@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Summary-->The **WP TABLE DELETE COLUMNS** command removes one or several column(s) from a 4D Write table.<!-- END REF-->
 
@@ -34,7 +34,7 @@ With this syntax, the optional *numColumns* parameter defines the number of colu
 
 Removing all columns of a table will remove the entire table.
 
-#### Example 
+## Example 
 
 You want to delete one column from the *Invoice* table. This code:
 
@@ -50,6 +50,6 @@ Will remove the column from the correct location:
 
 ![](../../assets/en/WritePro/commands/pict4680318.en.png)
 
-#### See also 
+## See also 
 
 [WP TABLE DELETE ROWS](wp-table-delete-rows.md)  

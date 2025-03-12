@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get Application color scheme.Summary-->**Get Application color scheme** コマンドは、アプリケーションレベルで使用されている実際のカラースキームの名前を返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 カラースキーム名の詳細については、[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドの詳細を参照してください。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $colorScheme : Text
@@ -39,12 +39,12 @@ displayed_sidebar: docs
  $colorScheme:=Get Application color scheme(*)
 ```
 
-#### 参照 
+## 参照 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

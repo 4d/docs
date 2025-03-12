@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 BLOBに新しいバイトを割り当て、それらのバイトを特定の値で初期化したい場合には、その値 (0..255) をオプション引数の*filler*に渡します。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 

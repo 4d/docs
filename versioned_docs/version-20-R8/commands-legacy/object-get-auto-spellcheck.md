@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->The **OBJECT Get auto spellcheck** command returns the status of the Auto spellcheck option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -23,11 +23,11 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 The command returns **True** when automatic spell-checking is enabled for the *object* and **False** when it is not. 
 
-#### See also 
+## See also 
 
 [OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

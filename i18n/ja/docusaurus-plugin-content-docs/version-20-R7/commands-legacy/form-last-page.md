@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE コマンドは、現在表示されているフォームページを最終のフォームページに変更します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](form-load.md) コマンドによってロードされてない場合や、すでに最終のフォームページが表示されている場合、FORM LAST PAGEコマンドは何も行いません。
 
-#### 例題 
+## 例題 
 
 以下の例は、メニューから呼び出される1行のメソッドです。これは、最終のフォームページを表示します:
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
  FORM LAST PAGE
 ```
 
-#### 参照 
+## 参照 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

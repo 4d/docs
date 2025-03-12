@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->La commande **OBJECT Get vertical alignment** retourne une valeur indiquant le type d’alignement vertical appliqué à l’objet désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -37,13 +37,13 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 * colonnes de list box,
 * en-tête et pieds de list box.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

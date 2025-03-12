@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->**OBJECT SET KEYBOARD LAYOUT**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたキーボードレイアウトをカレントプロセス内で動的に変更します。<!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 *languageCode* には使用する言語の (RFC3066、ISO639、そしてISO3166に基づく) コードを示す文字列を渡します。詳細は[SET DATABASE LOCALIZATION](set-database-localization.md)コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

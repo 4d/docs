@@ -50,7 +50,7 @@ The *sqlFormula* parameter can use references to 4D expressions. The syntax to u
 
 **Reminder:** You cannot have references to local variables in compiled mode. For more information about SQL programming in 4D, refer to the section *Overview of SQL Commands*.   
 
-##### About Relations 
+### About Relations 
 
 QUERY BY SQL does not use relations between tables defined in the 4D Structure editor. If you want to make use of related data, you will have to add a JOIN to the query. For example, assuming we have the following structure with a Many-to-One relation from\[Persons\]City to \[Cities\]Name:
 

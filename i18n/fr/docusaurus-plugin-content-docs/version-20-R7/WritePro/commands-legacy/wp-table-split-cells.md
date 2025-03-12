@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->La commande **WP TABLE SPLIT CELLS** fractionne la sélection intersectée de cellules contenues dans *targetObj* ou *tableRef* (défini par *startColumn*, *startRow*, *columnCount*, et *rowCount*).<!-- END REF--> Une cellule ne sera fractionnée que si elle a déjà été fusionnée horizontalement, verticalement ou les deux ; dans le cas contraire, la cellule ne sera pas modifiée.
 
@@ -45,7 +45,7 @@ Si rowCount est omis, cela équivaut à passer 1 (valeur par défaut). Si column
 
 Si startColumn plus ColumnCount ou *startRow* plus rowCount dépasse le nombre de colonnes/lignes dans tableRef, ou si startColumn ou *startRow* est supérieur au nombre de colonnes/lignes dans tableRef, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que chaque cellule du tableau (si elle a été fusionnée auparavant) est fractionnée.
 
-#### Example 
+## Example 
 
 L'exemple suivant consiste à désigner une plage de cellules (qui contient des cellules déjà fusionnées) et à la fractionner :
 
@@ -64,7 +64,7 @@ Les données de la cellule déjà fusionnée sont toutes conservées dans la pre
 
 Pour plus de détails, veuillez consulter *Fusionner et fractionner des cellules*.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Manipuler des tableaux*  
 [WP TABLE MERGE CELLS](wp-table-merge-cells.md)  

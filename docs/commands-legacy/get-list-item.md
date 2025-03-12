@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->The **GET LIST ITEM** command returns information about the item specified by *itemPos* of the list whose reference number or object name is passed in *list*.<!-- END REF--> 
 
@@ -39,7 +39,7 @@ If you passed the optional parameters *sublist* and *expanded*:
 * *subList* returns the list reference number of the sublist attached to the item. If the item has no sublist, *subList* returns zero (0).
 * If the item has a sublist, *expanded* returns TRUE if the sublist is currently expanded, and FALSE if it is collapsed.
 
-#### Example 1 
+## Example 1 
 
 *hList* is a list whose items have unique reference numbers. The following code programmatically toggles the expanded/collapsed state of the sublist, if any, attached to the current selected item:
 
@@ -53,11 +53,11 @@ If you passed the optional parameters *sublist* and *expanded*:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 
-#### See also 
+## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
@@ -66,7 +66,7 @@ Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

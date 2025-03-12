@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get database parameter.Summary-->The **Get database parameter** command allows you to get the current value of a 4D database parameter.<!-- END REF--> When the parameter value is a character string, it is returned in the *stringValue* parameter.
 
@@ -87,7 +87,7 @@ The *selector* parameter designates the parameter to get. 4D offers you the foll
 | Libzip version                      | Integer | 120   | **Scope:** Current 4D machine<br/>**Kept between two sessions:** n/a<br/>**Description:** Returns the version number of the libzip library in the 4D application on the current machine. (Read only)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Pause logging                       | Integer | 121   | **Scope**: 4D application<br/>**Kept between two** **sessions**: No<br/>**Possible values**: 0 (resume logs), 1 (pause logs)<br/>This selector allows to suspend/resume all logging operations started on the application (except ORDA logs). This feature can be useful to temporarily lighten the 4D application tasks or schedule logging operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-#### Thread-safe selectors 
+## Thread-safe selectors 
 
 The **Get database parameter** command can be used in preemptive processes when calling the following selectors:
 
@@ -102,7 +102,7 @@ The **Get database parameter** command can be used in preemptive processes when 
 * IMAP Log
 * Pause logging
 
-#### Example 
+## Example 
 
 You want your application to restart after a first launch. The application is launched with, for example, a command line on Windows:
 
@@ -126,14 +126,14 @@ In the [On Startup database method](on-startup-database-method.md), you write:
  End if
 ```
 
-#### See also 
+## See also 
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->The **APPEND MENU ITEM** command appends new menu items to the menu whose number or reference is passed in *menu*.<!-- END REF-->
 
@@ -54,7 +54,7 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 
 **Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](set-menu-item-property.md) or [SET MENU ITEM METHOD](set-menu-item-method.md) commands, or the items can also be managed from within a form method using the [Menu selected](menu-selected.md) command.
 
-#### Example 
+## Example 
 
 This example appends the names of the available fonts to the Font menu, which in this example is the sixth menu of the current menu bar:
 
@@ -74,13 +74,13 @@ Then, in any form or project method, you can write:
  APPEND MENU ITEM(6;◊atFontMenuItems)
 ```
 
-#### See also 
+## See also 
 
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

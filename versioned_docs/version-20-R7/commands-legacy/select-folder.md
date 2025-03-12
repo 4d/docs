@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Select folder.Summary-->The **Select folder** command displays a dialog box that allows you to manually select a folder and then retrieve the complete access path to that folder.<!-- END REF--> The optional *defaultPath* parameter can be used to designate the location of a folder that will be initially displayed in the folder selection dialog box.
 
@@ -66,7 +66,7 @@ If the user validates the dialog box, the **OK** system variable is set to 1\. I
 
 **Note:** On Windows, if the user selected some incorrect elements, such as “Workstation”, “Trash can”, and so on, the **OK** system variable is set to 0, even if the user validates the dialog box.
 
-#### Example 
+## Example 
 
 The following example allows you to select the folder in which the pictures in the picture library will be stored:
 
@@ -79,13 +79,13 @@ The following example allows you to select the folder in which the pictures in t
  End for
 ```
 
-#### See also 
+## See also 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

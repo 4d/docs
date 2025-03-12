@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidade 
+## Compatibilidade 
 
 <!--REF #_command_.WP Table range.Summary-->**WP Table range** era chamada **WP Create table range** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeada por razões de claridade. 
 
-#### Descrição 
+## Descrição 
 
 O comando **WP Table range** devolve um objeto de range que trata só as tabelas contidas em *objRange* passado como parâmetro. Devolverá uma range de wk type table, mesmo se *objRange* passado como parâmetro não contiver uma tabela. O objeto de range de tabela devolvido pode ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) e [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar os atributos que são aplicados às tabelas e aos conteúdos da tabela.
 
@@ -28,7 +28,7 @@ No parâmetro *objRange*, pode passar:
 * um elemento (corpo / cabeçalho / rodapé / parágrafo/seção/subseção), ou
 * um documento 4D Write Pro
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser modificar a aparência das tabelas contidas na range tabela:
 
@@ -43,7 +43,7 @@ Se quiser modificar a aparência das tabelas contidas na range tabela:
  WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get elements](wp-get-elements.md)  
 [WP Text range](wp-text-range.md)  

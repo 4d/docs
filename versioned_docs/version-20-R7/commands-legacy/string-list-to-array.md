@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->The **STRING LIST TO ARRAY** command populates the array *strings* with:
 
@@ -32,22 +32,22 @@ Before calling **STRING LIST TO ARRAY**, you can predeclare the array *strings* 
 
 **Tip:** Limit your use of string list resources to those up to 32K in total size, and a maximum of a few hundred strings per resource.
 
-#### Compatibility with XLIFF architecture 
+## Compatibility with XLIFF architecture 
 
 The **STRING LIST TO ARRAY** command is compatible with the XLIFF architecture of 4D v11: the command first looks for values corresponding to *resID* and *strID* in all the open XLIFF files (when the *resFile* parameter is omitted) and fills the *strings* array with the corresponding values. In this case, *resID* specifies the **id** attribute of the **group** element and the *strings* array contains all the strings of the element. If the value is not found, the command continues searching in the open resources files.  
 For more information about XLIFF architecture in 4D, refer to the Design Reference manual.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
-#### See also 
+## See also 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

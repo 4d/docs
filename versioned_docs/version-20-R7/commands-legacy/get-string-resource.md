@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get string resource.Summary-->The **Get string resource** command returns the string stored in the string (“STR ”) resource whose ID is passed in *resID*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 **Note:** A string resource can contain up to 255 characters.
 
-#### Example 
+## Example 
 
 The following example displays the contents of the string resource ID=20911, which must be located in at least one of the currently open resource files:
 
@@ -33,17 +33,17 @@ The following example displays the contents of the string resource ID=20911, whi
  ALERT(Get string resource(20911))
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
-#### See also 
+## See also 
 
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

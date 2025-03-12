@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->The **GET SERIAL PORT MAPPING** command returns two arrays, *numArray* and *nameArray*, containing the serial port numbers and the serial port names of the current machine.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ This command is useful under macOS, where the operating system dynamically alloc
 
 **Note:** This command does not return meaningful values with standard ports. If you want to address a standard port, you must pass its value (0 or 1) directly using the [SET CHANNEL](set-channel.md) command (former operation of 4D). 
 
-#### Example 
+## Example 
 
 This project method can be used to address the same serial port (without protocol), regardless of the number that has been assigned to it: 
 
@@ -46,11 +46,11 @@ This project method can be used to address the same serial port (without protoco
  SET CHANNEL(11) //Closing of port
 ```
 
-#### See also 
+## See also 
 
 [SET CHANNEL](set-channel.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

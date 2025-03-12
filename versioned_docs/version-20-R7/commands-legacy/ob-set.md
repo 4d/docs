@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF-->must be an object variable or designate a 4D object field.
 
@@ -31,7 +31,7 @@ In the *value* parameter, pass the value you want to set for the property. Sever
 * if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
 * starting with 4D v16 R4, you can pass a picture of any supported type (see *Native Formats Supported* ).
 
-#### Example 1 
+## Example 1 
 
 Creating an object and adding a text type property:
 
@@ -41,7 +41,7 @@ Creating an object and adding a text type property:
   // $Object = {"FirstName":"John","LastName":"Smith"}
 ```
 
-#### Example 2 
+## Example 2 
 
 Creating an object and adding a Boolean type property:
 
@@ -51,7 +51,7 @@ Creating an object and adding a Boolean type property:
   // $Object = {"LastName":"smith","age":42,"client":true}
 ```
 
-#### Example 3 
+## Example 3 
 
 Modifying a property:
 
@@ -61,7 +61,7 @@ Modifying a property:
   // $Object = {"FirstName":"Paul","LastName":"Smith"}
 ```
 
-#### Example 4 
+## Example 4 
 
 Adding a property:
 
@@ -71,7 +71,7 @@ Adding a property:
   // $Object = {"FirstName":"Paul","LastName":"Smith","department":"Accounting"}
 ```
 
-#### Example 5 
+## Example 5 
 
 Renaming a property:
 
@@ -85,7 +85,7 @@ Renaming a property:
   // $Object = {"FirstName":""James","age":35}
 ```
 
-#### Example 6 
+## Example 6 
 
 Using a pointer:
 
@@ -101,7 +101,7 @@ Using a pointer:
   // $JsonString="{"FirstName":"Paul","LastName":"Wesson"}
 ```
 
-#### Example 7 
+## Example 7 
 
 Using an object:
 
@@ -124,7 +124,7 @@ You can also change a value on the fly:
   // $string = "{"employee":{"name":"Smyth"}}"
 ```
 
-#### Example 8 
+## Example 8 
 
 If you have defined the \[Rect\]Desc field as an object field, you can write:
 
@@ -135,7 +135,7 @@ If you have defined the \[Rect\]Desc field as an object field, you can write:
  SAVE RECORD([Rect])
 ```
 
-#### Example 9 
+## Example 9 
 
 You want to export data in JSON that contains a 4D date that you want to be converted into a string without time zone information. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
 
@@ -148,7 +148,7 @@ You want to export data in JSON that contains a 4D date that you want to be conv
  SET DATABASE PARAMETER(Dates inside objects;$vDateSetting)
 ```
 
-#### Example 10 
+## Example 10 
 
 In the method of a form containing a 4D Write Pro area, you can write:
 
@@ -165,7 +165,7 @@ You can also read custom attributes of the documents:
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Example 11 
+## Example 11 
 
 You want to set a collection as a property value. You can write:
 
@@ -178,7 +178,7 @@ You want to set a collection as a property value. You can write:
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
-#### Example 12 
+## Example 12 
 
 You want to store a picture in an object field. You can write:
 
@@ -190,14 +190,14 @@ You want to store a picture in an object field. You can write:
  End if
 ```
 
-#### See also 
+## See also 
 
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

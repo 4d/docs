@@ -30,7 +30,7 @@ For each couple of *dstVar;expr* variables, the source variable must be of a typ
 
 The current process “pokes” the variables of the destination process—the destination process is not warned in any way that another process is writing the instance of its variables.
 
-##### Restrictions 
+### Restrictions 
 
 **VARIABLE TO VARIABLE** does not accept local variables as destination variables. 
 

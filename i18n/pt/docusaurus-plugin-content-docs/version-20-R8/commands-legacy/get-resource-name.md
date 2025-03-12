@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get resource name.Summary-->O comando Get resource name retorna o nome do recurso cujo tipo se passa em *resTipo* e cujo número de referência (ID) em *resNum*.<!-- END REF-->  
   
@@ -25,7 +25,7 @@ Se passa um número de referência de arquivo de recursos no parâmetro *resArqu
 Se o recurso não existir, Get resource name retorna uma cadeia vazia.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

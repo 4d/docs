@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->DOM SET XML ATTRIBUTE コマンドを使用して、*elementRef* に渡したXML要素に1つ以上の属性を追加できます。<!-- END REF-->また定義されたそれぞれの属性に値を設定することもできます。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | 日付    | "2006-12-04T00:00:00Z" (RFC 3339 標準) |
 | 時間    | "5233" (秒数)                          |
 
-#### 例題 
+## 例題 
 
 以下のXMLソースがあるとき:
 
@@ -56,18 +56,18 @@ displayed_sidebar: docs
 </Book>
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

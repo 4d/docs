@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command “registers” a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or eventually 4D Server (by using stored methods) to execute methods on it by using the [EXECUTE ON CLIENT](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
 
@@ -32,7 +32,7 @@ If you pass the optional *\** parameter, the created process is local. 4D will a
 
 Once the command is executed, it is not possible to modify a 4D client’s name on the fly. To do so, you must call the [UNREGISTER CLIENT](unregister-client.md) command, then the **REGISTER CLIENT** command.
 
-#### Example 
+## Example 
 
 In the following example, we are going to create a small messaging system that allows the client workstations to communicate between themselves.
 
@@ -104,17 +104,17 @@ In the following example, we are going to create a small messaging system that a
  UNREGISTER CLIENT
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the 4D client is correctly registered, the OK system variable is equal to 1\. If the 4D client was already registered, the command doesn’t do anything and OK is equal to 0.
 
-#### See also 
+## See also 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

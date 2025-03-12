@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters:
 
@@ -55,7 +55,7 @@ Forms are displayed inside an open window. Text from the [MESSAGE](message.md) c
 
 **Open window** returns a WinRef type window reference, which can be used by window management commands (see the "*WinRef*" section). 
 
-#### Example 1 
+## Example 1 
 
 The following project method opens a window centered in the main window (Windows) or in the main screen (Macintosh). Note that it can accept two, three, or four parameters:
 
@@ -90,7 +90,7 @@ After the project method is written, you can use it this way:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example opens a floating window that has a Control-menu box (Windows) or Close Box (Macintosh) method. The window is opened in the upper right hand corner of the application window.
 
@@ -105,7 +105,7 @@ The CloseColorPalette method calls the [CANCEL](cancel.md) command:
  CANCEL
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example opens a window whose size and title come from the properties of the form displayed in the window: 
 
@@ -119,7 +119,7 @@ The following example opens a window whose size and title come from the properti
 
 **Reminder:** In order to have **Open window** automatically use the properties of the form, you must call [FORM SET INPUT](form-set-input.md) with the optional *\** parameter, and the properties of the form must have been set accordingly in the Design environment.
 
-#### Example 4 
+## Example 4 
 
 This example illustrates the “delay” mechanism for displaying sheet windows under macOS:
 
@@ -131,13 +131,13 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
   //of the title bar
 ```
 
-#### See also 
+## See also 
 
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

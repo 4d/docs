@@ -13,22 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM CLOSE XML.Summary-->El comando DOM CLOSE XML libera el espacio en memoria ocupado por el objeto XML designado por *refElement*.<!-- END REF--> 
 
 Si *refElement* no es un objeto XML raíz, se genera un error. 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

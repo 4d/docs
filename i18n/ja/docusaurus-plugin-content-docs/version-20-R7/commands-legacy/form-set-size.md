@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->**FORM SET SIZE** コマンドを使用すると、プログラムからカレントフォームのサイズを変更することができます。<!-- END REF-->新しいサイズは、カレントプロセスに対して定義され、フォームには保存されません。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 **FORM SET SIZE** コマンドはフォームサイズを変更しますが、サイズ調整プロパティも考慮します。例えば、フォームの最小幅が500ピクセルの場合に、コマンドで幅を400ピクセルに設定すると、新しいフォーム幅は500ピクセルになります。  
 また、このコマンドはフォームウィンドウのサイズは変更しないという点に注意してください。ウインドウサイズを変更しないでフォームサイズを変えることもできます（その逆も同様）。フォームウィンドウのサイズを変更する方法については、[RESIZE FORM WINDOW](resize-form-window.md) コマンドを参照してください。
 
-#### 例題 
+## 例題 
 
 次の例題は、エクスプローラタイプのウィンドウの設定方法を示しています。以下のフォームはデザインモードで作成します:
 
@@ -117,12 +117,12 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

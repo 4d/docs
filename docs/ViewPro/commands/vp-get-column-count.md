@@ -15,7 +15,7 @@ title: VP Get column count
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Integer|<-|Total number of columns |<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get column count` command <!-- REF #_method_.VP Get column count.Summary -->returns the total number of columns from the designated *sheet*<!-- END REF -->.
 
@@ -23,7 +23,7 @@ In *vpAreaName*, pass the name property of the 4D View Pro area. If you pass a n
 
 You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
-#### Example
+## Example
 
 The following code returns the number of columns in the 4D View Pro area:
 
@@ -32,7 +32,7 @@ C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
-#### See also
+## See also
 
 [VP Get row count](vp-get-row-count.md)<br/>
 [VP SET COLUMN COUNT](vp-set-column-count.md)<br/>

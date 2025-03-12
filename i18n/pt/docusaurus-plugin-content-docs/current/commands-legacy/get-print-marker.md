@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get print marker.Summary-->O comando Get print marker permite obter a posição atual de um marcador durante uma impressão.<!-- END REF--> 
 
@@ -52,16 +52,16 @@ Passe uma das constantes do tema *Área de formulário* no parâmetro *numeroMar
 | Form header8  | Inteiro longo | 208   |
 | Form header9  | Inteiro longo | 209   |
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md). 
 
-#### Ver também 
+## Ver também 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

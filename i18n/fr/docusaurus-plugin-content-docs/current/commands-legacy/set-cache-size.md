@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CACHE SIZE.Summary-->La commande **SET CACHE SIZE** fixe dynamiquement la taille du cache de la base de données et, optionnellement, permet de fixer la taille minimum en octets à partir de laquelle on commence à libérer la mémoire.<!-- END REF-->.
 
@@ -24,7 +24,7 @@ Dans *taille*, passez la nouvelle taille du cache de la base en octets. Cette no
 
 Dans *libereMini*, passez la taille minimum de mémoire à libérer dans le cache de la base de données, lorsque le moteur a besoin de plus d'espace pour allouer un objet en mémoire (valeur en octets). L'intérêt de cette option est de réduire le nombre de fois où les données sont libérées à partir de la mémoire cache afin d'obtenir de meilleures performances. Par défaut, si cette option n'est pas utilisée, 4D décharge au moins 10 % de la mémoire cache lorsqu'il a besoin de place. Si votre base de données fonctionne avec un grand cache, il peut être avantageux d'utiliser une taille fixe, qui ne dépend pas de la taille du cache. Vous pouvez régler ce paramètre en fonction de la taille des blocs de données traitées dans votre base de données.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écrire :
 
@@ -36,11 +36,11 @@ Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écr
   // la taille courante du cache est maintenant de 519430400
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get cache size](get-cache-size.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

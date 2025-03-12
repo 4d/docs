@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA**は、カレントプロセスの*aTable*のカレントレコードセレクションをソートします。<!-- END REF-->ソートが終了すると、セレクションの先頭レコードがカレントレコードとなります。**注:** 引数*aTable* でテーブルを必ず指定しなければならない点に注意してください。デフォルトテーブルを使用することはできません。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 > **互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。この処理は、変換されたデータベースにおいては後方互換性のために維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのセレクターを使用すると、変換されたデータベースにおいてもサーバー側での実行が有効化されます。
 
-#### 例題 
+## 例題 
 
 以下の例は、\[People\]テーブルをLastNameフィールドの文字長をキーにして降順に並び替えます。最も長い名字を持った人がカレントセレクションの先頭になります:
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
  ORDER BY FORMULA([People];Length([People]LastName);<)
 ```
 
-#### 参照 
+## 参照 
 
 [ORDER BY](order-by.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

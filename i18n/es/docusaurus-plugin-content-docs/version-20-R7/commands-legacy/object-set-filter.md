@@ -35,7 +35,7 @@ El siguiente ejemplo define el filtro de entrada para el campo código postal. S
 
 ```4d
  If([Empresas]Pais ="ES") // Definir el filtro para un formato del código postal español
-    OBJECT SET FILTER([Empresas]Codigo Postal;"&9#####")
+    OBJECT SET FILTER([Empresas]Codigo Postal;"&9###")
  Else // Definir el filtro para aceptar todo valor alfanumérico y mayúsculas
     OBJECT SET FILTER([Empresas]Codigo Postal;"~@")
  End if

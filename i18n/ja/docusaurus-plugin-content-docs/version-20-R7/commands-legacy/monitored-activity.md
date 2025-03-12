@@ -25,7 +25,7 @@ displayed_sidebar: docs
 | activityDuration       | 実数                 | アクティビティの時間、秒単位                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | activityData           | オブジェクト             | 記録されたアクティビティのタイプ(*activityKind*)に応じて特定のプロパティを格納したオブジェクト。状況によっては、同じオペレーションに対して複数のオブジェクトが返されることもあります。この場合、これらのオブジェクトには同じUUIDが振られます。これらのオブジェクト内に格納される追加のプロパティについては、以下のセクションにおいて詳細な説明があります。                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-##### activityKind = Activity language (1) 
+### activityKind = Activity language (1) 
 
 **注:** *activityData* オブジェクトは*4DDebugLog.txt (標準)* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれば)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 | duration               | 倍長整数               | オペレーション時間の長さ(ミリ秒単位)                                                                                                                                     |
 | kind                   | テキスト               | 記録されたオペレーションの種類。取り得る値は以下の通りです:<br/> "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-###### 追加のプロパティ 
+#### 追加のプロパティ 
 
 *kind* で表されるオペレーションの種類によっては、*activityData* オブジェクト内に以下の追加のプロパティが返されます:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 | pluginMessageName       | テキスト  | pluginMessage                                                                                                                        | 取り得る値: PackMsgServerDeInit PackMsgServerDisposeData PackMsgServerWriteData PackMsgServerReadData PackMsgServerKillClient PackMsgServerNewClient PackMsgServerInit PackMsgProcessDeInit PackMsgProcessInit PackMsgClientDeInit PackMsgClientInit |
 | pluginName              | テキスト  | pluginCallback<br/>pluginCommand<br/>pluginEvent<br/>pluginMessage                                           | プラグインの名前                                                                                                                                                                                                                                        |
 
-##### activityKind = Activity network (2) 
+### activityKind = Activity network (2) 
 
 ****注:** 
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 | taskKind               | テキスト               | プリエンプティブまたはコオペラティブ(それぞれ 'p' または 'c')                                                                                                                            |
 | rtt                    | 倍長整数               | クライアントがリクエストを送信し、サーバーがそれを受信するまでの概算時間ネットワークレイヤーを使用している場合のみ計測されます。旧式ネットワークレイヤーを使用している場合には0を返しますWindows 10以前、Windows Server 2016 以前のWindows のバージョンでは、この呼び出しは0を返します |
 
-##### activityKind = Activity operations (4) 
+### activityKind = Activity operations (4) 
 
 **注:** *activityData* オブジェクトは[ACTIVITY SNAPSHOT](activity-snapshot.md) コマンドから返されるものに近いですが、閾値と完了したオペレーションのみが返されるという点が異なります。
 

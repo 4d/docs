@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Find previous.Summary-->O comando **WP Find previous**  pesquisa *objAlvo*, antes da range *pesquisarAntes*, para o *valorPesquisa* baseado em *condiçõesPesquisa*.<!-- END REF--> Um parâmetro opcional pode ser usado para substituir qualquer resultado encontrado. 
 
@@ -75,7 +75,7 @@ Se *objAlvo* for uma range ou elemento, valores encontrados são retornados na o
 
 Uma range ou seleção vazia é retornada se nenhum resultado for encontrado.
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$previousRanges: object
@@ -94,7 +94,7 @@ Uma range ou seleção vazia é retornada se nenhum resultado for encontrado.
  $previousRanges:=WP Find previous($target;"alpha";$options)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Find all](wp-find-all.md)  
 [WP Find next](wp-find-next.md)  

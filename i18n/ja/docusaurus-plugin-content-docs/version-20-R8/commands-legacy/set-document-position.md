@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DOCUMENT POSITION.Summary-->このコマンドは、*DocRef*に渡したドキュメント参照番号を持つ、現在開いているドキュメントだけに機能します。<!-- END REF-->
 
@@ -25,13 +25,13 @@ SET DOCUMENT POSITION コマンドは、引数*offset*に渡す、以下の読�
 
 *anchor*によっては、引数*offset*に正の値または負の値を渡すことができます。
 
-#### 参照 
+## 参照 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->The WA EXECUTE JAVASCRIPT FUNCTION command executes, in the Web area designated by the *\** and *object* parameters, the JavaScript function *jsFunction* and optionally returns its result in the *result* parameter.<!-- END REF-->
 
@@ -30,7 +30,7 @@ The command supports several types of parameters for both input (*param*) and ou
 
 **Warning:** Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print().**..) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
 
-#### Example 1 
+## Example 1 
 
 Calling a JavaScript function with 3 parameters:
 
@@ -43,7 +43,7 @@ Calling a JavaScript function with 3 parameters:
  WA EXECUTE JAVASCRIPT FUNCTION(MyWArea;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
 ```
 
-#### Example 2 
+## Example 2 
 
 The "getCustomerInfo" JavaScript function receive a number ID as parameter and returns an object:
 
@@ -54,11 +54,11 @@ The "getCustomerInfo" JavaScript function receive a number ID as parameter and r
  WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfo";$Result;$ID)
 ```
 
-#### See also 
+## See also 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

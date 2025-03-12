@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->O comando **METHOD GET FOLDERS** devolve no array *arrayNoms*, os nomes das pastas criadas na página Início do Explorador de 4D:  
 ![](../assets/en/commands/pict837666.en.png)  
@@ -26,11 +26,11 @@ Pode limitar a lista de pastas passando uma cadeia de comparação no parâmetro
   
 Se executado este comando desde um componente, devolve por defeito os caminhos dos métodos do componente. Se passado o parâmetro *\**, o array conterá os caminhos dos métodos da base local.
 
-#### Ver também 
+## Ver também 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->**OBJECT SET SCROLL POSITION**コマンドを使用して、 ([MODIFY SELECTION](modify-selection.md)または[DISPLAY SELECTION](display-selection.md)コマンドを用いて表示される) リストフォーム、サブフォーム、階層リストなどの行、あるいはリストボックスの列や行、そしてさらにピクチャのピクセルをスクロールすることができます。<!-- END REF--> 
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 **注**: [HIGHLIGHT RECORDS](highlight-records.md)コマンドはオプション引数 *\** を使用してスクロール管理を**OBJECT SET SCROLL POSITION**コマンドに委譲することができます。 
 
-#### 例題 1 
+## 例題 1 
 
 この例題ではリストボックスが標準モードで表示されている場合と階層モードで表示されている場合の違いについて説明します:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict197493.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 フォーム変数に格納されているピクチャーをスクロールしたい場合を考えます。このモンタージュ(合成画像)には、ピクチャーの表示されている部分と、表示すべき点(上から166ピクセル、左から200ピクセルの位置)が示されています:
 
@@ -86,13 +86,13 @@ displayed_sidebar: docs
 
 この場合、2つ目の *\** 引数を省略しないように注意してください。省略してしまうと、定義された点は既に表示されているため、ピクチャーはスクロールされません。
 
-#### 参照 
+## 参照 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP New style sheet.Summary-->El comando **WP New style sheet** crea un nuevo objeto de hoja de estilo (vacío) para el *wpDoc* designado.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Puede especificar los atributos de la hoja de estilo utilizando el comando [WP S
 * Una hoja de estilo solo modifica la visualización de un caracter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo predeterminado.
 * Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte *Comandos hoja de estilo*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código crea y define una hoja de estilo de párrafo:
 
@@ -64,7 +64,7 @@ El siguiente código crea y define una hoja de estilo de párrafo:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

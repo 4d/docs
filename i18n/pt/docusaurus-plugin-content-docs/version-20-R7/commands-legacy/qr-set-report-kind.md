@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->O comando QR SET REPORT KIND define o *tipo* do relatório presente em *area*.<!-- END REF-->  
   
@@ -35,11 +35,11 @@ Se passa um número de *area* inválido, se gera o erro -9850.
   
 Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.  
 
-#### Ver também 
+## Ver também 
 
 [QR Get report kind](qr-get-report-kind.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

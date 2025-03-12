@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->La commande **OBJECT Get list name** retourne le nom de l’énumération associée à l'objet ou au groupe d'objets désigné par *objet*.<!-- END REF--> 4D vous permet d'associer une énumération (créée avec l'éditeur d'énumérations en mode Développement) aux objets de formulaire via l'éditeur de formulaires ou la commande [OBJECT SET LIST BY NAME](object-set-list-by-name.md).
 
@@ -32,12 +32,12 @@ Le paramètre optionnel *typeListe* vous permet de désigner le type de liste qu
 
 Si aucune liste du type défini n’est associée à l’*objet*, la commande retourne une chaîne vide (""). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

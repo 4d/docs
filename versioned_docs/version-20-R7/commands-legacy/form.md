@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form, if any.<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 * the current form is a subform,
 * a table form is currently displayed on screen.
 
-##### DIALOG form 
+### DIALOG form 
 
 If the current form is being displayed by a call to the [DIALOG](dialog.md) command, **Form** returns either an empty object, or the *formData* object passed as parameter to this command, if any. 
 
-##### Subform 
+### Subform 
 
 If the current form is a subform, the returned object depends on the parent container variable:
 
@@ -38,7 +38,7 @@ In this case, the object returned by **Form** is the same as the one returned by
 
 For more information, please refer to the *Page subforms* section.
 
-##### Table form 
+### Table form 
 
 **Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: 
 
@@ -46,7 +46,7 @@ For more information, please refer to the *Page subforms* section.
 | ------------ | -------- | ----------------------------------------- |
 | parentForm   | object   | **Form** object of the parent output form |
 
-#### Example 
+## Example 
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
@@ -94,11 +94,11 @@ The form displays information for each child:
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
-#### See also 
+## See also 
 
 [DIALOG](dialog.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

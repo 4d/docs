@@ -30,7 +30,7 @@ En el objeto *opciones*, pase las propiedades que se utilizarán al generar el h
 
 **Nota**: si un valor en el objeto de *opciones* no es válido, se devolverá un mensaje de error y una cadena vacía.
 
-##### Gestión de errores 
+### Gestión de errores 
 
 Se pueden devolver los siguientes errores. Puede revisar un error con los comandos [Last errors](last-errors.md)  y [ON ERR CALL](on-err-call.md).  
 
@@ -39,7 +39,7 @@ Se pueden devolver los siguientes errores. Puede revisar un error con los comand
 | 850        | Password-hash: Algoritmo no soportado.                                              |
 | 852        | Password-hash: No disponible bcrypt costo parámetro, ofrece un valor entre 4 y 31\. |
 
-##### Sobre bcrypt 
+### Sobre bcrypt 
 
 bcrypt es una función de hashing de contraseñas basada en el cifrado Blowfish. Además de incorporar una sal para proteger contra los ataques tabla arco iris, es una función adaptativa en la que el recuento de la iteración puede aumentarse para hacerla más lenta, por lo que sigue siendo resistente a los ataques de fuerza bruta incluso con el aumento del poder computacional, porque toma demasiado tiempo y es costoso.
 

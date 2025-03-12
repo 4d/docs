@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Copy parameters.Summary-->La commande Copy parameters retourne une nouvelle collection contenant tous les paramètres passés à une méthode ou à une fonction.<!-- END REF--> Cette commande est utile lorsque vous devez transférer un certain nombre de paramètres d'une méthode ou d'une fonction à une autre méthode ou fonction. 
 
@@ -27,7 +27,7 @@ Lorsque la commande **Copy parameters** est appelée à l'intérieur d'une formu
 * elle n'est pas appelée dans une méthode ou fonction qui a été appelée par une autre méthode ou fonction,
 * aucun paramètre n'a été passé à la méthode ou à la fonction parente.
 
-#### Exemple 1 
+## Exemple 1 
 
 Appeler une fonction différente en fonction du premier paramètre et passer d'autres paramètres à cette fonction :
 
@@ -48,7 +48,7 @@ Ou, appeler une autre fonction ou un autre objet avec **apply()** passer les par
  This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Puisque la commande retourne une collection, elle peut être utilisée avec **.join()** pour générer une liste html par exemple :
 
@@ -77,11 +77,11 @@ Puisque la commande retourne une collection, elle peut être utilisée avec **.j
 
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count parameters](count-parameters.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

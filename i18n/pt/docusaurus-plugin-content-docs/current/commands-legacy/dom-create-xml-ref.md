@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Create XML Ref.Summary-->O comando DOM Create XML Ref cria uma árvore XML vazia na memória e retorna sua referência.<!-- END REF-->  
 
@@ -33,7 +33,7 @@ Pode declarar um ou vários espaços de nome adicionais na árvore XML gerada, c
   
 **Importante**: Lembre de chamar ao comando [DOM CLOSE XML](dom-close-xml.md) com o objetivo de liberar memória quando termine de utilizar a árvore XML.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Criação de uma árvore XML simples: 
 
@@ -49,7 +49,7 @@ Este código produz o seguinte resultado:
 <MiRaiz/>
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de uma árvore XML com um espaço de nome: 
 
@@ -66,7 +66,7 @@ Este código da o seguinte resultado:
 <Meunomeespaco:Minharaiz xmlns:Meunomeespaco="http://www.4DHispano.com/tech/nomeespaco"/>
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Criação de uma árvore XML com vários espaços de nome: 
 
@@ -90,16 +90,16 @@ NSNom1="http://www.4DHispano.com/Prod/nomeespaco"
 NSNom2="http://www.4DHispano.com/Mkt/nomeespaco"/>
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando foi executado corretamente, a variável sistema Ok assume o valor 1\. Do contrário, assume o valor 0 e um erro é gerado.
 
-#### Ver também 
+## Ver também 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

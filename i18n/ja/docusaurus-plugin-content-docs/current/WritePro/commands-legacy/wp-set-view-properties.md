@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP SET VIEW PROPERTIES.Summary-->**WP SET VIEW PROPERTIES** コマンドを使用すると、*wpArea* 引数で指定した4D Write Pro エリアの、一つまたは複数のビュープロパティを動的に設定することができます。<!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 このコマンドを使用して*wpArea* 引数で指定したエリアに対してビュープロパティを設定した場合、フォームエリアが他の呼び出しで変更されない限りは指定したフォームエリアに適用され続けます。ただしプロパティの編集はドキュメントまたはフォームには保存されません。
 
-#### 例題 
+## 例題 
 
 4D Write Pro エリアの一部のビュープロパティを設定したい場合を考えます:
 
@@ -69,6 +69,6 @@ displayed_sidebar: docs
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get view properties](wp-get-view-properties.md)  

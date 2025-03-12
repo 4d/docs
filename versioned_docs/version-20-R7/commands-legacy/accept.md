@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCEPT.Summary-->The **ACCEPT** command is used in form or object methods (or in subroutines) to:
 
@@ -28,15 +28,15 @@ It is also often used in the optional close box method for the [Open window](ope
 
 **ACCEPT** cannot be queued up. In response to an event, executing two **ACCEPT** commands in a row from within a method would have the same effect as executing one.
 
-##### Headless mode 
+### Headless mode 
 
 The **ACCEPT** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### See also 
+## See also 
 
 [CANCEL](cancel.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

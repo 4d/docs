@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->SET TABLE TITLES permite ocultar, renomear e reordenar as tabelas de seu banco quando aparecem nos editores padrão de 4D em modo Aplicação (quando os editores se chamam via os comandos da linguagem 4D).<!-- END REF--> Por exemplo, este comando pode modificar a visualização de tabelas e no editor pesquisas em modo Aplicação.  
   
@@ -47,7 +47,7 @@ Utilize o comando SET TABLE TITLES para:
 
 Executar SET TABLE TITLES sem parâmetros vai resetar toda a estrutura virtual do banco de dados para esta sessão (tabela personalizada e nomes de campos)
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Imagine que está desenvolvendo uma aplicação 4D que planeja vender internacionalmente. Portanto, você deve considerar as necessidades de tradução. Para os editores padrão de 4D que aparecem em modo Aplicação e seus formulários que utilizam nomes dinâmicos, pode utilizar uma tabela \[*Traduçoes*\] e alguns métodos de projeto para criar e utilizar as traduções para cada idioma.   
 Em seu banco, crie a próxima tabela:  
@@ -167,7 +167,7 @@ com o método de projeto TABELAS\_E\_CAMPOS\_LOCALIZADOS:
   
 * Note que as novas localizações possam ser adicionadas ao banco sem modificar o código a ser recompilado.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser remover todos os campos personalizados e nomes de tabela definidos:
 
@@ -175,7 +175,7 @@ Se quiser remover todos os campos personalizados e nomes de tabela definidos:
  SET TABLE TITLES //remove todos os nomes personalizados
 ```
 
-#### Ver também 
+## Ver também 
 
 [Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
@@ -183,7 +183,7 @@ Se quiser remover todos os campos personalizados e nomes de tabela definidos:
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

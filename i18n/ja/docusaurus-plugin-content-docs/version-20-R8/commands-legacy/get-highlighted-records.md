@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->GET HIGHLIGHTED RECORDS コマンドは、*aTable*中で (例: リストフォームでユーザにより選択されて) ハイライトされたレコードを*setName*で指定したセットに格納します。<!-- END REF-->*aTable*を省略すると、カレントフォームまたはサブフォームのテーブルが使用されます。
 
@@ -25,7 +25,7 @@ GET HIGHLIGHTED RECORDSコマンドはフォーム以外のコンテキストで
 
 **Note:** 組み込んだサブフォームのプロパティで選択モードに**複数**を指定しない場合、GET HIGHLIGHTED RECORDSは空のセットを返します。この場合、選択されたレコードの行を知るには[Selected record number](selected-record-number.md "Selected record number")コマンドを使用します。
 
-#### 例題 
+## 例題 
 
 次のメソッドは、テーブル (\[CDs\]) のレコードを表示するサブフォームにおいて、選択されているレコードの数を示します:
 
@@ -35,15 +35,15 @@ GET HIGHLIGHTED RECORDSコマンドはフォーム以外のコンテキストで
  CLEAR SET("$highlight")
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しき実行されるとシステム変数OKに1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

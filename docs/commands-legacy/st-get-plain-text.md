@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get plain text.Summary-->The ST Get plain text command removes any style tags from the text variable or field designated by the *\** and *object* parameters and returns the plain text.<!-- END REF--> 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
 
-##### 
+### 
 
 The optional *refMode* parameter indicates the way that references found in *object* must be returned. In *refMode*, pass one of the following constants, found in the "*Multistyle Text*" theme (you can pass a single constant or a combination):
 

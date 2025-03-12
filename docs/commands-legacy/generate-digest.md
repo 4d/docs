@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Generate digest.Summary-->The **Generate digest** command returns the digest key of a BLOB or text after application of an encryption algorithm.<!-- END REF-->
 
@@ -40,7 +40,7 @@ The value returned for the same object is the same on all the platforms (macOS/W
 
 **Note:** If you use the command with an empty text/BLOB, it does not return void but a string value (for example "d41d8cd98f00b204e9800998ecf8427e" for MD5).
 
-#### Example 1 
+## Example 1 
 
 This example compares two images using the MD5 algorithm: 
 
@@ -66,7 +66,7 @@ This example compares two images using the MD5 algorithm:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 These examples illustrate how to retrieve the digest key of a text:
 
@@ -77,7 +77,7 @@ These examples illustrate how to retrieve the digest key of a text:
   // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-#### See also 
+## See also 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
@@ -85,7 +85,7 @@ These examples illustrate how to retrieve the digest key of a text:
 *Secured Protocol*  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

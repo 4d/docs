@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Load list.Summary-->La commande **Load list** crée une liste hiérarchique dont le contenu est copié depuis la liste *nomListe* créée en mode Développement, dans l'éditeur d'énumérations.<!-- END REF--> La fonction retourne le numéro de référence de la liste nouvellement créée. 
 
@@ -28,7 +28,7 @@ Si vous n'avez plus besoin de la liste, n'oubliez pas d'appeler [CLEAR LIST](cle
 
 **Astuce :** Si vous associez une liste à un objet de formulaire (liste hiérarchique, onglet ou menu hiérarchique) à l'aide du menu **Enumération** dans la Liste des propriétés, il est inutile d'appeler **Load list** ou [CLEAR LIST](clear-list.md) dans la méthode de l'objet. 4D charge et efface la liste automatiquement pour vous.
 
-#### Exemple 
+## Exemple 
 
 Imaginons que vous créez une base pour le marché international. Vous voulez pouvoir changer la langue utilisée. Dans un formulaire, vous présentez une liste hiérarchique *listeHL* qui propose les langues disponibles. En mode Développement, vous avez préparé des listes différentes, par exemple “Options US” pour la version anglaise, “Options FR” pour la version française, “Options ES” pour la version espagnole, etc. De plus, vous maintenez la variable interprocess *<>gaLangueCourante* dans laquelle vous stockez un code de langue sur 2 caractères, par exemple “US” pour la version anglaise, “FR” pour la version française, “ES” pour la version espagnole, etc. Pour vous assurer que la liste correcte sera chargée en utilisant la langue choisie, vous pouvez écrire :
 
@@ -43,13 +43,13 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

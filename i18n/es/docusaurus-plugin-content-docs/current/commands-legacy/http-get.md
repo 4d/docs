@@ -27,7 +27,7 @@ Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomiend
 :::
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.HTTP Get.Summary-->El comando **HTTP Get** envía directamente una petición HTTP GET a un URL específico y procesa la respuesta del servidor HTTP.<!-- END REF-->
 
@@ -66,7 +66,7 @@ El parámetro *\** permite activar el mecanismo keep-alive para la conexión al 
 El comando devuelve el código del estado HTTP estándar (200=OK...) tal como fue devuelto por el servidor. La lista de códigos de estado HTTP está en el *RFC 2616*.  
 Si la conexión al servidor no es posible por una razón relacionada con la red (DNS Failed, Server not reachable...), el comando devuelve 0 y se genera un error. Puede interceptar estos errores utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Recuperación del logo 4D en el sitio web de 4D:
 
@@ -79,7 +79,7 @@ Recuperación del logo 4D en el sitio web de 4D:
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Recuperación de un RFC:
 
@@ -92,7 +92,7 @@ Recuperación de un RFC:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Recuperación de un vídeo:
 
@@ -102,11 +102,11 @@ Recuperación de un vídeo:
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-#### Ver también 
+## Ver también 
 
 [HTTP Request](http-request.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

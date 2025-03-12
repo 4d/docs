@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GOTO XY.Summary-->GOTO XY コマンドは、[Open window](open-window.md "Open window")で開いたウインドウに[MESSAGE](message.md "MESSAGE")コマンドでメッセージを表示する際に使用できます。<!-- END REF-->  
   
@@ -24,15 +24,15 @@ GOTO XY は、文字カーソル（見えないカーソル）の位置を指定
 
 GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](message.md "MESSAGE")コマンドでウインドウに文字を表示することができます。
 
-#### 例題 1 
+## 例題 1 
 
 [MESSAGE](message.md "MESSAGE")コマンドの例題参照
 
-#### 例題 2 
+## 例題 2 
 
 [Milliseconds](milliseconds.md "Milliseconds")コマンドの例題参照
 
-#### 例題 3 
+## 例題 3 
 
 以下の例題は:
 
@@ -55,11 +55,11 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 
 ![](../assets/en/commands/pict25419.ja.png)
 
-#### 参照 
+## 参照 
 
 [MESSAGE](message.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

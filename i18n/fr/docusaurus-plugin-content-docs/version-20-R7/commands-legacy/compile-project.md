@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** vous permet de compiler le projet hôte courant ou le projet spécifié dans le paramètre *projectFile*.<!-- END REF--> Pour plus d'informations sur la compilation, consultez la *page de compilation sur developer.4d.com*.
 
@@ -38,7 +38,7 @@ Les erreurs de compilation, le cas échéant, sont retournées sous forme d'obje
 
 **Note** : Vous ne pouvez pas appeler cette commande lorsqu'une autre compilation est en cours d'exécution (par exemple, une compilation lancée à partir de la fenêtre Compilation).
 
-##### Paramètre options 
+### Paramètre options 
 
 Le paramètre *options* est un objet. Voici les options de compilation disponibles :
 
@@ -60,7 +60,7 @@ Le paramètre *options* est un objet. Voici les options de compilation disponibl
 
 **Note :** Lorsque l'attribut *warnings* n'est pas défini dans l'objet options, la commande **Compile project** utilise les statuts de génération des warnings par défaut définis dans les paramètres.
 
-##### Function result 
+### Function result 
 
 L'objet retourné par **Compile project** possède jusqu'à trois propriétés : 
 
@@ -93,7 +93,7 @@ L'objet retourné par **Compile project** possède jusqu'à trois propriétés :
 
 Pour plus d'informations, reportez-vous aux *Outils de compilation*.
 
-###### Objets variable 
+## Objets variable 
 
 interprocessVariables.variables et processVariables.variables contiennent des objets avec la structure suivante :
 
@@ -104,7 +104,7 @@ interprocessVariables.variables et processVariables.variables contiennent des ob
 | arrayDimension | numérique | Pour les tableaux uniquement : 1 pour les tableaux mono-dimension, 2 pour les tableaux à deux dimensions |
 | code           | Objet     | Pour les variables process et interprocess : descripteur de l'emplacement de définition de la variable   |
 
-###### Objet code 
+## Objet code 
 
 La propriété *code* dans **methods\[ \].code** et **errors\[ \].code** est un objet dont les propriétés sont les suivantes :
 
@@ -122,7 +122,7 @@ La propriété *code* dans **methods\[ \].code** et **errors\[ \].code** est un 
 | functionName                                         | Chaîne    | Nom de fonction de classe                                                                                                                                                                                                                                                                                                                                                                               |
 | databaseMethod                                       | Numérique | Index de la méthode base                                                                                                                                                                                                                                                                                                                                                                                |
 
-#### Alerte 
+## Alerte 
 
 Pour effectuer un contrôle syntaxique uniquement, passez une collection vide au paramètre targets :  
   
@@ -178,11 +178,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BUILD APPLICATION](build-application.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

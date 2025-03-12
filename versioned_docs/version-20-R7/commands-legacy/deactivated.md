@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Deactivated.Summary-->The **Deactivated** command returns True in a form or object method when the frontmost window of the frontmost process, containing the form, moves to the back.<!-- END REF-->
 
@@ -21,12 +21,12 @@ In order for the **Deactivated** execution cycle to be generated, make sure that
 
 **Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Deactivate event.
 
-#### See also 
+## See also 
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

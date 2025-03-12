@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** rend saisissable ou non saisissable le ou les objet(s) de formulaire désigné(s) par *objet* et peut fixer l'attribut saisissable.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Rendre un objet non saisissable n'empêche pas sa modification par programmation
 
 **Note :** Vous rendez une cellule de list box non saisissable en passant la valeur -1 à $0 dans l'événement On Before Data Entry, cf. paragraphe *Gestion de la saisie*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant définit un champ de type d'expédition suivant le poids d'un colis expédié. Si le colis pèse un kilo ou moins, l'expéditeur sera La Poste et le champ est rendu non saisissable. Sinon, le champ est rendu saisissable. 
 
@@ -59,7 +59,7 @@ L'exemple suivant définit un champ de type d'expédition suivant le poids d'un 
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une liste pour contrôler le mode Saisie en liste : 
 
@@ -68,12 +68,12 @@ Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une
  OBJECT SET ENTERABLE([Table1];bSaisissable)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

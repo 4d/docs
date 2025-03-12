@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->O comando DELETE FROM ARRAY apaga um ou mais elementos de um *array*.<!-- END REF--> Elementos se apagam iniciando no elemento especificado por *posição*.
 
 O parâmetro *quantos* é o número de elementos a serem deletados. Se este parâmetro não é especificado, então o elemento é deletado. O tamanho do array se reduz de acordo com a *quantos*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir deleta três elementos, iniciando no elemento 5:
 
@@ -29,7 +29,7 @@ O exemplo a seguir deleta três elementos, iniciando no elemento 5:
  DELETE FROM ARRAY(anArray;5;3)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir deleta o última elemento de um array, se ele existir:
 
@@ -40,12 +40,12 @@ O exemplo a seguir deleta o última elemento de um array, se ele existir:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

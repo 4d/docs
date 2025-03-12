@@ -20,14 +20,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Field.Summary-->El comando Field tiene dos sintaxis: 
 
 * Si pasa un número de tabla en *numTabla* y un número de campo en *numCampo*, Field devuelve un puntero al campo.<!-- END REF-->
 * Si pasa un puntero a un campo en *ptrCamp*, Field devuelve el número del campo.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo asigna la variable *campPtr* a un puntero al segundo campo en la tercera tabla:
 
@@ -35,7 +35,7 @@ El siguiente ejemplo asigna la variable *campPtr* a un puntero al segundo campo 
  CampPtr:=Field(3;2)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si pasa *campPtr* (un puntero al segundo campo de una tabla) a Field devuelve el valor 2\. La siguiente línea asigna el valor 2 a *campNum*:
 
@@ -43,7 +43,7 @@ Si pasa *campPtr* (un puntero al segundo campo de una tabla) a Field devuelve el
  campNum:=Field(campPtr)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 En el siguiente ejemplo, la variable *campNum* es igual al número del campo de \[Tabla3\]Campo2:
 
@@ -51,14 +51,14 @@ En el siguiente ejemplo, la variable *campNum* es igual al número del campo de 
  campNum:=Field(->[Tabla3]Campo2)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DOCUMENT SIZE.Summary-->SET DOCUMENT SIZE コマンドは、ドキュメントのサイズを引数*size*に渡したバイト数に設定します。<!-- END REF--> 
 
@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 Macintoshでは、ドキュメントデータフォークのサイズが変更されます。
 
-#### 参照 
+## 参照 
 
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

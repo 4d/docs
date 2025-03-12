@@ -18,17 +18,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->O comando ST GET ATTRIBUTES é utilizado para recuperar o valor atual de um atributo de estilo em uma selección de texto do objeto de formulário designado por *objeto*.<!-- END REF-->  
   
-##### 
+### 
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (cadeia). Durante a execução se o objeto tem o foco, o comando devolve informação sobre o objeto que está sendo editado, no entanto, quando o objeto não tem o foco, o comando devolve informação sobre a fonte de dados (campo ou variável) do objeto.
 
 Se omite o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, passe uma referencia campo ou variável em vez de uma cadeia e durante a execução, o comando devolve informação sobre este campo ou variável.
 
-##### 
+### 
 
 Os parâmetros *inicioSel* e *fimSel* são utilizados para designar a seleção de texto da qual ler o atributo de estilo. Passe a posição do primeiro caractere da seleção em *inicioSel* e a posição mais um do último caractere da seleção em *fimSel*. Pode passar 0 em *finSel* para designar automaticamente o último caractere do texto (passe 1 em *inicioSel* para designar o primeiro caractere do texto).  
 Se os valores de *inicioSel* e *fimSel* são iguais ou se *inicioSel* é maior que *fimSel*, se devolve um erro.  
@@ -75,7 +75,7 @@ Se o valor do atributo *nomAtrib* é o mesmo para todos os da seleção, se devo
 | Attribute text size           | \-1                                                                                |
 | Attribute underline style     | 2                                                                                  |
 
-#### Exemplo 
+## Exemplo 
 
 Dado um campo \[Table\_1\]StyledText mostrado em um formulário. O objeto tem a propriedade Multi estilo e se chama "StyledText\_t". Você quer obter o texto ressaltado assim como também o estado de atributo de estilo Negrito. Pode proceder de duas formas diferentes dependendo de se utilizar o nome do objeto ou a referência do campo. 
 
@@ -94,17 +94,17 @@ Dado um campo \[Table\_1\]StyledText mostrado em um formulário. O objeto tem a 
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de executar este comando, a variável OK toma o valor 1 se não é apresento nenhum erro; do contrário, toma o valor 0\. Este é o caso particularmente quando as etiquetas de estilo não são avaliados corretamente (etiquetas incorretas ou faltantes).   
 
 No caso de erro, não modifica a variável. Quando ocorre um erro em uma variável quando se está avaliando o texto, 4D transforma o texto em texto plano; como resultado, os caracteres <, > e & são convertidas em entidades HTML.
 
-#### Ver também 
+## Ver também 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

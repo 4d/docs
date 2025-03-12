@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Value type.Summary-->O comando Value type devolve o tipo de valor resultante da avaliação da *expressão* que passou como parâmetro.<!-- END REF--> 
 
@@ -77,7 +77,7 @@ Se quiser escrever um teste para um valor de tipo numérico válido para os modo
 
 Nota de compatibilidade: A partir de 4D v16 R6, datas são armazenadas em propriedades de objeto ou com o tipo data ou como texto em formato data ISO. Para saber mais veja os comandos Dates inside objects ou [SET DATABASE PARAMETER](set-database-parameter.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser manejar os vários tipos possíveis de um valor propriedade objeto:
 
@@ -93,7 +93,7 @@ Se quiser manejar os vários tipos possíveis de um valor propriedade objeto:
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser somar todos os valores númericos em uma coleção
 
@@ -112,12 +112,12 @@ var $sum : Real
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

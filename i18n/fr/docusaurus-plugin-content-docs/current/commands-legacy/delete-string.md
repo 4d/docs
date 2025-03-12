@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Delete string.Summary-->**Delete string** supprime *nbCars* dans *source* à partir de *positionDépart* et retourne la chaîne résultante.<!-- END REF-->retourne la même chaîne que *source* dans les cas suivants :
 
@@ -28,7 +28,7 @@ Si *positionDépart* est inférieur à un (1), les caractères sont supprimés �
 
 Si *positionDépart* \+ *nbCars* est supérieur ou égal à la longueur de *source*, les caractères sont supprimés à partir de *positionDépart* jusqu'à la fin de *source*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats sont affectés à la variable *vRésultat*.
 
@@ -38,13 +38,13 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
  vRésultat:=Delete string(var;3;32000) // vRésultat est égal aux deux premiers caractères de var
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

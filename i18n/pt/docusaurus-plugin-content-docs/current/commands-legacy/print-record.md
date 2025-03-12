@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PRINT RECORD.Summary-->PRINT RECORD imprime o registro atual de *tabela*, sem modificar a seleção atual.<!-- END REF--> O formulário de saída atual se utiliza para a impressão. Se não houver registro atual para *tabela*, PRINT RECORD não faz nada.
 
@@ -36,7 +36,7 @@ Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisc
 
 **Aviso:** Não use o comando [PAGE BREAK](page-break.md) com PRINT RECORD. [PAGE BREAK](page-break.md) é reservado exclusivamente para uso combinado com o comando [Print form](../commands/print-form.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir imprime o registro atual da tabela \[Faturas\]. O código está no método de objeto de um botão **Imprimir** no formulário de entrada. Quando o usuário clicar no botão, o registro se imprime utilizando um formulário de saída criado para este propósito. 
 
@@ -46,7 +46,7 @@ O exemplo a seguir imprime o registro atual da tabela \[Faturas\]. O código est
  FORM SET OUTPUT([Faturas];"Standard Output") // Restauração do formulário de saída anterior
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir imprime o mesmo registro atual em dois formulários diferentes. O código está no método de objeto de um botão **Imprimir** no formulário de entrada. Você quer definir parâmetros de impressão personalizados e depois utilizá-los em dois formulários. 
 
@@ -61,11 +61,11 @@ O exemplo a seguir imprime o mesmo registro atual em dois formulários diferente
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Print form](../commands/print-form.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

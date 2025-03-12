@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Asserted.Summary-->**Asserted** コマンドは[ASSERT](assert.md)コマンドと同様の処理を行います。<!-- END REF-->1つの違いは、このコマンドは*boolExpression*引数の評価結果を戻り値として返すことです。このため、条件の評価としてアサーションを使用できます (例題参照)。アサーションの処理とこのコマンドの引数に関する詳細情報は[ASSERT](assert.md)コマンドの説明を参照してください。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **注:** [ASSERT](assert.md)コマンド同様 、**Asserted**もインタープリタモードでもコンパイル済みモードでも動作します。
 
-#### 例題 
+## 例題 
 
 式の評価部にアサーションを挿入する:
 
@@ -36,13 +36,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [ASSERT](assert.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

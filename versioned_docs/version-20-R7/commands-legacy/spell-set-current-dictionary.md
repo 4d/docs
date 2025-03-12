@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->The **SPELL SET CURRENT DICTIONARY** command causes the replacement of the current dictionary with the one specified by the *dictionary* parameter.<!-- END REF--> The current dictionary is used for the built-in spell-check feature in 4D (for more information, refer to the 4D *Design Reference* manual) as well as the one in the 4D Write Pro. The modification of the current dictionary is reflected immediately in all the processes of the database for the session, as well as in the 4D Write Pro areas. 
 
@@ -32,11 +32,11 @@ You can use the *dictionary* parameter to change the dictionary. You can pass ei
 
 **Compatibility note:** In previous versions of 4D, "Cordial" dictionaries were supported. For compatibility, it is still possible to pass a "Cordial" dictionary number in the *dictionary* parameter (value or constant from the "*Dictionaries*" theme). In this case, however, the dictionary is redirected internally to an equivalent Hunspell dictionary (or the native Mac dictionary). 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the *dictionary* is loaded correctly, the system variable OK is set to 1; otherwise, it is set to 0 and an error is returned. 
 
-#### Example 
+## Example 
 
 Loading of the "fr-classic" dictionary found in the Hunspell folder:
 
@@ -45,13 +45,13 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
   // SPELL SET CURRENT DICTIONARY ("FR-classic.dic") is valid
 ```
 
-#### See also 
+## See also 
 
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

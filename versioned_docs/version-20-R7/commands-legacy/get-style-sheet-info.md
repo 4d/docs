@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
 
@@ -46,11 +46,11 @@ In *styles*, the command returns a value corresponding to the style(s) associate
 
 If the command is executed correctly, the *OK* system variable is set to 1\. Otherwise (for example, if the *styleSheetName* does not exist), it is set to 0.
 
-##### Compatibility Note 
+### Compatibility Note 
 
 In **project architecture**, only the three automatic style sheets are supported by this command. 
 
-#### Example 
+## Example 
 
 You want to find out the current configuration of the "Automatic" style sheet:
 
@@ -60,12 +60,12 @@ You want to find out the current configuration of the "Automatic" style sheet:
  GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
-#### See also 
+## See also 
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

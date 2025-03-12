@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->**PROCESS 4D TAGS**コマンドを使用すると、*inputTemplate* 引数に格納されている4D変換タグの処理が開始されます。<!-- END REF-->引数を使用して値を挿入し(任意)、その結果が*outputResult* に返されます。 これらのタグの完全な詳細については、*4D 変換タグ* の章を参照して下さい。
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドは[On Web Authenticationデータベースメソッド](on-web-authentication-database-method.md)を呼び出しません。
 
-#### 例題 1 
+## 例題 1 
 
 この例題は'template' 型のドキュメントを読み込み、それに格納されるタグを処理し、その結果を保存します:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、配列のデータを使用してテキストを生成します:
 
@@ -69,11 +69,11 @@ displayed_sidebar: docs
   // $output = "elements = hello world"
 ```
 
-#### 参照 
+## 参照 
 
 *4D 変換タグ*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

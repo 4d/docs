@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get query limit.Summary-->**Get query limit**コマンドはカレントプロセスでクエリ結果として返されるレコードの上限値を返します。<!-- END REF-->
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 デフォルトでは制限がなく、この場合コマンドは0を返します。
 
-#### 参照 
+## 参照 
 
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

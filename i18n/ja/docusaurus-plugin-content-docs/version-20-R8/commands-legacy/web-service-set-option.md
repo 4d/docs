@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 予備的なお知らせ 
+## 予備的なお知らせ 
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Summary-->このコマンドは上級Webサービスユーザのためにデザインされています。<!-- END REF-->使用するかどうかは任意です。
 
-#### 説明 
+## 説明 
 
 **WEB SERVICE SET OPTION**コマンドを使用して、[WEB SERVICE CALL](web-service-call.md)コマンドを使用して次回呼び出されるSOAPリクエストで使用されるさまざまなオプションを設定できます。  
 設定するオプションの数だけこのコマンドを呼び出します。
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 オプションを呼び出す順番は重要ではありません。同じ *option* が複数回設定された場合は、最後の呼び出しで設定された値が有効になります。
 
-#### 例題 1 
+## 例題 1 
 
 SOAPリクエストにカスタマイズしたヘッダーを挿入する:   
 
@@ -50,7 +50,7 @@ SOAPリクエストにカスタマイズしたヘッダーを挿入する:
  WEB SERVICE SET OPTION(Web Service SOAP header;vElemRef)
 ```
 
-#### 例題 2 
+## 例題 2 
 
  SOAPプロトコルのバージョン1.2を使用する:   
 
@@ -58,11 +58,11 @@ SOAPリクエストにカスタマイズしたヘッダーを挿入する:
  WEB SERVICE SET OPTION(Web Service SOAP version;Web Service SOAP_1_2)
 ```
 
-#### 参照 
+## 参照 
 
 [WEB SERVICE CALL](web-service-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

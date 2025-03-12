@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->The SOAP DECLARATION command explicitly declares the type of parameters used in a 4D method published as a Web Service.<!-- END REF-->
 
@@ -78,7 +78,7 @@ In *input\_output*, pass a value indicating whether the processed parameter is �
 | SOAP input  | Integer | 1     |
 | SOAP output | Integer | 2     |
 
-##### Use of XML types 
+### Use of XML types 
 
  You can declare variables of the "XML structure" and "DOM reference" type, both incoming and outgoing, via the Is XML and Is DOM reference constants. When parameters of this type are specified, no processing or encoding is applied to them and the data are transmitted "as is" (see example 5). 
 
@@ -93,7 +93,7 @@ In *input\_output*, pass a value indicating whether the processed parameter is �
    * Is DOM reference indicates that the parameter must receive the DOM reference of an XML structure corresponding to the XML argument sent by the SOAP client.
 * Modification of the WSDL: These XML structures will be declared by 4D as the "anyType" type (undetermined) in the WSDL. If you want to type an XML structure precisely, you must save the WSDL file and manually add the desired data schema in the <types> section of the WSDL
 
-##### COMPILER\_WEB method 
+### COMPILER\_WEB method 
 
  Incoming SOAP arguments referred to using 4D variables (and not 4D method arguments) must first be declared in the COMPILER\_WEB project method. In fact, the use of process variables in Web Services methods requires that they be declared before the method is called. The COMPILER\_WEB project method is called, if it exists, for each SOAP request accepted. By default, the COMPILER\_WEB method does not exist. You must specifically create it. 
 
@@ -108,7 +108,7 @@ If the *alias* parameter is omitted, 4D will use, by default, the name of the va
 
 **Note:** The **SOAP DECLARATION** command must be included in the method published as a Web Service. It is not possible to call it from another method. 
 
-#### Example 1 
+## Example 1 
 
 This example specifies a parameter name:
 
@@ -122,7 +122,7 @@ This example specifies a parameter name:
  SOAP DECLARATION($1;Is longint;SOAP input;"zipcode")
 ```
 
-#### Example 2 
+## Example 2 
 
 This example retrieves an array of zip codes in the form of longints: 
 
@@ -134,7 +134,7 @@ This example retrieves an array of zip codes in the form of longints:
  SOAP DECLARATION(codes;LongInt array;SOAP input;"in_codes")
 ```
 
-#### Example 3 
+## Example 3 
 
 This example refers to two return values without specifying an argument name: 
 
@@ -143,7 +143,7 @@ This example refers to two return values without specifying an argument name:
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
-#### Example 4 
+## Example 4 
 
 This example allows the 4D SOAP server to return an argument with a size greater than 32 KB in databases in non-Unicode mode: 
 
@@ -155,7 +155,7 @@ This example allows the 4D SOAP server to return an argument with a size greater
   
 Note the type Is text (and not Is BLOB). This allows the argument to be correctly processed. 
 
-#### Example 5 
+## Example 5 
 
 This example illustrates the results of different types of declarations: 
 
@@ -189,13 +189,13 @@ This example illustrates the results of different types of declarations:
   //The XML is passed as a reference
 ```
 
-#### See also 
+## See also 
 
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

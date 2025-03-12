@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->The **WEB SEND HTTP REDIRECT** command allows you to transform a URL into another one.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ This command also allows you to redirect a request to another Web server.
 
 Note that the status of the request sent by this command is **302: Moved Temporarily**. If you need a "moved permanently" status (status 301), you can set a HTTP *X-STATUS: 301* field in the header of the reply. 
 
-#### Example 
+## Example 
 
 You can use this command to execute custom requests in 4D by using static pages. Imagine that you have placed the following elements in a static HTML page:
 
@@ -57,7 +57,7 @@ In the [QR SET DESTINATION](qr-set-destination.md), you insert the following cod
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

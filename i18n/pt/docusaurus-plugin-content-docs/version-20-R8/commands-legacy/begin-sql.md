@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Begin SQL.Summary-->Begin SQL é uma palavra chave que permite indicar no editor de métodos o inicio de uma sequência de comandos SQL que deve ser interpretada pela fonte de dados atual do processo (o motor SQL integrado de 4D ou toda fonte especificada através o comando [SQL LOGIN](sql-login.md "SQL LOGIN")).<!-- END REF-->  
   
@@ -40,13 +40,13 @@ ou:
 
 Note que o *Depurador* 4D avaliará o código SQL linha por linha. Em alguns casos, pode ser melhor utilizar mais de uma linha.
 
-#### Ver também 
+## Ver também 
 
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

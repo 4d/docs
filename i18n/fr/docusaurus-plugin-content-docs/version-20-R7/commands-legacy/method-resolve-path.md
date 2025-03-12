@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->La commande **METHOD RESOLVE PATH** analyse le chemin d’accès interne passé dans le paramètre *chemin* et retourne ses différentes composantes dans les paramètres *typeMéthode*, *ptrTable*, *nomObjet* et *nomObjetForm*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Le paramètre *nomObjetForm* contient un nom d’objet de formulaire si le chemi
 
 Si la commande est exécutée depuis un composant, elle considère par défaut que *chemin* désigne une méthode du composant. Si vous passez le paramètre *\**, elle considère que *chemin* désigne une méthode de la base hôte.
 
-#### Exemple 1 
+## Exemple 1 
 
 Résolution d’un chemin de méthode base :
 
@@ -62,7 +62,7 @@ Résolution d’un chemin de méthode base :
   // $objectFormName: ""
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Résolution d’un chemin d’objet de méthode formulaire table :
 
@@ -79,11 +79,11 @@ Résolution d’un chemin d’objet de méthode formulaire table :
   // $objectFormName: "Btn1"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD Get path](method-get-path.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

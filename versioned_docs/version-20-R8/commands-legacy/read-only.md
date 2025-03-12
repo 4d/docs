@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.READ ONLY.Summary-->READ ONLY changes the state of *aTable* to read-only for the process in which it is called.<!-- END REF--> All subsequent records that are loaded are locked, and you cannot make any changes made to them. If the optional \* parameter is specified, all tables are changed to read-only state.
 
@@ -21,13 +21,13 @@ Use READ ONLY when you do not need to modify the record or records.
 
 **Note:** This command is not retroactive. A record is loaded according to the table’s read/write status at the time of loading. To load a record from a read/write table in read-only mode, you must first change the table state to read-only.
 
-#### See also 
+## See also 
 
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

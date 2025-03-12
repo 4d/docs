@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Select RGB color.Summary-->**Select RGB color**コマンドはシステムカラー選択ウィンドウを表示し、ユーザによって選択された色のRGB値を返します。<!-- END REF-->
 
@@ -37,11 +37,11 @@ displayed_sidebar: docs
 
 **注:** サーバーマシンまたはWebプロセス内では、このコマンドを使用しないでください。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

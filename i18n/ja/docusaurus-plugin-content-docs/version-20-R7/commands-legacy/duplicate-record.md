@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->DUPLICATE RECORDは、カレントレコードを複製して同じ*aTable*内に新しいレコードを作成します。<!-- END REF-->新しいレコードはカレントレコードとなります。カレントレコードが存在しない場合、DUPLICATE RECORDは何も行いません。新しいレコードを保存するには[SAVE RECORD](save-record.md "SAVE RECORD")を使用しなければなりません。
 
@@ -21,11 +21,11 @@ DUPLICATE RECORDはデータ入力中にも実行可能です。これにより�
 
 **互換性に関する注意:** 4Dバージョン11より、このコマンドはサブテーブルをサポートしません。
 
-#### 参照 
+## 参照 
 
 [SAVE RECORD](save-record.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

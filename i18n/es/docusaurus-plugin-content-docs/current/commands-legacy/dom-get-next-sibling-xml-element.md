@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Get next sibling XML element.Summary-->El comando DOM Get next sibling XML element devuelve una referencia al próximo “hermano” del elemento XML pasado como referencia.<!-- END REF--> Esta referencia puede utilizarse con otros comandos de análisis XML. 
 
@@ -27,7 +27,7 @@ Este comando se utiliza para navegar entre los “hijos” de un elemento XML.
 
 Después del último “hermano,” la variable sistema OK toma el valor 0\. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Recuperación de la referencia del elemento XML hermano seguido por el elemento pasado como parámetro:
 
@@ -38,7 +38,7 @@ Recuperación de la referencia del elemento XML hermano seguido por el elemento 
 
 ![](../assets/en/commands/pict40038.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Recuperación en un bucle de las referencias de todos los elementos XML hijos del elemento padre pasado como parámetro, comenzando con el primer hijo:
 
@@ -54,15 +54,15 @@ Recuperación en un bucle de las referencias de todos los elementos XML hijos de
 
 ![](../assets/en/commands/pict40039.es.png)
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente y si el elemento analizado no es el último “hermano” del elemento referenciado, la variable sistema OK toma el valor 1\. Si ocurre un error o si el elemento analizado es el último “hermano” del elemento referenciado, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

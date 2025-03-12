@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE SELECTION.Summary-->**DELETE SELECTION** deletes the current selection of records from *aTable*.<!-- END REF--> If the current selection is empty, **DELETE SELECTION** has no effect. After the records are deleted, the current selection is empty. Records that are deleted during a transaction are locked to other users and other processes until the transaction is validated or canceled.
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Unchecking the **Records definitively deleted** option in the table Inspector allows you to increase the speed of deletions when **DELETE SELECTION** is used (see *Records definitively deleted* in the *Design Reference* manual).
 
-#### Example 1 
+## Example 1 
 
 The following example displays all the records from the \[People\] table and allows the user to select which ones to delete. The example has two sections. The first is a method to display the records. The second is an object method for a Delete button. Here is the first method:   
 
@@ -43,7 +43,7 @@ The following is the object method for the Delete button, which appears in the F
  ALL RECORDS([People]) // Select all records
 ```
 
-#### Example 2 
+## Example 2 
 
 If a locked record is encountered during the execution of **DELETE SELECTION**, that record is not deleted. Any locked records are put into a set called LockedSet. After **DELETE SELECTION** has executed, you can test the LockedSet to see if any records were locked. The following loop will execute until all the records have been deleted:
 
@@ -56,7 +56,7 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
  Until(Records in set("LockedSet")=0) // Until there are no more locked records
 ```
 
-#### See also 
+## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
@@ -64,7 +64,7 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
 *Sets*  
 [TRUNCATE TABLE](truncate-table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

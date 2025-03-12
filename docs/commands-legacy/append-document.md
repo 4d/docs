@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Append document.Summary-->The **Append document** command does the same as thing as [Open document](open-document.md): it opens a document on disk.<!-- END REF-->
 
@@ -23,7 +23,7 @@ The only difference is that **Append document** sets the file position at the en
 
 Refer to [Open document](open-document.md) for more details about using **Append document**.
 
-#### Example 
+## Example 
 
 The following example opens an existing document called Note, appends the string "and so long" and a carriage return onto the end of the document, and closes the document. If the document already contained the string "Good-bye", the document would now contain the string “Good-bye and so long”, followed by a carriage return:
 
@@ -34,12 +34,12 @@ The following example opens an existing document called Note, appends the string
  CLOSE DOCUMENT(vhDocRef) //Close the document
 ```
 
-#### See also 
+## See also 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

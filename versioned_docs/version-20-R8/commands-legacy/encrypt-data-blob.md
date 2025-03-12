@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->The **Encrypt data BLOB** command encrypts the *blobToEncrypt* parameter with the same algorithm as 4D uses to encrypt data (AES-256) and returns the result in *encryptedBlob*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ In case of error, the BLOB is returned empty and the command returns False.
 
 **Note:** When you encrypt a blob using **Encrypt data BLOB**, the resulting *encryptedBlob* is a multiple of 16 bytes because of the encryption algorithm. As a consequence, if *blobToEncrypt* is not a multiple of 16 bytes, the command automatically turns it into a multiple of 16 bytes by adding null bytes at the end. To avoid errors when decrypting the blob with [Decrypt data BLOB](decrypt-data-blob.md), you need to handle the size of *blobToEncrypt* when working with files other than text files. For a detailed example on how to do this, see [this blog article](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/ "test").
 
-#### Example 
+## Example 
 
 Encrypt a text file located in the RESOURCES folder of the database:
 
@@ -52,7 +52,7 @@ Encrypt a text file located in the RESOURCES folder of the database:
  $encryptedFile.setContent($encryptedBlob)
 ```
 
-#### See also 
+## See also 
 
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
@@ -60,7 +60,7 @@ Encrypt a text file located in the RESOURCES folder of the database:
 [Encrypt your own data with the 4D algorithm (blog post)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

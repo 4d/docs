@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB SET.Summary-->**OB SET**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に、一つ以上の *プロパティ*/*値* のペアを作成もしくは変更します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 * ランゲージオブジェクトまたはコレクションを渡した場合、コマンドはオブジェクトの参照を使用し、実際にコピーを作成するわけではありません。このため、オブジェクトまたはコレクションを編集した場合、同参照の使用先すべてに影響します。
 * 4D v16 R4 以降、サポートされているすべてのピクチャーを渡すことができます (*サポートされるネイティブフォーマット* 参照)。
 
-#### 例題 1 
+## 例題 1 
 
 オブジェクトを作成し、テキスト型のプロパティを追加する場合を考えます:
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
   // $Object = {"FirstName":"John","LastName":"Smith"}
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクトを作成し、ブール型のプロパティを追加する場合を考えます:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
   // $Object = {"LastName":"smith","age":42,"client":true}
 ```
 
-#### 例題 3 
+## 例題 3 
 
 プロパティを修正する場合:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
   // $Object = {"FirstName":"Paul","LastName":"Smith"}
 ```
 
-#### 例題 4 
+## 例題 4 
 
 プロパティを追加する場合:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
   // $Object = {"FirstName":"Paul","LastName":"Smith","department":"Accounting"}
 ```
 
-#### 例題 5 
+## 例題 5 
 
 プロパティの名前を変更する場合:
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
   // $Object = {"FirstName":""James","age":35}
 ```
 
-#### 例題 6 
+## 例題 6 
 
 ポインターを使用する場合:
 
@@ -101,7 +101,7 @@ displayed_sidebar: docs
   // $JsonString="{"FirstName":"Paul","LastName":"Wesson"}
 ```
 
-#### 例題 7 
+## 例題 7 
 
 オブジェクトを使用する場合:
 
@@ -124,7 +124,7 @@ displayed_sidebar: docs
   // $string = "{"employee":{"name":"Smyth"}}"
 ```
 
-#### 例題 8 
+## 例題 8 
 
 \[Rect\]Desc フィールドがオブジェクトフィールドとして定義されているとき、以下のように記述することができます:
 
@@ -135,7 +135,7 @@ displayed_sidebar: docs
  SAVE RECORD([Rect])
 ```
 
-#### 例題 9 
+## 例題 9 
 
 4D日付を、タイムゾーン情報を含まない文字列に変換してJSONにデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](ob-set.md)コマンドが呼び出される前に [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用する必要があることに注意して下さい:  
   
@@ -148,7 +148,7 @@ displayed_sidebar: docs
  SET DATABASE PARAMETER(Dates inside objects;$vDateSetting)
 ```
 
-#### 例題 10 
+## 例題 10 
 
 4D Write Proエリアを含むフォームメソッド内に、以下のように書く事ができます:
 
@@ -165,7 +165,7 @@ displayed_sidebar: docs
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### 例題 11 
+## 例題 11 
 
 コレクションをプロパティ値に設定する場合:
 
@@ -178,7 +178,7 @@ displayed_sidebar: docs
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
-#### 例題 12 
+## 例題 12 
 
 オブジェクトフィールドにピクチャーを保存する場合:
 
@@ -190,14 +190,14 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

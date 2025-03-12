@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->QUERY BY EXAMPLE realiza a mesma ação que o comando de menu Pesquisa por formulário.<!-- END REF-->.. no ambiente Desenho. Este comando mostra o formulário de entrada atual como janela de pesquisa. QUERY BY EXAMPLE busca em *tabela* os dados que o usuário introduz na janela de pesquisa. O formulário deve conter os campos que você queira utilizar para realizar a pesquisa. A pesquisa é otimizada; os campos indexados são utilizados automaticamente para otimizar a pesquisa.
 
 Ver o manual de Desenho de 4D para maior informação sobre a utilização do comando de menu pesquisa por formulário... do ambiente Desenho. 
 
-#### Exemplo 
+## Exemplo 
 
 O método neste exemplo mostra o formulário minhaPesquisa. Se o usuário aceita o formulário e executa a Pesquisa (ou seja, se a variável sistema OK toma o valor 1), são mostrados os registros que cumprem com o critério de Pesquisa:
 
@@ -32,16 +32,16 @@ O método neste exemplo mostra o formulário minhaPesquisa. Se o usuário aceita
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o usuário clicar no botão Aceitar, ou pressionar a tecla Enter, a variável sistema OK toma o valor 1, e a pesquisa é realizada. Se o usuário clicar no botão Cancelar, ou pressiona a tecla de anulação, a variável sistema OK toma o valor 0, e a pesquisa é cancelada.
 
-#### Ver também 
+## Ver também 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

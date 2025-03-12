@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->El comando LISTBOX SELECT ROW selecciona la fila cuyo número se pasa en *posicion* en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Después de la ejecución del método, los arrays son sincronizados: si el array
 * Si el número pasado en *posicion* corresponde a una línea oculta en el listbox, la línea es seleccionada pero no se muestra.
 * Si ha seleccionado la opción **Ocultar el resaltado de selección** para un list box, deberá hacer las selecciones de list box visibles utilizando las opciones de interfaz disponibles. Para mayor información sobre cómo hacer esto, ver *Personalizar la apariencia de las selecciones*.
 
-#### Ver también 
+## Ver también 
 
 [EDIT ITEM](edit-item.md)  
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
@@ -54,7 +54,7 @@ Después de la ejecución del método, los arrays son sincronizados: si el array
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

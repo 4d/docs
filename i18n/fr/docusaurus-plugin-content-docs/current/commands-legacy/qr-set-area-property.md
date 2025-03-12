@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->La commande **QR SET AREA PROPERTY** vous permet d'afficher ou de masquer l'élément d'interface dont la référence est passée dans le paramètre *propriété*.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Vous pouvez utiliser la constante suivante du thème *QR Propriétés de zone* d
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *propriété* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get area property](qr-get-area-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->REDRAW WINDOW コマンドは*window*に渡した参照番号を持つウィンドウのグラフィックな更新を行います。<!-- END REF-->
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 **Note:** 4Dはウィンドウが移動、リサイズ、最前面に移動、フォームの変更、またウィンドウ中の値が変更されるたびにグラフィックの更新を処理します。このコマンドを使用することはほとんどありません。
 
-#### 参照 
+## 参照 
 
 [ERASE WINDOW](erase-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

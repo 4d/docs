@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->O comando **OBJECT GET BEST SIZE** devolve nos parâmetros *largOpt* e *altOpt*, a largo e alto “ótimo” do objeto de formulário designado pelos parâmetros *\** e *objeto*.<!-- END REF--> Estes valores se expressan em píxeles. Este comando é particularmente útil para a visualização ou impressão de relatórios complexos, associados ao comando [OBJECT MOVE](object-move.md).
 
@@ -43,16 +43,16 @@ Os objetos a seguir são manejados por este comando:
 
 Para todos os outros tipos de objetos de formulário (áreas de grupos, abas, retângulos, linhas retas, círculos/óvais, áreas externas, etc.), o comando **OBJECT GET BEST SIZE** devolve o tamanho do objeto atual (definido no editor de formulários e eventualmente utilizando o comando [OBJECT MOVE](object-move.md)).
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo no comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER"). 
 
-#### Ver também 
+## Ver também 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

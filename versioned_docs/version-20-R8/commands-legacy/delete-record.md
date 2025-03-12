@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** deletes the current record of *aTable* in the process.<!-- END REF--> If there is no current record for *aTable* in the process, **DELETE RECORD** has no effect. In a form, you can create a Delete Record button instead of using this command.
 
@@ -26,7 +26,7 @@ Deleting records is a permanent operation and cannot be undone (except when it i
 
 If a record is deleted, the record number will be reused when new records are created. Do not use the record number as the record identifier if you will ever delete records from the database.
 
-#### Example 
+## Example 
 
 The following example deletes an employee record. The code asks the user what employee to delete, searches for the employee’s record, and then deletes it:
 
@@ -38,12 +38,12 @@ The following example deletes an employee record. The code asks the user what em
  End if
 ```
 
-#### See also 
+## See also 
 
 [Locked](locked.md)  
 *Triggers*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

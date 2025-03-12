@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get resource properties.Summary-->El comando **Get resource properties** devuelve los atributos del recurso cuyo tipo se pasa en *resTipo* y cuyo número de identificación se pasa en *resNum*.<!-- END REF--> 
 
@@ -26,16 +26,16 @@ Si el archivo de recursos no existe, **Get resource properties** devuelve *0* (c
 
 El valor numérico devuelto por **Get resource properties** debe considerable como un valor binario cuyos bits tienen un significado especial. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [Get resource name](get-resource-name.md).
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 0 si el recurso no existe, de lo contrario toma el valor 1.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.In footer.Summary-->**In footer** returns True for the In footer execution cycle.<!-- END REF-->
 
@@ -21,12 +21,12 @@ In order for the   **In footer** execution cycle to be generated, make sure that
 
 **Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Printing Footer event.
 
-#### See also 
+## See also 
 
 [In break](in-break.md)  
 [In header](in-header.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

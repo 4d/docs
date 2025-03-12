@@ -26,7 +26,7 @@ Este comando es valido sin importar el tipo de URL o de formulario (método POST
 
 Este comando puede llamarse, si es necesario, en el *Método de base On Web Connection* o en cualquier otro método 4D que resulte del envío de un formulario.
 
-##### Acerca de los formularios Web y sus acciones asociadas 
+### Acerca de los formularios Web y sus acciones asociadas 
 
 Un formulario contiene áreas de entrada (áreas de texto, botones, casillas de selección), cada una con un nombre.   
 Cuando un formulario se "envía" al servidor web (una petición se envía al servidor web), la petición contiene, entre otros, la lista de áreas de entrada y sus valores respectivos.   

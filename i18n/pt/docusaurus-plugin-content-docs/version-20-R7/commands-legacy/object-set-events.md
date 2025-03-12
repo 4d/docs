@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->O comando **OBJECT SET EVENTS** modifica, para o processo atual, a configuração dos eventos formulário do formulário, dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->
 
@@ -43,7 +43,7 @@ O comando **OBJECT SET EVENTS** pode dar lugar a ativação de eventos que não 
 
 Se um *objeto* é duplicado depois de uma chamada ao comando **OBJECT SET EVENTS**, a configuração resultante de ativação/desativação também é duplicada.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Ativação de três eventos formulario para um conjunto de objetos list box e desativação de outros eventos:
 
@@ -56,7 +56,7 @@ Ativação de três eventos formulario para um conjunto de objetos list box e de
   // Ativa 3 eventos e desativa todos os outros
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Desativação de três eventos formulário para um conjunto de objetos list box, sem modificar os outros eventos:
 
@@ -69,7 +69,7 @@ Desativação de três eventos formulário para um conjunto de objetos list box,
   // Desativa só 3 eventos
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Ativação de um evento formulário para um objeto, sem modificar os outros eventos:
 
@@ -80,7 +80,7 @@ Ativação de um evento formulário para um objeto, sem modificar os outros even
   // Ativa unicamente o evento
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Desativação de todos os eventos do formulário:  
 
@@ -90,7 +90,7 @@ Desativação de todos os eventos do formulário:
   // Desativa todos os eventos
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Desativação de um só evento do formulário sem modificar os outros:
 
@@ -101,12 +101,12 @@ Desativação de um só evento do formulário sem modificar os outros:
   // Só desativa o evento
 ```
 
-#### Ver também 
+## Ver também 
 
 *Form event*  
 [OBJECT GET EVENTS](object-get-events.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

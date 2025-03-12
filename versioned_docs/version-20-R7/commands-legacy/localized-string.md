@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Localized string.Summary-->The **Localized string** command returns the value of the string designated by the *resName* attribute for the current language.<!-- END REF-->
 
@@ -26,7 +26,7 @@ Pass the resource name of the string for which you want to get the translation i
 
 Note that XLIFF is diacritical.
 
-#### Example 
+## Example 
 
 Here is an extract from an .xlf file:
 
@@ -47,15 +47,15 @@ After executing the following statement:
 
 ... if the current language is French, $FRvalue contains “Montrer sur le disque”.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command is executed correctly, the OK variable is set to 1\. If *resName* is not found, the command returns an empty string and the OK variable is set to 0.
 
-#### See also 
+## See also 
 
 [Get database localization](get-database-localization.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

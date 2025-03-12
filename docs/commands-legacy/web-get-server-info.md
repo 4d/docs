@@ -56,7 +56,7 @@ The returned object contains the following properties (property names are case s
 
 **4D Server:** The command returns information about the local Web server. If you want to monitor the 4D Server web server from a remote 4D, you need to apply the "Execute on server" property to the method.
 
-##### cache property 
+### cache property 
 
 If you pass **true** in the *withCache* parameter, the command returns the "cache" object property with the following contents:
 

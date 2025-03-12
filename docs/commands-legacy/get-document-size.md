@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get document size.Summary-->The Get document size command returns the size, expressed in bytes, of a document.<!-- END REF-->
 
@@ -25,13 +25,13 @@ If the document is not open, you pass its name or pathname in *document*.
 
 On Macintosh, if you do not pass the optional *\** parameter, the size of the data fork is returned. If you do pass the *\** parameter, the size of the resource fork is returned.
 
-#### See also 
+## See also 
 
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

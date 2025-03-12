@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is window reduced.Summary-->La commande **Is window reduced** retourne **Vrai** si la fenêtre dont le numéro de référence est passé dans *window* est actuellement réduite dans la barre des tâches (Windows) ou dans le dock (macOS), et **Faux** dans le cas contraire.<!-- END REF-->
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

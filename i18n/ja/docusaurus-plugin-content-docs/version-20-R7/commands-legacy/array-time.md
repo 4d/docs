@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY TIME.Summary-->**ARRAY TIME**コマンドは、メモリ上に時間型の要素の配列を作成・リサイズします。<!-- END REF-->4Dでは時間は数の値として処理されるということに注意して下さい。以前のバージョンの4Dでは、時間の配列を管理するためには倍長整数配列と表示フォーマットを組み合わせる必要がありました。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 [SELECTION TO ARRAY](selection-to-array.md) または [SELECTION RANGE TO ARRAY](selection-range-to-array.md) のコマンドを Time 型のフィールドに対して適用した場合、これらのコマンドはコピー先の配列が他の型(例えば倍長整数など)に定義されていない場合に限り、時間型の配列を作成します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は時間型の要素を100個含んだプロセス配列を作成します:
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
  ARRAY TIME(arrTimes;100)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は50個の時間型の要素を含んだ行を100行持ったローカルな配列を作成します:
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
  ARRAY TIME($arrTimes;100;50)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 時間の配列が数字の値を受け取ることが出来るようになったことによって、以下のようなコードを使用することが出来るようになります:
 
@@ -59,12 +59,12 @@ displayed_sidebar: docs
  $Found:=Find in array($arrTimeValues;$CurTime)
 ```
 
-#### 参照 
+## 参照 
 
 [Time](time.md)  
 *配列を作成する*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New shared object.Summary-->**New shared object** コマンドは新しい空の、あるいは値が入れられた共有オブジェクトを作成し、その参照を返します。<!-- END REF-->このオブジェクトにプロパティを追加、あるいはプロパティを編集する際には必ず*Use...End use* 構造でくくる必要があり、そうでない場合にはエラーが生成されます。ただし、属性の読み出しは*Use...End use* 構造の外側でも可能です。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
     
 (\*)共有オブジェクトが共有オブジェクトに追加された場合、それらは同じロック識別子を共有します。この点についてのより詳細な情報については、*ロック識別子* の章を参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 値が既に格納されている新しい共有オブジェクトを作成したい場合を考えます:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 共有オブジェクトを作成し編集したい場合を考えます。このオブジェクトに対しては、必ず 構造を呼ぶ必要があります:   
 
@@ -62,13 +62,13 @@ displayed_sidebar: docs
  End use
 ```
 
-#### 参照 
+## 参照 
 
 [New object](new-object.md)  
 [New shared collection](../commands/new-shared-collection.md)  
 *共有オブジェクトと共有コレクション*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

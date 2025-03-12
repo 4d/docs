@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ASSERT.Summary-->**ASSERT** コマンドは*boolExpression* 引数に渡されたアサーションを評価し、Falseを返す場合にはコードの実行を中止するとともにエラーメッセージを出します。<!-- END REF-->このコマンドはインタープリタモードでもコンパイル済みモードでも動作します。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 プログラミングにおけるアサーションについての詳細は、Wikipediaの関連情報をご覧ください: [http://ja.wikipedia.org/wiki/表明](http://ja.wikipedia.org/wiki/%E8%A1%A8%E6%98%8E)
 
-#### 例題 1 
+## 例題 1 
 
 レコードに対する処理を実行する前に、開発者はレコードが正しく読み/書きモードでロードされたかを確認する必要があります:
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
   // レコードがロックされていると -10518 エラーが生成される
 ```
 
-#### 例題 2 
+## 例題 2 
 
 アサーションはプロジェクトメソッドに渡された引数をテストして、異常な値を検知するために使用できます。以下の例題では、カスタム警告メッセージが表示されます。
 
@@ -50,13 +50,13 @@ displayed_sidebar: docs
   //"アサーション違反: クライアント名が空です"
 ```
 
-#### 参照 
+## 参照 
 
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

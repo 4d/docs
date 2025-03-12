@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get content type.Summary-->La commande **ST Get content type** retourne le type de contenu présent dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -59,7 +59,7 @@ La commande retourne une valeur désignant le type de contenu identifié. Vous p
 | ST URL type         | Entier long | 1      | La sélection contient uniquement une référence d’URL                       |
 | ST User type        | Entier long | 5      | La sélection contient uniquement une référence personnalisée               |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type de contenu sélectionné dans la zone. 
 
@@ -102,7 +102,7 @@ Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

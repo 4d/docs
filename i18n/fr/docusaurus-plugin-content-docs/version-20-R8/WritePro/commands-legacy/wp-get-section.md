@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get section.Summary-->La commande **WP Get section** retourne soit la première section intersectée par la plage ou par l'élément *objCible*, soit l'*indexSection* spécifié du document *docWP*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si aucune section n'est définie pour l'*indexSection* spécifié, la commande r
 
 **Note :** Utilisez la commande [WP Get subsection](wp-get-subsection.md) pour lire une sous-section depuis une section ou depuis une plage.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez lire la première section :
 
@@ -39,7 +39,7 @@ Vous souhaitez lire la première section :
  $section:=WP Get section(wpDoc;1)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get sections](wp-get-sections.md)  
 [WP Get subsection](wp-get-subsection.md)  

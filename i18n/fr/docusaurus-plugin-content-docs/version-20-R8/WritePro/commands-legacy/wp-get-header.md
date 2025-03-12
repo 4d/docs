@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get header.Summary-->La commande **WP Get header** retourne l'en-tête associé à *objCible* ou à la section *indexSection* du document 4D Write Pro *docWP*.<!-- END REF--> Si aucun en-tête n'est trouvé par rapport au(x) paramètre(s), la commande retourne **Null**.
 
@@ -33,7 +33,7 @@ Si le paramètre *typeSousSection* est passé, la commande retourne l'en-tête a
     
 Si le *typeSousSection* n'est pas spécifié, l'en-tête de section principal est retourné. Dans ce cas, si une sous-section est active, l'objet en-tête de section principal est *undefined* (l'en-tête de section principal est disponible uniquement s'il n'y a pas de sous-section wk first page ou wk left page active).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez copier l'en-tête de la première page d'un document 4D Write Pro vers les en-têtes de toutes les pages d'un autre document 4D Write Pro :
 
@@ -50,7 +50,7 @@ Vous souhaitez copier l'en-tête de la première page d'un document 4D Write Pro
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Utiliser une zone 4D Write Pro*  
 [WP DELETE HEADER](wp-delete-header.md)  

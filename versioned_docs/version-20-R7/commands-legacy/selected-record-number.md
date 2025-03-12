@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selected record number.Summary-->**Selected record number** returns the position of the current record within the current selection of *aTable*.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ If the selection is not empty and if the current record is within the selection,
 
 The selected record number is not the same as the number returned by [Record number](record-number.md), which returns the physical record number in the table. The selected record number depends on the current selection and the current record.
 
-#### Example 
+## Example 
 
 The following example saves the current selected record number in a variable:
 
@@ -30,13 +30,13 @@ The following example saves the current selected record number in a variable:
  CurSelRecNum:=Selected record number([People]) // Get the selected record number
 ```
 
-#### See also 
+## See also 
 
 *About Record Numbers*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

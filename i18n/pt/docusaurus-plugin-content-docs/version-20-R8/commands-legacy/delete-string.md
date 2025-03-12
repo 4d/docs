@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Delete string.Summary-->Delete string apaga *numCaracteres* de *fonte*, a partir de *posiçao*, e devolve a cadeia resultante.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Se *posiçao* for inferior a um, os caracteres são apagados a partir do início
   
 Se *posiçao* mais *numCaracteres* for igual ou maior que o comprimento de fonte, os caracteres são apagados a partir de *posiçao* até o final de *fonte*.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo ilustra o uso de Delete string. Os resultados são atribuídos à variável *vtResult*. 
 
@@ -39,13 +39,13 @@ O exemplo abaixo ilustra o uso de Delete string. Os resultados são atribuídos 
  vtResult:=Delete string(var;3;32000) // vtResult é igual aos dois primeiros caracteres de var
 ```
 
-#### Ver também 
+## Ver também 
 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Summary-->This command can only be used with **legacy web sessions**, available in databases converted from versions prior to 4D v18 R6\.<!-- END REF--> It is ignored when **scalable web sessions** mode is enabled (recommended in 4D v18 R6 and higher). For more information, please refer to the *Web Sessions Management (Legacy)* section.
 
-#### Description 
+## Description 
 
 The **WEB LEGACY CLOSE SESSION** command invalidates an existing session designated by the *sessionID* parameter. If the session does not exist, the command does nothing.
 
@@ -31,12 +31,12 @@ After this command is executed, if a Web client sends a request using an invalid
 
 **Note:** In the context of a 4D Mobile session, the **WEB LEGACY CLOSE SESSION** command closes the 4D Mobile session whose ID is passed in the *sessionID* parameter. Since a 4D Mobile session can manage several processes, this command actually requests all the Web processes related to the session to finish their execution. 
 
-#### See also 
+## See also 
 
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
 *Web Sessions Management (Legacy)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

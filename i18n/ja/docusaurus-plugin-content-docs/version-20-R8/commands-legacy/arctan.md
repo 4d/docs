@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Arctan.Summary-->Arctan は*number*の逆正接値をラジアンで返します。<!-- END REF-->*number*はタンジェントです。
 
 **Note:** 4DではPi、Degree、Radianという定数があらかじめ定義されています。Piはパイの数値 (3.14159...) を返し、Degreeはラジアンで表わされた1度 (0.01745...) を、Radianは度数で表わされた1ラジアン (57.29577...) を返します。
 
-#### 例題 
+## 例題 
 
 以下の例はPiの値を表示します:
 
@@ -28,13 +28,13 @@ displayed_sidebar: docs
  ALERT("Pi is equal to: "+String(Arctan(1)*4))
 ```
 
-#### 参照 
+## 参照 
 
 [Cos](cos.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

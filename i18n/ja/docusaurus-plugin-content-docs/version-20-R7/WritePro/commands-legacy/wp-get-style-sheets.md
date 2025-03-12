@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get style sheets.Summary-->**WP Get style sheets** コマンドは*wpDoc* 引数で指定されたドキュメント内の、*type* 引数で定義されたタイプの全てのスタイルシートオブジェクトのコレクションを返します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * wk type character で文字スタイルシートを指定
 * wk type paragraph で段落スタイルシートを指定
 
-#### 例題 
+## 例題 
 
 全ての文字スタイルシートのコレクションを取得した場合を考えます:
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
  $styleSheets:=WP Get style sheets(myDoc;wk type character)
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

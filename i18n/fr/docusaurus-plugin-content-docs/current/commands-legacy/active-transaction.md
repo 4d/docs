@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Active transaction.Summary-->La commande **Active transaction** retourne **Vrai** si le process courant est en transaction et si cette transaction n'est pas suspendue.<!-- END REF--> Elle retourne **Faux** s'il n'y a pas de transaction en cours, ou si la transaction en cours est suspendue. Une transaction peut être suspendue à l'aide de la commande [SUSPEND TRANSACTION](suspend-transaction.md). 
 
@@ -21,7 +21,7 @@ Comme cette commande retourne également **Faux** lorsque le process courant n'e
 
 Pour plus d'informations, reportez-vous à la section *Suspendre des transactions*. 
 
-#### Description 
+## Description 
 
 Vous voulez connaître le statut courant de transaction :
 
@@ -37,14 +37,14 @@ Vous voulez connaître le statut courant de transaction :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspendre des transactions*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

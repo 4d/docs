@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->The **ST FREEZE EXPRESSIONS** command "freezes" the contents of expressions found in the multi-style text or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> This action converts dynamic expressions into static text or (4D Write Pro areas only) images and removes the associated references from the *object*. 
 
@@ -51,7 +51,7 @@ By default, expressions are not re-evaluated before they are frozen. If you want
 
 **Note:** **ST FREEZE EXPRESSIONS** does not freeze 4D Write Pro expressions containing *$wp\_pageNumber* or *$wp\_pageCount*. For more information, please refer to the *Managing formulas* section. 
 
-#### Example 
+## Example 
 
 You want to insert the current time at the start of the text and then freeze it before saving the record:
 
@@ -62,12 +62,12 @@ You want to insert the current time at the start of the text and then freeze it 
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
-#### See also 
+## See also 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

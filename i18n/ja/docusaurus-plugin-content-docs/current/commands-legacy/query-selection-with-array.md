@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->QUERY SELECTION WITH ARRAY コマンドは1番目の引数に渡されたフィールドのテーブルを検索し、*targetField* が*array*要素のうち少なくともひとつの値に等しいレコードをカレントセレクションにします。<!-- END REF-->
 
@@ -25,11 +25,11 @@ QUERY SELECTION WITH ARRAYは[QUERY WITH ARRAY](query-with-array.md "QUERY WITH 
 
 詳細は、[QUERY WITH ARRAY](query-with-array.md "QUERY WITH ARRAY") コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [QUERY WITH ARRAY](query-with-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

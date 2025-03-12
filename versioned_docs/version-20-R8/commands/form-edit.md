@@ -22,7 +22,7 @@ displayed_sidebar: docs
 </details>
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF--> Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
@@ -39,7 +39,7 @@ If *object* is not found in *form*, the form is opened and no error is returned.
 Pass an empty string in *object* to deselect all objects in the open *form*. 
 
 
-#### Examples 
+## Examples 
 
 To open the *Contacts* table *Address* form:
 
@@ -60,11 +60,11 @@ To open the *ContactPage* project form with "name-input" object selected:
 ```
 
 
-#### See also 
+## See also 
 
 *Design Object Access Commands*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

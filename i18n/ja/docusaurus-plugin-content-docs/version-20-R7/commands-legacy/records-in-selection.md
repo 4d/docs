@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Records in selection.Summary-->Records in selectionは、*aTable*のカレントセレクションのレコード数を返します。<!-- END REF-->一方、[Records in table](records-in-table.md "Records in table")はテーブルの全レコード数を返します。
 
-#### 例題 
+## 例題 
 
 以下の例は、カレントセレクションのすべてのレコード間を移動するのによく使用されるループ処理です。同じ動作は[APPLY TO SELECTION](apply-to-selection.md "APPLY TO SELECTION")コマンドで行うこともできます:
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [Records in table](records-in-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Font file.Summary-->The **Font file** command returns an object describing the font file in your OS corresponding to the *fontFamily* and, optionally, *fontStyle* you passed in parameter.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ The optional *fontStyle* parameter allows to define a style variation to get. Yo
 | Italic   | Integer | 2     |
 | Plain    | Integer | 0     |
 
-#### Exemplo 
+## Exemplo 
 
 You want to make sure the font used in a text area is available on the user system for a correct display:
 
@@ -45,11 +45,11 @@ You want to make sure the font used in a text area is available on the user syst
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

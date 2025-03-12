@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CONVERT PICTURE.Summary-->CONVERT PICTURE コマンドは*picture*を新しいタイプに変換します。<!-- END REF-->引数で生成するピクチャのタイプを指定します。Codecには拡張子 (例 “.gif”), またはMimeタイプ(例 “image/jpeg”)が使用できます。利用可能なCodecのリストは [PICTURE CODEC LIST](picture-codec-list.md) コマンドを使用して取得できます。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **注:** **CONVERT PICTURE** を、64-bit 版4D ではサポートされていないタイプのピクチャー(PICT など)に使用したい場合、変換は、オリジナルのタイプがサポートされている32-bit 版の4D で実行するようにしてください。詳細な情報については、*32-bit版から64-bit版への移行* のページを参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 vpPhoto ピクチャをjpegフォーマットに変換: 
 
@@ -36,7 +36,7 @@ vpPhoto ピクチャをjpegフォーマットに変換:
  CONVERT PICTURE(vpPhoto;".jpg")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 60%の品質でピクチャを変換:
 
@@ -44,11 +44,11 @@ vpPhoto ピクチャをjpegフォーマットに変換:
  CONVERT PICTURE(vPicture;".JPG";0.6)
 ```
 
-#### 参照 
+## 参照 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

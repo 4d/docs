@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is Windows.Summary-->The **Is Windows** command returns True if the current operating system is Windows.<!-- END REF-->
 
-#### Example 
+## Example 
 
 You want to determine if the current operating system is Windows:
 
@@ -29,12 +29,12 @@ You want to determine if the current operating system is Windows:
  End if
 ```
 
-#### See also 
+## See also 
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

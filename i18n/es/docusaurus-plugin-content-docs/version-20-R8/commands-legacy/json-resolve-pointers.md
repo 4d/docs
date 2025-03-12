@@ -68,7 +68,7 @@ Un puntero JSON es, estrictamente hablando, una cadena compuesta de partes separ
 
 **Nota**: 4D no soporta el carácter "-" como referencia a elementos de array inexistentes.
 
-##### Recursividad y resolución de ruta 
+### Recursividad y resolución de ruta 
 
 Los punteros JSON se resuelven recursivamente, lo que significa que si un puntero resuelto también contiene punteros, se resuelven recursivamente y así sucesivamente, hasta que se resuelvan todos los punteros. En este contexto, todas las rutas de archivo encontradas en las URIs de puntero JSON pueden ser relativas o absolutas. Deben utilizar '/' como delimitador de ruta y se resuelven de la siguiente manera:
 

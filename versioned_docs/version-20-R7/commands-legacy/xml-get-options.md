@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->The **XML GET OPTIONS** command is used to get the current value of one or more XML parameters for the current session and the current user.<!-- END REF--> 
 
@@ -34,11 +34,11 @@ In selector, pass a constant of the "*XML*" theme indicating the option to get. 
 | XML string encoding            | Integer | 1     | Specifies the way 4D strings are converted to element values. It does not concern the conversion to attributes for which XML imposes the use of escape characters.<br/>**Possible values:**<br/>XML with escaping (default value): conversion of 4D strings to XML element values with replacement of characters. The Text type data are automatically parsed so that forbidden characters (<&>’) are replaced by XML entities (&amp;&lt;&gt; &apos;&quot;).XML raw data: 4D strings are sent as raw data; 4D does not carry out encoding or parsing. 4D values are converted if possible to XML fragments and inserted as a child of the target element. If a value cannot be considered as an XML fragment, it is inserted as raw data into a new CDATA node.                                                                                                                                                                                                                                                                                                                                                                 |
 | XML time encoding              | Integer | 3     | Specifies the way 4D times are converted. For example, ?02/00/46? (Paris time). The encoding differs depending on whether you want to express a time or a duration.<br/> **Possible values for times:**<br/> XML datetime UTC: time expressed in UTC (Universal Time Coordinated). Note that conversion to UTC is automatic. Result: "<Duration>0000-00-00T01:00:46Z</Duration>". XML datetime local: time expressed with the time difference of the machine of the 4D engine. Result: "<Duration>0000-00-00T02:00:46+01:00</Duration>". XML datetime local absolute (default value): time expressed without indication of time zone. No modification of the value. Result: "<Duration>0000-00-00T02:00:46</Duration>". **Possible values for durations:**<br/>XML seconds: number of seconds since midnight; no modification of the value since it expresses a duration. Result: "<Duration>7246</Duration>". XML duration: duration expressed in compliance with XML Schema Part 2: Datatypes Second Edition. No modification of the value since it expresses a duration. Result: "<Duration>PT02H00M46S</Duration>". |
 
-#### See also 
+## See also 
 
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

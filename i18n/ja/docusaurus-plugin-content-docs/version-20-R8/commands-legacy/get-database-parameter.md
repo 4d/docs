@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get database parameter.Summary-->**Get database parameter**コマンドを使用して、現在の4Dデータベースパラメーターの値を知ることができます。<!-- END REF-->パラメーター値が文字列の場合、それは*stringValue* 引数に返されます。
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 | Libzip version                      | 倍長整数 | 120 | **スコープ:** カレントの4D マシン**<br/>2セッション間で設定を保持:** n/a**<br/>説明:** カレントマシン上の4D アプリケーションのlibzip ライブラリのバージョン番号を返します(読み出し専用)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Pause logging                       | 倍長整数 | 121 | **スコープ**: 4D アプリケーション**<br/>異なるセッション間で値を設定を保持**: No**<br/>取り得る値**: 0 (ログを再開)、1 (ログを停止)<br/>このセレクターを使用するとアプリケーション上で開始された全てのログオペレーションを停止/再開させることができます(ただしORDAログは除く)。この機能は4Dアプリケーションのタスクを一時的に軽くしたり、あるいはログオペレーションのスケジュールを設定することに有用です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-#### スレッドセーフなセレクター 
+## スレッドセーフなセレクター 
 
 **Get database parameter** コマンドは、以下のセレクターを使用する場合にはプリエンプティブプロセスで使用することができます:
 
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 * IMAP Log
 * Pause logging
 
-#### 例題 
+## 例題 
 
 アプリケーションを、初回起動後に再起動させたい場合を考えます。アプリケーションは、Windows 上において例えば以下のようなコマンドラインで起動したとします:
 
@@ -126,14 +126,14 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

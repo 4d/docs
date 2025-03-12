@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LOAD RECORD.Summary-->LOAD RECORDは、*aTable*のカレントレコードをロードします。<!-- END REF-->カレントレコードが存在しない場合、LOAD RECORDは何も行いません。  
 レコードがロードされたら、[Locked](locked.md "Locked")コマンドを使用してレコードが更新可能か調べることができます:
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 **Tip:** LOAD RECORDコマンドを使用し、入力フォームにおいてカレントレコードを再ロードすることができます。変更中のデータはすべて以前の値で置き換えられます。この場合、LOAD RECORDコマンドは、いわば一般的な入力データの取消しとして振る舞います。
 
-#### 参照 
+## 参照 
 
 [Locked](locked.md)  
 [UNLOAD RECORD](unload-record.md)  
 *レコードのロック*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

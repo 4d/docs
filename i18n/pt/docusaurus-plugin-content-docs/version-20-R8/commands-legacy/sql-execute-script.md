@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->O comando SQL EXECUTE SCRIPT permite executar uma série de instruções SQL localizadas no arquivo de script designado por *rotaScript*.<!-- END REF-->  
 Este comando apenas pode ser executado em uma máquina local (4D local ou procedimento armazenado em 4D Server). Funciona com o banco de dados atual (banco interno ou externo)
@@ -60,7 +60,7 @@ Se o script for executado corretamente (nenhum erro ocorre), a variável Sistema
 **Nota**: Se utilizar este comando para executar ações consumidoras de memória tales como importação massiva de dados, pode considerar chamar ao comando SQL *ALTER DATABASE* para desativar temporáriamente as opções SQL.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

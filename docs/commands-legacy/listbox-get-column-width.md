@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->The **LISTBOX Get column width** command returns the width (in pixels) of the column set in the *object* and *\** parameters.<!-- END REF--> You can pass either a list box column or a column header in the *object* parameter. 
 
@@ -26,11 +26,11 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 **LISTBOX Get column width** can return the resizing limits of the column in the *minWidth* and *maxWidth* parameters. These limits can be specified via the [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md) command.   
 If no minimum and/or maximum value has been set for the column, the corresponding parameter returns 0.
 
-#### See also 
+## See also 
 
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

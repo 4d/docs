@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->O comando LONGINT TO BLOB grava o valor *inteiro longo* de 4-byte no BLOB *blob*.<!-- END REF-->
 
@@ -39,11 +39,11 @@ Se você passar o parâmetro *offset*, um valor inteiro de 4-byte é escrito no 
 
 Após a chamada, o parâmetro variável *offset* é devolvido, incrementado pelo número de bytes que foram escritos. Portanto, você pode reutilizar a mesma variável com outro comando de escrita BLOB para gravar outro valor. 
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidade**: como este comando altera o blob passado como parâmetro, não é compatível com objetos blob (tipo 4D.Blob). Ver *Passing blobs and blob objects to 4D commands* em developer.4d.com
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Depois de executar esse código:
 
@@ -55,7 +55,7 @@ Depois de executar esse código:
 * Em PowerPC *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 * Em Intel:PC *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Depois de executar este código:
 
@@ -66,7 +66,7 @@ Depois de executar este código:
 * O tamanho de *vxBlob*es 4 bytes
 * Em todas as plataformas *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Depois de executar esse código:
 
@@ -77,7 +77,7 @@ Depois de executar esse código:
 * O tamanho de *vxBlob* es 4 bytes
 * Em todas as plataformas *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Depois de executar esse código:
 
@@ -90,7 +90,7 @@ Depois de executar esse código:
 * Em todas as plataformas *vxBLOB{100}=$04*, *vxBLOB{101}=$03*, *vxBLOB{102}=$02*, *vxBLOB{103}=$01*
 * Os outros bytes do BLOB são inalterados
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Depois de executar esse código:
 
@@ -105,7 +105,7 @@ Depois de executar esse código:
 * Os outros bytes do BLOB são inalterados
 * A variável *vlOffset* tem sido incrementada em 4 (e agora é igual a 54)
 
-#### Ver também 
+## Ver também 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -115,7 +115,7 @@ Depois de executar esse código:
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

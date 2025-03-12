@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Drop.Summary-->El Método base On Drop está disponible en aplicaciones 4D locales o remotas.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Este método de base se ejecuta automáticamente en el caso de soltar objetos en
 
 Bajo Mac OS, debe presionar las teclas **Opción**+**Comando** al soltar para que se llame el método de base. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo puede ser utilizado para abrir un documento 4D Write que fue soltado fuera de un formulario:   
   
@@ -41,6 +41,6 @@ Este ejemplo puede ser utilizado para abrir un documento 4D Write que fue soltad
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 *Arrastrar y soltar*  

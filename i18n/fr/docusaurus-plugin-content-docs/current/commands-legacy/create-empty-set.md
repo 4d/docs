@@ -14,22 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** crée un ensemble vide, *ensemble*, pour *laTable*.<!-- END REF--> Vous pouvez ajouter des enregistrements dans cet ensemble à l'aide de la commande [ADD TO SET](add-to-set.md). Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
 
 **Note :** Il n'est pas indispensable d'appeler la commande **CREATE EMPTY SET** avant d'utiliser la commande [CREATE SET](create-set.md).
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple proposé dans la section *Présentation des ensembles*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->**REDUCE RESTORE WINDOW** コマンドは、*window* 引数に参照を渡したウィンドウを、WindowsのタスクバーまたはmacOS のDockへ収納、またはそこから展開します。<!-- END REF-->
 
@@ -24,13 +24,13 @@ displayed_sidebar: docs
 
 **注意:** macOS では、このコマンドの動作は非同期です。
 
-#### 参照 
+## 参照 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

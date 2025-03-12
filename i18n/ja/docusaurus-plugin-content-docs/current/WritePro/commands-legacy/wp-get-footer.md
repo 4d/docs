@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get footer.Summary-->**WP Get footer** コマンドは*wpDoc* 引数で指定したドキュメントの、*targetObj* 引数で指定したレンジ、あるいは*sectionIndex* 引数で指定したインデックスに関連付けられたフッターを返します。<!-- END REF-->引数で指定した条件に合致するフッターが見つからなかった場合、コマンドは**Null** を返します。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
     
 *subSectionType* 引数が指定されなかった場合、メインセクションのフッターが返されます。この場合、サブセクションがアクティブになっている場合、メインセクションのフッターオブジェクトは*undefined* となります(メインセクションフッターはアクティブなwk first page あるいは wk left page サブセクションがない場合にのみ利用可能です)。
 
-#### 例題 
+## 例題 
 
 ある4D Write Pro ドキュメントの最初のページのフッターを、他の4D Write Pro ドキュメントのすべてのページのフッターにコピーしたい場合を考えます:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### 参照 
+## 参照 
 
 *4D Write Pro エリアを使用する*  
 [WP DELETE FOOTER](wp-delete-footer.md)  

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->SET PROCESS VARIABLE コマンドは、引数*expr1* (*expr2*等)に渡す値を、*process*に渡す番号の送り先プロセスの*dstVar* (*dstVar2*等) プロセス変数に書き込みます。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 **Tip:** サーバのプロセス番号がわからない場合でも、サーバのインタープロセス変数を使用することができます。このためには、*process*に任意の負の値を指定します。つまり、プロセス番号がわからなくても[GET PROCESS VARIABLE](get-process-variable.md "GET PROCESS VARIABLE")コマンドを使用してサーバのインタープロセス変数値を処理することができるということです。このことは、*On Server Startupデータベースメソッド*を使用して、ストアドプロシージャが起動されている場合に便利です。クライアントマシンではそのプロセスの番号が自動的にわからないため、*process*引数に任意の負の値を渡すことができます。
 
-##### 制限事項 
+### 制限事項 
 
 SET PROCESS VARIABLEは、送り先変数としてローカル変数を受け付けません。
 
@@ -42,7 +42,7 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
 
 送り先プロセスはユーザプロセスである必要があります。カーネルプロセスは送り先プロセスにはなれません。送り先プロセスが存在しない場合、エラーが生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")でインストールされたエラー処理メソッドを使用すると、このエラーをとらえることができます。
 
-#### 例題 1 
+## 例題 1 
 
 下のコードは、番号が*$vlProcess*であるプロセスのテキスト変数*vtCurStatus*を(空の文字列に)設定します:
 
@@ -50,7 +50,7 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードは、番号が*$vlProcess*であるプロセスのテキスト変数*vtCurStatus*を、カレントプロセスで実行中のメソッドの変数*$vtInfo*の値に設定します:
 
@@ -58,7 +58,7 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードは、番号が*$vlProcess*であるプロセスのテキスト変数*vtCurStatus*をカレントプロセスの同じ変数の値に設定します:
 
@@ -68,7 +68,7 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
 
 **Note:** 最初の*vtCurStatus*は送り先プロセスにある変数のインスタンスを示しています。2番目の*vtCurStatus*はカレントプロセスにある変数のインスタンスを示しています。
 
-#### 例題 4 
+## 例題 4 
 
 以下の例は*$vlProcess*で示されるプロセスのプロセス配列の要素を順次大文字に設定  
 します:
@@ -83,7 +83,7 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
 
 **Note:** この例では、プロセス変数*vl\_IPCom\_Array*には配列*at\_IPCom\_Array*のサイズが格納され、ソース/送信先プロセスによって管理されている必要があります。
 
-#### 例題 5 
+## 例題 5 
 
 以下の例は、現在のプロセスの同じ変数のインスタンスを使用して、送り先プロセスの変数*v1*, *v2*, *v3*のインスタンスに書き込みます:
 
@@ -91,14 +91,14 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
  SET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### 参照 
+## 参照 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 *プロセス*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

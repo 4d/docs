@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.JSON Parse.Summary-->O comando **JSON Parse** analisa o conteúdo de uma cadeia com formato JSON e extraem os valores que podem armazenar em um campo ou variável 4D.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify](json-stringify.md).  
   
@@ -60,7 +60,7 @@ __symbols:{//descrição objeto
   
 Nota: O parâmetro \* é ignorado se o valor retornado não for do tipo objeto.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Exemplos de conversões simples:
 
@@ -85,7 +85,7 @@ Exemplos de conversões simples:
  $h:=JSON Parse("5120";Is time) //$h=01:25:20
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Exemplo de conversão de dados de tipo data: 
 
@@ -102,7 +102,7 @@ Exemplo de conversão de dados de tipo data:
   //$date3=13/07/17
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se a configuração atual de armazenagem de data for "date type", pode escrever:
 
@@ -119,7 +119,7 @@ Se a configuração atual de armazenagem de data for "date type", pode escrever:
 
 **Nota:** Para saber mais sobre essa configuração, veja a opção "Use date type instead of ISO date format in objects" em *Página Compatibilidade*. 
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo mostra o uso combinado dos comandos [JSON Stringify](json-stringify.md) e **JSON Parse**:
 
@@ -133,7 +133,7 @@ $JSONContact:=JSON Stringify($Contact)
 // JSON Parse: conversão de string JSON em um novo objeto  
 $Contact2:=JSON Parse($JSONContact)\[#/code4D\]
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Se quiser criar uma coleção 4D de um array JSON:
 
@@ -142,7 +142,7 @@ Se quiser criar uma coleção 4D de um array JSON:
  $myCol:=JSON Parse("[\"Monday\",10,\"Tuesday\",11,\"Wednesday\",12,false]")
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Se quiser analisar a string abaixo e obter a posição de linha e deslocamento de linha de cada propriedade:
 
@@ -183,14 +183,14 @@ beta[1].echo:{line:9,offset:12},
 beta[1].golf:{line:10,offset:12}}}
 ```
 
-#### Ver também 
+## Ver também 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 *Tipos de campos e variáveis*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

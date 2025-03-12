@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP INSERT FORMULA.Summary-->**WP INSERT FORMULA** コマンドは、*targetObj* 引数で指定したターゲット内に*formula* 引数のフォーミュラを、*mode* 引数で指定したモードで挿入します。<!-- END REF-->
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 **注意:** フォーミュラオブジェクトは、呼び出されたときに、そのフォーミュラオブジェクトを作成したデータベースまたはコンポーネントのコンテキスト内で評価されるという点に注意してください。
 
-#### 例題 1 
+## 例題 1 
 
 全てのCurrent date フォーミュラを、フォーマットされた文字列で置き換えたい場合を考えます:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 例題 2 
+## 例題 2 
 
 顧客の名前にフォーミュラによる名前を使用したい場合を考えます:
 
@@ -108,7 +108,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### 参照 
+## 参照 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  

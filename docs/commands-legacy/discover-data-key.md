@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Discover data key.Summary-->The **Discover data key** command searches for a valid encryption key corresponding to the currently opened data file at the root level of all connected devices and returns **True** if successful.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
    * the encryption key is added to the 4D keychain.
 * **False** if no valid encryption key is found for the current opened data file, thus access to the data is not possible.
 
-#### Example 
+## Example 
 
 ```4d
  var $status : Object
@@ -45,12 +45,12 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
  End if
 ```
 
-#### See also 
+## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

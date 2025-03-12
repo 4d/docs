@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Exemplo 1 
+## Exemplo 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** estabelece *valor* da fonte de dados atual para os objetos formulário determinados pelo parâmetro *nomObjeto*.<!-- END REF-->.
 
@@ -24,7 +24,7 @@ O parâmetro *value* permite que passe um novo valor (qualquer tipo) para a font
 
 **Nota**: Se a fonte de dados for uma expressão não atribuível **OBJECT SET VALUE** não faz nada. Para saber mais veja *assignable vs non-assignable expressions*.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser o valor da data source de um objeto formulário, obtenha seu nome e estabeleça um novo valor:
 
@@ -36,11 +36,11 @@ Se quiser o valor da data source de um objeto formulário, obtenha seu nome e es
  OBJECT SET VALUE(OBJECT Get name(Object current);$value+10)&NBSP; //encontre o nome do objeto formulário e estabeleça o valor para 50
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get value](object-get-value.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

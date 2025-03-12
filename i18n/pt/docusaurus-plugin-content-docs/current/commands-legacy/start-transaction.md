@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 START TRANSACTION inicia uma transação no processo atual. Todas as mudanças nos dados (registros) do banco dentro da transação são armazenados temporariamente até que a transação seja validada ou cancelada.  
 
 A partir da versão 11 de 4D, pode aninhar várias transações (subtransações). Cada transação ou subtransação deve ser finalmente cancelada ou validada. Note que se a transação principal for cancelada, todas as subtransações também são canceladas, sem importar seu resultado.
 
-#### Ver também 
+## Ver também 
 
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
@@ -26,7 +26,7 @@ A partir da versão 11 de 4D, pode aninhar várias transações (subtransações
 *Usar Transações*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REDUCE SELECTION.Summary-->REDUCE SELECTION crea una nueva selección de registros para *tabla*.<!-- END REF--> El comando devuelve el primer número de registros de la selección actual de *tabla*. REDUCE SELECTION se aplica a la selección actual de *tabla* en el proceso actual. El primer registro de la nueva selección actual es el registro actual. 
 
 **Nota:** si se ejecuta la instrucción REDUCE SELECTION(tabla;0), no hay más selección ni registro actual en *tabla*. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo busca las estadísticas correctas para una competencia mundial entre los distribuidores de más de 20 países. Por cada país, los 3 mejores distribuidores que han vendido más de $50 000 de productos están entre los 100 mejores distribuidores en el mundo y reciben un premio. Con unas pocas líneas de código, esta petición compleja se puede ejecutar utilizando búsquedas indexadas:
 
@@ -51,14 +51,14 @@ El siguiente ejemplo busca las estadísticas correctas para una competencia mund
  PRINT SELECTION([Distribuidores]) // Imprimir las cartas
 ```
 
-#### Ver también 
+## Ver también 
 
 *Conjuntos*  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

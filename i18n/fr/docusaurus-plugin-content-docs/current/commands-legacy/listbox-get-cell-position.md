@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic ou de la dernière action de sélection effectuée dans la list box désignée par *\** et objet.<!-- END REF-->   
 La commande retourne les coordonnées du clic ou de l'action de sélection même lorsque la saisie n'est pas autorisée dans la list box. 
@@ -48,12 +48,12 @@ Si la sélection est modifiée via les touches fléchées du clavier, *colonne* 
 
 Les valeurs retournées par la commande ne sont pas mises à jour dans le cas d’un clic droit (ou Control+clic sous Mac OS) sur l’en-tête d’une colonne de la list box.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

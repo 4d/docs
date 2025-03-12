@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Path to object.Summary-->La commande **Path to object** retourne un objet contenant les propriétés spécifiques du *chemin* passé en paramètre.<!-- END REF--> 
 
@@ -40,7 +40,7 @@ L'extension est retournée, si elle n'est pas vide, que le chemin désigne un fi
 
 Notez que **Path to object** ne gère que les chaînes. Cette commande ne vérifie pas si le type de chemin est valide, ni l'existence réelle d'un fichier ou d'un dossier.
 
-#### Exemple 1 
+## Exemple 1 
 
 Les exemples suivants montrent différents résultats avec les chemins d'accès :
 
@@ -133,7 +133,7 @@ Si la dernière partie du chemin est ".something", c'est considéré comme un no
   //$o.isFolder=false
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous pouvez combiner cette commande avec [Object to path](object-to-path.md) pour renommer un fichier dans un chemin :
 
@@ -151,7 +151,7 @@ Vous pouvez combiner cette commande avec [Object to path](object-to-path.md) pou
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 
@@ -168,7 +168,7 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
  ALERT("La profondeur du chemin est : "+String($count))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -177,7 +177,7 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

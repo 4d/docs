@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Replace string.Summary-->Replace string devuelve una cadena de caracteres resultante de reemplazar *obsoleto* por *nuevo* en *fuente*.<!-- END REF-->
 
@@ -40,7 +40,7 @@ Note que en este modo, la evaluación no maneja variaciones de escritura de las 
 
 **Nota:** en 4D v15 R3 y superior, se hizo una optimización significativa al algoritmo utilizado por este comando cuando se reemplaza una cadena por otra de diferente longitud, independientemente de la sintaxis utilizada. Esto da como resultado una aceleración considerable del procesamiento en este contexto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo ilustra el uso de Replace string. Los resultados, descritos en los comentarios, son asignados a la variable *vtResult*.
 
@@ -50,7 +50,7 @@ El siguiente ejemplo ilustra el uso de Replace string. Los resultados, descritos
  vtResult:=Replace string(vtOtraVar;Char(Tab);",";*) // Reemplazar todas las tabulaciones en vtOtraVar por comas
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo elimina los retornos de carro y las tabulaciones del texto en la variable *vtResult*:
 
@@ -58,7 +58,7 @@ El siguiente ejemplo elimina los retornos de carro y las tabulaciones del texto 
  vtResult:=Replace string(Replace string(vtResult;Char(Carriage return);"";*);Char(Tab);"")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluación diacrítica:
 
@@ -67,13 +67,13 @@ El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluaci
  vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) //vtResult es igual a "Crème brûlée"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Add picture.Summary-->O comando **WP Add picture** ancora a *imagem* em um local fixo dentro de *wpDoc* e devolve sua referência.<!-- END REF--> A referência devolvida pode ser passada ao comando [WP SET ATTRIBUTES](wp-set-attributes.md) para mover a *imagem* a qualquer local em *wpDoc* (página, seção, cabeçalho, rodapé, etc.) com uma capa, tamanho, etc. definidos.
 
@@ -41,7 +41,7 @@ A localização, a capa (inline, na frente/atrás do texto), a visibilidade e as
 
 **Nota: o** comando [WP Selection range](wp-selection-range.md) devolve um objeto *referencia de imagem* se for selecionada uma imagem ancorada e um objeto de faixa se for selecionada uma imagem inline. Pode verificar se um objeto selecionado for um objeto de imagem com o atributo wk type. Se o valor = 2, então é um objeto imagem; do contrário, é um objeto faixa (valor = 0).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser agregar uma imagem com a configuração pré-determinada utilizando um arquivo de rota.
 
@@ -54,7 +54,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser agregar uma imagem redimensionada, centrada e ancorada ao cabeçalho:
 
@@ -71,7 +71,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser usar uma expressão de campo para adicionar uma imagem ancorada a um documento que exibe texto do banco de dados:
 
@@ -85,7 +85,7 @@ Se quiser usar uma expressão de campo para adicionar uma imagem ancorada a um d
 
 ![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
-#### Ver também 
+## Ver também 
 
   
 *Gerenciar Imagens*  

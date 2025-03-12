@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLOSE DOCUMENT.Summary-->CLOSE DOCUMENT cierra el documento especificado por *docRef*.<!-- END REF-->
 
 Cerrar un documento es la única forma de asegurar que los datos escritos en el archivo sean guardados. Debe cerrar todos los documentos abiertos por los comandos [Open document](open-document.md "Open document"), [Create document](create-document.md "Create document") o [Append document](append-document.md "Append document").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cadena “Hola” y cierra el documento:
 
@@ -32,13 +32,13 @@ El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cad
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->**DOM SET XML DECLARATION** コマンドを使用して、*elementRef*により設定されるXMLツリーの作成に利用されるさまざまなオプションを設定できます。<!-- END REF-->これらのオプションはツリーのエンコーディングやスタンドアロンプロパティに関連します:
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * *standalone*: ツリーがスタンドアロン ([True](true.md "True")) か、それが他のファイルや外部リソースを処理のために必要とするか ([False](false.md "False")) を指定します。デフォルトで (コマンドが呼び出されないか引数が省略されると) 、ツリーはスタンドアロンではありません。
 **互換性に関するメモ:** *indentation*引数は以前のバージョンの4Dとの互換性のために保持されていますが、その利用はv12では推奨されません。今後ドキュメントのインデントを指定するには、[XML SET OPTIONS](xml-set-options.md) コマンドの利用を強く推奨します。
 
-#### 例題 
+## 例題 
 
 以下の例題はelementRef要素で使用するエンコーディングとスタンドアロンオプションを設定します: 
 
@@ -33,12 +33,12 @@ displayed_sidebar: docs
  DOM SET XML DECLARATION(elementRef;"UTF-16";True)
 ```
 
-#### 参照 
+## 参照 
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

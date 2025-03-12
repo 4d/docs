@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->The **WP EXPORT VARIABLE** command exports the *wpDoc* 4D Write Pro object to the 4D *destination* variable in the specified *format*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ In the *format* parameter, pass a constant from the *4D Write Pro Constants* the
 * When exporting to SVG format with this command, images are embedded in base64 format.
 * For more information on exporting to SVG format, see *Exporting to SVG format*.
 
-##### option parameter 
+### option parameter 
 
 Pass an [object](# "Data structured as a native 4D object") in *option* containing the values to define the properties of the exported document. The following properties are available: 
 
@@ -92,7 +92,7 @@ The following table indicates the *option* available per export *format*:
 
 **Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an [object](# "Data structured as a native 4D object") parameter. 
 
-#### Example 1 
+## Example 1 
 
 You want to export the contents of the *myArea* 4D Write Pro object in MIME format and add "gmail.com" as the host domain:
 
@@ -104,7 +104,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in MIME form
  WP EXPORT VARIABLE(myArea;$export;wk mime html;$option)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to send an email containing styled text, 4D references and images. You can use a 4D Write Pro area exported in MIME format and sent using SMTP:
 
@@ -136,7 +136,7 @@ You want to send an email containing styled text, 4D references and images. You 
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 To export the first page of a 4D Write Pro as SVG in a Text variable and hide the headers: 
 
@@ -150,7 +150,7 @@ To export the first page of a 4D Write Pro as SVG in a Text variable and hide th
  WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
 ```
 
-#### See also 
+## See also 
 
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  

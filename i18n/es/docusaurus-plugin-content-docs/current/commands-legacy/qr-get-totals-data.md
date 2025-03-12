@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### Informe en lista 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### Informe en lista 
 
 El comando QR GET TOTALS DATA permite recuperar el contenido de una línea de ruptura específica.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Si *operador* devuelve 0, la celda no contiene ningún operador.
 
 **Nota:** *operador* y *texto* son mutuamente exclusivos, de manera que sólo uno de los dos parámetros devuelve un valor.
 
-##### Informe tabla cruzada 
+### Informe tabla cruzada 
 
 El comando QR GET TOTALS DATA permite recuperar el contenido de una celda específica. 
 

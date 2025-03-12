@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->La commande **GET STYLE SHEET INFO** retourne la configuration courante de la feuille de style *nomFeuilleStyle*.<!-- END REF--> 
 
@@ -46,11 +46,11 @@ La commande retourne dans *styles* une valeur correspondant au(x) style(s) assoc
 
 Si la commande est exécutée correctement, la variable système *OK* prend la valeur 1\. Dans le cas contraire (par exemple si *nomFeuilleStyle* n’existe pas), elle prend la valeur 0.
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaître la configuration actuelle de la feuille de style "Automatique" :
 
@@ -60,12 +60,12 @@ Vous souhaitez connaître la configuration actuelle de la feuille de style "Auto
  GET STYLE SHEET INFO(Automatic style sheet;$pol;$taille;$style)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

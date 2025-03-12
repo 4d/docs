@@ -22,12 +22,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->The ST SET ATTRIBUTES command can be used to modify one or more style attributes in the form object(s) designated by *object*.<!-- END REF--> 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, when the object has the focus, the command only applies to the object being edited and not to its data source (field or variable). The changes are only transferred to the source (and to any other objects using this same source) when the object being edited is validated either by losing the focus or with the **Enter** key. When the object does not have the focus, the command applies directly to the data source and the changes are immediately transferred to any other objects using the same source.   
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or variable and you pass a field or variable reference instead of a string. The command applies directly to the field or variable and changes are immediately transferred to all the objects using this source, including the object with the focus. 
 
-##### 
+### 
 
 **Note:** You can only use style attributes with Text type fields. Since Alpha type fields have a preset length, adding style tags would lead to a loss of data. 
 

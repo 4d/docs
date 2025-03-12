@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE modifica a página atual de um formulário para mostrar a página anterior.<!-- END REF--> Se nenhum formulário é mostrado ou carregado pelo comando \[#cmd id="1103"/\] ou se já é mostrada a primeira página do formulário, PREVIOUS PAGE não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é um método de uma linha chamado por um comando de menu, o qual mostra a página do formulário anterior a página mostrada atualmente:
 
@@ -24,7 +24,7 @@ O exemplo a seguir é um método de uma linha chamado por um comando de menu, o 
  FORM PREVIOUS PAGE
 ```
 
-#### Ver também 
+## Ver também 
 
 [FIRST PAGE](first-page.md)  
 [FORM Get current page](form-get-current-page.md)  

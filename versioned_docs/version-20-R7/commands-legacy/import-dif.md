@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT DIF.Summary-->The **IMPORT DIF** command reads data from *document*, a Windows or Macintosh DIF document, into the table *aTable* by creating new records for that table.<!-- END REF-->
 
@@ -32,7 +32,7 @@ By default, the command uses the UTF-8 character set. Since DIF format documents
 
 When using **IMPORT DIF**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13). You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Since Text fields can contain carriage returns, be careful if you use the carriage return as the field delimiter for fields to be exported.
 
-#### Example 
+## Example 
 
 The following example imports data from a DIF document. The method first sets the input form so that the data will be imported through the correct form, then performs the import:
 
@@ -41,18 +41,18 @@ The following example imports data from a DIF document. The method first sets th
  IMPORT DIF([People];"NewPeople.dif") // Import from “NewPeople.dif” document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the import is successfully completed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT DIF](export-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

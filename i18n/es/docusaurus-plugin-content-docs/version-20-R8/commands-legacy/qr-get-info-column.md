@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### Informes en lista 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### Informes en lista 
 
 El comando QR GET INFO COLUMN permite recuperar los parámetros de una columna existente.<!-- END REF--> 
 
@@ -53,7 +53,7 @@ El comando QR GET INFO COLUMN permite recuperar los parámetros de una columna e
 
 Cuando se pasa, el parámetro opcional *varResultado*  devuelve el nombre de la variable asignada automáticamente por el editor de Informes rápidos a la columna de la fórmula (si lo hay): "C1" para la primera columna de la fórmula, "C2" para la segunda y así sucesivamente. 4D utiliza esta variable para almacenar los resultados de la última ejecución de la fórmula de la columna cuando se genera el informe.
 
-##### Informes tablas cruzadas 
+### Informes tablas cruzadas 
 
 Con este tipo de informe, el comando QR GET INFO COLUMN permite recuperar globalmente los mismos parámetros pero la referencia de las áreas a las cuales aplica es diferente y varia dependiendo del parámetro que quiera definir. 
 

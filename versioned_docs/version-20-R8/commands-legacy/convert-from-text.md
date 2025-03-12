@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->The CONVERT FROM TEXT command can be used to convert a text expressed in the current character set of 4D to a text expressed in another character set.<!-- END REF-->
 
@@ -180,15 +180,15 @@ For more information about the names of character sets, please refer to the foll
 
 After execution of the command, the converted text will be returned in the *convertedBLOB* BLOB. This BLOB can be read by the [Convert to text](convert-to-text.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the OK variable is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [Convert to text](convert-to-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

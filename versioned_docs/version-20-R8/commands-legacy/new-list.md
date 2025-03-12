@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New list.Summary-->**New list** creates a new, empty hierarchical list in memory and returns its unique list reference number.<!-- END REF-->
 
@@ -30,11 +30,11 @@ After you have created a hierarchical list using **New list**, you can:
 * Add items to that list, using the command [APPEND TO LIST](append-to-list.md) or [INSERT IN LIST](insert-in-list.md).
 * Delete items from that list, using the command [DELETE FROM LIST](delete-from-list.md).
 
-#### Example 
+## Example 
 
 See example for the [APPEND TO LIST](append-to-list.md) command.
 
-#### See also 
+## See also 
 
 [APPEND TO LIST](append-to-list.md)  
 [BLOB to list](blob-to-list.md)  
@@ -45,7 +45,7 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

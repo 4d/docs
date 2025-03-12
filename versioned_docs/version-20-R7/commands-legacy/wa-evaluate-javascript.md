@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->The WA Evaluate JavaScript command executes, in the Web area designated by the *\** and *object* parameters, the JavaScript code passed in *jsCode* and returns the result.<!-- END REF--> This command must be called after the page is loaded (the On End URL Loading form event must have been generated).
 
@@ -36,7 +36,7 @@ By default, the command returns values as strings. You can use the optional *typ
 
 **Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()**...) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
 
-#### Example 1 
+## Example 1 
 
 This example of JavaScript code causes the previous URL to be displayed: 
 
@@ -44,7 +44,7 @@ This example of JavaScript code causes the previous URL to be displayed:
  $result:=WA Evaluate JavaScript(MyWArea;"history.back()")
 ```
 
-#### Example 2 
+## Example 2 
 
 This example shows a few evaluations with conversion of the values received.
 
@@ -98,11 +98,11 @@ You can then evaluate the JavaScript code from 4D:
   // $Eval4 = "2013-06-21T14:45:09.694Z" if type is omitted
 ```
 
-#### See also 
+## See also 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

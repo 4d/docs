@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Command name.Summary-->The **Command name** command returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
 
@@ -29,7 +29,7 @@ Two optional parameters are available:
 
 The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example). 
 
-#### Example 1 
+## Example 1 
 
 The following code allows you to load all valid 4D commands in an array:
 
@@ -51,7 +51,7 @@ The following code allows you to load all valid 4D commands in an array:
  Until(OK=0) //end of existing commands
 ```
 
-#### Example 2 
+## Example 2 
 
 In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
 
@@ -71,7 +71,7 @@ In the English version of 4D, the drop-down list will read: Sum, Average, Min, a
 
 \*with a 4D application configured to use the French programming language (see compatibility note)
 
-#### Example 3 
+## Example 3 
 
 You want to create a method that returns **True** if the command, whose number is passed as parameter, is thread-safe, and **False** otherwise.
 
@@ -97,12 +97,12 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
   // returns True
 ```
 
-#### See also 
+## See also 
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Preemptive 4D processes*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

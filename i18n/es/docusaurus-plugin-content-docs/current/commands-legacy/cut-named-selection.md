@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CUT NAMED SELECTION.Summary-->CUT NAMED SELECTION crea una selección temporal *temp* y coloca allí la selección actual de *tabla*.<!-- END REF--> A diferencia de [COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED SELECTION"), este comando no copia la selección actual de *tabla*, si no que la desplaza.
 
@@ -22,7 +22,7 @@ Después de ejecutar el comando, la selección actual de *tabla* en el proceso a
 
 CUT NAMED SELECTION es más eficiente en términos de utilización de memoria, que [COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED SELECTION"). [COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED SELECTION"), utiliza 4 bytes de memoria por cada registro de la selección. CUT NAMED SELECTION, sólo se desplaza la referencia a la lista. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El método siguiente vacía la selección actual de una tabla *\[Clientes\]*:
 
@@ -31,13 +31,13 @@ El método siguiente vacía la selección actual de una tabla *\[Clientes\]*:
  CLEAR NAMED SELECTION("ABorrar")
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

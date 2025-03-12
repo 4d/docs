@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->O comando **CREATE SELECTION FROM ARRAY** cria a seleção selectionName a partir de:
 
@@ -36,11 +36,11 @@ Quando usa um array booleano com este comando, o elemento X do array indica se o
 
 **Aviso:** Lembre que um número de registro pode ser reutilisado se o registro for apagado e outro registro for criado (ver *Sobre Números de Registros*). 
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se um número de registro não é válido (registro não criado), é gerado o erro -10503\. Pode interceptar este erro com a ajuda de um método instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver também 
+## Ver também 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -49,7 +49,7 @@ Se um número de registro não é válido (registro não criado), é gerado o er
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

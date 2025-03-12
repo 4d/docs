@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get edited text.Summary-->**Get edited text**コマンドは、主にOn After Edit フォームイベントで入力中のテキストを取得するために使用します。<!-- END REF-->またOn Before Keystroke および On After Keystroke フォームイベントで使用することもできます。これらのフォームイベントについてのより詳細な情報は[Form event code](../commands/form-event-code.md)の説明を参照してください。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 フォームオブジェクト内のテキスト入力以外のコンテキストで使用された場合、このファンクションは空の文字列を返します。
 
-#### 例題 1 
+## 例題 1 
 
 以下のメソッドは、入力される文字を自動で大文字に変換します:
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下はテキストフィールドへの文字入力をオンザフライで処理する例です。これは入力中の文のすべての単語を、"Words"という他のテキストフィールドに置くというアイデアに基づきます。これを実行するには、フィールドのオブジェクトメソッド内に下記のコードを記述します:
 
@@ -61,12 +61,12 @@ displayed_sidebar: docs
 
 **Note:** この例題は、単語がスペース（Char(32)）によって区切られていると仮定しているため、完全なものではありません。完全な解決法としては、すべての単語を抽出するように他のフィルタを付加する必要があります（カンマ、セミコロン、アポストロフィー等の区切り）。
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

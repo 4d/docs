@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get breaks.Summary-->The **WP Get breaks** command returns the collection of all breaks inserted in *targetObj*.<!-- END REF-->
 
@@ -64,7 +64,7 @@ If *targetObj* is a 4D Write Pro document, breaks are returned in the following 
 
 An empty collection is returned if *targetObj* does not contain any break (or any break of the requested *breakType*).
 
-#### Example 
+## Example 
 
 You want to replace all line breaks with paragraph breaks in the document:
 
@@ -77,7 +77,7 @@ You want to replace all line breaks with paragraph breaks in the document:
  End for each
 ```
 
-#### See also 
+## See also 
 
 [WP Get elements](wp-get-elements.md)  
 [WP INSERT BREAK](wp-insert-break.md)  

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->The **LISTBOX DELETE COLUMN** command removes one or more columns (visible or invisible) in the list box set in the *object* and *\** parameters.<!-- END REF-->
 
@@ -30,12 +30,12 @@ Otherwise, the *number* parameter indicates the number of columns to remove to t
 
 If the *colPosition* parameter is greater than the number of columns in the list box, the command does nothing.
 
-#### See also 
+## See also 
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

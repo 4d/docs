@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get document size.Summary-->Get document sizeコマンドは、ドキュメントのサイズをバイト単位で表示して返します。<!-- END REF-->
 
@@ -24,13 +24,13 @@ displayed_sidebar: docs
 
 Macintoshでは、任意の引数 *\** を渡さない場合、データフォークのサイズが返されます。 引数 *\** を渡すと、リソースフォークのサイズが返されます。
 
-#### 参照 
+## 参照 
 
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

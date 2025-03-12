@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.IMPORT DATA.Summary-->**IMPORT DATA**コマンドはデータを*fileName*ファイルから読み込みます。<!-- END REF-->4Dは以下のフォーマットのデータ読み込みを行えます: テキスト、固定長テキスト、XML、SYLK、DIF、DBF（dBase）および4Dフォーマット
 
@@ -37,18 +37,18 @@ displayed_sidebar: docs
 
 **Note:** 空のプロジェクトを使用してプロジェクトを保存する例題は[EXPORT DATA](export-data.md "EXPORT DATA") コマンドを参照してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 標準のファイルを保存または読み込みダイアログボックスでユーザがキャンセルをクリックするとOKシステム変数は0に設定されます。読み込みが行われると1に設定されます。
 
-#### 参照 
+## 参照 
 
 [EXPORT DATA](export-data.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

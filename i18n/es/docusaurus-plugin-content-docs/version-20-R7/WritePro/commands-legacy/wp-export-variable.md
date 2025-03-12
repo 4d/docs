@@ -46,7 +46,7 @@ En el parámetro *format* *o*, pase una constante del tema *Constantes 4D Write 
 * Al exportar al formato SVG con este comando, las imágenes se anidan en formato base64.
 * Para más información sobre la exportación al formato SVG, consulte *Exportar a formato SVG*.
 
-##### Parámetro opcion 
+### Parámetro opcion 
 
 Pase un [objeto](# "Datos estructurados como forma de objeto nativo 4D") en la *opcion* que contiene los valores para definir las propiedades del documento exportado. Las siguientes propiedades están disponibles:
 

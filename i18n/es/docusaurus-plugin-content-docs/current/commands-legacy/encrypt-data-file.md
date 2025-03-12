@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Encrypt data file.Summary-->El comando **Encrypt data file** se utiliza para cifrar o volver a cifrar el archivo de datos designado por el parámetro *rutaDatos* asociado al parámetro *rutaEstructura*.<!-- END REF--> También se puede utilizar para eliminar el cifrado de la base de datos. El comando no modifica los archivos originales, devuelve el nombre de ruta completo de la carpeta creada para respaldar el archivo de datos original.
 
@@ -64,7 +64,7 @@ El parámetro *método* se utiliza para establecer un método de retro llamada q
 
 Ruta real de la carpeta de destino de los archivos originales.  
   
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Cifrar un archivo de datos por primera vez:
 
@@ -77,7 +77,7 @@ Cifrar un archivo de datos por primera vez:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Vuelva a cifrar un archivo de datos cifrado (cambie la frase secreta):
 
@@ -94,7 +94,7 @@ Vuelva a cifrar un archivo de datos cifrado (cambie la frase secreta):
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Eliminar el cifrado de un archivo de datos cifrados:
 
@@ -109,7 +109,7 @@ Eliminar el cifrado de un archivo de datos cifrados:
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo, cuando se ha cambiado el estado encriptable para algunas tablas).
 
@@ -124,7 +124,7 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [Data file encryption status](data-file-encryption-status.md)  
@@ -132,7 +132,7 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

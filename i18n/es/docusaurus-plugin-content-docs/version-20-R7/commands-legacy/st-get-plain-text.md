@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get plain text.Summary-->El comando ST Get plain textremueve las etiquetas de estilo de la variable o campo de texto designado por los parámetros *\** y *objeto* y devuelve el texto plano.<!-- END REF-->
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Durante la ejecución, si el objeto tiene el foco, el comando devuelve información sobre el objeto que está siendo editado, sin embargo, cuando el objeto no tiene el foco, el comando devuelve información sobre la fuente de datos (campo o variable) del objeto.  
 Si omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable. En este caso, pase una referencia campo o variable en lugar de una cadena y durante la ejecución, el comando devuelve información sobre este campo o variable.
 
-##### 
+### 
 
 El parámetro opcional *modoRef* indica la forma en que las referencias que se encuentran en *objeto* deben ser devueltas. En *modoRef*, pase una de las siguientes constantes, que se encuentran en el tema "*Texto multiestilo*" (puede pasar una sola constante o una combinación):
 

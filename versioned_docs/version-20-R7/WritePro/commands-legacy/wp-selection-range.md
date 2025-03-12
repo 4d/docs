@@ -18,11 +18,11 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Compatibility 
+## Compatibility 
 
 <!--REF #_command_.WP Selection range.Summary-->**WP Selection range** was named **WP Get selection** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
 
-#### Description 
+## Description 
 
 The **WP Selection range** command returns a new range object or a picture object based upon the currently selected content in the *wpArea* 4D Write Pro area.
 
@@ -32,7 +32,7 @@ If you pass the optional *\** parameter, you indicate that *wpArea* is a form ob
 
 If an anchored image (picture at a fixed location) is selected in *wpArea*, **WP Selection range** returns a picture reference object and not a range object (for more information, please refer to the [WP Add picture](wp-add-picture.md) command description). Otherwise, **WP Selection range** returns a new range object. For more information on range objects, please refer to *Range handling commands*.
 
-#### Example 
+## Example 
 
 You want to get the selected text from a 4D Write Pro area:
 
@@ -40,7 +40,7 @@ You want to get the selected text from a 4D Write Pro area:
  $range:=WP Selection range(*;"WParea")
 ```
 
-#### See also 
+## See also 
 
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Picture range](wp-picture-range.md)  

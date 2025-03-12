@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Bool.Summary-->The **Bool** command returns the boolean form of the expression you passed in *expression*.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ The command can return the following values, depending on the *expression* resul
 
 This command is useful when the code expects a boolean value, and when the evaluation of the expression could result in a different type (e.g. if it evaluates to **null** or **undefined**). 
 
-#### Example 
+## Example 
 
 You select a value depending on the contents of an object field attribute, anticipating the case where the attribute is missing:
 
@@ -41,14 +41,14 @@ You select a value depending on the contents of an object field attribute, antic
  ALERT("This person is "+$married)
 ```
 
-#### See also 
+## See also 
 
 [Date](date.md)  
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

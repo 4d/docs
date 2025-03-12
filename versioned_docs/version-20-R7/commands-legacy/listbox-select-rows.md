@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->The **LISTBOX SELECT ROWS** command selects the rows of an entity selection or collection list box that correspond to the entities or objects in the *selection* parameter.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ By default, if the *action* parameter is omitted, the command replaces the row(s
 
 **Note:** The command assumes that each object or entity is displayed only once in the list box. 
 
-#### Example 1 
+## Example 1 
 
 This code allows you to select invoices in an entity selection using only a single server request:
 
@@ -66,7 +66,7 @@ This code allows you to select invoices in an entity selection using only a sing
  LISTBOX SELECT ROWS(*;"Invoices";$cash;lk replace selection)
 ```
 
-#### Example 2 
+## Example 2 
 
 Example with a collection of objects:
 
@@ -80,11 +80,11 @@ Example with a collection of objects:
  End if
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get parent XML element.Summary-->The DOM Get parent XML element command returns an XML reference to the “parent” of the XML element passed as reference in *elementRef*.<!-- END REF--> This reference may be used with the other XML parsing commands.
 
@@ -25,17 +25,17 @@ The optional *parentElemName* and *parentElemValue* parameters, when passed, rec
 When you pass a root element in *elementRef*, the command returns the "#document" reference. The document node is the parent of a root element.   
 If you use this command on a document node, the command returns a null reference ("0000000000000000") and the OK variable is set to 0\. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get root XML element](dom-get-root-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

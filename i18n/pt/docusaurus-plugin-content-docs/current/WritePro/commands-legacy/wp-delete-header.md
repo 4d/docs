@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP DELETE HEADER.Summary-->O comando **WP DELETE HEADER**  elimina o elemento do cabeçalho associado à seção ou subseção definida pelo parâmetro *wpSection*.<!-- END REF--> 
 
 Se não existir um elemento de cabeçalho para a seção ou subseção, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser eliminar o cabeçalho das páginas corretas de uma seção:
 
@@ -34,7 +34,7 @@ Se quiser eliminar o cabeçalho das páginas corretas de uma seção:
  WP DELETE HEADER($subsection)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get header](wp-get-header.md)  
 [WP New header](wp-new-header.md)  

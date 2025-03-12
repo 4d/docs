@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get resource properties.Summary-->The **Get resource properties** command returns the attributes of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
 
@@ -26,16 +26,16 @@ If the resource does not exist, the command returns *0* (zero) and sets the OK v
 
 The numeric value returned by **Get resource properties** must be seen as a bit field value whose bits have special meaning.
 
-#### Example 
+## Example 
 
 See example for the [Get resource name](get-resource-name.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 0 if the resource does not exist; otherwise, it is set to 1.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

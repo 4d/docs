@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->La commande **DOM Create XML element arrays** permet d’ajouter un nouvel élément dans l’élément XML *refElément* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Facultativement, la commande **DOM Create XML element arrays** permet de passer 
 
 Les tableaux doivent avoir été créés au préalable et fonctionner par paires. Vous pouvez passer autant de couples de tableaux et autant d’éléments dans chaque couple que vous voulez. 
 
-#### Exemple 
+## Exemple 
 
 Nous souhaitons créer l'élément suivant :
 
@@ -58,11 +58,11 @@ Pour cela, il suffit d'écrire :
  vRefElement:=DOM Create XML element arrays(vRefRacine;vxPath;tNomsAtt;tValeursAtt)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

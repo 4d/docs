@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->**METHOD GET COMMENTS**コマンドは*path*引数で指定したメソッドのドキュメンテーションを*comments*引数に返します。<!-- END REF-->
 
@@ -50,11 +50,11 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行されると、デフォルトではコンポーネントメソッドに適用されます。*\** 引数を渡すとホストデータベースのメソッドに適用します。
 
-#### 参照 
+## 参照 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

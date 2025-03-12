@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Cache info.Summary-->The **Cache info** command returns an object that contains detailed information about the current cache contents (used memory, loaded tables and indexes, etc.)
 
@@ -33,7 +33,7 @@ The **Cache info** command returns a single object that contains all the relevan
 
 Elements of the *objects* array are root objects (tables, indexes, Blobs, etc.) which are currently loaded in the cache. Each element contains specific attributes that describe its current status. For more information about advanced interpretation of this data, please contact your local Technical Service department. 
 
-#### Example 
+## Example 
 
 You want to get cache information for the current database:
 
@@ -50,11 +50,11 @@ You want to get cache information for the database and all opened components:
  $cache:=Cache info($dbFilter)
 ```
 
-#### See also 
+## See also 
 
 [MEMORY STATISTICS](memory-statistics.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

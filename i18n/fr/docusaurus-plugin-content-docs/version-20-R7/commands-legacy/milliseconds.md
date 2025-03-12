@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Milliseconds.Summary-->**Milliseconds** retourne le nombre de millisecondes (1 milliseconde = 1/1000ème de seconde) écoulées depuis le démarrage de la machine.<!-- END REF-->
 
@@ -21,7 +21,7 @@ La valeur retournée est un entier long signé allant jusqu'à 2^31 (environ 2 m
 
 Le but de la commande est de mesurer de courtes périodes de temps avec une très grande précision. Une plage de 24 jours est suffisamment longue pour effectuer des comparaisons, mais il est important de prendre des précautions. Lors de la comparaison de valeurs, travaillez systématiquement avec les différences entre les valeurs. Ne comparez jamais les valeurs directement, l'une d'elles pouvant être négative et l'autre positive.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouillé : 
 
@@ -42,13 +42,13 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
  (Milliseconds>($starttime+5000)) // ne suivez jamais cet exemple, l'une des valeurs pouvant être positive et l'autre négative
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

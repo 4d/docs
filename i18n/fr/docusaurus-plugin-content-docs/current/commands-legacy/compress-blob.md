@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->**COMPRESS BLOB** compresse le BLOB *blob* à l'aide d'un algorithme de compression.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Pour savoir si un BLOB a été compressé, utilisez la commande [BLOB PROPERTIES
 
 **ATTENTION :** Un BLOB compressé est toujours un BLOB, rien ne vous empêche donc de modifier son contenu. Cependant, si vous le modifiez, la commande [EXPAND BLOB](expand-blob.md) ne pourra plus décompresser correctement le BLOB.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, sinon, le compresse :
 
@@ -55,7 +55,7 @@ L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, sinon, le comp
 
 Notez que si vous appliquez **COMPRESS BLOB** à un BLOB déjà compressé, la commande le détecte et ne fait rien.
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant vous permet de sélectionner un document puis de le compresser :
 
@@ -73,7 +73,7 @@ L'exemple suivant vous permet de sélectionner un document puis de le compresser
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Envoi de données HTTP brutes compressées en GZIP :
 
@@ -85,16 +85,16 @@ Envoi de données HTTP brutes compressées en GZIP :
  WEB SEND RAW DATA($blob ;*)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable OK prend la valeur 1 si le BLOB a été correctement compressé, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

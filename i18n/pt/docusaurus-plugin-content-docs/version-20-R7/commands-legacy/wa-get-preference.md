@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->O comando WA GET PREFERENCE permite obter o valor atual de uma preferência na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Passe no parâmetro *seletor* a preferência a ler. Pode passar uma das seguinte
   
 Passe no parâmetro *valor* uma variável que receberá o valor atual da preferência. O tipo da variável depende da preferência. A variável *valor* sempre é de tipo Booleano: contém **True** se a preferência estiver ativa e se não **False**.
 
-#### Ver também 
+## Ver também 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

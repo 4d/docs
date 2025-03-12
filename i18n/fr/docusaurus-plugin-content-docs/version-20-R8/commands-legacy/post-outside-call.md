@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->Cette commande était nommée **CALL PROCESS** dans les versions précédentes de 4D.<!-- END REF--> 
 
-#### Description 
+## Description 
 
 **POST OUTSIDE CALL** appelle le formulaire affiché dans la fenêtre au premier plan de *process*. 
 
@@ -35,17 +35,17 @@ Si vous voulez établir une communication entre des process qui n'affichent pas 
 
 **POST OUTSIDE CALL** accepte la syntaxe alternative **POST OUTSIDE CALL**(-1). Pour ne pas ralentir l'exécution d'une méthode, 4D ne redessine pas les variables interprocess à chaque fois qu'elles sont modifiées. Si vous passez -1 au lieu du numéro du process dans le paramètre *process* de la commande **POST OUTSIDE CALL**, toutes les variables interprocess affichées dans toutes les fenêtres de tous les process seront mises à jour et redessinées.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la section [Semaphore](semaphore.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

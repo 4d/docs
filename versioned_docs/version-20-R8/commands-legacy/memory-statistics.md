@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MEMORY STATISTICS.Summary-->The **MEMORY STATISTICS** command recovers information related to the use of the data cache by 4D.<!-- END REF--> This information can be used to analyze the functioning of the application. 
 
@@ -24,11 +24,11 @@ The *infoType* parameter specifies the type of requested information. In current
 
 After the command has been executed, the statistics are provided in the *arrNames*, *arrValues* and *arrCount* arrays. This information is also available via the Runtime Explorer: size of physical, virtual, free and used memory, stack memory and free stack memory, etc. For more information about advanced interpretation of this data, please contact your local Technical Service department.
 
-#### See also 
+## See also 
 
 [Cache info](cache-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.JSON Stringify array.Summary-->**JSON Stringify array**コマンドは、4D配列 *array* をシリアライズされたJSON配列へと変換します。<!-- END REF-->このコマンドは [JSON PARSE ARRAY](json-parse-array.md)コマンドと逆の挙動をします。
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 任意の *\** 引数を渡す事によって戻り値の文字列に整形フォーマティングを使用することもできます。これはフォーマティング文字を含めることよってWebページで表示される際のJSONの表示を改善するものです。
 
-#### 例題 1 
+## 例題 1 
 
 テキスト配列の変換:
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
   // $jsonString = "["John","Jim"]"
 ```
 
-#### 例題 2 
+## 例題 2 
 
 数字を含むテキスト配列の変換:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
   // $string = "["555-0100","555-0120"]"
 ```
 
-#### 例題 3 
+## 例題 3 
 
 オブジェクト配列の変換:
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1205072.fr.png)
 
-#### 例題 4 
+## 例題 4 
 
 オブジェクト配列内の4Dセレクションの変換:
 
@@ -104,12 +104,12 @@ displayed_sidebar: docs
   //"ALMANZA",...}]"
 ```
 
-#### 参照 
+## 参照 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

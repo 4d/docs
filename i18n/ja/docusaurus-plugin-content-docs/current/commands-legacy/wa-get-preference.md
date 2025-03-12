@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->WA GET PREFERENCE コマンドを使用して、*\** と *object* によって指定されたWebエリアの環境設定の現在値を取得します。<!-- END REF-->
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 引数 *value* には、環境設定の現在値を受け取る変数を渡します。*value* 変数は必ずブール型です。設定がアクティブであれば **True** が、それ以外の場合には **False** が格納されます。
 
-#### 参照 
+## 参照 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->El comando GET MENU ITEMS devuelve, en los arrays *arrayTitMenus* y *arraysRefMenus*, los títulos e identificadores de todas las líneas de menú o de la barra de menús designada por el parámetro *menu*.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ En el parámetro *menu*, puede pasar una referencia de menú (MenuRef), un núme
 
 Si ninguna referencia de menú está asociada a un elemento, una cadena vacía se devuelve en el elemento de array correspondiente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere conocer el contenido de la barra de menú del proceso actual: 
 
@@ -35,7 +35,7 @@ Usted quiere conocer el contenido de la barra de menú del proceso actual:
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

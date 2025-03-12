@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->**SET LIST ITEM PARAMETER**コマンドは、リスト参照またはオブジェクト名を*list*に指定したリスト中、*itemRef*引数で指定した項目の*selector* パラメタを設定するために使用します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Associated standard action | 文字列 | 4D\_standard\_action\_name | *itemRef* 参照に標準アクションを割り当てます。この場合、*value* 引数に標準アクション名と引数を渡す必要があります。例: "fontSize?value=10pt"。詳細な情報については、*デザインリファレンスマニュアル*の*標準アクション* の章を参照してください。  |
 * **カスタムのセレクター**: *selector* 引数にカスタムのテキストを渡し、テキスト、数値、ブール型の値と関連づけることができます。この値はリスト項目に格納され、[GET LIST ITEM PARAMETER](get-list-item-parameter.md) コマンドを使用して取り出すことができます。これにより階層リストに関連づけられたどのようなインタフェースもセットアップできます。例えば顧客名リストにおいて、年齢をリスト項目に関連付け、項目が選択されたときにのみそれを表示させることなどができます。
 
-#### 例題 
+## 例題 
 
 階層ポップパップメニューに選択リストを割り当て、標準アクション機能を使用してそのリストでフォントサイズ値の一覧を管理したい場合を考えます:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-#### 参照 
+## 参照 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

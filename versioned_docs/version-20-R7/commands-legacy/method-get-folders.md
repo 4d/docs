@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer:
 
@@ -27,11 +27,11 @@ You can limit this list of folders by passing a comparison string in the *filter
 
 If the command is executed from a component, it returns by default the paths of the component methods. If you pass the *\** parameter, the array contains the paths of the methods of the host database.
 
-#### See also 
+## See also 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** crée la sélection temporaire *nom* et y place la sélection courante de *laTable*.<!-- END REF--> A la différence de [COPY NAMED SELECTION](copy-named-selection.md), cette commande ne copie pas la sélection, mais la déplace.
 
@@ -22,7 +22,7 @@ Après l'exécution de cette commande, la sélection courante de *laTable* dans 
 
 En termes d'utilisation de la mémoire, **CUT NAMED SELECTION** est plus économique que [COPY NAMED SELECTION](copy-named-selection.md). En effet, [COPY NAMED SELECTION](copy-named-selection.md) utilise 4 octets de mémoire pour chaque enregistrement de la sélection. Avec **CUT NAMED SELECTION**, seule la référence à la sélection est déplacée.
 
-#### Exemple 
+## Exemple 
 
 La méthode suivante vide la sélection courante de la table *\[Clients\]* :
 
@@ -31,13 +31,13 @@ La méthode suivante vide la sélection courante de la table *\[Clients\]* :
  CLEAR NAMED SELECTION("AEffacer")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

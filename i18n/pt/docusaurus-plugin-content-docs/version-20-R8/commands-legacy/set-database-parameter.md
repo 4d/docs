@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->O comando **SET DATABASE PARAMETER** permite modificar vários parâmetros internos do banco de dados 4D.<!-- END REF-->  
   
@@ -91,7 +91,7 @@ O *seletor* designa o parâmetro a ser modificado. 4D oferece constantes pré-de
 * :O parâmetro *tabela* só é utilizado pelos seletores 31, 46 e 47\. Em todos os demais casos, é ignorado se passado.
 * Se uma configuração não for mantida entre sessões, mas quiser ter certeza que é aplicada, deve executar em ou [On Server Startup database method](on-server-startup-database-method.md).
 
-#### seletores Thread-seguro 
+## seletores Thread-seguro 
 
 O comando **SET DATABASE PARAMETER** pode ser usado em processos preemptivos ao chamar os seletores abaixo:
 
@@ -106,7 +106,7 @@ O comando **SET DATABASE PARAMETER** pode ser usado em processos preemptivos ao 
 * IMAP Log
 * Pause logging
 
-#### Exemplo 1 
+## Exemplo 1 
 
 A instrução a seguir evitará um possível problema de timeout:
 
@@ -119,7 +119,7 @@ A instrução a seguir evitará um possível problema de timeout:
  ...
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo força temporariamente a execução de um comando de pesquisa por fórmula no computador cliente:
 
@@ -128,7 +128,7 @@ Este exemplo força temporariamente a execução de um comando de pesquisa por f
  SET DATABASE PARAMETER([tabla1];Query By Formula On Server;1) //Força a execução no computador cliente
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a conversão ocorre quando a data se guarda no objeto, deve chamar ao comando [SET DATABASE PARAMETER](set-database-parameter.md) antes de chamar a [OB SET](ob-set.md): 
 
@@ -140,13 +140,13 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
  SET DATABASE PARAMETER(JSON use local time;1)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

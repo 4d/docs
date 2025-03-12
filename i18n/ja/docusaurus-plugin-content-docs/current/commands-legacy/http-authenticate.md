@@ -23,7 +23,7 @@ displayed_sidebar: docs
 :::
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->**HTTP AUTHENTICATE**コマンドはクライアントアプリケーションの認証を要求するサーバーへのHTTPリクエストを可能にします。<!-- END REF-->*と* *password*引数には必要な認証情報 (ユーザー名とパスワード) を渡します。この情報はエンコードされ、[HTTP Request](http-request.md)または[HTTP Get](http-get.md)を使用して送信されるHTTPリクエストに追加されます。
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 デフォルトでは認証情報は一時的に保管され、カレントプロセス内においてはそれぞれのリクエスト毎に再使用されます。しかしながら[HTTP SET OPTION](http-set-option.md) コマンドでオプションを設定する事により各リクエスト後にこの情報をリセットする事ができます。この場合、[HTTP Request](http-request.md) または [HTTP Get](http-get.md)コマンドを呼び出す前に**HTTP AUTHENTICATE** コマンドを実行する必要があります。
 
-#### 例題 
+## 例題 
 
 認証付きリクエストの例:
 
@@ -52,11 +52,11 @@ displayed_sidebar: docs
  $httpStatus:=HTTP Get(...)
 ```
 
-#### 参照 
+## 参照 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

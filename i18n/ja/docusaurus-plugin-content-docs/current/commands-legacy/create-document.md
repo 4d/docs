@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Create document.Summary-->**Create document**コマンドは新しいドキュメントを作成し、ドキュメント参照番号を返します。<!-- END REF-->がロックされていたり既に開いている場合は、エラーが生成されます。
 
@@ -38,7 +38,7 @@ Windowsでは、Windowsのファイル拡張子を渡すか、*\_o\_MAP FILE TYP
 
 ドキュメントに対して、最後に[CLOSE DOCUMENT](close-document.md)を呼び出すことを忘れないでください。
 
-#### 例題 1 
+## 例題 1 
 
 次の例を使用して、Noteと呼ばれる新しいドキュメントを作成して開きます。文字列"Hello" をそこへ書き込み、ドキュメントを閉じます。 
 
@@ -51,7 +51,7 @@ Windowsでは、Windowsのファイル拡張子を渡すか、*\_o\_MAP FILE TYP
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例を使用して、Windowsで非標準拡張子を付けてドキュメントを作成します。 
 
@@ -61,16 +61,16 @@ Windowsでは、Windowsのファイル拡張子を渡すか、*\_o\_MAP FILE TYP
  $vtMyDoc:=Create document("Doc.") //拡張子なし (ピリオド "." は必須)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ドキュメントが正しく作成されると、システム変数OKに1が代入されます。システム変数Documentは、完全なパス名と*document*の名前を格納します。
 
-#### 参照 
+## 参照 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

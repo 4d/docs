@@ -15,18 +15,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is field number valid.Summary-->Is field number validコマンドは、引数*fieldNum*に渡したフィールド番号のフィールドが、引数*tableNum*または*tablePtr*に渡したテーブル番号またはポインタのテーブルに存在する場合、Trueを返します。<!-- END REF-->フィールドが存在しない場合、コマンドはFalesを返します。また、フィールドを持つテーブルがエクスプローラーのごみ箱にある場合も、コマンドはFalesを返しますので注意してください。
 
 このコマンドを使用して、フィールドの削除により生じる一連のフィールド番号の欠番を検知することができます。
 
-#### 参照 
+## 参照 
 
 [Last table number](last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

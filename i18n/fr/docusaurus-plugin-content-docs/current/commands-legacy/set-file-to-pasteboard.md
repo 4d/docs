@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->La commande **SET FILE TO PASTEBOARD** ajoute dans le conteneur de données le chemin d’accès complet du fichier passé dans le paramètre *fichier*.<!-- END REF--> Cette commande permet de mettre en place des interfaces autorisant le glisser-déposer d’objets 4D vers des fichiers sur le bureau par exemple.
 
@@ -24,11 +24,11 @@ La commande admet l’étoile *\** en paramètre optionnel. Par défaut, lorsque
 
 **Note :** Le conteneur de données est en lecture seule pendant l’événement formulaire On Drag Over. Il n’est pas possible d’utiliser cette commande dans ce contexte.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

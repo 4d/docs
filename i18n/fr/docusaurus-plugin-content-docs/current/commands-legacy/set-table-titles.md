@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** vous permet de masquer, renommer et réordonner les tables de votre base qui apparaissent dans les éditeurs standard de 4D en mode Application (lorsque le mode de lancement est le mode **Application**, ou après avoir sélectionné "**Tester l'application**" dans le menu **Exécution**) .<!-- END REF-->
 
@@ -45,7 +45,7 @@ La commande **SET TABLE TITLES** est utile dans les cas suivants :
 * Les plug-ins accèdent toujours à la structure "virtuelle" telle que définie par cette commande.
 * Exécuter la commande **SET TABLE TITLES** sans paramètres réinitialise l'environnement de langage et supprime la totalité de la structure virtuelle pour la session (incluant les noms personnalisés de tables et de champs).
 
-#### Exemple 1 
+## Exemple 1 
 
 * Vous développez une application 4D destinée au marché international. Vous avez donc besoin de prendre en compte les nécessités de traduction et de localisation. Pour les éditeurs standard de 4D qui apparaissent en mode Application et vos formulaires utilisant des libellés dynamiques, vous pouvez traiter cette question en utilisant une table *\[Traductions\]* et quelques méthodes pour créer et utiliser les traductions pour chaque langue que vous voulez.
 * Dans votre base, vous créez la table suivante :
@@ -164,7 +164,7 @@ La méthode projet TABLES\_ET\_CHAMPS\_LOCALISES est la suivante :
 
 * Notez que de nouvelles traductions peuvent être effectuées dans la base sans modification de code ni recompilation.
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez supprimer tous les noms de tables et de champs personnalisés définis pour la session :
 
@@ -172,7 +172,7 @@ Vous voulez supprimer tous les noms de tables et de champs personnalisés défin
  SET TABLE TITLES //supprimer les noms personnalisés
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
@@ -180,7 +180,7 @@ Vous voulez supprimer tous les noms de tables et de champs personnalisés défin
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

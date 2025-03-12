@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->**ARRAY TO COLLECTION** コマンドは*array* 引数で指定した一つあるいはそれ以上の配列を、*collection* 引数で指定したコレクションの要素、あるいは*propertyName* 引数で指定したプロパティの値にコピーします*。<!-- END REF-->*
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 * 引数を省略した場合、コマンドは全ての*array* の要素を*collection* へとコピーします。*collection* が空でない場合、既存の要素は置き換えられ、*array* のサイズが*collection* のlength より大きい場合には新しい要素が追加されます。コマンド実行後、*collection* のlength は*array* のサイズと同一になります。
 * 一つあるいはそれ以上の*propertyName* 引数を渡す場合、コマンドはオブジェクトを*collection* の要素として作成あるいは上書きします。それぞれのオブジェクトには引数で名前を指定したプロパティと、対応する配列の要素が値として格納されます。*collection* が空でない場合、既存の要素は置き換えられ、*array* のサイズが*collection* のlength より大きい場合には新しい要素が追加されます。コマンド実行後、*collection* のlength は*array* うち最大の配列のサイズと同一になります。
 
-#### 例題 1 
+## 例題 1 
 
 テキスト配列をコレクションへとコピーしたい場合を考えます:
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
   //...
 ```
 
-#### 例題 2 
+## 例題 2 
 
 フィールドの値を、配列を通してオブジェクトのコレクションへとコピーしたい場合を考えます:
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
   //...
 ```
 
-#### 例題 3 
+## 例題 3 
 
 テキスト配列を共有コレクションへとコピーしたい場合を考えます:
 
@@ -78,12 +78,12 @@ displayed_sidebar: docs
  End use
 ```
 
-#### 参照 
+## 参照 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *コレクションと4D配列間での型の変換*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

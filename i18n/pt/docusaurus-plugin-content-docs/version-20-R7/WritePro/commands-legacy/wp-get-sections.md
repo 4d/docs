@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get sections.Summary-->O comando **WP Get sections** devolve uma coleção de todas as seções definidas no parâmetro *targetObj*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Para caixas de texto e imagens ancoradas, **WP Get sections** devolve:
 
 Para saber mais sobre os objetos de seção, consulte o comando *Gerenciar cabeçalhos, rodapés e seções*
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar um atributo para a última seção da área 4D Write Pro:
 
@@ -44,6 +44,6 @@ Se quiser mudar um atributo para a última seção da área 4D Write Pro:
  WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get section](wp-get-section.md)  

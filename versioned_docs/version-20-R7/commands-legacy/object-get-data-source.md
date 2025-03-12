@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->The **OBJECT Get data source** command returns the current data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ You can define the data source for an object in Design mode using the Property L
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
-#### Example 
+## Example 
 
 Given a combo box object defined in a form:
 
@@ -36,11 +36,11 @@ You execute the following code:
   // $vPtr contains -> vCombo
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

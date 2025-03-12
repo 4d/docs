@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.WP Text range.Summary-->**WP Text range** は、以前のバージョンの4D Write Proでは**WP Create range** という名前でした。<!-- END REF-->分かりやすさのために名前が変更されています。
 
-#### 説明 
+## 説明 
 
 **WP Text range**コマンドは*targetObj* 引数の4D Write Proエリア内から、*startRange* と*endRange* の間に含まれるセレクションを新しいレンジオブジェクトを返します。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **注:* targetObj* 引数に、テーブル、行、段落、インライン画像、本文、ヘッダー、フッター、セクションまたはサブセクションの要素参照を渡した場合、*startRange* と*endRange* 引数は、レンジの要素の開始・終了インデックスに相対的なものになります。例えば、ヘッダーが渡された場合、wk start text はヘッダーの最初の文字を指定し、wk end text はヘッダーの最後の文字を指定します。テーブル要素参照が渡された場合、コマンドは、*targetObj* 引数で参照されているテーブルに相対的なテキストレンジを返します。セクションが渡された場合、*startRange* および *endRange* 引数はドキュメント本文(セクションから作成されたレンジの親エリア)に対して相対的なものになります。詳細は例題2を参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 4D Write Proフィールドの、最初から数えて12文字のレンジを選択したい場合を考えます。フィールドはフォームオブジェクト内に表示されているとします:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 セクションからレンジを作成したい場合を考えます:
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
   //$wpRange.end = 111
 ```
 
-#### 参照 
+## 参照 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP Get body](wp-get-body.md)  

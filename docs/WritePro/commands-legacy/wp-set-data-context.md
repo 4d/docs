@@ -17,7 +17,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET DATA CONTEXT.Summary-->The **WP SET DATA CONTEXT** command sets the *contextData* object as data context of the *wpDoc* 4D Write Pro document.<!-- END REF--> Setting a new context for a document replaces any existing context for that document. 
 
@@ -41,7 +41,7 @@ A data context can only be used in the process where it has been defined:
 
 In order to compute formulas with different data contexts in different processes (i.e generate different invoices from the same template document), it's recommended to duplicate the document using [WP New](wp-new.md) in each of those processes to avoid any errors. Note that the data context is not copied when you duplicate a document.
 
-#### Example 1 
+## Example 1 
 
 Insert an object in the 4D Write Pro document's context and display its information on the page: 
 
@@ -67,7 +67,7 @@ Here's the result:
 
 ![](../../assets/en/WritePro/commands/pict5867255.en.png)
 
-#### Example 2 
+## Example 2 
 
 When working with a template document, you can associate a context with it to fill the page with data. This is useful for mailing campaigns for example. 
 
@@ -89,7 +89,7 @@ The following example loops through an entity selection and creates a print prev
  End for each
 ```
 
-#### See also 
+## See also 
 
 [Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

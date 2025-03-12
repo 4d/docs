@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->The **OBJECT SET SUBFORM** command dynamically modifies the detail form as well as, optionally, the screen list form associated with the subform object designated by the *\**, *object* parameters.<!-- END REF-->
 
@@ -39,12 +39,12 @@ In the *detailSubform* and *listSubform* parameters, pass either :
 
 When you modify a page subform, the command can be executed at any time; current selections are not modified. However, when you modify a list subform, it can only be modified when it displays the list. If the command is executed when the detail form is displayed following a double-click in the list, an error is generated. 
 
-#### See also 
+## See also 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

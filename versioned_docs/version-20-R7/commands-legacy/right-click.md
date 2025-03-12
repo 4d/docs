@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Right click.Summary-->The Right click command returns True if the right button of the mouse has been clicked.<!-- END REF-->
 
 This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object.
 
-#### See also 
+## See also 
 
 [Contextual click](contextual-click.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

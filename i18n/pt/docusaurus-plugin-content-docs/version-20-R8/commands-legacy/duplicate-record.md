@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->DUPLICATE RECORD cria um novo registro para tabela que é uma duplicação do registro atual.<!-- END REF--> O novo registro é convertido no registro atual. Se não houver registro atual, DUPLICATE RECORD não faz nada. Deve utilizar [SAVE RECORD](save-record.md "SAVE RECORD") para guardar o novo registro.
 
@@ -21,11 +21,11 @@ DUPLICATE RECORD pode ser executado durante a entrada de dados. Isso permite dup
   
 **Nota de compatibilidade:** A partir da versão 11 de 4D, este comando não aceita subtabelas.
 
-#### Ver também 
+## Ver também 
 
 [SAVE RECORD](save-record.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

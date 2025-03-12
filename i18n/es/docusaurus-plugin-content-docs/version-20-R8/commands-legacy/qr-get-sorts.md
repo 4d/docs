@@ -26,7 +26,7 @@ Cada elemento de este array contiene el sentido de ordenación de la columna cor
 \- Si *aOrden{$i}* es igual a 1, el sentido de la ordenación es ascendente.  
 \- Si *aOrden{$i}* es igual -1, el sentido de la ordenación es descendente.
 
-##### Informes tablas cruzadas 
+### Informes tablas cruzadas 
 
 En el caso de este tipo de informes, los arrays resultantes no pueden tener más de dos elementos ya que la ordenación sólo puede realizarse en las columnas (1) y las filas (2). (Valores para *aColumnas).*
 

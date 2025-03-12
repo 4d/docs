@@ -41,7 +41,7 @@ Lorsque le paramètre facultatif astérisque (*\**) est passé, vous indiquez qu
 
 **Note :** Lorsque l’élément désigné par *refElément* est de type BLOB, **DOM SET XML ELEMENT VALUE** l'encode automatiquement en base64\. Dans ce cas, la commande [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) effectue automatiquement l'opération inverse.
 
-##### Note sur le traitement des caractères de fin de ligne 
+### Note sur le traitement des caractères de fin de ligne 
 
 Par conformité avec les règles de traitement XML, toutes les séquences de caractères de fin de ligne CR et CRLF sont converties en caractères LF.
 

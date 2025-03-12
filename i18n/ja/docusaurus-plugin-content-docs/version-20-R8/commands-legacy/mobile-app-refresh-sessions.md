@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->**MOBILE APP REFRESH SESSIONS** コマンドは、サーバーのMobileApps フォルダ内にある全てのモバイルアプリセッションファイルをチェックし、編集されたファイルに対してメモリ内にある既存のセッションのコンテンツを更新します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 | mobi         | 3          | json ファイルはjson スキーマに則していません |
 | mobi         | 4          | 接続トークンがカレントの情報と合致しません       |
 
-#### 例題 
+## 例題 
 
 全てのモパイルアプリの、全てのカレントセッションをリセットしたい場合を考えます:
 
@@ -42,11 +42,11 @@ displayed_sidebar: docs
  MOBILE APP REFRESH SESSIONS
 ```
 
-#### 参照 
+## 参照 
 
 [On Mobile App Authentication データベースメソッド](on-mobile-app-authentication-database-method.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

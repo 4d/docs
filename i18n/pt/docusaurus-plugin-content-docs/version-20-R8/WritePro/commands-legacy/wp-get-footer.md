@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get footer.Summary-->O comando **WP Get footer** devolveo rodapé de página associado a faixa *objfaixa* ou ao *indiceSeção* especificado do documento *wpDoc*.<!-- END REF--> \]. Se não for encontrado nenhum rodapé relativo aos parâmetros, o comando devolve Null.
 
@@ -33,7 +33,7 @@ Se for passado o parâmetro *tipoSubSecao*, o comando devolve o rodapé de pági
     
 Se não for especificado *tipoSubSeção*, se devolverá o rodapé de página da seção principal. Nesse caso, se uma subseção estiver ativa, o objeto de rodapé de página da seção principal não está definido (o rodapé de página da seção principal só está disponível se não houver nenhuma subseção wk first page ou wk left page ativa).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser copiar o rodapé da primeira página de um documento 4D Write Pro nos rodapés de todas as páginas de outro documento 4D Write Pro:
 
@@ -50,7 +50,7 @@ Se quiser copiar o rodapé da primeira página de um documento 4D Write Pro nos 
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Utilizar uma área 4D Write Pro*  
 [WP DELETE FOOTER](wp-delete-footer.md)  

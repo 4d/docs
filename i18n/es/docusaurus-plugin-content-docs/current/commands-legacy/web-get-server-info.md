@@ -56,7 +56,7 @@ El objeto devuelto contiene las siguientes propiedades (los nombres de propiedad
 
 **4D Server**: el comando devuelve información sobre el servidor web local. Si desea monitorear el servidor web 4D Server desde un 4D remoto, debe aplicar la propiedad "Ejecutar en el servidor" al método.
 
-##### Propiedad cache 
+### Propiedad cache 
 
 Si pasa **true** en el parámetro *conCache*, el comando devuelve la propiedad objeto "cache" con el siguiente contenido:
 

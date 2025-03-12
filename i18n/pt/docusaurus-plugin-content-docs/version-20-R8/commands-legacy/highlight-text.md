@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->O comando HIGHLIGHT TEXT seleciona uma parte de texto em *objeto*.<!-- END REF-->  
 
@@ -30,7 +30,7 @@ O parâmetro *inicioSel* representa a posição do primeiro caractere a selecion
   
 Se *fimSel* for superior ao número de caracteres em objeto, todos os caracteres entre *inicioSel* e o final do texto são selecionados.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo seleciona todos os caracteres no campo editável *\[Produtos\]Notas*: 
 
@@ -38,7 +38,7 @@ O exemplo abaixo seleciona todos os caracteres no campo editável *\[Produtos\]N
  HIGHLIGHT TEXT([Produtos]Notas;1;Length([Produtos]Notas)+1)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo move o ponto de inserção ao começo do campo editável *\[Produtos\]Notas*: 
 
@@ -46,7 +46,7 @@ O exemplo abaixo move o ponto de inserção ao começo do campo editável *\[Pro
  HIGHLIGHT TEXT([Produtos]Notas;1;1)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo move o ponto de inserção ao final do campo editável *\[Produtos\]Notas*: 
 
@@ -54,15 +54,15 @@ O exemplo abaixo move o ponto de inserção ao final do campo editável *\[Produ
  $vLen:=Length([Produtos]Notas)+1HIGHLIGHT TEXT([Produtos]Notas;$vLen;$vLen)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Ver o exemplo do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE").
 
-#### Ver também 
+## Ver também 
 
 [GET HIGHLIGHT](get-highlight.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

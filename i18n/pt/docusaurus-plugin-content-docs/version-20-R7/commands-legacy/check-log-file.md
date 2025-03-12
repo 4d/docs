@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->O comando **CHECK LOG FILE** mostra a caixa de diálogo de visulização do arquivo de histórico atual da base de dados (acessível também através da janela do Centro de segurança e manutenção) :
 
@@ -24,18 +24,18 @@ Esta caixa de diálogo inclui o botão **Desfazer** que permite cancelar as oper
 
 Este comando só pode ser utilizado no contexto de aplicativos monousuários. Mais particularmente, permite acessar a função Desfazer a partir dos aplicativos 4D Volume Desktop (aplicativos sem modo desenho). Se é chamado em um aplicativo cliente/servidor, o comando não tem efeito e retorna o erro 1421.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 * Se este comando é executado em uma base de dados que funciona sem arquivo de histórico, o comando não faz nada e retorna o erro 1403\.
 * Se este comando é executado em uma base de dados cliente/servidor, o comando não faz nada e retorna o erro 1421\.  
 É possível interceptar estes erros utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver também 
+## Ver também 
 
 *Erros de Gestão de backup (1401 -> 1421)*  
 [RESTORE](restore.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

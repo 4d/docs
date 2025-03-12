@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Locked records info.Summary-->El comando **Locked records info** devuelve un objeto que contiene diferente información sobre los registros bloqueados actualmente en *laTabla*.<!-- END REF-->
 
@@ -67,7 +67,7 @@ El objeto *contextAttributes* se compone de las siguientes propiedades:
 | recordNumber  | Entero   | Número de registro del registro bloqueado                                                                                                               |
 | userAgent     | Cadena   | Agente de usuario del locker, e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejecute el siguiente código:
 
@@ -87,11 +87,11 @@ Si el código se ejecuta en un 4D Server y el bloqueo es causado por una máquin
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                "user_name": "achim",                "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-#### Ver también 
+## Ver también 
 
 [Locked](locked.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

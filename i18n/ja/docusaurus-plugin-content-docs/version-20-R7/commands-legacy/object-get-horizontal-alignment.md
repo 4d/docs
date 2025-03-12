@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->**OBJECT Get horizontal alignment**コマンドは、引数*object*および *\** で指定されたオブジェクトに適用された整列タイプを示すコードを返します。<!-- END REF-->
 
@@ -51,13 +51,13 @@ displayed_sidebar: docs
 * リストボックスフッター
 * *4D Write Proリファレンス*エリア
 
-#### 参照 
+## 参照 
 
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

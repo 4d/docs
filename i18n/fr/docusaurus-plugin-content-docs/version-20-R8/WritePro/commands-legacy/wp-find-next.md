@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Find next.Summary-->La commande **WP Find next** recherche le paramètre *objCible,* après la plage rechercherAprès, pour le paramètre rechercherValeur fondé sur conditionRecherche.<!-- END REF--> Un paramètre optionnel peut être utilisé pour remplacer les résultats trouvés.
 
@@ -79,7 +79,7 @@ Si objCible est un document 4D Write Pro, les valeurs trouvées sont retournées
 
 Une plage vide est retournée si aucun résultat est trouvé. 
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$nextRanges: object
@@ -98,7 +98,7 @@ Une plage vide est retournée si aucun résultat est trouvé.
  $previousRanges:=WP Find next($target;$userSel;"alpha";$options)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Find all](wp-find-all.md)  
 [WP Find previous](wp-find-previous.md)  

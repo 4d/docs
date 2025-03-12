@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current machine.Summary-->O comando Current machine devolve o nome de seu equipo, como está definido no painel de controle da rede.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Inclusive se não está correndo a versão cliente/servidor de 4D, sua aplicação pode incluir serviços de rede que necessitem que seu equipo esteja configurado corretamente. No Método de base On Startup de sua aplicação, pode escrever:
 
@@ -27,11 +27,11 @@ Inclusive se não está correndo a versão cliente/servidor de 4D, sua aplicaç�
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Current system user](current-system-user.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

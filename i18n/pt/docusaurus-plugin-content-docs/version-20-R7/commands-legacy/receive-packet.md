@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET lê caracteres a partir de uma porta serial ou de um documento.<!-- END REF-->
 
@@ -47,7 +47,7 @@ Ao tentar ler após o final de um arquivo, RECEIVE PACKET retornará os dados li
 
 **Nota:** Em modo não-Unicode (modo de compatibilidade), quando você usar o comando RECEIVE PACKET para ler caracteres de um documento do Windows e não quiser usar mapas para converter caracteres ASCII em caracteres Windows Mac OS, você pode usar a função *Win to Mac*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir lê 20 caracteres de uma porta serial na variável *getTwenty*:
 
@@ -55,7 +55,7 @@ O exemplo a seguir lê 20 caracteres de uma porta serial na variável *getTwenty
  RECEIVE PACKET(getTwenty;20)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir lê os dados do documento referenciado pela variável *myDoc* na variável *vData*. Ele lê até encontrar um retorno de carro:
 
@@ -63,7 +63,7 @@ O exemplo a seguir lê os dados do documento referenciado pela variável *myDoc*
  RECEIVE PACKET(myDoc;vData;Char(Carriage return))
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir lê os dados do documento referenciado pela variável *myDoc* na variável *vData*. Ele lê até encontrar o  (Fim da célula da tabela)  
 
@@ -71,7 +71,7 @@ O exemplo a seguir lê os dados do documento referenciado pela variável *myDoc*
  RECEIVE PACKET(myDoc;vData;"")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo a seguir lê dados de um documento em campos. Os dados são armazenados como campos de comprimento fixo. O método chama uma subrotina para retirar espaços à direita (espaços no final da cadeia). A sub-rotina segue o método: 
 
@@ -103,11 +103,11 @@ Os espaços no final dos dados são removidos através do seguinte método, cham
  $0:=Delete string($1;-$i;Length($1)) // Apagar os espaços
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de um chamado a RECEIVE PACKET, a variável sistema OK recebe o valor 1 se o pacote é recebido sem erros. Caso contrário, a variável sistema OK recebe o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -116,7 +116,7 @@ Depois de um chamado a RECEIVE PACKET, a variável sistema OK recebe o valor 1 s
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** affiche, pour le process en cours, la sélection courante de *laTable* dans le formulaire sortie courant.<!-- END REF--> Les enregistrements sont affichés sous la forme d'une liste que l'on peut faire défiler, semblable à celle du mode Développement. Lorsque l'utilisateur double-clique sur un enregistrement, par défaut celui-ci s'affiche dans le formulaire entrée courant. La liste est placée dans la fenêtre de premier plan.
 
@@ -46,7 +46,7 @@ Vous pouvez placer des boutons personnalisés dans la zone d'en-tête ou de pied
 
 Pendant et après l'exécution d'un **DISPLAY SELECTION**, les enregistrements sélectionnés par l'utilisateur sont conservés dans un ensemble système nommé UserSet. Après l'exécution de la commande, l'ensemble UserSet est accessible pendant un **DISPLAY SELECTION** aux méthodes objet de boutons, aux méthodes appelées par des commandes de menu, ainsi que pour la méthode projet qui avait appelé **DISPLAY SELECTION**. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant sélectionne tous les enregistrements de la table \[Personnes\]. La commande **DISPLAY SELECTION** est alors utilisée pour afficher les enregistrements et permettre à l'utilisateur de désigner ceux qu'il souhaite imprimer. Enfin, les enregistrements sélectionnés sont récupérés à l'aide de la commande [USE SET](use-set.md) et imprimés avec [PRINT SELECTION](print-selection.md) :
 
@@ -57,11 +57,11 @@ L'exemple suivant sélectionne tous les enregistrements de la table \[Personnes\
  PRINT SELECTION([Personnes]) // Imprimer les enregistrements sélectionnés
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple n°6 de la commande [Form event code](../commands/form-event-code.md) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour reproduire, par exemple, les fonctionnalités apportées par le menu **Enregistrements** du mode Développement lorsque vous utilisez [MODIFY SELECTION](modify-selection.md) ou **DISPLAY SELECTION** en mode Application, procédez de la manière suivante :
 
@@ -87,13 +87,13 @@ III. Associez les méthodes projet suivantes à vos commandes de menu :
 
 Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print-selection.md), [QR REPORT](qr-report.md), etc., afin de reproduire les commandes de menu "standard" à chaque fois que vous affichez ou modifiez une sélection en mode Application. Grâce à la commande [Current form table](current-form-table.md), ces méthodes sont génériques et les barres de menus auxquelles elles sont associées peuvent être rattachées à tout formulaire de sortie ou à toute table.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *Présentation des ensembles*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

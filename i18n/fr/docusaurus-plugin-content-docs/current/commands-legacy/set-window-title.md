@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->La commande **SET WINDOW TITLE** remplace le titre de la fenêtre dont le numéro de référence est passé dans *fenêtre* par le texte passé dans *titre* (longueur maximale 80 caractères).<!-- END REF-->
 
@@ -24,7 +24,7 @@ Si vous omettez le paramètre *fenêtre*, **SET WINDOW TITLE** remplace le titre
 
 **Note :** En mode Développement, 4D définit automatiquement les titres des fenêtres — par exemple “Saisie pour table1” est affiché lorsque vous passez en saisie de données. Si vous changez le titre d'une fenêtre du mode Développement, il est probable que 4D le remplacera par la suite. En revanche, en mode Application, 4D ne modifie pas le titre des fenêtres.
 
-#### Exemple 
+## Exemple 
 
 Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui déclenche une longue opération (par exemple une modification par programmation des enregistrements liés affichés dans un sous-formulaire). Vous pouvez afficher des informations sur la progression des opérations dans le titre de la fenêtre :
 
@@ -46,11 +46,11 @@ Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui d
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get window title](get-window-title.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

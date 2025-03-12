@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->La commande **LISTBOX Get number of rows** retourne le nombre de lignes présentes dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 **Note :** Si les tableaux associés aux colonnes d’un objet List box n'ont pas tous la même taille, seul le nombre d’éléments correspondant au plus petit tableau apparaît dans la list box et est retourné par cette commande. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

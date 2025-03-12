@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->**RECEIVE BUFFER** は、[SET CHANNEL](set-channel.md)コマンドで前もって開いたシリアルポートからデータを読み込みます。<!-- END REF-->シリアルポートは、コマンドで読み込まれるまで内容を保持するバッファを持ちます。**RECEIVE BUFFER**はシリアルバッファから文字を読み込み、*receiveVar*に格納して、バッファを消去します。バッファ中に文字が存在しなければ、*receiveVar*は何も含みません。
 
@@ -27,7 +27,7 @@ Mac OS Xのシリアルポート バッファーサイズは、理論的には�
 
 **RECEIVE BUFFER**の実行中に、Ctrl-Alt-Shift (Windows) または Command-Option-Shift (Macintosh) を押して、受信を中断できます。中断することにより、エラー-9994が生成されます。[ON ERR CALL](on-err-call.md)を使用してインストールしたエラー処理メソッドにより、このエラーをとらえることができます。
 
-#### 例題 
+## 例題 
 
 以下のプロジェクトメソッドLISTEN TO SERIAL PORTは、RECEIVE BUFFERコマンドを使用してシリアルポートからテキストを取得し、それをインタープロセス変数に追加します:
 
@@ -56,7 +56,7 @@ Mac OS Xのシリアルポート バッファーサイズは、理論的には�
 
 プロセス間でのコンフリクトを避けるために、セマフォを利用してインタープロセス変数<>vtBufferへのアクセスを保護する必要がある点に注意してください。詳細は[Semaphore](semaphore.md "Semaphore")コマンドを参照してください。
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE PACKET](receive-packet.md)  
@@ -64,7 +64,7 @@ Mac OS Xのシリアルポート バッファーサイズは、理論的には�
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

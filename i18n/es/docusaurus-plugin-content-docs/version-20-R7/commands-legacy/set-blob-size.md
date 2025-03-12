@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Si quiere asignar nuevos bytes a un BLOB y quiere inicializar estos bytes en un valor especifico, pase este valor (0..255) en el parámetro opcional *relleno*.
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 

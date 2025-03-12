@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->The **SET ASSERT ENABLED** command can be used to disable or re-enable any assertions inserted into the 4D code of the application.<!-- END REF--> For more information about assertions, please refer to the description of the [ASSERT](assert.md) command. 
 
@@ -24,7 +24,7 @@ By default, the **SET ASSERT ENABLED** command affects all the processes of the 
 
 Please note that when assertions are disabled, expressions passed to [ASSERT](assert.md) commands are no longer evaluated. The lines of code that call this command no longer have any effect on the operation of the application, neither in terms of behavior, nor in terms of performance. 
 
-#### Example 
+## Example 
 
 Disabling assertions:
 
@@ -33,13 +33,13 @@ Disabling assertions:
  ASSERT(TestMethod) // TestMethod will not be called since assertions are disabled
 ```
 
-#### See also 
+## See also 
 
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

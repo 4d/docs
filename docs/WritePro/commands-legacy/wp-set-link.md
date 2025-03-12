@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET LINK.Summary-->The **WP SET LINK** applies a hyperlink reference to the *targetObj*.<!-- END REF--> Links to URLs, 4D methods, and bookmarks, are supported. The link triggers an action when the user clicks on it (or uses **Ctrl+click** on Windows or **Cmd+click** on macOS if the text is not read-only for opening URLs). 
 
@@ -47,7 +47,7 @@ In the *linkObj* parameter, pass an object that describes the hyperlink. It must
 * Links to 4D methods are removed from 4D Write Pro documents when they are exported in HTML, MIME HTML, or .docx format.
 * If you want to remove a link from *targetObj*, please refer to the *Link commands* paragraph.
 
-#### Example 1 
+## Example 1 
 
 You want to add a link to your website in the footer area of your document: 
 
@@ -58,7 +58,7 @@ You want to add a link to your website in the footer area of your document:
  WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to create a table of contents with links using all of the bookmarks in your document:
 
@@ -89,7 +89,7 @@ You want to create a table of contents with links using all of the bookmarks in 
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to set a link to a 4D method on each "4D" string in the document:
 
@@ -112,7 +112,7 @@ You want to set a link to a 4D method on each "4D" string in the document:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Blog: Links in 4D Write Pro documents](https://blog.4d.com/links-in-4d-write-pro-documents/)  
 [WP Get links](wp-get-links.md)  

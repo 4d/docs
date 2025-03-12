@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->**HIGHLIGHT TEXT**コマンドは、*object* 内にあるテキストの一部を反転表示します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 *lastSel* が *object* の文字数より大きい場合、*startSel* からテキストの最終までのすべての文字を反転表示します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題を使用して、入力可能なフィールド *\[Products\]Comments* のすべての文字を選択します。 
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
  HIGHLIGHT TEXT([Products]Comments;1;Length([Products]Comments)+1)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題を使用して、挿入ポインタを入力可能なフィールド *\[Products\]Comments* の始めに移動します。 
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
  HIGHLIGHT TEXT([Products]Comments;1;1)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例題を使用して、挿入ポインタを入力可能なフィールド *\[Products\]Comments* の終わりに移動します。 
 
@@ -55,15 +55,15 @@ displayed_sidebar: docs
  HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE") コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 [GET HIGHLIGHT](get-highlight.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

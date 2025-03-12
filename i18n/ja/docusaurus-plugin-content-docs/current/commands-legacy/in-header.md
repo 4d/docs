@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.In header.Summary-->**In header** はIn header実行サイクルに対してTrueを返します。<!-- END REF-->
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを使用して、On Header イベントを返すかどうかをテストするのと同じです。
 
-#### 参照 
+## 参照 
 
 [In break](in-break.md)  
 [In footer](in-footer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

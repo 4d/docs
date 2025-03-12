@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table append row.Summary-->The **WP Table append row** command appends one row to the *tableRef* table, fills it with *value*(s) and returns the corresponding row range object.<!-- END REF-->
 
@@ -29,7 +29,7 @@ The command adds as many cells in the row as there are values in the *value* par
 
 The command returns the new row as a row range object. 
 
-#### Example 1 
+## Example 1 
 
 You want to create an empty table and append several rows of different sizes. You can write:
 
@@ -44,7 +44,7 @@ You want to create an empty table and append several rows of different sizes. Yo
 
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
-#### Example 2 
+## Example 2 
 
 In a billing application, you want to create a table automatically filled with related invoice lines:
 
@@ -73,7 +73,7 @@ In a billing application, you want to create a table automatically filled with r
 
 ![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
-#### See also 
+## See also 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table get rows](wp-table-get-rows.md)  

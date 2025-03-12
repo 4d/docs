@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Count XML attributes.Summary-->DOM Count XML attributes コマンドは、*elementRef*で指定したXML要素中に現れるXML属性数を返します。<!-- END REF-->XML属性に関する詳細はの節を参照してください。
 
-#### 例題 
+## 例題 
 
 要素の属性値を配列に受け取る前に、XML要素の属性数を取得します:
 
@@ -45,15 +45,15 @@ displayed_sidebar: docs
 
 **注:** 配列のインデックス番号はXMLファイル中に表示される属性の順番通りではありません。XML中、属性のインデックスはnameのアルファベット順に並びかえられた属性の位置を示します。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

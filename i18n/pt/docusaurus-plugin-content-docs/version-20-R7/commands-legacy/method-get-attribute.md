@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->O comando**METHOD Get attribute**retorna o valor do atributo *tipoAtributo* para o método projeto designado pelo parâmetro *rota*.<!-- END REF-->
 
@@ -38,11 +38,11 @@ Se o comando for executado desde uma componente, é aplicado por padrão aos mé
   
 O comando retorna **True** se for selecionado um atributo e **False** se for desse-lecionado.
 
-#### Ver também 
+## Ver também 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

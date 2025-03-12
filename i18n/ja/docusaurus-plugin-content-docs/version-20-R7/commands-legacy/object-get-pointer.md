@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->**OBJECT Get pointer**コマンドはフォームオブジェクトの変数へのポインタを返します。<!-- END REF-->
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 オプションの*subformName*引数を使用してカレントのコンテキスト (すなわち親フォーム) に属さない*objectName*オブジェクトへのポインタを取得できます。この引数を使用可能にするには、Object named セレクタを使用しなければなりません。   
 *subformName*引数が渡されると、**OBJECT Get pointer**コマンドはまずカレントフォーム内で*subformName*という名称のサブフォームを探し、そしてその中で*objectName*という名称のオブジェクトを探します。このオブジェクトが見つかると、このオブジェクトの変数へのポインタを返します。 
 
-#### 例題 
+## 例題 
 
 同じ親フォーム上でサブフォームとして2回使用される"SF"フォームがあります。サブフォームオブジェクトにはそれぞれ"SF1"と"SF2"という名前が与えられます。"SF"フォームには*CurrentValue*という名称のオブジェクトがあります。親フォームのフォームメソッドの"On Load"フォームイベントで、SF1の*CurrentValue*オブジェクトを"January"に、SF2のそれを"February"に初期化します: 
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  $Ptr->:="February"
 ```
 
-#### 参照 
+## 参照 
 
 [Focus object](focus-object.md)  
 *Form Objects (Access)*  
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 [Self](self.md)  
 *オブジェクト(フォーム)*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

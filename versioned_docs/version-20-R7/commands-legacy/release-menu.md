@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELEASE MENU.Summary-->The **RELEASE MENU** command removes the menu whose ID is passed in *menu* from memory.<!-- END REF--> This menu must have been created by the menu [Create menu](create-menu.md) command. The following rule applies: for each [Create menu](create-menu.md) there must be a corresponding [RELEASE MENU](release-menu.md).
 
@@ -23,7 +23,7 @@ This command can be used with menus that are used as menu bars.
 
 Any sub-menus used by *menu* are not removed if they were created directly using the [Create menu](create-menu.md) command. In this case, you must remove them individually (see the rule mentioned above). However, if the submenus come from the duplication of an existing menu, do not call [RELEASE MENU](release-menu.md) with them because 4D will erase them automatically.
 
-#### Example 
+## Example 
 
 This example shows different ways to use this command:
 
@@ -51,11 +51,11 @@ This example shows different ways to use this command:
   //The rule to follow is: each Create menu must have a corresponding RELEASE MENU
 ```
 
-#### See also 
+## See also 
 
 [Create menu](create-menu.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

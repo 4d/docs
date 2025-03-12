@@ -46,7 +46,7 @@ Dans le paramètre *format*, passez une constante du thème *Constantes 4D Write
 * Lors de l'export au format SVG avec cette commande, les images sont intégrées au format base64.
 * Pour plus d'informations sur l'export au format SVG, consultez *Exporter au format SVG*.
 
-##### paramètre option 
+### paramètre option 
 
 Passez un [objet](# "Données structurées sous forme d'objet natif 4D") dans *option* contenant les valeurs définissant les propriétés du document exporté. Les propriétés suivantes sont disponibles : 
 

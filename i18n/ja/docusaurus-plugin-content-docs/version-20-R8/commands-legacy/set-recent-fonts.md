@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->**SET RECENT FONTS**コマンドは、コンテキストメニュー内の"最近使用したフォント"の中に表示されるフォントの一覧を変更します。<!-- END REF--> 
 
 このメニューはセッション中に最近選択されたフォントの名前を表示します。これは特に *プログラミングに関する注意* エリアの中で使用されます。
 
-#### 例題 
+## 例題 
 
 最近使用したフォントの中にフォントを追加したい場合を考えます。
 
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1202031.en.png)
 
-#### 参照 
+## 参照 
 
 [FONT LIST](font-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

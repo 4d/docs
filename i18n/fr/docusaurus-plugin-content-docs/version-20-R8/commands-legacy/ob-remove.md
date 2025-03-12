@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB REMOVE.Summary-->La commande **OB REMOVE** permet de supprimer la *propriété* de l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> Cette commande supprime la *propriété* ainsi que sa valeur courante.
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Passez dans le paramètre *propriété* le libellé de la propriété à lire. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez supprimer la propriété "age" d’un objet :
 
@@ -34,11 +34,11 @@ Vous souhaitez supprimer la propriété "age" d’un objet :
      //$Objet={"nom":"smith","client":true}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB SET](ob-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

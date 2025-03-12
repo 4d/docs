@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get command status.Summary-->The **QR Get command status** command returns 0 if the *command* is disabled or 1 if it is enabled.<!-- END REF-->
 
@@ -32,12 +32,12 @@ In *command*, you can pass a value or one of the constants of the *QR Commands* 
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *command* number, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -35,7 +35,7 @@ Après l’exécution de la commande, le BLOB *aCrypter* contient les données c
 
 **Note :** L’algorithme de cryptage comporte une fonction de vérification d’intégrité (checksum), afin d’empêcher toute modification malveillante ou accidentelle du contenu du BLOB. Par conséquent, un BLOB crypté ne doit pas être modifié, sous peine de ne pas pouvoir être décrypté.
 
-##### Optimisation des commandes de cryptage 
+### Optimisation des commandes de cryptage 
 
 Le cryptage des données ralentit l’exécution de l’application, en particulier si une paire de clés est utilisée. Deux types d’optimisations sont toutefois possibles : 
 

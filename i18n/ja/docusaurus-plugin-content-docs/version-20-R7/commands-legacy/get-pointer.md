@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get pointer.Summary-->**Get pointer** コマンドは、*varName*に渡した名前を持つ変数へのポインタを返します。<!-- END REF--> 
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 **Note:** **Get pointer** は、例えば*ArrName+"{3}"* のような式や、二次元配列要素 (*ArrName+"{3}{5}"*) を受け入れます。  
 しかしながら変数要素参照(*ArrName+"{myVar}"*) は使用できません。
 
-#### 例題 1 
+## 例題 1 
 
 フォーム上で、5 x 10のグリッドの入力可能な変数を作成し、それぞれv1, v2... v50という名前を付けます。これらの変数をすべて初期化するには次のようにします:
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 例題 2 
+## 例題 2 
 
 2次元配列の要素に対してポインターを使用する場合を考えます:
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
   //$pt2=->atCities{2}{6}
 ```
 
-#### 参照 
+## 参照 
 
 [Field](field.md)  
 [Table](table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

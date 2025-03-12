@@ -28,7 +28,7 @@ En el parámetro *formulario*, puede pasar:
 
 Cuando el comando se ejecuta desde un componente, carga los formularios del componente por defecto. Si se pasa el parámetro *\**, el método carga los formularios de la base local.
 
-##### dataForm 
+### dataForm 
 
 Opcionalmente, puede pasar parámetros al *formulario* utilizando el objeto *dataForm*. Toda propiedad del objeto *dataForm* estará disponible desde el contexto del formulario a través del comando [Form](form.md). Por ejemplo, si pasa un objeto que contiene {"version", "12"} en *dataForm*, podrá obtener o definir el valor de la propiedad "version" en el formulario llamando:
 
@@ -43,7 +43,7 @@ El objeto *dataForm* está disponible en el evento formulario On Load.
 
 **Nota:** si no pasa el parámetro *dataForm* o si pasa un objeto indefinido, **FORM LOAD** crea automáticamente un nuevo objeto vacío vinculado al *formulario*, disponible a través del comando [Form](form.md).
 
-##### Impresión de datos 
+### Impresión de datos 
 
 Para que este comando pueda ejecutarse, una tarea de impresión debe haberse abierto de antemano usando el comando [OPEN PRINTING JOB](open-printing-job.md). El comando [OPEN PRINTING JOB](open-printing-job.md) hace un llamado implícito al comando [FORM UNLOAD](form-unload.md), por lo que en este contexto es necesario ejecutar [FORM LOAD](form-load.md). Una vez cargado, el *formulario* se convierte en el formulario de impresión actual. Todos los comandos de gestión de objetos, y en particular, el comando [Print object](print-object.md), trabajan con este formulario.  
   
@@ -55,7 +55,7 @@ Para mantener la coherencia gráfica de los formularios, se recomienda aplicar l
   
 El formulario de impresión actual se cierra automáticamente cuando se llama el comando [CLOSE PRINTING JOB](close-printing-job.md).
 
-##### Análisis del contenido del formulario 
+### Análisis del contenido del formulario 
 
 Esta posibilidad consiste en cargar un formulario fuera de pantalla para análisis. Para efectuar esta acción, basta con llamar a **FORM LOAD** fuera del contexto de un trabajo de impresión. En este caso, los eventos de formulario no se ejecutan.  
   

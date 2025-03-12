@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COPY NAMED SELECTION.Summary-->COPY NAMED SELECTION は*aTable*のカレントセレクションを命名セレクション*name*にコピーします。<!-- END REF-->オプション*table*引数が指定されていない場合は、そのプロセスのデフォルトテーブルを使用します。*name*引数にはセレクションのコピーが納められます。そのプロセスにおける*table*のカレントセレクションとカレントレコードは変更されません。
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 *name*が使用したメモリを解放するには、[CLEAR NAMED SELECTION](clear-named-selection.md "CLEAR NAMED SELECTION")コマンドを使用します
 
-#### 例題 
+## 例題 
 
 以下の例では、*\[People*\]テーブルに未払いの送り状があるかどうかを調べています。セレクションをソートして保存します。請求書が未払いのレコードをすべて検索します。その後、そのセレクションを再利用してメモリ内の命名セレクションを消去します。ソートしたセレクションを後で使いたい場合には、命名セレクションを消去しなくても構いません:
 
@@ -45,13 +45,13 @@ displayed_sidebar: docs
  CLEAR NAMED SELECTION("UserSort")
 ```
 
-#### 参照 
+## 参照 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

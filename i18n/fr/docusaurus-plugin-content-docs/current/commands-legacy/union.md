@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.UNION.Summary-->**UNION** crée un nouvel ensemble contenant tous les enregistrements de *ensemble1* et *ensemble2*.<!-- END REF--> Le tableau suivant liste les résultats possibles d'une opération de réunion d'ensembles.
 
@@ -34,7 +34,7 @@ L'ensemble *résultat* est créé par **UNION**. Il remplace tout ensemble du m�
 
 **4D Server :** En mode client/serveur, les ensembles sont "visibles" en fonction de leur type (interprocess, process et local) et de leur lieu de création (serveur ou client). **UNION** requiert que les trois ensembles soient visibles sur la même machine. Pour plus d'informations sur ce point, reportez-vous au paragraphe *4D Server, ensembles et sélections* dans le manuel de référence de 4D Server.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant ajoute des enregistrements à l'ensemble des meilleurs clients. Les enregistrements sont affichés à l'écran. Ensuite, l'ensemble des meilleurs clients est chargé du disque, et tous les enregistrements sélectionnés par l'utilisateur (l'ensemble système UserSet) sont ajoutés. Enfin, le nouvel ensemble est sauvegardé sur le disque :
 
@@ -46,12 +46,12 @@ L'exemple suivant ajoute des enregistrements à l'ensemble des meilleurs clients
  SAVE SET("$Meilleurs";"$Meilleurs.sav") // Sauvegarde de l'ensemble des meilleurs clients
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB Is secured connection.Summary-->O comando WEB Is secured connection retorna um booleano indicando se a conexão ao servidor web 4D se realiza em modo seguro através de TLS/SSL (a petição começa com “https:” ao invés de “http:”).<!-- END REF-->  
 
@@ -24,11 +24,11 @@ displayed_sidebar: docs
   
 Este comando permite, por exemplo, recusar as tentativas de conexão em modo não seguro.
 
-#### Ver também 
+## Ver também 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

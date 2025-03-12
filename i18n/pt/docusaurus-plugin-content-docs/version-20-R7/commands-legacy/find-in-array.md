@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Find in array.Summary-->O comando Find in array devolve o número do primeiro elemento do [Array](# "An array of values") que corresponde a valor.<!-- END REF-->
 
@@ -28,7 +28,7 @@ valor deve ser exatamente igual ao elmento a encontrar (mesmas regras que as apl
 
 Se especificar *principio*, o comando começa a busca no número de elemento especificado por *principio*. Se não se especifica *principio*, o comando começa a busca no elemento 1.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O método de projeto a seguir deleta todos os elementos apagados do string ou array de texto cujo ponteiro é passado como parâmetro:
 
@@ -57,7 +57,7 @@ Depois de implementar este método de projeto em uma base, pode escrever:
  LIMPAR ARRAY(->atValores)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O método de projeto a seguir selecionar o primeiro elemento de um array cujo ponteiro passa como primeiro parâmetro que corresponde ao valor da variável ou campo cujo ponteiro é passado como parâmetro:
 
@@ -89,7 +89,7 @@ Depois de implementar este método em um banco, você pode escrever:
 
 **Nota:** este exemplo utiliza o **elemento selecionado** do array. Leve em conta que o elemento selecionado não é significativo se o array contém mais de 32.767 elementos (ver *Arrays e objetos de formulário*). Neste caso, é necessário utilizar uma variável de tipo inteiro longo para armazenar o resultado de **Find in array**. 
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para encontrar uma referência de objeto
 
@@ -109,7 +109,7 @@ $o1:={a10;b"xyz"}
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
@@ -117,7 +117,7 @@ $o1:={a10;b"xyz"}
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

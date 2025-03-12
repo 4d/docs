@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Insert string.Summary-->Insert stringは、*source*の*where*で指定された位置の前に、*what*を 挿入した文字列を返します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 Insert stringは、文字を上書きしないで挿入するという点が[Change string](change-string.md "Change string")と異なります。
 
-#### 例題 
+## 例題 
 
 Insert string関数の使用例を次に示します。結果を変数*vtResult*に代入します。
 
@@ -36,13 +36,13 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
  vtResult:=Insert string("Indention";"ta";6) // vtResultは"Indentation"
 ```
 
-#### 参照 
+## 参照 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

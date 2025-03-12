@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PAUSE PROCESS.Summary-->PAUSE PROCESSは、[RESUME PROCESS](resume-process.md "RESUME PROCESS")コマンドで再開されるまで*process*の実行を停止します。<!-- END REF-->この間*process*はマシンの処理時間を使用しません。プロセスは停止されてもメモリ内に残ります。
 
@@ -25,14 +25,14 @@ displayed_sidebar: docs
 
 **Note:** クライアントマシンから、サーバーマシンで動作するストアドプロシージャ (*process*<0) に対して、このコマンドを使用してはいけません。
 
-#### 参照 
+## 参照 
 
 [ABORT PROCESS BY ID](abort-process-by-id.md)  
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

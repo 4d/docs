@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE は、ユーザがフィールドや入力可エリアに入力した文字を、*filteredChar* に渡した文字列の最初の文字で置き換えます。<!-- END REF-->
 
@@ -31,7 +31,7 @@ FILTER KEYSTROKE は以下の目的で使用できます:
 
 **警告:** FILTER KEYSTROKEの後に[Keystroke](keystroke.md "Keystroke")コマンドを呼び出すと、実際に入力された文字の代わりにこのコマンドに渡された文字が返されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードを使用すると: 
 
@@ -49,7 +49,7 @@ FILTER KEYSTROKE は以下の目的で使用できます:
 
 *myObject* エリアに入力されたすべての数字がアスタリスクに変換されます。
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードはパスワード入力エリアを実装します。入力された文字はスクリーン上にランダムな文字で表示されます: 
 
@@ -72,7 +72,7 @@ FILTER KEYSTROKE は以下の目的で使用できます:
 
 注意: Handle keystroke メソッドは[Keystroke](keystroke.md) の節で紹介されています。
 
-#### 例題 3 
+## 例題 3 
 
  アプリケーションに文章を入力できる欄があります。またアプリケーションには辞書テーブルがあります。テキストエリア編集中に、テキストエリア中で選択された文字に基づき、辞書の内容を取り出して挿入したいとします。これを行うには2つの方法があります:  
 \- キーを割り当てたボタンを用意する  
@@ -238,7 +238,7 @@ Get highlighted text メソッド:
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
@@ -246,7 +246,7 @@ Get highlighted text メソッド:
 [Keystroke](keystroke.md)  
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

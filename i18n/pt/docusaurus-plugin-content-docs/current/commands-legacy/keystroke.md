@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Keystroke.Summary-->Keystroke retorna o caractere introduzido pelo usuário em um campo o em uma área editável.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Pode utilizar o comando Keystroke para:
 * criar um filtro de entrada não disponível automaticamente, por exemplo nos filtros de entrada
 * implementar áreas dinâmicas de pesquisa ou de auto completar
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Consulte os exemplos do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE").
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Quando processa um evento On Before Keystroke, você está administrando a edição da área de texto atual (onde se encontra o cursor), não o “valor futuro” da fonte de dados (campo ou variável) de esta área. O método de projeto Handle keystroke permite colocar em uma segunda variável os dados introduzidos em uma área de texto, de mode que você possa utilizar esta variável para realizar diferentes ações enquanto introduz caracteres na área. Você passa como primeiro parâmetro um ponteiro até a fonte de dados da área, e como segundo parâmetro um ponteiro até a segunda variável. O método retorna o novo valor da área de texto na segunda variável, e retorna [True](true.md "True") se este valor é diferente do valor antes da entrada do último caractere. 
 
@@ -171,13 +171,13 @@ Este é o formulário em execução:
 
 Utilizando as habilidades da comunicação interprocesso de 4D, pode construir interfaces de usuário nas quais as características de pesquisa são oferecidas em janelas ventanas flutantes que se comuniquen com processos nas quais os registros são listados ou editados. 
 
-#### Ver também 
+## Ver também 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

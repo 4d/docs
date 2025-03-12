@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Is font style supported.Summary-->La commande **WP Is font style supported** retourne Vrai si le style *stylePoliceWP* est pris en charge par au moins une partie du texte inclus dans *objCible*.<!-- END REF-->
 

@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Macintosh command down.Summary-->Macintosh command downはMacintoshのcommandキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、WindowsのCtrlキーが押されていると、Macintosh command down はTRUEを返します。
 
-#### 例題 
+## 例題 
 
 [Shift down](shift-down.md "Shift down") コマンドの例を参照してください。
 
-#### 参照 
+## 参照 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

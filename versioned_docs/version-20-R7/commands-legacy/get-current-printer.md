@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get current printer.Summary-->The **Get current printer** command returns the name of the current printer defined in the 4D application.<!-- END REF--> By default, on start-up of 4D, the current printer is the printer defined in the system.
 
@@ -23,16 +23,16 @@ To obtain the list of available printers as well as additional information, use 
 
 **Note:** When the Generic PDF driver constant is used with [SET CURRENT PRINTER](set-current-printer.md), [Get current printer](get-current-printer.md) returns "\_4d\_pdf\_printer" or the actual name of the PDF driver.
 
-#### Error management 
+## Error management 
 
 If no printer is installed, an error is generated.
 
-#### See also 
+## See also 
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

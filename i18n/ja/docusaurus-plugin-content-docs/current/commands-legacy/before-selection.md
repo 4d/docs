@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Before selection.Summary-->**Before selection** は、カレントレコードポインタが*aTable*のカレントセレクションの前にある場合にTRUEを返します。<!-- END REF-->は、一般に[PREVIOUS RECORD](previous-record.md) により、カレントレコードポインタが先頭レコードの前に移動したかどうかを調べるために使用します。カレントセレクションが空の場合、**Before selection** はTRUEを返します。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 
+## 例題 
 
 以下の例はレポートの印刷中に使用します。変数*vTitle*を設定し、先頭ページのヘッダエリアに印刷します:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->O comando **OB SET ARRAY** define o *array* a ser associado a *propriedade* no objeto definido pelo parâmetro *objeto*.<!-- END REF-->deve ter sido definido com o comando *C\_OBJECT* ou designar um campo objeto 4D..  
   
@@ -29,7 +29,7 @@ No parâmetro *array*, passe o array que deve passar como valor da propriedade. 
 * variáveis simples são compatíveis com o parâmetro *array*, nesse caso um array de valor único é criado e associado com a *propriedade*
 * não é possível utilizar arrays de duas dimensões.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Utilizando um array texto:
 
@@ -44,7 +44,7 @@ Utilizando um array texto:
   // Valor de $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Adição de um elemento de um array:
 
@@ -61,7 +61,7 @@ Adição de um elemento de um array:
   // $Employees = {"Employees":["Smith","White","Brown"]}
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Utilizando um array texto com seleção de um elemento:
 
@@ -71,7 +71,7 @@ Utilizando um array texto com seleção de um elemento:
   // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Uso de um array objeto:
 
@@ -100,7 +100,7 @@ Assim é como o objeto aparece no depurador:
 
 ![](../assets/en/commands/pict1211436.en.png)
 
-#### Exemplo 5 
+## Exemplo 5 
 
 ```4d
  ARRAY TEXT($arrGirls;3)
@@ -112,7 +112,7 @@ Assim é como o objeto aparece no depurador:
 
 ![](../assets/en/commands/pict1899097.en.png)
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Usar um array de imagem:
 
@@ -125,13 +125,13 @@ Usar um array de imagem:
  OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Conversões de Tipo entre coleções e arrays 4D*  
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New.Summary-->La commande **WP New** crée et retourne un nouvel objet 4D Write Pro.<!-- END REF--> L'objet retourné est un document complet pouvant être passé, par exemple, à la commande [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md).
 
@@ -47,7 +47,7 @@ Par défaut, les expressions HTML insérées dans les anciens documents 4D Write
 
 *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Legacy character style sheets are not imported and are no longer referenced in the document.*
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez créer un objet 4D Write Pro vide :
 
@@ -55,7 +55,7 @@ Vous voulez créer un objet 4D Write Pro vide :
  myWPObject:=WP New
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez créer un nouvel objet 4D Write Pro à l'aide d'un document 4D Write Pro stocké sur disque :
 
@@ -66,7 +66,7 @@ Vous voulez créer un nouvel objet 4D Write Pro à l'aide d'un document 4D Write
  myWPArea:=WP New($BlobDoc)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez créer un objet 4D Write Pro contenant une simple référence d'expression 4D :
 
@@ -77,7 +77,7 @@ Vous voulez créer un objet 4D Write Pro contenant une simple référence d'expr
  myWPA:=WP New(myText)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous voulez initialiser votre zone 4D Write pro avec un template précédemment créé :
 
@@ -91,7 +91,7 @@ Vous voulez initialiser votre zone 4D Write pro avec un template précédemment 
  myNewWPA:=WP New(wpTemplate)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous voulez importer dans une nouvelle zone 4D Write Pro un document de l'ancien plug-in 4D Write stocké dans un champ BLOB de l'enregistrement courant, et conserver les expressions HTML :
 
@@ -100,7 +100,7 @@ Vous voulez importer dans une nouvelle zone 4D Write Pro un document de l'ancien
  wpArea:=WP New([Templates]Reference_;wk import html expressions as text)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vous avez défini un document modèle (*template*) comportant différentes parties préformatées, chacune d'elles étant stockée en tant que signet. Lorsque vous produisez un document final à partir du *template*, vous pouvez traiter chaque signet en tant que nouveau document et l'insérer dans le document final. 
 
@@ -117,7 +117,7 @@ Vous avez défini un document modèle (*template*) comportant différentes parti
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Import document](../commands/wp-import-document.md)  
 [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

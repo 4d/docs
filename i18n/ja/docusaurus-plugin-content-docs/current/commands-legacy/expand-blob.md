@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->EXPAND BLOB コマンドは、[COMPRESS BLOB](compress-blob.md "COMPRESS BLOB")コマンドを使用して既に圧縮されている*blob*を解凍します。<!-- END REF-->  
   
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 BLOBが圧縮されているかを検証するには、[BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES") コマンドを使用します。
 
-#### 例題 1 
+## 例題 1 
 
 この例題はBLOB *vxMyBlob* が圧縮されているかテストし、圧縮されていれば解凍します:
 
@@ -35,7 +35,7 @@ BLOBが圧縮されているかを検証するには、[BLOB PROPERTIES](blob-pr
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題はドキュメントを選択させ、圧縮されていれば解凍します:
 
@@ -56,16 +56,16 @@ BLOBが圧縮されているかを検証するには、[BLOB PROPERTIES](blob-pr
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 BLOBが正しく解凍されるとOK変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

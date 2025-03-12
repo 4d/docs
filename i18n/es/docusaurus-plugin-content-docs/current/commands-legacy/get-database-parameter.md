@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get database parameter.Summary-->El comando **Get database parameter** permite obtener el valor actual de un parámetro de la base 4D.<!-- END REF--> Cuando el valor del parámetro es una cadena de caracteres, se devuelve en el parámetro *valorAlfa*.
 
@@ -87,7 +87,7 @@ El parámetro *selector* designa el parámetro a obtener. 4D ofrece las siguient
 | Libzip version                      | Entero largo | 120   | **Alcance**: máquina 4D actual<br/>**Se conserva entre dos sesiones**: n/a<br/>**Descripción**: devuelve el número de versión de la librería libzip en la aplicación 4D en la máquina actual. (Sólo lectura)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Pause logging                       | Entero largo | 121   | **Alcance**: aplicación 4D<br/>**Se mantiene entre dos sesiones**: no<br/>**Valores posibles**: 0 (reanudar historial), 1 (pausar historial)<br/>Este selector permite suspender/reanudar todas las operaciones de registro iniciadas en la aplicación (excepto los registros ORDA). Esta función puede ser útil para aligerar temporalmente las tareas de la aplicación 4D o programar las operaciones de registro.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-#### Selectores hilo seguro 
+## Selectores hilo seguro 
 
 El comando **Get database parameter** puede utilizarse en procesos apropiativos al llamar a los siguientes selectores:
 
@@ -102,7 +102,7 @@ El comando **Get database parameter** puede utilizarse en procesos apropiativos 
 * IMAP Log
 * Pause logging
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea que su aplicación se reinicie después de un primer lanzamiento. La aplicación se inicia con, por ejemplo, una línea de comando en Windows:
 
@@ -126,14 +126,14 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
 [Application info](application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

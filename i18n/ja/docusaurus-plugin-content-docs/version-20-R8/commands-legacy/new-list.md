@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New list.Summary-->New list は、新しい空の階層リストをメモリに作成し、ユニークなリスト参照番号を返します。<!-- END REF-->
 
@@ -30,11 +30,11 @@ New listを使用して階層リストを作成した後は、以下のことが
 * [APPEND TO LIST](append-to-list.md "APPEND TO LIST")や[INSERT IN LIST](insert-in-list.md "INSERT IN LIST")を使用して、項目をリストに追加できます。
 * [DELETE FROM LIST](delete-from-list.md "DELETE FROM LIST")コマンドを使用して、リストから項目を削除できます。.
 
-#### 例題 
+## 例題 
 
 [APPEND TO LIST](append-to-list.md "APPEND TO LIST")コマンドの例題を参照
 
-#### 参照 
+## 参照 
 
 [APPEND TO LIST](append-to-list.md)  
 [BLOB to list](blob-to-list.md)  
@@ -45,7 +45,7 @@ New listを使用して階層リストを作成した後は、以下のことが
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

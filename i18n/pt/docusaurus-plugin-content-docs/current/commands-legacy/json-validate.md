@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.JSON Validate.Summary-->O comando **JSON Validate** verifica a conformidade do conteúdo JSON *vJson* com as regras definidas no esquema JSON *vSchema*.<!-- END REF--> Se o JSON não for válido, o comando devolve uma descrição detalhada dos erros.
 
@@ -47,7 +47,7 @@ Cada objeto de erro da coleção *errors* contém as propriedades abaixo:
 | *offset*                | Número   | Deslocamento de linha de erro no arquivo JSON. Esta propriedade é preenchida se o JSON tiver sido analisado por [JSON Parse](json-parse.md) com o parâmetro *\**. Do contrário, a propriedade é omitida. |
 | *schemaPaths*           | Text   | Rota JSON no esquema que causa o erro de validação                                                                                                                                                       |
 
-##### Gestão de erros 
+### Gestão de erros 
 
 Os erros abaixo podem ser retornados  
 
@@ -77,7 +77,7 @@ Os erros abaixo podem ser retornados
 | 23       | not                    | O JSON é válido contra o valor de 'not'.                                                         |
 | 24       | format.                | A string não combina ("{s1}")                                                                    |
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser validar um objeto JSON com um esquema e obter a lista de erros de validação, se houver. Deseja armazenar linhas de erro e mensagens em uma variável de texto:
 
@@ -99,13 +99,13 @@ Se quiser validar um objeto JSON com um esquema e obter a lista de erros de vali
 
 **Nota:** este exemplo exige que a notação de objeto esteja ativada (ver o parágrafo *Página Compatibilidade*). 
 
-#### Ver também 
+## Ver também 
 
   
   
 [JSON Parse](json-parse.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

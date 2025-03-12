@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is nil pointer.Summary-->**Is nil pointer** retourne Vrai si le pointeur que vous passez dans *pointeur* est **Nil** (*\->\[\]*).<!-- END REF--> Elle retourne Faux dans tous les autres cas (pointeur vers un champ, une table ou une variable).
 
 Si vous souhaitez connaître le nom de la variable pointée ou le numéro du champ, vous pouvez utiliser la commande [RESOLVE POINTER](resolve-pointer.md).
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $ptr : Pointer
@@ -32,12 +32,12 @@ Si vous souhaitez connaître le nom de la variable pointée ou le numéro du cha
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

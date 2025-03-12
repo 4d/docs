@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Validate.Summary-->The **JSON Validate** command checks the compliance of the *vJson* JSON contents with the rules defined in the *vSchema* JSON schema.<!-- END REF--> If the JSON is invalid, the command returns a detailed description of error(s). 
 
@@ -47,7 +47,7 @@ Each error object of the *errors* collection contains the following properties:
 | *offset*          | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](json-parse.md) with the *\** parameter. Otherwise, the property is omitted. |
 | *schemaPaths*     | Text   | JSON path in the schema that causes the validation error                                                                                                                                   |
 
-##### Error management 
+### Error management 
 
 The following errors may be returned :   
 
@@ -77,7 +77,7 @@ The following errors may be returned :
 | 23       | not                  | The JSON is valid against the value of 'not'.                                                                 |
 | 24       | format               | The string does not match ("{s1}")                                                                            |
 
-#### Example 
+## Example 
 
 You want to validate a JSON object with a schema and get the list of validation errors, if any, and store error lines and messages in a text variable:
 
@@ -99,13 +99,13 @@ You want to validate a JSON object with a schema and get the list of validation 
 
 **Note:** This example requires that object notation is activated (see the *Compatibility page*). 
 
-#### See also 
+## See also 
 
   
   
 [JSON Parse](json-parse.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is in set.Summary-->**Is in set** teste si l'enregistrement courant de la table est inclus dans *ensemble*.<!-- END REF--> La fonction **Is in set** retourne Vrai si l'enregistrement courant de la table est dans *ensemble*, et retourne Faux si l'enregistrement courant de la table n'est pas dans *ensemble*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est la méthode objet d'un bouton testant si l'enregistrement courant est inclus dans l'ensemble des meilleurs clients :
 
@@ -30,12 +30,12 @@ L'exemple suivant est la méthode objet d'un bouton testant si l'enregistrement 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->**On Server Close Connectionデータベースメソッド**は、4Dクライアントプロセスが終了するたびに、サーバマシン上で一度呼び出されます。<!-- END REF-->
 
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 
 **On Server Close Connectionデータベースメソッド**は、[On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)と対をなすメソッドです。4Dクライアントプロセスについての詳細は、このデータベースメソッドの説明を参照してください。
 
-#### 例題 
+## 例題 
 
 [On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)の例題参照

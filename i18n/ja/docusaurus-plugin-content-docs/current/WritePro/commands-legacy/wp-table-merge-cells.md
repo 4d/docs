@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->**WP TABLE MERGE CELLS** コマンドは、*targetObj* または(*startColumn*、*startRow*、*columnCount*、および *rowCount* によって定義される)*tableRef* 内のセルのセレクションを結合します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ rowCount 引数が省略された場合は、1 を渡したのと同等の扱い
 
 If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数と rowCount 引数の和が *tableRef* 引数で指定した表の列/行数を超える場合、またはstartColumn 引数または *startRow* 引数が *tableRef* 引数で指定した表の列/行数より大きい場合、返されるレンジには最大限大きい列/行数を格納したレンジが返されますので、これはつまり表全体が一つの巨大なセルへと結合されることになります。
 
-#### 例題 
+## 例題 
 
 複数のセルのレンジを指定して一つに結合したい場合を考えます:
 
@@ -64,7 +64,7 @@ If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数�
 
 詳細については、*セルの結合と結合解除* の章を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
 *表の管理*  

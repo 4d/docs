@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DIFFERENCE.Summary-->DIFFERENCEコマンドは、*set*と*subtractSet*を比較し、*subtractSet*に格納されている全てのレコードを*set*から取り除きます。<!-- END REF-->つまり、*set*にだけ存在し、*subtractSet*には存在しないレコードのみを*resultSet*に格納します。以下の表に、DIFFERENCEコマンドで考えられるすべての組み合わせを示します。
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **4D Server:** クライアント/サーバモードにおいて、セットはタイプ (インタープロセス、プロセスおよびローカル) およびそれらがどこで作成されたか (サーバまたはクライアント) によって、アクセス可能かどうかが決定されます。DIFFERENCEでは3つのセットが同じマシン上でアクセスできる必要があります。詳細は4D Server Referenceマニュアルの*4D Server: セットと命名セレクション*に関する説明を参照してください。
 
-#### 例題 
+## 例題 
 
 以下の例は、表示したセレクションからユーザが選択したレコードを排除します。このレコードリストは、以下のステートメントで画面に表示されます。
 
@@ -51,12 +51,12 @@ displayed_sidebar: docs
  CLEAR SET("$Current") //セットを消去する
 ```
 
-#### 参照 
+## 参照 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

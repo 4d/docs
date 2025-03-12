@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ENABLE MENU ITEM.Summary-->O comando ENABLE MENU ITEM ativa o comando de menu cujo número ou referência de menu e número de elemento que passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*.
 
@@ -25,11 +25,11 @@ Se omite o parâmetro *processo*, ENABLE MENU ITEM é aplicado a barra de menus 
 
 **Tip:** para ativar/desativar todos os comandos de menus de uma vez, passe 0 (zero) em *menuItem*.
 
-#### Ver também 
+## Ver também 
 
 [DISABLE MENU ITEM](disable-menu-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

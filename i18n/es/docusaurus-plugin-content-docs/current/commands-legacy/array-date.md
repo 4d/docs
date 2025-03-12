@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY DATE.Summary-->El comando ARRAY DATE crea y/o redimensiona un array de elementos de tipo Fecha en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
@@ -26,7 +26,7 @@ Cuando aplica ARRAY DATE a un array existente:
 * Si agranda el tamaño del array, los elementos existente no son modificados, y los nuevos elementos se inicializan en (!00/00/00!).
 * Si reduce el tamaño del array, se pierden los últimos elementos borrados del array.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array de proceso de 100 elementos de tipo Fecha:
 
@@ -34,7 +34,7 @@ Este ejemplo crea un array de proceso de 100 elementos de tipo Fecha:
  ARRAY DATE(adValores;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas de 50 elementos de tipo Fecha:
 
@@ -42,7 +42,7 @@ Este ejemplo crea un array local de 100 filas de 50 elementos de tipo Fecha:
  ARRAY DATE($adValores;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array interproceso de 50 elementos de tipo Fecha y asigna a cada elemento la fecha actual más un número de días igual al número de elemento:
 
@@ -54,7 +54,7 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Fecha y asigna a
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

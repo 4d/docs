@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description 
+## Description 
 
 The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
@@ -36,7 +36,7 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive.
 
-#### Example
+## Example
 
 To retrieve and view the contents of a ZIP file object:
 
@@ -76,14 +76,14 @@ To extract from the root folder:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-#### See also 
+## See also 
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

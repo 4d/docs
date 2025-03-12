@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RECEIVE RECORD.Summary-->RECEIVE RECORDは、[SET CHANNEL](set-channel.md "SET CHANNEL")コマンドで開いたシリアルポートまたはドキュメントから*table*にレコードを受信します。<!-- END REF-->受信するレコードは[SEND RECORD](send-record.md "SEND RECORD")で送信したものでなければなりません。RECEIVE RECORDを実行すると、*table*に新しいレコードが自動で作成されます。レコードを正しく受信した時点で、[SAVE RECORD](save-record.md "SAVE RECORD")コマンドを使用して新しいレコードを保存します。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 1. このコマンドを使用してドキュメントからレコードを受信する場合、ドキュメントは[SET CHANNEL](set-channel.md "SET CHANNEL")コマンドを使用して開かれていなければなりません。[Open document](open-document.md "Open document"), [Append document](append-document.md "Append document") または [Create document](create-document.md "Create document")で開かれたドキュメントに対して、RECEIVE RECORDを使用することはできません。
 2. RECEIVE RECORDの実行中、Ctrl-Alt-Shift (Windows) またはCommand-Option-Shift (Macintosh) を押して、受信を中断することができます。中断することにより、エラー-9994が生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")を使用してインストールされたエラー処理メソッドにより、このエラーをとらえることができます。通常、シリアルポート経由での通信の場合にのみ、受信の中断処理を実行する必要があります。
 
-#### 例題 
+## 例題 
 
 データのアーカイブ作成や、異なる場所で使用されている同じシングルユーザデータベース間でデータをやり取りする際には、[SEND VARIABLE](send-variable.md "SEND VARIABLE"), [SEND RECORD](send-record.md "SEND RECORD"), [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE") そして RECEIVE RECORDコマンドを組み合わせて使用するとよいでしょう。[EXPORT TEXT](export-text.md "EXPORT TEXT") や [IMPORT TEXT](import-text.md "IMPORT TEXT")等の読み込み/書き出しコマンドを利用して、4Dデータベース間でデータ交換を実行できます。しかしデータ中にグラフィックやリレートテーブルが含まれる場合には、[SEND RECORD](send-record.md "SEND RECORD") と RECEIVE RECORDを使う方がはるかに便利です。 
 
@@ -141,17 +141,17 @@ displayed_sidebar: docs
   
 デー タ受信中にシステム変数OKの評価も行わず、またエラーの検出も行っていない点に注意してください。しかし、ドキュメントそのものを表わす変数をドキュメ ントに保存するため、これらの変数がいったん受信され意味を持つ場合には、エラーの可能性は低くなります。例えば、ユーザが誤ったドキュメントをオープン した場合、この処理は最初の判定式で即座に中断されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 レコードを受信するとシステム変数OKは1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

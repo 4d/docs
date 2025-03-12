@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Web Connection database method.Summary-->O On Web Connection database method pode ser chamado nos seguintes casos:  
 
@@ -92,7 +92,7 @@ Os parâmetros *$5* e *$6* recebem o nome de usuário e senha inseridos pelo usu
 
 **Nota:** se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro *$6* (a senha do usuário) não é retornado por razões de segurança.
 
-#### On Web Connection Database Method Calls 
+## On Web Connection Database Method Calls 
 
 O On Web Connection database method pode ser utilizado como ponto de entrada para o servidor web 4D, seja para usar a URL especial *4DCGI*, ou utilizando as URLs de comando personalizados.
 

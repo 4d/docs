@@ -31,7 +31,7 @@ La comunicación proceso “Intermachine”, ofrecida por los comandos GET PROCE
 
 **Tip:** si no conoce el número de identificación del proceso servidor, aún puede utilizar las variables interproceso del servidor. Para hacer esto, puede utilizar cualquier valor negativo en *proceso*. En otras palabras, no es necesario conocer el número de identificación del proceso para poder utilizar el comando GET PROCESS VARIABLE con las variables interproceso del servidor. Esta posibilidad es muy útil particularmente cuando un procedimiento almacenado se lanza utilizando el método base On server startup. Como los equipos cliente no conocen automáticamente el número de identificación de ese proceso, todo valor negativo puede pasarse en el parámetro *proceso*.
 
-##### Restricciones 
+### Restricciones 
 
 GET PROCESS VARIABLE no acepta variables locales como variables fuente. 
 

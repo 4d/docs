@@ -16,22 +16,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->SAX GET XML DOCUMENT VALUES コマンドは、*document* 引数で参照されるXMLドキュメントのXMLヘッダから基本情報を取得します。<!-- END REF--> 
 
 コマンドはエンコーディングのタイプ、バージョン、そして"スタンドアロン" プロパティをそれぞれ*encoding*、*version*、そして*standalone*引数に返します。このコマンドはXML Start Documentイベント内で使用されなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 [SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

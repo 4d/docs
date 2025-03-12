@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Test path name.Summary-->**Test path name**コマンドは、引数*pathname*に渡された名前またはパス名を持つドキュメントまたはフォルダーが、ディスク上に存在するかどうかをチェックします。<!-- END REF-->相対的なパス名または絶対的なパス名のいずれかをカレントシステムのシンタックスで表して渡します。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
   
 ドキュメントもフォルダも見つからない場合、**Test path name**は負の値を返します。(ファイルが見つからない場合には-43になります) 。
 
-#### 例題 
+## 例題 
 
 以下の例では、“Journal” というドキュメントがデータベースのフォルダにあるかどうかをテストし、見つからない場合にはこれを作成します。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

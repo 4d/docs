@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->O comando SCREEN COORDINATES devolve nos parâmetros *esquerda*, *acima*, *direita,* e *abaixo* as coordenadas da tela especificada por *IDtela*.<!-- END REF-->
 
@@ -40,13 +40,13 @@ As imagens abaixo demostram as diferenças entre o tamanho da tela e a área de 
 * Se a barra de tarefas ou o dock se ocultarem automaticamente, **SCREEN COORDINATES** sempre devolverá o tamanho completo da tela.
 * Se oferecer um valor não válido em *IDtela*, se devolve um zero para todas as coordenadas.
 
-#### Ver também 
+## Ver também 
 
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

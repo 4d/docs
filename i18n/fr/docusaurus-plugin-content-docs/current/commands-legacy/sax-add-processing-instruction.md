@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->La commande **SAX ADD PROCESSING INSTRUCTION** ajoute dans le document XML référencé par *document* une *instruction* de traitement XML.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Une instruction de traitement permet d’indiquer le type d’application et év
 
 La commande formate les données d’instruction conformément au XML. En revanche, les instructions elles-mêmes ne sont pas analysées, il revient au développeur de s’assurer qu’elles sont valides.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant : 
 
@@ -40,15 +40,15 @@ Le code suivant :
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

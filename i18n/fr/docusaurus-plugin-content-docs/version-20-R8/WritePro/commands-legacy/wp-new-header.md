@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New header.Summary-->La commande **WP New header** crée et retourne l'en-tête associé à la section ou à la sous-section définie par le paramètre *wpSection* .<!-- END REF-->
 
 Si un élément en-tête est déjà défini pour la section ou la sous-section, un objet indéfini est retourné et une erreur est générée.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez créer un en-tête pour les pages de droite d'une section :
 
@@ -37,7 +37,7 @@ Vous souhaitez créer un en-tête pour les pages de droite d'une section :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE HEADER](wp-delete-header.md)  
 [WP Get header](wp-get-header.md)  

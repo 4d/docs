@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->O comando **OBJECT Get horizontal alignment** devolve um código indicando o tipo de alinhamento aplicado ao objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -50,13 +50,13 @@ Os objetos de formulário aos quais se pode aplicar alinhamento são os seguinte
 * Rodapés de list box
 * *Referência 4D Write Pro* areas
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get picture file name.Summary-->The **Get picture file name** command returns the current default name of the picture passed as parameter.<!-- END REF-->
 
@@ -22,11 +22,11 @@ The default name is used when exporting the picture to a disk file. It can be se
 
 If the picture does not have a default name, the command returns an empty string.
 
-#### See also 
+## See also 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

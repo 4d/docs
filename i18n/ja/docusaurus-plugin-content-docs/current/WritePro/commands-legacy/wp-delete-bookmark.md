@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP DELETE BOOKMARK.Summary-->**WP DELETE BOOKMARK** コマンドは*wpDoc* 引数で指定した4D Write Proドキュメント内の、*bkName* 引数で指定した名前のブックマークを削除します。<!-- END REF-->
 
 *bkName* 引数のブックマークがの*wpDoc* ドキュメント内に存在しない場合、コマンドは何もしません。
 
-#### 例題 
+## 例題 
 
 既存のブックマークの名前を変更したい場合を考えます。そのためには、同じレンジを使用した新しいブックマークを作成し、古い方を削除する必要があります:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

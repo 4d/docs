@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MOUSE POSITION.Summary-->La commande **MOUSE POSITION** retourne l'état courant de la souris.<!-- END REF-->
 
@@ -26,11 +26,11 @@ Le paramètre *boutonSouris* retourne l'état du ou des bouton(s) de la souris, 
 
 **Note :** Les valeurs 2 et 3 peuvent être retournées sous macOS à compter de la version 10.2.5 uniquement.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [Pop up menu](pop-up-menu.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -41,7 +41,7 @@ Reportez-vous à l'exemple de la commande [Pop up menu](pop-up-menu.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

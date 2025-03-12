@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->El comando REDRAW WINDOW provoca una actualización del contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 
 
@@ -21,11 +21,11 @@ Si omite el parámetro *ventana*, REDRAW WINDOW aplica a la ventana del primer p
 
 **Nota:** 4D administra automáticamente las actualizaciones gráficas de las ventanas cada vez que usted mueve, redimensiona o pasa al primer plano una ventana, así como también cuando usted cambia el formulario y/o los valores mostrados en la ventana. Este comando se utiliza con muy poca frecuencia.
 
-#### Ver también 
+## Ver también 
 
 [ERASE WINDOW](erase-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

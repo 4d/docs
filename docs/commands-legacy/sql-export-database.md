@@ -48,7 +48,7 @@ In the export file, there may be fewer values than there are fields in the table
 
 If the export has been carried out correctly, the OK variable is set to 1\. Otherwise, it is set to 0\. 
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 

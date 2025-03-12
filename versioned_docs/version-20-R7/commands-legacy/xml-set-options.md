@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->The **XML SET OPTIONS** command is used to modify the value of one or more XML options for the structure passed in the first parameter.<!-- END REF--> 
 
@@ -48,7 +48,7 @@ Pass the option to be modified in *selector* and the new value of the option in 
 | XML external entity resolution | Integer | 7     | Controls whether external entities are resolved in XML documents. For security reasons, by default both DOM and SAX 4D XML parsers do not allow external entity resolution. Note that the scope of this selector is the calling process (if preemptive) or all cooperative processes (if called from a cooperative process). It globally applies to all XML documents (the first parameter is ignored, you can pass an empty string). <br/>**Possible values:**<br/>XML enabled: allow external entity resolution in XML documentsXML disabled (default value): disallow external entity resolution (an external entity declaration generates a parser error) |  
 | XML line ending                | Integer | 10    | End-of-line characters in written XML documents.<br/>**Possible values:** XML default (default): use current database settings. Default is LF on macOS and CRLF on Windows. However on macOS, in databases/projects created with 4D versions up to v19.x, default is CR for DOM and CRLF for SAX. See also Compatibility settings. XML LF: Use LF (line feed) XML CR: Use CR (carriage return) XML CRLF: Use CR+LF                                                                                                                                                                                                                                                    |
 
-#### Example 
+## Example 
 
 Insertion of an SVG picture:
 
@@ -58,7 +58,7 @@ Insertion of an SVG picture:
  DOM SET XML ATTRIBUTE($pictElemRef;"xlink:href";PictVar)
 ```
 
-#### See also 
+## See also 
 
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
@@ -66,7 +66,7 @@ Insertion of an SVG picture:
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

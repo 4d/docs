@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ALL RECORDS.Summary-->ALL RECORDS seleciona todos os registros de *tabela* para o processo atual.<!-- END REF--> ALL RECORDS faz do primeiro registro da seleção o registro atual e o carrega em memória. ALL RECORDS retorna os registros na ordem padrão, que é a ordem no qual os registros são armazenados no disco
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]: 
 
@@ -26,7 +26,7 @@ O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]:
  DISPLAY SELECTION([Pessoas]) // Mostrar os registros no formulário de saída
 ```
 
-#### Ver também 
+## Ver também 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
@@ -35,7 +35,7 @@ O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]:
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

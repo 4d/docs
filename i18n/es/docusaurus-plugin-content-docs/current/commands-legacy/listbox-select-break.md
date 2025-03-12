@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->El comando LISTBOX SELECT BREAK se utiliza para seleccionar líneas de ruptura en el objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF--> El list box debe mostrarse en modo jerárquico.   
   
@@ -38,7 +38,7 @@ El parámetro *accion*, si se pasa, puede definir la acción de selección que d
 * tiene que hacer selecciones de list box visibles utilizando opciones de interfaz disponibles. Para más información acerca de cómo hacerlo, ver *Personalizar la apariencia de las selecciones*.
 * no puede resaltar las líneas de ruptura para los list boxes jerárquicos en este caso (ver *Limitación con list boxes jerárquicos*).
 
-#### Ejemplo 
+## Ejemplo 
 
 Dados los siguientes arrays representados en un list box:
 
@@ -57,12 +57,12 @@ Este es el resultado:
 
 ![](../assets/en/commands/pict185059.en.png)
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

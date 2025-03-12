@@ -17,7 +17,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP PRINT.Summary-->**WP PRINT** コマンドは、*wpDoc* で指定した 4D Write Proドキュメントの印刷ジョブをローンチするか、あるいは[OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) と [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md) の間に呼び出された場合には、ドキュメントをカレントの印刷ジョブに追加します。<!-- END REF-->**WP PRINT** は通常の [PRINT SETTINGS](../../commands-legacy/print-settings.md) あるいは [SET PRINT OPTION](../../commands-legacy/set-print-option.md) コマンドで定義された印刷設定を使用しますが、ページの余白に関しては常に 4D Write Pro ドキュメントの設定を使用します。また、**WP PRINT** はカレントのページ設定オプション (ページサイズやページの向きなど) を使用しますが、[WP USE PAGE SETUP](wp-use-page-setup.md) が先に呼び出されていた場合には、指定ドキュメントにおけるこれらの設定を使用します。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** GDI-ベースの旧式印刷レイヤー([SET PRINT OPTION](../../commands-legacy/set-print-option.md) コマンドを使用して設定可能)は廃止予定となっており、**WP PRINT** と使用してはいけません。レンダリング時にアーティファクトが出るおそれがあるからです。このコマンドではデフォルトの印刷レイヤーのみを使用することが推奨されています。
 
-#### 例題 
+## 例題 
 
 変数の値に応じて、4D Write Pro ドキュメントを標準レイアウト、あるいは HTML wysiwyg レイアウトで印刷します:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get position](wp-get-position.md)  
 [WP USE PAGE SETUP](wp-use-page-setup.md)  

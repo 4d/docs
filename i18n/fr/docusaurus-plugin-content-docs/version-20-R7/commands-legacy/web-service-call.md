@@ -64,13 +64,13 @@ Les cinq configurations décrites ci-dessous peuvent donc être mises en oeuvre.
 
 **Note :** Bien qu’étant des types XML composés, les tableaux de données sont gérés par 4D comme des types simples. 
 
-##### Mode RPC, entrée et sortie simples 
+### Mode RPC, entrée et sortie simples 
 
 Cette configuration est la plus simple à utiliser. Dans ce cas, le paramètre *typeComposé* contient la constante Web Service dynamic ou est omis.   
 Les paramètres envoyés et les réponses reçues peuvent être manipulés directement, sans traitement préalable.   
 Reportez-vous à l’exemple de la commande [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### Mode RPC, entrée composée et sortie simple 
+### Mode RPC, entrée composée et sortie simple 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual in. Avec cette configuration, vous devez passer “manuellement” au Web Service chaque élément xml source sous la forme d'un BLOB, à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).  
 Il vous appartient de formater le BLOB initial sous forme d’élément xml valide. Ce BLOB doit contenir comme premier élément le premier élément “fils” supposé de l’élément <Body> de la requête finale. 
@@ -86,7 +86,7 @@ Il vous appartient de formater le BLOB initial sous forme d’élément xml vali
  WEB SERVICE GET RESULT($0;"MaVarSortie";*)
 ```
 
-##### Mode RPC, entrée simple et sortie composée 
+### Mode RPC, entrée simple et sortie composée 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual out. Chaque paramètre de sortie sera retourné par le Web Service sous forme d’élément xml stocké dans un BLOB. Vous récupérez ce paramètre à l’aide de la commande [WEB SERVICE GET RESULT](web-service-get-result.md). Vous pourrez ensuite analyser le contenu du BLOB reçu à l’aide des commandes XML de 4D. 
 
@@ -101,7 +101,7 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
  WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
 ```
 
-##### Mode RPC, entrée et sortie composées 
+### Mode RPC, entrée et sortie composées 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual. Chaque paramètre d’entrée et de sortie devra être stocké sous forme d’élément xml dans des BLOBs, comme décrit dans les deux configurations précédentes. 
 
@@ -116,7 +116,7 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
  WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
 ```
 
-##### Mode DOC 
+### Mode DOC 
 
 Une méthode proxy d’appel d’un Web Service DOC est semblable à une méthode proxy d’appel d’un Web Service RPC utilisant des paramètres d’entrée et de sortie composés.  
 La seule différence entre ces deux configurations se situe au niveau du contenu xml des paramètres BLOB passés et reçus. Du point de vue de 4D, la construction et l’envoi de la requête SOAP sont identiques. 

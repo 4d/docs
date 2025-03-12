@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is compiled mode.Summary-->La fonction **Is compiled mode** teste si la base tourne en mode compilé (Vrai) ou en mode interprété (Faux).<!-- END REF-->
 
@@ -25,7 +25,7 @@ Le paramètre facultatif *\** est utile dans le cadre d'une architecture utilisa
    * si le paramètre *\** n’est pas passé, la commande retourne [True](true.md) ou [False](false.md) en fonction du mode d’exécution du composant.
 * Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours [True](true.md) ou [False](false.md) en fonction du mode d’exécution de la base hôte.
 
-#### Exemple 
+## Exemple 
 
 Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsque vous êtes en mode interprété. Vous pouvez précéder ce code d'un test qui appelle la fonction **Is compiled mode** :
 
@@ -37,12 +37,12 @@ Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsq
   // ...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

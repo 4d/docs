@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COLLECTION TO ARRAY.Summary-->La commande **COLLECTION TO ARRAY** remplit un ou plusieurs *tableau*(x) avec les éléments ou les valeurs *nomPropriété* de la *collection* dans le ou les *tableau*(x).<!-- END REF-->
 
@@ -26,7 +26,7 @@ Cette commande peut être utilisée avec une *collection* qui contient des valeu
 
 Dans tous les cas, 4D convertit les éléments de la collection ou les valeurs selon le type du *tableau* (si nécessaire). Les règles de conversion sont détaillées dans la page *Conversions de type entre les collections et les tableaux 4D*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez copier une collection de chaînes dans un tableau texte :
 
@@ -40,7 +40,7 @@ Vous souhaitez copier une collection de chaînes dans un tableau texte :
   //...
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez copier différentes valeurs de propriété d'une collection d'objets dans différents tableaux :
 
@@ -61,12 +61,12 @@ Vous voulez copier différentes valeurs de propriété d'une collection d'objets
   //...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
 *Conversions de type entre les collections et les tableaux 4D*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->**GET LIST PROPERTIES** コマンドは、*list*で指定された参照番号を持つ階層リストについての情報を返します。<!-- END REF--> 
 
@@ -39,11 +39,11 @@ displayed_sidebar: docs
 
 リストの表示様式、ノードアイコン、行の高さの最小値、およびダブルクリックの管理についての詳細は、[SET LIST PROPERTIES](set-list-properties.md) コマンドを参照してください。
 
-#### 参照 
+## 参照 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

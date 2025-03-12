@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get subsection.Summary-->La commande **WP Get subsection** retourne soit la première sous-section intersectée par la plage ou par l'élément *objCible*, soit la sous-section *typeSousSection* spécifiée de la section *wpSection*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Si la plage ou l'élément est associé(e) à une image ancrée, une erreur est 
     
 Si aucune sous-section *typeSousSection* n'est définie pour la *wpSection* spécifiée, la commande retourne un objet indéfini (aucune erreur n'est retournée).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez appliquer un fond bleu aux pages de gauche :
 
@@ -55,7 +55,7 @@ Vous souhaitez appliquer un fond bleu aux pages de gauche :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get section](wp-get-section.md)  

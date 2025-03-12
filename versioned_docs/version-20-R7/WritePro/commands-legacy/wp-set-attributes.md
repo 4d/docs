@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET ATTRIBUTES.Summary-->The **WP SET ATTRIBUTES** command allows you to set the value of any attribute in a range, element or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
@@ -31,7 +31,7 @@ You can pass as many *attribName* / *attribValue* pairs as you want.
 
 **Note:** If you need to set multiple attributes for the same target, it is more optimized to use a single call to **WP SET ATTRIBUTES** with all attribute/value pairs, rather than calling **WP SET ATTRIBUTES** several times. 
 
-#### Example 1 
+## Example 1 
 
 In this 4D Write Pro area, you selected a word:  
   
@@ -57,7 +57,7 @@ You get the following result:
   
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
-#### Example 2 
+## Example 2 
 
 This example illustrates the use of wk inside and wk outside constants:  
 
@@ -73,7 +73,7 @@ Assuming all of the contents were selected, the result is:
   
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
-#### Example 3 
+## Example 3 
 
 You want to set a background image for the document:
 
@@ -109,7 +109,7 @@ The result is:
 
 **Note**: The paper box value is only applicable to documents and sections.
 
-#### Example 4 
+## Example 4 
 
 You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
 
@@ -137,7 +137,7 @@ The result is:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 
-#### See also 
+## See also 
 
 *4D Write Pro Attributes*  
 [WP GET ATTRIBUTES](wp-get-attributes.md)  

@@ -14,20 +14,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML COMMENT.Summary-->La commande **SAX GET XML COMMENT** retourne un *commentaire* si un événement SAX de type XML comment est généré dans le document XML référencé par *document*.<!-- END REF--> Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

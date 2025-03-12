@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Sum.Summary-->O comando **Sum** devolve a soma (total de todos os valores) para *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para calcular o total dos valores.  
   
@@ -27,7 +27,7 @@ Apenas valores de atributo numérico são computados. Se houver valores na rota 
 
 Se o comando for executado corretamente, a variável sistema OK toma o valor 0\. Se for interrompida (por exemplo se o usuário clicar no botão Parar o termômetro de progresso) a variável OK toma o valor 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é um método de objeto para uma variável *vTotal* localizada em um formulário. O método de objeto atribui a soma de todos os salários a *vTotal*:
 
@@ -48,7 +48,7 @@ O método a seguir é chamado para imprimir os registros na seleção e para ati
 
 **Nota:** o parâmetro para o comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu informe. Para maior informação sobre o processo de quebras consulte os comandos do tema *Imprimir*.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo permite obter a soma de todos os valores localizados num array:
 
@@ -59,11 +59,11 @@ Este exemplo permite obter a soma de todos os valores localizados num array:
  vSum:=Sum($ArrGrades)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](average.md).
 
-#### Ver também 
+## Ver também 
 
 [ACCUMULATE](accumulate.md)  
 [Average](average.md)  
@@ -74,7 +74,7 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Pop up menu.Summary-->The **Pop up menu** command displays a pop-up menu at the current location of the mouse.<!-- END REF--> 
 
@@ -56,7 +56,7 @@ If you select a menu item, the command returns its number; otherwise, it returns
 
 **Note:** Use pop-up menus that have a reasonable number of items. If you want to display more than 50 items, you might think about a using scrollable area in a form instead of a pop-up menu.
 
-#### Example 
+## Example 
 
 The project method MY SPEED MENU pulls down a navigation speed menu:
 
@@ -98,12 +98,12 @@ The following is the pop-up menu as it appears on Windows (left) and Macintosh (
 
 ![](../assets/en/commands/pict36394.en.png)
 
-#### See also 
+## See also 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

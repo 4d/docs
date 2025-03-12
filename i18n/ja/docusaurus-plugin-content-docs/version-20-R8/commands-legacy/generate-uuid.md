@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Generate UUID.Summary-->Generate UUID は32文字のUUID識別子を整形されていない形式で返します。<!-- END REF-->
 
@@ -21,7 +21,7 @@ UUIDは16バイト (128 bit) の数値で、32個の16進文字を含んでい�
 
 4DではUUID番号をフィールドに格納することができます。 詳細はDesign Referenceマニュアルの*UUIDフォーマット*を参照してください。
 
-#### 例題 
+## 例題 
 
 UUIDを生成して変数に代入する: 
 
@@ -31,7 +31,7 @@ UUIDを生成して変数に代入する:
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

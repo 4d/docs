@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->**LISTBOX SET STATIC COLUMNS**コマンドは*object* と *\** 引数で指定したリストボックス中のスタティック列の数を左端から*numColumns*に設定します。<!-- END REF-->
 
@@ -23,12 +23,12 @@ displayed_sidebar: docs
 
 **注:** スタティック列とロックされた列は異なる機能です。詳細はランゲージリファレンスマニュアルを参照してください。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

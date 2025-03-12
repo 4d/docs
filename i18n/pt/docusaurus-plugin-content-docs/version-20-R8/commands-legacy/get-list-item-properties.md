@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->O comando **GET LIST ITEM PROPERTIES** retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF-->
 
@@ -45,14 +45,14 @@ Depois de a chamar:
 
 Para maior informação sobre estas propriedades, consulte a descrição do comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

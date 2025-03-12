@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->The **GET DOCUMENT PROPERTIES** command returns information about the document whose name or pathname you pass in *document*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ After the call:
 * *created on* and *created at* return the date and time when the document was created.
 * *modified on* and *modified at* return the date and time when the document modified for the last time.
 
-#### Example 
+## Example 
 
 You have created a documentation database and you would like to export all the records you created in the database to documents on disk. Because the database is regularly updated you want to write an export algorithm that create or recreate each document on disk if the document does not exist or if the corresponding record has been modified after the document was saved for the last time. Consequently, you need to compare the date and time of modification of a document (if it exists) with its corresponding record. For illustrating this example, we use the table whose definition is shown below:
 
@@ -205,11 +205,11 @@ Once this is implemented in the database, we have all we need to write the proje
  ALERT("Number of documents processed: "+String($vlNbRecords)+Char(13)+"Number of documents updated: "+String($vlNbDocs)+Char(13)+"Number of documents deleted: "+String(Size of array($asDocument)))
 ```
 
-#### See also 
+## See also 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

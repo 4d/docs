@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DELETE INDEX.Summary-->DELETE INDEXコマンドを使用して、データベースから1つ以上の既存のインデックスを削除できます。<!-- END REF-->  
 フィールドを指すポインター、またはインデックスの名前のどちらかを渡します。
@@ -26,11 +26,11 @@ displayed_sidebar: docs
 
 *fieldPtr*または*indexName*に対応するインデックスがない場合、コマンドは何もしません。
 
-#### 配布に関する注意 
+## 配布に関する注意 
 
 このコマンドはデータベースストラクチャーを変更するため、読み出し専用のパッケージアプリ(*Program Files* フォルダ内にまたは.4dz ファイル内にインストールされている.4dc ファイル)のコンテキストにおいては使用することができません。
 
-#### 例題 
+## 例題 
 
 このコマンドの両方のシンタックスの使用例を以下に示します。
 
@@ -41,13 +41,13 @@ displayed_sidebar: docs
  DELETE INDEX("CityZip")
 ```
 
-#### 参照 
+## 参照 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

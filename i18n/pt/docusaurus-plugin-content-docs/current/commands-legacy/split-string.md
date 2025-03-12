@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Split string.Summary-->O comando **Split string** devolve uma coleção de strings, criada ao dividir string*Aseparar* em substrings nos limites especificados pelo parâmetro *separador*.<!-- END REF--> As substrings na coleção devolvida não incluem o *separador*.
 
@@ -29,7 +29,7 @@ No parâmetro *opções*, pode passar uma combinação das constantes abaixo do 
 | sk ignore empty strings | Inteiro longo | 1     | Remove strings vazias da coleção resultante (são ignorados) |
 | sk trim spaces          | Inteiro longo | 2     | Retira os caracteres espaço no começo e fim das substrings  |
 
-#### Exemplo 1 
+## Exemplo 1 
 
 ```4d
  var $vt : Text
@@ -42,7 +42,7 @@ No parâmetro *opções*, pode passar uma combinação das constantes abaixo do 
  $col:=Split string($vt;";";sk ignore empty strings+sk trim spaces) //["John","Doe","120 jefferson st.","Riverside","NJ","08075"]
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O parâmetro *separador* pode ser uma string de múltiplos caracteres: 
 
@@ -54,11 +54,11 @@ O parâmetro *separador* pode ser uma string de múltiplos caracteres:
   //$col=["Name","Smith","age","40"]
 ```
 
-#### Ver também 
+## Ver também 
 
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

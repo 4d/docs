@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY SET.Summary-->The COPY SET command copies the contents of the set *srcSet* into the set *dstSet*.<!-- END REF-->
 
 Each of these sets can be of the process, interprocess or local/client type. The two sets do not have to be the same type (as shown in the examples below), so long as they are both visible on the machine. For more information about this point, refer to "*Visibility of Sets*".
 
-#### Example 1 
+## Example 1 
 
 The following example, in Client/Server, copies the local set "*$SetA",* maintained on the client machine, to the process set *"SetB",* maintained on the server machine:
 
@@ -28,7 +28,7 @@ The following example, in Client/Server, copies the local set "*$SetA",* maintai
  COPY SET("$SetA";"SetB")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example, in Client/Server, copies the process set "*SetA*", maintained on the server machine, to the local process set *"$SetB",* maintained on the client machine: 
 
@@ -36,11 +36,11 @@ The following example, in Client/Server, copies the process set "*SetA*", mainta
  COPY SET("SetA";"$SetB")
 ```
 
-#### See also 
+## See also 
 
 *Sets*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

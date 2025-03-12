@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SHOW ON DISK.Summary-->O comando SHOW ON DISK mostra em uma janela padrão do sistema operativo o arquivo ou a pasta na qual a rota de acesso for passada no parâmetro *nomeRota*.<!-- END REF-->  
 
@@ -22,7 +22,7 @@ Em uma interface de usuário, este comando permite designar a localização de u
   
 Por padrão, se *nomeRota* designa uma pasta, o comando mostra o nível da pasta mesma. Se passa o parâmetro opcional *\**, o comando abre a pasta e mostra su conteúdo na janela. Se *nomeRota* designa um arquivo, se ignora o parâmetro *\**.  
   
-#### Exemplo 
+## Exemplo 
 
 Os exemplos abaixo ilustram o funcionamento do comando: 
 
@@ -44,12 +44,12 @@ Os exemplos abaixo ilustram o funcionamento do comando:
 
 ![](../assets/en/commands/pict35009.en.png)
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK assume o valor 1 se o comando for executado corretamente, do contrário assume o valor 0\. 
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

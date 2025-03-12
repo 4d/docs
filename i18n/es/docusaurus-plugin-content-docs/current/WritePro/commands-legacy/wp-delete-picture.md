@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP DELETE PICTURE.Summary-->El comando **WP DELETE PICTURE**  elimina la imagen definida por el parámetro *objImagen*.<!-- END REF-->
 
 Si no existe una imagen, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea eliminar una imagen utilizando su ID:
 
@@ -33,7 +33,7 @@ Desea eliminar una imagen utilizando su ID:
  WP DELETE PICTURE($myPicture)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Gestión de imágenes*  
 [WP Add picture](../commands/wp-add-picture.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->La commande **WEB SET HOME PAGE** vous permet de modifier la page d’accueil (page Home) personnalisée pour le process Web courant.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Pour ne plus envoyer *homePage* comme page d’accueil pour le process Web coura
 **Note :** La page d’accueil par défaut du serveur Web est définie dans les Propriétés de la base. 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

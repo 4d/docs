@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->**LISTBOX INSERT COLUMN FORMULA**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF--> 
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 **注:** オブジェクト名は、フォーム内で重複してはいけません。*colName*や*headerName*、*footerName*に渡される名前が既に使用されていないことを確認してください。重複した名前を指定すると、列は作成されず、エラーが生成されます。
 
-##### 動的な挿入 
+### 動的な挿入 
 
 4D v14 R3以降、フォーム実行中にこのコマンドを使用してカラムをリストボックス内へと動的に挿入することが出来るようになりました。その際、必要な変数(フッター、ヘッダー)の定義を4Dが自動的に行うようになりました。  
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
   
 ヘッ ダー変数とフッター変数は常に特定のタイプで作成されるという点に注意して下さい(ヘッダーは倍長整数、フッターはテキスト)。
 
-#### 例題 1 
+## 例題 1 
 
 リストボックスの右に列を追加し、従業員の年齢を計算するフォーミュラを関連付けます:
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 コレクション型のリストボックスにカラムを追加する場合を考えます:
 
@@ -116,11 +116,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-#### 参照 
+## 参照 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find window.Summary-->La commande **Find window** retourne (s'il existe) le numéro de référence de la première fenêtre "touchée" par le point dont vous passez les coordonnées dans *gauche* et *haut*.<!-- END REF-->
 
@@ -24,12 +24,12 @@ Ces coordonnées doivent être exprimées relativement au coin supérieur gauche
 
 Le paramètre *partieFenêtre* retourne 3 si une fenêtre est touchée, et 0 sinon (**Note de compatibilité :** à compter de 4D v14, les constantes du thème *Chercher fenetre* sont obsolètes). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

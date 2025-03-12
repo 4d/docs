@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command. 
 
@@ -69,7 +69,7 @@ The five configurations described below can therefore be implemented. In all cas
 
 **Note:** Despite the fact that they are complex XML types, data arrays are handled by 4D as simple types. 
 
-##### RPC mode, simple input and output 
+### RPC mode, simple input and output 
 
 This configuration is the easiest to use. In this case, the *complexType* contains the Web Service dynamic constant or is omitted.   
   
@@ -77,7 +77,7 @@ The parameters sent and responses received can be handled directly, without prio
   
 Refer to the example of the command [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### RPC mode, complex input and simple output 
+### RPC mode, complex input and simple output 
 
 In this case, the *complexType* parameter contains the Web Service manual in constant. With this configuration, you must “manually” pass each XML source element in the form of a BLOB to the Web Service, using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command.   
   
@@ -94,7 +94,7 @@ It is up to you to format the initial BLOB as a valid XML element. As its first 
  WEB SERVICE GET RESULT($0;"MyOutputVar";*)
 ```
 
-##### RPC mode, simple input and complex output 
+### RPC mode, simple input and complex output 
 
 In this case, the *complexType* parameter contains the Web Service manual out constant. Each output parameter will be returned by the Web Service in the form of an XML element stored in a BLOB. You retrieve this parameter using the [WEB SERVICE GET RESULT](web-service-get-result.md) command. You can then parse the contents of the BLOB received using the XML commands of 4D.   
   
@@ -109,7 +109,7 @@ In this case, the *complexType* parameter contains the Web Service manual out co
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### RPC mode, complex input and output 
+### RPC mode, complex input and output 
 
 In this case, the *complexType* parameter contains the Web Service manual constant. Each input and output parameter must be stored in the form of XML elements in BLOBs, as described in the two previous configurations.   
   
@@ -124,7 +124,7 @@ In this case, the *complexType* parameter contains the Web Service manual consta
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### DOC mode 
+### DOC mode 
 
 A proxy calling method for a DOC Web Service is similar to a proxy calling method for an RPC Web Service using complex type input and output parameters.  
   
@@ -154,16 +154,16 @@ The proxy method will be called in the following manner: *$XMLresultBlob:=$DOCpr
 
 The *\** parameter can be used to optimize calls. When it is passed, the command does not close the connection used by the process at the end of its execution. In this case, the next call to **WEB SERVICE CALL** will reuse this same connection if the \* parameter is passed, and so on. To close the connection, simply execute the command without the \* parameter. This mechanism can be used to noticeably accelerate the processing of successive calls of several different Web Services on the same server, in particular in a WAN configuration (via the Internet, for example). Note that this mechanism depends on the “keep-alive” setting of the Web server. This setting generally defines a maximum number of requests via the same connection, and can even deny requests. If the **WEB SERVICE CALL** requests following each other in the same connection reach this maximum number, or if keep-alive connections are not allowed, 4D will create a new connection for each request.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the request has been correctly routed and the Web Service has accepted it, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is returned.
 
-#### See also 
+## See also 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

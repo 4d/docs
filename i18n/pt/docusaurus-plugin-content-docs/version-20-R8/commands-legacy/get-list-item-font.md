@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get list item font.Summary-->O comando Get list item font retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *RefElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF--> 
 
@@ -28,11 +28,11 @@ Pode passar um número de referência em *refElem*. Se este número não corresp
 
 Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao elemento atual da lista. Se vários elementos são selecionados manualmente, o elemento atual é o último selecionado. Se nenhum elemento estiver selecionado, o comando não faz nada.
 
-#### Ver também 
+## Ver também 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

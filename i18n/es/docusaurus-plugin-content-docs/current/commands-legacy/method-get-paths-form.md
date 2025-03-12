@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->El comando **METHOD GET PATHS FORM** llena el array *arrRutas* con las rutas de acceso internas y los nombres de los métodos de todos los objetos de los formularios así como también de los métodos formulario.<!-- END REF--> Los métodos formulario se etiquetan {formMethod}.  
   
@@ -38,7 +38,7 @@ Si se ejecuta este comando desde un componente, devuelve por defecto las rutas d
 
 Si el comando detecta un nombre de método duplicado, se genera el error -9802 ("Object path not unique"). En este caso, es aconsejable utilizar el CSM con el fin de verificar la estructura de la base de datos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Lista de todos los objetos del formulario "input" de la tabla \[Empleados\]. Note que los métodos formulario tabla (y los métodos formulario proyecto) se procesan como objetos que pertenecen al formulario:
 
@@ -50,7 +50,7 @@ Lista de todos los objetos del formulario "input" de la tabla \[Empleados\]. Not
   // [tableForm]/input/bCancel -> Método objeto
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Lista de los objetos del formulario proyecto "dial":
 
@@ -58,7 +58,7 @@ Lista de los objetos del formulario proyecto "dial":
  METHOD GET PATHS FORM(arrPaths;"dial")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Lista de todos los objetos de los formularios "input" de la tabla \[Empleados\] a partir de un componente:
 
@@ -66,11 +66,11 @@ Lista de todos los objetos de los formularios "input" de la tabla \[Empleados\] 
  METHOD GET PATHS FORM(([Empleados];arrPaths;"input@";*)
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM GET NAMES](form-get-names.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

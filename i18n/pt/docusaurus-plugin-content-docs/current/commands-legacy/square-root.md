@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Square root.Summary-->Square root retorna a raiz quadrada de *numero*.<!-- END REF-->
 
-#### Exemplo 1 
+## Exemplo 1 
 
 A linha: 
 
@@ -28,7 +28,7 @@ A linha:
 
 atribui o valor *1.414213562373* a variável *$vrRaizDeDois*.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O método a seguir retorna a hipotenusa do triângulo cujos dois lados são passados como parâmetros: 
 
@@ -43,7 +43,7 @@ O método a seguir retorna a hipotenusa do triângulo cujos dois lados são pass
 Por exemplo, Hipotenusa (4;3) devolve 5.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

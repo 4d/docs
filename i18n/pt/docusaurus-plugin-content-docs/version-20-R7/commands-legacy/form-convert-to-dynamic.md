@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->O comando **FORM Convert to dynamic** converte o *nomeFormulario* (formulário clássico) a um formulário dinâmico e o devolve em um objeto.<!-- END REF-->
 
@@ -34,7 +34,7 @@ As imagens estáticas são convertidas como propriedades objeto tipo imagem.
 
 **Nota:** as referências ao método de formulário e os métodos objeto de formulário são exportadas com identificadores internos, que serão válidos apenas no banco de dados atual enquanto que os métodos *nomeFormulario* não são modificados. Se quiser utilizar o formulário exportado em outro contexto, deve atribuir nomes de método de projeto à propriedade "método" do formulário ou objeto de formulário (ver exemplo).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser converter um formulário clássico, modificá-lo e mostrá-lo.
 
@@ -55,12 +55,12 @@ Se executar o código:
 
 ![](../assets/en/commands/pict3977362.en.png)
 
-#### Ver também 
+## Ver também 
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

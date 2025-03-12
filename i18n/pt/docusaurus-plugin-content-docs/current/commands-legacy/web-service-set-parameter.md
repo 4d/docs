@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Summary-->O comando WEB SERVICE SET PARAMETER permite a definição de um parâmetro utilizado por uma petição SOAP cliente.<!-- END REF--> Chame este comando por cada parâmetro na petição (o número de vezes que for chamado o comando depende do número de parâmetros).
 
@@ -58,7 +58,7 @@ Entretanto, poderia “forçar” a definição do tipo SOAP de um parâmetro. N
 * para maior informação sobre tipos de dados XML, consulte a URL <http://www.w3.org/TR/xmlschema-2/>
 * Esse comando não é compatível com objetos blob (tipo 4D.Blob). Veja *Passing blobs and blob objects to 4D commands* em developer.4d.com.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo define dois parâmetros: 
 
@@ -69,12 +69,12 @@ Este exemplo define dois parâmetros:
  WEB SERVICE SET PARAMETER("país";$2)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

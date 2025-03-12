@@ -42,7 +42,7 @@ Vous pouvez passer plusieurs paires *typeAttribut*;*valeurAttribut* en un seul a
 
 Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée. 
 
-##### 
+### 
 
 Cette commande ne peut pas être exécutée en mode compilé. Dans ce mode, son appel génère l'erreur -9762\. 
 

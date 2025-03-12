@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.XML DECODE.Summary-->XML DECODE コマンドはXML文字列に格納されている値を4D型の値に変換します。<!-- END REF--> 変換は以下のルールに基づいて自動で行われます: 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *4Dvar* 引数の型が未定義の場合、デフォルトでテキスト型が使用されます。
 
-#### 例題 
+## 例題 
 
 XMLドキュメントから、属性として格納されているデータを読み込む。  
 XMLドキュメントの例:  
@@ -82,12 +82,12 @@ Title="4  Stabat mater"/>
  Until(MyEvent=XML End Document)
 ```
 
-#### 参照 
+## 参照 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY POINTER.Summary-->**ARRAY POINTER** コマンドは、メモリ上にポインタ要素の配列を作成またはリサイズします。<!-- END REF-->  
   
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * 配列サイズを増やす場合、既存の値は保持され、新しい要素はヌルポインタで初期化されます。この新しい要素に[Is nil pointer](is-nil-pointer.md) を適用するとTrueが返されます。
 * 配列サイズを減らす場合、後ろの要素は配列から削除され、失われます。
 
-#### 例題 1 
+## 例題 1 
 
 この例は、100要素のポインタプロセス配列を作成します:  
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
  ARRAY POINTER(apValues;100)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例は、100行50列要素のポインタローカル配列を作成します:  
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
  ARRAY POINTER($apValues;100;50)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 この例題はポインタインタプロセス配列を作成し、それぞれの要素に要素番号に対応するテーブルのポインタを格納します。要素数はテーブル数と同じです。テーブルが削除されていた場合、Nilが返されます。 
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

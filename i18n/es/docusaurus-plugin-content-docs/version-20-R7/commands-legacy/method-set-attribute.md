@@ -42,7 +42,7 @@ Puede pasar múltiples pares *tipoAtrib*;*valorAtrib* en una sola llamada.
 
 Puede ejecutar este comando desde un componente, pero en este caso debe pasar el parámetro *\**, por el acceso en sólo escritura al código del componente. Si omite el parámetro *\** en este contexto, se genera el error -9763.
 
-##### 
+### 
 
 Este comando no puede ejecutarse en modo compilado. Cuando se llama en este modo, generará el error -9762\. 
 

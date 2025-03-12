@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->El comando APPEND DATA TO PASTEBOARD añade en el portapapeles los datos del tipo especificado en *tipoDatos* en el BLOB *datos*.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Si quiere limpiar y añadir:
 
 Sin embargo, note que si un BLOB contiene texto o una imagen, usted puede utilizar el comando APPEND DATA TO PASTEBOARD para añadir un texto o una imagen al portapapeles.
 
-#### Ejemplo 
+## Ejemplo 
 
 Utilizando los comandos del tema portapapeles y de los BLOBs, puede construir esquemas sofisticados de Cortar/Copiar/Pegar para administrar datos estructurados en lugar de una sola pieza de información. En el siguiente ejemplo, los dos métodos de proyecto SET RECORD TO CLIPBOARD y GET RECORD FROM CLIPBOARD le permiten tratar un registro de una información a copiar en o desde el portapapeles.
 
@@ -206,17 +206,17 @@ Puede pegar esta imagen del registro en otro registro, utilizando el método GET
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si los datos en el BLOB se añaden correctamente al portapapeles, la variable sistema OK toma el valor 1; de lo contrario OK toma el valor 0 y se podría generar un error.
 
-#### Ver también 
+## Ver también 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

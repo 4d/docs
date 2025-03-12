@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** vous permet de définir *formulaire* ou *formUtilisateur* comme formulaire sortie courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.
 
@@ -55,7 +55,7 @@ Vous utilisez le formulaire sortie lorsque vous créez des états à l'aide des 
 * [EXPORT SYLK](export-sylk.md)
 * [EXPORT TEXT](export-text.md)
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre une utilisation typique **FORM SET OUTPUT**. Notez que, bien que dans cet exemple la commande **FORM SET OUTPUT** soit placée juste avant que le formulaire soit utilisé, cela n'est pas obligatoire. En fait, la commande pourrait se trouver dans n'importe quelle autre méthode, dans la mesure où elle est exécutée avant celle-ci : 
 
@@ -65,7 +65,7 @@ L'exemple suivant illustre une utilisation typique **FORM SET OUTPUT**. Notez qu
  MODIFY SELECTION([Parties]) //Cette commande utilise les deux formulaires
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant utilise un formulaire décrit dans un fichier .json : 
 
@@ -75,7 +75,7 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
  PRINT SELECTION([Personnel])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -86,7 +86,7 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->La commande **SVG GET ATTRIBUTE** permet de lire la valeur courante de l’attribut *nomAttribut* dans un objet ou une image SVG.<!-- END REF--> 
 
@@ -37,11 +37,11 @@ Pour plus d’informations sur les attributs SVG, reportez-vous à la descriptio
 | 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | lecture          | Si l’attribut de la classe héritée du noeud contient tous les noms de classes, retourne 'true' sinon retourne 'false'. Retourne par exemple true pour "4D-isOfClass-land" si la classe héritée du noeud est "land department01")                                                                                                                                                                                                                                                                                                                           |
 | 4D-enableD2D                                  | lecture/écriture | Si 'false', inactive Direct2D pour le moteur de rendu SVG. En effet, les filtres SVG ne sont pas rendus en Direct2D mais ils le sont en GDI/GDIPlus. Cette option permet de bénéficier des filtres SVG même si la base est en Direct2D. A noter que cette option n'est prise en compte que si *objetImage* contient déjà une image chargée. En revanche, elle n'a besoin d'être définie qu'une seule fois par session (par exemple avec un SVG simple chargé en mémoire depuis une variable texte au démarrage de la base) car elle est globale au moteur. |
 
-#### Voir aussi 
+## Voir aussi 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

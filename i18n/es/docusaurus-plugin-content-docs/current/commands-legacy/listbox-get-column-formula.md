@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->El comando **LISTBOX Get column formula** devuelve la fórmula asociada a la columna de list box designada por los parámetros *objeto* y *\**.<!-- END REF--> Las fórmulas no pueden utilizarse cuando la propiedad “Fuente de datos” del list box es **Selección actual**, **Selección temporal** o **Colección o Selección** **de entidades**. Si ninguna fórmula está asociada a la columna, el comando devuelve una cadena vacía. 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Si no pasa este parámetro, esto indica que el parámetro *objeto* es una variable. En este caso, pase una referencia de variable en lugar de una cadena. Este parámetro debe designar una columna del list box.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

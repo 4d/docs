@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Read only state.Summary-->La fonction **Read only state** est utilisé pour tester si *laTable* est en mode lecture seulement dans le process où la fonction est appelée.<!-- END REF-->retourne Vrai si *laTable* est en lecture seulement, et Faux si *laTable* est en lecture-écriture.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant teste le statut de la table \[Factures\]. Si elle est en lecture seulement, le mode lecture-écriture lui est appliqué et l'enregistrement courant est rechargé.
 
@@ -31,13 +31,13 @@ L'exemple suivant teste le statut de la table \[Factures\]. Si elle est en lectu
 
 **Note :** L'enregistrement courant est rechargé pour permettre à l'utilisateur de le modifier. En effet, un enregistrement précédemment chargé en mode lecture seulement reste verrouillé jusqu'à ce qu'il soit rechargé en mode lecture-écriture.
 
-#### Voir aussi 
+## Voir aussi 
 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

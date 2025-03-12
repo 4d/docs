@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get print marker.Summary-->The **Get print marker** command enables you to get the current position of a marker during printing.<!-- END REF--> 
 
@@ -53,16 +53,16 @@ Pass one of the constants of the *Form Area* theme in the *markNum* parameter:
 | Form header8  | Integer | 208   |
 | Form header9  | Integer | 209   |
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command. 
 
-#### See also 
+## See also 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

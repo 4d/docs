@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Count parameters.Summary-->O comando Count parameters devolve o número de parâmetros passados a um método de projeto.<!-- END REF-->Count parameters é significativo apenas em um método de projeto que tenha sido chamado por outro método (método de projeto ou outro). Se o método de projeto que chama Count parameters está associado a um menu, Count parameters devolve 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Os métodos de projeto de 4D aceitam parâmetros opcionais, a partir da direita.  
 Por exemplo, pode chamar ao método MeuMetodo(a;b;c;d) das seguintes formas: 
@@ -59,7 +59,7 @@ Depois de adicionar este método de projeto a sua aplicação, pode escrever:
  AGREGAR TEXTO(vtText;0;$vhRefDoc) // Mostrar a mensagem de texto e escrevê-la em $vhDocRef
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Os métodos de projeto de 4D aceitam um número variável de parâmetros do mesmo tipo, a partir da direita. Para declarar estes parâmetros, utilize as diretivas de compilação às quais você passa *${N}* como uma variável, onde N especifica o primeiro parâmetro. Utilizando Count parameters pode referenciar estes parâmetros com um loop For e a sintaxe de indireção de parâmetro. Este exemplo é uma função que retorna o número mais grande recebido como parâmetro: 
 
@@ -89,12 +89,12 @@ ou:
  vrResult:=Max of(r1;r2;r3;r4;r5;r6)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Comandos de Compilação*  
 [Copy parameters](copy-parameters.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

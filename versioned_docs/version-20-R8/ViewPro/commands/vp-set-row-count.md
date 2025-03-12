@@ -14,7 +14,7 @@ title: VP SET ROW COUNT
 |rowCount |Integer|->|Number of rows|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->defines the total number of rows in *vpAreaName*<!-- END REF -->.
 
@@ -26,7 +26,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 * `vk current sheet`
 
-#### Example
+## Example
 
 The following code defines five rows in the 4D View Pro area:
 
@@ -36,7 +36,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowCount.PNG)
 
-#### See also
+## See also
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP get row-count](vp-get-row-count.md)<br/>

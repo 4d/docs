@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EDIT ITEM.Summary-->O comando **EDIT ITEM** lhe permite editar o elemento atual ou o elemento de número *item* do array ou a lista designada pelo parâmetro *objeto*.<!-- END REF-->
 
@@ -40,7 +40,7 @@ O parâmetro opcional *item* lhe permite designar a posição do elemento (lista
 * Em subformulários e formulários listados, o comando passa a modo edição o primeiro campo da fila especificada, na ordem de entrada.
 * Em listboxes mostrados em modo hierárquico, se o elemento objetivo pertence a um nível hierárquico colapsado, este nível (como também os possíveis níveis pais) são suspensos automaticamente para que a linha seja visível.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este comando pode ser particularmente útil quando cria um novo elemento em uma lista hierárquica. Quando sechama o comando, o último elemento adicionado ou inserido na lista se converte automaticamente em editável, sem que o usuário tenha que realizar alguma ação específica.   
   
@@ -54,7 +54,7 @@ O seguinte código pode ser o método de um botão que lhe permite inserir um no
 
 ![](../assets/en/commands/pict21419.pt.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Dadas duas colunas em una list box onde os nomes das variáveis são “Array1” e “Array2” respectivamente. O seguinte exemplo insere um novo elemento em dois arrays e passa o novo elemento de Array2 a modo edição: 
 
@@ -68,13 +68,13 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
 
 ![](../assets/en/commands/pict21420.es.png)
 
-#### Ver também 
+## Ver também 
 
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

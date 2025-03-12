@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->ARRAY TO LIST コマンドは、配列*array*の要素を使用して、(デザインモードのリストエディタで作成される)階層リストまたは選択リスト*list*リストを作成または置き換えます。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ARRAY TO LIST コマンドを使い、配列の要素に基づくリストを作成することはできます。しかしながら、これらの制約に縛られずにリストの値を自由に使用するためには、*階層リスト* テーマ内にあるコマンドの使用が推奨されます。
 
-#### 例題 
+## 例題 
 
 以下の例は、配列*atRegions*の要素から構成される“Regions”リストを作成します:  
 
@@ -39,7 +39,7 @@ ARRAY TO LIST コマンドを使い、配列の要素に基づくリストを作
  ARRAY TO LIST(atRegions;"Regions")
 ```
 
-#### 例題 
+## 例題 
 
 フィールドの異なる値をリストに入れて、例えば階層ポップアップメニューを作成したい場合:
 
@@ -50,18 +50,18 @@ ARRAY TO LIST コマンドを使い、配列の要素に基づくリストを作
  ARRAY TO LIST($arrCountries;CountryList)
 ```
 
-#### エラー管理 
+## エラー管理 
 
 デザインモードのリストエディタで現在編集中のリストにARRAY TO LISTを適用すると、エラー *\-9957* が生成されます。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")でインストールされたエラー処理メソッドで管理できます。
 
-#### 参照 
+## 参照 
 
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

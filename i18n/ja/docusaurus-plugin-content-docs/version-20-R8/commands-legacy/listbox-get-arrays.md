@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->**LISTBOX GET ARRAYS**コマンドは一連の同期化された配列を返し、*object*引数および *\** で指定されたリストボックスの各列（表示または非表示）に関する情報を提供します。<!-- END REF-->
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
    * 変数により設定された設定ごとに、変数へのポインタが、  
    * 式により設定された設定ごとに、[Is nil pointer](is-nil-pointer.md)ポインタが格納されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

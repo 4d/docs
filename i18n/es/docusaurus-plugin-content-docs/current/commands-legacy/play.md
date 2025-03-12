@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PLAY.Summary-->El comando **PLAY** permite reproducir archivos de sonido o multimedia.<!-- END REF--> Pase la ruta de acceso completa del archivo que quiere reproducir en *nombreObjeto*. En macOS, el comando también puede utilizarse para reproducir un sonido sistema.   
 
@@ -32,7 +32,7 @@ Para detener un sonido asincrónico, utilice la siguiente instrucción:
  PLAY("";0)
 ```
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra cómo reproducir un archivo WAV en Windows:
 
@@ -44,7 +44,7 @@ El siguiente ejemplo muestra cómo reproducir un archivo WAV en Windows:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente código de ejemplo reproduce un sonido del sistema en macOS:
 
@@ -52,11 +52,11 @@ El siguiente código de ejemplo reproduce un sonido del sistema en macOS:
  PLAY("Submarine.aiff")
 ```
 
-#### Ver también 
+## Ver también 
 
 [BEEP](beep.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

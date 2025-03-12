@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](set-query-destination.md) command.
 
@@ -39,7 +39,7 @@ The value returned in the *destinationObject* parameter depends on the value of 
 
  When the query destination is a local variable (*destinationType* returns 3), 4D returns a pointer to this variable in the *destinationPtr* parameter.
 
-#### Example 
+## Example 
 
 We want to modify the query destination temporarily and then restore the previous parameters:
 
@@ -53,11 +53,11 @@ We want to modify the query destination temporarily and then restore the previou
   //restoring parameters
 ```
 
-#### See also 
+## See also 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

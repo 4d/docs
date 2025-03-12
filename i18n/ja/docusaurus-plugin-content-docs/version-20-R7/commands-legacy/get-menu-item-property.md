@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->**GET MENU ITEM PROPERTY** コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、現在のプロパティ値を返します。<!-- END REF-->  
 *menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** デフォルトでは、*value*引数の変数が明示的にテキスト型として型指定あるいは宣言がされていなければ、コマンドは*標準アクション*の名前を返します。(廃止予定の)*割り当てられた標準アクションの値*定数テーマに定義されている数値を取得したい場合には、*value*引数の変数を倍長整数型で宣言する必要があります。
 
-#### 参照 
+## 参照 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

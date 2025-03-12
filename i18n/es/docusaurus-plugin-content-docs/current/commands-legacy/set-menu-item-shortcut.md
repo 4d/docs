@@ -39,7 +39,7 @@ Si omite el parámetro *proceso*, **SET MENU ITEM SHORTCUT** se aplica a la barr
 
 **Nota:** si se pasa un [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") en *menu*, el parámetro *proceso* no sirve para nada y se ignora.
 
-##### Compatibility 
+### Compatibility 
 
 Por razones de compatibilidad, el comando también acepta un código carácter en el parámetro *itemKey* (sintaxis anterior). En este caso, el atajo incluye automáticamente la tecla **Ctrl** (Windows) o **Cmd** (macOS) y no se tiene en cuenta el parámetro modificadores. 
 

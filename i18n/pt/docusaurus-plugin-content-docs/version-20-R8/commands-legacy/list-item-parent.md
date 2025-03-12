@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.List item parent.Summary-->O comando List item parent retorna o número de referência do elemento pai.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Se não existir um elemento com o número de referência que passou, ou se passo
 
 Se trabalha com números de referência dos elementos, tenha certeza de construir uma lista na qual os elementos tenham números de referência únicos; do contrário não poderá diferenciar os elementos. Para maior informação, consulte o comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Exemplo 
+## Exemplo 
 
 Aqui há uma lista chamada *hList* mostrada no ambiente Aplicação:
 
@@ -65,14 +65,14 @@ Os números de referência dos elementos são os seguintes:
 * Se for selecionado o elemento “a - 1”, a variável *$vlPaiElemRef* toma o valor 100, ou seja o número de referência do elemento “a”.
 * Se for selecionado o elemento “a” ou “b”, a variável *$vlPaiElemRef* toma o valor 0, porque estes elementos não tem elemento pai.
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

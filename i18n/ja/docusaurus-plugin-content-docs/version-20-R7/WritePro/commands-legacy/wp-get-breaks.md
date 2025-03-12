@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get breaks.Summary-->**WP Get breaks** コマンドは*targetObj* 引数のターゲット内に挿入されている全てのブレークを格納したコレクションを返します。<!-- END REF-->
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 *targetObj* 引数にブレークが何も含まれない場合(または*breakType* 引数で指定したタイプのブレークが何も含まれない場合)、空のコレクションが返されます。
 
-#### 例題 
+## 例題 
 
 ドキュメント内のの全ての改行を段落ブレークで置き換えたい場合を考えます:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get elements](wp-get-elements.md)  
 [WP INSERT BREAK](wp-insert-break.md)  

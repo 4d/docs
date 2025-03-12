@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->La commande **LIST TO ARRAY** crée ou remplace le tableau *tableau* avec les éléments du premier niveau de la liste ou de l'énumération *liste*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Le paramètre optionnel *réfEléments* (un tableau de type numérique) retourne
 
 Vous pouvez utiliser **LIST TO ARRAY** pour construire un tableau basé sur les éléments de premier niveau d'une liste. Cependant, cette commande ne vous donne pas les moyens de travailler avec les éléments des sous-listes. Pour exploiter pleinement les listes hiérarchiques, il est préférable d'utiliser les commandes de listes hiérarchiques, notamment [Load list](load-list.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant recopie les éléments de l'énumération Régions dans le tableau *tabRégions* :
 
@@ -37,7 +37,7 @@ L'exemple suivant recopie les éléments de l'énumération Régions dans le tab
  LIST TO ARRAY("Régions";tabRégions)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit une liste hiérarchique créée de la manière suivante :
 
@@ -79,13 +79,13 @@ Si vous exécutez l’instruction :
  ...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

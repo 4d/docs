@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Append XML element.Summary-->DOM Append XML element コマンドは*targetElementRef* 引数に渡した参照を持つXML要素の子要素を新しいXML要素に追加します。<!-- END REF-->引数には追加する要素の参照を渡します。この要素はDOMツリー上に既に存在するXML要素の参照として渡さなければなりません。これは*targetElementRef* の子要中最後の既存の要素の後に追加されます。
 
-#### 例題 
+## 例題 
 
 [DOM Insert XML element](dom-insert-xml-element.md "DOM Insert XML element") コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 [DOM Insert XML element](dom-insert-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

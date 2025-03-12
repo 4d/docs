@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->The OBJECT Get enabled command returns True if the object or group of objects designated by *object* is enabled in the form and False if it is not enabled.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ This command can be applied to the following types of objects:
 * Pop-up menu, Drop-down List, Combo Box, Menu/Drop-down List
 * Thermometer, Ruler
 
-#### See also 
+## See also 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

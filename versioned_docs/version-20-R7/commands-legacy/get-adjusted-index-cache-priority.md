@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get adjusted index cache priority.Summary-->The **Get adjusted index cache priority** command returns the current adjusted cache priority value applied by the cache manager for the *aField* index(es).<!-- END REF--> This command is only needed for debugging purposes. 
 
 **Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
 
-#### See also 
+## See also 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 *Managing priorities in database cache*  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

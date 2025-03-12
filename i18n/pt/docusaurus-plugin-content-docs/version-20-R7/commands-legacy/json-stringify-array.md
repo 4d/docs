@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.JSON Stringify array.Summary-->O comando **JSON Stringify array** converte o array *array* 4D em um array JSON serializado.<!-- END REF--> Este comando realiza a ação inversa do comando [JSON PARSE ARRAY](json-parse-array.md).  
   
@@ -25,7 +25,7 @@ Em *array*, passe um array 4D com os dados a serializar. Este array pode ser de 
 
 Pode passar o parâmetro opcional *\** para utilizar os caracteres de formato na cadeia resultante. Esta opção melhora a apresentação dos dados JSON quando se mostram em uma página web (*pretty formatting*).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Conversão de um array texto:
 
@@ -39,7 +39,7 @@ Conversão de um array texto:
   // $jsonString = "["John","Jim"]"
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Conversão de um array texto que contém números:
 
@@ -51,7 +51,7 @@ Conversão de um array texto que contém números:
   // $string = "["555-0100","555-0120"]"
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Conversão de um array objeto:
 
@@ -73,7 +73,7 @@ Conversão de um array objeto:
 
 ![](../assets/en/commands/pict1205072.fr.png)
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Conversão de uma seleção 4D em um array objeto:
 
@@ -104,12 +104,12 @@ Conversão de uma seleção 4D em um array objeto:
   //"ALMANZA",...}]"
 ```
 
-#### Ver também 
+## Ver também 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

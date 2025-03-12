@@ -25,7 +25,7 @@ SCAN INDEX funciona únicamente con campos indexados. Este comando modifica la s
 
 Si especifica un número de registros superior al número de registros presentes en la tabla, SCAN INDEX devolverá todos los registros.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

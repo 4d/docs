@@ -33,7 +33,7 @@ El parámetro *tipoPropiedades* se tiene en cuenta en las bases configuradas en 
 
 Si pasa una llave invalida, se muestra la primera página de la caja de diálogo de Propiedades de la base.
 
-##### Llaves de rutas (modo estándar) 
+### Llaves de rutas (modo estándar) 
 
 La siguiente es una lista de llaves que puede utilizarse en el parámetro *selector* en modo estándar, es decir con las "propiedades estructura": 
 
@@ -76,7 +76,7 @@ La siguiente es una lista de llaves que puede utilizarse en el parámetro *selec
 
 **Nota de compatibilidad:** el comando continúa funcionando con las llaves definidas para las versiones 11; la correspondencia es establecida automáticamente por 4D. Sin embargo se recomienda reemplazar las llamadas antiguas por las llaves descritas anteriormente.
 
-##### Llaves de rutas (modo Propiedades Usuario) 
+### Llaves de rutas (modo Propiedades Usuario) 
 
 Estas son las llaves que se pueden utilizar en el parámetro *selector* en los modos "Propiedades usuario" y "Propiedades usuario para archivo de datos":
 

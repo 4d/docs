@@ -22,7 +22,7 @@ title: VP MOVE CELLS
 |targetRange|Object|->|Target range for the values, formatting and formulas|
 |options|Object|->|Additional options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP MOVE CELLS` command <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or copies the values, style and formulas from *originRange* to *targetRange*<!-- END REF -->.
 
@@ -42,7 +42,7 @@ The *options* parameter has several properties:
 
 The paste options defined in the [workbook options](vp-set-workbook-options.md) are taken into account.
 
-#### Example
+## Example
 
 To copy the contents, values, formatting and formulas from an origin range:
 
@@ -60,7 +60,7 @@ $options.pasteOptions:=vk clipboard options all
 VP MOVE CELLS($originRange; $targetRange; $options)
 ```
 
-#### See also
+## See also
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>

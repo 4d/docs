@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get XML element.Summary-->The DOM Get XML element command returns a reference to the “child” element dependent on the *elementName* and *index* parameters.<!-- END REF-->
 
@@ -25,16 +25,16 @@ The value of the element is also returned in the *elementValue* parameter.
 
 **Note:** By default, **DOM Get XML element** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

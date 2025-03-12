@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->DOM Get XML document ref コマンドを使用して*elementRef*に渡したDOMツリーの"ドキュメント"参照を取得できます。<!-- END REF-->ドキュメント要素はDOMツリーの最初の要素であり、ルート要素の親です。
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 このレベルでは、処理命令やコメントを追加したり、Doctypeノードを置換したりすることだけが可能です。ここにCDATAやテキストノードを作成することはできません。
 
-#### 例題 
+## 例題 
 
 この例題では、XMLドキュメントのDTD宣言を取得します:
 
@@ -49,12 +49,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

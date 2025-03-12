@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->The **Dynamic pop up menu** causes a hierarchical pop-up menu to appear at the current location of the mouse or at the location set by the optional *xCoord* and *yCoord* parameters.<!-- END REF-->
 
@@ -44,7 +44,7 @@ If a standard action is associated to a menu item, it is taken into account by t
 * If the action title has been set to the item using the ak standard action title constant, the localized name is displayed in the menu.
 * When the item is selected, the associated standard action is invoked (execution is asynchronous).
 
-#### Example 
+## Example 
 
 This code allows creating a hierarchical dynamic pop up menu built upon standard actions:
 
@@ -84,7 +84,7 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
  paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
-#### See also 
+## See also 
 
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
@@ -92,7 +92,7 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

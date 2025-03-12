@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE FOOTER.Summary-->The **WP DELETE FOOTER** command deletes the footer element associated to the section or subsection defined by the *wpSection* parameter.<!-- END REF--> 
 
 If no footer element exists for the section or subsection, the command does nothing. 
 
-#### Example 
+## Example 
 
 You want to delete the footer of the left pages of a section:
 
@@ -34,7 +34,7 @@ You want to delete the footer of the left pages of a section:
  WP DELETE FOOTER($subsection)
 ```
 
-#### See also 
+## See also 
 
 [WP Get footer](wp-get-footer.md)  
 [WP New footer](wp-new-footer.md)  

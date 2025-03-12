@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 このファンクションは*password* 引数のパスワードを、[Generate password hash](generate-password-hash.md) ファンクションで生成された*hash* 引数のハッシュと比較します。
 
-##### エラー管理 
+### エラー管理 
 
 以下のエラーが返される可能性があります。これらのエラーは[Last errors](last-errors.md)  および [ON ERR CALL](on-err-call.md) コマンドで分析することができます。
 

@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->La commande **WP DELETE TEXT BOX** supprime la zone de texte définie par le paramètre *textBox* .<!-- END REF-->
 
 Si *textBox* n'existe pas, la commande ne fait rien. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez supprimer une zone de texte en utilisant son ID :
 
@@ -36,6 +36,6 @@ Vous souhaitez supprimer une zone de texte en utilisant son ID :
  WP DELETE TEXT BOX($myTextBox)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP New text box](wp-new-text-box.md)  

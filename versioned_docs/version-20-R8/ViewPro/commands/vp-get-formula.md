@@ -15,13 +15,13 @@ title: VP Get formula
 
 
 
-#### Description
+## Description
 
 The `VP Get formula` command <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
 
-#### Example
+## Example
 
 ```4d
   //set a formula
@@ -30,7 +30,7 @@ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
 
-#### See also
+## See also
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP SET FORMULA](vp-set-formula.md)<br/>

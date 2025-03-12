@@ -26,7 +26,7 @@ Attention, en mode Non unicode si vous utilisez une variable Texte pour stocker 
 
 En mode Unicode, l'encodage d'origine est conservé dans la variable.
 
-##### Notes sur le traitement des caractères de fin de ligne et des BOM 
+### Notes sur le traitement des caractères de fin de ligne et des BOM 
 
 En XML, les sauts de ligne ne sont pas significatifs, qu'ils soient présents à l'intérieur ou entre des éléments XML. En interne, le XML utilise des caractères normalisés LF comme séparateurs de lignes.
 

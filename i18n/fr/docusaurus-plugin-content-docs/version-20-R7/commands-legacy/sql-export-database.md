@@ -48,7 +48,7 @@ Dans le fichier d’export, il peut y avoir moins de valeurs que de champs dans 
 
 Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0\. 
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

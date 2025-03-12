@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->La commande **OBJECT GET SHORTCUT** retourne l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -37,11 +37,11 @@ Si aucune touche de modification n’a été définie dans l’équivalent clavi
 
 **Note :** Si le paramètre *objet* désigne plusieurs objets du formulaire ayant des paramétrages différents, la commande retourne "" dans *touche* et 0 dans *modifiers*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Validate password retorna True se a cadeia passada em *senha* for a senha para a conta de usuário cujo número de referência é passado em *refUsuario*.  
   
@@ -28,7 +28,7 @@ Este parâmetro é particularmente útil quando se utilizam métodos base de aut
 
 O comando é atrasado com o objetivo de evitar ataques de força bruta (flooding), em outras palavras, tentativas de múltiplas combinações de nomes de usuário/senha. Como resultado, depois da quarta chamada a este comando, não se executa por um período de 10 segundos. Este atraso é global a estação de trabalho.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo verifica se a senha do usuário “Hardy” for “Laurel”: 
 
@@ -46,7 +46,7 @@ O exemplo verifica se a senha do usuário “Hardy” for “Laurel”:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-database-method.md), você pode provar um pedido de conexão (utilizando os usuários 4D da base). Pode escrever:
 
@@ -54,13 +54,13 @@ No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-dat
  $0:=Validate password($1;$2;$3)
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

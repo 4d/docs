@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.Self.Summary-->このコマンドは互換性の目的で保持されています。<!-- END REF-->4D v12からはOBJECT Get pointerコマンドの利用が推奨されます。
 
-#### 説明 
+## 説明 
 
 Self コマンドはオブジェクトメソッドが現在実行されているオブジェクトへのポインタを返します。
 
@@ -29,17 +29,17 @@ Self が上記のコンテキスト以外で呼ばれた場合、Nilポインタ
 
 **Note:** このコマンドがリストボックスのコンテキストで使用される場合、コマンドはそのコンテキストに応じリストボックスまたはリストボックスの列へのポインタを返します。詳細は*リストボックスオブジェクトの管理*の節を参照してください。
 
-#### 例題 
+## 例題 
 
 [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER") コマンドの例を参照
 
-#### 参照 
+## 参照 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](../commands/this.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

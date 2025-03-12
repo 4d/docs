@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form.md) ou la commande [OPEN PRINTING JOB](open-printing-job.md).
 
@@ -26,22 +26,22 @@ Le paramètre facultatif *typeDial* permet de configurer l’affichage de la bo�
 
 **Note :** La boîte de dialogue d'impression comporte l'option **Imprimer à l'écran** permettant à l'utilisateur de visualiser son impression à l'écran. Vous pouvez présélectionner ou désélectionner cette option par un appel préalable à la commande [SET PRINT PREVIEW](set-print-preview.md).
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [Print form](../commands/print-form.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur clique sur le bouton OK dans chaque boîte de dialogue, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

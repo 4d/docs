@@ -17,13 +17,13 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get data context.Summary-->La commande **WP Get data context** returne le contexte de données du document wpDoc\[#/descv\].<!-- END REF--> Les contextes de données sont définis à l'aide de la commande [WP SET DATA CONTEXT](wp-set-data-context.md).
 
 Dans wpDoc, passez le document 4D Write Pro dont vous souhaitez obtenir le contexte de données.
 
-#### Exemple 
+## Exemple 
 
 Vous pouvez obtenir un contexte de données à partir d'un document et le réutiliser dans une autre méthode du même process.
 
@@ -58,7 +58,7 @@ méthode2 pourrait avoir le contenu suivant :
  ALERT(JSON Stringify($context)) // Affiche {"firstName":"John","lastName":"Doe"}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP SET DATA CONTEXT](wp-set-data-context.md)  

@@ -28,7 +28,7 @@ También se usa a menudo en el método de caja cierre opcional para el comando [
 
 **ACCEPT** no puede encadenarse. En respuesta a un evento, la ejecución de dos comandos **ACCEPT** en una fila desde dentro de un método tendría el mismo efecto que la ejecución de uno.
 
-##### Modo sin interfaz 
+### Modo sin interfaz 
 
 El comando **ACCEPT** se permite en modo sin interfaz, en el contexto de las áreas fuera de pantalla creadas por *VP Run offscreen area* o [WA Run offscreen area](wa-run-offscreen-area.md). 
 

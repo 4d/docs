@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->El comando **DELETE FOLDER**borra la carpeta cuyo nombre o ruta completa se pasa en *carpeta*.<!-- END REF--> 
 
@@ -38,12 +38,12 @@ Por defecto, por razones de seguridad, si se omite el parámetro *opcionEliminac
 
 Puede interceptar estos errores utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).  
 
-#### Ver también 
+## Ver también 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

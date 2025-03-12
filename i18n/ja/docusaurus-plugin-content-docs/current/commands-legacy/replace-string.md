@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Replace string.Summary-->Replace stringは、*source*に存在するすべての*oldString*を*newString*で*howMany*回数だけ置き換えます。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **注:** 4D v15 R3 以降、使用するシンタックスに関わらず、文字列を異なる長さの文字列で置き換える際にこのコマンドが使用するアルゴリズムに対し大幅な最適化が行われました。その結果、このコンテキストにおける処理が飛躍的に早くなりました。
 
-#### 例題 1 
+## 例題 1 
 
 Replace stringの使用例を次に示します。結果を変数*vtResult*に代入します。コメントは、変数*vtResult*に代入される内容についての説明です。
 
@@ -48,7 +48,7 @@ Replace stringの使用例を次に示します。結果を変数*vtResult*に�
  vtResult:=Replace string(vtOtherVar;Char(Tab);",";*) //vtOtherVar の中の全てのタブをコンマ(.) に置き換える
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、*vtResult*のテキストからキャリッジリターンとタブを取り除きます。
 
@@ -56,7 +56,7 @@ Replace stringの使用例を次に示します。結果を変数*vtResult*に�
  vtResult:=Replace string(Replace string(vtResult;Char(Carriage return);"";*);Char(Tab);"";*)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 この例では発音区分符号を区別するために、\* 引数の使用する例を示します。   
   
@@ -67,13 +67,13 @@ Replace stringの使用例を次に示します。結果を変数*vtResult*に�
 
   
 
-#### 参照 
+## 参照 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

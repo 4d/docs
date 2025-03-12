@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Insert XML element.Summary-->El comando DOM Insert XML element se utiliza para insertar un nuevo elemento XML entre los hijos del elemento XML cuya referencia se pasa en el parámetro *refElementTarget*.<!-- END REF-->   
   
@@ -26,7 +26,7 @@ El parámetro *indiceHijo* se puede utilizar para designar al hijo del elemento 
   
 El comando devuelve la referencia del elemento XML obtenido.
 
-#### Ejemplo 
+## Ejemplo 
 
 En la siguiente estructura, queremos invertir el primer y segundo libro:
 
@@ -77,11 +77,11 @@ $rootRef:=DOM Parse XML source("") //selección de documento XML
 
 ```
 
-#### Ver también 
+## Ver también 
 
 [DOM Append XML element](dom-append-xml-element.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

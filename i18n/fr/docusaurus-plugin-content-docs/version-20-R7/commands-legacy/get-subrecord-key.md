@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get subrecord key.Summary-->La commande **Get subrecord key** est destinée à faciliter la migration du code 4D utilisant des sous-tables converties vers le code standard de manipulation des tables.<!-- END REF-->Les sous-tables ne sont plus prises en charge à compter de la version 11 de 4D. Lors de la conversion d’une ancienne base, les sous-tables existantes sont automatiquement transformées en tables standard reliées aux tables d’origine par un lien automatique. La sous-table devient une table “N” et la table d’origine la table “1”. Dans la table 1, l’ex-champ de type sous-table est transformé en champ spécial de type “Lien sous-table” et dans la table N, un champ spécial, également de type “Lien sous-table” est ajouté. Il est nommé “id\_added\_by\_converter”. 
 
@@ -58,7 +58,7 @@ La commande accepte dans le paramètre *champ\_ID* soit un champ de type Lien so
 
 Ce principe permet d’écrire du code de transition. Lors de la dernière étape de la mise à niveau de l’application, vous pourrez supprimer les appels à cette commande. 
 
-#### Affecter le champ id\_added\_by\_converter 
+## Affecter le champ id\_added\_by\_converter 
 
 A compter de 4D v14 R3, vous pouvez affecter la valeur du champ "id\_added\_by\_converter". Jusqu'alors, cette valeur pouvait uniquement être affectée par 4D, ce qui obligeait les développeurs à utiliser des commandes obsolètes telles que *\_o\_CREATE SUBRECORD* pour pouvoir ajouter des enregistrements dans les sous-tables converties.
 
@@ -80,7 +80,7 @@ Par exemple, vous pouvez écrire avec la structure précédente :
 Ce code fonctionnera indifféremment avec un lien spécial ou standard.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

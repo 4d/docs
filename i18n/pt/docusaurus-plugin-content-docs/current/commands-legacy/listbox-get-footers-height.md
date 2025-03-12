@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get footers height.Summary-->O comando **LISTBOX Get footers height** devolve a altura da linha de rodapé do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -32,11 +32,11 @@ Por defeito, é omitido o parâmetro *unidad*e, a altura de linha devolvida se e
   
 **Nota**: para maior informação sobre o cálculo da altura de linnhas, consulte o manual de *Desenho*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET FOOTERS HEIGHT](listbox-set-footers-height.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

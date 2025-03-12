@@ -15,7 +15,7 @@ title: VP IMPORT FROM BLOB
 |vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
 |paramObj   |Object|->|Import options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](vp-export-to-blob.md) command or via the 4D View Pro interface. 
 
@@ -45,7 +45,7 @@ The following parameters can be used in the callback method:
 | |.errorMessage|text|Error message.|
 
 
-#### Example
+## Example
 
 You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
 
@@ -55,6 +55,6 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 ```
 
-#### See also
+## See also
 
 [VP EXPORT TO BLOB](vp-export-to-blob.md)

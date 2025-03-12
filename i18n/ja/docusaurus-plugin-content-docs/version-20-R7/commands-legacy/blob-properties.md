@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->**BLOB PROPERTIES**コマンドは、BLOB *blob*に関する情報を返します。<!-- END REF-->
 
@@ -34,11 +34,11 @@ BLOBの圧縮ステータスにかかわらず、*expandedSize*引数は、圧�
 
 *currentSize*引数は、BLOBの現在のサイズを戻します。BLOBが圧縮されている場合には、通常、*expandedSize*より小さい*currentSize*を取得します。BLOBが圧縮されていない場合には、常に、*expandedSize*に等しい*currentSize*を取得します。
 
-#### 例題 1 
+## 例題 1 
 
 [COMPRESS BLOB](compress-blob.md "COMPRESS BLOB")および[EXPAND BLOB](expand-blob.md "EXPAND BLOB")の例を参照。
 
-#### 例題 2 
+## 例題 2 
 
 BLOBが圧縮された後、以下のプロジェクトメソッドは圧縮できたメモリ空間の割合を返します:
 
@@ -74,12 +74,12 @@ BLOBが圧縮された後、以下のプロジェクトメソッドは圧縮で�
  " of space.")
 ```
 
-#### 参照 
+## 参照 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CREATE RECORD.Summary-->CREATE RECORD cria um novo registro vazio para *tabela*, mas não mostra o novo registro.<!-- END REF--> Utilize o comando [ADD RECORD](add-record.md) para criar um novo registro e mostra-lo em um formulário de entrada.
 
@@ -23,7 +23,7 @@ O registro existe em memória unicamente até que um comando [SAVE RECORD](save-
 
 **Nota**: este comando não exibe tabelas para estar en modo leitura/escrita. Pode ser usado mesmo quando a tabela estiver em modo de apenas leitura (ver *Record Locking*). 
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo arquiva os registros que tem mais de 30 dias. Esta operação se realiza para a criação de registros em uma tabela de arquivo. Uma vez terminada a operação, os registros arquivados são eliminados da tabela \[Contas\]:
 
@@ -41,13 +41,13 @@ O seguinte exemplo arquiva os registros que tem mais de 30 dias. Esta operação
  DELETE SELECTION([Contas]) // Apagar os registros de conta
 ```
 
-#### Ver também 
+## Ver também 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

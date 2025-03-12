@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP SET VIEW PROPERTIES.Summary-->O comando **WP SET VIEW PROPERTIES** le permite configurar dinamicamente uma ou mais propriedades de vista da área 4D Write Pro *wpArea*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Todas as propriedades podem ser modificadas a qualqueer momento, mas algumas só
 
 Quando tiver estabelecido as propriedades de vista para *wpArea* utilizando este comando, são aplicadas enquanto a área de formulario é usada, desde que não seja modificada por outra chamada. As modificações de propriedade não são salvadas com o documento ou o formulário
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser definir algumas propriedades de vista para uma área 4D Write Pro:
 
@@ -69,6 +69,6 @@ Se quiser definir algumas propriedades de vista para uma área 4D Write Pro:
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get view properties](wp-get-view-properties.md)  

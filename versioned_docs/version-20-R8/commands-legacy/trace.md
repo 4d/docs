@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRACE.Summary-->You use **TRACE** to trace methods during the development of a database.<!-- END REF-->
 
@@ -24,7 +24,7 @@ The **TRACE** command is ignored when the executing code is compiled.
 
 **Tip:** Do not place **TRACE** calls when using a form whose On Activate and On Deactivate events have been enabled. Each time the debugger window appears, these events will be invoked; you will then loop infinitely between these events and the debugger window. If you end up in this situation, **Shift+click** on the **No Trace**  button of the debugger in order to get out of it. Any subsequent calls to **TRACE** within the process will be ignored.
 
-#### Example 
+## Example 
 
 The following code expects the process variable BUILD\_LANG to be equal to “US” or “FR”. If this is not the case, it calls the project method DEBUG:
 
@@ -61,7 +61,7 @@ The DEBUG project method is listed here:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

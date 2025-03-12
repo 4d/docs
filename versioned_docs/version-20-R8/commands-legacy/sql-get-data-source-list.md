@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->The **SQL GET DATA SOURCE LIST** command returns, in the *sourceNamesArr* and *driversArr* arrays, the names and drivers of the *sourceType* type data sources defined in the ODBC manager of the operating system.<!-- END REF-->
 
@@ -34,7 +34,7 @@ The command fills and sizes the *sourceNamesArr* and *driversArr* arrays with th
 
 **Note:** If you want to connect to an external 4D data source via ODBC, you will need to have installed the 4D ODBC Driver on your machine. For more information, please refer to the 4D ODBC Driver Installation manual. 
 
-#### Example 
+## Example 
 
 Example using a user data source:
 
@@ -44,17 +44,17 @@ Example using a user data source:
  SQL GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command is executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
-#### See also 
+## See also 
 
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

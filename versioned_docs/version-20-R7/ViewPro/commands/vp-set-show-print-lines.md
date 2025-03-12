@@ -15,7 +15,7 @@ title: VP SET SHOW PRINT LINES
 |visible|Boolean|->|Print lines displayed if True (default), hidden if False|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
 
@@ -30,7 +30,7 @@ In *sheet*, pass the index of the target sheet. If no index is specified, the co
 
 The position of a spreadsheet's print lines varies according to that spreadsheet's page breaks.
 
-#### Example
+## Example
 
 The following code displays print lines in a document's second sheet:
 
@@ -45,6 +45,6 @@ With a page break:
 
 ![set-show-print-lines-with-page-break](../../assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
-#### See also
+## See also
 
 [4D Get show print lines](vp-get-show-print-lines.md)

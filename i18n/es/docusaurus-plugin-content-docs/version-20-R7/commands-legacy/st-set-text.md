@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET TEXT.Summary-->El comando ST SET TEXT inserta el texto pasado en el parámetro *nuevText* en el campo o variable de texto con estilo designado por el parámetro *objeto*.<!-- END REF--> Este comando sólo se aplica al texto sin formato del parámetro de *objeto*, sin modificar las etiquetas de estilo que contiene. Se puede utilizar para modificar por programación, texto con estilo en la pantalla. 
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Durante la ejecución, si el objeto tiene el foco, el comando sólo se aplica al objeto que se está editando y no a su fuente de datos (campo o variable). Los cambios sólo se transfieren a la fuente (y a cualquier otro objeto con esta misma fuente) cuando el objeto que se está editando se valida, ya sea por perder el foco o con la tecla **Intro**. Si el objeto no tiene el foco, el comando se aplica directamente a la fuente de datos y los cambios son inmediatamente trasladados a otros objetos con la misma fuente.  
 Si se omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable y se pasa una referencia de campo o variable en lugar de una cadena. El comando se aplica directamente al campo o a la variable y los cambios son transferidos inmediatamente a todos los objetos que utilizan esta fuente, incluyendo el objeto con el foco.
 
-##### 
+### 
 
 En *nuevText*, pase el texto a insertar. El comando ST SET TEXT está diseñado para trabajar con texto enriquecido (multiestilo) con etiquetas de tipo <span>. En todos los demás casos (particularmente, cuando trabaja con texto plano que contiene los caracteres <, > o &), debe utilizar el comando [ST SET PLAIN TEXT](st-set-plain-text.md). Si pasa texto plano con los caracteres <, > o & al comando ST SET TEXT, el comando no hace nada. Este principio de funcionamiento es necesario porque si inserta directamente una cadena como "a<b" dentro de un texto enriquecido, no distorsionará el análisis interno de las etiquetas <span>. En este caso, el carácter "<" debe ser previamente codificado como "&lt;", lo cual se puede hacer utilizando el comando [ST SET PLAIN TEXT](st-set-plain-text.md) (ver también el ejemplo de este comando).
 

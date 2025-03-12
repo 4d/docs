@@ -14,7 +14,7 @@ title: VP Get cell style
 |rangeObj  |Object|->|Range object|
 |Result  |Object|<-|Style object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ In *rangeObj*, pass a range containing the style to retrieve.
 * If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
 * If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
 
-#### Example
+## Example
 
 To get the details about the style in the selected cell (B2):
 
@@ -54,7 +54,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 }
 ```
 
-#### See also
+## See also
 
 [VP GET DEFAULT STYLE](vp-get-default-style.md)<br/>
 [VP SET CELL STYLE](vp-set-cell-style.md)

@@ -23,7 +23,7 @@ Después de ejecutar el comando, cada elemento del array contiene el nombre de u
 
 **Nota**: por razones de compatibilidad, las hojas de estilo automáticas "\_\_automatic\_main\_text\_\_" y "\_\_automatic\_additional\_text\_\_" no son devueltas por este comando. Sin embargo, todavía están disponibles en los formularios.
 
-##### Nota de compatibilidad 
+### Nota de compatibilidad 
 
 Este comando sólo puede utilizarse en **bases de datos binarias**. En la arquitectura de proyectos, el array no se llena. 
 

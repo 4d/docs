@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get view properties.Summary-->The **WP Get view properties** command returns the current view properties for the 4D Write Pro area designated by *wpArea*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ The returned object contains all view properties of the 4D Write Pro area, along
 | wk visible vertical ruler    | visibleVerticalRuler   | Displays the vertical ruler (visible effect in Page view mode only). Possible values: True/False                                                                                                                                                                                                                                                                                                  |
 | wk zoom                      | zoom                   | Zoom percentage for displaying the contents of the 4D Write Pro area. Possible values: Number greater than 1                                                                                                                                                                                                                                                                                      |
 
-#### Example 
+## Example 
 
 In the 4D Write Pro area, you want to display the rulers only in page mode:
 
@@ -66,6 +66,6 @@ In the 4D Write Pro area, you want to display the rulers only in page mode:
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### See also 
+## See also 
 
 [WP SET VIEW PROPERTIES](wp-set-view-properties.md)  

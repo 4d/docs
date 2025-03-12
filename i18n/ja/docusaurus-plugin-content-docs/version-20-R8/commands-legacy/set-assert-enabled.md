@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET ASSERT ENABLED.Summary-->**SET ASSERT ENABLED** コマンドを使用してアプリケーションの4Dコードに挿入されたアサーションを無効にしたり、再度有効にしたりできます。<!-- END REF-->アサーションに関する詳細は[ASSERT](assert.md)コマンドの説明を参照してください。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 アサーションが無効にされていると、[ASSERT](assert.md)コマンドに渡された式は評価されないことに留意してください。[ASSERT](assert.md)を呼び出すコード行は動作においてもパフォーマンスにおいても、 アプリケーションの処理に一切影響を及ぼしません。
 
-#### 例題 
+## 例題 
 
 アサーションを無効にする:
 
@@ -33,13 +33,13 @@ displayed_sidebar: docs
  ASSERT(TestMethod) // アサーションが無効なのでTestMethodは呼び出されない
 ```
 
-#### 参照 
+## 参照 
 
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

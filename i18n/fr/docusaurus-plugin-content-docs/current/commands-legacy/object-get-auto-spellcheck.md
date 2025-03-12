@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->La commande **OBJECT Get auto spellcheck** retourne le statut de l’option **Correction orthographique** du ou des objet(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
@@ -23,11 +23,11 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 La commande retourne **Vrai** si la correction automatique est activée pour l’*objet*, et **Faux** sinon. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New list.Summary-->La commande **New list** crée une nouvelle liste hiérarchique vide en mémoire et retourne son numéro de référence unique.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Une fois que vous avez créé une liste hiérarchique à l'aide de la commande *
 * Ajouter des éléments à la liste à l'aide des commandes [APPEND TO LIST](append-to-list.md) et [INSERT IN LIST](insert-in-list.md).
 * Supprimer des éléments de cette liste à l'aide de la commande [DELETE FROM LIST](delete-from-list.md).
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [BLOB to list](blob-to-list.md)  
@@ -45,7 +45,7 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

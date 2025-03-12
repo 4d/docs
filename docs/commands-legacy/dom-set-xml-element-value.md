@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->The **DOM SET XML ELEMENT VALUE** command modifies the value of the element set by *elementRef*.<!-- END REF--> 
 
@@ -41,11 +41,11 @@ When the optional asterisk (\*) parameter is passed, this indicates that the val
 
 **Note:** If the element designated by *elementRef* is a BLOB processed by this command, it is automatically encoded in base64\. In this case, the [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) command does automatically the reverse operation.
 
-##### Note about processing end-of-line characters 
+### Note about processing end-of-line characters 
 
 To comply with XML processing rules, all CR and CRLF end-of-line characters are replaced by LF characters.
 
-#### Example 1 
+## Example 1 
 
 In the following XML source: 
 
@@ -69,7 +69,7 @@ We get:
 </Book>
 ```
 
-#### Example 2 
+## Example 2 
 
 In the following XML source: 
 
@@ -108,16 +108,16 @@ We get:
 </Maths>
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated (for example, if the element reference is invalid).
 
-#### See also 
+## See also 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

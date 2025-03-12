@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->O comando **SPELL GET DICTIONARY LIST** devolve nos arrays *lingID*, *lingArquivos* e *lingNoms*, os IDs, os nomes de arquivos e os nomes dos linguagens correspondentes aos arquivos de dicionário Hunspell instalados no equipo.<!-- END REF-->  
   
@@ -26,7 +26,7 @@ Note que os IDs são únicos e são baseados nos nomes de arquivos. Este comando
 * *lingArquivos* recebe os nomes dos arquivos de dicionários instalados na máquina.
 * *lingNoms* recebe os nomes das linguagens expressadas na linguagem atual da aplicação. Por exemplo, para um dicionário francês, o valor "français (France)" será devolvido em uma máquina configurada em francês e "French (France)" em um sistema inglês. O nome da linguagem é seguido por "- Hunspell". Este campo só é válido para os arquivos "conhecidos" por 4D. Para os arquivos não conhecidos (por exemplo, arquivos personalizados), é devolvido o nome "N/A - Hunspell". Este principio não lhe impede utilizar o dicionário (se o arquivo correspondente é válido), o ID devolvido pode ser passado ao comando [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
 
-#### Exemplo 
+## Exemplo 
 
 Você coloca "fr-classic+reform1990.aff" e "fr-classic+reform1990.dic" como também "fr-dentist.aff" e "fr-dentist.dic" no diretório Hunspell:
 
@@ -48,11 +48,11 @@ Você coloca "fr-classic+reform1990.aff" e "fr-classic+reform1990.dic" como tamb
 | 1074036166  | fr-classic+reform1990 | French (France) - Hunspell |
 | 1073901273  | fr-dentist            | No description - Hunspell  |
 
-#### Ver também 
+## Ver também 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

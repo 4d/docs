@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selection to JSON.Summary-->The **Selection to JSON** command returns a string containing a JSON array with as many elements as there are records in the current selection of *aTable*.<!-- END REF--> Each element of the array is a JSON object containing the labels and values of the fields of the selection.
 
@@ -35,7 +35,7 @@ This command supports Object type fields: the data of these fields is automatica
 
 **Note:** After a call to **Selection to JSON**, the current selection remains the same, but the current record is no longer loaded and might have changed (the last record of the current selection is then the current record). After the **Selection to JSON** command, call [LOAD RECORD](load-record.md) in combination with [GOTO SELECTED RECORD](goto-selected-record.md) (if needed) to use the values of the fields in the current record. 
 
-#### Example 1 
+## Example 1 
 
 You want to create a JSON string representing this selection:
 
@@ -72,7 +72,7 @@ You can use the *template* syntax:
   // {"Member":"Albert"},{"Member":"Leonard"},{"Member":"Pradel"}]
 ```
 
-#### Example 2 
+## Example 2 
 
 You can use the *template* syntax in order to export fields from different tables:
 
@@ -88,11 +88,11 @@ You can use the *template* syntax in order to export fields from different table
  SET FIELD RELATION([Emp]UUID_Company;Structure configuration;Do not modify)
 ```
 
-#### See also 
+## See also 
 
 [JSON TO SELECTION](json-to-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

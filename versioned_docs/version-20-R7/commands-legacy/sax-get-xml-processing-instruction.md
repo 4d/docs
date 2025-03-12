@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->The **SAX GET XML PROCESSING INSTRUCTION** command returns the *name* and *value* of the XML instruction processed in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML Processing Instruction event. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
 
-#### Example 
+## Example 
 
 Let's look at the following piece of XML code:
 
@@ -36,12 +36,12 @@ The following instruction will return “PI” in *vName* and “TextProcess” 
  SAX GET XML PROCESSING INSTRUCTION($DocRef;vName;vValue)
 ```
 
-#### See also 
+## See also 
 
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

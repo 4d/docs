@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.
 
@@ -71,7 +71,7 @@ Esta é a estrutura de uma consulta por atributos:
 
 **NOta:** um critério implícito para todos os operadores (exceto #) é que o campo Objeto contenha um atributo. Entretanto, para o operador #, ele pode ser indefinido (ver abaixo). 
 
-##### Usar o operator # 
+### Usar o operator # 
 
 Ao consultar por atributo utilizando o operador **#**, deve se lembrar dos casos em que um atributo pode não estar presente em um registro. Por exemplo, considere a afirmação abaixo:
 
@@ -101,7 +101,7 @@ Este principio também aplica aos atributos array. Por exemplo, a pesquisa devol
 
 **Nota:** Para obter específicamente os registros onde o atributo não está definido, pode utilizar um objeto vazio (ver exemplo 2). Note entretanto que a pesquisa de valores NULL em elementos array não é compatível.
 
-##### Construir múltiplas pesquisas 
+### Construir múltiplas pesquisas 
 
 Aqui estão as regras a serem seguidas para a construção de várias pesquisas por atributo:  
 
@@ -118,7 +118,7 @@ Não importa a forma em que a pesquisa foi definida:
 * Se a operação de busca vai levar algum tempo para ser executada, 4D mostra automaticamente uma mensagem contendo um termômetro de progresso. Estas mensagens podem ser ligados e desligadas usando os comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Se um termômetro de progresso for exibido, o usuário pode clicar no botão Parar para parar a pesquisa. Se a consulta for concluída, OK é definido como 1\. Caso contrário, se a consulta for interrompida, OK é definido como 0 (zero).
 * Se nenhum campo objeto indexado não for indicado, a pesquisa é otimizada sempre que for possível (campos indexados são procurados primeiro), resultando em uma busca que leva o mínimo de tempo possível.
 
-##### Valores de Datas nos objetos 
+### Valores de Datas nos objetos 
 
 As datas são armazenadas nos objectos com base nos parâmetros do banco de dados e; por padrão, se considera o fuso horário (veja selector JSON use local time no comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
@@ -144,11 +144,11 @@ Lembnre que o escopo deste parâmetro é limitado ao process.. Se você executar
  QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
-##### Usar a propriedade de comprimento virtual 
+### Usar a propriedade de comprimento virtual 
 
 Pode usar a propriedade virtual "comprimento" com este comando. Esta propriedade está disponível automaticamente para qualquer atributo do tipo array e retorna o tamanho do array, ou seja, o número de elementos que o array contém. Pode ser usado no contexto de execução do comando **QUERY BY ATTRIBUTE** (veja exemplo 4).
 
-##### Atributo Linking array com múltiplos argumentos pesquisa 
+### Atributo Linking array com múltiplos argumentos pesquisa 
 
 (Novo em 4D v16 R2) Quando procurar um atributo de array com múltiplos argumentos de pesquisa unidos pelo operador AND, pode querer ter certeza que apenas registros contendo elementos que correspondam a todos os argumentos sejam retornados, e não registros onde argumentos podem ser encontrados em diferentes elementos. Para fazer isso, precisa linkar argumentos de pesquisa a elementos array, de maneira que apenas elementos únicos contendo argumentos linkados são encontrados. 
 
@@ -198,7 +198,7 @@ Com os registros acima, se escrever:
 
 **Nota:** Usar uma sintaxe linkada em uma única linha de pesquisa dá os mesmos resultados como uma pesquisa padrão, exceto quando usando o operador "#" : neste caso, resultados inválidos podem ser retornados. Esta sintaxe inválida portanto não é compatível. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Neste exemplo, o atributo de "age" (idade) é uma string ou um inteiro e queremos encontrar pessoas cujas idades estão entre 20 e 29. As primeiras duas linhas procuram o atributo como um número inteiro (> = 20 e <30) e as última consultam o campo como uma string (começando com "2", mas é diferente de "2".)
 
@@ -209,7 +209,7 @@ Neste exemplo, o atributo de "age" (idade) é uma string ou um inteiro e queremo
  QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //sem * para lançar a execução
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos quais alguns atributos são definidos (ou não). Para isso, deve usar um objeto vazio.
 
@@ -227,7 +227,7 @@ O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos qua
 
 **Nota:** Essa sintaxe específica não é ocmpatível com atributos do tipo array. Pesquisar por valores NULL em elementos array dá resultados inválidos.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Você quer encontrar um campo que contém os atributos do array. Com os dois registros a seguir:
 
@@ -266,7 +266,7 @@ Você quer encontrar um campo que contém os atributos do array. Com os dois reg
   //Selecciona "smith"
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
  Este exemplo ilustra o uso da propriedade virtual "comprimento". Seu banco de dados tem um campo de objeto \[Customer\]full\_Data com os dados abaixo:
 
@@ -278,7 +278,7 @@ Se quiser obter os registros para qualquer cliente que tenha duas ou mais crian�
  QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Estes exemplos ilustram as várias combinações disponíveis de argumentos de pesquisa linkados em arrays. Assuma que você tem os registros abaixo:
 
@@ -393,7 +393,7 @@ Para achar pessoas que tenham um filho de 15 anos chamado "Harry" que tenha um b
   //retorna "Sam" e "Louis"
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a pesquisa é realizada corretamente, a variável sistema OK toma o valor 1.  
 A variável Ok toma o valor 0 se:
@@ -401,13 +401,13 @@ A variável Ok toma o valor 0 se:
 * o usuário clicar em **Cancelar** na caixa de diálogo de pesquisa,
 * em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](set-query-and-lock.md)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
 
-#### Ver também 
+## Ver também 
 
   
 *Estrutura dos objetos de linguagem 4D*  
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

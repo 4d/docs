@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->**WEB SEND RAW DATA**コマンドを使用すると、4D Webサーバはチャンクが可能な"生"HTTPデータを送ります。<!-- END REF-->
 
@@ -60,7 +60,7 @@ Location: http://...
 
 ![](../assets/en/commands/pict856016.en.png)
 
-#### 例題 
+## 例題 
 
 **WEB SEND RAW DATA**コマンドを用いたチャンクオプションの使用例を表します。データ (数字のシーケンス) はループされオンザフライで生成された100個のチャンクで送られます。応答のヘッダは、明確に設定されません。**WEB SEND RAW DATA**コマンド が応答のヘッダを自動的に送り、それに *transfer-encoding: chunked* フィールドを挿入します。それは引数 *\** が適用されているからです。
 
@@ -76,12 +76,12 @@ Location: http://...
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

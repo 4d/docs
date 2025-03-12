@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOLVE ALIAS.Summary-->La commande **RESOLVE ALIAS** retourne le chemin d’accès complet du fichier ou dossier cible d’un alias (appelé “raccourci” sous Windows).<!-- END REF--> 
 
@@ -25,15 +25,15 @@ Vous passez dans *cheminAlias* le nom ou le chemin d’accès complet de l’ali
 Après l’exécution de la commande, la variable *cheminCible* contient le chemin d’accès complet du fichier ou dossier cible de l’alias et la variable système OK prend la valeur 1.  
 Si le chemin passé dans *cheminAlias* correspond à un fichier et non à un alias, *cheminCible* retourne le chemin d’accès du fichier et la variable système OK prend la valeur 0.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si *cheminAlias* désigne bien un alias/raccourci, la variable système OK prend la valeur 1\. Si *cheminAlias* désigne un fichier standard, la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE ALIAS](create-alias.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

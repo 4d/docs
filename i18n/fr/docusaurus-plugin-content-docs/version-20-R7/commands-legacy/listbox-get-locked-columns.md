@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->La commande **LISTBOX Get locked columns** retourne le nombre de colonnes verrouillées dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -27,11 +27,11 @@ Si une colonne a été insérée ou supprimée par programmation à l’intérie
 
 En revanche, la commande ne tient pas compte du statut visible/invisible des colonnes.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

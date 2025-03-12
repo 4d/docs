@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->La commande **LISTBOX MOVED COLUMN NUMBER** retourne dans les paramètres *ancPosition* et *nouvPosition* des numéros indiquant respectivement la précédente position et la nouvelle position de la colonne déplacée dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -26,12 +26,12 @@ Cette commande doit être utilisée en combinaison avec l’événement formulai
 
 **Note :** Cette commande tient compte des colonnes invisibles.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

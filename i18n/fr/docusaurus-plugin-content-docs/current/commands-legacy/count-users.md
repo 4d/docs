@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count users.Summary-->La commande **Count users** retourne le nombre d'utilisateurs connectés au poste serveur.<!-- END REF-->
 
 Dans le cas d'une version monoposte de 4D, **Count users** retourne 1.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count tasks](count-tasks.md)  
 [Count user processes](count-user-processes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

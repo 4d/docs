@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Call chain.Summary-->La commande **Call chain** retourne une collection d'objets décrivant chaque étape de la chaîne d'appel d'une méthode, dans le process courant.<!-- END REF--> Elle fournit les mêmes informations que celles qui sont affichées dans le débogeur. Elle a l'avantage de pouvoir être exécutée à partir de n'importe quel environnement 4D, y compris en mode compilé.
 
@@ -28,7 +28,7 @@ La commande facilite le débogage en permettant l'identification de la méthode 
 
 **Note :** Afin que cette commande soit opérationnelle en mode compilé, le contrôle d'exécution ne doit pas être désactivé. Veuillez vous reporter au paragraphe *Contrôle d’exécution*.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant retourne une collection d'objets contenant des informations sur la chaîne d'appel d'une méthode :
 
@@ -50,7 +50,7 @@ Si une méthode formulaire est exécutée, la chaîne d'appel peut contenir (par
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

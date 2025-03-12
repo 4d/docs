@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Create document.Summary-->The**Create document** command creates a new document and returns its document reference number.<!-- END REF--> 
 
@@ -41,7 +41,7 @@ Once you have created and opened a document, you can write and read the document
 
 Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the document.
 
-#### Example 1 
+## Example 1 
 
 The following example creates and opens a new document called Note, writes the string “Hello” into it, and closes the document:
 
@@ -54,7 +54,7 @@ The following example creates and opens a new document called Note, writes the s
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example creates documents with non-standard extensions under Windows:
 
@@ -64,16 +64,16 @@ The following example creates documents with non-standard extensions under Windo
  $vtMyDoc:=Create document("Doc.") //No extension (the period "." is mandatory)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the document has been created correctly, the system variable OK is set to 1 and the system variable Document contains the full pathname and the name of *document*. 
 
-#### See also 
+## See also 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

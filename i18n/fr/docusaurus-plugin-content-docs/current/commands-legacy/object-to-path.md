@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Object to path.Summary-->La commande **Object to path** retourne un chemin (chaîne) basé sur les informations passées dans le paramètre *objetChemin*.<!-- END REF--> Les chemins suivants sont pris en charge :
 
@@ -32,7 +32,7 @@ Dans *objetChemin*, passez un objet définissant le chemin que vous souhaitez g�
 
 *objetChemin* sera généralement fourni par la commande [Path to object](path-to-object.md), mais en principe l'objet peut être créé de manière personnaliée. Notez que **Object to path** manipule uniquement des chaînes de caractères. La commande ne vérifie ni la validité du chemin par rapport à son type, ni l'existence réelle des dossiers et fichiers sur le disque. 
 
-#### Exemple 
+## Exemple 
 
 Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
 
@@ -47,7 +47,7 @@ Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
  COPY DOCUMENT($path;Object to path($o))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -56,7 +56,7 @@ Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

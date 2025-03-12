@@ -14,7 +14,7 @@ title: VP Get frozen panes
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Object|<-|Object containing frozen column and row information|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
-##### Returned object
+### Returned object
 
 The command returns an object describing the frozen columns and rows. This object can contain the following properties:
 
@@ -33,7 +33,7 @@ The command returns an object describing the frozen columns and rows. This objec
 |rowCount|  Integer|   The number of frozen rows on the top of the sheet|
 |trailingRowCount|  Integer|   The number of frozen rows on the bottom of the sheet|
 
-#### Example
+## Example
 
 You want to retrieve information about the number of frozen columns and rows:
 
@@ -48,6 +48,6 @@ The returned object contains, for example:
 
 ![](../../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
-#### See also
+## See also
 
 [VP SET FROZEN PANES](vp-set-frozen-panes.md)

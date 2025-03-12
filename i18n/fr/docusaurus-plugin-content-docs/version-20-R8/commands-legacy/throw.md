@@ -28,7 +28,7 @@ Les erreurs générées à l'aide de la commande **throw** sont gérées par le 
 
 La commande prend en charge trois syntaxes :
 
-##### **throw(errorCode{; description})**
+### **throw(errorCode{; description})**
 
 Elle spécifie le code d'erreur et un texte de description facultatif ; l'erreur est immédiatement déclenchée.   
 Si aucune description n'est fournie, elle est remplie par :
@@ -36,7 +36,7 @@ Si aucune description n'est fournie, elle est remplie par :
 * Code d'erreur errorCode: (hôte) dans l'application hôte
 * Code d'erreur errorCode: (C00x) dans un composant
 
-##### throw(errorObj)
+### throw(errorObj)
 
 L'objet *errorObj* permet d'obtenir des informations plus détaillées sur les erreurs et de contrôler leur traitement. Il peut contenir les propriétés suivantes, ainsi que toute propriété personnalisée à laquelle vous pouvez faire référence en utilisant des placeholders dans la propriété **message**.
 
@@ -53,7 +53,7 @@ Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last 
 
 **Note :** Il est possible d'appeler la commande plusieurs fois dans la même méthode de projet pour générer plusieurs erreurs. Vous pouvez utiliser l'option **deferred** pour envoyer toutes les erreurs en une seule fois.
 
-##### **throw** 
+### **throw** 
 
 Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](on-err-call.md) callback.
 

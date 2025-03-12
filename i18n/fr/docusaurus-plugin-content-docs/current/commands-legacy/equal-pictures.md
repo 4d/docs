@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Equal pictures.Summary-->La commande **Equal pictures** vous permet de comparer précisément deux images, tant au niveau de leurs dimensions que de leur contenu.<!-- END REF--> 
 
@@ -26,11 +26,11 @@ Passez dans *image1* l’image source et dans *image2* une image à comparer à 
 * Si les deux images sont de même dimension mais ont des contenus différents, la commande retourne **Faux** et le paramètre *masque* contient l’image masque résultante de la comparaison des deux images. La comparaison est effectuée par pixel. Chaque pixel différent apparaît en blanc sur fond noir.
 * Si les deux images sont identiques, la commande retourne **Vrai** et le paramètre *masque* contient une image noire.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si les deux images ont pu être comparées. En cas d'anomalie, notamment si au moins une des deux images n'est pas initialisée (image vide), la variable OK prend la valeur 0.
 
-#### Exemple 
+## Exemple 
 
 Dans l’exemple suivant, on compare deux images (pict1 et pict2) et on affiche le masque résultant : 
 
@@ -43,7 +43,7 @@ Le code du bouton **Compare** est le suivant :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

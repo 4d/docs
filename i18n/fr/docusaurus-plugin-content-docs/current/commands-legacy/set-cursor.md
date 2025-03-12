@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CURSOR.Summary-->La commande **SET CURSOR** remplace le pointeur (graphique) de la souris par le pointeur système dont vous avez passé le numéro d'ID dans le paramètre *curseur*.<!-- END REF-->
 
@@ -50,7 +50,7 @@ Voici les curseurs disponibles :
 
 **Note :** La disponibilité et l'apparence des curseurs varie en fonction du système d'exploitation. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez que le curseur se transforme en ![](../assets/en/commands/pict2478692.en.png) lorsque la souris survole une variable du formulaire. Dans la méthode de la variable, vous pouvez écrire :
 
@@ -61,7 +61,7 @@ Vous souhaitez que le curseur se transforme en ![](../assets/en/commands/pict247
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -78,7 +78,7 @@ In *input\_output*, pass a value indicating whether the processed parameter is â
 | SOAP input  | Integer | 1     |
 | SOAP output | Integer | 2     |
 
-##### Use of XML types 
+### Use of XML types 
 
  You can declare variables of the "XML structure" and "DOM reference" type, both incoming and outgoing, via the Is XML and Is DOM reference constants. When parameters of this type are specified, no processing or encoding is applied to them and the data are transmitted "as is" (see example 5). 
 
@@ -93,7 +93,7 @@ In *input\_output*, pass a value indicating whether the processed parameter is â
    * Is DOM reference indicates that the parameter must receive the DOM reference of an XML structure corresponding to the XML argument sent by the SOAP client.
 * Modification of the WSDL: These XML structures will be declared by 4D as the "anyType" type (undetermined) in the WSDL. If you want to type an XML structure precisely, you must save the WSDL file and manually add the desired data schema in the <types> section of the WSDL
 
-##### COMPILER\_WEB method 
+### COMPILER\_WEB method 
 
  Incoming SOAP arguments referred to using 4D variables (and not 4D method arguments) must first be declared in the COMPILER\_WEB project method. In fact, the use of process variables in Web Services methods requires that they be declared before the method is called. The COMPILER\_WEB project method is called, if it exists, for each SOAP request accepted. By default, the COMPILER\_WEB method does not exist. You must specifically create it. 
 

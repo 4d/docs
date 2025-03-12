@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Find XML element.Summary-->El comando DOM Find XML element permite buscar los elementos XML específicos en una estructura XML.<!-- END REF--> La búsqueda comienza por el elemento designado por el parámetro *refElement*.
 
@@ -51,7 +51,7 @@ El nodo XML a buscar está definido por el parámetro *xRuta*, expresado en nota
 
 El comando devuelve la referencia XML de los elementos encontrados. Cuando se pasa el array de cadenas *arrRefElement*, el comando lo llena con la lista de referencias XML encontradas. En este caso, el comando devuelve el primer elemento del array *arrRefElement* como resultado. Este parámetro es útil cuando existen varios elementos con el mismo nombre en la ubicación especificada por el parámetro *xRuta*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Dada la siguiente estructura XML:
 
@@ -78,7 +78,7 @@ La misma búsqueda también puede efectuarse de esta forma:
  ALERT("The value of the element is: \""+value+"\"") //Aprendiendo XML
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Dada la siguiente estructura XML: 
 
@@ -94,7 +94,7 @@ El siguiente código permite recuperar la referencia de cada elemento Elem2 en e
  vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea seleccionar todos los elementos "rect" con atributos "class" que contengan la cadena "bgcontainer":
 
@@ -102,23 +102,23 @@ Desea seleccionar todos los elementos "rect" con atributos "class" que contengan
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error. 
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Se genera un error cuando:
 
 * La referencia del elemento no es válida
 * La ruta xPath especificada no es válida.
 
-#### Ver también 
+## Ver también 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

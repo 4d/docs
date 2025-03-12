@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->The **SET QUERY AND LOCK** command can be used to request the automatic locking of records found by all queries that follow the calling of this command in the current transaction.<!-- END REF--> This means that the records cannot be modified by a process other than the current process between a query and the handling of results.
 
@@ -48,7 +48,7 @@ Call **SET QUERY AND LOCK**(False) in order to disable this mechanism afterward.
 
 However, SET QUERY AND LOCK does not affect other commands that modify the current selection such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
 
-#### Example 
+## Example 
 
 In this example, it is not possible to delete a client who would have been passed from category “C” to category “A” in another process between the [QUERY](query.md) and [DELETE SELECTION](delete-selection.md) commands:
 
@@ -62,15 +62,15 @@ In this example, it is not possible to delete a client who would have been passe
  VALIDATE TRANSACTION
 ```
 
-#### Error management 
+## Error management 
 
 If the command is not called in the context of a transaction, an error is generated. 
 
-#### See also 
+## See also 
 
 [QUERY](query.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

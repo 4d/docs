@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** modifica a página atual de um formulário para mostrar a página especificada por *numPag*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Se não for mostrado nenhum formulário ou carregado pelo comando [FORM LOAD](..
   
 O parâmetro *\** é útil quando o comando é chamado no contexto de um subformulário em página que contém muitas páginas. Neste caso, quando passar este parâmetro, o comando muda a página do subformulário atual (a que chamou o comando). Por padrão, quando o parâmetro *\** é omitido, o comando é sempre aplicado ao formulário pai.
 
-##### Sobre os comandos de gestão de páginas de formulário 
+### Sobre os comandos de gestão de páginas de formulário 
 
 Os botões de ação automática realizam as mesmas tarefas que os comandos [FIRST PAGE](first-page.md), [LAST PAGE](last-page.md), [NEXT PAGE](next-page.md), [PREVIOUS PAGE](previous-page.md) e **FORM GOTO PAGE** que você pode aplicar a objetos tais como abas, list box drop downs, etc. Sempre que seja possível, utilize botões de ação automática ao invés dos comandos. 
 
@@ -33,7 +33,7 @@ Os comandos de página podem ser utilizadas com formulários de entrada ou com f
 
 **Nota:** quando **desenha** um formulário, pode trabalhar com as páginas da 1 à X, como também com a página 0, na qual põe os objetos que aparecem em todas as páginas. Quando **utiliza** um formulário, e chama os comandos de página, você trabalha com as páginas da 1 a X; a página 0 é combinada automaticamente com a página que está sendo mostrada.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é um método de objeto para um botão que mostra uma página específica, a página 3: 
 
@@ -41,7 +41,7 @@ O exemplo a seguir é um método de objeto para um botão que mostra uma página
  FORM GOTO PAGE(3)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FIRST PAGE](first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -49,7 +49,7 @@ O exemplo a seguir é um método de objeto para um botão que mostra uma página
 [NEXT PAGE](next-page.md)  
 [PREVIOUS PAGE](previous-page.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

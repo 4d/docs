@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count in array.Summary-->The Count in array command returns the number of times *value* is found in *array*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ This command can be used with the following array types: Text, number, Date, Poi
 
 If no element in *array* matches *value*, the command returns 0.
 
-#### Example 1 
+## Example 1 
 
 The following example allows displaying the number of selected lines in a list box: 
 
@@ -34,7 +34,7 @@ The following example allows displaying the number of selected lines in a list b
  ALERT(String(Count in array(tBList;True))+" line(s) selected in the list box")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to count object references in an object array:
 
@@ -53,12 +53,12 @@ You want to count object references in an object array:
  $n:=Count in array($objects;$o2) // n = 0
 ```
 
-#### See also 
+## See also 
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Dec.Summary-->Dec returns the decimal (fractional) portion of *number*.<!-- END REF-->The value returned is always positive or zero.
 
-#### Example 
+## Example 
 
 The following example takes a monetary value expressed as a real number, and extracts the dollar part and the cents part. If *vrAmount* is 7.31, then *vlDollars* is set to 7 and *vlCents* is set to 31:
 
@@ -27,11 +27,11 @@ The following example takes a monetary value expressed as a real number, and ext
  vlCents:=Dec(vrAmount)*100 // Get the fractional part
 ```
 
-#### See also 
+## See also 
 
 [Int](int.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

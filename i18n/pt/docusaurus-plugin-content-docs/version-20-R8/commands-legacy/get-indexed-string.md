@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get indexed string.Summary-->O comando Get indexed string devolve:   
 
@@ -25,21 +25,21 @@ displayed_sidebar: docs
 
 **Nota:** uma cadeia de um recurso lista de cadeias pode conter até 255 caracteres.
 
-##### Compatibilidade com arquitetura XLIFFO 
+### Compatibilidade com arquitetura XLIFFO 
 
 O comando Get indexed string é compatível com a arquitetura XLIFF de 4D a partir da versão 11: o comando pesquisa primeiro pelos valores correspondentes a *resNum* e *cadeiaNum* em todos os arquivos XLIFF abertos (se o parâmetro *resArquivo* for omitido). Neste caso, *resNum* especifica o atributo **id** do elemento **grupo** e*cadeiaNum* especifica o atributo **id** do elemento **trans-unit**. Se não for encontrado o valor, o comando continua a pesquisa nos arquivos de recursos abertos. Para maiores informações sobre a arquitetura XLIFF em 4D, consulte o Manual de Desenho.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o recurso for encontrado, OK toma o valor 1, do contrário assume o valor 0 (zero).
 
-#### Ver também 
+## Ver também 
 
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

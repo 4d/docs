@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CANCEL.Summary-->La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
 
@@ -31,25 +31,25 @@ Enfin, cette commande peut être utilisée dans l’événement formulaire On Pr
 
 **Note :** Ce fonctionnement est différent de celui de l’instruction [PAGE BREAK](page-break.md)(\*) qui provoque l’annulation de TOUTES les lignes en attente d’impression. 
 
-##### Mode headless 
+### Mode headless 
 
 La commande **CANCEL** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Lorsque la commande [CANCEL](cancel.md) est exécutée (formulaire annulé ou annulation d'impression), la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->The **DELETE DOCUMENT** command deletes the document whose name you pass in *document*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ If the document is open when the command is called, the result depends on the OS
 
 **WARNING:** **DELETE DOCUMENT** can delete any file on a disk. This includes documents created with other applications as well as the applications themselves. **DELETE DOCUMENT** should be used with extreme caution. Deleting a document is a permanent operation and cannot be undone.
 
-#### Example 1 
+## Example 1 
 
 The following example deletes the document named Note:
 
@@ -36,19 +36,19 @@ The following example deletes the document named Note:
  DELETE DOCUMENT("Note") // Delete the document
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 Deleting a document sets the OK system variable to 1\. If **DELETE DOCUMENT** can’t delete the document, the OK system variable is set to 0.
 
-#### See also 
+## See also 
 
 [Test path name](test-path-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

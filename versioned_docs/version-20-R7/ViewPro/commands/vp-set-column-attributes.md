@@ -13,7 +13,7 @@ title: VP SET COLUMN ATTRIBUTES
 |rangeObj   |Object|->|Range object|
 |propertyObj |Object|->|Object containing column properties|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
 
@@ -29,7 +29,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the colu
 |resizable | boolean | True if the column can be resized, else false |
 |header|  text | Column header text|
   
-#### Example
+## Example
 
 To change the size of the second column and set the header, you write:
 
@@ -45,7 +45,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
-#### See also
+## See also
 
 [VP Column](vp-column.md)<br/>
 [VP Get column attributes](vp-get-column-attributes.md)<br/>

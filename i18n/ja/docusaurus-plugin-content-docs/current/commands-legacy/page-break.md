@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAKはプリンタに送信されたデータの印刷を実行させ、改ページを行います。<!-- END REF-->PAGE BREAKは (On Printing Detailフォームイベントのコンテキストで) [Print form](../commands/print-form.md "Print form")と共に使用し、強制的に改ページを行ったり、メモリに作成された最後のページを印刷するために使用します。PAGE BREAKは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドとともに使用してはいけません。この代りに、[Subtotal](subtotal.md "Subtotal")や[BREAK LEVEL](break-level.md "BREAK LEVEL")にオプション引数を使用してページブレークを行ってください。
 
@@ -31,20 +31,20 @@ displayed_sidebar: docs
 
 **Note:** スクリーンをプリントする際、ユーザがプリントプレビューダイアログボックスのキャンセルボタンをクリックした場合、PAGE BREAKコマンドはシステム変数OKに0を代入します。
 
-#### 例題 1 
+## 例題 1 
 
 [Print form](../commands/print-form.md "Print form") コマンドの例題参照
 
-#### 例題 2 
+## 例題 2 
 
 [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [CANCEL](cancel.md)  
 [Print form](../commands/print-form.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

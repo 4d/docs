@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Find all.Summary-->**WP Find all** コマンドは*targetObj* 引数のオブジェクト内を、*searchValue* 引数の値を、*searchCondition* 引数の検索条件に基づいて検索を行います。<!-- END REF-->また任意の引数を使用することで見つかった結果を置き換えることができます。
 
@@ -74,7 +74,7 @@ wk find reverse が使用された場合には順番が逆転します。
 
 検索の結果何も見つからなかった場合には空のコレクションが返されます。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $userSel ;$target ;$alphaRanges : Object
@@ -94,7 +94,7 @@ wk find reverse が使用された場合には順番が逆転します。
  $bravoRanges:=WP Find all($target;"alpha";$options;"bravo")
 ```
 
-#### 参照 
+## 参照 
 
 [WP Find next](wp-find-next.md)  
 [WP Find previous](wp-find-previous.md)  

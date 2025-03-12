@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->O comando **OBJECT GET MINIMUM VALUE** devolve, na variável *valorMin*, o valor mínimo atual do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -23,12 +23,12 @@ A propriedade "Valor mínimo" pode ser definida utilizando a Lista de propriedad
 
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável em lugar de uma cadeia (campo ou variável objeto unicamente).
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

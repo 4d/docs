@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Bool.Summary-->O comando **Bool** devolve a forma booleana da expressão que foi passado em *expressao*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ O comando pode devolver os valores abaixo, dependendo do tipo de resultado da *e
 
 Este comando é útil quando se esperar que o resultado de uma expressão for um booleano, qualquer que seja o resultado real de sua avaliação (por exemplo, se for avaliada como **nulo** ou **indefinido**).
 
-#### Exemplo 
+## Exemplo 
 
 Seleciona um valor dependendo do conteúdo de um atributo de campo de objeto, antecipando o caso no qual falta o atributo:
 
@@ -41,14 +41,14 @@ Seleciona um valor dependendo do conteúdo de um atributo de campo de objeto, an
  ALERT("This person is "+$married)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Date](date.md)  
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

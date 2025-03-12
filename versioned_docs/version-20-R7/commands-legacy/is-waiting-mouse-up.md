@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->The **Is waiting mouse up** command returns **True** if the current object has been clicked and the mouse button has not been released, while the parent window has the focus.<!-- END REF--> Otherwise, it returns **False**, in particular if the parent window has lost the focus before the mouse button was released. 
 
  The command must be called in the context of the current object. It is designed to be used in conjunction with the On Mouse Up form event which is available for picture fields and variables. It allows your code to handle the cases where the user clicked and started to move something within a form object picture, and this action is interrupted by an external event, such as an alert dialog box. In this case, the internal state of the object can be suspended indefinitely because it is waiting for a mouse up event which will never occur. To prevent this issue, you must protect your mouse moving code within a **Is waiting mouse up** command which makes you sure that it is executed in a valid context. 
 
-#### Example 
+## Example 
 
 The following code can be used to manage a mouse tracking feature in a picture object:
 
@@ -47,11 +47,11 @@ The following code can be used to manage a mouse tracking feature in a picture o
  End case
 ```
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

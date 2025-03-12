@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is record loaded.Summary-->O comando **Is record loaded** devolve [True](true.md "True") se o registro atual de *tabela* é carregado no processo atual.<!-- END REF-->  
   
 **4D Server**: Em princípio, quando tabelas estiverem linkadas por relações automáticas, os registros atuais de tabelas relacionadas são carregados automaticamente (ver \[#title id="1"/\]). Entretanto, por razões de otimização, 4D Server só carrega os registros quando necessário, por exemplo quando lendo ou atribuindo um campo ao registro relacionado. Como resultado disso, no contexto do comando **Is record loaded**, será retornado False em modo remoto (retorna True em modo local).
 
-#### Exemplo 
+## Exemplo 
 
 Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Registro anterior”, pode escrever os métodos de objeto para esses botões para melhorar sua operação. O botão “Seguinte” mostra o começo da seleção se o usuário estiver ao princípio da seleção e o botão “Anterior” mostra o final da seleção quando o usuário estiver ao começo da seleção  
 
@@ -45,7 +45,7 @@ Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Regi
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

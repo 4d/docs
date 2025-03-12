@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->The **OBJECT SET COORDINATES** command modifies the location and, optionally, the size of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -39,7 +39,7 @@ This command only functions in the following contexts:
 * Headers and footers of output forms displayed by the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) command,
 * Forms being printed.
 
-#### Exemplo 
+## Exemplo 
 
 A seguinte declaração localiza oi objeto "button\_1" nas coordenadas (10,20) (30,40):
 
@@ -49,13 +49,13 @@ A seguinte declaração localiza oi objeto "button\_1" nas coordenadas (10,20) (
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-#### Ver também 
+## Ver também 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET CACHE SIZE.Summary-->O comando SET CACHE SIZE define dinâmicamente o tamanho da cache do banco de dados e, opcionalmente, permite definir o tamanho minino em bytes a partir do qual começa a liberar memória.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Em tam, passe o novo tamanho da memória cache do banco de dados em bytes. Este 
 
 Em libMin, passe o tamanho mínimo de memória a liberar da caché do banco de dados quando o motor necessitar espaço para assignar um objeto a ele (valor em bytes). O propósito desta opção é reduzir o número de vezes que os dados são liberados da memória caché com o objetivo de obter um melhor rendimento. Como padrão, se esta opção não for utilizada, 4D descarrega pelo menos 10% da caché quando for necessário espaço. Se seu banco de dados funcionar com um grande cache, pode ser vantajoso utilizar um tamanho fixo que não dependa de tamanho da memória caché. Pode ajustar esta configuração de acordo com o tamanho dos blocos de dados que maneja em seu banco de datos.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser adicionar 100 MB ao tamanho da cache de seu banco de ados atual. Pode escrever:
 
@@ -36,11 +36,11 @@ Se quiser adicionar 100 MB ao tamanho da cache de seu banco de ados atual. Pode 
   // o tamanho da caché atual agora é 519430400
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get cache size](get-cache-size.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

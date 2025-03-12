@@ -16,7 +16,7 @@ title: VP Row
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
 
@@ -30,7 +30,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 * `vk current sheet`
   
-#### Example
+## Example
 
 You want to define a range object for the row shown below (on the current spreadsheet):
 
@@ -42,7 +42,7 @@ You can write:
 $row:=VP Row("ViewProArea";9) // row 10
 ```
 
-#### See also
+## See also
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>

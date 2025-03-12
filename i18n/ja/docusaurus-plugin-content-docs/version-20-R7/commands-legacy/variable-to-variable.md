@@ -33,7 +33,7 @@ VARIABLE TO VARIABLEは、[SET PROCESS VARIABLE](set-process-variable.md "SET PR
 
 カレントプロセスは送り先プロセスの変数を"のぞき見"しています。送り先プロセスは別のプロセスが自分の変数のインスタンスに書き込んでいることについては何も警告されません。
 
-##### 制限事項 
+### 制限事項 
 
 VARIABLE TO VARIABLE は、送り先変数としてローカル変数を受け付けません。
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->**SELECTION TO ARRAY**コマンドは、1つ以上の配列を作成し、カレントセレクションのフィールドデータやレコード番号を配列にコピーします。<!-- END REF-->
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 **注:** **SELECTION TO ARRAY**コマンドを呼び出した後、カレントセレクションとカレントレコードは同じままですが、カレントレコードはロードされていません。もしカレントレコードのフィールド値を使いたい場合は**SELECTION TO ARRAY**コマンドの後に[LOAD RECORD](load-record.md)コマンドを使用してください。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、*\[People\]*テーブルと*\[Company\]*テーブルは自動リレーションを持ちます。2つの配列*asLastName*と*asCompanyAddr*は、*\[People\]* テーブルのセレクションの数にリサイズされ、両テーブルからのデータを受け取ります:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
  SELECTION TO ARRAY([People]Last Name;asLastName;[Company]Address;asCompanyAddr)
 ```
 
-#### 例題 2 
+## 例題 2 
 
  以下の例は、*\[Clients\]*レコード番号を配列 *alRecordNumbers* に、*\[Clients\]Names* フィールドの値を配列 *asNames* 代入します:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
  SELECTION TO ARRAY
 ```
 
-#### 参照 
+## 参照 
 
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GRAPH.Summary-->**GRAPH** draws a graph for a picture variable on the basis of values coming from arrays.<!-- END REF--> 
 
@@ -35,7 +35,7 @@ The *xLabels* parameter defines the labels that will be used to label the x-axis
 
 The data specified by *yElements* is the data to graph. The data must be numeric. Up to eight data sets can be graphed. Pie charts graph only the first *yElements*.
 
-##### Automatic IDs 
+### Automatic IDs 
 
 Specific IDs are assigned automatically to elements found in the SVG graph:
 
@@ -59,7 +59,7 @@ Specific IDs are assigned automatically to elements found in the SVG graph:
 | ID\_y\_grid                                  | Grid on Y axis                           |
 | ID\_y\_grid\_shadow                          | Shadow for grid on Y axis                |
 
-##### graphSettings attributes 
+### graphSettings attributes 
 
 When you use the *graphSettings* parameter, you pass an object that contains the various graph properties to define. You can use the following constants, found in the "*Graph Parameters*" constant theme:
 
@@ -107,7 +107,7 @@ When you use the *graphSettings* parameter, you pass an object that contains the
 | Graph yMax                        | Text | yMax                       | **Possible value**s: Numbers <br/>If missing, 4D automatically calculates the yMax value.<br/>For all types except 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Graph yMin                        | Text | yMin                       | **Possible values**: Numbers <br/>If missing, 4D automatically calculates the yMin value.<br/>For all types except 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-#### Example 1 
+## Example 1 
 
 Syntax using *graphNumber*: The following example shows the different types of graphs that you can obtain. The code would be inserted in a form method or object method. It is not intended to be realistic, since the data is constant:
 
@@ -146,7 +146,7 @@ The following figures show the resulting graph.
 * With *vType* equal to 8, you obtain a **Picture** graph:  
 ![](../assets/en/commands/pict847124.fr.png)
 
-#### Example 2 
+## Example 2 
 
 Syntax using *graphSettings*: In the following example, you draw a simple line graph based on time values:
 
@@ -181,7 +181,7 @@ Syntax using *graphSettings*: In the following example, you draw a simple line g
 
 ![](../assets/en/commands/pict2603210.en.png)
 
-#### Example 3 
+## Example 3 
 
 With the same values, you can add custom settings to obtain a different view:
 
@@ -222,7 +222,7 @@ With the same values, you can add custom settings to obtain a different view:
 
 ![](../assets/en/commands/pict2603212.en.png)
 
-#### Example 4 
+## Example 4 
 
 In this example, we customize a few settings:
 
@@ -271,14 +271,14 @@ In this example, we customize a few settings:
 
 ![](../assets/en/commands/pict2648517.en.png)
 
-#### See also 
+## See also 
 
   
 *Graph Parameters*  
 [GRAPH SETTINGS](graph-settings.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

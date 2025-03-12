@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Type.Summary-->O comando Type devolve um valor numérico que indica o tipo do campo ou da variável que passa em *campVar*.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Se pode aplicar a função Type a campos, variáveis interprocesso, variáveis p
 * Não se pode aplicar a função **Type** a expressões escalares tais como propriedades de objeto (*emp.name*) ou itens coleção (*myColl\[5\]*). Para fazer isso, deve usar o comando [Value type](value-type.md)
 * Em modo compilado, chamar **Type** em um parâmetro método ($0, $1...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O método de projeto a seguir apaga uma parte ou a totalidade dos campos do registro atual da tabela a qual aponta o ponteiro passado como parâmetro. Faz isto sem apagar ou modificar o registro atual: 
 
@@ -118,7 +118,7 @@ Depois de implementar este método de projeto em seu banco de dados, pode escrev
  APAGAR REGISTRO(->[Coisas a fazer];-1?-Is alpha field)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Em alguns casos, por exemplo quando se escreve código genérico, pode necessitar saber se um array é um array normal independente ou uma "fila" de um array 2D. Neste caso, pode utilizar o código a seguir:  
 
@@ -132,17 +132,17 @@ Em alguns casos, por exemplo quando se escreve código genérico, pode necessita
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Ver exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver também 
+## Ver também 
 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

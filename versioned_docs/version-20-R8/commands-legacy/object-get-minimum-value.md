@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->The **OBJECT GET MINIMUM VALUE** command returns, in the *minValue* variable, the current minimum value of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -23,12 +23,12 @@ You can set the "Minimum Value" property using the Property List in Design mode,
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
-#### See also 
+## See also 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

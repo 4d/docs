@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Summary-->The **SOAP REJECT NEW REQUESTS** command specifies whether or not the Web Services server accepts new SOAP requests.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ In *rejectStatus*, pass **True** to reject new SOAP requests. Passing **False** 
 
 **Note**: This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **SOAP REJECT NEW REQUESTS** does nothing.
 
-#### Example 
+## Example 
 
 You want to deny any new requests to your Web Services server:
 
@@ -32,12 +32,12 @@ You want to deny any new requests to your Web Services server:
  End if
 ```
 
-#### See also 
+## See also 
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

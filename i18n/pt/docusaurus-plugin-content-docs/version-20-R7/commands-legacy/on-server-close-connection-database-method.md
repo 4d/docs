@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->O **On Server Close Connection database method** é chamado no computador servidor cada vez que termina um processo 4D Client.<!-- END REF--> 
 
@@ -37,6 +37,6 @@ Esta tabela detalha a informação oferecida pelos três parâmetros passados ao
 
 O **On Server Close Connection database method** é o inverso exato do [On Server Open Connection database method](on-server-open-connection-database-method.md). Para maior informação e uma descrição deste método base, assim como para a descrição dos **processos 4D Client**, ver a descrição deste método base.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o primeiro exemplo para [On Server Open Connection database method](on-server-open-connection-database-method.md).

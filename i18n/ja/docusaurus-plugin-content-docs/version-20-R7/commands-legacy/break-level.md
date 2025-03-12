@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL**は、[PRINT SELECTION](print-selection.md)コマンドを使ってプリントするレポートのブレークの数を指定します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 2番目のオプションの引数*pageBreak*は、印刷中にページブレークを発生させるために使用します。
 
-#### 例題 
+## 例題 
 
 以下の例は、2つのブレークレベルを持つレポートを印刷します。このセレクションは4つのレベルに対してソートされますが、**BREAK LEVEL**コマンドは2つのレベルだけにブレークを指定します。一つのフィールドは[ACCUMULATE](accumulate.md)コマンドで累計しています:
 
@@ -38,14 +38,14 @@ displayed_sidebar: docs
  PRINT SELECTION([Emp]) // レポートを印刷する
 ```
 
-#### 参照 
+## 参照 
 
 [ACCUMULATE](accumulate.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

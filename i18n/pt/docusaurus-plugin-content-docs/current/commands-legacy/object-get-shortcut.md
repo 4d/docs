@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->O comando **OBJECT GET SHORTCUT** devolve o atalho de teclado associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** no processo atual.<!-- END REF-->  
   
@@ -38,11 +38,11 @@ Se nenhuma tecla de modificação foi definida para o atalho, modificadores devo
   
 **Nota**: se o parâmetro *objeto* designa vários objetos do formulário que contém diferentes configurações, o comando devolve "" em *tecla* 0 em *modificadores*. 
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

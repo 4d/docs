@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Find column.Summary-->The QR Find column command returns the number of the first column whose contents match the *expression* passed in parameter.<!-- END REF-->
 
@@ -25,7 +25,7 @@ QR Find column returns –1 if nothing has been found.
 
 If you pass an invalid area number, the error -9850 will be generated.
 
-#### Example 
+## Example 
 
 The following code retrieves the column number that holds the field \[G.NQR Tests\]Quarter and deletes that column:
 
@@ -48,7 +48,7 @@ followed by:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

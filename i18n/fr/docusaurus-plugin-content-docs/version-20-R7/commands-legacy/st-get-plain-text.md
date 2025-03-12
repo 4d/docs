@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get plain text.Summary-->La commande **ST Get plain text** supprime toute balise de style du champ ou de la variable texte désigné(e) par les paramètres *\** et *objet*, et retourne le texte brut.<!-- END REF--> 
 
-##### 
+### 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande retourne les informations de l'objet en cours d'édition ; si l'objet n'a pas le focus, la commande retourne les informations de la source de données de l'objet (variable ou champ).  
 Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l'exécution, la commande retourne les informations de la variable ou du champ.
 
-##### 
+### 
 
 Le paramètre optionnel *modeRéf* permet d’indiquer la manière dont les références présentes dans *objet* doivent être retournées. Passez dans *modeRéf* une des constantes suivantes, placées dans le thème "*Texte multistyle*" (vous pouvez passer une constante ou une combinaison de constantes) :
 

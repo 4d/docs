@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Dec.Summary-->**Dec** retourne la partie décimale de *nombre*.<!-- END REF--> La valeur retournée est toujours positive ou nulle.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique et en extrait les parties "euros" et "centimes". Si *vrMontant* valait 7,31, *vlEuros* vaudrait 7 et *vlCentimes* 31 : 
 
@@ -27,11 +27,11 @@ L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique 
  vlCentimes:=Dec(vrMontant)*100 // Extraire la partie décimale et la multiplier par 100 pour obtenir un entier
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Int](int.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

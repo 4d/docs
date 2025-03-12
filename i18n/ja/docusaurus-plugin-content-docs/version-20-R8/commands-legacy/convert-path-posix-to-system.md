@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Convert path POSIX to system.Summary-->Convert path POSIX to system コマンドはPOSIX (Unix) シンタックスで表現されたパス名をシステムシンタックスで表現されたパス名に変換します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を使用して*posixPath*引数がエンコードされているかどうかを指定できます。*posixPath*引数がエンコードされている場合、この引数を渡さなければなりません。そうでなければ正しく変換されません。このコマンドはエンコードなしのパス名を返します。
 
-#### 例題 1 
+## 例題 1 
 
 Mac OSでの例題:
 
@@ -38,7 +38,7 @@ Mac OSでの例題:
   // "machd:file 2.txt"を返す (machdは起動ディスク)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 Windowsでの例題:
 
@@ -49,13 +49,13 @@ Windowsでの例題:
   // "c:\docs\truc 2.txt" を返す
 ```
 
-#### 参照 
+## 参照 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

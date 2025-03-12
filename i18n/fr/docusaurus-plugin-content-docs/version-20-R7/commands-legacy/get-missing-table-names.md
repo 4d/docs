@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->La commande **GET MISSING TABLE NAMES** retourne dans le tableau *tabManquantes* les noms de toutes les tables manquantes de la base courante.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Une fois que vous avez identifié les tables manquantes de la base, vous pouvez 
 
 **Note :** Les données des tables manquantes sont effacées en cas de compactage du fichier de données (si les tables n’ont pas été regénérées entre-temps). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

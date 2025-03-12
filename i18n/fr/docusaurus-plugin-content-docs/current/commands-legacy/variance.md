@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Variance.Summary-->**Variance** retourne la variance de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul.
 
@@ -28,7 +28,7 @@ La variance d'un ensemble de valeurs est la moyenne des carrés des écarts par 
 
 Si les valeurs considérées ne constituent pas un échantillon, multipliez la valeur retournée par **Variance** par (n-1)/n.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est la méthode objet d'une variable appelée Var. La méthode assigne la variance de la série à Var:
 
@@ -49,7 +49,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
 
 **Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tableau : 
 
@@ -60,14 +60,14 @@ Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tab
  vVariance:=Variance($TabNote)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

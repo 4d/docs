@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Record number.Summary-->**Record number** devolve o número do registro atual de *tabela*.<!-- END REF--> Se não há registro atual, como quando o ponteiro do registro está antes ou depois da seleção atual, **Record number** devolve –1\. Se o registro é um novo registro que não foi guardado, **Record number** devolve –3.  
   
@@ -24,7 +24,7 @@ Os números de registro podem variar. Os números de registros apagados são reu
   
 **Nota:** É recomendado utilizar o comando [Is new record](is-new-record.md) para verificar se o registro está em processo de criação. 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir salva o número do registro atual e depois procura na tabela se outro registro tiver o mesmo valor:
 
@@ -36,7 +36,7 @@ O exemplo a seguir salva o número do registro atual e depois procura na tabela 
  GOTO RECORD([Pessoas];$NumReg) // Regressar ao registro original
 ```
 
-#### Ver também 
+## Ver também 
 
 [GOTO RECORD](goto-record.md)  
 [Is new record](is-new-record.md)  
@@ -44,7 +44,7 @@ O exemplo a seguir salva o número do registro atual e depois procura na tabela 
 [Sequence number](sequence-number.md)  
 *Sobre Números de Registros*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

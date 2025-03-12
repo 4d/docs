@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->The **LIST OF STYLE SHEETS** command returns the list of application style sheets in the *arrStyleSheets* array.<!-- END REF-->
 
@@ -23,11 +23,11 @@ After executing the command, each element of the array contains the name of a st
 
 **Note:** For compatibility reasons, the automatic style sheets "\_\_automatic\_main\_text\_\_" and "\_\_automatic\_additional\_text\_\_" are not returned by this command. However, they are still available in the forms. 
 
-##### Compatibility Note 
+### Compatibility Note 
 
 This command can only be used in **binary databases**. In **project architecture**, the array is not filled. 
 
-#### Example 
+## Example 
 
 In your application, the following style sheets are defined:
 
@@ -45,12 +45,12 @@ If you execute the following code:
   // $arrStyles{6} contains "Variables"
 ```
 
-#### See also 
+## See also 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

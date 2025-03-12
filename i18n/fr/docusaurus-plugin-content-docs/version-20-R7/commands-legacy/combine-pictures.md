@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 
@@ -33,7 +33,7 @@ Si les paramètres facultatifs *décalHoriz* et *décalVert* sont utilisés, une
 
 **Note :** La superposition effectuée par la commande **COMBINE PICTURES** diffère de la superposition proposée par les opérateurs “classiques” & et | (superposition exclusive et superposition inclusive). Tandis que la commande **COMBINE PICTURES** conserve les caractéristiques de chaque image source dans l’image résultante, les opérateurs & et | traitent chaque pixel et génèrent une image bitmap dans tous les cas. Ces opérateurs, conçus à l’origine pour les images monochromes, sont désormais obsolètes.
 
-#### Exemple 
+## Exemple 
 
 Soient les images suivantes : 
 
@@ -47,11 +47,11 @@ Résultat :
 
 ![](../assets/en/commands/pict27794.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [TRANSFORM PICTURE](transform-picture.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

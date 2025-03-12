@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET HELP TIP.Summary-->O comando **OBJECT SET HELP TIP** permite definir ou modificar dinamicamente a mensagem de ajuda associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
   
@@ -35,7 +35,7 @@ Quando aparece uma mensagem de ajuda, chamando ao comando **OBJECT SET HELP TIP*
 * O conteúdo da mensagem de ajuda também pode ser definida utilizando o editor de formulários (ver *Controles de entrada de dados e ajuda de entrada*) e o editor de estrutura (ver *Propriedades Campo*) em modo Desenho.
 * Os conselhos de ajuda podem ser desativados globalmente para a aplicação utilizando o seletor Tips enabled do comando [SET DATABASE PARAMETER](set-database-parameter.md).
   
-#### Exemplo 1 
+## Exemplo 1 
 
 Neste formulário, uma mensagem de ajuda se visualiza e muda dinamicamente quando o mouse passar sobre diferentes partes de um botão de imagem:
 
@@ -86,7 +86,7 @@ Neste formulário, uma mensagem de ajuda se visualiza e muda dinamicamente quand
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se tiver um list box, "Commands List", que contenha uma lista e quiser definir uma mensagem de ajuda que mostre a descrição de cada elemento de lista. A descrição se encontra na tabela \[Documentation\]. 
 
@@ -125,12 +125,12 @@ O resultado é...
 
 ![](../assets/en/commands/pict3529022.en.png)
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

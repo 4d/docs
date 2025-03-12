@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->The **DELETE FOLDER** command deletes the folder whose name or full path has been passed in *folder*.<!-- END REF--> 
 
@@ -38,12 +38,12 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
 
 You can intercept these errors using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

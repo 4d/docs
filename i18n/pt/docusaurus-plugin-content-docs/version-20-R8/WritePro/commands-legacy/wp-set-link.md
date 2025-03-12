@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP SET LINK.Summary-->**WP SET LINK** aplica uma referência de hiperlink ao *objRange*.<!-- END REF--> São compatíveis links a URL, métodos 4D e marcadores. O link ativa uma ação quando o usuário clicar nele (ou utilizar **Ctrl+clique** em Windows ou **Cmd+clique** em macOS se o texto não for apenas leitura para abrir URL).  
   
@@ -46,7 +46,7 @@ No parâmetro *objLink*, passe um objeto que descreva o hyperlink. Deve conter a
 * Os links aos métodos 4D são eliminados dos documentos 4D Write Pro quando se exportam em formato HTML, MIME HTML ou .docx.
 * Se desejar eliminar um link de *objRange*, consulte o parágrafo *Manejar URLs*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser agregar um link a seu website na área de rodapé de seu documento:  
 
@@ -57,7 +57,7 @@ Se quiser agregar um link a seu website na área de rodapé de seu documento:
  WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser criar uma tabela de conteúdo com links utilizando todos os marcadores em seu documento:
 
@@ -88,7 +88,7 @@ Se quiser criar uma tabela de conteúdo com links utilizando todos os marcadores
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser definir um link a um método 4D em cada string "4D" no documento:
 
@@ -114,7 +114,7 @@ Se quiser definir um link a um método 4D em cada string "4D" no documento:
 
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [WP Get links](wp-get-links.md)  

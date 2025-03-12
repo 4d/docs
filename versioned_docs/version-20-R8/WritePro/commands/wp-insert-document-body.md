@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the range of the inserted document body.<!-- END REF-->
 
@@ -53,7 +53,7 @@ In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pa
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Example 1 
+## Example 1 
 
 You want to replace the contents of a document by the text selected in another one:  
 
@@ -63,7 +63,7 @@ You want to replace the contents of a document by the text selected in another o
  WP Insert document body(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
 ```
 
-#### Example 2 
+## Example 2 
 
 You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.   
 
@@ -80,7 +80,7 @@ You have defined a template document with different preformatted parts, each of 
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to set the font style and size for the inserted document body:
 
@@ -93,7 +93,7 @@ WP SET ATTRIBUTES($range1; wk font family; "Times New Roman")
 WP SET ATTRIBUTES($range1; wk font italic; wk true)
 ```
 
-#### See also 
+## See also 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

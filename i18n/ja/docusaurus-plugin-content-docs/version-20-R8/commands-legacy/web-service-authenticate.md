@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->**WEB SERVICE AUTHENTICATE**コマンドは、クライアントアプリケーションの認証を必要とするWeb サービスの使用を可能にします (シンプルな認証) 。<!-- END REF-->BASICとDIGEST メソッド、そしてプロキシの存在がサポートされています。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 認証が失敗すると、SOAPサーバはエラーを返します。このエラーは[WEB SERVICE Get info](web-service-get-info.md)コマンドを使用して確認できます。
 
-#### 例題 
+## 例題 
 
 プロキシの後ろに配置されているWebサービスによる認証:
 
@@ -48,12 +48,12 @@ displayed_sidebar: docs
  WEB SERVICE CALL(...)
 ```
 
-#### 参照 
+## 参照 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

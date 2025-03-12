@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Uppercase.Summary-->Uppercase devolve uma cadeia de caracteres igual a *cadeia* com todos os caracteres alfabéticos convertidos em maiúsculas.<!-- END REF-->  
   
 O parâmetro opcional *\**, se for passado, indica que os eventuais caracteres acentuados presentes em *cadeia* devem ser retornados como caracteres em maiúsculas acentuados. Como padrão, quando se omite este parâmetro, os caracteres acentuados “perdem” seus acentos depois de realizada a conversão.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo compara os resultados obtidos segundo se passe ou não o parâmetro *\**: 
 
@@ -30,15 +30,15 @@ Este exemplo compara os resultados obtidos segundo se passe ou não o parâmetro
  $string:=Uppercase("andré";*) // $cadeia é igual a "ANDRÉ"
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo para [Lowercase](lowercase.md "Lowercase").
 
-#### Ver também 
+## Ver também 
 
 [Lowercase](lowercase.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

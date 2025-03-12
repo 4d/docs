@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->O comando HIDE MENU BAR torna invisível a barra de menus.<!-- END REF-->  
 
 Se a barra de menus já estiver oculta, o comando não faz nada  
 
-#### Exemplo 
+## Exemplo 
 
 O método abaixo mostra um registro em toda a tela (Macintosh) até que dê um clique: 
 
@@ -38,13 +38,13 @@ O método abaixo mostra um registro em toda a tela (Macintosh) até que dê um c
 
 **Nota:** em Windows, a janela estará limitada pelos limites da janena da aplicação. 
 
-#### Ver também 
+## Ver também 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

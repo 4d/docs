@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONTは*process*に属するすべてのウィンドウを最前面に配置します。<!-- END REF-->このプロセスが既に最前のプロセスの場合は、このコマンドは何も行いません。プロセスが非表示の場合に、[SHOW PROCESS](show-process.md "SHOW PROCESS")コマンドでプロセスを表示しないとBRING TO FRONTコマンドは効果がありません。 
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **注:**プロセスに複数のウィンドウが含まれていて、その中で特定のものを最前面に配置したいときには、例えば [SET WINDOW RECT](set-window-rect.md) のようなコマンドを使用することが推奨されます。
 
-#### 例題 
+## 例題 
 
 次の例は、メニューから実行できるプロジェクトメソッドです。これは、最前のプロセスが<>*vlAddCust\_PID*プロセスかどうかを調べています。そうでなければ、それを前面に配置します:
 
@@ -31,13 +31,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

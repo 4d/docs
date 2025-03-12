@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->La commande **CHANGE LICENSES** affiche la boîte de dialogue du Gestionnaire de licences 4D.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ La boîte de dialogue du Gestionnaire de licences vous permet notamment d’acti
 
 Pour plus d'informations sur le fonctionnement de cette boîte de dialogue, reportez-vous à la section *Installation et activation* du Guide d'installation de 4D.
 
-#### Exemple 
+## Exemple 
 
 Dans une boîte de dialogue de configuration ou de préférences personnalisée, vous placez un bouton auquel la méthode suivante est associée :
 
@@ -35,12 +35,12 @@ Dans une boîte de dialogue de configuration ou de préférences personnalisée,
 
 Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à modifier la base de données.
 
-#### Voir aussi 
+## Voir aussi 
 
 [License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

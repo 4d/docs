@@ -13,13 +13,13 @@ title: VP Get value
 |rangeObj   |Object|->|Range object|
 |Result  |Object|<-|Object containing a cell value|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range whose value you want to retrieve.
 
-#### Returned object
+## Returned object
 
 The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
 
@@ -37,7 +37,7 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 
 
 
-#### Example
+## Example
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
@@ -47,7 +47,7 @@ If(Value type($value.value)=Is text)
 End if
 ```
 
-#### See also
+## See also
 
 [VP Get values](vp-get-values.md)<br/>
 [VP SET VALUE](vp-set-value.md)<br/>

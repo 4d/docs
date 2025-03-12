@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->O comando GET RELATION PROPERTIES retorna as propriedades da relação (se houver) que começa do campo fonte definido por *numTabela* e *numCamp*o ou por *pontCampo*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Quando o comando tiver sido executado:
 * Os parâmetro *autoUm e autoMuitos* retornam *True* se, respectivamente, as opções “Relação um a muitos automática” e “Relação muitos a um automática” forem selecionadas para esta relação; do contrário, retornam *False*.
 **Nota**: os parâmetros *autoUm* e *autoMuitos* também devolverão *True* se nenhuma relação parte do campo fonte (nesse caso retornam valores não significativos.). O valor dos parâmetros t*abelaUno e campUno* permitem assegurar de que uma relação existe.
 
-#### Ver também 
+## Ver também 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -42,7 +42,7 @@ Quando o comando tiver sido executado:
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

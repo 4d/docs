@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET LINK.Summary-->La commande **WP SET LINK** applique une référence de lien hypertexte au paramètre *objCible*.<!-- END REF--> Les liens vers les URL, les méthodes 4D et les signets sont pris en charge. Le lien déclenche une action lorsque l'utilisateur clique dessus (ou lorsqu'il utilise le raccource **Ctrl+clic** sur Windows ou **Cmd+clic** sur macOS si le texte n'est pas en lecture seule pour les URL ouvrants).
 
@@ -46,7 +46,7 @@ Dans le paramètre *objLien*, passez un objet qui décrit le lien hypertexte. Il
 * Les liens vers les méthodes 4D sont supprimés des documents 4D Write Pro lorsqu'ils sont exportés en format HTML, MIME HTML, ou .docx.
 * Si vous souhaitez supprimer un lien de *objCible*, veuillez consulter le paragraphe *Gestion des liens*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez ajouter un lien dans votre site Web, au niveau du pied de page de votre document : 
 
@@ -57,7 +57,7 @@ Vous souhaitez ajouter un lien dans votre site Web, au niveau du pied de page de
  WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez créer une table des matières contenant des liens à l'aide des signets de votre document :
 
@@ -88,7 +88,7 @@ Vous souhaitez créer une table des matières contenant des liens à l'aide des 
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez fixer un lien dans une méthode 4D dans chaque chaîne "4D" d'un document :
 
@@ -111,7 +111,7 @@ Vous souhaitez fixer un lien dans une méthode 4D dans chaque chaîne "4D" d'un 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP Get links](wp-get-links.md)  

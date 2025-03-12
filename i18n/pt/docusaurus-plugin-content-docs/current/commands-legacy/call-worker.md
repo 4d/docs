@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CALL WORKER.Summary-->O comando **CALL WORKER** cria ou chama o processo worker cujo nome ou ID se passa em *processo* e pede a execução do *metodo* em seu contexto com o parâmetro opcional *param*.<!-- END REF-->
 
@@ -48,7 +48,7 @@ Também pode passar parâmetros ao *metodo* utilizando um ou mais parâmetros op
 
 Um processo worker se mantém vivo até que a aplicação esteja fechada ou o comando [KILL WORKER](kill-worker.md) se chame explicitamente. Para liberar memória, não esqueça de chamar a este comando quando um processo worker já não for necessário.
 
-#### Exemplo 
+## Exemplo 
 
 Em um formulário, um botão inicia um cálculo, por exemplo as estatísticas relativas ao ano selecionado. O botâo cria ou chama a um processo de trabalho que vai calcular os dados enquanto o usuário pode continuar trabalhando no formulário.  
   
@@ -77,14 +77,14 @@ O código de *workerMethod é*:
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 *Sobre Workers*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

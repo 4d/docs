@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidade 
+## Compatibilidade 
 
 <!--REF #_command_.WP Text range.Summary-->**WP Text range** recebeu o nome **WP Get range** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeado para maior clareza.
 
-#### Descrição 
+## Descrição 
 
 O novo comando **WP Text range d**evolve um novo objeto de faixa de texto (objFaixa) que contem a seleção entre *faixaInicio* e *faixaFim* na área *wpArea* 4D Write Pro.
 
@@ -39,7 +39,7 @@ para definir o começo do documento e wk end text em *faixaFim* para definir o f
 
 **Nota:** Se passar um elemento de referência tabela, linha, parágrafo, imagem inline, corpo, cabeçalho, seção ou subseção objeto de cabeçalho ou rodapé em *wpArea*, *faixaInicio* e *faixaFim* será relativo ao índice inicial e final do elemento da range. Por exemplo, se um cabeçalho for passado, , wk start text designa o caractere que inicia o cabeçalho e wk end text o caractere que termina o cabeçalho; se um elemento de referência da tabela for passado, o comando vai retoranr uma range de texto relativa às referências de tabela de *targetObj* se a seção for passada *startRange* e *endRange* são relativas ao corpo do documento (área pai da range criada de uma seção). Ver exemplo 2.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser selecionar uma faixa de 12 caracteres começando desde o principio do campo 4D Write Pro. O campo se mostra em um objeto de formulário:
 
@@ -56,7 +56,7 @@ Se executar:
 
 ![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser criar uma range (faixa de seleção) de uma seção:
 
@@ -68,7 +68,7 @@ Se quiser criar uma range (faixa de seleção) de uma seção:
   //$wpRange.end = 111
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP Get body](wp-get-body.md)  

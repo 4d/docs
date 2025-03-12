@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->HIDE MENU BARコマンドは、メニューバーを隠します。<!-- END REF-->
 
 既にメニューバーが隠れている場合は、このコマンドは何も行いません。
 
-#### 例題 
+## 例題 
 
 以下のメソッドは、マウスボタンをクリックするまでフルスクリーン表示（Macintosh）でレコードを表示します。
 
@@ -38,13 +38,13 @@ displayed_sidebar: docs
 
 **Note**: Windows上では、ウィンドウはアプリケーションウィンドウの範囲内に制限されます。
 
-#### 参照 
+## 参照 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

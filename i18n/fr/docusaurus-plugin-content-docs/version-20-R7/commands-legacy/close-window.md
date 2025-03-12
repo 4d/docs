@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** referme la dernière fenêtre créée à l'aide de la commande [Open window](open-window.md) ou [Open form window](open-form-window.md) dans le process courant.<!-- END REF--> S'il n'y a pas de fenêtre personnalisée ouverte, **CLOSE WINDOW** ne fait rien ; la commande ne ferme pas les fenêtres système. Si **CLOSE WINDOW** est appelée alors qu'un formulaire est actif dans la fenêtre, elle n'a pas d'effet non plus. Vous devez appeler **CLOSE WINDOW** lorsque vous avez fini d'utiliser une fenêtre ouverte avec [Open window](open-window.md) ou [Open form window](open-form-window.md). 
 
@@ -21,7 +21,7 @@ Il est inutile de passer un numéro à **CLOSE WINDOW** lorsque vous l'utilisez 
 
 Si vous passez en paramètre la référence d'une zone externe créée à l'aide de la fonction , **CLOSE WINDOW** referme la fenêtre externe. Pour plus d'informations sur les fenêtres externes, reportez-vous à la description de la fonction .
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à l'aide de la commande [ADD RECORD](add-record.md). Une fois les enregistrements ajoutés, la fenêtre est fermée par la commande **CLOSE WINDOW** :
 
@@ -34,12 +34,12 @@ L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à 
  CLOSE WINDOW //Fermeture de la fenêtre
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

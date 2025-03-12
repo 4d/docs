@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CLEAR NAMED SELECTION.Summary-->CLEAR NAMED SELECTION apaga *nome* da memória e libera a memória utilizada por *nome*.<!-- END REF-->CLEAR NAMED SELECTION não afeta as tabelas, seleções, ou registros. Como as seleções temporais utilizam memória, é recomendável apagar as seleções temporárias quando já não sejam necessárias.
 
 Se *nome* foi criado pelo comando [CUT NAMED SELECTION](cut-named-selection.md "CUT NAMED SELECTION") e depois manipulado utilizando o comando [USE NAMED SELECTION](use-named-selection.md "USE NAMED SELECTION"), *nome* não existe mais em memória. Neste caso, não é necessário utilizar o comando CLEAR NAMED SELECTION.
 
-#### Ver também 
+## Ver também 
 
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

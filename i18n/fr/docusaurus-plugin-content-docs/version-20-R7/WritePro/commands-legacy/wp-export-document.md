@@ -42,7 +42,7 @@ Vous pouvez également passer une constante du thème *Constantes 4D Write Pro* 
 * Pour consulter la liste des différences ou des incompatibilités connues liées à l'utilisation du format .docx, veuillez lire *Exporter au format .docx*.
 * Pour plus d'informations sur l'exportation au format SVG, voir *Exporter au format SVG*.
 
-##### Paramètre option 
+### Paramètre option 
 
 Passez un [objet](# "Données structurées sous forme d'objet natif 4D") dans *option* contenant les valeurs définissant les propriétés du document exporté. Les propriétés suivantes sont disponibles : 
 
@@ -88,7 +88,7 @@ Le tableau suivant indique l'*option* disponible par *format* d'export :
 
 **Note de compatibilité :** Passer une valeur *entier long* dans *option* est pris en charge pour des raisons de compatibilité, mais il est recommandé d'utiliser un paramètre [objet](# "Données structurées sous forme d'objet natif 4D"). 
 
-##### collection wk files 
+### collection wk files 
 
 La propriété wk files permet d'[exporter un PDF avec des pièces jointes](https://blog.4d.com/fr/4d-write-pro-export-to-pdf-with-enclosures). Cette propriété doit contenir une collection d'objets décrivant les fichiers à inclure dans le document final. Chaque objet de la collection peut contenir les propriétés suivantes :
 
@@ -105,7 +105,7 @@ Si le paramètre *option* contient également une propriété wk factur x, le pr
 
 **Note :** Les pièces jointes en format PDF ne sont prises en charge que par la version "PDF/A-3". Lorsque vous transmettez la propriété wk files, la version "PDF/A-3" est automatiquement utilisée.
 
-##### objet wk factur x 
+### objet wk factur x 
 
 La propriété wk factur x est un objet qui peut contenir jusqu'à deux propriétés :
 

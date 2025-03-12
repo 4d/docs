@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COPY ARRAY.Summary-->O comando COPY ARRAY cria ou reescreve o array de destino com os mesmos conteúdo, tamanho e fonte do array fonte.<!-- END REF-->é mantido.
 
@@ -25,7 +25,7 @@ Os arrays *fonte* e *destino* podem ser arrays locais, de processo ou interproce
 * em modo compilado, o array destino deve ser do mesmo tipo que o array fonte. Assim é recomendado sempre usar arrays do mesmo tipo para ter comportamento similar em modos interpretado e compilado.
 * Quando copiar arrays de objeto, apenas referênc ias a objetos que eles contem são duplicadas, e não os objetos em si. Significa que qualquer modificação feita em um objeto em um array serão aplicadas a instancias existentes do objeto em arrays copiados. Se precisar duplicar objetos, deve usar o comando [OB Copy](ob-copy.md).
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo seguinte preenche o array chamado C. Ele então cria um novo array, chamado D, do mesmo tamanho e conteúdo que o C:
 
@@ -36,7 +36,7 @@ O exemplo seguinte preenche o array chamado C. Ele então cria um novo array, ch
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

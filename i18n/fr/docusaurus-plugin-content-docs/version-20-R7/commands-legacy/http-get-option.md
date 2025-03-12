@@ -20,7 +20,7 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP GET OPTION.Summary-->La commande **HTTP GET OPTION** retourne la valeur courante des options HTTP (options utilisées par le client pour la prochaine requête déclenchée par la commande [HTTP Get](http-get.md) ou [HTTP Request](http-request.md)).<!-- END REF--> La valeur courante d'une option peut être la valeur par défaut ou avoir été modifiée à l'aide de la commande [HTTP SET OPTION](http-set-option.md).
 
@@ -40,11 +40,11 @@ Passez dans le paramètre *option* le numéro de l’option dont vous souhaitez 
 
 Passez dans le paramètre *valeur* une variable qui recevra la valeur courante de l'*option*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

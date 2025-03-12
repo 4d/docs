@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->La commande **MULTI SORT ARRAY** vous permet d’effectuer un tri multi-critères sur un ensemble de tableaux.<!-- END REF-->
 
@@ -57,7 +57,7 @@ A chaque élément du tableau *tabPointeurs* doit correspondre un élément du t
 1. Vous ne pouvez pas trier de tableaux de type Pointeur ou Image. Vous pouvez trier les éléments d’un tableau à deux dimensions (c’est-à-dire t2DTableau{$vlCetElément}), mais vous ne pouvez pas trier le tableau 2D lui-même (c’est-à-dire t2DTableau).
 2. Vous pouvez trier les tableaux de type Objet. Les éléments Null sont regroupés et les éléments du tableau sont triés selon un ordre interne.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant utilise la première syntaxe : il crée quatre tableaux et les trie par ville (ordre croissant) puis par salaire (ordre décroissant), les deux derniers tableaux *tab\_Noms* et *tab\_NumTel* étant synchronisés en fonction des critères de tri précédents :
 
@@ -81,7 +81,7 @@ A noter que la syntaxe :
  SORT ARRAY(tab_Villes;tab_Salaire;tab_Noms;tab_NumTel;>)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant utilise la seconde syntaxe : il crée quatre tableaux et les trie par ville (ordre croissant) et société (ordre décroissant), les deux derniers tableaux tab\_Noms et tab\_NumTel étant synchronisés en fonction des critères de tri précédents :
 
@@ -104,13 +104,13 @@ L’exemple suivant utilise la seconde syntaxe : il crée quatre tableaux et les
 
 Si vous souhaitez que le tableau des noms soit utilisé comme troisième critère de tri, il vous suffit d’assigner la valeur 1 à l’élément tab\_Tris{3}. Ou bien, si vous souhaitez que les tableaux soient triés uniquement sur le critère des villes, assignez la valeur 0 aux éléments tab\_Tris{2}, tab\_Tris{3} et tab\_Tris{4}. De cette manière, vous obtenez un résultat identique à [SORT ARRAY](sort-array.md)(tab\_Villes;tab\_Société;tab\_Noms;tab\_NumTel;>). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

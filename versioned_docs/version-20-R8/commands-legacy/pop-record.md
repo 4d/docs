@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POP RECORD.Summary-->**POP RECORD** pops a record belonging to *aTable* from the table’s record stack, and makes the record the current record.<!-- END REF-->
 
 If you push a record, change the selection to not include the pushed record, and then pop the record, the current record is not in the current selection. To designate the popped record as the current selection, use [ONE RECORD SELECT](one-record-select.md). If you use any commands that move the record pointer before saving the record, you will lose the copy in memory.
 
-#### Example 
+## Example 
 
 The following example pops the record for the customer off the record stack:
 
@@ -27,12 +27,12 @@ The following example pops the record for the customer off the record stack:
  POP RECORD([Customers]) // Pop customer’s record onto stack
 ```
 
-#### See also 
+## See also 
 
 [PUSH RECORD](push-record.md)  
 *Using the Record Stack*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

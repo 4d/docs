@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LOAD VARIABLES.Summary-->El comando LOAD VARIABLES carga una o varias variables del documento especificado por *documento*.<!-- END REF--> El documento debe haberse creado utilizando el comando [SAVE VARIABLES](save-variables.md "SAVE VARIABLES"). 
 
@@ -26,7 +26,7 @@ En bases de datos compiladas, cada variable debe ser del mismo tipo que las carg
 
 **Advertencia:** este comando no soporta variables de tipo array. Para variables de tipo array utilice los comandos del tema BLOB.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo carga tres variables de un documento llamado PrefsUsuario:
 
@@ -34,11 +34,11 @@ El siguiente ejemplo carga tres variables de un documento llamado PrefsUsuario:
  LOAD VARIABLES("PrefsUsuario";vsNombre;vlCodigo;vgIconImagen)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si las variables se cargan correctamente, la variable sistema OK toma el valor 1; de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -46,7 +46,7 @@ Si las variables se cargan correctamente, la variable sistema OK toma el valor 1
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

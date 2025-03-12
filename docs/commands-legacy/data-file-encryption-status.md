@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Data file encryption status.Summary-->The **Data file encryption status** command returns an object providing the encryption status for the data file designated by the *structurePath* and *dataPath* parameters.<!-- END REF--> The status for each table is also provided.
 
@@ -46,7 +46,7 @@ The returned object contains the following properties:
    * after the data file was opened, with the [Discover data key](discover-data-key.md) command
 * using the [Register data key](register-data-key.md) command
 
-#### Example 
+## Example 
 
 You want to know the encryption status of a data file that corresponds to the current structure file:
 
@@ -64,12 +64,12 @@ You want to know the encryption status of a data file that corresponds to the cu
  End case
 ```
 
-#### See also 
+## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Encrypt data file](encrypt-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

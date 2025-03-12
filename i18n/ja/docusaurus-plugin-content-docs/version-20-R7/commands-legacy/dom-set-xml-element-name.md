@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->DOM SET XML ELEMENT NAME コマンドを使用して、*elementRef*で指定した要素の名前を変更します。<!-- END REF-->
 
 名称を変更する要素の参照を*elementRef* に渡します。コマンドは要素の開く、閉じるタグの更新も行います。
 
-#### 例題 
+## 例題 
 
 以下のXMLソースにおいて:
 
@@ -44,22 +44,22 @@ displayed_sidebar: docs
 </BestSeller>
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### エラー管理 
+## エラー管理 
 
 以下のような場合にエラーが生成されます:  
 
 * 要素参照が無効である。
 * 新しい要素名が無効である (例えば要素名が数字から始まっているなど)。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

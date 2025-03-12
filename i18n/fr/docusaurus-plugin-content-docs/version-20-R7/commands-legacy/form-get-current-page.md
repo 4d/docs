@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page** retourne le numéro de la page courante du formulaire actuellement affiché ou du formulaire courant chargé via la commande [FORM LOAD](form-load.md).<!-- END REF-->
 
 Le paramètre *\** est utile lorsque la commande est appelée dans le contexte d’un sous-formulaire en page contenant plusieurs pages. Dans ce cas, si vous passez ce paramètre, la commande retourne le numéro de la page courante du sous-formulaire courant (celui qui a appelé la commande). Par défaut, si le paramètre *\** est omis, la commande s’applique toujours au formulaire parent. 
 
-#### Exemple 
+## Exemple 
 
 Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une commande de menu ou si le formulaire reçoit un appel d'un autre process, vous voulez que des actions différentes soient effectuées en fonction de la page du formulaire affichée. Vous pouvez alors écrire :
 
@@ -60,7 +60,7 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
@@ -68,7 +68,7 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

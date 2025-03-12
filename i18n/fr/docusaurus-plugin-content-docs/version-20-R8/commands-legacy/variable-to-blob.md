@@ -44,7 +44,7 @@ La variable OK prend la valeur 1 si la variable a été correctement stockée. S
 
 **Note sur l'indépendance de plate-forme :** **VARIABLE TO BLOB** et [BLOB TO VARIABLE](blob-to-variable.md) utilisent un format interne à 4D pour gérer les variables stockées dans les BLOBs. Vous n'avez donc pas besoin de vous préoccuper de la conversion des octets ("byte swapping") entre les différentes plates-formes lors de l'utilisation de ces deux commandes. Un BLOB créé sous Windows à l'aide de ces deux commandes peut être réutilisé sans la moindre manipulation sous Mac OS et vice-versa.
 
-##### Note 
+### Note 
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 

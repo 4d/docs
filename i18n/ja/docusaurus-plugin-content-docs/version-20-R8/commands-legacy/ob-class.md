@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Class.Summary-->**OB Class** コマンドは*object* 引数のクラスを返します。<!-- END REF-->4D では、全てのオブジェクトはオブジェクトはオブジェクトクラスから継承しています。引数のオブジェクトが既存のオブジェクトでなかった場合、**OB Class** はnull を返します。
 
-#### 例題 
+## 例題 
 
 Polygon というクラスを作成した場合を考えます:
 
@@ -40,11 +40,11 @@ Polygon というクラスを作成した場合を考えます:
   //$class にはClass: Polygon が格納される
 ```
 
-#### 参照 
+## 参照 
 
 [OB Instance of](ob-instance-of.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

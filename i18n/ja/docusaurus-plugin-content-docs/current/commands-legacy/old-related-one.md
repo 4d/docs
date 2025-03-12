@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->OLD RELATED ONEは、リレーションを実行する際に*aField*の古い値を使用することを除き、[RELATE ONE](relate-one.md "RELATE ONE")と同じ処理を行います。<!-- END REF-->
 
@@ -21,18 +21,18 @@ displayed_sidebar: docs
 
 OLD RELATED ONEは、更新前のカレントレコードの内容にリレートしたレコードをロードし、そのリレートレコードにアクセスできるようにします。この更新前の関連レコードを修正し、保存したい場合には、[SAVE RELATED ONE](save-related-one.md "SAVE RELATED ONE")コマンドを使用する必要があります。新しく作成されたレコ－ドは、更新前の関連するレコ－ドを持たないという点に注意してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されリレーとされたレコードがロードされると、OKシステム変数は1に設定されます。ユーザが(リレートされたレコードが更新されたときに表示される) レコード選択ダイアログボックスで**キャンセル**をクリックすると、OK変数は0に設定されます。
 
-#### 参照 
+## 参照 
 
 [Old](old.md)  
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

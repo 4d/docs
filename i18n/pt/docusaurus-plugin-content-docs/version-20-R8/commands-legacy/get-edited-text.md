@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get edited text.Summary-->O comando Get edited text é utilizado principalmente com o evento de formulário On After Keystroke para recuperar o texto a medida em que é introduzido.<!-- END REF--> Também pode ser utilizado com o evento de formulário On Before Keystroke. Para maior informação sobre estes eventos de formulário, por favor consulte a descrição do comando [Form event code](../commands/form-event-code.md).
 
@@ -28,7 +28,7 @@ Estes dois eventos só são gerados nos métodos objeto em questão.
 
 Quando é utilizado em um contexto diferente ao de entrada de dados em um objeto de formulário, esta função retorna uma string vazia.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O método abaxio automaticamente põe os caracteres sendo digitados em maiúsculas
 
@@ -41,7 +41,7 @@ End if
 
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 ```4d
  Esteéum exemplo de como processar imediatamente os caracteres introduzidos em um camp. A idéia consiste em colocar em outro campo texto(chamado“Palavras”)todas as palavras da frase que estão sendo escritas. Para isso, escreva o seguinte código no método de objeto do campo&NBSP;If(Form event code=On After Keystroke)
@@ -62,12 +62,12 @@ End if
 
 **Nota:** este exemplo não é exaustivo porque assumimos que as palavras são separadas unicamente por espaços (Char (32)). Para uma solução completa necessitará adicionar outros filtros para extrair todas as palavras (vírgulas, ponto e vírgula, apóstrofes, etc.).
 
-#### Ver também 
+## Ver também 
 
 [Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

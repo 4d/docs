@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->**テーマ:** 配列
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 呼び出し後に、配列のサイズはセレクション内で見つかった固有の値の数と同じになります。コマンドはカレントセレクションまたはカレントレコードを変更しません。
 
-##### .length 仮想プロパティの使用 
+### .length 仮想プロパティの使用 
 
 このコマンドでは"length"仮想プロパティが使用できます。配列型の全ての属性に対して自動的に使用可能で、配列のサイズ、つまり格納される要素の数を提供します。このプロパティはクエリで使用される事を想定して設計されています(**QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)を参照して下さい)。また**DISTINCT ATTRIBUTE VALUES**コマンドに対して使用する事で、属性の異なる配列サイズを取得することもできます。
 
-#### 例題 
+## 例題 
 
 データベースに、\[Customer\]full\_Data というオブジェクトフィールドがあり、レコードが15ある場合を考えます:
 
@@ -89,12 +89,12 @@ displayed_sidebar: docs
 | 2      | 2     |
 | 3      | 3     |
 
-#### 参照 
+## 参照 
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->O comando LISTBOX DELETE ROWS apaga a fila número *posição* (visível ou não) do list box definido pelos parâmetros *objeto* e \*.<!-- END REF-->
 
@@ -31,12 +31,12 @@ Se o parâmetro *posição* é superior ao número de linhas do array do list bo
 
 **Nota**: este comando não considera os possíveis estados ocultos/visíveis das linhas do list box.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

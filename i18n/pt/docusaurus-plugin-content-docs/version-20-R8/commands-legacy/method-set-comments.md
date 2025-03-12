@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->O comando **METHOD SET COMMENTS** substitui os comentários dos métodos designados pelo parâmtero *rota* pelos definidos no parâmetro *comentarios*.<!-- END REF-->
 
@@ -56,7 +56,7 @@ Se passar um nome de rota não válido, é gerado um erro.
 
 Pode executar o comando de uma componente, mas neste caso você deve passar o parâmetro *\** porque o acesso ao código do componente é somente leitura. Se omitir o parâmetro *\** neste contexto, o erro -9763 é gerado.
 
-#### Exemplo 
+## Exemplo 
 
  Adicione uma data de modificação para um comentário de trigger existente:
 
@@ -66,11 +66,11 @@ Pode executar o comando de uma componente, mas neste caso você deve passar o pa
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-#### Ver também 
+## Ver também 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

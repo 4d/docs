@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->La commande **APPEND TO ARRAY** ajoute une nouvelle ligne à la fin du *tableau* et lui affecte la valeur passée dans le paramètre *valeur*.<!-- END REF--> En mode interprété, si le *tableau* n’a pas été défini au préalable, la commande le crée et lui attribue un type en fonction de celui de *valeur*. 
 
@@ -25,7 +25,7 @@ Le type de *valeur* doit correspondre au type du tableau, sinon l’erreur de sy
 * un *tableau* de type chaîne (Texte ou Alpha) accepte toute *valeur* de type Texte ou Alpha.
 * un *tableau* de type numérique (Entier, Entier long ou Réel) accepte toute *valeur* de type Entier, Entier long, Numérique ou Heure.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant :
 
@@ -40,12 +40,12 @@ Le code suivant :
  APPEND TO ARRAY($montableau;$mavaleur)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** aunque utilizar **DEFAULT TABLE** y omitir el nombre de la tabla pueden hacer el código más fácil de leer, muchos programadores consideran que la utilización de este comando en realidad trae más inconvenientes que ventajas.<!-- END REF--> En particular, note que [DEFAULT TABLE](default-table.md) es prioritario cuando utiliza por ejemplo el comando [DIALOG](../commands/dialog.md) con un formulario proyecto y hay un formulario de la tabla por defecto con el mismo nombre.
 
@@ -51,7 +51,7 @@ porque una tabla por defecto ha sido definida.
 
 En 4D, todas las tablas están “abiertas” y listas para ser utilizadas. **DEFAULT TABLE** no abre una tabla, define una tabla actual, o prepara la tabla para entrada o salida. **DEFAULT TABLE** es simplemente una facilidad de programación para facilitar la digitación y lectura del código.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo presenta primero el código sin el comando DEFAULT TABLE. Luego muestra el mismo código, con DEFAULT TABLE. El código es un bucle comúnmente utilizado para añadir nuevos registros a una base de datos. Los comandos [FORM SET INPUT](form-set-input.md "FORM SET INPUT") y [ADD RECORD](add-record.md "ADD RECORD") necesitan una tabla como primer parámetro:
 
@@ -72,12 +72,12 @@ En este código se especifica el resultado de la tabla por defecto:
  Until(OK=0)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

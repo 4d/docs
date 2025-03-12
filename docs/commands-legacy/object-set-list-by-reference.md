@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->The **OBJECT SET LIST BY REFERENCE** command defines or replaces the list associated with the object(s) designated by the *object* and *\** parameters, with the hierarchical list referenced in the *list* parameter.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Existing list of values are replaced depending on how the list is associated to 
 
 This command is particularly interesting in the context of a drop-down or combo box associated with a variable or a field. In this case, the association is dynamic and any change in the list is copied to the form. When the object is associated with an array or an object, the list is copied into the array or the object and any changes to the list are not available automatically (see example 5).
 
-#### Example 1 
+## Example 1 
 
 Associating a simple choice list (default list type) to a text field:
 
@@ -54,7 +54,7 @@ Associating a simple choice list (default list type) to a text field:
  OBJECT SET LIST BY REFERENCE([Contact]Country;vCountriesList)
 ```
 
-#### Example 2 
+## Example 2 
 
 Associating the "vColor" list as a simple choice list with the "DoorColor" pop-up/drop-down list:
 
@@ -67,7 +67,7 @@ Associating the "vColor" list as a simple choice list with the "DoorColor" pop-u
  OBJECT SET LIST BY REFERENCE(*;"DoorColor";Choice list;vColor)
 ```
 
-#### Example 3 
+## Example 3 
 
 Now you want to associate the "vColor" list with a combo box named "WallColor". Since this combo box is enterable, you want to make sure certain colors, such as "black," "purple," etc., cannot be used. These colors are placed in the "vReject" list:
 
@@ -80,7 +80,7 @@ Now you want to associate the "vColor" list with a combo box named "WallColor". 
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;vReject)
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to remove the list associations:
 
@@ -90,7 +90,7 @@ You want to remove the list associations:
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;0)
 ```
 
-#### Example 5 
+## Example 5 
 
 This example illustrates the difference in how the command works when applied to a pop-up menu associated with a text array or one associated with a text variable. There are two pop-up menus in a form:
 
@@ -123,12 +123,12 @@ Only the menu associated with the Text field is updated (by means of the dynamic
 
 In order to update the list associated with the pop-up managed by array, you need to call the **OBJECT SET LIST BY REFERENCE** command again to copy the contents of the list.
 
-#### See also 
+## See also 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->The **SQL SET OPTION** command modifies the *value* of the option passed in *option*.<!-- END REF--> 
 
@@ -38,15 +38,15 @@ displayed_sidebar: docs
    * Under Windows, ISO8859-1 is used,  
    * Under Mac OS, MAC-ROMAN is used.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was properly executed, the system variable OK returns 1\. Otherwise, it returns 0.
 
-#### See also 
+## See also 
 
 [SQL GET OPTION](sql-get-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

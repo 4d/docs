@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML ELEMENT.Summary-->SAX GET XML ELEMENT コマンドは*document* 引数で参照されるXMLドキュメントに現れる、*name*要素についてのさまざまな情報を返します。<!-- END REF-->このコマンドはXML Start ElementまたはXML End Element SAXイベントで呼び出さなければなりません。XML End Elementの特定のケースでは、属性引数は処理されません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 *attrValues* 配列にはターゲット要素の属性値が返されます。必要に応じてコマンドは配列を作成しサイズを調整します。 
 
-#### 例題 
+## 例題 
 
 以下のXMLコードがあります:
 
@@ -54,15 +54,15 @@ tAttrValues{1} には "111",
 tAttrValues{2} には "222"、  
 tAttrValues{3} には "333"が返されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

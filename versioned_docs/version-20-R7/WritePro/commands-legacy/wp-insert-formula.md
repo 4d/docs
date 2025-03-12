@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT FORMULA.Summary-->The **WP INSERT FORMULA** command inserts a *formula* in *targetObj* according to the specified insertion *mode*.<!-- END REF-->
 
@@ -58,7 +58,7 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* 
 
 **Note:** Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
 
-#### Example 1 
+## Example 1 
 
 To replace all current date formulas with formatted strings:
 
@@ -84,7 +84,7 @@ To replace all current date formulas with formatted strings:
  End for each
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to use a formula name for the customer name:
 
@@ -108,7 +108,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### See also 
+## See also 
 
 *Managing formulas*  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

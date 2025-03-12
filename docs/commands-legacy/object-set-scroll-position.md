@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->The **OBJECT SET SCROLL POSITION** command allows scrolling the contents of several types of objects: the lines of a subform, of a list form (displayed using the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands), or of a hierarchical list, the rows and columns of a list box or even the pixels of a picture.<!-- END REF-->
 
@@ -47,7 +47,7 @@ If you pass the second optional *\** parameter:
 
 **Note:** The [HIGHLIGHT RECORDS](highlight-records.md) command features an optional *\** parameter that allows delegating scroll management to the **OBJECT SET SCROLL POSITION** command. 
 
-#### Example 1 
+## Example 1 
 
 This example illustrates the difference in the way the command functions depending on whether the list box is displayed in standard or hierarchical mode:
 
@@ -67,7 +67,7 @@ On the other hand, if the same statement is applied to a list box displayed in h
 
 ![](../assets/en/commands/pict197493.en.png)
 
-#### Example 2 
+## Example 2 
 
 You want to scoll a picture that is included in a form variable. This montage shows the visible part of the picture as well as the point to be displayed (166 pixels vertically and 200 pixels horizontally):
 
@@ -85,13 +85,13 @@ You then get the following result:
 
 Make sure that you do not omit the second *\** parameter in this case, otherwise the picture will not scroll because the point defined is already displayed. 
 
-#### See also 
+## See also 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

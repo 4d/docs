@@ -50,13 +50,13 @@ La primera forma del comando SET CHANNEL abre un puerto serial, define el protoc
 
 **Importante:** el valor que pasa en *puerto* se refiere a un puerto serial COM existente reconocido por el sistema operativo. Por ejemplo, para que pueda utilizar los valores 101, 103 y 125, los puertos seriales COM1, COM3 y COM25 deben haber sido configurados correctamente.
 
-##### Nota sobre los puertos seriales 
+### Nota sobre los puertos seriales 
 
 En una configuración estándar, Mac OS y Windows reconocen dos puertos seriales: en Mac OS, el puerto modem y el puerto impresora; en Windows, los puertos COM1 y COM2\. Sin embargo, se pueden añadir puertos seriales adicionales por medio de tableros de extensión. Inicialmente, 4D sólo direccionaba dos puertos seriales estándar y más adelante se implementó el soporte de puertos adicionales. Por razones de compatibilidad, se conservan ambos sistemas de direccionamiento.  
 \- Si quiere direccionar un puerto serial estándar (impresora/COM2 o modem/COM1), puede pasar en el parámetro *puerto* uno de los siguientes valores 0, 1, 20, 21, 30 y 31 (que corresponde al método de direccionamiento antiguo), o un valor mayor a 100 (por favor vea la siguiente explicación).   
 \- Si quiere direccionar puertos seriales adicionales, debe pasar el valor N+100 (donde N es el valor del puerto a direccionar). También puede considerar añadir 100 o 200 al valor menciondo anteriormente (N+100), si quiere seleccionar respectivamente un protocolo de software o de hardware. 
 
-##### Ejemplo 1 
+### Ejemplo 1 
 
 Si quiere utilizar el puerto impresora/COM2 sin protocolo, puede utilizar una de las siguientes sintaxis:
 
@@ -70,7 +70,7 @@ o
  SET CHANNEL(102;param)
 ```
 
-##### Ejemplo 2 
+### Ejemplo 2 
 
 Si quiere utilizar el puerto modem/COM1 con el protocolo XON/XOFF, puede utilizar una de las siguientes sintaxis:
 
@@ -84,7 +84,7 @@ o
  SET CHANNEL(201;param)
 ```
 
-##### Ejemplo 3 
+### Ejemplo 3 
 
 Si quiere utilizar el puerto COM 25 con el protocolo RTS/CTS, debe utilizar las siguientes sintaxis: 
 
@@ -149,7 +149,7 @@ Por ejemplo, para visualizar una caja de diálogo de abrir un archivo, puede uti
 
 Todas las operaciones en esta tabla modifican la variable sistema Document si es necesario. Igualmente la variable sistema OK toma el valor 1 si la operación fue exitosa. De lo contrario, la variable sistema OK toma el valor 0.
 
-##### Ejemplo 4 
+### Ejemplo 4 
 
 Ver los ejemplos de los comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [SET TIMEOUT](set-timeout.md "SET TIMEOUT") y [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 

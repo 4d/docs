@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->BLOB TO USERS コマンドは、データベース内で管理者によって作成されたユーザーアカウントとグループを *users* BLOBに格納されたアカウントとグループで上書きします。<!-- END REF--> *users* BLOBは暗号化されており、[USERS TO BLOB](users-to-blob.md) コマンドを使用して作成されていなければなりません。
 
@@ -39,15 +39,15 @@ displayed_sidebar: docs
  BLOB TO USERS(blob)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKには1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [USERS TO BLOB](users-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

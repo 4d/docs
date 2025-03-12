@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP GET BOOKMARKS.Summary-->O comando **WP GET BOOKMARKS** devolve um array que contém os nomes de todos os marcadores definidos em *docWP*.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Depois de executar o comando, *arrayNomMarcadores* é preenchido com todos os no
   
 Se vários marcadores começarem na mesma posição, são ordenados em ordem alfabética.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser saber o número de marcadores definidos em seu documento:
 
@@ -32,7 +32,7 @@ Se quiser saber o número de marcadores definidos em seu documento:
  ALERT("The document contains "+Size of array($_bookmarks)+" bookmarks.")
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  

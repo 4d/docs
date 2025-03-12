@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->DELAY PROCESS delays the execution of a *process* for a number of ticks (1 tick = 1/60th of a second).<!-- END REF--> During this period, *process* does not take any processing time. Even though the execution of a process may be delayed, it is still in memory.
 
@@ -26,20 +26,20 @@ If the process does not exist, the command does nothing.
 
 **Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
 
-#### Example 1 
+## Example 1 
 
 See example in *Record Locking*.
 
-#### Example 2 
+## Example 2 
 
 See example for the command [Process number](../commands/process-number.md).
 
-#### See also 
+## See also 
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

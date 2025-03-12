@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.WP Picture range.Summary-->**WP Picture range** は以前のバージョンの4D Write Pro では**WP Create picture range** という名前でした。<!-- END REF-->分かりやすさのために名前が変更されています。
 
-#### 説明 
+## 説明 
 
 新しい**WP Picture range**コマンドは、*targetObj* 引数に渡したオブジェクト内に含まれるピクチャーのみを格納したレンジオブジェクトを返します。返された画像レンジオブジェクトは、[WP GET ATTRIBUTES](wp-get-attributes.md) と[WP SET ATTRIBUTES](wp-set-attributes.md) によってピクチャーの属性のみを管理するのに使用することができます。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 * レンジ
 * 要素 (テーブル / 行 / 段落 / ヘッダー / フッター / 本文 / セクション / サブセクション)
 
-#### 例題 
+## 例題 
 
 ピクチャーの境界線カラーのみを変えたい場合を考えます:
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  WP SET ATTRIBUTES($oPicts;wk border color;"blue")
 ```
 
-#### 参照 
+## 参照 
 
 [WP Add picture](wp-add-picture.md)  
 [WP INSERT PICTURE](wp-insert-picture.md)  

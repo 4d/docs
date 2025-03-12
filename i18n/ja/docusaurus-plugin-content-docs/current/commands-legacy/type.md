@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Type.Summary-->Type コマンドは、*fieldVar* 引数に渡したフィールドまたは変数の型を示す数値を返します。<!-- END REF-->
 
@@ -62,7 +62,7 @@ Type ファンクションはフィールド、インタープロセス変数、
 * **Type** ファンクションは、オブジェクトプロパティ*(emp.name)* やコレクション要素(*myColl\[5\]*) などのスカラー式に対して適用することができません。これには、[Value type](value-type.md) コマンドを使用する必要があります。
 * コンパイル済みモードでは、*C\_VARIANT* として宣言されたメソッド引数($0, $1...) に対して**Type** を呼び出した場合、Is variant は返されず、実際のデータ型が返されます([Value type](value-type.md) を呼んだ場合と同じ)
 
-#### 例題 1 
+## 例題 1 
 
 以下のプロジェクトメソッドは、テーブルのカレントレコードのフィールドの一部あるいはすべてをクリアします。テーブルは、ポインタ引数として渡されます。カレントレコードの削除や変更は行いません
 
@@ -123,7 +123,7 @@ Type ファンクションはフィールド、インタープロセス変数、
  EMPTY RECORD(->[Things To Do];-1?-Is alpha field)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 汎用コードを書くなど特別なケースで、配列が標準の配列か、2次元配列の行かを知りたい場合があるとします。以下のように書くことができます:   
   
@@ -137,17 +137,17 @@ Type ファンクションはフィールド、インタープロセス変数、
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

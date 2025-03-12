@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SOAP Request.Summary-->**SOAP request**コマンドは実行されているコードがSOAPリクエストの一部であれば[True](true.md "True")を返します。<!-- END REF--> 
 
 このコマンドは、セキュリティの目的で*On Web Authenticationデータベースメソッド*で使用し、受信したリクエストがSOAPであるか知ることができます。
 
-#### 参照 
+## 参照 
 
 [SOAP DECLARATION](soap-declaration.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

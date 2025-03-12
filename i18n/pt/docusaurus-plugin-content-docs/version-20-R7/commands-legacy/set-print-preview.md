@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->SET PRINT PREVIEW lhe permite selecionar ou desmarcar por programação a opção de pré-visualização em tela.<!-- END REF--> Se passar TRUE em *vistaprevia*, se selecionar Pré-visualização em tela, se passar FALSE, será desmarcado. Este parâmetro é local para um processo e não afeta a impressão de outros processos ou usuários.
 
 **Nota:** em Windows, é possível definir o formato da vista prévia de impressão utilizando o comando [SET PRINT OPTION](set-print-option.md).
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir seleciona a opção Pré-visualização em tela para mostrar os resultados de uma pesquisa em tela, e depois a desmarca.
 
@@ -32,12 +32,12 @@ O exemplo a seguir seleciona a opção Pré-visualização em tela para mostrar 
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

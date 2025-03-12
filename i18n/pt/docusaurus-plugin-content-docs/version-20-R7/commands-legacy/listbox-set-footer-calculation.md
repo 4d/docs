@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->O comando **LISTBOX SET FOOTER CALCULATION** permite definir o cálculo automático associado à área de rodapé do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -47,11 +47,11 @@ Se o tipo de dados da coluna ou de pelo menos uma coluna do list box (se objeto 
 
 **Nota:** As variáveis da área rodapé se definem automaticamente (quando não se definem por programação) em função do tipo de cálculo definido na Lista de propriedades (*List box footer specific properties*). Se o tipo da variável não corresponde ao resultado esperado pelo comando **LISTBOX SET FOOTER CALCULATION**, é gerado um erro. Por exemplo, para uma coluna que mostra datas, se o rodapé faz um cálculo 'Maximum', a variável roda*pé* será definida em data. Se executar a instrução **LISTBOX SET FOOTER CALCULATION** (rodapé;lk footer count), é gerado um erro pelo tipo do resultado esperado (inteiro largo) varia do tipo da variável.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->The **LDAP SEARCH ALL** command searches in the target LDAP server for all occurrences matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
 
@@ -47,7 +47,7 @@ By default, the command returns attributes as an array if multiple results are f
 * When you pass **true** in an element, the corresponding element of the *attributes* parameter will be returned in an array. If a single value is found, the command returns an array with a single element.
 * When you pass **false** in an element, the corresponding element of the *attributes* parameter will be returned in a simple variable. If multiple entries are found, the command returns only the first element.
 
-#### Example 1 
+## Example 1 
 
 We want to get the phone number of all users named "smith" in the company directory:
 
@@ -73,7 +73,7 @@ We want to get the phone number of all users named "smith" in the company direct
   // ...
 ```
 
-#### Example 2 
+## Example 2 
 
 These examples illustrate the use of the *attributesAsArray* parameter:
 
@@ -111,12 +111,12 @@ These examples illustrate the use of the *attributesAsArray* parameter:
   // in $memberOf we have a variable containing the first group of the entry
 ```
 
-#### See also 
+## See also 
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

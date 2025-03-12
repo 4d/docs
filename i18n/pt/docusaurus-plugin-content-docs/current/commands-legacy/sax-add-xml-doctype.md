@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->O comando SAX ADD XML DOCTYPE adiciona a instrução DocType definida pelo parâmetro *docType* no documento XML referenciado por *documento*.<!-- END REF-->  
 
 A instrução DocType permite indicar o tipo de XML no qual o documento foi escrito e especificar a Declaração de tipo de documento (DTD) utilizada. Uma instrução DocType geralmente tem a seguinte forma: <!DOCTYPE XML\_type "DTD\_address">.
 
-#### Exemplo 
+## Exemplo 
 
 A instrução: 
 
@@ -35,19 +35,19 @@ A instrução:
  
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
  Se o comando tiver sido executado corretamente, a variável sistema Ok assume o valor 1\. Se ocorrer um erro, assume o valor 0.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Em caso de erro, o comando retorna um erro que possa ser interceptado usando um método de gestão de erros.
 
-#### Ver também 
+## Ver também 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

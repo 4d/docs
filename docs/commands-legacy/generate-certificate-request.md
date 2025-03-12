@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->The **GENERATE CERTIFICATE REQUEST** command generates a certificate request at the PKCS format which can be directly used by certificate authorities such as Verisign(R) .<!-- END REF--> The certificate plays an important part in the SSL secured protocol. It is sent to each browser connecting in SSL mode. It contains the “ID card” of the Web site (made from the information entered in the command), as well as its public key allowing the browsers to decrypt the received information. Furthermore, the certificate contains various information added by the certificate authority which guarantees its integrity.
 
@@ -45,7 +45,7 @@ The required codes and names may change according to the certificate authority a
 
 The code and information content entering order does not matter, however the two arrays must be synchronized: if the third item of the *codeArray* contains the value *15* (locality name), the *nameArray* third item should contain this information, in our example San Jose.
 
-#### Example 
+## Example 
 
 A “Certificate request” form contains the six fields necessary for a standard certificate request. The **Generate** button creates a document on disk containing the certificate request. The “Privatekey.txt” document containing the private key (generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command) should be on the disk:
 
@@ -82,12 +82,12 @@ Here is the **Generate** button method:
  End if
 ```
 
-#### See also 
+## See also 
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

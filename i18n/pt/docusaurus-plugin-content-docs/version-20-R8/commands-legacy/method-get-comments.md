@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->O comando **METHOD GET COMMENTS** devolve no parâmetro *comentários*, os comentários dos métodos designados pelo parâmetro *rota*.<!-- END REF-->  
   
@@ -53,11 +53,11 @@ Não podem combinar-se as duas sintaxes.
 
 Se o comando é executado desde um componente, se aplica por defeito aos métodos do componente. Se passado o parâmetro *\**, é acessado aos métodos da base local.
 
-#### Ver também 
+## Ver também 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Find XML element.Summary-->DOM Find XML element コマンドはXMLストラクチャ中で特定のXML要素を検索するために使用します。<!-- END REF-->検索は*elementRef* 引数で指定された要素から開始されます。
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 このコマンドは見つかった要素のXML 参照を返します。*arrElementRefs* 文字列配列が渡されると、コマンドはこの配列に見つけた要素のリストを返します。この場合コマンドは結果として*arrElementRefs* 配列の最初の要素を返します。この引数は*xPath* 引数で指定した場所に同じ名前の要素が複数ある場合に利用できます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のXML 構造がある場合を考えます:
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
  ALERT("要素の値は: \""+value+"\"") // Learning XML が表示される
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のXML構造があるとき: 
 
@@ -94,7 +94,7 @@ displayed_sidebar: docs
  vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 "rect" 要素のうち、"class" 属性に"bgcontainer" という文字列が含まれているものを全て選択したい場合を考えます:
 
@@ -102,23 +102,23 @@ displayed_sidebar: docs
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### エラー管理 
+## エラー管理 
 
 エラーは以下の場合に生成されます:  
 
 * 要素参照が無効の場合。
 * 指定されたXPathパスが無効の場合。
 
-#### 参照 
+## 参照 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

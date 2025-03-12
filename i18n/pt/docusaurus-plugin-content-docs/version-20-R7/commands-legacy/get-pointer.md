@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get pointer.Summary-->O comando **Get pointer** devolve um ponteiro até uma variável processo ou interprocesso cujo nome se passa em *nomVar*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Para levar um ponteiro até um campo, utilize [Field](field.md). Para levar um p
 **Nota:** pode passar expressões como, por exemplo, *NomArr+"{3}"*, assim como elementos de array 2D *(NomArr+"{3}{5}")* para **Get pointer**.  
 Entretanto, não pode passar elementos de variável *(NomArr+"{miVar}")*. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um formulário, você constrói uma matriz de 5 x 10 de variáveis editáveis chamadas v1, v2... v50\. Para inicializar todas estas variáveis, você escreve:
 
@@ -35,7 +35,7 @@ Em um formulário, você constrói uma matriz de 5 x 10 de variáveis editáveis
  End for
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Usando ponteiros para elementos de arrays bi-dimensionais:
 
@@ -46,12 +46,12 @@ Usando ponteiros para elementos de arrays bi-dimensionais:
   //$pt2=->atCities{2}{6}
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field](field.md)  
 [Table](table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

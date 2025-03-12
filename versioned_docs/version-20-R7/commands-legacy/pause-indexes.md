@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->The **PAUSE INDEXES** command temporarily disables all the indexes of *aTable*, except for the index of the primary key.<!-- END REF-->
 
@@ -32,7 +32,7 @@ If you call the **PAUSE INDEXES** command for a table and then quit the database
 
 **Note:** This command cannot be executed from a 4D remote.
 
-#### Example 
+## Example 
 
 Example of method for importing large amounts of data:
 
@@ -42,12 +42,12 @@ Example of method for importing large amounts of data:
  RESUME INDEXES([Articles])
 ```
 
-#### See also 
+## See also 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

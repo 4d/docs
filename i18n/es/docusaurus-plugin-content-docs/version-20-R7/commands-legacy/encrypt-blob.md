@@ -37,7 +37,7 @@ Además, si la llave pública opcional ha sido utilizada para cifrar la informac
 
 **Nota:** el algoritmo de cifrado contiene una función de verificación de integridad (checksum), con el fin de evitar toda modificación del contenido del BLOB (intencional o no). Por lo tanto, un BLOB cifrado no debe modificarse de lo contrario no podría descifrarse. 
 
-##### Optimización de comandos de cifrado 
+### Optimización de comandos de cifrado 
 
 El cifrado de los datos disminuye la velocidad de ejecución de sus aplicaciones, especialmente si se utiliza un par de llaves. Sin embargo, puede considerar los siguientes consejos de optimización: 
 

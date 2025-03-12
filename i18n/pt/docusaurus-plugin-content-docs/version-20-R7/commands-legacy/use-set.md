@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.USE SET.Summary-->USE SET transforma os registros em *conjunto* na nova seleção atual para a tabela para o qual pertence o conjunto
 
@@ -21,7 +21,7 @@ Quando cria um conjunto, a posição do registro atual é lembrada pelo conjunto
   
 **Advertência**: lembre que um conjunto é a representação de uma seleção de registros no momento da criação do conjunto. Se os registros representados pelo conjunto forem modificados, o conjunto poderia não ser válido. Portanto, um conjunto guardado no disco deve representar um grupo de registros que não modifique frequentemente. Muitos eventos podem invalidar a validade de um conjunto, como por exemplo a eliminação ou modificação de um registro do conjunto, ou a modificação dos critérios de criação do conjunto.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo utiliza [LOAD SET](load-set.md) para carregar um conjunto de localizações da empresa Acme localizada em Nova Iorque. Depois utiliza USE SET para fazer do conjunto a seleção atual:   
 
@@ -31,12 +31,12 @@ O seguinte exemplo utiliza [LOAD SET](load-set.md) para carregar um conjunto de 
  &NBSP;CLEAR SET("NY Acme") // Apagar o conjunto da memória
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

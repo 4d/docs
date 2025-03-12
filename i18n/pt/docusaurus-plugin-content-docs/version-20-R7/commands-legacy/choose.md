@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Choose.Summary-->O comando **Choose** retorna um dos valores passados nos parâmetros *valor1, valor2*, etc.<!-- END REF--> em função do valor do parâmetro *criterio*.
 
@@ -40,7 +40,7 @@ Este comando permite gerar código conciso que substitui os testes de tipo “Ca
  $res:=Choose(True;"red1";"blue"+2) //error  
 ```
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este é um exemplo do uso típico deste comando com um critério de tipo booleano: 
 
@@ -58,7 +58,7 @@ Este código é estritamente equivalente a:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este é um exemplo do uso típico deste comando com um critério de tipo numérico: 
 
@@ -82,7 +82,7 @@ Este código é estritamente equivalente a:
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

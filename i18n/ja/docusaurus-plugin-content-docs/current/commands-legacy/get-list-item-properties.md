@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->**GET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡されたリスト参照番号またはオブジェクト名のリスト内で、引数*itemRef*によって指定された項目のプロパティを返します。<!-- END REF-->
 
@@ -45,14 +45,14 @@ displayed_sidebar: docs
 
 これらのプロパティに関する詳細は、[SET LIST ITEM PROPERTIES](set-list-item-properties.md) コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

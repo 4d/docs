@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Replace string.Summary-->Replace string replaces *howMany* occurrences of *oldString* in *source* with *newString*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Note that in this mode, the evaluation does not handle variations in the way wor
 
 **Note:** In 4D v15 R3 and higher, a significant optimization was made to the algorithm used by this command when you replace a string by another of a different length, regardless of the syntax used. This results in a considerable acceleration of processing in this context. 
 
-#### Example 1 
+## Example 1 
 
 The following example illustrates the use of **Replace string**. The results, described in the comments, are assigned to the variable *vtResult*.
 
@@ -48,7 +48,7 @@ The following example illustrates the use of **Replace string**. The results, de
  vtResult:=Replace string(vtOtherVar;Char(Tab);",";*) // Replaces all tabs in vtOtherVar with commas
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example eliminates CRs and TABs from the text in *vtResult*:
 
@@ -56,7 +56,7 @@ The following example eliminates CRs and TABs from the text in *vtResult*:
  vtResult:=Replace string(Replace string(vtResult;Char(Carriage return);"";*);Char(Tab);"";*)
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example illustrates the use of the \* parameter in the case of a diacritical evaluation:
 
@@ -65,13 +65,13 @@ The following example illustrates the use of the \* parameter in the case of a d
  vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) //Result gets "Crème brûlée"
 ```
 
-#### See also 
+## See also 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

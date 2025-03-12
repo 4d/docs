@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->The **GET PASTEBOARD DATA TYPE** command gets the list of data types present in the pasteboard.<!-- END REF--> This command should generally be used in the context of a drag and drop operation, within the On Drop or On Drag Over form events of the destination object. More particularly, it allows the pasteboard to be checked for the presence of a specific type of data.
 
@@ -30,11 +30,11 @@ The *nativeTypes* array lets any type of data found in the pasteboard to be supp
 
 For more information about the data types supported, please refer to the *Managing Pasteboards* section. 
 
-#### See also 
+## See also 
 
 *Managing Pasteboards*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

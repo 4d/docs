@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->O comando SVG SHOW ELEMENT move o documento SVG *objetoImagem* para mostrar o elemento cujo atributo "id" é especificado pelo parâmetro *id*.<!-- END REF-->  
   
@@ -29,7 +29,7 @@ Este comando apenas tem efeito em modo de visualização "top left" (com barras 
 Se este comando não for executado no contexto de um formulário ou se for passado um *objetoImagem* inválido, a variável OK toma o valor 0\. Se o comando for executado corretamente, toma o valor 1.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

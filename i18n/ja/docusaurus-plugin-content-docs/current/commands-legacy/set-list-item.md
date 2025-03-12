@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->SET LIST ITEM コマンドは、*list*引数に渡した参照番号またはオブジェクト名のリストにおいて、*itemRef*で指定した項目を変更します。<!-- END REF-->
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 **Note:** 引数*sublist*と*expanded*はともにオプションですが、指定する場合は組み合わせて指定してください。
 
-#### 例題 1 
+## 例題 1 
 
 *hList*はユニークな参照番号が付いた項目を持つリストです。以下のボタン用オブジェクトメソッドは、現在選択されているリスト項目にサブ項目を追加します。
 
@@ -61,15 +61,15 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [GET LIST ITEM](get-list-item.md "GET LIST ITEM")コマンドの例題参照
 
-#### 例題 3 
+## 例題 3 
 
 [APPEND TO LIST](append-to-list.md "APPEND TO LIST")コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

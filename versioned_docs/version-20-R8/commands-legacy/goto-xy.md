@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](open-window.md).<!-- END REF-->  
   
@@ -24,15 +24,15 @@ The upper-left corner is position 0,0\. The cursor is automatically placed at 0,
 
 After **GOTO XY** positions the cursor, you can use [MESSAGE](message.md) to display characters in the window.
 
-#### Example 1 
+## Example 1 
 
 See example for the [MESSAGE](message.md) command.
 
-#### Example 2 
+## Example 2 
 
 See example for the [Milliseconds](milliseconds.md) command.
 
-#### Example 3 
+## Example 3 
 
 The following example: 
 
@@ -55,11 +55,11 @@ displays the following window (on Macintosh) for 30 seconds:
 
 ![](../assets/en/commands/pict25419.en.png)
 
-#### See also 
+## See also 
 
 [MESSAGE](message.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

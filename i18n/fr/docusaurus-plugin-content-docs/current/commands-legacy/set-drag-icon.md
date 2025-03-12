@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->La commande **SET DRAG ICON** vous permet d’associer l’image *icône* au curseur lors des glisser-déposer gérés par programmation.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Vous pouvez passer dans *décalageH* et *décalageV* des valeurs de décalage en
 
 Si vous omettez ce paramètre, le curseur est placé au centre de l’icône.
 
-#### Exemple 
+## Exemple 
 
 Dans un formulaire, l’utilisateur peut générer une étiquette par glisser-déposer d’une ligne. Dans la méthode objet de la list box, vous écrivez :
 
@@ -54,11 +54,11 @@ A noter que vous pouvez modifier la position du curseur par rapport à l’image
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

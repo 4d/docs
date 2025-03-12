@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->The **OBJECT SET CORNER RADIUS** command modifies the *radius* of corners for the object(s) you passed in the *object* parameter.<!-- END REF--> The new radius is only set for the process and is not saved in the form itself. 
 
@@ -33,7 +33,7 @@ In the *radius* parameter, you pass a new radius value in pixels to be applied t
 
 You can modify this value at the form level using the *Corner radius property* (see also *Corner radius (rectangles)*).
 
-#### Example 1 
+## Example 1 
 
 You have the following rectangles in your form, named respectively "Rect1" and "Rect2":
 
@@ -47,7 +47,7 @@ You can execute the following code to change their corners:
 
 ![](../assets/en/commands/pict1629576.en.png)
 
-#### Example 2 
+## Example 2 
 
 You have the following text area in your form, named "required-label":
 
@@ -63,11 +63,11 @@ If you execute the following code:
 
 Note that for text areas (as well as inputs), unlike for rectangles, the corner roundness is drawn outside the initial area of the object.
 
-#### See also 
+## See also 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

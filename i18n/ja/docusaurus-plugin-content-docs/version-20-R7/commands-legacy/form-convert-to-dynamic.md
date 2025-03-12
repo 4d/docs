@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->**FORM Convert to dynamic** コマンドは、*formName* 引数で指定したフォーム(クラシックフォーム)をダイナミックフォームへと変換し、それをオブジェクト型で返します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 **注:** フォームメソッドおよびフォームオブジェクトメソッドへの参照は、内部IDで書き出しがされます。これは、カレントデータベース内のみにおいて、*formName* のフォームのメソッドが変更されていない場合にのみ有効です。書き出されたフォームを他のコンテキストで使用したい場合、フォーム、あるいはフォームオブジェクト"メソッド"プロパティに、プロジェクトメソッド名を割り当てる必要があります(例題参照)。
 
-#### 例題 
+## 例題 
 
 クラシックなフォームを変換し、編集した後、それを表示したい場合を考えます。
 
@@ -55,12 +55,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3977362.en.png)
 
-#### 参照 
+## 参照 
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

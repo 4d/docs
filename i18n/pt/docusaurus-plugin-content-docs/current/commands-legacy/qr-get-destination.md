@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->O comando QR GET DESTINATION recupera o *tipo* de saída do relatório para a área cuja referência se passou em *area*.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ A tabela a seguir descreve os valores que podem ser recuperados nos parâmetros 
 
 Se passa um número de *area* incorreto, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR SET DESTINATION](qr-set-destination.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Backup Startup.Summary-->El Método base On Backup Startup se llama cada vez que un backup está a punto de iniciar (backup manual, backup automático programado, o utilizando el comando [BACKUP](backup.md)).<!-- END REF--> 
 

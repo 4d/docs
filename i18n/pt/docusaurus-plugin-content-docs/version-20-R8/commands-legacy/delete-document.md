@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->O comando DELETE DOCUMENT apaga o documento cujo nome se passa em *documento*.<!-- END REF-->  
   
@@ -29,7 +29,7 @@ DELETE DOCUMENT não aceita uma string vazia no parâmetro *documento*. Se uma s
   
 **Advertência**: DELETE DOCUMENT pode apagar um arquivo em disco. Isso inclui documentos criados com outras aplicações, além das próprias aplicações. DELETE DOCUMENT deve ser usado com extremo cuidado. A eliminação de um documento é uma operação permanente e não pode ser desfeita.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo apaga o documento chamado Nota: 
 
@@ -37,19 +37,19 @@ O exemplo abaixo apaga o documento chamado Nota:
  DELETE DOCUMENT("Nota") // Apaga o documento
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Veja o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A eliminação de um documento faz que a variável sistema assuma o valor 1\. Se DELETE DOCUMENT não pode apagar o documento, a variável sistema OK assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [Test path name](test-path-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

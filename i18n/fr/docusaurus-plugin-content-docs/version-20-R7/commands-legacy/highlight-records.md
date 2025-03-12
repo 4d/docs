@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->La commande **HIGHLIGHT RECORDS** permet de “surligner” des enregistrements dans un formulaire en liste.<!-- END REF--> Cette opération est identique à la sélection en mode liste, par l’utilisateur, d’enregistrement(s) à l’aide des combinaisons **Maj+clic** ou **Ctrl+clic** (Windows) ou **Commande+clic** (Mac OS). La sélection courante n’est pas modifiée. 
 
@@ -30,7 +30,7 @@ Le paramètre *\**, s’il est passé, provoque l’inactivation de la fonction 
 
 **Note :** Dans le cadre des sous-formulaires inclus, la commande **HIGHLIGHT RECORDS** ne fait rien si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour marquer une ligne, vous devez utiliser la commande [GOTO SELECTED RECORD](goto-selected-record.md). 
 
-#### Exemple 
+## Exemple 
 
 Dans un formulaire en liste affiché par la commande [MODIFY SELECTION](modify-selection.md), vous souhaitez que l’utilisateur puisse effectuer des recherches, sans que la sélection courante soit modifiée. Pour cela, placez un bouton **Chercher** dans le formulaire et associez-lui la méthode suivante :
 
@@ -43,12 +43,12 @@ Dans un formulaire en liste affiché par la commande [MODIFY SELECTION](modify-s
 
 Lorsque l’utilisateur clique sur le bouton, la boîte de dialogue standard de recherche apparaît. Une fois la recherche validée, les enregistrements trouvés sont surlignés, sans que la sélection courante ne soit modifiée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

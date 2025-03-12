@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->The **OBJECT SET MAXIMUM VALUE** command modifies the maximum value of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> 
 
@@ -25,12 +25,12 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 In *maxValue*, pass the new maximum value you want to assign to the object for the current process. This value must correspond to the object type, otherwise error 18 "Field types are incompatible" is returned.
 
-#### See also 
+## See also 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -25,7 +25,7 @@ Los objetos en la colección devuelta tienen las siguientes propiedades:
 | activityDuration | Real                   | La duración de la actividad expresada en segundos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | activityData     | Objeto                 | Objeto(s) que contiene(n) propiedades específicas dependiendo del tipo de actividad registrada (activityKind). En algunas circunstancias, se pueden devolver varios objetos para la misma operación. En este caso, los objetos tendrán el mismo UUID. Las propiedades adicionales en estos objetos se describen en las secciones a continuación.                                                                                                                                                                                                                                                                                                                                               |
 
-##### activityKind = Activity language (1) 
+### activityKind = Activity language (1) 
 
 **Nota:** el objeto *activityData* utiliza la información definida por el comando [SET DATABASE PARAMETER](set-database-parameter.md) para *4DDebugLog.txt (estándar)* (si corresponde), de lo contrario, utiliza un modo predeterminado. Iniciar la grabación del historial durante la ejecución del comando **Monitored activity** afectará los resultados devueltos.
 
@@ -41,7 +41,7 @@ objeto *activityData*:
 | duration                         | entero largo           | Duración de la operación (expresada en microsegundos)                                                                                                       |
 | kind                             | texto                  | Tipo de operación registrada. Valores posibles: "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-###### Propiedades adicionales 
+#### Propiedades adicionales 
 
 Las siguientes propiedades adicionales se devuelven en el objeto *activityData* según el tipo de operación:
 
@@ -62,7 +62,7 @@ Las siguientes propiedades adicionales se devuelven en el objeto *activityData* 
 | pluginMessageName           | texto                  | pluginMessage                                                                                                                        | Valores posibles: PackMsgServerDeInit PackMsgServerDisposeData PackMsgServerWriteData PackMsgServerReadData PackMsgServerKillClient PackMsgServerNewClient PackMsgServerInit PackMsgProcessDeInit PackMsgProcessInit PackMsgClientDeInit PackMsgClientInit |
 | pluginName                  | texto                  | pluginCallback<br/>pluginCommand<br/>pluginEvent<br/>pluginMessage                                           | Nombre del plug-in                                                                                                                                                                                                                                         |
 
-##### activityKind = Activity network (2) 
+### activityKind = Activity network (2) 
 
 **Notas:** 
 
@@ -87,7 +87,7 @@ objeto *activityData*:
 | taskKind                         | texto                  | Apropiativo o cooperativo (respectivamente 'p' o 'c')                                                                                                                                                                                                                                                                                                        |
 | rtt                              | entero largo           | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la confirme. Solo se mide cuando se utiliza la capa de red ServerNet, devuelve 0 cuando se utiliza con la capa de red heredada.Para versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada devolverá 0.<br/><br/><br/> |
 
-##### activityKind = Activity operations (4) 
+### activityKind = Activity operations (4) 
 
 **Nota:** el objeto *activityData* es similar al que devuelve el comando [ACTIVITY SNAPSHOT](activity-snapshot.md), excepto que solo se devuelven las operaciones de umbral y finalizadas.
 

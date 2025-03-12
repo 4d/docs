@@ -28,11 +28,11 @@ Si vous appelez **Execute on server** sur un poste client, la commande retourne 
 
 Si le process n'a pas pu être créé (par exemple s'il n'y a pas assez de mémoire), **Execute on server** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-##### Méthode du process 
+### Méthode du process 
 
  Vous passez le nom de la méthode de gestion du nouveau process dans *procédure*. Une fois que 4D a défini le contexte pour le nouveau process, il démarre l'exécution de cette méthode qui devient alors la méthode du process.
 
-##### Pile du process 
+### Pile du process 
 
 Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la pile du process. Cette valeur représente la place utilisée en mémoire pour "empiler" les appels de méthode, les variables locales, les paramètres des sous-routines et les enregistrements empilés.
 
@@ -41,7 +41,7 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 **Note :** La pile n'est pas la mémoire totale réservée au process. Les process se partagent la mémoire pour les enregistrements, les variables interprocess, etc. Un process utilise également de la mémoire supplémentaire pour stocker ses variables process. La pile contient diverses informations internes à 4D ; la taille de ces informations varie en fonction du nombre d'appels de méthodes imbriquées.
 
-##### Nom du process : 
+### Nom du process : 
 
 Vous passez le nom du nouveau process dans *nom*. Avec 4D monoposte, ce nom s'affichera dans la liste des process de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md) appliquée à ce process. En client/serveur, ce nom apparaîtra en bleu dans la liste des **Procédures stockées** de la fenêtre principale de 4D Server. 
 
@@ -49,7 +49,7 @@ Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une cha�
 
 **Attention :** A la différence de la commande [New process](new-process.md), vous ne devez pas avec **Execute on server** créer un process local en préfixant son nom du symbole dollar (*$*). Cela fonctionnerait correctement en version monoposte, car **Execute on server** se comporte comme [New process](new-process.md) dans cet environnement, mais, en client/serveur, cela génèrerait une erreur. 
 
-##### Paramètres de la méthode process : 
+### Paramètres de la méthode process : 
 
 Vous pouvez passer des paramètres à la méthode process. Vous pouvez le faire de la même manière que pour les sous-routines. Notez cependant qu'il y a une restriction : vous ne pouvez pas passer d'expression de type Pointeur. Rappelez-vous également que les tableaux ne peuvent pas être passés comme paramètres à une méthode. Une fois qu'elle a commencé à s'exécuter dans le contexte du nouveau process, la méthode process reçoit les valeurs des paramètres dans *$1*, *$2*, etc. 
 
@@ -57,7 +57,7 @@ Vous pouvez passer des paramètres à la méthode process. Vous pouvez le faire 
 
 Si vous passez un objet 4D (*C\_OBJECT*) ou une collection (*C\_COLLECTION*) comme *param*, une copie est envoyée (et non une référence) et la forme JSON est utilisée en utf-8 pour le serveur. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont envoyées, pas les pointeurs eux-mêmes.
 
-##### Paramètre optionnel \* 
+### Paramètre optionnel \* 
 
 Si vous passez le dernier paramètre (optionnel) *\**, vous indiquez à 4D de vérifier en premier lieu si un process du même nom que celui que vous avez passé dans *nom* est déjà en cours d'exécution. Si c'est le cas, 4D ne démarre pas de nouveau process et retourne le numéro du process existant.
 

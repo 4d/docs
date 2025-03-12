@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->The **DOM SET XML DECLARATION** command allows you to define various options that are useful in creating the XML tree set using *elementRef*.<!-- END REF--> These options concern the encoding and the standalone property of the tree:
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * *standalone*: Indicates whether the tree is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the tree is not standalone.
 **Compatibility note:** The *indentation* parameter is kept for reasons of compatibility with previous versions of 4D but its use is not recommended in 4D v12\. From now on, to specify the indentation of the document, it is strongly recommended to use the [XML SET OPTIONS](xml-set-options.md) command.
 
-#### Example 
+## Example 
 
 The following example sets the encoding to use and the standalone option in the *elementRef* element: 
 
@@ -33,12 +33,12 @@ The following example sets the encoding to use and the standalone option in the 
  DOM SET XML DECLARATION(elementRef;"UTF-16";True)
 ```
 
-#### See also 
+## See also 
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->**BLOB PROPERTIES** retourne des informations sur le BLOB *blob*.<!-- END REF-->
 
@@ -34,11 +34,11 @@ Quel que soit l'état de compression du BLOB, le paramètre *tailleDécompressé
 
 Le paramètre *tailleCourante* retourne la taille courante du BLOB. Si le BLOB est compressé, *tailleCourante* sera inférieur à *tailleDécompressée*. Si le BLOB n'est pas compressé, *tailleCourante* sera égal à *tailleDécompressée*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Référez-vous aux exemples des commandes [COMPRESS BLOB](compress-blob.md) et [EXPAND BLOB](expand-blob.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 Lorsqu'un BLOB est compressé, la méthode projet suivante vous permet de connaître le taux de place gagnée en compressant le BLOB :
 
@@ -73,12 +73,12 @@ Lorsque cette méthode est placée dans votre application, vous pouvez écrire :
  ALERT("La compression permet de gagner "+String(vlTailleBlob)+" octets, donc "+Chaine($vlPourcent;"#0%")+" d'espace.")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

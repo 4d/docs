@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu item mark.Summary-->Get menu item mark コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目の、チェックマークを返します。<!-- END REF-->*menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **Note:** Macintosh と Windows におけるチェックマークの議論については、コマンド [SET MENU ITEM MARK](set-menu-item-mark.md "SET MENU ITEM MARK")の説明を参照してください。
 
-#### 例題 
+## 例題 
 
 以下の例題は、メニュー項目のチェックマークを切り替えます:
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
  SET MENU ITEM MARK($vlMenu;$vlItem;Char(18)*Num(Character code(Get menu item mark($vlMenu;$vlItem))#18))
 ```
 
-#### 参照 
+## 参照 
 
 [SET MENU ITEM MARK](set-menu-item-mark.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

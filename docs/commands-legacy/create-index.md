@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE INDEX.Summary-->The **CREATE INDEX** command creates:
 
@@ -45,11 +45,11 @@ If the **CREATE INDEX** command encounters any locked records, they will not be 
 
 If a problem occurs during command execution (non-indexed field, attempt to create a keyword index on more than one field, etc.), an error is generated. This error can be intercepted using an error-handling method.
 
-#### Note for deployment 
+## Note for deployment 
 
 Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
 
-#### Example 1 
+## Example 1 
 
 Creation of two standard indexes on the “Last Name” and “Telephone”fields of the \[Customers\] table:
 
@@ -61,7 +61,7 @@ Creation of two standard indexes on the “Last Name” and “Telephone”field
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustTelIdx")
 ```
 
-#### Example 2 
+## Example 2 
 
 Creation of a keywords index on the “Observations” field of the \[Customers\] table:
 
@@ -71,7 +71,7 @@ Creation of a keywords index on the “Observations” field of the \[Customers\
  CREATE INDEX([Customers];fieldPtrArr;Keywords Index;"CustObsIdx")
 ```
 
-#### Example 3 
+## Example 3 
 
 Creation of a composite index on the “City” and “Zipcode” fields of the \[Customers\] table:
 
@@ -82,13 +82,13 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
 ```
 
-#### See also 
+## See also 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

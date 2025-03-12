@@ -13,23 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CLEAR SEMAPHORE.Summary-->CLEAR SEMAPHOREは、[Semaphore](semaphore.md "Semaphore")コマンドで設定された*semaphore*を消去します。<!-- END REF-->
 
 ルールとして、作成されたすべてのセマフォは消去するべきです。セマフォが消去されない場合、セマフォを作成したプロセスが終了するまで、作成されたセマフォはメモリ上に残ります。プロセスは自身が作成したセマフォしか消去することはできません。セマフォを作成していないプロセス内からセマフォを消去しようとしても、何も行いません。
 
-#### 例題 
+## 例題 
 
 [Semaphore](semaphore.md "Semaphore")の例題参照
 
-#### 参照 
+## 参照 
 
 [Semaphore](semaphore.md)  
 [Test semaphore](test-semaphore.md)  
 *セマフォーとシグナル*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

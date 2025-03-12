@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SEND TEXT.Summary-->**WEB SEND TEXT**コマンドを使用して、 HTMLにフォーマットされたテキストデータを直接送ります。<!-- END REF--> 
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 *type* 引数を省略した場合、4Dは送信されたデータが "text/html" 型であると自動的に判断します。この場合、コマンドは [WEB SEND BLOB](web-send-blob.md) コマンドを使用して "text/html" 型のBLOBを送信したのと同一の挙動をします。  
 また、 *type* 引数を使用して送信したいテキストのMIME型を指定することもできます。サポートされているMIME型に関しての詳細な情報は、 [WEB SEND BLOB](web-send-blob.md) コマンドの詳細を参照して下さい。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $content_t : Text
@@ -42,11 +42,11 @@ displayed_sidebar: docs
  WEB SEND TEXT($content_t)
 ```
 
-#### 参照 
+## 参照 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

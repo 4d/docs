@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->**GET PICTURE METADATA**コマンドを使用して *picture* で指定したピクチャ (4Dのピクチャフィールドや変数) 内のメタデータ (またはメタタグ) の内容を読みだすことができます。<!-- END REF--> メタデータに関する詳細は[SET PICTURE METADATA](set-picture-metadata.md)コマンドの説明を参照してください。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * *metaName*にタグパスを渡した場合、*metaContents* 引数は直接取得した値を含みます。値は変数の型に合わせて変換されます(変数の型が定義されていない場合、デフォルトでテキスト型が使用されます)。テキスト型の変数ではXML (XMP標準) でフォーマットされます。(特にIPTC Keywordsタグのように) メタデータに一つ以上の値が含まれる場合、配列を渡すことができます。
 * *metaName*にブロック名か空の文字列を渡すとき、*metaContents* 引数は有効なXML DOM要素参照でなければなりません。この場合、指定されたブロック (あるいは*metaName*に空の文字列を渡した場合はすべてのブロック) の内容は参照された要素に再コピーされます。
 
-#### 例題 1 
+## 例題 1 
 
 DOMツリーストラクチャを使用する
 
@@ -46,7 +46,7 @@ DOMツリーストラクチャを使用する
  GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 変数の使用
 
@@ -63,7 +63,7 @@ DOMツリーストラクチャを使用する
  GET PICTURE METADATA(vPicture;IPTC urgency;$urgency)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 タグの複数の値が配列に返される
 
@@ -79,7 +79,7 @@ DOMツリーストラクチャを使用する
  $arrTkeywords{2}="Europe"
 ```
 
-#### 例題 4 
+## 例題 4 
 
 テキスト変数に複数の値を持つタグを受信する
 
@@ -90,18 +90,18 @@ DOMツリーストラクチャを使用する
 
 コマンド実行後、$vTwordsは例えば"France;Europe"のようになります。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 メタデータの取得が正しく行われると、*OK*システム変数に1が設定され、エラーが発生したり1つ以上のタグが見つからない場合は0が設定されます。どのような場合でも、読みだされた値は返されます。
 
-#### 参照 
+## 参照 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

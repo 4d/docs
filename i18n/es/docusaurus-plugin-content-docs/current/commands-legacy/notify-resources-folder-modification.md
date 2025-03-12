@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->El comando NOTIFY RESOURCES FOLDER MODIFICATION permite "forzar" el envío por 4D Server de una notificación indicando a todos los puestos 4D conectados que el contenido de la carpeta Resources de la base ha sido modificado, de manera que puedan sincronizar su carpeta Resources local.<!-- END REF-->   
 Este comando puede utilizarse particularmente para administrar la sincronización de las carpetas *Resources* de los equipos remotos después de que esta carpeta haya sido modificada por un procedimiento almacenado en el servidor. 
@@ -30,11 +30,11 @@ El parámetro actual puede estar definido:
 * a nivel global de la base vía el parámetro de las Propiedades de la base. En este caso, se aplica a todos los equipos remotos;
 * localmente, utilizando el comando [SET DATABASE PARAMETER](set-database-parameter.md) ejecutado en el equipo remoto (selector Auto Synchro Resources Folder). En este caso, "invalida" el de la base y se aplica únicamente al equipo remoto para la sesión.
 
-#### Ver también 
+## Ver también 
 
 [Get 4D folder](get-4d-folder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

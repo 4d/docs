@@ -17,7 +17,7 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP SET DATA CONTEXT.Summary-->El comando **WP SET DATA CONTEXT** define el objeto *datosContext* como contexto de datos del documento 4D Write Pro *wpDoc*.<!-- END REF--> Definir un nuevo contexto en el mismo proceso reemplaza todo contexto existente para el documento.
 
@@ -40,7 +40,7 @@ Un contexto de datos sólo puede utilizarse en el proceso en el que se ha defini
 * Si se establece un contexto de datos que ya ha sido definido para el mismo documento en otro proceso, se produce un error
  Para calcular fórmulas con diferentes contextos de datos en diferentes procesos (es decir, generar diferentes facturas a partir del mismo documento modelo), se recomienda duplicar el documento utilizando [WP New](wp-new.md) en cada uno de esos procesos para evitar errores. Tenga en cuenta que el contexto de datos no se copia cuando se duplica un documento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Inserta un objeto en el contexto del documento de 4D Write Pro y muestra su información en la página:
 
@@ -72,7 +72,7 @@ WP SET DATA CONTEXT(WParea; $person)
   
 // 
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Cuando se trabaja con un documento plantilla, se puede asociar un contexto a él para llenar la página con datos. Esto es útil, por ejemplo, para las campañas de correo.
 
@@ -94,7 +94,7 @@ El siguiente ejemplo recorre una selección de entidades y crea una vista previa
  End for each
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

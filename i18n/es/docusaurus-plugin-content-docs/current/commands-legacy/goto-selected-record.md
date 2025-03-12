@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD** vuelve el registro especificado en la selección actual de *tabla* el registro actual.<!-- END REF--> La selección actual no cambia. El parámetro *registro* no es el mismo del número devuelto por [Record number](record-number.md); Este parámetro representa la posición del registro en la selección actual. La posición del registro depende de la manera en que la selección ha sido creada y ordenada. 
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 Si pasa 0 en *registro*, no habrá registro actual en *tabla*. Este mecanismo permite deseleccionar todos los registros en una lista, en particular en el caso de los subformularios incluidos, cuando el modo de selección es “único”.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo carga datos del campo \[People\]Last Name en el array *atNames*. Un array de enteros largos, llamado *alRecNum*, se llena con los números que representarán a los registros seleccionados. Luego se ordenan los dos arrays:
 
@@ -58,11 +58,11 @@ El siguiente método de objeto del área desplegable *atNames* selecciona el reg
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Selected record number](selected-record-number.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

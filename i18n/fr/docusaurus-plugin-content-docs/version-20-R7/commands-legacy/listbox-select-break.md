@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->La commande **LISTBOX SELECT BREAK** permet de sélectionner des lignes de rupture dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> La list box doit être affichée en mode hiérarchique. 
 
@@ -38,7 +38,7 @@ Le paramètre *action*, s’il est passé, permet de définir l’action de sél
 * vous devrez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Pour plus d'informations sur ce point, veuillez vous reporter au paragraphe *Personnaliser la représentation des sélections*.
 * vous ne pouvez pas surligner les lignes de rupture dans les list box hiérarchiques dans ce cas (cf. *Limitation pour les list box hiérarchiques*).
 
-#### Exemple 
+## Exemple 
 
 Soient les tableaux suivants représentés dans une list box :
 
@@ -57,12 +57,12 @@ Voici le résultat :
 
 ![](../assets/en/commands/pict185059.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

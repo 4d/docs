@@ -24,7 +24,7 @@ Todas las acciones disponibles se listan en la sección *Acciones estándar* del
 
 **Nota:** también se ofrecen acciones específicas adicionales para los documentos 4D Write Pro. Se detallan en la sección *Utilizar las acciones estándar 4D Write Pro* del manual de referencia de 4D Write Pro.
 
-##### 
+### 
 
 En *objetivo*, puede pasar el contexto del formulario en el que se debe ejecutar la *accion*. Puede utilizar una de las siguientes constantes del tema *Acción estándar*:
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get breaks.Summary-->O comando **WP Get breaks** retorna a coleção de todas as quebras inseridas em *objAlvo*.<!-- END REF-->
 
@@ -61,7 +61,7 @@ Se *objAlvo* for uma range ou elemento, quebras são retornadas na ordem em que 
 
 Uma coleção vazia é retornada se *objAlvo* não conter qualquer quebra (ou qualquer quebra da petição de *tipoQuebra*).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser substituir todas as quebras de linha por quebras de parágrafo no documento:
 
@@ -74,7 +74,7 @@ Se quiser substituir todas as quebras de linha por quebras de parágrafo no docu
  End for each
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get elements](wp-get-elements.md)  
 [WP INSERT BREAK](wp-insert-break.md)  

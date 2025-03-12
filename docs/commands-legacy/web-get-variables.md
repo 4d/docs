@@ -26,7 +26,7 @@ This command is valid regardless of the type of URL or form (POST or GET method)
 
 This command can be called, if necessary, in the [QR SET DESTINATION](qr-set-destination.md) or any other 4D method resulting from a form submission.
 
-##### About Web forms and their associated actions 
+### About Web forms and their associated actions 
 
 Each form contains named data entry area (text area, buttons, checkboxes).  
 When a form is submitted (a request is sent to the Web server), the request contains (within others) the list of the data entry areas and their associated values.  

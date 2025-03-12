@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Num.Summary-->The Num command returns the numeric form of the String, Boolean or numeric expression you pass in *expression*.<!-- END REF--> The optional *separator* parameter designates a decimal separator for evaluating string type expressions.
 
@@ -42,7 +42,7 @@ If you pass a numeric expression in the *expression* parameter, Num returns the 
 **Undefined Expressions**  
 If *expression* evaluates to undefined, the command returns 0 (zero). This is useful when you expect the result of an expression (e.g. an object attribute) to be a number, even if it can be undefined.
 
-#### Example 1 
+## Example 1 
 
 The following example illustrates how Num works when passed a string argument. Each line assigns a number to the *vResult* variable. The comments describe the results:
 
@@ -55,7 +55,7 @@ The following example illustrates how Num works when passed a string argument. E
  vResult:=Num("–123e2") // vResult gets –12300
 ```
 
-#### Example 2 
+## Example 2 
 
 Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
 
@@ -65,7 +65,7 @@ Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to thes
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
-#### Example 3 
+## Example 3 
 
 This example compares the results obtained depending on the “current” separator:
 
@@ -78,13 +78,13 @@ This example compares the results obtained depending on the “current” separa
   // for example, 33 333,33 on a French system
 ```
 
-#### See also 
+## See also 
 
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

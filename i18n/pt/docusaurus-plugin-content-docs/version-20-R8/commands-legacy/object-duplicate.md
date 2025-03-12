@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->O comando OBJECT DUPLICATE permite criar uma cópia do objeto designado pelo parâmetro *objeto* no contexto do formulário que está sendo executado (modo Aplicação).<!-- END REF--> O formulário de origem, gerado em modo Desenho, não se modifica. 
 
@@ -79,7 +79,7 @@ Quando o comando se chama em um contexto não compatível, o objeto não é dupl
   
 Se o comando foi executado corretamente, a variável *OK* toma o valor 1\. Do contrário toma o valor 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Criação de um novo botão chamado "BotãoCancelar" sobre o objeto existente "BotãoOk" e associação com a variável *vCancelar*:
 
@@ -87,7 +87,7 @@ Criação de um novo botão chamado "BotãoCancelar" sobre o objeto existente "B
  OBJECT DUPLICATE(*;"BotaoOK";"BotaoCancelar";vCancelar)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de um novo botão opção "bRadio6" baseado no botão opção existente "bRadio5". Este botão será associado à variável <>r6, integrada com o grupo do botão "bRadio5" e localizado 20 píxels acima:
 
@@ -95,13 +95,13 @@ Criação de um novo botão opção "bRadio6" baseado no botão opção existent
  OBJECT DUPLICATE(*;"bRadio5";"bRadio6";<>r6;"bRadio5";0;20)
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
 *Objetos de formulário (Acesso)*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

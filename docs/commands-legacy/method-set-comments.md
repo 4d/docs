@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->The **METHOD SET COMMENTS** command replaces the documentation of the method(s) designated by the *path* parameter by those specified in the *comments* parameter.<!-- END REF-->
 
@@ -48,7 +48,7 @@ If you pass an invalid pathname, an error is generated.
 
 You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated
 
-#### Example 
+## Example 
 
 Add a modification date to an existing trigger documentation:
 
@@ -58,11 +58,11 @@ Add a modification date to an existing trigger documentation:
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-#### See also 
+## See also 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

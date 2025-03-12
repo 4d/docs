@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->The **LISTBOX GET GRID COLORS** command returns the color of the horizontal and vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -27,11 +27,11 @@ In *hColor* and *vColor*, the command returns the values of the RGB colors. The 
 * if you passed a text, the color will be expressed as a CSS text (format "#rrggbb")
 * if you passed a longint, the color will be expressed as a 4-byte Long Integer (format 0x00rrggbb).
 
-#### See also 
+## See also 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

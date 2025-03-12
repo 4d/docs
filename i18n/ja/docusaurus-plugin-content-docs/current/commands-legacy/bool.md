@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Bool.Summary-->**Bool** コマンドは、*expression* 引数に渡した式のブール形式を返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 このコマンドは、コードがブール値の結果を期待している場合に、式の評価のが異なる型になりうる場合などに有効です(例・式が評価の結果**null**あるいは**未定義**を返す場合など)。
 
-#### 例題 
+## 例題 
 
 オブジェクトフィールド属性の中身に応じて値を選択し、その属性がない場合も想定するとします:
 
@@ -41,14 +41,14 @@ displayed_sidebar: docs
  ALERT("This person is "+$married)
 ```
 
-#### 参照 
+## 参照 
 
 [Date](date.md)  
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.String.Summary-->**String**コマンドは、*expression*に渡した数値、日付、時間、文字列、またはブールを文字列に変換します。<!-- END REF-->
 
@@ -179,7 +179,7 @@ displayed_sidebar: docs
 **Null 式**  
 *expression* がNull に評価される場合、コマンドは"null"の文字列を返します。これはある式(例: オブジェク属性)の結果が、nullである可能性があるが、文字列として返されることを期待する場合に有用です。
 
-#### 参照 
+## 参照 
 
 [Bool](bool.md)  
 [Date](date.md)  
@@ -187,7 +187,7 @@ displayed_sidebar: docs
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

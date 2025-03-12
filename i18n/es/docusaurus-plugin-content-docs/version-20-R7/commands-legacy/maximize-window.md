@@ -23,7 +23,7 @@ Un clic posterior en la cuadro de zoom o la llamada al comando [MINIMIZE WINDOW]
 
 Si *ventana* ya está maximizada, el comando no hace nada.
 
-##### En Windows 
+### En Windows 
 
 El tamaño de la ventana se incrementa para coincidir con el tamaño actual de la ventana de la aplicación (modo MDI) o la pantalla (modo SDI). La ventana maximizada pasa al primer plano. Si no pasa el parámetro *ventana*, el comando se aplica a todas las ventanas de la aplicación.
 
@@ -36,7 +36,7 @@ En casos en que se aplica el comando a una ventana cuyo tamaño está sujeto a r
 * Si ninguna restricción de tamaño está en conflicto con el tamaño objetivo, la ventana se "maximiza" (es decir, se restaura del tamaño de la ventana MDI ("Multiple Document Interface"); su barra de título y sus bordes están ocultos y su botones de control, minimizar, restaurar y cerrar, se ubican a la derecha de la barra de menú de la aplicación).
 * Si al menos una restricción de tamaño está en conflicto (por ejemplo, si el ancho de la ventana MDI es 100 y el ancho máximo de la ventana de formulario es 80), la ventana no se "maximiza", sólo se restaura a su tamaño máximo permitido. Este tamaño se define ya sea por la ventana MDI, o por la restricción. De esta manera, la interfaz sigue siendo coherente cuando se redimensionan ventanas con restricciones.
 
-##### En Mac OS 
+### En Mac OS 
 
 La ventana se agranda de manera que pueda mostrar la totalidad de su contenido. Si no pasa el parámeto *ventana*, el comando se aplica a la ventana del primer plano del proceso actual. 
 

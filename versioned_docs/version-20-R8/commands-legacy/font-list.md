@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->The **FONT LIST** command populates the *fonts* text array with the names of scalable fonts available on your system.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Under Windows, the *\** parameter has no effect. The command still returns the f
 
 **Note:** Under macOS, if you use the result of this command with [ST SET ATTRIBUTES](st-set-attributes.md) in a multi-style text area, you must not pass the *\** parameter (only font families are supported as Attribute font name). This limitation does not apply to 4D Write Pro areas, which accept either font or font family names. 
 
-##### About scalable fonts 
+### About scalable fonts 
 
 This command returns only scalable fonts. Using non-scalable fonts (i.e. bitmap fonts) to design interfaces is not recommended since they are based on an outdated technology and suffer from limitations regarding size variations. They are not supported in cutting-edge features of 4D such as 4D Write Pro areas .
 
@@ -44,7 +44,7 @@ Under Windows, this principle is applied beginning with 4D v15 R4\. In order to 
 * Bitmap fonts can still be used in your 4D forms (except in 4D Write Pro areas). They are just removed from the list returned by this command. However, to ensure compatibility with future versions of 4D and Windows, we recommend using only DirectWrite font families.
 * Since bitmap fonts are filtered from the *fonts* parameter on Windows, the resulting list is different in 4D v15 R4 applications and higher, compared to previous releases. Please make sure to adapt your code if you were using this command to select a non-scalable font.
 
-#### Example 1 
+## Example 1 
 
 In a form, you want a drop-down list that displays a list of the fonts available on your system. The method of the drop-down list is as follows:
 
@@ -58,7 +58,7 @@ In a form, you want a drop-down list that displays a list of the fonts available
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to get a list of recent fonts:
 
@@ -66,7 +66,7 @@ You want to get a list of recent fonts:
  FONT LIST($arrFonts;Recent fonts)
 ```
 
-#### See also 
+## See also 
 
 [FONT STYLE LIST](font-style-list.md)  
 *Font Type List*  
@@ -74,7 +74,7 @@ You want to get a list of recent fonts:
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Min.Summary-->**Min** returns the minimum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the minimum value.
 
@@ -28,7 +28,7 @@ Only numeric attribute values are computed. If there are values in the attribute
 
 If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
 
-#### Example 1 
+## Example 1 
 
 The following example is an object method for the variable *vMin* placed in the break 0 portion of the form. The variable is printed at the end of the report. The object method assigns the minimum value of the field to the variable, which is then printed in the last break of the report: 
 
@@ -51,7 +51,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
-#### Example 2 
+## Example 2 
 
 The following example finds the lowest sale amount of an employee and displays the result in an alert box:
 
@@ -59,7 +59,7 @@ The following example finds the lowest sale amount of an employee and displays t
  ALERT("Minimum sale = "+String(Min([Employees]Sales)))
 ```
 
-#### Example 3 
+## Example 3 
 
 This example gets the lowest value in the array:
 
@@ -70,15 +70,15 @@ This example gets the lowest value in the array:
  vMin:=Min($ArrGrades)
 ```
 
-#### Example 4 
+## Example 4 
 
 For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
 
-#### See also 
+## See also 
 
 [Max](max.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

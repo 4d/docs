@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Select folder.Summary-->**Select folder** コマンドは、フォルダを選択するダイアログボックスを表示し、フォルダへの完全なアクセスパスを検索します。<!-- END REF-->オプションの引数*defaultPath*を使用して、フォルダの場所を指定します。そのフォルダは最初にフォルダ選択ダイアログボックスに表示されます。 
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 **Note:** Windowsでは、ユーザが"ワークステーション" や "ごみ箱" のような何らかの誤った要素を選択すると、ユーザがダイアログボックスを受け入れてもシステム変数OKは0になります。
 
-#### 例題 
+## 例題 
 
 次の例ではフォルダを選択し、そこにピクチャライブラリ内のピクチャを保存する場合を考えます:
 
@@ -81,13 +81,13 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

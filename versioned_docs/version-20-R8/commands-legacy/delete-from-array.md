@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->The DELETE FROM ARRAY command deletes one or more elements from *array*.<!-- END REF--> Elements are deleted starting at the element specified by *where*.
 
 The *howMany* parameter is the number of elements to delete. If *howMany* is not specified, then one element is deleted. The size of the array shrinks by *howMany*.
 
-#### Example 1 
+## Example 1 
 
 The following example deletes three elements, starting at element 5:
 
@@ -29,7 +29,7 @@ The following example deletes three elements, starting at element 5:
  DELETE FROM ARRAY(anArray;5;3)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example deletes the last element from an array, if it exists:
 
@@ -40,12 +40,12 @@ The following example deletes the last element from an array, if it exists:
  End if
 ```
 
-#### See also 
+## See also 
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

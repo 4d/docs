@@ -26,7 +26,7 @@ Recuerde que si utiliza una variable de tipo texto para almacenar el elemento *r
 
 En modo Unicode, el código original se conserva en la variable.
 
-##### Gestión de los caracteres de fin de línea y de BOM 
+### Gestión de los caracteres de fin de línea y de BOM 
 
 En XML, los saltos de línea no son significativos, independientemente de si se encuentran dentro o entre los elementos XML. Internamente, XML utiliza caracteres estándar LF como separadores de líneas. Durante las operaciones de importación y exportación, los caracteres de salto de línea se pueden convertir. Durante una importación, el analizador XML reemplaza los caracteres CRLF (rupturas de línea estándar en Windows) por caracteres de LF. Durante la exportación, los caracteres LF se sustituyen por caracteres CRLF en Windows (sin remplazar en macOS).
 

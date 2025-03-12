@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->DRAG WINDOW コマンドは、ユーザがマウスのクリックと移動を行うと、ウィンドウをドラッグします。<!-- END REF-->通常このコマンドは (非表示ボタンなど) マウスクリックに瞬時に反応するオブジェクトのオブジェクトメソッドから呼び出します。
 
-#### 例題 
+## 例題 
 
 以下のフォームには、それぞれの側に非表示ボタンが上に置かれたス色付きのフレームがあります:
 
@@ -42,12 +42,12 @@ displayed_sidebar: docs
 
 フレームをクリックして、ウィンドウをドラッグすることができます。
 
-#### 参照 
+## 参照 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

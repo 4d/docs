@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->La commande **GET DOCUMENT PROPERTIES** retourne des informations sur le document dont le nom ou le chemin d'accès est passé dans le paramètre *document*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Après l'appel :
 * *créé le* et *créé à* retournent la date et l'heure de création du document.
 * *modifié le* et *modifié à* retournent la date et l'heure de la dernière modification du document.
 
-#### Exemple 
+## Exemple 
 
 Vous avez créé une base de documentation et vous voulez exporter tous les enregistrements créés dans le base vers un document sur disque. Comme la base est régulièrement mise à jour, vous voulez écrire un algorithme d'export qui crée ou recrée chaque document sur disque si le document n'existe pas ou si l'enregistrement correspondant a été modifié depuis la dernière sauvegarde du document. Par conséquent, vous devez comparer la date et l'heure de modification du document (s'il existe) avec celles de l'enregistrement correspondant. Pour illustrer cet exemple, nous allons utiliser la table suivante :
 
@@ -205,11 +205,11 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
  ALERT("Nombre de documents traités : "+String($vlNbRecords)+Caractere(13)+"Nombre de documents mis à jour : "+Chaine($vlNbDocs)+Caractere(13)+"Nombre de documents supprimés : "+Chaine(Taille tableau($asDocument)))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

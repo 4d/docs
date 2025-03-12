@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Get first child XML element.Summary-->O comando DOM Get first child XML element retorna uma referência XML ao primeiro “filho” do elemento XML passado em *refElemento*.<!-- END REF--> Esta referência pode ser utilizada com outros comandos de análise XML.  
 
@@ -24,7 +24,7 @@ Os parâmetros *nomElemFilho e valorElemFilho*, se forem passados, recebem respe
 
 ![](../assets/en/commands/pict39972.en.png)
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Recuperação da referência do primeiro elemento XML do pai raiz. A estrutura XML (C:\\\\import.xml) é carregado previamente em um BLOB: 
 
@@ -37,7 +37,7 @@ Recuperação da referência do primeiro elemento XML do pai raiz. A estrutura X
  $xml_Filho_Ref:=DOM Get first child XML element($xml_Pai_Ref)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Recuperação da referência, nome e valor do primeiro elemento XML do pai raiz. A estrutura XML (C:\\\\importar.xml) é carregada previamente em um BLOB: 
 
@@ -51,15 +51,15 @@ Recuperação da referência, nome e valor do primeiro elemento XML do pai raiz.
  $xml_Filho_Ref:=DOM Get first child XML element($xml_Pai_Ref;$filhoNom;$filhoValor)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável sistema OK assume o valor 1\. Do contrário, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

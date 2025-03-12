@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Sum.Summary-->**Sum**コマンドは、*series*の合計値を返します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 このコマンドが正しく実行されると、OKシステム変数は1に設定されます。ユーザが進捗サーモメータの**停止**ボタンをクリックするなどして処理が中断されると、OK変数は0に設定されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例はフォームに置かれた変数*vTotal*のオブジェクトメソッドです。オブジェクトメソッドは*vTotal*に一連のデータの合計値を代入します:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
-#### 例題 2 
+## 例題 2 
 
 この例では配列中の値の合計値を求めます:
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
  vSum:=Sum($ArrGrades)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 オブジェクト型フィールドの属性を計算する例題については、[Average](average.md)コマンドの詳細の例題3を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [ACCUMULATE](accumulate.md)  
 [Average](average.md)  
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

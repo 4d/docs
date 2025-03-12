@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->**OBJECT SET SUBFORM CONTAINER VALUE** コマンドは、オヤフォーム内に表示されたサブフォームコンテナにバインドされたデータソースのカレント値を設定します。<!-- END REF-->
 
@@ -23,16 +23,16 @@ displayed_sidebar: docs
 
 バインド変数とフォーム/サブフォームの相互作用についての詳細な情報については、developer.4d.com の*バインドされた変数あるいは式の管理* を参照してください。
 
-#### 例題 
+## 例題 
 
 このコマンドの具体的な使用例については、[OBJECT Get subform container value](object-get-subform-container-value.md) の章に例題があります。
 
-#### 参照 
+## 参照 
 
 [Form](../commands/form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

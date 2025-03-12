@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->O comando SET LIST ITEM ICON permite modificar o ícone associado ao elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*   
 
@@ -30,7 +30,7 @@ Por último, pode passar *\** em *refElem*: neste caso, o comando será aplicado
 
 Passe no parâmetro *icone* uma expressão de imagem 4D válida (campo, variável, ponteiro, etc.). A imagem será colocada a direita do elemento.
 
-#### Exemplo 
+## Exemplo 
 
 Queremos atribuir a mesma imagem a dois elementos diferentes. O seguinte código se otimiza já que a imagem é carregada na memória só uma vez:
 
@@ -41,13 +41,13 @@ Queremos atribuir a mesma imagem a dois elementos diferentes. O seguinte código
  SET LIST ITEM ICON(mylist;ref2;$picture)
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

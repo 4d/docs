@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New log file.Summary-->**Preliminary note:** This command only works with 4D Server.<!-- END REF--> It can only be executed via the [Execute on server](execute-on-server.md) command or in a stored procedure. 
 
@@ -26,13 +26,13 @@ The file is renamed with the current backup numbers of the database and of the l
 * If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. The name of the first “segment” of the log file will therefore be MyDatabase\[0004-0001\].journal.
 * If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
 
-#### Error management 
+## Error management 
 
 In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](on-err-call.md "ON ERR CALL") command.
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

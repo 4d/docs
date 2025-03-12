@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Clickcount.Summary-->La commande **Clickcount** retourne, dans le contexte d'un événement clic, le nombre de fois que l'utilisateur a cliqué de manière répétée avec le même bouton de la souris.<!-- END REF--> Typiquement, la commande retourne 2 pour un double-clic. 
 
@@ -29,7 +29,7 @@ Lorsque les deux événements formulaire On Clicked et On Double Clicked sont ac
 * 2 dans l'événement On Double Clicked
 * 2+n dans l'événement On Clicked
 
-#### Exemple 1 
+## Exemple 1 
 
 La structure de code suivante peut être placée dans un en-tête de list box pour gérer les clics simples et les double-clics :
 
@@ -45,7 +45,7 @@ La structure de code suivante peut être placée dans un en-tête de list box po
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Les libellés ne sont pas saisissables mais ils peuvent le devenir après un triple-clic. Si vous souhaitez permettre aux utilisateurs de modifier les libellés, vous pouvez écrire la méthode objet suivante :
 
@@ -60,7 +60,7 @@ Les libellés ne sont pas saisissables mais ils peuvent le devenir après un tri
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DELETE SELECTION.Summary-->DELETE SELECTION borra la selección actual de registros de *tabla*.<!-- END REF--> Si la selección actual está vacía, DELETE SELECTION no hace nada. Después de borrar los registros, la selección actual queda vacía. Los registros que se borran durante una transacción están bloqueados para los otros usuarios y procesos hasta que la transacción se valide o cancele.
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Deseleccionar la opción **Registros borrados definitivamente** en el Inspector de tablas le permite aumentar la velocidad de las eliminaciones durante el uso de DELETE SELECTION (ver *Registros borrados definitivamente* en el manual *Modo Diseño*).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra todos los registros de la tabla \[Personas\] y permite al usuario seleccionar cuáles borrar. El ejemplo tiene dos partes. La primera es un método para mostrar los registros. La segunda es un método de objeto para un botón Borrar. Este es el primer método: 
 
@@ -44,7 +44,7 @@ El siguiente es el método de objeto del botón Borrar, que aparece en el pie de
  ALL RECORDS([Personas]) // Selección de todos los registros
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION, ese registro no se borra. Todos los registros bloqueados se colocan en un conjunto sistema llamado LockedSet. Después de la ejecución de DELETE SELECTION, puede probar LockedSet para verificar si los registros estaban bloqueados. El siguiente bucle se ejecutará hasta que todos los registros se borren:
 
@@ -57,7 +57,7 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
  Until(Records in set("LockedSet")=0) // Hasta que no haya más registros bloqueados
 ```
 
-#### Ver también 
+## Ver también 
 
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
@@ -65,7 +65,7 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
 *Record Locking*  
 [TRUNCATE TABLE](truncate-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

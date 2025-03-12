@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->La commande **RESIZE FORM WINDOW** permet de modifier la taille de la fenêtre du formulaire courant.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ A noter que ce fonctionnement est différent de celui de la commande [SET WINDOW
 
 A noter également que cette commande ne modifie pas forcément les dimensions du formulaire lui-même. Pour modifier par programmation la taille d’un formulaire, reportez-vous à la description de la commande [FORM SET SIZE](form-set-size.md).
 
-#### Exemple 
+## Exemple 
 
 Soit la fenêtre suivante (les champs et l'encadrement ont pour propriété de redimensionnement horizontal “Agrandir”) :
 
@@ -42,13 +42,13 @@ Après l'exécution de cette ligne :
 
 ![](../assets/en/commands/pict39549.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

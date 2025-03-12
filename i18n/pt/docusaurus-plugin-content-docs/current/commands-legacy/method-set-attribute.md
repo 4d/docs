@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->O comando **METHOD SET ATTRIBUTE** permite definir o valor do atributo tipoAtrib para o método projeto designado pelo parâmetro *rota*.<!-- END REF--> Este comando somente funciona com métodos projeto. Se passar uma rota não válida, um erro é gerado.
 
@@ -42,11 +42,11 @@ Pode passar múltiplos pares *tipoAtrib*;*valorAtrib* em uma só chamada.
 
 Pode executar este comando desde um componente, ams neste caso deverá passar o parâmetro *\** porque o acesso ao código do componente é somente leitura. Se omitir o parâmetro *\** neste contexto, o erro -9763 é gerado.
 
-##### 
+### 
 
 Este comando não pode ser executado em modo compilado. Quando é chamado neste modo, irá gerar o erro -9762\. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Seleção da propriedade "Compartilhado entre componentes e o banco local" para o método projeto "Seleção diálogo":
 
@@ -54,7 +54,7 @@ Seleção da propriedade "Compartilhado entre componentes e o banco local" para 
  METHOD SET ATTRIBUTE("Seleção diálogo";Attribute shared;True)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Definição de vários pares de atributos/valores:
 
@@ -62,13 +62,13 @@ Definição de vários pares de atributos/valores:
  METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

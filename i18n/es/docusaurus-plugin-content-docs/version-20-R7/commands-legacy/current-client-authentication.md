@@ -32,7 +32,7 @@ Opcionalmente, el comando puede devolver dos parámetros de texto:
 
 Estos parámetros se pueden utilizar para aceptar o rechazar las conexiones si desea filtrar el acceso en relación con el dominio o el protocolo.
 
-##### Nivel de seguridad de la autenticación 
+### Nivel de seguridad de la autenticación 
 
 El nivel de seguridad de la autenticación (es decir, cuánto se puede confiar en el inicio de sesión de usuario) depende de la forma en que el usuario se ha identificado. El valor devuelto en los parámetros del comando **Current client authentication** permitirán conocer en qué se basa el inicio de sesión (si lo hay) y, por tanto, el nivel de seguridad: 
 

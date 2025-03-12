@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COPY SET.Summary-->O comando COPY SET copia o conteúdo do conjunto *comOrigem* no conjunto *comDestino*.<!-- END REF-->  
 
 Os dois conjuntos podem ser processos, inter-processos, ou conjuntos locais. Os dois conjuntos não precisam tem o mesmo tipo (como mostrado abaixo), desde que ambos sejam visíveis na máquina. Para saber mais sobre isso, veja "*Visibilidade de Conjuntos*". 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo, copia o conjunto "*ConjuntoA*", no conjunto "*ConjuntoB*":  
   
@@ -28,7 +28,7 @@ O seguinte exemplo, copia o conjunto "*ConjuntoA*", no conjunto "*ConjuntoB*":
  COPY SET("ConjuntoA";"ConjuntoB")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O seguinte exemplo em Cliente/Servidor, copia o conjunto processo "*ConjuntoA*", conservado na máquina servidor, no conjunto local "*$ConjuntoB*", conservado no máquina cliente:  
   
@@ -36,11 +36,11 @@ O seguinte exemplo em Cliente/Servidor, copia o conjunto processo "*ConjuntoA*",
  COPY SET("ConjuntoA";"$ConjuntoB")
 ```
 
-#### Ver também 
+## Ver também 
 
 *Conjuntos*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

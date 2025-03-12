@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is field value Null.Summary-->The Is field value Null command returns **True** if the field designated by the *aField* parameter contains the NULL value, and **False** otherwise.<!-- END REF-->
 
@@ -24,12 +24,12 @@ The value returned by this command is only meaningful if the "*Map NULL values t
 
 **Note:** This command cannot be used with objects and object properties. Null values in object fields are handled through the [Null](null.md) command. 
 
-#### See also 
+## See also 
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

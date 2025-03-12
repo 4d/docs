@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Euro converter.Summary-->The **Euro converter** command converts any value from and to the different currencies belonging to “Euroland” and the Euro currency itself.<!-- END REF-->
 
@@ -67,7 +67,7 @@ The conversion rates between the Euro and the currencies of the 11 participating
 | Portuguese Escudo   | 200.482              |
 | Spanish Peseta      | 166.386              |
 
-#### Example 
+## Example 
 
 Here are some examples of conversions that can be done with this command:
 
@@ -80,7 +80,7 @@ Here are some examples of conversions that can be done with this command:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

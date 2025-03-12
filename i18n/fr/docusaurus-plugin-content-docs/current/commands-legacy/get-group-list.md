@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->**GET GROUP LIST** remplit les tableaux *nomsGroupes* et *numérosGroupes* avec les noms et les numéros de référence uniques des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe.<!-- END REF-->
 
@@ -23,17 +23,17 @@ Le tableau *numérosGroupes*, synchronisé avec le tableau *nomsGroupes*, est re
 * Dans les bases projets, ces numéros commencent à 15001, sont assignés dynamiquement au démarrage et sont maintenus au cours de la session.
 * Dans les bases binaires, ces numéros sont stockés et correspondent à une plage spécifique, en fonction du créateur du groupe. Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP LIST** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

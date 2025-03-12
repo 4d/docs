@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->O comando **QR MOVE COLUMN** move a coluna que se encontra atualmente na posição *numColuna* para a posição *novaPosição*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Tanto os parâmetros *numColuna* e *novaPosição* devem ser números válidos d
 
 **Nota:** este comando pode ser usado apenas com os relatórios em lista.
 
-#### Exemplo 
+## Exemplo 
 
 Se tivesse criado o relatório abaixo:
 
@@ -40,7 +40,7 @@ O resultado será:
 ![](../assets/en/commands/pict2569472.en.png)
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

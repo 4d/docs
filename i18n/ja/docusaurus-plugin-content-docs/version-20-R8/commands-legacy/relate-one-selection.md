@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->**RELATE ONE SELECTION**コマンドは、*manyTable*のレコードセレクションをもとにして、*oneTable*テーブルの新しいセレクションを作成し、その新しいセレクションの最初のレコードをカレントレコードとしてロードします。<!-- END REF--> 
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **RELATE ONE SELECTION**は開始テーブルからリレート先テーブルまで設定されているリレーションパスのうち、最も短いものを使用します。同じサイズのパスが存在し、使用されたパスをコントロールする必要がある場合には、[SET FIELD RELATION](set-field-relation.md) コマンドの使用も検討してください。
 
-#### 例題 
+## 例題 
 
 以下の例では、今日が請求書の支払期日であるすべての顧客を検索します。
 
@@ -51,14 +51,14 @@ displayed_sidebar: docs
  QUERY([Customers];[Invoices]DueDate=Current date)
 ```
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
 *セット*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

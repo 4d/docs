@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is data file locked.Summary-->O comando Is data file locked retorna True se o arquivo de dados do banco de dados aberto, ou pelo menos um dos seus segmentos está fechado - ou seja, protegido contra gravação.<!-- END REF--> 
 
 Colocado, por exemplo, no método de banco de dados , este comando permite a prevenção de qualquer risco de abertura acidental de um arquivo de dados bloqueado. 
 
-#### Exemplo 
+## Exemplo 
 
 Este método vai impedir a abertura do banco de dados se o arquivo de dados estiver bloqueado: 
 
@@ -31,7 +31,7 @@ Este método vai impedir a abertura do banco de dados se o arquivo de dados esti
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

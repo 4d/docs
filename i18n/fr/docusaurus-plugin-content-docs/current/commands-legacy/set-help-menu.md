@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET HELP MENU.Summary-->La commande **SET HELP MENU** vous permet de remplacer le menu **Aide** par défaut de 4D par la collection d'éléments de menu MenuCol dans le mode d'application.<!-- END REF-->
 
@@ -40,7 +40,7 @@ Le menu **Aide** personnalisé affichera les éléments dans le même ordre que 
 
 Pour insérer une ligne de séparation, passez **null** ou un objet vide dans la collection.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez personnaliser le menu **Aide** de votre application :
 
@@ -56,11 +56,11 @@ Vous souhaitez personnaliser le menu **Aide** de votre application :
 
 ![](../assets/en/commands/pict6260534.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET ABOUT](set-about.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

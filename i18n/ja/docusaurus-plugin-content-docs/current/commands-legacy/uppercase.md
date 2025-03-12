@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Uppercase.Summary-->Uppercaseは、*aString*を取りアルファベット文字列をすべて英大文字に変換して返します。<!-- END REF-->
 
 オプションの*\** 引数が渡されると、*aString*に存在するアクセント符号付きの文字を、アクセント符号付きの英小文字で返します。この引数が省略され変換が実行されると、アクセント符号付きの文字は、デフォルトでそのアクセント符号を失います。
 
-#### 例題 1 
+## 例題 1 
 
 この例では、引数が渡されたか、渡されないかに応じて取得された結果を比較します。
 
@@ -30,15 +30,15 @@ displayed_sidebar: docs
  $thestring:=Uppercase("helene";*) // $thestringは"HELENE"
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Lowercase](lowercase.md "Lowercase")の例を参照してください。
 
-#### 参照 
+## 参照 
 
 [Lowercase](lowercase.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

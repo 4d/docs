@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ON ERR CALL.Summary-->O comando **ON ERR CALL** instala o método de projeto, cujo nome se passa em *metodoErro*, como método de tratamento de ocorrências ou método de gestão de erros.<!-- END REF-->
 
@@ -51,7 +51,7 @@ O comando [ABORT](abort.md) pode ser utilizado para terminar o processo. Se não
 
 Se ocorrer um erro no método de gestão de erros, 4D retoma o controle da gestão de erros. Portanto, deve ter certeza de que o método de gestão de erros não possa gerar um erro. Igualmente, não pode utilizar **ON ERR CALL** dentro do método de gestão de erros.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Pode definir um método de gestão de erros global por exemplo no método base On Open:
 
@@ -59,7 +59,7 @@ Pode definir um método de gestão de erros global por exemplo no método base O
  ON ERR CALL("myGlobalErrorHandler";ek global)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O método de projeto a seguir trata de criar um documento cujo nome é recebido como parâmetro. Se não for possível criar o documento, o método de projeto retorna 0 (zero) ou o código de erro: 
 
@@ -99,7 +99,7 @@ Note a utilização da variável processo gError para obter o código do erro no
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Enquanto implementa um conjunto de operações complexas, pode terminar com várias subrotinas que necessitem diferentes métodos de gestão de erros. Só pode ter um método de gestão de erros por processo, de maneira que tem duas opções:  
  \- Manter contato com o método atual cada vez que chama a ON ERR CALL, ou   
@@ -164,7 +164,7 @@ Depois, pode chamá-lo desta maneira:
   // ...
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O método abaixo de gestão de erros ignora as interrupções de usuário e mostra o texto do erro:  
   
@@ -177,7 +177,7 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 
   
 
-#### Ver também 
+## Ver também 
 
 [ABORT](abort.md)  
 *Error Handler*  
@@ -186,7 +186,7 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 [Method called on error](method-called-on-error.md)  
 *Variáveis sistema*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

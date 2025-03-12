@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LOG EVENT.Summary-->**LOG EVENT**コマンドを使用して、アプリケーションの使用中に発生した内部イベントを記録するためのカスタマイズされたシステムを設定します。<!-- END REF-->
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 *importance* 引数は*outputType* 引数に `Into Windows log events`、 `Into 4D diagnostic log`、 および `Into system standard outputs` を渡した時のみ使用されます。
 :::
 
-#### 例題 
+## 例題 
 
 Windowsでデータベースが開かれた時の情報をログしたい場合は、以下のコードを[On Startupデータベースメソッド](on-startup-database-method.md)内に記述します。
 
@@ -58,12 +58,12 @@ Windowsでデータベースが開かれた時の情報をログしたい場合�
 
 データベースが開かれるたびに、重要度レベルが0として、この情報がWindowsログイベントに書き込まれます。
 
-#### 参照 
+## 参照 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

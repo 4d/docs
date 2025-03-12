@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note:** This command cannot create a subtotal.<!-- END REF-->
 
-##### List Mode 
+### List Mode 
 
 The **QR SET TOTALS DATA** command sets the details of a specific break (total or subtotal). 
 
@@ -57,7 +57,7 @@ You can pass the following values:
 \- ##D will be replaced by the Standard deviation.  
 \- ##xx, where xx is a column number. This will be replaced by that column’s value, using its formatting. If this column does not exist, then it will not be replaced. 
 
-##### Cross-table Mode 
+### Cross-table Mode 
 
 The **QR SET TOTALS DATA** command sets the details of a specific cell. 
 
@@ -75,7 +75,7 @@ Here is a depiction of how the parameters column and break have to be combined i
 
 ![](../assets/en/commands/pict31186.en.png)
 
-##### Supported Types of Data 
+### Supported Types of Data 
 
 The types of data that you can pass are of two basic kinds:
 

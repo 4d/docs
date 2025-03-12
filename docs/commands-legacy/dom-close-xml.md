@@ -13,22 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM CLOSE XML.Summary-->The DOM CLOSE XML command frees up the memory occupied by the XML object designated by *elementRef*.<!-- END REF--> 
 
 If *elementRef* is not an XML root object, an error is generated. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

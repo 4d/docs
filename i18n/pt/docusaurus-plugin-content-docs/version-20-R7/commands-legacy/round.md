@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Round.Summary-->Round retorna *numero* arredondado ao número de decimais especificado por *decimais*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Se *decimais*  é positivo, se arredonda a parte decimal de *numero*. Se *decima
 
 Se o dígito depois de *decimais* está entre 5 e 9, *round* arredonda ao valor superior se o número é positivo, e até o valor inferior se o número for negativo. Se o dígito depois de *decimais* está entre 0 e 4, Round arredonda até zero.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir ilustra como Round funciona com diferentes argumentos. Cada linha atribui um número à variável *vlResult*. Os comentários descrevem os resultados:
 
@@ -34,11 +34,11 @@ O exemplo a seguir ilustra como Round funciona com diferentes argumentos. Cada l
  vlResult:=Round(-1.5;0) // vlResult vale –2
 ```
 
-#### Ver também 
+## Ver também 
 
 [Trunc](trunc.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

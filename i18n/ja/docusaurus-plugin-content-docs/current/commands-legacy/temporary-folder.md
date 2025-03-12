@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Temporary folder.Summary-->Temporary folderコマンドは、システムによって設定される現在のテンポラリフォルダへのパス名を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD")コマンドの例を参照してください。
 
-#### 参照 
+## 参照 
 
 [System folder](system-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

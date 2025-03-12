@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->The **SVG Find element IDs by rect** command fills the Text or Alpha *arrIDs* array with the IDs ("id" or "xml:id" attribute) of the XML elements whose bounding rectangle intersects with the selection rectangle at the location specified by the *x* and *y* parameters.<!-- END REF-->
 
@@ -38,11 +38,11 @@ The coordinates passed in the *x* and *y* parameters must be expressed in pixels
 
 All elements whose bounding rectangle intersects with the selection rectangle are taken into account, even those that are under other elements.
 
-#### See also 
+## See also 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

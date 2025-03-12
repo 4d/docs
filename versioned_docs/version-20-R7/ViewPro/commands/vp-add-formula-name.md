@@ -16,7 +16,7 @@ title: VP ADD FORMULA NAME
 |name|Text|->|Name for the formula|
 |options|Object|->|Options for the named formula|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD FORMULA NAME` command <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->creates or modifies a named formula in the open document<!-- END REF -->.
 
@@ -35,13 +35,13 @@ You can pass an object with additional properties for the named formula in *opti
 |scope| Number| Scope for the formula. You can pass the sheet index (counting begins at 0) or use the following constants: <li>`vk current sheet`</li><li>`vk workbook`</li>The scope determines whether a formula name is local to a given worksheet (*scope*=sheet index or `vk current sheet`), or global across the entire workbook (*scope*=`vk workbook`).|
 |comment|Text|Comment associated to named formula
 
-#### Example  
+## Example  
 
 ```4d
 VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 ```
 
-#### See also
+## See also
 
 [Cell references](../formulas.md#cell-references)<br/>
 [VP Get formula by name](vp-get-formula-by-name.md)<br/>

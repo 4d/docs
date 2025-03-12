@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Last errors.Summary-->**Last errors** コマンドは4D アプリケーションのエラーのカレントのスタックを、エラーオブジェクトのコレクションとして返します。<!-- END REF-->エラーが発生していない場合には**null** を返します。
 
@@ -28,12 +28,12 @@ displayed_sidebar: docs
 このコマンドは、[ON ERR CALL](on-err-call.md) コマンドでインストールされたエラー処理メソッド内から呼び出されている必要があります。
 
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

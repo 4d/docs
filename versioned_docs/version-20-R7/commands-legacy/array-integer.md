@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY INTEGER.Summary-->The ARRAY INTEGER command creates and/or resizes an array of 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements in memory.<!-- END REF-->parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.
@@ -26,7 +26,7 @@ While applying ARRAY INTEGER to an existing array:
 * If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to 0.
 * If you reduce the array size, the last elements deleted from the array are lost.
 
-#### Example 1 
+## Example 1 
 
 This example creates a process array of 100 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements:
 
@@ -34,7 +34,7 @@ This example creates a process array of 100 2-byte [Integer](# "Number between -
  ARRAY INTEGER(aiValues;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates a local array of 100 rows of 50 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements:
 
@@ -42,7 +42,7 @@ This example creates a local array of 100 rows of 50 2-byte [Integer](# "Number 
  ARRAY INTEGER($aiValues;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example creates an interprocess array of 50 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements, and sets each element to its element number:
 
@@ -53,12 +53,12 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
  End for
 ```
 
-#### See also 
+## See also 
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

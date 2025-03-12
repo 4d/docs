@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current form window.Summary-->Current form window コマンドはカレントフォームウィンドウの参照を返します。<!-- END REF-->カレントフォームにウィンドウが設定されていない場合、コマンドは0を返します。
 
 カレントフォームウィンドウは[ADD RECORD](add-record.md "ADD RECORD")のようなコマンドを使用すると自動で生成されることがあります。また[Open window](open-window.md "Open window") や [Open form window](open-form-window.md "Open form window") コマンドでも生成されます。 
 
-#### 参照 
+## 参照 
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

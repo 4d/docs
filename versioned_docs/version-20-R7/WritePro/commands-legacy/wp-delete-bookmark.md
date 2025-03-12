@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE BOOKMARK.Summary-->The **WP DELETE BOOKMARK** command removes the bookmark named *bkName* from *wpDoc*.<!-- END REF-->
 
 If the *bkName* bookmark does not exist in *wpDoc*, the command does nothing.
 
-#### Example 
+## Example 
 
 You want to rename an existing bookmark. To do this, you need to create a new bookmark with the same range, and then delete the old one:
 
@@ -44,7 +44,7 @@ You want to rename an existing bookmark. To do this, you need to create a new bo
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

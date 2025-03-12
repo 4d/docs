@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->El comando **DISTINCT ATTRIBUTE PATHS** devuelve la lista de rutas distintas que se encuentran en el campo objeto indexado pasado en *campoObjeto* para la selección actual de la tabla a la que pertenece el campo.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Después de la llamada, el tamaño de *arrayRuta* es igual al número de rutas d
 * los registros con un valor indefinido en campoObjeto no se tienen en cuenta.
 * Las rutas de atributos creadas durante una transacción son tenidas en cuenta por el comando. Es importante señalar que estas rutas se conservan en el índice del campo objeto, incluso si la transacción ha sido cancelada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Su base contiene un campo objeto \[Customer\]full\_Data (indexado) con 15 registros:
 
@@ -63,12 +63,12 @@ El array *aTPaths* obtiene los siguientes elementos:
 
 **Nota:** "length" es una *propiedad virtual* que está disponible automáticamente para todos los atributos de tipo array. Ofrece el tamaño del array, es decir, el número de elementos,y puede ser utilizado en las peticiones. Para mayor información, consulte el párrafo *Utilización de la propiedad virtual .length*. 
 
-#### Ver también 
+## Ver también 
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

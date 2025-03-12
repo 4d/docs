@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu item method.Summary-->O comando Get menu item method devolve o nome do método de projeto 4D associado a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 
 
@@ -26,11 +26,11 @@ Em *menu*, pode passar uma referência de menu ([MenuRef](# "Unique ID (16-chara
 
 O comando devolve o nome do método 4D como uma cadeia de caracteres (expressão). Se nenhum método está associado a linha de menu, o comando devolve uma cadeia vazia.
 
-#### Ver também 
+## Ver também 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

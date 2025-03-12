@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to longint.Summary-->La fonction **BLOB to longint** retourne une valeur de type Entier long (4 octets) lue dans le BLOB *blob*.<!-- END REF-->
 
@@ -39,7 +39,7 @@ Si vous passez une variable dans le paramètre optionnel *offset*, l'entier long
 
 Après l'exécution de la commande, la variable *offset* est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de l'offset 0x200 :
 
@@ -51,7 +51,7 @@ L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to real](blob-to-real.md)  
@@ -61,7 +61,7 @@ L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de 
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

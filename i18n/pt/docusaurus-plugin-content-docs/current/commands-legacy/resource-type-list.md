@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->O comando RESOURCE TYPE LIST preenche o array *resTipos* com os tipos de recursos presentes no(os) arquivo(s) de recursos aberto(s).<!-- END REF-->  
   
@@ -24,7 +24,7 @@ Pode pré-declarar o array *resTipos* como um array tipo Alfa ou Texto antes de 
   
 Depois da chamada, pode testar o número de tipo de recursos encontrados aplicando o comando [Size of Array](size-of-array.md "Size of Array") ao array *resTipos*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir preenche o array *atResTipo* com os tipos de recursos presentes nos arquivos de recursos abertos: 
 
@@ -32,7 +32,7 @@ O exemplo a seguir preenche o array *atResTipo* com os tipos de recursos present
  RESOURCE TYPE LIST(atResTipo)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O arquivo mostra se o arquivo de estrutura Mac OS usa o conteúdo dos antigos plug-ins 4D, que deverão ser atualizados para usar o banco em Windows: 
 
@@ -47,7 +47,7 @@ O arquivo mostra se o arquivo de estrutura Mac OS usa o conteúdo dos antigos pl
 
 **Nota:** O arquivo de estrutura não é o único arquivo no qual os plug-ins da versão anterior podem ser armazenados. O banco também pode incluir um arquivo Proc.Ext.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O método de projeto a seguir retorna o número de recursos presentes em um arquivo de recursos:
 
@@ -77,11 +77,11 @@ Quando este método de projeto for implementado em um banco, pode escrever:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [RESOURCE LIST](resource-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is editing text.Summary-->La commande **Is editing text** retourne **Vrai** si l'utilisateur saisit des valeurs dans un objet de formulaire d'entrée, et **Faux** dans tous les autres cas.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ La commande **Is editing text** peut être utilisée uniquement avec les objets 
 
 Avec d'autres objets, la commande retourne toujours **Faux**. Elle ne peut notamment pas être utilisée avec des zones 4D Write Pro et 4D View Pro.
 
-#### Exemple 
+## Exemple 
 
 Pour permettre à l'utilisateur de sélectionner une ligne commençant par la lettre ou le numéro saisi(e) dans une listbox saisissable :
 
@@ -53,13 +53,13 @@ Pour permettre à l'utilisateur de sélectionner une ligne commençant par la le
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

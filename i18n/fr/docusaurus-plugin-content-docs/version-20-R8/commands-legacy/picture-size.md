@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Picture size.Summary-->**Picture size** retourne la taille de l'image *image* en octets.<!-- END REF-->
 
-#### Voir aussi 
+## Voir aussi 
 
 [PICTURE PROPERTIES](picture-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

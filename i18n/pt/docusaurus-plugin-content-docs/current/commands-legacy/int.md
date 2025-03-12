@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Int.Summary-->Int retorna a parte inteira de *numero,* arredondando ao inteiro inferior.<!-- END REF--> 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir ilustra o funcionamento de Int para números positivos e negativos. Note que a porção decimal do número é eliminado:
 
@@ -27,11 +27,11 @@ O exemplo a seguir ilustra o funcionamento de Int para números positivos e nega
  vlResult:=Int(-123,4) // vlResult vale –124
 ```
 
-#### Ver também 
+## Ver também 
 
 [Dec](dec.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

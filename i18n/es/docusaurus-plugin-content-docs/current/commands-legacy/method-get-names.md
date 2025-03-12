@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->El comando **METHOD GET NAMES** llena el array *arrNoms* con los nombres de los métodos proyecto creados en la aplicación.<!-- END REF-->  
   
@@ -25,7 +25,7 @@ Si se ejecuta este comando desde un componente, devuelve por defecto los nombres
   
 **Nota**: los métodos ubicados en la papelera no se listan. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejemplos de uso:
 
@@ -41,7 +41,7 @@ Ejemplos de uso:
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

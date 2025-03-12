@@ -29,7 +29,7 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 
 **Note :** La commande existante [METHOD SET ATTRIBUTE](method-set-attribute.md) reste prise en charge, toutefois comme elle ne peut retourner que des valeurs booléennes, elle ne peut pas être utilisée pour les attributs étendus tels que les propriétés 4D Mobile.
 
-##### 
+### 
 
 ```json
 {

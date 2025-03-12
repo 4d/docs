@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->La commande **LISTBOX DELETE COLUMN** supprime une ou plusieurs colonne(s) (visibles ou non) dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -29,12 +29,12 @@ Sinon, le paramètre *nombre* indique le nombre de colonnes à supprimer vers la
 
 Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list box, la commande ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

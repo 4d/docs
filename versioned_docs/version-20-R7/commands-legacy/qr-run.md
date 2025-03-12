@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR RUN.Summary-->The **QR RUN** command executes the report *area* whose reference was passed as parameter with the Quick Report current settings, including the output type.<!-- END REF--> You can use the [QR SET DESTINATION](qr-set-destination.md) command to modify the output type.
 
@@ -24,7 +24,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 **4D Server:** This command can be executed on 4D Server as part of a stored procedure. In this context, make sure that no dialog box appears on the server machine (except for specific requirements). To do this, you need to call the [QR SET DESTINATION](qr-set-destination.md) command with the "\*" parameter. In case of a printer problem (out of paper, printer disconnected, etc.), no error message is generated. 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

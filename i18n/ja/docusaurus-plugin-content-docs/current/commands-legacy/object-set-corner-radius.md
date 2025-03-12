@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->**OBJECT SET CORNER RADIUS** コマンドは、*object* 引数で指定したオブジェクトの角の半径を*radius* 引数で指定した半径に変更します。<!-- END REF-->新しい半径はそのプロセスに対してのみ有効で、フォーム内には保存されません。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 *角の半径プロパティ* を使用することで、この値をフォームレベルで変更することができます(*角の半径(四角)* も参照してください)。
 
-#### 例題 1 
+## 例題 1 
 
 フォーム内に、以下の様に"Rect1" と "Rect2" と名付けられた長方形が入っています:
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1629576.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 フォーム内に、以下のような"required-label" と名前のついたテキスト入力エリアがある場合を考えます:
 
@@ -63,11 +63,11 @@ displayed_sidebar: docs
 
 テキストエリア(および入力)に対しては、四角形とは異なり、角の丸み部分は元々のオブジェクトエリアの外側に膨らんで描画されている点に注意してください。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

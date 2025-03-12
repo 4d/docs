@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Summary-->The **FORM SET VERTICAL RESIZING** command allows you to change the vertical resizing properties of the current form through programming.<!-- END REF--> By default, these properties are set in the Design environment Form editor. New properties are set for the current process; they are not stored with the form. 
 
@@ -27,17 +27,17 @@ If you pass **False**, the current form height cannot be changed; in this case, 
 
 If you passed **True** in the first parameter, you can pass new minimum and maximum heights (in pixels) in the optional *minHeight* and *maxHeight* parameters. If you leave these parameters out, the values set in the Design environment (if any) are used. 
 
-#### Example 
+## Example 
 
 Refer to the example of the [FORM SET SIZE](form-set-size.md) command. 
 
-#### See also 
+## See also 
 
 [FORM GET VERTICAL RESIZING](form-get-vertical-resizing.md)  
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ENABLE MENU ITEM.Summary-->ENABLE MENU ITEM コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目を選択可にします。<!-- END REF-->*menuItem*に-1を渡すと、*menu*に最後に追加された項目を指定します。
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 **Tip:** 一度にすべての項目の選択可/不可を切り替えるには、*menuItem*に0を渡します。
 
-#### 参照 
+## 参照 
 
 [DISABLE MENU ITEM](disable-menu-item.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

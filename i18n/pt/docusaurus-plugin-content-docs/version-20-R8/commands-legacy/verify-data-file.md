@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->O comando VERIFY DATA FILE\[#descv\] realiza uma verificação estrutural dos objetos contidos no arquivo de dados 4D criado por *endereçoEstrutura* e *endereçoDados*.<!-- END REF-->\[#descv\]
 
@@ -88,7 +88,7 @@ Por padrão, o comando VERIFY DATA FILE cria um arquivo de histórico em formato
 Se tiver passado a opção nome Timestamp arquivo histórico, o nome do arquivo de histórico inclui a data e a hora de sua criação na forma "AAAA-MM-DD HH-MM-SS", que nos dá, por exemplo: “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. Isto significa que cada novo arquivo de histórico não substitui ao anterior, mas poderia pedir ação manual posterior para eliminar arquivos desnecessários.  
 Independentemente da opção selecionada, logo que gerar um arquivo de histórico, sua rota se devolve na variável de sistema Document depois da execução de comando.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Simples verificação dos dados e dos índices:
 
@@ -96,7 +96,7 @@ Simples verificação dos dados e dos índices:
  VERIFY DATA FILE($NomEstrutura;$NomData;Verify indexes+Verify records;Do not create log file;"")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Verificação completa com arquivo de histórico:
 
@@ -104,7 +104,7 @@ Verificação completa com arquivo de histórico:
  VERIFY DATA FILE($NomEstrutura;$NomData;Verify All No Callback;0;"")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Verificação somente dos registros:
 
@@ -112,7 +112,7 @@ Verificação somente dos registros:
  VERIFY DATA FILE($NomEstrutura;$NomData;Verify records;0;"")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Verificação dos registros das tabelas 3 e 7 somente:  
 
@@ -123,7 +123,7 @@ Verificação dos registros das tabelas 3 e 7 somente:
  VERIFY DATA FILE($NomeEstrutura;$NomeData;Verify records;0;"FollowScan";$arrTableNums)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Verificação de índices específicos (índice do campo 1 da tabela 4 e índice dos campos 2 e 3 da tabela 5):
 
@@ -138,7 +138,7 @@ Verificação de índices específicos (índice do campo 1 da tabela 4 e índice
  VERIFY DATA FILE($NomEstrutura;$NomData;Verify indexes;0;"FollowScan";$arrTablaNums;$arrIndex)
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Verificar o arquivo de dados, criar e exibir o arquivo de histórico:
 
@@ -147,15 +147,15 @@ Verificar o arquivo de dados, criar e exibir o arquivo de histórico:
  SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o método de callback não existir, a verificação não é efetuada, é gerado um erro e a variável sistema OK recebe o valor 0\. Se um arquivo de log histórico for erado, seu nome de caminho completo é retornado na variável de sistema Document.  
 
-#### Ver também 
+## Ver também 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

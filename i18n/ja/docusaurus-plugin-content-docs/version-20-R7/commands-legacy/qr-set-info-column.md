@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### リストモード 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->### リストモード 
 
 QR SET INFO COLUMN コマンドを使用して、既存のカラムに関するパラメタを設定できます。<!-- END REF-->
 
@@ -55,7 +55,7 @@ QR SET INFO COLUMN コマンドを使用して、既存のカラムに関する�
 ```
   
   
-##### クロステーブルモード 
+### クロステーブルモード 
 
 QR SET INFO COLUMN コマンドを使用して同様のパラメタを設定できますが、設定しようとするパラメタにより、適用するエリアの参照が異なります。  
 第一に、このコマンドをクロステーブルモードで用いた場合、引数*title*、*hide*、*repeatedValue*は使用されません。設定したい値がカラムサイズ、データソース、表示フォーマットのいずれであるかによって、*colNum*に使用する値が変わります。 
@@ -102,13 +102,13 @@ QR SET INFO COLUMNコマンドを使用しても、すべてのセルに対応�
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*colNum*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

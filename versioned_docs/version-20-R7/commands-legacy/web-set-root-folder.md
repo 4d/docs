@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->The **WEB SET ROOT FOLDER** command is used to modify the default root folder where 4D looks for the HTML files requested of the Web server.<!-- END REF-->
 
@@ -33,12 +33,12 @@ The location of the root folder can be expression either in HTML syntax (URL typ
 
 If you specify an invalid pathname, an OS File manager error is generated. You can intercept the error with an [ON ERR CALL](on-err-call.md) method. If you display an alert or a message from within the error method, it will appear on the browser side.
 
-#### See also 
+## See also 
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

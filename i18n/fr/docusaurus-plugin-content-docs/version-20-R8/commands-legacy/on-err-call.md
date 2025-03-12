@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ON ERR CALL.Summary-->**ON ERR CALL** installe la méthode projet dont le nom est passé dans *méthodErreur* comme méthode d'interception des erreurs pour le contexte d'exécution défini dans le projet courant.<!-- END REF--> Cette méthode est aussi appelée méthode de gestion des erreurs. 
 
@@ -53,7 +53,7 @@ La commande [ABORT](abort.md) peut être utilisée pour stopper le traitement. S
 
 Si une erreur se produit dans la méthode de gestion d'erreurs elle-même, 4D reprend le contrôle de la gestion des erreurs. En conséquence, assurez-vous que la méthode de gestion des erreurs installée ne puisse pas elle-même générer d'erreur. Aussi, vous ne pouvez pas utiliser la commande **ON ERR CALL** dans une méthode de gestion des erreurs.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez définir un gestionnaire d'erreur global, par exemple dans la méthode base Sur ouverture :
 
@@ -61,7 +61,7 @@ Vous souhaitez définir un gestionnaire d'erreur global, par exemple dans la mé
  ON ERR CALL("myGlobalErrorHandler";ek global)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La méthode projet suivante tente de créer un document dont le nom est reçu en paramètre et retourne 0 (zéro) ou un code d'erreur si le document n'a pas pu être créé : 
 
@@ -101,7 +101,7 @@ Notez l'utilisation de la variable process *gError* pour récupérer le code d'e
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Alors que vous implémentez un ensemble complexe d'opérations, vous pouvez terminer avec de multiples sous-routines qui nécessitent différentes méthodes de gestion des erreurs. Comme ne pouvez avoir qu'une seule méthode à la fois de gestion des erreurs par process, vous devez soit repérer la méthode courante à chaque fois que vous appelez **ON ERR CALL**, soit utiliser une variable tableau process (ici *tabErrorMethod*) pour “empiler” les méthodes de gestion d'erreur ainsi qu'une méthode projet (ici APPEL SUR ERR) pour les installer et les désinstaller. Le tableau doit être initialisé au tout début de l'exécution du process : 
 
@@ -160,7 +160,7 @@ Vous pouvez alors l'appeler de la manière suivante :
   // ...
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisateur et affiche le texte de l'erreur :
 
@@ -171,7 +171,7 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ABORT](abort.md)  
 *Gestionnaire d'erreur*  
@@ -180,7 +180,7 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
 [Method called on error](method-called-on-error.md)  
 *Variables système*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

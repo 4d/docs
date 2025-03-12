@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET SYSTEM FORMAT.Summary-->El comando GET SYSTEM FORMAT devuelve el valor actual de varios parámetros regionales definidos en el sistema operativo.<!-- END REF--> Este comando puede utilizarse para crear formatos personalizados “automáticos” basados en las preferencias del sistema. 
 
@@ -39,11 +39,11 @@ En el parámetro *formato*, pase el tipo del parámetro del que quiere conocer e
 | Thousand separator         | Entero largo | 1     | Separador de miles (ej.: “,”)                                                                        |
 | Time separator             | Entero largo | 14    | Separador utilizado en formatos de hora (ej.: “:”)                                                   |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

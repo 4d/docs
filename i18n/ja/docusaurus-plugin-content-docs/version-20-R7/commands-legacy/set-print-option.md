@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。
 
-##### オプションおよび値 
+### オプションおよび値 
 
 *option* を使用することで、変更したいオプションを指定することができます。以下の一覧にある、“*Print Options*” テーマ内の定義済み定数のいずれか一つを渡すことができます。引数で指定したオプション用の新しい値を引数および(必要であれば)引数に渡してください。渡す値の数と種類は指定したオプションのタイプによって変わります。
 

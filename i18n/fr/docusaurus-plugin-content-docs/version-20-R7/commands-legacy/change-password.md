@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHANGE PASSWORD.Summary-->**CHANGE PASSWORD** permet de changer le mot de passe de l'utilisateur courant.<!-- END REF--> Cette commande remplace le mot de passe courant par le nouveau mot de passe que vous passez dans *motDePasse*. 
 
 **Attention :** Les mots de passe différencient les caractères majuscules et minuscules.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant permet à l'utilisateur de modifier son mot de passe :
 
@@ -38,12 +38,12 @@ L'exemple suivant permet à l'utilisateur de modifier son mot de passe :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

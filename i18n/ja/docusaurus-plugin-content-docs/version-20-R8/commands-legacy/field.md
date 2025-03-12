@@ -21,14 +21,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Field.Summary-->Field コマンドには、2つの形式があります。<!-- END REF-->
 
 * *tableNum*と*fieldNum*を指定した場合、Fieldはフィールドへのポインタを返します。
 * *fieldPtr*を指定した場合には、Fieldはフィールド番号を返します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、変数*fieldPtr*にテーブル番号=3、フィールド番号=2のフィールドへのポインタを代入します。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  FieldPtr:=Field(3;2)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 *fieldPtr* (テーブルの2番目のフィールドを指すポインタ) をField に渡すと、数値2を返します。  
 以下の例を実行すると変数FieldNumに2を代入します。
@@ -45,7 +45,7 @@ displayed_sidebar: docs
  FieldNum:=Field(FieldPtr)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は、変数FieldNumに\[Table3\]Field2フィールドのフィールド番号を代入します。
 
@@ -53,14 +53,14 @@ displayed_sidebar: docs
  FieldNum:=Field(->[Table3]Field2)
 ```
 
-#### 参照 
+## 参照 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

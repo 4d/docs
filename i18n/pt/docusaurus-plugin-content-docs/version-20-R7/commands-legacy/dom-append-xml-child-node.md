@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->O comando DOM Append XML child node se utiliza para anexar o valor *valorFilho* ao nodo XML designado por *refElement*.<!-- END REF-->  
   
@@ -36,7 +36,7 @@ Em *valorFilho*, passe os dados a inserir. Passe uma string ou uma variável 4D 
   
 **Nota**: se o parâmetro *refElement* determina o nodo Document (nodo de nivel superior), o comando insere um nodo "Doctype" antes de qualquer outro nodo. O mesmo ocurre com as instruções de processamento e os comentários, que sempre são inseridos antes do nodo raiz (mas depois do nodo Doctype).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Adição de um nodo de tipo texto:
 
@@ -55,7 +55,7 @@ Resultado:
 <myElement>Olá<br/>Nova<br/>York</myElement>
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Adição de um nodo de tipo instrução de processo:
 
@@ -70,7 +70,7 @@ Resultado (inserido antes do primeiro elemento):
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Adição de um nodo de tipo comentário:
 
@@ -84,7 +84,7 @@ Resultado:
 <!--Olá mundo-->
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Adição de um nodo de tipo CDATA:
 
@@ -98,7 +98,7 @@ Resultado:
 <element><![CDATA[12 < 18]]></element>
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Adição ou substituição de um nodo de tipo declaração Doctype:
 
@@ -112,7 +112,7 @@ Resultado (insido antes do primeiro elemento):
 <!DOCTYPE Books SYSTEM  "Book.DTD">
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Adição ou substituição de um nodo de tipo Element.
 
@@ -142,12 +142,12 @@ Resultado:
 
 Se o conteúdo de *valorFilho* não é válido, se devolve um erro. 
 
-#### Ver também 
+## Ver também 
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

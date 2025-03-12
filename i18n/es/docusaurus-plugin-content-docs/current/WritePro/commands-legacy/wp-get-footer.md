@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get footer.Summary-->El comando **WP Get footer** devuelve el pie de página asociado al rango *objRango* o al *indiceSeccion* especificado del documento *wpDoc*.<!-- END REF--> Si no se encuentra ningún pie de página con respecto a los parámetros, el comando devuelve **Null**.
 
@@ -32,7 +32,7 @@ Si se pasa el parámetro *tipoSubSeccion*, el comando devuelve el pie de página
 | wk right page | Entero largo | 3     |  
  Si no se especifica *tipoSubSeccion*, se devolverá el pie de página de la sección principal. En este caso, si una subsección está activa, el objeto de pie de página de la sección principal no está *definido* (el pie de página de la sección principal sólo está disponible si no hay ninguna subsección wk first page o wk left page activa).
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea copiar el pie de la primera página de un documento 4D Write Pro en los pies de todas las páginas de otro documento 4D Write Pro:
 
@@ -49,7 +49,7 @@ Usted desea copiar el pie de la primera página de un documento 4D Write Pro en 
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Utilizar un área 4D Write Pro*  
 [WP DELETE FOOTER](wp-delete-footer.md)  

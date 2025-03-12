@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->O comando **LISTBOX DUPLICATE COLUMN** duplica a coluna definida pelos parâmetros *objeto* e *\** por programação no contexto do formulário executado (Modo Aplicação).<!-- END REF--> O formulário original, gerado em modo Desenho não se modifica. 
 
@@ -49,7 +49,7 @@ Nos parâmetros *nomCabe* e *varCabe*, passe o nome do objeto e a variável do c
   
 Este comando deve ser utilizado no contexto de mostrar um formulário. É chamado geralmente no evento de formulário On Load ou depois de uma ação usuário (evento On Clicked).
 
-##### Duplicação dinâmica 
+### Duplicação dinâmica 
 
 Pode duplicar dinamicamente as colunas de list box e 4D se encarrega automaticamente da definição das variáveis necessárias (coluna, rodapé de página e cabeçalho).   
   
@@ -57,7 +57,7 @@ Para isso, **LISTBOX DUPLICATE COLUMN** aceita um ponteiro **Nil** (**\->\[\]**)
   
 Note que as variáveis de cabeçalho e de rodapé de página sempre se criam com um tipo específico (inteiro longo e texto, respectivamente). Pelo contrário, as variáveis de coluna não podem ser escritas durante a criação porque os list boxes aceitam diferentes tipos de arrays para estas variáveis (array texto, array inteiro, etc.). Isto significa que você têm que fixar o tipo de array manualmente (ver exemplo 2). É importante digitar antes de chamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para inserir novos elementos no array. Ou bem, pode utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir o tipo do array e a inserção de elementos.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um list box de tipo array, queremos duplicar a coluna "Nome", lista para a entrada:
 
@@ -75,7 +75,7 @@ Aqui está o código do botão:
   
 Ao fazer clique no botão, aparece o list box assim:![](../assets/en/commands/pict1205359.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 A partir de 4D v14 R3, pode duplicar dinamicamente as colunas de list box e 4D se encarrega automaticamente da definição das variáveis necessárias (coluna, rodapé de página e cabeçalho). 
 
@@ -88,11 +88,11 @@ A partir de 4D v14 R3, pode duplicar dinamicamente as colunas de list box e 4D s
  OBJECT SET TITLE(headprt->;"New duplicated column")
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

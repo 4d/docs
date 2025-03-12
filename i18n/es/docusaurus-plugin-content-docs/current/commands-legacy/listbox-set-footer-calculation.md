@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->El comando **LISTBOX SET FOOTER CALCULATION** permite definir el cálculo automático asociado al área de pie del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  
   
@@ -47,11 +47,11 @@ Si el tipo de datos de la columna o de al menos una columna del list box (si obj
 
 **Nota:** las variables del área pie se definen automáticamente (cuando no se definen por programación) en función del tipo de cálculo definido en la Lista de propiedades (*Propiedades específicas de los pies de list box*). Si el tipo de la variable no corresponde al resultado esperado por el comando **LISTBOX SET FOOTER CALCULATION**, se genera un error. Por ejemplo, para una columna que muestra fechas, si el pie hace un cálculo 'Maximum', la variable *pie* será definida en fecha. Si ejecuta la instrucción **LISTBOX SET FOOTER CALCULATION** (pie;lk footer count), se genera un error por el tipo del resultado esperado (entero largo) difiere del tipo de la variable.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY PICTURE.Summary-->La commande **ARRAY PICTURE** crée et/ou redimensionne un tableau d'éléments de type [Image](# "Can be any Windows or Macintosh picture") en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
@@ -26,7 +26,7 @@ Lorsque vous appliquez la commande **ARRAY PICTURE** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à une image vide (ce qui signifie que la fonction [Picture size](picture-size.md) appliquée à l'un de ces éléments retourne 0).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Image](# "Can be any Windows or Macintosh picture") :
 
@@ -34,7 +34,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Image](# 
  ARRAY PICTURE(tabImages;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Image](# "Can be any Windows or Macintosh picture") : 
 
@@ -42,7 +42,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY PICTURE($tabImages;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess d'éléments de type [Image](# "Can be any Windows or Macintosh picture"). La taille du tableau est égale au nombre de ressources *'PICT'* dont le nom commence par *"Utilisateur Intf/"* disponibles dans la base. Chaque image est chargée dans un élément du tableau :
 
@@ -61,7 +61,7 @@ Cet exemple crée un tableau interprocess d'éléments de type [Image](# "Can be
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

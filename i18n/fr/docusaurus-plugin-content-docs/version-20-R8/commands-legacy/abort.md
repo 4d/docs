@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ABORT.Summary-->La commande **ABORT** est destinée à être utilisée dans une méthode projet de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).<!-- END REF--> 
 
@@ -26,15 +26,15 @@ Si vous n'avez pas installé de méthode projet de gestion d'erreurs, lorsqu'une
 
 Si vous décidez de traiter les erreurs à l'aide d'une méthode projet d'interception d'erreurs, 4D n'affiche plus sa boîte de dialogue d'erreur standard et n'interrompt plus l'exécution de votre code. Au lieu de cela, 4D appelle votre méthode projet d'interception d'erreurs puis poursuit l'exécution de la ligne de code suivant celle ayant provoqué l'erreur. Vous pouvez traiter certaines erreurs par programmation (par exemple pendant un import, si vous interceptez une erreur de la base de donnée signalant une valeur dupliquée, vous pouvez ignorer l'erreur et poursuivre l'opération). Il existe également des erreurs que vous ne pouvez pas traiter ou des erreurs que vous ne devez pas "ignorer". Dans ces cas, vous devez stopper l'exécution de la méthode comme le fait 4D ; pour cela, appelez la commande **ABORT** depuis la méthode projet d'interception d'erreurs.
 
-#### Note historique 
+## Note historique 
 
 Bien que la commande **ABORT** soit destinée à une utilisation au sein d'une méthode projet d'interception d'erreurs, des membres de la communauté 4D ont commencé à l'utiliser dans d'autres méthodes projet pour interrompre leur exécution. Le fait que cela fonctionne n'est qu'un "effet secondaire". Nous vous recommandons de n'utiliser cette commande que dans des méthodes projet d'interception d'erreurs.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

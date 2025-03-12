@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->La commande **LIST OF STYLE SHEETS** retourne la liste des feuilles de style de l’application dans le tableau *tabFeuillesStyle*.<!-- END REF--> 
 
@@ -23,11 +23,11 @@ A l’issue de l’exécution de la commande, chaque élément du tableau contie
 
 **Note :** Pour des raisons de compatibilité, les feuilles de style automatiques "\_\_automatic\_main\_text\_\_" et "\_\_automatic\_additional\_text\_\_" ne sont pas retournées par cette commande. Cependant, elles sont toujours disponibles dans les formulaires. 
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Cette commande ne peut être utilisée que dans les **bases de données binaires**. Dans **l'architecture projet**, le tableau n'est pas rempli.
 
-#### Exemple 
+## Exemple 
 
 Dans votre application, les feuilles de style suivantes sont définies :
 
@@ -45,12 +45,12 @@ Si vous exécutez le code suivant :
      //$tTtabstyles{6} contient "Variables"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

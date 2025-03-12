@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get elements.Summary-->O comando **WP Get elements** devolve uma coleção de objetos que contém parágrafos, imagens, tabelas ou referências de filas.<!-- END REF-->
 
@@ -49,7 +49,7 @@ Opcionalmente, pode passar o parâmetro *tipoElemento* para especificar os tipos
 * Se um intervalo passado em *targetObj* conter um elemento que não esteja completamente contido dentro do intervalo, o elemento completo se incluirá nos resultados. Por exemplo, se o intervalo inclui parte de uma tabela (mas não de toda a tabela), se devolve a referência para todo elemento da tabela, entretanto, só são incluídas as referências de célula (parágrafo) dentro do intervalo.
 * Se passar wk type text box no parâmetro tipoElemento, targetObj pode conter um documento 4D Write Pro. Um erro é devolvido se passar qualquer coisa que não seja um objeto documento em targetObj neste caso.
 
-##### Como elementos são ordenados 
+### Como elementos são ordenados 
 
 Os elementos na coleção retornada são ordenados de forma diferente dependendo do conteúdo de *objAlvo*:
 
@@ -58,7 +58,7 @@ Os elementos na coleção retornada são ordenados de forma diferente dependendo
 
 Se quiser alternar a cor de fundo para parágrafos na parte de corpo de um documento, precisa passar o elemento de corpo em *objAlvo*, e não o documento, para ter certeza que a ordem de elementos na coleção corresponda à ordem de parágrafo de documento.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser devolver uma coleção de todos os parágrafos em um documento:
 
@@ -68,7 +68,7 @@ Se quiser devolver uma coleção de todos os parágrafos em um documento:
   //devolve uma coleção que contém só elementos de parágrafo
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser alternar a alinhação e a cor dos parágrafos em um documento: 
 
@@ -103,7 +103,7 @@ Se quiser alternar a alinhação e a cor dos parágrafos em um documento:
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

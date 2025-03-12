@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->O comando **WEB GET OPTION** permite ler o valor atual de uma opção de funcionamento do servidor web de 4D.<!-- END REF-->
 
@@ -60,11 +60,11 @@ Quando usar o seletor web debug log, pode receber uma das constantes abaixo no p
 | wdl enable with response body  | Inteiro longo | 3     | O arquivo de histórico de petições HTTP Web está ativado com o corpo da resposta unicamente                   |
 | wdl enable without body        | Inteiro longo | 1     | O arquivo de histórico de petições Web está desativado sem o corpo (o tamanho do corpo é entregue neste caso) |
 
-#### Ver também 
+## Ver também 
 
 [WEB SET OPTION](web-set-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

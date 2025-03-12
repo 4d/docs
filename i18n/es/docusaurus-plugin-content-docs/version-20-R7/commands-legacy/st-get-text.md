@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST Get text.Summary-->El comando ST Get text devuelve el texto con estilo encontrado en el campo o variable de texto designado por el parámetro *objeto*.<!-- END REF--> 
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Durante la ejecución, si el objeto tiene el foco, el comando devuelve información sobre el objeto que está siendo editado, sin embargo, cuando el objeto no tiene el foco, el comando devuelve información sobre la fuente de datos (campo o variable) del objeto.  
 Si omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable. En este caso, pase una referencia campo o variable en lugar de una cadena y durante la ejecución, el comando devuelve información sobre este campo o variable.
 
-##### 
+### 
 
 El comando devuelve el texto con las etiquetas de estilo asociadas a él, lo que significa, por ejemplo, que puede copiar y pegar texto mientras conserva su estilo.
 

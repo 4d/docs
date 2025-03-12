@@ -37,7 +37,7 @@ Si une feuille de style avait déjà été associée à l’objet en mode Dével
 
 Si vous utilisez au cours de la session les commandes [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md), [OBJECT SET FONT](object-set-font.md) ou [OBJECT SET FONT SIZE](object-set-font-size.md) sur l’*objet* afin de modifier sa police ou sa taille de police, la référence à la feuille de style est automatiquement supprimée de l’objet -- même si vous affectez des attributs identiques à ceux de la feuille de style. En revanche, si vous modifiez le style (gras, italique...), par exemple avec les commandes [ST SET ATTRIBUTES](st-set-attributes.md) ou [OBJECT SET FONT STYLE](object-set-font-style.md), ces nouvelles propriétés s’ajoutent à la feuille de style pour la durée de la session.
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 

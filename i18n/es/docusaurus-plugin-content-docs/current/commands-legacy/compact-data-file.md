@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Compact data file.Summary-->El comando **Compact data file** compacta el archivo de datos designado por el parámetro *rutaDatos* asociado al archivo de estructura *rutaEstructura*.<!-- END REF--> Para mayor información sobre la compactación, consulte el Manual de Diseño.
 
@@ -51,7 +51,7 @@ Por defecto, el comando **Compact data file** crea un archivo de historial en fo
 Si ha pasado la opción Timestamp log file name, el nombre del archivo de historial incluye la fecha y la hora de su creación en la forma "AAAA-MM-DD HH-MM-SS", lo que nos da, por ejemplo:  
 “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. Este principio permite evitar que cada nuevo archivo de historial reemplace al anterior, pero podría requerir una acción manual posterior para eliminar archivos innecesarios. Independientemente de la opción seleccionada, tan pronto como se genera un archivo de historial, su trayectoria se devuelve en la variable sistema *Document* después de la ejecución del comando.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo (Windows) efectúa la compactación de un archivo de datos:
 
@@ -62,16 +62,16 @@ El siguiente ejemplo (Windows) efectúa la compactación de un archivo de datos:
  $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la operación de compactación se lleva a cabo correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. Sin un archivo de historial se ha generado, su ruta completa se devuelve en la variable sistema Document.  
 
-#### Ver también 
+## Ver también 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

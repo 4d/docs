@@ -26,7 +26,7 @@ displayed_sidebar: docs
 |Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -69,7 +69,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 > On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
 
 
-#### See also 
+## See also 
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)  
@@ -77,7 +77,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 [Path to object](../commands-legacy/path-to-object.md)  
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

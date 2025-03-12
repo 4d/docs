@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->O comando **OBJECT SET SHORTCUT** permite definir ou modificar dinamicamente o atalho de teclado associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
   
@@ -72,7 +72,7 @@ No parâmetro *modificadores*, passe uma ou mais teclas de modificação à asso
   
 **Nota**: se omitido o parâmetro *modificadores*, o objeto se ativa tão pronto como se pressiona a tecla definida. Por exemplo, se associada a tecla "H" a um botão, este botão se ativa cada vez que pressione a tecla H. Este funcionamento se reserva para interfaces específicas.
 
-#### Exemplo 
+## Exemplo 
 
 Você quer associar um atalho de teclado diferente em função da linguagem atual da aplicação. No evento On Load form, pode escrever:
 
@@ -85,11 +85,11 @@ Você quer associar um atalho de teclado diferente em função da linguagem atua
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

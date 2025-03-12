@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->**LOG FILE TO JSON**コマンドはカレントログファイル、または指定されたログファイルを、JSONフォーマットで保存します。<!-- END REF-->
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 実際に含まれるプロパティの実際の一覧は、オペレーションのタイプ(レコード作成、レコード削除、レコード編集、Blob作成、等)によって異なります。主なプロパティは以下の通りです:
 
@@ -74,7 +74,7 @@ Blobおよびピクチャーフィールドの場合、保存場所によって�
 
 (\*) プロジェクトモードのデータベースでは"user4d\_id" プロパティは返されません。
 
-#### 例題 
+## 例題 
 
 カレントのログファイルをJSON形式で保存したい場合を考えます:
 
@@ -88,16 +88,16 @@ Blobおよびピクチャーフィールドの場合、保存場所によって�
  LOG FILE TO JSON("c:\\4Dv15\\ExportLogs";0;"c:\\4Dv15\\Backup\\old_myDB.journal";Field attribute with name)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 **LOG FILE TO JSON**コマンドは、OKシステム変数とDocumentシステム変数の値を変更します。JSONファイルが正常に保存されていた場合、OK変数は1に設定され、Document変数にはログファイルのパス名が格納されます。*logPath*引数に""(空の文字列)を渡し、ユーザーがファイル選択ダイアログボックスをキャンセルした場合、OK変数は0に設定され、Document変数には空の文字列が渡されます。ユーザーが不正なファイルを選択した場合、OK変数は0に設定され、Document変数には不正なファイルのパスが格納されます。
 
-#### 参照 
+## 参照 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

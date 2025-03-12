@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get row color as number.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 **Warning:** 行に割り当てられたカラーであっても、それが全てのセルに配色されるとは限りません(以下の例を参照のこと)。リストボックスまたはリストボックス列に対して矛盾する値がプロパティを使用して設定された場合、4D内部の優先順位が適用されます。詳細な情報に関しては *Design Reference* マニュアルを参照して下さい。
 
-#### 例題 
+## 例題 
 
 以下に与えられたリストボックスについて考えます。
 
@@ -54,13 +54,13 @@ displayed_sidebar: docs
   // vColor3 contains 0x00FF0000 (red)
 ```
 
-#### 参照 
+## 参照 
 
 *List Box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

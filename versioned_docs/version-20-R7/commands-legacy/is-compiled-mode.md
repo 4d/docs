@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is compiled mode.Summary-->Is compiled mode tests whether you are running in compiled mode (True) or interpreted mode (False).<!-- END REF-->  
   
@@ -25,7 +25,7 @@ The optional *\** parameter is useful in the case of an architecture using compo
    * If the *\** parameter is not passed, the command returns [True](true.md) or [False](false.md) depending on the mode in which the component is running.
 * When the command is called from a method of the host database, it returns [True](true.md) or [False](false.md) depending on the mode in which the host database is running.
 
-#### Example 
+## Example 
 
 In one of your routines, you include debugging code useful only when you are running in interpreted mode, so surround this debugging code with a test that calls **Is compiled mode**:
 
@@ -37,12 +37,12 @@ In one of your routines, you include debugging code useful only when you are run
   // ...
 ```
 
-#### See also 
+## See also 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

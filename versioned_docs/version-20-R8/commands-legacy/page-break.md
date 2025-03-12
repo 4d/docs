@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PAGE BREAK.Summary-->**PAGE BREAK** triggers the printing of the data that has been sent to the printer and ejects the page.<!-- END REF--> **PAGE BREAK** is used with [Print form](../commands/print-form.md) (in the context of the On Printing Detail form event) to force page breaks and to print the last page created in memory. Do not use **PAGE BREAK** with the [PRINT SELECTION](print-selection.md) command. Instead, use [Subtotal](subtotal.md) or [BREAK LEVEL](break-level.md) with the optional parameter to generate page breaks.
 
@@ -31,20 +31,20 @@ The second option is particularly useful when used with a spooled print job. The
 
 **Note:** When screen printing, if the user clicks on Cancel in the print preview dialog box, the **PAGE BREAK** command sets the system variable OK to 0.
 
-#### Example 1 
+## Example 1 
 
 See example for the [Print form](../commands/print-form.md) command.
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
-#### See also 
+## See also 
 
 [CANCEL](cancel.md)  
 [Print form](../commands/print-form.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

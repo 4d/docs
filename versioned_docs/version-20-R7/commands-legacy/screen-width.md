@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Screen width.Summary-->On Windows, Screen width returns the width of 4D application window (MDI window).<!-- END REF--> If you specify the optional *\** parameter, the function returns the width of the screen.
 
 On Macintosh, Screen width returns the width of the main screen, the screen where the menu bar is located.
 
-#### See also 
+## See also 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

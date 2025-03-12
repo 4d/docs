@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in set.Summary-->Records in set returns the number of records in *set*.<!-- END REF--> If *set* does not exist, or if there are no records in *set*, the command returns 0.
 
-#### Example 
+## Example 
 
 The following example displays an alert telling what percentage of the customers are rated as the best:
 
@@ -29,12 +29,12 @@ The following example displays an alert telling what percentage of the customers
  ALERT(String($Percent;"##0%")+" of our customers are the best.")
 ```
 
-#### See also 
+## See also 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

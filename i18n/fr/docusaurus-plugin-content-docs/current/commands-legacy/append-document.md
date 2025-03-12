@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Append document.Summary-->La commande **Append document** "fait la même chose" que la commande [Open document](open-document.md) : elle vous permet d'ouvrir un document sur disque et de se placer à la fin du document.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ La seule différence est que **Append document** se place initialement à la fin
 
 Pour plus d'informations, reportez-vous à la description de la commande [Open document](open-document.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à la fin du document la chaîne “ et à bientôt” suivie d'un retour chariot puis le referme. Si le document contenait déjà la chaîne “Au revoir”, il contiendra la chaîne “Au revoir et à bientôt” suivie d'un retour chariot :
 
@@ -34,12 +34,12 @@ L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à
  CLOSE DOCUMENT(vDoc) // Fermer le document
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

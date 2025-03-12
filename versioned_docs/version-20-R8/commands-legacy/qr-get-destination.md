@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->The **QR GET DESTINATION** command retrieves the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ The following table describes the values that can be retrieved in both *type* an
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET DESTINATION](qr-set-destination.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

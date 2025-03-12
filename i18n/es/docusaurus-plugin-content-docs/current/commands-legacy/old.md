@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Old.Summary-->El comando Old devuelve el valor almacenado en *campo* antes de que se le haya asignado un valor por programación o modificado un durante la entrada de datos.<!-- END REF--> 
 
@@ -36,11 +36,11 @@ Para restaurar el valor original de un campo, asígnele el valor devuelto por Ol
  $tamano :=BLOB size($antBLOB) //CORRECTO
 ```
 
-#### Ver también 
+## Ver también 
 
 [Modified](modified.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

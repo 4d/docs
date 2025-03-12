@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is compiled mode.Summary-->Is compiled modeは、データベースがコンパイルモード（True）、ま たはインタプリタモード（False）のどちらで実行されているかをテストします。<!-- END REF-->  
   
@@ -25,7 +25,7 @@ displayed_sidebar: docs
    * *\** 引数が渡されないと、コマンドはコンポーネントの実行モードに応じて[True](true.md "True")または[False](false.md "False")を 返します。
 * コマンドがホストデータベースから呼ばれた場合、コマンドはホストデータベースの実行モードに応じて[True](true.md "True")または[False](false.md "False")を返します。
 
-#### 例題 
+## 例題 
 
 インタプリタモードで実行している場合にだけ使用したいデバッグコードを記述するには、デバッグコードをIs compiled modeを呼び出すテストの中に記述します:
 
@@ -37,12 +37,12 @@ displayed_sidebar: docs
   // ...
 ```
 
-#### 参照 
+## 参照 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

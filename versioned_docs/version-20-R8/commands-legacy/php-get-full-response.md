@@ -24,7 +24,7 @@ displayed_sidebar: docs
 :::
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->The PHP GET FULL RESPONSE command lets you obtain additional information about the response returned by the PHP interpreter.<!-- END REF--> This command is particularly useful in the case of an error occurring during execution of the script. 
 
@@ -34,12 +34,12 @@ The synchronized *errLabels* and *errValues* text arrays are filled when the exe
 
 Since exchanges between 4D and the PHP interpreter are carried out via FastCGI, the PHP interpreter functions as if it were called by an HTTP server and therefore sends HTTP headers. You can recover these headers and their values in the *httpHeaderFields* and *httpHeaderValues* arrays.
 
-#### See also 
+## See also 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

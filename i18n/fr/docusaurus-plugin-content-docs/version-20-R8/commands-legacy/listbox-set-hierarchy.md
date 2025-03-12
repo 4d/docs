@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->La commande **LISTBOX SET HIERARCHY** vous permet de configurer l'objet list box désigné par les paramètres *objet* et *\** en mode hiérarchique ou non.<!-- END REF--> 
 
@@ -38,7 +38,7 @@ Si vous affichez la list box en mode hiérarchique et omettez ce paramètre :
 * si la list box est en mode non hiérarchique et n’a jamais été déclarée hiérarchique, le premier tableau est utilisé comme hiérarchie par défaut.
 * si la list box est en mode non hiérarchique mais avait été déclarée hiérarchique précédemment, la dernière hiérarchie est rétablie.
 
-#### Exemple 
+## Exemple 
 
 Définition des tableaux tPays, tRegion et tVille comme hiérarchie d’une list box :
 
@@ -50,11 +50,11 @@ Définition des tableaux tPays, tRegion et tVille comme hiérarchie d’une list
  LISTBOX SET HIERARCHY(*;"mylistbox";True;$TabHierarch)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

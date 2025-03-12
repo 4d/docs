@@ -13,20 +13,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->The MINIMIZE WINDOW command sets the size of the window whose number is passed as *window* to the size it was before being maximized.<!-- END REF--> If *window* is omitted, the command applies to each window of the application (Windows) or to the frontmost window of the process (on Mac OS).
 
 This command has the same effect as one click on the reduction box of the 4D application: 
 
-##### On Windows 
+### On Windows 
 
 The size of the window is set to its initial size, i.e., its size before being maximized. If the *window* parameter is omitted, all the application windows are set to their initial sizes.
 
 ![](../assets/en/commands/pict39369.en.png)  
 Reduction box on Windows
 
-##### On Mac OS 
+### On Mac OS 
 
 The size of the window is set to its initial size (i.e. its size before being maximized). If the window parameter is omitted, the frontmost window of the current process is set to its initial size. 
 
@@ -43,12 +43,12 @@ Windows
 ![](../assets/en/commands/pict39372.en.png)  
 Mac OS
 
-#### See also 
+## See also 
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

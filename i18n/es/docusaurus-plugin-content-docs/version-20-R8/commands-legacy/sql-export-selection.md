@@ -29,7 +29,7 @@ Si la selección actual está vacía, el comando no hace nada. Note que en este 
 
 Si la exportación se lleva a cabo correctamente, la variable *OK* toma el valor 1\. De lo contrario, toma el valor 0\. 
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 

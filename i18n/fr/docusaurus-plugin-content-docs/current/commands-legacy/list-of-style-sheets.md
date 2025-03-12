@@ -23,7 +23,7 @@ A l’issue de l’exécution de la commande, chaque élément du tableau contie
 
 **Note :** Pour des raisons de compatibilité, les feuilles de style automatiques "\_\_automatic\_main\_text\_\_" et "\_\_automatic\_additional\_text\_\_" ne sont pas retournées par cette commande. Cependant, elles sont toujours disponibles dans les formulaires. 
 
-##### Note de compatibilité 
+### Note de compatibilité 
 
 Cette commande ne peut être utilisée que dans les **bases de données binaires**. Dans **l'architecture projet**, le tableau n'est pas rempli.
 

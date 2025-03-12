@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->La commande **SET DATABASE LOCALIZATION** permet de modifier la langue courante de la base pour la session courante.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Si la commande est correctement exécutée, la variable système OK prend la val
 
 **4D Server :** Avec 4D Server, les langues disponibles sont celles situées sur le poste distant ayant appelé la commande. Vous devez donc veiller à la synchronisation des dossiers **Resources**. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous souhaitons définir la langue de l’interface en français :
 
@@ -40,7 +40,7 @@ Nous souhaitons définir la langue de l’interface en français :
  SET DATABASE LOCALIZATION("fr")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’interface de votre application utilise la chaîne statique ":xliff:shopping". Les fichiers xliff contiennent notamment les informations suivantes :
 
@@ -66,11 +66,11 @@ L’interface de votre application utilise la chaîne statique ":xliff:shopping"
   //La chaîne ":xliff:shopping" affiche "Magasiner"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

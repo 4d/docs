@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET SORTS.Summary-->El comando QR SET SORTS permite definir el sentido de ordenación de cada columna del informe rápido cuya referencia se pasa en *area*.<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * Si *aOrden{$i}* es igual a 1, el sentido de la ordenación es ascendente.
 * Si *aOrden{$i}* es igual a - 1, el sentido de la ordenación es descendiente.
 
-##### Informes tablas cruzadas 
+### Informes tablas cruzadas 
 
 En el caso de este tipo de informes, el array no puede tener más de dos elementos. Únicamente puede ordenar las columnas (1) y las filas (2). Los datos (situados en la intersección de las columnas y las líneas) no pueden ordenarse con este comando.
 
@@ -42,11 +42,11 @@ Este es el código para ordenar sólo las líneas en caso de un informe de tabla
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

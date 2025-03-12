@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -34,7 +34,7 @@ In *row*, pass the number of the row whose style you want to get.
 
 **Warning:** a style assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
 
-#### Example 
+## Example 
 
 Given the following list box: 
 
@@ -47,11 +47,11 @@ Given the following list box:
   // vStyle2 contains 6 (Italic + Underline)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

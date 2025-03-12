@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->**OBJECT SET MAXIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトの最大値を、カレントプロセスにおいて変更します。<!-- END REF-->
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 
 *maxValue* 引数には、カレントプロセスにおいてオブジェクトに対して適用したい最大値を渡します。このとき、渡す最大値はオブジェクトの型と対応している必要があります。そうでない場合にはエラー18 "フィールドタイプが対応していません。"が返されます。
 
-#### 参照 
+## 参照 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

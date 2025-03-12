@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB Keys.Summary-->El comando **OB Keys** devuelve una colección de cadenas que contienen todos los nombres de propiedades enumerables del *objeto*.<!-- END REF--> 
 
 Solo se devuelven los nombres de propiedades de primer nivel (no se devuelven los nombres de propiedades de los subobjetos). El orden de los nombres dentro de la colección devuelta sigue el orden de definición de las propiedades.
 
-#### Ejemplo 
+## Ejemplo 
 
 Quiere una colección con todos los nombres de propiedad de primer nivel de un objeto:
 
@@ -40,12 +40,12 @@ Quiere una colección con todos los nombres de propiedad de primer nivel de un o
   //$col[2]="children"
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

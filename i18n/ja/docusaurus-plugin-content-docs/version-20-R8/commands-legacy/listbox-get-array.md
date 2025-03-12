@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 * ユーザーによって定義されたプロパティの配列へのポインター
 * [LISTBOX SET ROW COLOR](listbox-set-row-color.md) や [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md) コマンドを使用して設定されたプロパティの配列へのポインター
 
-#### 例題 
+## 例題 
 
 典型的な使用例:
 
@@ -56,12 +56,12 @@ displayed_sidebar: docs
   // フォントスタイル配列を返します。
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->O comando **DISTINCT ATTRIBUTE PATHS** \[#descv\] devolve a lista de rotas diferentes que se encontram no campo objeto indexado passado em *campoObjeto* para a seleção atual da tabela a qual pertence o campo.<!-- END REF--> \[#descv\]
 
@@ -29,7 +29,7 @@ Depois da chamada, o tamanho de *arrayRota* é igual ao número de rotas distint
 * Registros com um valor indefinido no *campoObj* não foram levadas em consideração.
 * Rotas atributos criadas durante uma transação foram levadas em consideração pelo comando. É importante notar que estas rotas são mantidas no índice do campo objeto mesmo se a transação tiver sido cancelada
 
-#### Exemplo 
+## Exemplo 
 
 Se seu banco de dados contiver um campo objeto \[Customer\]full\_Data (indexado) com 15 registros:
 
@@ -63,12 +63,12 @@ O array *aTPaths* obtém os elementos abaixo:
 
 **Note:** "length"/comprimento é uma *propriedade virtual* que está disponível automaticamente para todos os atributos de tipo array. Oferece o tamanho do array, ou seja, o número de elementos, e pode ser usada em pesquisas. Para saber mais, veja o parágrafo \[#cmd id="1397" anchor="2998555"/\]. 
 
-#### Ver também 
+## Ver também 
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

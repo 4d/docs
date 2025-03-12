@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->La commande **SPELL SET CURRENT DICTIONARY** provoque le remplacement du dictionnaire courant par celui spécifié par le paramètre *dictionnaire*.<!-- END REF--> Le dictionnaire courant est utilisé pour la correction orthographique intégrée de 4D (pour plus d’informations, reportez-vous au manuel *Mode Développement*) ainsi qu'à celle de 4D Write Pro. La modification du dictionnaire courant est immédiatement répercutée dans tous les process de la base pour la session, ainsi que dans les zones 4D Write Pro. 
 
@@ -32,11 +32,11 @@ Vous pouvez changer de dictionnaire à l'aide du paramètre *dictionnaire*. Vous
 
 **Note de compatibilité :** Dans les versions précédentes de 4D, les dictionnaires "Cordial" étaient également pris en charge. Par compatibilité, il reste possible de passer un numéro de dictionnaire "Cordial" dans le paramètre *dictionnaire* (valeur ou constante du thème "*Dictionnaires*"). Dans ce cas toutefois, le dictionnaire est redirigé en interne vers un dictionnaire Hunspell équivalent (ou le dictionnaire natif sous macOS). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le *dictionnaire* est correctement chargé, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est retournée. 
 
-#### Exemple 
+## Exemple 
 
 Chargement du dictionnaire "fr-classique" présent dans le dossier Hunspell :
 
@@ -45,13 +45,13 @@ Chargement du dictionnaire "fr-classique" présent dans le dossier Hunspell :
      // SPELL FIXER DICTIONNAIRE COURANT("FR-classique.dic") est valide
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Application type.Summary-->Application type コマンドは、現在実行している4D 環境のアプリケーションタイプを示す数値を返します。<!-- END REF-->4D は、以下の定義済み定数を提供しています:
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **注:** *4D Desktop* にはいくつかの配付オファーが含まれています。例えば、"4D SQL Desktop"などです。
 
-#### 例題 
+## 例題 
 
 *On Server Startupデータベースメソッド*以外のいずれかの箇所で、4D Serverを実行中かチェックする必要がある場合、以下のように記述できます:
 
@@ -38,12 +38,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

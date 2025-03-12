@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Process state.Summary-->**Process state** コマンドは、*process*に指定したプロセス番号を持つプロセスの状態を返します。<!-- END REF--> 
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 プロセスが存在しない (つまり1から[Count tasks](count-tasks.md) までの番号を渡さなかった) 場合、**Process state** はDoes not exist (-100)を返します。
 
-#### 例題 
+## 例題 
 
 以下の例は、各プロセスの名前とプロセス参照番号を配列*asProcName*と*aiProcNum*に入れます。このメソッドは、プロセスがアボートされたかを調べます。この場合、プロセス名とプロセス番号は配列に追加されません:
 
@@ -55,12 +55,12 @@ displayed_sidebar: docs
  ARRAY INTEGER(aiProcNum;$vlActualCount)
 ```
 
-#### 参照 
+## 参照 
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

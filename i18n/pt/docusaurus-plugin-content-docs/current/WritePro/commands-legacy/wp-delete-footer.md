@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP DELETE FOOTER.Summary-->O comando **WP DELETE FOOTER** elimina o elemento do rodapé associado à seção ou subseção definida pelo parâmetro *wpSection*.<!-- END REF--> 
 
 Se não existir um elemento de rodapé para a seção ou subseção, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser eliminar o rodapé das páginas da esquerda de uma seção:
 
@@ -34,7 +34,7 @@ Se quiser eliminar o rodapé das páginas da esquerda de uma seção:
  WP DELETE FOOTER($subsection)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Get footer](wp-get-footer.md)  
 [WP New footer](wp-new-footer.md)  

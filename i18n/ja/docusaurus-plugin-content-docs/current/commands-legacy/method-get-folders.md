@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->**METHOD GET FOLDERS**コマンドは4Dエクスプローラーのホームページに作成されたフォルダー名を*arrNames*配列に返します。<!-- END REF-->
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 このコマンドがコンポーネントから呼ばれると、デフォルトでコンポーネントのフォルダー名が返されます。*\** 引数を渡すと配列にはホストデータベースのフォルダーが返されます。
 
-#### 参照 
+## 参照 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

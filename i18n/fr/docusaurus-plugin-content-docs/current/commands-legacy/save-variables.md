@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE VARIABLES.Summary-->La commande **SAVE VARIABLES** sauvegarde une ou plusieurs variable(s) dans un document disque dont le nom est passé dans le paramètre *document*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Si les variables ont été correctement sauvegardées, la variable système OK p
 
 **ATTENTION :** La commande **SAVE VARIABLES** ne permet pas de sauvegarder les variables de type Tableau. Pour cela, vous devez utiliser les commandes du thème BLOB.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant enregistre trois variables dans un fichier nommé PrefsUti :
 
@@ -36,11 +36,11 @@ L'exemple suivant enregistre trois variables dans un fichier nommé PrefsUti :
  SAVE VARIABLES("PrefsUti";VSNom;VLCode;VGIconPict)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -49,7 +49,7 @@ Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1,
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *Variables système*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

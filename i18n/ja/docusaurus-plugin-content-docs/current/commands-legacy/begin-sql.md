@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Begin SQL.Summary-->**Begin SQL**はメソッドエディタで使用するキーワードで、プロセスのカレントデータソース (4Dの統合SQLエンジン、または[SQL LOGIN](sql-login.md)コマンドで特定されたソース) により解釈されるべき一連のコマンドの始まりを宣言します。<!-- END REF--> 
 
@@ -41,13 +41,13 @@ displayed_sidebar: docs
 
 4Dの*デバッガ*は行ごとにSQL命令行を評価します。一行以上使用した方が好ましい場合もありますのでご注意下さい。
 
-#### 参照 
+## 参照 
 
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

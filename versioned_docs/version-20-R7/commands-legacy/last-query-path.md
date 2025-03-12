@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last query path.Summary-->The **Last query path** command returns the detailed internal description of the actual path of the last query carried out on the data.<!-- END REF--> For more information about query descriptions, please refer to the documentation of the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command. 
 
@@ -29,12 +29,12 @@ This command returns a significant value if the [DESCRIBE QUERY EXECUTION](descr
 
 The description of the last query path can be compared to the description of the query plan provided for the last query (obtained using the [Last query plan](last-query-plan.md) command) for optimization purposes.
 
-#### See also 
+## See also 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

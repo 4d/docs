@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Count menu items.Summary-->O comando Count menu items devolve o número dos elementos do menu presentes no menu cujo número ou referência é passada em *menu.<!-- END REF-->*  
   
@@ -23,11 +23,11 @@ Se omite o parâmetro *processo*, Count menu items é aplicada a barra de menus 
 
 **Nota**: se passa um parâmetro MenuRef em *menu*, o parâmetro *processo é* inútil e será ignorado.
 
-#### Ver também 
+## Ver também 
 
 [Count menus](count-menus.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,22 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE EMPTY SET.Summary-->CREATE EMPTY SETは、*aTable*に対して新しい空のセット*set*を作成します。<!-- END REF-->[ADD TO SET](add-to-set.md "ADD TO SET")コマンドを使って、このセットにレコードを追加できます。既に同じ名前のセットが存在している場合、そのセットを消去して新しい空のセットに置き換えます。
 
 **Note:** [CREATE SET](create-set.md "CREATE SET")を使用する前に、CREATE EMPTY SETを使用する必要はありません。
 
-#### 例題 
+## 例題 
 
 の節の例題参照。
 
-#### 参照 
+## 参照 
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

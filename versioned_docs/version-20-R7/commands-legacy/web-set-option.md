@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->The **WEB SET OPTION** command modifies the current value of various options concerning the functioning of the 4D Web server.<!-- END REF-->
 
@@ -62,7 +62,7 @@ When you use the Web debug log *selector*, you can pass one of the following con
 | wdl enable with response body  | Integer | 3     | Web HTTP debug log is enabled with body part in response only                         |
 | wdl enable without body        | Integer | 1     | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
 
-#### Example 
+## Example 
 
 Enabling the HTTP debug log without body parts:
 
@@ -76,12 +76,12 @@ A log entry looks like this:
 # REQUEST# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089388#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber:5GET /4DWEBTEST HTTP/1.1Accept: text/html,(...)Accept-Encoding: gzip, deflateConnection: keep-aliveHost: 127.0.0.1User-Agent: 4D_HTTP_Client/0.0.0.0# RESPONSE# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089389 (elapsed time: 1 ms)#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber:6HTTP/1.1 200 OKAccept-Ranges: bytesConnection: keep-aliveContent-Encoding: gzipContent-Length: 3555Content-Type: text/plain; charset=UTF-8Date: Thu, 20 Apr 2017 10:51:29 GMTExpires: Thu, 20 Apr 2017 10:51:29 GMTServer: 4D/16.0.1[Body Size: 3555]
 ```
 
-#### See also 
+## See also 
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

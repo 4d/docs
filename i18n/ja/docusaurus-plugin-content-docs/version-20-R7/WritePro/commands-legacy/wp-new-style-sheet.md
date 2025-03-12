@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP New style sheet.Summary-->**WP New style sheet** コマンドは、*wpDoc* 引数で指定されたドキュメントに対して、新しい(空の)スタイルシートオブジェクトを作成します。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 * スタイルシートは文字または段落の表示を変えるだけであり、それがドキュメント内でどのように保存されるかを変えるものではありません。スタイルシートが削除された場合、テキストはデフォルトのスタイルへと戻されます。
 * 新しいスタイルシート内で定義されていないスタイル属性はどれも自動的に通常のスタイルを使用します。詳細な情報については、*スタイルシートコマンド* を参照してください。
 
-#### 例題 
+## 例題 
 
 以下のコードを実行すると、段落スタイルシートを作成して定義します:
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

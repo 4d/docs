@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Euro converter.Summary-->コマンドは"ユーロ"に所属するユーロ通貨の元と先の異なった通貨の値を変換します。<!-- END REF-->
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 | Portuguese Escudo   | 200.482    |
 | Spanish Peseta      | 166.386    |
 
-#### 例題 
+## 例題 
 
 以下の例題はこのコマンドを使用して変換したものです:
 
@@ -82,7 +82,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

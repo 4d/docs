@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Last table number.Summary-->Last table number retorna o maior número de tabela entre as tabelas no banco.<!-- END REF--> As tabelas estão numeradas na ordem na qual foram criadas. Se nenhuma tabela tiver sido apagada do banco, o comando retorna o número de tabelas presentes no banco. No caso de loops iterativos sobre os números de tabelas do banco, deve utilizar o comando [Is table number valid](is-table-number-valid.md) para verificar que a tabela não tenha sido apagada.  
 
-#### Example 
+## Example 
 
 O seguinte exemplo inicializa os elementos do array *arrayTabelas*, com os nomes das tabelas definidos no banco. Este array pode ser utilizado como lista drop down (ou abas, área de deslocamento, etc.), para mostrar em um formulário a lista de tabelas do banco
 
@@ -34,13 +34,13 @@ O seguinte exemplo inicializa os elementos do array *arrayTabelas*, com os nomes
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

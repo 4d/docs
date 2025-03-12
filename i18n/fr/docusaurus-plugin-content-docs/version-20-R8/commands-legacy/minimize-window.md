@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->La commande **MINIMIZE WINDOW** provoque un zoom arrière de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF-->
 
 Cette commande produit le même effet qu'un clic sur la case de réduction d'une fenêtre de l'application 4D ayant été préalablement maximisée : 
 
-##### Sous Windows 
+### Sous Windows 
 
 La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont redimensionnées à leur taille initiale.
 
@@ -27,7 +27,7 @@ La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas l
 
 Case de réduction sous Windows
 
-##### Sous Mac OS 
+### Sous Mac OS 
 
 La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre de premier plan du process courant est minimisée.   
 ![](../assets/en/commands/pict39370.fr.png)
@@ -43,12 +43,12 @@ Windows
 ![](../assets/en/commands/pict39372.fr.png)  
 Mac OS
 
-#### Voir aussi 
+## Voir aussi 
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

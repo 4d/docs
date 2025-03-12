@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** コマンドは、イベントを検知するメソッドである*eventMethod*をインストールします。<!-- END REF-->このメソッドは、**イベント処理メソッド**または**イベントキャッチメソッド**と呼ばれます。
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
 * システム変数MouseProcには、イベント(マウスクリック)が発生したプロセスのプロセス参照番号が入ります。
 **重要**: システム変数MouseDown、KeyCode、Modifiers、MouseX、MouseY、and MouseProcには、**ON EVENT CALL**コマンドでインストールされたイベント処理メソッド内でのみ意味を持つ値が納められます。
 
-#### 例題 
+## 例題 
 
 次の例は、ユーザがCtrl+ピリオド（Windows）またはCommand+ピリオド（Macintosh）を押したら、印刷を中止します。ま ず、イベント処理メソッドをインストールします。次にユーザにメッセージを表示して、印刷を中止できることを知らせます。イベント処理メソッド内でイン タープロセス変数*<>vbWeStop*にTrueが代入されると、既に印刷されたレコードの数をユーザに知らせます。最後にイベント処理メソッドをクリアします:
 
@@ -108,14 +108,14 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 
 [PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってレポートを印刷する場合、ユーザに印刷を中断させるようなイベント処理を実行する必要はありません。この処理は[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドにより自動的に行われます。
 
-#### 参照 
+## 参照 
 
 [FILTER EVENT](filter-event.md)  
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

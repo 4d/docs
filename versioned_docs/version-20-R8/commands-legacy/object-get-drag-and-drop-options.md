@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->The **OBJECT GET DRAG AND DROP OPTIONS** command returns the drag and drop options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -33,11 +33,11 @@ Each parameter returns True or False according to whether the corresponding opti
 * *droppable* \= True: Object accepts drops in programmed mode.
 * *automaticDrop* \= True (only used with picture fields and variables, text, combo boxes and list boxes): Object accepts drops in automatic mode.
 
-#### See also 
+## See also 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

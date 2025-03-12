@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 詳細 
+## 詳細 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->**On Host Database Event データベースメソッド** はデータベースが開いた時と閉じられた時に 4D コンポーネントにコードを実行させることが出来るようになりました。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 このコマンドにより、4D コンポーネントはホストデータベースのオペレーションに関連したプリファレンスやユーザー情報を読み込んだり保存したりすることが出来ます。
 
-#### 例題 
+## 例題 
 
 On Host Database Event の典型例を紹介します:
 

@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Transaction level.Summary-->O comando Transaction level retorna o nível de transação atual para o processo.<!-- END REF--> Este comando considera todas as transações do processo atual, sem importar se foram iniciadas através da linguagem 4D ou através de SQL.
 
-#### Ver também 
+## Ver também 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *Usar Transações*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

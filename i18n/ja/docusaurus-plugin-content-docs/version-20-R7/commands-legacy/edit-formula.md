@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->**EDIT FORMULA**コマンドを使用してフォーミュラーエディターを開き、ユーザーはフォーミュラーを作成したり変更したりできます。<!-- END REF-->次の項目をデフォルトとして表示することができます。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ダイアログボックスが確定したとしても、*formula*が実行されないことを心に留めてください。フォーミュラの検証と変数の中身が更新されるだけです。*formula*を実行する必要がある場合は、[EXECUTE FORMULA](execute-formula.md) コマンドを使用しなければなりません。
 
-#### 例題 
+## 例題 
 
 事前に入力されたフォーミュラは使用せず、\[Employees\]テーブルを使用してフォーミュラエディタを表示します:
 
@@ -44,17 +44,17 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ユーザがダイアログボックスを受け入れるとシステム変数OKに1が、キャンセルすると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

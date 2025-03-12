@@ -29,7 +29,7 @@ Para cada pareja de variables *dstVar;expr*, la variable fuente debe ser de tipo
 
 El proceso actual escribe las variables del proceso de destino, el proceso de destino no es advertido de ninguna manera de que otro proceso está escribiendo la instancia de sus variables.
 
-##### Restricciones 
+### Restricciones 
 
 VARIABLE TO VARIABLE no acepta variables locales como variables de destino. 
 

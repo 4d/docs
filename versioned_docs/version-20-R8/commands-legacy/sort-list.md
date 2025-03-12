@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SORT LIST.Summary-->The **SORT LIST** command sorts the list whose reference number is passed in *list*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ To sort in ascending order, pass *\>*. To sort in descending order, pass <. If y
 
 **SORT LIST** does not change the current list item nor the current expanded/collapsed state of the list and sublists. However, because the current item can be moved by the sorting operation, [Selected list items](selected-list-items.md) may return a different position before and after the sort.
 
-#### Example 
+## Example 
 
 Given the list named *hList,* shown here in the Application environment:
 
@@ -52,11 +52,11 @@ The list looks like:
 
 ![](../assets/en/commands/pict23039.en.png)
 
-#### See also 
+## See also 
 
 [Selected list items](selected-list-items.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

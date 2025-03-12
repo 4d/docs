@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Substring.Summary-->The **Substring** command returns the portion of *source* defined by *firstChar* and *numChars*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ If *firstChar* plus *numChars* is greater than the number of characters in the s
 
 **Warning:** When you use this command in a multi-style context, you need to convert any Window end-of-line characters ('\\r\\n') into single ('\\r') characters in order for processing to be valid. This is due to the mechanism which normalizes 4D line endings to ensure multi-platform compatibility for texts. For more information, refer to *Automatic normalization of line endings*. 
 
-#### Example 1 
+## Example 1 
 
 This example illustrates the use of Substring. The results, described in the comments, are assigned to the variable *vsResult*.
 
@@ -36,7 +36,7 @@ This example illustrates the use of Substring. The results, described in the com
  vsResult:=Substring(var;2) // vsResult gets all characters except ` the first
 ```
 
-#### Example 2 
+## Example 2 
 
 The following project method appends the paragraphs found in the text (passed as first parameter) to a string or text array (the pointer of which is passed as second parameter):
 
@@ -62,11 +62,11 @@ The following project method appends the paragraphs found in the text (passed as
  Until($1="")
 ```
 
-#### See also 
+## See also 
 
 [Position](position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** fait apparaître l'ensemble des fenêtres appartenant à *process*.<!-- END REF--> Cette commande ne passe pas les fenêtres de *process* au premier plan, utilisez pour cela la commande [BRING TO FRONT](bring-to-front.md).
 
 Si les fenêtres de *process* sont déjà affichées, cette commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche le process "Clients", s'il était caché auparavant. Le numéro de process est stocké dans la variable interprocess *<>Clients* :
 
@@ -27,13 +27,13 @@ L'exemple suivant affiche le process "Clients", s'il était caché auparavant. L
  SHOW PROCESS(<>Clients)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

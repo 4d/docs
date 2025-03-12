@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->The **METHOD Get attribute** command returns the value of the *attribType* attribute for the project method designated by the *path* parameter.<!-- END REF--> This command only works with project methods. If you pass an invalid *path*, an error is generated. 
 
@@ -36,11 +36,11 @@ If the command is executed from a component, it applies by default to the compon
 
 The command returns **True** when an attribute is selected and **False** if it is deselected.
 
-#### See also 
+## See also 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE SET.Summary-->**SAVE SET** saves *set* to *document*, a document on disk.<!-- END REF-->
 
@@ -26,7 +26,7 @@ If the user clicks Cancel in the Save File dialog box, or if there is an error d
 
 **WARNING:** Remember that a set is a representation of a selection of records at the moment that the set is created. If the records represented by the set change, the set may no longer be accurate. Therefore, a set saved to disk should represent a group of records that does not change frequently. A number of things can make a set invalid: modifying a record of the set, deleting a record of the set, or changing the criteria that determined the set. Also remember that sets do not save field values.
 
-#### Example 
+## Example 
 
 The following example displays the Save File dialog box, which the user can enter the name of the document that contains the set:
 
@@ -34,15 +34,15 @@ The following example displays the Save File dialog box, which the user can ente
  SAVE SET("SomeSet";"")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks Cancel in the Save File dialog box, or if there is an error during the load operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
 
-#### See also 
+## See also 
 
 [LOAD SET](load-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->O comando **GET PICTURE KEYWORDS** devolve no array *arrayPalavrasChaves*, a lista de palavras-chaves associadas à imagem passada como parâmetro.<!-- END REF-->  
   
@@ -29,12 +29,12 @@ Caso a imagem não contém palavras-chaves ou metadados IPTC/Keywords, o comando
   
 **Nota**: os resultados devolvidos por este comando podem diferir em função do valor atual da propriedade da base "Considerar unicamente caracteres não alfanuméricos para as palavras-chaves" (ver o parágrafo [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)).
 
-#### Ver também 
+## Ver também 
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

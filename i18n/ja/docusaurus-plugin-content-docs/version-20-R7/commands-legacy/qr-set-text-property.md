@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->QR SET TEXT PROPERTY コマンドを使用し、*colNum* と *rowNum* で指定されたセルのテキスト属性を設定できます。<!-- END REF--> 
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 無効な*rowNum* 引数を渡した場合、エラー番号-9853が生成されます。  
 無効な*property* 引数を渡した場合、エラー番号-9854が生成されます。
 
-#### 例題 
+## 例題 
 
 このメソッドは、最初のカラムのタイトルに対して複数の属性を定義します:
 
@@ -80,11 +80,11 @@ displayed_sidebar: docs
  QR SET TEXT PROPERTY(qr_area;1;-1;qr text color;0x0000FF00)
 ```
 
-#### 参照 
+## 参照 
 
 [QR Get text property](qr-get-text-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

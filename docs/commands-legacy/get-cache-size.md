@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get cache size.Summary-->The **Get cache size** command returns the current database cache size in bytes.<!-- END REF-->This command only works in local mode (4D Server and 4D); it must not be used from 4D in remote mode. 
 
-#### Example 
+## Example 
 
 See example for [SET CACHE SIZE](set-cache-size.md) command. 
 
-#### See also 
+## See also 
 
 [SET CACHE SIZE](set-cache-size.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

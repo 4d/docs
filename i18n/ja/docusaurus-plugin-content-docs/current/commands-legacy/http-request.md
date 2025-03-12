@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 
+## 
 
 <!--REF #_command_.HTTP Request.Summary-->**HTTP Request**コマンドは指定したURLに任意のメソッドでHTTPリクエストを送信し、HTTPサーバーのレスポンスを処理することを可能にします。<!-- END REF-->引数にはHTTPリクエストのメソッドを渡します。*HTTP Client*テーマの以下の定数を使用できます:
 
@@ -87,7 +87,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 コマンドからは標準のHTTPステータスコードが返されます (200=OK等)。HTTPステータスコードについては*RFC 2616*を参照してください。   
 ネットワークに関連する理由 (DNS解決に失敗した、サーバーに接続できないなど...) により、サーバーに接続できない場合、コマンドは0を返し、エラーが生成されます。エラーは [ON ERR CALL](on-err-call.md) コマンドを使用してインストールされたエラー処理メソッドで処理できます。
 
-#### 例題 1 
+## 例題 1 
 
 リモートデータベースからレコード削除を要求する:
 
@@ -98,7 +98,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 
 **注:** サーバー側では受け付けたリクエストに応じて適切な処理を実装しなければなりません。**HTTP Request**はリクエストの送信と返される結果を処理するだけです。
 
-#### 例題 2 
+## 例題 2 
 
 リモートデータベースにレコード追加を要求する:
 
@@ -109,7 +109,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 
 **注:** サーバー側では受け付けたリクエストに応じて適切な処理を実装しなければなりません。**HTTP Request**はリクエストの送信と返される結果を処理するだけです。
 
-#### 例題 3 
+## 例題 3 
 
 リモートデータベースにJSON形式のレコードを追加するリクエスト:
 
@@ -119,11 +119,11 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-#### 参照 
+## 参照 
 
 [HTTP Get](http-get.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

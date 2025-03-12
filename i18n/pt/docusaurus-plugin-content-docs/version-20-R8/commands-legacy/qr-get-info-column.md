@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### Relatórios em lista 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### Relatórios em lista 
 
 O comando QR GET INFO COLUMN permite recuperar os parâmetros de uma coluna existente.<!-- END REF-->  
   
@@ -52,7 +52,7 @@ O comando QR GET INFO COLUMN permite recuperar os parâmetros de uma coluna exis
   
 Quando passar o parâmetro opcional *varResultado*, ele devolve o nome da variável atribuida automaticamente pelo editor de relatórios rápidos à coluna da fórmula (se houver): "C1" para a primeira coluna da fórmula, "C2" para a segunda e assim sucessivamente. 4D utiliza esta variável para armazenar os resultados da última execução da fórmula da coluna quando for gerado o relatório.
 
-##### Relatório tabelas cruzadas 
+### Relatório tabelas cruzadas 
 
 Com este tipo de relatório, o comando QR GET INFO COLUMN permite recuperar globalmente os mesmos parâmetros mas a referência das áreas às quais aplica é diferente e varia dependendo do parâmetro que queira definir.  
   
@@ -85,7 +85,7 @@ Nesse caso, a numeração das colunas opera como se mostra a continuação:
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *numCol* é incorreto se gera o erro -9852.
 
-#### Exemplo 
+## Exemplo 
 
 Após criar o relatório abaixo:
 
@@ -106,13 +106,13 @@ Pode escrever:
   //$vResultVar = "C1"
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

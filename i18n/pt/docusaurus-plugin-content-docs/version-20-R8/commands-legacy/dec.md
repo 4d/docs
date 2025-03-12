@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Dec.Summary-->Dec retorna a parte decimal de *numero*.<!-- END REF--> O valor retornado é sempre positivo ou zero.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir utiliza um valor monetário expresso como um número real, e extrai a parte de dólares e a parte de centavos. Se vrQuantidade é 7,31, logo *vlDolares* vale 7 e *vlCents* 31:
 
@@ -27,11 +27,11 @@ O exemplo a seguir utiliza um valor monetário expresso como um número real, e 
  vlCents:=Dec(vrQuantidade)*100 // Obter a parte decimal
 ```
 
-#### Ver também 
+## Ver também 
 
 [Int](int.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

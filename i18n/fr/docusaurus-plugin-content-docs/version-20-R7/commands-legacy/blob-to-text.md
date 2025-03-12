@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to text.Summary-->La fonction **BLOB to text** retourne une valeur de type Texte lue dans le BLOB *blob*.<!-- END REF-->
 
@@ -51,7 +51,7 @@ Si vous passez une variable dans le paramètre optionnel *offset*, la valeur de 
 
 Après l'exécution de la commande, la variable *offset* est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -62,7 +62,7 @@ Après l'exécution de la commande, la variable *offset* est incrémentée du no
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

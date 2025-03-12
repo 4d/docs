@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ If you pass -1 in the *tickCount* parameter, the command will activate the On Ti
 
 To procedurally disable the triggering of the On Timer form event, call **SET TIMER** again and pass 0 in *tickCount*.
 
-#### Example 
+## Example 
 
 Let’s imagine that you want, when a form is displayed on screen, the computer to beep every three seconds. To do so, write the following form method: 
 
@@ -41,12 +41,12 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
  End if
 ```
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

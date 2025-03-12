@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDUCE SELECTION.Summary-->**REDUCE SELECTION** creates a new selection of records for *aTable*.<!-- END REF--> The command reduces the current selection of *aTable* to the first *number* records. **REDUCE SELECTION** is applied to the current selection of *aTable* in the current process. It changes the current selection of *aTable* for the current process; the first record of the new selection is the current record.
 
 **Note:** If the statement **REDUCE SELECTION**(aTable;0) is executed, there is no longer any selection nor any current records in the table. 
 
-#### Example 
+## Example 
 
 The following example first finds the correct statistics for a worldwide contest among the dealers in over 20 countries. For each country, the 3 best dealers who have sold product worth more than $50,000 and who are among the 100 best dealers in the world are awarded a prize. With a few lines of code, this complex request can be executed by using indexed searches:
 
@@ -51,14 +51,14 @@ The following example first finds the correct statistics for a worldwide contest
  PRINT SELECTION([Dealers]) // Print the letters
 ```
 
-#### See also 
+## See also 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 *Sets*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->The SVG GET ATTRIBUTE command is used to get the current value of the *attribName* attribute in an object or an SVG picture.<!-- END REF--> 
 
@@ -37,11 +37,11 @@ For more information about SVG attributes, please refer to the description of th
 | 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | read       | Returns 'true' if inherited class attribute of node contains all class name(s); otherwise, returns 'false'. Returns for example true for "4D-isOfClass-land" if the inherited class of the node is "land department01").                                                                                                                                                                                                                                                                                                                            |
 | 4D-enableD2D                                  | read/write | If 'false', disables Direct2D for the SVG rendering engine. In fact, SVG filters are not rendered in Direct2D but they are in GDI/GDIPlus. This option lets you use SVG filters even when the database is in Direct2D. Note that this option is only taken into account when a picture has already been loaded into the *pictureObject*. However, since this option is applied globally to the engine, you only need to set it once per session (for example with a simple SVG loaded in memory from a text variable when the database is started). |
 
-#### See also 
+## See also 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Modified record.Summary-->**Modified record** retourne Vrai si l'enregistrement courant de *laTable* a été modifié et non encore stocké.<!-- END REF--> Sinon, elle retourne Faux. Cette fonction vous permet de déterminer rapidement s'il faut stocker l'enregistrement. Dans les formulaires entrée, vous pouvez effectuer le test avant d'aller à l'enregistrement suivant. 
 
@@ -27,7 +27,7 @@ A noter que cette fonction retourne toujours Vrai dans les contextes suivants :
  [Table_1]Champ_1:=[Table_1]Champ_1  
 ```
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant montre une utilisation typique de **Modified record** :
 
@@ -37,13 +37,13 @@ L'exemple suivant montre une utilisation typique de **Modified record** :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

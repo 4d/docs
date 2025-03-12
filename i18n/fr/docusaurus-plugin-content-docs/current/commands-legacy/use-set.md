@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE SET.Summary-->**USE SET** crée, avec les enregistrements de *ensemble*, une nouvelle sélection courante pour la table à laquelle *ensemble* appartient.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Si vous avez créé un ensemble ne contenant pas de position d'enregistrement co
 
 **ATTENTION :** Rappelez-vous qu'un ensemble est la représentation d'une sélection d'enregistrements à un instant donné (au moment de la création de l'ensemble). Si les enregistrements que l'ensemble représente sont modifiés, il se peut que celui-ci ne soit plus valide. En conséquence, un ensemble sauvegardé sur disque doit généralement représenter un groupe d'enregistrements qui ne change pas souvent. De multiples événements peuvent rendre un ensemble invalide, comme par exemple la suppression ou la modification d'un enregistrement de l'ensemble, ou encore la modification des critères de création de l'ensemble. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant utilise [LOAD SET](load-set.md) pour charger un ensemble des sites de la société Dubois à Paris. **USE SET** est ensuite appelée pour faire de l'ensemble la sélection courante :
 
@@ -33,12 +33,12 @@ L'exemple suivant utilise [LOAD SET](load-set.md) pour charger un ensemble des s
  CLEAR SET("DuboisParis") // Effacement de l'ensemble de la mémoire
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

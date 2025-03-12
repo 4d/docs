@@ -13,20 +13,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAVE RELATED ONE.Summary-->SAVE RELATED ONE guarda o registro relacionado a *campo*.<!-- END REF--> Execute este comando para atualizar um registro criado com [CREATE RELATED ONE](create-related-one.md), ou para guardar as mudanças realizadas a um registro carregado por [RELATE ONE](relate-one.md).
 
 SAVE RELATED ONE não guardará um registro bloqueado. Quando utilize este comando, primeiro deve ter certeza que o registro não esteja bloqueado. Se o registro estiver bloqueado, o comando é ignorado, não se guarda o registro e não se devolve nenhum erro.
 
-#### Ver também 
+## Ver também 
 
 [CREATE RELATED ONE](create-related-one.md)  
 [Locked](locked.md)  
 [RELATE ONE](relate-one.md)  
 *Triggers*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

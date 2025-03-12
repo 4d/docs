@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PAUSE PROCESS.Summary-->PAUSE PROCESS suspende a execução de *processo* até que seja reativada pelo comando [RESUME PROCESS](resume-process.md "RESUME PROCESS").<!-- END REF--> Durante este período, *processo* não toma tempo em sua máquina. Ainda que um processo esteja suspendido, o processo ainda está em memória. 
 
@@ -25,14 +25,14 @@ Quando se suspende a execução de um processo, as janelas que pertencem a este 
 
 **Nota:** não pode utilizar este comando para atribuir um procedimento armazenado na máquina servidor de uma máquina cliente. (*processo*<0).
 
-#### Ver também 
+## Ver também 
 
 [ABORT PROCESS BY ID](abort-process-by-id.md)  
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

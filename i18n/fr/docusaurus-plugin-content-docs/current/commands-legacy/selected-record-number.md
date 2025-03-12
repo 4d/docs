@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selected record number.Summary-->**Selected record number** retourne la position de l'enregistrement courant dans la sélection courante de *laTable*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Le numéro de l'enregistrement dans la sélection est différent du numéro reto
 
 Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la section *A propos des numéros d'enregistrements*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant stocke le numéro de l'enregistrement courant de la sélection dans une variable :
 
@@ -33,13 +33,13 @@ L'exemple suivant stocke le numéro de l'enregistrement courant de la sélection
  NumEnrCourant:=Selected record number([Personnes])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *A propos des numéros d'enregistrements*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

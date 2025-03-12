@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Open form window.Summary-->El comando Open form window abre una nueva ventana utilizando las propiedades de tamaño y de redimensionamiento del formulario *nomForm*.<!-- END REF-->
 
@@ -88,7 +88,7 @@ Estos parámetros se expresan con relación a la esquina superior izquierda del 
 
 Si pasa el parámetro opcional *\**, la posición y el tamaño actual de la ventana se memorizan al cerrar. Cuando la ventana se abre nuevamente, se respetan su posición y tamaño anterior. En este caso, los parámetros *posV* y *PosH* sólo se utilizan cuando se abre la ventana por primera vez.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente instrucción abre una ventana estándar o una casilla cerrar y se ajusta automáticamente al tamaño del formulario de "Entrada". Como el formulario ha sido definido como redimensionables, la ventana tiene una casilla de redimensionamiento y una casilla de zoom:
 
@@ -96,7 +96,7 @@ La siguiente instrucción abre una ventana estándar o una casilla cerrar y se a
  $winRef :=Open form window([Table1];"Enter")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La siguiente instrucción abre una paleta flotante en la parte superior izquierda de la pantalla basada en un formulario de proyecto llamado "Herramientas". Esta paleta utiliza la última posición en cada nueva apertura:
 
@@ -104,7 +104,7 @@ La siguiente instrucción abre una paleta flotante en la parte superior izquierd
  $winRef :=Open form window("Herramientas";Palette form window;On the left;At the top;*)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este código se debe llamar en macOS mientras se muestra una ventana documento, por ejemplo desde un botón de formulario, para mostrar una ventana hoja:
 
@@ -116,7 +116,7 @@ Este código se debe llamar en macOS mientras se muestra una ventana documento, 
   //desde la parte inferior de la barra de título
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo usa la ruta a un formulario .json para mostrar los registros en una lista de empleados:
 
@@ -130,14 +130,14 @@ que devuelve:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Ver también 
+## Ver también 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 *Tipos de ventanas*  
 *Tipos de ventanas (Compatibilidad)*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->The **LISTBOX SET ROW HEIGHT** command allows you to modify the height of the specified *row* in the list box object designated using the *object* and *\** parameters.<!-- END REF-->
 
@@ -30,7 +30,7 @@ The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified i
 
 **Important note:** If the global [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command is called subsequently with a different unit than the one previously defined, the default value set by this command will replace and reinitialize any row heights set using **LISTBOX SET ROW HEIGHT** (see example 2).
 
-#### Example 1 
+## Example 1 
 
 You want to change the height of a few rows in the following list box:
 
@@ -48,7 +48,7 @@ If you execute this code:
 
 ![](../assets/en/commands/pict3071135.en.png)
 
-#### Example 2 
+## Example 2 
 
 You have set a default row height and then set several individual row height values using the **LISTBOX SET ROW HEIGHT** command:
 
@@ -76,14 +76,14 @@ On the other hand, if the code below is executed subsequently…
 
 …then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.
 
-#### See also 
+## See also 
 
   
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

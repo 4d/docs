@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->El comando **RELOAD EXTERNAL DATA** permite recargar en memoria el contenido en memoria de un archivo de almacenamiento externo asociado a un campo de tipo BLOB, Imagen o Texto.<!-- END REF-->  
   
@@ -23,11 +23,11 @@ A continuación debe recargar los datos utilizando el comando **RELOAD EXTERNAL 
 
 **Nota**: el comando **RELOAD EXTERNAL DATA** sólo funciona 4D local o 4D Server. No es posible recargar individualmente un campo con 4D en modo remoto. En este contexto, es necesario recargar todos los registros (utilizando el comando [LOAD RECORD](load-record.md) por ejemplo).
 
-#### Ver también 
+## Ver también 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

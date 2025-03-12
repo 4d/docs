@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Table.Summary-->O comando Table tem três sintaxes diferentes: 
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 * Se passa um ponteiro de tabela em *Ponteiro*, Table retorna o número da tabela.
 * Se passa um ponteiro de campo em *Ponteiro*, Table retorna o número de tabela do campo.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Esse exemplo, a variável *ponTabela* recebe um ponteiro da tabela 3 do banco: 
 
@@ -30,7 +30,7 @@ Esse exemplo, a variável *ponTabela* recebe um ponteiro da tabela 3 do banco:
  ponTabela:=Table(3)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se passa *pontTabela* (um ponteiro a tabela 3) a Table retorna 3\. Na linha abaixo, a variável *numTabela* assume o valor 3: 
 
@@ -39,7 +39,7 @@ Se passa *pontTabela* (um ponteiro a tabela 3) a Table retorna 3\. Na linha abai
 ```
   
   
-#### Exemplo 3 
+## Exemplo 3 
 
 Neste exemplo, a variável *numTabela* é igual ao número da tabela *\[Tabela3\]*: 
 
@@ -47,7 +47,7 @@ Neste exemplo, a variável *numTabela* é igual ao número da tabela *\[Tabela3\
  numTabela:=Table(->[Tabela3])
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Este exemplo, a variável *numTabela* é igual ao número da tabela a qual pertence o campo *\[Tabela3\]Campo1*: 
 
@@ -55,13 +55,13 @@ Este exemplo, a variável *numTabela* é igual ao número da tabela a qual perte
  numTabela:=Table(->[Tabela3]Campo1)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field](field.md)  
 [Last table number](last-table-number.md)  
 [Table name](table-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

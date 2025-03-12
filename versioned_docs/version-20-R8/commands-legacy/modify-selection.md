@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->**MODIFY SELECTION** does almost the same thing as [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Refer to the description of [DISPLAY SELECTION](display-selection.md) for details. The differences between the two commands are:
 
@@ -25,13 +25,13 @@ displayed_sidebar: docs
 
 2\. [DISPLAY SELECTION](display-selection.md) loads the records in Read-only mode in the current process, which means that they are not locked for writing in the other processes. **MODIFY SELECTION** places all the records of the selection in Read-Write mode, which means that they are automatically locked for writing in other processes. **MODIFY SELECTION** frees the records when its execution is completed.
 
-#### See also 
+## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](../commands/form-event-code.md)  
 *Sets*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

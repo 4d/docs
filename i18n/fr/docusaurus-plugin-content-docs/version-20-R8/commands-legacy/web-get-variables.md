@@ -24,7 +24,7 @@ Cette commande récupère la valeur de toutes les variables pouvant être inclus
 La commande fonctionne quel que soit le type d’URL ou de formulaire (méthode POST ou GET) envoyé au serveur Web.   
 Cette commande peut être appelée, selon les besoins, dans la [QR SET DESTINATION](qr-set-destination.md) ou toute autre méthode 4D qui résulte de la soumission d’un formulaire.
 
-##### Précisions sur les formulaires Web et les actions associées 
+### Précisions sur les formulaires Web et les actions associées 
 
 Un formulaire est composé de “zones de saisie” (zones de texte, boutons, cases à cocher), chacune ayant un nom. Lorsqu’un formulaire est “soumis” au serveur Web (une requête est envoyée au serveur), la requête comporte, entre autres, la liste des zones de saisie et leurs valeurs respectives.  
 Il y a deux “méthodes” pour soumettre un formulaire (4D accepte indifféremment l’une ou l’autre) : 

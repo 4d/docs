@@ -39,7 +39,7 @@ Si pasa una variable en el parámetro *offset*, el valor entero largo (4 byte) s
 
 Después de llamar el comando, se devuelve la variable del parámetro *offset*, incrementada en el número de bytes que hayan sido escritos. Por lo tanto, puede reutilizar esa misma variable con otro comando de escritura de BLOB para escribir otro valor. 
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET SUBFORM.Summary-->**OBJECT GET SUBFORM**コマンドは*object*と*\**引数で指定したサブフォームオブジェクトに関連付けられたフォームの名前を返します。<!-- END REF-->
 
@@ -35,12 +35,12 @@ displayed_sidebar: docs
 
 リストフォームが指定されていない場合、*listSubform* 引数には空の文字列が返されます。
 
-#### 参照 
+## 参照 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

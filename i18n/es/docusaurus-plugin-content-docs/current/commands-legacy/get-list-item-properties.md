@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->El comando **GET LIST ITEM PROPERTIES** devuelve las propiedades del elemento designado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->
 
@@ -46,14 +46,14 @@ Después de la llamada:
 
 Para mayor información sobre estas propiedades, consulte la descripción del comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### Ver también 
+## Ver también 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

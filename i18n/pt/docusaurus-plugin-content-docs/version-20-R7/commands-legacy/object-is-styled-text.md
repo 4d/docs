@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->O comando **OBJECT Is styled text** devolve **True** se a opção "Multiestilo" está selecionada para o(s) objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->
 
@@ -27,7 +27,7 @@ Ao passar o parâmetro opcional *\** se indica que o parâmetro *objeto* é um n
 
 **Nota:** o comando **OBJECT Is styled text** devolve **True** quando se aplica a uma área 4D Write Pro.
 
-#### Exemplo 
+## Exemplo 
 
 Um formulário contém um campo representado por dois objetos diferentes, um dos objetos tem a propriedade "Multi-estilo" marcada, e o outro não. Você pode escrever:
 
@@ -39,11 +39,11 @@ Um formulário contém um campo representado por dois objetos diferentes, um dos
   // devolve False (se a opção "Multi-estilo" não está selecionada)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Texto multi estilo*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

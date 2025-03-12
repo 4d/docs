@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get format.Summary-->**OBJECT Get format** コマンドは、*object*引数で指定されたオブジェクトに適用された現在の表示フォーマットを返します。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **OBJECT Get format** コマンドを日付、時間、ピクチャタイプのオブジェクト (定数で定義されたフォーマット) に対して適用すると、定数の文字コードに相当する文字列が返されます。定数の値を取得するには、この戻り値に対して[Character code](character-code.md) コマンドを適用してください(後述)。
 
-#### 例題 1 
+## 例題 1 
 
 この例は、“myphoto”という名前のピクチャ変数に対して適用されたフォーマット定数の値を取得します: 
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
   //"3"が表示される
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例は、ブールフィールド“\[Members\]Marital\_status”に対して適用されたフォーマットを取得することができます: 
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
  ALERT($format) //表示フォーマット, 例えば"Married;Single"
 ```
 
-#### 例題 3 
+## 例題 3 
 
 カスタマイズされたフォーマットは、そのまま返されます:
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
  $format:=OBJECT Get format(*;"timeinput") // 返される値は":m"
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

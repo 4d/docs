@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->El comando **GET PICTURE METADATA** permite leer el contenido de los metadatos (o meta-tags) presentes en *imagen* (campo o variable imagen 4D).<!-- END REF--> Para mayor información sobre metadatos, consulte la descripción del comando [SET PICTURE METADATA](set-picture-metadata.md).
 
@@ -30,7 +30,7 @@ Pase en el parámetro *ContenidoMeta* la variable destinada a recibir los metada
 * Si pasa una ruta de etiqueta en *nomMeta*, el parámetro *ContenidoMeta* contiene directamente el valor a leer. El valor se convertirá en el tipo de la variable (si el tipo de variable no se ha definido, se utilizará el tipo texto por defecto. Las variables de tipo texto serán formateadas en XML (estándar XMP). Puede pasar un array cuando el metadato contiene más de un valor (este es el caso, particularmente, para las etiquetas IPTC Keywords).
 * Si pasa un nombre de bloque o una cadena vacía en *nomMeta*, el parámetro *ContenidoMeta* debe ser una referencia valida del elemento DOM XML. En este caso, el contenido del bloque designado (o de todos los bloques si pasó una cadena vacía en *nomMeta*) se copia nuevamente en el elemento de referencia.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Uso de estructuras de árbol DOM
 
@@ -46,7 +46,7 @@ Uso de estructuras de árbol DOM
  GET PICTURE METADATA(vImagen;"GPS";$_Xml_GPS)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Uso de variables
 
@@ -63,7 +63,7 @@ Uso de variables
  GET PICTURE METADATA(vImagen;IPTC urgency;$urgencia)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Recepción de etiquetas con valores múltiples en arrays
 
@@ -79,7 +79,7 @@ Después de la ejecución del comando, arrTkeywords contiene por ejemplo:
  $arrTkeywords{2}="Europa"
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Recepción de etiquetas con valores múltiples en una variable Texto
 
@@ -90,18 +90,18 @@ Recepción de etiquetas con valores múltiples en una variable Texto
 
 Después de la ejecución del comando, *vTwords* contiene por ejemplo "Francia;Europa".
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema *OK* devuelve 1 si la recuperación de los metadatos es correcta y 0 si se produce un error o si no se encuentra al menos una de las etiquetas. En todos los casos, se devuelven los valores legibles.
 
-#### Ver también 
+## Ver también 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 *Nombres de metadatos imágenes*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

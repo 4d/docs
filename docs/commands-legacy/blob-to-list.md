@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to list.Summary-->The BLOB to list command creates a new hierarchical list with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset* and returns a List Reference number for that new list.<!-- END REF-->
 
@@ -28,7 +28,7 @@ After the call, if the hierarchical list has been successfully created, the OK v
 
 **Note regarding Platform Independence:** BLOB to list and [LIST TO BLOB](list-to-blob.md) use a 4D internal format for handling lists stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms when using these two commands. In other words, a BLOB created on Windows using those two commands can be reused on Macintosh and vice-versa.
 
-#### Example 
+## Example 
 
 In this example, the form method for a data entry form extracts a list from a BLOB field before the form appears on the screen, and stores it back to the BLOB field if the data entry is validated:
 
@@ -52,15 +52,15 @@ In this example, the form method for a data entry form extracts a list from a BL
  End case
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 1 if the list has been successfully created, otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

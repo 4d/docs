@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->The **GET FIELD TITLES** command fills the *fieldTitles* and *fieldNums* arrays with the names and numbers of database fields for the desired *aTable*.<!-- END REF--> The contents of these two arrays are synchronized.
 
@@ -25,12 +25,12 @@ Otherwise, **GET FIELD TITLES** returns the names of all database fields as defi
 
 In both cases, the command does not return invisible fields. 
 
-#### See also 
+## See also 
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->**GET TEXT KEYWORDS**コマンドは*text*を個々の単語に分割し、*arrKeywords*配列の要素にして返します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 このコマンドは、4Dと同じキーワードを使用しつつ、大量のテキストを含むレコードを検索する、簡素な方法を提供します。例えば"10,000 Jean-Pierre BC45"を含むテキストにおいて、このテキストがキーワード"10,000" + "Jean" + "Pierre" + "BC45"に分割されるとき、配列には4要素が含まれます。プログラムでこの配列をループし、%演算子を使用してこれらのキーワードを1つ以上含むレコードを検索することができます (例題参照)。
 
-#### 例題 1 
+## 例題 1 
 
 検索エリアフォームにユーザーは1つ以上の単語を入力できます。ユーザーが検索実行を指示したら、プログラムはユーザーが入力した単語を最低1つ*MyField*フィールドに含むレコードを検索します。 
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
  USE SET("Totalfound")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 先の例と同じフォームで、ユーザーが入力した単語を*MyField*フィールドにすべて含むレコードを検索します。
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  QUERY([MyTable]) //検索実行
 ```
 
-#### 例題 3 
+## 例題 3 
 
 テキスト中の単語をカウント:
 
@@ -80,11 +80,11 @@ displayed_sidebar: docs
  ALERT("このテキストには"+String($n)+"個の単語が含まれ、重複を取り除くと"+String($m)+"個です。")
 ```
 
-#### 参照 
+## 参照 
 
 [DISTINCT VALUES](distinct-values.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

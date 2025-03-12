@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->DELETE FOLDER コマンドは*folder* に渡したフルパスまたは名前を持つフォルダーを削除します。<!-- END REF-->パラメーターを省略した場合のデフォルトでは、安全のため **DELETE FOLDER** は空のフォルダーのみ削除します。空でないフォルダーを削除するには *deleteOption* を使います。*deleteOption* には "*System Documents*" テーマの次の定数を受け渡すことができます:
 
@@ -36,12 +36,12 @@ displayed_sidebar: docs
 
 これらのエラーは [ON ERR CALL](on-err-call.md) コマンドによって実装したメソッドでインターセプトすることができます。
 
-#### 参照 
+## 参照 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET**は、データベースとドキュメントまたはシリアルポート間のデータ交換の際、4Dが 使用する文字セットを変更するために使用できます。<!-- END REF-->このコマンドはカレントプロセスに有効です。交換操作にはテキスト, DIF, そして SYLK ファイルの読み込み/書き出しが含まれます。文字マップはまた[SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (テキスト型パケット) そして[RECEIVE BUFFER](receive-buffer.md)によるデータ交換にも使用されます。[SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (BLOB型パケット) そして [RECEIVE VARIABLE](receive-variable.md) によるデータ交換には影響しません。
 
@@ -29,7 +29,7 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
 *\** 引数が渡されると、 (*mapInOut*の値に基づき、読み込みまたは書き込みが) デフォルトの文字セットに再設定されます。  
 4Dが使用するデフォルトの文字コードはUTF-8です。
 
-#### 例題 
+## 例題 
 
 以下の例題 (Unicodeモード) では、UTF-16文字セットをテキストの書き出しに使用し、その後デフォルトの文字セットに再設定します:
 
@@ -39,11 +39,11 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
  USE CHARACTER SET(*;0) // デフォルト文字セットに戻す
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 マップが正しくロードされるとシステム変数OKに1が設定され、そうでなければ0が設定されます。  
 
-#### 参照 
+## 参照 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
@@ -55,7 +55,7 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

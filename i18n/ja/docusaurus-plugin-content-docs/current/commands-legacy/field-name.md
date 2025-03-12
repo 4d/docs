@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Field name.Summary-->Field name関数は、*tableNum*と*fieldNum*または*fieldPtr*で指定したフィールドの名前を返します。<!-- END REF-->
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、FieldArray{1}の2番目の要素にテーブル番号=1、フィールド番号=2のフィールドの名前を代入します。FieldArrayは、2次元の配列です。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
  FieldArray{1}{2}:=Field name(1;2)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、FieldArray{1}の2番目の要素にフィールド*\[MyTable\]MyField*の名前を代入します。FieldArrayは、2次元の配列です。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
  FieldArray{1}{2}:=Field name(->[MyTable]MyField)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は、フィールドに対してポインタを渡して、警告を表示します。
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
  +"のID番号 は、5文字以上でなければなりません。")
 ```
 
-#### 参照 
+## 参照 
 
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

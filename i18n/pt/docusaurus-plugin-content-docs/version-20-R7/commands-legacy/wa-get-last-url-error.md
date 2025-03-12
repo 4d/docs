@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->O comando WA GET LAST URL ERROR permite recuperar vários elementos de informação relacionados com o último erro ocorrido na área Web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
 
@@ -31,11 +31,11 @@ Esta informação se retorna em três variáveis:
    * Do contrário, é um erro retornado pelo WebKit (Mac OS) ou ActiveX (Windows).
 É recomendável chamar este comando dentro do marco do evento de formulário On URL Loading Error com o objetivo de conhecer a causa do erro que acaba de ocorrer.
 
-#### Ver também 
+## Ver também 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

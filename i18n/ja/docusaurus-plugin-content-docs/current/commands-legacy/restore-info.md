@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESTORE INFO.Summary-->RESTORE INFOコマンドを使用し、前回のデータベース自動復元に関連する情報を取得できます。<!-- END REF-->
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 **Note:** このコマンドは手動でのデータベース復元は対象外となります。
 
-#### 参照 
+## 参照 
 
 [RESTORE](restore.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

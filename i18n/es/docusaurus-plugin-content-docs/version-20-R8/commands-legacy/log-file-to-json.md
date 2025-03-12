@@ -51,7 +51,7 @@ El archivo JSON guardado contiene todas las operaciones registradas en el histor
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 La lista actual de propiedades disponibles depende del tipo de operación (por ejemplo: crear registros, eliminar registros, modificar registros, crear Blob etc.). Estas son las principales propiedades:
 

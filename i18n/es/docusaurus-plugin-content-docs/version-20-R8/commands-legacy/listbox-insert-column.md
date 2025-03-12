@@ -49,7 +49,7 @@ Puede pasar en los parámetros *nomPie* y *variablePie*, el nombre del objeto y 
 
 **Nota:** los nombres de los objetos deben ser únicos en un formulario. Debe asegurarse de que los nombres pasados en los parámetros *nomCol*, *nomTitulo* y *nomPie* no hayan sido utilizados. De lo contrario, la columna no sea crea y se genera un error. 
 
-##### Inserción dinámica 
+### Inserción dinámica 
 
 Puede utilizar este comando para insertar columnas en los list box de forma dinámica durante la ejecución del formulario. 4D manejará automáticamente la definición de las variables necesarias (pie de página y encabezado).  
   

@@ -29,7 +29,7 @@ Après l'exécution de la commande, la taille du tableau *tabValeurs* est égale
 
 La commande ne modifie pas la sélection courante ni l'enregistrement courant. 
 
-##### Utilisation de la propriété virtuelle length 
+### Utilisation de la propriété virtuelle length 
 
 Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle est destinée à une utilisation avec la commande [QUERY BY ATTRIBUTE](query-by-attribute.md) mais est également disponible pour **DISTINCT ATTRIBUTE VALUES** afin d'obtenir les différentes tailles de tableaux pour un attribut.
 

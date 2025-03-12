@@ -16,7 +16,7 @@ title: VP Name
 |sheet|Integer|->|Range location (current sheet if omitted)|
 |Result|Object|<-|Range object of name|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
@@ -29,7 +29,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 * `vk current sheet`
 * `vk workbook`  
 
-#### Example
+## Example
 
 You want to give a value to the "Total" named range.
 
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### See also
+## See also
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>

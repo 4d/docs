@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->GOTO OBJECTコマンドは、フォームのアクティブエリアとしてデータ入力オブジェクト*object* を選択するために使用します。<!-- END REF-->これはユーザがフィールドや変数をクリックしたりタブでフォーカスを移動したりするのと同じです。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 GOTO OBJECT コマンドをサブフォームのコンテキストで利用できます。コマンドがサブフォームから呼び出されると、まずサブフォーム内でオブジェクトを探し、そしてなにも見つからなければ親フォーム内を検索します。
 
-#### 例題 1 
+## 例題 1 
 
 GOTO OBJECTコマンドは以下のように使用します:   
 
@@ -33,7 +33,7 @@ GOTO OBJECTコマンドは以下のように使用します:
  GOTO OBJECT(*;"AgeArea") // オブジェクト名
 ```
 
-#### 例題 2 
+## 例題 2 
 
 フォーカスを外す: 
 
@@ -41,16 +41,16 @@ GOTO OBJECTコマンドは以下のように使用します:
  GOTO OBJECT(*;"")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 [REJECT](reject.md "REJECT")コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

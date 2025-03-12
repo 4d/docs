@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.False.Summary-->**False**は、ブール値のFalseを返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 この例は、変数*vbOptions*にFalseを代入します:
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
  vbOptions:=False
 ```
 
-#### 参照 
+## 参照 
 
 [Not](not.md)  
 [True](true.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

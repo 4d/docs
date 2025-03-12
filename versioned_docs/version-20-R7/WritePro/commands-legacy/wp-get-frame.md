@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get frame.Summary-->The **WP Get frame** command returns the frame where the cursor is currently set within the 4D Write Pro *wpArea* area.<!-- END REF-->
 
@@ -44,7 +44,7 @@ The returned value can be compared to one of the following constants from the *4
 
 If the cursor is currently set in a text box element, the element **id** of the text box is returned in the *textBoxID* parameter. In all other cases, this parameter is returned empty.
 
-#### Example 
+## Example 
 
 You want to make sure the user has set the cursor in a header or a footer frame:
 
@@ -56,7 +56,7 @@ You want to make sure the user has set the cursor in a header or a footer frame:
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP Get footer](wp-get-footer.md)  
 [WP SET FRAME](wp-set-frame.md)  

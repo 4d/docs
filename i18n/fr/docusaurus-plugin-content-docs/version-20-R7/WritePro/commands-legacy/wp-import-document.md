@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Import document.Summary-->La commande **WP Import document** convertit un document 4D Write Pro / 4D Write existant (extension .4wp, .4w7 ou .4wt) ou un document MS Word (.docx) en un nouvel objet 4D Write Pro.<!-- END REF-->
 
@@ -61,14 +61,14 @@ Vous pouvez passer un objet pour définir la manière dont les attributs suivant
 * *Les feuilles de style de caractères des documents 4D Write hérités utilisent un mécanisme propriétaire, qui n'est pas pris en charge par 4D Write Pro. Afin d'obtenir le meilleur résultat pour les textes importés, les attributs de feuilles de style sont convertis en attributs de style "codés en dur". Les feuilles de style de caractères hérités ne sont pas importants et ne sont plus référencés dans les documents.*
 * *La prise en charge de l'import au format .docx n'est certifiée que pour Microsoft Word 2010 et les versions plus récentes. Les versions antérieures, en particulier Microsoft Word 2007, peuvent ne pas être importées correctement.*
 
-#### Exemple 1 
+## Exemple 1 
 
 ```4d
  var WPDoc : Object
  WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez importer un document .docx et souhaitez que les bordures de paragraphe soient réduites comme dans MS Word :
 
@@ -97,6 +97,6 @@ Vous souhaitez importer un document .docx dont le texte est principalement en ja
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP New](wp-new.md)  

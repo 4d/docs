@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->The **OBJECT SET DRAG AND DROP OPTIONS** command sets or dynamically modifies the drag and drop options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -31,7 +31,7 @@ In each parameter, you pass a Boolean indicating whether the corresponding optio
 * *droppable* \= True: Object accepts drops in programmed mode.
 * *automaticDrop* \= True (only used with picture fields and variables, text, combo boxes and list boxes): Object accepts drops in automatic mode.
 
-#### Example 
+## Example 
 
 Setting a text area to automatic drag and drop: 
 
@@ -39,11 +39,11 @@ Setting a text area to automatic drag and drop:
  OBJECT SET DRAG AND DROP OPTIONS(*;"Comments";False;True;False;True)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

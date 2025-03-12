@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->SET LIST ITEM ICON コマンドは、リスト参照またはオブジェクト名を*list*に指定したリスト中、*itemRef*引数で指定した項目に割り当てるアイコンを設定します。<!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
   
 *icon* 引数には有効な4Dピクチャ式 (フィールド、変数、ポインタなど) を渡します。ピクチャは項目の左側に表示されます。
 
-#### 例題 
+## 例題 
 
 同じピクチャーを二つの異なる項目に適用したい場合を考えます。以下のコードは、ピクチャーがメモリに一度読み出されているために、最適化されています:
 
@@ -40,13 +40,13 @@ displayed_sidebar: docs
  SET LIST ITEM ICON(mylist;ref2;$picture)
 ```
 
-#### 参照 
+## 参照 
 
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

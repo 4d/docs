@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get XML element.Summary-->DOM Get XML element コマンドは、*elementName* と *index* 引数に基づき、子要素の参照を返します。<!-- END REF--> 
 
@@ -25,16 +25,16 @@ displayed_sidebar: docs
 
 **注:** デフォルトでは、**DOM Get XML element** は*elementName* 引数については大文字と小文字を区別します(xml準拠のため)。コマンドの大文字と小文字の区別については、[XML SET OPTIONS](xml-set-options.md) コマンドのXML DOM case sensitivity セレクターを使用することで管理可能です。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

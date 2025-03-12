@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get resource name.Summary-->**Get resource name** retourne le nom de la ressource dont le type est passé dans *resType* et le numéro de référence (ID) dans *resNum*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Si vous ne passez pas le paramètre *resFichier*, la ressource est recherchée d
 Si la ressource n'existe pas, **Get resource name** retourne une chaîne vide.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

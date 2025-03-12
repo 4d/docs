@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get footer.Summary-->La commande **WP Get footer** retourne le pied de page associé à la plage *objCible* ou à la section *indexSection* du document 4D Write Pro *docWP*.<!-- END REF--> Si aucun pied de page n'est trouvé par rapport au(x) paramètre(s), la commande retourne **Null**.
 
@@ -33,7 +33,7 @@ Si le paramètre *typeSousSection* est passé, la commande retourne le pied asso
     
 Si le *typeSousSection* n'est pas spécifié, le pied de section principal est retourné. Dans ce cas, si une sous-section est active, l'objet pied de section principal est *undefined* (le pied de section principal est disponible uniquement s'il n'y a pas de sous-section wk first page ou wk left page active).
 
-#### Exemple 
+## Exemple 
 
 Vous voulez copier le pied de la première page d'un document 4D Write Pro vers les pieds de toutes les pages d'un autre document 4D Write Pro :
 
@@ -50,7 +50,7 @@ Vous voulez copier le pied de la première page d'un document 4D Write Pro vers 
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Utiliser une zone 4D Write Pro*  
 [WP DELETE FOOTER](wp-delete-footer.md)  

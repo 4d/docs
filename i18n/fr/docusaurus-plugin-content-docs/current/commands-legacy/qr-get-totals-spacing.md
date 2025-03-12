@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->La commande **QR GET TOTALS SPACING** permet de récupérer la valeur de l'espacement ajouté au-dessous d'une ligne de sous-total.<!-- END REF--> Elle ne peut être utilisée qu'avec des états en liste.
 
@@ -32,11 +32,11 @@ Le paramètre *valeur* retourne la valeur de l'espacement :
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *sousTotal* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

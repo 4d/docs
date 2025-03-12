@@ -71,7 +71,7 @@ Las cinco configuraciones descritas a continuación pueden implementarse. En tod
 
 **Nota:** a pesar del hecho de que los tipos XML compuestos, los arrays de datos son tratados por 4D como tipos simples. 
 
-##### Modo RPC, entrada y salida simples 
+### Modo RPC, entrada y salida simples 
 
 Esta configuración es la más fácil de utilizar. En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Dynamic o se omite.
 
@@ -79,7 +79,7 @@ Los parámetros enviados y las respuestas recibidas pueden ser manipulados direc
 
 Consulte el ejemplo del comando [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### Modo RPC, entrada compuesta y salida simple 
+### Modo RPC, entrada compuesta y salida simple 
 
 En este caso, el parámetro *tipoComplejo* contiene la constante Web Service Manual In. Con esta configuración, debe pasar “manualmente” al servicio Web cada elemento XML fuente bajo la forma de un BLOB, con la ayuda del comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -97,7 +97,7 @@ Depende de usted formatear el BLOB inicial como un elemento XML válido. Este BL
 ```
 
   
-##### Modo RPC, entrada simple y salida compuestas 
+### Modo RPC, entrada simple y salida compuestas 
 
 En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Manual Out. Cada parámetro de salida será devuelto por el servicio Web bajo la forma del elemento XML almacenado en un BLOB. Recupera este parámetro utilizando el comando [WEB SERVICE GET RESULT](web-service-get-result.md). Luego puede analizar el contenido del BLOB recibido utilizando los comandos XML de 4D.   
   
@@ -112,7 +112,7 @@ En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Ma
  WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
 ```
 
-##### Modo RPC, entrada y salida compuestas 
+### Modo RPC, entrada y salida compuestas 
 
 En este caso, el parámetro *tipoCompuesto* contiene la constantes Web Service Manual. Cada parámetro de entrada y de salida debe ser almacenado en la forma de los elementos XML en los BLOBs, como se describió en las dos configuraciones anteriores.  
   
@@ -127,7 +127,7 @@ En este caso, el parámetro *tipoCompuesto* contiene la constantes Web Service M
  WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
 ```
 
-##### Modo DOC 
+### Modo DOC 
 
 Un método proxy de llamada de un servicio web DOC es similar a un método proxy de llamada de un servicio web RPC utilizando los parámetros de entrada y de salida compuestos. 
 

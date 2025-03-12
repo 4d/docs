@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DIFFERENCE.Summary-->**DIFFERENCE** compares *set1* and *set2* and excludes all records that are in *set2* from the *resultSet*.<!-- END REF--> In other words, a record is included in the *resultSet* only if it is in *set1*, but not in *set2*. The following table shows all possible results of a set Difference operation.
 
@@ -34,7 +34,7 @@ The *resultSet* is created by **DIFFERENCE**. The *resultSet* replaces any exist
 
 **4D Server:** In Client/Server mode, sets are "visible" depending on their type (interprocess, process and local) and where they were created (server or client). **DIFFERENCE** requires all three sets to be visible on the same machine. See the paragraph *4D Server, Sets and Named Selections* in the 4D Server Reference manual for more information.
 
-#### Example 
+## Example 
 
 This example excludes the records that a user selects from a displayed selection. The records are displayed on screen with the following line:
 
@@ -51,12 +51,12 @@ At the bottom of the list of records is a button with an object method. The obje
  CLEAR SET("$Current") //Clear the set
 ```
 
-#### See also 
+## See also 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

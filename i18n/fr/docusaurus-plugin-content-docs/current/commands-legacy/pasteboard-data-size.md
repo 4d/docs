@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Pasteboard data size.Summary-->**Pasteboard data size** vous permet de savoir s'il y a des données du type *typeDonnées* dans le conteneur de données.<!-- END REF--> 
 
@@ -31,7 +31,7 @@ Après avoir vérifié que le conteneur contient bien des données du type que v
 * Si le conteneur contient un chemin d'accès de fichier, vous pouvez l'extraire à l'aide de la commande [Get file from pasteboard](get-file-from-pasteboard.md), qui retourne le chemin d'accès du fichier.
 * Pour tout type de données, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne les données dans un BLOB.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant teste si le Presse-papiers contient une image jpeg et, si oui, la copie dans une variable 4D : 
 
@@ -46,7 +46,7 @@ L'exemple suivant teste si le Presse-papiers contient une image jpeg et, si oui,
   
 **Note :** Si vous passez le type générique 'PICT' (ou la constante Picture data) à la commande, elle retournera toujours 1 et non une taille si le Presse-papiers contient une image. 
 
-#### Exemple 2 
+## Exemple 2 
 
 Généralement, après un couper ou un copier, les applications placent des données de type Texte ou Image dans le Presse-papiers, ces deux types de données standard sont reconnus par la plupart des applications. Cependant, une application peut placer dans le Presse-papiers plusieurs copies des mêmes données sous des formats différents. Par exemple, chaque fois que vous copiez ou coupez un tableau, l'application tableur peut placer les données dans un format propriétaire — par exemple, ‘SPSH’ — ou dans les formats SYLK et TEXT. La copie ‘SPSH’ contient les données structurées dans le format interne de l'application. La copie SYLK contient les mêmes données, mais dans le format SYLK, reconnu par la plupart des tableurs. Enfin, la copie TEXT contient les mêmes données, mais sans les informations de formatage supplémentaires présentes dans les formats SYLK ou ‘SPSH’. Donc, lorsque vous écrivez des routines de Couper/Copier/Coller entre 4D et une application tableur, en prenant l'hypothèse que vous connaissez la description du format ‘SPSH’ et que vous pouvez analyser les données SYLK, vous pouvez écrire le code suivant :
 
@@ -66,7 +66,7 @@ Généralement, après un couper ou un copier, les applications placent des donn
 
 Autrement dit, vous essayez d'extraire du Presse-papiers la copie des données la plus riche en informations originales.
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez déplacer des données en format privé entre divers objets de votre formulaire. Vous pouvez écrire :
 
@@ -84,18 +84,18 @@ Vous voulez déplacer des données en format privé entre divers objets de votre
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 *Conteneur de données*  
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

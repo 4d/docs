@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM LOAD.Summary-->**FORM LOAD**コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて*formData* 引数のデータ(オプション)とともにメモリーにロードします。<!-- END REF-->1つのプロセスにつきカレントフォームは1つしか指定できません。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから呼び出された場合、デフォルトではコマンドはコンポーネントのフォームをロードします。 *\** 引数を渡した場合、メソッドはホストデータベースのフォームをロードします。
 
-##### formData 
+### formData 
 
 オプションとして、*formData* オブジェクト引数を使用して*form* 引数で指定したフォームへとパラメーターを渡すことができます。*formData* オブジェクトのプロパティであれば、フォームコンテキスト内から[Form](form.md) コマンドを通して利用することができるようになります。例えば、*formData* 引数に{"version","12"} を格納しているオブジェクトを渡した場合、フォーム内から以下のコードを呼び出すことで、"version" プロパティの値を取得したり設定したりすることができます:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注意:** 引数を渡さなかった場合、あるいは未定義のオブジェクトを渡した場合、**FORM LOAD** は[Form](form.md) コマンドを通して利用可能な、*form* 引数で指定したフォームに割り当てられた新しい空のオブジェクトを自動的に作成します。
 
-##### データの印刷 
+### データの印刷 
 
 このコマンドを使用するには、 [OPEN PRINTING JOB](open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](open-printing-job.md) は [FORM UNLOAD](form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて [FORM LOAD](form-load.md) コマンドを使用する必要があります。ロードされた *form* はカレントの印刷フォームとなります。 [Print object](print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 [CLOSE PRINTING JOB](close-printing-job.md)コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
 
-##### コンテンツの解析 
+### コンテンツの解析 
 
 データ解析のためにスクリーン外にフォームをロードするには、印刷ジョブ外のコンテキストで **FORM LOAD** を呼び出します。この場合、フォームイベントは実行されません。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 
 **注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には [FORM UNLOAD](form-unload.md) を必ずコールしてください。
 
-#### 例題 1 
+## 例題 1 
 
 印刷ジョブにプロジェクトフォームを呼び出す場合:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
   // イベントとオブジェクトメソッドの実行
 ```
 
-#### 例題 2 
+## 例題 2 
 
 印刷ジョブにテーブルフォームを呼び出す場合:
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
   // イベントとオブジェクトメソッドの実行
 ```
 
-#### 例題 3 
+## 例題 3 
 
 フォームの内容を解析してテキスト入力エリアに何らかの処理をする場合:
 
@@ -101,7 +101,7 @@ displayed_sidebar: docs
  FORM UNLOAD //フォームをunloadするのを忘れないこと
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
@@ -120,7 +120,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### 例題 5 
+## 例題 5 
 
 リストボックスを格納しているフォームを印刷したい場合を考えます。*on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
@@ -161,7 +161,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
@@ -169,7 +169,7 @@ displayed_sidebar: docs
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Average.Summary-->**Average** devuelve la media aritmética (promedio) de *series*.<!-- END REF--> Si *series* es un campo indexado, el índice se utiliza para calcular el promedio. 
 
@@ -26,7 +26,7 @@ Sólo los valores numéricos de los atributos se utilizan para el calculo. Si ha
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. Si se interrumpe (por ejemplo si el usuario hace clic en el botón **Detener** del termómetro de progreso) la variable OK toma el valor 0.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo define la variable *vPromedio* que está en el área de ruptura B0 de un formulario de salida. La línea de código es el método de objeto para *vPromedio*. El método de objeto no se ejecuta hasta el nivel de ruptura 0:
 
@@ -47,7 +47,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
 
 **Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte *Impresión*. 
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo permite obtener la media de los 15 primeras notas de la selección:
 
@@ -60,7 +60,7 @@ Este ejemplo permite obtener la media de los 15 primeras notas de la selección:
  vAverage:=Average($ArrGrades)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Su tabla \[Customer\] contiene un campo objeto "full\_Data" con los siguientes datos:
 
@@ -79,7 +79,7 @@ Puede hacer los siguientes cálculos:
   //$vTot is 105
 ```
 
-#### Ver también 
+## Ver también 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
@@ -90,7 +90,7 @@ Puede hacer los siguientes cálculos:
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Add picture.Summary-->**WP Add picture** コマンドは*wpDoc* 引数で指定したドキュメント内に、*picture* 引数で指定したピクチャーを固定位置でアンカーし、その参照を返します。<!-- END REF-->返された参照はコマンドに渡すことで*picture* 引数のピクチャーを*wpDoc* 引数のドキュメント内のどんな位置(ページ、セクション、ヘッダー、フッター)にも、定義されたレイヤー、サイズで移動させることができます。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 **注:** [WP Selection range](wp-selection-range.md) コマンドは、アンカーされたピクチャーが選択されていた場合には*ピクチャー参照*オブジェクトを返し、インライン画像をが選択されていた場合には*レンジ*オブジェクトを返します。wk type 属性を使用すると、選択されたオブジェクトがピクチャーオブジェクトがどうかをチェックすることができます。値 = 2の場合、オブジェクトはピクチャーオブジェクトであり、それ以外の場合にはレンジオブジェクト(値 = 0)となります。
 
-#### 例題 1 
+## 例題 1 
 
 ファイルパスを使用してデフォルトの設定でピクチャーを追加する場合を考えます。
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 ピクチャーをリサイズし、中央揃えにしてヘッダーにアンカーして追加したい場合を考えます:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
-#### 例題 3 
+## 例題 3 
 
 フィールド式を使用してアンカーされた画像を、データベースからのテキストを表示しているドキュメントに追加したい場合を考えます:
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
-#### 参照 
+## 参照 
 
   
 [WP DELETE PICTURE](wp-delete-picture.md)  

@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Add to date.Summary-->The **Add to date** command adds *years*, *months,* and *days* to the date you pass in *aDate*, then returns the result.<!-- END REF-->
 
 Although you can use the [Self](self.md) to add days to a date, **Add to date** allows you to quickly add months and years without having to deal with the number of days per month or leap years (as you would when using the + date operator).
 
-#### Example 
+## Example 
 
 ```4d
   // This line calculates the date in one year, same day
@@ -37,7 +37,7 @@ Although you can use the [Self](self.md) to add days to a date, **Add to date** 
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

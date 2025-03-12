@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Bool.Summary-->La commande **Bool** retourne l'expression que vous avez passée dans *expression* sous une forme booléenne.<!-- END REF-->
 
@@ -30,7 +30,7 @@ La commande peut retourner les valeurs suivantes, en fonction du type du résult
 
 Cette commande est utile lorsque le code attend toujours un booléen et que l'évaluation de *expression* peut parfois aboutir à un type différent (notamment **null** ou **indéfini**). 
 
-#### Exemple 
+## Exemple 
 
 Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en anticipant la possibilité que l'attribut ne soit pas présent :
 
@@ -41,14 +41,14 @@ Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en antic
  ALERT("Le statut de cette personne est "+$married)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Date](date.md)  
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

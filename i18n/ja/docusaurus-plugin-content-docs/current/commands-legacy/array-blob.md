@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->**ARRAY BLOB**コマンドは、メモリ上にBLOB型の要素の配列を作成・リサイズします。<!-- END REF-->引数には配列の名前を渡します。  
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 * サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素は空のBLOBで初期化されます([BLOB size](blob-size.md)\= 0)
 * サイズを縮小する場合は、 "底"にある要素から削除されていきます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例はBLOB型の要素を100個含んだプロセス配列を作成します:
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  ARRAY BLOB(arrBlob;100)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は50個のBLOB型の要素を含んだ行を100行持ったローカルな配列を作成します:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  ARRAY BLOB($arrBlob;100;50)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は50個のBLOB型の要素を含んだ行を100行持ったローカルな配列を作成します。$vByteValue 変数には、そのBLOB配列の5行目・7列目の、10バイト目のBLOBが渡されます:
 
@@ -55,11 +55,11 @@ displayed_sidebar: docs
  $vByteValue:=$arrValues{5}{7}{9}
 ```
 
-#### 参照 
+## 参照 
 
 *配列を作成する*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

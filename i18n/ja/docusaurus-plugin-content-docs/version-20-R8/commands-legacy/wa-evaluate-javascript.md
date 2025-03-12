@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->WA Evaluate JavaScript コマンドは、*\** と *object* 引数で指定したWebエリアで、*jsCode*に渡されたJavaScriptコードを実行し、結果を戻します。<!-- END REF-->このコマンドはページが読み込まれた後に呼び出してください(On End URL Loading フォームイベントが生成されている必要があります)。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **警告**: このコマンドを使用して、ダイアログを表示するようなJavaScript 関数(**alert()**, **print()**...) を直接呼び出すことは推奨されていません。4D コードが実行中はユーザーはWeb エリアを操作することができないからです。このようなインターフェースを実装する必要がある場合には、例えば **setTimeout(function(){alert();}, 50))** のようなコードを呼び出すことで、4D コードが実行を完了させたあとにユーザーが入力をできるようにすることができます。
 
-#### 例題 1 
+## 例題 1 
 
 この例題のJavaScriptコードは、履歴中前のURLを表示します:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  $result:=WA Evaluate JavaScript(MyWArea;"history.back()")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下に返ってきた結果の変換を含む例を紹介します。
 
@@ -98,11 +98,11 @@ HTML ファイル内にあるJavaScriptファンクションの例:
   // $Eval4 = 型が省略されていた場合は"2013-06-21T14:45:09.694Z"
 ```
 
-#### 参照 
+## 参照 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

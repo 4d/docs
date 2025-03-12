@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->The **BLOB PROPERTIES** command returns information about the BLOB *blob*.<!-- END REF-->
 
@@ -34,11 +34,11 @@ Whatever the compression status of the BLOB, the *expandedSize* parameter return
 
 The parameter *currentSize* returns the current size of the BLOB. If the BLOB is compressed, you will usually obtain *currentSize* less than *expandedSize*. If the BLOB is not compressed, you will always obtain *currentSize* equal to *expandedSize*.
 
-#### Example 1 
+## Example 1 
 
 See examples for the commands [COMPRESS BLOB](compress-blob.md) and [EXPAND BLOB](expand-blob.md).
 
-#### Example 2 
+## Example 2 
 
 After a BLOB has been compressed, the following project method obtains the percentage of space saved by the compression: 
 
@@ -74,12 +74,12 @@ After this method has been added to your application, you can use it this way:
  " of space.")
 ```
 
-#### See also 
+## See also 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

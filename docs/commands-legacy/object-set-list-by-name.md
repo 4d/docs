@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->The OBJECT SET LIST BY NAME command sets, replaces or disassociates the *list* associated with the object or group of objects specified by *object*.<!-- END REF--> The list whose name is passed in the *list* parameter must have been created using the List Editor in the Design environment.
 
@@ -44,7 +44,7 @@ Existing list of values are replaced depending on how the list is associated to 
 * using an array: the list is copied in array elements.
 * using an object (*not supported in binary databases*): the list is copied as collection elements in the *values* property of the object.
 
-#### Example 1 
+## Example 1 
 
 The following example sets a choice list for a shipping field. If the shipping is overnight, then the choice list is set to shippers who can ship overnight. Otherwise, it is set to the standard shippers:
 
@@ -56,7 +56,7 @@ The following example sets a choice list for a shipping field. If the shipping i
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Associate the "color\_choice" list as a simple pop-up/drop-down list named "DoorColor":
 
@@ -65,7 +65,7 @@ Associate the "color\_choice" list as a simple pop-up/drop-down list named "Door
   // in this case, the 3rd parameter (constant) can be omitted
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to associate the "color\_choice" list with the "WallColor" combo box. Since this combo box is enterable, you want for it not to be possible to use certain colors such as "black", "purple" etc. These colors are placed in the "excl\_colors" list:
 
@@ -74,7 +74,7 @@ You want to associate the "color\_choice" list with the "WallColor" combo box. S
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to remove the list associations:
 
@@ -85,12 +85,12 @@ You want to remove the list associations:
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

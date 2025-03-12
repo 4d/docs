@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->The **WEB GET VARIABLES** command fills the text arrays *nameArray* and *valueArray* with the variable names and values contained in the Web form “submitted” (i.e. sent to the Web server).<!-- END REF-->
 
@@ -26,7 +26,7 @@ This command is valid regardless of the type of URL or form (POST or GET method)
 
 This command can be called, if necessary, in the [QR SET DESTINATION](qr-set-destination.md) or any other 4D method resulting from a form submission.
 
-##### About Web forms and their associated actions 
+### About Web forms and their associated actions 
 
 Each form contains named data entry area (text area, buttons, checkboxes).  
 When a form is submitted (a request is sent to the Web server), the request contains (within others) the list of the data entry areas and their associated values.  
@@ -35,7 +35,7 @@ A form can be submitted through two methods (both can be used with 4D):
 * POST, usually used to add data into the Web server - to a database,
 * GET, usually used to request the Web server - data coming from a database.
 
-#### Example 
+## Example 
 
 A form contains two fields, vName and vCity with “ROBERT” and “DALLAS” values. The action associated to the form is “/4DACTION/WEBFORM”.
 
@@ -61,11 +61,11 @@ The result will be:
 
 The vNAME variable contains ROBERT and the vCITY variable contains DALLAS.
 
-#### See also 
+## See also 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get section.Summary-->The **WP Get section** command returns the first section intersected by the *targetObj* range or element, or to the specified *sectionIndex* of the *wpDoc* document.<!-- END REF-->
 
@@ -29,7 +29,7 @@ If no section is defined for the specified *sectionIndex*, the command returns a
 
 **Note:** Use the [WP Get subsection](wp-get-subsection.md) command to get a subsection from a section or from a range.
 
-#### Example 
+## Example 
 
 You want to get the first section:
 
@@ -39,7 +39,7 @@ You want to get the first section:
  $section:=WP Get section(wpDoc;1)
 ```
 
-#### See also 
+## See also 
 
 [WP Get sections](wp-get-sections.md)  
 [WP Get subsection](wp-get-subsection.md)  

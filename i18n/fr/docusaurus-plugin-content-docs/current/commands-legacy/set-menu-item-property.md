@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->La commande **SET MENU ITEM PROPERTY** permet de fixer la *valeur* de la *propriété* pour la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
 Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
@@ -41,7 +41,7 @@ Pour plus d’informations sur les propriétés standard des lignes de menus, re
 
 **Note :** Si la ligne de menu correspond au libellé d’un sous-menu hiérarchique, l’action standard ne sera pas appelée lorsque la ligne de menu sera sélectionnée.
 
-#### Exemple
+## Exemple
 
 ```4d
   // Standard action
@@ -53,12 +53,12 @@ Pour plus d’informations sur les propriétés standard des lignes de menus, re
   SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

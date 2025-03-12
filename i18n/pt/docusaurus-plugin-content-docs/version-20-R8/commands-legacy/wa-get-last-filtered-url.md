@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->O comando WA Get last filtered URL retorna a última URL filtrada na área web designada pelos parâmetros \* e *objeto*.<!-- END REF-->  
 
@@ -26,14 +26,14 @@ A URL pode ter sido filtrada por uma das seguintes razões:
 * A URL tenta abrir uma janela pop up.
 É recomendável chamar este comando no contexto dos eventos de formulário On URL Filtering, On Open External Link e On Window Opening Denied com o objetivo de conhecer a URL filtrada.  
 
-#### Ver também 
+## Ver também 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

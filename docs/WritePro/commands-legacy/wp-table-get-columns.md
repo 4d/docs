@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get columns.Summary-->The **WP Table get columns** command returns a new cell range object containing the selection of columns from *targetObj* or *tableRef* (defined by *startCol* and *numCols*).<!-- END REF--> 
 
@@ -38,7 +38,7 @@ If *targetObj* does not intersect with a table or text range where a selection o
     
 If *startCol* plus *numCols* exceed the number of columns in *tableRef*, or if *startCol* is greater than the number of columns in *tableRef*, the returned range contains the maximum possible columns.
 
-#### Example 1 
+## Example 1 
 
 You want to modify the attributes of the last two columns of a table:
 
@@ -61,7 +61,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
-#### Example 2 
+## Example 2 
 
 To get a range of columns starting from the 10th to the end:
 
@@ -69,7 +69,7 @@ To get a range of columns starting from the 10th to the end:
  WP Table get columns(tableRef;10;MAXLONG)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to retrieve the columns a user has selected:
 
@@ -81,7 +81,7 @@ You want to retrieve the columns a user has selected:
  $columns:=WP Table get columns($userSelection)
 ```
 
-#### See also 
+## See also 
 
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get rows](wp-table-get-rows.md)  

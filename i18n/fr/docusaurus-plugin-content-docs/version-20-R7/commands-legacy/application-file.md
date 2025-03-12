@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application file.Summary-->La fonction **Application file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier exécutable ou de l'application 4D que vous utilisez.<!-- END REF--> 
 Si, par exemple, vous utilisez 4D qui se trouve dans le répertoire \\PROGRAMMES\\4D sur le volume E, **Application file** renvoie E:\\PROGRAMMES\\4D\\4D.EXE.
@@ -21,7 +21,7 @@ Si, par exemple, vous utilisez 4D qui se trouve dans le répertoire \\PROGRAMMES
 *Sous Mac OS*  
 Si, par exemple, vous utilisez 4D qui se trouve dans le dossier Programmes sur le disque Disque Dur, **Application file** renvoie Disque Dur:Programmes:4D.app.
 
-#### Exemple 
+## Exemple 
 
 Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une librairie DLL se trouve au même niveau que le fichier exécutable de 4D. Dans la , vous pouvez écrire les instructions suivantes :
 
@@ -35,12 +35,12 @@ Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

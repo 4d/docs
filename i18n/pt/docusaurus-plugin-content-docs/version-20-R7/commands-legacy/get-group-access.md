@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get group access.Summary-->O comando **Get group access** devolve às filiações da conta de usuário 4D para a sessão atual.<!-- END REF--> Se o usuário não pertencer a nenhum grupo na sessão, se devolver uma coleção vazia.
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Coleção de strings: nomes de grupos aos que pertence a conta de usuário 4D.
 
-#### Exemplo 
+## Exemplo 
 
 Se qusier verificar se o usuário atual pertence ao grupo "plugins":
 
@@ -32,11 +32,11 @@ Se qusier verificar se o usuário atual pertence ao grupo "plugins":
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

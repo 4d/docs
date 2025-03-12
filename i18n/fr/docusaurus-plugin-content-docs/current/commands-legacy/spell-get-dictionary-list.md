@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->La commande **SPELL GET DICTIONARY LIST** retourne dans les tableaux *langID*, *langFichiers* et *langNoms* les IDs, les noms de fichiers et les noms des langues correspondant aux fichiers de dictionnaires Hunspell installés sur la machine.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ A noter que les IDs sont uniques et basés sur les noms de fichiers. Cette comma
 * *langFichiers* reçoit les noms des fichiers de dictionnaires (sans extensions) installés sur le poste.
 * *langNoms* reçoit les noms des langues exprimés dans la langue courante de l’application. Par exemple, pour un dictionnaire français, la valeur "français (France)" sera retournée sur une machine configurée en français et "French (France)" sur un système anglais. Le nom de la langue est suivi de "- Hunspell". Ce champ n’est valide que pour les fichiers "connus" de 4D. Pour les fichiers non connus (par exemple les fichiers personnalisés), le nom "N/A - Hunspell" est retourné. Ce principe n’empêche pas d’utiliser le dictionnaire (si le fichier concerné est valide), l’ID retourné pourra être passé à la commande [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
 
-#### Exemple 
+## Exemple 
 
 Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic" ainsi que "fr-dentiste.aff" et "fr-dentiste.dic" dans le répertoire Hunspell :
 
@@ -48,11 +48,11 @@ Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic
 | 1074036166  | fr-classique+reforme1990 | français (France) - Hunspell |
 | 1073901273  | fr-dentiste              | No description - Hunspell    |
 
-#### Voir aussi 
+## Voir aussi 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->DECRYPT BLOB コマンドは、BLOB *toDecrypt*の内容を送信者の公開鍵*sendPubKey*を使用して解読します。<!-- END REF-->オプションとして、受信者の秘密鍵*recipPrivKey*も使用します。
 
@@ -26,16 +26,16 @@ displayed_sidebar: docs
 
 DECRYPT BLOBコマンドは、（意図的かどうかに関わらず）BLOB内容の変更を防ぐため、チェックサム機能が提供されています。暗号化したBLOBが損傷したり変更されていると、このコマンドは何も行わず、エラーを返します。
 
-#### 例題 
+## 例題 
 
 [ENCRYPT BLOB](encrypt-blob.md "ENCRYPT BLOB") コマンドの例題を参照
 
-#### 参照 
+## 参照 
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

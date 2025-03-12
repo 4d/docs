@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->The **TRUNCATE TABLE** command quickly deletes all the records of *aTable*.<!-- END REF--> After calling the command, there is no longer any current selection or current record.
 
@@ -31,15 +31,15 @@ The **TRUNCATE TABLE** command should therefore be used with caution but is very
 
 **Note:** The concept and functioning of this command is similar to that of the SQL TRUNCATE (TABLE) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [DELETE SELECTION](delete-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->O comando DISABLE MENU ITEM desativa o comando de menu cujo número ou referência de menu e número de elemento você passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*.
 
@@ -27,11 +27,11 @@ Se o parâmetro *menuItem* designa um submenu hierárquico, todos os elementos d
 
 **Tip:** para ativar/desativar todas as linhas de menus de uma vez, passe 0 (zero) em *menuItem*.
 
-#### Ver também 
+## Ver também 
 
 [ENABLE MENU ITEM](enable-menu-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

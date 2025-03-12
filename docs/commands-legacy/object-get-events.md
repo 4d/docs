@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->The **OBJECT GET EVENTS** command gets the current configuration of the form events for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ Pass a longint array in the *arrEvents* parameter. When the command is executed,
 
 Note that the *arrEvents* array is returned empty if no object method is associated with the object or if no form method is associated with the form. 
 
-#### Example 
+## Example 
 
 You want to enable two events and get the list of events for an object:
 
@@ -43,11 +43,11 @@ You want to enable two events and get the list of events for an object:
  OBJECT GET EVENTS(*;"Col1";$ArrCurrentEvents)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET EVENTS](object-set-events.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -38,7 +38,7 @@ Los errores de compilación, si los hay, se devuelven como objetos en la colecci
 
 **Nota:** no puede llamar a este comando cuando se está ejecutando otra compilación (por ejemplo, una compilación lanzada desde la ventana Compilación).
 
-##### Parámetro opciones 
+### Parámetro opciones 
 
 El parámetro *opciones* es un objeto. Estas son las opciones de compilación disponibles:
 
@@ -61,7 +61,7 @@ El parámetro *opciones* es un objeto. Estas son las opciones de compilación di
 | \[\].minor             | Número               | Segundo número del warning, después del punto                                                                                                                                                                                                                                        |
 | \[\].enabled           | Booleano             | Estado de activación del aviso                                                                                                                                                                                                                                                       |
 
-##### Resultado de la función 
+### Resultado de la función 
 
 El objeto devuelto por **Compile project**  tiene hasta tres propiedades:
 
@@ -94,7 +94,7 @@ El objeto devuelto por **Compile project**  tiene hasta tres propiedades:
 
 Para más información, consulte *Herramientas de compilación*.
 
-###### Objetos variable 
+#### Objetos variable 
 
 interprocessVariables.variables y processVariables.variables contienen objetos con la siguiente estructura:
 
@@ -105,7 +105,7 @@ interprocessVariables.variables y processVariables.variables contienen objetos c
 | arrayDimension | número   | Sólo para arrays: 1 para arrays de una dimensión, 2 para arrays de dos dimensiones                 |
 | code           | Objeto   | Para las variables proceso e interproceso: descriptor de la ubicación de definición de la variable |
 
-###### Objeto code 
+#### Objeto code 
 
 La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto con las siguientes propiedades:
 

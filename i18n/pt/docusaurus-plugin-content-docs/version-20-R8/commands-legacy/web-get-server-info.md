@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB Get server info.Summary-->O comando **WEB Get server info** devolve um objeto que contèm informação do tempo de execução detalhada na sessão atual do servidor web 4D.<!-- END REF--> A informação devolvida inclui o servidor SOAP.
 
@@ -54,7 +54,7 @@ O objeto devolvido contém as propriedades abaixo (os nomes de propriedade são 
 
 **Nota:** este comando devolve informação sobre o servidor web local. Se quiser monitorar o servidor web 4D Server desde um 4D remoto, deve aplicar a propriedade "Executar no servidor" ao método.
 
-##### Propriedade de cache 
+### Propriedade de cache 
 
 Se passar **true** no parâmetro *conCache*, o comando devolve a propriedade objeto "cache" com o conteúdo abaixo:
 
@@ -69,7 +69,7 @@ Se passar **true** no parâmetro *conCache*, o comando devolve a propriedade obj
 | nbCachedObjects         | Número            | Número de objetos na caché                                                                                                                   |
 | cachedObjects           | Coleção           | Coleção de objetos na caché. Cada objeto em caché é definido por diferentes propriedades (url, mimeType, expirationType, lastModified, etc.) |
 
-#### Exemplo 
+## Exemplo 
 
 Depois de executar o código abaixo:
 
@@ -83,13 +83,13 @@ Depois de executar o código abaixo:
 {   "started": true,   "uptime": 40,   "SOAPServerStarted": true,   "startMode": "manual",   "httpRequestCount": 0,   "options": {      "CORSEnabled": false,      "CORSSettings": null,      "webCharacterSet": "UTF-8",      "webHTTPCompressionLevel": 1,      "webHTTPCompressionThreshold": 1024,      "webHTTPSPortID": 443,      "webIPAddressToListen": ["192.168.xxx.xxx"],      "webInactiveProcessTimeout": 28800,      "webInactiveSessionTimeout": 28800,      "webMaxConcurrentProcesses": 100,      "webPortID": 80   },   "security": {      "HTTPEnabled": true,      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",      "perfectForwardSecrecy": true,      "minTLSVersion": "1.2"    },    "cache": {        "cacheUsage": 1,        "numOfLoads": 24,        "currentSize": 154219,        "maxSize": 10485760,        "objectMaxSize": 524288,        "enabled": true,        "nbCachedObjects": 23,        "cachedObjects": [            {...},{...}         ]   }}
 ```
 
-#### Ver também 
+## Ver também 
 
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

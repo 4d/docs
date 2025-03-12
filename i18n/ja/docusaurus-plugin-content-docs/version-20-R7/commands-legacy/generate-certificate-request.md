@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->**GENERATE CERTIFICATE REQUEST** コマンドは、Verisign(R)等の認証局で使用されているPKCSフォーマットで証明書リクエストを生成します。<!-- END REF-->証明書はSSL暗号化プロトコルの重要な役割を持ちます。これはSSLモードで接続している各ブラウザに送信され、Webサイトの“IDカード” (このコマンドに指定した情報をもとに作成) とともに、ブラウザが受信情報の解読に使用できる公開鍵も納められています。さらにこの証明書には、整合性を保証する認証局により加えられた各種情報も納められます。
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 コードと情報内容の入力順は問いませんが、これら2つの配列は同期していなくてはなりません。つまり、*codeArray*の3番目の項目の値が15 (LocalityName) であれば、*nameArray*の3番目の項目にはその情報を納める必要があります。ここの例題ではSetagaya-kuになります。
 
-#### 例題 
+## 例題 
 
 “Certificate request”フォームには、標準の証明書リクエストで必要となる6つのフィールドが含まれています。**Generate**ボタンは証明書リクエストを納めたドキュメントをディスク上に作成します。([GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) コマンドで作成された) 秘密鍵を納めた“Privatekey.txt”もディスク上に存在している必要があります:
 
@@ -81,12 +81,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

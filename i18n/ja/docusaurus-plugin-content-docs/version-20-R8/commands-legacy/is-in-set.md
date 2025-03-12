@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is in set.Summary-->Is in set関数は、*set*の属するテーブルのカレントレコードが*set*に含まれているかどうかを調べます。<!-- END REF-->Is in set関数は、カレントレコードが*set*に含まれていれば Trueを返し、含まれていなければ Falseを返します。
 
-#### 例題 
+## 例題 
 
 以下の例は、ボタンのオブジェクトメソッドです。これは、現在表示されているレコードが "Best" のセットに含まれているかどうかを調べます。  
 :
@@ -31,12 +31,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

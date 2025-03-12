@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->The **WP TABLE SPLIT CELLS** command splits the intersecting selection of cells in the *targetObj* or *tableRef* (defined by *startColumn*, *startRow*, *columnCount*, and *rowCount*).<!-- END REF--> A cell will be split only if it has already been merged horizontally, vertically, or both; otherwise, the cell will not be modified.
 
@@ -45,7 +45,7 @@ If rowCount is omitted, it is the equivalent of passing 1 (default value). If bo
 
 If startColumn plus ColumnCount or *startRow* plus rowCount exceeds the number of columns/rows in *tableRef*, or if startColumn or *startRow* is greater than the number of columns/rows in *tableRef*, the returned range contains the maximum possible columns/rows which means every cell in the table (if it has been merged before) is splitted.
 
-#### Example 
+## Example 
 
 You want to designate a range of cells (that contain some already merged cells) and split it:
 
@@ -64,7 +64,7 @@ Data from the already merged cell is kept all in the first (top left) cell after
 
 For more details, please refer to *Merging and splitting cells*.
 
-#### See also 
+## See also 
 
 *Handling tables*  
 [WP TABLE MERGE CELLS](wp-table-merge-cells.md)  

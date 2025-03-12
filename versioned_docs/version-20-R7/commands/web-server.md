@@ -24,7 +24,7 @@ displayed_sidebar: docs
 </details>
 
 
-#### Description 
+## Description 
 
 The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
@@ -38,7 +38,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 
 The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
 
-#### Example  
+## Example  
 
 From your component, you want to know if the Web server of the host database is started:
 
@@ -52,12 +52,12 @@ From your component, you want to know if the Web server of the host database is 
 ```
 
 
-#### See also 
+## See also 
 
 [WEB Server list](web-server-list.md)  
 [webServer.stop()](../API/WebServerClass.md#stop)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

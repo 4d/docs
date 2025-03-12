@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML ENTITY.Summary-->La commande **SAX GET XML ENTITY** permet de récupérer le *nom* et la *valeur* d’une entité XML présente dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML entity. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-#### Exemple 
+## Exemple 
 
 Considérons l’extrait de code XML suivant :
 
@@ -41,15 +41,15 @@ L’instruction suivante retournera “nom” dans *vNom* et “Le remplacement�
  SAX GET XML ENTITY(RefDoc;vNom;vValeur)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

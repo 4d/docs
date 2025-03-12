@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current client authentication.Summary-->O comando **Current client authentication** pede ao servidor Active Directory de Windows autenticar o cliente atual e se tiver êxito, devolve o nome de início de sessão de Windows para este cliente (identificador de sessão).<!-- END REF--> Se a autenticação falhar, se devolve uma string vazia. 
 
@@ -32,7 +32,7 @@ Opcionalmente, o comando pode devolver dois parâmetros de texto:
 
 Estes parâmetros podem ser utilizar para aceitar ou recusar as conexões se desejar filtrar o acesso em relação com o domínio ou o protocolo.
 
-##### Nível de segurança da autenticação 
+### Nível de segurança da autenticação 
 
 O nível de segurança da autenticação (ou seja, em quanto se pode confiar no início de sessão de usuário) depende da forma em que o usuário tenha sido identificado. O valor devolvido nos parâmetros do comando **Current client authentication** permitirão conhecer em que se baseia o início de sessão (se houver) e, portanto, o nível de segurança: 
 
@@ -44,7 +44,7 @@ O nível de segurança da autenticação (ou seja, em quanto se pode confiar no 
 | preenchido | preenchido  | Kerberos      | A ID devolvida foi autenticada com o protocolo Kerberos no domínio esperado. Esta configuração oferece o mais alto nível de segurança.                                                                                                                                                                                             |
 
   
-#### Exemplo 
+## Exemplo 
 
 Em seu banco de dados 4D Server, se tiver designado um sistema de controle de acesso baseado na propriedade de 4D de usuários e grupos, pode configurar sua aplicação para que os usuários remotos 4D em Windows se conectem diretamente a 4D Server (não são mostradas nenhum quadro de diálogo de senha), estando conectado com seus direitos atuais: 
 
@@ -72,7 +72,7 @@ Com esta configuração, não se mostra um diálogo de senha para um 4D remoto q
 * usa propriedades LDAP para conseguir credenciais de usuário.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Discover data key.Summary-->O comando **Discover data key** busca uma chave de cifrado válida correspondente ao arquivo de dados aberto atualmente a nivel da raíz de todos os dispositivos conectados e devolve **True** se for exitoso.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Os archivos chave (arquivos de extensão ".4DKeyChain") devem ser armazenados no
    * a chave de criptografia se agrega à keychain 4D.
 * **False** se não for encontrada uma chave de criptografia válida para o arquivo de dados aberto atual, pelo que não é possível acessar alos dados.
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
  var $status : Object
@@ -45,12 +45,12 @@ Os archivos chave (arquivos de extensão ".4DKeyChain") devem ser armazenados no
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [New data key](new-data-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.On Web Legacy Close Session database method.Summary-->Cette méthode base peut être utilisée uniquement avec d'**anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle n'est jamais appelée lorsque le mode **sessions Web extensibles** est activé (recommandé sous 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.
 
-#### 
+## 
 
 La **On Web Legacy Close Session database method** est appelée par le serveur Web de 4D à chaque fois qu’une session Web est sur le point d’être refermée. Une session peut être refermée dans les cas suivants :
 
@@ -30,7 +30,7 @@ Au moment de l’appel de la méthode base, le contexte de la session (variables
 
 Un exemple d’utilisation de la **On Web Legacy Close Session database method** est fourni dans la section *Gestion des sessions Web*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gestion des sessions Web*  
 [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  

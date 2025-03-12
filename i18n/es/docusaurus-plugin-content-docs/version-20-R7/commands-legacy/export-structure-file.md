@@ -64,7 +64,7 @@ El parámetro *opciones* le permite personalizar el proceso de conversión. El o
 
 **Atención**: cuando se pasa el parámetro *opciones* y se usa el objeto "filtro", debe declarar explícitamente cada propiedad para exportar con el valor **true**. Cuando se pasa este objeto, 4D asume que todas las propiedades están en **false** por defecto.
 
-##### Resultado 
+### Resultado 
 
 El comando devuelve un objeto que ofrece el estado final de la exportación, así como también información sobre problemas encontrados o errores, si los hay. Se devuelven las siguientes propiedades:
 

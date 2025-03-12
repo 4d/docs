@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application version.Summary-->The Application version command returns an encoded string value that expresses the version number of the 4D environment you are running.<!-- END REF-->
 
@@ -71,7 +71,7 @@ The Application version command can return additional information in the optiona
 
 **Note:** In the case of applications that are compiled and merged with 4D Volume License, the build number returned is not significant. In this context, version information is managed by the developer. 
 
-#### Example 1 
+## Example 1 
 
 This example displays the 4D environment version number:
 
@@ -81,7 +81,7 @@ This example displays the 4D environment version number:
  $vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
-#### Example 2 
+## Example 2 
 
 This example tests to verify that you are using a final version:
 
@@ -92,7 +92,7 @@ This example tests to verify that you are using a final version:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to use the application's short version value returned by the command to display the 4D application release name. You can write:
 
@@ -115,12 +115,12 @@ You want to use the application's short version value returned by the command to
  End if
 ```
 
-#### See also 
+## See also 
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

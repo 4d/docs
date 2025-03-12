@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->**INVOKE ACTION**コマンドは*action* 引数で定義された標準アクションを、任意の*target* 引数で指定したコンテキストでトリガーします。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注意:** 4D Write Pro ドキュメントに対しては、特定のアクションが追加されています。これらについては、4D Write Pro リファレンスマニュアル内の *4D Write Pro標準アクションの使用* の章に詳細な説明があります。
 
-##### 
+### 
 
 *target* 引数には、*action* 引数で指定したアクションを実行したいフォームコンテキストを渡すことができます。*標準アクション* テーマの以下の定数のうちどれか一つを使用することができます:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 **INVOKE ACTION** コマンドはエラーを生成しません。例えば、指定したアクションがカレントのコンテキストでは利用不可能な場合などにおいてもエラーは生成されません。[Action info](action-info.md) コマンドを使用して、予定しているアクションを評価する必要があります。
 
-#### 例題 1 
+## 例題 1 
 
 カレントフォームにおいて**コピー**の標準アクションを実行したい場合を考えます:
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 メインフォームにおいて**指定したページへ移動**標準アクション(3ページ)を実行したい場合を考えます:
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-#### 参照 
+## 参照 
 
 [Action info](action-info.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BLOB to integer.Summary-->O comando BLOB to integer retorna um valor inteiro de 2 bytes inteiro lido do BLOB *blob*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Se você especificar o parâmetro opcional *offset* , o valor inteiro de 2-byte 
 
 Após a chamada, a variável é incrementada pelo número de bytes lidos, portanto, você pode reutilizar a mesma variável com outro comando de leitura BLOB para ler outro valor. 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir lê 20 valores inteiros de um BLOB, iniciando no offset 0x200:
 
@@ -50,7 +50,7 @@ O exemplo a seguir lê 20 valores inteiros de um BLOB, iniciando no offset 0x200
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  
@@ -60,7 +60,7 @@ O exemplo a seguir lê 20 valores inteiros de um BLOB, iniciando no offset 0x200
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

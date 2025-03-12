@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->O comando **LIST OF STYLE SHEETS** devolve a lista de folhas de estilo da aplicação no array *arrFolhasEstilo*.<!-- END REF-->  
   
@@ -23,11 +23,11 @@ Depois de executar o comando, cada elemento do array contém o nome de uma folha
 
 Nota: por razões de compatibilidade, a folha de estilo automático "\_\_automatic\_main\_text\_\_" and "\_\_automatic\_additional\_text\_\_" não são retornadas por esse comando. Entretanto, eles estão disponíveis nos formulários.
 
-##### Nota de compatibilidade 
+### Nota de compatibilidade 
 
 Esse comando pode ser usado somente em **bancos de dados binários**. Em **arquitetura de projetos**, o array não é preenchido. 
 
-#### Exemplo 
+## Exemplo 
 
 Em sua aplicação, se definem as seguintes folhas de estilo:
 
@@ -45,12 +45,12 @@ Se executa o seguinte código:
   // $arrStyles{6} contém "Variables"
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

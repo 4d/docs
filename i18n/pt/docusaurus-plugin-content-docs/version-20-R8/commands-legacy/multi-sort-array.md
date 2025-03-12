@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->O comando MULTI SORT ARRAY lhe permite realizar um tipo de ordenação multi-nível em um conjunto de arrays.<!-- END REF-->
 
@@ -63,7 +63,7 @@ Você não pode ordenar arrays do tipo Ponteiro ou imagem. Você pode ordenar os
 
 É possível ordenar arrays Objeto. Elementos Null são agrupados e elementos arrays são ordenados com uma ordem interna.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir usa a primeira sintaxe: ele cria quatro arrays e os classifica por cidade (ordem crescente) e depois por salário (por ordem decrescente) com os dois últimos arrays, *names\_array* e *telNum\_array*, sendo sincronizados de acordo com os critérios de classificação anteriores:
 
@@ -87,7 +87,7 @@ Note que a sintaxe:
  SORT ARRAY(cidades;salarios;nomes;telNums;>)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir usa a segunda sintaxe: ele cria quatro arrays e os classifica por cidade (ordem crescente) e companhia (ordem decrescente); os dois últimos arrays, nomes\_Array e telNum\_Array, sendo sincronizados de acordo com critérios de classificação anteriores:
 
@@ -110,13 +110,13 @@ O exemplo a seguir usa a segunda sintaxe: ele cria quatro arrays e os classifica
 
 Se quiser que o array de nomes seja usado como um terceiro critério de ordenação, você precisa atribuir o valor 1 para o elemento Ordem\_array{3}. Ou então, se você quiser os arrays sejam classificados pelo critério único da cidade, atribua o valor 0 para os elementos ordem\_array{2}, ordem\_array{3} e ordem\_array{4} . Desta forma, você obtém um resultado idêntico ao. *SORT ARRAY(cidades; empresas; nomes; telNums;>).* 
 
-#### Ver também 
+## Ver também 
 
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

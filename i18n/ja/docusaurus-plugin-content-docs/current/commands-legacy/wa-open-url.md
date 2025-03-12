@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA OPEN URL.Summary-->**WA OPEN URL**コマンドは、*url* 引数に渡したURLを、*\** と *object* 引数で指定したWebエリアにロードします。<!-- END REF-->
 
@@ -42,13 +42,13 @@ Mac OSにおいてFileVault が有効化されている場合には、Posix シ�
  WA OPEN URL(MyWArea;"http://www.4d.com/")
 ```
 
-#### 参照 
+## 参照 
 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

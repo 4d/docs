@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->La commande **CLOSE RESOURCE FILE** referme le fichier de ressources dont vous avez passé le numéro de référence dans *resFichier*.<!-- END REF-->
 
@@ -25,11 +25,11 @@ Si vous passez un numéro de référence de fichier de ressources non valide, la
 
 N'oubliez pas d'appeler finalement **CLOSE RESOURCE FILE** pour un fichier de ressources que vous avez ouvert à l'aide de la commande [Open resource file](open-resource-file.md). Notez cependant que 4D referme automatiquement tous les fichiers de ressources ouverts lorsque vous quittez l'application ou ouvrez une autre base de données.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Open resource file](open-resource-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

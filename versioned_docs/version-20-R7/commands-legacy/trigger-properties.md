@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRIGGER PROPERTIES.Summary-->The **TRIGGER PROPERTIES** command returns information about the trigger execution level you pass in *triggerLevel*.<!-- END REF--> You use this command in conjunction with [Trigger level](trigger-level.md) to perform different actions depending on the cascading of trigger execution levels. For more information, see *Triggers*.
 
@@ -32,14 +32,14 @@ The nature of the database event for the trigger execution level is returned in 
 
 The table number and record number for the record involved by the database event for the trigger execution level are returned in *tableNum* and *recordNum*.
 
-#### See also 
+## See also 
 
 *About Record Numbers*  
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *Triggers*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

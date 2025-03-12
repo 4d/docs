@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in array.Summary-->The Find in array command returns the number of the first element in *array* that matches *value*.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Find in array can be used with Text, Numeric, Date, Pointer, Object, and Boolean
 
 If *start* is specified, the command starts searching at the element number specified by *start*. If *start* is not specified, the command starts searching at element 1.
 
-#### Example 1 
+## Example 1 
 
 The following project method deletes all empty elements from the string or text array whose pointer is passed as parameter:
 
@@ -57,7 +57,7 @@ After this project method is implemented in a database, you can write:
  CLEAN UP ARRAY(->atSomeValues)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following project method selects the first element of an array whose pointer is passed as the first parameter that matches the value of the variable or field whose pointer is passed as parameter:
 
@@ -85,7 +85,7 @@ After this project method is implemented in a database, you can write:
 
 **Note:** This example uses the **selected element** of the array. Keep in mind that the selected element is not meaningful if the array contains more than 32,767 elements (see *Arrays and Form Objects*). In this case, you need to use a longint variable to store the result of **Find in array**.
 
-#### Example 3 
+## Example 3 
 
 You want to find an object reference:
 
@@ -102,7 +102,7 @@ You want to find an object reference:
  $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
-#### See also 
+## See also 
 
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
@@ -110,7 +110,7 @@ You want to find an object reference:
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

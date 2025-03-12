@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP NEW BOOKMARK.Summary-->El comando **WP NEW BOOKMARK** crea un nuevo marcador llamado *nombk* basado en el *objRango* 4D Write Pro del documento padre.<!-- END REF-->
 
@@ -31,7 +31,7 @@ En *nombk*, pase el nombre para el nuevo marcador. Un nombre de marcador debe se
 
 Puede crear tantos marcadores como desee dentro del mismo documento. Varios marcadores pueden ser creados usando el mismo rango exacto. Una vez creado, un marcador se almacena automáticamente en el documento de nivel superior y se guarda con el documento en sí.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere crear un nuevo marcador referenciando el texto seleccionado actualmente en el documento. Puede escribir:
 
@@ -41,7 +41,7 @@ Usted quiere crear un nuevo marcador referenciando el texto seleccionado actualm
  WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere cambiar el nombre de un marcador existente. Para ello, es necesario crear un nuevo marcador con el mismo rango y luego, eliminar el anterior:
 
@@ -65,7 +65,7 @@ Usted quiere cambiar el nombre de un marcador existente. Para ello, es necesario
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP Bookmark range](wp-bookmark-range.md)  

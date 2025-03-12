@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->**OBJECT Get data source**コマンドは、引数 *object* と *\** で指定したオブジェクトの、カレントのデータソースを返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
-#### 例題 
+## 例題 
 
 フォーム内に以下の様に定義されたコンボボックスがあるとします:
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
   // $vPtr の値は -> vCombo
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Application info.Summary-->**Application info** コマンドはアクティブなアプリケーションのアクティビティと、ネットワーク設定に関する詳細な情報を格納したオブジェクト型を返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 (\*) Windows 上では、例えば[On Startupデータベースメソッド](on-startup-database-method.md) 内で**Application info** コマンドを呼び出すなどして、カウンターを事前に初期化しておく必要があります。
 
-#### 例題
+## 例題
 
 以下のコードを実行すると、実行中のアプリケーションについての情報を格納したオブジェクトが返されます:
 
@@ -125,14 +125,14 @@ displayed_sidebar: docs
 }
 ```
 
-#### 参照 
+## 参照 
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

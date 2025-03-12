@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->**INSERT MENU ITEM** コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューにおいて、*afterItem*に渡された番号の既存のメニュー項目の後ろに新しいメニュー項目を挿入します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **重要**: 新しいメニュー項目には、メソッドやアクションが割り当てられていません。これらを[SET MENU ITEM PROPERTY](set-menu-item-property.md) や [SET MENU ITEM METHOD](set-menu-item-method.md) コマンドを使用して項目に割り当てるか、[Menu selected](menu-selected.md) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
 
-#### 例題 
+## 例題 
 
  以下の例題は2つのコマンドからなるメニューを作成し、メソッドを割り当てます:
 
@@ -50,12 +50,12 @@ displayed_sidebar: docs
  SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
 ```
 
-#### 参照 
+## 参照 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

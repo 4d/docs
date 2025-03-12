@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->The **LISTBOX GET CELL COORDINATES** command returns in variables or fields the *left*, *top*, *right* and *bottom* coordinates (in points) of the cell designated by the *column* and *row* parameters, in the list box defined by *\** and *object*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ For consistency with the *OBJECT GET COORDINATES* command, the origin is the upp
 
 For more information, please refer to the [OBJECT GET COORDINATES](object-get-coordinates.md) command description.
 
-#### Example 
+## Example 
 
 You want to draw a red rectangle around the selected cell of a list box:
 
@@ -49,12 +49,12 @@ You want to draw a red rectangle around the selected cell of a list box:
 
 ![](../assets/en/commands/pict1741070.en.png)
 
-#### See also 
+## See also 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

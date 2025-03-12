@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
@@ -118,7 +118,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 * Make sure that no dialog box appears on the server machine (except for a specific requirement).
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 1 
+## Example 1 
 
 The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
@@ -143,11 +143,11 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command. 
 
-#### Example 3 
+## Example 3 
 
 This form is used as dialog, then printed with modifications:
 
@@ -175,14 +175,14 @@ The code that calls the dialog then prints its body:
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-#### See also 
+## See also 
 
 [CANCEL](../commands-legacy/cancel.md)  
 [PAGE BREAK](../commands-legacy/page-break.md)  
 [PRINT SETTINGS](../commands-legacy/print-settings.md)  
 [SET PRINT OPTION](../commands-legacy/set-print-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

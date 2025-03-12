@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->El comando **Decrypt data BLOB** descifra el parámetro *blobADescifrar* con el mismo algoritmo que 4D utiliza para descifrar datos (AES-256) y devuelve el resultado en *blobDescifrado*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Si el descifrado tiene éxito, los datos descifrados se devuelven en el parámet
 
 En caso de error, el BLOB se devuelve vacío y el comando devuelve false.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra cómo descifrar un archivo encriptado ubicado en la carpeta RESOURCES de la base de datos:  
   
@@ -52,14 +52,14 @@ El siguiente ejemplo muestra cómo descifrar un archivo encriptado ubicado en la
 
 La *frasePasar* y la *sal* utilizadas para el descifrado son idénticas a la *frasePasar*  y la *sal* utilizadas para el cifrado (ver el ejemplo [Encrypt data BLOB](encrypt-data-blob.md)).
 
-#### Ver también 
+## Ver también 
 
   
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

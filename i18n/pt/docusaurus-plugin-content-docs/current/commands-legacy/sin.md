@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Sin.Summary-->Sin retorna o seno do *numero*, onde *numero* é expresso em radianos.<!-- END REF-->4D oferece as constantes pré-definidas Pi, Degree, e Radian. Pi retorna o número Pi (3,14159...), Degree retorna o valor em radianos de um grau (0.01745...), e Radian retorna o valor em graus de um radiano (57.29577...).
 
-#### Ver também 
+## Ver também 
 
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Expert mode 
+## Expert mode 
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
 
-#### Description 
+## Description 
 
 The **ADJUST BLOBS CACHE PRIORITY** command modifies the *priority* of the "blobs" data related to *aTable* in cache for the current process. A call to this command replaces any priority previously adjusted through the same command in the same process. This command adjusts the priority for a temporary need, for example during a query or an import. 
 
@@ -36,7 +36,7 @@ Pass one of the following constants from the "*Cache Management*" theme in the *
 | Cache priority high      |                                              |
 | Cache priority very high |                                              |
 
-#### Example 
+## Example 
 
 You want to temporarily change the cache priority for the \[Docs\] table text fields stored in the data file when executing a sequential search:
 
@@ -48,12 +48,12 @@ You want to temporarily change the cache priority for the \[Docs\] table text fi
  ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### See also 
+## See also 
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

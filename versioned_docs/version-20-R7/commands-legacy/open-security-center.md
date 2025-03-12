@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->The OPEN SECURITY CENTER command displays the Maintenance and Security Center (MSC) window.<!-- END REF--> For more information, please refer to the *Maintenance and security center* page. 
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 * This command works on the same principle as a call to [DIALOG](dialog.md) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](cancel.md). So you need to manage its display through the code of the process being executed.
 * This command cannot be executed on a remote 4D application.
 
-#### See also 
+## See also 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

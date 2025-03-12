@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->**GET PRINT OPTION** コマンドは、プリントオプションの現在の値を返します。<!-- END REF--> 
 
@@ -41,16 +41,16 @@ PDFオプションコードは2つの部分、OptionT*ype*と*OptionName*から�
 
 **注:** **GET PRINT OPTION** コマンドは主にPostScript プリンターをサポートします。このコマンドは他のタイプのプリンター、例えばPCLやlinkなどにも使用できますが、その場合一部のオプションが使用できない可能性があります。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 このコマンドが正しく実行されると、OKシステム変数に1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

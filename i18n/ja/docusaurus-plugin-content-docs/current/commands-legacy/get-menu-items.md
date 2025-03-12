@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->GET MENU ITEMS コマンドは、*menu*引数で指定したメニューまたはメニューバーのタイトルとIDを*menuTitlesArray* と *menuRefsArray* 配列に返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 項目にメニュー参照が割り当てられていない場合、対応する配列要素には空の文字列が返されます。
 
-#### 例題 
+## 例題 
 
 カレントプロセスのメニューバーの内容を取得します: 
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

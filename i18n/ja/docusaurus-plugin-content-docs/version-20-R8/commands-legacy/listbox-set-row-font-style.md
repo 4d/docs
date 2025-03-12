@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **注:** リストボックス全体に対するスタイルの指定より単一の列に対するスタイルの方が優先されるので、リストボックス全体に対してこのコマンドは、列に対するスタイル配列が設定されていない場合のみ有効です。
 
-#### 例題 
+## 例題 
 
 ある配列リストボックスに以下のスタイルを適用する場合を考えます。
 
@@ -73,12 +73,12 @@ displayed_sidebar: docs
 
 2つ目のコマンドの後、3行目のセルは下線付きのイタリックになりましたが、5列目のセルだけは太字のままになっています(列スタイル配列の方がリストボックス配列より優先されるからです)。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

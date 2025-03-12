@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Font file.Summary-->El comando **Font file** devuelve un objeto que describe el archivo de fuente de su sistema operativo correspondiente a *familiaFuente* y, opcionalmente, a *estilofuente* pasado en el parámetro.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ El parámetro opcional *estilofuente* permite definir una variación de estilo. 
 | Italic    | Entero largo | 2     |
 | Plain     | Entero largo | 0     |
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea asegurarse de que la fuente utilizada en un área de texto esté disponible en el sistema del usuario para una visualización correcta:
 
@@ -45,11 +45,11 @@ Desea asegurarse de que la fuente utilizada en un área de texto esté disponibl
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

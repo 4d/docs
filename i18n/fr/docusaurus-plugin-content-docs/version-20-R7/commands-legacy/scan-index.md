@@ -26,7 +26,7 @@ Si vous passez *<*, **SCAN INDEX** retourne *nombre* enregistrements à partir d
 
 Si vous spécifiez un nombre d'enregistrements supérieur au nombre d'enregistrements présents dans la table, **SCAN INDEX** retourne tous les enregistrements.
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 

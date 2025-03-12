@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties permite modificar e atualizar as propriedades de uma conta ativa de usuário existente cujo número de referência se passa no parâmetro *refUsuario* ou para adicionar um novo usuário.<!-- END REF-->
 
@@ -52,11 +52,11 @@ Se passar o parâmetro opcional *adesao*, muda todas as adesões para o usuário
 
 **Nota para bancos de dados binários**: Valores de ID de grupos e usuários dependem do criador (Designer, Administrador ou proprietário de grupo afiliado). Para saber mais veja o parágrafo *User and group ID ranges* Para criar um usuário afiliado com o Designer, passe -1 em refUsuario. Para criar um usuário afiliado com o Administrador, passe -2 em refUsuario.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se você não tiver os acessos de privilégio para chamar Set user properties ou se o sistema de senhas já estiver acessado para outro processo, um erro de privilégio de acesso é gerado. Você pode interceptar o erro com um método de gestão de erros instalado usando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -65,7 +65,7 @@ Se você não tiver os acessos de privilégio para chamar Set user properties ou
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB TO VARIABLE.Summary-->BLOB TO VARIABLE コマンドは、*offset*引数で指定されたバイトオフセット (ゼロから開始) にある*blob*に格納されているデータを使用して*variable*を上書きします。<!-- END REF-->
 
@@ -33,19 +33,19 @@ BLOBデータは宛先変数と整合性を保っていなければなりませ�
 
 BLOB TO VARIABLEと[VARIABLE TO BLOB](variable-to-blob.md)は4Dの内部フォーマットを使用してBLOBに格納される変数を取り扱います。この利点として、これら二つのコマンドを使用する際、プラットフォーム間のバイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBをMacintoshで使用する、あるいはその逆をおこなうことができます。
 
-#### 例題 
+## 例題 
 
 [VARIABLE TO BLOB](variable-to-blob.md "VARIABLE TO BLOB")の例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 変数に書き込みが行われると、OK変数に1が設定されます。そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

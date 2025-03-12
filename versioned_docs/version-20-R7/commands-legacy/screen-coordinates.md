@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->The SCREEN COORDINATES command returns in *left*, *top*, *right,* and *bottom* the global coordinates of the screen specified by *screenID*.<!-- END REF-->
 
@@ -40,13 +40,13 @@ The following images demonstrate the differences between the screen size and the
 * If the taskbar or dock is automatically hidden, **SCREEN COORDINATES** always returns the entire screen size.
 * If an invalid value is given in *screenID* or *screenArea*, a zero is returned for all of the coordinates.
 
-#### See also 
+## See also 
 
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

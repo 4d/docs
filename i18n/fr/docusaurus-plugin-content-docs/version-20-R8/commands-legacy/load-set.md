@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD SET.Summary-->**LOAD SET** charge un ensemble depuis le fichier *nomFichier*, créé à l'aide de la commande [SAVE SET](save-set.md).<!-- END REF-->
 
@@ -25,7 +25,7 @@ Le paramètre *nomFichier* est le nom du fichier disque contenant l'ensemble. Il
 
 **ATTENTION :** Rappelez-vous qu'un ensemble est l'image d'une sélection d'enregistrements au moment précis où l'ensemble est créé. Si les enregistrements représentés par l'ensemble sont modifiés, celui-ci devient obsolète. En conséquence, vous devez stocker et charger des ensembles avec des enregistrements dont le contenu varie peu. De multiples événements peuvent rendre un ensemble obsolète : modification ou suppression d'un enregistrement de l'ensemble, ou encore modification des critères ayant déterminé la création de l'ensemble.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant utilise **LOAD SET** pour charger l'ensemble des locaux de l'entreprise Dupont SARL à Paris :
 
@@ -36,15 +36,15 @@ L'exemple suivant utilise **LOAD SET** pour charger l'ensemble des locaux de l'e
  CLEAR SET("Paris Dupont SARL") // Effacer l'ensemble de la mémoire
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fichiers, ou si une erreur se produit pendant le chargement, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAVE SET](save-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

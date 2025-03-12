@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current default table.Summary-->**Current default table** returns a pointer to the table that has been passed to the last call to [DEFAULT TABLE](default-table.md) for the current process.<!-- END REF-->
 
-#### Example 
+## Example 
 
 Provided a default table has been set, the following line of code sets the window title to the name of the current default table:
 
@@ -25,13 +25,13 @@ Provided a default table has been set, the following line of code sets the windo
  SET WINDOW TITLE(Table name(Current default table))
 ```
 
-#### See also 
+## See also 
 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

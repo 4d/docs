@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->The LIST TO ARRAY command creates or overrides the array *array* with the first level items of the list or choice list designated by *list*.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ The optional *itemRefs* parameter (a numeric array) returns the list item refere
 
 You can use LIST TO ARRAY to build an array based on the first level items of a list. However, this command does not allow you to work with any of the list's child items. When working with hierarchical lists, we recommend that you use the hierarchical lists commands, in particular [Load list](load-list.md).
 
-#### Example 1 
+## Example 1 
 
 The following example copies the items of a list called Regions into an array called *atRegions*:
 
@@ -37,7 +37,7 @@ The following example copies the items of a list called Regions into an array ca
  LIST TO ARRAY("Regions";atRegions)
 ```
 
-#### Example 2 
+## Example 2 
 
 Given a hierarchical list created as follows:
 
@@ -79,13 +79,13 @@ If you execute the following statement:
  ...
 ```
 
-#### See also 
+## See also 
 
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

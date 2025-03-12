@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.UNION.Summary-->**UNION** creates a set that contains all records from *set1* and *set2*.<!-- END REF--> The following table shows all possible results of a set Union operation.
 
@@ -34,7 +34,7 @@ The *resultSet* is created by **UNION**. The *resultSet* replaces any existing s
 
 **4D Server:** In Client/Server mode, sets are "visible" depending on their type (interprocess, process and local) and where they were created (server or client). **UNION** requires that all three sets be visible on the same machine. See the paragraph *4D Server, Sets and Named Selections* in the 4D Server Reference manual for more information.
 
-#### Example 
+## Example 
 
 This example adds records to a set of best customers. The records are displayed on screen with the first line. After the records are displayed, a set of the best customers is loaded from disk, and any records that the user selected (the set named “UserSet”) are added to the set. Finally, the new set is saved on disk:
 
@@ -46,12 +46,12 @@ This example adds records to a set of best customers. The records are displayed 
  SAVE SET("$Best";"$SaveBest") // Save the set of best customers
 ```
 
-#### See also 
+## See also 
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

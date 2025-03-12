@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Active transaction.Summary-->O comando **Active transaction** devolve **True** se o processo atual estiver em transação e se esta transação não for suspensa.<!-- END REF--> Devolve **False** se não houver uma transação em curso, ou se for suspensa a transação atual. Uma transação pode ser suspensa utilizando o comando *SUSPEND TRANSACTION*. 
 
@@ -21,7 +21,7 @@ Dado que o comando também devolverá **False** se o processo atual não estiver
 
 Para saber mais, consulte o parágrafo . 
 
-#### Descrição 
+## Descrição 
 
 Se quiser conhecer o estado da transação atual:
 
@@ -37,14 +37,14 @@ Se quiser conhecer o estado da transação atual:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspender as transações*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

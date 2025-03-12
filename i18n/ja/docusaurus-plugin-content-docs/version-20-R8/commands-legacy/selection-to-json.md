@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Selection to JSON.Summary-->**Selection to JSON**コマンドは、 *aTable* のカレントセレクション内のレコードと同数の要素を持つJSON配列を含んだ文字列を返します。<!-- END REF-->配列のそれぞれの要素はセレクションのフィールドのラベルと値を含んだJSONオブジェクトです。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **注:** **Selection to JSON**コマンドを呼び出した後、カレントセレクションは同じままですが、カレントレコードはロードされておらず、変更されている可能性もあります(その場合、カレントセレクションの最後のレコードがカレントレコードになります)。**Selection to JSON**コマンドのあと、カレントレコード内のフィールドの値を使用したい場合には[LOAD RECORD](load-record.md) コマンドと、(必要であれば)[GOTO SELECTED RECORD](goto-selected-record.md) コマンドを組み合わせて呼んで下さい。
 
-#### 例題 1 
+## 例題 1 
 
 以下のセレクションを JSON 文字列で表現する場合:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
   // $jsonString = [{"Member":"Durant"},{"Member":"Smith"},{"Member":"Anderson"},{"Member":"Albert"},{"Member":"Leonard"},{"Member":"Pradel"}
 ```
 
-#### 例題 2 
+## 例題 2 
 
 *template* 表記を使用する事で、異なるテーブルからフィールドを書き出す事ができます:
 
@@ -87,11 +87,11 @@ displayed_sidebar: docs
  SET FIELD RELATION([Emp]UUID_Company;Structure configuration;Do not modify)
 ```
 
-#### 参照 
+## 参照 
 
 [JSON TO SELECTION](json-to-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

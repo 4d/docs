@@ -22,7 +22,7 @@ displayed_sidebar: docs
 |Result|Object|&#8592;|Email object|
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
 
@@ -30,11 +30,11 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 
-#### Returned object
+## Returned object
 
 Email object.
 
-#### Example 1
+## Example 1
 
 You want to load a mail template saved as MIME in a text document and send an email:
 
@@ -58,7 +58,7 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-#### Example 2
+## Example 2
 
 In this example, you send directly a 4D Write Pro document containing pictures:
 
@@ -93,7 +93,7 @@ $status:=$transporter.send($email)
 | mime | BLOB, Text | &#8594;  | Email in MIME |
 | Function result | Object | &#8592; | Email object |
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

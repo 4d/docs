@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](json-stringify.md).
 
@@ -58,7 +58,7 @@ __symbols:{//description de l'objet
 
 **Note :** Le paramètre *\** est ignoré si la valeur retournée n'est pas de type objet.
 
-#### Exemple 1 
+## Exemple 1 
 
 Exemples de conversions simples : 
 
@@ -83,7 +83,7 @@ Exemples de conversions simples :
  $h:=JSON Parse("5120";Is time) //$h=01:25:20
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemples de conversions de données de type date : 
 
@@ -100,7 +100,7 @@ Exemples de conversions de données de type date :
   //$date3=13/07/17
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Si le paramétrage courant de stockage de date est "type date", vous pouvez écrire :
 
@@ -117,7 +117,7 @@ Si le paramétrage courant de stockage de date est "type date", vous pouvez écr
 
 **Note :** Pour plus d'informations sur ce paramétrage, reportez-vous à l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans le *Page Compatibilité*. 
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple montre l’utilisation conjointe des commandes [JSON Stringify](json-stringify.md) et **JSON Parse** :
 
@@ -133,7 +133,7 @@ Cet exemple montre l’utilisation conjointe des commandes [JSON Stringify](json
  $Contact2:=JSON Parse($JSONContact)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous souhaitez créer une collection 4D à partir d'un tableau JSON :
 
@@ -142,7 +142,7 @@ Vous souhaitez créer une collection 4D à partir d'un tableau JSON :
  $myCol:=JSON Parse("[\"Lundi\",10,\"Mardi\",11,\"Mercredi\",12,false]")
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vous souhaitez analyser la chaîne suivante et obtenir le chemin et la position de chaque propriété :
 
@@ -183,14 +183,14 @@ beta[1].echo:{line:9,offset:12},
 beta[1].golf:{line:10,offset:12}}}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 *Types champs et variables*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

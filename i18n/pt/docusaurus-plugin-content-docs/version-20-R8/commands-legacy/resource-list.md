@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->O comando RESOURCE LIST preenche os arrays *resNum* e *resNomes* com os números e os nomes dos recursos cujo tipo se passa em *resTipo*.<!-- END REF-->  
   
@@ -28,7 +28,7 @@ Se pré-declara os arrays antes de chamar a RESOURCE LIST, deve pré-declarar *r
   
 Depois da chamada, pode testar o número de recursos encontrados aplicando o comando [Size of Array](size-of-array.md "Size of Array") ao array *resNum* ou *resNomes*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir preenche os arrays *$alResNum* e *$atResNom* com os números e os nomes de recursos de tipo lista de cadeias presentes no arquivo de estrutura do banco: 
 
@@ -43,7 +43,7 @@ O exemplo a seguir preenche os arrays *$alResNum* e *$atResNom* com os números 
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir copia os recursos imagem presentes em todos os arquivos de recursos abertos na biblioteca de imagens do banco:
 
@@ -66,11 +66,11 @@ O exemplo a seguir copia os recursos imagem presentes em todos os arquivos de re
  CLOSE WINDOW
 ```
 
-#### Ver também 
+## Ver também 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

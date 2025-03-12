@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Startup database method.Summary-->**On Startupデータベースメソッド**は、データベースを開くと1度呼び出されます。<!-- END REF--> 
 
@@ -35,17 +35,17 @@ displayed_sidebar: docs
 * データベースを開く度に自動的に実行したい他の動作を実行する。
 しかしながら**On Startupデータベースメソッド**から印刷ジョブを起動することは推奨しません。
 
-#### 例題 
+## 例題 
 
 [Semaphore](semaphore.md)の例題を参照
 
-#### 参照 
+## 参照 
 
 [On Exitデータベースメソッド](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 *データベースメソッド*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

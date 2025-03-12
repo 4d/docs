@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->The **DOM Get XML document ref** command is used to recover the reference of the "document" element of the DOM tree whose reference you have passed in *elementRef*.<!-- END REF--> The document element is the first element of a DOM tree; it is the parent of the root element. 
 
@@ -22,7 +22,7 @@ The reference of the document element lets you handle the "Doctype" and "Process
 
 At this level, you can only append processing instructions and comments or replace the Doctype node. You cannot create CDATA or Text nodes there. 
 
-#### Example 
+## Example 
 
 In this example, we want to find the DTD declaration of the XML document:
 
@@ -50,12 +50,12 @@ In this example, we want to find the DTD declaration of the XML document:
  End if
 ```
 
-#### See also 
+## See also 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

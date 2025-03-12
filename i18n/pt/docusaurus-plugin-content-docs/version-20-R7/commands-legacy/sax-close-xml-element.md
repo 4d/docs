@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->O comando SAX CLOSE XML ELEMENT escreve no documento XML referenciado por *documento* as instruções necessárias para fechar o último elemento aberto utilizando o comando [SAX OPEN XML ELEMENT](sax-open-xml-element.md).<!-- END REF-->  
 
 O uso deste comando é opcional. Na verdade, 4D adiciona automaticamente, se for necessário, as etiquetas de final dos elementos não fechados explicitamente, no momento do fechamento dos documentos 
 
-#### Exemplo 
+## Exemplo 
 
 Se o último elemento aberto for *<Book>*, a instrução abaixo: 
 
@@ -33,12 +33,12 @@ Se o último elemento aberto for *<Book>*, a instrução abaixo:
  
 ```
 
-#### Ver também 
+## Ver também 
 
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

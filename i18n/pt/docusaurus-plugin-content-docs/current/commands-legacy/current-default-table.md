@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current default table.Summary-->Current default table retorna um ponteiro a tabela que foi passado na última chamada a [DEFAULT TABLE](default-table.md) para o processo atual.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Desde que uma tabela padrão tenha sido estabelecida, a linha de código abaixo estabelece o título de janela ao nome da tabela padrão atual:
 
@@ -25,13 +25,13 @@ Desde que uma tabela padrão tenha sido estabelecida, a linha de código abaixo 
  SET WINDOW TITLE(Table name(Current default table))
 ```
 
-#### Ver também 
+## Ver também 
 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -47,7 +47,7 @@ Cada objeto de error de la colección *errors* contiene las siguientes propiedad
 | *offset*                | Número   | Desplazamiento de línea del error en el archivo JSON. Esta propiedad se llena si el JSON ha sido analizado por [JSON Parse](json-parse.md) con el parámetro *\**. De lo contrario, la propiedad se omite. |
 | *schemaPaths*           | Cadena   | Ruta JSON en el esquema que causa el error de validación                                                                                                                                                  |
 
-##### Gestión de errores 
+### Gestión de errores 
 
 Se pueden devolver los siguientes errores:  
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Frontmost process.Summary-->Frontmost process devolve o número do processo cuja janela (ou janelas) estão no primeiro plano.<!-- END REF--> 
 
@@ -25,16 +25,16 @@ Quando tiver uma ou mais janelas flutuantes abertas, há duas camadas de janelas
 
 Se a função Frontmost process é utilizada no método de formulário ou em um método de objeto de uma janela flutuante, a função devolve o número de referência da janela flutuante que se encontra mais adiante na capa de janelas flutuantes. Se especifica o parâmetro opcional *\**, a função devolve o número de referência do processo da janela ativa que se encontra no primeiro plano nas camadas de janelas padrão.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 
-#### Ver também 
+## Ver também 
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

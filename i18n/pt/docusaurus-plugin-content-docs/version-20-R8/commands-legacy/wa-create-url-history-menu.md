@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->O comando WA Create URL history menu cria e preenche um menu que pode ser utilizado diretamente para a navegação entre as URLs visitadas durante a sessão na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Pode ser utilizado para criar uma interface de navegação personalizada.
 
@@ -37,7 +37,7 @@ Chame o comando [RELEASE MENU](release-menu.md) para apagar um menu de históric
 
 Nota de compatibilidade: a partir de 4D v19 R5, esse comando preenche um menu com apenas a URL atual para areas web usando o motor de renderização de Windows 
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo pode estar associado a um botão 3D com menu pop up chamado "Anterior":
 
@@ -62,13 +62,13 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

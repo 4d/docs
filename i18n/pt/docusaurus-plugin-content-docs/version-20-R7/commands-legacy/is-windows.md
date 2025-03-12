@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is Windows.Summary-->O comando **Is Windows** devolve True se o sistema operativo atual for Windows.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser determinar se o sistema operativo atual é Windows:
 
@@ -29,12 +29,12 @@ Se quiser determinar se o sistema operativo atual é Windows:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

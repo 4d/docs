@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->**SET QUERY DESTINATION** enables you to tell 4D where to put the result of any subsequent query for the current process.<!-- END REF-->
 
@@ -101,7 +101,7 @@ The number of records found by any subsequent query will end up in the variable 
 
 On the other hand, **SET QUERY DESTINATION** does not affect other commands that may change the current selection of a table such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md) and so on.
 
-#### Example 1 
+## Example 1 
 
 You create a form that will display the records from a *\[Phone Book\]* table. You create a Tab Control named *asRolodex* (with the 26 letters of the alphabet) and a subform displaying the *\[Phone Book\]* records. Choosing one Tab from the Tab Control displays the records whose names start with the corresponding letter. 
 
@@ -158,7 +158,7 @@ To do so, you can redirect your queries into named selections that you reuse as 
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 The Unique values project method in this example allows you to verify the uniqueness of the values for any number of fields in a table. The current record can be an existing or a newly created record.
 
@@ -241,7 +241,7 @@ After this project method is implemented in your application, you can write:
   //...
 ```
 
-#### See also 
+## See also 
 
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
@@ -253,7 +253,7 @@ After this project method is implemented in your application, you can write:
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

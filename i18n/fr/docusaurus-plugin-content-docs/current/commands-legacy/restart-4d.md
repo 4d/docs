@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESTART 4D.Summary-->La commande **RESTART 4D** provoque le redémarrage de l’application 4D courante.<!-- END REF--> 
 
@@ -30,12 +30,12 @@ Le paramètre optionnel *message* vous permet d’afficher un message personnali
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et l’application redémarre. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get last update log path](last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

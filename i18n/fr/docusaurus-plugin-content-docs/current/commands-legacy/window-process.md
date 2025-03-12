@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Window process.Summary-->La commande **Window process** retourne le numéro du process qui exécute la fenêtre dont le numéro de référence est passé dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande retourne *0* (zéro).
 
 Si vous omettez le paramètre *fenêtre*, **Window process** retourne le numéro du process de la fenêtre de premier plan du process courant.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current process](current-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

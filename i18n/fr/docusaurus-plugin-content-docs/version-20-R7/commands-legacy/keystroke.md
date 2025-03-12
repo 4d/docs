@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** retourne le caractère tapé par l'utilisateur dans un champ ou une zone saisissable.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Vous pouvez utiliser la commande **Keystroke** pour :
 
 **Note :** Vous ne pouvez pas utiliser la fonction **Keystroke** dans les sous-formulaires.
 
-#### Exemple 1 
+## Exemple 1 
 
 Référez-vous aux exemples de la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 Lorsque vous traitez un événement On Before Keystroke, vous gérez la modification de la zone de texte courante (celle qui contient le curseur), et non la “valeur future” de la source de données (champ ou variable) de cette zone. La méthode Gérer frappe clavier décrite ci-dessous vous permet de placer dans une seconde variable les caractères saisis dans une zone de texte. Vous pouvez alors utiliser cette variable pour effectuer différentes actions pendant la saisie des caractères dans la zone. Vous passez comme premier paramètre un pointeur vers la source des données de la zone, et comme second paramètre un pointeur vers cette seconde variable. La méthode renvoie la nouvelle valeur de la zone de texte dans la seconde variable et retourne Vrai si cette valeur est différente de ce qu'elle était avant la saisie du dernier caractère. 
 
@@ -159,13 +159,13 @@ Voici le formulaire en exécution :
 
 A l'aide des possibilités de communication interprocess de 4D, vous pouvez construire une interface dans laquelle les recherches se construisent dans des palettes flottantes communiquant avec les process dans lesquels les enregistrements sont affichés ou modifiés.
 
-#### Voir aussi 
+## Voir aussi 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

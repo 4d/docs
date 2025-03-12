@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PHP Execute.Summary-->**PHP Execute**コマンドはPHPスクリプトや関数を実行するために使用します。<!-- END REF-->.
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 **注** **:** PHPを使用してエラー管理を設定できます。詳細は例えば以下のページを参照してください: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
 
-##### 返されるデータの変換 
+### 返されるデータの変換 
 
 以下の表は*phpResult*引数の型に基づき、返されるデータが4Dによりどのように解釈され変換されるかを説明しています。
 
@@ -74,11 +74,11 @@ displayed_sidebar: docs
 
 **注:** PHPを使用して大量のデータを取得する必要がある場合、通常関数の戻り値を使用するよりも、(**echo**や同等のコマンドを使用して) *stdOut*バッファーを経由した方が効率的です。詳細は[PHP GET FULL RESPONSE](php-get-full-response.md)コマンドの説明を参照してください。
 
-##### 環境変数を使用する 
+### 環境変数を使用する 
 
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)コマンドを使用してスクリプトが使用する環境変数を指定できます。警告: [LAUNCH EXTERNAL PROCESS](launch-external-process.md) や**PHP Execute** を呼出した後、一連の環境変数は消去されます。
 
-##### 特別な関数 
+### 特別な関数 
 
 4Dは以下の特別な関数を提供します:
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 
 **PHP Execute**から最初のリクエストが送信されると、インタープリターが自動で再起動されることに留意してください。
 
-#### 例題 1 
+## 例題 1 
 
 "myPhpFile.php"スクリプトを関数指定なしで呼び出します。スクリプトは以下の通りです:
 
@@ -106,7 +106,7 @@ displayed_sidebar: docs
 
 カレントのPHP バージョンが表示されます。
 
-#### 例題 2 
+## 例題 2 
 
 "myNewScript.php"内のmyPhpFunction関数を引数付きで呼び出します。スクリプトは以下の通りです:
 
@@ -127,7 +127,7 @@ displayed_sidebar: docs
  ALERT($result) // "Hello 4D world!"が表示される
 ```
 
-#### 例題 3 
+## 例題 3 
 
 PHPインタープリターを終了します:
 
@@ -135,7 +135,7 @@ PHPインタープリターを終了します:
  $ifOk:=PHP Execute("";"quit_4d_php")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 エラー管理:
 
@@ -175,7 +175,7 @@ PHP\_errHandlerメソッドは以下の通りです :
  End for
 ```
 
-#### 例題 5 
+## 例題 5 
 
 実行前に4Dで動的にスクリプトを作成します:
 
@@ -202,7 +202,7 @@ PHP\_errHandlerメソッドは以下の通りです :
  $err:=PHP Execute("C:\\Scripts\\MyScript.php";"function2Rename_v2";*)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 日付と時間タイプの値を直接受け取ります。スクリプトは以下の通りです:
 
@@ -227,7 +227,7 @@ PHP\_errHandlerメソッドは以下の通りです :
 
 ```
 
-#### 例題 7 
+## 例題 7 
 
 配列にデータを配分します:
 
@@ -243,7 +243,7 @@ PHP\_errHandlerメソッドは以下の通りです :
   // $arLongには数値 11, 22, 33,... が格納されます。
 ```
 
-#### 例題 8 
+## 例題 8 
 
 配列を初期化します:
 
@@ -254,7 +254,7 @@ PHP\_errHandlerメソッドは以下の通りです :
   // $arTextは50 要素の"undefined"で埋められます。
 ```
 
-#### 例題 9 
+## 例題 9 
 
 配列を使用して引数を渡します:
 
@@ -265,7 +265,7 @@ PHP\_errHandlerメソッドは以下の通りです :
   // 配列に初期値が設定されます
 ```
 
-#### 例題 10 
+## 例題 10 
 
 以下の例は、文字列の始めと終わりの余分なスペースまたは不可視の文字を除去するtrimファンクションの基本的な使用法です:
 
@@ -278,13 +278,13 @@ PHP\_errHandlerメソッドは以下の通りです :
 
 trimファンクションについてのより詳細な情報については、PHPドキュメントを参照して下さい。
 
-#### 参照 
+## 参照 
 
 *4DでPHPスクリプトを実行する*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

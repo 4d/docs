@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->The **OBJECT SET THREE STATES CHECKBOX** command modifies, for the current process, the "Three-States" property of the checkbox(es) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -27,11 +27,11 @@ This command only applies to checkboxes associated with variables, and not to Bo
 
 In the *threeStates* parameter, pass **True** to enable the "three states" mode, or **False** to disable it. 
 
-#### See also 
+## See also 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

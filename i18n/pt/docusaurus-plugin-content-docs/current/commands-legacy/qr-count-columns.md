@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Count columns.Summary-->O comando QR Count columns devolve o número de colunas presentes na *area* do relatório rápido.<!-- END REF-->
 
 Se passa um número de *area* inválido, é gerado o erro -9850.
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir permite adicionar uma coluna adicional à direita da última coluna da área:
 
@@ -29,12 +29,12 @@ O código a seguir permite adicionar uma coluna adicional à direita da última 
  QR INSERT COLUMN(MinhaArea;$ColNb+1;->[Tabela 1]Campo2)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

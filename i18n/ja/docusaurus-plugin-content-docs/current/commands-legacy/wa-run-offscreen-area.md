@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->**WA Run offscreen area** コマンドは、メモリ内にWeb エリアを作成します。<!-- END REF-->このWeb エリアはWeb ページを自動的に読み込んで解析することなどに使用できます。
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-#### 例題 
+## 例題 
 
 自分のOffscreenArea クラスのファンクションを使用して、オフスクリーンのWeb エリアを作成し管理したい場合を考えます:
 
@@ -86,17 +86,17 @@ displayed_sidebar: docs
  End case
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 タイムアウトに達した場合、または*onEvent* で[CANCEL](cancel.md) が呼び出された場合、OK システム変数は0に設定され、それ以外の場合には1に設定されます。
 
-#### 参照 
+## 参照 
 
 [FORM Event](../commands/form-event.md)  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 *Webエリアのプログラムによる管理*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

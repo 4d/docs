@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->O comando  SET MENU ITEM SHORTCUT  modifica o atalho Ctrl (Windows) ou comando (Macintosh) para o comando de menu cujos números de menu e de elemento são passados em *menu* e *menuItem,* pelo caracter cujo caractere de código ou texto se passa em *itemKey*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado ao menu. Esta tecla se combinará automaticamente com a tecla **Ctrl** (Windows) ou **Comando** (Macintosh) para definir o novo atalho de teclado.
 
@@ -39,13 +39,13 @@ Se omitir o parâmetro processo, SET MENU ITEM SHORTCUT se aplica ao processo at
 
 **Nota**: Se passar um MenuRef em menu, o parâmetro de processo não serve nenhum propósito e é ignorado.
 
-##### Compatibilidade 
+### Compatibilidade 
 
 Por razões de compatibilidade, o comando também aceita o código de caractere no parâmetro *itemKey* (sintaxe antiga). Nesse caso, o atalho automaticamente inclui as teclas **Ctrl** (Windows) ou **Cmd** (macOS) e os parâmetros *modificadores* não é levado em consideração. 
 
 Se passar 0 (zero) em *itemKey*, qualquer atalho é removido do item menu.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Definição do atalho Ctrl+Shift+U (Windows) e Cmd+Shift+U (Mac OS) para a linha "Sublinhado": 
 
@@ -54,7 +54,7 @@ Definição do atalho Ctrl+Shift+U (Windows) e Cmd+Shift+U (Mac OS) para a linha
  SET MENU ITEM SHORTCUT(MenuRef;1;"U";Shift key mask)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Definição do atalho Ctrl+R (Windows) e Cmd+R (Mac OS) para o elemento de menu "Reiniciar":
 
@@ -63,7 +63,7 @@ Definição do atalho Ctrl+R (Windows) e Cmd+R (Mac OS) para o elemento de menu 
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Definição do atalho\\shortcut para o item de menu "Close:
 
@@ -72,12 +72,12 @@ Definição do atalho\\shortcut para o item de menu "Close:
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -21,11 +21,11 @@ displayed_sidebar: docs
 * el formulario actual es un subformulario,
 * actualmente se muestra un formulario tabla en la pantalla.
 
-##### Formulario DIALOG 
+### Formulario DIALOG 
 
 Si el formulario actual se muestra mediante una llamada al comando [DIALOG](dialog.md), **Form** devuelve un objeto vacío, o el objeto *formData* pasado como parámetro a este comando, si existe.
 
-##### Subformulario 
+### Subformulario 
 
 Si el formulario actual es un subformulario, el objeto devuelto depende de la variable del contenedor padre:
 
@@ -38,7 +38,7 @@ En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la
 
 Para más información, consulte la sección *Subformularios en página*.
 
-##### Formulario Tabla 
+### Formulario Tabla 
 
 **Form** devuelve el objeto asociado al formulario tabla que se muestra en la pantalla. En el contexto de un formulario de entrada que se muestra desde un formulario de salida (es decir, después de hacer doble clic en un registro), el objeto devuelto contiene la siguiente propiedad:
 

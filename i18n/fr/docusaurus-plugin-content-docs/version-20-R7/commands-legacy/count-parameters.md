@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count parameters.Summary-->**Count parameters** retourne le nombre de paramètres passés à une méthode projet.<!-- END REF-->**Count parameters** n'a d'intérêt que dans une méthode projet appelée par une autre méthode (projet ou non). Si la méthode projet qui appelle **Count parameters** est associée à une commande de menu, la fonction retourne 0.
 
-#### Exemple 1 
+## Exemple 1 
 
 Les méthodes projet de 4D acceptent que des paramètres soient optionnels, à partir de la droite. Par exemple, la méthode *maMéthode(a;b;c;d)* peut accepter les syntaxes suivantes : 
 
@@ -58,7 +58,7 @@ Vous pouvez ensuite appeler cette méthode de ces trois façons différentes :
  AJOUTER TEXTE(vtTexte;0;$vhRéfDoc) // Afficher le message texte et l'écrire dans $vhRéfDoc
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Les méthodes projet de 4D acceptent un nombre variable de paramètres du même type à partir de la droite. Pour déclarer ces paramètres, vous devez utiliser des directives de compilation auxquelles vous passez *${N}* en tant que variable, où N spécifie le premier des paramètres. A l'aide de **Count parameters**, vous pouvez référencer ces paramètres dans une boucle avec la syntaxe d'indirection de paramètre. L'exemple suivant est une fonction qui retourne la valeur maximale reçue en tant que paramètre :
 
@@ -88,12 +88,12 @@ ou :
  vrRésultat:=Max de(r1;r2;r3;r4;r5;r6)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Commandes du thème Compilateur*  
 [Copy parameters](copy-parameters.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

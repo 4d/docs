@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RECEIVE VARIABLE.Summary-->RECEIVE VARIABLE は、[SET CHANNEL](set-channel.md "SET CHANNEL")で開いたシリアルポートまたはドキュメントから、[SEND VARIABLE](send-variable.md "SEND VARIABLE")コマンドで送信した*variable*を受信します。<!-- END REF-->
 
@@ -27,22 +27,22 @@ displayed_sidebar: docs
 2. このコマンドは配列をサポートしません。ドキュメントやシリアルポートを介して配列を送受信したい場合、*BLOBコマンド*を使用してください。
 3. RECEIVE VARIABLEの実行中、Ctrl-Alt-Shift (Windows) またはCommand-Option-Shift (Macintosh) を押して、受信を中断することができます。中断することにより、エラー-9994が生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")を使用してインストールされたエラー処理メソッドにより、このエラーをとらえることができます。通常、シリアルポート経由での通信の場合にのみ、受信の中断処理を実行する必要があります。
 
-#### 例題 
+## 例題 
 
 [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") コマンドの例題を参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 変数を受信するとシステム変数OKに1が設定され、そうでなければ0が設定されます。  
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

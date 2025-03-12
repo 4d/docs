@@ -37,7 +37,7 @@ El comando es temporizado con el fin de evitar ataques de fuerza bruta, en otras
 
 **Nota:** cuando el grupo del usuario actual ofrece acceso a una funcionalidad "serializada" (por ejemplo, un plug-in), se utiliza una licencia correspondiente que permanecerá vinculada a la cuenta de usuario 4D hasta el final de la sesión, incluso si se llama a **CHANGE CURRENT USER** y el grupo del nuevo usuario no ofrece acceso a la funcionalidad.
 
-##### Ofrecer una caja de diálogo de gestión de acceso personalizada 
+### Ofrecer una caja de diálogo de gestión de acceso personalizada 
 
 El comando CHANGE CURRENT USER permite establecer cajas de diálogo personalizadas para introducir el nombre y contraseña (con reglas de entrada y de vencimiento) que tengan las mismas ventajas del sistema de control de accesos de 4D. 
 

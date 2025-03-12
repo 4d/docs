@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->La commande **WEB SERVICE GET RESULT** permet de récupérer une valeur renvoyée par le Web Service à l’issue du traitement effectué.<!-- END REF-->Cette commande doit être utilisée uniquement après la commande [WEB SERVICE CALL](web-service-call.md).
 
@@ -27,7 +27,7 @@ Le paramètre optionnel *nomRetour* permet de spécifier le nom du paramètre à
 
 Le paramètre *\**, optionnel, indique au programme de libérer la mémoire consacrée au traitement de la requête. Vous devez passer ce paramètre après la récupération de la dernière valeur renvoyée par le Web Service.
 
-#### Exemple 
+## Exemple 
 
 Imaginons un Web Service retournant l’heure courante dans n’importe quelle ville du monde. Les paramètres reçus par le Web Service sont le nom de la ville et le code du pays. Le Web Service retourne alors l’heure correspondante. La méthode proxy d’appel pourrait être de la forme suivante :
 
@@ -47,12 +47,12 @@ Imaginons un Web Service retournant l’heure courante dans n’importe quelle v
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

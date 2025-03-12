@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->La commande **SET DEFAULT CENTURY** vous permet de définir le siècle courant par défaut et l'année pivot adoptés par 4D lorsque des dates sont saisies avec seulement deux chiffres pour l'année.<!-- END REF-->
 
@@ -63,7 +63,7 @@ Notez que cette commande n'affecte que l'interprétation des dates lorsque les a
 Cette commande affecte uniquement la saisie des données. Elle n'influe pas sur le stockage des données, les calculs, etc. 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Select document.Summary-->La commande **Select document** affiche une boîte de dialogue standard d’ouverture de documents, permettant à l’utilisateur de désigner un ou plusieurs fichier(s), et retourne le nom et/ou le chemin d’accès complet du ou des fichier(s) sélectionné(s).<!-- END REF-->
 
@@ -60,7 +60,7 @@ Le paramètre facultatif *sélectionnés* permet de récupérer le chemin d’ac
 
 La commande retourne le nom (nom+extension sous Windows) du fichier sélectionné. Si plusieurs fichiers ont été sélectionnés, la commande retourne le nom du premier fichier de la liste des fichiers sélectionnés. La liste des fichiers peut être récupérée dans le paramètre *sélectionnés*. Si aucun fichier n’a été sélectionné, la commande retourne une chaîne vide. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple permet de désigner un fichier de données 4D :
 
@@ -76,7 +76,7 @@ Cet exemple permet de désigner un fichier de données 4D :
  $Doc:=Select document("";$DocType;"Sélectionner le fichier de données";$Options)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un document personnalisé par l’utilisateur : 
 
@@ -87,17 +87,17 @@ Création d’un document personnalisé par l’utilisateur :
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée et qu’un document valide a été sélectionné, la variable système OK prend la valeur 1 et la variable système Document contient le chemin d’accès complet du fichier sélectionné.   
 Si aucun fichier n’a été sélectionné (par exemple si l’utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue d’ouverture), la variable système OK prend la valeur 0 et la variable système Document est vide. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

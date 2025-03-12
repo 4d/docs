@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->La commande **OBJECT SET COORDINATES** permet de modifier l’emplacement et, optionnellement, la taille de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
 
@@ -39,7 +39,7 @@ Cette commande fonctionne uniquement dans les contextes suivants :
 * En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
 * Formulaires en cours d'impression.
 
-#### Exemple 
+## Exemple 
 
 L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (30,40) :
 
@@ -49,13 +49,13 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

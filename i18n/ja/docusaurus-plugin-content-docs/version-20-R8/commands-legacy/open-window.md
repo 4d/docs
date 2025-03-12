@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Open window.Summary-->**Open window** は最初の4つの引数で指定された寸法を使用して新しいウィンドウを開きます。<!-- END REF-->
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 **Open window** はWinRef 型のウィンドウ参照を返し、これはウィンドウ管理コマンド("*WinRef*"の章を参照)によって使用することができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のプロジェクトメソッドはメインウィンドウ (Windows) またはメインスクリーン (Macintosh) の中央にウィンドウを開きます。2\~４つの引数を受け入れます: 
 
@@ -88,7 +88,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題はコントロールメニューボックス (Windows) またはクローズボックス (Macintosh) メソッド付きのウィンドウを開きます。ウィンドウはアプリケーションウィンドウの右上に開かれます。  
   
@@ -103,7 +103,7 @@ CloseColorPalette メソッドは[CANCEL](cancel.md)コマンドを呼び出し�
  CANCEL
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例題では、ウィンドウに表示するフォームのサイズとタイトルプロパティを使用して、ウィンドウを開きます: 
 
@@ -117,7 +117,7 @@ CloseColorPalette メソッドは[CANCEL](cancel.md)コマンドを呼び出し�
 
 **Reminder:** **Open window**が自動でフォームのプロパティを使用するためには、事前に表示するフォームを[FORM SET INPUT](form-set-input.md)コマンドで指定し、またオプションの *\** 引数を[FORM SET INPUT](form-set-input.md)コマンドに指定しなければなりません。またデザインモードで対応するフォームのプロパティを設定していなければなりません。
 
-#### 例題 4 
+## 例題 4 
 
 この例題はMac OS X下でのシートウィンドウを表示する際の遅延メカニズムを説明します: 
 
@@ -129,13 +129,13 @@ CloseColorPalette メソッドは[CANCEL](cancel.md)コマンドを呼び出し�
   //ウィンドウはタイトルバーからドロップダウンされる
 ```
 
-#### 参照 
+## 参照 
 
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 *Open Window*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

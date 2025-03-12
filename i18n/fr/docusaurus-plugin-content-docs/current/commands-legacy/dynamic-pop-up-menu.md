@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->La commande **Dynamic pop up menu** fait apparaître un pop up menu hiérarchique à l’emplacement courant de la souris ou à l’emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->  
 Le menu hiérarchique utilisé doit avoir été créé à l’aide de la commande [Create menu](create-menu.md). La référence retournée par [Create menu](create-menu.md) doit être passée dans le paramètre *menu*.
@@ -43,7 +43,7 @@ Si une action standard est associée à une ligne de menu, elle est prise en com
 * Si le titre de l'action de la ligne de menu a été défini en utilisant la constante ak standard action title, le nom localisé est affiché dans le menu.
 * Lorsque la ligne de menu est sélectionnée, l'action standard associée est appelée (l'exécution est asynchrone).
 
-#### Exemple 
+## Exemple 
 
 Ce code permet de créer un pop up menu dynamique hiérarchique, construit sur les actions standard :
 
@@ -83,7 +83,7 @@ APPEND MENU ITEM($refMainContextMenu; "Edition"; $refMenuEdit)
 paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
@@ -91,7 +91,7 @@ paramRef:=Dynamic pop up menu($refMainContextMenu)
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->**LISTBOX Get rows height**コマンドは、*object*引数および *\** で指定されたリストボックスの現在の行の高さを返します。<!-- END REF-->
 
@@ -31,13 +31,13 @@ displayed_sidebar: docs
 
 **注:** 行の高さの計算に関する情報はデザインリファレンスマニュアルを参照してください。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

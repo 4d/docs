@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ The actual entry order always includes objects from page 0 and from inherited fo
 
 **Note:** The entry order within a subform is not returned when this command is applied to the parent form. 
 
-#### Example 
+## Example 
 
 You want to exclude some objects from the current entry order:
 
@@ -48,11 +48,11 @@ You want to exclude some objects from the current entry order:
  FORM SET ENTRY ORDER($arrTabOrderObject) //apply the new entry order
 ```
 
-#### See also 
+## See also 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

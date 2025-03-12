@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->The GET MENU ITEM ICON command returns, in the *iconRef* variable, the reference of any icon that is associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This reference is the pathname or number of the picture.
 
@@ -30,11 +30,11 @@ If you do not attribute a specific type to the *iconRef* variable, by default, t
 
 If no icon is associated with the menu item, the command returns a blank value.
 
-#### See also 
+## See also 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP New subsection.Summary-->**WP New subsection** コマンドは、*wpSection* 引数で指定した4D Write Pro セクション内に*subSectionType* 引数で指定した型の新しいサブセクションを作成し、それを返します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 *subSectionType* のサブセクションがすでに存在する場合、エラーが返されます。
 
-#### 例題 
+## 例題 
 
 左ページと右ページのサブセクションを作成したい場合を考えます:
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
  $subsection:=WP New subsection($section;wk left page)
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get subsection](wp-get-subsection.md)  

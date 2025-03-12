@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get frame.Summary-->**WP Get frame** コマンドは*wpArea* 引数で指定した4D Write Pro エリア内で、カーソルが現在設定されているフレームを返します。<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 カレントのカーソル位置がテキストボックス要素内にある場合、テキストボックスの要素 **ID** は*textBoxID* 引数に返されます。その他の場合には、この引数は空の値が返されます。
 
-#### 例題 
+## 例題 
 
 ユーザーがカーソルをヘッダーあるいはフッターフレームに設定したかどうかを確認したい場合を考えます:
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get footer](wp-get-footer.md)  
 [WP SET FRAME](wp-set-frame.md)  

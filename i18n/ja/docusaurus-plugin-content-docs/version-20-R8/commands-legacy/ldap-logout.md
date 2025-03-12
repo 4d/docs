@@ -12,15 +12,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LDAP LOGOUT.Summary-->**LDAP LOGOUT** コマンドカレントプロセスにおいて、LDAPサーバーとの接続を(開いていた場合)閉じます。<!-- END REF-->接続がなかった場合、1003エラーが返されて、ログインしていないことが警告されます。
 
-#### 参照 
+## 参照 
 
 [LDAP LOGIN](ldap-login.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

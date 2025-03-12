@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->El comando MODIFY RECORD permite al usuario modificar el registro actual de la tabla *tabla* o de la tabla por defecto si se omite el parámetro *tabla*.<!-- END REF--> MODIFY RECORD carga el registro, si no se ha cargado por el proceso actual y muestra el formulario de entrada actual. Si no hay registro actual, entonces MODIFY RECORD no hace nada. MODIFY RECORD no afecta la selección actual. 
 
@@ -33,15 +33,15 @@ Después de llamar MODIFY RECORD, la variable sistema OK toma el valor 1 si se a
 
 Si está utilizando MODIFY RECORD y el usuario no realiza ninguna modificación al registro, no se considera que el registro haya sido modificado y aunque acepte el registro no se guardará nuevamente. Las acciones tales como el cambio del valor de variables, la selección de casillas de selección y de botones de radio no clasifican como modificaciones. Únicamente la modificación del valor de un campo, a través de una entrada manual o de un método, hace que el registro se guarde nuevamente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [ADD RECORD](add-record.md "ADD RECORD").
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancela. La variable OK no toma ningún valor hasta que el registro haya sido validado o anulado.
 
-#### Ver también 
+## Ver también 
 
 [ADD RECORD](add-record.md)  
 [Locked](locked.md)  
@@ -49,7 +49,7 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 [READ WRITE](read-write.md)  
 [UNLOAD RECORD](unload-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->The **GENERATE ENCRYPTION KEYPAIR** command generates a new pair of RSA keys.<!-- END REF--> These keys allow asymmetric encryption features in 4D, usually required when you need to secure data exchanges over a network (e.g. using the 4D Web server and the TLS protocol). 
 
@@ -33,7 +33,7 @@ This command will generate keys in PKCS format encoded in base64, which means th
 
 **Warning:** The private key should always be kept secret.
 
-#### About RSA, private key and public key 
+## About RSA, private key and public key 
 
 The RSA cipher used by **GENERATE ENCRYPTION KEYPAIR** is based on a double key encryption system: a private key and a public key. As indicated by its name, the public key can be given to a third person and used to decrypt information. The public key is matched with a unique private key, used to encrypt the information. Thus, the private key is used for encryption; the public key for decryption (or vice versa). The information encrypted with one key can only be decrypted with the other one.
 
@@ -43,17 +43,17 @@ This encryption mode is also used by the first syntax of the [ENCRYPT BLOB](encr
 
 It is possible to mix the public and private keys from two persons to encrypt information so that the recipient is the only person to be able to decrypt them and the sender is the only person to have encrypted them. This principle is given by the second syntax of the two [ENCRYPT BLOB](encrypt-blob.md) and [DECRYPT BLOB](decrypt-blob.md) commands.
 
-#### Example 
+## Example 
 
 See example for the [ENCRYPT BLOB](encrypt-blob.md) command.
 
-#### See also 
+## See also 
 
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

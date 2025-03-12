@@ -36,7 +36,7 @@ La formule peut utiliser des variables process et interprocess. En revanche, *in
 
 Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](current-time.md), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 
-##### Cache de formules en mode compilé 
+### Cache de formules en mode compilé 
 
 A des fins d'optimisation, chaque formule exécutée via **EXECUTE FORMULA** en mode compilé peut être conservée en mémoire dans un cache dédié. La formule est stockée sous forme de références (*tokens*). Une fois placée dans le cache, une formule s'exécutera de manière beaucoup plus rapide par la suite car la phase de *tokenisation* sera évitée. 
 

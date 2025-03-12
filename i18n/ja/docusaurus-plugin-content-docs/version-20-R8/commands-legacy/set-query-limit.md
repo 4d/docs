@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET QUERY LIMIT.Summary-->SET QUERY LIMITは、カレントプロセスの以降の検索を対象に、*limit*に渡した数のレコードが見つかったら検索を中止するよう4Dに指示します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ SET QUERY LIMITは、下記のクエリコマンドの動作を変更します:
 
 これに対して、SET QUERY LIMITは、[ALL RECORDS](all-records.md "ALL RECORDS")や[RELATE MANY](relate-many.md "RELATE MANY")等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
 
-#### 例題 1 
+## 例題 1 
 
 “100万ドル以上の売上を獲得している顧客10人を探せ”という要求に対応する検索を実行するには、以下のように記述します:
 
@@ -48,11 +48,11 @@ SET QUERY LIMITは、下記のクエリコマンドの動作を変更します:
  SET QUERY LIMIT(0)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [SET QUERY DESTINATION](set-query-destination.md "SET QUERY DESTINATION")の2番目の例題参照
 
-#### 参照 
+## 参照 
 
 [Get query limit](get-query-limit.md)  
 [QUERY](query.md)  
@@ -64,7 +64,7 @@ SET QUERY LIMITは、下記のクエリコマンドの動作を変更します:
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

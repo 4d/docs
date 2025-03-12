@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->The **LISTBOX MOVE COLUMN** command moves the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
 
@@ -29,7 +29,7 @@ The command takes the static and locked column properties into account: for exam
 
 This functionality was already found in 4D in Application mode: the user can move non-static columns using the mouse. However, unlike columns moved by the user, this command does not generate the On Column Moved event. 
 
-#### Example 
+## Example 
 
 You want to swap the 2nd and 3rd columns of the list box:
 
@@ -37,11 +37,11 @@ You want to swap the 2nd and 3rd columns of the list box:
  LISTBOX MOVE COLUMN(*;"column2";3)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

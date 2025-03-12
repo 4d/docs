@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 **注:** *menu* 引数に[MenuRef](# "Unique ID (16-character alphanumeric) of a menu") を渡した場合、*process* 引数は何も動作せず、無視されます。
 
-##### 互換性に関する注意 
+### 互換性に関する注意 
 
 互換性上の理由から、このコマンドは*itemKey* 引数に文字コードを受け入れることもできます(旧シンタックス)。この場合、ショートカットは自動的に**Ctrl** (Windows) または **Cmd** (macOS) をモディファイヤーキーとして含み、*modifiers* 引数に渡された値は考慮されません。
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->O On Backup Shutdown database method é chamado a cada vez que o backup do banco de dados termina.<!-- END REF--> As razões para deter um backup podem ser o fim da cópia, interrupção por parte do usuário ou um erro.
 

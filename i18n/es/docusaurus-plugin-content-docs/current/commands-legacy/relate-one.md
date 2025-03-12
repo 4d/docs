@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RELATE ONE.Summary-->RELATE ONE acepta dos sintaxis.<!-- END REF--> 
 
@@ -42,11 +42,11 @@ Un usuario introducido LLC@ para ver la lista de todas las empresas cuyos nombre
 
 Especificar un campo en *discriminante* es lo mismo que definir un campo discriminante en la caja de diálogo de definición de las propiedades de una relación en el entorno Diseño. Para mayor información sobre la definición de un campo discriminante, consulte el *Manual de Diseño* de 4D.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
-#### Ejemplo 
+## Ejemplo 
 
 En el siguiente ejemplo, la tabla *\[Facturas\]* está relacionada a la tabla *\[Clientes\]* por dos relaciones manuales. Una relación parte del campo *\[Facturas\]A nombre de* al campo *\[Clientes\]ID* y la otra relación va de *\[Facturas\]Enviar a* a *\[Clientes\]ID*.![](../assets/en/commands/pict2287721.es.png)  
   
@@ -78,16 +78,16 @@ Este es el método de objeto para el campo *\[Facturas\]Enviar a:*
  vZIP2:=[Clientes]CodigoPostal
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente y si los registros relacionados se han cargado, la variable sistema OK toma el valor 1\. Si el usuario hizo clic en **Cancelar** en la caja de diálogo de selección del registro (que aparece cuando el registro relacionado ha sido modificado), la variable ***OK*** toma el valor 0\. 
 
-#### Ver también 
+## Ver también 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

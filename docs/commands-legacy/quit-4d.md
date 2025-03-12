@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 The command processing is different whether it is executed on 4D (local or remote mode) or on 4D Server. 
 
-##### With 4D local mode and remote mode 
+### With 4D local mode and remote mode 
 
 After you call QUIT 4D, the current process stops its execution, then 4D acts as follows:
 
@@ -37,7 +37,7 @@ A third strategy is also possible. Before calling QUIT 4D, you check whether a w
 
 **Note:** The *time* parameter cannot be used with 4D in local or remote mode.
 
-##### With 4D Server (Stored procedure) 
+### With 4D Server (Stored procedure) 
 
 The QUIT 4D command can be executed on the server machine, in a stored procedure. In this case, it accepts the *time* optional parameter.  
   

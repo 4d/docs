@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lee los datos del puerto serial abierto previamente por el comando [SET CHANNEL](set-channel.md).<!-- END REF--> El puerto serial tiene un buffer que se llena con caracteres hasta que un comando los lee. RECEIVE BUFFER obtiene los caracteres del buffer serial, los coloca en la variable *varRecep* y luego limpia el buffer. Si no hay caracteres en el buffer, la variable *varRecep* estará vacía.
 
@@ -27,7 +27,7 @@ El comando RECEIVE BUFFER es diferente de [RECEIVE PACKET](receive-packet.md) en
 
 Durante la ejecución de RECEIVE BUFFER, el usuario puede interrumpir la recepción presionando **Ctrl-Alt-Mayús** (Windows) o **Comando-Opción-Mayús** (Macintosh). Esta interrupción genera un error -9994 que puede interceptar con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md). 
 
-#### Ejemplo 
+## Ejemplo 
 
 El método de proyecto ESCUCHAR PUERTO SERIAL utiliza RECEIVE BUFFER para obtener texto del puerto serial y acumularlo en una variable interproceso:
 
@@ -56,7 +56,7 @@ Para dejar de escuchar al puerto serial, ejecute:
 
 Note que el acceso a la variable interproceso *vtBuffer* debe estar protegido por un semáforo, de manera que los procesos no entren en conflicto. Para mayor información ver el comando [Semaphore](semaphore.md "Semaphore").
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE PACKET](receive-packet.md)  
@@ -64,7 +64,7 @@ Note que el acceso a la variable interproceso *vtBuffer* debe estar protegido po
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

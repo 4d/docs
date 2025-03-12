@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->The **WEB GET BODY PART** command, when called in the context of a Web process, parses the "body" part of a multi-part request.<!-- END REF-->
 
@@ -32,7 +32,7 @@ The *mimeType* and *name* parameters receive the Mime type and the name of the o
 
 **Note:** In the context of a multi-part request, the first array of the [WEB GET VARIABLES](web-get-variables.md) command returns all parts of the form, in the same order as the **WEB GET BODY PART** command. You can use it in order to get the position of the parts of the form directly. 
 
-#### Example 
+## Example 
 
 In this example, a Web form downloads several pictures using a browser onto the HTTP server and displays them in the page. Here is the Web form:
 
@@ -87,13 +87,13 @@ Here is the code for GetFile:
  WEB SEND HTTP REDIRECT("/") // return to page
 ```
 
-#### See also 
+## See also 
 
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

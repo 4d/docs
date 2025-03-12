@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->The QR GET TOTALS SPACING command retrieves a space below a subtotal row.<!-- END REF--> It applies only to the list mode.
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *subtotal*, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

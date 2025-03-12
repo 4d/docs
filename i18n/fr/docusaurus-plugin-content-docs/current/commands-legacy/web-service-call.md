@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -64,13 +64,13 @@ Les cinq configurations décrites ci-dessous peuvent donc être mises en oeuvre.
 
 **Note :** Bien qu’étant des types XML composés, les tableaux de données sont gérés par 4D comme des types simples. 
 
-##### Mode RPC, entrée et sortie simples 
+### Mode RPC, entrée et sortie simples 
 
 Cette configuration est la plus simple à utiliser. Dans ce cas, le paramètre *typeComposé* contient la constante Web Service dynamic ou est omis.   
 Les paramètres envoyés et les réponses reçues peuvent être manipulés directement, sans traitement préalable.   
 Reportez-vous à l’exemple de la commande [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### Mode RPC, entrée composée et sortie simple 
+### Mode RPC, entrée composée et sortie simple 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual in. Avec cette configuration, vous devez passer “manuellement” au Web Service chaque élément xml source sous la forme d'un BLOB, à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).  
 Il vous appartient de formater le BLOB initial sous forme d’élément xml valide. Ce BLOB doit contenir comme premier élément le premier élément “fils” supposé de l’élément <Body> de la requête finale. 
@@ -86,7 +86,7 @@ Il vous appartient de formater le BLOB initial sous forme d’élément xml vali
  WEB SERVICE GET RESULT($0;"MaVarSortie";*)
 ```
 
-##### Mode RPC, entrée simple et sortie composée 
+### Mode RPC, entrée simple et sortie composée 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual out. Chaque paramètre de sortie sera retourné par le Web Service sous forme d’élément xml stocké dans un BLOB. Vous récupérez ce paramètre à l’aide de la commande [WEB SERVICE GET RESULT](web-service-get-result.md). Vous pourrez ensuite analyser le contenu du BLOB reçu à l’aide des commandes XML de 4D. 
 
@@ -101,7 +101,7 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
  WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
 ```
 
-##### Mode RPC, entrée et sortie composées 
+### Mode RPC, entrée et sortie composées 
 
 Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual. Chaque paramètre d’entrée et de sortie devra être stocké sous forme d’élément xml dans des BLOBs, comme décrit dans les deux configurations précédentes. 
 
@@ -116,7 +116,7 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
  WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
 ```
 
-##### Mode DOC 
+### Mode DOC 
 
 Une méthode proxy d’appel d’un Web Service DOC est semblable à une méthode proxy d’appel d’un Web Service RPC utilisant des paramètres d’entrée et de sortie composés.  
 La seule différence entre ces deux configurations se situe au niveau du contenu xml des paramètres BLOB passés et reçus. Du point de vue de 4D, la construction et l’envoi de la requête SOAP sont identiques. 
@@ -145,16 +145,16 @@ La méthode proxy sera appelée de la manière suivante : *$BlobXMLresult:=$prox
 
 Le paramètre *\** permet d'optimiser les appels. Lorsqu'il est passé, la commande ne referme pas la connexion utilisée par le process à l’issue de son exécution. Dans ce cas, l’appel suivant à [WEB SERVICE CALL](web-service-call.md) réutilise cette même connexion si le paramètre \* est passé, et ainsi de suite. Pour refermer la connexion, il suffit d’exécuter la commande [WEB SERVICE CALL](web-service-call.md) sans le paramètre \*. Ce mécanisme permet d’accélérer sensiblement les traitements en cas d’appels successifs de plusieurs Web Services sur le même serveur, notamment en configuration WAN (via Internet par exemple). A noter que ce mécanisme s’appuie sur le paramétrage “keep-alive” du serveur Web. Ce paramétrage définit généralement un nombre maximal de requêtes via une même connexion, et peut même les interdire. Si les requêtes [WEB SERVICE CALL](web-service-call.md) enchaînées dans la même connexion atteignent ce nombre maximal ou si les connexions keep-alive ne sont pas autorisées, 4D créera une nouvelle connexion pour chaque requête.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la requête est correctement acheminée et que le Web Service l’a acceptée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est retournée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

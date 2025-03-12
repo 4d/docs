@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Database measures** devuelve un único objeto que contiene todas las medidas relevantes. El parámetro *opciones* le permite configurar las opciones para la información devuelta.
 
-##### Presentación del objeto devuelto 
+### Presentación del objeto devuelto 
 
 El objeto devuelto contiene una sola propiedad llamada "DB", que tiene la siguiente estructura básica:
 
@@ -32,7 +32,7 @@ Este objeto está compuesto de ocho propiedades que contienen las medidas básic
   
 **Nota**: una propiedad sólo está presente en el interior del objeto si éste recibe contenido. Cuando una propiedad no tiene ningún contenido, no está incluida en el objeto. Por ejemplo, si la base se ha abierto en modo de sólo lectura y los índices no se han utilizado, el objeto devuelto no contendrá "diskWriteBytes", "diskWriteCount", "indexSegment" e "indexes".
 
-##### Propiedades elementales 
+### Propiedades elementales 
 
 Las propiedades elementales se pueden encontrar en los diferentes niveles del objeto DB. La propiedades elementales devuelven la misma información pero con alcances diferentes. Esta es una descripción de las propiedades elementales:   
   
@@ -70,7 +70,7 @@ Dado que el tamaño máximo del array es 200, si la base de datos se utiliza int
 Este ejemplo puede ser representado en el siguiente diagrama:  
 ![](../assets/en/commands/pict1510781.en.png) 
 
-##### dataSegment1 y indexSegment 
+### dataSegment1 y indexSegment 
 
 Las propiedades "dataSegment1" e "indexSegment" pueden contener hasta cuatro propiedades elementales (cuando están disponibles): 
 
@@ -121,7 +121,7 @@ Los valores devueltos corresponden a las fórmulas siguientes:
 *diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
 *diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
 
-##### tables 
+### tables 
 
 La propiedad "tables" contiene tantas propiedades como tablas que hayan sido accedidas, ya sea en modo de lectura o escritura desde la apertura de la base. El nombre de cada propiedad es el nombre de la tabla en cuestión. Por ejemplo:  
   
@@ -216,7 +216,7 @@ Ejemplo: desde el momento en que se lanza la base, una sola búsqueda se ha real
   
 **Nota:** el atributo "queries" se crea cuando al menos una búsqueda se ha efectuado en la tabla.
 
-##### indexes 
+### indexes 
 
 Este es el objeto más complejo. Todas las tablas a las cuales se ha tenido acceso utilizando uno o varios de sus índices se almacenan como propiedades y en el interior de las propiedades, también se incluyen los nombres de los índices utilizados como propiedades. Los índices de palabras claves aparecen por separado y sus nombres están seguidos por "*(Keyword)*". Por último, cada objeto nombre de índice contiene los ocho propiedades elementales relacionadas con este índice así como también un máximo de cuatro sub-objetos en función del uso del índice de la base desde su lanzamiento (cada sub-objeto sólo existe si al menos una operación correspondiente se ha realizado en algún momento desde el lanzamiento de la base).  
   
@@ -260,7 +260,7 @@ Ejemplo: desde el lanzamiento de la base, varios índices del campo \[Employees\
 }
 ```
 
-##### Parámetro options 
+### Parámetro options 
 
 El parámetro *opciones* le permite personalizar la información real que devuelve el comando. En *opciones*, se pasa un objeto que puede contener hasta tres propiedades: "withHistory", "historyLength" y "path".
 
@@ -273,7 +273,7 @@ El parámetro *opciones* le permite personalizar la información real que devuel
 (\*) Como se describió anteriormente, la historia no se almacena como una secuencia de segundos, sino sólo con valores relevantes. Si no ocurre nada durante un par de segundos o más, nada se almacena y una brecha aparecerá en el array de historial interno. "time" puede contener, por ejemplo, -2, -4, -5, -10, -15, -30 con valores de 200, 300, 250, 400, 500,150\. Si la propiedad "historyLength" está definida en 600 (10 minutos), luego el array devuelto contendrá 0, -1, -2, -3 ... -599 para "time" y sólo los valores -2, -4, - 5, -10, -15, -30 se llenarán. Todos los demás valores se pondrán en 0 (cero) como valor. También como se describió anteriormente, el único límite del array interno es el tamaño (200), no el tiempo. Esto significa que si hay una baja actividad para una propiedad específica, el tiempo más antiguo puede ser muy grande (por ejemplo: -3600 para hace una hora). También puede contener menos de 200 valores si la base se acaba de iniciar. En estos casos, si el tiempo del historial interno es menor al solicitado o si todos los valores importantes que ya se han definido en el array devuelto, el valor devuelto será -1.  
 Ejemplo: la base sólo se inició hace 20 segundos y la historia de la petición es de 60 segundos. Los valores devueltos entre 0 y -20 se definen con valores o ceros y los otros se establecerán con -1\. Cuando un valor "-1" se devuelve, esto significa que, o bien el tiempo de solicitud es demasiado antiguo o que el valor ya no está en el array de historia interna (es decir, se ha llegado al límite de los 200 elementos y se han eliminado los valores mayores).
 
-##### Cliente/servidor y componentes 
+### Cliente/servidor y componentes 
 
 Este comando devuelve la información sobre el uso de la base de datos. Esto significa que le devuelve un objeto válido con valores relevantes sólo cuando se le llama: 
 

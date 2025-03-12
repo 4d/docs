@@ -16,7 +16,7 @@ title: VP Column
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 |Result|Object|<-|Range object of cells|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new range object referencing a specific column or columns<!-- END REF -->.
 
@@ -28,7 +28,7 @@ The optional *columnCount* parameter allows you to define the total number of co
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
-#### Example  
+## Example  
 
 You want to define a range object for the column shown below (on the current spreadsheet):
 
@@ -40,7 +40,7 @@ The code would be:
  $column:=VP Column("ViewProArea";3) // column D
 ```
 
-#### See also
+## See also
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Web Connection database method.Summary-->La **On Web Connection database method** peut être appelée dans les cas suivants :
 
@@ -95,7 +95,7 @@ Cette boîte de dialogue apparaît pour chaque connexion dès que l’option **U
 
 **Note :** Si le nom d’utilisateur envoyé par le navigateur existe dans 4D, pour des raisons de confidentialité le paramètre *$6* n’est alors pas rempli (il reçoit une chaîne vide).
 
-#### Appels de la Méthode base Sur connexion Web 
+## Appels de la Méthode base Sur connexion Web 
 
 La **On Web Connection database method** peut être utilisée comme point d'entrée dans le serveur Web 4D, soit à l'aide de l'URL spécial *4DCGI*, soit à l'aide d'URLs de commande personnalisés.
 

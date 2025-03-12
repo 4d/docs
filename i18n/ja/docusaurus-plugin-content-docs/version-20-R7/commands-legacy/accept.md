@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ACCEPT.Summary-->**ACCEPT** コマンドは以下の目的で、フォームメソッドまたはオブジェクトメソッド（またはサブルーチン）で使用されます：
 
@@ -28,15 +28,15 @@ displayed_sidebar: docs
 
 **ACCEPT** を実行待ちのキューに追加することはできません。イベントへのレスポンスとしてメソッド中で2つの**ACCEPT** コマンドを実行しても、1回実行したのと同じ効果しかありません。
 
-##### ヘッドレスモード 
+### ヘッドレスモード 
 
 **ACCEPT** コマンドは、*VP Run offscreen area* あるいは [WA Run offscreen area](wa-run-offscreen-area.md) で作成されたオフスクリーンエリアのコンテキストならば、ヘッドレスモードでも使用ができます。
 
-#### 参照 
+## 参照 
 
 [CANCEL](cancel.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

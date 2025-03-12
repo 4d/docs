@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get text property.Summary-->QR Get text property コマンドは、*colNum* と *rowNum* で指定されたセルのテキスト属性のプロパティ値を返します。<!-- END REF--> 
 
@@ -61,11 +61,11 @@ displayed_sidebar: docs
 無効な *rowNum* 引数を渡した場合、エラー番号-9853が生成されます。  
 無効な *property* 引数を渡した場合、エラー番号-9854が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

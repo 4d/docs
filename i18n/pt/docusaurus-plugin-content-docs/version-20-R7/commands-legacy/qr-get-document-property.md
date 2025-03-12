@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Get document property.Summary-->O comando QR Get document property permite recuperar o estado mostrado para a caixa de diálogo de impressão ou a unidade utilizada para o documento presente na *area*.<!-- END REF-->  
   
@@ -43,11 +43,11 @@ displayed_sidebar: docs
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->The **CONVERT COORDINATES** command converts the (x;y) coordinates of a point from one coordinate system to another.<!-- END REF--> The input and output coordinate systems supported are forms (and subforms), windows, and the screen. For example, you can use this command to get the coordinates in the main form of an object belonging to a subform. This makes it easy to create a context menu at any custom position. 
 
@@ -43,7 +43,7 @@ When *from* is XY Current form and the point is in the body section of a list fo
 * If the command is called outside of an On Display Detail event but while a record is being edited, the resulting point is located in the display of the record being edited.
 * Otherwise, the resulting point is located in the display of the first record.
 
-#### Example 1 
+## Example 1 
 
 You want to open a pop-up menu at the bottom left corner of the "MyObject" object.
 
@@ -64,7 +64,7 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Example 2 
+## Example 2 
 
 You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [MOUSE POSITION](mouse-position.md) (with the \* parameter) returns values based on the position of the MDI window:
 
@@ -78,14 +78,14 @@ You want to open a pop-up window at the position of the mouse cursor. On Windows
  CLOSE WINDOW($window)
 ```
 
-#### See also 
+## See also 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Trunc.Summary-->**Trunc** retourne *nombre* dont la partie décimale a été tronquée à partir du nombre de décimales spécifié par *nbDécimales*.<!-- END REF-->arrondit toujours *nombre* à la valeur inférieure.
 
 Si *nbDécimales* est positif, la troncature se fait sur la partie décimale de *nombre*. Si *nbDécimales* est négatif, la troncature se fait sur la partie entière de *nombre*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre la manière dont **Trunc** fonctionne dans différents cas. A chaque ligne, une valeur est assignée à la variable *vRésultat*. Les commentaires décrivent le résultat :
 
@@ -32,11 +32,11 @@ L'exemple suivant illustre la manière dont **Trunc** fonctionne dans différent
  vRésultat:=Trunc(-216,897;-1) // Résultat prend la valeur -220
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Round](round.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

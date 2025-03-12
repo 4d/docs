@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Expert mode 
+## Expert mode 
 
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
 
-#### Description 
+## Description 
 
 The **SET INDEX CACHE PRIORITY** command sets a specific *priority* to the index(es) related to the *aField* in cache for all processes in the current session. This command should be called in the **On Startup** or **On Server Startup** database method. 
 
@@ -36,7 +36,7 @@ In the *priority* parameter, pass one of the following constants from the "*Cach
 | Cache priority high      |                                              |
 | Cache priority very high |                                              |
 
-#### Example 
+## Example 
 
 In the , you want to set a high priority for the \[Customer\]LastName field indexes:
 
@@ -44,12 +44,12 @@ In the , you want to set a high priority for the \[Customer\]LastName field inde
  SET INDEX CACHE PRIORITY([Customer]LastName;Cache priority very high)
 ```
 
-#### See also 
+## See also 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

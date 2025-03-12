@@ -23,7 +23,7 @@ displayed_sidebar: docs
 <!-- END REF -->
 
 
-#### Description
+## Description
 
 The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
 
@@ -68,7 +68,7 @@ Here is an example of output object:
 
 ```
 
-#### Example
+## Example
 
 ```4d
 
@@ -78,7 +78,7 @@ Here is an example of output object:
 
 ```
 
-#### See also 
+## See also 
 
 [Session](../API/SessionClass.md)
 [Process info](process-info.md)  

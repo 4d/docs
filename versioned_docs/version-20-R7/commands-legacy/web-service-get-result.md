@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->The **WEB SERVICE GET RESULT** command retrieves a value sent back by the Web Service as a result of the processing performed.<!-- END REF-->This command must be used only after the [WEB SERVICE CALL](web-service-call.md) command. 
 
@@ -27,7 +27,7 @@ The optional *returnName* parameter specifies the name of the parameter to be re
 
 The optional *\** parameter signals the program to free up the memory devoted to the processing of the request. You must pass this parameter after retrieving the last value sent by the Web Service.
 
-#### Example 
+## Example 
 
 Imagine that a Web Service returns the current time in any city in the world. The parameters received by the Web Service are the name of the city and the country code. In return, the Web Service sends the corresponding time. The proxy calling method could be in the following form:
 
@@ -47,12 +47,12 @@ Imagine that a Web Service returns the current time in any city in the world. Th
  End if
 ```
 
-#### See also 
+## See also 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** devuelve la información sobre el usuario cuyo número de referencia se pasa en el parámetro *refUsuario*.<!-- END REF--> Debe pasar un número de referencia de usuario devuelto por el comando [GET USER LIST](get-user-list.md).
 
@@ -41,11 +41,11 @@ Si pasa el parámetro opcional *membresias*, recupera los números de referencia
 
 **Nota para bases binarias:** los valores de ID de grupo y usuario dependen de su creador (Diseñador, Administrador o propietario del grupo afiliado). Para más información, consulte el párrafo *Rangos de identificaciones de usuarios y grupos*.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
@@ -53,7 +53,7 @@ Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o s
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

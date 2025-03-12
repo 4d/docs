@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->The **METHOD SET ATTRIBUTES** command allows you to set the *attributes* values for the method(s) specified in the *path* parameter.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Method attributes must be set using the [OB SET](ob-set.md) or [OB SET ARRAY](ob
 
 If the command is executed from a component, by default it applies to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
-##### 
+### 
 
 The supported attributes are:
 
@@ -37,7 +37,7 @@ The supported attributes are:
 
 **Note:** "published4DMobile" attributes are deprecated as for 4D v18.
 
-#### Example 
+## Example 
 
 You want to set a single attribute:
 
@@ -47,12 +47,12 @@ You want to set a single attribute:
  METHOD SET ATTRIBUTES("aMethod";$attributes) //Only the "executedOnServer" attribute is modified
 ```
 
-#### See also 
+## See also 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

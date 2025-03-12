@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
 
@@ -32,7 +32,7 @@ Si le paramètre optionnel *\** est passé, le process créé est local (4D ajou
 
 Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [UNREGISTER CLIENT](unregister-client.md) puis d’exécuter à nouveau **REGISTER CLIENT**.
 
-#### Exemple 
+## Exemple 
 
 Les méthodes suivantes permettent de réaliser une petite messagerie entre les postes clients inscrits. 
 
@@ -109,17 +109,17 @@ Les méthodes suivantes permettent de réaliser une petite messagerie entre les 
  UNREGISTER CLIENT
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le poste client est correctement inscrit, la variable système OK prend la valeur 1\. Si le poste était déjà inscrit, la commande ne fait rien et OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

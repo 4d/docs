@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->The **SAX OPEN XML ELEMENT** command adds a new element in the XML document referenced by *document* as well as, optionally, attributes and their values.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ In *tag*, pass the name of the element to be created. This name may only contain
 
 Optionally, the command can pass one or more attribute/value pairs (in the form of variables, fields or literal values) using the *attribName* and *attribValue* parameters. You can pass as many attribute/value pairs as you want. 
 
-#### Example 
+## Example 
 
 The following statement:
 
@@ -44,16 +44,16 @@ The following statement:
 <Book
 ```
 
-#### Error management 
+## Error management 
 
 If an invalid character is passed in *tag*, an error is generated. 
 
-#### See also 
+## See also 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

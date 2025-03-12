@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Discover data key.Summary-->La commande **Discover data key** recherche, à la racine de tous les appareils connectés, une clé de chiffrement valide correspondant au fichier de données courant et retourne **Vrai** si l'opération est réussie.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Les fichiers de clés (fichiers d'extension ".4DKeyChain") doivent être stocké
    * la clé de chiffrement est ajoutée au trousseau 4D.
 * **Faux** si une clé de chiffrement valide n'a pas été trouvée pour le fichier de données courant, auquel cas l'accès aux données est impossible.
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $status : Object
@@ -45,12 +45,12 @@ Les fichiers de clés (fichiers d'extension ".4DKeyChain") doivent être stocké
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [New data key](new-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

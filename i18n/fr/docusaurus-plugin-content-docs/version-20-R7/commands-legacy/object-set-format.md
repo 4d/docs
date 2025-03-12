@@ -23,14 +23,14 @@ Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *obje
 
 La commande **OBJECT SET FORMAT** peut être indifféremment utilisée dans des formulaires entrée ou sortie (affichés ou imprimés) et appliquée aux champs ou aux variables (saisissables ou non saisissables). Bien entendu, vous devez utiliser un format d'affichage compatible avec le type de données présentes dans l'objet ou avec l'objet lui-même.
 
-##### Booléens 
+### Booléens 
 
 Pour formater des champs booléens :
 
 * (toutes versions) vous pouvez passer une valeur simple dans *formatAffich*. Dans ce cas, le champ sera affiché sous forme de case à cocher, son libellé sera la valeur définie.
 * (bases binaires uniquement) vous pouvez passer deux valeurs séparées par un point-virgule (;) dans *formatAffich*. Dans ce cas, le champ sera affiché sous forme de deux boutons radio.
 
-##### Dates et heures 
+### Dates et heures 
 
 Pour formater des champs ou des variables de type Date ou Heure, vous pouvez utiliser :
 
@@ -87,7 +87,7 @@ Voir également l'exemple 2.
  OBJECT SET FORMAT(*;"timeinput";":m")  
 ```
 
-##### Images 
+### Images 
 
 Pour formater des champs ou variables de type Image, passez [Char](char.md)(n) dans *formatAffich*, où *n* peut être une des constantes prédéfinies suivantes (thème *Formats d'affichage des images*) :  
 
@@ -101,7 +101,7 @@ Pour formater des champs ou variables de type Image, passez [Char](char.md)(n) d
 | Truncated centered          | Entier long | 1      |
 | Truncated non centered      | Entier long | 4      |
 
-##### Alphas et numériques 
+### Alphas et numériques 
 
 Pour formater des champs ou variables de type alpha ou numérique, passez directement le libellé du format dans le paramètre *formatAffich*.
 
@@ -109,7 +109,7 @@ Pour plus d'informations sur les formats d'affichage, reportez-vous aux sections
 
 **Note :** Pour pouvoir exploiter les formats d'affichage personnalisés que vous avez créés dans la boîte à outils, préfixez le nom du format, dans le paramètre *formatAffich*, d'une barre verticale (|). 
 
-##### Boutons image 
+### Boutons image 
 
 Pour formater des boutons image, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *cols;lignes;image;mode{;ticks}*
@@ -137,7 +137,7 @@ Pour formater des boutons image, passez dans le paramètre *formatAffich* une ch
    Permet d’indiquer que la dernière image de la série doit être utilisée lorsque le bouton est inactivé. Avec ce paramétrage, 4D affiche la dernière “partie” de l’image référencée lorsque le bouton image est inactivé. L’image d’inactivation est traitée à part par 4D : lorsque vous combinez cette option avec les valeurs 0, 1 ou 2 dans le paramètre *mode*, la dernière image est exclue de la séquence associée au bouton et n’apparaîtra que lorsqu’il sera inactivé.
 * *ticks* \= activation du mode “défilement automatique tous les N ticks” et intervalle de temps séparant l'affichage de chaque image. Ce paramètre optionnel, s'il est passé, provoque le défilement automatique et en boucle du contenu du bouton image à la vitesse spécifiée. Par exemple, si vous passez "2;3;?16807;0;10", la variation du bouton image s’effectuera tous les 10 ticks. Dans ce mode, toutes les autres options sont ignorées — à l’exception de l’option “Transparent” (mode 64).
 
-##### Pop up menus image 
+### Pop up menus image 
 
 Pour formater des pop up menus image, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *cols;lignes;image;margeH;margeV;mode*  
@@ -153,7 +153,7 @@ Pour formater des pop up menus image, passez dans le paramètre *formatAffich* u
    * *mode* \= 0 : le pop-up menu image n'est pas transparent,  
    * *mode* \= 64 : le pop-up menu image est transparent.
 
-##### Thermomètres et règles 
+### Thermomètres et règles 
 
 Pour formater des objets de type thermomètre ou règle, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *min;max;unité;pas;mode{;format* *{;affichage}* *}*  
@@ -175,7 +175,7 @@ A noter les libellés et les graduations sont automatiquement masqués si la tai
    * *affichage* \= 0 (ou est omis) : afficher une règle standard / afficher un thermomètre en animation continue "barber shop".  
    * *affichage* \= 1 : activer le mode "Stepper" pour une règle / activer le mode "Progression asynchrone" pour un thermomètre. Pour plus d'informations sur ces options, reportez-vous au manuel *Mode Développement*.
 
-##### Cadrans 
+### Cadrans 
 
 Pour formater des objets de type cadran, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *min;max;unité;pas{;mode}*  
@@ -186,7 +186,7 @@ Pour formater des objets de type cadran, passez dans le paramètre *formatAffich
 * *pas* \= intervalle de déplacement du curseur dans le cadran
 * *mode* \= mode de fonctionnement du cadran (facultatif). Ce paramètre accepte uniquement la valeur 32 : déclencher la méthode objet avec l’événement On Data Change pendant que l’utilisateur change la valeur du cadran. Par défaut, la méthode est exécutée après la modification.
 
-##### Grilles de boutons 
+### Grilles de boutons 
 
 Pour formater des grilles de boutons, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *cols;lignes*  
@@ -196,7 +196,7 @@ Pour formater des grilles de boutons, passez dans le paramètre *formatAffich* u
 
 **Note :** Pour plus d'informations sur les formats d'affichage des objets de formulaire, reportez-vous au manuel Mode Développement de 4D.
 
-##### Boutons 3D 
+### Boutons 3D 
 
 Pour formater des boutons 3D, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *titre;image;imageFond;posTitre;titreVisible;icôneVisible;style;margeHor;margeVert;décalageIcône;popupMenu;hyperlien;nbEtats;i*mageHugsTitle
@@ -255,7 +255,7 @@ Certaines options ne sont pas prises en charge dans tous les styles de boutons 3
  OBJECT SET FORMAT(maVar;"JoliBouton;?256;:562;1;;1;4;5;;5;0;;2")
 ```
 
-##### En-têtes de list box 
+### En-têtes de list box 
 
 Pour formater l'icône d'un en-tête de list box, passez dans le paramètre *formatAffich* une chaîne de caractères respectant la syntaxe suivante :  
 *image;posIcone*
@@ -293,9 +293,9 @@ L'exemple suivant change le format d'un champ *\[Sociétés\]Code postal* selon 
 
 ```4d
  If(Length([Sociétés]Code postal)=9)
-    OBJECT SET FORMAT([Sociétés]Code postal;"#####–####")
+    OBJECT SET FORMAT([Sociétés]Code postal;"###–####")
  Else
-    OBJECT SET FORMAT([Sociétés]Code postal;"#####")
+    OBJECT SET FORMAT([Sociétés]Code postal;"###")
  End if
 ```
 

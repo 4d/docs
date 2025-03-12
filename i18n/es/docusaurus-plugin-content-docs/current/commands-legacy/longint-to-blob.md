@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->El comando LONGINT TO BLOB escribe el valor de tipo Entero largo (4 bytes) *enteroLargo* en el BLOB *blob*.<!-- END REF-->
 
@@ -39,11 +39,11 @@ Si pasa una variable en el parámetro *offset*, el valor entero largo (4 byte) s
 
 Después de llamar el comando, se devuelve la variable del parámetro *offset*, incrementada en el número de bytes que hayan sido escritos. Por lo tanto, puede reutilizar esa misma variable con otro comando de escritura de BLOB para escribir otro valor. 
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Después de la ejecución de este código:
 
@@ -55,7 +55,7 @@ Después de la ejecución de este código:
 * En PowerPC *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 * En Intel:PC *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Después de la ejecución de este código:
 
@@ -66,7 +66,7 @@ Después de la ejecución de este código:
 * El tamaño de *vxBlob*es 4 bytes
 * En todas las plataformas *vxBLOB{0}=$01*, *vxBLOB{1}=$02*, *vxBLOB{2}=$03*, *vxBLOB{3}=$04*
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Después de la ejecución de este código:
 
@@ -77,7 +77,7 @@ Después de la ejecución de este código:
 * El tamaño de *vxBlob* es 4 bytes
 * En todas las plataformas *vxBLOB{0}=$04*, *vxBLOB{1}=$03*, *vxBLOB{2}=$02*, *vxBLOB{3}=$01*
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Después de la ejecución de este código:
 
@@ -90,7 +90,7 @@ Después de la ejecución de este código:
 * En todas las plataformas *vxBLOB{100}=$04*, *vxBLOB{101}=$03*, *vxBLOB{102}=$02*, *vxBLOB{103}=$01*
 * Los otros bytes del BLOB no cambian
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Después de la ejecución de este código:
 
@@ -105,7 +105,7 @@ Después de la ejecución de este código:
 * Los otros bytes del BLOB no cambian
 * La variable *vlOffset* se ha incrementado en 4 (y ahora es igual a 54)
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -115,7 +115,7 @@ Después de la ejecución de este código:
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

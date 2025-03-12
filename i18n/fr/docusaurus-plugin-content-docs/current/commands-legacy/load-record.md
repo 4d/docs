@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD RECORD.Summary-->**LOAD RECORD** charge l'enregistrement courant de *laTable*.<!-- END REF--> S'il n'y a pas d'enregistrement courant, **LOAD RECORD** ne fait rien.
 
@@ -31,13 +31,13 @@ En environnements multi-utilisateurs et multi-process, lorsque vous devez modifi
 
 **Astuce :** La commande **LOAD RECORD** peut être utilisée pour recharger l'enregistrement courant dans le contexte d'un formulaire entrée. Toutes les données modifiées sont alors remplacées par leurs valeurs précédentes. Dans ce cas, la commande **LOAD RECORD** effectue en quelque sorte une annulation globale de la saisie. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Locked](locked.md)  
 [UNLOAD RECORD](unload-record.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

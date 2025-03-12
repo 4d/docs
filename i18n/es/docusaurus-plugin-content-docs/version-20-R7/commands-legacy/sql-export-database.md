@@ -48,7 +48,7 @@ En el archivo de exportación, puede haber menos valores que campos en la tabla.
 
 Si la exportación se realiza correctamente, la variable OK toma el valor 1\. De lo contrario, toma el valor 0.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
