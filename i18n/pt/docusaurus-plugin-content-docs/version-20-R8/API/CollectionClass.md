@@ -36,7 +36,7 @@ Uma coleção é inicializada com os comandos [`New collection`](../commands/new
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
@@ -55,7 +55,7 @@ Uma coleção é inicializada com os comandos [`New collection`](../commands/new
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
@@ -1939,7 +1939,7 @@ Todas as coleções colsToSort devem ter o mesmo número de elementos, caso cont
 
 :::
 
-Se quiser classificar as coleções em outra ordem que não seja a ascendente, você deverá fornecer uma *fórmula* ([Formula object](FunctionClass.md#formula) que defina a ordem de classificação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Você pode fornecer parâmetros adicionais à fórmula, se necessário.
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Você pode fornecer parâmetros adicionais à fórmula, se necessário.
 
 A fórmula recebe os seguintes parâmetros:
 
@@ -2411,18 +2411,18 @@ onde:
 
 - **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
-| Comparação                               | Símbolos                    | Comentário                                                                                                                                                                                                                        |
-| ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
-|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
-| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Condição não aplicada em uma declaração" ([ver abaixo](#not-equal-to-in-collections)).                   |
-|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |
-| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
-| Menor que                                | <  |                                                                                                                                                                                                                                   |
-| Maior que                                | >                           |                                                                                                                                                                                                                                   |
-| Menor que ou igual a                     | <= |                                                                                                                                                                                                                                   |
-| Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   |
-| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
+| Comparação                               | Símbolos                    | Comentário                                                                                                                                                         |
+| ---------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas. |
+|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                        |
+| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalent to "Not condition applied on a statement" ).                     |
+|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                 |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalent to "Not equal to" ). |
+| Menor que                                | <  |                                                                                                                                                                    |
+| Maior que                                | >                           |                                                                                                                                                                    |
+| Menor que ou igual a                     | <= |                                                                                                                                                                    |
+| Maior ou igual a                         | > =                         |                                                                                                                                                                    |
+| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                   |
 
 - **value**: o valor a ser comparado com o valor atual da propriedade de cada elemento da coleção. Pode ser qualquer expressão de valor constante que corresponda à propriedade de tipo de dados do elemento ou um [**placeholder**](#using-placeholders).
  Quando usar um valor constante, as regras abaixo devem ser respeitadas:
