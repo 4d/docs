@@ -52,7 +52,7 @@ $4d.HelloWorld();
 
 ### Controlling $4d Access
 
-With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what `$4d` can access in a Web Area. Using this command you can define a **context object** that includes only the allowed methods through formulas and class instances.
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
 To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
 
