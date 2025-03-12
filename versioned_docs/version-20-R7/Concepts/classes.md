@@ -377,7 +377,7 @@ Class Constructor ($name : Text ; $age : Integer)
 // You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"HelloWorld";"age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 
