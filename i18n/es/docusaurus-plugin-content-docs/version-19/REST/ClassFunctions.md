@@ -77,7 +77,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se suministra __KEY, la entidad correspondiente a__KEY se carga en el servidor con los atributos dados
 
-See examples for creating or updating entities.
+Ver ejemplos para crear o actualizar entidades.
 
 #### Parámetro de entidad asociado
 
