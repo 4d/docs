@@ -74,7 +74,7 @@ Essa propriedade é o nome do próprio formulário sendo usada para fazer refer�
 
 #### Gramática JSON
 
-O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. See [project architecture](Project/architecture#sources) for more information.
 
 ---
 
