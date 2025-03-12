@@ -111,7 +111,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 | Propriedade                                                                                 | List box array | List box seleção | List box coleção ou entity selection |
 | ------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
-| [Cor de fundo alternado](properties_BackgroundAndBorder.md##alternate-background-color)     | X              | X                | X                                    |
+| [Cor de fundo alternado](properties_BackgroundAndBorder.md#alternate-background-color)      | X              | X                | X                                    |
 | [Cor de fundo](properties_BackgroundAndBorder.md#background-color--fill-color)              | X              | X                | X                                    |
 | [Negrito](properties_Text.md#bold)                                                          | X              | X                | X                                    |
 | [Expressão cor de fundo](properties_BackgroundAndBorder.md#background-color-expression)     |                | X                | X                                    |
