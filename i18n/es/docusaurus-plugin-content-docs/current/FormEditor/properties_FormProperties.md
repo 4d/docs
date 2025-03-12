@@ -75,7 +75,7 @@ Esta propiedad es el nombre del propio formulario y se utiliza para referirse al
 
 #### Gramática JSON
 
-El nombre del formulario está definido por el nombre de la carpeta que contiene el archivo form.4Dform. Ver [arquitectura del proyecto](Project/architecture.md#sources-folder) para más información.
+El nombre del formulario está definido por el nombre de la carpeta que contiene el archivo form.4Dform. See [project architecture](Project/architecture#sources) for more information.
 
 ---
 
