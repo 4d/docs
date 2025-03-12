@@ -150,7 +150,7 @@ Um "bloqueio pessimista" significa que uma entidade é bloqueada antes de ser ac
 
 ## Privilégio
 
-La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+The ability to run one or more [actions](#action) on [resources](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propriedade
 
