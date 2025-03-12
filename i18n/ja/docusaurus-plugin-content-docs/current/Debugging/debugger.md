@@ -333,7 +333,7 @@ $c:=$a+$b
 
 ### 新しい式の挿入
 
-評価したい任意の式を入力することができます。 カスタムの式は [式を固定化](#pin-an-expression) した場合を除き、カレントのデバッガのウィンドウにしか表示されません。
+評価したい任意の式を入力することができます。 A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 リストに式を追加する方法は複数あります:
 

@@ -36,7 +36,7 @@ Indica se o servidor web vai ou não aceitar conexões seguras. Consulte [Habili
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database access through 4DSYNC URLs
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
 *Nota de compatibilidade*: esta opção é [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 

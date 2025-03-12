@@ -118,7 +118,7 @@ The current state of the debugger window is automatically saved in the project. 
 - the size and position of the window,
 - the position of the division lines,
 - o [modo de exibição](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Você pode [**fixar uma expressão**](#pin-an-expression) para mantê-la exibida em todos os contextos.
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Manuseamento de expressões
 
-You can enter any expression to evaluate. Uma expressão personalizada só é exibida na janela atual do depurador, exceto se você [fixá-la](#pin-an-expression).
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 Existem várias formas de adicionar expressões à lista:
 

@@ -14,6 +14,12 @@ title: リリースノート
 
 #### ハイライト
 
+:::info Evaluation applications
+
+Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+
+:::
+
 - 4D 20.6 LTS はWindows Server 2025 対応です。
 
 :::警告 WINDOWS SERVER 2025 での既知の問題
@@ -143,7 +149,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 #### 動作の変更
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
-- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
+- TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew), and rejected with an error if they are invalid. 新しい *option* プロパティで、この検証を管理することができます。
 - TLS v1.0 および TLS v1.1 は廃止され、4D Server において `Min TLS version` としてサポートされなくなりました。 `_o_TLSv1_0` または `_o_TLSv1_1` 定数が [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) で設定されている場合には、バージョン 1.3 が自動的に使用されます。
 - 一貫性のため、ボタン・チェックボックス・ラジオボタンはすべて、実行時に "3D" タイプでレンダリングされるようになりました。 これらのオブジェクトに対し [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/ja/page1300.html) を呼び出した場合、返されるのはそれぞれ、`Object type 3D button`、`Object type 3D checkbox`、`Object type 3D radio button` の値です。
 - 4D for Mobile の開発機能を 4D で利用するには、プロジェクトの ["Components"](../Project/architecture.md#components) フォルダーに [4D Mobile App コンポーネントをインストール](https://developer.4d.com/go-mobile/docs/getting-started/installation) する必要があります。 プロジェクトが [4D Mobile App Server コンポーネント](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server) の機能を使用している場合、こちらも同じ場所にインストールする必要があります。 4D 20 より、[4D for Mobile](https://developer.4d.com/go-mobile/) は 4D環境にデフォルトでインストールされなくなりました。

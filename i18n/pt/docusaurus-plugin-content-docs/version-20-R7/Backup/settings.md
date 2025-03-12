@@ -9,7 +9,7 @@ As configurações de backup são definidas através de três páginas na [caixa
 - os arquivos a incluir em cada backup
 - as funcionalidades avançadas que permitem executar tarefas automáticas
 
-> As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na pasta [Settings](Project/architecture.md#settings-folder).
+> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
 
 ## Backups periódicos
 
@@ -50,8 +50,8 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
     - o arquivo de histórico atual da aplicação (se houver),
-    - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#pasta-de-configurações) (se existir), ou seja os *parâmetros usuário para os dados*.
-- **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada no mesmo nível que a pasta Project, ou seja, os parâmetros usuário.
+    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
+- **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](../Project/architecture.md#settings-user), i.e. the *user settings*, is automatically backed up.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
     - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
