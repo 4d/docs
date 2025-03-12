@@ -39,7 +39,7 @@ El comando admite los siguientes almacenes de datos remotos:
 
 :::note
 
-Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la [sección de inicio de sesión de usuario](../REST/authUsers.md#force-login-mode) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión de usuario seleccionado.
 
 :::
 
