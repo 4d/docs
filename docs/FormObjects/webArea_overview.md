@@ -38,7 +38,7 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 :::
 
-## **$4d Object**
+## $4d Object
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
@@ -52,7 +52,7 @@ $4d.HelloWorld();
 
 ### Controlling $4d Access
 
-With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can limit `$4d` to only specific methods and user class functions. Using this command you can define a **context object** that includes only the allowed methods through formulas and class instances.
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what `$4d` can access in a Web Area. Using this command you can define a **context object** that includes only the allowed methods through formulas and class instances.
 
 To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
 

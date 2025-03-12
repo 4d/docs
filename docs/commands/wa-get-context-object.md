@@ -45,10 +45,10 @@ Checking if a context exists:
 ```4d
  var $contextObj:=WA Get context object(*; "myWebArea")
 
- If (Not(Null($contextObj)))
-    ALERT("Context object is defined!")
+ If ($contextObj=Null)
+	ALERT("No context object set for this web area.")
  Else 
-    ALERT("No context object set for this web area.")
+	ALERT("Context object is defined!")
  End if
 ```
 
