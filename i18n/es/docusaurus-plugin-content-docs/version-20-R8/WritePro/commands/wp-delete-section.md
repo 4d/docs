@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 #### Descripción
 
-The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
+El comando **WP DELETE SECTION** <!--REF #_command_.WP DELETE SECTION.Summary-->elimina el objeto *section* pasado, o elimina una o más secciones comenzando por *indexNumber* y dependiendo del *count* pasado<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
 
 An error is raised if the **WP DELETE SECTION** command requests to delete all sections or if the document contains only one section.
 
