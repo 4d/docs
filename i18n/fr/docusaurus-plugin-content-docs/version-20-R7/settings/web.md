@@ -74,7 +74,7 @@ Cette zone vous permet de configurer, par le serveur Web, la gestion des session
 
 #### Sessions extensibles (sessions multi-process)
 
-Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. Voir la [page Sessions utilisateur](../WebServer/sessions.md#enabling-sessions).
+Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Pas de sessions
 
@@ -84,7 +84,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 - [Process Web simultanés maxi](#maximum-concurrent-web-processes)
 - [Réutilisation des contextes temporaires (en mode distant)](#reuse-temporary-context)
-- [Utiliser des process préemptifs](#use-preemptive-web-processes)
+- [Use preemptive processes](#use-preemptive-processes)
 
 #### Anciennes sessions (sessions process uniques)
 
