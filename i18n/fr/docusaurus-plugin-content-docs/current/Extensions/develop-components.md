@@ -11,13 +11,13 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
-- **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md#basics) et dont le contenu est utilisé dans l'application hôte.
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
 
 ## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md#basics).
+- To use a component, you simply need to [install it in your application](../Project/components.md).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
