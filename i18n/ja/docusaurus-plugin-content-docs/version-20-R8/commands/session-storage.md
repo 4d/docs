@@ -61,7 +61,7 @@ displayed_sidebar: docs
 #### 参照
 
 [Process activity](process-activity.md)
-[ Session](../API/SessionClass.md#session)
+[Session](../API/SessionClass.md#session)
 
 #### プロパティ
 
