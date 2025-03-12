@@ -52,7 +52,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 |                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
+| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
 | [<!-- INCLUDE #WebSocketClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketClass.handler.Summary -->           |
 | [<!-- INCLUDE #WebSocketClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketClass.id.Summary -->                          |
 | [<!-- INCLUDE #WebSocketClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketClass.send().Summary -->                |
@@ -74,11 +74,11 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 <!-- REF #4D.WebSocket.new().Params -->
 
-| 引数                                         | 型                            |                             | 説明                                        |
-| ------------------------------------------ | ---------------------------- | :-------------------------: | ----------------------------------------- |
-| url                                        | Text                         |              ->             | 接続先の URL                                  |
-| [connectionHandler](#connectionHandler-引数) | Object                       |              ->             | WebSocket用コールバックを宣言しているオブジェクト             |
-| 戻り値                                        | 4D.WebSocket | <- | 新しい [WebSocket オブジェクト](#websocket-オブジェクト) |
+| 引数                                                | 型                            |                             | 説明                                        |
+| ------------------------------------------------- | ---------------------------- | :-------------------------: | ----------------------------------------- |
+| url                                               | Text                         |              ->             | 接続先の URL                                  |
+| [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | WebSocket用コールバックを宣言しているオブジェクト             |
+| 戻り値                                               | 4D.WebSocket | <- | 新しい [WebSocket オブジェクト](#websocket-オブジェクト) |
 
 <!-- END REF -->
 
