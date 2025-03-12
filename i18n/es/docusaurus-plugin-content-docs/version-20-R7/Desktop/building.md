@@ -43,7 +43,7 @@ La generación sólo puede efectuarse una vez compilado el proyecto. Si seleccio
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
+Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo de proyecto de la aplicación llamado `buildApp.4DSettings`, ubicado en la carpeta [`Settings` del proyecto](../Project/architecture.md#settings-user).
 
 Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
 
@@ -164,7 +164,7 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
  - MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
  - Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
  - Database folder - Includes a Resources folder and  MyProject.4DZ file. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources.
-  **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#management-of-data-files).
  - (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins--components-page).
  - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
  - Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
