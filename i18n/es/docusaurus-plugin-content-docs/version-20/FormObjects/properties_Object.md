@@ -170,7 +170,7 @@ Lista de palabras separadas por espacios que se utilizan como selectores de clas
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_Overview.md)
+[Área 4D View Pro](writeProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón radio](radio_overview.md) - [Imagen estática](staticPicture.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área Web](webArea_Overview.md)
 
 ---
 

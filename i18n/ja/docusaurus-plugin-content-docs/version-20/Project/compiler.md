@@ -179,7 +179,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 - **インタープロセス変数**: インタープロセス変数定義を集約します。
 - **配列**: プロセス配列定義を集約します。
 - **インタープロセス配列**: インタープロセス配列定義を集約します。
-- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
+- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 

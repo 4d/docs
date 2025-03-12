@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Manuseamento de expressões
 
-You can enter any expression to evaluate. Uma expressão personalizada só é exibida na janela atual do depurador, exceto se você [fixá-la](#pin-an-expression).
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 Existem várias formas de adicionar expressões à lista:
 

@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Gestion des expressions
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 Il y a plusieurs façons d'ajouter des expressions à la liste :
 

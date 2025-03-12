@@ -597,7 +597,7 @@ Esta opción activa el modo apropiativo para el código del servidor web de su a
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database access through 4DSYNC URLs
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
 Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
 

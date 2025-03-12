@@ -179,7 +179,7 @@ Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de 
 - **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
 - **Tableaux** : Regroupe les déclarations de tableaux de process ;
 - **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
-- **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
 
 Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
 

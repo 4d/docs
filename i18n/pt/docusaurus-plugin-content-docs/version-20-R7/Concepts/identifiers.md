@@ -17,7 +17,7 @@ Um nome de processo pode conter até 31 caracteres.
 
 O nome de uma classe deve estar em conformidade com as regras normais de nomeação de propriedades para notação de pontos.
 
-> Não se recomenda dar o mesmo nome a uma classe e a [tabela de base de dados](#tables), a fim de evitar qualquer conflito.
+> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
 
 ## Funções
 
@@ -29,7 +29,7 @@ Nomes de função devem estar em conformidade com as regras normais de nomeaçã
 
 O nome de uma propriedade de objeto (também chamada de *atributo* de objeto) pode conter até 255 caracteres.
 
-As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Seja qual for sua natureza, os nomes das propriedades do objeto devem seguir as seguintes regras **se você quiser usar a [notação de ponto](dt_object.md#propriedades-do-objeto)**:
+As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#properties)**:
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .

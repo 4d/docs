@@ -12,7 +12,7 @@ title: Restaurar um backup
 
 - A perda de um ou mais arquivos do banco de dados. This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para saber se um banco de dados foi danificado depois de um incidente, basta relançar o banco de dados com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se usar uma estratégia de backup regulares, as ferramentas de restauração de 4D permite recuperar (na maioria dos casos) o banco de dados na mesma situação que estava antes do incidente.
 
-> 4D pode lançar procedimentos automaticamente para recuperar os bancos de dados depois de um incidente. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Configurações. For more information, refer to the [Automatic Restore](./settings.md#automatic-restore-and-log-integration) paragraph.\
+> 4D pode lançar procedimentos automaticamente para recuperar os bancos de dados depois de um incidente. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Configurações. For more information, refer to the [Automatic Restore](./settings.md##automatic-restore-and-log-integration) paragraph.\
 > Se o incidente for resultado de uma operação inadequada realizada nos dados (eliminação de um registro, por exemplo), você pode tentar reparar o arquivo de dados usando a função "rollback" no arquivo de log. Esta função está disponível na página [Rollback](MSC/rollback.md) do MSC.
 
 ## Restaurar manualmente o backup (diálogo padrão)
@@ -36,7 +36,7 @@ Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 Você também pode clicar no botão **[...]** para especificar um local diferente.
 3. Clique no botão **Restaurar**.
 4D extrai todos os arquivos de backup do local especificado.
-Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. A integração é feita automaticamente se a opção **Integrar último arquivo de histórico...** for marcada (ver [Restauração automática](settings.md#automatic-restore)).
+Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
 
 4.(Opcional) Clique em **OK** para integrar o arquivo de log na aplicação restaurada.
 Se a restauração e integração forem realizadas corretamente, 4D exibe uma caixa de diálogo indicando que a operação foi feita com sucesso.
