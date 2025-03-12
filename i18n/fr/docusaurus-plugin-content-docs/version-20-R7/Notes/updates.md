@@ -11,7 +11,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 - Les colonnes et les en-têtes des list box de type heure prennent désormais en charge l'option ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nouvelles propriétés dans [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) et [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist).
-- Vous pouvez désormais [ajouter et supprimer des composants à l'aide de l'interface du Gestionnaire de composants](../Project/components.md#adding-and-removing-dependencies).
+- You can now [add and remove components using the Component manager interface](../Project/components.md#monitoring-project-dependencies).
 - Nouveau [**mode de typage direct**](../Project/compiler.md#enabling-direct-typing) dans lequel vous déclarez toutes les variables et paramètres dans votre code en utilisant les mots-clés `var` et `#DECLARE`/`Function` (seul mode supporté dans les nouveaux projets). La [fonctionnalité de vérification de syntaxe](../Project/compiler.md#check-syntax) a été adaptée en conséquence.
 - Prise en charge des [singletons de session](../Concepts/classes.md#singleton-classes) et nouvelle propriété de classe [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
 - Nouveau [mot-clé de fonction `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) pour définir des fonctions singleton ou ORDA qui peuvent être appelées par des [requêtes HTTP REST GET](../REST/ClassFunctions.md#function-calls).
@@ -42,7 +42,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 - Prise en charge des opérateurs de comparaison sur les [références d'objet](../Concepts/dt_object.md#operateurs-sur-les-objets) et les [références de collection](../Concepts/dt_collection.md#operateurs-sur-les-collections). [`collection.query()`](../API/CollectionClass.md#query) prend maintenant en charge les [références d'objet et de collection en tant que valeurs de requête](../API/CollectionClass.md#reference-dobject-ou-de-collection-comme-value).
 - Lorsqu'un composant a un [espace de noms déclaré](../Extensions/develop-components.md#declaring-the-component-namespace), ses classes sont maintenant automatiquement partagées entre tous les composants chargés dans le projet hôte via [`cs.<namespace>`](../Concepts/classes.md#cs).
-- Gestionnaire de composants : Prise en charge des [composants stockés sur GitHub](../Project/components.md#declaring-components-stored-on-github).
+- Component manager: Support of [components stored on GitHub](../Project/components.md#components-stored-on-github).
 - Nouvelle fonction [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) et API REST [`$clean`](../REST/$clean.md) pour obtenir une nouvelle entity selection basée sur l'entity selection originale mais sans ses entités supprimées.
 - Nouvelle fonction [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) et API REST [`$info/privileges`](../REST/$info.md) pour inspecter les privilèges de session plus facilement lors du débogage.
 - Nouveau fichier [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) pour personnaliser les zones Web embarquées dans 4D.
@@ -72,7 +72,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Prise en charge des structures de gestion d'erreur [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
 - La couche réseau QUIC prend désormais en charge le [*broadcasting*](../Desktop/clientServer.md#ouverture-d-un-projet-à-distance), [SSO](https://doc.4d.com/4Dv20R/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.fe.html) et [IPv6](https://doc.4d.com/4Dv20R/4D/20-R5/Paramètres-IP.300-6932707.fe.html).
 - Prise en charge des [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
-- Prise en charge des [classes partagées](../Concepts/classes.md#shared-classes) et des [classes singleton](../Concepts/classes.md#singleton-classes). Nouvelles propriétés de classe : [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
+- Prise en charge des [classes partagées](../Concepts/classes.md#shared-classes) et des [classes singleton](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#issingleton), [`me`](../API/ClassClass.md#me).
 - Prise en charge de l'[initialisation d'une propriété de classe dans sa ligne de déclaration](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nouveau paramètre REST [$format](../REST/$format.md).
@@ -96,10 +96,10 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v
 - Les connexions TLS client/serveur et serveur SQL sont désormais [configurées dynamiquement](../Admin/tls.md#enabling-tls-with-the-other-servers) (aucun fichier de certificat n'est requis).
 - Format HTML direct pour les [exports de définition de structure](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - Nouveau [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) qui améliore le contrôle du code pendant le typage, la vérification de la syntaxe et les étapes de compilation afin d'éviter les erreurs d'exécution.
-- Les paramètres de méthode déclarés dans les prototypes `#DECLARE` ne sont [plus nécessaires dans les méthodes "Compiler_"(../Concepts/parameters.md#compilation).
+- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md).
 - Prise en charge des [formats de date et d'heure personnalisés](../Project/date-time-formats.md)
 - Nouveau mot-clé [`Try(expression)`](../Concepts/error-handling.md#tryexpression) pour gérer les cas d'erreur simples.
-- Nouvelle commande [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
+- New [`HTTP Parse message`](../commands/http-parse-message.md) command.
 - Nouvelle option de compatibilité [Impression non bloquante](../settings/compatibility.md).
 - Nouveau [mode édition](../Admin/dataExplorer.md#editing-data) dans le Data Explorer.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) sur doc.4d.com.
@@ -123,9 +123,9 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v
 - Prise en charge du paramètre *context* dans [`Formula from string`](../commands/formula-from-string.md).
 - Prise en charge de la propriété `headers` dans le paramètre *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Marqueur de modification global](../ORDA/global-stamp.md) pour faciliter la mise en œuvre de modules de synchronisation des données. Nouvelles fonctions : [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) et [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
-- L'assignation de références de fichiers à des attributs picture/blob est [prise en charge dans ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes).
 - Prise en charge de [l'initialisation de la valeur et du type de données de la variable dans la ligne de déclaration](../Concepts/variables/#initialisation des variables dans la ligne de déclaration).
-- Les paramètres du fichier journal sont désormais [sauvegardés avec le fichier de données courant](../Backup/settings.md#log-file-management)
+- Log file settings are now [saved with the current data file](../Backup/settings.md#log-management)
 - Nouvelle syntaxe pour [déclarer des paramètres variadiques](../Concepts/parameters.md#declaring-variadic-parameters)
 - 4D View Pro : Prise en charge de [l'importation](../ViewPro/commands/vp-import-from-blob) et de [l'exportation](../ViewPro/commands/vp-export-to-blob) des documents 4D View Pro au format Blob.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) sur doc.4d.com.
