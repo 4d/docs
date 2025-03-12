@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
 
@@ -51,7 +51,7 @@ The location, layer (inline, in front/behind text), visibility, and any properti
 - **Value = 2**: The selected object is a picture object.
 - **Value = 0**: The selected object is a range object.
 
-#### Exemplo 1
+## Exemplo 1
 
 You want to add a picture with default settings using a filepath.
 
@@ -64,7 +64,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to add a resized picture, centered and anchored to the header:
 
@@ -84,7 +84,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
-#### Exemplo 3
+## Exemplo 3
 
 You want to use a field expression to add an anchored image to a document displaying some text from the database:
 
@@ -98,7 +98,7 @@ You want to use a field expression to add an anchored image to a document displa
 
 ![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
-#### Veja também
+## Veja também
 
 [WP DELETE PICTURE](../commands-legacy/wp-delete-picture.md)</br>
 [WP Picture range](../commands-legacy/wp-picture-range.md)
