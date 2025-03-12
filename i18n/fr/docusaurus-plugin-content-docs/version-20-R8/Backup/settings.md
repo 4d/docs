@@ -9,7 +9,7 @@ Les paramètres de sauvegarde sont définis sur trois pages dans la [boîte de d
 - les fichiers à inclure dans chaque sauvegarde
 - les fonctionnalités avancées permettant d'exécuter des tâches automatiques
 
-> Les propriétés définies dans cette boîte de dialogue sont écrits dans le fichier *Backup.4DSettings*, stocké dans le [dossier Settings](Project/architecture.md#settings-folder).
+> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
 
 ## Périodicité
 
@@ -50,8 +50,8 @@ Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la 
 
 - **Data** : fichier de données de l'application. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
     - le fichier journal courant de l'application (le cas échéant),
-    - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
-- **Structure** : fichiers et dossiers du projet d'application. Dans le cas de projets compilés, cette option permet de sauvegarder le fichier .4dz. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les *paramètres utilisateur*, est automatiquement sauvegardé.
+    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
+- **Structure** : fichiers et dossiers du projet d'application. Dans le cas de projets compilés, cette option permet de sauvegarder le fichier .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-user-1), i.e. the *user settings*, is automatically backed up.
 - **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*
 - **Attachments** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que l'application. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
     - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
