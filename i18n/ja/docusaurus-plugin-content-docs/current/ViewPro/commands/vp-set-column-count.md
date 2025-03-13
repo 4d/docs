@@ -15,7 +15,7 @@ title: VP SET COLUMN COUNT
 | columnCount | Integer | -> | カラム数                                           |                  |
 | sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET COLUMN COUNT` コマンドは、<!-- REF #_method_.VP SET COLUMN COUNT.Summary -->*vpAreaName* 引数内にあるカラムの総数を定義します<!-- END REF -->。
 
@@ -27,7 +27,7 @@ title: VP SET COLUMN COUNT
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 以下のコードは 4D View Pro エリア内に 5つのカラムを定義します:
 
@@ -37,7 +37,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnCount.PNG)
 
-#### 参照
+## 参照
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP Get row count](vp-get-row-count.md)<br/>
