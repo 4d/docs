@@ -240,7 +240,7 @@ You want to delete a specific file in the database folder:
 
 |Release|Changes|
 |---|---|
-|20 R9|Support of UUID on mac executable|
+|20 R9|Read UUIDs in macOS executables|
 |19|Added|
 </details>
 
@@ -294,7 +294,7 @@ A macOS executable file is located within a package (e.g. myApp.app/Contents/Mac
 
 :::
 
-The function returns a collection of `archs` objects describing every architecture found in the executable (a fat executable can contain several architectures). Every object of the `archs` collection contains the following properties:
+The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
@@ -336,8 +336,9 @@ var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
 
+Result in *$info*:
+
 ```json
-result in $info:
 {
   "archs":
   [
@@ -554,6 +555,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 |Release|Changes|
 |---|---|
+|20 R9|Read UUIDs in macOS executables|
 |20|Support of WinIcon|
 |19|Added|
 </details>
@@ -564,20 +566,34 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+|info|Object|->|Properties to write in an application file information|
 <!-- END REF -->
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+***info* parameter object with a .plist file (all platforms)**
 
-***info* parameter object with a .exe or .dll file**
+:::note
 
-> Writing a .exe or .dll file information is only possible on Windows.
+The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+
+:::
+
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.  
+
+:::note
+
+To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
+
+:::
+
+***info* parameter object with a .exe or .dll file (Windows only)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
@@ -597,15 +613,34 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a .plist file**
+***info* parameter object with a macOS executable file (macOS only)**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.  
+Every object in the *info*.archs collection must contain the following properties:
 
-> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
+|Property|Type|Description|
+|---|---|---|
+|type|Number|Numerical identifier of the architecture to modify|
+|uuid|Text|Textual representation of the new executable uuid|
 
-#### Example
+#### Example 1
+
+```4d
+  // set some keys in an info.plist file (all platforms)
+var $infoPlistFile : 4D.File
+var $info : Object
+$infoPlistFile:=File("/RESOURCES/info.plist")
+$info:=New object
+$info.Copyright:="Copyright 4D 2023" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
+$infoPlistFile.setAppInfo($info)
+```
+
+
+#### Example 2
 
 ```4d
   // set copyright, version and icon of a .exe file (Windows)
@@ -620,18 +655,24 @@ $info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
+#### Example 3
+
 ```4d
-  // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D.File
-var $info : Object
-$infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
-$infoPlistFile.setAppInfo($info)
+// regenerate uuids of an application (macOS)
+
+// read myApp uuids 
+var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
+var $info:=$app.getAppInfo()
+
+// regenerate uuids for all architectures
+For each ($i; $info.archs)
+	$i.uuid:=Generate UUID
+End for each 
+
+// update the app with the new uuids
+$app.setAppInfo($info)
 ```
+
 
 #### See also
 
