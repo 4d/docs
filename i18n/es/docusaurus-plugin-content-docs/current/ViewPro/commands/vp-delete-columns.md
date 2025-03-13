@@ -13,7 +13,7 @@ title: VP DELETE COLUMNS
 | ---------- | ------ | -- | ------------ | ---------------- |
 | rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP DELETE COLUMNS` <!-- REF #_method_.VP DELETE COLUMNS.Summary -->elimina las columnas del *rangeObj*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ En *rangeObj*, pase un objeto que contenga un rango de columnas a eliminar. Si e
 
 > &#062; Columns are deleted from right to left.
 
-#### Ejemplo
+## Ejemplo
 
 Para eliminar las columnas seleccionadas por el usuario (en la imagen de abajo las columnas B, C y D):
 
@@ -36,7 +36,7 @@ utilice el siguiente código:
 VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 ```
 
-#### Ver también
+## Ver también
 
 [VP DELETE ROWS](vp-delete-rows.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>
