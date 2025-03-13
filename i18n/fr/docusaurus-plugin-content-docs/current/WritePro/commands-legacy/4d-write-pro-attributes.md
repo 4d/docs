@@ -166,7 +166,7 @@ Les attributs Image permettent de gérer les images insérées dans la zone ou a
 
 **Rappel :** Comme indiqué dans la section *Manipuler des images*, 4D Write Pro prend en charge deux types d'images :
 
-* les images insérées dans le texte via les commandes [WP INSERT PICTURE](WritePro/commands/wp-insert-picture.md) ou [ST INSERT EXPRESSION](commands/st-insert-expression.md)
+* les images insérées dans le texte via les commandes [WP INSERT PICTURE](WritePro/commands/wp-insert-picture.md) ou [ST INSERT EXPRESSION](../../commands-legacy/st-insert-expression.md)
 * les images ancrées dans la page via la commande [WP Add picture](WritePro/commands/wp-add-picture.md).
 
 Les attributs suivants sont disponibles aussi bien pour les images insérées que pour les images ancrées :
