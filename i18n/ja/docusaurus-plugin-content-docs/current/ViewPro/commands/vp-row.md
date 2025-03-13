@@ -17,7 +17,7 @@ title: VP Row
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | Range object of row(s)      | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Row` コマンドは、<!-- REF #_method_.VP Row.Summary -->特定の行、あるいは複数の行を参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -31,7 +31,7 @@ title: VP Row
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 以下に表示されている (カレントスプレッドシートの) 行に対するレンジオブジェクトを定義します:
 
@@ -43,7 +43,7 @@ title: VP Row
 $row:=VP Row("ViewProArea";9) // 10行目
 ```
 
-#### 参照
+## 参照
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>
