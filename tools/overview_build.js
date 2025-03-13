@@ -51,7 +51,7 @@ async function run(inFolder, sidebarObject) {
                 console.log(`Command ${commandName} not found`, fileName);
                 continue;
             }
-            overview += `|[<!-- INCLUDE #_command_.${commandName}.Syntax -->](../../${command}.md)<br/><!-- INCLUDE #_command_.${commandName}.Summary -->|\n`;
+            overview += `|[<!-- INCLUDE #_command_.${commandName}.Syntax -->](../../${command}.md)<br/>|\n`;
         }
 
         category.link = { type: "doc", id: `commands/theme/${overview_id}` };
