@@ -23,7 +23,7 @@ title: VP EXPORT DOCUMENT
 | filePath   | Text   | -> | Caminho do documento                       |                  |
 | paramObj   | Object | -> | Opções de exportação                       | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP EXPORT DOCUMENT` <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exporta o objeto do 4D View Pro anexado à área *vpAreaName* do 4D View Pro para um documento em disco, de acordo com os parâmetros *filePath* e *paramObj*<!-- END REF -->.
 
@@ -109,7 +109,7 @@ O parâmetro opcional *paramObj* permite que você defina várias propriedades p
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
-#### Passagem de um método de retorno de chamada (fórmula)
+## Passagem de um método de retorno de chamada (fórmula)
 
 When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. O método de retorno de chamada receberá os seguintes valores em parâmetros locais:
 
@@ -123,7 +123,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 |           | .errorCode    | integer | Código de erro.                                              |
 |           | .errorMessage | text    | Mensagem de erro.                                            |
 
-#### Exemplo 1
+## Exemplo 1
 
 Pretende exportar o conteúdo da área "VPArea" para um documento 4D View Pro no disco:
 
@@ -134,7 +134,7 @@ $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP" VP EXPORT DOCUMENT("VPArea";$do
 //MyExport.4VP is saved on your disk
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Pretende exportar a folha atual em PDF:
 
@@ -146,7 +146,7 @@ $params.pdfOptions:=New object("title";"Annual Report";"author";Current user)
 VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 Você deseja exportar um documento do 4D View Pro no formato ".xlsx" e chamar um método que iniciará o Microsoft Excel com o documento aberto após a conclusão da exportação:
 
@@ -170,7 +170,7 @@ Método ***AfterExport***:
  End if
 ```
 
-#### Exemplo
+## Exemplo
 
 You want to export the current sheet to a `.txt` file with pipe-separated values:
 
@@ -188,7 +188,7 @@ Aqui está o resultado:
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### Veja também
+## Veja também
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>
