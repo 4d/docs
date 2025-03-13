@@ -669,7 +669,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retourne des informations relatives au contexte d'optimisation utilisé par l'entité<!-- END REF -->.
 
-S'il n'existe pas de [contexte d'optimisation](../ORDA/remoteDatastores.md#clientserver-optimization) pour l'entity, la fonction retourne un texte vide.
+If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity, the function returns an empty Text.
 
 #### Exemple
 
@@ -698,7 +698,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Voir également
 
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 
@@ -1615,7 +1615,7 @@ Retourne :
 
 <!-- REF EntityClass.touched().Desc -->
 
-## .touched( )
+## .touched()
 
 <details><summary>Historique</summary>
 
@@ -1661,7 +1661,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
 
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>Historique</summary>
 

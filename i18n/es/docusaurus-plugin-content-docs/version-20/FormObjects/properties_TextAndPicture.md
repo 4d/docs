@@ -181,7 +181,7 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 
 ## Posición título imagen
 
-Esta propiedad permite definir si el título y la imagen del botón deben estar visualmente contiguos o separados, según las propiedades [Posición del título/imagen](#titlepicture-position) y [Alineación horizontal](#horizontal-alignment).
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](properties_Text.md#horizontal-alignment) properties.
 
 Esta propiedad no tiene efecto cuando el botón sólo contiene un título (sin imagen asociada) o una imagen (sin título).
 

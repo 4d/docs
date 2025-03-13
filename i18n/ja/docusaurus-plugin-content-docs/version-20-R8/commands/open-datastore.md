@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 :::note
 
-`Open datastore` のリクエストは 4D REST API に依存し、リモートの 4D Server 上で接続を開くにあたって、4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#ユーザーログインモード) を参照ください。
+`Open datastore` のリクエストは 4D REST API に依存し、リモートの 4D Server 上で接続を開くにあたって、4D クライアントライセンスが必要な場合があります。 Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
 
 :::
 
@@ -147,10 +147,10 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 #### プロパティ
 
-|            |                                 |
-| ---------- | ------------------------------- |
-| コマンド番号     | 1452                            |
-| スレッドセーフ    | &amp;check; |
-| 更新するシステム変数 | error                           |
+|            |                             |
+| ---------- | --------------------------- |
+| コマンド番号     | 1452                        |
+| スレッドセーフ    | &check; |
+| 更新するシステム変数 | error                       |
 
 

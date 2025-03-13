@@ -26,7 +26,7 @@ Em qualquer outro contexto, o comando retorna **Null**.
 
 #### Função de classe
 
-Quando uma função [construtor de classe](#class-constructor) é usada (com a [`new()`](API/ClassClass.md#new)), sua `This` estará ligada ao novo objeto que está sendo construído.
+When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave Super , esteja atento que This não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](super.md#exemplo-1).
+> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Veja [este exemplo](super.md#exemplo-1).
 
 Em qualquer caso, `This` refere-se ao objeto em que o método foi chamado, como se o método estivesse no objeto.
 
@@ -181,9 +181,9 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 #### Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1470                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1470                        |
+| Thread safe    | &check; |
 
 

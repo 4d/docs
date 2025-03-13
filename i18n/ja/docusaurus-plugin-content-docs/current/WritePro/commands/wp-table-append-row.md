@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Table append row** コマンドは<!--REF #_command_.WP Table append row.Summary-->*tableRef* 引数で指定した表組に行を一つ追加し、その中に*value* or a *valueColl* で指定した値を入れ、それに対応する行レンジオブジェクトを返します<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 コマンドは新しい行を行レンジオブジェクトとして返します。
 
-#### 例題 1
+## 例題 1
 
 空の表組を作成し、異なるサイズの行を複数追加したい場合を考えます。  以下のように書くことができます:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
-#### 例題 2
+## 例題 2
 
 空の表組を作成し、コレクションを使用して行を追加したい場合を考えます:
 
@@ -83,7 +83,7 @@ $row:=WP Table append row($table; $colItems)
 
 ![](../../assets/en/WritePro/commands/WPpic2.png)
 
-#### 例題 3
+## 例題 3
 
 請求書アプリケーションにおいて、関連した請求書項目を自動的に表示する表組を作成したい場合を考えます:
 
@@ -112,7 +112,7 @@ $row:=WP Table append row($table; $colItems)
 
 ![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
-#### 参照
+## 参照
 
 [WP Insert table](../commands-legacy/wp-insert-table.md)</br>
 [WP Table get rows](../commands-legacy/wp-table-get-rows.md)

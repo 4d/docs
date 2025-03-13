@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Insert document body** コマンドは、<!--REF #_command_.WP Insert document body.Summary-->*mode* 引数や*rangeUpdate* 引数で指定された形で、*wpDoc* 引数で指定したドキュメントの本文を*targetObj* 引数で指定したターゲット内に挿入し、挿入されたドキュメント本文へのレンジを返します。<!-- END REF-->
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 - *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
-#### 例題 1
+## 例題 1
 
 ドキュメントのコンテンツを他のドキュメント内で選択されたテキストで置き換えたい場合を考えます:
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
  WP Insert document body(WPDoc;$doctoCopy;wk replace) //WPDoc の中身を新しいドキュメントの中身で置き換えます
 ```
 
-#### 例題 2
+## 例題 2
 
 テンプレートとして定義されたドキュメントがあり、その中には異なるフォーマットを持つ部分が、それぞれブックマークとして保存されているものとします。  最終ドキュメントをテンプレートから作成する場合、任意のブックマークを新規ドキュメントとして取得し、最終ドキュメントに挿入することができます。
 
@@ -83,7 +83,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3
+## 例題 3
 
 挿入されたドキュメント本文の、フォントスタイルとサイズを設定したい場合を考えます:
 
@@ -96,7 +96,7 @@ WP SET ATTRIBUTES($range1; wk font family; "Times New Roman")
 WP SET ATTRIBUTES($range1; wk font italic; wk true)
 ```
 
-#### 参照
+## 参照
 
 [WP INSERT BREAK](wp-insert-break.md)\
 [WP INSERT PICTURE](wp-insert-picture.md)\

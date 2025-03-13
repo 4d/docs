@@ -17,7 +17,7 @@ El nombre de una clase puede contener hasta 31 caracteres.
 
 Un nombre de clase debe cumplir con el estándar [reglas de nomenclatura de propiedades](#object-properties) para la notación de puntos.
 
-> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
+> No se recomienda dar el mismo nombre a una clase y a una [tabla de la base](#tables-and-fields), para evitar conflictos.
 
 ## Funciones
 
@@ -29,7 +29,7 @@ Los nombres de función deben cumplir con el estándar [reglas de nomenclatura d
 
 El nombre de una propiedad objeto (también llamado objeto *atributo*) puede contener hasta 255 caracteres.
 
-Las propiedades de los objetos pueden hacer referencia a valores escalares, elementos ORDA, funciones de clase, otros objetos, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](./dt_object.md#properties)**:
+Las propiedades de los objetos pueden hacer referencia a valores escalares, elementos ORDA, funciones de clase, otros objetos, etc. Sea cual sea su naturaleza, los nombres de las propiedades de los objetos deben seguir las siguientes reglas **si se quiere utilizar la [notación de punto](./dt_object.md#properties)**:
 
 - El nombre de una propiedad debe comenzar con una letra, un guión bajo o un dólar "$".
 - A partir de ahí, el nombre puede incluir cualquier letra, dígito, el caracter de subrayado ("_"), o el caracter de dólar ("$").

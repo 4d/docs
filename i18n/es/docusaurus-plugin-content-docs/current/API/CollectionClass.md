@@ -35,7 +35,7 @@ Notas
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
@@ -54,7 +54,7 @@ Notas
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
@@ -1919,7 +1919,7 @@ Todas las colecciones *colsToSort* deben tener el mismo número de elementos, de
 
 :::
 
-Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](FunctionClass.md#formula)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
 
 La fórmula recibe los siguientes parámetros:
 
@@ -2391,18 +2391,18 @@ donde:
 
 - **comparator**: símbolo que compara *propertyPath* y *value*. Se soportan los siguientes símbolos:
 
-| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                                                                                  |
-| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                                          |
-|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                                                                                 |
-| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivale a "Condición no aplicada en una sentencia" ([ver más abajo](#not-equal-to-in-collections)).                             |
-|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                                                                                       |
-| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalente a "Not equal to" ([ver abajo](#not-equal-to-in-collections)). |
-| Menor que                             | <    |                                                                                                                                                                                                                                             |
-| Mayor que                             | >                             |                                                                                                                                                                                                                                             |
-| Menor o igual que                     | <=   |                                                                                                                                                                                                                                             |
-| Mayor o igual que                     | > =                           |                                                                                                                                                                                                                                             |
-| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
+| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                     |
+| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.             |
+|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                    |
+| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivalent to "Not condition applied on a statement" ).                                |
+|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                          |
+| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalent to "Not equal to" ). |
+| Menor que                             | <    |                                                                                                                                                                                |
+| Mayor que                             | >                             |                                                                                                                                                                                |
+| Menor o igual que                     | <=   |                                                                                                                                                                                |
+| Mayor o igual que                     | > =                           |                                                                                                                                                                                |
+| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                   |
 
 - **valor**: valor a comparar con el valor actual de la propiedad de cada elemento de la colección. Puede ser cualquier valor de expresión constante que coincida con la propiedad del tipo de datos del elemento o un [**marcador de posición**](#using-placeholders).
  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
@@ -3075,14 +3075,13 @@ The returned collection contains the element specified by *startFrom* and all su
 
 <!-- REF #collection.some().Params -->
 
-| Parámetros | Tipo |     | Descripción |
-| ---------- | ---- | :-: | ----------- |
-
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+| Parámetros | Tipo                        |                             | Descripción                                               |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Índice para iniciar la prueba en                          |
+| formula    | 4D.Function |              ->             | Objeto fórmula                                            |
+| methodName | Text                        |              ->             | Nombre de un método                                       |
+| param      | any                         |              ->             | Parámetro(s) a pasar                   |
+| Resultado  | Boolean                     | <- | True if at least one element successfully passed the test |
 
 <!-- END REF -->
 

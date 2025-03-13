@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-La classe `mySingleton` et la fonction `sayHello` sont répertoriées lorsque vous appelez la commande [`$catalog`]($catalog.md#singleton).
+The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
 
 :::
 

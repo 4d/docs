@@ -137,8 +137,8 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 - If `__KEY` is not provided, a new entity is created on the server with the given attributes.
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
-Ver ejemplos de [creación](#creating-an-entity) o [actualización](#updating-an-entity) entidades con peticiones POST.
-Ver un ejemplo de [descarga de contenidos usando una entidad](#using-an-entity-to-download-contents) con una petición GET.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### Parámetro de entidad asociado
 

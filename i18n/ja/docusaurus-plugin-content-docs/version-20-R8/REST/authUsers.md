@@ -5,7 +5,7 @@ title: ユーザーとセッション
 
 ## セッション
 
-[スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
 開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
 
@@ -18,7 +18,7 @@ title: ユーザーとセッション
 
 :::note 互換性
 
-4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#dsauthentify) の実装が推奨されています。 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
+4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#function-authentify). 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
 
 :::
 
@@ -27,7 +27,7 @@ title: ユーザーとセッション
 1. 最初の RESTコール (たとえば Qodlyページコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。\
     記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
-2. 事前に用意した [`authentify()` 関数](#authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
+2. You call your [`authentify()` function](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
 
 3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](../WebServer/qodly-studio.md) を利用できます。
 

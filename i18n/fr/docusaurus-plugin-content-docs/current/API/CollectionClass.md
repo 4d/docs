@@ -36,7 +36,7 @@ Une collection est initialisée avec les commandes [`New collection`](../command
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
@@ -55,7 +55,7 @@ Une collection est initialisée avec les commandes [`New collection`](../command
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
@@ -1958,7 +1958,7 @@ Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, 
 
 :::
 
-Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 
@@ -2436,18 +2436,18 @@ où :
 
 - **comparator** : symbole qui compare *propertyPath* et *value*. Les symboles suivants sont pris en charge :
 
-| Comparaison                             | Symbole(s) | Commentaire                                                                                                                                                                                                                                       |
-| --------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Egal à                                  | =, ==                         | Retourne les données correspondantes, prend en charge le joker de recherche (@), ne tient pas compte de la casse et est non diacritique.                                                          |
-|                                         | ===, IS                       | Retourne les données correspondantes, considère le @ comme un caractère standard, ne tient pas compte de la casse et est non diacritique                                                                                             |
-| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Équivalent à "Condition Not appliquée à une assertion" ([voir ci-dessous](#not-equal-to-in-collections)).           |
-|                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                                                                           |
-| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Équivalent à "Not equal to" ([voir ci-dessous](#not-equal-to-in-collections)). |
-| Inférieur à                             | <    |                                                                                                                                                                                                                                                   |
-| Supérieur à                             | >                             |                                                                                                                                                                                                                                                   |
-| Inférieur ou égal à                     | <=   |                                                                                                                                                                                                                                                   |
-| Supérieur ou égal à                     | > =                           |                                                                                                                                                                                                                                                   |
-| Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
+| Comparaison                             | Symbole(s) | Commentaire                                                                                                                                                                              |
+| --------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Egal à                                  | =, ==                         | Retourne les données correspondantes, prend en charge le joker de recherche (@), ne tient pas compte de la casse et est non diacritique. |
+|                                         | ===, IS                       | Retourne les données correspondantes, considère le @ comme un caractère standard, ne tient pas compte de la casse et est non diacritique                                    |
+| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Equivalent to "Not condition applied on a statement" ).                       |
+|                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                  |
+| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Equivalent to "Not equal to" ).          |
+| Inférieur à                             | <    |                                                                                                                                                                                          |
+| Supérieur à                             | >                             |                                                                                                                                                                                          |
+| Inférieur ou égal à                     | <=   |                                                                                                                                                                                          |
+| Supérieur ou égal à                     | > =                           |                                                                                                                                                                                          |
+| Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)           |
 
 - **valeur** : valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de n'importe quelle valeur d'expression constante correspondant au type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
@@ -3120,14 +3120,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type |     | Description |
-| ---------- | ---- | :-: | ----------- |
-
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+| Paramètres | Type                        |                             | Description                                               |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation              |
+| formula    | 4D.Function |              ->             | Objet formule                                             |
+| methodName | Text                        |              ->             | Nom de méthode                                            |
+| param      | any                         |              ->             | Paramètre(s) à passer                  |
+| Résultat   | Boolean                     | <- | True if at least one element successfully passed the test |
 
 <!-- END REF -->
 

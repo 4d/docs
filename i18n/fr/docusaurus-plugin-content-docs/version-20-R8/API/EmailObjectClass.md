@@ -110,7 +110,7 @@ Les propriétés [`textBody`](#textbody) et [`htmlBody`](#htmlbody) sont utilis�
 
 La propriété `.attachments` contient une <!-- REF #EmailObjectClass.attachments.Summary -->collection d'objet(s) `4D.MailAttachment`<!-- END REF -->.
 
-Les objets de type pièce jointe sont définis par la commande [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment). Les objets Attachment ont des [propriétés et fonctions](MailAttachmentClass.md) spécifiques.
+Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment.md) command. Les objets Attachment ont des [propriétés et fonctions](MailAttachmentClass.md) spécifiques.
 
 ## .bcc
 
@@ -140,7 +140,7 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 | language    | Collection de textes | Liste de balises de langage, telles que définies dans la [RFC3282](https://tools.ietf.org/html/rfc3282), dans le champ d'en-tête Content-Language de la partie, le cas échéant. |
 | location    | Text                 | URI, tel que défini dans la [RFC2557](https://tools.ietf.org/html/rfc2557), dans le champ d'en-tête Content-Location de la partie, le cas échéant.                              |
 | subParts    | Collection d'objets  | Parties du corps de chaque enfant (collection d'objets *EmailBodyPart*)                                                                                                      |
-| headers     | Collection d'objets  | Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets *EmailHeader* voir propriété [headers](#headers-))             |
+| headers     | Collection d'objets  | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers) property)                       |
 
 ## .bodyValues
 

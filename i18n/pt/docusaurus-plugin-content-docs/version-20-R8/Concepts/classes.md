@@ -507,7 +507,7 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 
 Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
-Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+If the functions are declared in a [shared class](#shared-classes), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 

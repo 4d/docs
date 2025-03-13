@@ -32,7 +32,7 @@ Super($text1) // テキスト型引数をスーパークラスコンストラク
 This.param:=$text2 // 2番目の引数を使用します
 ```
 
-2. [クラス関数](#class-function) 内において、`Super` は[`スーパークラス`](../API/ClassClass.md#superclass) のプロトタイプを指し、スーパークラス階層の関数の呼び出しを可能にします。
+2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) // スーパークラスにて宣言されている
@@ -115,9 +115,9 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 #### プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1706                            |
-| スレッドセーフ | &amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1706                        |
+| スレッドセーフ | &check; |
 
 

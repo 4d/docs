@@ -19,7 +19,7 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 
 - **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
 - **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
-- **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture.md#sources-folder). Voici un exemple :
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). Voici un exemple :
 
 ```
 {

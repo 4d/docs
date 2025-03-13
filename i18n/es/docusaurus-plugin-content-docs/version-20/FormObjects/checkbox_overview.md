@@ -424,7 +424,7 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 > (1) No compatible con los estilos [Regular](#regular) y [Plano](#flat).<br/> (2) No compatible con los estilos [Regular](#regular), [Plano](#flat), [Divulgación](#disclosure) y [Contraer/Expandir](#collapseexpand).
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Existen propiedades específicas adicionales, dependiendo del [estilo de botón](#check-box-button-styles):
 
 - Personalizar: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)

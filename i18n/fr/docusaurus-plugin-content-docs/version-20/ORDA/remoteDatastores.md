@@ -81,7 +81,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
     *   [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
     *   [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
     *   [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
-    *   [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
+    *   [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)
     *   [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
     *   [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 

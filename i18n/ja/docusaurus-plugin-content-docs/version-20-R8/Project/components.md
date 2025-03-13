@@ -69,8 +69,8 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 このファイルには次の内容を含めることができます:
 
-- デフォルトパス、または **environment4d.json** ファイルで定義されたパスに [ローカル保存されている](#ローカルコンポーネントの宣言) コンポーネントの名前
-- [GitHubリポジトリ](#github保存のコンポーネントの宣言) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
+- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
+- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -111,7 +111,7 @@ flowchart TB
 
 ### ローカルコンポーネント
 
-ローカルコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+You declare a local component in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -195,7 +195,7 @@ GitHub に保存された 4Dコンポーネントを直接参照して使用す�
 
 #### パスの宣言
 
-GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+You declare a component stored on GitHub in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -226,7 +226,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. たとえば:
 
 ```json
 {
@@ -390,7 +390,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
+**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
 
 選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
 
@@ -401,11 +401,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 プロジェクトに依存関係を追加するには、**追加** をクリックします。
 
 - プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environment4djson) file (see note). 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
-この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
+If no [**environment4d.json**](#environment4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
 
 :::
 

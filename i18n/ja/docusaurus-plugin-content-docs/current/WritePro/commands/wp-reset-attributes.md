@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。  リセットしたい属性の名前を*attribName* 引数に渡すか、あるいは*attribColl* 引数に属性名のコレクションを渡すことで、複数の属性を一度にリセットすることもできます。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 引数として渡された要素の中にリセットしたい属性が定義されていなかった場合、コマンドは何もしません。
 
-#### 例題 1
+## 例題 1
 
 以下の選択範囲から複数の属性を削除したい場合を考えます:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 
-#### 例題 2
+## 例題 2
 
 コレクションを使用して複数の属性を一度に削除したい場合を考えます:
 
@@ -73,7 +73,7 @@ WP RESET ATTRIBUTES($myRange; $myCollection)
  
 ```
 
-#### 例題 3
+## 例題 3
 
 ```4d
 $section:=WP Get section($document; 3)
@@ -82,7 +82,7 @@ $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
 WP RESET ATTRIBUTES($subSection) // サブセクションの全ての属性が削除される
 ```
 
-#### 参照
+## 参照
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](wp-get-attributes.md)\

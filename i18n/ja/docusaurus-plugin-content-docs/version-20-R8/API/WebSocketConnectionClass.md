@@ -25,14 +25,14 @@ title: WebSocketConnection
 
 WebSocketConnection オブジェクトは、次のプロパティと関数を提供します:
 
-|                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketConnectionClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketConnectionClass.handler.Summary -->               |
-| [<!-- INCLUDE #WebSocketConnectionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketConnectionClass.id.Summary -->                              |
-| [<!-- INCLUDE #WebSocketConnectionClass.send().Syntax -->](#send\(\))<br/><!-- INCLUDE #WebSocketConnectionClass.send().Summary -->                |
-| [<!-- INCLUDE #WebSocketConnectionClass.status.Syntax -->](#status)<br/><!-- INCLUDE #WebSocketConnectionClass.status.Summary -->                  |
-| [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate\(\))<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
-| [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                           |
+|                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebSocketConnectionClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketConnectionClass.handler.Summary -->           |
+| [<!-- INCLUDE #WebSocketConnectionClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketConnectionClass.id.Summary -->                          |
+| [<!-- INCLUDE #WebSocketConnectionClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketConnectionClass.send().Summary -->                |
+| [<!-- INCLUDE #WebSocketConnectionClass.status.Syntax -->](#status)<br/><!-- INCLUDE #WebSocketConnectionClass.status.Summary -->              |
+| [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
+| [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                       |
 
 <!-- REF #WebSocketConnectionClass.handler.Desc -->
 

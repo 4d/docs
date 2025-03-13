@@ -51,7 +51,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 
 En el parámetro *destinationFile*, pase un objeto `4D.File` que describa el archivo ZIP a crear (nombre, ubicación, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
 
-Una vez creado un archivo, puede utilizar el comando [ZIP Read archive](#zip-read-archive) para acceder a él.
+Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.md) command to access it.
 
 **Status object**
 
@@ -166,9 +166,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 #### Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1640                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1640                        |
+| Hilo seguro       | &check; |
 
 

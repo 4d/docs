@@ -424,7 +424,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
+Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#check-box-button-styles):
 
 - Personalizado: [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 - [Três Estados](properties_Display.md#three-states) (Flat, Clássico)

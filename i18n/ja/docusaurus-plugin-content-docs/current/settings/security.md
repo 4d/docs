@@ -41,7 +41,7 @@ title: セキュリティページ
     - **誰も制限しない**: このオプションはフォーミュラの制御を無効にします。 このオプションが選択されると、ユーザーはすべての 4Dコマンドおよびプラグインコマンド、さらにはプロジェクトメソッドを使用できます (非表示のものを除く)。
         **Note:** This option takes priority over the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command. このオプションが選択されると、コマンドの効果はなくなります。
 
-- **外部ファイルのユーザー設定を有効にする**: 外部ファイル化したユーザー設定を使用するにはこのオプションを選択します。 このオプションが選択されると、設定をおこなうダイアログが最大 3つになります: **ストラクチャー設定**、**ユーザー設定**、そして **データファイル用のユーザー設定** です。 詳細は [ユーザー設定](overview.md#ストラクチャー設定を開く) を参照ください。
+- **外部ファイルのユーザー設定を有効にする**: 外部ファイル化したユーザー設定を使用するにはこのオプションを選択します。 このオプションが選択されると、設定をおこなうダイアログが最大 3つになります: **ストラクチャー設定**、**ユーザー設定**、そして **データファイル用のユーザー設定** です。 For more information, refer to [User settings](../Desktop/user-settings.md).
 
 - **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. セキュリティ上の理由から、このメソッドの実行はそれぞれのホストデータベースにおいて明示的に許可されなければなりません。 そのためにはこのオプションをチェックします。 デフォルトでは、チェックされていません。
 

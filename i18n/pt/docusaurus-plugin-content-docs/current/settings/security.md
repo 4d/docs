@@ -41,7 +41,7 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
     - **Desactivado para todos**: esta opción desactiva el control en las fórmulas. Quando esta opção estiver marcada, os usuários terão acesso a todos os comandos 4D e plug-ins, bem como a todos os métodos do projeto (exceto para os invisíveis).
         **Note:** This option takes priority over the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command. Quando está selecionado, este comando não faz nada.
 
-- **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para más información, consulte [Propiedades usuario](overview.md#user-settings).
+- **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. For more information, refer to [User settings](../Desktop/user-settings.md).
 
 - **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. Por razões de segurança, você deve autorizar explicitamente a execução deste método em cada banco de dados de host. Para o efeito, é necessário marcar esta opção. Por padrão, não está marcada.
 

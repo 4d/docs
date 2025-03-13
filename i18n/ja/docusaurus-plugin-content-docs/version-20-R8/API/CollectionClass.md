@@ -36,7 +36,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
@@ -55,7 +55,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
@@ -1961,7 +1961,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 :::
 
-昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](FunctionClass.md#formula)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
 
 フォーミュラは以下の引数を受け取ります:
 
@@ -2439,18 +2439,18 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 - **比較演算子**: *propertyPath* 引数と *value* 引数の比較に使用する記号 以下の記号がサポートされます:
 
-| 比較            | 記号                          | 説明                                                                                                                                                                               |
-| ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                                                                          |
-|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                                                                                 |
-| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |
-|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                                                                      |
-| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                                                                       |
-| 小さい           | <  |                                                                                                                                                                                  |
-| 大きい           | >                           |                                                                                                                                                                                  |
-| 以下            | <= |                                                                                                                                                                                  |
-| 以上            | > =                         |                                                                                                                                                                                  |
-| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                                                                    |
+| 比較            | 記号                          | 説明                                                                                                                            |
+| ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                       |
+|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                              |
+| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 Equivalent to "Not condition applied on a statement" ). |
+|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                   |
+| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 Equivalent to "Not equal to" ).                                 |
+| 小さい           | <  |                                                                                                                               |
+| 大きい           | >                           |                                                                                                                               |
+| 以下            | <= |                                                                                                                               |
+| 以上            | > =                         |                                                                                                                               |
+| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                 |
 
 - **値** (value): コレクションの各要素のプロパティのカレント値に対して比較する値。 要素のデータ型に合致する任意の定数値の式または[**プレースホルダー**](#プレースホルダーを仕様する)であることができます。
  定数値を使用する場合、以下の原則に従う必要があります:

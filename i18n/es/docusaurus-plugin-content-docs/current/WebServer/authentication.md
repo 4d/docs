@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
-- cuando el servidor web recibe una URL que comienza con `rest/` y se ejecuta el servidor REST (en este caso, la autenticación es manejada a través de [`ds. función uthentify`](../REST/authUsers#force-login-mode) o el [método base `On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) (obsoleto) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - cuando el servidor web recibe una URL con un patrón que desencadena un [gestor de peticiones HTTP personalizadas](http-request-handler.md).
 
 ### Sintaxis
@@ -115,7 +115,7 @@ Debe declarar estos parámetros de la siguiente manera:
 
 :::note
 
-Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
 
 :::
 

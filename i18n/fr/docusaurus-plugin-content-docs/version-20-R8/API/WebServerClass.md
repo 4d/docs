@@ -7,7 +7,7 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Objet Web Server
 
-Les objets serveur Web sont instanciés avec la commande [`WEB Server`](#web-server).
+Web server objects are instantiated with the [`WEB Server`](../commands/web-server.md) command.
 
 Leurs propriétés et fonctions sont les suivantes :
 
@@ -568,7 +568,7 @@ La fonction `.start()` <!-- REF #WebServerClass.start().Summary -->démarre le s
 
 Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre *settings*, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
 
-Tous les paramètres des [objets Serveur Web](#objet-serveur-web) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
+All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
 Les paramètres de session personnalisés seront réinitialisés lorsque la fonction [`.stop()`](#stop) sera appelée.
 

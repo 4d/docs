@@ -481,7 +481,7 @@ Pode passar:
 - no parâmetro `msgsIDs`, uma coleção que contém as IDs exclusivas das mensagens específicas a serem excluídas, ou
 - no parâmetro `allMsgs`, a constante `IMAP all` (inteiro) para excluir todas as mensagens da caixa de correio selecionada.
 
-A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). As mensagens sinalizadas são excluídas do servidor IMAP com a função [`.expunge()`](#expunge) ou selecionando outra caixa de correio ou quando o [objeto transportador](#imap-transporter-object) (criado com [IMAP New transporter](#imap-new-transporter)) é destruído.
+A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Objeto devolvido**
 

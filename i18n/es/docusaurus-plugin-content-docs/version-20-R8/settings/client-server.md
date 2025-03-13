@@ -79,8 +79,8 @@ Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legac
     - QUIC se conecta automáticamente al puerto 19813 tanto para el servidor de aplicaciones como para el servidor DB4D.
     - Cuando se selecciona la opción de capa QUIC:
         - Cerca del selector aparece un mensaje beta y un icono de alerta.
-        - [los parámetros del tiempo de espera de las conexiones cliente-servidor](#Client-Server-Connections-Timeout) están ocultos
-        - La casilla de verificación [Encriptar comunicación Cliente-Servidor](#Encrypt-Client-Server-Communications) está oculta (las comunicaciones QUIC son siempre en TLS, sea cual sea su modo seguro).
+        - [Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
+        - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
     - **Compatibilidad**: necesita desplegar sus aplicaciones cliente/servidor con 4D v20 o superior antes de cambiar a la capa de red QUIC.
 
 :::note

@@ -51,7 +51,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
 - エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-See [this example](#receiving-an-entity-selection-as-parameter).
+こちらの [例題](#receiving-an-entity-selection-as-parameter) を参照ください。
 
 ### スカラー値の引数
 
@@ -77,7 +77,7 @@ See [this example](#receiving-an-entity-selection-as-parameter).
 - __KEY が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
 - __KEY が提供された場合、__KEY が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-See examples for creating or updating entities.
+エンティティを作成または更新する例を参照してください。
 
 #### リレートエンティティ引数
 

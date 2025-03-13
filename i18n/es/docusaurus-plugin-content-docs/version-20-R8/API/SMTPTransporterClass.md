@@ -135,7 +135,7 @@ La función `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envía el
 
 > El objeto `transporter` debe haber sido creado con el comando `SMTP New transporter`.
 
-El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. Para más información, consulte la descripción del comando [`SMTP New transporter`](#smtp-new-transporter).
+El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. For more information, please refer to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command description.
 
 En *mail*, pase un [objeto `Email`](EmailObjectClass.md#email-object) válido para enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 

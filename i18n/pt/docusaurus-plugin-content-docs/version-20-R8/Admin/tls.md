@@ -108,7 +108,7 @@ O servidor 4D web é compatível com a opção HSTS para prevenir um navegador d
 
 Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. Se o arquivo *dhparams.pem* (documento que contém a chave privada DH do servidor) ainda não existir, 4D vai gerar o arquivo automaticamente com um tamanho de chave de  2048. A geração inicial deste arquivo pode levar vários minutos. O arquivo é colocado com os arquivos [*key.pem* e *cert.pem*](#instalando-arquivos-de-certificado).
 
-Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) e quiser habilitar o PFS, deve comprovar que contenha entradas com algoritmos DH ou ECDH (Elliptic-curve Diffie-Hellman).
+If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
 
 ## Ativando TLS com os outros servidores
 

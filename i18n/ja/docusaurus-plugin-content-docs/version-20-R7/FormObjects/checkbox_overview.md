@@ -392,7 +392,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
 
-[ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -

@@ -67,7 +67,7 @@ title: ログファイル (.journal)
 
 ## ログファイル設定
 
-[ログファイル設定](settings.md#ログ管理) は、ブール値とパスという 2つの情報に基づいています。
+The [log file settings](settings.md#log-management) are based on two pieces of information: a boolean value and a path.
 
 1. **ブール値**: アプリケーション内で "ログを使用" 機能が有効か無効かを示します。 デフォルトで、このブール値は *catalog.4DCatalog* に格納されます。 ただし、[ユーザー設定](../Desktop/user-settings.md) が有効化されると、*catalog.4DCatalog* ファイルの構成がオーバーライドされます。その場合、[データファイルの隣](../Project/architecture.md#settings-ユーザーデータ) にある *Backup.4DSettings* ファイル、または、[プロジェクトのフォルダー＞Settingsフォルダー](../Project/architecture.md#settings-ユーザー) 内の *Backup.4DSettings* ファイルにて、このブール値を設定できるようになります ([doc.4d.com](https://doc.4d.com) の `JournalFileEnabled` xmlバックアップキーのドキュメントも参照ください)。
 

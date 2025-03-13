@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Get attributes** コマンドは、<!--REF #_command_.WP Get attributes.Summary-->4D Write Proレンジ、ヘッダー/フッター/本文/表、あるいはドキュメント内のあらゆる属性の値を返します。<!-- END REF--> このコマンドを使用すると4D Write Proのどのような内部属性(文字、段落、ドキュメント、表組み、画像など)にもアクセスすることができます。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注意**: *targetObj* オブジェクトに段落スタイルシートと文字スタイルシートが格納されていた場合、段落スタイルシート名が返されます。
 
-#### 例題 1
+## 例題 1
 
 選択されたエリアの背景色を取得したい場合を考えます:
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  WP Get attributes($range;wk background color;$bcol)
 ```
 
-#### 例題 2
+## 例題 2
 
 選択したエリアのフォントサイズ、背景色と背景スタイルを、コレクションを使用して取得したい場合を考えます:
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
  
 ```
 
-#### 参照
+## 参照
 
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)

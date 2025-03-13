@@ -11,7 +11,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 
 - Las columnas de los list box y de los encabezados de tipo hora ahora soportan la opción ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nuevas propiedades en [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) y [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist).
-- Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#adding-and-removing-dependencies).
+- Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#monitoring-project-dependencies).
 - Nuevo [**modo de tipado directo**](../Project/compiler.md#enabling-direct-typing) en el que declara todas las variables y parámetros en su código usando las palabras clave `var` y `#DECLARE`/`Function` (sólo modo soportado en nuevos proyectos). [La función de verificación de sintaxis](../Project/compiler.md#check-syntax) se ha mejorado en consecuencia.
 - Soporte de [singletones de sesión](../Concepts/classes.md#singleton-classes) y nueva propiedad de clase [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
 - Nueva palabra clave de función [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) para definir funciones singleton u ORDA que pueden ser llamadas a través de [peticiones HTTP REST GET](../REST/ClassFunctions.md#function-calls).
@@ -42,7 +42,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 
 - Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#object-operators) y las [referencias de colección](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) ahora soporta las [referencias de objeto y de colección como valores de consulta](../API/CollectionClass.md#object-or-collection-reference-as-value).
 - Cuando un componente tiene un [espacio de nombres declarado](../Extensions/develop-components.md#declarar-el-espacio-de-nombres-del-componente), sus clases ahora se comparten automáticamente entre todos los componentes cargados en el proyecto del host por [`cs.<namespace>`](../Concepts/classes.md#cs).
-- Gestión de componentes: soporte de [componentes almacenados en GitHub](../Project/components.md#declaring-components-stored-on-github).
+- Gestión de componentes: soporte de [componentes almacenados en GitHub](../Project/components.md#components-stored-on-github).
 - Nueva función [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) y API REST [`$clean`](../REST/$clean.md) para obtener una nueva entity selection basada en la entity selection original pero sin sus entidades eliminadas.
 - Nueva función [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) y API REST [`$info/privileges`](../REST/$info.md) para inspeccionar los privilegios de sesión más fácilmente durante la depuración.
 - Nuevo archivo [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) para personalizar las áreas web anidadas de 4D.
@@ -72,7 +72,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 - Soporte de estructuras de gestión de errores [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
 - La capa de red QUIC ahora soporta [broadcasting](../Desktop/clientServer.md#opening-a-remote-project), [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html), e [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.en.html).
 - Soporte de [selecciones de entidades restringidas](../ORDA/entities.md#restricting-entity-selections).
-- Soporte de [clases compartidas](../Concepts/classes.md#shared-classes) y de [clases singleton](../Concepts/classes.md#singleton-classes). Nuevas propiedades de clase: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
+- Soporte de [clases compartidas](../Concepts/classes.md#shared-classes) y de [clases singleton](../Concepts/classes.md#singleton-classes). Nuevas propiedades de clase: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#issingleton), [`me`](../API/ClassClass.md#me).
 - Soporte para [inicializar una propiedad de clase en su línea de declaración](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Nuevo modo [forzar login para peticiones REST](../REST/authUsers.md#force-login-mode) con un [soporte específico en Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nuevo parámetro REST [$format](../REST/$format.md).
@@ -96,10 +96,10 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 - Las conexiones TLS cliente/servidor y servidor SQL ahora se [configuran dinámicamente](../Admin/tls.md#enabling-tls-with-the-other-servers) (no se requieren archivos de certificado).
 - Formato HTML directo para [exportaciones de definición de estructura](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - Nuevo [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) que mejora el control del código durante los pasos de declaración, comprobación de sintaxis y compilación para evitar errores de ejecución.
-- Los parámetros de métodos declarados en prototipos `#DECLARE` [ya no son necesarios en métodos "Compiler_"](../Concepts/parameters.md#compilation).
+- Los parámetros de métodos declarados en prototipos `#DECLARE` [ya no son necesarios en métodos "Compiler_"](../Concepts/parameters.md).
 - Soporte de [formatos personalizados de fecha y hora](../Project/date-time-formats.md)
 - Nueva [palabra clave `Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error simples.
-- Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
+- New [`HTTP Parse message`](../commands/http-parse-message.md) command.
 - Nueva opción de compatibilidad [Impresión no bloqueante](../settings/compatibility.md).
 - Nuevo [modo de edición](../Admin/dataExplorer.md#editing-data) en el Explorador de datos.
 - Comandos del lenguaje 4D: [Página de novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
@@ -123,9 +123,9 @@ Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/),
 - Support of *context* parameter in [`Formula from string`](../commands/formula-from-string.md).
 - Soporte de la propiedad `headers` en el parámetro *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Sello de modificación global](../ORDA/global-stamp.md) para ayudar a implementar módulos de sincronización de datos. Nuevas funciones: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) y [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
-- La asignación de referencias de archivo a atributos imagen/blob está [soportada en ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
+- La asignación de referencias de archivo a atributos imagen/blob está [soportada en ORDA](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes).
 - Soporte para [inicializar el valor de la variable y el tipo de datos en la línea de declaración](../Concepts/variables/#initializing-variables-in-the-declaration-line).
-- Los parámetros del archivo de registro se guardan ahora [con el archivo de datos actual](../Backup/settings.md#log-file-management)
+- Log file settings are now [saved with the current data file](../Backup/settings.md#log-management)
 - Nueva sintaxis para [declarar parámetros variádicos](../Concepts/parameters.md#declaring-variadic-parameters)
 - 4D View Pro: soporte de la [importación](../ViewPro/commands/vp-import-from-blob) y de la [exportación](../ViewPro/commands/vp-export-to-blob) de documentos 4D View Pro al formato Blob.
 - Comandos del lenguaje 4D: [Página Novedades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) en doc.4d.com.
