@@ -14,7 +14,7 @@ title: VP RESET SELECTION
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->désélectionne toutes les cellules, ce qui entraîne l'absence de sélection courante ou de cellule active visible<!-- END REF -->.
 
@@ -26,7 +26,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 - `vk current sheet`
 
-#### Exemple
+## Exemple
 
 Vous souhaitez déselectionner toutes les cellules (la cellule active et toute autre cellule sélectionée) :
 
@@ -34,7 +34,7 @@ Vous souhaitez déselectionner toutes les cellules (la cellule active et toute a
 VP RESET SELECTION("myVPArea")
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>
