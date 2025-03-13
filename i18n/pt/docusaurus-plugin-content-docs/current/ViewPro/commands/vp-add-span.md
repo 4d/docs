@@ -13,7 +13,7 @@ title: VP ADD SPAN
 | --------- | ------ | -- | ---------------- | ---------------- |
 | rangeObj  | Object | -> | Objeto intervalo | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP ADD SPAN` combina as células em *rangeObj* como um único intervalo de células.
 
@@ -22,7 +22,7 @@ Em *rangeObj*, passe um objeto de intervalo de células. As células do interval
 > - Só são apresentados os dados da célula superior esquerda. Os dados nas outras células combinadas ficam ocultos até que a extensão seja removida.
 > - Os dados ocultos em células estendidas podem ser acessados por meio de fórmulas (começando com a célula superior esquerda).
 
-#### Exemplo
+## Exemplo
 
 Para abranger as células do primeiro trimestre e do segundo trimestre nas duas células ao lado delas, e a célula da área sul nas duas linhas abaixo dela:
 
@@ -43,7 +43,7 @@ Para abranger as células do primeiro trimestre e do segundo trimestre nas duas 
 
 ![vp-add-span-result](../../assets/en/ViewPro/vp-add-span-2.png)
 
-#### Veja também
+## Veja também
 
 [4D View Pro Range Object Properties](../getting-started.md#using-range-objects)<br/>
 [VP Get spans](vp-get-spans.md)<br/>
