@@ -16,7 +16,7 @@ title: VP Name
 | sheet      | Integer | ->                          | Localização do intervalo (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto intervalo de nome                                             | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->retorna um novo objeto de intervalo referenciando uma faixa de nome<!-- END REF -->.
 
@@ -29,7 +29,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 - `vk current sheet`
 - `vk workbook`
 
-#### Exemplo
+## Exemplo
 
 Pretende atribuir um valor ao intervalo nomeado "Total".
 
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### Veja também
+## Veja também
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>
