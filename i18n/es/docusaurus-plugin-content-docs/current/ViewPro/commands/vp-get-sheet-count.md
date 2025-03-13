@@ -14,13 +14,13 @@ title: VP Get sheet count
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
 | Resultado  | Integer | <- | Número de hojas                              | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->devuelve el número de hojas del documento cargado en *vpAreaName*.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-#### Ejemplo
+## Ejemplo
 
 En el siguiente documento:
 
@@ -36,7 +36,7 @@ Obtener el número de hojas y define la hoja actual como la última hoja:
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### Ver también
+## Ver también
 
 [VP Get sheet index](vp-get-sheet-index.md)<br/>
 [VP SET SHEET COUNT](vp-set-sheet-count.md)
