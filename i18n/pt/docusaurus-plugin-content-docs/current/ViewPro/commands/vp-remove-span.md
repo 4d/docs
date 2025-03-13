@@ -13,13 +13,13 @@ title: VP REMOVE SPAN
 | --------- | ------ | -- | ---------------- | ---------------- |
 | rangeObj  | Object | -> | Objeto intervalo | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o span das células em *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um objeto de alcance do intervalo da célula. As células geradas no alcance são divididas em células individuais.
 
-#### Exemplo
+## Exemplo
 
 Para remover todos os intervalos de células deste documento:
 
@@ -38,7 +38,7 @@ Resultados:
 
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
-#### Veja também
+## Veja também
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP Get spans](vp-get-spans.md)
