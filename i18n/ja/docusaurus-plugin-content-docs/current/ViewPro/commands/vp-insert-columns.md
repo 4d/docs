@@ -13,7 +13,7 @@ title: VP INSERT COLUMNS
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP INSERT COLUMNS` コマンドは、<!-- REF #_method_.VP INSERT COLUMNS.Summary -->*rangeObj* 引数で指定したレンジにカラムを挿入します<!-- END REF -->。
 
@@ -21,7 +21,7 @@ title: VP INSERT COLUMNS
 
 新しいカラムは、*rangeObj* 引数で指定した開始カラムの直前 (すぐ左側) に挿入されます。
 
-#### 例題
+## 例題
 
 2番目のカラムの前にカラムを3列挿入します:
 
@@ -33,7 +33,7 @@ VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 
 ![](../../assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
-#### 参照
+## 参照
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>
