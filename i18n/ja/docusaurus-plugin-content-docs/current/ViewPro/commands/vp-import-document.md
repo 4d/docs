@@ -23,7 +23,7 @@ title: VP IMPORT DOCUMENT
 | filePath   | Text   | -> | ドキュメントのパス名              |                  |
 | paramObj   | Object | -> | 読み込みのオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP IMPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、*filePath* 引数のドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
 
@@ -79,7 +79,7 @@ title: VP IMPORT DOCUMENT
 
 :::
 
-#### 例題 1
+## 例題 1
 
 フォームが開かれたときに、ディスク上に保存されているデフォルトの 4D View Pro ドキュメントを読み込みます:
 
@@ -91,7 +91,7 @@ If(Form event code=On VP Ready) //4D View Pro area loaded and ready
 End if
 ```
 
-#### 例題 2
+## 例題 2
 
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
@@ -116,7 +116,7 @@ Else
 End if
 ```
 
-#### 例題 3
+## 例題 3
 
 カンマ (",") を区切り文字として使用している `.txt` ファイルを読み込みます:
 
@@ -131,7 +131,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 このようになります:
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv-result.png)
 
-#### 参照
+## 参照
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP NEW DOCUMENT](vp-new-document.md)<br/>
