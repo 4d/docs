@@ -21,7 +21,7 @@ title: Windows
 |[<!-- INCLUDE #_command_.MINIMIZE WINDOW.Syntax -->](../../commands-legacy/minimize-window.md)<br/>|
 |[<!-- INCLUDE #_command_.Next window.Syntax -->](../../commands-legacy/next-window.md)<br/>|
 |[<!-- INCLUDE #_command_.Open form window.Syntax -->](../../commands-legacy/open-form-window.md)<br/>|
-|[<!-- INCLUDE #_command_.Open window.Syntax -->](../../commands-legacy/open-window.md)<br/>|
+|[<!-- INCLUDE #_command_.Open window.Syntax -->](../../commands-legacy/open-window.md)  ![](../../assets/en/commands/deprecated.png)<br/>|
 |[<!-- INCLUDE #_command_.REDRAW WINDOW.Syntax -->](../../commands-legacy/redraw-window.md)<br/>|
 |[<!-- INCLUDE #_command_.REDUCE RESTORE WINDOW.Syntax -->](../../commands-legacy/reduce-restore-window.md)<br/>|
 |[<!-- INCLUDE #_command_.RESIZE FORM WINDOW.Syntax -->](../../commands-legacy/resize-form-window.md)<br/>|
