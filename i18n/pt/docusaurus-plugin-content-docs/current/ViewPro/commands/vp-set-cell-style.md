@@ -14,7 +14,7 @@ title: VP SET CELL STYLE
 | rangeObj  | Object | -> | Objeto intervalo |                  |
 | styleObj  | Object | -> | Objecto estilo   | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the *styleObj* to the cells defined in the *rangeObj*<!-- END REF -->.
 
@@ -31,7 +31,7 @@ Para remover um estilo e reverter para as configurações de estilo padrão (se 
 
 Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Objetos de estilo](../configuring.md#style-objects).
 
-#### Exemplo
+## Exemplo
 
 ```4d
 $style:=New object
@@ -48,7 +48,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 ![](../../assets/en/ViewPro/cmd_vpSetCellStyle.PNG)
 
-#### Veja também
+## Veja também
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>
