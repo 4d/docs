@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->La commande **SELECT LOG FILE** crée ou ferme le fichier d'historique (ou fichier journal) de la base de données, suivant la valeur que vous passez en paramètre.<!-- END REF-->.
 
@@ -27,16 +27,16 @@ Si vous passez une chaîne vide, **SELECT LOG FILE** présente une boîte de dia
 
 Si vous passez *\** dans *logFile*, **SELECT LOG FILE** ferme le fichier journal courant de la base de données. La variable OK prend la valeur 1 lorsque le fichier d'historique est refermé.
 
-#### Variables et ensembles système
+## Variables et ensembles système
 
 OK prend la valeur 1 si le fichier d'historique est correctement créé ou fermé.
 
-#### Voir également
+## Voir également
 
 [New log file](new-log-file.md)\
 [ON ERR CALL](../commands-legacy/on-err-call.md)
 
-#### Propriétés
+## Propriétés
 
 |                       |                             |
 | --------------------- | --------------------------- |

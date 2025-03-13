@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `MAIL Convert from MIME` コマンドは、<!-- REF #_command_.MAIL Convert from MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->。
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 *mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
 
-#### 返されるオブジェクト
+## 返されるオブジェクト
 
 Email オブジェクト。
 
-#### 例題 1
+## 例題 1
 
 テキストドキュメントとして保存された MIME のメールのテンプレートを読み込み、メールを送信します。
 
@@ -59,7 +59,7 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-#### 例題 2
+## 例題 2
 
 この例題では、ピクチャーが含まれた 4D Write Pro ドキュメントを直接送信します:
 
@@ -91,7 +91,7 @@ $status:=$transporter.send($email)
 \| mime | BLOB, Text | &#8594;  | MIME形式のEメール |
 \| Function result | Object | &#8592; | Eメールオブジェクト |
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CHANNEL.Summary-->The **SET CHANNEL** command opens a serial port or a document.<!-- END REF--> You can open only one serial port or one document at a time with this command. To close an opened serial port, pass SET CHANNEL (11).
 
@@ -28,7 +28,7 @@ The description of SET CHANNEL is composed of two sections:
 * Working with Serial Ports
 * Working with Documents
 
-#### Working with Serial Ports: SET CHANNEL (port;settings) 
+## Working with Serial Ports: SET CHANNEL (port;settings) 
 
 The first form of the **SET CHANNEL** command opens a serial port, setting the protocol and other port information. Data can be sent with [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) or [SEND VARIABLE](send-variable.md), and received with [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) or [RECEIVE RECORD](receive-record.md).
 
@@ -125,7 +125,7 @@ The *settings* parameter sets the speed, number of data bits, number of stop bit
 
 **Tip:** The various numeric values to be accumulated and passed in *port* and *settings* (but not including the values for COM1...COM99) are available as predefined constants in the theme *Communications* within the Design environment Explorer windows. For COM1...COM99, use numeric literals.
 
-#### Working with Documents on Disk: SET CHANNEL(operation;document) 
+## Working with Documents on Disk: SET CHANNEL(operation;document) 
 
 The second form of the **SET CHANNEL** command allows you to create, open, and close a document. Unlike the *System Documents* commands, it can open only one document at a time. The document can be read from or written to.
 
@@ -151,7 +151,7 @@ All of the operations in this table set the Document system variable if appropri
 
 See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) and [RECEIVE RECORD](receive-record.md) commands.
 
-#### See also 
+## See also 
 
 [Append document](append-document.md)  
 [Communications](/category/commands/Communications)  
@@ -167,7 +167,7 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

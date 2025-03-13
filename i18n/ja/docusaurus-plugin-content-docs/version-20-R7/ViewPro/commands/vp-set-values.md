@@ -14,7 +14,7 @@ title: VP SET VALUES
 | rangeObj  | Object     | -> | レンジオブジェクト |                  |
 | valuesCol | Collection | -> | 値のコレクション  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET VALUES` コマンドは、<!-- REF #_method_.VP SET VALUES.Summary -->指定のセルレンジから開始して値のコレクションを割り当てていきます<!-- END REF -->。
 
@@ -33,7 +33,7 @@ title: VP SET VALUES
 | value | Integer, Real, Boolean, Text, Date, Null | セルの値 (時間部分を除く) |
 | time  | Real                                     | 時間値 (秒単位)      |
 
-#### 例題
+## 例題
 
 ```4d
 $param:=New collection
@@ -48,7 +48,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 ![](../../assets/en/ViewPro/cmd_vpSetValues.PNG)
 
-#### 参照
+## 参照
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>

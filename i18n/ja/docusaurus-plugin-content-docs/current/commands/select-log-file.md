@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->。
 
@@ -27,16 +27,16 @@ If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save F
 
 If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
 
-#### システム変数およびセット
+## システム変数およびセット
 
 OK is set to 1 if the log file is correctly created, or closed.
 
-#### 参照
+## 参照
 
 [New log file](new-log-file.md)\
 [ON ERR CALL](../commands-legacy/on-err-call.md)
 
-#### プロパティ
+## プロパティ
 
 |            |                             |
 | ---------- | --------------------------- |

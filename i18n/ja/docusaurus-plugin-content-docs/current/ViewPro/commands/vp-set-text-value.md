@@ -15,7 +15,7 @@ title: VP SET TEXT VALUE
 | textValue     | Text   | -> | 設定するテキスト値 |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET TEXT VALUE` コマンドは、<!-- REF #_method_.VP SET TEXT VALUE.Summary -->指定されたセルレンジにテキスト値を割り当てます<!-- END REF -->。
 
@@ -25,13 +25,13 @@ title: VP SET TEXT VALUE
 
 任意の *formatPattern* 引数は、*textValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
-#### 例題
+## 例題
 
 ```4d
 VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ```
 
-#### 参照
+## 参照
 
 [セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET VALUE](vp-set-value.md)

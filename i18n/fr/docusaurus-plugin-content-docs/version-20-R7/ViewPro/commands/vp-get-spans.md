@@ -14,13 +14,13 @@ title: VP Get spans
 | rangeObj   | Object | ->                          | Objet plage                                                                        |                  |
 | Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->récupère les cellules fusionnées (cell spans) dans le *rangeObj* désigné<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage de cellules fusionnées que vous souhaitez récupérer. Si *rangeObj* ne contient pas de cellules fusionnées, une plage vide est retournée.
 
-#### Exemple
+## Exemple
 
 Pour centrer le texte des cellules fusionnées dans ce document :
 
@@ -35,7 +35,7 @@ $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal alig
 VP SET CELL STYLE($range;$style)
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)

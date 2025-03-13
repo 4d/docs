@@ -15,7 +15,7 @@ title: VP SET SHEET OPTIONS
 | sheetOptions | Object  | -> | Option(s) de la feuille à définir                        |                  |
 | sheet        | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permet de définir différentes options de feuille de la zone *vpAreaName* <!-- END REF -->.
 
@@ -27,7 +27,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 - `vk current sheet`
 
-#### Exemple 1
+## Exemple 1
 
 Vous souhaitez protéger toutes les cellules à l'exception de la plage C5:D10 :
 
@@ -43,7 +43,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Vous souhaitez protéger votre document pendant que vos utilisateurs redimensionnent les lignes et colonnes :
 
@@ -63,7 +63,7 @@ $options.protectionOptions.allowResizeColumns=True;
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Vous souhaitez personnaliser la couleur des onglets, des lignes figées, du quadrillage, du fond de la sélection et de la bordure de la sélection :
 
@@ -95,7 +95,7 @@ Résultat:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
-#### Exemple 4
+## Exemple 4
 
 Vous souhaitez masquer le quadrillage et les en-têtes des lignes et colonnes.
 
@@ -116,7 +116,7 @@ Résultat:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### Voir également
+## Voir également
 
 [4D View Pro sheet options](../configuring.md#sheet-options)<br/>
 [VP Get sheet options](vp-get-sheet-options.md)

@@ -39,7 +39,7 @@ Super.doSomething(42) // スーパークラスにて宣言されている
 // "doSomething" メンバーメソッドを呼び出します
 ```
 
-#### 例題 1
+## 例題 1
 
 クラスコンストレクター内で`Super` を使う例です。 `Rectangle` と `Square` クラスの共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### 例題 2
+## 例題 2
 
 参照 関数を持つ `Rectangle` クラスを作成します:
 
@@ -109,11 +109,11 @@ $square:=cs.Square.new()
 $message:=$square.description() // "I have 4 sides which are all equal"
 ```
 
-#### 参照
+## 参照
 
 [**クラスのコンセプトページ**](../Concepts/classes.md).
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

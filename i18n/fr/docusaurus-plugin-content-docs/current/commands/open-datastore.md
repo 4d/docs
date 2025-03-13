@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
 
@@ -75,7 +75,7 @@ Les objets disponibles dans le `cs.Datastore` sont mappés conformément aux [r�
 
 Si aucun datastore correspondant n'est trouvé, `Open datastore` retourne **Null**.
 
-#### Exemple 1
+## Exemple 1
 
 Connexion à un datastore distant sans utilisateur/mot de passe :
 
@@ -87,7 +87,7 @@ Connexion à un datastore distant sans utilisateur/mot de passe :
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
@@ -100,7 +100,7 @@ Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Travailler avec plusieurs datastores distants :
 
@@ -115,7 +115,7 @@ Travailler avec plusieurs datastores distants :
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Exemple 4
+## Exemple 4
 
 Connexion à une application Qodly :
 
@@ -136,15 +136,15 @@ ALERT(String($data.length)+" items have been read")
 
 ```
 
-#### Gestion des erreurs
+## Gestion des erreurs
 
 En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut pas être joint (adresse incorrecte, web serveur non lancé, http et https non activés, etc.), l'erreur 1610 "Une requête vers l’hôte: {xxx} a échoué" est générée. Vous pouvez intercepter cette erreur avec une méthode installée par `ON ERR CALL`.
 
-#### Voir également
+## Voir également
 
 [ds](ds.md)
 
-#### Propriétés
+## Propriétés
 
 |                       |                             |
 | --------------------- | --------------------------- |

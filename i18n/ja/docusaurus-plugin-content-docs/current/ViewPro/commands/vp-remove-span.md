@@ -13,13 +13,13 @@ title: VP REMOVE SPAN
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE SPAN` コマンドは、<!-- REF #_method_.VP REMOVE SPAN.Summary -->*rangeObj* で指定したレンジ内のセル結合を解除します<!-- END REF -->。
 
 *rangeObj* には、セル結合しているレンジのオブジェクトを渡します。 レンジ内の結合セルは個別セルに分割されます。
 
-#### 例題
+## 例題
 
 ドキュメントのセル結合をすべて解除します:
 
@@ -38,7 +38,7 @@ title: VP REMOVE SPAN
 
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
-#### 参照
+## 参照
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP Get spans](vp-get-spans.md)

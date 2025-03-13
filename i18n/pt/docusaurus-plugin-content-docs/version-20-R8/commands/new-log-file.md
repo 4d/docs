@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 **Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](../commands-legacy/execute-on-server.md) command or in a stored procedure.
 
@@ -33,10 +33,10 @@ A log file must always be related to a data file. If you call this command just 
 
 :::
 
-#### Gestão de erros
+## Gestão de erros
 
 In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
 
-#### Veja também
+## Veja também
 
 [SELECT LOG FILE](select-log-file.md)

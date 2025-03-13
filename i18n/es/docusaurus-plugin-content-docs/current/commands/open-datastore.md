@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos remota identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
 
@@ -75,7 +75,7 @@ Los objetos disponibles en el `cs.Datastore` son mapeados en función de las [re
 
 Si no se encuentra ningún datastore coincidente, `Open datastore` devuelve **Null**.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Conexión a un almacén de datos remoto sin usuario/contraseña:
 
@@ -87,7 +87,7 @@ Conexión a un almacén de datos remoto sin usuario/contraseña:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
 
@@ -100,7 +100,7 @@ Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Trabajar con varios almacenes de datos remotos:
 
@@ -115,7 +115,7 @@ Trabajar con varios almacenes de datos remotos:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Conexión a una aplicación Qodly:
 
@@ -136,15 +136,15 @@ ALERT(String($data.length)+" items have been read")
 
 ```
 
-#### Gestión de errores
+## Gestión de errores
 
 En caso de error, el comando devuelve **Null**. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". Puede interceptar este error con un método instalado por `ON ERR CALL`.
 
-#### Ver también
+## Ver también
 
 [ds](ds.md)
 
-#### Propiedades
+## Propiedades
 
 |                    |                             |
 | ------------------ | --------------------------- |

@@ -15,7 +15,7 @@ title: VP Get print info
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet contenant les informations d'impression                               | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->retourne un objet contenant les attributs d'impression de *vpAreaName*<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro) dont vous souhaitez retourner les attributs d'impression.  Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
-#### Exemple
+## Exemple
 
 Le code suivant :
 
@@ -78,7 +78,7 @@ zoomFactor:1
 }
 ```
 
-#### Voir également
+## Voir également
 
 [4D View Pro Print Attributes](../configuring.md#print-attributes)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)

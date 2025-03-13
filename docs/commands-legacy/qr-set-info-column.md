@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET INFO COLUMN.Summary-->### List mode 
 
@@ -101,13 +101,13 @@ This would be the resulting report area:
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *colNum* value, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

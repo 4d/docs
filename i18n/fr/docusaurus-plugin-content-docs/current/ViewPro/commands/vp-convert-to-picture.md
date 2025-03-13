@@ -15,7 +15,7 @@ title: VP Convert to picture
 | rangeObj   | Object  | ->                          | Objet plage                                     |                  |
 | Résultat   | Picture | <- | Image SVG de la zone                            | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->convertit l'objet 4D View Pro *vpObject* (ou la plage *rangeObj* dans *vpObject*) en une image SVG<!-- END REF -->.
 
@@ -43,11 +43,11 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 
 > La visibilité du quadrillage dépend de l'attribut du document défini avec [VP SET PRINT INFO](vp-set-print-info.md).
 
-#### Résultat
+## Résultat
 
 La commande retourne une image au format SVG.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez convertir une zone 4D View Pro en SVG, prévisualiser le résultat et l'envoyer dans une variable image :
 
@@ -58,7 +58,7 @@ $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 ```
 
-#### Voir également
+## Voir également
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>

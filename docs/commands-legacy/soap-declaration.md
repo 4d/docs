@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->The SOAP DECLARATION command explicitly declares the type of parameters used in a 4D method published as a Web Service.<!-- END REF-->
 
@@ -108,7 +108,7 @@ If the *alias* parameter is omitted, 4D will use, by default, the name of the va
 
 **Note:** The **SOAP DECLARATION** command must be included in the method published as a Web Service. It is not possible to call it from another method. 
 
-#### Example 1 
+## Example 1 
 
 This example specifies a parameter name:
 
@@ -122,7 +122,7 @@ This example specifies a parameter name:
  SOAP DECLARATION($1;Is longint;SOAP input;"zipcode")
 ```
 
-#### Example 2 
+## Example 2 
 
 This example retrieves an array of zip codes in the form of longints: 
 
@@ -134,7 +134,7 @@ This example retrieves an array of zip codes in the form of longints:
  SOAP DECLARATION(codes;LongInt array;SOAP input;"in_codes")
 ```
 
-#### Example 3 
+## Example 3 
 
 This example refers to two return values without specifying an argument name: 
 
@@ -143,7 +143,7 @@ This example refers to two return values without specifying an argument name:
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
-#### Example 4 
+## Example 4 
 
 This example allows the 4D SOAP server to return an argument with a size greater than 32 KB in databases in non-Unicode mode: 
 
@@ -155,7 +155,7 @@ This example allows the 4D SOAP server to return an argument with a size greater
   
 Note the type Is text (and not Is BLOB). This allows the argument to be correctly processed. 
 
-#### Example 5 
+## Example 5 
 
 This example illustrates the results of different types of declarations: 
 
@@ -189,13 +189,13 @@ This example illustrates the results of different types of declarations:
   //The XML is passed as a reference
 ```
 
-#### See also 
+## See also 
 
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

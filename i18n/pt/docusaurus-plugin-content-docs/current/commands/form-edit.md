@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.O comando **FORM EDIT** abre o *formulário* associado a *aTable* no editor do formulário 4D, com opcionalmente *objeto* selecionado. Note que você deve ter acesso ao ambiente de Design, caso contrário o erro -9804 ("Impossível abrir formulário") será gerado.
 
@@ -40,7 +40,7 @@ Se *objeto* não for encontrado em *formulário*, o formulário é aberto e nenh
 
 Passa uma seqüência de caracteres vazia em *objeto* para desmarcar todos os objetos da *forma* aberta.
 
-#### Exemplos
+## Exemplos
 
 Para abrir o formulário *Contacts* da tabela *Address*:
 
@@ -60,11 +60,11 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
  FORM EDIT("ContactList"; "name-input")
 ```
 
-#### Veja também
+## Veja também
 
 *Design de Comandos de Acesso aos Objetos*
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

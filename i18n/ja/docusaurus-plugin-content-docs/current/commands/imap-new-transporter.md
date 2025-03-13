@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `IMAP New transporter` コマンドは、*server* 引数の指定に応じて<!-- REF #_command_.IMAP New transporter.Summary -->新規の IMAP 接続を設定します<!-- END REF -->。戻り値は、新しい*transporter* オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
 
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
 
-#### 戻り値
+## 戻り値
 
 このファンクション[**IMAP transporter オブジェクト**](../API/IMAPTransporterClass.md#imap-transporter-object). 返されるプロパティはすべて **読み取り専用** です。
 
 > IMAP接続は、transporter オブジェクトが消去された時点で自動的に閉じられます。
 
-#### 例題
+## 例題
 
 ```4d
 $server:=New object
@@ -69,7 +69,7 @@ If(Not($status.success))
 End if
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

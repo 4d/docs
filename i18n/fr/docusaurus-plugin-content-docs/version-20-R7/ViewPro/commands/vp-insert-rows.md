@@ -13,7 +13,7 @@ title: VP INSERT ROWS
 | ---------- | ------ | -- | ----------- | ---------------- |
 | rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->insère les lignes définies dans *rangeObj*<!-- END REF -->.
 
@@ -21,7 +21,7 @@ Dans *rangeObj*, passez un objet contenant une plage de la ligne de début (la l
 
 De nouvelles lignes sont insérées directement avant la première ligne dans *rangeObj*.
 
-#### Exemple
+## Exemple
 
 Pour insérer 3 lignes avant la première ligne :
 
@@ -33,7 +33,7 @@ Le résultat est le suivant :
 
 ![](../../assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
-#### Voir également
+## Voir également
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>

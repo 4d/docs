@@ -14,7 +14,7 @@ title: VP Get row attributes
 | rangeObj   | Object     | ->                          | Objeto intervalo                 |                  |
 | Resultados | Collection | <- | Coleção de propriedades de linha | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get row attributes` command <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the *rangeObj*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In *rangeObj*, pass an object containing a range of the rows whose attributes wi
 
 The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md) method.
 
-#### Exemplo
+## Exemplo
 
 O código seguinte retorna uma coleção de atributos no intervalo fornecido:
 
@@ -36,7 +36,7 @@ $attr:=VP Get row attributes($range)
 
 ![](../../assets/en/ViewPro/cmd_vpGetRowAttributes.PNG)
 
-#### Veja também
+## Veja também
 
 [VP Get column attributes](vp-get-column-attributes.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)<br/>

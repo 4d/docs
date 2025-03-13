@@ -17,7 +17,7 @@ title: VP SET FROZEN PANES
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. Uma linha sólida é exibida para indicar que as colunas e linhas estão congeladas. The location of the line depends on where the frozen column or row is on the sheet:
 
@@ -39,7 +39,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 
 - `vk current sheet`
 
-#### Exemplo
+## Exemplo
 
 You want to freeze the first three columns on the left, two columns on the right, and the first row:
 
@@ -56,6 +56,6 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 ![](../../assets/en/ViewPro/cmd_vpSetFrozenPanes.PNG)
 
-#### Veja também
+## Veja também
 
 [VP Get frozen panes](vp-get-frozen-panes.md)

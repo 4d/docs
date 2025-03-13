@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 <!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** retourne un objet contenant des informations sur l'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **FORM Event** à partir d'une méthode formulaire ou objet.
 
@@ -42,7 +42,7 @@ L'objet événement peut contenir des propriétés supplémentaires, en fonction
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
-#### Exemple 1
+## Exemple 1
 
 You want to handle the On Clicked event on a button:
 
@@ -52,7 +52,7 @@ You want to handle the On Clicked event on a button:
  End if
 ```
 
-#### Exemple 2
+## Exemple 2
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
@@ -70,7 +70,7 @@ Vous pouvez trier la colonne à l'aide de l'événement On Header Click :
  End case
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Vous voulez gérer On Display Details sur un objet list box avec une méthode définie dans la propriété *Meta info expression* :
 
@@ -96,12 +96,12 @@ La zone de liste résultante lorsque des lignes sont sélectionnées :
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### Voir également
+## Voir également
 
 [Form Events](../Events/overview.md)
 [Form event code](form-event-code.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                                                                 |
 | ------------------ | --------------------------------------------------------------- |

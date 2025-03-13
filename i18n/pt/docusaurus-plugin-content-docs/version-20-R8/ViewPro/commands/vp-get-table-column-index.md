@@ -25,7 +25,7 @@ title: VP Get table column index
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Integer | <- | Índice de *columnName*                                      | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
 
@@ -39,7 +39,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 If *tableName* or *columnName* is not found, the command returns -1.
 
-#### Exemplo
+## Exemplo
 
 ```4d
 	// Search the column id according the column name
@@ -49,7 +49,7 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 ```
 
-#### Veja também
+## Veja também
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

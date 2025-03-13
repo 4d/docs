@@ -39,7 +39,7 @@ Super.doSomething(42) //chamada a função "doSomething"
 //declarada em superclasses
 ```
 
-#### Exemplo 1
+## Exemplo 1
 
 Este exemplo ilustra o uso do `Super` em um construtor de classe. O comando é chamado para evitar duplicar as partes do construtor que são comuns entre as classes `Rectangle` e `Square`.
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 This example illustrates the use of `Super` in a class function. Você criou a classe `Rectangle` com uma função:
 
@@ -106,11 +106,11 @@ Depois pode escrever num método projecto:
 Parâmetros
 ```
 
-#### Veja também
+## Veja também
 
 [**Página conceito para classes**](../Concepts/classes.md).
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

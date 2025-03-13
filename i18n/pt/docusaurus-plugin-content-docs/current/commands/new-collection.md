@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
 
@@ -43,7 +43,7 @@ Pode prestar atenção aos problemas de conversão abaixo:
 - Datas são armazenadas no formato "aaaa-mm-dd" ou strings com o formato "AAAA-MM-DDTHH:mm:ss.SSSZ", de acordo com a configuração atual "dates inside objects"/datas dentro de objetos. Quando converter datas 4D em texto antes de armazená-las em uma coleção, como padrão o programa considera a zona horária local. Pode modificar esse valor usando o seletor `Dates inside objects` do comando `SET DATABASE PARAMETER`.
 - Se passar a hora, é armazenada como um número de milissegundos (Real).
 
-#### Exemplo 1
+## Exemplo 1
 
 Se quiser criar uma nova coleção vazia e atribuí-la à uma variável coleção 4D:
 
@@ -53,7 +53,7 @@ Se quiser criar uma nova coleção vazia e atribuí-la à uma variável coleçã
   //$myCol=[]
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Se quiser criar uma coleção pré-prenchida:
 
@@ -63,7 +63,7 @@ Se quiser criar uma coleção pré-prenchida:
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 Pode criar uma nova coleção e adicionar um novo elemento:
 
@@ -76,12 +76,12 @@ Pode criar uma nova coleção e adicionar um novo elemento:
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-#### Veja também
+## Veja também
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

@@ -14,7 +14,7 @@ title: VP SET SHEET COUNT
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
 | number     | Integer | -> | シートの数                   | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET SHEET COUNT` コマンドは、<!-- REF #_method_.VP SET SHEET COUNT.Summary -->*vpAreaName* 引数で指定した View Pro エリア内のシートの数を設定します<!-- END REF -->。
 
@@ -22,7 +22,7 @@ title: VP SET SHEET COUNT
 
 > **警告**: このコマンドは、現在のシート数より少ない数字を渡した場合にはシートを削除します。 たとえば、ドキュメント内にシートが 5つあり、このコマンドでシートを 3つに設定した場合には、シート4 と 5 は削除されます。
 
-#### 例題
+## 例題
 
 ドキュメントには現在シートが 1つあります:
 
@@ -36,6 +36,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ![](../../assets/en/ViewPro/vp-sheet-3.png)
 
-#### 参照
+## 参照
 
 [VP Get sheet count](vp-get-sheet-count.md)

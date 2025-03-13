@@ -23,7 +23,7 @@ title: VP Get data context
 | sheet      | Integer      | ->                          | Índice da folha a partir da qual se obtém o contexto de dados |                  |
 | Resultados | Diferente de | <- | Data context. Object or Collection            | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. O contexto retornado inclui todas as modificações feitas no conteúdo do contexto de dados.
 
@@ -31,7 +31,7 @@ Em *sheet*, passe o índice da planilha para obter o contexto de dados. Se nenhu
 
 The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
 
-#### Exemplo
+## Exemplo
 
 Para obter o contexto de dados ligado às células seguintes:
 
@@ -43,7 +43,7 @@ var $dataContext : Object
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
 
-#### Veja também
+## Veja também
 
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>

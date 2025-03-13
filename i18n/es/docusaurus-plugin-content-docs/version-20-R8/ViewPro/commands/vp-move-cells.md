@@ -23,7 +23,7 @@ title: VP MOVE CELLS
 | targetRange | Object | -> | Rango de destino para los valores, el formato y las fórmulas |                  |
 | options     | Object | -> | Opciones adicionales                                         | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->mueve o copia los valores, estilo y fórmulas de *originRange* a *targetRange*<!-- END REF -->.
 
@@ -42,7 +42,7 @@ El parámetro *options* tiene varias propiedades:
 
 Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro de trabajo](vp-set-workbook-options.md).
 
-#### Ejemplo
+## Ejemplo
 
 Para copiar el contenido, los valores, el formato y las fórmulas de un rango origen:
 
@@ -60,7 +60,7 @@ $options.pasteOptions:=vk clipboard options all
 VP MOVE CELLS($originRange; $targetRange; $options)
 ```
 
-#### Ver también
+## Ver también
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>

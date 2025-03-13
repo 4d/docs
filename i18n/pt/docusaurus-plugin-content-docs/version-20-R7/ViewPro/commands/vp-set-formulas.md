@@ -14,7 +14,7 @@ title: VP SET FORMULAS
 | rangeObj    | Object     | -> | Objeto intervalo de células |                  |
 | formulasCol | Collection | -> | Colecção de fórmulas        | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
 
@@ -30,7 +30,7 @@ O parâmetro *formulasCol* é uma coleção bidimensional:
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 
-#### Exemplo 1
+## Exemplo 1
 
 ```4d
 $formulas:=New collection
@@ -49,7 +49,7 @@ $0:=$1*3.33
 
 ![](../../assets/en/ViewPro/cmd_vpSetFormulas.PNG)
 
-#### Exemplo 2
+## Exemplo 2
 
 Para remover fórmulas:
 
@@ -61,7 +61,7 @@ $formulas.push(New collection("";"")) // second collection
 VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 ```
 
-#### Veja também
+## Veja também
 
 [VP Get Formulas](vp-get-formulas.md)<br/>
 [VP GET VALUES](vp-get-values.md)<br/>

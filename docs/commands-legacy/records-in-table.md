@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in table.Summary-->**Records in table** returns the total number of records in aTable.<!-- END REF--> [Records in selection](records-in-selection.md) returns the number of records in the current selection only. If **Records in table** is used within a transaction, records created during the transaction will be taken into account.
 
-#### Example 
+## Example 
 
 The following example displays an alert that shows the number of records in a table:
 
@@ -26,11 +26,11 @@ The following example displays an alert that shows the number of records in a ta
  ALERT("There are "+String(Records in table([People]))+" records in the table.")
 ```
 
-#### See also 
+## See also 
 
 [Records in selection](records-in-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

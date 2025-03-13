@@ -14,7 +14,7 @@ title: VP SET VALUES
 | rangeObj  | Object     | -> | Objeto intervalo   |                  |
 | valuesCol | Collection | -> | Coleção de valores | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
 
@@ -33,7 +33,7 @@ O parâmetro *valuesCol* é bidimensional:
 | value       | Integer, Real, Boolean, Text, Date, Null | Valor da célula (exceto - time) |
 | time        | Real                                     | Valor hora (em segundos)        |
 
-#### Exemplo
+## Exemplo
 
 ```4d
 $param:=New collection
@@ -48,7 +48,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 ![](../../assets/en/ViewPro/cmd_vpSetValues.PNG)
 
-#### Veja também
+## Veja também
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>

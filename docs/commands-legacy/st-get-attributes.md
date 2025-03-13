@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->The ST GET ATTRIBUTES command is used to recover the current value of a style attribute in a selection of text of the form object(s) designated by *object*.<!-- END REF--> 
 
@@ -72,7 +72,7 @@ If the value of the *attribName* attribute is the same for all of the selection,
 | Attribute text size           | \-1                                                                    |
 | Attribute underline style     | 2                                                                      |
 
-#### Example 
+## Example 
 
 Given a \[Table\_1\]StyledText field displayed in a form. The object has the Multistyle property and is named "StyledText\_t". You want to get the highlighted text as well as the status of the Bold style attribute. You can proceed in two different ways depending on whether you use the object name or the field reference. 
 
@@ -91,17 +91,17 @@ Given a \[Table\_1\]StyledText field displayed in a form. The object has the Mul
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### See also 
+## See also 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

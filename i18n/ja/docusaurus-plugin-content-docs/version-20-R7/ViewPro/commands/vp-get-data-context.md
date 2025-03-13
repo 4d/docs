@@ -23,7 +23,7 @@ title: VP Get data context
 | sheet      | Integer | ->                          | データコンテキストを取得するシートのインデックス                           |                  |
 | 戻り値        | Variant | <- | Data context. Object or Collection | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get data context` コマンドは、 <!-- REF #_method_.VP Get data context.Summary -->ワークシートのカレントのデータコンテキストを返します<!-- END REF -->。 返されるコンテキストには、データコンテキストの内容に対しておこなわれた変更を含みます。
 
@@ -31,7 +31,7 @@ title: VP Get data context
 
 [VP SET DATA CONTEXT](vp-set-data-context.md) により設定されたデータコンテキストの種類によって、関数はオブジェクトまたはコレクションを返します。
 
-#### 例題
+## 例題
 
 次のセルにバインドされたデータコンテキストを取得します:
 
@@ -43,7 +43,7 @@ var $dataContext : Object
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
 
-#### 参照
+## 参照
 
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>

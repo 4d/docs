@@ -14,7 +14,7 @@ title: VP IMPORT FROM OBJECT
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
 | viewPro    | Object | -> | Objecto 4D View Pro                        | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
@@ -24,7 +24,7 @@ Em *viewPro*, passe um objeto 4D View Pro válido. Esse objeto pode ter sido cri
 
 An error is returned if the *viewPro* object is invalid.
 
-#### Exemplo
+## Exemplo
 
 Se quiser importar uma folha de cálculo que foi salva previamente em um campo objeto:
 
@@ -33,6 +33,6 @@ QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 ```
 
-#### Veja também
+## Veja também
 
 [VP Export to object](vp-export-to-object.md)

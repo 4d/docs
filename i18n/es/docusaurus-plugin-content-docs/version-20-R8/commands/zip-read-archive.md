@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera el contenido de *zipFile* y lo devuelve como un objeto `4D.ZipArchive`<!-- END REF -->.
 
@@ -38,7 +38,7 @@ Si el *zipFile* está protegido por contraseña, es necesario utilizar el parám
 
 El objeto `4D.ZipArchive` devuelto contiene una única propiedad [`root`](../API/ZipArchiveClass.md#root) cuyo valor es un objeto `4D.ZipFolder`. Esta carpeta describe todo el contenido del archivo ZIP.
 
-#### Ejemplo
+## Ejemplo
 
 Para recuperar y ver el contenido de un objeto ZIP file:
 
@@ -78,14 +78,14 @@ Para extraer desde la carpeta root:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-#### Ver también
+## Ver también
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                                 |
 | ----------------- | ------------------------------- |

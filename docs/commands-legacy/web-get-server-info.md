@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Get server info.Summary-->The **WEB Get server info** command returns an object containing detailed runtine information on the 4D Web server current session.<!-- END REF--> Returned information include the SOAP server.
 
@@ -71,7 +71,7 @@ If you pass **true** in the *withCache* parameter, the command returns the "cach
 | nbCachedObjects   | Number         | Number of objects in the cache                                                                                                                |
 | cachedObjects     | Collection     | Collection of objects in the cache. Each cached object is defined by different properties (url, mimeType, expirationType, lastModified, etc.) |
 
-#### Example 
+## Example 
 
 After you execute the following code:
 
@@ -125,13 +125,13 @@ After you execute the following code:
 
 ```
 
-#### See also 
+## See also 
 
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

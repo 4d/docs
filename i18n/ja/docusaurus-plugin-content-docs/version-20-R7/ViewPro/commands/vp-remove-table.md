@@ -24,7 +24,7 @@ title: VP REMOVE TABLE
 | options    | Integer | -> | 追加のオプション                                       |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE TABLE` コマンドは、<!-- REF #_method_.VP REMOVE TABLE.Summary -->表組みを削除します<!-- END REF --> ([VP CREATE TABLE](vp-create-table.md) で作成した表組み)。
 
@@ -42,7 +42,7 @@ title: VP REMOVE TABLE
 
 表組み名はシートのレベルで定義されます。 任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、表が置かれているシートを指定できます。
 
-#### 例題
+## 例題
 
 2番目のシートの "people" の表組みを削除し、セルのデータは保持します:
 
@@ -50,6 +50,6 @@ title: VP REMOVE TABLE
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)

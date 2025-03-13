@@ -22,7 +22,7 @@ title: VP SET BINDING PATH
 | rangeObj             | Object | -> | レンジオブジェクト               |                  |
 | dataContextAttribute | Text   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET BINDING PATH` コマンドは、<!-- REF #_method_.VP SET BINDING PATH.Summary -->*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。 機能するには、[SET DATA CONTEXT](vp-set-data-context.md) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
 
@@ -35,7 +35,7 @@ title: VP SET BINDING PATH
 
 > コレクション型の属性はサポートされていません。 コレクション属性の名前を渡した場合、コマンドは何もしません。
 
-#### 例題
+## 例題
 
 データコンテキストを設定し、`firstName` と `lastName` の属性をセルにバインドします:
 
@@ -54,7 +54,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### 参照
+## 参照
 
 [VP Get binding path](vp-get-binding-path.md)<br/>
 [VP Get data context](vp-get-data-context.md)<br/>

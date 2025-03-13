@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `ZIP Create archive` コマンドは、<!-- REF #_command_.ZIP Create archive.Summary -->圧縮された ZIPArchive オブジェクトを作成し、その処理のステータスを返します<!-- END REF -->。
 
@@ -63,7 +63,7 @@ Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.
 | status     | Integer | ステータスコード                                                                                                                   |
 | success    | Boolean | アーカイブが正常に作成された場合には true、それ以外は false                                                                                        |
 
-#### 例題 1
+## 例題 1
 
 `4D.File` を圧縮します:
 
@@ -77,7 +77,7 @@ Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### 例題 2
+## 例題 2
 
 フォルダー自体は圧縮せずに `4D.Folder` の中身だけを圧縮します:
 
@@ -92,7 +92,7 @@ Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### 例題 3
+## 例題 3
 
 ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 
@@ -122,7 +122,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### 例題 4
+## 例題 4
 
 *zipStructure* オブジェクトに、圧縮したいフォルダーとファイルを格納したコレクションを渡します:
 
@@ -139,7 +139,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### 例題 5
+## 例題 5
 
 高い圧縮レベルの代替圧縮アルゴリズムを使用します:
 
@@ -157,14 +157,14 @@ $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
 ```
 
-#### 参照
+## 参照
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

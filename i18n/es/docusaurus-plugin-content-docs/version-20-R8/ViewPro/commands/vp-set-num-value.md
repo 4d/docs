@@ -15,7 +15,7 @@ title: VP SET NUM VALUE
 | numberValue   | Number | -> | Valor del número a definir |                  |
 | formatPattern | Text   | -> | Formato del valor          | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 The `VP SET NUM VALUE` command<!-- REF #_method_.VP SET NUM VALUE. Summary -->assigns a specified numeric value to a designated cell range<!-- END REF -->.
 
@@ -25,7 +25,7 @@ El parámetro *numberValue* especifica un valor numérico que se asignará al *r
 
 El *formatPattern* opcional define un [patrón](../configuring.md#cell-format) para el parámetro *numberValue*.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 //Definir el valor de la celda en 2
@@ -35,7 +35,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);2)
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 ```
 
-#### Ver también
+## Ver también
 
 [Cell format](../configuring.md#cell-format)<br/>
 [VP SET VALUE](vp-set-value.md)

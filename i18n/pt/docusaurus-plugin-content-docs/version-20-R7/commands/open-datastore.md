@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
 
@@ -75,7 +75,7 @@ Objetos disponíveis no `cs.Datastore` são mapeados em relação às [regras ge
 
 Se não for encontrado um datastore correspondente, `Open datastore` retornará **Null**.
 
-#### Exemplo 1
+## Exemplo 1
 
 Conexão a uma datastore remota com usuário/ senha/ timetou/ tls
 
@@ -87,7 +87,7 @@ Conexão a uma datastore remota com usuário/ senha/ timetou/ tls
  ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Conexão a uma datastore remota sem usuário ou senha:
 
@@ -100,7 +100,7 @@ Conexão a uma datastore remota sem usuário ou senha:
  ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 Trabalhando com várias datastores remotas:
 
@@ -115,7 +115,7 @@ Trabalhando com várias datastores remotas:
  ALERT("They are "+String($foreignStudents. Students.all().length)+" foreign students")
 ```
 
-#### Exemplo
+## Exemplo
 
 Conexão com uma aplicação Qodly:
 
@@ -136,15 +136,15 @@ ALERT(String($data.length)+" items have been read")
 
 ```
 
-#### Gestão de erros
+## Gestão de erros
 
 Em caso de erro, o comando retorna **Null**. Se não for possível acessar o armazem de dados remotos (endereço incorreto, servidor web não inciiado, http e https não habilitados...), se produz o erro 1610 " Uma petição remota ao host XXX falhou". Você pode interceptar esse erro com um método instalado por `ON ERR CALL`.
 
-#### Veja também
+## Veja também
 
 [ds](ds.md)
 
-#### Propriedades
+## Propriedades
 
 |                    |                             |
 | ------------------ | --------------------------- |

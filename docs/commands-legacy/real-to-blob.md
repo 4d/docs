@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REAL TO BLOB.Summary-->The REAL TO BLOB command writes the Real value *real* into the BLOB *blob*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### Example 1 
+## Example 1 
 
 After executing this code:
 
@@ -56,7 +56,7 @@ After executing this code:
 
 * On all platforms, the size of *vxBlob* is 10 bytes
 
-#### Example 2 
+## Example 2 
 
 After executing this code:
 
@@ -68,7 +68,7 @@ After executing this code:
 
 * On all platforms, the size of *vxBlob* is 8 bytes
 
-#### Example 3 
+## Example 3 
 
 After executing this code:
 
@@ -81,7 +81,7 @@ After executing this code:
 
 * On all platforms, the size of *vxBlob* is 8 bytes
 
-#### Example 4 
+## Example 4 
 
 After executing this code:
 
@@ -98,7 +98,7 @@ After executing this code:
 * The other bytes of the BLOB are left unchanged
 * The variable *vlOffset* has been incremented by 8 (and is now equal to 58)
 
-#### Example 5 
+## Example 5 
 
 After executing this code:
 
@@ -110,7 +110,7 @@ After executing this code:
 
 * On all platforms, the size of *vxBlob* is 8 bytes
 
-#### Example 6 
+## Example 6 
 
 After executing this code:
 
@@ -123,7 +123,7 @@ After executing this code:
 * On all platforms, the real value is stored at the bytes #100 to #109
 * The other bytes of the BLOB are left unchanged
 
-#### See also 
+## See also 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -133,7 +133,7 @@ After executing this code:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

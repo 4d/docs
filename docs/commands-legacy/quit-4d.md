@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->The QUIT 4D command exits the current 4D application and returns to the Desktop.<!-- END REF--> 
 
@@ -51,7 +51,7 @@ If there is an *On Server Shutdown Database Method*, it is executed after the de
 
 The action of the QUIT 4D command used in a stored procedure is the same as the one for the Quit command of the 4D Server File menu: it causes a dialog box to appear on each client machine indicating that the server is about to quit.
 
-#### Example 
+## Example 
 
 The project method listed here is associated with the Quit or Exit menu item in the File menu.
 
@@ -64,11 +64,11 @@ The project method listed here is associated with the Quit or Exit menu item in 
  End if
 ```
 
-#### See also 
+## See also 
 
 [On Exit database method](on-exit-database-method.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

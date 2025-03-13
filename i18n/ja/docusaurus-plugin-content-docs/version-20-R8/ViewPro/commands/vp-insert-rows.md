@@ -13,7 +13,7 @@ title: VP INSERT ROWS
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP INSERT ROWS` コマンドは、<!-- REF #_method_.VP INSERT ROWS.Summary -->*rangeObj* 引数で指定したレンジに行を挿入します<!-- END REF -->。
 
@@ -21,7 +21,7 @@ title: VP INSERT ROWS
 
 新しい行は、*rangeObj* 引数で指定した開始行の直前 (すぐ上) に挿入されます。
 
-#### 例題
+## 例題
 
 先頭行の前に 3行挿入します:
 
@@ -33,7 +33,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 ![](../../assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
-#### 参照
+## 参照
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `WEB Server list` コマンドは、<!-- REF #_command_.WEB Server list.Summary -->4Dアプリケーション内で利用可能な Webサーバーオブジェクトのコレクションを返します<!-- END REF -->。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
 
-#### 例題
+## 例題
 
 利用可能な Webサーバーのうちいくつが実行中かを調べます:
 
@@ -50,12 +50,12 @@ Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロ�
  ALERT(String($wSList.length)+" 個のリストの中で、"+String($vRun)+" 個の Web サーバーが実行中です。")
 ```
 
-#### 参照
+## 参照
 
 [WEB Server](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

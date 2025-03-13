@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET SORTS.Summary-->The QR SET SORTS command sets the sort orders for the columns in the report whose reference is passed in *area*.<!-- END REF-->
 
@@ -42,11 +42,11 @@ Here is the code to sort only the rows in the case of a cross-table report:
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

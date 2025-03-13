@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](../Concepts/classes.md#cs).
 
-#### Propriétés
+## Propriétés
 
 |                    |                                                                 |
 | ------------------ | --------------------------------------------------------------- |

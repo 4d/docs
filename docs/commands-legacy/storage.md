@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Storage.Summary-->The **Storage** method returns the catalog of shared objects or shared collections that you have registered in the *Storage* object on the current machine or component.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Since the catalog returned by **Storage** is a *shared object*, it follows the r
 * When surrounded by the *Use...End use* structure, first-level attributes of **Storage** are locked for other processes.
 * Unlike standard shared objects, the object returned by **Storage** will NOT share its *locking identifier* with shared objects or collections added as attributes (for more information, refer to the *About the locking identifier (how shared groups work)* section).
 
-#### Example 1 
+## Example 1 
 
 A common practice could be initializing the **Storage** object in the : 
 
@@ -38,7 +38,7 @@ A common practice could be initializing the **Storage** object in the :
  End use
 ```
 
-#### Example 2 
+## Example 2 
 
 This example shows a standard way to set **Storage** values: 
 
@@ -52,7 +52,7 @@ This example shows a standard way to set **Storage** values:
  End use
 ```
 
-#### Example 3 
+## Example 3 
 
 **Storage** allows implementing a singleton with a *lazy initialization*, as shown in the following example.
 
@@ -79,11 +79,11 @@ This example shows a standard way to set **Storage** values:
  $0:=$counterValue
 ```
 
-#### See also 
+## See also 
 
 *Shared objects and shared collections*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

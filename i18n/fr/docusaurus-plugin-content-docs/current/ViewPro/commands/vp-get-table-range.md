@@ -25,7 +25,7 @@ title: VP Get table range
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis)    |                  |
 | Résultat   | Object  | <- | Plage contenant la table                                                       | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->retourne la plage de *tableName*<!-- END REF -->.
 
@@ -44,7 +44,7 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 Si *tableName* n'est pas trouvé, la commande retourne **null**.
 
-#### Voir également
+## Voir également
 
 [VP RESIZE TABLE](vp-resize-table.md)<br/>
 [VP Find table](vp-find-table.md)

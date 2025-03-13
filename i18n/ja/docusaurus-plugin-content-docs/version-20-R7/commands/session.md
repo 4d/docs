@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `Session` コマンドは、<!-- REF #_command_.Session.Summary -->カレントのユーザーセッションに対応する `Session` オブジェクトを返します<!-- END REF -->。
 
@@ -37,7 +37,7 @@ For more information, see the [Session types](../command/session.md-types) parag
 
 サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
 
-#### Webセッション
+## Webセッション
 
 Webセッションの `Session` オブジェクトは、どの Webプロセスからも利用できます:
 
@@ -49,7 +49,7 @@ Webセッションの `Session` オブジェクトは、どの Webプロセス�
 
 Web ユーザーセッションに関する詳細な情報については、[Web Server Sessions](../WebServer/sessions.md) の章を参照してください。
 
-#### リモートクライアントセッション
+## リモートクライアントセッション
 
 リモートクライアントの `Session` オブジェクトは、次のいずれかから利用できます:
 
@@ -59,7 +59,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 リモートユーザーセッションの詳細については、[**リモートクライアントユーザーセッション**](../Desktop/clientServer.md#リモートユーザーセッション) の段落を参照ください。
 
-#### ストアドプロシージャーセッション
+## ストアドプロシージャーセッション
 
 すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
@@ -68,7 +68,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.ja.html) のページを参照ください。
 
-#### 例題
+## 例題
 
 "公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
 
@@ -96,7 +96,7 @@ IP:port/4DACTION/action_Session
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `Formula from string` コマンドは、<!-- REF #_command_.Formula from string.Summary -->*formulaString* と任意の *context* 引数に基づいた`4D.Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 | `sk execute in current database` | Integer | (デフォルト) フォーミュラは作成されたコンテキストにおいて実行されます。 |
 | `sk execute in host database`    | Integer | フォーミュラは、ホストデータベースのコンテキストで実行されます。                         |
 
-#### 例題
+## 例題
 
 以下のコードは、テキストフォーマットのフォーミュラを受け入れるダイアログを作成し、:
 
@@ -61,12 +61,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/API/formulaAlert.png)
 
-#### 参照
+## 参照
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

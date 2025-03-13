@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Verify password hash.Summary-->The **Verify password hash** function verifies that the given *hash* matches the given *password*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ The following errors may be returned. You can review an error with the [Last err
 
 **Reminder:** Only bcrypt algorithm is supported. If your hash was not generated using bcrypt, an error is returned. 
 
-#### Example 
+## Example 
 
 This example verifies a password hash previously created by [Generate password hash](generate-password-hash.md) and stored in a \[Users\] table with a newly entered password:
 
@@ -49,12 +49,12 @@ This example verifies a password hash previously created by [Generate password h
 
 **Note:** The password is never stored on disk, only the hash. Using a remote 4D application, the hash could be produced on the client side. If instead, you use a JavaScript (or similar) based front end, the best practice for security is to create the hash on the server side. Of course, you should use a TLS encrypted network connection for security, as this requires transferring the password over the network.
 
-#### See also 
+## See also 
 
   
 [Generate password hash](generate-password-hash.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

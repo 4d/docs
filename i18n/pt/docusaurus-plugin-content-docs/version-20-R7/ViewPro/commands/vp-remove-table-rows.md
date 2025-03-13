@@ -25,7 +25,7 @@ title: VP REMOVE TABLE ROWS
 | count      | Integer | -> | Número de linhas a remover (tem de ser >0) |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)   | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->removes one or *count* row(s) from the specified *tableName* at the specified *row* index<!-- END REF -->. O comando remove valores e estilos.
 
@@ -35,7 +35,7 @@ If the *tableName* table is bound to a [data context](vp-set-data-context.md), t
 
 Se *tableName* não existir, não acontece nada.
 
-#### Exemplo
+## Exemplo
 
 Para remover duas linhas da 3.ª linha da tabela "dataTable":
 
@@ -43,7 +43,7 @@ Para remover duas linhas da 3.ª linha da tabela "dataTable":
 VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
-#### Veja também
+## Veja também
 
 [VP INSERT TABLE ROWS](vp-insert-table-rows.md)<br/>
 [VP REMOVE TABLE COLUMNS](vp-remove-table-columns.md)

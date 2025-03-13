@@ -15,7 +15,7 @@ title: VP SET DEFAULT STYLE
 | styleObj   | Object  | -> | スタイルオブジェクト                                   |                  |
 | sheet      | Integer | -> | シートインデックス (デフォルト=カレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET DEFAULT STYLE` コマンドは、<!-- REF #_method_.VP SET DEFAULT STYLE.Summary -->*sheet* で指定したシートに対して、*styleObj* 引数のスタイルをデフォルトスタイルとして定義します<!-- END REF -->。
 
@@ -27,7 +27,7 @@ title: VP SET DEFAULT STYLE
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 ```4d
 $style:=New object
@@ -40,7 +40,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 ![](../../assets/en/ViewPro/cmd_vpSetDefaultStyle.PNG)
 
-#### 参照
+## 参照
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>

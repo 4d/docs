@@ -14,7 +14,7 @@ title: VP REMOVE SHEET
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |                  |
 | index      | Integer | -> | Índice de la hoja a eliminar                 | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP REMOVE SHEET` <!-- REF #_method_.VP REMOVE SHEET.Summary -->elimina la hoja con el *index* especificado del documento cargado en *vpAreaName*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ En *index*, pase el índice de la hoja que desea eliminar. Si el *index* pasado 
 
 > La indexación comienza en 0.
 
-#### Ejemplo
+## Ejemplo
 
 El documento tiene actualmente tres hojas:
 
@@ -38,6 +38,6 @@ VP REMOVE SHEET("ViewProArea";2)
 
 ![](../../assets/en/ViewPro/vp-sheet-2.png)
 
-#### Ver también
+## Ver también
 
 [VP ADD SHEET](vp-add-sheet.md)

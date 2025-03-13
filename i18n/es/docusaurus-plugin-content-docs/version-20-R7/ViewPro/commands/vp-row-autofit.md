@@ -13,13 +13,13 @@ title: VP ROW AUTOFIT
 | ---------- | ------ | -- | ------------ | ---------------- |
 | rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->dimensiona automáticamente la(s) fila(s) de *rangeObj* en función de su contenido<!-- END REF -->.
 
 En *rangeObj*, pase un objeto rango que contenga un rango de líneas cuyo tamaño se gestionará automáticamente.
 
-#### Ejemplo
+## Ejemplo
 
 Las siguientes líneas no muestran correctamente el texto:
 
@@ -33,7 +33,7 @@ Resultado:
 
 ![](../../assets/en/ViewPro/cmd_vpRowAutoFit2.PNG)
 
-#### Ver también
+## Ver también
 
 [VP Column autofit](vp-column-autofit.md)
 

@@ -14,7 +14,7 @@ title: VP SET VALUE
 | rangeObj   | Object | -> | Objeto rango                              |                  |
 | valueObj   | Object | -> | Valores de la celda y opciones de formato | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->asigna un valor especificado a un rango de celdas designado<!-- END REF -->.
 
@@ -30,7 +30,7 @@ El parámetro *valueObj* es un objeto que incluye propiedades para el valor y el
 | time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                                        |
 | format    | Text                                     | Patrón de propiedad valor/tiempo. Para obtener información sobre patrones y caracteres de formato, consulte el párrafo [Formato de celda](../configuring.md#cell-format). |
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 //Define el valor de la celda como False
@@ -58,7 +58,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!); "time"
 VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 ```
 
-#### Ver también
+## Ver también
 
 [Cell Format](../configuring.md#cell-format)<br/>
 [VP Get values](vp-get-value.md)<br/>

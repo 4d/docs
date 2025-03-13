@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive. Summary -->crea un objeto archivo ZIP comprimido y devuelve el estado de la operación<!-- END REF -->.
 
@@ -63,7 +63,7 @@ El objeto status devuelto contiene las siguientes propiedades:
 | status     | Integer | Código de estado                                                                                                                                                               |
 | success    | Boolean | True si el archivo se ha creado con éxito, si no, false                                                                                                                        |
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Para comprimir un archivo `4D.File`:
 
@@ -77,7 +77,7 @@ Para comprimir un archivo `4D.File`:
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Para comprimir una carpeta `4D.Folder` sin la carpeta en sí:
 
@@ -92,7 +92,7 @@ Para comprimir una carpeta `4D.Folder` sin la carpeta en sí:
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Para comprimir una estructura de archivo ZIP con una contraseña y una barra de progreso:
 
@@ -122,7 +122,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zipStructure*:
 
@@ -139,7 +139,7 @@ Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zip
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### Ejemplo 5
+## Ejemplo 5
 
 Desea utilizar un algoritmo de compresión alternativo con un alto nivel de compresión:
 
@@ -157,14 +157,14 @@ $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
 ```
 
-#### Ver también
+## Ver también
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |

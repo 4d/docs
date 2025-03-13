@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->The VERIFY CURRENT DATA FILE command carries out a structural check of the objects found in the data file currently opened by 4D.<!-- END REF-->
 
@@ -36,15 +36,15 @@ When this command is executed, the data cache is flushed and all operations acce
 
 If a log file has been generated, its complete pathname is returned in the *Document* system variable. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the callback method does not exist, the verification is not carried out, an error is generated and the system variable OK is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
-#### See also 
+## See also 
 
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

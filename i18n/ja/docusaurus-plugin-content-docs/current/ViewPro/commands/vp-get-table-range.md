@@ -25,7 +25,7 @@ title: VP Get table range
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート)                             |                  |
 | 戻り値        | Object  | <- | 表組みが含まれるレンジ                                                                | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get table range` コマンドは、<!-- REF #_method_.VP Get table range.Summary -->*tableName* で指定した表組みが含まれるレンジを返します<!-- END REF -->。
 
@@ -44,7 +44,7 @@ title: VP Get table range
 
 *tableName* に指定した名称の表組みが見つからない場合、コマンドは **null** を返します。
 
-#### 参照
+## 参照
 
 [VP RESIZE TABLE](vp-resize-table.md)<br/>
 [VP Find table](vp-find-table.md)

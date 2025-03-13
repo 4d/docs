@@ -14,13 +14,13 @@ title: VP Get value
 | rangeObj   | Object | ->                          | Objeto intervalo                     |                  |
 | Resultados | Object | <- | Objeto que contém um valor de célula | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary --> recupera um valor de célula em uma faixa de células designadas<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar.
 
-#### Objeto devolvido
+## Objeto devolvido
 
 The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
 
@@ -36,7 +36,7 @@ Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e
 
 If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. O comando retorna um objeto null se a célula estiver vazia.
 
-#### Exemplo
+## Exemplo
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
@@ -46,7 +46,7 @@ If(Value type($value.value)=Is text)
 End if
 ```
 
-#### Veja também
+## Veja também
 
 [VP Get values](vp-get-values.md)<br/>
 [VP SET VALUE](vp-set-value.md)<br/>

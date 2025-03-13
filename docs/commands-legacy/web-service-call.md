@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command. 
 
@@ -154,16 +154,16 @@ The proxy method will be called in the following manner: *$XMLresultBlob:=$DOCpr
 
 The *\** parameter can be used to optimize calls. When it is passed, the command does not close the connection used by the process at the end of its execution. In this case, the next call to **WEB SERVICE CALL** will reuse this same connection if the \* parameter is passed, and so on. To close the connection, simply execute the command without the \* parameter. This mechanism can be used to noticeably accelerate the processing of successive calls of several different Web Services on the same server, in particular in a WAN configuration (via the Internet, for example). Note that this mechanism depends on the “keep-alive” setting of the Web server. This setting generally defines a maximum number of requests via the same connection, and can even deny requests. If the **WEB SERVICE CALL** requests following each other in the same connection reach this maximum number, or if keep-alive connections are not allowed, 4D will create a new connection for each request.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the request has been correctly routed and the Web Service has accepted it, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is returned.
 
-#### See also 
+## See also 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

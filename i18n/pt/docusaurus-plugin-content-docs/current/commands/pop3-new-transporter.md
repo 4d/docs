@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) object. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
@@ -41,13 +41,13 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 995                                                               |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                             | nenhum                                                            |
 
-#### Resultados
+## Resultados
 
 A função retorna um [**objeto POP3 transporter**](../API/POP3TransporterClass.md#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
-#### Exemplo
+## Exemplo
 
 ```4d
  var $server : Object
@@ -67,7 +67,7 @@ A função retorna um [**objeto POP3 transporter**](../API/POP3TransporterClass.
  End if
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

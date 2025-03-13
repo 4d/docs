@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Insert picture** コマンドは、<!--REF #_command_.WP Insert picture.Summary-->指定した挿入モード*mode* とレンジ更新モード*rangeUpdate* に従って、*picture* または*pictureFileObj* のピクチャーを*targetObj* で指定したレンジに挿入し、ピクチャー要素への参照を返します。<!-- END REF-->ピクチャーは文字として*targetObj* に挿入されます。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 - *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
-#### 例題 1
+## 例題 1
 
 この例題では、ユーザーはレンジオブジェクトに挿入したいピクチャーを選択し、そのピクチャーが挿入できなかった場合に警告を出します:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2
+## 例題 2
 
 ピクチャーをドキュメントの本文に挿入したい場合を考えます:
 
@@ -104,7 +104,7 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 
 ```
 
-#### 参照
+## 参照
 
 [WP Insert document body](wp-insert-document-body.md)</br>
 [WP Picture range](../commands-legacy/wp-picture-range.md)

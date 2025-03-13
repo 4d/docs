@@ -14,7 +14,7 @@ title: VP SET SHEET COUNT
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | number     | Integer | -> | Nombre de feuilles                      | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET SHEET COUNT` command <!-- REF #_method_.VP SET SHEET COUNT.Summary -->sets the number of sheets in *vpAreaName*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In `number`, pass a number corresponding to how many sheets the document will co
 
 > **Warning**: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. Par exemple, si votre document comporte 5 feuilles et que vous avez fixé le nombre de feuilles à 3, la commande supprimera les feuilles numérotées 4 et 5.
 
-#### Exemple
+## Exemple
 
 Le document comporte actuellement une feuille :
 
@@ -36,6 +36,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ![](../../assets/en/ViewPro/vp-sheet-3.png)
 
-#### Voir également
+## Voir également
 
 [VP Get sheet count](vp-get-sheet-count.md)

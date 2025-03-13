@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP SET ATTRIBUTES** コマンドを使うと<!--REF #_command_.WP SET ATTRIBUTES.Summary-->レンジ、要素、あるいはドキュメントのあらゆる属性の値を設定することができます。<!-- END REF-->このコマンドを使ってあらゆる4D Write Pro内部の属性(文字、段落、ドキュメント、表組、またはピクチャー)にアクセスすることができます。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 渡すことのできる属性の包括的な一覧と、そのスコープおよび対応する値については、*4D Write Pro属性* の章を参照してください。
 
-#### 例題 1
+## 例題 1
 
 この4D Write Proエリアにて、以下のように単語を選択した場合を考えます:
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
-#### 例題 2
+## 例題 2
 
 以下の例では、wk inside とwk outside 定数の使用を説明します:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
-#### 例題 3
+## 例題 3
 
 ドキュメントに対して背景画像を設定したい場合を考えます:
 
@@ -118,7 +118,7 @@ paper box の値はドキュメントあるいはセクションに対しての�
 
 :::
 
-#### 例題 4
+## 例題 4
 
 異なる間隔のタブを設定し、最後のタブに対して先頭文字を指定したい場合を考えます:
 
@@ -146,7 +146,7 @@ paper box の値はドキュメントあるいはセクションに対しての�
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 
-#### 参照
+## 参照
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\

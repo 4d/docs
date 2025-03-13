@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 **Compile project** は、<!--REF #_command_.Compile project.Summary-->
 カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、[コンパイルページ](../Project/compiler.md) を参照してください。
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **注:** 他のコンパイルの実行中に、このコマンドを呼び出すことはできません(例えば、コンパイルウィンドウからローンチしたコンパイルが実行中である場合など)。
 
-##### options 引数
+### options 引数
 
 *options* 引数はオブジェクト型です。 利用可能なコンパイルオプションは次のとおりです: 利用可能なコンパイルオプションは次のとおりです:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 **Note:** *options* オブジェクト内において*warnings* 属性が定義されていない場合、**Compile project** コマンドはストラクチャー設定内で定義されているデフォルトの警告生成ステータスを使用します。
 
-##### 戻り値
+### 戻り値
 
 **Compile project** によって返されるオブジェクトには、以下のプロパティが格納されています(最大で3つ):
 
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 より詳細な情報については、[コンパイルツール](../Project/compiler.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%83%84%E3%83%BC%E3%83%AB) を参照してください。
 
-###### 変数オブジェクト
+## 変数オブジェクト
 
 `interprocessVariables.variables` および `processVariables.variables` には以下の構造を持ったオブジェクトが格納されます:
 
@@ -113,7 +113,7 @@ displayed_sidebar: docs
 | arrayDimension | number | 配列のみ: 1 は1次元配列を、2 は2次元配列を意味します       |
 | code           | Object | プロセス変数とインタープロセス変数のみ: 変数がどこで定義されたかの詳細 |
 
-###### コードオブジェクト
+## コードオブジェクト
 
 `methods.code` および `errors.code` 内の`code` プロパティは、以下のプロパティを持ったオブジェクトです:
 
@@ -132,7 +132,7 @@ displayed_sidebar: docs
 | functionName   | Text                    | クラス関数名                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | databaseMethod | Number                  | データベースメソッドのインデックス                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-#### 例題
+## 例題
 
 シンタックスチェックのみを実行したいので、空のコレクションをtargets 引数に渡す場合を考えます:
 
@@ -189,11 +189,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### 参照
+## 参照
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

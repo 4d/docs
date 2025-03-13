@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** executes *statement* as a line of code.<!-- END REF--> This command is designed to be used when you need to evaluate expressions that can be built or modified by the user. 
 
@@ -49,7 +49,7 @@ The cache size is zero by default (no cache); it needs to be created or adjusted
 
 The **EXECUTE FORMULA** command uses the cache only when called from a compiled database or component.
 
-#### Example 
+## Example 
 
 You want to execute a formula including calls to 4D commands and tables. Since these elements could potentially be renamed, you can ensure correct execution in future versions of your application by using the token syntax as shown here:
 
@@ -57,13 +57,13 @@ You want to execute a formula including calls to 4D commands and tables. Since t
  EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
 ```
 
-#### See also 
+## See also 
 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

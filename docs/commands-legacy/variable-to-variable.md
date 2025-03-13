@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->The **VARIABLE TO VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values of the variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
 
@@ -42,7 +42,7 @@ The current process “pokes” the variables of the destination process—the d
 
 The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
 
-#### Example 
+## Example 
 
 The following example reads a process array from the process indicated by *$vlProcess*, sequentially sets the elements to uppercase and then writes back the array as a whole:
 
@@ -54,13 +54,13 @@ The following example reads a process array from the process indicated by *$vlPr
  VARIABLE TO VARIABLE($vlProcess;at_IPCom_Array;$anArray)
 ```
 
-#### See also 
+## See also 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Processes*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ title: VP SET TIME VALUE
 | timeValue     | Time   | -> | 設定する時間値   |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET TIME VALUE` コマンドは、<!-- REF #_method_.VP SET TIME VALUE.Summary -->指定されたセルレンジに時間値を割り当てます<!-- END REF -->。
 
@@ -25,7 +25,7 @@ title: VP SET TIME VALUE
 
 任意の *formatPattern* 引数は、*timeValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
-#### 例題
+## 例題
 
 ```4d
 // セルの値を現在の時間に設定します
@@ -35,7 +35,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);Current time)
 VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 ```
 
-#### 参照
+## 参照
 
 [セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>

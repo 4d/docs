@@ -14,7 +14,7 @@ title: VP RESET SELECTION
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP RESET SELECTION` コマンドは、<!-- REF #_method_.VP RESET SELECTION.Summary -->すべてのセル選択を解除し、その結果カレントセレクション (またはアクティブセル) がなくなります<!-- END REF -->。
 
@@ -26,7 +26,7 @@ title: VP RESET SELECTION
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 セル選択 (アクティブセルと選択セル) をすべて解除します:
 
@@ -34,7 +34,7 @@ title: VP RESET SELECTION
 VP RESET SELECTION("myVPArea")
 ```
 
-#### 参照
+## 参照
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>

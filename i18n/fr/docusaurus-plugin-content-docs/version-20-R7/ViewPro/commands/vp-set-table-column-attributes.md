@@ -25,7 +25,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | attributes | Object  | -> | Attribut(s) à appliquer à *column*                       |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
 
@@ -48,7 +48,7 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
 
-#### Exemple
+## Exemple
 
 Vous créez une table avec un contexte de données :
 
@@ -98,7 +98,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 ![](../../assets/en/ViewPro/table-insertb.png)
 
-#### Voir également
+## Voir également
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

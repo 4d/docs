@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY.Summary-->**ORDER BY** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record.
 
@@ -45,7 +45,7 @@ If the sort is performed without interruption, the OK variable is set to *1*. If
 
 **Note:** This command does not support Object type fields.
 
-#### Example 1 
+## Example 1 
 
 The following line displays the Order By editor for the \[Products\] table:
 
@@ -53,7 +53,7 @@ The following line displays the Order By editor for the \[Products\] table:
  ORDER BY([Products])
 ```
 
-#### Example 2 
+## Example 2 
 
 The following line displays the Order By editor for the default table (if it has been set): 
 
@@ -61,7 +61,7 @@ The following line displays the Order By editor for the default table (if it has
  ORDER BY
 ```
 
-#### Example 3 
+## Example 3 
 
 The following line orders the selection of \[Products\] by name in ascending order:
 
@@ -69,7 +69,7 @@ The following line orders the selection of \[Products\] by name in ascending ord
  ORDER BY([Products];[Products]Name;>)
 ```
 
-#### Example 4 
+## Example 4 
 
 The following line orders the selection of \[Products\] by name in descending order:
 
@@ -77,7 +77,7 @@ The following line orders the selection of \[Products\] by name in descending or
  ORDER BY([Products];[Products]Name;<)
 ```
 
-#### Example 5 
+## Example 5 
 
 The following line orders the selection of \[Products\] by type and price in ascending order for both levels:
 
@@ -85,7 +85,7 @@ The following line orders the selection of \[Products\] by type and price in asc
  ORDER BY([Products];[Products]Type;>;[Products]Price;>)
 ```
 
-#### Example 6 
+## Example 6 
 
 The following line orders the selection of \[Products\] by type and price in descending order for both levels:
 
@@ -93,7 +93,7 @@ The following line orders the selection of \[Products\] by type and price in des
  ORDER BY([Products];[Products]Type;<;[Products]Price;<)
 ```
 
-#### Example 7 
+## Example 7 
 
 The following line orders the selection of \[Products\] by type in ascending order and by price in descending order:
 
@@ -101,7 +101,7 @@ The following line orders the selection of \[Products\] by type in ascending ord
  ORDER BY([Products];[Products]Type;>;[Products]Price;<)
 ```
 
-#### Example 8 
+## Example 8 
 
 The following line orders the selection of \[Products\] by type in descending order and by price in ascending order:
 
@@ -109,7 +109,7 @@ The following line orders the selection of \[Products\] by type in descending or
  ORDER BY([Products];[Products]Type;<;[Products]Price;>)
 ```
 
-#### Example 9 
+## Example 9 
 
 The following line performs an indexed sort if \[Products\]Name is indexed: 
 
@@ -117,7 +117,7 @@ The following line performs an indexed sort if \[Products\]Name is indexed:
  ORDER BY([Products];[Products]Name;>)
 ```
 
-#### Example 10 
+## Example 10 
 
 The following line orders the selection of \[Products\] by name in ascending order: 
 
@@ -125,7 +125,7 @@ The following line orders the selection of \[Products\] by name in ascending ord
  ORDER BY([Products];[Products]Name)
 ```
 
-#### Example 11 
+## Example 11 
 
 The following line performs a sequential sort, whether or not the fields are indexed: 
 
@@ -133,7 +133,7 @@ The following line performs a sequential sort, whether or not the fields are ind
  ORDER BY([Products];[Products]Type;>;[Products]Price;>)
 ```
 
-#### Example 12 
+## Example 12 
 
 The following line performs a sequential sort using a related field
 
@@ -143,7 +143,7 @@ The following line performs a sequential sort using a related field
  SET FIELD RELATION([Employee]Company_ID;Structure configuration;Do not modify)
 ```
 
-#### Example 13 
+## Example 13 
 
 The following example carries out an indexed sort on two levels if a \[Contacts\]LastName + \[Contacts\]FirstName composite index has been specified in the database:
 
@@ -151,7 +151,7 @@ The following example carries out an indexed sort on two levels if a \[Contacts\
  ORDER BY([Contacts];[Contacts]LastName;>;[Contacts]FirstName;>)
 ```
 
-#### Example 14 
+## Example 14 
 
 In an Output form displayed in the Application environment, you allow the users to order a column in ascending order by simply clicking in the column header.   
 If the user holds the **Shift** key down while clicking in other column headers, the sort is performed on several levels:
@@ -195,11 +195,11 @@ Each button calls the MULTILEVEL project method with a pointer to the correspond
  End if
 ```
 
-#### See also 
+## See also 
 
 [ORDER BY FORMULA](order-by-formula.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

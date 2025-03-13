@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, although a legacy command, is still fully supported and can remain in your application -- there is no need to rewrite existing code.<!-- END REF--> However, it would be better to use [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) to manage indexes because they provide more features. 
 
-#### Description 
+## Description 
 
 The **SET INDEX** accepts two syntaxes:
 
@@ -52,11 +52,11 @@ The optional *\** parameter indicates an asynchronous (simultaneous) indexing. A
 * This command cannot be used to create or delete composite indexes.
 * This command cannot be used to delete a keywords index created by the [CREATE INDEX](create-index.md) command.
 
-#### Note for deployment 
+## Note for deployment 
 
 Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
 
-#### Example 1 
+## Example 1 
 
 The following example indexes the field *\[Customers\]ID*:
 
@@ -65,7 +65,7 @@ The following example indexes the field *\[Customers\]ID*:
  SET INDEX([Customers]ID;True)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to index the *\[Customers\]Name* field in asynchronous mode:
 
@@ -73,7 +73,7 @@ You want to index the *\[Customers\]Name* field in asynchronous mode:
  SET INDEX([Customers]Name;True;*)
 ```
 
-#### Example 3 
+## Example 3 
 
 Creation of a keywords index:
 
@@ -81,7 +81,7 @@ Creation of a keywords index:
  SET INDEX([Books]Summary;Keywords Index)
 ```
 
-#### See also 
+## See also 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -89,7 +89,7 @@ Creation of a keywords index:
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
 
@@ -41,7 +41,7 @@ If the formula is created in a component, you might consider using the *context*
 | `sk execute in current database` | Integer | (padrão) A fórmula será executada no contexto em que foi criada |
 | `sk execute in host database`    | Integer | A fórmula será executada no contexto do banco de dados do host                     |
 
-#### Exemplo
+## Exemplo
 
 O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
@@ -61,12 +61,12 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ![](../assets/en/API/formulaAlert.png)
 
-#### Veja também
+## Veja também
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

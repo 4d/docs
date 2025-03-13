@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** looks for records in *aTable*.<!-- END REF--> It changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
 
@@ -48,7 +48,7 @@ If they exist, the relations between the tables are not used as a rule. However,
 
 > **Compatibility note:** Until 4D Server v11, this command was executed on the client machine. For reverse compatibility, this behavior is maintained in converted databases. However, a compatibility property or a selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command enables server-side execution in converted databases.
 
-#### Example 1 
+## Example 1 
 
 This example finds the records for all invoices that were entered in December of any year. It does this by applying the [Month of](month-of.md) function to each record. This query could not be performed any other way without creating a separate field for the month:
 
@@ -56,7 +56,7 @@ This example finds the records for all invoices that were entered in December of
  QUERY BY FORMULA([Invoice];Month of([Invoice]Entered)=12) // Find the invoices entered in December
 ```
 
-#### Example 2 
+## Example 2 
 
 This example finds records for all the people who have names with more than ten characters:
 
@@ -64,7 +64,7 @@ This example finds records for all the people who have names with more than ten 
  QUERY BY FORMULA([People];Length([People]Name)>10) // Find names longer than ten characters
 ```
 
-#### Example 3 
+## Example 3 
 
 This example uses a join to query all the lines of "ACME" client invoices even though the tables are not related:
 
@@ -72,14 +72,14 @@ This example uses a join to query all the lines of "ACME" client invoices even t
  QUERY BY FORMULA([invoice_line];([invoice_line]invoice_id=[invoice]id&[invoice]client="ACME"))
 ```
 
-#### See also 
+## See also 
 
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

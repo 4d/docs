@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
@@ -55,7 +55,7 @@ If *formulaExp* uses local variables, their values are copied and stored in the 
 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
 
-#### Exemplo 1
+## Exemplo 1
 
 Uma fórmula simples:
 
@@ -69,7 +69,7 @@ Uma fórmula simples:
  $result:=$o.f() // devoluções 3
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Uma fórmula usando um método projeto com parâmetros:
 
@@ -83,7 +83,7 @@ Uma fórmula usando um método projeto com parâmetros:
  $result:=$o.f() // retorna 10
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 Uma fórmula usando variáveis locais:
 
@@ -92,7 +92,7 @@ Uma fórmula usando variáveis locais:
  $result:=$o.f(10;20) //retorna 30
 ```
 
-#### Exemplo
+## Exemplo
 
 Uma fórmula simples usando parâmetros:
 
@@ -101,7 +101,7 @@ Uma fórmula simples usando parâmetros:
  $result:=$o.f("param1";"param2") // equivalent to $result:=myMethod("param1";"param2")
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Usando `This`:
 
@@ -112,7 +112,7 @@ Usando `This`:
  $result:=$o.fullName() //retorna "John Smith"
 ```
 
-#### Exemplo 6
+## Exemplo 6
 
 Chamar uma fórmula usando notação de objeto:
 
@@ -133,14 +133,14 @@ Chamar uma fórmula usando notação de objeto:
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
-#### Veja também
+## Veja também
 
 [4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

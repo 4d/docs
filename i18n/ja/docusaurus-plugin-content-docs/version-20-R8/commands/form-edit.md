@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->**FORM EDIT** コマンドは *aTable* 引数で指定したテーブルに関連づけられている、 *form* 引数で指定したフォームを4D フォームエディターで開きます。オプションとして、*object* 引数で指定したフォームオブジェクトを選択した状態で開くこともできます。 このとき、デザイン環境へのアクセスが必要である点に注意してください。ない場合には、エラー -9804("フォームを開けません")エラーが生成されます。
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 *form* で開いたフォーム内で全てのフォームオブジェクトの選択を解除したい場合には*object* 引数に空の文字列を渡します。
 
-#### 例題
+## 例題
 
 *Contacts* テーブルの*Address* フォームを開きたい場合を考えます:
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
  FORM EDIT("ContactList"; "name-input")
 ```
 
-#### 参照
+## 参照
 
 *デザインオブジェクトアクセスコマンド*
 
-#### プロパティ
+## プロパティ
 
 |         |                                                                 |
 | ------- | --------------------------------------------------------------- |

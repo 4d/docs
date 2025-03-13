@@ -16,7 +16,7 @@ title: VP ADD STYLESHEET
 | styleObj   | Object  | -> | 属性設定を定義するオブジェクト                                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD STYLESHEET` コマンドは、<!-- REF #_method_.VP ADD STYLESHEET.Summary -->開いているドキュメント内にて、*styleName* 引数で指定したスタイルシートを、*styleObj* 引数のプロパティの組み合わせに基づいて作成または変更します<!-- END REF -->。 同じ名前とインデックスを持つスタイルシートがドキュメント内にすでに存在する場合、このコマンドはそれを新しい値で上書きします。
 
@@ -37,7 +37,7 @@ title: VP ADD STYLESHEET
 
 スタイルシートを適用するには、[VP SET DEFAULT STYLE](vp-set-default-style.md) または [VP SET CELL STYLE](vp-set-cell-style.md) コマンドを使用します。
 
-#### 例題
+## 例題
 
 以下のコードは:
 
@@ -71,7 +71,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 }
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>

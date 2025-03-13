@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** has two forms.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Specifying *choiceField* is the same as specifying a wildcard choice when establ
 
 **Note:** This command does not support Object type fields.
 
-#### Example 
+## Example 
 
 Let’s say you have an *\[Invoice\]* table related to a *\[Customers\]* table with two non-automatic relations. One relation is from *\[Invoice\]Bill to* to *\[Customers\]Number*, and the other relation is from *\[Invoice\]Ship to* to *\[Customers\]Number*.
 
@@ -80,16 +80,16 @@ Here is the object method for the *\[Invoice\]Ship to* field:
  vZIP2:=[Customers]ZIP
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly and if the related records have been loaded, the OK system variable is set to 1\. If the user clicked on **Cancel** in the record selection dialog box (that appears when the related record has been modified), the OK variable is set to 0\. 
 
-#### See also 
+## See also 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->The ST SET PLAIN TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the*object* parameter, without modifying any style tags that it contains. 
 
@@ -58,7 +58,7 @@ The style of the first character replaced will be used for all of the *newText* 
 
 If *startSel* is greater than *endSel* (except when *endSel* value is 0, see above), the text is not modified and the OK variable is set to 0.
 
-#### Example 
+## Example 
 
 Given the following rich text (multi-style) variable:
 
@@ -82,18 +82,18 @@ You can see that the inserted text was enclosed within an additional pair of sty
 
 **Note:** If you had used the [ST SET TEXT](st-set-text.md) command in this case, 4D would not have inserted anything because the presence of the non-encoded "&" character would prevent the interpretation of the style tags found in the variable. For more information, refer to the description of this command. 
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### See also 
+## See also 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

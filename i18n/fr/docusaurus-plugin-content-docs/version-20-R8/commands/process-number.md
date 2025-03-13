@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 <!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter. If no process is found, `Process number` returns 0.
 
@@ -34,13 +34,13 @@ The optional parameter \* allows you to retrieve, from a remote 4D, the number o
 
 If the command is executed with the \* parameter from a process on the server machine, the returned value is positive.
 
-#### Voir également
+## Voir également
 
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                                                                 |
 | ------------------ | --------------------------------------------------------------- |

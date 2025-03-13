@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP SEND FAULT.Summary-->The **SOAP SEND FAULT** command returns an error to a SOAP client indicating the origin of the fault: client or server.<!-- END REF--> Using this command lets you indicate an error to a client without having to return a result. 
 
@@ -31,7 +31,7 @@ Pass the origin of the error in *faultType*. You can use the following predefine
 
 Pass a description of the error in *description*. If the client implementation is in conformity, the error can be processed. 
 
-#### Example 
+## Example 
 
 To go back to the example of the “Square\_root” Web Service provided in the command description, the following command can be used to process requests with negative numbers:
 
@@ -39,12 +39,12 @@ To go back to the example of the “Square\_root” Web Service provided in the 
  SEND SOAP FAULT(SOAP client fault;"Positive values required")
 ```
 
-#### See also 
+## See also 
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

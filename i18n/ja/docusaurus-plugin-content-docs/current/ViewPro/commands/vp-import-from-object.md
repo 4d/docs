@@ -14,7 +14,7 @@ title: VP IMPORT FROM OBJECT
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
 | viewPro    | Object | -> | 4D View Pro オブジェクト      | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP IMPORT FROM OBJECT` コマンドは、<!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに *viewPro* の 4D View Pro オブジェクトを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだオブジェクトのデータで置換されます。
 
@@ -24,7 +24,7 @@ title: VP IMPORT FROM OBJECT
 
 *viewPro* オブジェクトが無効な場合には、エラーが返されます。
 
-#### 例題
+## 例題
 
 オブジェクトフィールドに保存してあるスプレッドシートを読み込みます:
 
@@ -33,6 +33,6 @@ QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 ```
 
-#### 参照
+## 参照
 
 [VP Export to object](vp-export-to-object.md)

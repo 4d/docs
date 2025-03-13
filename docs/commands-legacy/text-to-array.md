@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->The **TEXT TO ARRAY** command transforms a text variable into a text array.<!-- END REF--> The original varText text (styled or not) is divided and each part becomes an element of the *arrText* array that is returned by the command. This command can be used for example to fill pages or columns with text of a set size.
 
@@ -52,7 +52,7 @@ This parameter is optional; when it is omitted, the Plain style is used.
 
 The optional *\** parameter, if passed, forces the *fontName*, *fontSize* and/or *fontStyle* parameters to be taken into account for multistyle text when these parameters are not defined in the original text. However, if these parameters are defined in the original text, then the parameters passed to the command are ignored in all cases.
 
-#### Example 1 
+## Example 1 
 
 We want to divide a multistyle text into lines with a maximum size of 200 pixels:
 
@@ -61,7 +61,7 @@ We want to divide a multistyle text into lines with a maximum size of 200 pixels
   // the Arial, 20, and Normal attributes are only taken into account if they are not defined in the text
 ```
 
-#### Example 2 
+## Example 2 
 
 We want to divide raw text into lines with a maximum size of 350 pixels in Bodoni Bold font, size 14\. Since the command does not work correctly if the font is not available, it is important to check for its presence:
 
@@ -77,7 +77,7 @@ We want to divide raw text into lines with a maximum size of 350 pixels in Bodon
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 Multistyle text must be printed without any styles in Arial Normal font, size 12 with a maximum width of 600 pixels:
 
@@ -88,7 +88,7 @@ Multistyle text must be printed without any styles in Arial Normal font, size 12
  TEXT TO ARRAY($RawText;TextArray;600;"Arial";12)
 ```
 
-#### Example 4 
+## Example 4 
 
 You need to print in a 400-pixel wide area, a text with a maximum of 80 lines and using the largest font possible (without exceeding 24 points). You can write:
 
@@ -102,13 +102,13 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
  Until($n<=80)
 ```
 
-#### See also 
+## See also 
 
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

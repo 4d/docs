@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY.Summary-->**QUERY** looks for records matching the criteria specified in *queryArgument* and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
 
@@ -29,7 +29,7 @@ For more information about using the Query Editor, refer to the 4D Design Refere
 
 The user builds the query, then clicks the Query button or chooses Query in selection to perform the query. If the query is performed without interruption, the OK variable is set to 1\. If the user clicks Cancel, the **QUERY** terminates with no query actually performed, and sets the OK variable to *0* (zero). 
 
-#### Example 1 
+## Example 1 
 
 The following line displays the Query editor for the \[Products\] table:
 
@@ -37,7 +37,7 @@ The following line displays the Query editor for the \[Products\] table:
  QUERY([Products])
 ```
 
-#### Example 2 
+## Example 2 
 
 The following line displays the Query editor for the default table (if it has been set)
 
@@ -47,7 +47,7 @@ The following line displays the Query editor for the default table (if it has be
 
 If you specify the *queryArgument* parameter, the standard Query editor is not presented and the query is defined programmatically. For simple queries (search on only one field) you call QUERY once with *queryArgument*. For multiple queries (search on multiple fields or with multiple conditions), you call QUERY as many times as necessary with *queryArgument*, and you specify the optional \* parameter, except for the last QUERY call, which starts the actual query operation. The *queryArgument* parameter is described further in this section.
 
-#### Example 3 
+## Example 3 
 
 The following line looks for the \[People\] whose name starts with an “a”:
 
@@ -55,7 +55,7 @@ The following line looks for the \[People\] whose name starts with an “a”:
  QUERY([People];[People]Last name="a@")
 ```
 
-#### Example 4 
+## Example 4 
 
 The following line looks for the \[People\] whose name starts with “a” or “b”:
 
@@ -66,7 +66,7 @@ The following line looks for the \[People\] whose name starts with “a” or �
 
 **Note:** The interpretation of @ characters in queries can be modified via an option in the Preferences. For more information, please refer to the *Comparison Operators* section.
 
-#### Specifying the Query Argument 
+## Specifying the Query Argument 
 
 The *queryArgument* parameter uses the following syntax:
 
@@ -116,7 +116,7 @@ No matter which way a query has been defined:
 * If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click on the Stop button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
 * If any indexed fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible. The command makes use of composite indexes for queries using the AND (&).
 
-#### Example 5 
+## Example 5 
 
 The following command finds the records for all the people named Smith:
 
@@ -128,7 +128,7 @@ The following command finds the records for all the people named Smith:
 
 **Reminder:** This query will find records like “Smith”, “smith”,“SMITH”, etc. To distinguish lowercase from uppercase, perform additional queries using the character codes.
 
-#### Example 6 
+## Example 6 
 
 The following example finds the records for all people named John Smith. The Last Name field is indexed. The First Name field is not indexed. 
 
@@ -139,7 +139,7 @@ The following example finds the records for all people named John Smith. The Las
 
 When the query is performed, it quickly does an indexed search on Last Name and reduces the selection of records to those of people named Smith. The query then sequentially searches on First Name in this selection of records.
 
-#### Example 7 
+## Example 7 
 
 The following example will automatically take advantage of a composite index of the *\[People\]First Name*+*\[People\]Last Name* fields (if it exists) to find the records for all people named John Smith.
 
@@ -150,7 +150,7 @@ The following example will automatically take advantage of a composite index of 
 
 For more information, see *Composite indexes*.
 
-#### Example 8 
+## Example 8 
 
 The following example finds the records of people named Smith or Jones. The Last Name field is indexed.
 
@@ -161,7 +161,7 @@ The following example finds the records of people named Smith or Jones. The Last
 
 The QUERY command uses the Last Name index for both queries. The two queries are performed, and their results put into internal sets that are eventually combined using a union.
 
-#### Example 9 
+## Example 9 
 
 The following example finds the records for people who do not have a company name. It does this by finding entries with empty fields (the empty string).
 
@@ -169,7 +169,7 @@ The following example finds the records for people who do not have a company nam
  QUERY([People];[People]Company="") // Find every person with no company
 ```
 
-#### Example 10 
+## Example 10 
 
 The following example finds the record for every person whose last name is Smith and who works for a company based in New York. The second query uses a field from another table. This query can be done because the \[People\] table is related to the \[Company\] table with a many to one relation:
 
@@ -178,7 +178,7 @@ The following example finds the record for every person whose last name is Smith
  QUERY([People];&;[Company]State="NY") // ... who works for a company based in NY
 ```
 
-#### Example 11 
+## Example 11 
 
 The following example finds the record for every person whose name falls between A (included) and M (included):
 
@@ -186,7 +186,7 @@ The following example finds the record for every person whose name falls between
  QUERY([People];[People]Name<"n") // Find every person from A to M
 ```
 
-#### Example 12 
+## Example 12 
 
 The following example finds the records for all the people living in the San Francisco or Los Angeles areas (ZIP codes beginning with 94 or 90):
 
@@ -195,7 +195,7 @@ The following example finds the records for all the people living in the San Fra
  QUERY([People];|;[People]ZIP Code ="90@") // ...or Los Angeles areas
 ```
 
-#### Example 13 
+## Example 13 
 
 Searching by keyword: the following example searches the \[Products\] table for records where the Description field contains the word “easy”: 
 
@@ -204,7 +204,7 @@ Searching by keyword: the following example searches the \[Products\] table for 
   // Find products whose description contains the keyword easy
 ```
 
-#### Example 14 
+## Example 14 
 
 The following example finds the record that matches the invoice reference entered in the request dialog box:
 
@@ -215,7 +215,7 @@ The following example finds the record that matches the invoice reference entere
  End if
 ```
 
-#### Example 15 
+## Example 15 
 
 The following example finds the records for the invoices entered in 1996\. It does this by finding all records entered after 12/31/95 and before 1/1/97:
 
@@ -224,7 +224,7 @@ The following example finds the records for the invoices entered in 1996\. It do
  QUERY([Invoice];&;[Invoice]In Date
 ```
 
-#### Example 16 
+## Example 16 
 
 The following example finds the record for each employee whose salary is between $10,000 and $50,000\. The query includes the employees who make $10,000, but excludes those who make $50,000:
 
@@ -233,7 +233,7 @@ The following example finds the record for each employee whose salary is between
  QUERY([Employee];&;[Employee]Salary <50000) // ...$10,000 and $50,000
 ```
 
-#### Example 17 
+## Example 17 
 
 The following example finds the records for the employees in the marketing department who have salaries over $20,000\. The Salary field is queried first because it is indexed. Notice that the second query uses a field from another table. It can do this because the \[Dept\] table is related to the \[Employee\] table with an automatic many to one relation:
 
@@ -242,7 +242,7 @@ The following example finds the records for the employees in the marketing depar
  QUERY([Employee];&;[Dept]Name="marketing") // ...who are in the marketing department
 ```
 
-#### Example 18 
+## Example 18 
 
 Given three tables related by Many-to-One relations: \[City\] -> \[Department\] -> \[Region\]. The following query finds all the regions with cities whose names begin with "Saint":
 
@@ -250,7 +250,7 @@ Given three tables related by Many-to-One relations: \[City\] -> \[Department\] 
  QUERY([Region];[City]Name="Saint@") // Find all the regions with cities beginning with "Saint"
 ```
 
-#### Example 19 
+## Example 19 
 
 The following example queries for information that was entered into the variable *myVar*.
 
@@ -263,7 +263,7 @@ The query could have many different results, depending on the value of *myVar*. 
 * If *myVar* equals *"Copyright@"*, the selection contains all laws with texts beginning with Copyright.
 * If *myVar* equals *"@Copyright@"*, the selection contains all laws with texts containing at least one occurrence of Copyright.
 
-#### Example 20 
+## Example 20 
 
 The following example adds or does not add lines to a complex query depending on the value of the variables. This way, only valid criteria are taken into account for the query: 
 
@@ -278,7 +278,7 @@ The following example adds or does not add lines to a complex query depending on
  QUERY([Invoice]) // Execution of query on the criteria
 ```
 
-#### Example 21 
+## Example 21 
 
 This example illustrates the use of a comparison operator as an alphanumeric expression. The value of the comparison operator is specified using a pop-up menu placed in a custom query dialog box:
 
@@ -290,7 +290,7 @@ This example illustrates the use of a comparison operator as an alphanumeric exp
  End if
 ```
 
-#### Example 22 
+## Example 22 
 
 Using picture keyword indexes can greatly increase the speed of your applications.
 
@@ -298,7 +298,7 @@ Using picture keyword indexes can greatly increase the speed of your application
  QUERY([PICTURES];[PICTURES]Photos %"cats") // look for photos associated with the "cats" keyword
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the query is carried out correctly, the OK system variable is set to 1.  
 The OK variable is set to 0 if:
@@ -306,11 +306,11 @@ The OK variable is set to 0 if:
 * the user clicks on the **Cancel**/**Stop** button,
 * in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
-#### See also 
+## See also 
 
 [QUERY SELECTION](query-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

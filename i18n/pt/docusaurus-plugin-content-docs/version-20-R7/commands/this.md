@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 O comando `This` <!--REF #_command_.This.Summary-->retorna uma referência ao objeto processado atualmente.<!-- END REF-->
 
@@ -24,7 +24,7 @@ This command can be used in different contexts, described below. Within these co
 
 Em qualquer outro contexto, o comando retorna **Null**.
 
-#### Função de classe
+## Função de classe
 
 When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
@@ -68,7 +68,7 @@ $val:=$o.f() //8
 
 Neste exemplo, o objeto atribuído à variável $o não tem sua própria propriedade *f*, herda-o de sua classe. Uma vez que *f* é chamado como um método de $o, o seu `This` refere-se a $o.
 
-#### Objecto fórmula
+## Objecto fórmula
 
 In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
 
@@ -90,7 +90,7 @@ With the *Greeting* project method:
  return $greeting+" "+This.firstName+" "+This.lastName
 ```
 
-#### List box
+## List box
 
 In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
 
@@ -100,7 +100,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 
 :::
 
-#### Exemplo 1
+## Exemplo 1
 
 A collection of objects, each with this structure:
 
@@ -147,7 +147,7 @@ Once the form is executed, you can see the result:
 
 ![](../assets/en/commands/pict3783169.en.png)
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to display entities from the following structure in a list box:
 
@@ -174,12 +174,12 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 ![](../assets/en/commands/pict3872875.en.png)
 
-#### Veja também
+## Veja também
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

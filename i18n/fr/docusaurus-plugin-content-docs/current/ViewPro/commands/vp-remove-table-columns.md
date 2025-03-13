@@ -25,7 +25,7 @@ title: VP REMOVE TABLE COLUMNS
 | count      | Integer | -> | Number of columns to remove (must be >0)                 |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. The command removes values and styles.
 
@@ -33,7 +33,7 @@ The command removes columns from the *tableName* table, NOT from the sheet. The 
 
 If *tableName* does not exist, nothing happens.
 
-#### Exemple
+## Exemple
 
 To remove two columns from 3rd column of the "dataTable" table:
 
@@ -41,7 +41,7 @@ To remove two columns from 3rd column of the "dataTable" table:
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
-#### Voir également
+## Voir également
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)

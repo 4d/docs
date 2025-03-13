@@ -14,13 +14,13 @@ title: VP Get spans
 | rangeObj   | Object | ->                          | Objeto rango                                     |                  |
 | Resultado  | Object | <- | Objeto de celdas fusionadas en el rango definido | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera los rangos de celdas en el *rangeObj* designado<!-- END REF -->.
 
 En *rangeObj*, pase un rango de celdas fusionadas que desee recuperar. Si *rangeObj* no contiene celdas fusionadas, se devuelve un rango vacío.
 
-#### Ejemplo
+## Ejemplo
 
 Para centrar el texto de las celdas fusionadas en este documento:
 
@@ -35,7 +35,7 @@ $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal alig
 VP SET CELL STYLE($range;$style)
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)

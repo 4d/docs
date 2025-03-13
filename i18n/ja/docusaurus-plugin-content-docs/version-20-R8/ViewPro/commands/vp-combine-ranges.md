@@ -15,7 +15,7 @@ title: VP Combine ranges
 | otherRangeObj | Object | ->                          | レンジオブジェクト           |                  |
 | 戻り値           | Object | <- | 統合されたレンジを格納したオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Combine Ranges` コマンドは、<!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
 
@@ -25,7 +25,7 @@ title: VP Combine ranges
 
 > このコマンドは *rangeObj* および *otherRangeObj* のオブジェクトを参照によって組み合わせます。
 
-#### 例題
+## 例題
 
 セル、カラム、行のレンジオブジェクトを、新規レンジオブジェクトにまとめます:
 
@@ -37,7 +37,7 @@ title: VP Combine ranges
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### 参照
+## 参照
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

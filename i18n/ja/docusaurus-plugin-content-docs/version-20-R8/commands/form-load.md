@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて *formData* 引数のデータ(オプション)とともにメモリーにロードします。  1つのプロセスにつきカレントフォームは1つしか指定できません。
 
@@ -29,14 +29,14 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから呼び出された場合、 デフォルトではコマンドはコンポーネントのフォームをロードします。 *\** 引数を渡した場合、メソッド はホストデータベースのフォームをロードします。
 
-##### formData
+### formData
 
 オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、 [フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。  form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
 formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。
 
 form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
-##### データの印刷
+### データの印刷
 
 このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
@@ -48,7 +48,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドが呼び出されると、カレント印刷フォームは自動で閉じられます。
 
-##### フォームコンテンツの解析
+### フォームコンテンツの解析
 
 データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
 
@@ -58,7 +58,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **注:** メモリオーバーフローのリスクを回避するため、スクリーン外でフォームを使用した場合には[FORM UNLOAD](../commands-legacy/form-unload.md) を必ずコールしてください。
 
-#### 例題 1
+## 例題 1
 
 印刷ジョブにプロジェクトフォームを呼び出す場合:
 
@@ -68,7 +68,7 @@ form data オブジェクトについての詳細な情報については、[`DI
   // イベントとオブジェクトメソッドの実行
 ```
 
-#### 例題 2
+## 例題 2
 
 印刷ジョブにテーブルフォームを呼び出す場合:
 
@@ -78,7 +78,7 @@ form data オブジェクトについての詳細な情報については、[`DI
   // イベントとオブジェクトメソッドの実行
 ```
 
-#### 例題 3
+## 例題 3
 
 フォームの内容を解析してテキスト入力エリアに何らかの処理をする場合:
 
@@ -94,7 +94,7 @@ form data オブジェクトについての詳細な情報については、[`DI
  FORM UNLOAD // フォームをunloadするのを忘れないこと
 ```
 
-#### 例題 4
+## 例題 4
 
 以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
@@ -113,7 +113,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### 例題 5
+## 例題 5
 
 リストボックスを含んでいるフォームを印刷したい場合を考えます。 そして *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
@@ -154,7 +154,7 @@ form data オブジェクトについての詳細な情報については、[`DI
  End case
 ```
 
-#### 参照
+## 参照
 
 [Current form name](../commands-legacy/current-form-name.md)\
 [FORM UNLOAD](../commands-legacy/form-unload.md)\
@@ -162,7 +162,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 [OBJECT Get type](../commands-legacy/object-get-type.md)\
 [Print object](../commands-legacy/print-object.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                                                 |
 | ------- | --------------------------------------------------------------- |

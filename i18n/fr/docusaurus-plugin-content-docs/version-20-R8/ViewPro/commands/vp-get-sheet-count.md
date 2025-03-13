@@ -14,13 +14,13 @@ title: VP Get sheet count
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
 | Résultat   | Integer | <- | Nombre de feuilles                      | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->retourne le nombre de feuilles dans le document chargé dans *vpAreaName*.<!-- END REF -->
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-#### Exemple
+## Exemple
 
 Dans le document suivant :
 
@@ -36,7 +36,7 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### Voir également
+## Voir également
 
 [VP Get sheet index](vp-get-sheet-index.md)<br/>
 [VP SET SHEET COUNT](vp-set-sheet-count.md)

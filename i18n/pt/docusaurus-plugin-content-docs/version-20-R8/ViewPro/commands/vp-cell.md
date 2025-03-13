@@ -19,7 +19,7 @@ title: VP Cell
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 O comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retorna um novo objeto de intervalo que faz referência a uma célula específica<!-- END REF -->.
 
@@ -35,7 +35,7 @@ No parâmetro opcional *sheet*, você pode indicar o índice da planilha em que 
 
 > a indexação começa em 0.
 
-#### Exemplo
+## Exemplo
 
 Se quiser definir um objeto de intervalo para a célula mostrada abaixo (na planilha atual):
 
@@ -47,7 +47,7 @@ O código seria:
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

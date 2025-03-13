@@ -16,7 +16,7 @@ title: VP ADD STYLESHEET
 | styleObj   | Object  | -> | Objeto que define as propriedades do atributo               |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET. Resumo -->cria ou modifica a folha de estilo *styleName* com base na combinação das propriedades especificadas em *styleObj* no documento aberto <!-- END REF -->. .
 
@@ -37,7 +37,7 @@ Se uma folha de estilo *styleName* for definida no nível da pasta de trabalho e
 
 To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
 
-#### Exemplo
+## Exemplo
 
 O seguinte código:
 
@@ -71,7 +71,7 @@ criará e aplicará o seguinte objeto estilo denominado *GreenDashDotStyle*:
 }
 ```
 
-#### Veja também
+## Veja também
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>

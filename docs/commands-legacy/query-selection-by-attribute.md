@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** works and performs the same actions as [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> The difference between these two commands is the scope of the query:
 
@@ -32,7 +32,7 @@ For more information, see the description of the [QUERY BY ATTRIBUTE](query-by-a
 
 The **QUERY SELECTION BY ATTRIBUTE** command is useful when a query cannot be defined using a combination of [QUERY BY ATTRIBUTE](query-by-attribute.md) (and even [QUERY](query.md)) calls joined with the \* parameter. Typically, this is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
 
-#### Example 
+## Example 
 
 You want to find people with an age between 20 and 30, among the records that were previously highlighted by the user:
 
@@ -42,11 +42,11 @@ You want to find people with an age between 20 and 30, among the records that we
  QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //triggers the query
 ```
 
-#### See also 
+## See also 
 
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Get page title.Summary-->The WA Get page title command returns the title of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> The title corresponds to the HTML "Title" tag.
 
 This command returns an empty string if there is no title available for the current URL. 
 
-#### See also 
+## See also 
 
 [WA Get page content](wa-get-page-content.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

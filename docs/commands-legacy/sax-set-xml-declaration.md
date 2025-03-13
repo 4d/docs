@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->The **SAX SET XML DECLARATION** command initializes the XML document referenced in *document* using the specified *encoding*.<!-- END REF--> Optionnally, you can set the *standalone* attribute.
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 This command must be called one time per document and before the first XML set command in the document; otherwise, an error message will be generated.
 
-#### Example 
+## Example 
 
 The following code: 
 
@@ -41,11 +41,11 @@ The following code:
 <<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 ```
 
-#### See also 
+## See also 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

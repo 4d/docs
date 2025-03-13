@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->### List mode 
 
@@ -81,7 +81,7 @@ In this case, the numbering of columns operates as depicted below:
 If you pass an invalid area number, the error -9850 will be generated.  
 If you pass an invalid ColNum value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 You have designed the following report:
 
@@ -102,13 +102,13 @@ You can write:
   //$vResultVar = "C1"
 ```
 
-#### See also 
+## See also 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

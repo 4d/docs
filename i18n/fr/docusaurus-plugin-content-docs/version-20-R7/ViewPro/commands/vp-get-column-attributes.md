@@ -14,7 +14,7 @@ title: VP Get column attributes
 | rangeObj   | Object     | ->                          | Objet plage                          |                  |
 | Résultat   | Collection | <- | Collection de propriétés de colonnes | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Get column attributes` command <!-- REF #_method_.VP Get column attributes.Summary -->returns a collection of properties for any column in the *rangeObj*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In *rangeObj*, pass an object containing a range of the columns whose attributes
 
 The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) command.
 
-#### Exemple
+## Exemple
 
 Le code suivant :
 
@@ -38,7 +38,7 @@ $attr:=VP Get column attributes($range)
 
 ![](../../assets/en/ViewPro/cmd_vpGetColumnAttributes.PNG)
 
-#### Voir également
+## Voir également
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)<br/>

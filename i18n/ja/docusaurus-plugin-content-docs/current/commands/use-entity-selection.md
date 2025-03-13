@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `USE ENTITY SELECTION` コマンドは、<!--REF #_command_.USE ENTITY SELECTION.Summary-->*entitySelection* 引数のデータクラスに合致するテーブルのカレントセレクションを、渡したエンティティセレクションの内容で更新します<!-- END REF-->。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題
+## 例題
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,11 +42,11 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されます
 ```
 
-#### 参照
+## 参照
 
 [Create entity selection](create-entity-selection.md)
 
-#### プロパティ
+## プロパティ
 
 |                 |                                 |
 | --------------- | ------------------------------- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get text property.Summary-->The **QR Get text property** command returns the property value of the text attributes for the cell determined by *colNum* and *RowNum*.<!-- END REF-->
 
@@ -65,11 +65,11 @@ If you pass an invalid *rowNum* number, the error -9853 will be generated.
 
 If you pass an invalid *property* number, the error -9854 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

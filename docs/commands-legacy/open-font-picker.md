@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->The **OPEN FONT PICKER** command displays the system font picker dialog box.<!-- END REF-->
 
@@ -22,7 +22,7 @@ When the user selects a font and/or a style and validates the dialog box, the ch
 
 If the font was changed, the On After Edit form event is generated for the object . 
 
-#### Example 
+## Example 
 
 In a form, you want to add a button to display the font picker in order to allow users to modify the font or style of a Text variable area. Make sure that:
 
@@ -39,11 +39,11 @@ Here is the button code:
  End case
 ```
 
-#### See also 
+## See also 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

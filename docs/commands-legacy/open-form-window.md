@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
@@ -84,7 +84,7 @@ These parameters are expressed relative to the top left corner of the contents a
 
 If you pass the optional parameter *\**, the current position and size of the window are memorized when closed. When the window is reopened again, its previous position and size are respected. In this case, the *vPos* and *hPos* parameters are only used the first time the window is opened.
 
-#### Example 1 
+## Example 1 
 
 The following statement opens a standard window with a close box and automatically adjusts it to be the same size as the "Input" form. The form window size is not set to "fixed", then the window also has a grow and a zoom box:
 
@@ -92,7 +92,7 @@ The following statement opens a standard window with a close box and automatical
  $winRef :=Open form window([Table1];"Enter")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following statement opens a floating palette in the upper left portion of the screen based on a project form named "Tools". This palette uses the last position it was in when the user closed it each time it is reopened:
 
@@ -100,7 +100,7 @@ The following statement opens a floating palette in the upper left portion of th
  $winRef :=Open form window("Tools";Palette form window;On the left;At the top;*)
 ```
 
-#### Example 3 
+## Example 3 
 
 This code must be called on macOS while a document window is displayed, for example from a form button, to display a sheet window:
 
@@ -112,7 +112,7 @@ This code must be called on macOS while a document window is displayed, for exam
   //from the bottom of the title bar
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example uses the path to a .json form to display the records in an employee list: 
 
@@ -126,14 +126,14 @@ which displays:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### See also 
+## See also 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 *Window Types*  
 *Window Types (compatibility)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

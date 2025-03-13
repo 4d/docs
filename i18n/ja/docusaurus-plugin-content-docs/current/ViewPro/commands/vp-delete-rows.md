@@ -13,7 +13,7 @@ title: VP DELETE ROWS
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP DELETE ROWS` コマンドは、<!-- REF #_method_.VP DELETE ROWS.Summary -->*rangeObj* 引数で指定した行を削除します<!-- END REF -->。
 
@@ -25,7 +25,7 @@ title: VP DELETE ROWS
 
 > 行は下から上に向かって削除されます。
 
-#### 例題
+## 例題
 
 ユーザーが選択した行を削除します (以下の画像の 1、2、3行目を削除します):
 
@@ -38,7 +38,7 @@ title: VP DELETE ROWS
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
-#### 参照
+## 参照
 
 [VP DELETE ROWS](vp-delete-columns.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>

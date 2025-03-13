@@ -15,7 +15,7 @@ title: VP SET SHEET OPTIONS
 | sheetOptions | Object  | -> | Opção(ões) de folha a definir            |                  |
 | sheet        | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir várias opções de planilha da área *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ No parâmetro opcional *sheet*, pode designar uma planilha específica (a contag
 
 - `vk current sheet`
 
-#### Exemplo 1
+## Exemplo 1
 
 Pretende proteger todas as células exceto o intervalo C5:D10:
 
@@ -43,7 +43,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 You need to protect your document while your users can resize rows and columns:
 
@@ -63,7 +63,7 @@ $options.protectionOptions.allowResizeColumns=True;
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 You want to customize the colors of your sheet tabs, frozen lines, grid lines, selection background and selection border:
 
@@ -95,7 +95,7 @@ Resultados:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
-#### Exemplo
+## Exemplo
 
 Pretende ocultar as linhas da grelha, bem como os cabeçalhos das linhas e das colunas.
 
@@ -116,7 +116,7 @@ Resultados:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### Veja também
+## Veja também
 
 [4D View Pro sheet options](../configuring.md#sheet-options)<br/>
 [VP Get sheet options](vp-get-sheet-options.md)

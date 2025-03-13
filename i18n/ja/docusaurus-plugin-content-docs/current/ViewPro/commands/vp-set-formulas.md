@@ -14,7 +14,7 @@ title: VP SET FORMULAS
 | rangeObj    | Object     | -> | セルレンジオブジェクト   |                  |
 | formulasCol | Collection | -> | フォーミュラのコレクション | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET FORMULAS` コマンドは、<!-- REF #_method_.VP SET FORMULAS.Summary -->指定のセルレンジから開始してフォーミュラのコレクションを割り当てていきます<!-- END REF -->。
 
@@ -30,7 +30,7 @@ title: VP SET FORMULAS
 
 *rangeObj* 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
 
-#### 例題 1
+## 例題 1
 
 ```4d
 $formulas:=New collection
@@ -49,7 +49,7 @@ $0:=$1*3.33
 
 ![](../../assets/en/ViewPro/cmd_vpSetFormulas.PNG)
 
-#### 例題 2
+## 例題 2
 
 フォーミュラを削除します:
 
@@ -61,7 +61,7 @@ $formulas.push(New collection("";"")) // 二行目
 VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当てます
 ```
 
-#### 参照
+## 参照
 
 [VP Get Formulas](vp-get-formulas.md)<br/>
 [VP GET VALUES](vp-get-values.md)<br/>

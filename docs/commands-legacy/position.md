@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Position.Summary-->**Position** returns the position of the first occurrence of *find* in *aString*.<!-- END REF--> 
 
@@ -68,7 +68,7 @@ For information about defining the data language, see the section in the *Design
 
 **Warning:** You cannot use the @ wildcard character with **Position**. For example, if you pass *"abc@"* in *find*, the command will actually look for *"abc@"* and not for "abc" plus any character.
 
-#### Example 1 
+## Example 1 
 
 This example illustrates the use of **Position**. The results, described in the comments, are assigned to the variable *vlResult*.
 
@@ -82,7 +82,7 @@ This example illustrates the use of **Position**. The results, described in the 
  vlResult:=Position("œ";"Bœuf";1;$length) // vlResult =2, $length = 1
 ```
 
-#### Example 2 
+## Example 2 
 
 In the following example, the *lengthFound* parameter can be used to search for all the occurrences of "aegis" in a text, regardless of how it is written:
 
@@ -94,7 +94,7 @@ In the following example, the *lengthFound* parameter can be used to search for 
  Until(vlResult=0)
 ```
 
-#### Example 3 
+## Example 3 
 
 In the following example, you want to find all instances of a string and replace it:
 
@@ -115,12 +115,12 @@ In the following example, you want to find all instances of a string and replace
  Until($p<=0) //result: $string -> Hello Joëlle and Joël!
 ```
 
-#### See also 
+## See also 
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

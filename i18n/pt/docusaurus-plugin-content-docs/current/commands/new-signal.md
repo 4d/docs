@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 O comando `New signal` <!-- REF #_command_.New signal.Summary -->cria um objeto `4D.Signal` <!-- END REF -->.
 
@@ -40,7 +40,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
 
-#### Exemplo
+## Exemplo
 
 Este é um exemplo típico de um worker que fixa um sinal:
 
@@ -70,7 +70,7 @@ O método ***doSomething*** poderia ser como:
  $signal.trigger() // The work is finished
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

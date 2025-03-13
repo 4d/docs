@@ -14,7 +14,7 @@ title: VP Get row attributes
 | rangeObj | Object     | ->                          | レンジオブジェクト     |                  |
 | 戻り値      | Collection | <- | 行プロパティのコレクション | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get row attributes` コマンドは、<!-- REF #_method_.VP Get row attributes.Summary -->*rangeObj* 引数で指定したレンジ内にある行のプロパティのコレクションを返します<!-- END REF -->。
 
@@ -22,7 +22,7 @@ title: VP Get row attributes
 
 [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションには行の属性がすべて返されます。
 
-#### 例題
+## 例題
 
 以下のコードは、指定したレンジ内の行属性のコレクションを返します:
 
@@ -36,7 +36,7 @@ $attr:=VP Get row attributes($range)
 
 ![](../../assets/en/ViewPro/cmd_vpGetRowAttributes.PNG)
 
-#### 参照
+## 参照
 
 [VP Get column attributes](vp-get-column-attributes.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)<br/>

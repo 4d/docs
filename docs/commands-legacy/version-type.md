@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Version type.Summary-->The Version type command returns a numeric value that denotes the type of 4D or 4D Server version that you are running.<!-- END REF--> 4D provides the following predefined constants, found in the *4D Environment* theme:
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 Version type returns a value in the form of a *bit field*; it is necessary to use bitwise operators to interpret it (see the example).
 
-#### Example 
+## Example 
 
 This test lets you run different code depending on whether the version is a merged application or a database opened by 4D / 4D Server:
 
@@ -39,12 +39,12 @@ This test lets you run different code depending on whether the version is a merg
  End if
 ```
 
-#### See also 
+## See also 
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

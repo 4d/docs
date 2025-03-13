@@ -15,7 +15,7 @@ title: VP Get print info
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | 印刷情報のオブジェクト                                    | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get print info` コマンドは、<!-- REF #_method_.VP Get print info.Summary -->*vpAreaName* 引数で指定したエリアの印刷属性を格納したオブジェクトを返します<!-- END REF -->。
 
@@ -23,7 +23,7 @@ title: VP Get print info
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、印刷属性を取得するスプレッドシートを指定することができます。  省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 以下のコードを実行すると:
 
@@ -78,7 +78,7 @@ zoomFactor:1
 }
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro 印刷属性](../configuring.md#印刷属性)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)

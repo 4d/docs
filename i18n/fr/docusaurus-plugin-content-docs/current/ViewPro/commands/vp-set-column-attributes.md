@@ -14,7 +14,7 @@ title: VP SET COLUMN ATTRIBUTES
 | rangeObj    | Object | -> | Objet plage                                |                  |
 | propertyObj | Object | -> | Objet contenant des propriétés de colonnes | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the colu
 | resizable | boolean | Vrai si la colonne peut être redimensionnée, sinon faux                             |
 | header    | text    | Texte de l'en-tête de la colonne                                                    |
 
-#### Exemple
+## Exemple
 
 Pour modifier la taille de la deuxième colonne et définir un en-tête, le code suivant :
 
@@ -45,7 +45,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
-#### Voir également
+## Voir également
 
 [VP Column](vp-column.md)<br/>
 [VP Get column attributes](vp-get-column-attributes.md)<br/>

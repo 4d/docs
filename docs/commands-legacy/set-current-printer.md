@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->The **SET CURRENT PRINTER** command designates the printer to be used for printing with the current 4D application.<!-- END REF-->
 
@@ -30,11 +30,11 @@ The **SET CURRENT PRINTER** command must be called before [SET PRINT OPTION](set
 This command can be used with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), and [QR REPORT](qr-report.md) commands, and is applied to all 4D printing, including that in Design mode.  
 It is imperative for print commands to be called with the *\>* parameter (where applicable) so that the specified settings are not lost.
 
-#### System variables and sets 
+## System variables and sets 
 
 If printer selection is carried out correctly, the system variable OK is set to 1\. Should the opposite occur (for instance if the designated printer is not found), the system variable OK is set to 0 and the current printer remains unchanged. 
 
-#### Example 
+## Example 
 
 Creation of a PDF document under Windows:
 
@@ -48,12 +48,12 @@ Creation of a PDF document under Windows:
  SET CURRENT PRINTER("")
 ```
 
-#### See also 
+## See also 
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

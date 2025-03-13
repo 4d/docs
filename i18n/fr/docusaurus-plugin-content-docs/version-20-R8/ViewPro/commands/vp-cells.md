@@ -27,7 +27,7 @@ title: VP Cells
 | sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat    | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne un nouvel objet de plage référencant des cellules spécifiques<!-- END REF -->.
 
@@ -43,7 +43,7 @@ Le paramètre *rowCount* vous permet de définir le nombre total de lignes dans 
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez définir un objet plage pour les cellules suivantes (de la feuille courante) :
 
@@ -55,7 +55,7 @@ Le code est le suivant :
 $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 à D7
 ```
 
-#### Voir également
+## Voir également
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>

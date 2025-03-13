@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 <!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
 
@@ -42,7 +42,7 @@ The event object can contain additional properties, depending on the object for 
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
-#### Exemplo 1
+## Exemplo 1
 
 You want to handle the On Clicked event on a button:
 
@@ -52,7 +52,7 @@ You want to handle the On Clicked event on a button:
  End if
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
@@ -70,7 +70,7 @@ You can sort the column using the On Header Click event:
  End case
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
 
@@ -96,12 +96,12 @@ The resulting list box when rows are selected:
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### Veja também
+## Veja também
 
 [Eventos de formulário](../Events/overview.md)
 [Código de evento do formulário](../commands/form-event-code.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

@@ -14,7 +14,7 @@ title: VP SET BOOLEAN VALUE
 | rangeObj  | Object  | -> | レンジオブジェクト |                  |
 | boolValue | Boolean | -> | 設定するブール値  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET BOOLEAN VALUE` コマンドは、<!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->指定のセルレンジにブール値を割り当てます<!-- END REF -->。
 
@@ -22,13 +22,13 @@ title: VP SET BOOLEAN VALUE
 
 *boolValue* 引数には、*rangeObj* のセルレンジに割り当てるブール値 (**true** あるいは **false**) を渡します。
 
-#### 例題
+## 例題
 
 ```4d
 // セルの値を false に設定
 VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 ```
 
-#### 参照
+## 参照
 
 [VP SET VALUE](vp-set-value.md)

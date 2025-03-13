@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `This` <!--REF #_command_.This.Summary-->renvoie une référence à l'objet en cours de traitement.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Cette commande peut être utilisée dans différents contextes, décrits ci-dess
 
 Dans tout autre contexte, la commande renvoie **Null**.
 
-#### Fonction de classe
+## Fonction de classe
 
 When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
@@ -67,7 +67,7 @@ $val:=$o.f() //8
 
 Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*, il hérite de celle de sa classe. Comme *f* est appelée comme une méthode de $o, son `This` se réfère à $o.
 
-#### Objet formule
+## Objet formule
 
 Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](formula.md) ou [Formula from string](formula-from-string.md), `This` renvoie une référence à l'objet en cours de traitement par la formule.
 
@@ -89,7 +89,7 @@ Avec la méthode projet *Greeting* :
  return $greeting+" "+This.firstName+" "+This.lastName
 ```
 
-#### List box
+## List box
 
 Dans le contexte d'une list box associée à une collection ou à une entity selection, pendant les événements [`On Display Detail`](../Events/onDisplayDetail.md) ou [`On Data Change`](../Events/onDataChange.md), `This` retourne une référence à l'élément de collection ou à l'entité auquel accède la list box pour afficher la ligne courante.
 
@@ -99,7 +99,7 @@ Si vous utilisez une collection de valeurs scalaires dans une list box, 4D crée
 
 :::
 
-#### Exemple 1
+## Exemple 1
 
 Une collection d'objets, chacun avec cette structure :
 
@@ -146,7 +146,7 @@ Une fois le formulaire exécuté, vous pouvez voir le résultat :
 
 ![](../assets/en/commands/pict3783169.en.png)
 
-#### Exemple 2
+## Exemple 2
 
 Vous voulez afficher les entités de la structure suivante dans une list box :
 
@@ -173,12 +173,12 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 
 ![](../assets/en/commands/pict3872875.en.png)
 
-#### Voir également
+## Voir également
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |

@@ -14,7 +14,7 @@ title: VP Get values
 | rangeObj   | Object     | ->                          | Objeto intervalo   |                  |
 | Resultados | Collection | <- | Coleção de valores | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera os valores do *rangeObj*<!-- END REF -->.
 
@@ -35,7 +35,7 @@ Datas ou horas são tratadas como um datetime e são completadas da forma abaixo
 - valor hora - a parte da data é preenchida como 30 de dezembro de 1899
 - valor data - a porção hora é completa como meia noite (00:00:00:000)
 
-#### Exemplo
+## Exemplo
 
 Pretende obter valores de C4 a G6:
 
@@ -48,7 +48,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 // $result[2]=[null,{time:42,value:2019-05-29T00:00:00.000Z},null,null,null]
 ```
 
-#### Veja também
+## Veja também
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>

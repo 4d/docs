@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `New collection` コマンドは、<!--REF #_command_.New collection.Summary-->新しい空の、または値が既に入れられたコレクションを作成し、その参照を返します。<!-- END REF-->コレクションは、[Collection クラス API](../API/CollectionClass.md)のプロパティや関数を使用して操作することができます。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 - 日付は、"dates inside objects" データベース設定に応じて、"yyyy-mm-dd" という日付、または "YYYY-MM-DDTHH:mm:ss.SSSZ" というフォーマットの文字列で保存されます。 コレクションに保存する前に 4D日付をテキストに変換した場合、プログラムはデフォルトでローカルのタイムゾーンを使用します。 このふるまいは `SET DATABASE PARAMETER` コマンドで `Dates inside objects` セレクターを使用することで変更可能です。
 - 時間を渡した場合、それはミリ秒の数 (実数) として保存されます。
 
-#### 例題 1
+## 例題 1
 
 新しい空のコレクションを作成し、それを 4Dコレクション変数に代入します:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
   // $myCol=[]
 ```
 
-#### 例題 2
+## 例題 2
 
 あらかじめ値の入ったコレクションを作成します:
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
   // $filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### 例題 3
+## 例題 3
 
 新しいコレクションを作成し、そこに新しい要素を追加します:
 
@@ -76,12 +76,12 @@ displayed_sidebar: docs
   // $coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-#### 参照
+## 参照
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

@@ -15,7 +15,7 @@ title: VP Get show print lines
 | sheet      | Integer | <- | Índice de la hoja                                                   |                  |
 | Resultado  | Boolean | <- | True si las líneas de impresión son visibles, de lo contrario False | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->devuelve `True` si las líneas de la vista previa de impresión están visibles y `False` si están ocultas.<!-- END REF -->
 
@@ -25,7 +25,7 @@ En *sheet*, pase el índice de la hoja objetivo. Si se omite *sheet*, el comando
 
 > La indexación comienza en 0.
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código comprueba si las líneas de vista previa se muestran u ocultan en el documento:
 
@@ -34,6 +34,6 @@ El siguiente código comprueba si las líneas de vista previa se muestran u ocul
  $result:=VP Get show print lines("ViewProArea";1)
 ```
 
-#### Ver también
+## Ver también
 
 [VP SET SHOW PRINT LINES](vp-set-show-print-lines.md)

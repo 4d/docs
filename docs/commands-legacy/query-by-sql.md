@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->The QUERY BY SQL command can be used to take advantage of the SQL kernel integrated into 4D.<!-- END REF--> It can execute a simple SELECT query that can be written as follows:
 
@@ -72,7 +72,7 @@ Using QUERY BY SQL, you must write the following statement, regardless of whethe
 
 **Note:** QUERY BY SQL handles One-to-Many and Many-to-Many relations differently than [QUERY BY FORMULA](query-by-formula.md).
 
-#### Example 1 
+## Example 1 
 
 This example shows the offices where sales exceed 100\. The SQL query is: 
 
@@ -88,7 +88,7 @@ When using the **QUERY BY SQL** command:
  QUERY BY SQL([Offices];$queryFormula)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example shows the orders that fall into the 3000 to 4000 range. The SQL query is: 
 
@@ -104,7 +104,7 @@ When using the QUERY BY SQL command:
  QUERY BY SQL([Orders];$queryFormula)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example shows how to get the query result ordered by a specific criterion. The SQL query is: 
 
@@ -120,7 +120,7 @@ When using the QUERY BY SQL command:
  QUERY BY SQL([People];$queryFormula)
 ```
 
-#### Example 4 
+## Example 4 
 
 This example shows a query using related tables in 4D. In SQL you should use a JOIN to simulate this relation. Assuming we have the two following tables: 
 
@@ -149,15 +149,15 @@ When using the **QUERY BY SQL** command:
  QUERY BY SQL([Lines_Invoices];$queryFormula)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the format of the search condition is correct, the system variable OK is set to 1\. Otherwise, it is set to 0, the result of the command is an empty selection and an error is returned. This error can be intercepted by a method installed using the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

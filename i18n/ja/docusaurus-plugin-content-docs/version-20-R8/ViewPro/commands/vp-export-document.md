@@ -23,7 +23,7 @@ title: VP EXPORT DOCUMENT
 | filePath   | Text   | -> | ドキュメントのパス名              |                  |
 | paramObj   | Object | -> | 書き出しのオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP EXPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを、*filePath* と *paramObj* で指定したとおりにディスク上のドキュメントに書き出します<!-- END REF -->。
 
@@ -109,7 +109,7 @@ title: VP EXPORT DOCUMENT
 
 書き出し操作が完了すると、`VP EXPORT DOCUMENT` は自動的に、*paramObj* オブジェクトの *formula* プロパティに設定されたメソッドをトリガーします (設定されていれば)。
 
-#### コールバックメソッド (フォーミュラ) の渡し方
+## コールバックメソッド (フォーミュラ) の渡し方
 
 When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. コールバックメソッドは、以下の値をローカルパラメーターに受け取ります:
 
@@ -123,7 +123,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 |        | .errorCode    | integer | エラーコード。                           |
 |        | .errorMessage | テキスト    | エラーメッセージ。                         |
 
-#### 例題 1
+## 例題 1
 
 "VPArea" エリアのコンテンツをディスク上の 4D View Pro ドキュメントに書き出します:
 
@@ -135,7 +135,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 // MyExport.4VP がディスク上に保存されます
 ```
 
-#### 例題 2
+## 例題 2
 
 カレントシートを PDF に書き出します:
 
@@ -147,7 +147,7 @@ $params.pdfOptions:=New object("title";"Annual Report";"author";Current user)
 VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```
 
-#### 例題 3
+## 例題 3
 
 4D View Pro ドキュメントを ".xlsx" 形式に書き出して、書き出し完了後にそのドキュメントをMicrosoft Excel で開くメソッドを呼び出します:
 
@@ -171,7 +171,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
  End if
 ```
 
-#### 例題 4
+## 例題 4
 
 カレントシートを、縦棒 (|) 区切りの `.txt` ファイルに書き出します:
 
@@ -189,7 +189,7 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### 参照
+## 参照
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>

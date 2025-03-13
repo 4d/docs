@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->The WA STOP LOADING URL command stops loading the resources of the current URL of the Web area designated by the *\** and *object* parameters.<!-- END REF-->
 
-#### See also 
+## See also 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

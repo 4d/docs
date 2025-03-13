@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->The **SET LIST ITEM PARAMETER** command modifies the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
 
@@ -37,7 +37,7 @@ In *selector*, you can pass either:
 | Associated standard action | Text | 4D\_standard\_action\_name | Associate a standard action with the *itemRef*. In this case, you must pass in the *value* parameter a standard action name with a parameter, for example "fontSize?value=10pt". For more information, please refer to the *Standard actions* section in the *Design Reference* manual. |
 * or a **custom selector**: You can also pass custom text and associate it with a value of the Text, Number or Boolean type in *selector*. This value will be stored with the list item and may be retrieved using the [GET LIST ITEM PARAMETER](get-list-item-parameter.md) command. This lets you set up any type of interface associated with hierarchical lists. For example, in a list of customer names, you can store the age of each person and only display it when the corresponding item is selected.
 
-#### Example 
+## Example 
 
 You want to set as choice list of a hierarchical pop up menu a custom list of font size values using the standard actions feature:
 
@@ -54,7 +54,7 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-#### See also 
+## See also 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
@@ -62,7 +62,7 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

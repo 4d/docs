@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET TEXT.Summary-->The ST SET TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the object parameter, without modifying any style tags that it contains. It can be used to modify, by programming, styled text displayed on screen. 
 
@@ -50,13 +50,13 @@ The optional *startSel* and *endSel* parameters let you designate a selection of
 
 **Note:** If *startSel* is greater than *endSel* (except if *endSel* value is 0, see above), the text is not modified and the OK variable is set to 0\. 
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### Example 1 
+## Example 1 
 
 You want to replace the styled text selected by the user with the contents of a variable.
 
@@ -80,17 +80,17 @@ The field and its contents are as follows:
 
 ![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [ST SET PLAIN TEXT](st-set-plain-text.md) command. 
 
-#### See also 
+## See also 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

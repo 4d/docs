@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->The **RELOAD EXTERNAL DATA** command reloads the contents in memory of an external storage file associated with a BLOB, Picture, or Text type field.<!-- END REF-->
 
@@ -23,11 +23,11 @@ You then need to reload the data using the **RELOAD EXTERNAL DATA** command to u
 
 **Note:** The **RELOAD EXTERNAL DATA** command only works on a local 4D or on 4D Server. You cannot reload a field individually with 4D in remote mode. In this context, you have to reload all the records (using the [LOAD RECORD](load-record.md) command for example).
 
-#### See also 
+## See also 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

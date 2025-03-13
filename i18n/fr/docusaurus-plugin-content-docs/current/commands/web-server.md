@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre *option*<!-- END REF -->.
 
@@ -38,7 +38,7 @@ Par défaut, si le paramètre *option* est omis, la commande renvoie une référ
 
 L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
-#### Exemple
+## Exemple
 
 L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
 
@@ -51,12 +51,12 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
  End if
 ```
 
-#### Voir également
+## Voir également
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
 
-#### Propriétés
+## Propriétés
 
 |                    |                                 |
 | ------------------ | ------------------------------- |

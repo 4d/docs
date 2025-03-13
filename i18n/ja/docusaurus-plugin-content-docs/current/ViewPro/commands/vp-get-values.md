@@ -14,7 +14,7 @@ title: VP Get values
 | rangeObj | Object     | ->                          | レンジオブジェクト |                  |
 | 戻り値      | Collection | <- | 値のコレクション  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get values` コマンドは、<!-- REF #_method_.VP Get values.Summary --> *rangeObj* で指定したレンジの値をすべて取得します<!-- END REF -->。
 
@@ -35,7 +35,7 @@ title: VP Get values
 - 時間値 - 日付部分は 1899年12月30日として補完されます。
 - 日付値 - 時間部分は真夜中 (00:00:00:000) として補完されます。
 
-#### 例題
+## 例題
 
 C4 から G6 までの値を取得します:
 
@@ -48,7 +48,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 // $result[2]=[null,{time:42,value:2019-05-29T00:00:00.000Z},null,null,null]
 ```
 
-#### 参照
+## 参照
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>

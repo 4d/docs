@@ -14,7 +14,7 @@ title: VP SET CURRENT SHEET
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
 | sheet      | Integer | <- | Index of the new current sheet          | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
@@ -24,7 +24,7 @@ In *sheet*, pass the index of the sheet to be set as current sheet. If no index 
 
 > La numérotation démarre à 0.
 
-#### Exemple
+## Exemple
 
 The document's current sheet is the first sheet:
 
@@ -38,6 +38,6 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### Voir également
+## Voir également
 
 [VP Get current sheet](vp-get-current-sheet.md)

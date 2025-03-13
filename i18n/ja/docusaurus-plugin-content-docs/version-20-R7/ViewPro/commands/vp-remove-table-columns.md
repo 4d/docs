@@ -25,7 +25,7 @@ title: VP REMOVE TABLE COLUMNS
 | count      | Integer | -> | 削除する列の数 (>0)                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE TABLE COLUMNS` コマンドは、<!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスから、1つまたは *count* で指定した数の列を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
@@ -33,7 +33,7 @@ title: VP REMOVE TABLE COLUMNS
 
 *tableName* の表組みが存在しない場合には、何も起こりません。
 
-#### 例題
+## 例題
 
 "dataTable" 表組みの 3列目から 2列を削除します:
 
@@ -41,7 +41,7 @@ title: VP REMOVE TABLE COLUMNS
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
-#### 参照
+## 参照
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando **WP EXPORT DOCUMENT**<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exporta el objeto *wpDoc* 4D Write Pro a un documento en disco de acuerdo con el parámetro *filePath* o *fileObj*, así como cualquier parámetro opcional.<!-- END REF-->
 
@@ -48,7 +48,7 @@ You can omit the *format* parameter, in which case you need to specify the exten
 - To view a list of known differences or incompatibility when using the .docx format, see *Importing and Exporting in .docx format*.
 - For more information on exporting to SVG format, see *Exporting to SVG format*.
 
-##### Parámetro option
+### Parámetro option
 
 Pase un [objeto](# "Datos estructurados como un objeto nativo 4D") en *option* conteniendo los valores para definir las propiedades del documento exportado. Las siguientes propiedades están disponibles:
 
@@ -94,7 +94,7 @@ The following table indicates the *option* available per export *format*:
 
 **Nota de compatibilidad:** pasar un valor *largo* en *longint* es compatible por razones de compatibilidad, pero se recomienda usar un parámetro [objeto](# "Datos estructurados como un objeto nativo 4D").
 
-##### wk files collection
+### wk files collection
 
 The wk files property allows you to [export a PDF with attachments](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). This property must contain a collection of objects describing the files to be embedded in the final document. Each object of the collection can contain the following properties:
 
@@ -115,7 +115,7 @@ PDF attachments are only supported by the PDF/A-3 version. When you pass the wk 
 
 :::
 
-##### wk factur x object
+### wk factur x object
 
 The wk factur x property is an object that can contains up to two properties:
 
@@ -140,7 +140,7 @@ For a detailed example of Factur-X / ZUGFeRD export implementation, you can down
 
 :::
 
-#### Ejemplo 1
+## Ejemplo 1
 
 You want to export the contents of the *myArea* 4D Write Pro object in both HTML and PDF format:
 
@@ -170,7 +170,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in both HTML
  WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to export the contents of the *myArea* 4D Write Pro object in .4wp format:
 
@@ -190,7 +190,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
  End case
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 To export the second page of the document as SVG and export the pictures from the document:
 
@@ -204,7 +204,7 @@ To export the second page of the document as SVG and export the pictures from th
  WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Exporting a PDF document with PDF/A-2 conformance:
 
@@ -215,7 +215,7 @@ Exporting a PDF document with PDF/A-2 conformance:
  WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
-#### Ejemplo 5
+## Ejemplo 5
 
 Examples of Factur-X PDF exports:
 
@@ -249,7 +249,7 @@ Examples of Factur-X PDF exports:
  WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 ```
 
-#### Ejemplo 6
+## Ejemplo 6
 
 Exporting a docx document using a File object:
 
@@ -264,7 +264,7 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 
 ```
 
-#### Ver también
+## Ver también
 
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>

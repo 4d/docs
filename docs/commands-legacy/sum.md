@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sum.Summary-->The **Sum** command returns the sum (total of all values) for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to total the values.
 
@@ -26,7 +26,7 @@ Only numeric attribute values are computed. If there are values in the attribute
 
 If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
 
-#### Example 1 
+## Example 1 
 
 The following example is an object method for a *vTotal* variable placed in a form. The object method assigns the sum of all salaries to *vTotal*:
 
@@ -47,7 +47,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md "BREAK LEVEL") command should be equal to the number of breaks in your report. For more information about break processing, refer to the printing commands.
 
-#### Example 2 
+## Example 2 
 
 This example gets the sum of all the values placed in an array:
 
@@ -58,11 +58,11 @@ This example gets the sum of all the values placed in an array:
  vSum:=Sum($ArrGrades)
 ```
 
-#### Example 3 
+## Example 3 
 
 For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
 
-#### See also 
+## See also 
 
 [ACCUMULATE](accumulate.md)  
 [Average](average.md)  
@@ -73,7 +73,7 @@ For an example of computing an object field attribute, please refer to the examp
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->The ST SET ATTRIBUTES command can be used to modify one or more style attributes in the form object(s) designated by *object*.<!-- END REF--> 
 
@@ -83,7 +83,7 @@ If you pass the Attribute text color or Attribute background color constants in 
 | White               | #FFFFFF        |
 | Yellow              | #FFFF00        |
 
-#### Example 
+## Example 
 
 In this example, we modify the size and color of the text as well as the bold and underline attributes of the characters 2 to 4 of the field:
 
@@ -91,18 +91,18 @@ In this example, we modify the size and color of the text as well as the bold an
  ST SET ATTRIBUTES([MyTable]MyField;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### See also 
+## See also 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** は、発生したフォームイベント に関する情報を格納しているオブジェクトを返します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。
 
-#### 例題 1
+## 例題 1
 
 ボタン上でOn Clicked イベントを管理したい場合を考えます:
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2
+## 例題 2
 
 カラムオブジェクト名に、実際のデータクラスの属性名を以下のように設定した場合:
 
@@ -70,7 +70,7 @@ On Header Click イベントを使用してカラムをソートすることが�
  End case
 ```
 
-#### 例題 3
+## 例題 3
 
 リストボックスオブジェクトのOn Display Details イベントが発生したときに、*メタ情報式 プロパティ*に設定したメソッドを実行したい場合を考えます:
 
@@ -96,12 +96,12 @@ On Header Click イベントを使用してカラムをソートすることが�
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### 参照
+## 参照
 
 [Form Events](../Events/overview.md)
 [Form event code](../commands/form-event-code.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

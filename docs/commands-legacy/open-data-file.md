@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->The **OPEN DATA FILE** command allows changing the data file opened by the 4D application on-the-fly.<!-- END REF--> 
 
@@ -31,7 +31,7 @@ If you pass an empty string in *accessPath*, the command will re-open the databa
 
 **4D Server:** Beginning with 4D v13, this command can be executed with 4D Server. In this context, it makes an internal call to [QUIT 4D](quit-4d.md) on the server (which causes a dialog box to appear on each remote machine indicating that the server is in the process of quitting) before opening the designated file.
 
-#### Example 
+## Example 
 
 In the context of deploying a merged application, you want to open or create the user data file in the On Startup database method. This example uses the default data file (see *Data file management in final applications*):
 
@@ -51,11 +51,11 @@ In the context of deploying a merged application, you want to open or create the
  End if
 ```
 
-#### See also 
+## See also 
 
 [CREATE DATA FILE](create-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

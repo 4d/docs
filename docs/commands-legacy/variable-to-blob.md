@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->The VARIABLE TO BLOB command stores the variable *variable* in the BLOB *blob*.<!-- END REF-->
 
@@ -48,11 +48,11 @@ After the call, if the variable has been successfully stored, the OK variable is
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 1 if the variable has been successfully stored, otherwise it is set to 0.
 
-#### Example 1 
+## Example 1 
 
 The two following project methods allow you to quickly store and retrieve any set of variables into and from a BLOB:
 
@@ -89,7 +89,7 @@ After these methods have been added to your application, you can write:
  RETRIEVE VARIABLES FROM BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
 ```
 
-#### Example 2 
+## Example 2 
 
 The two following project methods allow you to quickly store and retrieve arrays into and from documents on disk:
 
@@ -127,13 +127,13 @@ After these methods have been added to your application, you can write:
  LOAD ARRAY($vsDocName;->asAnyArray)
 ```
 
-#### See also 
+## See also 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.La commande **FORM EDIT** ouvre le *formulaire* associé à *aTable* dans l'éditeur de formulaire 4D, avec optionnellement *object* sélectionné. Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
@@ -40,7 +40,7 @@ If *object* is not found in *form*, the form is opened and no error is returned.
 
 Pass an empty string in *object* to deselect all objects in the open *form*.
 
-#### Exemples
+## Exemples
 
 To open the *Contacts* table *Address* form:
 
@@ -60,11 +60,11 @@ Pour ouvrir le formulaire de projet *ContactPage* avec l'objet "name-input" sél
  FORM EDIT("ContactList"; "name-input")
 ```
 
-#### Voir également
+## Voir également
 
 *Design Object Access Commands*
 
-#### Propriétés
+## Propriétés
 
 |                    |                                 |
 | ------------------ | ------------------------------- |

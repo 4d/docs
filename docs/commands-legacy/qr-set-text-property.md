@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->The **QR SET TEXT PROPERTY** command sets the text attributes for the cell determined by *colNum* and *rowNum*.<!-- END REF-->
 
@@ -62,7 +62,7 @@ If you pass an invalid *colNum* number, the error -9852 will be generated.
 If you pass an invalid *rowNum* number, the error -9853 will be generated.  
 If you pass an invalid *property* number, the error -9854 will be generated.
 
-#### Example 
+## Example 
 
 This method defines several attributes of the first column’s title:
 
@@ -81,11 +81,11 @@ This method defines several attributes of the first column’s title:
  QR SET TEXT PROPERTY(qr_area;1;-1;qr text color;0x0000FF00)
 ```
 
-#### See also 
+## See also 
 
 [QR Get text property](qr-get-text-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

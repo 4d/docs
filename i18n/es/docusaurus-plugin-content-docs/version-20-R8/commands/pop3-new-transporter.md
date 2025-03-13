@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary -->configura una nueva conexión POP3<!-- END REF --> en función del parámetro *server* y devuelve un nuevo objeto [transporter POP3](../API/POP3TransporterClass.md#pop3-transporter-object). El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
 
@@ -41,13 +41,13 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 995                                                                      |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ninguno                                                                  |
 
-#### Resultado
+## Resultado
 
 La función devuelve un [**objeto POP3 transporter**](../API/POP3TransporterClass.md#pop3-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
 > La conexión POP3 se cierra automáticamente cuando se destruye el objeto transportador.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
  var $server : Object
@@ -67,7 +67,7 @@ La función devuelve un [**objeto POP3 transporter**](../API/POP3TransporterClas
  End if
 ```
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |

@@ -15,7 +15,7 @@ title: VP Get stylesheets
 | sheet      | Integer    | ->                          | Alcance objetivo (por defecto = hoja actual) |                  |
 | Resultado  | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->devuelve la colección de objetos de hojas de estilo definidos de la *sheet* designada<!-- END REF -->.
 
@@ -26,7 +26,7 @@ Puede definir dónde obtener las hojas de estilo en el parámetro opcional *shee
 - `vk current sheet`
 - `vk workbook`
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código devolverá una colección de todos los objetos estilo de la hoja actual:
 
@@ -54,7 +54,7 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 ]
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>

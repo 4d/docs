@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->### List Mode 
 
@@ -69,11 +69,11 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *colNum* number, the error -9852 will be generated.  
 If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

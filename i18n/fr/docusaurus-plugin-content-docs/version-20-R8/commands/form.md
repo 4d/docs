@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D associe automatiquement un objet à la forme courante dans les cas suivants :
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 - the current form is a subform,
 - a table form is currently displayed on screen.
 
-##### Commands (DIALOG...)
+### Commands (DIALOG...)
 
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 
@@ -38,7 +38,7 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 - or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
 - or, an empty object.
 
-##### Sous-formulaire
+### Sous-formulaire
 
 If the current form is a subform, the returned object depends on the parent container variable:
 
@@ -54,7 +54,7 @@ If the current form is a subform, the returned object depends on the parent cont
 
 For more information, please refer to the *Page subforms* section.
 
-##### Table form
+### Table form
 
 **Form** returns the object associated with the table form displayed on screen.\
 **Form** returns the object associated with the table form displayed on screen.\
@@ -65,7 +65,7 @@ In the context of an input form displayed from an output form (i.e. after a doub
 | ------------- | -------- | ----------------------------------------- |
 | parentForm    | object   | **Form** object of the parent output form |
 
-#### Exemple
+## Exemple
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
@@ -111,11 +111,11 @@ Le formulaire affiche des informations pour chaque enfant :
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
-#### Voir également
+## Voir également
 
 [DIALOG](dialog.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                                 |
 | ------------------ | ------------------------------- |

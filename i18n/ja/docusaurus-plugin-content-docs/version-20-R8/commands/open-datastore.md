@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
 *connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 合致するデータストアが見つからない場合、`Open datastore` は **Null** を返します。
 
-#### 例題 1
+## 例題 1
 
 user / password を指定せずにリモートデータストアに接続します:
 
@@ -88,7 +88,7 @@ user / password を指定せずにリモートデータストアに接続しま�
  ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
 
-#### 例題 2
+## 例題 2
 
 user / password / timeout / tls を指定してリモートデータストアに接続します:
 
@@ -101,7 +101,7 @@ user / password / timeout / tls を指定してリモートデータストアに
  ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
 
-#### 例題 3
+## 例題 3
 
 複数のリモートデータストアと接続します:
 
@@ -116,7 +116,7 @@ user / password / timeout / tls を指定してリモートデータストアに
  ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
 ```
 
-#### 例題 4
+## 例題 4
 
 Qodly アプリケーションへの接続:
 
@@ -137,15 +137,15 @@ ALERT(String($data.length)+" 件の項目が読み込まれました")
 
 ```
 
-#### エラー管理
+## エラー管理
 
 エラーが起きた場合、コマンドは **Null** を返します。 リモートデータベースにアクセスできなかった場合 (アドレス違い、Webサーバーが開始されていない、http/https が有効化されていない、等)、エラー1610 "ホスト XXX へのリモートリクエストに失敗しました" が生成されます。 このエラーは `ON ERR CALL` で実装されたメソッドで割り込み可能です。
 
-#### 参照
+## 参照
 
 [ds](ds.md)
 
-#### プロパティ
+## プロパティ
 
 |            |                             |
 | ---------- | --------------------------- |

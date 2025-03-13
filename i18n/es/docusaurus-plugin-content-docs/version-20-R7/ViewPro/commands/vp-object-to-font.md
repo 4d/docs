@@ -14,7 +14,7 @@ title: VP Object to font
 | font object | Object | ->                          | Objeto fuente    |                  |
 | Resultado   | Text   | <- | Fuente abreviada | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->devuelve una cadena abreviada de fuente a partir de *fontObj*<!-- END REF -->.
 
@@ -32,7 +32,7 @@ Este objeto puede crearse con el comando [VP Font to object](vp-font-to-object.m
 
 La cadena abreviada devuelta puede asignarse a la propiedad "font" de una celda con la función [VP SET CELL STYLE](vp-set-cell-style.md), por ejemplo.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 $cellStyle:=VP Get cell style($range)
@@ -46,7 +46,7 @@ $cellStyle.font:=VP Object to font($font)
 //$cellStyle.font contains "bolder oblique small-caps 16pt arial"
 ```
 
-#### Ver también
+## Ver también
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>

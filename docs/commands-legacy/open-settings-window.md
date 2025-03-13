@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Database Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->
 
@@ -102,7 +102,7 @@ Addtional keys in "User settings for data" mode:
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### Example 1 
+## Example 1 
 
 Open the “Methods” page of the 4D Preferences:   
   
@@ -111,7 +111,7 @@ Open the “Methods” page of the 4D Preferences:
 ```
 
   
-#### Example 2 
+## Example 2 
 
 Open the “Shortcuts” parameters in the Database Settings while locking the other settings:  
 
@@ -119,7 +119,7 @@ Open the “Shortcuts” parameters in the Database Settings while locking the o
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### Example 3 
+## Example 3 
 
 Open Database Settings on the first page:   
 
@@ -127,7 +127,7 @@ Open Database Settings on the first page:
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### Example 4 
+## Example 4 
 
 Access to the Interface page of the Database settings in "User settings" mode:
 
@@ -135,12 +135,12 @@ Access to the Interface page of the Database settings in "User settings" mode:
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the Preferences/Settings dialog box is validated, the system variable OK returns 1\. Otherwise, it returns 0.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

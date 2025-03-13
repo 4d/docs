@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `Session` correspondant à la session utilisateur courante<!-- END REF -->.
 
@@ -37,7 +37,7 @@ For more information, see the [Session types](../command/session.md-types) parag
 
 Si la commande est appelée à partir d'un contexte non pris en charge (application mono-utilisateur, sessions évolutives désactivées...), elle retourne *Null*.
 
-#### Sessions Web
+## Sessions Web
 
 L'objet `Session` des sessions web est disponible depuis n'importe quel process web :
 
@@ -49,7 +49,7 @@ L'objet `Session` des sessions web est disponible depuis n'importe quel process 
 
 For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
 
-#### Sessions clients distants
+## Sessions clients distants
 
 L'objet `Session` des sessions client distants est disponible depuis :
 
@@ -59,7 +59,7 @@ L'objet `Session` des sessions client distants est disponible depuis :
 
 Pour plus d'informations sur les sessions utilisateur distantes, veuillez vous référer au paragraphe [**Sessions utilisateur client distants**](../Desktop/clientServer.md#remote-user-sessions).
 
-#### Session des procédures stockées
+## Session des procédures stockées
 
 Tous les process des procédures stockées partagent la même session d'utilisateur virtuel. L'objet `Session` des procédures stockées est disponible depuis :
 
@@ -68,7 +68,7 @@ Tous les process des procédures stockées partagent la même session d'utilisat
 
 For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
-#### Exemple
+## Exemple
 
 Vous avez défini la méthode `action_Session` ayant l'attribut "Disponible via Balises HTML et URLs 4D". Vous appelez la méthode en saisissant l'URL suivant dans votre navigateur :
 
@@ -96,7 +96,7 @@ IP:port/4DACTION/action_Session
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary -->空の、あるいは値が入った新規共有コレクションを作成し、その参照を返します<!-- END REF -->。 コレクションは、[Collection クラス API](../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題
+## 例題
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -63,13 +63,13 @@ displayed_sidebar: docs
  End use
 ```
 
-#### 参照
+## 参照
 
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *共有オブジェクトと共有コレクション*
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

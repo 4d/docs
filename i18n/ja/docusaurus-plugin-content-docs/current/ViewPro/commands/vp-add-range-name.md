@@ -15,7 +15,7 @@ title: VP ADD RANGE NAME
 | name     | Text   | -> | フォーミュラの名称      |                  |
 | options  | Object | -> | 命名フォーミュラのオプション | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD RANGE NAME` コマンドは、 <!-- REF #_method_.VP ADD RANGE NAME.Summary -->開いているドキュメント内に命名レンジを作成、または編集します<!-- END REF -->。
 
@@ -33,7 +33,7 @@ title: VP ADD RANGE NAME
 > - 命名レンジの実態は、座標を格納した命名フォーミュラです。 `VP ADD RANGE NAME` を使うと簡単に命名レンジの作成ができますが、[`VP ADD FORMULA NAME`](vp-add-formula-name.md) コマンドで命名レンジを作成することもできます。
 > - 命名レンジを定義するフォーミュラは、[`VP Get formula by name`](vp-get-formula-by-name.md) コマンドで取得することができます。
 
-#### 例題
+## 例題
 
 あるセルレンジに対して命名レンジを作成します:
 
@@ -42,7 +42,7 @@ $range:=VP Cell("ViewProArea";2;10)
 VP ADD RANGE NAME($range;"Total1")
 ```
 
-#### 参照
+## 参照
 
 [VP Get names](vp-get-names.md)<br/>
 [VP Name](vp-name.md)

@@ -14,7 +14,7 @@ title: VP SET CUSTOM FUNCTIONS
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
 | formulaObj | Object | -> | フォーミュラオブジェクト            | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET CUSTOM FUNCTIONS` コマンドは、<!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->4D View Pro フォーミュラから直接呼び出し可能な 4Dフォーミュラを指定します<!-- END REF -->。 カスタムのファンクションはドキュメント内に保存されていないので、`VP SET CUSTOM FUNCTIONS` は `On Load` フォームイベント内で呼び出される必要があります。
 
@@ -42,7 +42,7 @@ title: VP SET CUSTOM FUNCTIONS
 > - `VP SET CUSTOM FUNCTIONS` が呼び出された場合、[VP SET ALLOWED METHODS](vp-set-allowed-methods.md) コマンドにより許可されたメソッド (あれば) は同 4D View Pro エリアにおいて無視されます。
 > - `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
-#### 例題
+## 例題
 
 4D View Pro エリア内で、フォーミュラオブジェクトを使用して、数値を追加し、顧客の苗字・敬称および平均売上を取得します:
 
@@ -86,7 +86,7 @@ Case of
 End case
 ```
 
-#### 参照
+## 参照
 
 [4D functions](../formulas.md#4d-functions)<br/>
 [VP SET ALLOWED METHODS](vp-set-allowed-methods.md)<br/>

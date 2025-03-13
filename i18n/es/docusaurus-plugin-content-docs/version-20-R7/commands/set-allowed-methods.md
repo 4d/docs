@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
 
@@ -42,7 +42,7 @@ This command only filters the **input** of methods, not their **execution**. It 
 
 :::
 
-#### Ejemplo
+## Ejemplo
 
 This example authorizes all methods starting with “formula” and the “Total\_general” method to be entered by the user in protected contexts:
 
@@ -53,12 +53,12 @@ This example authorizes all methods starting with “formula” and the “Total
  SET ALLOWED METHODS(methodsArray)
 ```
 
-#### Ver también
+## Ver también
 
 [EDIT FORMULA](../commands-legacy/edit-formula.md)\
 [GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |

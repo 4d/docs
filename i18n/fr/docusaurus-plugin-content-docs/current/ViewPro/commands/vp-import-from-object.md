@@ -14,7 +14,7 @@ title: VP IMPORT FROM OBJECT
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | viewPro    | Object | -> | Objet 4D View Pro                       | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->importe et affiche l'objet 4D View Pro *viewPro* dans la zone 4D View Pro *vpAreaName*<!-- END REF -->. Le contenu de l'objet importé remplace toutes les données insérées auparavant dans la zone.
 
@@ -24,7 +24,7 @@ Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été c
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez importer une feuille de calcul précédemment stockée dans un champ objet :
 
@@ -33,6 +33,6 @@ QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 ```
 
-#### Voir également
+## Voir également
 
 [VP Export to object](vp-export-to-object.md)

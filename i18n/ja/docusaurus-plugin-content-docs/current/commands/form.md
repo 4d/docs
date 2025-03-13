@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->**Form** コマンドはカレントフォームに割り当てられている( *formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された) オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 - カレントフォームがサブフォームである場合。
 - テーブルフォームが現在画面上に表示されている場合。
 
-##### コマンド(DIALOGなど)
+### コマンド(DIALOGなど)
 
 カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 - [フォームに割り当てられているユーザークラス](../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
 - または、空のオブジェクト。
 
-##### サブフォーム
+### サブフォーム
 
 カレントフォームがサブフォームの場合、返されるオブジェクトは親コンテナ変数に依存します:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 より詳細な情報については、*サブフォームページ* の章を参照してください。
 
-##### テーブルフォーム
+### テーブルフォーム
 
 **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。  出力フォームから表示された入力フォームのコンテキスト (つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 | ---------- | ------ | ----------------------- |
 | parentForm | object | 親出力フォームの**Form** オブジェクト |
 
-#### 例題
+## 例題
 
 人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
@@ -107,11 +107,11 @@ displayed_sidebar: docs
 
 値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 
-#### 参照
+## 参照
 
 [DIALOG](dialog.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

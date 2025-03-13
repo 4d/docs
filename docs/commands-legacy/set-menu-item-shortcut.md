@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->The **SET MENU ITEM SHORTCUT** command assigns a new shortcut to a menu item.<!-- END REF--> 
 
@@ -45,7 +45,7 @@ For compatibility reasons, the command also accepts a character code in the *ite
 
 If you pass 0 (zero) in *itemKey*, any shortcut is removed from the menu item.
 
-#### Example 1 
+## Example 1 
 
 Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (Mac OS) shortcut for the “Underline” menu item:
 
@@ -54,7 +54,7 @@ Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (Mac OS) shortcut for t
  SET MENU ITEM SHORTCUT(menuRef;1;"U";Shift key mask)
 ```
 
-#### Example 2 
+## Example 2 
 
 Definition of the Ctrl+R (Windows) and Cmd+R (Mac OS) shortcut for the "Restart" menu item:
 
@@ -63,7 +63,7 @@ Definition of the Ctrl+R (Windows) and Cmd+R (Mac OS) shortcut for the "Restart"
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### Example 3 
+## Example 3 
 
 Definition of the F4 shortcut for the "Close" menu item:
 
@@ -72,12 +72,12 @@ Definition of the F4 shortcut for the "Close" menu item:
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### See also 
+## See also 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo [`4D.File`](../API/FileClass.md)<!-- END REF -->. El comando acepta dos sintaxis:
 
@@ -78,7 +78,7 @@ Si el objetivo *fileConstant* no existe, se devuelve un objeto null. No se produ
 
 Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. De lo contrario, si omite el parámetro `*`, siempre se devuelve un objeto null.
 
-#### Ver también
+## Ver también
 
 [`4D.File` class](../API/FileClass.md)
 [Folder](folder.md)
@@ -86,7 +86,7 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |

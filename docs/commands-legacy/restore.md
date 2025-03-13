@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESTORE.Summary-->The RESTORE command can be used to restore the file(s) included in a 4D archive.<!-- END REF--> This command is useful as part of custom interfaces for managing backups. 
 
@@ -29,12 +29,12 @@ The RESTORE command modifies the value of the *OK* and *Document* variables: if 
 
 **Note:** In a 4D application that is compiled and merged with 4D Volume Desktop, the RESTORE command causes the display of a standard open file dialog box that lists by default any files having the “4BK” extension. 
 
-#### See also 
+## See also 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ title: VP ADD SELECTION
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD SELECTION` コマンドは、<!-- REF #_method_.VP ADD SELECTION.Summary -->指定されたセルを、現在選択されているセル範囲に追加します<!-- END REF -->。
 
@@ -21,7 +21,7 @@ title: VP ADD SELECTION
 
 > アクティブセルは変更されません。
 
-#### 例題
+## 例題
 
 以下のようにセルが選択されている場合:
 
@@ -38,7 +38,7 @@ VP ADD SELECTION($currentSelection)
 
 ![](../../assets/en/ViewPro/cmd_vpAddSelection2.PNG)
 
-#### 参照
+## 参照
 
 [VP Get active cell](vp-get-active-cell.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>

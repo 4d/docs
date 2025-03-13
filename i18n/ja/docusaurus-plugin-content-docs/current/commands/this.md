@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `This` コマンドは<!--REF #_command_.This.Summary-->現在処理中のオブジェクトへの参照を返します<!-- END REF-->。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 これら以外のコンテキストにおいては、コマンドは**Null** を返します。
 
-#### クラス関数
+## クラス関数
 
 When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
@@ -68,7 +68,7 @@ $val:=$o.f() //8
 
 この例では、変数 $o に代入されたオブジェクトは自身の *f* プロパティを持たないため、これをクラスより継承します。 *f* は $o のメソッドとして呼び出されるため、メソッド内の `This` は $o を指します。
 
-#### フォーミュラオブジェクト
+## フォーミュラオブジェクト
 
 [Formula](formula.md) あるいは [Formula from string](formula-from-string.md) コマンドで作成されたフォーミュラオブジェクトの実行コンテキストにおいては、`This` はフォーミュラによって現在処理されているオブジェクトへの参照を返します。
 
@@ -90,7 +90,7 @@ $val:=$o.f() //8
  return $greeting+" "+This.firstName+" "+This.lastName
 ```
 
-#### リストボックス
+## リストボックス
 
 コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../Events/onDisplayDetail.md) あるいは [`On Data Change`](../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
 
@@ -100,7 +100,7 @@ $val:=$o.f() //8
 
 :::
 
-#### 例題 1
+## 例題 1
 
 以下のような構造を持つオブジェクトのコレクションがある場合を考えます:
 
@@ -147,7 +147,7 @@ $val:=$o.f() //8
 
 ![](../assets/en/commands/pict3783169.en.png)
 
-#### 例題 2
+## 例題 2
 
 以下のようなストラクチャーからのエンティティをリストボックスに表示したい場合を考えます:
 
@@ -174,12 +174,12 @@ $val:=$o.f() //8
 
 ![](../assets/en/commands/pict3872875.en.png)
 
-#### 参照
+## 参照
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

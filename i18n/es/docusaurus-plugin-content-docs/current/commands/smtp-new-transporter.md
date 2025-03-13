@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configura una nueva conexión SMTP<!-- END REF --> según el parámetro *server* y devuelve un nuevo [objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object). El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
@@ -54,11 +54,11 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                         | 100                                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | ninguno                                                                                          |
 
-#### Resultado
+## Resultado
 
 La función devuelve un [**objeto SMTP transporter**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas las propiedades devueltas son de sólo lectura\*\*.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
  $server:=New object
@@ -85,7 +85,7 @@ La función devuelve un [**objeto SMTP transporter**](../API/SMTPTransporterClas
  End if
 ```
 
-#### Propiedades
+## Propiedades
 
 |                   |                                 |
 | ----------------- | ------------------------------- |

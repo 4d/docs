@@ -14,7 +14,7 @@ title: VP Get cell style
 | rangeObj | Object | ->                          | レンジオブジェクト  |                  |
 | 戻り値      | Object | <- | スタイルオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get cell style` コマンドは、<!-- REF #_method_.VP Get cell style.Summary -->*rangeObj* 引数で指定したレンジの最初のセルの [スタイルオブジェクト](../configuring.md#スタイルオブジェクト) を返します<!-- END REF -->。
 
@@ -24,7 +24,7 @@ title: VP Get cell style
 - *rangeObj* 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
 - *rangeObj* 引数に複数のレンジが含まれている場合、最初のレンジの最初のセルのスタイルのみが返されます。
 
-#### 例題
+## 例題
 
 選択されたセル (B2) のスタイルの詳細を取得します:
 
@@ -54,7 +54,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 }
 ```
 
-#### 参照
+## 参照
 
 [VP GET DEFAULT STYLE](vp-get-default-style.md)<br/>
 [VP SET CELL STYLE](vp-set-cell-style.md)

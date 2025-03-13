@@ -22,7 +22,7 @@ title: VP RESIZE TABLE
 | rangeObj   | Object | -> | Nouvelle plage de la table |                  |
 | tableName  | Text   | -> | Nom de la table            | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modifie la taille de la *tableName* par rapport à *rangeObj*<!-- END REF -->.
 
@@ -36,7 +36,7 @@ Les règles suivantes s'appliquent :
 
 If *tableName* does not exist, nothing happens.
 
-#### Exemple
+## Exemple
 
 Vous créez une table avec un contexte de données :
 
@@ -64,7 +64,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 ![](../../assets/en/ViewPro/table-resize.png)
 
-#### Voir également
+## Voir également
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table range](vp-get-table-range.md)

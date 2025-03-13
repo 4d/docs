@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡した ID を持つセッションの詳細を記述したオブジェクトを返します<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 例題
+## 例題
 
 ```4d
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 参照
+## 参照
 
 [Session](../API/SessionClass.md)
 [Process info](process-info.md)

@@ -23,7 +23,7 @@ title: VP EXPORT DOCUMENT
 | filePath   | Text   | -> | Ruta de acceso del documento                 |                  |
 | paramObj   | Object | -> | Opciones de exportación                      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP EXPORT DOCUMENT` <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exporta el objeto de 4D View Pro adjunto al área 4D View Pro *vpAreaName* a un documento en disco según los parámetros *filePath* y *paramObj*<!-- END REF -->.
 
@@ -80,7 +80,7 @@ El parámetro opcional *paramObj* le permite definir múltiples propiedades para
 
 Una vez finalizada la operación de exportación, `VP EXPORT DOCUMENT` activa automáticamente la ejecución del método definido en la propiedad *formula* del *paramObj*, si se usa.
 
-#### Pasar un método retrollamada (fórmula)
+## Pasar un método retrollamada (fórmula)
 
 When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. El método de retrollamada recibirá los siguientes valores en parámetros locales:
 
@@ -94,7 +94,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 |            | .errorCode    | integer | Código de error.                                  |
 |            | .errorMessage | text    | Mensaje de error.                                 |
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Quiere exportar el contenido del área "VPArea" a un documento 4D View Pro en el disco:
 
@@ -106,7 +106,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP se guarda en su disco
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Quiere exportar la hoja actual en PDF:
 
@@ -119,7 +119,7 @@ $params.pdfOptions:=New object("title";"Annual Report";"author";Current user)
 VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método que inicie Microsoft Excel con el documento abierto una vez completada la exportación:
 
@@ -144,7 +144,7 @@ Método ***AfterExport***:
  End if
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Quiere exportar la hoja actual a un archivo `.txt` con valores separados por "|":
 
@@ -163,7 +163,7 @@ Aquí está el resultado:
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### Ver también
+## Ver también
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
 
@@ -58,7 +58,7 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted picture is
 
 - If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 In the following example, a user selects the picture they want to insert into the range object and will be warned if this picture could not be inserted:
 
@@ -89,7 +89,7 @@ In the following example, a user selects the picture they want to insert into th
  End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to insert a picture in the body of the documment:
 
@@ -104,7 +104,7 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 
 ```
 
-#### Ver también
+## Ver también
 
 [WP Insert document body](wp-insert-document-body.md)</br>
 [WP Picture range](../commands-legacy/wp-picture-range.md)

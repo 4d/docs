@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET SORTS.Summary-->The QR GET SORTS command populates two arrays<!-- END REF-->:
 
@@ -32,11 +32,11 @@ In the case of cross-table mode, the resulting arrays cannot have more than two 
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

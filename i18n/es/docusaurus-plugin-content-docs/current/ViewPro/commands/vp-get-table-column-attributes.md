@@ -25,7 +25,7 @@ title: VP Get column attributes
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Atributos de la *columna*                                      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->devuelve los atributos actuales de *column* especificados en la *tableName*<!-- END REF -->.
 
@@ -47,7 +47,7 @@ El comando devuelve un objeto que describe los atributos actuales de la *column*
 
 Si no se encuentra *tableName* o si el índice *column* es mayor que el número de columnas, el comando devuelve **null**.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 var $attributes : Object
@@ -57,7 +57,7 @@ If ($attributes.dataField#"")
 End if
 ```
 
-#### Ver también
+## Ver también
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

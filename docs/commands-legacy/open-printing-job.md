@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.
 
@@ -26,18 +26,18 @@ You must call the [CLOSE PRINTING JOB](close-printing-job.md) command to termina
 
 **Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](../settings/compatibility.md) documentation in the Compatibility settings.
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK system variable is set to 1 if the print job has been successfully open. Otherwise, it is set to 0, for example in the followiing cases:
 
 * the print job has been canceled by the user
 * on Windows, the selected print preview format is not available
 
-#### See also 
+## See also 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

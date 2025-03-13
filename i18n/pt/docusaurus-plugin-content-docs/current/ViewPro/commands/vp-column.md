@@ -17,7 +17,7 @@ title: VP Column
 | sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados  | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Column` <!-- REF #_method_.VP Column.Summary -->retorna um novo objeto de intervalo que faz referência a uma coluna ou colunas específicas<!-- END REF -->.
 
@@ -29,7 +29,7 @@ O parâmetro opcional *columnCount* permite que você defina o número total de 
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se for omitido ou se passar vk current sheet, é utilizada a folha de cálculo atual.
 
-#### Exemplo
+## Exemplo
 
 Se quiser definir um objeto de intervalo para a coluna mostrada abaixo (na planilha atual):
 
@@ -41,7 +41,7 @@ O código seria:
  $column:=VP Column("ViewProArea";3) // coluna D
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

@@ -15,7 +15,7 @@ title: VP SET SHOW PRINT LINES
 | visible    | Boolean | -> | 印刷線を表示する場合は true (デフォルト)、非表示の場合は false |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)            | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET SHOW PRINT LINES` コマンドは、<!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> スプレッドシート内で印刷プレビュー線を表示するかどうかを設定します<!-- END REF -->。
 
@@ -29,7 +29,7 @@ title: VP SET SHOW PRINT LINES
 
 スプレッドシートの印刷線の位置は、スプレッドシートの改ページの位置によって変化します。
 
-#### 例題
+## 例題
 
 以下のコードはドキュメントの 2番目のシートの印刷線を表示させます:
 
@@ -44,6 +44,6 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 ![set-show-print-lines-with-page-break](../../assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
-#### 参照
+## 参照
 
 [VP Get show print lines](vp-get-show-print-lines.md)

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->The **Print settings to BLOB** command saves the current 4D print settings in the *printSettings* BLOB.<!-- END REF--> The *printSettings* parameter stores all the settings used for printing:
 
@@ -32,7 +32,7 @@ The command returns 1 if the BLOB has been generated correctly, and 0 if no curr
 The *printSettings* BLOB can be saved and read on both platforms. However, even if some print settings are common, some others are platform-specific and depend on the drivers and system versions. If the same *printSettings* BLOB is shared between both platforms, you may lost information parts.   
 When used in an heterogeneous environment, in order to restore the maximum settings available for each platform (and not only the common part), it is recommended that you handle two *printSettings* BLOBs, one for each platform.
 
-#### Example 
+## Example 
 
 You want to store the current print settings to disk:
 
@@ -49,12 +49,12 @@ You want to store the current print settings to disk:
  End if
 ```
 
-#### See also 
+## See also 
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

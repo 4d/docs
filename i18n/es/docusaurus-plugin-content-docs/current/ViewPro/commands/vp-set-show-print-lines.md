@@ -15,7 +15,7 @@ title: VP SET SHOW PRINT LINES
 | visible    | Boolean | -> | Líneas de impresión mostradas si True (por defecto), ocultas si es False |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                              | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> establece si se muestran las líneas de vista previa de impresión en una hoja de cálculo.<!-- END REF -->.
 
@@ -29,7 +29,7 @@ En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 La posición de las líneas de impresión de una hoja de cálculo varía según los saltos de página de dicha hoja.
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código muestra las líneas de impresión en la segunda hoja de un documento:
 
@@ -44,6 +44,6 @@ Con un salto de página:
 
 ![set-show-print-lines-with-page-break](../../assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
-#### Ver también
+## Ver también
 
 [4D Get show print lines](vp-get-show-print-lines.md)

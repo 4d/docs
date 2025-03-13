@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **Form event code** コマンドは、現在生成中のフォームイベントタイプ を示す数値を返します。  通常フォームメソッドやオブジェクトメソッド内で **Form event code** を使用します。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 イベントの詳細については[**Form Events**](../Events/overview.md) の章を参照してください。
 
-#### 例題 1
+## 例題 1
 
 この例題ではレコード更新日をOn Validateイベントで自動的に(フィールドへ)割り当てる例を示します:
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2
+## 例題 2
 
 この例題では、ドロップダウンリスト処理 (初期化, ユーザクリック, オブジェクトのリリース) をオブジェクトメソッドにカプセル化します:
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 3
+## 例題 3
 
 この例題はフォームメソッドのテンプレートです。 この例題はフォームメソッドのテンプレートです。 この例題はフォームメソッドのテンプレートです。 出力フォームとしてサマリレポートがフォームを使用する際に発生し得るイベントを示しています:
 
@@ -98,7 +98,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 4
+## 例題 4
 
 この例題は[DISPLAY SELECTION](../commands-legacy/display-selection.md) または [MODIFY SELECTION](../commands-legacy/modify-selection.md) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。  説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
 
@@ -137,11 +137,11 @@ displayed_sidebar: docs
  SET WINDOW TITLE($vsTheEvent)
 ```
 
-#### 例題 5
+## 例題 5
 
 [`On Before Keystroke`](../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../Events/onAfterKeystroke.md) イベントを処理する方法は [Get edited text](../commands-legacy/get-edited-text.md)、[Keystroke](../commands-legacy/keystroke.md)、そして[FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) コマンドの説明を参照してください。
 
-#### 例題 6
+## 例題 6
 
 この例題は、スクロールエリアでクリックとダブルクリックを同様に扱う方法を示しています:
 
@@ -161,7 +161,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 7
+## 例題 7
 
 この例題では、クリック とダブルクリックで異なるレスポンスをする方法を示します。  要素0を使用して選択された項目を追跡していることに注目してください:
 
@@ -192,7 +192,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 8
+## 例題 8
 
 この例題では、[`On Getting Focus`](../Events/onGettingFocus.md) と [`On Losing Focus`](../Events/onLosingFocus.md) を使用して、フォームメソッド内でステータス情報を管理します:
 
@@ -220,7 +220,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 9
+## 例題 9
 
 この例題では、レコードのデータ入力に使われるフォームで、ウィンドウを閉じるイベントを処理する方法を示します:
 
@@ -244,7 +244,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 10
+## 例題 10
 
 この例題では、文字フィールドが更新されるたびに、1文字目を大文字に、それ以外を小文字に変換する方法を示します:
 
@@ -258,7 +258,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 11
+## 例題 11
 
 以下の例題では階層リストで削除アクションを管理する方法を示します:
 
@@ -286,7 +286,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 12
+## 例題 12
 
 この例題では [`On Scroll`](../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。  以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
 
@@ -302,7 +302,7 @@ displayed_sidebar: docs
 
 結果: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### 例題 13
+## 例題 13
 
 リストボックスで選択されたセルの周りに赤い長方形を描画し、 リストボックスがユーザーによって垂直方向にスクロールされた場合には、その長方形を一緒に移動させたい場合を考えます。  その場合、リストボックスのオブジェクトメソッドに対して以下のように書きます:
 
@@ -337,7 +337,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1900395.en.png)
 
-#### 参照
+## 参照
 
 [Form Events](../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
@@ -349,7 +349,7 @@ displayed_sidebar: docs
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                                                 |
 | ------- | --------------------------------------------------------------- |

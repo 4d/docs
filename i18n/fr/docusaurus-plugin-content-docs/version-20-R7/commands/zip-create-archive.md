@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary -->crée un objet d'archive ZIP compressée et renvoie le statut de l'opération<!-- END REF -->.
 
@@ -63,7 +63,7 @@ L'objet statut retourné contient les propriétés suivantes :
 | status     | Integer | Code d'état                                                                                                                                                                          |
 | success    | Boolean | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                                                |
 
-#### Exemple 1
+## Exemple 1
 
 Pour compresser un `4D.File` :
 
@@ -77,7 +77,7 @@ Pour compresser un `4D.File` :
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Pour compresser un `4D.Folder` sans le dossier lui-même :
 
@@ -92,7 +92,7 @@ Pour compresser un `4D.Folder` sans le dossier lui-même :
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Pour compresser une structure d'archive ZIP avec un mot de passe et une barre de progression :
 
@@ -122,7 +122,7 @@ Pour compresser une structure d'archive ZIP avec un mot de passe et une barre de
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### Exemple 4
+## Exemple 4
 
 Vous souhaitez passer une collection de dossiers et de fichiers à compresser à l'objet *zipStructure* :
 
@@ -139,7 +139,7 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### Exemple 5
+## Exemple 5
 
 Vous souhaitez utiliser un autre algorithme de compression à un niveau de compression élevé :
 
@@ -157,14 +157,14 @@ $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
 ```
 
-#### Voir également
+## Voir également
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |
