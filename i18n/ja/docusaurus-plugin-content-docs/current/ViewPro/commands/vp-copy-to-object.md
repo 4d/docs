@@ -23,7 +23,7 @@ title: VP Copy to object
 | options  | Object | ->                          | 追加のオプション                       |                  |
 | 戻り値      | Object | <- | 返されるオブジェクト。 コピーされたデータが格納されています | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Copy to object` コマンドは、<!-- REF #_method_.VP Copy to object.Summary -->*rangeObj* のコンテンツ、スタイル、フォーミュラをオブジェクトにコピーします<!-- END REF -->。
 
@@ -40,7 +40,7 @@ title: VP Copy to object
 
 このコマンドは、コピーされたデータを含むオブジェクトを返します。
 
-#### 例題
+## 例題
 
 あるレンジのコンテンツ、値、フォーマット、フォーミュラをオブジェクトに格納し、それを別のレンジに貼り付けます:
 
@@ -59,7 +59,7 @@ $targetRange:=VP Cell("ViewProArea"; 4; 0)
 VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```
 
-#### 参照
+## 参照
 
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>
