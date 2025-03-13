@@ -15,7 +15,7 @@ title: VP REMOVE NAME
 | name       | Text    | -> | 削除する命名レンジまたは命名フォーミュラの名前                       |                  |
 | scope      | Integer | -> | ターゲットのスコープ (デフォルト=カレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE NAME` コマンドは、<!-- REF #_method_.VP REMOVE NAME.Summary -->*name* の命名レンジまたは命名フォーミュラを、定義された *scope* のスコープから削除します<!-- END REF -->。
 
@@ -28,7 +28,7 @@ title: VP REMOVE NAME
 - `vk current sheet`
 - `vk workbook`
 
-#### 例題
+## 例題
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
@@ -39,6 +39,6 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 // $formula=null
 ```
 
-#### 参照
+## 参照
 
 [VP Name](vp-name.md)
