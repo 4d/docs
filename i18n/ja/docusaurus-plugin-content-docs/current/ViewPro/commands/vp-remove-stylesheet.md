@@ -15,7 +15,7 @@ title: VP REMOVE STYLESHEET
 | styleName  | Text    | -> | 削除するスタイルの名前                                    |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE STYLESHEET` コマンドは、<!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->*vpAreaName* 引数で指定したエリアから、*styleName* で指定したスタイルシートを削除します<!-- END REF -->。
 
@@ -28,7 +28,7 @@ title: VP REMOVE STYLESHEET
 - `vk current sheet`
 - `vk workbook`
 
-#### 例題
+## 例題
 
 カレントシートから、*GreenDashDotStyle* スタイルオブジェクトを削除します:
 
@@ -36,7 +36,7 @@ title: VP REMOVE STYLESHEET
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 ```
 
-#### 参照
+## 参照
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
