@@ -25,7 +25,7 @@ title: VP SET DATA CONTEXT
 | options    | Object     | -> | 追加のオプション                 |                  |
 | sheet      | Integer    | -> | シートのインデックス               | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET DATA CONTEXT` コマンドは、<!-- REF #_method_.VP SET DATA CONTEXT.Summary -->シートのデータコンテキストを設定します<!-- END REF -->。 データコンテキストは、ワークシートにバインドされたオブジェクトまたはコレクションで、自動生成オプションまたは [VP SET BINDING PATH](vp-set-binding-path.md) メソッドを使用することで、シートのセルにその内容を自動的に表示させることができます。 他方、[VP Get data context](vp-get-data-context.md) コマンドは、ユーザーによる編集が含まれたコンテキストを返すことができます。
 
@@ -51,7 +51,7 @@ title: VP SET DATA CONTEXT
 
 [VP Export to object](vp-export-to-object.md) でドキュメントをオブジェクトにエクスポート、または [VP EXPORT DOCUMENT](vp-export-document.md) でドキュメントを 4DVP ドキュメントにエクスポートする場合、`includeBindingSource` オプションを使うことで、現在のコンテキストの内容をエクスポート先のセルの値としてコピーすることができます。 詳細については、これらのメソッドの説明を参照ください。
 
-#### 例題
+## 例題
 
 オブジェクトを受け渡し、先頭行のセルにコンテキストデータをバインドします:
 
@@ -72,7 +72,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### 例題 2
+## 例題 2
 
 オブジェクトのコレクションを受け渡して、カラムを自動生成します:
 
@@ -91,7 +91,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-2.png)
 
-#### 例題 3
+## 例題 3
 
 引数として渡す *data* は、サブコレクションを含むコレクションです。 それぞれのサブコレクションは行を定義します:
 
@@ -112,7 +112,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-3.png)
 
-#### 例題 4 - 日付と時間のシンタックス
+## 例題 4 - 日付と時間のシンタックス
 
 ```4d
 var $data : Collection
@@ -138,7 +138,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
-#### 参照
+## 参照
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>
