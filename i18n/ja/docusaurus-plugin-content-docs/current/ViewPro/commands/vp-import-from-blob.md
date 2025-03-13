@@ -15,7 +15,7 @@ title: VP IMPORT FROM BLOB
 | vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob |                  |
 | paramObj   | Object                  | -> | 読み込みのオプション                | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP IMPORT FROM BLOB` コマンドは、<!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](vp-export-to-blob.md) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
 
@@ -44,7 +44,7 @@ title: VP IMPORT FROM BLOB
 |        | .errorCode    | integer                 | エラーコード。                           |
 |        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
-#### 例題
+## 例題
 
 myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
 
@@ -54,6 +54,6 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 ```
 
-#### 参照
+## 参照
 
 [VP EXPORT TO BLOB](vp-export-to-blob.md)
