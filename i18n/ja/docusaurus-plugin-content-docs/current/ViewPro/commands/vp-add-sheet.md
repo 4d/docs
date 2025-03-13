@@ -15,7 +15,7 @@ title: VP ADD SHEET
 | sheet      | Integer | -> | 新しいシートのインデックス           |                  |
 | name       | Text    | -> | シート名                    | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD SHEET` コマンドは、<!-- REF #_method_.VP ADD SHEET.Summary -->*vpAreaName* にロードされているドキュメントにシートを挿入します。<!-- END REF -->
 
@@ -27,7 +27,7 @@ title: VP ADD SHEET
 
 *name* 引数として、新しいシートの名前を渡します。 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
 
-#### 例題
+## 例題
 
 ドキュメントには現在 3つのシートがあります:
 
@@ -41,7 +41,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 ![vp-add-sheet](../../assets/en/ViewPro/vp-add-sheet.png)
 
-#### 参照
+## 参照
 
 [VP REMOVE SHEET](vp-remove-sheet.md)
 
