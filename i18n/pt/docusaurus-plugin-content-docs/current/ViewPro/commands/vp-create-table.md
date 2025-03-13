@@ -26,7 +26,7 @@ title: VP CREATE TABLE
 | source    | Text                                                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |                  |
 | options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opções adicionais                                               | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. É possível criar uma tabela em um intervalo de células para facilitar o gerenciamento e a análise de um grupo de dados relacionados. Em geral, uma tabela contém dados relacionados em linhas e colunas e aproveita um [contexto de dados] (vp-set-data-context).
 
@@ -70,7 +70,7 @@ Aqui, os títulos das colunas seriam `LastName` e `FirstName`.
 
 > Isto só funciona quando se geram colunas automaticamente. Não é possível usar uma coleção de dados escalares com a opção *tableColumns*.
 
-#### Exemplo
+## Exemplo
 
 Para criar uma tabela utilizando um contexto de dados:
 
@@ -103,7 +103,7 @@ Aqui está o resultado:
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### Veja também
+## Veja também
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
