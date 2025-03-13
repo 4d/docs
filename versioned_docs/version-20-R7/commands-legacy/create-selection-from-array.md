@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName* from:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName*<!-- END REF--> from:
 
 * either an array of absolute record numbers *recordArray* from *aTable*,
-* or an array of Booleans.<!-- END REF--> In this case, the values of the array indicate the belonging (**True**) or not (**False**) of each record in *table* to *selectionName*.
+* or an array of Booleans. In this case, the values of the array indicate the belonging (**True**) or not (**False**) of each record in *table* to *selectionName*.
 
 **Warning:** A named selection is created and loaded into memory. Therefore, make sure that you have enough memory before executing this command.
 

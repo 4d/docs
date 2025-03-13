@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.ACCEPT.Summary-->El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:
+El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:
 
-* validar un registro o subregistro creado o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* o *\_o\_MODIFY SUBRECORD*.<!-- END REF-->
+* validar un registro o subregistro creado o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* o *\_o\_MODIFY SUBRECORD*.
 * validar un formulario mostrado por el comando [DIALOG](../commands/dialog.md).
 * salir de un formulario que muestra una selección de registros, utilizando [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
 
-**ACCEPT** efectúa la misma acción que si un usuario hubiera presionado la tecla **Intro**. Después de que el formulario es aceptado, la variable sistema OK toma el valor 1.
+<!--REF #_command_.ACCEPT.Summary-->**ACCEPT** efectúa la misma acción que si un usuario hubiera presionado la tecla **Intro**.<!-- END REF--> Después de que el formulario es aceptado, la variable sistema OK toma el valor 1.
 
 **ACCEPT** se ejecuta con frecuencia como resultado de la selección de un comando de menú. **ACCEPT** es igualmente utilizado en el método de objeto de un botón “sin acción”.
 

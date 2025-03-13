@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->El comando **CREATE SELECTION FROM ARRAY** crea la selección temporal *temp* a partir de:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->El comando **CREATE SELECTION FROM ARRAY** crea la selección temporal *temp*<!-- END REF-->  a partir de:
 
 * un array de números de registros absolutos *regArray* de *tabla*,
-* o de un array de booleanos.<!-- END REF--> En este caso, los valores del array indican la pertenencia (**True**) o no (**False**) de cada registro de *tabla* a la selección *temp*.
+* o de un array de booleanos.En este caso, los valores del array indican la pertenencia (**True**) o no (**False**) de cada registro de *tabla* a la selección *temp*.
 
 **Atención:** una selección temporal se crea y carga en la memoria. Por lo tanto, asegúrese de que tenga memoria suficiente antes de ejecutar este comando.
 

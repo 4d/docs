@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Contextual click.Summary-->O comando Contextual click retorna Verdadeiro se foi realizado um clique contextual:
+<!--REF #_command_.Contextual click.Summary-->O comando Contextual click retorna Verdadeiro se foi realizado um clique contextual<!-- END REF-->:
 
-* Em Windows e Mac OS, os cliques contextuais são realizados com o botão direito do mouse.<!-- END REF-->
+* Em Windows e Mac OS, os cliques contextuais são realizados com o botão direito do mouse.
 * Em Mac OS, os cliques contextuais também podem ser gerados utilizando a combinação **Controle+clique**.
 
 Este comando deve ser utilizado só no contexto do evento de formulário On clicked. Portanto é necessário verificar em modo Desenho que o evento tenha sido selecionado corretamente nas propriedades do formulário ou do objeto específico. 

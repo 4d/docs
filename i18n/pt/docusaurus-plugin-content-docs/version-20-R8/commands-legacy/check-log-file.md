@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.CHECK LOG FILE.Summary-->O comando **CHECK LOG FILE** mostra a caixa de diálogo de visulização do arquivo de histórico atual da base de dados (acessível também através da janela do Centro de segurança e manutenção) :
+<!--REF #_command_.CHECK LOG FILE.Summary-->O comando **CHECK LOG FILE** mostra a caixa de diálogo de visulização do arquivo de histórico atual da base de dados (acessível também através da janela do Centro de segurança e manutenção) <!-- END REF-->:
 
 ![](../assets/en/commands/pict4835044.en.png)
 
-Esta caixa de diálogo inclui o botão **Desfazer** que permite cancelar as operações efetuadas aos dados da base de dados.<!-- END REF--> Para maiores informações sobre esta caixa de diálogo, favor consultar o Manual de Desenho.
+Esta caixa de diálogo inclui o botão **Desfazer** que permite cancelar as operações efetuadas aos dados da base de dados. Para maiores informações sobre esta caixa de diálogo, favor consultar o Manual de Desenho.
 
 **Nota:** como a função Desfazer é relativamente poderosa, é recomendável restringir o acesso ao comando **CHECK LOG FILE** dos administradores da base de dados.
 

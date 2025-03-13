@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Cache info.Summary-->El comando **Cache info** devuelve un objeto que contiene la información detallada sobre el contenido actual de la caché (memoria utilizada, tablas e índices cargados, etc.)
+<!--REF #_command_.Cache info.Summary-->El comando **Cache info** devuelve un objeto que contiene la información detallada sobre el contenido actual de la caché (memoria utilizada, tablas e índices cargados, etc.)<!-- END REF-->.
 
-**Nota:** este comando sólo funciona en modo local (4D Server y 4D); no debe ser utilizado con 4D en modo remoto.<!-- END REF-->
+**Nota:** este comando sólo funciona en modo local (4D Server y 4D); no debe ser utilizado con 4D en modo remoto.
 
 Por defecto, la información devuelta se refiere solamente a la base en ejecución. El parámetro objeto opcional *dbFilter* le permite especificar el alcance del comando:
 

@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->The SAX CLOSE XML ELEMENT command writes the statements necessary for closing the last element opened using the [SAX OPEN XML ELEMENT](sax-open-xml-element.md) command in the XML document referenced by *document*
+<!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->The SAX CLOSE XML ELEMENT command writes the statements necessary for closing the last element opened using the [SAX OPEN XML ELEMENT](sax-open-xml-element.md) command in the XML document referenced by *document*<!-- END REF-->.
 
-The use of this command is optional.<!-- END REF--> In fact, 4D will automatically add the necessary end tags for any unclosed elements when XML documents are closed.
+The use of this command is optional. In fact, 4D will automatically add the necessary end tags for any unclosed elements when XML documents are closed.
 
 ## Example 
 

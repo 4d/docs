@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->El comando GET REGISTERED CLIENTS llena dos arrays:
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->El comando GET REGISTERED CLIENTS llena dos array<!-- END REF-->s:
 
-* *listaClients* contiene la lista de los clientes “registrados” utilizando el comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").<!-- END REF-->
+* *listaClients* contiene la lista de los clientes “registrados” utilizando el comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").
 * *metodos* proporciona la lista de “cargas de trabajo” de cada cliente. La carga de trabajo es el número de métodos que un cliente 4D debe ejecutar llamando el comando [EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT") (para mayor información, por favor consulte la descripción del comando [EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT")).
 
 **Nota:** si la operación fue exitosa, la variable sistema OK es igual a 1.

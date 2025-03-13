@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->La commande **CREATE SELECTION FROM ARRAY** construit la sélection temporaire *nom* à partir :
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->La commande **CREATE SELECTION FROM ARRAY** construit la sélection temporaire *nom*<!-- END REF--> à partir :
 
 * soit du tableau de numéros d’enregistrements absolus *tabEnrg* de *laTable*,
-* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (Vrai) ou non (Faux) de chaque enregistrement de *laTable* à la sélection *nom*.<!-- END REF-->: Une sélection nommée est créée et chargée en mémoire. Par conséquent, assurez-vous que vous disposez de suffisamment de mémoire avant d'exécuter cette commande.
+* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (Vrai) ou non (Faux) de chaque enregistrement de *laTable* à la sélection *nom*. Une sélection nommée est créée et chargée en mémoire. Par conséquent, assurez-vous que vous disposez de suffisamment de mémoire avant d'exécuter cette commande.
 
 Si vous ne passez pas le paramètre *nom* ou si vous passez une chaîne vide, la commande s’appliquera à la sélection courante de *laTable*, qui sera donc mise à jour.
 

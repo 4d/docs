@@ -4,7 +4,7 @@ title: Create entity selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create entity selection.Syntax-->***Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+<!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
 <!--REF #_command_.Create entity selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->CREATE SET FROM ARRAY コマンドは、セット*setName*を下記の情報から作成します:
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->CREATE SET FROM ARRAY コマンドは、セット*setName*<!-- END REF-->を下記の情報から作成します:
 
 * *aTable*テーブルの絶対レコード番号の配列*recordsArray*
-* ブール配列*recordsArray*。<!-- END REF-->この場合、配列の値はそれぞれのレコードが*setName*に属する ([True](true.md "True")) か属さないか ([False](false.md "False")) を表します。
+* ブール配列*recordsArray*。この場合、配列の値はそれぞれのレコードが*setName*に属する ([True](true.md "True")) か属さないか ([False](false.md "False")) を表します。
 
 このコマンドを使用する際、*recordsArray*に倍長整数配列を渡すと、配列中のすべての数値は*setName*に格納されるレコードのレコード番号を表します。番号が無効の場合 (例えばレコードが作成されていない場合)、エラー-10503が生成されます。
 

@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.QR Get drop column.Summary-->O comando QR Get drop column devolve um valor dependendo de onde se realiza uma ação soltar:
+<!--REF #_command_.QR Get drop column.Summary-->O comando QR Get drop column devolve um valor dependendo de onde se realiza uma ação soltar<!-- END REF--> :
 
 * se o valor for negativo, indica um número de coluna (por exemplo, -3 indica que uma ação soltar se realizou na coluna número 3)
-* se o valor for positivo, indica que a ação de soltar se realizou em um separador situado na frente da coluna (por exemplo, 3 indica que um soltar foi realizado na coluna 2).<!-- END REF--> Lembre que a ação de soltar não é considerada antes de uma coluna existente.
+* se o valor for positivo, indica que a ação de soltar se realizou em um separador situado na frente da coluna (por exemplo, 3 indica que um soltar foi realizado na coluna 2).Lembre que a ação de soltar não é considerada antes de uma coluna existente.
 
 Se passa um número de *area* inválido, se gera o erro -9850.
 

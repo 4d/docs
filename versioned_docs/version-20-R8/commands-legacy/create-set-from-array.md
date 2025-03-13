@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->The **CREATE SET FROM ARRAY** command creates *setName* from:
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->The **CREATE SET FROM ARRAY** command creates *setName*<!-- END REF-->  from:
 
 * Either an array of absolute record numbers *recordsArray* from *aTable*,
-* Or an array of booleans *recordsArray*.<!-- END REF--> In this case, the values of the array indicate if each record in the table belongs (**True**) or not (**False**) to *setName*.
+* Or an array of booleans *recordsArray*.In this case, the values of the array indicate if each record in the table belongs (**True**) or not (**False**) to *setName*.
 
 When you use this command and pass a Longint array in *recordsArray*, all the numbers in the array represent the list of record numbers that are in *setName*. If a number is invalid (for example, if a record has not been created), the error -10503 is generated.
 

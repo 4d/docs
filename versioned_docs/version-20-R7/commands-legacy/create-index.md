@@ -19,10 +19,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE INDEX.Summary-->The **CREATE INDEX** command creates:
+The **CREATE INDEX** command creates:
 
-* A standard index on one or more fields (composite index) or
-* A keyword index on a field.<!-- END REF-->
+* A <!--REF #_command_.CREATE INDEX.Summary-->standard index on one or more fields (composite index)<!-- END REF--> or
+* A keyword index on a field.
 
 The index is created for the *aTable* table by using one or more fields designated by the *fieldsArray* pointer array. This array contains a single row when you want to create a simple index and two or more rows when you want to create a composite index (except in the case of a keyword index). In the case of composite indexes, the order of the fields in the array is important when the index is being built.
 

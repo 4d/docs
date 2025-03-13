@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros: 
+<!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros<!-- END REF-->: 
 
-* *izquierda* es la distancia en píxeles desde el lado izquierdo de la ventana de la aplicación y el costado interior izquierdo de la ventana.<!-- END REF-->
+* *izquierda* es la distancia en píxeles desde el lado izquierdo de la ventana de la aplicación y el costado interior izquierdo de la ventana.
 * *superior* es la distancia en píxeles entre la altura de la ventana de la aplicación y el borde superior del interior de la ventana.
 * *derecha* es la distancia en píxeles entre el lado izquierdo de la ventana de la aplicación y el costado interior derecho de la ventana.
 * *inferior* es la distancia en píxeles desde la parte superior de la ventana de la aplicación y borde interior inferior de la ventana.

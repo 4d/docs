@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.CHECK LOG FILE.Summary-->El comando **CHECK LOG FILE** muestra la caja de diálogo de visulización del archivo de historial actual de la base (accesible también vía la ventana del Centro de seguridad y mantenimiento):
+<!--REF #_command_.CHECK LOG FILE.Summary-->El comando **CHECK LOG FILE** muestra la caja de diálogo de visulización del archivo de historial actual de la base (accesible también vía la ventana del Centro de seguridad y mantenimiento)<!-- END REF-->:
 
 ![](../assets/en/commands/pict4835044.en.png)
 
-Esta caja de diálogo incluye el botón **Volver atrás** que permite cancelar las operaciones efectuadas a los datos de la base.<!-- END REF--> Para mayor información sobre esta caja de diálogo, por favor consulte el Manual de Diseño de 4D.
+Esta caja de diálogo incluye el botón **Volver atrás** que permite cancelar las operaciones efectuadas a los datos de la base. Para mayor información sobre esta caja de diálogo, por favor consulte el Manual de Diseño de 4D.
 
 **Nota:** como la función Volver atrás es relativamente poderosa, es recomendable restringir el acceso al comando CHECK LOG FILE de los administradores de la base..
 

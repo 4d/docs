@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.On Mobile App Action database method.Summary-->**ドキュメンテーションは移動しました**
+<!--REF #_command_.On Mobile App Action database method.Summary-->**ドキュメンテーションは移動しました**<!-- END REF-->
 
-このデータベースメソッドについてのドキュメンテーションはアップデートされ、 [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) へと移されました。
+このデータベースメソッドについてのドキュメンテーションはアップデートされ、 [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) へと移されました。
 
 ## 参照 
 

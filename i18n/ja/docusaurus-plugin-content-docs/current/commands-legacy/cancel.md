@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.CANCEL.Summary-->**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
+**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
 
-* [ADD RECORD](add-record.md) 、[MODIFY RECORD](modify-record.md) を使用して開始されたレコードのデータ新規あるいは更新入力をキャンセルする。<!-- END REF-->
+* [ADD RECORD](add-record.md) 、[MODIFY RECORD](modify-record.md) を使用して開始されたレコードのデータ新規あるいは更新入力をキャンセルする。
 * [DIALOG](../commands/dialog.md) コマンドで表示されたフォームをキャンセルする。
 * [DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) でレコードセレクションを表示したフォームを閉じる。
 * [Print form](../commands/print-form.md) コマンドで印刷されようとしているフォームの印刷をキャンセルする (後述)。
 
-データ入力のコンテキストで、**CANCEL** はキャンセルキー (**Esc**) を押したのと同じ動作をします。
+<!--REF #_command_.CANCEL.Summary-->データ入力のコンテキストで、**CANCEL** はキャンセルキー (**Esc**) を押したのと同じ動作をします。<!-- END REF-->
 
 **CANCEL** は一般的にメニューコマンド選択結果として実行されます。また**CANCEL** は"アクションなし"ボタンのオブジェクトメソッドで使用されます。
 

@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->**STRING LIST TO ARRAY**コマンドは以下の要素から構築される*strings*配列を生成します:
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->**STRING LIST TO ARRAY**コマンドは以下の要素から構築される*strings*<!-- END REF-->配列を生成します:
 
 * ストリングリスト (“STR#”) リソースに格納された、IDが*resID*の文字列、または
-* 開かれたXLIFFファイル中、'group'要素の'id'属性が*resID*である文字列 (後述の"XLIFFアーキテクチャとの互換性"を参照)。<!-- END REF-->
+* 開かれたXLIFFファイル中、'group'要素の'id'属性が*resID*である文字列 (後述の"XLIFFアーキテクチャとの互換性"を参照)。
 
 リソースが見つからない場合*strings*配列はそのまま変更されず、システム変数OKに0が設定されます。
 

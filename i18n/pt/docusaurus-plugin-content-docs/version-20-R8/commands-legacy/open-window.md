@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Open window.Summary-->Open window abre uma nova janela cujas dimensões são definidas pelos quatro primeiros parâmetros:  
+<!--REF #_command_.Open window.Summary-->Open window abre uma nova janela cujas dimensões são definidas pelos quatro primeiros parâmetros<!-- END REF-->:  
 
-* *esquerda* é a distância em pixels desde o lado esquerdo da janela da aplicação e o lado interior esquerdo da janela.<!-- END REF-->
+* *esquerda* é a distância em pixels desde o lado esquerdo da janela da aplicação e o lado interior esquerdo da janela.
 * *superior* é a distância em píxels entre a altura da janela da aplicação e a borda superior do interior da janela.
 * *direita* é a distância em píxels entre o lado esquerdo da janela da aplicação e o lado interior direito da janela.
 * *inferior* é a distância em píxels desde a parte superior da janela da aplicação e borda interior inferior da janela.

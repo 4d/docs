@@ -20,11 +20,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->### Etats en liste 
+### Etats en liste 
 
-La commande **QR SET INFO COLUMN** vous permet de définir les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->La commande **QR SET INFO COLUMN** vous permet de définir les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
 
 Passez dans *zone* la référence de la zone d'état rapide.
 
@@ -99,13 +99,13 @@ La zone d'état suivante est générée :
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CANCEL.Summary-->La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
+La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
 
-* annuler la création ou la modification d'un enregistrement ou un sous-enregistrement — dont les données ont été saisies à la suite d'un [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* ou *\_o\_MODIFY SUBRECORD*.<!-- END REF-->
+* annuler la création ou la modification d'un enregistrement ou un sous-enregistrement — dont les données ont été saisies à la suite d'un [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* ou *\_o\_MODIFY SUBRECORD*.
 * annuler un formulaire affiché par l'intermédiaire de la commande [DIALOG](../commands/dialog.md).
 * quitter un formulaire affichant une sélection d'enregistrements — à l'aide de [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
 * annuler l'impression d'une ligne sur le point d’être imprimée à l'aide de la commande [Print form](../commands/print-form.md) (voir ci-dessous).
 
-Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).   
+<!--REF #_command_.CANCEL.Summary-->Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).<!-- END REF-->   
 **CANCEL** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **CANCEL** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
 Cette commande peut également être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **CANCEL** et [ACCEPT](accept.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.  

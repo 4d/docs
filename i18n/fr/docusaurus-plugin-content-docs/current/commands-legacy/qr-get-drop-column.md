@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.QR Get drop column.Summary-->La commande **QR Get drop column** retourne une valeur indiquant l'emplacement auquel un “déposer” a été effectué dans *zone* :
+<!--REF #_command_.QR Get drop column.Summary-->La commande **QR Get drop column** retourne une valeur indiquant l'emplacement auquel un “déposer” a été effectué dans *zone* <!-- END REF-->:
 
-* Si la valeur est négative, elle indique un numéro de colonne (par exemple, -3 indique qu'un “déposer” a été effectué sur la colonne n° 3).<!-- END REF-->
+* Si la valeur est négative, elle indique un numéro de colonne (par exemple, -3 indique qu'un “déposer” a été effectué sur la colonne n° 3).
 * Si la valeur est positive, elle indique que le “déposer” a été effectué sur le séparateur situé devant la colonne (par exemple, 3 indique qu'un “déposer” a été effectué après la colonne n° 2). Gardez à l'esprit qu'un “déposer” ne peut pas être effectué devant une colonne existante.
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.

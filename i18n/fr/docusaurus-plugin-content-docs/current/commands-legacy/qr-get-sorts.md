@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels :
+<!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels<!-- END REF--> :
 
 * *tabColonnes*  
-Ce tableau contient toutes les colonnes auxquelles un ordre de tri a été associé.<!-- END REF-->
+Ce tableau contient toutes les colonnes auxquelles un ordre de tri a été associé.
 * *tabTris*  
 Chaque élément de ce tableau fournit l'ordre de tri courant de la colonne correspondante.  
 \- si *tabTris{$i}* vaut 1, le tri est croissant.  

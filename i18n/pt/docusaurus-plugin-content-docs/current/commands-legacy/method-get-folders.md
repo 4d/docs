@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.METHOD GET FOLDERS.Summary-->O comando **METHOD GET FOLDERS** devolve no array *arrayNoms*, os nomes das pastas criadas na página Início do Explorador de 4D:  
+<!--REF #_command_.METHOD GET FOLDERS.Summary-->O comando **METHOD GET FOLDERS** devolve no array *arrayNoms*, os nomes das pastas criadas na página Início do Explorador de 4D<!-- END REF-->:  
 ![](../assets/en/commands/pict837666.en.png)  
   
-Como os nomes das pastas devem ser únicos, a hierarquia não é devolvida neste array.<!-- END REF-->   
+Como os nomes das pastas devem ser únicos, a hierarquia não é devolvida neste array.   
   
 Pode limitar a lista de pastas passando uma cadeia de comparação no parâmetro *filtro*, neste caso, somente são devolvidas as pastas cujos nomes coincidam com o filtro. Pode utilizar o caracter @ para definir os filtros de tipo "começa por", "termina em" o "contém". Se passado uma cadeia vazia, o parâmetro *filtro* se ignora.   
   

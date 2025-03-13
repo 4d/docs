@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->La commande **GET REGISTERED CLIENTS** remplit deux tableaux :
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->La commande **GET REGISTERED CLIENTS** remplit deux tableaux <!-- END REF-->:
 
-* *listeClients*, qui contient la liste des clients “inscrits” à l’aide de la commande [REGISTER CLIENT](register-client.md).<!-- END REF-->
+* *listeClients*, qui contient la liste des clients “inscrits” à l’aide de la commande [REGISTER CLIENT](register-client.md).
 * *nbMéthodes*, qui fournit liste des “charges de travail” de chaque client. La charge de travail est le nombre de méthodes qu’un 4D Client doit encore exécuter, à la demande de la commande [EXECUTE ON CLIENT](execute-on-client.md).
 
 ## Exemple 1 

@@ -19,10 +19,10 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.CREATE INDEX.Summary-->O comando **CREATE INDEX** permite criar: 
+O comando **CREATE INDEX** permite criar: 
 
-* Um índice padrão em um ou mais campos (índice composto) ou
-* Um índice de palavras chaves em um campo.<!-- END REF-->
+* Um <!--REF #_command_.CREATE INDEX.Summary-->índice padrão em um ou mais campos (índice composto)<!-- END REF--> ou
+* Um índice de palavras chaves em um campo.
 O índice é criado para a tabela *minhaTabela* utilizando um ou mais campos determinados pelo array de ponteiros *arrayCampos*. Este array contém apenas uma linha se quiser criar um índice simples e dois ou mais quando quiser criar um índice composto (exceto no caso de um índice de palavras chaves). No caso dos índices compostos, a ordem dos campos no array é importante durante a construção do índice.  
   
 O parâmetro *tipoIndice* permite definir o tipo de índice a criar. Pode passar uma das seguintes constantes, que se encontram no tema *Tipo de Índice*:  

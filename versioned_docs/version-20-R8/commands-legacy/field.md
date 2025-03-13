@@ -22,9 +22,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Field.Summary-->The **Field** command has two forms:
+The **Field** command has two forms:
 
-* If you pass a table number in *tableNum* and a field number in fieldNum, **Field** returns a pointer to the field.<!-- END REF-->returns the field number of the field.
+* If you pass a table number in *tableNum* and a field number in *fieldNum*, **Field** returns a pointer to the field.
+* If you pass a field pointer in *fieldPtr*, **Field** <!--REF #_command_.Field.Summary-->returns the field number of the field<!-- END REF-->.
 
 ## Example 1 
 

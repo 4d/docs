@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.CANCEL.Summary-->El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
+El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
 
-* cancelar un registro nuevo o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md).<!-- END REF-->
+* cancelar un registro nuevo o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md).
 * cancelar un formulario mostrado por intermedio del comando [DIALOG](../commands/dialog.md).
 * salir de un formulario que muestra una selección de registros, utilizando [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
 * cancelar la impresión de un formulario que está a punto de ser impreso utilizando el comando [Print form](../commands/print-form.md) (ver a continuación).
 
-En el contexto de entrada de datos, **CANCEL** efectúa la misma acción que si el usuario hubiera presionado la tecla de cancelación (**Esc**).
+<!--REF #_command_.CANCEL.Summary-->En el contexto de entrada de datos, **CANCEL** efectúa la misma acción que si el usuario hubiera presionado la tecla de cancelación (**Esc**).<!-- END REF-->
 
 **CANCEL** se ejecuta con frecuencia como resultado de la selección de un comando de menú. **CANCEL** también se utiliza con frecuencia en el método de objeto de un botón “sin acción”.
 

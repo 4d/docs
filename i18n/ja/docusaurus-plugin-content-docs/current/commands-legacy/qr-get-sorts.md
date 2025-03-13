@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.QR GET SORTS.Summary-->QR GET SORTS コマンドは、次の2つの配列を作成します:
+<!--REF #_command_.QR GET SORTS.Summary-->QR GET SORTS コマンドは、次の2つの配列を作成します<!-- END REF-->:
 
 * *aColumns*  
-この配列には、ソート順が設定されているすべてのカラムが格納されます。<!-- END REF-->
+この配列には、ソート順が設定されているすべてのカラムが格納されます。
 * *aOrders*  
 この配列の各要素には、対応するカラムの並び替え順が格納されます。  
    * *aOrders{$i}*が1の場合、並び替え順は昇順です。  

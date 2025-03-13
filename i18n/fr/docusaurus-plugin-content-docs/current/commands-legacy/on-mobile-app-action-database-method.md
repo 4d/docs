@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.On Mobile App Action database method.Summary-->**Documentation déplacée**
+<!--REF #_command_.On Mobile App Action database method.Summary-->**Documentation déplacée**<!-- END REF-->
 
-La documentation de cette méthode base a été mise à jour et déplacée vers [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
+La documentation de cette méthode base a été mise à jour et déplacée vers [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
 
 ## Voir aussi 
 

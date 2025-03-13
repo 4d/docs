@@ -20,11 +20,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->### Informes en lista 
+### Informes en lista 
 
-El comando QR SET INFO COLUMN permite definir los parámetros de una columna existente.<!-- END REF--> 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->El comando QR SET INFO COLUMN permite definir los parámetros de una columna existente.<!-- END REF--> 
 
 *area* es la referencia del área del informe rápido.
 
@@ -104,13 +104,13 @@ Se genera la siguiente área de informe:
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *numColumna* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

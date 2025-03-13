@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CHECK LOG FILE.Summary-->La commande **CHECK LOG FILE** affiche la boîte de dialogue de visualisation du fichier d’historique courant de la base (également accessible via la fenêtre du Centre de sécurité et de maintenance) :
+<!--REF #_command_.CHECK LOG FILE.Summary-->La commande **CHECK LOG FILE** affiche la boîte de dialogue de visualisation du fichier d’historique courant de la base (également accessible via la fenêtre du Centre de sécurité et de maintenance) <!-- END REF-->:
 
 ![](../assets/en/commands/pict4835044.fr.png)
 
-Cette boîte de dialogue comporte le bouton **Revenir en arrière**, permettant d’annuler des opérations effectuées sur les données de la base.<!-- END REF--> Pour plus d’informations sur cette boîte de dialogue, reportez-vous au manuel Mode Développement de 4D.
+Cette boîte de dialogue comporte le bouton **Revenir en arrière**, permettant d’annuler des opérations effectuées sur les données de la base. Pour plus d’informations sur cette boîte de dialogue, reportez-vous au manuel Mode Développement de 4D.
 
 **Note :** La fonction de retour en arrière étant relativement puissante, il est conseillé de restreindre l’accès à la commande **CHECK LOG FILE** aux administrateurs de la base.
 

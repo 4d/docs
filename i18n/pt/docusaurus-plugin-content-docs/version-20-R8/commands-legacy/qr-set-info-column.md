@@ -22,9 +22,8 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->### List mode 
-
-O comando QR SET INFO COLUMN permite definir os parâmetros de uma coluna existente.<!-- END REF-->  
+### List mode
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->O comando QR SET INFO COLUMN permite definir os parâmetros de uma coluna existente.<!-- END REF-->  
   
 *area* é a referência da área do relatório rápido.  
   

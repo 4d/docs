@@ -17,10 +17,10 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon* a partir de: 
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon*<!-- END REF--> a partir de: 
 
 * Un array de número de registros absolutos *arrayReg* de la tabla *tabla*,
-* o un array de booleanos *arrayReg*.<!-- END REF--> En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](true.md "True")) o no ([False](false.md "False")) a *nomCon*.
+* o un array de booleanos *arrayReg*. En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](true.md "True")) o no ([False](false.md "False")) a *nomCon*.
 
 Cuando utilice este comando y pasa un array entero largo en *arrayReg*, todos los números en el array representan la lista de números de registros que está en *nomCon*. Si un número es inválido (por ejemplo, si un registro no ha sido creado), se genera el error -10503.
 
