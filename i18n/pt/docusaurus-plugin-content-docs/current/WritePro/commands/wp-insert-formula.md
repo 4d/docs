@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
 
@@ -65,7 +65,7 @@ Keep in mind that, when called, the formula object is evaluated within the conte
 
 :::
 
-#### Exemplo 1
+## Exemplo 1
 
 To replace all current date formulas with formatted strings:
 
@@ -91,7 +91,7 @@ To replace all current date formulas with formatted strings:
  End for each
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to use a formula name for the customer name:
 
@@ -115,7 +115,7 @@ Resultados:
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### Exemplo 3
+## Exemplo 3
 
 You want to highlight a formula in yellow:
 
@@ -132,7 +132,7 @@ Resultados:
 
 ![](../../assets/en/WritePro/commands/WPpic1.png)
 
-#### Veja também
+## Veja também
 
 *Managing formulas*\
 [WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
