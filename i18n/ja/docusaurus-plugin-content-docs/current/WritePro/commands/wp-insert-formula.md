@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Insert formula** コマンドは、<!--REF #_command_.WP Insert formula.Summary-->*targetObj* 引数で指定したターゲット内に*formula* 引数のフォーミュラを、*mode* 引数で指定したモードで挿入しその結果のテキストレンジを返します。<!-- END REF-->
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題 1
+## 例題 1
 
 全てのCurrent date フォーミュラを、フォーマットされた文字列で置き換えたい場合を考えます:
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 例題 2
+## 例題 2
 
 顧客の名前にフォーミュラによる名前を使用したい場合を考えます:
 
@@ -115,7 +115,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### 例題 3
+## 例題 3
 
 フォーミュラを黄色でハイライトしたい場合を考えます:
 
@@ -132,7 +132,7 @@ WP SET ATTRIBUTES($range1; wk background color; "yellow")
 
 ![](../../assets/en/WritePro/commands/WPpic1.png)
 
-#### 参照
+## 参照
 
 *Managing formulas*\
 [WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
