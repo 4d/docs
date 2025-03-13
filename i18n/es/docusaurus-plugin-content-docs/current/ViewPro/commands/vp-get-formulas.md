@@ -14,7 +14,7 @@ title: VP Get formulas
 | rangeObj   | Object     | ->                          | Objeto rango                        |                  |
 | Resultado  | Collection | <- | Colección de valores de una fórmula | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera las fórmulas de un *rangeObj* designado<!-- END REF -->.
 
@@ -25,7 +25,7 @@ La colección devuelta es bidimensional:
 - La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección representa una línea.
 - Cada subcolección define los valores de las celdas para la línea. The first-level collection contains subcollections of formulas.
 
-#### Ejemplo
+## Ejemplo
 
 Quiere recuperar las fórmulas de las columnas Sum y Average de este documento:
 
@@ -40,7 +40,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[2]=[Sum(B4:D4),Average(C4:D4)]
 ```
 
-#### Ver también
+## Ver también
 
 [VP Get formula](vp-get-formula.md)<br/>
 [VP Get values](vp-get-values.md)<br/>
