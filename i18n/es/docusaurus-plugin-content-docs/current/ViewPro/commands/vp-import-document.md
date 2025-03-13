@@ -23,7 +23,7 @@ title: VP IMPORT DOCUMENT
 | filePath   | Text   | -> | Ruta de acceso del documento                 |                  |
 | paramObj   | Object | -> | Opciones de importación                      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa y muestra el documento designado por *filePath* en el área de 4D View Pro *vpAreaName*<!-- END REF -->. El documento importado sustituye a los datos ya insertados en el área.
 
@@ -79,7 +79,7 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 
 :::
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Desea importar un documento 4D View Pro por defecto almacenado en el disco, al abrir el formulario:
 
@@ -91,7 +91,7 @@ If(Form event code=On VP Ready) //4D View Pro area loaded and ready
 End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Desea importar un documento Microsoft Excel protegido por contraseña a un área 4D View Pro:
 
@@ -116,7 +116,7 @@ Else
 End if
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Quiere importar un archivo `.txt` que utiliza una coma (",") como delimitador:
 
@@ -131,7 +131,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 Este es el resultado:
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv-result.png)
 
-#### Ver también
+## Ver también
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP NEW DOCUMENT](vp-new-document.md)<br/>
