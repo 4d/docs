@@ -15,7 +15,7 @@ title: VP Export to object
 | options    | Object | ->                          | Options d'export                        |                  |
 | Résultat   | Object | <- | Objet 4D View Pro                       | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> retourne l'objet 4D View Pro attaché à la zone 4D View Pro *vpAreaName*<!-- END REF -->. Vous pouvez utiliser cette commande par exemple pour stocker la zone 4D View Pro dans un champ objet de la base de données 4D.
 
@@ -30,7 +30,7 @@ Dans le paramètre *options*, vous pouvez passer les options d'exportation suiva
 
 Pour plus d'informations sur les objets 4D View Pro, veuillez vous référer au paragraphe [Objet 4D View Pro](../configuring.md#4d-view-pro-objet).
 
-#### Exemple 1
+## Exemple 1
 
 Vous souhaitez lire la propriété "version" de la zone 4D View Pro courante :
 
@@ -42,7 +42,7 @@ $vpAreaObj:=VP Export to object("vpArea")
 $vpVersion:=$vpAreaObj.version
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Vous souhaitez exporter la zone, en excluant les informations de formatage :
 
@@ -51,7 +51,7 @@ var $vpObj : Object
 $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 ```
 
-#### Voir également
+## Voir également
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
