@@ -215,7 +215,7 @@ El método devuelve Null si:
 - *msgNumber* designa un mensaje inexistente,
 - el mensaje fue marcado para borrado utiizando [`.delete()`](#delete).
 
-**Objeto devuelto**
+**Returned object**
 
 `.getMail()` devuelve un [objeto `Email`](EmailObjectClass.md#objeto-email).
 
