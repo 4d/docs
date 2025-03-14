@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.READ WRITE.Summary-->**READ WRITE** place *laTable* en mode lecture/écriture pour le process dans lequel la commande a été appelée.<!-- END REF--> Si vous passez le paramètre optionnel *\**, toutes les tables sont placées en mode lecture/écriture.
 
@@ -25,13 +25,13 @@ Utilisez **READ WRITE** lorsque vous devez modifier un enregistrement et sauvega
 
 **Note :** Cette commande n'est pas rétroactive. Les privilèges de lecture/écriture pour un enregistrement sont définis par ceux de la table au moment où l'enregistrement est chargé. Pour qu'un enregistrement soit chargé en mode lecture/écriture alors que la table est en mode lecture seulement, vous devez placer la table en mode lecture/écriture avant que l'enregistrement soit chargé.
 
-#### Voir aussi 
+## Voir aussi 
 
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

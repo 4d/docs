@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Find XML element by ID.Summary-->El comando DOM Find XML element by ID busca, al interior de un documento XML, el elemento cuyo atributo id sea igual al valor pasado en el parámetro *id*.<!-- END REF-->  
   
@@ -25,11 +25,11 @@ El comando devuelve en resultado la referencia XML del elemento encontrado.
   
 **Advertencia**: en XML, el atributo id asocia un identificador único a cada elemento del documento. El valor del atributo id debe ser un nombre XML válido y debe ser único en el documento XML (restricción de validez). Para que el comando DOM Find XML element by ID funcione correctamente, esta restricción debe respetarse; de lo contrario el resultado es aleatorio (el comando devuelve la referencia al primer elemento encontrado en el documento).  
 
-#### Ver también 
+## Ver también 
 
 [DOM Find XML element](dom-find-xml-element.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

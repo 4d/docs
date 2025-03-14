@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST SET TEXT.Summary-->El comando ST SET TEXT inserta el texto pasado en el parámetro *nuevText* en el campo o variable de texto con estilo designado por el parámetro *objeto*.<!-- END REF--> Este comando sólo se aplica al texto sin formato del parámetro de *objeto*, sin modificar las etiquetas de estilo que contiene. Se puede utilizar para modificar por programación, texto con estilo en la pantalla. 
 
@@ -50,13 +50,13 @@ Los parámetros opcionales *inicioSel* y *finSel* permiten designar una selecci�
 
 **Nota:** si *inicioSel* es superior a *finSel*, el texto no se modifica y la variable OK toma el valor 0 (excepto cuando *finSel* vale 0, ver arriba). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de ejecutar este comando, la variable OK toma el valor 1 si no se presenta ningún error; de lo contrario, toma el valor 0\. Este es el caso particularmente cuando las etiquetas de estilo no se evalúan correctamente (etiquetas incorrectas o faltantes).   
 
 En caso de error, no cambia la variable. Cuando ocurre un error en una variable cuando se está evaluando el texto, 4D transforma el texto en texto plano; como resultado, los caracteres <, > y & se convierten en entidades HTML.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Si quiere reemplazar el texto con estilo seleccionado por el usuario con el contenido de una variable.
 
@@ -80,17 +80,17 @@ El campo y su contenido son los siguientes:
 
 ![](../assets/en/commands/pict579075.es.png) ![](../assets/en/commands/pict579077.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Consulte el ejemplo del comando [ST SET PLAIN TEXT](st-set-plain-text.md). 
 
-#### Ver también 
+## Ver también 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

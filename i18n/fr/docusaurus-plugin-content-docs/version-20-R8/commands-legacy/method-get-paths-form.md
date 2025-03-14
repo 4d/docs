@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->La commande **METHOD GET PATHS FORM** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de tous les objets des formulaires, ainsi que des méthodes formulaire.<!-- END REF--> Les méthodes formulaire sont libellées {formMethod}. 
 
@@ -37,7 +37,7 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 
 Si la commande détecte un nom d'objet dupliqué, l'erreur -9802 est générée ("Chemin d'objet non unique"). Il est recommandé dans ce cas d'utiliser le CSM afin de vérifier la structure de la base de données. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Liste de tous les objets du formulaire "input" de la table \[Emp\]. A noter que les méthodes formulaire table (et les méthodes formulaire projet) sont traitées comme des objets appartenant au formulaire :
 
@@ -49,7 +49,7 @@ Liste de tous les objets du formulaire "input" de la table \[Emp\]. A noter que 
   // [tableForm]/input/bCancel -> Méthode objet
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Liste des objets du formulaire projet "dial" :
 
@@ -57,7 +57,7 @@ Liste des objets du formulaire projet "dial" :
  METHOD GET PATHS FORM(tabChemins;"dial")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d’un composant : 
 
@@ -65,11 +65,11 @@ Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d
  METHOD GET PATHS FORM(([Emp];tabChemins;"input@";*)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM GET NAMES](form-get-names.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

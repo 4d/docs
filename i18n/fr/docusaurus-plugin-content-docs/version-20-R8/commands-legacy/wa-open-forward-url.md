@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->La commande **WA OPEN FORWARD URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL suivant dans la séquence d’URLs ouverts.<!-- END REF--> 
 
 S’il n’y a pas d’URL suivant (c’est-à-dire si l’utilisateur n’a jamais effectué de retour à l’URL précédent), la commande ne fait rien. Vous pouvez tester la disponibilité d’un URL suivant à l’aide de la commande [WA Forward URL available](wa-forward-url-available.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

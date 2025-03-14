@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get elements.Summary-->La commande **WP Get elements** retourne une collection d'objets contenant des paragraphes, images, tableaux et/ou lignes de tableaux.<!-- END REF-->
 
@@ -58,7 +58,7 @@ Les éléments contenus dans la collection retournée sont classés différemmen
 
 Si vous souhaitez par exemple alterner la couleur de fond des paragraphes présents dans le corps d'un document, passez l'élément "body" (et non le document) dans l'*objCible*, afin de vous assurer que l'ordre des éléments de la collection corresponde à celui des paragraphes du document.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez récupérer une collection de tous les paragraphes dans un document :
 
@@ -68,7 +68,7 @@ Vous voulez récupérer une collection de tous les paragraphes dans un document 
   //retourne une collection contenant seulement les éléments paragraphes
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
  Vous souhaitez alterner l'alignement et la couleur des paragraphes dans un document :
 
@@ -103,7 +103,7 @@ Vous voulez récupérer une collection de tous les paragraphes dans un document 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

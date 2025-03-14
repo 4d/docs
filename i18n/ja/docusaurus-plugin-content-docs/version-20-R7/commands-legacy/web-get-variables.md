@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->**WEB GET VARIABLES**コマンドは、サブミットされたWebフォームにある変数の名前と値をテキスト配列 *nameArray*と*valueArray* に代入します。<!-- END REF-->
 
@@ -35,7 +35,7 @@ URLのタイプやWebサーバーに送られたフォーム (POSTまたはGET�
 * POST: 通常Webサーバやデータベースにデータを追加する際に使用します。
 * GET: 通常Webサーバやデータベースから抽出されたデータをリクエストする際に使用します。
 
-#### 例題 
+## 例題 
 
 フォームには、値 "ROBERT" と "DALLAS" を持つ vNameフィールドとvCityフィールドがそれぞれあります。そのフォームに関連するアクションは、"/4DACTION/WEBFORM" です。
 
@@ -61,11 +61,11 @@ WEBFORMメソッド以下のように記述します。
 
 変数vNAMEは、ROBERTを格納し、変数vCITYは、DALLASを格納します。.
 
-#### 参照 
+## 参照 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

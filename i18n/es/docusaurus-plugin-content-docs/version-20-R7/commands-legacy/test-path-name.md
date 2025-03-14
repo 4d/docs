@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Test path name.Summary-->La función Test path name verifica si un documento o carpeta cuyo nombre o ruta de acceso se pasa en *rutaAcceso* está presente en el disco.<!-- END REF--> Puede pasar una ruta de acceso relativa o absoluta, expresada en la sintaxis del sistema actual. 
 
@@ -30,7 +30,7 @@ Si se encuentra un documento, Test path name devuelve 1\. Si se encuentra una ca
   
 Si no se encuentra ningún documento o carpeta, Test path name devuelve un valor negativo (por ejemplo -43 para "Archivo no encontrado").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo prueba la presencia del documento “Diario” en la carpeta de la base, si no lo encuentra lo crea:
 
@@ -43,7 +43,7 @@ El siguiente ejemplo prueba la presencia del documento “Diario” en la carpet
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
@@ -51,7 +51,7 @@ El siguiente ejemplo prueba la presencia del documento “Diario” en la carpet
 [Object to path](object-to-path.md)  
 [Path to object ](path-to-object.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

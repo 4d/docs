@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Day number.Summary-->La fonction **Day number** retourne un numéro représentant le jour de la semaine auquel *laDate* correspond.<!-- END REF-->Si une date nulle est passée à **Day number**, la fonction retourne 2\. 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Note :** **Day number** retourne une valeur comprise entre 1 et 7\. Pour obtenir le numéro du jour dans le sens "date du mois", utilisez la fonction [Day of](day-of.md). 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est une fonction qui retourne le jour d'aujourd'hui sous forme de chaîne :
 
@@ -56,11 +56,11 @@ L'exemple suivant est une fonction qui retourne le jour d'aujourd'hui sous forme
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Day of](day-of.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

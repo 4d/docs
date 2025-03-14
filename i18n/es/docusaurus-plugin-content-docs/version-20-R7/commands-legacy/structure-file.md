@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Structure file.Summary-->El comando **Structure file** devuelve la ruta de acceso del archivo de estructura de la base en la cual está trabajando actualmente.<!-- END REF-->
 
@@ -35,7 +35,7 @@ El parámetro opcional \* es útil en el caso de una arquitectura que utilice co
          * en el caso de un componente instalado en forma de carpeta/paquete .4dbase, el comando devuelve la ruta de acceso del archivo al interior de esta carpeta/paquete.
 * Cuando el comando se llama desde un método de una base local, siempre devuelve la ruta de acceso del archivo de estructura/proyecto de la base local, sin importar si se pasa o no el parámetro \*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo muestra el nombre y la ubicación del archivo de estructura que está utilizando:
 
@@ -52,7 +52,7 @@ Este ejemplo muestra el nombre y la ubicación del archivo de estructura que est
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo puede utilizarse para saber si el método se llama desde un componente:
 
@@ -62,13 +62,13 @@ El siguiente ejemplo puede utilizarse para saber si el método se llama desde un
   // $0=True si el método es llamado desde un componente
 ```
 
-#### Ver también 
+## Ver también 
 
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

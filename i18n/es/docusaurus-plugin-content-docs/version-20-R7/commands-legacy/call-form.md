@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Gestión de errores 
+## Gestión de errores 
 
 <!--REF #_command_.CALL FORM.Summary-->El comando **CALL FORM** ejecuta el código designado en *formula* con el(los) *param*(s) opcional(es) en el contexto de un formulario que se muestra en una *ventana*, independientemente del proceso al que pertenece la ventana.<!-- END REF-->
 
@@ -34,7 +34,7 @@ También puede pasar parámetros a la fórmula utilizando uno o más parámetros
 * Los punteros a las variables, particularmente las variables locales y de proceso, no se recomiendan ya que estas variables pueden no estar definidas en el momento en que el método de proceso acceda.
 * Si pasa un parámetro de tipo Objeto o Colección, 4D crea una copia del objeto o de la colección en el proceso de destino (en lugar de una referencia) si el formulario está en un proceso diferente del que llama al comando **CALL FORM**.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Puede utilizar el comando **CALL FORM** para pasar configuraciones personalizadas a un formulario, por ejemplo valores de configuración, sin tener que utilizar variables proceso:
 
@@ -44,7 +44,7 @@ Puede utilizar el comando **CALL FORM** para pasar configuraciones personalizada
  DIALOG("form")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere abrir dos ventanas de diálogo diferentes en el mismo formulario, pero con diferentes colores de fondo y diferentes mensajes. También desea enviar mensajes después y mostrarlos en cada ventana de diálogo.
 
@@ -96,13 +96,13 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
 
 ![](../assets/en/commands/pict2896833.en.png)
 
-#### Ver también 
+## Ver también 
 
   
 [CALL WORKER](call-worker.md)  
 [DIALOG](dialog.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

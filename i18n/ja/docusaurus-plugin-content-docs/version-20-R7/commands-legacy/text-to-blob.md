@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.TEXT TO BLOB.Summary-->**TEXT TO BLOB**コマンドはテキスト値 *text*をBLOB *blob*に書き込みます。<!-- END REF-->引数を使用して、書き込むテキスト値の内部フォーマットと文字セットを指定できます。これを行うには、*BLOB*テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します: 
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### 例題 
+## 例題 
 
 ```4d
  SET BLOB SIZE(vxBlob;0)
@@ -93,7 +93,7 @@ displayed_sidebar: docs
  TEXT TO BLOB(vtValue;vxBlob;UTF8 text without length) // BLOBのサイズは5 bytes
 ```
 
-#### 参照 
+## 参照 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

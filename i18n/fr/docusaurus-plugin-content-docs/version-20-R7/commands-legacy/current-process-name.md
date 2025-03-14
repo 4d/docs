@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current process name.Summary-->La commande **Current process name** retourne le nom du process depuis lequel elle est appelée.<!-- END REF-->
 
 Cette commande est particulièrement utile dans le contexte des process workers (voir la section *A propos des workers*). Lorsque vous écrivez du code générique, vous pouvez l'utiliser afin d'identifier le process worker à appeler. 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez appeler un process worker et lui passer comme paramètre le nom du process appelant :
 
@@ -27,13 +27,13 @@ Vous voulez appeler un process worker et lui passer comme paramètre le nom du p
  CALL WORKER(1;"monMessage";Current process name;"Début :"+String(vMax))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *A propos des workers*  
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

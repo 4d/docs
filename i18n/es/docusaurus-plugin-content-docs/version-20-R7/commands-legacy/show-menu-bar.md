@@ -12,23 +12,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SHOW MENU BAR.Summary-->El comando SHOW MENU BAR hace visible la barra de menús.<!-- END REF--> 
 
 Si la barra de menús ya era visible, el comando no hace nada. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [HIDE MENU BAR](hide-menu-bar.md "HIDE MENU BAR").
 
-#### Ver también 
+## Ver también 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

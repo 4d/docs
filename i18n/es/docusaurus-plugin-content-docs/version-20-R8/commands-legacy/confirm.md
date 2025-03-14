@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CONFIRM.Summary-->El comando CONFIRM muestra una caja de diálogo de confirmación compuesta de un icono, un mensaje, un botón OK, y un botón Cancelar.<!-- END REF-->
 
@@ -27,7 +27,7 @@ El botón OK tiene la propiedad [botón por defecto](../FormObjects/propertiesAp
 
 **Consejo:** no llame al comando CONFIRM desde un método de formulario o de objeto que maneje los eventos de formulario On Activate o On Deactivate; esto provocará un bucle infinito.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La línea:
 
@@ -45,7 +45,7 @@ Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
 ![](../assets/en/commands/pict4225029.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La línea:
 
@@ -57,7 +57,7 @@ Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
 ![](../assets/en/commands/pict4225038.en.png)
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted está desarrollando una aplicación 4D para el mercado internacional. Escribió sus cadenas de interfaz junto con sus traducciones al lenguaje objetivo en archvos XLIFF. Al hacer esto, el código:
 
@@ -75,7 +75,7 @@ Mostrará la siguiente caja de diálogo de confirmación:
 
 **Nota:** Para más información sobre la localización de la base de datos xliff, consulte la sección *Apéndice B: Arquitectura XLIFF*. 
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 La línea:
 
@@ -88,12 +88,12 @@ Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
 ![](../assets/en/commands/pict4225058.en.png)
 
-#### Ver también 
+## Ver también 
 
 [ALERT](alert.md)  
 [Request](request.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

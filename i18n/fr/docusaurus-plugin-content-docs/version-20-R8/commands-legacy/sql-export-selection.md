@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->La commande **SQL EXPORT SELECTION** exporte au format SQL les enregistrements de la sélection courante de la table 4D désignée par le paramètre *laTable*.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

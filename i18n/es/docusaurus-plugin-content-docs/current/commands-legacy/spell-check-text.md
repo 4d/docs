@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->El comando **SPELL CHECK TEXT** verifica el contenido del parámetro *texto* a partir del carácter *posVerif* y devuelve la posición de la primera palabra desconocida encontrada (si la hay).<!-- END REF-->
 
@@ -27,7 +27,7 @@ Si la verificación inicia sin error y se encuentra una palabra desconocida, la 
 
 **Note macOS:** bajo macOS, cuando el corrector nativo se activa, este comando no soporta la corrección gramatical. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Queremos contar el número posible de errores en un texto:
 
@@ -48,12 +48,12 @@ Queremos contar el número posible de errores en un texto:
   // Al final $errCount=Size of array($tErrors)
 ```
 
-#### Ver también 
+## Ver también 
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->El comando DOM GET XML ELEMENT NAME devuelve en el parámetro *nomElement*, el nombre del elemento XML designado por *elementRef*.<!-- END REF-->. Si el tipo de variable *nomElement* no está definido, el tipo texto se utiliza de manera predeterminada.
 
 Para mayor información sobre los nombres de elementos XML, consulte la sección *Presentación de los comandos XML DOM*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método devuelve el nombre del elemento $xml\_Element\_Ref:
 
@@ -31,17 +31,17 @@ Este método devuelve el nombre del elemento $xml\_Element\_Ref:
  DOM GET XML ELEMENT NAME($xml_Element_Ref;$nom)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [DOM SET XML ELEMENT NAME](dom-set-xml-element-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Locked.Summary-->**Locked** teste si l'enregistrement courant de *laTable* est verrouillé.<!-- END REF--> Cette fonction vous permet de savoir si un enregistrement est verrouillé ou non, et donc de réagir de manière appropriée, par exemple en laissant à l'utilisateur le choix d'attendre que l'enregistrement soit libéré ou d'annuler l'opération.
 
@@ -28,14 +28,14 @@ Lorsque vous tentez de charger un enregistrement qui a été supprimé, **Locked
 
 Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont souvent appelées pour tester la disponibilité des enregistrements. Si un enregistrement est verrouillé, il suffit d'annuler la transaction.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

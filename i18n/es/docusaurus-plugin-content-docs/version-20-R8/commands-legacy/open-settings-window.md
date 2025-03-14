@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->El comando **OPEN SETTINGS WINDOW** abre la caja de diálogo de Preferencias 4D o las Propiedades de la base actual y muestra los parámetros o la página correspondiente a la llave pasada en el parámetro *selector*.<!-- END REF-->
 
@@ -102,7 +102,7 @@ Llaves adicionales en modo "Propiedades usuario para archivo de datos":
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
   
 Apertura de la página “Métodos” de las Preferencias 4D”:   
@@ -111,7 +111,7 @@ Apertura de la página “Métodos” de las Preferencias 4D”:
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Acceso a los parámetros de los atajos de teclado en las Propiedades de la base con bloqueo de otras propiedades:   
 
@@ -119,7 +119,7 @@ Acceso a los parámetros de los atajos de teclado en las Propiedades de la base 
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Apertura de las Propiedades de la base en la primera página:   
 
@@ -127,7 +127,7 @@ Apertura de las Propiedades de la base en la primera página:
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Acceso a la página interfaz de las Propiedades de la base en modo "Propiedades usuario":
 
@@ -135,12 +135,12 @@ Acceso a la página interfaz de las Propiedades de la base en modo "Propiedades 
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la caja de diálogo Preferencias/Propiedades se valida, la variable sistema OK devuelve 1; si se anula, OK devuelve 0.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

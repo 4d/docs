@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->El comando Get menu item modifiers devuelve los modificadores adicionales asociados a los atajos de teclado estándar de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->
 
@@ -43,16 +43,16 @@ Si pasa una referencia de menú, el parámetro *proceso* es inútil y será igno
 
 Si pasa un número de menú, el comando tomará el menú correspondiente en la barra de menús principal del proceso actual. Si quiere designar otro proceso, pase su número en el parámetro opcional *proceso*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [Get menu item key](get-menu-item-key.md "Get menu item key"). 
 
-#### Ver también 
+## Ver también 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

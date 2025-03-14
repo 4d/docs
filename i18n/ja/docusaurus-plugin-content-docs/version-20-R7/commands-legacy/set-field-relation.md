@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET FIELD RELATION.Summary-->**SET FIELD RELATION** コマンドを使用すると、デザインモードのリレートプロパティウィンドウで設定した初期状態が何であれ、データベースの各リレートの自動/マニュアルの状態を個別に設定できます。<!-- END REF--> 
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **Note:** [SET AUTOMATIC RELATIONS](set-automatic-relations.md)コマンドに対して[True](true.md "True") を同じセッション中に渡したとき、**SET FIELD RELATION**への呼び出しは、それが[SET AUTOMATIC RELATIONS](set-automatic-relations.md)の前にあろうと後ろにあろうと無視されます。自動モードをロックして**SET FIELD RELATION**への呼び出しを有効化するためには、[SET AUTOMATIC RELATIONS](set-automatic-relations.md)に[False](false.md "False") を渡します。
 
-#### 例題 
+## 例題 
 
 以下のコードを実行すると、クイックレポートエディター内において、有用なリレートだけを自動に設定できるようになります:
 
@@ -50,14 +50,14 @@ displayed_sidebar: docs
  QR REPORT([Invoices];Char(1))
 ```
 
-#### 参照 
+## 参照 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

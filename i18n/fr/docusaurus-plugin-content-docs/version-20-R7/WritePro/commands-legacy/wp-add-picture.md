@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Add picture.Summary-->La commande **WP Add picture** ancre *image* à un emplacement fixe dans *wpDoc* et retourne sa référence.<!-- END REF--> La référence retournée peut alors être passée à la commande [WP SET ATTRIBUTES](wp-set-attributes.md) pour déplacer *image* à n'importe quel endroit dans *wpDoc* (page, section, en-tête, pied, etc.) avec une couche définie, taille, etc. 
 
@@ -41,7 +41,7 @@ L'emplacement, la couche (en ligne, devant/derrière le texte), la visibilité, 
 
 **Note :** La commande [WP Selection range](wp-selection-range.md) retourne un objet *référence image* si une image ancrée est sélectionnée, et un *objet plage* si une image en ligne est sélectionnée. Vous pouvez vérifier si l'objet sélectionné est un objet image avec l'attribut wk type. Si sa valeur = 2, alors c'est un objet image, sinon c'est un objet plage (valeur = 0).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez ajouter une image avec les paramètrages par défaut, en utilisant un chemin d'accès.
 
@@ -54,7 +54,7 @@ Le résultat est :
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez ajouter une image retaillée, centrée et ancrée au papier :
 
@@ -71,7 +71,7 @@ Le résultat est :
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez utiliser une expression de type champ pour ajouter une image ancrée dans un document affichant du texte provenant de la base de données :
 
@@ -86,7 +86,7 @@ Vous souhaitez utiliser une expression de type champ pour ajouter une image ancr
   
 ![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
   
 *Manipuler des images*  

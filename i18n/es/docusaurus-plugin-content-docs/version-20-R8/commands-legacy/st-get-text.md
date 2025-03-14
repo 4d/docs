@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST Get text.Summary-->El comando ST Get text devuelve el texto con estilo encontrado en el campo o variable de texto designado por el parámetro *objeto*.<!-- END REF--> 
 
@@ -49,19 +49,19 @@ Los parámetros opcionales *inicioSel* y *finSel* permiten designar una selecci�
   
 Si los valores de *inicioSel* y *finSel* son iguales o si *inicioSel* es mayor que *finSel*, se devuelve un error.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de ejecutar este comando, la variable OK toma el valor 1 si no se presenta ningún error; de lo contrario, toma el valor 0\. Este es el caso particularmente cuando las etiquetas de estilo no se evalúan correctamente (etiquetas incorrectas o faltantes).   
 
 En caso de error, no cambia la variable. Cuando ocurre un error en una variable cuando se está evaluando el texto, 4D transforma el texto en texto plano; como resultado, los caracteres <, > y & se convierten en entidades HTML.
 
-#### Ver también 
+## Ver también 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

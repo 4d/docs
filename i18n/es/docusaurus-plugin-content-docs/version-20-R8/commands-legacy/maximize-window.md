@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->El comando MAXIMIZE WINDOW provoca el zoom de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si se omite este parámetro, el efecto es el mismo pero se aplica a todas las ventanas de la aplicación (Windows) o de la ventana del primer plano del proceso actual (Mac OS). 
 
@@ -47,7 +47,7 @@ Zoom en Mac OS
 * El zoom se basa en el contenido de la ventana; así, el comando debe llamarse en un contexto en el que se definen el contenido de la ventana, por ejemplo, en un método formulario. De lo contrario, el comando no hace nada.
 * La ventana está dimensionada en su tamaño "máximo". Si la ventana es un formulario cuyo tamaño se define en las Propiedades del formulario, el tamaño de la ventana se establece en esos valores.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere que su formulario se abra en una ventana "abierta totalmente". Para alcanzar esto, usted coloca el siguiente código en el método de formulario:
 
@@ -56,7 +56,7 @@ Usted quiere que su formulario se abra en una ventana "abierta totalmente". Para
  MAXIMIZE WINDOW
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo ilustra cómo las restricciones de tamaño se manejan en Windows (modo MDI). El siguiente formulario tiene una restricción de tamaño (ancho máximo=400):
 
@@ -76,13 +76,13 @@ En este contexto, si el usuario hace clic en el botón:
 
 ![](../assets/en/commands/pict1476363.en.png)
 
-#### Ver también 
+## Ver también 
 
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

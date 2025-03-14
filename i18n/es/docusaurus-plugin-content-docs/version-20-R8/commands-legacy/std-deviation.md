@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Std deviation.Summary-->**Std deviation** devuelve la desviación estándar de *series*.<!-- END REF-->   
   
@@ -22,7 +22,7 @@ Si *series* es un campo indexado, el índice se utiliza para calcular la desviac
 
 Puede pasar en *series* un array (de una o dos dimensiones). En este caso, el array debe ser de tipo Entero, Entero largo o Real.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo es un método de objeto para la variable *vDesv*. El método de objeto asigna la desviación estándar de una serie de datos a *vDesv*:
 
@@ -43,7 +43,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
 
 **Nota:** el parámetro del comando [BREAK LEVEL](break-level.md "BREAK LEVEL") debe ser igual al número de rupturas de su informe. Para mayor información sobre rupturas, consulte los comandos de impresión. 
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo obtiene la desviación estándar de una serie de valores ubicados en un array: 
 
@@ -54,14 +54,14 @@ Este ejemplo obtiene la desviación estándar de una serie de valores ubicados e
  vStdDev:=Std deviation($ArrGrades)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

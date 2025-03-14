@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.After.Summary-->**After** devuelve True para el ciclo de ejecución After.<!-- END REF-->
 
@@ -21,11 +21,11 @@ Para que el ciclo de ejecución **After** se genere, asegúrese de que la propie
 
 **Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Validate.
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

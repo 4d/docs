@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Drop database method.Summary-->La **On Drop database method** est disponible dans les applications 4D en mode local ou distant.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Cette méthode base est exécutée automatiquement en cas de déposer d’objets
 
 Sur Mac, il est nécessaire de maintenir les touches **Option**+**Commande** enfoncées pendant le déposer afin que la méthode base soit appelée. 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet d’ouvrir un document 4D Write déposé en-dehors de tout formulaire :
 
@@ -41,6 +41,6 @@ Cet exemple permet d’ouvrir un document 4D Write déposé en-dehors de tout fo
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Glisser-Déposer*  

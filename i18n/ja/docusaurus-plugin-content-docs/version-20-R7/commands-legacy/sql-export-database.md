@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->**SQL EXPORT DATABASE**コマンドはデータベースのすべてのテーブルのすべてのレコードをSQLフォーマットで書き出します。<!-- END REF-->SQLではこのグローバルな書き出し処理は"ダンプ"と呼ばれます。  
   
@@ -52,11 +52,11 @@ displayed_sidebar: docs
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 参照 
+## 参照 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

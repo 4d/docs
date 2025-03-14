@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST GET URL.Summary-->La commande **ST GET URL** retourne le libellé et l’adresse du premier URL détecté dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -46,7 +46,7 @@ Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une
 
 **Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-#### Exemple 
+## Exemple 
 
 Sur un événement double-clic, vous vérifiez que vous êtes bien en présence d’un URL, et dans ce cas affichez un dialogue où vous avez récupéré ses valeurs afin de permettre à l’utilisateur de le modifier :
 
@@ -67,11 +67,11 @@ Sur un événement double-clic, vous vérifiez que vous êtes bien en présence 
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST INSERT URL](st-insert-url.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

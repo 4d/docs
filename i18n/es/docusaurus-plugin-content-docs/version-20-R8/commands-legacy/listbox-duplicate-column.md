@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->El comando **LISTBOX DUPLICATE COLUMN** duplica la columna definida por los parámetros *objeto* y *\** por programación en el contexto del formulario ejecutado (Modo Aplicación).<!-- END REF--> El formulario original, generado en modo Diseño no se modifica. 
 
@@ -56,7 +56,7 @@ Para ello, **LISTBOX DUPLICATE COLUMN** acepta un puntero **Nil** (**\->\[\]**) 
   
 Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir el tipo del array y la inserción de elementos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En un list box de tipo array, queremos duplicar la columna "Nombre", lista para la entrada:
 
@@ -74,7 +74,7 @@ Aquí está el código del botón:
   
 Al hacer clic en el botón, aparece el list box así:![](../assets/en/commands/pict1205359.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 A partir de 4D v14 R3, puede duplicar dinámicamente las columnas de list box y 4D se encarga automáticamente de la definición de las variables necesarias (columna, pie de página y encabezado).   
   
@@ -82,11 +82,11 @@ Para ello, **LISTBOX DUPLICATE COLUMN** acepta un puntero **Nil** (**\->\[\]**) 
   
 Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir el tipo del array y la inserción de elementos.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

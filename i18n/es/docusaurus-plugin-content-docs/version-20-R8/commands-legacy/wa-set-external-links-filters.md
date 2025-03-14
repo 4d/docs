@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->El comando WA SET EXTERNAL LINKS FILTERS permite establecer uno o más filtros de enlaces externos para la zona web designada por los parámetros *\** y *objeto*.<!-- END REF--> Los filtros de enlaces externos determinan si un URL asociado a la página actual vía un enlace debe abrirse en el área web o en el navegador web por defecto del equipo. 
 
@@ -33,7 +33,7 @@ Para desactivar el filtro de los URL, llame el comando y pase los arrays vacío 
 
 **Importante:** el filtro establecido por el comando [WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS") se tiene en cuenta antes que el del comando WA SET EXTERNAL LINKS FILTERS. Esto significa que si un URL es rechazado por un filtro del comando [WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS"), no podrá abrirse en el navegador incluso si es definido explícitamente por el comando WA SET EXTERNAL LINKS FILTERS (ver ejemplo 2).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo provoca la apertura de sitios en navegadores externos:
 
@@ -50,7 +50,7 @@ Este ejemplo provoca la apertura de sitios en navegadores externos:
  WA SET EXTERNAL LINKS FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo combina los filtros de sitios y de enlaces externos:
 
@@ -70,12 +70,12 @@ Este ejemplo combina los filtros de sitios y de enlaces externos:
  WA SET EXTERNAL LINKS FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

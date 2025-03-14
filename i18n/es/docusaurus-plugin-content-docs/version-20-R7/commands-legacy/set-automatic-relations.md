@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->SET AUTOMATIC RELATIONS cambia temporalmente todas las relaciones manuales en relaciones automáticas para toda la base en el proceso actual.<!-- END REF--> Las relaciones permanecen automáticas a menos que se realice una llamada posterior a SET AUTOMATIC RELATIONS.
 
@@ -28,7 +28,7 @@ Este comando cambia relaciones definidas como manuales en modo Diseño a automá
 * Cuando pase [True](true.md "True") al comando **SET AUTOMATIC RELATIONS**, el modo automático se "bloquea" para todas las relaciones manuales durante la sesión. En este caso, todas las llamadas al comando [SET FIELD RELATION](set-field-relation.md) durante la misma sesión se ignoran, sin importar si estaban antes o después de **SET AUTOMATIC RELATIONS**. Para "desbloquear" el modo automático y tener en cuenta las llamadas a [SET FIELD RELATION](set-field-relation.md), pase [False](false.md "False") a **SET AUTOMATIC RELATIONS**.
 * Las funcionalidades automáticas se desactivan cuando las tablas relacionadas se visualizan en un formulario listado mostrado utilizando [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), o un subformulario. Ver *Relaciones manuales y automáticas*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo vuelve automáticas todas las relaciones Muchos a Uno y restablece a manual todas las relaciones Uno a Muchos cambiadas previamente:
 
@@ -36,7 +36,7 @@ El siguiente ejemplo vuelve automáticas todas las relaciones Muchos a Uno y res
  SET AUTOMATIC RELATIONS(True;False)
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
@@ -45,7 +45,7 @@ El siguiente ejemplo vuelve automáticas todas las relaciones Muchos a Uno y res
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

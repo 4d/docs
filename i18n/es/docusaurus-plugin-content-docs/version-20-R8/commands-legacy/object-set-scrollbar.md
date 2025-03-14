@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->El comando OBJECT SET SCROLLBAR le permite mostrar u ocultar las barras de desplazamiento horizontal o vertical en el objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -38,14 +38,14 @@ Pase en los parámetros *horizontal* y *vertical* los valores indicando si las b
 
 **Nota:** para obtener más información sobre el modo automático, consulte *Barras de desplazamiento*.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

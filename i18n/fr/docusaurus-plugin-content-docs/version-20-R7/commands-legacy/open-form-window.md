@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open form window.Summary-->La commande **Open form window** crée une nouvelle fenêtre utilisant les propriétés de taille et de redimensionnement du formulaire *nomForm*, passé en paramètre.<!-- END REF-->
 
@@ -84,7 +84,7 @@ Ces paramètres sont exprimés relativement au coin supérieur gauche de la zone
 
 Si vous passez le paramètre optionnel *\**, la position et la taille courantes de la fenêtre sont mémorisées au moment où elle est refermée. Lorsque la fenêtre est réouverte par la suite, elle conserve sa position et sa taille précédentes. Dans ce cas, les paramètres *posV* et *posH* ne sont utilisés que pour la première ouverture de la fenêtre.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’instruction suivante ouvre une fenêtre standard avec case de fermeture automatiquement ajustée à la taille du formulaire “Entrée”. La taille de fenêtre du formulaire n'est pas fixe, la fenêtre comporte donc également une case de contrôle de taille et une case de zoom :
 
@@ -92,7 +92,7 @@ L’instruction suivante ouvre une fenêtre standard avec case de fermeture auto
  $refFen:=Open form window([Table1];"Entrée")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’instruction suivante ouvre, en haut et à gauche de l’écran, une palette flottante basée sur un formulaire projet nommé "Outils". Cette palette conservera sa précédente position à chaque nouvelle ouverture :
 
@@ -100,7 +100,7 @@ L’instruction suivante ouvre, en haut et à gauche de l’écran, une palette 
  $refFen:=Open form window("Outils";Palette form window;On the left;At the top;*)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Ce code doit être appelé alors qu'une fenêtre document est affichée, par exemple depuis un bouton de formulaire sous macOS :
 
@@ -112,7 +112,7 @@ Ce code doit être appelé alors qu'une fenêtre document est affichée, par exe
   //du dessous de la barre de titre
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant utilise le chemin d'un fichier .json décrivant un formulaire permettant d'afficher les enregistrements d'une liste d'employés :
 
@@ -126,14 +126,14 @@ Résultat :
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 *Types de fenêtres*  
 *Types de fenêtres (compatibilité)*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

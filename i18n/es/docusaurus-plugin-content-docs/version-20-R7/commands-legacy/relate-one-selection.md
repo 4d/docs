@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->El comando **RELATE ONE SELECTION** crea una nueva selección de registros en *tabla1* a partir de la selección de registros de la *tablaN* relacionada y carga el primer registro de la nueva selección como el registro actual.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Este comando sólo puede utilizarse si hay una relación de  la *tablaN* a la *t
 
 Las relaciones pueden ser manuales o automáticas. Cuando existen relaciones automáticas, **RELATE ONE SELECTION** siempre las utiliza en primer lugar. Cuando hay varios caminos posibles desde la tabla de inicio a la tabla de destino, **RELATE ONE SELECTION** toma el más corto, utilizando las relaciones automáticas (si las hay). Si existen rutas del mismo tamaño y desea controlar la ruta utilizada, o si desea «forzar» el uso de relaciones manuales, deberá utilizar el comando [`SET FIELD RELATION`](set-field-relation.md). 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo busca los clientes cuyas facturas se vencen hoy. 
 
@@ -51,14 +51,14 @@ La siguiente técnica utiliza **RELATE ONE SELECTION** para obtener el mismo res
  QUERY([Clientes];[Facturas]FechaVence=Current date)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Conjuntos*  
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** trie (réordonne) les enregistrements de la sélection courante de *laTable* pour le process courant sur le critère de tri défini par *formule*.<!-- END REF--> Une fois le tri effectué, le premier enregistrement de la sélection courante devient le nouvel enregistrement courant.
 
@@ -34,7 +34,7 @@ Quelle que soit la manière dont le tri est défini, si l'opération risque de p
 **4D Server :** Cette commande est exécutée sur le serveur, ce qui optimise son exécution. A noter qu’en cas d’appel direct de variables dans la *formule*, la requête est calculée avec la valeur de la variable sur le poste client. Par exemple, l’instruction **ORDER BY FORMULA(\[matable\];\[matable\]monchamp\*mavariable)** sera exécutée sur le serveur mais avec le contenu de la variable *mavariable* du client.   
 **Note de compatibilité :** Jusqu'à 4D Server v11, cette commande était exécutée sur le poste client. Par compatibilité, ce fonctionnement est maintenu dans les bases de données converties. Toutefois, une propriété de compatibilité et un sélecteur de la commande [SET DATABASE PARAMETER](set-database-parameter.md) permettent d'adopter l'exécution sur serveur dans les bases de données converties.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant trie les enregistrements de la table \[Personnes\] dans l'ordre décroissant par rapport à la longueur du nom de famille de chaque personne. L'enregistrement de la personne qui a le nom le plus long sera le premier enregistrement de la sélection courante :
 
@@ -42,11 +42,11 @@ L'exemple suivant trie les enregistrements de la table \[Personnes\] dans l'ordr
  ORDER BY FORMULA([Personnes];Length([Personnes]Nom);<)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

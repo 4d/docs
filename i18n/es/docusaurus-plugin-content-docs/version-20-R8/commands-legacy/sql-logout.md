@@ -12,19 +12,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->El comando SQL LOGOUT cierra la conexión con una fuente ODBC abierta en el proceso actual (si aplica).<!-- END REF--> Si no hay conexión ODBC abierta, el comando no hace nada.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la conexión se cierra correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [SQL LOGIN](sql-login.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

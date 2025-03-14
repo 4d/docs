@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Window process.Summary-->Window process コマンドは*window*に渡されたウィンドウが実行されているプロセスの番号を返します。<!-- END REF-->ウィンドウが存在しない場合0が返されます。
 
 *window* 引数を省略すると、Window processは現在の最前面ウィンドウのプロセスを返します。
 
-#### 参照 
+## 参照 
 
 [Current process](current-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

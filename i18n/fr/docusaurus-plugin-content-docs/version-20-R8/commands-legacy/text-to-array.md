@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->La commande **TEXT TO ARRAY** permet de transformer une variable texte en tableau texte.<!-- END REF--> Le texte d’origine (stylé ou non) est découpé et chaque morceau devient un élément du tableau *tabTexte* qui est retourné par la commande. Cette commande peut être utilisée par exemple pour remplir des pages ou des colonnes de texte de taille fixe.
 
@@ -52,7 +52,7 @@ Ce paramètre est optionnel ; s’il est omis, le style Plain est utilisé.
 
 Le paramètre optionnel *\**, s’il est passé, permet de forcer la prise en compte des paramètres *nomPolice*, *taillePolice* et/ou *stylePolice* pour les textes multistyles lorsque ces paramètres ne sont pas définis dans le texte d’origine. S’ils sont définis dans le texte, les paramètres passés à la commande sont ignorés dans tous les cas. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous souhaitons découper un texte multistyle en lignes d’une taille maximale de 200 pixels : 
 
@@ -61,7 +61,7 @@ Nous souhaitons découper un texte multistyle en lignes d’une taille maximale 
   // les attributs Arial, 20, Normal ne seront pris en compte que s’ils ne sont pas définis dans le texte
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Nous souhaitons découper un texte brut en lignes d’une taille maximale de 350 pixels en police Bodoni gras 14\. Comme la commande ne fonctionne pas correctement si la police n’est pas disponible, il est utile de vérifier sa présence :
 
@@ -77,7 +77,7 @@ Nous souhaitons découper un texte brut en lignes d’une taille maximale de 350
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Un texte multistyle doit être imprimé sans style dans la police Arial normal 12 avec une largeur maximale de 600 pixels : 
 
@@ -88,7 +88,7 @@ Un texte multistyle doit être imprimé sans style dans la police Arial normal 1
  TEXT TO ARRAY($RawText;tabTexte;600;"Arial";12)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum de 80 lignes et ce, avec la plus grande taille de police possible (ne devant pas dépasser 24 points). Vous pouvez écrire : 
 
@@ -102,13 +102,13 @@ Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum
  Until($n<=80)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

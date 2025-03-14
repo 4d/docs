@@ -20,13 +20,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Field.Summary-->La commande **Field** a deux syntaxes :
 
 * Si vous passez un numéro de table dans *numTable* et un numéro de champ dans *numChamp*, **Field** retourne un pointeur vers le champ.<!-- END REF-->retourne le numéro du champ.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant assigne la variable ChampPtr à un pointeur vers le deuxième champ de la troisième table : 
 
@@ -34,7 +34,7 @@ L'exemple suivant assigne la variable ChampPtr à un pointeur vers le deuxième 
  ChampPtr:=Field(3;2)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Si vous passez *champPtr* (un pointeur vers le 2e champ de la table) à **Field**, la valeur 2 est retournée. La ligne suivante assigne la valeur 2 à *champNum* :
 
@@ -42,7 +42,7 @@ Si vous passez *champPtr* (un pointeur vers le 2e champ de la table) à **Field*
  champNum:=Field(champPtr)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Dans l'exemple, la variable *champNum* est égale au numéro de champ de \[Table3\]Champ2 :
 
@@ -50,14 +50,14 @@ Dans l'exemple, la variable *champNum* est égale au numéro de champ de \[Table
  champNum:=Field(->[Table3]Champ2)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

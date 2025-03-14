@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.WP Bookmark range.Summary-->La commande **WP Bookmark range** était nommée **WP Get bookmark range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
 
-#### Description 
+## Description 
 
 La commande **WP Bookmark range** retourne un objet de type plage (objPlage) contenant la plage associée au signet nommé *nomSignet* dans le document *docWP*.
 
 Si le signet *nomSignet* n'existe pas dans *docWP*, un objet plage objPlage vide est retourné.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez faire apparaître la plage associée au signet "MyBookmark" dans votre document :
 
@@ -35,7 +35,7 @@ Vous souhaitez faire apparaître la plage associée au signet "MyBookmark" dans 
  WP SELECT(WParea;$wpRange)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

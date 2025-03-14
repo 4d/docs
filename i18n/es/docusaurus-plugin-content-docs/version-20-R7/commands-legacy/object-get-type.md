@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get type.Summary-->El comando **OBJECT Get type** devuelve el tipo del objeto designado por los parámetros *objeto* y *\** en el formulario actual .<!-- END REF-->
 
@@ -72,7 +72,7 @@ El valor devuelto corresponde a una de las siguientes constantes, disponibles en
 | Object type web area                | Entero largo | 40    |
 | Object type write pro area          | Entero largo | 41    |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere cargar un formulario y obtener la lista de todos los objetos de los list boxes que contiene.
 
@@ -91,12 +91,12 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
  FORM UNLOAD
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM LOAD](form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

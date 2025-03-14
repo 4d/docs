@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE cambia la página actual del formulario para mostrar la página siguiente.<!-- END REF-->Si ningún formulario es mostrado o cargado por el comando [FORM LOAD](form-load.md), o si ya se muestra la última página del formulario, FORM NEXT PAGE no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo es un método de una línea, llamado por un comando de menú, el cual muestra la página del formulario que sigue a la página mostrada actualmente:
 
@@ -24,7 +24,7 @@ El siguiente ejemplo es un método de una línea, llamado por un comando de men�
  FORM NEXT PAGE
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -32,7 +32,7 @@ El siguiente ejemplo es un método de una línea, llamado por un comando de men�
 [FORM LAST PAGE](form-last-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

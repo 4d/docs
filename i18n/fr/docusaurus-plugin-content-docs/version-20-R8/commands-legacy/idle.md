@@ -12,12 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IDLE.Summary-->**IDLE** est destinée uniquement à une utilisation avec le compilateur.<!-- END REF--> En effet, seul le moteur de 4D peut détecter un événement. Il était donc nécessaire, dans le cadre d'une base compilée, qu'une routine puisse interroger le moteur de 4D afin de savoir si un événement s'est produit. Cette commande doit donc être utilisée lorsque vous employez la commande [ON EVENT CALL](on-event-call.md).   
 Par exemple, si une méthode exécute une boucle dans laquelle aucune commande 4D n'est appelée, la boucle ne pourra pas être interrompue par un process installé à l'aide d' [ON EVENT CALL](on-event-call.md), et l'utilisateur ne pourra pas ouvrir une autre application. Dans ce cas, **IDLE** doit être insérée pour que 4D puisse intercepter les événements. Bien entendu, n'utilisez pas **IDLE** si vous ne voulez aucune interruption.
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, la boucle ne se terminerait jamais dans une base compilée sans l'aide de **IDLE** :
 
@@ -48,12 +48,12 @@ La méthode METHODE EVENEMENT :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Commandes du thème Compilateur*  
 [ON EVENT CALL](on-event-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ABORT.Summary-->El comando ABORT se utiliza en un método de proyecto de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").<!-- END REF-->
 
@@ -28,15 +28,15 @@ Si utiliza un método de proyecto de intercepción de errores, 4D no muestra má
 
 Hay errores que puede tratar por programación; por ejemplo, durante una operación de importación, si intercepta un error de la base de datos que señala un valor duplicado, puede “cubrir” el error y seguir con la importación. Sin embargo, hay errores que no puede procesar y errores que no debe “cubrir.” En estos casos, necesita detener la ejecución llamando ABORT desde el método de proyecto de intercepción de errores.
 
-#### Nota histórica 
+## Nota histórica 
 
 Aunque el comando ABORT está destinado a ser utilizado sólo desde un método de proyecto de intercepción de errores, algunos miembros de la comunidad 4D también lo utilizan en otros métodos para interrumpir su ejecución. El hecho de que funcione es sólo un efecto secundario. No recomendamos utilizar este comando en métodos diferentes a los métodos de proyecto de intercepción de errores.
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

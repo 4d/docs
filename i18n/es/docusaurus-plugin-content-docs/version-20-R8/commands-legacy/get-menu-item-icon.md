@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->El comando GET MENU ITEM ICON devuelve, en la variable *refIcono*, la referencia del icono asociado a la línea de menú designada por los parámetros *menu* y *menuItem*.<!-- END REF--> Esta referencia es el nombre o número de la imagen en la librería de imágenes.
 
@@ -30,11 +30,11 @@ Si no atribuye un tipo específico a la variable *refIcono*, por defecto, se dev
 
 Si ningún icono está asociado a la línea de menú, el comando devuelve un valor vacío.
 
-#### Ver también 
+## Ver también 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

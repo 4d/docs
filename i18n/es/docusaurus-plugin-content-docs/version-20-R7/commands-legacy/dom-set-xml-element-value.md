@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->El comando DOM SET XML ELEMENT VALUE le permite modificar el valor del elemento definido por *refElement*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Cuando se pasa el parámetro opcional asterisco (\*), indica que el valor del el
 
 Para cumplir con las reglas de procesamiento XML, todas las secuencias de caracteres de fin de línea CR y CRLF se convierten en caracteres LF.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En la siguiente fuente XML: 
 
@@ -69,7 +69,7 @@ Obtenemos:
 </Book>
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En la siguiente fuente XML: 
 
@@ -108,16 +108,16 @@ Obtenemos:
 </Maths>
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0 y se genera un error (por ejemplo, si la referencia del elemento es inválida).
 
-#### Ver también 
+## Ver también 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

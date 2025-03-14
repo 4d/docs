@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->El comando EXECUTE METHOD IN SUBFORM permite ejecutar el código desigando por *formula* en el contexto del subformulario *objetoSubform*.<!-- END REF-->   
   
@@ -34,7 +34,7 @@ Este comando debe llamarse en el contexto del formulario padre (contiene el obje
 
 **Nota:** la *formula* no se ejecuta si *objetoSubForm* no se encuentra en la página actual o si no ha sido instanciado.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Dado el formulario "ContactDetail" utilizado como subformulario en el formulario padre "Empresa". El objeto subformulario que contiene el formulario ContactDetail se llama "ContactSubform". Imagine que queremos modificar la apariencia de ciertos elementos del subformulario de acuerdo al valor de los campos de la empresa (por ejemplo, "nomcontact" debe pasar a rojo cuando \[Empresa\]Ciudad="Nueva York" y a azul cuando \[Empresa\]Ciudad="San Diego"). Este mecanismo se implementa vía el método SetToColor. Para poder obtener este resultado, el método SetToColor no puede llamarse directamente desde el proceso del evento de formulario "On Load" del formulario padre Empresa porque el objeto "contactname" no pertenece al formulario actual, sino al formulario mostrado en el objeto subformulario "ContactSubform". El método debe por lo tanto ejecutarse utilizando el comando EXECUTE METHOD IN SUBFORM para que funcione correctamente.
 
@@ -53,7 +53,7 @@ Dado el formulario "ContactDetail" utilizado como subformulario en el formulario
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desarrolle una base que se utilizará como componente. Incluye un formulario proyecto compartido (llamado por ejemplo Calendar) que contiene *variables dinámicas* así como también un método proyecto público que permite ajustar el calendario: SetCalendarDate(varDate).   
 Si este método se utilizó directamente en el método del formulario Calendar, puede llamar directamente el evento "On Load": 
@@ -69,12 +69,12 @@ Si este método se utilizó directamente en el método del formulario Calendar, 
  EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si este comando se ejecuta correctamente, la variable sistema OK toma el valor 1; de lo contrario toma el valor 0.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

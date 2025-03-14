@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->El comando **ST GET OPTIONS** obtiene el valor actual de una o varias opciones de funcionamiento del campo o de la variable de texto con estilo designada por el parámetro *objeto*.<!-- END REF-->
 
@@ -31,11 +31,11 @@ Pase el código de la opción a leer en el parámetro *opcion*. El comando devue
 | ST References               | Entero largo | 1     | Muestra las cadenas fuente de las expresiones                                           |
 | ST Values                   | Entero largo | 0     | Muestra los valores calculados de las expresiones                                       |
 
-#### Ver también 
+## Ver también 
 
 [ST SET OPTIONS](st-set-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** place une copie du texte que vous avez passé dans *texte* dans le conteneur de données.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont auparavant effacées. 
 
@@ -25,20 +25,20 @@ Les expressions de type Texte de 4D peuvent contenir jusqu'à 2 Go de texte.
 
 **Note :** Le conteneur de données est en lecture seule pendant l’événement formulaire On Drag Over. Il n’est pas possible d’utiliser cette commande dans ce contexte.
 
-#### Exemple 
+## Exemple 
 
 Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la copie du texte est correctement placée dans le conteneur de données, la variable système OK prend la valeur 1\. S'il n'y a pas assez de mémoire pour placer une copie du texte dans le conteneur, la variable système OK prend la valeur 0, mais aucune erreur n'est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

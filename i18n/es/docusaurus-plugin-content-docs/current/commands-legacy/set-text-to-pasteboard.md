@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD limpia el portapapeles y luego coloca una copia del texto en *texto* en el portapapeles.<!-- END REF--> 
 
@@ -25,20 +25,20 @@ Después de colocar texto en el portapapeles, puede recuperarlo utilizando el co
 
 **Nota:** el contenedor de datos está en modo sólo lectura durante el evento de formulario On Drag Over. No es posible utilizar este comando en este contexto.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el texto se coloca correctamente en el portapapeles, la variable OK toma el valor 1\. Si no hay suficiente memoria para colocar una copia del texto en el portapapeles, la variable OK toma el valor 0, pero no se genera error.
 
-#### Ver también 
+## Ver también 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST GET URL.Summary-->**ST GET URL**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で見つかった最初のURL の表示テキストとアドレスを返します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 **注:** もし *startSel* 引数が *endSel* 引数より大きい場合、コマンドは何も行わず、 *OK* 変数は0に設定されます(ただし *endSel* が0である場合を除く)。
 
-#### 例題 
+## 例題 
 
 ダブルクリックイベントがあると、URLが実際にあるかどうかをチェックし、あった場合にはユーザーがそれを変更できるようにその値を取得したダイアログボックスを表示する、という場合について考えます:
 
@@ -67,11 +67,11 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [ST INSERT URL](st-insert-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

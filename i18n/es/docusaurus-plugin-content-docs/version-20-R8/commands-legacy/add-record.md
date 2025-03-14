@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidad 
+## Compatibilidad 
 
 <!--REF #_command_.ADD RECORD.Summary-->**Este comando se implementó en las primeras versiones de 4D y sigue siendo útil para la creación de prototipos o desarrollos básicos.<!-- END REF--> Sin embargo, para construir interfaces personalizadas y modernas, ahora se recomienda utilizar formularios genéricos basados en el comando [DIALOG](../commands/dialog.md) que ofrecen funciones avanzadas y un mejor control sobre el flujo de datos.* 
 
-#### Descripción 
+## Descripción 
 
 El comando **ADD RECORD** permite al usuario añadir un nuevo registro en la tabla *tabla* o en la tabla por defecto, si omite el parámetro *tabla*. 
 
@@ -44,7 +44,7 @@ Después de llamar a **ADD RECORD**, OK toma el valor 1 si se acepta el registro
 
 **Nota:** el registro permanece en memoria, incluso cuando se cancela, y puede guardarse si se ejecuta [SAVE RECORD](save-record.md) antes de que cambie el puntero del registro actual. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo es un bucle utilizado generalmente para añadir nuevos registros a una base: 
 
@@ -55,7 +55,7 @@ El siguiente ejemplo es un bucle utilizado generalmente para añadir nuevos regi
  Until(OK=0) // Hasta que el usuario cancele
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo busca un cliente en la base. Dependiendo de los resultado de la búsqueda, sucederá una de estas cosas. Si no se encuentra un cliente, entonces se le permite al usuario añadir un nuevo cliente con ADD RECORD. Si se encuentra al menos un cliente, se le presenta al usuario el primer registro encontrado, el cual puede modificarse con [MODIFY RECORD](modify-record.md "MODIFY RECORD"): 
 
@@ -78,11 +78,11 @@ El siguiente ejemplo busca un cliente en la base. Dependiendo de los resultado d
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancela. La variable OK no toma ningún valor hasta que el registro haya sido validado o anulado.
 
-#### Ver también 
+## Ver también 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
@@ -90,7 +90,7 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

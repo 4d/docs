@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Max.Summary-->**Max** retourne la valeur la plus élevée contenue dans *séries*.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ Seules les valeurs numériques des attributs sont utilisées pour le calcul. Si 
 
 Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Si elle est interrompue (par exemple si l'utilisateur clique sur le bouton **Arrêt** dans le thermomètre de progression), la variable OK prend la valeur 0.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple ci-dessous est la méthode objet d'une variable, *vMax*, placée dans la zone de rupture R0 d'un formulaire sortie. La variable est imprimée à la fin de l'état. La méthode objet assigne la valeur la plus élevée du champ à la variable, qui est alors imprimée dans la dernière rupture de l'état.
 
@@ -53,7 +53,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
 
 **Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple vous permet d’obtenir la valeur la plus élevée d’un tableau :
 
@@ -64,15 +64,15 @@ Cet exemple vous permet d’obtenir la valeur la plus élevée d’un tableau :
  vMax:=Max($TabNote)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous reporter à l'exemple 3 de la commande [Average](average.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Min](min.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

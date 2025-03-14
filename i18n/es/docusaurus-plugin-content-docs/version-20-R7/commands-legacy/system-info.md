@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.System info.Summary-->El comando **System info** devuelve un objeto que contiene información sobre el sistema operativo y las características del hardware y software del sistema de la máquina en que se ejecuta.<!-- END REF-->
 
@@ -56,7 +56,7 @@ El comando devuelve la siguiente información:
 
 **Nota**: en el caso de las máquinas virtuales, la información devuelta será la de la máquina virtual.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código en una máquina Windows:
 
@@ -140,13 +140,13 @@ devuelve un objeto que contiene la siguiente información:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

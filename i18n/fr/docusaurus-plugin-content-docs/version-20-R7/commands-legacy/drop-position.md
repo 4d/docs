@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Drop position.Summary-->**Drop position** permet de connaître l'emplacement, dans un objet de destination “complexe”, auquel un objet a été (glissé et) déposé.<!-- END REF--> Généralement, vous utiliserez **Drop position** pendant le traitement d'un événement glisser-déposer qui s'est produit dans un tableau, une list box, une liste hiérarchique, un champ texte ou une image.
 
@@ -29,7 +29,7 @@ Si vous appelez **Drop position** pendant le traitement d'un événement qui n'e
 
 **Rappel :** Pour qu'un objet de formulaire accepte des données déposées, la propriété **Déposable** doit lui avoir été assignée. De plus, sa méthode objet doit être appelée par l'événement On Drag Over et/ou On Drop si vous voulez pouvoir gérer ce type d'événement. 
 
-#### Exemple 
+## Exemple 
 
 Dans l’exemple suivant, une liste de sommes doit être ventilée par mois et par personne. L’opération s’effectue par glisser-déposer entre deux list box :
 
@@ -88,11 +88,11 @@ La méthode objet de la list box de gauche (destination) contient le code suivan
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Présentation du Glisser-Déposer*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

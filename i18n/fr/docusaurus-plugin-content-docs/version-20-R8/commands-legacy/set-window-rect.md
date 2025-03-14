@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->La commande **SET WINDOW RECT** modifie les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence [RefFen](# "Expression de type Entier long identifiant de façon unique une fenêtre ouverte") dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande ne fait rien.
 
@@ -32,11 +32,11 @@ Par défaut, l’exécution de la commande fait automatiquement passer au premie
 
 Cette commande n’affecte pas les objets du formulaire. Si la fenêtre contient un formulaire, les objets du formulaire ne sont pas déplacés ou redimensionnés par la commande (quelles que soient leurs propriétés). Seule la fenêtre est modifiée. Pour modifier une fenêtre de formulaire en tenant compte de ses propriétés de redimensionnement et des objets qu’elle contient, vous devez utiliser la commande [RESIZE FORM WINDOW](resize-form-window.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit la fenêtre suivante :
 
@@ -52,14 +52,14 @@ La fenêtre apparaît ainsi :
 
 ![](../assets/en/commands/pict39569.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

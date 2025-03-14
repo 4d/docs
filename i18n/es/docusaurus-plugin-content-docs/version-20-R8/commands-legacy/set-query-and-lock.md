@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->El comando SET QUERY AND LOCK permite solicitar el bloqueo automático de los registros encontrados por todas las búsquedas que siguen el llamado de este comando en la transacción actual.<!-- END REF--> Esto significa que los registros no pueden ser modificados por un proceso diferente al proceso actual entre una búsqueda y la manipulación de resultados.
 
@@ -48,7 +48,7 @@ SET QUERY AND LOCK modifica únicamente el comportamiento de los comandos de bú
 
 Sin embargo, SET QUERY AND LOCK no afecta los otros comandos que modifican la selección actual tales como #cmd id="47"/\], [RELATE MANY](relate-many.md), etc.
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, no es posible borrar un cliente que habrías sido pasado de la categoría “C” a la categoría “A” en otro proceso entre [QUERY](query.md) y [DELETE SELECTION](delete-selection.md):
 
@@ -62,15 +62,15 @@ En este ejemplo, no es posible borrar un cliente que habrías sido pasado de la 
  VALIDATE TRANSACTION
 ```
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si el comando no se llama en el contexto de una transacción, se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [QUERY](query.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

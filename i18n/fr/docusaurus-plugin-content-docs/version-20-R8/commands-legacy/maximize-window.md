@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->La commande **MAXIMIZE WINDOW** provoque le zoom de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF--> 
 
@@ -45,7 +45,7 @@ Case de zoom sous Mac OS
 * Le zoom étant calculé par rapport au contenu de la fenêtre, cette commande doit être appelée dans un contexte où ce contenu est défini, par exemple une méthode formulaire. Sinon, la commande ne fait rien.
 * La fenêtre est dimensionnée à sa taille "maximale". Si la fenêtre est un formulaire dont la taille maximale a été définie dans les Propriétés du formulaire, le zoom de la fenêtre se limitera à cette taille.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez que votre formulaire s'ouvre sur une fenêtre "plein écran". Pour cela, vous placez la commande **MAXIMIZE WINDOW** dans la méthode du formulaire :
 
@@ -55,7 +55,7 @@ Vous souhaitez que votre formulaire s'ouvre sur une fenêtre "plein écran". Pou
  MAXIMIZE WINDOW
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple illustre la prise en charge des contraintes de taille sous Windows en mode MDI. Le formulaire suivant comporte une contrainte de taille (largeur maximale=400) :
 
@@ -75,13 +75,13 @@ Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 
 ![](../assets/en/commands/pict1476363.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

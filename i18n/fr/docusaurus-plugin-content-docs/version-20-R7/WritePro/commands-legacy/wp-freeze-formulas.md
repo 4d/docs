@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP FREEZE FORMULAS.Summary-->La commande **WP FREEZE FORMULAS** "fige" le contenu des formules dans objCible.<!-- END REF--> 
 
@@ -42,7 +42,7 @@ Par défaut, si *recompute* est omis, les expressions sont recalculées.
 
 **Attention** : Les *carry-over rows* (lignes à reporter en bas), s'il y en a, sont transformées en lignes normales lorsque vous figez targetObj. Par conséquent, si la taille ou l'orientation de la page est modifiée, ou si le document est exporté, elles peuvent être décalées dans la mise en page résultante. 
 
-#### Exemple 
+## Exemple 
 
 Pour figer des formules dans un document :
 
@@ -56,7 +56,7 @@ Pour figer toutes les formules de la première section d'un document sans recalc
  WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB SET NULL.Summary-->El comando **OB SET NULL** almacena el valor **null** en el objeto de lenguaje designado por el parámetro *objeto* .<!-- END REF-->debe haber sido definido utilizando el comando *C\_OBJECT* o designar un campo objeto 4D.  
   
 En el parámetro *propiedad*, pase la etiqueta de la propiedad en la que desea almacenar el valor **null**. Si la propiedad ya existe en *objeto*, su valor se actualiza. Si no existe, se crea.  
 Tenga en cuenta que el parámetro *propiedad* tiene en cuenta las mayúsculas y minúsculas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Queremos poner el valor nulo en la propiedad "edad" para Lea:
 
@@ -34,13 +34,13 @@ Queremos poner el valor nulo en la propiedad "edad" para Lea:
   // $ref = {"nombre":"Lea","edad":null}
 ```
 
-#### Ver también 
+## Ver también 
 
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

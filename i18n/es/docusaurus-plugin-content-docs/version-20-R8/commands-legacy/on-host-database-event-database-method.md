@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Metodo base On Host Database Event.Summary-->El **Método base On Host Database Event** permite a los componentes 4D ejecutar código cuando se abre y cierra la base local.<!-- END REF-->  
   
@@ -32,7 +32,7 @@ Para procesar un evento, debe probar el valor del parámetro $1 en el método, y
 
 Esto permite a los componentes 4D cargar y guardar preferencias o estados de usuario relacionados con el funcionamiento de la base local.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejemplo de estructura tipo de un método base On Host Database Event:
 

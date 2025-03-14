@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Open document.Summary-->El comando Open document abre el documento cuyo nombre o ruta de acceso se pasa en *documento*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Una vez haya abierto un documento, puede leer y escribir en el documento utiliza
 
 No olvide llamar finalmente a [CLOSE DOCUMENT](close-document.md) para el documento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo abre un documento existente llamado Note, escribe la cadena “Good-bye” en el documento y lo cierra. Todo contenido existente en el documento se sobrescribirá: 
 
@@ -62,7 +62,7 @@ El siguiente ejemplo abre un documento existente llamado Note, escribe la cadena
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Puede leer un documento incluso si está abierto en modo escritura:  
 
@@ -72,7 +72,7 @@ Puede leer un documento incluso si está abierto en modo escritura:
  vRef:=Open document("PassFile";"TEXT";Read Mode)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el documento se abre correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. Después de la llamada, la variable sistema Document contiene el nombre completo del documento.
 
@@ -83,12 +83,12 @@ Si pasa el valor 3 en *modo*, la función devuelve ?00:00:00? (sin referencia de
 
 **Nota:** si no se encuentra el archivo definido en *documento* o si pasa una cadena vacía en *documento*, aparece una caja de diálogo de apertura de archivos. Si el usuario elije un documento y hace clic en el botón OK, *documento* define la ruta al documento seleccionado por el usuario y OK toma el valor 1\. Si el usuario hace clic en el botón Cancelar, OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get report kind.Summary-->El comando QR Get report kind devuelve el tipo del informe presente en *area*.<!-- END REF-->
 
@@ -31,11 +31,11 @@ Igualmente puede comparar el resultado de la función con las constantes del tem
   
 Si pasa un número de *area* incorrecto, se genera el error -9850. 
 
-#### Ver también 
+## Ver también 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

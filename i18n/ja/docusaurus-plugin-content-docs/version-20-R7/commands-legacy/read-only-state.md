@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Read only state.Summary-->このコマンドは、コマンドが呼び出されるプロセス内の*aTable*の状態が読み込み専用かどうかを調べます。<!-- END REF-->*aTable*が読み込み専用であれば、[True](true.md "True")を返します。*aTable*が読み書き可であれば、[False](false.md "False")を返します。
 
-#### 例題 
+## 例題 
 
 以下の例は\[Invoice\]テーブルの状態を判断するものです。\[Invoice\]テーブルの状態が読み込み専用であれば、読み書き可に設定し、カレントレコードを再度ロードします。
 
@@ -31,13 +31,13 @@ displayed_sidebar: docs
 
 **Note:** ユーザがレコードを修正できるようにするために、請求書レコードを再ロードします。すでに読み込み専用でロードされたレコードは、書き込み可能状態で再ロードされるまで、変更不可のままです。
 
-#### 参照 
+## 参照 
 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *レコードのロック*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

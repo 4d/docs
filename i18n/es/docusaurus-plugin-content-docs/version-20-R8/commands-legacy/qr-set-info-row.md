@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->El comando QR SET INFO ROW muestra/oculta la fila cuya referencia se pasa en *linea*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Puede utilizar las constantes del tema  para designar el elemento de línea (*qr
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *linea* es incorrecto, se genera el error -9852.
 
-#### Ejemplo 
+## Ejemplo 
 
 La siguiente instrucción oculta el contenido de la línea detalle:
 
@@ -44,13 +44,13 @@ La siguiente instrucción oculta el contenido de la línea detalle:
  QR SET INFO ROW(area;qr detail;1)
 ```
 
-#### Ver también 
+## Ver también 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

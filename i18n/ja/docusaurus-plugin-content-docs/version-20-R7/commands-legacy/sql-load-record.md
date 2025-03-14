@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->SQL LOAD RECORDコマンドは、現在の接続において開かれたODBCソースからのレコードを1件以上4D内に取り込みます。<!-- END REF-->
 
@@ -25,16 +25,16 @@ displayed_sidebar: docs
 
 **Note:** 最後の2つの設定は、取得したデータが配列や4Dフィールドに関連付けられている場合にのみ意味を持ちます。 
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されると、OKシステム変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->El comando **OBJECT Get three states checkbox** devuelve el estado actual de la propiedad "Tres estados" de la(s) casilla(s) de selección designada(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
   
 La propiedad "Tres estados" se puede definir ya sea usando la lista de propiedades, o utilizando el comando [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) si se llama en el proceso actual.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

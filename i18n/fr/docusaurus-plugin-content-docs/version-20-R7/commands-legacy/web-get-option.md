@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->La commande **WEB GET OPTION** permet de lire la valeur courante d’une option de fonctionnement du serveur Web de 4D.<!-- END REF-->
 
@@ -60,11 +60,11 @@ Lorsque vous utilisez le *sélecteur* Web debug log, vous pouvez récupérer une
 | wdl enable with response body  | Entier long | 3      | Le fichier de debug de requêtes HTTP Web est activé avec le body de la réponse uniquement                      |
 | wdl enable without body        | Entier long | 1      | Le fichier de debug de requêtes HTTP Web est activé sans les body (la taille des body est fournie dans ce cas) |
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB SET OPTION](web-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

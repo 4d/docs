@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New log file.Summary-->**Note préliminaire :** Cette commande ne fonctionne qu’avec 4D Server.<!-- END REF--> Elle ne peut être exécutée que via la commande [Execute on server](execute-on-server.md) ou dans une procédure stockée. 
 
@@ -26,13 +26,13 @@ Le fichier est renommé avec les numéros de sauvegarde courants de la base et d
 * si la base MaBase.4DD a été sauvegardée 4 fois, le dernier fichier de sauvegarde se nomme MaBase\[0004\].4BK. Le nom du premier “segment” de fichier d’historique sera donc MaBase\[0004-0001\].journal.
 * si la base MaBase.4DD a été sauvegardée 3 fois et que le fichier d’historique a été sauvegardé 5 fois depuis, le nom de la 6e sauvegarde du fichier d’historique sera MaBase\[0003-0006\].journal.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 En cas d'anomalie, la commande génère une erreur que vous pouvez intercepter à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

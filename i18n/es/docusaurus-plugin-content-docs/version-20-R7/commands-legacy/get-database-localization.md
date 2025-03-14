@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get database localization.Summary-->El comando Get database localization devuelve el lenguaje por defecto o el lenguaje de la base, especificado por *tipoLeng*, expresado en el estándar definido por la RFC 3066.<!-- END REF-->Generalmente, el comando devuelve “en” para inglés, “es” para español, etc. Para mayor información sobre este estándar y los valores devueltos por este comando, por favor consulte el *Apéndice B: Arquitectura XLIFF* en el manual de *Diseño*. 
 
@@ -47,12 +47,12 @@ El lenguaje actual de la base permite definir la carpeta .lproj en la que el pro
 
 **Nota:** si la base no contiene una carpeta .lproj, 4D aplica el siguiente orden de prioridad: 1\. Lenguaje del sistema 2\. Inglés (si el lenguaje del sistema no puede identificarse).
 
-#### Ver también 
+## Ver también 
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

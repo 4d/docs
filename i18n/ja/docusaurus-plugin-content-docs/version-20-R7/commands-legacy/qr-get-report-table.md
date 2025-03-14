@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get report table.Summary-->QR Get report table コマンドは、*area*に渡した参照のレポートエリア用のカレントテーブル番号を返します。<!-- END REF-->
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET REPORT TABLE](qr-set-report-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

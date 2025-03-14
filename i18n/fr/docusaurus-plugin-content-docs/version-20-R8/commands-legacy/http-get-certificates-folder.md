@@ -19,13 +19,13 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->La commande **HTTP Get certificates folder** retourne le chemin d’accès complet du dossier de certificats client actif.<!-- END REF--> 
 
 Par défaut, 4D utilise le dossier "ClientCertificatesFolder" créé à côté du fichier de structure (dossier créé uniquement si nécessaire). Vous pouvez toutefois créer un dossier personnalisé pour le process courant à l’aide de la commande [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez changer temporairement de dossier de certificats :
 
@@ -37,11 +37,11 @@ Vous souhaitez changer temporairement de dossier de certificats :
  HTTP SET CERTIFICATES FOLDER($certifFolder) //on rétablit le dossier
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

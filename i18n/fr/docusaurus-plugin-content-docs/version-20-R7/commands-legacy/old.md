@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Old.Summary-->La commande **Old** retourne la valeur qui était stockée dans *leChamp* avant qu'il n'ait été modifié par programmation ou pendant la saisie de données.<!-- END REF--> 
 
@@ -39,11 +39,11 @@ Pour restaurer la valeur originale d'un champ, assignez-lui la valeur retournée
  $taille :=BLOB size($ancienBlob) //CORRECT
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Modified](modified.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

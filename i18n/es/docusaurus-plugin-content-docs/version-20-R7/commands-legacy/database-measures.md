@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Database measures.Summary-->El comando **Database measures** le permite obtener información detallada acerca de los eventos del motor de base de datos 4D.<!-- END REF--> La información reenviada incluye los accesos lectura/escritura a los datos desde/hacia el disco o la memoria caché, así como también la utilización de los índices de la base, las búsquedas y las ordenaciones.   
 
@@ -284,7 +284,7 @@ Si el comando se llama desde un 4D remoto, luego el objeto se deja vacío.
 En este contexto, si necesita obtener información acerca de la base de datos en el servidor, la forma más sencilla de realizar esta acción es crear un método con la opción "ejecutar en el servidor" activada.   
 Este principio también funciona para un componente: si el componente se utiliza en un contexto local 4D, devolverá la información sobre la base local; en un contexto 4D remoto, devolverá la información sobre la base del servidor.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea obtener el objeto "history" en el objeto devuelto:
 
@@ -295,7 +295,7 @@ Usted desea obtener el objeto "history" en el objeto devuelto:
  $measures:=Database measures($param)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Sólo queremos saber el número total de bytes leídos en la memoria caché ("cacheReadBytes"):   
   
@@ -318,7 +318,7 @@ El objeto devuelto contiene, por ejemplo:
 }
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Queremos obtener las medidas de bytes de caché en los últimos dos minutos:
 
@@ -332,7 +332,7 @@ Queremos obtener las medidas de bytes de caché en los últimos dos minutos:
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

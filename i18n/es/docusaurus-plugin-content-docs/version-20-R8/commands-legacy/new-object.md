@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.New object.Summary-->El comando **New object** crea un nuevo objeto vacío o prellenado y devuelve su referencia.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Tenga en cuenta que:
 * las fechas se almacenan en como fechas "aaaa-mm-dd" o en cadena en formato "AAAA-MM-DDTHH:mm:ss.SSSZ" en función del parámetro actual relativo al almacenamiento de las fechas en los objetos (ver *Página Compatibilidad*). Al convertir las fechas 4D en texto antes de almacenarlas en el objeto, por defecto el programa toma en cuenta la zona horaria local. Puede modificar este comportamiento utilizando el selector Dates inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md).
 * si pasa una hora, se almacena como un número de milisegundos (Real).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este comando puede crear objeto vacíos o llenos:
 
@@ -61,7 +61,7 @@ Este comando puede crear objeto vacíos o llenos:
   // $obj3 = {name:Smith,age:40}
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Crear un nuevo objeto con un objeto como valor de parámetro:
 
@@ -80,7 +80,7 @@ Crear un nuevo objeto con un objeto como valor de parámetro:
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este comando es útil para pasar objetos como parámetros:
 
@@ -89,7 +89,7 @@ Este comando es útil para pasar objetos como parámetros:
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Con este comando, puede fácilmente manejar objetos en bucles:
 
@@ -102,12 +102,12 @@ Con este comando, puede fácilmente manejar objetos en bucles:
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [New shared object](new-shared-object.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

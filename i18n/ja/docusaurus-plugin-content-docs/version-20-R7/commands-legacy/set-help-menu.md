@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET HELP MENU.Summary-->**SET HELP MENU** コマンドを使用すると、アプリケーションモードにおいてデフォルトの4D **ヘルプ**メニューの内容を、 *menuCol* 引数に渡したコレクションで置き換えることができます。<!-- END REF-->
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 セパレーター線を挿入するには、コレクション内に**null** または空のオブジェクトを渡します。
 
-#### 例題 
+## 例題 
 
 アプリケーションの**ヘルプ**メニューをカスタマイズしたい場合を考えます:
 
@@ -56,11 +56,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict6260534.en.png)
 
-#### 参照 
+## 参照 
 
 [SET ABOUT](set-about.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

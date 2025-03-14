@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Summary-->El comando **SVG SET ATTRIBUTE** se utiliza para modificar el valor de un atributo existente en el árbol de renderización SVG de una imagen mostrada o en el árbol DOM interno de una imagen.<!-- END REF-->   
   
@@ -82,7 +82,7 @@ Si intenta modificar el atributo de un elemento que no es compatible o uno de su
   
 Si el comando no se ejecuta en el contexto de un formulario o si se pasa un *objetoImagen* inválido, la variable OK toma el valor 0\. Si el comando se ha ejecutado correctamente, toma el valor 1.
 
-#### Ejemplo 
+## Ejemplo 
 
 Modificación del contenido de un elemento de tipo texto:
 
@@ -92,11 +92,11 @@ Modificación del contenido de un elemento de tipo texto:
 
 **Nota:** no hay no namespace para que el atributo pueda utilizarse en una hoja de estilo CSS sin riesgo de conflicto. 
 
-#### Ver también 
+## Ver también 
 
 [SVG GET ATTRIBUTE](svg-get-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

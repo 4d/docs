@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE DATA FILE.Summary-->El comando **CREATE DATA FILE** permite crear un nuevo archivo de datos en disco y reemplazar rápidamente el archivo de datos abierto por la aplicación 4D.<!-- END REF--> 
 
@@ -23,11 +23,11 @@ Antes de lanzar la operación, el comando verifica que la ruta de acceso no corr
 
 **4D Server:** a partir de 4D v13, este comando puede ejecutarse con 4D Server. En este contexto, efectúa una llamada interna a [QUIT 4D](quit-4d.md) en el servidor (lo que produce la aparición de una caja de diálogo en cada equipo remoto, indicando que el servidor está en proceso de salir) antes de la creación del archivo designado. 
 
-#### Ver también 
+## Ver también 
 
 [OPEN DATA FILE](open-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

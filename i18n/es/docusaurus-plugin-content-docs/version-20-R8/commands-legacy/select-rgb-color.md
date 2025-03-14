@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Select RGB color.Summary-->El comando Select RGB color muestra la ventana sistema de selección de color y devuelve el valor RGB del color seleccionado por el usuario.<!-- END REF--> 
 
@@ -36,11 +36,11 @@ El efecto de la validación de esta caja de diálogo difiere dependiendo de la p
 
 **Nota:** este comando no debe ejecutarse en el equipo servidor ni en un proceso web.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

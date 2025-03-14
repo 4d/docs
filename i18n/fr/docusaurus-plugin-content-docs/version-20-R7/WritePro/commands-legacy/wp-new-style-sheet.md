@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New style sheet.Summary-->La commande **WP New style sheet** crée un nouvel objet feuille de style (vide) pour le *docWP* désigné.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Vous pouvez indiquer les attributs de la feuille de style à l'aide de la comman
 * Une feuille de style modifie uniquement l'affichage d'un caractère ou d'un paragraphe, mais ne modifie pas la façon dont il est stocké dans le document. Si une feuille de style est supprimée, le texte reprendra le style par défaut.
 * Les attributs de style non définis dans la nouvelle feuille de style utiliseront automatiquement le style Normal. Pour plus d'informations, consultez *Commandes feuilles de style*.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant crée et définit une feuille de style de paragraphe :
 
@@ -65,7 +65,7 @@ Le code suivant crée et définit une feuille de style de paragraphe :
  End if 
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

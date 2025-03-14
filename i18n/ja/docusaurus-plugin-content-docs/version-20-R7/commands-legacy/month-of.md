@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Month of.Summary-->Month of コマンドは*aDate*の月を返します。<!-- END REF-->Month of は月の数値を返します。月の名前ではありません (例題 1参照)。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | December  | 倍長整数 | 12 |
 
   
-#### 例題 1 
+## 例題 1 
 
 以下の例題はMonth ofの使用方法を紹介しています。結果は変数*vResult*に代入されます:
 
@@ -45,16 +45,16 @@ displayed_sidebar: docs
  vResult:=Month of(Current date) // vResult には今日の日付の月が代入される
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Current date](current-date.md "Current date")コマンドの例題を参照。
 
-#### 参照 
+## 参照 
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

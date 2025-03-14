@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD Get attribute.Summary-->El comando **METHOD Get attribute** devuelve el valor del atributo *tipoAtributo* para el método proyecto designado por el parámetro *ruta*.<!-- END REF--> Este comando sólo funciona con métodos proyecto. Si pasa una *ruta* invalida, se genera un error. 
 
@@ -36,11 +36,11 @@ Si el comando se ejecuta desde un componente, se aplica por defecto a los métod
 
 El comando devuelve **True** si se selecciona un atributo y **False** si se deselecciona.
 
-#### Ver también 
+## Ver también 
 
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

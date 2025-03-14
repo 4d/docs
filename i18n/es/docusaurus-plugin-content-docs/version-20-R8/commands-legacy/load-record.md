@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LOAD RECORD.Summary-->LOAD RECORD carga el registro actual de *tabla*.<!-- END REF--> Si no hay registro actual, LOAD RECORD no tienen ningún efecto.
 
@@ -31,13 +31,13 @@ En entornos multiusuario y multiprocesos, cuando necesite modificar un registro 
 
 **Consejo:** el comando LOAD RECORD puede ser utilizado para recargar el registro actual en el contexto de un formulario de entrada. Todos los datos modificados son reemplazados por los valores anteriores. En ese caso, el comando LOAD RECORD efectúa en cierto modo una cancelación general de la entrada. 
 
-#### Ver también 
+## Ver también 
 
 [Locked](locked.md)  
 *Record Locking*  
 [UNLOAD RECORD](unload-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

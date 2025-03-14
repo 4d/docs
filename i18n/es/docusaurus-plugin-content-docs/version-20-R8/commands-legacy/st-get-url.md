@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST GET URL.Summary-->El comando **ST GET URL** devuelve la etiqueta y la dirección de la primera URL detectada en el campo o la variable de texto multiestilo designado por el parámetro *objeto*.<!-- END REF--> 
 
@@ -45,7 +45,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
   
 **Nota**: si *inicioSel* es mayor que *finSel* (excepto cuando *finSel* es 0) , el comando no hace nada y la variable OK toma el valor 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 Cuando hay un evento de doble clic, se comprueba que no existe en realidad una URL, y si es así, se muestra un diálogo en el que ha recuperado sus valores para que el usuario puede modificarlos:
 
@@ -66,11 +66,11 @@ Cuando hay un evento de doble clic, se comprueba que no existe en realidad una U
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST INSERT URL](st-insert-url.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

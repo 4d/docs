@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->La commande **QUIT 4D**  vous permet de quitter l'application 4D courante et de retourner sur le Bureau du système d'exploitation.<!-- END REF--> 
 
@@ -48,7 +48,7 @@ Si une *On Server Shutdown Database Method* existe, elle est exécutée à l’i
 
 L’action de la commande **QUIT 4D** utilisée dans une procédure stockée est équivalente à celle de la commande **Quitter** du menu **Fichier** de 4D Server : elle provoque l’apparition, sur chaque poste client, d’une boîte de dialogue signalant que le serveur est sur le point de quitter. 
 
-#### Exemple 
+## Exemple 
 
 La méthode projet suivante est associée à la commande **Quitter** du menu **Fichier**.
 
@@ -61,11 +61,11 @@ La méthode projet suivante est associée à la commande **Quitter** du menu **F
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

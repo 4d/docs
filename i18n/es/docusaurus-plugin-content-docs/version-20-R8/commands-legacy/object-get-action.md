@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get action.Summary-->El comando **OBJECT Get action** devuelve el nombre y (si es el caso) el parámetro de la acción estándar asociada con el objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Puede establecer una acción estándar para un objeto en el Editor de formulario
 
 Para obtener una lista completa de acciones estándar, consulte la sección *Acciones estándar* en el manual de *Diseño*. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea asociar la acción "Cancelar" con todos los objetos en el formulario que aún no tienen ninguna acción asociada:
 
@@ -40,11 +40,11 @@ Usted desea asociar la acción "Cancelar" con todos los objetos en el formulario
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET ACTION](object-set-action.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels<!-- END REF--> :
 
@@ -32,11 +32,11 @@ Avec ce type d'état, les tableaux ne peuvent pas comporter plus de deux éléme
   
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

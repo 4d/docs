@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->REMOVE FROM SET elimina el registro actual de *tabla* de *conjunto*.<!-- END REF--> El conjunto ya debe existir; si no existe, ocurre un error. Si no existe un registro actual para *Tabla*, REMOVE FROM SET no tiene efecto.
 
-#### Ver también 
+## Ver también 
 
 [ADD TO SET](add-to-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

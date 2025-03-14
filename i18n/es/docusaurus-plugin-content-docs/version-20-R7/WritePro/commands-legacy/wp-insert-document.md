@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP INSERT DOCUMENT.Summary-->El comando **WP INSERT DOCUMENT** inserta el documento *docWP* en el rango *objRango* de acuerdo a los parámetros *modo* de inserción y *actRango*.<!-- END REF-->
 
@@ -53,7 +53,7 @@ Puede combinar una de las constantes anteriores con las siguientes opciones de i
 Si no pasa un parámetro *actRango*, por defecto los contenidos insertados se incluyen en el rango resultante.
 * Si *objRango* no es un rango, *actRango* se ignora.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea remplazar los contenidos de un documento por el texto seleccionado de otro documento:
 
@@ -63,7 +63,7 @@ Usted desea remplazar los contenidos de un documento por el texto seleccionado d
  WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //remplazamos el contenido de WPDoc por el contenido del nuevo documento
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Se ha definido un documento de plantilla con diferentes partes con formato previo, cada una de ellas se almacena como un marcador. Al producir un documento final de la plantilla, puede extraer cualquier marcador como un nuevo documento e insertarlo en el documento final.
 
@@ -80,7 +80,7 @@ Se ha definido un documento de plantilla con diferentes partes con formato previ
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

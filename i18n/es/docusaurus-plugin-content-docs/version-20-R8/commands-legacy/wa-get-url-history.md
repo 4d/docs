@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->El comando WA GET URL HISTORY devuelve uno o dos arrays que contienen los URLs visitados durante la sesión en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> Permite construir una interfaz de navegación personalizada.
 
@@ -40,11 +40,11 @@ Si se pasa, el parámetro *arrTitulos* contiene la lista de los nombres de venta
 
 **Nota de compatibilidad:** **a partir de 4D v19 R5, este comando sólo devuelve la URL actual en los arrays *arrayUrls y *arrTitulos para las áreas web que utilizan el motor de renderizado del sistema Windows.* 
 
-#### Ver también 
+## Ver también 
 
 [WA Create URL history menu](wa-create-url-history-menu.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

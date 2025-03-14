@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->SET PLUGIN ACCESS コマンドを使用すれば、データベース上にインストールされた各 "シリアルされた" プラグインをプログラムで設定する環境をユーザグループに提供することができます。<!-- END REF-->
 
@@ -38,13 +38,13 @@ displayed_sidebar: docs
 * 1度にプラグインを使用できるのは、1つのグループだけです。他のグループがプラグインアクセス権を所有している場合、このコマンドを実行すると、そのグループはその権限を失います。
 * 使用されたライセンスはセッションの間、*group* 引数で指定されたグループ内の4D ユーザーアカウントに割り当てられます。これはアカウントのグループ所属状況が変わっても、*group* 引数のグループがプラグインアクセス権を失っても変わりません。
 
-#### 参照 
+## 参照 
 
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

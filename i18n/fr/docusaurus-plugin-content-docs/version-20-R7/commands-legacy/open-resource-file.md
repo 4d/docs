@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open resource file.Summary-->La commande **Open resource file** ouvre le fichier de ressources dont vous avez passé le nom ou le chemin d'accès complet dans le paramètre *resNomFichier*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Si toutefois vous accédez au fichier de ressources de la structure et souhaitez
 
 Une fois que vous avez ouvert un fichier de ressources, vous pouvez analyser son contenu à l'aide des commandes [RESOURCE TYPE LIST](resource-type-list.md) et [RESOURCE LIST](resource-list.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans l'exemple suivant, nous cherchons à ouvrir sous Windows le fichier de ressources "MesPrefs.res" situé dans le dossier de la base :
 
@@ -53,7 +53,7 @@ Dans l'exemple suivant, nous cherchons à ouvrir sous Windows le fichier de ress
 
 Sous Mac OS, l'exemple recherchera le fichier “MesPrefs”.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple tente d'ouvrir sous Windows le fichier de ressources "MesPrefs.rsr" situé dans le dossier de la base :
 
@@ -63,7 +63,7 @@ Cet exemple tente d'ouvrir sous Windows le fichier de ressources "MesPrefs.rsr" 
 
 Sous Mac OS, l'exemple recherchera le fichier “MesPrefs”.
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de fichiers, dans laquelle tous les types de documents sont affichés :
 
@@ -71,7 +71,7 @@ L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de
  $vhResFile:=Open resource file("")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de fichiers, dans laquelle seuls les documents créés à l'aide de la fonction  et utilisant le type par défaut sont affichés : 
 
@@ -83,22 +83,22 @@ L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le fichier de ressources est correctement ouvert, la variable système OK prend la valeur 1\. Si le fichier de ressources n'a pas pu être ouvert ou si l'utilisateur a cliqué sur le bouton Annuler dans la boîte de dialogue standard d'ouverture de fichiers, la variable OK prend la valeur 0 (zéro).
 
 Si le fichier de ressources est correctement ouvert par l'intermédiaire de la boîte de dialogue standard d'ouverture de fichiers, la variable système Document contient le chemin d'accès au fichier.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème de ressource ou d'E/S, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 *Ressources*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

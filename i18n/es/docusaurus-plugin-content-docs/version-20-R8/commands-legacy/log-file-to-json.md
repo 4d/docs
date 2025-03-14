@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->El comando **LOG FILE TO JSON** guarda en formato JSON el archivo de historial actual o todo archivo de historial especificado.<!-- END REF-->
 
@@ -74,7 +74,7 @@ La lista actual de propiedades disponibles depende del tipo de operación (por e
 
 (\*) En las bases de datos proyecto, la propiedad "user4d\_id" no se devuelve.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere guardar el archivo de historial actual en JSON:
 
@@ -88,16 +88,16 @@ Usted quiere guardar un archivo de historial archivado en JSON:
  LOG FILE TO JSON("c:\\4Dv15\\ExportLogs";0;"c:\\4Dv15\\Backup\\old_myDB.journal")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 El comando **LOG FILE TO JSON** modifica el valor de las variables sistema OK y Document: si el archivo JSON se guarda correctamente, OK toma el valor 1 y Document contiene la ruta del archivo de historial. Si ha pasa "" en el parámetro *rutaLog* y el usuario cancela el cuadro de diálogo de selección de archivos, OK toma el valor 0 y el Document contiene una cadena vacía. Si el usuario selecciona un archivo no válido, OK toma el valor 0 y Document contiene la ruta del archivo invalido.
 
-#### Ver también 
+## Ver también 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

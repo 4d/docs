@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
@@ -199,7 +199,7 @@ Avec les mêmes enregistrements que précédemment, si vous écrivez :
 
 **Note :** Utiliser la syntaxe liée dans une ligne de recherche unique donnera les mêmes résultats qu'une recherche standard, hormis avec l'opérateur "#" : dans ce cas, des résultats invalides peuvent être retournés. Par conséquent, cette syntaxe spécifique n'est pas prise en charge. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous souhaitons trouver les personnes dont l'âge est situé entre 20 et 29\. Les deux premières lignes interrogent l'attribut en tant qu'entier (>=20 et < 30) et les suivantes interrogent l'attribut en tant que chaîne (débute par "2" mais est différent de "2").
 
@@ -210,7 +210,7 @@ Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous s
  QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";#;"2") //pas de * final pour lancer l'exécution
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enregistrements dans lesquels certains attributs sont définis (ou non définis). Pour cela, vous devez utiliser un objet vide : 
 
@@ -228,7 +228,7 @@ La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enre
 
 **Note :** Cette syntaxe spécifique n'est pas prise en charge avec les attributs de type tableau. La recherche de valeurs NULL dans les attributs de tableau donne des résultats invalides. 
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux enregistrements suivants :
 
@@ -267,7 +267,7 @@ Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux en
   //trouve "smith"
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple illustre l'utilisation de la propriété virtuelle "length". Votre base de données comporte un champ objet \[Customer\]full\_Data avec les données suivantes :
 
@@ -279,7 +279,7 @@ Vous souhaitez obtenir les enregistrements des clients qui ont deux enfants ou p
  QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Ces exemples illustrent les différentes combinaisons de liaisons de critères disponibles avec les tableaux. Soit une base contenant les enregistrements suivants :
 
@@ -396,7 +396,7 @@ Recherche des personnes qui ont un enfant de 15 ans nommé "Harry" qui a une voi
   //retourne "Sam" et "Louis"
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la recherche est correctement effectuée, la variable système OK prend la valeur 1.  
 La variable OK prend la valeur 0 si :
@@ -404,13 +404,13 @@ La variable OK prend la valeur 0 si :
 * l'utilisateur clique sur le bouton **Annuler** / **Stop**,
 * en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 *Structure des objets de langage 4D*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

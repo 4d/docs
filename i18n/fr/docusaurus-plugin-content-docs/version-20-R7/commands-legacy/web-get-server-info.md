@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Get server info.Summary-->La commande **WEB Get server info** retourne un objet contenant des informations détaillées sur la session courante du serveur Web 4D.<!-- END REF--> Les informations retournées incluent le serveur SOAP.
 
@@ -69,7 +69,7 @@ Si vous passez **Vrai** dans le paramètre *avecCache*, la commande retourne les
 | nbCachedObjects         | Numérique             | Nombre d'objets dans le cache                                                                                                                          |
 | cachedObjects           | Collection            | Collection d'objets dans le cache. Chaque objet mis en cache est défini par différentes propriétés (url, mimeType, expirationType, lastModified, etc.) |
 
-#### Exemple 
+## Exemple 
 
 Après exécution du code suivant :
 
@@ -121,13 +121,13 @@ $webServerInfo:=WEB Get server info(True)
    }
 }```
 
-#### Voir aussi 
+## Voir aussi 
 
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

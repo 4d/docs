@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->La commande **PAUSE INDEXES** désactive temporairement tous les index de *laTable*, hormis l’index de la clé primaire.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Si vous appelez la commande **PAUSE INDEXES** sur une table puis quittez la base
 
 **Note :** Cette commande ne peut pas être exécutée depuis un 4D distant.
 
-#### Exemple 
+## Exemple 
 
 Exemple de méthode d’import massif de données :
 
@@ -42,12 +42,12 @@ Exemple de méthode d’import massif de données :
  RESUME INDEXES([Articles])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

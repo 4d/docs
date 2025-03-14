@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Substring.Summary-->El comando **Substring** devuelve la parte de *fuente* definida por *aPartirDe* y *numCars*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Si *aPartirDe* más *numCars* es mayor que el número de caracteres en la cadena
 
 **Atención**: cuando se utiliza este comando en un contexto multi-estilo, debe convertir los eventuales caracteres de fin de línea Windows ('\\r\\n') en caracteres de fin de línea simples ('\\r') para que el procesamiento sea válido. Esto se debe al mecanismo que normaliza los finales de línea 4D para asegurar la compatibilidad multi-plataforma para los textos. Para obtener más información, consulte *Normalización automática de fines de líneas*.   
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo ilustra la utilización de Substring. Los resultados se asignan a la variable *vsResult*. 
 
@@ -36,7 +36,7 @@ Este ejemplo ilustra la utilización de Substring. Los resultados se asignan a l
  vsResult:=Substring(var;2) // vsResult toma el valor de todos los caracteres excepto el primero
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente método de proyecto añade los párrafos que se encuentran en el texto (pasado como primer parámetro) a una array de tipo texto o alfa (cuyo puntero se pasa como segundo parámetro):
 
@@ -62,11 +62,11 @@ El siguiente método de proyecto añade los párrafos que se encuentran en el te
  Until($1="")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Position](position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

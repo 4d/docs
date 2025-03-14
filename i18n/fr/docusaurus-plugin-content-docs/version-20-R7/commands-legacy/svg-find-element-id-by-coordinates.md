@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->La commande **SVG Find element ID by coordinates** retourne l’ID (attribut "id" ou "xml:id") de l’élément XML situé à l’emplacement défini par les coordonnées (*x*,*y*) dans l’image SVG désignée par le paramètre *objetImage*.<!-- END REF--> Cette commande permet notamment de créer des interfaces graphiques interactives utilisant des objets SVG. 
 
@@ -45,15 +45,15 @@ La commande retourne une chaîne vide si :
 
 **Note :** Cette commande ne permet pas de détecter des objets dont la valeur d'opacité (attribut "fill-opacity") est inférieure à 0,01 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si *objetImage* ne contient pas une image SVG valide, la commande retourne une chaîne vide et la variable système OK prend la valeur 0\. Sinon, si la commande a été exécutée correctement, la variable système OK prend la valeur 1\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

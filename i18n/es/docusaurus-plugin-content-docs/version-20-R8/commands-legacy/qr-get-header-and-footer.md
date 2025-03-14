@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->El comando QR GET HEADER AND FOOTER permite recuperar el contenido y el tamaño del encabezado o pie de página.<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *selector* es incorrecto, se genera el error -9852.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código recupera el contenido y la altura del título del encabezado y los muestra como alertas:
 
@@ -63,11 +63,11 @@ El siguiente código recupera el contenido y la altura del título del encabezad
  ALERT("La altura del encabezado es "+String($altura))
 ```
 
-#### Ver también 
+## Ver también 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

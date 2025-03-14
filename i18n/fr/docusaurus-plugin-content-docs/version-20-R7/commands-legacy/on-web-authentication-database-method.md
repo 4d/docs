@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->La **On Web Authentication database method** est chargée de gérer les accès au moteur de serveur Web.<!-- END REF--> Elle est automatiquement appelée par 4D ou 4D Server lorsqu'une requête d'un navigateur Web requiert l'exécution d'une méthode 4D sur le serveur (appel d'une méthode via un URL *4DACTION*, une balise *4DSCRIPT*, etc.). 
 
@@ -92,7 +92,7 @@ La [On Web Connection database method](on-web-connection-database-method.md) n�
 * N’appelez aucun élément d’interface dans la **On Web Authentication database method** (([ALERT](alert.md), [DIALOG](dialog.md), etc.), sinon son exécution sera interrompue et la connexion refusée. Il en est de même si une erreur se produit durant son traitement.
 * Il est possible d'interdire l'exécution par *4DACTION* ou *4DSCRIPT* de chaque méthode projet à l'aide de l'option “Disponible via les balises HTML et URLs 4D (4DACTION...)” dans la boîte de dialogue des Propriétés des méthodes. Pour plus d'informations sur ce point, reportez-vous à la section *Sécurité des connexions*.
 
-#### Appels de la Méthode base Sur authentification Web 
+## Appels de la Méthode base Sur authentification Web 
 
 La **On Web Authentication database method** est automatiquement appelée, quel que soit le mode, lorsqu’une requête ou un traitement nécessite l'exécution d'une méthode 4D. Elle est également appelée lorsque le serveur Web reçoit un URL statique invalide (par exemple, si la page statique demandée n'existe pas). 
 
@@ -109,7 +109,7 @@ La **On Web Authentication database method** est donc appelée dans les cas suiv
 
 A noter que la **On Web Authentication database method** n'est PAS appelée lorsque le serveur reçoit un URL demandant une page statique valide. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Exemple de **On Web Authentication database method** en mode BASIC :
 
@@ -159,7 +159,7 @@ Exemple de **On Web Authentication database method** en mode BASIC :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple de méthode base Sur authentification Web en mode DIGEST :
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New process.Summary-->La commande **New process** lance un nouveau process (sur la même machine) et retourne le numéro de ce process.<!-- END REF-->
 
@@ -59,7 +59,7 @@ Vous pouvez passer des paramètres à la méthode process via un ou plusieurs pa
 
 Si vous passez le dernier paramètre (optionnel) *\**, vous indiquez à 4D de vérifier en premier lieu si un process du même nom que celui que vous avez passé dans *nom* est déjà en cours d'exécution. Si c'est le cas, 4D ne démarre pas de nouveau process et retourne le numéro du process existant.
 
-#### Exemple 
+## Exemple 
 
 Examinons la méthode projet suivante : 
 
@@ -101,13 +101,13 @@ La méthode objet de *bAjoutClient* devient :
 
 Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode DEMARRER AJOUT CLIENTS. Désélectionnez l'option **Démarrer un process** pour la commande de menu.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
 *Introduction aux process*  
 *Process 4D préemptifs*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

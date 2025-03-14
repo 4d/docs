@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Is secured connection.Summary-->La commande **WEB Is secured connection** retourne un booléen indiquant si la connexion au serveur Web 4D s’effectue en mode sécurisé via TLS/SSL (la requête débute par “https:” au lieu de “http:”).<!-- END REF--> 
 
@@ -22,11 +22,11 @@ displayed_sidebar: docs
 
 Cette commande permet par exemple, le cas échéant, de refuser les tentatives de connexion en mode non sécurisé. Pour plus d’informations sur ce point, reportez-vous à la section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

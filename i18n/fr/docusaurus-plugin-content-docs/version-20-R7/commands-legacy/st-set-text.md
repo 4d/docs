@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET TEXT.Summary-->La commande **ST SET TEXT** insère le texte passé dans le paramètre *nouvTexte* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> Cette commande s’applique uniquement au texte brut du paramètre *objet*, sans modifier les éventuelles balises de style qu’il contient. Elle permet de modifier par programmation du texte multistyle affiché à l’écran. 
 
@@ -50,13 +50,13 @@ Les paramètres optionnels *débutSel* et *finSel* vous permettent de désigner 
 
 **Note :** Si *débutSél* est supérieur à *finSél*, le texte n'est pas modifié et la variable OK prend la valeur 0 (hormis lorsque *finSél* vaut 0, cf. ci-dessus). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
 A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez remplacer le texte multistyle sélectionné par l’utilisateur avec le contenu d'une variable.
 
@@ -80,17 +80,17 @@ Le champ et son contenu sont les suivants :
 
 ![](../assets/en/commands/pict579075.fr.png) ![](../assets/en/commands/pict579077.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [ST SET PLAIN TEXT](st-set-plain-text.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

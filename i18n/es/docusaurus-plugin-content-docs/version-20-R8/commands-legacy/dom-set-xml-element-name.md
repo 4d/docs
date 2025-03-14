@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->El comando DOM SET XML ELEMENT NAME  permite modificar el nombre del elemento designado por *refElement*.<!-- END REF-->
 
 Pase en *refElement* la referencia del elemento a renombrar y en *nomElement* el nuevo nombre del elemento. El comando también se encarga de actualizar las etiquetas de apertura y cierre del elemento. 
 
-#### Ejemplo 
+## Ejemplo 
 
 En el siguiente recurso XML: 
 
@@ -44,22 +44,22 @@ Obtenemos:
 </MejorVendedor>
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error. 
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Se genera un error cuando:
 
 * La referencia del elemento no es válida
 * El nuevo nombre del elemento a crear no es válido (por ejemplo, si comienza con un número).
 
-#### Ver también 
+## Ver también 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

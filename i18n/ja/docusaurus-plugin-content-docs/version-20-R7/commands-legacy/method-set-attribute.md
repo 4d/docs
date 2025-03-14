@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->**METHOD SET ATTRIBUTE**コマンドは*path*引数で指定されたプロジェクトメソッドの*attribType*属性の値を設定します。<!-- END REF-->このコマンドはプロジェクトメソッドに対してのみ動作します。無効な *path*を渡すとエラーが生成されます。
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 このコマンドをコンパイルモードで実行することはできません。このモードで呼び出されると、エラー -9762 が生成されます。 
 
-#### 例題 1 
+## 例題 1 
 
 "Choose dialog"プロジェクトメソッドの"コンポーネントとホストデータベースで共有"プロパティを選択します:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 複数の属性/値のペアを設定する場合:
 
@@ -62,13 +62,13 @@ displayed_sidebar: docs
  METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
-#### 参照 
+## 参照 
 
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

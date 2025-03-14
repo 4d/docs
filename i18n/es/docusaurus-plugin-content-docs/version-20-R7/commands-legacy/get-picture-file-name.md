@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get picture file name.Summary-->El comando **Get picture file name** devuelve el nombre por defecto actual de la imagen pasada como parámetro.<!-- END REF-->
 
@@ -22,11 +22,11 @@ El nombre por defecto se utiliza durante la exportación de la imagen en un arch
 
 Si la imagen no tienen un nombre por defecto, el comando devuelve una cadena vacía.
 
-#### Ver también 
+## Ver también 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

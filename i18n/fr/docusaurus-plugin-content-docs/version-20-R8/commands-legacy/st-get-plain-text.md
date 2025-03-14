@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get plain text.Summary-->La commande **ST Get plain text** supprime toute balise de style du champ ou de la variable texte désigné(e) par les paramètres *\** et *objet*, et retourne le texte brut.<!-- END REF--> 
 
@@ -48,7 +48,7 @@ Le paramètre optionnel *modeRéf* permet d’indiquer la manière dont les réf
 * Le paramètre optionnel *modeRéf* n’est donc utile que si le texte contient des références, sinon le texte brut est identique quelle que soit la valeur du paramètre *modeRéf*.
 * Si un document 4D Write Pro contient des tableaux, le contenu de chaque cellule est traité en tant que paragraphe individuel et retourné sous forme de texte, séparé par des tabulations. Les lignes sont séparées par des retours chariot.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous cherchez le texte "très beau" parmi les valeurs d’un champ texte multistyle. La valeur a été stockée sous la forme "Il fait très beau **aujourd’hui**". 
 
@@ -62,7 +62,7 @@ Vous cherchez le texte "très beau" parmi les valeurs d’un champ texte multist
  QUERY([Commentaires];[Commentaires]Meteo="@très beau@")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit le texte suivant placé dans la zone multistyle "mazone" :
 
@@ -95,20 +95,20 @@ Si vous exécutez le code suivant :
      //$txt = "Il est actuellement    ou openW"
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
 A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

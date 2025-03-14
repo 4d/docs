@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On SQL Authentication.Summary-->El Método base On SQL Authentication puede utilizarse para filtrar las peticiones enviadas al servidor SQL integrado de 4D.<!-- END REF--> Este filtro puede estar basado en el nombre y contraseña como también de manera opcional en la dirección IP del usuario. El desarrollador puede utilizar su propia tabla de usuarios o la de los usuarios 4D para evaluar los identificadores de conexión. Una vez validada la conexión, el comando [CHANGE CURRENT USER](change-current-user.md) puede utilizarse para controlar el acceso de las peticiones dentro de la base 4D. 
 

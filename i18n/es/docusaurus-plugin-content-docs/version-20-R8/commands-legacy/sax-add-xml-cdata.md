@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAX ADD XML CDATA.Summary-->El comando SAX ADD XML CDATA añade en el documento XML referenciado por *documento*, los *datos* de tipo texto o BLOB.<!-- END REF--> Estos datos se enmarcarán automáticamente con las etiquetas *<!\[CDATA\[* y *\]\]>*  
 El texto incluido en una sección CData es ignorado por el intérprete XML. 
@@ -23,7 +23,7 @@ Si quiere codificar los contenidos de datos, debe utilizar el comando [BASE64 EN
 
 Para que este comando funcione correctamente, debe estar abierto un elemento. De lo contrario, se generará un error. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Si quiere insertar las siguientes líneas en su documento XML: 
 
@@ -67,15 +67,15 @@ else
 ]]>
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

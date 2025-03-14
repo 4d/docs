@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->El comando WRITE PICTURE FILE permite guardar en un archivo en el disco la imagen pasada en el parámetro *imagen,* en el formato definido por *codec*.<!-- END REF--> 
 
@@ -44,14 +44,14 @@ Si la extensión utilizada no corresponde a ningún codec disponible, el archivo
 
 Si la ejecución del comando es correcta, la variable sistema Document contiene la ruta de acceso completa al archivo creado y la variable sistema OK toma el valor 1\. De lo contrario, OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 *Imágenes*  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

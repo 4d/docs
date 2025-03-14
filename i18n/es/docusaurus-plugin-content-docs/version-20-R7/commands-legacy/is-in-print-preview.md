@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is in print preview.Summary-->El comando **Is in print preview** devuelve True si la opción **Vista previa de impresión** está seleccionada en la caja de diálogo de impresión y False de lo contrario.<!-- END REF--> Esta configuración es local al proceso. 
 
 A diferencia del comando [Get print preview](get-print-preview.md), **Is in print preview** devuelve el valor final de la opción, después de la validación de la caja de diálogo por parte del usuario. Este comando permite determinar con certeza si la impresión toma lugar en modo "vista previa". 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo permite tener en cuenta todos los tipos de impresiones:
 
@@ -40,12 +40,12 @@ Este ejemplo permite tener en cuenta todos los tipos de impresiones:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

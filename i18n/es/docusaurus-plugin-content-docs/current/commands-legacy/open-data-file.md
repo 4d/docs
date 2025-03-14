@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->El comando OPEN DATA FILEpermite cambiar el archivo de datos abierto por la aplicación 4D.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Si pasa una cadena vacía en *rutaAcceso*, el comando abrirá nuevamente la base
 
 **4D Server:** a partir de 4D v13, este comando puede utilizarse con 4D Server. En este contexto, hace una llamada interna a [QUIT 4D](quit-4d.md) en el servidor (lo que produce la aparición de una caja de diálogo en cada equipo remoto, indicando que el servidor está en proceso de salir) antes de abrir el archivo designado.
 
-#### Ejemplo 
+## Ejemplo 
 
 En el contexto del despliegue de una aplicación fusionada, usted desea abrir o crear el archivo de datos usuario en el método base On Startup. En este ejemplo se utiliza el archivo de datos por defecto (ver *Gestión de archivo de datos en las aplicaciones finales* ):
 
@@ -51,11 +51,11 @@ En el contexto del despliegue de una aplicación fusionada, usted desea abrir o 
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [CREATE DATA FILE](create-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

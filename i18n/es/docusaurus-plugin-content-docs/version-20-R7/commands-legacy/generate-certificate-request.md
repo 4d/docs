@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->El comando GENERATE CERTIFICATE REQUEST genera una solicitud de certificación al formato PKCS el cual puede ser utilizado directamente por las autoridades de certificación tal como Verisign(R).<!-- END REF--> El certificado es una parte importante en el protocolo seguro SSL. El certificado se envía a cada navegador que se conecta en modo SSL y contiene la “tarjeta de identidad” del sitio web (con la información introducida en el comando), así como también su llave pública permitiendo a los navegadores descifrar la información recibida. Además, el certificado contiene diferente información añadida por la autoridad de certificación lo cual garantiza su integridad. 
 
@@ -46,7 +46,7 @@ Los códigos y nombres requeridos pueden cambiar de acuerdo a la autoridad de ce
 
 El orden en el que se introducen los códigos y la información no importa, sin embargo los dos arrays deben estar sincronizados: si el tercer elemento de *codeArray* contiene el valor *15* (ciudad), el tercer elemento de *nameArray* debe contener esta información, en nuestro ejemplo Barcelona.
 
-#### Ejemplo 
+## Ejemplo 
 
 Un formulario “Solicitud de certificado” contiene los seis campos necesarios para una solicitud de certificación estándar. El botón **Generar** crea un documento en disco que contiene la solicitud del certificado. El documento “Privatekey.txt” que contiene la llave privada (generada con el comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md "GENERATE ENCRYPTION KEYPAIR")) debe estar en el disco:
 
@@ -83,12 +83,12 @@ Este es el método del botón **Generar**
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->El comando MULTI SORT ARRAY permite efectuar una ordenación multicriterios en un conjunto de arrays.<!-- END REF-->
 
@@ -58,7 +58,7 @@ Para cada elemento del array *ptrArrayNombre*, debe corresponder un elemento del
 * no es posible ordenar arrays de tipo Puntero o [Imagen](# "Can be any Windows or Macintosh picture"). Puede ordenar un elemento de un array de bidimensional (es decir *a2DArray{$vlThisElem}*) pero no puede ordenar el array bidimensional en sí mismo (es decir *a2DArray*).
 * You can sort Object arrays. Null elements are grouped and array elements are sorted with an internal order.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo utiliza la primera sintaxis: crea cuatro arrays y los ordena por ciudad (orden ascendente) luego por salario (orden descendente) con los dos últimos arrays *nombres\_array* y *telNum\_array*, siendo sincronizados de acuerdo con los criterios de ordenación anteriores:
 
@@ -82,7 +82,7 @@ es equivalente a:
  SORT ARRAY(ciudades;salarios;nombres;telNums;>)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo utiliza la segunda sintaxis: crea cuatro arrays y los ordena por ciudad (orden creciente) y empresa (orden decreciente); los últimos dos arrays, nombres\_Array y telNum\_Array, están sincronizados de acuerdo al criterio de ordenación anterior:
 
@@ -105,13 +105,13 @@ El siguiente ejemplo utiliza la segunda sintaxis: crea cuatro arrays y los orden
 
 Si quiere que el array de nombres se utilice como tercer criterio de ordenación, debe asignar el valor 1 al elemento Array\_orden{3}. O bien, si quiere que los arrays se ordenen sólo por el criterio ciudades, asigne el valor 0 a los elementos Array\_orden{2}, Array\_orden{3} y Array\_orden{4}. De esta manera, puede obtener un resultado idéntico a SORT ARRAY(ciudades;empresas;nombres;telNums;>). 
 
-#### Ver también 
+## Ver también 
 
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

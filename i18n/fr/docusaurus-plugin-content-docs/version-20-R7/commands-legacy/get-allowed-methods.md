@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->La commande **GET ALLOWED METHODS** retourne dans le tableau *tabMéthodes* le nom des méthodes “autorisées” dans l’éditeur de formules, c’est-à-dire pouvant être utilisées lors de l’écriture d’une formule — ces méthodes sont listées à la fin de la liste des commandes dans l’éditeur.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ Par défaut, aucune méthode n’est utilisable dans l’éditeur de formules. L
 
 Cette commande est utile pour préserver le paramétrage de l’ensemble courant de méthodes autorisées avant l’exécution d’une formule dans un contexte spécifique (par exemple un état rapide). 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet d’autoriser ponctuellement un ensemble de méthodes spécifiques pour la création d’un état rapide : 
 
@@ -40,11 +40,11 @@ Cet exemple permet d’autoriser ponctuellement un ensemble de méthodes spécif
  SET ALLOWED METHODS(tabméthodes)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

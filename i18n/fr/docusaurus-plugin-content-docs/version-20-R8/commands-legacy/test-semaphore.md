@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Test semaphore.Summary-->La commande **Test semaphore** permet de tester l’existence d’un sémaphore.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ Si le sémaphore existe, la fonction retourne **Vrai**, s’il n’existe pas el
 
 **Note :** Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet de connaître l’état d’un traitement (en l’occurrence, la modification d’un code) sans modifier le sémaphore :
 
@@ -41,12 +41,12 @@ Cet exemple permet de connaître l’état d’un traitement (en l’occurrence,
  CLOSE WINDOW
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

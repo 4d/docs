@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->El comando DOM Get XML document ref se utiliza para recuperar la referencia del elemento "documento" del árbol DOM cuya referencia se pasa en *refElement*.<!-- END REF--> El elemento document es el primer elemento de un árbol DOM; es el padre del elemento raíz. 
 
@@ -22,7 +22,7 @@ La referencia del elemento document permite manipular los nodos "Doctype" y "Pro
 
 A este nivel, puede únicamente añadir las instrucciones y comentarios o reemplazar el nodo Doctype. No puede crear nodos CDATA o Text. 
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, queremos encontrar la declaración DTD del documento XML:
 
@@ -49,12 +49,12 @@ En este ejemplo, queremos encontrar la declaración DTD del documento XML:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

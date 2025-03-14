@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->El comando OBJECT MOVE permite mover los objetos en el formulario actual, definido por los parámetros *\** y *objeto, moveH* píxeles horizontalmente y *moveV* píxeles verticalmente.<!-- END REF-->   
   
@@ -45,7 +45,7 @@ Este comando funciona en los siguientes contextos:
 * Encabezados y pies de página de formularios de salida mostrados por los comandos [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION") o [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION"),
 * Formularios en curso de impresión.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente instrucción mueve el botón “boton\_1” 10 píxeles a la derecha, 20 píxeles hacia arriba y agranda el botón 30 píxeles de largo y 40 de alto: 
 
@@ -53,7 +53,7 @@ La siguiente instrucción mueve el botón “boton\_1” 10 píxeles a la derech
  OBJECT MOVE(*;"boton_1";10;-20;30;40)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La siguiente instrucción mueve el botón “boton\_1” a las siguientes coordenadas (10;20) (30;40): 
 
@@ -61,13 +61,13 @@ La siguiente instrucción mueve el botón “boton\_1” a las siguientes coorde
  OBJECT MOVE(*;"boton_1";10;20;30;40;*)
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

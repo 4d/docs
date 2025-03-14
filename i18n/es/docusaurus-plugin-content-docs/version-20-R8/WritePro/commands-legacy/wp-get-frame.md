@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get frame.Summary-->El comando **WP Get frame** devuelve el marco en el que se encuentra actualmente el cursor en el área 4D Write Pro *wpArea*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ El valor devuelto puede compararse con una de las siguientes constantes del tema
 
 Si el cursor se encuentra actualmente en un elemento caja de texto, el id del elemento de la caja de texto se devuelve en el parámetro *textBoxID*. En todos los demás casos, este parámetro se devuelve vacío.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea asegurarse de que el usuario ha colocado el cursor en un un marco encabezado o pie de página:
 
@@ -56,7 +56,7 @@ Usted desea asegurarse de que el usuario ha colocado el cursor en un un marco en
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get footer](wp-get-footer.md)  
 [WP SET FRAME](wp-set-frame.md)  

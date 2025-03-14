@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXPORT DIF.Summary-->El comando EXPORT DIF  escribe los datos de los registros de la selección actual de *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento DIF Windows o Macintosh, en el disco.
 
@@ -30,7 +30,7 @@ El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documento e
 
 Durante la utilización de EXPORT DIF , el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13). Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* FldDelimit y RecDelimit. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Como los campos Texto pueden contener retornos de carro, sea cuidadoso si utiliza el retorno de carro como delimitador entre los campos a exportar.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo exporta los datos a un documento DIF. El método comienza por definir el formulario de salida de manera que los datos se exporten por el formulario correcto, luego realiza la exportación:
 
@@ -39,18 +39,18 @@ El siguiente ejemplo exporta los datos a un documento DIF. El método comienza p
  EXPORT DIF([Personas];"Nuevas_Personas.dif") // Exporta al documento "Nuevas_Personas.dif"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

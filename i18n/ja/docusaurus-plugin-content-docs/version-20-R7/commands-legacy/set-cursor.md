@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET CURSOR.Summary-->SET CURSOR コマンド はマウスカーソルを、*cursor* 引数に渡したID番号のシステムカーソルへと変更します。<!-- END REF-->
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **注:** カーソルが使用可能状況とその見た目はOSによって変化する場合があります。
 
-#### 例題 
+## 例題 
 
 マウスがフォーム内の変数エリア上に来た際に、カーソルを![](../assets/en/commands/pict2478692.en.png) に表示させたい場合を考えます。この場合、変数のオブジェクトメソッド内に、以下の様に記述します:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

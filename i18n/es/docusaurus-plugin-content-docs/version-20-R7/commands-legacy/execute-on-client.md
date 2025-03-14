@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->El comando EXECUTE ON CLIENT provoca la ejecución del método *nomMetodo*, con los parámetros *param1.<!-- END REF-->.. paramN*, si es necesario, en el cliente 4D registrado cuyo nombre es *nomCliente*. El nombre registrado del cliente 4D es definido por el comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").   
 Este comando puede llamarse desde un cliente 4D o desde un procedimiento almacenado en 4D Server. 
@@ -29,7 +29,7 @@ Si este comando se llama muchas veces para un mismo 4D Client, las órdenes de e
 
 Puede ejecutar simultáneamente el mismo método en varios o en todos los 4D Clients registrados. Para hacerlo, utilice el carácter arroba (@) en el parámetro *nomCliente*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Asumamos que quiere ejecutar el método “GenerarNums” en el equipo cliente “Client1”:
 
@@ -37,7 +37,7 @@ Asumamos que quiere ejecutar el método “GenerarNums” en el equipo cliente �
  EXECUTE ON CLIENT("Client1";"GenerarNums";12;$a;"Text")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si quiere que todos los clientes ejecuten el método “VacioTiemp”:
 
@@ -45,22 +45,22 @@ Si quiere que todos los clientes ejecuten el método “VacioTiemp”:
  EXECUTE ON CLIENT("@";"EmptyTemp")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Consulte el ejemplo del comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
  La variable sistema OK es igual a 1 si 4D Server ha recibido correctamente petición de ejecución de un método; sin embargo, esto no garantiza que el método ha sido ejecutado correctamente por 4D Client.
 
-#### Ver también 
+## Ver también 
 
 [Execute on server](execute-on-server.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

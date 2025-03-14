@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get text property.Summary-->El comando QR Get text property devuelve el valor de la propiedad de los atributos texto en la celda determinada por *numColumna* y *numLinea*.<!-- END REF-->
 
@@ -62,11 +62,11 @@ Si el parámetro *numColumna* es incorrecto, se genera el error -9852.
 Si el parámetro *numLinea* es incorrecto, se genera el error -9853.  
 Si el parámetro *propiedad* es incorrecto, se genera el error -9854
 
-#### Ver también 
+## Ver también 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

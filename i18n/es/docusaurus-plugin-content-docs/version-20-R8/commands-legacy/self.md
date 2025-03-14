@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.Self.Summary-->Este comando sólo se conserva por razones de compatibilidad.<!-- END REF--> A partir de la versión 12 de 4D, se recomienda utilizar el comando OBJECT Get pointer.
 
-#### Descripción 
+## Descripción 
 
 El comando Self devuelve un puntero hacia el objeto cuyo método de objeto se está ejecutando. 
 
@@ -33,17 +33,17 @@ Si Self se llama fuera de contexto, devuelve un puntero Nil (*\->\[\]*).
 * Para una columna asociada a una variable, un puntero a la variable,
 * Para una columna asociada a una expresión, un puntero Nil.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER").
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This ](../commands/this.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

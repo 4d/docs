@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get HTML template.Summary-->El comando QR Get HTML template devuelve la plantilla HTML utilizada actualmente por el área del informe rápido referenciada por *area*.<!-- END REF--> El valor devuelto es de tipo texto e incluye la totalidad del código HTML utilizado como plantilla.
 
@@ -22,11 +22,11 @@ Si no se definió una plantilla específica, se devuelve la plantilla por defect
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

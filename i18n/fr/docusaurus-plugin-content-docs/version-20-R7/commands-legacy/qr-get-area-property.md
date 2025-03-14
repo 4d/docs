@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get area property.Summary-->La commande **QR Get area property** retourne 0 si l'élément d'interface dont la référence est passée dans le paramètre *propriété* est masqué dans la *zone*, sinon elle retourne 1\.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 Si le paramètre *propriété* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET AREA PROPERTY](qr-set-area-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

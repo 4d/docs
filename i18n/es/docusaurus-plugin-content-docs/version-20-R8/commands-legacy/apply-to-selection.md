@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** aplica *sentencia* a cada registro de la selección actual de *tabla*.<!-- END REF--> La *sentencia* puede ser una línea de instrucciones o un método. Si *sentencia* modifica un registro de *tabla*, el registro modificado se guarda. Si *sentencia* no modifica un registro, el registro no se guarda. Si la selección actual está vacía, **APPLY TO SELECTION** no tiene efecto. Si la relación es automática, la *sentencia* puede contener un campo de una tabla relacionada.
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 Un termómetro de progresión se muestra mientras se ejecuta **APPLY TO SELECTION**. Para ocultarlo, utilice [MESSAGES OFF](messages-off.md) antes de llamar a **APPLY TO SELECTION**. Si el termómetro de progreso se muestra, el usuario puede cancelar la operación.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo cambia a mayúsculas todos los nombres en la tabla \[Empleados\]:
 
@@ -34,7 +34,7 @@ El siguiente ejemplo cambia a mayúsculas todos los nombres en la tabla \[Emplea
  APPLY TO SELECTION([Empleados];[Empleados]Apellido:=Uppercase([Empleados]Apellido))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si un registro está bloqueado durante la ejecución de APPLY TO SELECTION y ese registro se modifica, el registro no se guardará. Todos los registros bloqueados que se encuentren se colocan en un conjunto llamado LockedSet. Después de ejecutar APPLY TO SELECTION, es recomendable probar LockedSet para verificar si hay registros bloqueados. El siguiente bucle se ejecuta hasta que todos los registros hayan sido modificados:
 
@@ -45,7 +45,7 @@ Si un registro está bloqueado durante la ejecución de APPLY TO SELECTION y ese
  Until(Records in set("LockedSet")=0) // Hasta que no haya registros bloqueados
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo utiliza un método:
 
@@ -54,16 +54,16 @@ Este ejemplo utiliza un método:
  APPLY TO SELECTION([Empleados];M_Cap)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el usuario hace clic en el botón Detener en el termómetro de progresión, la variable sistema OK toma el valor 0\. De lo contrario, toma el valor 1.
 
-#### Ver también 
+## Ver también 
 
 *Conjuntos*  
 [EDIT FORMULA](edit-formula.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

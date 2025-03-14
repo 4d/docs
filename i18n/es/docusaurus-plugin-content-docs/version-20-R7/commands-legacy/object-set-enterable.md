@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->El comando **OBJECT SET ENTERABLE** \]vuelve editables o no editables los objetos de formulario especificados por *objeto* y puede definir el atributo enfocable.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Volver un objeto no editable no evita que cambie su valor por programación.
 
 **Nota:** para volver una celda de list box no editable, pase el valor -1 a $0 en el evento On Before Data Entry, ver *Gestión de entrada*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo define un campo de envío, dependiendo del peso del paquete. Si el paquete pesa un 1 kilo o menos, el envío se realiza a través de la Oficina Postal Nacional y el campo no es editable. De lo contrario, el campo es editable. 
 
@@ -59,7 +59,7 @@ El siguiente ejemplo define un campo de envío, dependiendo del peso del paquete
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este es el método de objeto de una casilla de selección ubicada en el encabezado de una lista para controlar el modo Entrada en lista: 
 
@@ -68,12 +68,12 @@ Este es el método de objeto de una casilla de selección ubicada en el encabeza
  OBJECT SET ENTERABLE([Tabla1];bEditable)
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

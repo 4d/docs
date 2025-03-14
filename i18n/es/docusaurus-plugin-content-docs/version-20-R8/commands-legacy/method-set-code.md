@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->El comando **METHOD SET CODE** modifica el código de los métodos designados por el parámetro *ruta* con el contenido pasado en el parámetro *codigo*.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Concerniente a la propiedad "folder" de los metadatos:
 
 Puede ejecutar el comando desde un componente, en este caso, debe pasar el parámetro *\** por el acceso al código del componente en modo sólo lectura. Si omite el parámetro *\** en este contexto, se genera el error -9763.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo exporta e importa la totalidad de los métodos proyecto de una aplicación:
 
@@ -94,11 +94,11 @@ Este ejemplo exporta e importa la totalidad de los métodos proyecto de una apli
  SHOW ON DISK($root_t)
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD GET CODE](method-get-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->La commande **QR SET DOCUMENT PROPERTY** permet d'afficher la boîte de dialogue d'impression ou de définir l'unité du document présent dans la *zone*.<!-- END REF-->  
   
@@ -31,11 +31,11 @@ Vous pouvez passer dans le paramètre *propriété* une des constantes du thème
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si la valeur du paramètre *propriété* ou *valeur* est incorrecte, l’erreur correspondante (-9852 ou -9853) est générée, 
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get document property](qr-get-document-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->El comando QUERY BY SQL permite aprovechar directamente el motor SQL integrado de 4D.<!-- END REF--> Este comando puede ejecutar una petición SELECT simple que puede escribirse de esta forma: 
 
@@ -74,7 +74,7 @@ Utilizando QUERY BY SQL, debe escribir la siguiente instrucción, sin importar s
 
 **Nota:** QUERY BY SQL trata las relaciones Uno a Muchos y Muchos a Uno de una manera diferente a la de [QUERY BY FORMULA](query-by-formula.md "QUERY BY FORMULA").
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo muestra las oficinas con ventas superiores a 100\. La búsqueda SQL es: 
 
@@ -90,7 +90,7 @@ Utilizando el comando QUERY BY SQL:
  QUERY BY SQL([Oficinas];$formulabusqueda)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo muestra las órdenes comprendidas entre 3 000 y 4 000\. La búsqueda SQL es: 
 
@@ -106,7 +106,7 @@ Utilizando el comando QUERY BY SQL:
  QUERY BY SQL([Ordenes];$formulabusqueda)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo muestra cómo obtener el resultado de la búsqueda ordenado con un criterio específico. La búsqueda SQL es: 
 
@@ -122,7 +122,7 @@ Utilizando el comando QUERY BY SQL:
  QUERY BY SQL([Personas];$formulabusqueda)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este ejemplo muestra una búsqueda utilizando tablas relacionadas en 4D. En SQL debe utilizar un JOIN para simular esta relación. Consideremos las dos tablas siguientes: 
 
@@ -152,15 +152,15 @@ Cuando utiliza el comando QUERY BY SQL:
  QUERY BY SQL([Lineas_Facturas];$formulaBusqueda)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el formato de la condición de búsqueda es correcto, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0, el resultado del comando es una selección vacía y se devuelve un error. Este error puede ser interceptado por un método instalado utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

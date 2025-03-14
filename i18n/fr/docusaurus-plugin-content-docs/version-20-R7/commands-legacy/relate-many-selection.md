@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->La commande **RELATE MANY SELECTION** crée une sélection d'enregistrements dans la table N basée sur la sélection courante de la table 1, et charge le premier enregistrement de la table N comme enregistrement courant.<!-- END REF-->**RELATE MANY SELECTION** modifie l'enregistrement courant de la table 1.
 
-#### Exemple 
+## Exemple 
 
 Prenons l'exemple d'une base de données comportant une table *\[Factures\]* dont le champ *\[Factures\]IDClient* est lié au champ *\[Clients\]NoID* de la table *\[Clients\]*. L'exemple suivant sélectionne toutes les factures adressées aux clients dont le crédit est supérieur ou égal à 5710 Euros :
 
@@ -28,13 +28,13 @@ Prenons l'exemple d'une base de données comportant une table *\[Factures\]* don
  RELATE MANY SELECTION([Factures]IDClient)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

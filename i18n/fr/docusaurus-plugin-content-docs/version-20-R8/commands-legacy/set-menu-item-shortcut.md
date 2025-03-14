@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->La commande **SET MENU ITEM SHORTCUT** remplace la touche du raccourci clavier associé à la ligne de menu désignée par *menu* et *ligneMenu*, par le caractère dont vous avez passé le code de caractère ou le texte dans *touche*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. La touche définie sera combinée à la touche **Ctrl** (Windows) ou **Commande** (Macintosh) pour définir le nouveau raccourci clavier.
 
@@ -48,7 +48,7 @@ Pour des raisons de compatibilité, la commande accepte également un code de ca
 
 Si vous passez 0 (zéro) dans *touche*, les raccourcis spnt supprimés de l'élément de menu.
 
-#### Exemple 1 
+## Exemple 1 
 
 Définition du raccourci Ctrl+Maj+U (Windows) et Cmd+Maj+U (Mac OS) pour la ligne “Souligné” :
 
@@ -57,7 +57,7 @@ Définition du raccourci Ctrl+Maj+U (Windows) et Cmd+Maj+U (Mac OS) pour la lign
  SET MENU ITEM SHORTCUT(menuRef;1;"U";Shift key mask)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Définition du raccourci Ctrl+R (Windows) et Cmd+R (Mac OS) pour la ligne "Recommencer" :
 
@@ -66,7 +66,7 @@ Définition du raccourci Ctrl+R (Windows) et Cmd+R (Mac OS) pour la ligne "Recom
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Définition du raccourci F4 pour l'élément de menu "Fermer" : 
 
@@ -75,12 +75,12 @@ Définition du raccourci F4 pour l'élément de menu "Fermer" :
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Get XML element.Summary-->El comando DOM Get XML element devuelve una referencia XML al elemento “hijo” dependiente de los parámetros *nomElement* e *index*.<!-- END REF--> 
 
@@ -25,16 +25,16 @@ El valor del elemento también se devuelve en el parámetro *valorElement*.
 
 **Nota:** por defecto, **DOM Get XML element** es sensible a las mayúsculas y minúsculas en relación con el parámetro *nomElement* (de acuerdo a los estándares xml). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](xml-set-options.md). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

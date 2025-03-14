@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->Les commandes **MESSAGES OFF** et [MESSAGES ON](messages-on.md) suppriment ou font apparaître les thermomètres de progression affichés par 4D lorsque le programme exécute des opérations de longue durée.<!-- END REF--> Par défaut, les messages sont affichés. 
 
@@ -49,7 +49,7 @@ Voici les commandes qui peuvent provoquer l'affichage d'un thermomètre de progr
 
 **Note 4D Server :** A compter de 4D Server v14 R3, les fenêtres de messages de progression ne sont plus affichées sur le serveur, ces opérations étant automatiquement listées dans la *Fenêtre d'administration de 4D Server* de la fenêtre d'administration. Si vous souhaitez forcer l'affichage de ces fenêtres de progression, vous devez appeler la commande [MESSAGES ON](messages-on.md) sur le serveur. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant supprime les thermomètres de progression avant d'effectuer un tri, puis les rétablit après l'opération :
 
@@ -59,11 +59,11 @@ L'exemple suivant supprime les thermomètres de progression avant d'effectuer un
  MESSAGES ON
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [MESSAGES ON](messages-on.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

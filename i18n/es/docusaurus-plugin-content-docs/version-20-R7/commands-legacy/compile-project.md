@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compilar el proyecto local actual o el proyecto especificado en el parámetro *archivoProyecto*.<!-- END REF--> Para más información sobre la compilación, consulte la *página de compilación en developer.4d.com*.
 
@@ -94,7 +94,7 @@ El objeto devuelto por **Compile project**  tiene hasta tres propiedades:
 
 Para más información, consulte *Herramientas de compilación*.
 
-#### Objetos variable 
+## Objetos variable 
 
 interprocessVariables.variables y processVariables.variables contienen objetos con la siguiente estructura:
 
@@ -105,7 +105,7 @@ interprocessVariables.variables y processVariables.variables contienen objetos c
 | arrayDimension | número   | Sólo para arrays: 1 para arrays de una dimensión, 2 para arrays de dos dimensiones                 |
 | code           | Objeto   | Para las variables proceso e interproceso: descriptor de la ubicación de definición de la variable |
 
-#### Objeto code 
+## Objeto code 
 
 La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto con las siguientes propiedades:
 
@@ -123,7 +123,7 @@ La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto
 | functionName                                                | Cadena   | Nombre de función de clase                                                                                                                                                                                                                                                                                                                                                                                           |
 | databaseMethod                                              | Número   | Índice del método base                                                                                                                                                                                                                                                                                                                                                                                               |
 
-#### Advertencia 
+## Advertencia 
 
 Para realizar una comprobación de sintaxis solamente, pase una colección vacía al parámetro targets:  
   
@@ -181,11 +181,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### Ver también 
+## Ver también 
 
 [BUILD APPLICATION](build-application.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

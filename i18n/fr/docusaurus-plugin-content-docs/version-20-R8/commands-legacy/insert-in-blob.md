@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->**INSERT IN BLOB** insère le nombre d'octets spécifié par *nombre* dans le BLOB *blob* à la position spécifiée par *décalage*.<!-- END REF--> La taille du BLOB est augmentée de *nombre* d'octets.
 
@@ -28,11 +28,11 @@ Vous passez dans le paramètre *décalage* la position (relative à l'origine du
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

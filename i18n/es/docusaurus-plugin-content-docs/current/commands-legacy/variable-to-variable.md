@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->El comando VARIABLE TO VARIABLE escribe las variables proceso *dstVar* (*dstVar2*, etc.) del proceso de destino cuyo número se pasa en *proceso* utilizando los valores de las variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
 
@@ -41,7 +41,7 @@ VARIABLE TO VARIABLE acepta todo tipo de variable proceso o interproceso de dest
 
 El proceso de destino debe ser un proceso usuario; no puede ser un proceso kernel. Si el proceso de destino no existe, se genera un error. Usted puede encontrar este error utilizando un método de gestión de errores instalado con [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo lee un array proceso desde el proceso indicado por *$vlProceso*, secuencialmente convierte los elementos a mayúsculas y luego escribe completamente el array: 
 
@@ -53,13 +53,13 @@ El siguiente ejemplo lee un array proceso desde el proceso indicado por *$vlProc
  VARIABLE TO VARIABLE($vlProceso;at_IPCom_Array;$anArray)
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Procesos*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

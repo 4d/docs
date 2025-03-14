@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB Is server running.Summary-->El comando **WEB Is server running** devuelve **True** si el servidor web integrado 4D está corriendo y **False** si el servidor web está apagado.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Este comando ofrece el estado de funcionamiento del servidor web en el que se ej
 | 4D modo remoto (procedimiento almacenado en 4D Server)      | Servidor web 4D Server    |
 | 4D modo remoto (procedimiento almacenado en otro 4D remoto) | Servidor web 4D remoto    |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere verificar que el servidor web se está ejecutando:
 
@@ -38,7 +38,7 @@ Usted quiere verificar que el servidor web se está ejecutando:
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Mode expert 
+## Mode expert 
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->Cette commande est réservée pour des besoins spécifiques.<!-- END REF--> Elle doit être utilisée avec précaution car elle peut affecter les performances de la base. 
 
-#### Description 
+## Description 
 
 La commande **SET TABLE CACHE PRIORITY** applique une *priorité* spécifique aux données de *laTable* chargées dans le cache pour tous les process dans la session courante. Elle doit être appelée dans la méthode base **Sur ouverture** ou **Sur démarrage serveur**.
 
@@ -36,7 +36,7 @@ Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du 
 | Cache priority high      |                                                      |
 | Cache priority very high |                                                      |
 
-#### Exemple 
+## Exemple 
 
 Dans la , vous souhaitez fixer une priorité très haute pour les données scalaires de la table \[Client\] :
 
@@ -44,13 +44,13 @@ Dans la , vous souhaitez fixer une priorité très haute pour les données scala
  SET TABLE CACHE PRIORITY([Client];Cache priority very high)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

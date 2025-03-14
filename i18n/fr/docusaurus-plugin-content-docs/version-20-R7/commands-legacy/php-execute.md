@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP Execute.Summary-->La commande **PHP Execute** permet d’exécuter un script ou une fonction PHP.<!-- END REF--> 
 
@@ -87,7 +87,7 @@ Vous pouvez utiliser la commande [SET ENVIRONMENT VARIABLE](set-environment-vari
 
 A noter que l’interpréteur est relancé automatiquement à la première requête envoyée par **PHP Execute**. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Appel du script "myPhpFile.php" sans fonction. Voici le contenu du script :
 
@@ -106,7 +106,7 @@ Le code 4D suivant :
 
 ... affichera la version php courante.
 
-#### Exemple 2 
+## Exemple 2 
 
 Appel de la fonction *myPhpFunction* dans le script "myNewScript.php" avec des paramètres. Voici le contenu du script :
 
@@ -127,7 +127,7 @@ Appel avec fonction :
  ALERT($result) // Affiche "Hello 4D world!"
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Faire quitter l’interpréteur PHP :
 
@@ -135,7 +135,7 @@ Faire quitter l’interpréteur PHP :
  $ifOk:=PHP Execute("";"quit_4d_php")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Gestion des erreurs :
 
@@ -172,7 +172,7 @@ La méthode PHP\_errHandler est la suivante :
  End for
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Création dynamique par 4D d’un script avant son exécution :
 
@@ -199,7 +199,7 @@ Le script est ensuite exécuté :
  $err:=PHP Execute("C:\\Scripts\\MonScript.php";"function2Rename_v2";*)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Récupération directe d’une valeur de type date et heure. Voici le contenu du script :
 
@@ -220,7 +220,7 @@ Réception de la date côté 4D :
      //$phpResult_time vaut ?01 :02 :03 ?
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 Répartition de données dans des tableaux :
 
@@ -236,7 +236,7 @@ Répartition de données dans des tableaux :
         // $arLong contient les numériques, 11, 22, 33, etc.
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 Initialisation d’un tableau :
 
@@ -247,7 +247,7 @@ Initialisation d’un tableau :
         // Remplit le tableau $arText avec 50 éléments "indéfini"
 ```
 
-#### Exemple 9 
+## Exemple 9 
 
 Passage de paramètres via un tableau :
 
@@ -258,7 +258,7 @@ Passage de paramètres via un tableau :
         // Remplit le tableau avec des valeurs initiales
 ```
 
-#### Exemple 10 
+## Exemple 10 
 
 Utilisation basique de la fonction *trim* de PHP permettant d'enlever les espaces et/ou caractères invisibles de part et d'autre d'une chaîne de caractères :
 
@@ -271,13 +271,13 @@ Utilisation basique de la fonction *trim* de PHP permettant d'enlever les espace
 
 Pour plus d'informations sur la fonction *trim*, veuillez vous reporter à la documentation PHP.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Exécuter des scripts PHP dans 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

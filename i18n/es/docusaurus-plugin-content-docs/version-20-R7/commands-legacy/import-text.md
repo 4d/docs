@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->El comando IMPORT TEXT lee los datos de *documento*, un documento texto Windows o Macintosh, y los escribe en *tabla* creando nuevos registros para esa tabla.<!-- END REF-->
 
@@ -32,7 +32,7 @@ El comando utiliza por defecto el conjunto de caracteres UTF-8\. Usted puede uti
 
 Durante la utilización de IMPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13). Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: *FldDelimit* y *RecDelimit*. El usuario puede cambiar los valores por defecto en la caja de diálogo de importación del entorno Diseño. Los campos texto pueden contener retornos de carro, por lo tanto, tenga cuidado cuando utilice como delimitador un retorno de carro si está importando campos texto. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo importa datos de un documento texto. El método primero define el formulario de entrada de manera que los datos sean importados al formulario correcto, cambia el delimitador de variables 4D, luego efectúa la importación:
 
@@ -43,18 +43,18 @@ El siguiente ejemplo importa datos de un documento texto. El método primero def
  IMPORT TEXT([Personas];"Nuevas_Personas.txt") // Importación del documento “Nuevas_Personas.txt”
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

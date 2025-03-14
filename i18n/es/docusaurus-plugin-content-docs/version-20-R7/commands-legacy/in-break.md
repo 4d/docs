@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.In break.Summary-->**In break** devuelve True para el ciclo de ejecución In break.<!-- END REF--> 
 
@@ -21,12 +21,12 @@ Para que se genere el ciclo de ejecución **In break** asegúrese de que la prop
 
 **Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Printing Break.
 
-#### Ver también 
+## Ver también 
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

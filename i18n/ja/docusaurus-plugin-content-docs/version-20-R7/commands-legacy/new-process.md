@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New process.Summary-->New process コマンドは、(同じマシン上で) 新しいプロセスを開始し、そのプロセス参照番号を返します。<!-- END REF-->
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 この最後の引数を指定した場合、4Dははじめに*name*に指定した名前を持つプロセスが既に実行されているかどうかを調べます。同一名のプロセスが存在する場合、4Dは新規プロセスを開始せずにその名前を持つプロセスのプロセス番号を返します。
 
-#### 例題 
+## 例題 
 
 以下のプロジェクトメソッドがある時:   
 
@@ -100,13 +100,13 @@ displayed_sidebar: docs
 
 メニューバーエディタでADD CUSTOMERSメソッドをSTART ADD CUSTOMERSメソッドと置き換え、メニュー項目の**新規プロセス開始**チェックボックスを選択解除します。
 
-#### 参照 
+## 参照 
 
 [Execute on server](execute-on-server.md)  
 *プリエンプティブ4Dプロセス*  
 *プロセス*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

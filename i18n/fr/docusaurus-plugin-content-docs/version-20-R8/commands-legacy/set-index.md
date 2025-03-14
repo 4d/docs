@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.SET INDEX.Summary-->Bien que **SET INDEX** soit une ancienne commande, elle reste entièrement prise en charge et peut être conservée dans votre application -- il n'est pas nécessaire de réécrire le code existant.<!-- END REF--> Toutefois, il est désormais préférable d'utiliser les commandes [CREATE INDEX](create-index.md) et [DELETE INDEX](delete-index.md) pour gérer les index car elles ont des fonctionnalités plus étendues. 
 
-#### Description 
+## Description 
 
 La commande **SET INDEX** admet deux syntaxes :
 
@@ -52,11 +52,11 @@ Le paramètre optionnel *\** indique une indexation asynchrone (simultanée). Un
 * Cette commande ne permet pas de créer ou de supprimer des index composites.
 * Cette commande ne permet pas de supprimer un index de mots-clés créé par la commande [CREATE INDEX](create-index.md).
 
-#### Note pour le déploiement 
+## Note pour le déploiement 
 
 Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant indexe le champ *\[Clients\]Num* :
 
@@ -65,7 +65,7 @@ L'exemple suivant indexe le champ *\[Clients\]Num* :
  SET INDEX([Clients]Num;True)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez indexer le champ \[Clients\]Nom, en mode asynchrone :
 
@@ -73,7 +73,7 @@ Vous souhaitez indexer le champ \[Clients\]Nom, en mode asynchrone :
  SET INDEX([Clients]Nom;True;*)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Création d'un index de mots-clés :
 
@@ -81,7 +81,7 @@ Création d'un index de mots-clés :
  SET INDEX([Livres]Résumé;Keywords Index)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -89,7 +89,7 @@ Création d'un index de mots-clés :
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

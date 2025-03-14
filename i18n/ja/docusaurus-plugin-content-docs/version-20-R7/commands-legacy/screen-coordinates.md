@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SCREEN COORDINATES.Summary-->SCREEN COORDINATES コマンドは、*screenID* に指定した画面のグローバル座標を引数*left*、*top*、*right*と*bottom*に返します。<!-- END REF-->
 
@@ -40,13 +40,13 @@ displayed_sidebar: docs
 * タスクバーまたはDockが自動的に非表示する設定になっていた場合、**SCREEN COORDINATES** は常に画面絵エリア全体の座標を返します。
 * *screenID* または *screenArea* 引数に無効な値を渡した場合、全ての座標に対してゼロが返されます。
 
-#### 参照 
+## 参照 
 
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

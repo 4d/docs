@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.TEXT TO BLOB.Summary-->El comando TEXT TO BLOB escribe el valor de tipo Texto *texto* en el BLOB *blob*.<!-- END REF-->
 
@@ -79,7 +79,7 @@ Después de llamar el comando, la variable del parámetro *offset* se incrementa
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Ejemplo 
+## Ejemplo 
 
 Después de la ejecución este código:
 
@@ -96,7 +96,7 @@ Después de la ejecución este código:
  TEXT TO BLOB(vtValor;vxBlob;UTF8 text without length) // El tamaño del BLOB se vuelve 5 bytes
 ```
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -107,7 +107,7 @@ Después de la ejecución este código:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

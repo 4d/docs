@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->La commande **SELECT LIST ITEMS BY POSITION** sélectionne le ou les élément(s) dont vous avez passé la position dans *positionElém* et, facultativement, dans *tabPositions*, à l'intérieur de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
@@ -33,7 +33,7 @@ Lorsque vous passez ce paramètre, l’élément désigné par le paramètre *po
 
 **Note :** Pour que plusieurs éléments puissent être sélectionnés simultanément dans une liste hiérarchique (manuellement ou par programmation), la propriété *multiSélection* doit avoir été activée pour cette liste. Cette propriété est définie via la commande [SET LIST PROPERTIES](set-list-properties.md). 
 
-#### Exemple 
+## Exemple 
 
 Soit une liste hiérarchique nommée *hList* affichée en mode Application :
 
@@ -66,13 +66,13 @@ Après l'exécution des lignes de code suivantes :
 
 ![](../assets/en/commands/pict22760.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

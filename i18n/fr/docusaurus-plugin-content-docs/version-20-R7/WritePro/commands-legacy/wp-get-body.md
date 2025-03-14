@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get body.Summary-->La commande **WP Get body** retourne la partie corps (*body*) du document 4D Write Pro *docWP*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Cet élément peut ensuite être passé aux commandes :
 * [WP Text range](wp-text-range.md) pour définir le corps en tant que plage.
 * [WP SET ATTRIBUTES](wp-set-attributes.md) et [WP GET ATTRIBUTES](wp-get-attributes.md) pour gérer les attributs du corps du document.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez copier le corps d'un document 4D Write Pro dans un autre document 4D Write Pro :
 
@@ -41,6 +41,6 @@ Vous voulez copier le corps d'un document 4D Write Pro dans un autre document 4D
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Text range](wp-text-range.md)  

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->El comando **SAX ADD XML ELEMENT VALUE** añade directamente en el documento XML referenciado por *documento* los *datos* sin convertirlos.<!-- END REF--> Este comando es equivalente, por ejemplo, a insertar un archivo adjunto en el cuerpo de un e-mail.
 
@@ -32,7 +32,7 @@ En este contexto, para forzar la codificación de parámetros especiales durante
 
 Para que este comando funcione correctamente, debe estar abierto un elemento. De lo contrario, se generará un error.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo inserta el archivo *whitepaper.pdf* en el elemento XML abierto:
 
@@ -42,16 +42,16 @@ Este ejemplo inserta el archivo *whitepaper.pdf* en el elemento XML abierto:
  SAX ADD XML ELEMENT VALUE($DocRef;vBMiBLOB)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

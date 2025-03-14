@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->La commande **SET MENU ITEM METHOD** permet de modifier la méthode projet 4D associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
 Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
@@ -27,15 +27,15 @@ Passez dans *nomMéthode* le nom de la méthode 4D sous la forme d’une chaîne
 
 **Note :** Si la ligne de menu correspond au libellé d’un sous-menu hiérarchique, la méthode ne sera pas appelée lorsque la ligne de menu sera sélectionnée.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous aux exemple de la commande [SET MENU BAR](set-menu-bar.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get menu item method](get-menu-item-method.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

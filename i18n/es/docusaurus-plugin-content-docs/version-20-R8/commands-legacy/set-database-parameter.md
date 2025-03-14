@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->El comando **SET DATABASE PARAMETER** permite modificar varios parámetros internos de la base de datos 4D.<!-- END REF-->  
   
@@ -91,7 +91,7 @@ El *selector* designa el parámetro a modificar. 4D ofrece constantes predefinid
 
 Si no se mantiene una configuración constante entre sesiones, pero desea asegurarse de que se aplique, debe ejecutarla en o [Método base On Server Startup](metodo-base-on-server-startup.md).
 
-#### Selectores hilo seguro 
+## Selectores hilo seguro 
 
 El comando **SET DATABASE PARAMETER** puede utilizarse en procesos apropiativos al llamar a los siguientes selectores:
 
@@ -106,7 +106,7 @@ El comando **SET DATABASE PARAMETER** puede utilizarse en procesos apropiativos 
 * IMAP Log
 * Pause logging
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente instrucción evitará un posible problema de timeout:
 
@@ -119,7 +119,7 @@ La siguiente instrucción evitará un posible problema de timeout:
  ...
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo forza temporalmente la ejecución de un comando búsqueda por fórmula en el equipo cliente:
 
@@ -128,7 +128,7 @@ Este ejemplo forza temporalmente la ejecución de un comando búsqueda por fórm
  SET DATABASE PARAMETER([tabla1];Query By Formula On Server;1) //Fuerza la ejecución en el equipo cliente
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted quiere exportar datos en JSON que contienen una fecha 4D convertida. Note que la conversión ocurre cuando la fecha se guarda en el objeto, debe llamar al comando [SET DATABASE PARAMETER](set-database-parameter.md) antes de llamar a [OB SET](ob-set.md): 
 
@@ -140,13 +140,13 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D convertida. Note 
  SET DATABASE PARAMETER(Dates inside objects;1)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get database parameter](get-database-parameter.md)  
 [LOG EVENT](log-event.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

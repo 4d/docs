@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Find previous.Summary-->El comando **WP Find previous**  busca el *objTarget*, antes del rango *buscarAntes*, para *buscarValor* basado en *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
@@ -78,7 +78,7 @@ Si *objTarget* es un rango o elemento, los valores encontrados se devuelven en e
 
 Se devuelve un rango vacío si no se encuentran resultados.  
   
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$previousRanges: object
@@ -97,7 +97,7 @@ Se devuelve un rango vacío si no se encuentran resultados.
  $previousRanges:=WP Find previous($target;"alpha";$options)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Find all](wp-find-all.md)  
 [WP Find next](wp-find-next.md)  

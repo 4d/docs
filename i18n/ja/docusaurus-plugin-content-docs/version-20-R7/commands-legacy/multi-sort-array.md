@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->**MULTI SORT ARRAY** コマンドにより、一連の配列に対してマルチレベルソートを実行することができます。<!-- END REF-->
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 * Pointer 型、またはPicture 型の配列を並び替えることはできません。二次元配列（例えば*a2DArray{$vlThisElement}*）の要素を並び替えることができますが、二次元配列そのもの（例えば*a2DArray*）を並び替えることはできません。
 * Object 型の配列は並べ替えることができます。Null 要素はグループ化され、配列要素は内部的な順番で並べ替えされます。
 
-#### 例題 1 
+## 例題 1 
 
 次の例題では1番目の構文を使用します。4つの配列を作成して都市（昇順）そして給与（降順）で並び替えます。最後の2つの配列、*names*と*telNums*は、前の並び替え条件に応じて同期されます:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  SORT ARRAY(cities;salaries;names;telNums;>)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例題では2番目の構文を使用ます。4つの配列を作成し、都市（昇順）と会社（降順）で並び替えます。最後の2つの配列、names配列とtelNums配列は、前の並び替え条件に応じて同期化されます:
 
@@ -107,13 +107,13 @@ displayed_sidebar: docs
 
 3番目の並び替え条件としてnames配列を使用したい場合には、sorts\_Array {3}要素に値1を割り当てる必要があります。または、都市だけを条件として配列を並び替えたい場合は、sorts\_Array {2}、sorts\_Array {3}、sorts\_Array {4}の要素に値0を割り当てます。すると、SORT ARRAY(cities;companies;names;telNums;>)と同じ結果を得ることができます。
 
-#### 参照 
+## 参照 
 
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Summary-->El comando **SOAP REJECT NEW REQUESTS** especifica si el servidor de servicios web acepta o no nuevas solicitudes SOAP.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ En *estadoRechazar*, pase **True** para rechazar las nuevas solicitudes SOAP. Al
 
 **Nota**: este comando solo puede ejecutarse en 4D Server. Si el método que llama al comando se ejecuta localmente en un cliente remoto o en un solo usuario 4D, **SOAP REJECT NEW REQUESTS** no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea rechazar cualquier solicitud nueva a su servidor de servicios web:
 
@@ -34,12 +34,12 @@ Desea rechazar cualquier solicitud nueva a su servidor de servicios web:
 
   
 
-#### Ver también 
+## Ver también 
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

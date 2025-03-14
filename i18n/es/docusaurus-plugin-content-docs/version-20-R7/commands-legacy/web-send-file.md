@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SEND FILE.Summary-->El comando **WEB SEND FILE** envía al navegador web la página HTML o el archivo web almacenado en el documento cuya ruta se pasa en *archivohtml*.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ Una vez se ejecuta **WEB SEND FILE**, la variable sistema OK se actualiza: si el
 
 Las referencias a las variables 4D y a las etiquetas de tipo *4DSCRIPT* en la página siempre se analizan cuando el tipo de documento lo permite (documento basado en texto). 
 
-#### Ejemplo 
+## Ejemplo 
 
 La carpeta raíz HTML de la base es la carpeta *WebDocs*. Contiene los siguientes elementos:   
   
@@ -43,15 +43,15 @@ El envío de la página web *"MiPagina.HTM"* debe efectuarse de la siguiente for
  WEB SEND FILE("HTM/MiPagina.HTM")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el archivo a enviar existe y si el timeout no ha pasado, OK toma el valor 1\. De lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

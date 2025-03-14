@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->La commande **WA SET PREFERENCE** permet de fixer différentes préférences pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Passez dans le paramètre *sélecteur* la préférence à modifier et dans *vale
 
 Pour chaque préférence, passez Vrai dans *valeur* pour l’activer et Faux pour l’inactiver.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 
@@ -46,11 +46,11 @@ Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

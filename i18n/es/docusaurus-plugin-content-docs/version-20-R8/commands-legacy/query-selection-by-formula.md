@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->El comando QUERY SELECTION BY FORMULA busca registros en tabla.<!-- END REF--> busca registros en tabla aplicando QUERY BY FORMULA a cada registro de la selección QUERY SELECTION BY FORMULA modifica la selección actual de tabla para el proceso actual y hace del primer registro el nuevo registro actual.
 
@@ -25,13 +25,13 @@ QUERY SELECTION BY FORMULA funciona de la misma forma que [QUERY BY FORMULA](que
 
 Para mayor información, consulte la descripción del comando [QUERY BY FORMULA](query-by-formula.md "QUERY BY FORMULA").
 
-#### Ver también 
+## Ver también 
 
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

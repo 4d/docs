@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->La commande **PICTURE LIBRARY LIST** retourne les numéros de référence et le nom des images stockées dans la bibliothèque d’images de la base de données.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Si la bibliothèque d’images est vide, les deux tableaux retournés seront vid
 
 Pour obtenir le nombre d’images contenues dans la bibliothèque, il vous suffit de tester la taille d’un des deux tableaux à l'aide de la fonction [Size of array](size-of-array.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Le code suivant retourne le contenu de la bibliothèque d'images dans les tableaux *telRefImage* et *taNomImage* :
 
@@ -36,7 +36,7 @@ Le code suivant retourne le contenu de la bibliothèque d'images dans les tablea
  PICTURE LIBRARY LIST(telRefImage;taNomImage)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant teste si la bibliothèque d’images est vide ou non :
 
@@ -49,7 +49,7 @@ L’exemple suivant teste si la bibliothèque d’images est vide ou non :
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant exporte la Bibliothèque d’Images vers un document stocké sur disque :
 
@@ -87,13 +87,13 @@ L'exemple suivant exporte la Bibliothèque d’Images vers un document stocké s
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

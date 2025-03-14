@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->El comando SET PICTURE TO LIBRARY crea una nueva imagen o reemplaza una imagen existente en la librería de imágenes.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Si no hay una imagen en la librería de imágenes con el número de referencia p
 
 **Nota:** si pasa una imagen vacía en *imagen* o un valor negativo o nulo en *refImag*, el comando no hace nada.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Sin importar el contenido actual de la librería de imágenes, el siguiente ejemplo añade una nueva imagen a la librería buscando primero un número de referencia de una imagen única:
 
@@ -47,7 +47,7 @@ Sin importar el contenido actual de la librería de imágenes, el siguiente ejem
  SET PICTURE TO LIBRARY(vgImagen;$vlRefImag;"Nueva Imagen")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo importa en la librería de imágenes las imágenes (almacenadas en un documento en disco) creadas por el tercer ejemplo del comando [PICTURE LIBRARY LIST](picture-library-list.md "PICTURE LIBRARY LIST"):
 
@@ -83,17 +83,17 @@ El siguiente ejemplo importa en la librería de imágenes las imágenes (almacen
  End if
 ```
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si no hay suficiente memoria para añadir la imagen a la librería de imágenes, se genera un error -108\. Note que los errores E/S también pueden ser generados (si por ejemplo el archivo de estructura está bloqueado). Puede interceptar estos errores con un método de gestión de errores.
 
-#### Ver también 
+## Ver también 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

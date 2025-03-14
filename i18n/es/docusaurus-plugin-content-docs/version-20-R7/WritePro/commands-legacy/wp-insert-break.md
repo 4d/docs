@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP INSERT BREAK.Summary-->El comando **WP INSERT BREAK** inserta una nueva ruptura de tipo *tipoRuptura* en el rango de selección *objRango* según el modo de inserción *modo* y el parámetro *ActRango*.<!-- END REF-->
 
@@ -55,7 +55,7 @@ En el parámetro *modo*, pase una constante para indicar el modo de inserción q
 Si no pasa el parámetro *ActRango*, por defecto los contenidos insertados están incluidos en el rango resultante.
 * Si *objRango* is not a range, *ActRango* is ignored.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Al crear facturas, usted desea insertar saltos de página, excepto en la última página:  
   
@@ -69,7 +69,7 @@ Al crear facturas, usted desea insertar saltos de página, excepto en la última
  End for
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea insertar un salto de sección continuo para tener una sección de una columna y una sección de dos columnas en la misma página.
 
@@ -92,7 +92,7 @@ Desea insertar un salto de sección continuo para tener una sección de una colu
     
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### Ver también 
+## Ver también 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP INSERT DOCUMENT](wp-insert-document.md)  

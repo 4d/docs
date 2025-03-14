@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Trigger event.Summary-->El comando **[Trigger event](trigger-event.md)** se llama en un trigger y devuelve un valor numérico que indica el tipo del evento de la base, en otras palabras, la razón por la cual se invoca el trigger.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ Dentro de un trigger, si efectúa operaciones de base de datos sobre varios regi
 
 En 4D, no hay límite, a parte de la memoria disponible, para la llamada de triggers en cascada. Para optimizar la ejecución de un trigger, puede escribir el código de sus triggers dependiendo no sólo del evento de la base, sino también del nivel de la llamada cuando los triggers se llaman en cascada. Por ejemplo, durante una eliminación del evento trigger para la tabla *\[Facturas\]*, puede no efectuar la actualización del campo *\[Clientes\]* Ventas brutas si la eliminación del registro de la tabla *\[Facturas\]* es parte de la eliminación en cascada de facturas relacionadas con el registro en la tabla *\[Clientes\]* que está siendo eliminado. Para hacer esto, utilice los comandos [Trigger level](trigger-level.md) y [TRIGGER PROPERTIES](trigger-properties.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Utilice el comando **Trigger event** para estructurar sus triggers de esta manera:
 
@@ -47,14 +47,14 @@ Utilice el comando **Trigger event** para estructurar sus triggers de esta maner
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [In transaction](in-transaction.md)  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

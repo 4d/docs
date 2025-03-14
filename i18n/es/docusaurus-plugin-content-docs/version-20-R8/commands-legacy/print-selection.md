@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->PRINT SELECTION imprime la selección actual de *tabla*.<!-- END REF--> Los registros se imprimen en el formulario de salida actual de la tabla del proceso actual. PRINT SELECTION realiza la misma acción que el comando Imprimir del entorno Usuario. Si la selección está vacía, PRINT SELECTION no hace nada.
 
@@ -44,7 +44,7 @@ Después de un llamado a PRINT SELECTION, la variable OK toma el valor 1 si la i
 * Asegúrese que ninguna caja de diálogo aparezca en el equipo servidor (excepto para una necesidad específica). Para hacer esto, es necesario llamar al comando con el parámetro *\** o *\>*.
 * En caso de un problema con la impresora (sin papel, impresora desconectada, etc.), no se genera mensaje de error.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El comando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") es entonces llamado para mostrar los registros y permitir al usuario seleccionar los registros a imprimir. Finalmente, utiliza los registros seleccionados con el comando [USE SET](use-set.md "USE SET"), y los imprime con PRINT SELECTION:
 
@@ -55,14 +55,14 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
  PRINT SELECTION([Personas]) // Imprimir los registros seleccionados por el usuario
 ```
 
-#### Ver también 
+## Ver también 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

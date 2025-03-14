@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Is font style supported.Summary-->El nuevo comando **WP Is font style supported**  devuelve True si el estilo *estiloFuenteWP* es soportado por alguna parte del texto en *rangoObj*.<!-- END REF-->
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get drop column.Summary-->El comando QR Get drop column devuelve un valor dependiendo de dónde se efectúe una acción soltar<!-- END REF--> :
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

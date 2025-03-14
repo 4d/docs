@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->**OPEN SETTINGS WINDOW**コマンドは、カレントの4Dアプリケーションの環境設定ダイアログボックスまたはカレント4Dアプリケーションのデータベース設定を表示し、*selector*キーで指定されたパラメーターやページを表示します。<!-- END REF-->
 
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### 例題 1 
+## 例題 1 
 
 4D環境設定の“メソッド”ページを開きます:   
   
@@ -110,7 +110,7 @@ displayed_sidebar: docs
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 データベース設定の“ショートカット”パラメーターを開き、他の設定はロックします:  
 
@@ -118,7 +118,7 @@ displayed_sidebar: docs
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 環境設定の最初のページを開きます:  
 
@@ -126,7 +126,7 @@ displayed_sidebar: docs
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 ユーザー設定モードでデータベース設定のインターフェースページにアクセスする:
 
@@ -134,12 +134,12 @@ displayed_sidebar: docs
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 環境設定/データベース設定ダイアログが受け入れられるとOKシステム変数に1が、キャンセルされると0が設定されます。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

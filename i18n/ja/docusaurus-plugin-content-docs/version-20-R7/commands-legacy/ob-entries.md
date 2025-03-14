@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Entries.Summary-->**OB Entries** コマンドは*object* 引数で指定したオブジェクトのコンテンツを、キー/値のペアとして格納したオブジェクトのコレクションを返します。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 返されるのは第1レベルのプロパティのみです(オブジェクト内にあるオブジェクトのプロパティは返されません)。返されるコレクション内のプロパティの順番は、プロパティの定義順に対応します。
 
-#### 例題 
+## 例題 
 
 オブジェクトをハッシュマップ()として使用することで、ちょうどインデックスを使用するように、データへ素早く直接的にアクセスすることができるようになります(例: Maryの年齢を知りたいとき、$persons\["Mary"\]と書くことができるようになります)。
 
@@ -50,12 +50,12 @@ displayed_sidebar: docs
  ALERT("Their names are: "+$ages.extract("key").join("-"))
 ```
 
-#### 参照 
+## 参照 
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

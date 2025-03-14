@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Undefined.Summary-->Undefined コマンドは、*expression* の評価の結果が未定義の値である場合には[True](true.md "True")を返し、それ以外の場合には[False](false.md "False")を返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  $result:=(Type($ptr->)=Is undefined) // ポイントしている変数が存在しない場合はtrue(エラーなし)
 ```
 
-#### 例題 
+## 例題 
 
 オブジェクトプロパティを対象に、このコマンドおよび [Null](null.md) コマンドを使用した場合の結果の例です:
 
@@ -56,11 +56,11 @@ displayed_sidebar: docs
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### 参照 
+## 参照 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

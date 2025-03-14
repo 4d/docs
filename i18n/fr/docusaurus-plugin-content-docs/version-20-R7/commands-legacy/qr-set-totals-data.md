@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note :** Cette commande ne crée pas de sous-total.<!-- END REF-->
 
@@ -92,11 +92,11 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
 Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

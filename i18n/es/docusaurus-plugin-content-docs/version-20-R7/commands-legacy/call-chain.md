@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Call chain.Summary-->El comando **Call chain** devuelve una colección de objetos que describen cada paso de la cadena de llamadas al método dentro del proceso actual.<!-- END REF--> Ofrece la misma información que la ventana del Depurador. Tiene la ventaja adicional de poder ejecutarse desde cualquier entorno 4D, incluido el modo compilado.
 
@@ -28,7 +28,7 @@ El comando facilita la depuración al permitir la identificación del método ll
 
 **Nota:** para que este comando pueda operar en modo compilado, la verificación de Rango no debe estar deshabilitada. Ver *Control de ejecución*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código devuelve una colección de objetos que contienen información sobre la cadena de llamadas al método:
 
@@ -50,7 +50,7 @@ Si se ejecuta un método de objeto de formulario, la cadena de llamadas podría 
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX** は旧式のコマンドではありますが、これは完全にサポートされており、既存のコードを書き換えることなくアプリケーション内で維持してよいコマンドです。<!-- END REF-->しかしながら、インデックスを管理するためには[CREATE INDEX](create-index.md) および [DELETE INDEX](delete-index.md) コマンドを使用した方が、より多くの機能が提供されるため、推奨されています。
 
-#### 説明 
+## 説明 
 
 **SET INDEX** には2つのシンタックスがあります。
 
@@ -52,11 +52,11 @@ displayed_sidebar: docs
 * 複合インデックスを作成したり削除するために、このコマンドを使用することはできません。
 * このコマンドを使用して、[CREATE INDEX](create-index.md) で作成されたキーワードインデックスを削除することはできません。
 
-#### 配布に関する注意 
+## 配布に関する注意 
 
 このコマンドはデータベースストラクチャーを変更するため、読み出し専用のパッケージアプリ(*Program Files* フォルダ内にまたは.4dz ファイル内にインストールされている.4dc ファイル)のコンテキストにおいては使用することができません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、*\[Customers\]ID*フィールドにインデックスを付けます。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
  SET INDEX([Customers]ID;True)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 *\[Customers\]Name* フィールドを非同期モードでインデックスします:
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
  SET INDEX([Customers]Name;True;*)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 キーワードインデックスを作成します:
 
@@ -81,7 +81,7 @@ displayed_sidebar: docs
  SET INDEX([Books]Summary;Keywords Index)
 ```
 
-#### 参照 
+## 参照 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -89,7 +89,7 @@ displayed_sidebar: docs
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

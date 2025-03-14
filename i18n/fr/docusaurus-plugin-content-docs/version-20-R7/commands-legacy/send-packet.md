@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SEND PACKET.Summary-->La commande **SEND PACKET** envoie *paquet* vers un port série ou un document.<!-- END REF--> Si *docRef* est spécifié, le paquet est écrit dans le document référencé par *docRef*. Si *docRef* n'est pas spécifié, le paquet est envoyé vers le port série ou un document préalablement ouvert par la commande [SET CHANNEL](set-channel.md). 
 
@@ -29,7 +29,7 @@ Lorsque vous envoyez un paquet vers un document, le premier **SEND PACKET** comm
 
 **Note :** Ce fonctionnement est valide avec un document ouvert par [SET CHANNEL](set-channel.md). Cependant, pour un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md), vous pouvez utiliser les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md) pour connaître et modifier la position à laquelle, dans le document, la prochaine écriture (**SEND PACKET**) ou lecture ([RECEIVE PACKET](receive-packet.md)) aura lieu.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant écrit, dans un document, des données en provenance de champs. Les valeurs sont écrites sous forme de champs de taille fixe. Dans ce cas, si la longueur d'un champ est inférieure à la taille fixée, le champ est comblé avec des espaces (c'est-à-dire que des espaces sont ajoutés de manière à ce que le champ corresponde à la taille définie). Bien que les champs de valeurs fixes soient un moyen peu efficace de stocker des données, certains systèmes informatiques et certaines applications l'utilisent encore :
 
@@ -50,7 +50,7 @@ L'exemple suivant écrit, dans un document, des données en provenance de champs
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple illustre l’envoi et la récupération de caractères étendus via un BLOB dans un document :
 
@@ -76,13 +76,13 @@ Cet exemple illustre l’envoi et la récupération de caractères étendus via 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

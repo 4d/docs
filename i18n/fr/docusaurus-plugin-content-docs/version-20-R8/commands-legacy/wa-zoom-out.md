@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->La commande **WA ZOOM OUT** réduit la taille du texte affiché dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
@@ -22,11 +22,11 @@ Sous Mac OS, la portée de cette commande est la session 4D : le paramétrage ef
 
 Sous Windows, la portée de cette commande est globale : le paramétrage est conservé après la fermeture de l’application 4D.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA ZOOM IN](wa-zoom-in.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

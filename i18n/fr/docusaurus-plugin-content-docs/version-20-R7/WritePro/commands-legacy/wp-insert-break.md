@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT BREAK.Summary-->La commande **WP INSERT BREAK** insère une nouvelle rupture de type *typeRupture* dans la plage de sélection *objCible* selon le mode d'insertion *mode* et le paramètre *miseAJourPlage*.<!-- END REF-->
 
@@ -56,7 +56,7 @@ Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertio
 Si vous ne passez pas un paramètre *miseAJourPlage*, par défaut, le contenu inséré sera inclus dans la plage mise à jour.
 * Si *objCible* n'est pas une plage, *miseAJourPlage* est ignoré.
 
-#### Exemple 1 
+## Exemple 1 
 
 En construisant vos factures, vous souhaitez insérer un saut de page à chaque facture, excepté sur la dernière page :
 
@@ -70,7 +70,7 @@ En construisant vos factures, vous souhaitez insérer un saut de page à chaque 
  End for
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez insérer un saut de section continu pour avoir une section à une seule colonne et une section à deux colonnes sur la même page.
 
@@ -93,7 +93,7 @@ Vous souhaitez insérer un saut de section continu pour avoir une section à une
     
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP INSERT DOCUMENT](wp-insert-document.md)  

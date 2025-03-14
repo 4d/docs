@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Is defined.Summary-->**OB Is defined**コマンドは、*object* または *property* が定義済みである場合にはTrueを返し、それ以外の場合にはFalseを返します。<!-- END REF-->引数で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 *property* 引数を渡した場合、コマンドは指定されたプロパティが *object* 内に存在するかどうかをチェックします。*property* 引数では、大文字と小文字は区別されることに注意して下さい。
 
-#### 例題 1 
+## 例題 1 
 
 オブジェクトの初期化を調べる記法:
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
  $def2:=OB Is defined($object) // $object は空({})ではあるものの定義済みなので$def2=true
 ```
 
-#### 例題 2 
+## 例題 2 
 
 プロパティが存在しているかどうかを調べます:
 
@@ -57,11 +57,11 @@ displayed_sidebar: docs
  If(OB Get type($Object;"name")#Is undefined)
 ```
 
-#### 参照 
+## 参照 
 
 [OB Is empty](ob-is-empty.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

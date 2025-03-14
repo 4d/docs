@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->El comando **SET LIST ITEM PROPERTIES** modifica el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF-->
 
@@ -59,11 +59,11 @@ En el parámetro *icono*, puede pasar una imagen para utilizarla como icono para
 
 El parámetro *color* (opcional) le permite modificar el color del texto del elemento. El color debe especificarse en forma de color RGB, es decir un entero largo de 4 bytes en formato 0x00RRGGBB. Para mayor información sobre este formato, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Pase -1 en el parámetro *color* para restablecer el color original del elemento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ver el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo cambia el texto del elemento actual de *lista* a negrita y rojo vivo:
 
@@ -71,14 +71,14 @@ El siguiente ejemplo cambia el texto del elemento actual de *lista* a negrita y 
  SET LIST ITEM PROPERTIES(list;*;True;Bold;0;0x00FF0000)
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 *Listas jerárquicas*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

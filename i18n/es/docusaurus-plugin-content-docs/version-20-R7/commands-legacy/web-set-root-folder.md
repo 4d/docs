@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->El comando **WEB SET ROOT FOLDER** se utiliza para modificar la carpeta raíz por defecto en la cual 4D busca los archivos HTML pedidos al servidor web.<!-- END REF--> 
 
@@ -34,12 +34,12 @@ La ubicación de la carpeta raíz puede expresarse en sintaxis HTML (tipo URL), 
 
 Si especifica una ruta de acceso invalida, se generará un error del administrador archivos del sistema operativo. Puede interceptar el error con un método [ON ERR CALL](on-err-call.md "ON ERR CALL"). Si el método muestra una caja de diálogo de alerta o un mensaje, aparecerá del lado del navegador.
 
-#### Ver también 
+## Ver también 
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

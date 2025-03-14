@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Find window.Summary-->El comando Find windowdevuelve (si existe) el número de referencia de la primera ventana “tocada” por el punto cuyas coordenadas se pasan en *izquierda* y *superior*.<!-- END REF--> 
 
@@ -24,12 +24,12 @@ Las coordenadas deben ser expresadas con relación a la esquina superior izquier
 
 El parámetro *parteVentana* devuelve 3 si se toca la ventana, de lo contrario 0\. (**Nota de compatibilidad:** a partir de 4D v14, las constantes del tema *Buscar ventana* son obsoletas).
 
-#### Ver también 
+## Ver también 
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

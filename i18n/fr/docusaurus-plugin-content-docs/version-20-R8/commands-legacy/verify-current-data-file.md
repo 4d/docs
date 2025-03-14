@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->La commande **VERIFY CURRENT DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données actuellement ouvert par 4D.<!-- END REF--> 
 
@@ -35,15 +35,15 @@ Lorsque cette commande est exécutée, le cache de données est écrit sur le di
 
 Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système *Document*. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la méthode de rétro-appel passée n’existe pas, la vérification n’est pas effectuée, une erreur est générée et la variable OK prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

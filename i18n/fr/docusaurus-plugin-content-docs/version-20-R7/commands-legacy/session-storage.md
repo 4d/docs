@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note 
+## Note 
 
 <!--REF #_command_.Session storage.Summary-->La commande **Session storage** renvoie l'objet de stockage de la session dont l'identifiant unique a été transmis dans le paramètre *id*.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ Dans id, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le s
 
 L'objet renvoyé est la propriété **[.storage](../API/SessionClass.md#storage)** de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les processus de la session.
 
-#### Exemple 
+## Exemple 
 
 Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'objet de stockage d'une session spécifique :
 
@@ -48,12 +48,12 @@ Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'ob
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Process activity](../commands/process-activity.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

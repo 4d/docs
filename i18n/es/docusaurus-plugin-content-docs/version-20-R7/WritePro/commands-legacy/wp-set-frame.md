@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP SET FRAME.Summary-->El comando **WP SET FRAME** coloca el cursor en el marco designado por *selectorMarco* y opcionalmente, *textBoxID*, en el área *areaWP* 4D Write Pro.<!-- END REF-->
 
@@ -52,7 +52,7 @@ Si *selectorMarco* \= wk text box, debe pasar el parámetro *textBoxID* con el *
 
 El parámetro *textBoxID* se ignora si *selectorMarco* \# wk text box.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea colocar el cursor en el pie izquierdo de la sección actual:
 
@@ -60,6 +60,6 @@ Usted desea colocar el cursor en el pie izquierdo de la sección actual:
  WP SET FRAME(*;"WPArea";wk current section left footer)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get frame](wp-get-frame.md)  

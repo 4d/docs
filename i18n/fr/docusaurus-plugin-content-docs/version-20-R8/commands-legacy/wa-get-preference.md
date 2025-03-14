@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->La commande **WA GET PREFERENCE** permet de lire la valeur courante d’une préférence dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ Passez dans le paramètre *sélecteur* la préférence à lire. Vous pouvez pass
 
 Passez dans le paramètre *valeur* une variable devant recevoir la valeur courante de la préférence. Le type de la variable dépend de la préférence. La variable *valeur* est toujours de type booléen : elle contient Vrai si la préférence est active et Faux sinon. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

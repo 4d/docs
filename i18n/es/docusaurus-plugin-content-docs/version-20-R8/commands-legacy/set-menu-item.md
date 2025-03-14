@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->El comando SET MENU ITEM cambia el texto de la línea de menú cuyo número o referencia de menú se pasa en *menu* y cuyo número de elemento se pasa en *menuItem*, para el texto que pasó en *itemText*.<!-- END REF--> Puede pasar -1 en *menuItem* para designar el último elemento añadido a *menu*.
 
@@ -27,13 +27,13 @@ Si omite el parámetro *proceso*, SET MENU ITEM se aplica a la barra de menús d
 
 **Nota:** si pasa un [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") en *menu*, el parámetro *proceso* es inútil y se ignorará. 
 
-#### Ver también 
+## Ver también 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

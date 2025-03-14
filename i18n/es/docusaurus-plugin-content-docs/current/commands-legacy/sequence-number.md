@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Sequence number.Summary-->Sequence number devuelve el próximo número automático de *tabla*.<!-- END REF--> El número de secuencia es único para cada tabla. Este número es único para cada tabla. Este valor no se repite y se incrementa por cada nuevo registro creado en la tabla (\*).  
 
@@ -42,7 +42,7 @@ Si la numeración debe comenzar en un valor diferente de 1, simplemente añada l
  [Table1]Seq Field :=Sequence number([Table1])+999
 ```
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo es parte de un método de formulario. Estas líneas de código prueban si se trata de un nuevo registro (si el número de factura es igual a una cadena vacía). Si es un nuevo registro, el método asigna un número de factura. El número de factura está formado por dos partes: el número de secuencia, y el identificador del operador, el cual fue introducido al abrir la base. El número de secuencia es formateado como una cadena de cinco caracteres:
 
@@ -54,13 +54,13 @@ El siguiente ejemplo es parte de un método de formulario. Estas líneas de cód
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 *Acerca de números de registros*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Select folder.Summary-->El comando **Select folder** muestra una caja de diálogo que le permite seleccionar manualmente una carpeta y luego recuperar la ruta de acceso completa a esa carpeta.<!-- END REF--> El parámetro opcional *rutaDefecto* puede utilizarse para designar la ubicación de una carpeta que inicialmente será mostrada en la caja de diálogo de selección de la carpeta.
 
@@ -67,7 +67,7 @@ Si el usuario valida la caja de diálogo, la variable sistema **OK** toma el val
 
 **Nota:** en Windows, si el usuario selecciona algunos elementos incorrectos, tales como “Puesto de trabajo”, “Papelera”, etc., la variable sistema **OK** toma el valor 0, incluso si el usuario valida la caja de diálogo.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenarán las imágenes de la librería de imágenes:  
   
@@ -82,13 +82,13 @@ El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenará
 
   
 
-#### Ver también 
+## Ver también 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

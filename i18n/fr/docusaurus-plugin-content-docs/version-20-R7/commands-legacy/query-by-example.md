@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->La commande **QUERY BY EXAMPLE** effectue la même action que la commande de menu **Recherche par formulaire**.<!-- END REF-->.. en mode Développement. Cette commande affiche le formulaire entrée courant comme fenêtre de recherche. **QUERY BY EXAMPLE** cherche dans *laTable* les données que l'utilisateur a saisies dans cette fenêtre. Le formulaire doit contenir les champs sur lesquels vous voulez que l'utilisateur puisse effectuer la recherche. La recherche est optimisée : les champs indexés sont automatiquement utilisés.  
 Si vous passez le paramètre optionnel *\**, les barres de défilement du formulaire sont masquées.
 
 Reportez-vous au manuel Mode Développement de 4D pour plus d'informations sur l'utilisation de la commande de menu **Recherche par formulaire...** du mode Développement.
 
-#### Exemple 
+## Exemple 
 
 La méthode dans l'exemple suivant affiche le formulaire *maRecherche*. Si l'utilisateur valide le formulaire et exécute la recherche (c'est-à-dire si la variable système OK prend la valeur 1), les enregistrements trouvés sont affichés :
 
@@ -33,16 +33,16 @@ La méthode dans l'exemple suivant affiche le formulaire *maRecherche*. Si l'uti
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur clique sur le bouton Valider ou appuie sur la touche Entrée, la variable système OK prend la valeur 1 et la recherche est effectuée. Si l'utilisateur clique sur le bouton Annuler ou utilise la touche d'annulation, la variable système OK prend la valeur 0 et la recherche est annulée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

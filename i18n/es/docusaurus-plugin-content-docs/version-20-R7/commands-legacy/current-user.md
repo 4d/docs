@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current user.Summary-->Current user devuelve el alias o el nombre del usuario actual.<!-- END REF-->
 
@@ -28,18 +28,18 @@ En el parámetro *usuario* opcional, puede especificar cuál de los siguientes d
 | 4D user alias            | 2     | Nombre alternativo para la cuenta de usuario 4D si se define con el [SET USER ALIAS](set-user-alias.md) o una cadena vacía ("") si no se define un alias para el usuario 4D.          |
 | 4D user alias or account | 0     | Nombre alternativo para la cuenta de usuario 4D como se define con el comando [SET USER ALIAS](set-user-alias.md), o nombre de cuenta de usuario regular 4D si no se define un alias. |
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [User in group](user-in-group.md "User in group").
 
-#### Ver también 
+## Ver también 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 [User in group](user-in-group.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

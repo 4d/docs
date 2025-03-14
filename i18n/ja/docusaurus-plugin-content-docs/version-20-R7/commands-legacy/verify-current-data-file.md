@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->VERIFY CURRENT DATA FILEコマンドは、4Dが現在開いているデータファイル中にあるオブジェクトの、構造的な検証を行います。<!-- END REF-->
 
@@ -35,15 +35,15 @@ VERIFY CURRENT DATA FILEコマンドを引数なしで呼び出すと、デフ�
 
 ログファイルが生成されていた場合、その完全パス名がDocumentシステム変数へと返されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コールバックメソッドが存在しない場合、検証は実行されず、エラーが生成され、OKシステム変数には0が設定されます。ログファイルが生成されていた場合、その完全パス名がDocumentシステム変数へと返されます。
 
-#### 参照 
+## 参照 
 
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

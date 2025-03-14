@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Summary-->El comando **OBJECT SET MAXIMUM VALUE** modifica el valor máximo del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
   
@@ -25,12 +25,12 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
   
 En *valorMax*, pase el nuevo valor máximo que desea asignar al objeto para el proceso actual. Este valor debe coincidir con el tipo de objeto, de lo contrario se devuelve el error 18 "Tipos incompatibles".
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

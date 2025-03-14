@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Window kind.Summary-->Window kind コマンドは*window*に渡した参照番号のウィンドウのタイプを返します。<!-- END REF-->ウィンドウが存在しない場合、 Window kind には *0* が返されます。
 
@@ -30,17 +30,17 @@ displayed_sidebar: docs
   
 *window* 引数を省略すると、Window kind はカレントプロセスの最前面ウィンドウのタイプを返します。
 
-#### 例題 
+## 例題 
 
 [WINDOW LIST](window-list.md "WINDOW LIST")コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

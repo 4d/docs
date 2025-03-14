@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->El comando **OBJECT GET MAXIMUM VALUE** devuelve, en la variable valorMax, el valor máximo actual del objeto o de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF--> 
 
@@ -26,12 +26,12 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
   
 .
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

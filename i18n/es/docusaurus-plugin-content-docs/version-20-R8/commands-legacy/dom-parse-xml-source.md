@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->El comando DOM Parse XML source analiza un documento que contiene una estructura XML y devuelve una referencia para este documento.<!-- END REF--> El comando puede validar o no el documento vía una DTD o un esquema XML (documento XSD, XML Schema Definition). 
 
@@ -54,7 +54,7 @@ El comando devuelve una cadena de 16 caracteres (RefElement) constituyendo la re
 
 **Importante:** una vez no lo necesite, recuerde llamar al comando [DOM CLOSE XML](dom-close-xml.md) con esta referencia con el fin de liberar memoria. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Apertura sin validación de un documento XML en disco:
 
@@ -62,7 +62,7 @@ Apertura sin validación de un documento XML en disco:
  $xml_Ref_Estruct:=DOM Parse XML source("C:\\importar.xml")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Apertura sin validación de un documento XML ubicado junto al archivo de estructura de la base:
 
@@ -70,7 +70,7 @@ Apertura sin validación de un documento XML ubicado junto al archivo de estruct
  $xml_Ref_Estruct:=DOM Parse XML source("importar.xml")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Apertura de un documento XML ubicado en el disco y validación utilizando un DTD ubicado en el disco:
 
@@ -78,7 +78,7 @@ Apertura de un documento XML ubicado en el disco y validación utilizando un DTD
  $xml_Ref_Estruct:=DOM Parse XML source("C:\\importar.xml";True;"C:\\importar_dtd.xml")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Apertura sin validación de un documento XML ubicado en un URL específico:
 
@@ -86,16 +86,16 @@ Apertura sin validación de un documento XML ubicado en un URL específico:
  $xml_Ref_Estruct:=DOM Parse XML source("http://www.4DHispano.com/xml/importar.xml")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

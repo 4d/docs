@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->El comando **WEB SERVICE AUTHENTICATE**  permite utilizar los servicios web que necesitan de la autenticación de la aplicación cliente.<!-- END REF--> Los métodos BASIC y DIGEST son soportados.  
   
@@ -36,7 +36,7 @@ Por defecto, la información de autenticación se reinicia después de cada peti
 
 Si la autenticación falla, el servidor SOAP devuelve un error que puede identificar utilizando el comando [WEB SERVICE Get info](web-service-get-info.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Autenticación con un servicio web ubicado detrás de un proxy:
 
@@ -48,12 +48,12 @@ Autenticación con un servicio web ubicado detrás de un proxy:
  WEB SERVICE CALL(...)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

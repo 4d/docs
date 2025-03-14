@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Locked records info.Summary-->La commande **Locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->Cette commande fonctionne uniquement avec 4D et 4D Server. Elle retourne toujours un objet invalide lorsqu'elle est appelée depuis un 4D distant. Elle peut toutefois être appelée depuis un 4D distant si la méthode d'appel dispose de l'option "Exécuter sur serveur" ; elle retourne dans ce cas les informations relatives au serveur. Lorsqu'elle est appelée depuis un composant, elle s'applique à la base hôte.
 
@@ -65,7 +65,7 @@ L'objet *contextAttributes* est constitué des propriétés suivantes :
 | recordNumber  | Entier   | Numéro d'enregistrement de l'enregistrement verrouillé                                                                                                          |
 | userAgent     | Chaîne   | Agent utilisateur du verrou, par exemple "Mozilla/5.0 (Windows NT 10.0 ; Win64 ; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-#### Exemple 
+## Exemple 
 
 Vous exécutez le code suivant :
 
@@ -85,11 +85,11 @@ Si le code est exécuté sur 4D Server et que le verrouillage est causé par un 
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Locked](locked.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

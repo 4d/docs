@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SEND RECORD.Summary-->SEND RECORD は、*aTable*のカレントレコードを[SET CHANNEL](set-channel.md "SET CHANNEL")コマンドで開いたシリアルポートまたはドキュメントに送信します。<!-- END REF-->レコードは特別な内部フォーマットで送信され、[RECEIVE RECORD](receive-record.md "RECEIVE RECORD")でのみ読み込むことができます。カレントレコードが存在しなければ、SEND RECORDは何も行いません。
 
@@ -25,17 +25,17 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** 4Dバージョン11より、このコマンドはサブテーブルをサポートしません。
 
-#### 例題 
+## 例題 
 
 [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")コマンドの例題を参照
 
-#### 参照 
+## 参照 
 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

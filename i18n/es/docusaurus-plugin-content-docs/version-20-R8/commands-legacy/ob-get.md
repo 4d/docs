@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB Get.Summary-->El comando **OB Get** devuelve el valor actual de la *propiedad* del *objeto*, convertido opcionalmente en el *tipo* definido.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.
 
@@ -53,7 +53,7 @@ El comando devuelve el valor de la *propiedad*. Varios tipos de datos están sop
 * (*4D Write Pro*) En versiones anteriores a v16 R6, cuando *propiedad* definía un atributo de imagen 4D Write Pro (como wk image), siempre se devolvía un valor de texto que contenía un URI de datos. A partir de 4D v16 R6, los atributos imagen 4D Write Pro siempre se devuelven como valores imagen. Debe usar una *propiedad* específica como wk image url ara obtener un URI de datos.
 * En versiones anteriores a v16 R4, cuando *propiedad* contiene un valor nulo y si no se utiliza el parámetro *tipo*, 4D devuelve una cadena vacía. En 4D v16 R4 y superiores, la constante Is null se devuelve en este caso. Para conservar la compatibilidad, este cambio solo surte efecto si la opción "Utilizar la notación objetos para acceder a las propiedades de objetos (se requiere Unicode) " está habilitada en la base (ver el párrafo *Página Compatibilidad*).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Recuperación de un valor de tipo texto:
 
@@ -64,7 +64,7 @@ Recuperación de un valor de tipo texto:
  $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Recuperación de un valor real convertido en entero largo:
 
@@ -74,7 +74,7 @@ Recuperación de un valor real convertido en entero largo:
  $age:=OB Get($ref ;"age";Is longint) // $age es un entero largo
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Recuperación de los valores de un objeto:
 
@@ -86,7 +86,7 @@ Recuperación de los valores de un objeto:
  $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Modificando de la edad de un empleado dos veces:
 
@@ -107,7 +107,7 @@ Modificando de la edad de un empleado dos veces:
  End for
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Al recuperar una fecha, el valor resultante depende de la configuración actual de la fecha de la base.
 
@@ -133,7 +133,7 @@ Al recuperar una fecha, el valor resultante depende de la configuración actual 
 
 **Nota:** para más información sobre esta configuración, consulte *Página Compatibilidad*.
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Utilización de objetos anidados:
 
@@ -152,7 +152,7 @@ Utilización de objetos anidados:
   // $childName = "Monroe" (text)
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 Recuperación en 4D de una hora almacenada en un objeto:
 
@@ -168,7 +168,7 @@ Recuperación en 4D de una hora almacenada en un objeto:
   // $get_h = ?01:00:01?
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Ejemplos de manipulación de campos objeto 4D:
 
@@ -182,7 +182,7 @@ Ejemplos de manipulación de campos objeto 4D:
  $lastName:=OB Get([People]Identity_OB;"Last name")
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 En un método formulario, puede escribir:
 
@@ -199,7 +199,7 @@ También puede leer los atributos personalizados de los documentos:
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Ejemplo 10 
+## Ejemplo 10 
 
 Desea conocer el tamaño de una imagen almacenada en un atributo objeto:
 
@@ -215,13 +215,13 @@ Desea conocer el tamaño de una imagen almacenada en un atributo objeto:
  $vPict:=OB Get($object;"photo") //"is picture" es inútil en este caso
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 *Tipos de campos y variables*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

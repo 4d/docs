@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->El comando **WP DELETE TEXT BOX** borra la caja de texto definida por el parámetro *textBox*.<!-- END REF-->
 
 Si *textBox* no existe, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Quiere borrar una caja de texto utilizando su ID:
 
@@ -36,6 +36,6 @@ Quiere borrar una caja de texto utilizando su ID:
  WP DELETE TEXT BOX($myTextBox)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP New text box](wp-new-text-box.md)  

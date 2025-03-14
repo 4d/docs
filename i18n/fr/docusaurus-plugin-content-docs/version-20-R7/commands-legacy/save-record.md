@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE RECORD.Summary-->**SAVE RECORD** sauvegarde l'enregistrement courant de *laTable* pour le process courant.<!-- END REF--> S'il n'y a pas d'enregistrement courant, la commande est ignorée. 
 
@@ -32,7 +32,7 @@ L'utilisation de **SAVE RECORD** est nécessaire dans les cas suivants :
 
 Vous ne devez pas appeler **SAVE RECORD** dans l'événement formulaire On Validate d'un enregistrement qui a été validé, sinon l'enregistrement est sauvegardé deux fois. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est une partie d'une méthode récupérant des enregistrements d'un fichier. Dans cette partie, les enregistrements sont reçus puis, si l'opération s'est correctement déroulée, sauvegardés :
 
@@ -43,13 +43,13 @@ L'exemple suivant est une partie d'une méthode récupérant des enregistrements
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Présentation des triggers*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

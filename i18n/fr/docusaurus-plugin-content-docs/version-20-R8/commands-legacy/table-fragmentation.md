@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Table fragmentation.Summary-->La commande **Table fragmentation** retourne le pourcentage de fragmentation logique des enregistrements de la table désignée par le paramètre *laTable*.<!-- END REF--> 
 
 Le taux de fragmentation logique des enregistrements indique si les enregistrements sont stockés de manière ordonnée dans le fichier de données. Une fragmentation trop élevée peut ralentir sensiblement les tris et les recherches séquentiels sur la table. Un pourcentage de fragmentation de 0 correspond à une fragmentation nulle. Au-delà de 20 %, il peut être intéressant de procéder au compactage du fichier de données. 
 
-#### Exemple 
+## Exemple 
 
 Cette méthode de maintenance permet de demander le compactage du fichier de données en cas de fragmentation importante d’au moins une table de la base :
 
@@ -38,11 +38,11 @@ Cette méthode de maintenance permet de demander le compactage du fichier de don
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Compact data file](compact-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

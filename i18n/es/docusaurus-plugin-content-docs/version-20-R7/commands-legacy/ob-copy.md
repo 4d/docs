@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB Copy.Summary-->El comando **OB Copy** devuelve un objeto que contiene una copia completa de las propiedades, sub objetos y valores de *objeto*.<!-- END REF-->
 Si el *objeto* contiene valores de tipo de puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver los punteros al momento de la copia pasando **True** en el parámetro *resuelvePunt*. En este caso, cada puntero presente como valor en *objeto* se evalúa al momento de la copia y se utiliza su valor desreferenciado.
@@ -41,7 +41,7 @@ El parámetro *agruparCon* le permite designar una colección o un objeto con el
 * El mismo principio se aplica a las selecciones de entidades almacenadas dentro de las propiedades del *objeto*. Sin embargo, el comando se optimiza cuando se pasa ck shared y una selección de entidades anidada es *compartible*: la misma referencia de selección de entidades se devuelve en el objeto resultante.
 * Los objetos almacén de datos, clase de datos y entidad no se pueden copiar. Si se llama al comando **OB Copy** con ellos, se devuelve valor nulo.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere duplicar un objeto que contiene valores simples:
 
@@ -65,7 +65,7 @@ Usted quiere duplicar un objeto que contiene valores simples:
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Duplique un objeto que contenga punteros (primera sintaxis):
 
@@ -96,7 +96,7 @@ Duplique un objeto que contenga punteros (primera sintaxis):
   // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Queremos copiar el objeto estándar (no compartido) *$person* en el objeto compartido *$sharedObject*. Para hacer esto, debemos crear una copia compartida del objeto (*$sharedObject*).
 
@@ -115,7 +115,7 @@ Queremos copiar el objeto estándar (no compartido) *$person* en el objeto compa
  End use
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 *$obj* contiene un puntero (propiedad "name") en el campo "name" del registro actual.
 
@@ -138,7 +138,7 @@ Queremos copiar el objeto estándar (no compartido) *$person* en el objeto compa
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Queremos copiar *$sharedObj e*n *$sharedColl* pero dado que pertenecen a diferentes grupos compartidos, una copia directa daría como resultado un error. Debemos hacer una copia de *$sharedObj* y designar *$sharedColl* como grupo compartido para la copia. 
 
@@ -160,12 +160,12 @@ Queremos copiar *$sharedObj e*n *$sharedColl* pero dado que pertenecen a diferen
  End use
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Get](ob-get.md)  
 *Objetos y colecciones compartidos*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

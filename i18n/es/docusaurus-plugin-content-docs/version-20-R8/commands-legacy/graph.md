@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GRAPH.Summary-->El comando **GRAPH** crea un gráfico en una variable imagen, a partir de los valores provenientes de los arrays.<!-- END REF--> El comando GRAPH debe ser ubicado en el método formulario o en un método objeto perteneciente al formulario, o en un método proyecto llamado por uno de estos dos métodos.
 
@@ -107,7 +107,7 @@ Cuando se utiliza el parámetro *grafParams*, se pasa un objeto que contiene las
 | Graph yMax                        | Cadena | yMax                       | **Valores posibles**: números<br/> Si falta, 4D calcula automáticamente el valor yMax.<br/>Todos los tipos excepto 7<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Graph yMin                        | Cadena | yMin                       | **Valores posibles**: números<br/> Si falta, 4D calcula automáticamente el valor yMin.<br/>Todos los tipos excepto 7<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Sintaxis con *grafNumber*: el siguiente ejemplo muestra los diferentes tipos de gráficos que puede obtener. El código debe ser insertado en un método formulario o método objeto del formulario que contiene la variable imagen. Los datos representados son constantes, generalmente este no es el caso:
 
@@ -152,7 +152,7 @@ Las siguientes imágenes muestran los gráficos resultantes:
 * *vTipo* igual a 8, obtiene un gráfico en **Imágenes**  
 ![](../assets/en/commands/pict847124.fr.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Sintaxis utilizando *grafParams*: en el siguiente ejemplo, se dibuja un gráfico de línea sencilla basado en los valores de tiempos:
 
@@ -187,7 +187,7 @@ Sintaxis utilizando *grafParams*: en el siguiente ejemplo, se dibuja un gráfico
 
 ![](../assets/en/commands/pict2603210.en.png)
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Con los mismos valores, puede agregar una configuración personalizada para obtener una vista diferente:
 
@@ -228,7 +228,7 @@ Con los mismos valores, puede agregar una configuración personalizada para obte
 
 ![](../assets/en/commands/pict2603212.en.png)
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 En este ejemplo, personalizamos algunos parámetros:
 
@@ -277,14 +277,14 @@ En este ejemplo, personalizamos algunos parámetros:
 
 ![](../assets/en/commands/pict2648517.en.png)
 
-#### Ver también 
+## Ver también 
 
   
 [GRAPH SETTINGS](graph-settings.md)  
 *Parámetros Gráficos*  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

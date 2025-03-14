@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->El comando **WEB SET HTTP HEADER** permite definir los campos del encabezado HTTP de la respuesta enviada al navegador web por 4D.<!-- END REF--> Sólo tiene efecto en un proceso web.  
 Este comando le permite administrar las “cookies”. 
@@ -62,11 +62,11 @@ Si no especifica un estado, automáticamente será HTTP/1.0 200 OK. El campo **S
 
 Los campos **Date** y **Content-Length** siempre son definidos por defecto por 4D.
 
-#### Ver también 
+## Ver también 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

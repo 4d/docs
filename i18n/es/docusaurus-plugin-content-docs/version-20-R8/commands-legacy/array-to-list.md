@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->El comando ARRAY TO LIST crea o reemplaza la lista jerárquica o la *lista* utilizando los elementos del *array* *.<!-- END REF-->*
 
@@ -31,7 +31,7 @@ El parámetro opcional *refElementos*, si se pasa, debe ser un array numérico s
 
 Puede utilizar ARRAY TO LIST para construir una lista basada en los elementos de un array. Sin embargo, para librarse de estas restricciones y explotar por completo las listas de valores, le recomendamos utilizar los comandos del tema *Listas jerárquicas*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo copia el array *atRegiones* en la lista “Regiones:”
 
@@ -39,7 +39,7 @@ El siguiente ejemplo copia el array *atRegiones* en la lista “Regiones:”
  ARRAY TO LIST(atRegions;"Regions")
 ```
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere poner los distintos valores de un campo en una lista, por ejemplo para crear un menú pop-up jerárquico. Puede escribir:
 
@@ -50,18 +50,18 @@ Usted quiere poner los distintos valores de un campo en una lista, por ejemplo p
  ARRAY TO LIST($arrPaises;ListaPais)
 ```
 
-#### Gestión de errores 
+## Gestión de errores 
 
 El comando ARRAY TO LIST genera el error *\-9957* cuando se aplica a una lista que está siendo editada en el editor de listas del entorno Diseño. Puede interceptar este error utilizando un método de proyecto [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

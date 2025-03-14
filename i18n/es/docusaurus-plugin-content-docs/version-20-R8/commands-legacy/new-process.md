@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.New process.Summary-->El comando New process inicia un nuevo proceso (en el mismo equipo) y devuelve el número de este proceso.<!-- END REF-->
 
@@ -59,7 +59,7 @@ El parámetro *pila*, le permite indicar la cantidad de memoria asignada para la
 
 Le indica a 4D que debe verificar primero si se está ejecutando un proceso con el nombre que usted pasó en *nombre*. Si es así, 4D no inicia un nuevo proceso y devuelve el número del proceso con ese nombre.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado el siguiente método proyecto:  
 
@@ -103,13 +103,13 @@ El método de objeto de bAddCustomers se convierte en:
   
 En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método START ADD CUSTOMERS, y deseleccionar la propiedad **Iniciar un nuevo proceso** para el comando de menú. 
 
-#### Ver también 
+## Ver también 
 
 [Execute on server](execute-on-server.md)  
 *Procesos*  
 *Procesos 4D apropiativos*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

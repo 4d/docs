@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->La commande **SAX OPEN XML ELEMENT** permet d’ajouter un nouvel élément dans le document XML référencé par *document* ainsi que, facultativement, des attributs et leurs valeurs.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ Passez dans *balise* le nom de l’élément à créer. Ce nom peut contenir uni
 
 Facultativement, la commande permet de passer un ou plusieurs couple(s) attributs/valeurs (sous forme de variables, champs ou valeur littérales) via les paramètres *nomAttribut* et *valeurAttribut*. Vous pouvez passer autant de couples attribut/valeur que vous voulez. 
 
-#### Exemple 
+## Exemple 
 
 L’instruction suivante :
 
@@ -44,16 +44,16 @@ L’instruction suivante :
 <Book
 ```
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si un caractère invalide est passé dans *balise*, une erreur est générée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

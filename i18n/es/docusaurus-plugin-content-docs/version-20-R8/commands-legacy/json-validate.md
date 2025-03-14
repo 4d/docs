@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON Validate.Summary-->El comando **JSON Validate** verifica la conformidad del contenido JSON *vJson* con las reglas definidas en el esquema JSON *vSchema*.<!-- END REF--> Si el JSON no es válido, el comando devuelve una descripción detallada de los errores.
 
@@ -77,7 +77,7 @@ Se pueden devolver los siguientes errores:
 | 23         | not                    | El JSON es válido contra el valor de 'not'.                                                                  |
 | 24         | format.                | La cadena no coincide ("{s1}")                                                                               |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea validar un objeto JSON con un esquema y obtener la lista de errores de validación, si los hay, y guardar líneas de error y mensajes en una variable texto:
 
@@ -99,13 +99,13 @@ Usted desea validar un objeto JSON con un esquema y obtener la lista de errores 
 
 **Nota:** este ejemplo requiere que la notación de objeto esté activada (ver el párrafo *Página Compatibilidad*). 
 
-#### Ver también 
+## Ver también 
 
   
   
 [JSON Parse](json-parse.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

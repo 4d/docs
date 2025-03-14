@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Get body part count.Summary-->**WEB Get body part count**コマンドは受信したボディに含まれるパートの数を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 [WEB GET BODY PART](web-get-body-part.md) コマンドの例題を参照してください。 
 
-#### 参照 
+## 参照 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

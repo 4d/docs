@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAVE VARIABLES.Summary-->El comando SAVE VARIABLES guarda una o varias variables en el documento cuyo nombre se pasa en l parámetro *documento*.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Si las variables se guardan correctamente, la variable OK toma el valor 1\. Si n
 
 **Advertencia:** este comando no soporta variables de tipo array. Para estas variables utilice los comandos del tema BLOB.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo guarda tres variables en un archivo llamado PrefsUsuario:
 
@@ -36,11 +36,11 @@ El siguiente ejemplo guarda tres variables en un archivo llamado PrefsUsuario:
  SAVE VARIABLES(" PrefsUsuario";vsNombre;vlCodigo;vgIconImagen)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si las variables se guardan correctamente, la variable sistema OK toma el valor 1; de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -49,7 +49,7 @@ Si las variables se guardan correctamente, la variable sistema OK toma el valor 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *Variables sistema*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

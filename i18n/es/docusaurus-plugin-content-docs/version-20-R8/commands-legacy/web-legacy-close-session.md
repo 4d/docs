@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Summary-->Este comando sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Se ignora cuando se habilita el modo **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para más información, consulte la sección *Gestión de las sesiones web (heredado)*.
 
-#### Descripción 
+## Descripción 
 
 El comando **WEB LEGACY CLOSE SESSION** invalida la sesión existente designada por el parámetro *idSesion*. Si la sesión no existe, el comando no hace nada.  
   
@@ -31,12 +31,12 @@ Después de la ejecución de este comando, si un cliente web envía una petició
 
 **Nota:** en el contexto de una sesión 4D Mobile, el comando **WEB LEGACY CLOSE SESSION** cierra la sesión 4D Mobile cuyo ID se pasa en el parámetro *ID* *sesion*. Como una sesión 4D Mobile puede gestionar varios procesos, este comando solicita a todos los procesos Web relacionados con la sesión para terminar su ejecución.
 
-#### Ver también 
+## Ver también 
 
 *Gestión de las sesiones web (heredado)*  
 [Método base On Web Legacy Close Session](metodo-base-on-web-legacy-close-session.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

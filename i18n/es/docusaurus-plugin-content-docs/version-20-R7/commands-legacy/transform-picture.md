@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->El comando TRANSFORM PICTURE permite aplicar una transformación de tipo *operador* a la imagen pasada en el parámetro *imagen*.<!-- END REF-->este comando extiende las funcionalidades ofrecidas por los operadores convencionales de transformación de imágenes (+/, etc., ver la sección [Picture](../Concepts/dt_picture.md)). Estos operadores permanecen totalmente utilizables en 4D.  
   
@@ -47,7 +47,7 @@ En *operador*, pase el número de la operación a efectuar y en *param1* a *para
 * Fade to grey scale: la imagen se convierte a escala de grises (ningún parámetro es necesario). Esta transformación no puede deshacerse.
 * Transparency: una máscara de transparencia se aplica a la imagen basada en el color pasado en *param1*. Por ejemplo, si pasa 0x00FFFFFF (color blanco) en *param1*, todos los píxeles blancos en la imagen original serán transparentes en la imagen transformada. Esta operación se puede aplicar a imágenes de mapa de bits o de vectores. Por defecto, si el parámetro *param1* se omite, el color blanco (0x00FFFFFF) se establece como color objetivo. Esta función está especialmente diseñada para manejar la transparencia en imágenes convertidas desde el formato obsoleto PICT, pero se puede usar con imágenes de todo tipo. Esta transformación no se puede deshacer.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Quiere definir las partes blancas de una imagen como transparentes. Para ello, puede utilizar el siguiente código:
 
@@ -59,7 +59,7 @@ Obtiene el siguiente resultado:
 
 ![](../assets/en/commands/pict1359750.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario con el formato “Truncado (no-centrado)”): 
 
@@ -69,11 +69,11 @@ Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario
 
 ![](../assets/en/commands/pict28288.es.png)
 
-#### Ver también 
+## Ver también 
 
 [COMBINE PICTURES](combine-pictures.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

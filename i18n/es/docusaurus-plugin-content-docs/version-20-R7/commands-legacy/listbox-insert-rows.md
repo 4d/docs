@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->El comando **LISTBOX INSERT ROWS** inserta una o varias nuevas líneas en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -30,11 +30,11 @@ La fila se inserta en la posición definida por el parámetro *posicionL*. Una n
 
 Si el valor de *posicionL* es mayor que el número total de filas en el list box, la fila se añade al final de cada array. Si es igual a 0, la fila se añade al principio de cada array. Si contiene un valor negativo, el comando no hace nada.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

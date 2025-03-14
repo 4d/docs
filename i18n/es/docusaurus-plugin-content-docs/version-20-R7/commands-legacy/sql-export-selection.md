@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->El comando SQL EXPORT SELECTION exporta al formato SQL los registros de la selección actual de la tabla 4D designada por el parámetro *Tabla*.<!-- END REF-->   
 
@@ -33,11 +33,11 @@ Si la exportación se lleva a cabo correctamente, la variable *OK* toma el valor
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
-#### Ver también 
+## Ver también 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

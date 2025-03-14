@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Replace string.Summary-->**Replace string** retourne une chaîne de caractères résultant du remplacement dans *source* de *obsolète* par *nouveau*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ A noter que dans ce mode, l'évaluation ne gère pas les variations d'écriture 
 
 **Note :** Dans 4D v15 R3 et suivantes, une optimisation importante a été apportée à l'algorithme utilisé par cette commande lorsque vous remplacez une chaîne par une autre de taille différente, quelle que soit la syntaxe utilisée. Il en résulte une accélération significative des traitements dans ce contexte. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre l'utilisation de **Replace string**. Les résultats sont affectés à la variable *vRésultat*. Les commentaires fournissent la valeur de la variable :
 
@@ -47,7 +47,7 @@ L'exemple suivant illustre l'utilisation de **Replace string**. Les résultats s
  vRésultat:=Replace string(var;Char(Tab);",";*) // Remplacer toutes les tabulations par des virgules
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant élimine les retours chariot et les tabulations du texte contenu dans la variable *vRésultat* :
 
@@ -55,7 +55,7 @@ L'exemple suivant élimine les retours chariot et les tabulations du texte conte
  vRésultat:=Replace string(Replace string(vRésultat;Char(Carriage return);"";*);Char(Tab);"";*)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évaluation diacritique :
 
@@ -64,13 +64,13 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
  vRésultat:=Replace string("Crème brûlée";"Brulee";"caramel";*) //vRésultat est égal à "Crème brûlée"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

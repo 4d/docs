@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Time string.Summary-->El comando Time string devuelve la cadena de la expresión tipo hora que usted pasó en *segundos*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Si pasa un número de segundos superior al número de segundos que hay en un dí
 
 **Nota:** si necesita el formato de la cadena de la expresión de tipo hora en una variedad de formatos, utilice [String](string.md "String").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente muestra una caja de alerta con el mensaje, “46 800 segundos representan 13:00:00.”
 
@@ -32,12 +32,12 @@ El siguiente muestra una caja de alerta con el mensaje, “46 800 segundos repre
  ALERT("46800 segundos representan "+Time string(46800))
 ```
 
-#### Ver también 
+## Ver también 
 
 [String](string.md)  
 [Time](time.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

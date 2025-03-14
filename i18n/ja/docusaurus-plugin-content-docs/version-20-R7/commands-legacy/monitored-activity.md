@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Monitored activity.Summary-->**Monitored activity** コマンドは、[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドによって設定された詳細に応じて記録されたオペレーションを表すオブジェクトのコレクションを返します。<!-- END REF-->このコマンドは4D リモート、4D Server、スタンドアロン版の4D において実行または呼び出し可能です(ただしスタンドアロン版は*source* 引数で指定されたソースがネットワークアクティビティでない場合のみ可能)。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 | duration               | 倍長整数               | オペレーション時間の長さ(ミリ秒単位)                                                                                                                                     |
 | kind                   | テキスト               | 記録されたオペレーションの種類。取り得る値は以下の通りです:<br/> "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-#### 追加のプロパティ 
+## 追加のプロパティ 
 
 *kind* で表されるオペレーションの種類によっては、*activityData* オブジェクト内に以下の追加のプロパティが返されます:
 
@@ -131,16 +131,16 @@ displayed_sidebar: docs
 | |  \[ \].title          | テキスト   | オペレーションについての追加の情報                                                                                                                          |                                                                                                                                |
 | |  \[ \].extraInfo      | オブジェクト | 追加のSQL情報(あれば):<br/><br/> \[ \].extraInfo.SQL\_Query (text): SQL クエリ \[ \].extraInfo.SQL\_User (text): SQL サーバーで認証されているユーザー |                                                                                                                                |
 
-#### 例題 
+## 例題 
 
 **[START MONITORING ACTIVITY](start-monitoring-activity.md)**の例題を参照してください
 
-#### 参照 
+## 参照 
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

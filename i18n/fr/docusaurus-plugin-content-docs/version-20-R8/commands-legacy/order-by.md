@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY.Summary-->**ORDER BY** trie (réordonne) les enregistrements de la sélection courante de *laTable* pour le process courant.<!-- END REF--> Une fois le tri effectué, le premier enregistrement de la sélection courante devient le nouvel enregistrement courant. 
 
@@ -43,7 +43,7 @@ Quelle que soit la manière dont le tri est défini, si l'opération risque de p
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant affiche la boîte de dialogue de Tri pour la table \[Produits\] :
 
@@ -51,7 +51,7 @@ L'exemple suivant affiche la boîte de dialogue de Tri pour la table \[Produits\
  ORDER BY([Produits])
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant affiche la boîte de dialogue de Tri pour la table par défaut (si elle a été définie) : 
 
@@ -59,7 +59,7 @@ L'exemple suivant affiche la boîte de dialogue de Tri pour la table par défaut
  ORDER BY
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un ordre croissant :
 
@@ -67,7 +67,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un or
  ORDER BY([Produits];[Produits]Nom;>)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un ordre décroissant :
 
@@ -75,7 +75,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un or
  ORDER BY([Produits];[Produits]Nom;<)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par type et par prix dans un ordre croissant à chaque niveau :
 
@@ -83,7 +83,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par type et par pr
  ORDER BY([Produits];[Produits]Type;>;[Produits]Prix;>)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par type et par prix dans un ordre décroissant à chaque niveau :
 
@@ -91,7 +91,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par type et par pr
  ORDER BY([Produits];[Produits]Type;<;[Produits]Prix;<)
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par type dans un ordre croissant et par prix dans un ordre décroissant :
 
@@ -99,7 +99,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par type dans un o
  ORDER BY([Produits];[Produits]Type;>;[Produits]Prix;<)
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par type dans un ordre décroissant et par prix dans un ordre croissant :
 
@@ -107,7 +107,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par type dans un o
  ORDER BY([Produits];[Produits]Type;<;[Produits]Prix;>)
 ```
 
-#### Exemple 9 
+## Exemple 9 
 
 L'exemple suivant effectue un tri indexé si le champ \[Produits\]Nom est indexé :
 
@@ -115,7 +115,7 @@ L'exemple suivant effectue un tri indexé si le champ \[Produits\]Nom est index�
  ORDER BY([Produits];[Produits]Nom;>)
 ```
 
-#### Exemple 10 
+## Exemple 10 
 
 L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un ordre croissant :
 
@@ -126,7 +126,7 @@ L'exemple suivant trie la sélection courante de \[Produits\] par nom dans un or
 Si un seul champ est spécifié (tri sur un niveau) et s'il est indexé, le tri tire parti de l'index. Si le champ n'est pas indexé ou si plus d'un champ est utilisé, le tri est effectué de manière séquentielle (hors index composites). Le champ peut appartenir à la table de la sélection que vous triez ou à une table 1 liée à *table* par un lien automatique ou manuel. Dans ce cas, le tri est toujours séquentiel.  
 Si les champs triés sont inclus dans un index composite, **ORDER BY** tire parti de l'index. 
 
-#### Exemple 11 
+## Exemple 11 
 
 L'exemple suivant effectue un tri séquentiel, que les champs soient ou non indexés :
 
@@ -134,7 +134,7 @@ L'exemple suivant effectue un tri séquentiel, que les champs soient ou non inde
  ORDER BY([Produits];[Produits]Type;>;[Produits]Prix;>)
 ```
 
-#### Exemple 12 
+## Exemple 12 
 
 L'exemple suivant effectue un tri séquentiel à l'aide d'un champ lié :
 
@@ -144,7 +144,7 @@ L'exemple suivant effectue un tri séquentiel à l'aide d'un champ lié :
  SET FIELD RELATION([Employé]ID_Societe;Structure configuration;Do not modify)
 ```
 
-#### Exemple 13 
+## Exemple 13 
 
 L'exemple suivant effectue un tri indexé sur deux niveaux si un index composite \[Contacts\]Nom + \[Contacts\]Prénom a été défini dans la base :
 
@@ -152,7 +152,7 @@ L'exemple suivant effectue un tri indexé sur deux niveaux si un index composite
  ORDER BY([Contacts];[Contacts]Nom;>;[Contacts]Prénom;>)
 ```
 
-#### Exemple 14 
+## Exemple 14 
 
 Dans un formulaire sortie affiché en mode Application, vous souhaitez permettre aux utilisateurs de trier une colonne par ordre croissant en cliquant simplement sur son en-tête.   
 Si l'utilisateur maintient la touche **Maj** enfoncée et clique ensuite sur plusieurs autres colonnes, le tri est multicritères, c'est-à-dire que les colonnes sont triées sur autant de niveaux qu'il y a de clics : 
@@ -198,11 +198,11 @@ Chaque bouton appelle la méthode projet MULTITRIS en passant un pointeur sur le
 
 Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY FORMULA](order-by-formula.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

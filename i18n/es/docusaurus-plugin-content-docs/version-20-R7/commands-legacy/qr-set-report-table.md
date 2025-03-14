@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->El comando QR SET REPORT TABLE define la tabla actual para el área del informe referenciada por el parámetro *area* a la tabla número *tabla*.<!-- END REF-->
 
@@ -23,11 +23,11 @@ Es necesario que una tabla sea asignada al informe ya que el editor de informes 
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *tabla* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR Get report table](qr-get-report-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

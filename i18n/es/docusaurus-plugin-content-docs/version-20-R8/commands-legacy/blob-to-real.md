@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB to real.Summary-->El comando BLOB to real devuelve un valor de tipo Real leído del BLOB *blob*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Si especifica la variable del parámetro opcional *offset*, el valor real es le�
 
 Después de llamar el comando, la variable se incrementa en el número de bytes leído. Por lo tanto, puede reutilizar la misma variable con otro comando de lectura de BLOB para leer otro valor.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo lee 20 valores reales de un BLOB, a partir del offset 0x200:
 
@@ -50,7 +50,7 @@ El siguiente ejemplo lee 20 valores reales de un BLOB, a partir del offset 0x200
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -60,7 +60,7 @@ El siguiente ejemplo lee 20 valores reales de un BLOB, a partir del offset 0x200
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

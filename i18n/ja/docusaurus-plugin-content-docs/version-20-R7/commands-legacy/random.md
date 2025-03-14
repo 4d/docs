@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Random.Summary-->Random は、0から32,767までの範囲の乱数を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 *vStart*は範囲の開始値で、*vEnd*は最終値です。
 
-#### 例題 
+## 例題 
 
 以下の例は、10から30までの範囲の整数の乱数を*vlResult*に代入します:
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

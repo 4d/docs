@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET SORTS.Summary-->La commande **QR SET SORTS** vous permet de définir l'ordre de tri de chaque colonne de l'état rapide dont la référence est passée dans *zone*.<!-- END REF--> 
 
@@ -42,11 +42,11 @@ Voici le code permettant de trier les lignes uniquement dans un état tableau cr
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

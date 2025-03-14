@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->El comando **JSON Resolve pointers** resuelve todos los punteros JSON encontrados en el objeto, con respecto a la configuración de opciones (si existe).<!-- END REF-->
 
@@ -54,7 +54,7 @@ En todos los casos, el comando devuelve un objeto que contiene las siguientes pr
 | errors\[\].pointerURI   | Cadena            | valor del puntero                                                                                                  |
 | errors\[\].referredPath | Cadena            | ruta completa del documento                                                                                        |
 
-#### Definir punteros JSON 
+## Definir punteros JSON 
 
 JSON Pointer es un estándar que define una sintaxis de cadena que se puede utilizar para acceder a un campo o a un valor clave particular en todo el documento JSON. El estándar se ha descrito en [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
@@ -80,7 +80,7 @@ Los punteros JSON se resuelven recursivamente, lo que significa que si un punter
 * La resolución del nombre distingue entre mayúsculas y minúsculas.
 * 4D no resuelve una ruta a un archivo json ubicado en la red (que empiece por "http/https").
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar en un objeto:
 
@@ -108,7 +108,7 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere reutilizar "billingAddress" como "shippingAddress" en el siguiente objeto JSON (llamado $oMyConfig):
 
@@ -153,7 +153,7 @@ Después de ejecutar este código:
 }
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo ilustra el efecto de la opción "fusionar". Usted desea editar los derechos de un usuario basándose en un archivo predeterminado.
 
@@ -227,11 +227,11 @@ Si ejecuta:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
   
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

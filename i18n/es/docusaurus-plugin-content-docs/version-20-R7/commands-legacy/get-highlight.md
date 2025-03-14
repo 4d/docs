@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->El comando GET HIGHLIGHT permite determinar el texto seleccionado actualmente en *objeto*.<!-- END REF-->  
   
@@ -33,7 +33,7 @@ Si los valores devueltos de *inicioSel* y *finSel* son iguales, el usuario no ha
 
 Si el objeto designado por el parámetro *objeto* no se encuentra en el formulario, el comando devuelve -1 en *inicioSel* y -2 en *finSel*. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo obtiene el texto seleccionado en el campo *\[Productos\]Comentarios*: 
 
@@ -44,11 +44,11 @@ If(vFirst < vlast)
 End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo del comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROKE").
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Modificación del estilo del texto resaltado:
 
@@ -57,13 +57,13 @@ Modificación del estilo del texto resaltado:
  ST SET ATTRIBUTES(*;"miTexto";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-#### Ver también 
+## Ver también 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

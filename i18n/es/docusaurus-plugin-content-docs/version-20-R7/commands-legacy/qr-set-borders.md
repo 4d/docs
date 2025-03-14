@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->El comando QR SET BORDERS permite definir el estilo del borde de una celda dada.<!-- END REF--> 
 
@@ -69,11 +69,11 @@ Si el parámetro *linea* es incorrecto, se genera el error -9853.
 Si el parámetro *borde* es incorrecto, se genera el error -9854.  
 Si el parámetro *ancho* es incorrecto, se genera el error -9855.
 
-#### Ver también 
+## Ver también 
 
 [QR GET BORDERS](qr-get-borders.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->El comando SVG GET ATTRIBUTE se utiliza para obtener el valor actual del atributo *nomAtrib* en un objeto o una imagen SVG.<!-- END REF-->   
   
@@ -37,11 +37,11 @@ Para obtener más información acerca de los atributos SVG, consulte la descripc
 | 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | lectura           | Devuelve 'true' si el atributo de clase heredado del nodo contiene todos los nombres de clases; de lo contrario, devuelve 'false'. Devuelve por ejemplo true para "4D-isOfClass-tierra" si la clase heredada del nodo es "land department01")                                                                                                                                                                                                                                                                                                               |
 | 4D-enableD2D                                  | lectura/escritura | Si 'false', desactiva Direct2D para el motor de renderización SVG. De hecho, los filtros SVG no son renderizados en Direct2D sino en GDI/GDIPlus. Esta opción le permite beneficiarse de los filtros SVG incluso si la base está en Direct2D. Note que esta opción sólo se tiene en cuenta cuando una imagen ya ha sido cargada en *objetoImagen*. Sin embargo, como esta opción se aplica d globalmente al motor, sólo debe definirse una vez por sesión (por ejemplo con un SVG simple cargado en memoria desde una variable texto al inicio de la base). |
 
-#### Ver también 
+## Ver también 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

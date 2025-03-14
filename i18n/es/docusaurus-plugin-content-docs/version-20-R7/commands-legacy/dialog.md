@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DIALOG.Summary-->El comando **DIALOG** presenta el *formulario* al usuario junto con los parámetros *formData* (opcional).<!-- END REF--> Este comando se designa para trabajar con interfaces de usuario avanzadas y personalizadas basadas en formularios. Puede utilizarlo para mostrar información de la base o de otras ubicaciones, o para ofrecer funcionalidades de entrada de datos. A diferencia de [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md), **DIALOG** le da control total sobre el formulario, su contenido y los bontones de navegación y validación. 
 
@@ -57,7 +57,7 @@ Si pasa el parámetro opcional \*, el formulario se carga y muestra en la últim
 * debe crear una ventana antes de llamar la instrucción **DIALOG**(form;\*); si no es posible utilizar la ventana de diálogo actual en el proceso ni la ventana creada por defecto para cada proceso. De lo contrario, se genera el error -9909.
 * cuando se utiliza el parámetro *\**, la ventana se cierra automáticamente después de una acción estándar o una llamada al comando [CANCEL](cancel.md) o [ACCEPT](accept.md). No tiene que gestionar el cierre de la propia ventana.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo puede usarse para crear una paleta de herramientas
 
@@ -70,7 +70,7 @@ El siguiente ejemplo puede usarse para crear una paleta de herramientas
  DIALOG("doc")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En un formulario, usted asignó algunas propiedades de objeto [Form](form.md) a variables:
 
@@ -91,7 +91,7 @@ El formulario muestra los valores que ha pasado:
 
 **Nota:** este ejemplo requiere que la notación de objeto esté habilitada en la base de datos (ver *Página Compatibilidad*).
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo usa la ruta a un formulario .json para mostrar los registros en una lista de empleados:
 
@@ -105,7 +105,7 @@ que devuelve:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo utiliza un archivo .json como un objeto y modifica algunas propiedades:
 
@@ -123,11 +123,11 @@ El formulario modificado se devuelve con el título, el logotipo y el borde modi
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de llamar a DIALOG, si se acepta el diálogo, la variable sistema OK toma el valor 1; si se cancela toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [ACCEPT](accept.md)  
 [ADD RECORD](add-record.md)  
@@ -136,7 +136,7 @@ Después de llamar a DIALOG, si se acepta el diálogo, la variable sistema OK to
 [Form](form.md)  
 [Open window](open-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

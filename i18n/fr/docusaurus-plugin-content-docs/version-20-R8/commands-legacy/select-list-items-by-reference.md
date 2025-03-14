@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->La commande **SELECT LIST ITEMS BY REFERENCE** sélectionne le ou les élément(s) dont vous avez passé le numéro de référence dans *réfElément* et, facultativement, dans *tabRéfs*, parmi la liste dont vous avez passé la référence dans *liste*.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ Dans ce cas, l’élément désigné par le paramètre *refElém* désigne parmi
 
 Lorsque vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
 
-#### Exemple 
+## Exemple 
 
 En supposant que *hList* est une liste dont les éléments ont des numéros de référence uniques, la méthode objet de bouton suivante sélectionne l'élément parent (s'il existe) de l'élément actuellement sélectionné :
 
@@ -44,13 +44,13 @@ En supposant que *hList* est une liste dont les éléments ont des numéros de r
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->QR SET SELECTION コマンドを使用するとマウスクリックをした場合と同様に、セルや行、カラム、またはエリア全体を反転表示 (選択) することができます。<!-- END REF-->また、現在選択されている範囲を解除することもできます。
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR GET SELECTION](qr-get-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

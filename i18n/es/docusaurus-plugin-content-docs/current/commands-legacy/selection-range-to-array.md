@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crea uno o más arrays y copia los datos de los campos o números de registro de la selección actual en arrays.<!-- END REF--> 
 
@@ -59,7 +59,7 @@ Si carga los números de los registros, se copian en un array de tipo Entero lar
 
 Si el comando se ejecuta correctamente, el tamaño de cada array resultante es igual a *(fin-inicio)+1*, excepto si el parámetro *fin* es superior al número de registros en la selección. En tal caso, cada array resultante contiene *(Registros en selección(\[...\])-inicio)+1* elementos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente línea de código utiliza los 50 primeros registros de la selección actual de la tabla *\[Facturas\].* Se cargan los valores del campo *\[Facturas\]Facturas ID* y del campo relacionado *\[Clientes\]Clientes ID*.
 
@@ -67,7 +67,7 @@ La siguiente línea de código utiliza los 50 primeros registros de la selecció
  SELECTION RANGE TO ARRAY(1;50;[Facturas]Facturas ID;alInvoID;[Clientes]Clientes ID;alCustID)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Las siguientes líneas de código utilizan los 50 primeros registros de la selección actual de la tabla *\[Facturas\]*. Se cargan los números de registro de la tabla *\[Facturas\]* así como los de la tabla asociada *\[Clientes\]*:
 
@@ -76,7 +76,7 @@ Las siguientes líneas de código utilizan los 50 primeros registros de la selec
  SELECTION RANGE TO ARRAY(lSelTalla-49;lSelTalla;[Facturas];alFacRegN;[Facturas];alCliRegN)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Las siguiente líneas de código permiten trabajar secuencialmente en porciones de 1 000 registros de una selección grande que no puede descargase en su totalidad en arrays:
 
@@ -90,7 +90,7 @@ Las siguiente líneas de código permiten trabajar secuencialmente en porciones 
  End for
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Uso de los 50 primeros registros actuales de la tabla \[Facturas\] para cargar varios arrays, en ejecución diferida: 
 
@@ -103,13 +103,13 @@ Uso de los 50 primeros registros actuales de la tabla \[Facturas\] para cargar v
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

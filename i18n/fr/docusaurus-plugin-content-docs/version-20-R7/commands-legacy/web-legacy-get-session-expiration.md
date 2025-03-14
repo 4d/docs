@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->Cette commande peut être utilisée uniquement avec les **anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle retourne des valeurs null, date et heure lorsque le mode **sessions Web extensibles** est activé (recommandé sous 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.
 
-#### Description 
+## Description 
 
 La commande **WEB LEGACY GET SESSION EXPIRATION** retourne les informations relatives à l’expiration du cookie de la session dont vous avez passé l’UUID dans *idSession*. 
 
@@ -33,13 +33,13 @@ Le paramètre *dateExp* reçoit la date d’expiration et le paramètre *heureEx
 *Troisième requête, Mardi à 04h00 : cookie expiré*  
  \-> envoi du cookie 4DSID aaabbb expiration I+24h = Mercredi 01:00
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gestion des sessions Web*  
 [WEB Get current session ID](web-get-current-session-id.md)  
 [WEB SET OPTION](web-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

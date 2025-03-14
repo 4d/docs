@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Summary-->La commande **WP TABLE DELETE ROWS** supprime une ou plusieurs lignes d'un tableau 4D Write Pro.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Avec cette syntaxe, le paramètre optionnel *nbLignes* définit le nombre de lig
 
 La suppression de toutes les lignes du tableau entrainera la suppression du tableau.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez supprimer deux lignes du tableau *Invoice*. Le code suivant :
 
@@ -50,6 +50,6 @@ Supprimera les deux lignes de leur emplacement initial :
 
 ![](../../assets/en/WritePro/commands/pict4680306.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP TABLE DELETE COLUMNS](wp-table-delete-columns.md)  

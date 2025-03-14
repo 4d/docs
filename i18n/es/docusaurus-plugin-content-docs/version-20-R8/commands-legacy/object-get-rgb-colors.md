@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->El comando OBJECT GET RGB COLORS devuelve los colores de fondo y primer plano del objeto o grupo de objetos designados por *objeto*.<!-- END REF-->  
   
@@ -32,11 +32,11 @@ Los valores de colores RGB devueltos en los parámetros a *colorPrimerPlano*, *c
 
 Para obtener más información acerca del formato de los parámetros *colorPrimerPlano*, *colorFondo* y *colorFondoAlt*, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md).
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

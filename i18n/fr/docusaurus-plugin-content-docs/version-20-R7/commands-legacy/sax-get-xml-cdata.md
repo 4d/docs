@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML CDATA.Summary-->La commande **SAX GET XML CDATA** permet de récupérer la *valeur* CDATA d’un élément XML existant dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML CDATA. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
@@ -22,7 +22,7 @@ Passez une variable *valeur* de type Texte si vous souhaitez récupérer des don
 
 **Note de compatibilité :** A compter de 4D v12, les contenus CDATA encodés en base64 sont automatiquement décodés par la commande **SAX GET XML CDATA**, il est donc inutile d'appeler la commande [BASE64 DECODE](base64-decode.md). 
 
-#### Exemple 
+## Exemple 
 
 Considérons l’extrait de code XML suivant :
 
@@ -41,16 +41,16 @@ Le code 4D suivant retournera “MonCData” dans *vDonnéesTexte* :
  vDonnéesTexte:=BLOB to text(vDonnées;UTF8 C string)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

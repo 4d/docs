@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current client authentication.Summary-->La commande **Current client authentication** envoie au serveur Active Directory de Windows une requête d'authentification du client courant et, en cas de succès, retourne le nom d'utilisateur Windows de ce client (identifiant de session).<!-- END REF--> Si l'authentification échoue, une chaîne vide est retournée. 
 
@@ -45,7 +45,7 @@ Le niveau de sécurité de l'authentification (c'est-à-dire le degré de confia
 
 Pour plus d'informations sur les configurations, veuillez vous reporter au paragraphe *Configuration requise pour le SSO*.
 
-#### Exemple 
+## Exemple 
 
 Dans votre base 4D Server, vous avez conçu un système de contrôle d'accès basé sur la fonctionnalité des utilisateurs et des groupes de 4D. Vous souhaitez configurer votre application de manière à ce que les utilisateurs 4D distants sous Windows puissent se connecter directement à 4D Server (sans qu'aucune boîte de dialogue de mot de passe ne s'affiche), tout en étant connectés avec leurs propres droits d'accès.
 
@@ -74,7 +74,7 @@ Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée
 * utilisation des fonctions LDAP afin de récupérer les droits d'accès de l'utilisateur.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

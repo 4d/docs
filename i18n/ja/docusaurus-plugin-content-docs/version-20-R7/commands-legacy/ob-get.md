@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Get.Summary-->**OB Get**コマンドは、 *object* 引数で指定したオブジェクトの *property* のカレントの値を返します。<!-- END REF-->任意の *type* 引数で指定した型へと変換することもできます。
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 * (*4D Write Pro*) v16 R6 以前のバージョンでは、引数で4D Write Pro 画像属性(wk image など)を定義していた場合、データのURI を格納したテキスト値が常に返されてきました。4D v16 R6 以降、4D Write Pro 画像属性は常にピクチャー値として返されます。データURI を取得するためには、*property* 引数に対しwk image url のような特定のプロパティを使用する必要があります。
 * v16 R4 以前のバージョンでは、*property* がnull値で *type* パラメーターが省略されていると、4Dは空文字列を返します。4D v16 R4 以降においてはこの場合にIs null 定数が返されるようになります。互換性を保つため、この仕様変更が有効になるのは、"オブジェクト記法を使用してオブジェクトプロパティにアクセス(Unicode 必須)" オプションがデータベースにおいて有効化されている場合に限られます(*互換性ページ*参照)。
 
-#### 例題 1 
+## 例題 1 
 
 テキスト型の値を取得する場合:
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
  $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 実数型の値を取得して、倍長整数へと変換する場合:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  $age:=OB Get($ref ;"age";Is longint) // $age を倍長整数型に変換
 ```
 
-#### 例題 3 
+## 例題 3 
 
 オブジェクトの中の値を取得する場合:
 
@@ -88,7 +88,7 @@ displayed_sidebar: docs
  $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 従業員の年齢を二度修正したい場合:
 
@@ -109,7 +109,7 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 例題 5 
+## 例題 5 
 
 日付を取得する場合、結果の文字列はカレントのデータベース日付設定によります。
 
@@ -135,7 +135,7 @@ displayed_sidebar: docs
 
 **注:** この設定についての詳細な情報については、*互換性ページ*を参照してください。
 
-#### 例題 6 
+## 例題 6 
 
 入れ子にされたオブジェクトを使用することもできます:
 
@@ -154,7 +154,7 @@ displayed_sidebar: docs
   // $childName = "Monroe" (text)
 ```
 
-#### 例題 7 
+## 例題 7 
 
 オブジェクトに保存された時間を4Dに復元する例を考えます:
 
@@ -170,7 +170,7 @@ displayed_sidebar: docs
   // $get_h = ?01:00:01?
 ```
 
-#### 例題 8 
+## 例題 8 
 
 4Dオブジェクトフィールドの使用例です:
 
@@ -184,7 +184,7 @@ displayed_sidebar: docs
  $lastName:=OB Get([People]Identity_OB;"Last name")
 ```
 
-#### 例題 9 
+## 例題 9 
 
 4D Write Proエリアを含むフォームメソッド内に、以下のように書く事ができます:
 
@@ -201,7 +201,7 @@ displayed_sidebar: docs
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### 例題 10 
+## 例題 10 
 
 オブジェクト属性に保存されているピクチャーのサイズを確認します:
 
@@ -217,13 +217,13 @@ displayed_sidebar: docs
  $vPict:=OB Get($object;"photo") // この場合は "is picture" は不要です
 ```
 
-#### 参照 
+## 参照 
 
 *Field and Variable Types*  
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

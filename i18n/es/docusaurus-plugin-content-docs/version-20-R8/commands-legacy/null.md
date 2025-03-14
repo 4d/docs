@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Null.Summary-->**Null** devuelve el valor **null** de tipo *null*.<!-- END REF-->
 
@@ -33,7 +33,7 @@ El valor **Null** no se puede pasar como un parámetro a un método o se devuelv
 
 **Nota:** este comando no se puede utilizar con campos escalares de la base de datos. Los valores Null en los campos de la base son gestionados por el motor SQL y se gestionan a través de los comandos [Is field value Null](is-field-value-null.md) y [SET FIELD VALUE NULL](set-field-value-null.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea asignar y probar el valor **null** con las propiedades de los objetos:
 
@@ -53,7 +53,7 @@ Usted desea asignar y probar el valor **null** con las propiedades de los objeto
 
 **Nota:** este ejemplo requiere que la notación objeto esté activada en la base.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea asignar y comparar el valor **null** con colección de elementos:
 
@@ -67,7 +67,7 @@ Usted desea asignar y comparar el valor **null** con colección de elementos:
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Estos ejemplos muestran las distintas maneras de asignar o comparar el valor **null** con las variables:
 
@@ -107,7 +107,7 @@ Estos ejemplos muestran las distintas maneras de asignar o comparar el valor **n
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Aquí están los diferentes resultados del comando [Undefined](undefined.md) así como también del comando [Null](null.md) aplicados a las propiedades de objetos, dependiendo del contexto:
 
@@ -127,13 +127,13 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### Ver también 
+## Ver también 
 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

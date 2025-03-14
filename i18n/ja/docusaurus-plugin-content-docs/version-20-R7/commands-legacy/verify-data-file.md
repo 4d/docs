@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->**VERIFY DATA FILE**コマンドは、*structurePath*と*dataPath*で指定したデータファイル中にあるオブジェクトの構造的な検証を行います。<!-- END REF-->データ検証に関する詳細は、Design Referenceマニュアルを参照してください。
 
@@ -103,7 +103,7 @@ displayed_sidebar: docs
 デフォルトで**VERIFY DATA FILE**コマンドは、(*options*引数にDo not create log fileオプションが指定されていなければ) XMLフォーマットのログファイルを作成します。このファイルはデータベースの**Logs**フォルダに作成され、名前もカレントデータベースのストラクチャーファイルに基づいたものがつけられます。例えば、“myDB.4db”という名前のストラクチャーファイルに対しては、ログファイルは“myDB\_Verify\_Log.xml”という名前が付けられます。Timestamp log file nameオプションを渡していた場合、ログファイル名には"YYYY-MM-DD HH-MM-SS"という形式で作成時の日時の情報が含まれます。ファイル名は例として次のような形になります:“myDB\_Verify\_Log\_2015-09-27 15-20-35.xml” これはつまりそれぞれの新しいログファイルは以前のものを置き換える事はない一方、不要なファイルを削除するためにはいくつかのファイルを手動で削除しなければならない可能性があることを意味します。  
 選択されたオプションに関わらず、ログファイルが生成されるとそのファイルへのパスはコマンド実行後に*Document*システム変数へと返されます。
 
-#### 例題 1 
+## 例題 1 
 
 データとインデックスの検証:
 
@@ -111,7 +111,7 @@ displayed_sidebar: docs
  VERIFY DATA FILE($StructName;$DataName;Verify indexes+Verify records;Do not create log file;"")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 完全な検証を行い、ログを作成する:
 
@@ -119,7 +119,7 @@ displayed_sidebar: docs
  VERIFY DATA FILE($StructName;$DataName;Verify all;0;"")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 レコードのみの検証:
 
@@ -127,7 +127,7 @@ displayed_sidebar: docs
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"")
 ```
 
-#### 例題 4 
+## 例題 4 
 
 テーブル3と7のレコードのみを検証:  
 
@@ -138,7 +138,7 @@ displayed_sidebar: docs
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"FollowScan";$arrTableNums)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 特定のインデックスを検証 (\[table4\]field1、\[table5\]field2とfield3):
 
@@ -153,7 +153,7 @@ displayed_sidebar: docs
  VERIFY DATA FILE($StructName;$DataName;Verify indexes;0;"FollowScan";$arrTableNums;$arrIndex)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 データファイルの検証と、ログファイルの作成および表示:
 
@@ -162,15 +162,15 @@ displayed_sidebar: docs
  SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コールバックメソッドが存在しない場合、検証は実行されず、エラーが生成され、OKシステム変数には0が設定されます。ログファイルが生成されていた場合、その完全パス名がDocumentシステム変数へと返されます。
 
-#### 参照 
+## 参照 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->La commande **EDIT FORMULA** affiche l’éditeur de formules afin de permettre à l’utilisateur d’écrire ou de modifier une formule.<!-- END REF--> L’éditeur contient à l'ouverture :
 
@@ -33,7 +33,7 @@ L’utilisateur peut modifier la *formule* affichée et la sauvegarder. Il peut 
 
 A noter qu’au moment de la validation de la boîte de dialogue, la commande n’exécute pas la *formule*, seul le contenu de la variable est validé et mis à jour. Si vous voulez exécuter la *formule*, vous devez utiliser la commande [EXECUTE FORMULA](execute-formula.md).
 
-#### Exemple 
+## Exemple 
 
 Affichage de l’éditeur avec la table \[Salaires\] et sans formule pré-saisie puis exécution de la formule sur la sélection courante :
 
@@ -45,17 +45,17 @@ Affichage de l’éditeur avec la table \[Salaires\] et sans formule pré-saisie
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l’utilisateur valide la boîte de dialogue, la variable système OK prend la valeur 1\. Si l’utilisateur annule la boîte de dialogue, la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY devuelve la información sobre el usuario y el proceso que tiene bloqueado un registro.<!-- END REF--> El número del proceso (\*), el nombre de usuario en la aplicación 4D y en el sistema así como el nombre del proceso son devueltos en las variables *proceso*, *usuario4D*, *sesionUsuario*, y *nombreProceso*. Puede utilizar esta información en una caja de diálogo personalizada para advertir al usuario cuando un registro está bloqueado.
 
@@ -36,12 +36,12 @@ Si el registro ha sido bloqueado por una *petición $lock REST*:
 * *sesionUsuario* devuelve ""
 * *nombreProceso* devuelve la dirección IP del locker, p. ej. "127.0.0.1"
 
-#### Ver también 
+## Ver también 
 
 [Locked](locked.md)  
 *Record Locking*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

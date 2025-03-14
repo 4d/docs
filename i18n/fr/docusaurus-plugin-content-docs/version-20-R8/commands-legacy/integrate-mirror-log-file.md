@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Note préliminaire :** Cette commande ne fonctionne qu’avec 4D Server.<!-- END REF--> Elle ne peut être exécutée que via la commande [Execute on server](execute-on-server.md) ou dans une procédure stockée.
 
@@ -81,7 +81,7 @@ Dans le cas de valeurs de type Blob ou image, différentes informations sont sto
 * *sequenceNumber* : numéro courant au sein d'une séquence d'incrémentation automatique.
 * *primaryKey* : valeur de clé primaire.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez intégrer un fichier d'historique sur le serveur miroir en mode réparation auto :
 
@@ -92,15 +92,15 @@ Vous voulez intégrer un fichier d'historique sur le serveur miroir en mode rép
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'intégration s'effectue correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

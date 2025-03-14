@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get format.Summary-->El comando OBJECT Get format devuelve el formato de salida actual aplicado al objeto especificado en el parámetro *objeto*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Este comando devuelve el formato de salida actual del objeto, es decir el format
   
 Cuando el comando OBJECT Get format se aplica a objetos de tipo fecha, hora o imagen (formatos definidos como constantes), la cadena que se devuelve corresponde al código del carácter de la constante. Para obtener el valor de la constante, simplemente aplique la función [Character code](character-code.md) al resultado (ver ejemplo a continuación). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo le permite obtener el valor de la constante del formato aplicado a la variable imagen llamada “mifoto”: 
 
@@ -40,7 +40,7 @@ Este ejemplo le permite obtener el valor de la constante del formato aplicado a 
   //Mostrar el valor "3"
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo le permite obtener el formato aplicado al campo booleano \[Miembros\]Estado\_civil: 
 
@@ -50,7 +50,7 @@ Este ejemplo le permite obtener el formato aplicado al campo booleano \[Miembros
  ALERT($formato) //Visualizar formato, por ejemplo "Casado;Soltero"
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Customized formats are returned untouched:
 
@@ -60,11 +60,11 @@ Customized formats are returned untouched:
  $format:=OBJECT Get format(*;"timeinput") // ":m"
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

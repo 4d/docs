@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get footers height.Summary-->**LISTBOX Get footers height**コマンドは*object*と*\** 引数で指定したリストボックスのフッター行の高さを返します。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 **注:** 行の高さの計算に関する詳細はデザインリファレンスを参照してください。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET FOOTERS HEIGHT](listbox-set-footers-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

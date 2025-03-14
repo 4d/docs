@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.APPEND MENU ITEM.Summary-->El comando **APPEND MENU ITEM** añade nueva líneas de menú al menú cuyo número o referencia se pasa en *menu*.<!-- END REF-->
 
@@ -55,7 +55,7 @@ El parámetro opcional *subMenu* permite designar un menú como elemento añadid
 
 **Importante:** las nuevas líneas no tienen métodos o acciones asociados. Estos deben asociarse con los elementos utilizando los comandos [SET MENU ITEM PROPERTY](set-menu-item-property.md) o [SET MENU ITEM METHOD](set-menu-item-method.md), o los elementos también pueden ser administradas por un método de formulario utilizando el comando [Menu selected](menu-selected.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo añade los nombres de las fuentes disponibles en un menú Fuentes, el cual en este ejemplo es el sexto menú de la barra de menús actual:
 
@@ -75,13 +75,13 @@ Entonces, en todo método de formulario o de proyecto, puede escribir:
  APPEND MENU ITEM(6;◊atFuenteMenuItems)
 ```
 
-#### Ver también 
+## Ver también 
 
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

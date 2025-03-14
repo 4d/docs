@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB Validate digest.Summary-->El comando **WEB Validate digest** permite verificar la validez de la información de identificación (nombre y contraseña) suministrada por un usuario que se conecta al servidor web.<!-- END REF--> Este comando debe utilizarse en el *Método de base On Web Authentication* en el contexto de una autenticación web en modo Digest (ver la sección ). 
 
@@ -27,7 +27,7 @@ Puede utilizar este mecanismo para administrar y mantener por programación su p
 
 **Nota:** si el navegador no soporta la autenticación Digest, se devuelve un error (error de autenticación).
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejemplo de método de base On Web Authentication en modo Digest:
 
@@ -52,12 +52,12 @@ Ejemplo de método de base On Web Authentication en modo Digest:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

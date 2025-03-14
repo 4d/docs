@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA REFRESH CURRENT URL.Summary-->El comando WA REFRESH CURRENT URL recarga el URL actual mostrado en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
 
-#### Ver también 
+## Ver también 
 
 [WA STOP LOADING URL](wa-stop-loading-url.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

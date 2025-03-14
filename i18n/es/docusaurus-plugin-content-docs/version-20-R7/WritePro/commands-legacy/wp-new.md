@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP New.Summary-->El comando **WP New** crea y devuelve un objeto 4D Write Pro.<!-- END REF--> El objeto devuelto es un documento completo que se puede pasar al comando [WP INSERT DOCUMENT](wp-insert-document.md), por ejemplo.
 
@@ -45,7 +45,7 @@ De forma predeterminada, las expresiones HTML insertadas en documentos antiguos 
 
 **Nota de compatibilidad*: las hojas de estilo de caracteres en los documentos 4D Write* *heredados*   *utilizan un mecanismo patentado, que no es soportado por 4D Write Pro. Para obtener el mejor resultado para el texto importado, los atributos de la hoja de estilo se convierten en atributos de estilo "codificados". Las hojas de estilo de caracteres heredadas no se importan y ya no se hace referencia a ellas en el documento.* 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea crear un objeto 4D Write Pro vacío:
 
@@ -53,7 +53,7 @@ Desea crear un objeto 4D Write Pro vacío:
  myWPObject:=WP New
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea crear un nuevo objeto 4D Write Pro utilizando un documento 4D Write Pro almacenado en el disco:
 
@@ -64,7 +64,7 @@ Desea crear un nuevo objeto 4D Write Pro utilizando un documento 4D Write Pro al
  myWPArea:=WP New($BlobDoc)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea crear un objeto 4D Write Pro que contiene una referencia de expresión 4D simple:
 
@@ -75,7 +75,7 @@ Desea crear un objeto 4D Write Pro que contiene una referencia de expresión 4D 
  myWPA:=WP New(myText)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Usted desea inicializar su área 4D Write Pro con una plantilla creada previamente:
 
@@ -89,7 +89,7 @@ Usted desea inicializar su área 4D Write Pro con una plantilla creada previamen
  myNewWPA:=WP New(wpTemplate)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Usted desea importar en una nueva área 4D Write Pro un documento del antiguo plug-in 4D Write almacenado en un campo BLOB del registro actual, y conservar las expresiones HTML:
 
@@ -98,7 +98,7 @@ Usted desea importar en una nueva área 4D Write Pro un documento del antiguo pl
  wpArea=WP New([Templates]Reference_;wk import html expressions as text)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Se ha definido un documento de plantilla con diferentes partes con formato previo, cada una de ellas se almacena como un marcador. Al producir un documento final de la plantilla, puede extraer cualquier marcador como un nuevo documento e insertarlo en el documento final.
 
@@ -115,7 +115,7 @@ Se ha definido un documento de plantilla con diferentes partes con formato previ
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Import document](wp-import-document.md)  
 [WP INSERT DOCUMENT](wp-insert-document.md)  

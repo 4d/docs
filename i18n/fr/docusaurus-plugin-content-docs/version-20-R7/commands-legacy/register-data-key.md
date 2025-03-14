@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Register data key.Summary-->La commande **Register data key** ajoute au trousseau 4D la clé de chiffrement de données qui a été passée dans le paramètre.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
 * **Vrai** si la clé de chiffrement est chargée dans le trousseau 4D avec succès.
 * **Faux** si la même clé de chiffrement était déjà présente dans le trousseau 4D.
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $passphrase : Text
@@ -44,12 +44,12 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [New data key](new-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

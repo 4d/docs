@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Method called on event.Summary-->Method called on event コマンドは、[ON EVENT CALL](on-event-call.md "ON EVENT CALL")コマンドでインストールされたメソッド名を返します。<!-- END REF-->
 
 インストールされたメソッドが存在しない場合は、空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [ON EVENT CALL](on-event-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

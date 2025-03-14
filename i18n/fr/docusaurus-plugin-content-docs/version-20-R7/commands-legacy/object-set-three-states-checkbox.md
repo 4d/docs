@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->La commande **OBJECT SET THREE STATES CHECKBOX** vous permet de modifier, pour le process courant, la propriété "Trois états" de la ou des case(s) à cocher désignée(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -27,11 +27,11 @@ Cette commande s’applique uniquement aux case à cocher associées à des vari
 
 Passez **Vrai** dans le paramètre *troisEtat* pour activer le mode "trois états", ou **Faux** pour le désactiver. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

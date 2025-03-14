@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET QUERY LIMIT.Summary-->SET QUERY LIMIT permite pedirle a 4D detener todas la búsquedas posteriores en el proceso actual tan pronto encuentre el número de registros definido en *limite*.<!-- END REF--> 
 
@@ -38,7 +38,7 @@ SET QUERY LIMIT cambia el comportamiento de los comandos de búsqueda:
 
 Por otra parte, SET QUERY LIMIT no afecta los otros comandos que puedan modificar la selección actual de una tabla como [ALL RECORDS](all-records.md "ALL RECORDS"), [RELATE MANY](relate-many.md "RELATE MANY"), etc.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Para efectuar una búsqueda que corresponda a la fórmula “...encontrar diez clientes cuyas ventas sean superiores a $1 M...”, escriba el siguiente código:
 
@@ -48,11 +48,11 @@ Para efectuar una búsqueda que corresponda a la fórmula “...encontrar diez c
  SET QUERY LIMIT(0)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el segundo ejemplo del comando [SET QUERY DESTINATION](set-query-destination.md "SET QUERY DESTINATION").
 
-#### Ver también 
+## Ver también 
 
 [Get query limit](get-query-limit.md)  
 [QUERY](query.md)  
@@ -64,7 +64,7 @@ Ver el segundo ejemplo del comando [SET QUERY DESTINATION](set-query-destination
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

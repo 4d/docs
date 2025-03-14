@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->El comando SET LIST ITEM PARAMETER permite modificar el parámetro *selector* para el elemento *refElem* de la lista jerárquica cuya referencia o nombre de objeto se pasa en el parámetro *lista*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ En *selector*, puede pasar:
 | Associated standard action | Cadena | 4D\_standard\_action\_name | Asociar una acción estándar con el *refElem*. En este caso, debe pasar en el parámetro *valor* un nombre de acción estándar con un parámetro, por ejemplo "fontSize?value=10pt". Para más información, consulte la sección *Acciones estándar* del manual de *Diseño*.                                        |
 * o un **selector personalizado**: también puede pasar un texto personalizado y asociarlo con un valor de tipo texto, numérico o booleano. Este valor será almacenado con el elemento y podrá recuperarse utilizando el comando [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Este principio permite configurar todo tipo de interfaz asociado con las listas jerárquicas. Por ejemplo, en una lista de nombres de clientes, puede guardar la edad de cada persona y mostrarla únicamente cuando el elemento correspondiente sea seleccionado.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea definir como lista de opciones de un menú emergente jerárquico una lista personalizada de valores de tamaño de fuente utilizando la funcionalidad de acciones estándar:
 
@@ -54,7 +54,7 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-#### Ver también 
+## Ver también 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
@@ -62,7 +62,7 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

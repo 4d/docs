@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD devuelve la imagen presente en el portapapeles en el campo o variable imagen *imagen*.<!-- END REF-->
 
 **Nota**: en el caso de una operación copiar/pegar, el contenedor de datos corresponde al Portapapeles.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente método de objeto de un botón asigna la imagen presente en el portapapeles (si hay) al campo \[Empleados\]Foto:
 
@@ -31,17 +31,17 @@ El siguiente método de objeto de un botón asigna la imagen presente en el port
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la imagen se extrae correctamente, OK toma el valor 1; de lo contrario OK toma el valor 0 y se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

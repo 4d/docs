@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota 
+## Nota 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->El comando **OPEN DATABASE** cierra la base de datos 4D actual y abre sobre la marcha de la base definida por *rutaArchivo*.<!-- END REF--> Este comando es útil para realizar pruebas automáticas, para reabrir una base de forma automática después de una compilación, o para permitir fusionar una aplicación remota 4D para seleccionar el servidor de la base al cual conectar.
 
@@ -36,13 +36,13 @@ El comando se ejecuta de forma asíncrona: después de su llamada, 4D continúa 
 
 Si el archivo de la base objetivo no se encuentra o es inválido, se devuelve un error sistema estándar del administrador de archivos y 4D no hace nada.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 ```4d
  OPEN DATABASE("C:\\databases\\Invoices\\Invoices.4db")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Puede ejecutar este código desde un proceso lanzado por [Método base On Startup](metodo-base-on-startup.md):
 
@@ -71,7 +71,7 @@ Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Pued
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

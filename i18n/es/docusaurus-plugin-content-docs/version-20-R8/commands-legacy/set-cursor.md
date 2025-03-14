@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET CURSOR.Summary-->El comando SET CURSOR cambia el puntero (gráfico) del ratón por el del sistema cuyo número de identificación se pasa en *cursor*.<!-- END REF-->
 
@@ -50,7 +50,7 @@ Los siguientes son algunos cursores que pueden pasarse en el parámetro *cursor*
 
 **Nota:** la disponibilidad y la apariencia de los cursores puede variar dependiendo del sistema operativo.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere que se muestre el cursor ![](../assets/en/commands/pict2478692.en.png) cuando el ratón pase sobre una área variable en el formulario. Puede escribir en el método objeto de la variable:
 
@@ -61,7 +61,7 @@ Usted quiere que se muestre el cursor ![](../assets/en/commands/pict2478692.en.p
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

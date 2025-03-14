@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota preliminar 
+## Nota preliminar 
 
 <!--REF #_command_.WEB SERVICE SET OPTION.Summary-->Este comando está diseñado para los usuarios de servicios web.<!-- END REF--> Su uso es opcional. 
 
-#### Descripción 
+## Descripción 
 
 El comando **WEB SERVICE SET OPTION** permite definir diferentes opciones que se utilizarán durante la próxima petición SOAP provocada por el comando [WEB SERVICE CALL](web-service-call.md).  
 
@@ -37,7 +37,7 @@ En el parámetro *opcion*, pase el número de la opción a definir y en el pará
 
 El orden de llamada de las opciones no es importante. Si la misma *opcion* está definida varias veces, sólo el valor de la primera llamada se tiene en cuenta. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Inserción de un encabezado personalizado en la petición SOAP: 
 
@@ -51,7 +51,7 @@ Inserción de un encabezado personalizado en la petición SOAP:
  WEB SERVICE SET OPTION(Web Service SOAP header;vElemRef)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Utilización de la versión 1.2 del protocolo SOAP:  
 
@@ -59,11 +59,11 @@ Utilización de la versión 1.2 del protocolo SOAP:
  WEB SERVICE SET OPTION(Web Service SOAP version;Web Service SOAP_1_2)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WEB SERVICE CALL](web-service-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

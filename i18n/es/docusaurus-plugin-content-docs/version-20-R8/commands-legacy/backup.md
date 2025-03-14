@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BACKUP.Summary-->El comando BACKUP inicia el backup de la base de datos utilizando los parámetros de copia de seguridad actuales.<!-- END REF--> No aparece una caja de diálogo de confirmación; sin embargo, aparece una barra de progreso en la pantalla.
 
@@ -24,21 +24,21 @@ Por este mecanismo, el comando no debe llamarse desde uno de estos métodos base
 
 **4D Server:** cuando se llama desde un equipo cliente, el comando BACKUP se considera como un procedimiento almacenado; siempre ejecutado en el servidor.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el backup se realiza correctamente, la variable del sistema OK toma el valor 1; de lo contrario, toma el valor 0\. 
 
-#### Gestión de errores 
+## Gestión de errores 
 
 En caso de que se presenten incidentes durante el backup, la información relativa al incidente se escribe en el diario de backup y el error de más alto nivel se envía únicamente al [Método base On Backup Shutdown](on-backup-shutdown-database-method.md). Por lo tanto es importante utilizar este método base para poder administrar por programación los errores relacionados con el backup.
 
-#### Ver también 
+## Ver también 
 
 [BACKUP INFO](backup-info.md)  
 [Método base On Backup Startup](on-backup-startup-database-method.md)
 [RESTORE](restore.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to print settings.Summary-->La commande **BLOB to print settings** remplace les paramètres d’impression courants de 4D par les paramètres stockés dans le BLOB *paramImpression*.<!-- END REF--> Ce BLOB doit avoir été généré par la commande [Print settings to BLOB](print-settings-to-blob.md) ou par la commande de 4D Pack  (voir ci-dessous).
 
@@ -48,7 +48,7 @@ Lorsque vous utilisez un environnement hétérogène, pour restaurer le maximum 
 
 Les BLOBs de paramètres d'impression générés avec la commande 4D Pack  peuvent être chargés et utilisés par la commande **BLOB to print settings**. Notez toutefois que s'ils sont stockés avec [Print settings to BLOB](print-settings-to-blob.md), ils sont convertis et ne pourront plus être ouvert avec . La commande **BLOB to print settings** stocke davantage d'informations que la commande . 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez appliquer des paramètres d'impression précédemment stockés sur disque au dialogue d'impression de 4D : 
 
@@ -72,11 +72,11 @@ Vous voulez appliquer des paramètres d'impression précédemment stockés sur d
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Print settings to BLOB](print-settings-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

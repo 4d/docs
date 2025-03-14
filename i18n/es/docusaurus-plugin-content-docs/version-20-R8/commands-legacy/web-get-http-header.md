@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->El comando **WEB GET HTTP HEADER** devuelve, en una cadena o dos arrays, el encabezado HTTP de la petición en proceso.<!-- END REF-->
 
@@ -55,7 +55,7 @@ Esta es una lista de algunos campos HTTP que pueden utilizarse en una petición:
 * **Referer**: origen de la petición (por ejemplo http://miservidorweb/mipagina1.html), es decir la página que el usuario muestra cuando se hace clic en el botón Anterior.
 * **User-Agent**: nombre y versión del navegador o del proxy.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente método permite recuperar el contenido de todo campo de encabezado de petición HTTP: 
 
@@ -114,12 +114,12 @@ On Web Connection):
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

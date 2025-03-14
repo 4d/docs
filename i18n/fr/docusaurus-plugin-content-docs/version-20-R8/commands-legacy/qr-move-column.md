@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->La commande **QR MOVE COLUMN** déplace la colonne *numColonne* de sa position courante à la position *nouvPosition*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Les deux paramètres *numColonne* et *nouvPosition* doivent être des numéros d
 
 **Note :** Cette commande peut être utilisée avec des états en liste uniquement. 
 
-#### Exemple 
+## Exemple 
 
 Vous avez conçu l'état suivant :
 
@@ -40,7 +40,7 @@ Vous obtenez :
 ![](../assets/en/commands/pict2569472.fr.png)
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

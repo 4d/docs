@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->**OBJECT SET SUBFORM**コマンドは*\** 引数および*object* 引数で指定したサブフォームオブジェクトに割り当てられる詳細フォームおよびオプションでリストフォームを動的に変更します。<!-- END REF-->
 
@@ -37,12 +37,12 @@ displayed_sidebar: docs
 
 ページモードのサブフォームを変更する場合、このコマンドをいつでも実行できます。カレントセレクションは変更されません。しかしリストサブフォームを変更する場合、リストを表示しているときのみ変更可能です。リスト中がダブルクリックされ詳細フォームが表示されている状態でこのコマンドを実行すると、エラーが生成されます。 
 
-#### 参照 
+## 参照 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

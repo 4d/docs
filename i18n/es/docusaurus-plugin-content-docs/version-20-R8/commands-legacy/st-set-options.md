@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->El comando **ST SET OPTIONS** modifica una o varias opciones de funcionamiento del campo o de la variable de texto con estilo designada por el parámetro *objeto* .<!-- END REF-->  
   
@@ -45,7 +45,7 @@ Visualización de las expresiones:
 
 ![](../assets/en/commands/pict1216065.es.png)
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código permite cambiar el modo de visualización del área:
 
@@ -58,11 +58,11 @@ El siguiente código permite cambiar el modo de visualización del área:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST GET OPTIONS](st-get-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

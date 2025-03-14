@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** reemplaza el formato de salida para los objetos especificados por *objeto* por el formato que pasa en *formatSalida*.<!-- END REF--> El nuevo formato se utiliza únicamente para la visualización actual, no se guarda con el formulario.
 
@@ -270,7 +270,7 @@ Para formatear el icono en un encabezado de list box, pase una cadena de caracte
 
 Esta funcionalidad es útil, por ejemplo, cuando se quiere trabajar con un icono personalizado.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente línea de código da formato al campo *\[Empleados\]Fecha Contratado* al quinto formato de fecha (Internal date long). 
 
@@ -278,7 +278,7 @@ La siguiente línea de código da formato al campo *\[Empleados\]Fecha Contratad
  OBJECT SET FORMAT([Empleados]Fecha Contratado;Char(Internal date long))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo formatea una variable fecha y una variable hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
@@ -287,19 +287,19 @@ Este ejemplo formatea una variable fecha y una variable hora utilizando [formato
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo cambia el formato de un campo *\[Empresa\]Codigo postal* de acuerdo con la longitud del valor en el campo: 
 
 ```4d
  If(Length([Empresa]Codigo postal)=9)
-    OBJECT SET FORMAT([Empresa]Codigo postal;"###–####")
+    OBJECT SET FORMAT([Empresa]Codigo postal;"###–##")
  Else
     OBJECT SET FORMAT([Empresa]Codigo postal;"###")
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo da formato al valor de un campo numérico dependiendo de si es positivo, negativo, o nulo:
 
@@ -307,7 +307,7 @@ El siguiente ejemplo da formato al valor de un campo numérico dependiendo de si
  OBJECT SET FORMAT([Stats]Results;"### ##0.00;(### ##0.00);")
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 El siguiente ejemplo define el formato de un campo Booleano para mostrar Casado y Soltero, en lugar de los valores por defecto Sí y No: 
 
@@ -315,7 +315,7 @@ El siguiente ejemplo define el formato de un campo Booleano para mostrar Casado 
  OBJECT SET FORMAT([Empleado]Estado Civil;"Casado;Soltero")
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Siempre que haya almacenado un archivo de imagen llamado "envelope\_open.png" en la carpeta Resources de la base, puede escribir:
 
@@ -327,7 +327,7 @@ Siempre que haya almacenado un archivo de imagen llamado "envelope\_open.png" en
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 El siguiente ejemplo define el formato de un campo booleano para mostrar una casilla de selección llamada “Clasificado”: 
 
@@ -335,7 +335,7 @@ El siguiente ejemplo define el formato de un campo booleano para mostrar una cas
  OBJECT SET FORMAT([Carpeta]Clasificación;"Clasificado")
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Usted tiene una tabla de miniaturas que contiene 1 línea y 4 columnas, destinada a mostrar un botón imagen (“activa por defecto”, “al hacer clic en el botón”, “al pasar el cursor” e “inactivo”). Usted quiere asociar las opciones Cambiar al pasar el cursor encima, Volver al soltar el clic y Última imagen si desactivado: 
 
@@ -343,7 +343,7 @@ Usted tiene una tabla de miniaturas que contiene 1 línea y 4 columnas, destinad
  OBJECT SET FORMAT(*;"BotonImagen";"4;1;?15000;176")
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 Pase un termómetro a modo "Barber shop" 
 
@@ -352,14 +352,14 @@ Pase un termómetro a modo "Barber shop"
  $Mitermo :=1 //Iniciar la animación
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

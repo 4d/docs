@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Nota de compatibilidad*: este comando solo funciona en bases de datos binarias.<!-- END REF--> Siempre devuelve un BLOB vacío en proyectos.* 
 
@@ -28,11 +28,11 @@ Este comando es el equivalente al registro de los grupos y usuarios desde la ven
 
 Este concepto permite conservar un backup de usuarios en la base e implementar un mecanismo de backup como también un sistema para cargar automáticamente a los usuarios en caso de una actualización de la estructura de la base (la información relacionada con las cuentas de usuario se son guardadas por 4D en el archivo de estructura de la base).
 
-#### Ver también 
+## Ver también 
 
 [BLOB TO USERS](blob-to-users.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

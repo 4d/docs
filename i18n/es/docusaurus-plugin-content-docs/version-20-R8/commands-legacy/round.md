@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Round.Summary-->Round devuelve *número* redondeado al número de decimales especificado por *decimales*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Si *decimales e*s positivo, se redondea la parte decimal de *número*. Si *decim
 
 Si la cifra después del número de decimales definido por *decimales e*stá entre 5 y 9, *redond* redondea al valor superior si el número es positivo, y hacia el valor inferior si el número es negativo. Si el digito después de *decimales* está entre 0 y 4, Round redondea hacia cero.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo ilustra cómo Redondeo funciona con diferentes argumentos. Cada línea asigna un número a la variable *vlResult*. Los comentarios describen los resultados:
 
@@ -34,11 +34,11 @@ El siguiente ejemplo ilustra cómo Redondeo funciona con diferentes argumentos. 
  vlResult:=Round(-1.5;0) // vlResult vale –2
 ```
 
-#### Ver también 
+## Ver también 
 
 [Trunc](trunc.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

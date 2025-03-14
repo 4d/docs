@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.READ ONLY.Summary-->READ ONLY cambia el estado de t*abla* a modo sólo lectura para el proceso en el cual se llama al comando.<!-- END REF--> Todos los registros cargados posteriormente están bloqueados, y no se puede realizar ninguna modificación. Si se pasa el parámetro opcional \*, todas las tablas se cambian a modo sólo lectura.
 
@@ -21,13 +21,13 @@ Utilice READ ONLY cuando no necesite modificar los registros.
 
 **Nota:** este comando no es retroactivo. Los privilegios de lectura/escritura para un registro son definidos por los privilegios de la tabla en el momento en que se carga el registro. Para cargar un registro en modo sólo lectura cuando la tabla está en modo lectura/escritura, primero debe cambiar el estado de la tabla a modo sólo lectura.
 
-#### Ver también 
+## Ver también 
 
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

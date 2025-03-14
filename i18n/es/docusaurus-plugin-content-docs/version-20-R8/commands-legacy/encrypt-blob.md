@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->El comando ENCRYPT BLOB cifra el contenido del BLOB *aCifrar* con la ayuda de la llave privada del emisor *enviarLlavePriv*, así como también opcionalmente la llave pública del receptor *recepLlavePub*.<!-- END REF--> Estas llaves deben ser generadas por el comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) (en el tema “Protocolo de seguridad”). 
 
@@ -48,7 +48,7 @@ De lo contrario, por razones de seguridad se utiliza el modo sincrónico. Este m
 
 * En el caso de BLOBs grandes, puede cifrar sólo una pequeña parte “estratégica” del BLOB con el fin de reducir el tamaño de los datos a procesar como también el tiempo de ejecución.
 
-#### Ejemplo 
+## Ejemplo 
 
 * **Utilización de una sola llave**
 
@@ -179,14 +179,14 @@ Una empresa quiere utilizar el Internet para intercambiar información. Cada fil
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

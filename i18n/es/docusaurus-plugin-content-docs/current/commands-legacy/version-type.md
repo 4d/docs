@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Version type.Summary-->El comando Version type devuelve un valor numérico que representa el tipo de versión de 4D o de 4D Server que está utilizando.<!-- END REF--> 4D ofrece las siguientes constantes predefinidas, que se encuentran en el tema *Entorno 4D*:
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 Version type devuelve un valor en forma de un *campo de bits*; es necesario utilizar los operadores de bits para interpretarlo (ver los ejemplos).
 
-#### Ejemplo 
+## Ejemplo 
 
 Esta prueba permite ejecutar código diferente dependiendo de que versión es una aplicación fusionada o una base abierta por 4D/4D Server:
 
@@ -39,12 +39,12 @@ Esta prueba permite ejecutar código diferente dependiendo de que versión es un
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

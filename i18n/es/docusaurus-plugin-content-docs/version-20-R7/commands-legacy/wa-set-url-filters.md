@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->El comando WA SET URL FILTERS permite colocar uno o más filtros para el área Web designada por los parámetros *\** y *objeto*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Una vez ejecutado el comando, los filtros se vuelven propiedad del área Web. Si
 
 **Importante:** el filtro de los URLs efectuado por este comando sólo aplica a la variable "URL" primaria de la página, bien sea del usuario, código javascript o código 4D, excepto para el comando [WA OPEN URL](wa-open-url.md) y las URLs que comienzan con "javascript:".
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere negar el acceso a todos los sitios web .org, .net y .fr:
 
@@ -53,7 +53,7 @@ Usted quiere negar el acceso a todos los sitios web .org, .net y .fr:
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere negar el acceso a todos los sitios Web excepto los sitios rusos (.ru):
 
@@ -73,7 +73,7 @@ Usted quiere negar el acceso a todos los sitios Web excepto los sitios rusos (.r
  WA SET URL FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted quiere permitir el acceso únicamente a los sitios Web 4D (.com, .fr, .es, etc.):
 
@@ -90,7 +90,7 @@ Usted quiere permitir el acceso únicamente a los sitios Web 4D (.com, .fr, .es,
  WA SET URL FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Usted quiere autorizar el acceso local a la documentación únicamente (ubicada en la carpeta C://doc):
 
@@ -111,7 +111,7 @@ Usted quiere autorizar el acceso local a la documentación únicamente (ubicada 
  WA SET URL FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Usted quiere autorizar todos los sitios excepto uno, por ejemplo el sitio Elcaro:
 
@@ -128,7 +128,7 @@ Usted quiere autorizar todos los sitios excepto uno, por ejemplo el sitio Elcaro
  WA SET URL FILTERS(MiWArea;$filtros;$PermitirRechazar)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Usted quiere negar el acceso a direcciones IP específicas:
 
@@ -151,12 +151,12 @@ Usted quiere negar el acceso a direcciones IP específicas:
   //(Note que la dirección IP de un dominio puede variar).
 ```
 
-#### Ver también 
+## Ver también 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

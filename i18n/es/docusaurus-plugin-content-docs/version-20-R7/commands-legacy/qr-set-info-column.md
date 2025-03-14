@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 ### Informes en lista 
 
@@ -104,13 +104,13 @@ Se genera la siguiente área de informe:
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *numColumna* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

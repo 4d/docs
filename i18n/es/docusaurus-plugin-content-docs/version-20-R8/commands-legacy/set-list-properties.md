@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->El comando **SET LIST PROPERTIES** define el alto de línea y el funcionamiento de las lista jerárquica cuya referencia se pasa en el parámetro *lista*.<!-- END REF--> 
 
@@ -48,7 +48,7 @@ Si pasa 0 y omite el parámetro *multiSeleccion*, se aplicará el comportamiento
 El parámetro opcional *editable* le permite indicar si la lista debe ser editable por el usuario cuando se muestra como una lista de selección asociada a un campo o a una variable durante la entrada de datos. Cuando la lista es editable, un botón **Modificar** se añade en la ventana de la lista y el usuario puede añadir, borrar y ordenar los valores a través de un editor específico.   
 Si pasa 1 u omite el parámetro *editable*, la lista será editable; si pasa 0, no será editable.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escribir en el método de formulario:
 
@@ -60,13 +60,13 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

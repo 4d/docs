@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->**WEB SET OPTION**コマンドは4D Webサーバーの機能に関する様々なオプションのカレントの値を変更します。<!-- END REF-->
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 | wdl enable with response body  | 倍長整数 | 3 | Web HTTP debug log はレスポンスのボディー部のみを含めた状態で有効化されています。        |
 | wdl enable without body        | 倍長整数 | 1 | Web HTTP debug log はボディ部なしで有効化されています(この場合ボディ部のサイズは提供されます) |
 
-#### 例題 
+## 例題 
 
 HTTP デバッグログをボディ部分なしで有効化する場合を考えます:
 
@@ -107,12 +107,12 @@ Server: 4D/16.0.1
 [Body Size: 3555]
 ```
 
-#### 参照 
+## 参照 
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

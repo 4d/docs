@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TEXT TO DOCUMENT.Summary-->La commande **TEXT TO DOCUMENT** permet d’écrire directement le *texte* dans un fichier sur disque.<!-- END REF-->
 
@@ -48,7 +48,7 @@ Par défaut, si le paramètre *modeRetour* est omis, les caractères de fin de l
 
 **Note :** Cette commande ne modifie pas la variable OK. En cas d’échec, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Voici des exemples type d’utilisation de cette commande :
 
@@ -57,7 +57,7 @@ Voici des exemples type d’utilisation de cette commande :
  TEXT TO DOCUMENT("monTest.xml";"Ceci est un test")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple permettant à l’utilisateur de désigner l’emplacement du fichier à créer :
 
@@ -76,12 +76,12 @@ Exemple permettant à l’utilisateur de désigner l’emplacement du fichier à
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Document to text](document-to-text.md)  
 *Documents système*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

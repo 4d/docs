@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR GET TOTALS DATA.Summary-->### Informe en lista 
 
@@ -68,11 +68,11 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 Si el parámetro *numColumna* es incorrecto, se genera el error -9852\.   
 Si el parámetro *numRuptura* es incorrecto, se genera el error -9853.
 
-#### Ver también 
+## Ver también 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

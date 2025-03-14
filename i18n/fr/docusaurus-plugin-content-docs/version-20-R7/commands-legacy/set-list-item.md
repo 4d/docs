@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->La commande **SET LIST ITEM** modifie l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
@@ -39,7 +39,7 @@ Si vous voulez dissocier de l'élément une sous-liste qui lui est actuellement 
 
 Si vous ne souhaitez pas modifier les propriétés de sous-liste de l'élément, passez *\-1* dans le paramètre *sous\_Liste*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous supposons que *hList* est une liste dont les éléments ont des numéros de référence uniques. La méthode objet suivante d'un bouton ajoute une sous-liste à l'élément actuellement sélectionné dans la liste *hList* :  
 
@@ -60,15 +60,15 @@ Nous supposons que *hList* est une liste dont les éléments ont des numéros de
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [GET LIST ITEM](get-list-item.md).   
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
@@ -76,7 +76,7 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

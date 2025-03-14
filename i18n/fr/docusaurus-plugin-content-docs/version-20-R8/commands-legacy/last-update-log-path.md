@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last update log path.Summary-->La commande **Last update log path** retourne le chemin d’accès complet du fichier journal de mise à jour le plus récent sur le poste où elle est appelée.<!-- END REF-->
 
@@ -21,12 +21,12 @@ Le journal de mise à jour est généré par 4D lors des processus de mise à jo
 
 Cette commande est destinée à être utilisée dans un processus de mise à jour automatique d’une application fusionnée (serveur ou monoposte). Pour plus d’informations, reportez-vous à la section *Finaliser et déployer les applications finales* dans le manuel *Mode Développement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [RESTART 4D](restart-4d.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** devuelve la hora UTC actual en formato ISO con milisegundos, es decir, aaaa-MM-ddTHH:mm:ss.<!-- END REF-->SSSZ. Tenga en cuenta que el carácter "Z" indica la zona horaria GMT.
 
@@ -21,7 +21,7 @@ Cada hora devuelta por **Timestamp** se expresa de acuerdo con la norma ISO 8601
 
 **Note:** esta función no es adecuada para tiempos; Debe utilizar [Milliseconds](milliseconds.md) cuando desee medir el tiempo transcurrido.
 
-#### Ejemplo 
+## Ejemplo 
 
 Puede utilizar **Timestamp** en un archivo de historial para saber con precisión donde ocurrieron los eventos. Como se muestra a continuación, es posible que se produzcan varias operaciones durante el mismo segundo:
 
@@ -37,13 +37,13 @@ Resultado:
 2016-12-12T13:31:29.477Z   Log with timestamp2016-12-12T13:31:29.478Z   Connection of user12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'2016-12-12T13:31:29.492Z   Click on button16842016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
 ```
 
-#### Ver también 
+## Ver también 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

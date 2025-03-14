@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FILTER EVENT.Summary-->**FILTER EVENT** doit être appelée à l'intérieur d'une méthode de gestion d'événements installée par [ON EVENT CALL](on-event-call.md).<!-- END REF-->
 
@@ -32,15 +32,15 @@ Pour cela, il vous suffit de placer dans la méthode du formulaire sortie les li
  End if
 ```
 
-#### Exemple 
+## Exemple 
 
 Référez-vous à l'exemple d'[ON EVENT CALL](on-event-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON EVENT CALL](on-event-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

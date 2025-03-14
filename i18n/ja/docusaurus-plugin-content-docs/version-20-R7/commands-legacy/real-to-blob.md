@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REAL TO BLOB.Summary-->REAL TO BLOB コマンドは、*blob*に実数値*real*を書き込みます。<!-- END REF-->
 
@@ -46,7 +46,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードを実行すると: 
 
@@ -58,7 +58,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 * すべてのプラットフォームで*vxBlob*のサイズは10bytesになります
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードを実行すると: 
 
@@ -70,7 +70,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 * すべてのプラットフォームで*vxBlob*のサイズは8 bytesになります
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードを実行すると: 
 
@@ -83,7 +83,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 すべてのプラットフォームで*vxBlob*のサイズは8 bytesになります
 
-#### 例題 4 
+## 例題 4 
 
 以下のコードを実行すると: 
 
@@ -100,7 +100,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * BLOBの他のバイトは変更されません
 * 変数*vlOffset*は8インクリメントされ58となります
 
-#### 例題 5 
+## 例題 5 
 
 以下のコードを実行すると: 
 
@@ -112,7 +112,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 * すべてのプラットフォームで*vxBlob*のサイズは8 bytesになります
 
-#### 例題 6 
+## 例題 6 
 
 以下のコードを実行すると: 
 
@@ -125,7 +125,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 * すべてのプラットフォームで、実数値は#100から#109までのバイトに書き込まれます
 * BLOBの他のバイトは変更されません
 
-#### 参照 
+## 参照 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -135,7 +135,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

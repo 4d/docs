@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Uppercase.Summary-->Uppercase devuelve una cadena de caracteres igual a *laCadena* con todos los caracteres alfabéticos convertidos en mayúsculas.<!-- END REF-->
 
 El parámetro opcional *\**, si se pasa, indica que los eventuales caracteres acentuados presentes en *laCadena* deben ser devueltos como caracteres en mayúsculas acentuados. Por defecto, cuando se omite este parámetro, los caracteres acentuados “pierden” sus acentos después de efectuada la conversión.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo compara los resultados obtenidos según se pase o no el parámetro *\**:
 
@@ -30,15 +30,15 @@ Este ejemplo compara los resultados obtenidos según se pase o no el parámetro 
  $lacadena:=Uppercase("andrés";*) // $lacadena es igual a "ANDRÉS"
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo para [Lowercase](lowercase.md "Lowercase").
 
-#### Ver también 
+## Ver también 
 
 [Lowercase](lowercase.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

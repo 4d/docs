@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Field name.Summary-->El comando Field name devuelve el nombre del campo cuyo puntero se pasa en *campPtr* o cuyos números de tabla y de campos se pasan en *tablaNum* y *campNum*.<!-- END REF-->
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo asigna el segundo elemento del array *campArray{1}* al nombre del segundo campo en la primera tabla. *campArray* es un array de dos dimensiones:
 
@@ -27,7 +27,7 @@ Este ejemplo asigna el segundo elemento del array *campArray{1}* al nombre del s
  campArray{1}{2}:=Field name(1;2)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo asigna al segundo elemento del array *campArray{1}* el nombre del campo *\[MiTabla\]MiCampo*. *campArray* es un array de dos dimensiones:
 
@@ -35,7 +35,7 @@ Este ejemplo asigna al segundo elemento del array *campArray{1}* el nombre del c
  campArray{1}{2}:=Field name(->[MiTabla]MiCampo)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo muestra una alerta. Este método pasa un puntero a un campo:
 
@@ -44,13 +44,13 @@ Este ejemplo muestra una alerta. Este método pasa un puntero a un campo:
  +Table name(Table($1))+" debe ser de más de cinco caracteres.")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get expression.Summary-->La commande **ST Get expression** retourne la première expression présente dans la sélection courante du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une
 
 Si aucune expression n’est présente dans la sélection, la commande retourne une chaîne vide. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Sur un événement double-clic, vous vérifiez que vous êtes bien en présence d’une expression, et dans ce cas affichez un dialogue où vous avez récupéré ses valeurs afin de permettre à l’utilisateur de la modifier :
 
@@ -69,7 +69,7 @@ Sur un événement double-clic, vous vérifiez que vous êtes bien en présence 
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien utilisateur :
 
@@ -88,11 +88,11 @@ Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien util
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

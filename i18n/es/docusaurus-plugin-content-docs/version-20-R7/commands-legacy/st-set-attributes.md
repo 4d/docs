@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->El comando ST SET ATTRIBUTES permite modificar uno o más atributos de estilo en el(los) objeto(s) de formulario designado(s) por *objeto*.<!-- END REF--> 
 
@@ -84,7 +84,7 @@ Pase en los parámetros *nomAtrib* y *valorAtrib* respectivamente el nombre y el
 | White                    | #FFFFFF               |
 | Yellow                   | #FFFF00               |
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, modificamos el tamaño y el color de texto como también los atributos negrita y subrayado de los caracteres 2 a 4 del campo:
 
@@ -92,18 +92,18 @@ En este ejemplo, modificamos el tamaño y el color de texto como también los at
  ST SET ATTRIBUTES([MyTable]MyField;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de ejecutar este comando, la variable OK toma el valor 1 si no se presenta ningún error; de lo contrario, toma el valor 0\. Este es el caso particularmente cuando las etiquetas de estilo no se evalúan correctamente (etiquetas incorrectas o faltantes).   
 
 En caso de error, no cambia la variable. Cuando ocurre un error en una variable cuando se está evaluando el texto, 4D transforma el texto en texto plano; como resultado, los caracteres <, > y & se convierten en entidades HTML.
 
-#### Ver también 
+## Ver también 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

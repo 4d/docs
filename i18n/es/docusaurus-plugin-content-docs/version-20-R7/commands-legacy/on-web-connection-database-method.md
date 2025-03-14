@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Web Connection.Summary-->El Método base On Web Connection puede llamarse en los siguientes casos: 
 
@@ -92,7 +92,7 @@ Los parámetros *$5* y *$6* reciben el nombre de usuario y la contraseña introd
 
 **Nota:** si el nombre de usuario enviado por el navegador existe en 4D, el parámetro *$6* (la contraseña del usuario) no se devuelve por razones de seguridad.
 
-#### Llamadas al Método base On Web Connection 
+## Llamadas al Método base On Web Connection 
 
 El Método base On Web Connection puede utilizarse como punto de entrada para el servidor web 4D, bien sea utilizando la URL especial *4DCGI*, o utilizando las URLs de comando personalizadas.
 

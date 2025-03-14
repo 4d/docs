@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get document property.Summary-->QR Get document property コマンドを使用し、印刷ダイアログの表示の有無、または*area*に表示されるドキュメントの単位を取得することができます。<!-- END REF-->
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 無効な*property*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

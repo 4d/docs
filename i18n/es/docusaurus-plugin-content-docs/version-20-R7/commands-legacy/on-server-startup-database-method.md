@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Server Startup.Summary-->El Método base On Server Startup se llama una vez en el equipo servidor cuando abre una base con 4D Server.<!-- END REF--> El Método base On Server Startup NO se ejecuta en un entorno diferente a 4D Server.
 

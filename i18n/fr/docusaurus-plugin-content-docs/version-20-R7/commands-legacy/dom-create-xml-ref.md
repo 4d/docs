@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML Ref.Summary-->La commande **DOM Create XML Ref** crée un arbre XML vide en mémoire et retourne sa référence.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Vous pouvez déclarer un ou plusieurs espace(s) de nommage supplémentaire(s) da
 
 **Important :** N'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) afin de libérer la mémoire lorsque vous avez terminé d'utiliser l'arbre XML.
 
-#### Exemple 1 
+## Exemple 1 
 
 Création d’un arbre XML simple : 
 
@@ -48,7 +48,7 @@ Ce code produit le résultat suivant :
 <MaRacine/>
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un arbre XML avec un espace de nommage : 
 
@@ -65,7 +65,7 @@ Ce code produit le résultat suivant :
 <MonNameSpace:MaRacine xmlns:MonNameSpace="http://www.4D.com/tech/namespace"/>
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Création d’un arbre XML avec plusieurs espaces de nommage : 
 
@@ -89,16 +89,16 @@ NSNom1="http://www.4D.com/Prod/namespace"
 NSNom2="http://www.4D.com/Mkt/namespace"/>
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

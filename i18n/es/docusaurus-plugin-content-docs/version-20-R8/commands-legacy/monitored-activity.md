@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Monitored activity.Summary-->El comando **Monitored activity** devuelve una colección de objetos que describen operaciones registradas de acuerdo con las especificaciones definidas por el comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Se puede llamar y ejecutar en 4D remoto, 4D Server y aplicaciones 4D autónomas (si *fuente* no proviene de la actividad de red).
 
@@ -41,7 +41,7 @@ objeto *activityData*:
 | duration                         | entero largo           | Duración de la operación (expresada en microsegundos)                                                                                                       |
 | kind                             | texto                  | Tipo de operación registrada. Valores posibles: "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-#### Propiedades adicionales 
+## Propiedades adicionales 
 
 Las siguientes propiedades adicionales se devuelven en el objeto *activityData* según el tipo de operación:
 
@@ -131,16 +131,16 @@ objeto *activityData*:
 | |  \[ \].title         | texto        | Información adicional sobre la operación                                                                                                                                                     |                                                                                                                                                                                  |
 | |  \[ \].extraInfo     | objeto       | Información SQL adicional (si la hay):<br/><br/> \[ \].extraInfo.SQL\_Query (text): la consulta SQL \[ \].extraInfo.SQL\_User (text): usuario autenticado en el servidor SQL |                                                                                                                                                                                  |
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
-#### Ver también 
+## Ver también 
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

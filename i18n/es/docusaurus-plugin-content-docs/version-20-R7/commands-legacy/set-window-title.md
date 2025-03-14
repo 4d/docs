@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->El comando SET WINDOW TITLE cambia el título de la ventana cuyo número de referencia se pasa en *ventana* para el texto pasado en *titulo* (longitud máxima 80 caracteres).<!-- END REF--> 
 
@@ -24,7 +24,7 @@ Si omite el parámetro *ventana*, SET WINDOW TITLE reemplaza el título de la ve
 
 **Nota:** en el entorno Diseño, 4D define automáticamente los títulos de las ventanas, por ejemplo, “Entrada para tabla 1” cuando realiza una entrada de datos. Si cambia un título de ventana, es probable que 4D lo sobrescriba. Por otra parte, en el entorno Aplicación, 4D no cambia los títulos de las ventanas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Mientras efectúa una entrada de datos en un formulario, usted hace clic en un botón que ejecuta una operación larga (por ejemplo, una modificación por programación de los registros relacionados mostrados en un subformulario). Puede mantenerse informado sobre el progreso de la operación utilizando el título de la ventana actual:
 
@@ -46,11 +46,11 @@ Mientras efectúa una entrada de datos en un formulario, usted hace clic en un b
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get window title](get-window-title.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

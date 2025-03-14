@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.throw.Summary-->La commande **throw** crée une erreur qui sera levée soit immédiatement, soit lorsque la méthode appelante retournera à l'appelant (mode différé).<!-- END REF--> 
 
@@ -60,7 +60,7 @@ Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie
 * **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](on-err-call.md) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](last-errors.md) renvoie la pile d'erreurs.
 * **Par conséquent, dans un composant** : La pile d'erreurs peut être envoyée à l'application hôte et la méthode [ON ERR CALL](on-err-call.md) de l'application hôte est appelée.
 
-#### Example 1 
+## Example 1 
 
 ```4d
  var $code : Integer
@@ -70,25 +70,25 @@ Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie
  throw($code ;$description) // Lance une erreur avec le message " Il s'agit d'une erreur personnalisée " et errCode = 50042
 ```
 
-#### Example 2 
+## Example 2 
 
 ```4d
 throw({errCode: 1; message: "Ceci est une erreur"}) // Lance une erreur avec errCode = 1 et le message "Ceci est une erreur"
 ```
 
-#### Example 3 
+## Example 3 
 
 ```4d
 throw({errCode: 1}) // Lance une erreur avec errCode = 1 et le message "Error code : 1 (host)"
 ```
 
-#### Example 4 
+## Example 4 
 
 ```4d
 throw({message: "Ceci est une erreur"}) //  Lance une erreur avec errCode = -1 et le message "Ceci est une erreur"
 ```
 
-#### Example 5 
+## Example 5 
 
 ```4d
 throw({message: "Ceci est mon erreur"; deferred: True}) // Lance une erreur avec le message "Ceci est mon erreur" et errCode = -1 en deferred mode 
@@ -96,19 +96,19 @@ throw({message: "Ceci est mon erreur"; deferred: True}) // Lance une erreur avec
 
 ``
 
-#### Example 6 
+## Example 6 
 
 ```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lance une erreur avec le message "File myFileName not found (myFilePath)" en mode différé
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New log file.Summary-->**注:** このコマンドは4D Serverでのみ動作します。<!-- END REF-->このコマンドは[Execute on server](execute-on-server.md)あるいはストアードプロシージャー内でのみ実行できます。
 
@@ -28,12 +28,12 @@ displayed_sidebar: docs
 * MyDatabase.4DD というデータベースを4 回保存すると、最後のバックアップファイルの名前は、**MyDatabase\[0004\].4BK**となります。従って最初のログファイルの"セグメント"は、**MyDatabase\[0004-0001\].journal**です。
 * MyDatabase.4DD というデータベースが3 回保存され、ログファイルが5 回保存された場合、6 度目に実行されるログファイルのバックアップは、**MyDatabase\[0003-0006\].journal**です。
 
-#### エラー管理 
+## エラー管理 
 
 エラーが発生すると、コマンドは[ON ERR CALL](on-err-call.md "ON ERR CALL") コマンドでとらえることが可能なエラーコードを生成します。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidad 
+## Compatibilidad 
 
 <!--REF #_command_.WP Text range.Summary-->**WP Text range** recibió el nombre **WP Get range** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado para mayor claridad.
 
-#### Descripción 
+## Descripción 
 
 El comando **WP Text range** devuelve un nuevo de rango de selección (objRange) que contiene los caracteres ubicados entre *rangoInicio* y *rangoFin* en el área 4D Write Pro *wpArea*.
 
@@ -38,7 +38,7 @@ En *rangoInicio* y *rangoFin*, pase los valores correspondientes a la posición 
 
 **Nota:** Si pasó una referencia de elemento de tabla, fila, párrafo, imagen en línea, cuerpo, encabezado, pie, sección o subsección en *objRango*, *rangoInicio* y *rangoFin* serán relativos al índice inicial y final del rango del elemento. Por ejemplo, si se pasa un encabezado, wk start text designa el carácter de inicio del encabezado y wk end text el carácter de finalización del encabezado; si se pasa una referencia de elemento de tabla, el comando devolverá el rango de texto relativo a la tabla referenciada por *objRango*; si se pasa una sección *rangoInicio* y *rangoFin* son relativos al cuerpo del documento (área padre de un rango creado de una sección). Ver ejemplo 2.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea seleccionar un rango de 12 caracteres comenzando desde el principio del campo 4D Write Pro. El campo se muestra en un objeto de formulario:
 
@@ -55,7 +55,7 @@ Si ejecuta:
 
 ![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Quiere crear un rango de una sección:
 
@@ -67,7 +67,7 @@ Quiere crear un rango de una sección:
   //$wpRange.end = 111
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP Get body](wp-get-body.md)  

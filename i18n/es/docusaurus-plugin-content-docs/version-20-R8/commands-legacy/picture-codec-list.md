@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PICTURE CODEC LIST.Summary-->El comando PICTURE CODEC LIST llena el array *arrayCodec* con la lista de los identificadores de los codecs de imágenes que están disponibles en el equipo donde se ejecuta.<!-- END REF--> Esta lista incluye los codecs de los formatos de imágenes que son gestionados nativamente por 4D. 
 
@@ -28,12 +28,12 @@ Los identificadores de los codecs pueden devolverse en el array *arrayCodec* de 
 Por defecto, si no pasa el parámetro *\**, el comando devuelve únicamente los codecs que pueden ser utilizados para codificar (escribir) las imágenes. Estos identificadores pueden utilizarse en el parámetro *formato* de los comandos de exportación de imágenes [WRITE PICTURE FILE](write-picture-file.md) y [PICTURE TO BLOB](picture-to-blob.md).  
  Si pasa el parámetro *\**, el comando también devuelve la lista de codecs utilizados para decodificar (leer) las imágenes. Las dos listas no son exclusivas, ciertos codecs de lectura y de escritura son idénticos. Los codecs destinados a la codificación de las imágenes pueden utilizarse para la decodificación. Por otra parte, los codecs de decodificación no necesariamente pueden utilizarse para la codificación. Por ejemplo, el codec ".jpg" se encontrará en ambas listas, mientras el ".xbmp" estará presente en la lista de codecs de lectura pero no en la de escritura.
 
-#### Ver también 
+## Ver también 
 
 *Imágenes*  
 [Is picture file](is-picture-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->**OBJECT SET PLACEHOLDER**コマンドは、引数 *object* と *\** で指定したオブジェクトにプレースホルダーテキストを関連付けます。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 このコマンドは、変数、フィールド、コンボボックスのフォームオブジェクトにしか使用できません。  
 プレースホルダーには文字列かテキストの値を関連付けることが出来ます。また、「ヌルのときブランクにする」プロパティがあるフォームオブジェクトに関しては、日付か時刻のデータと関連付けることができます。
 
-#### 例題 
+## 例題 
 
 コンボボックスにプレースホルダーとして「Search」というテキストを表示したい場合:
 
@@ -42,11 +42,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1208449.en.png)
 
-#### 参照 
+## 参照 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

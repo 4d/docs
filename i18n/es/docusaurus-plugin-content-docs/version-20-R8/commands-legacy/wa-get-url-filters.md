@@ -16,18 +16,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->El comando WA GET URL FILTERS devuelve en los arrays *arrFiltros* y *arrAutorizRechazar*, los filtros activos en el área web designada por los parámetros *\** y *objeto* .<!-- END REF--> Si ningún filtro está activo, los arrays se devuelven vacíos. 
 
 Los filtros son instalados por el comando [WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS"). Si los arrays se reinicializan durante la sesión, el comando WA GET URL FILTERS puede utilizarse para conocer los parámetros actuales.
 
-#### Ver también 
+## Ver también 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

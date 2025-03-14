@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo experto 
+## Modo experto 
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->Este comando está reservado para necesidades específicas.<!-- END REF--> Debe utilizarse con cuidado, ya que puede afectar el rendimiento de la base.
 
-#### Descripción 
+## Descripción 
 
 El comando **SET TABLE CACHE PRIORITY** define una *prioridad* específica para los datos relacionados con *tabla* en caché para todos los procesos de la sesión actual. Este comando debe llamarse en el método base **On Startup** u **On Server Startup**.
 
@@ -36,7 +36,7 @@ Pase en *prioridad* una de las siguientes constantes del tema:
 | Cache priority high      |                                                        |
 | Cache priority very high |                                                        |
 
-#### Ejemplo 
+## Ejemplo 
 
 En el , usted desea definir una prioridad alta para el dato escalar \[Customer\]:
 
@@ -44,13 +44,13 @@ En el , usted desea definir una prioridad alta para el dato escalar \[Customer\]
  SET TABLE CACHE PRIORITY([Customer];Cache priority very high)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

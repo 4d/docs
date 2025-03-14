@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->Los comandos MESSAGES OFF y [MESSAGES ON](messages-on.md) encienden y apagan los termómetros de progresión mostrados por 4D mientras se ejecutan operaciones de larga duración.<!-- END REF--> Por defecto, se muestran los mensajes. 
 
@@ -49,7 +49,7 @@ La siguiente tabla lista los comandos que muestran termómetros de progreso:
 
 **Nota para 4D Server:** las ventanas de mensajes de progreso no se muestran en el servidor desde que estas operaciones se listan automáticamente en la *\_o\_PAGE SETUP* de la ventana de administración. Si desea forzar la visualización de estas ventanas de progreso, debe llamar al comando [MESSAGES ON](messages-on.md) en el servidor. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo suprime los termómetros de progreso antes de efectuar una ordenación y luego los restablece después de terminar la operación de ordenación:
 
@@ -59,11 +59,11 @@ El siguiente ejemplo suprime los termómetros de progreso antes de efectuar una 
  MESSAGES ON
 ```
 
-#### Ver también 
+## Ver también 
 
 [MESSAGES ON](messages-on.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

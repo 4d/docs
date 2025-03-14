@@ -13,12 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->SHOW PROCESS muestra todas las ventanas que pertenecen a *proceso*.<!-- END REF--> Este comando no trae las ventanas de *proceso* al primer plano. Para hacer esto, utilice el comando [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").  
 Si el proceso ya está siendo visualizado, el comando no tiene efecto.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra un proceso llamado Clientes, que se ha ocultado previamente. El número de proceso se almacena en la variable interproceso *<>Clientes*:
 
@@ -26,13 +26,13 @@ El siguiente ejemplo muestra un proceso llamado Clientes, que se ha ocultado pre
  SHOW PROCESS(◊Clientes)
 ```
 
-#### Ver también 
+## Ver también 
 
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->La commande **OBJECT SET LIST BY NAME** définit, remplace ou dissocie l'*énumération* associée à l'objet ou au groupe d'objets désigné(s) par *objet*.<!-- END REF--> L'énumération dont le nom est passé dans le paramètre *énumération* doit avoir été créée dans l'éditeur d'énumérations, en mode Développement.
 
@@ -44,7 +44,7 @@ La liste de valeurs existante est remplacée en fonction de la manière dont la 
 * à l'aide d'un tableau : la liste est copiée dans les éléments du tableau.
 * à l'aide d'un objet (non pris en charge dans les bases binaires) : la liste est copiée en tant qu'éléments de collection dans la propriété values ​​de l'objet.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant définit l'énumération liée à un champ Coursiers. Si l'envoi doit être effectué de nuit, alors l'énumération affiche les sociétés de courses qui fonctionnent la nuit. Sinon, l'énumération standard est proposée :
 
@@ -56,7 +56,7 @@ L'exemple suivant définit l'énumération liée à un champ Coursiers. Si l'env
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Associer la liste "choix\_coul" en tant qu’énumération simple au pop up/Liste déroulante "CoulPorte" :
 
@@ -65,7 +65,7 @@ Associer la liste "choix\_coul" en tant qu’énumération simple au pop up/List
      // dans ce cas le 3e paramètre (constante) peut être omis
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez associer la liste "choix\_coul" à une combo box "CoulMur". Comme la combo box est saisissable, vous souhaitez que certaines couleurs telles que "noir", "violet"... ne puissent être utilisées. Ces couleurs sont placées dans la liste "coul\_exclues" :
 
@@ -74,7 +74,7 @@ Vous souhaitez associer la liste "choix\_coul" à une combo box "CoulMur". Comme
  OBJECT SET LIST BY NAME(*;"CoulMur";Excluded list;"coul_exclues")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous souhaitez supprimer des associations de listes :
 
@@ -85,12 +85,12 @@ Vous souhaitez supprimer des associations de listes :
  OBJECT SET LIST BY NAME(*;"CoulMur";Excluded list;"")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

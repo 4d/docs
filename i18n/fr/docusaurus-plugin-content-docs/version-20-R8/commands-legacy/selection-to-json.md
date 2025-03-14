@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selection to JSON.Summary-->La commande **Selection to JSON** retourne une chaîne qui contient un tableau JSON avec autant d'éléments qu'il y a d'enregistrements dans la sélection courante de *laTable*.<!-- END REF--> Chaque élément du tableau est un objet JSON contenant les libellés et les valeurs des champs de la sélection.
 
@@ -35,7 +35,7 @@ Cette commande prend en charge les champs de type objet : les données des champ
 
 **Note :** Après un appel à **Selection to JSON**, la sélection courante n'est pas modifiée mais l'enregistrement courant n'est plus chargé et il peut avoir changé (le dernier enregistrement de la sélection devient l'enregistrement courant). Après un **Selection to JSON**, utilisez les commandes [LOAD RECORD](load-record.md) ainsi que [GOTO SELECTED RECORD](goto-selected-record.md) (si nécessaire) si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant d'origine. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez créer une chaîne JSON représentant cette sélection :
 
@@ -70,7 +70,7 @@ Vous voulez créer une chaîne JSON représentant cette sélection :
      // $jsonString = [{"Membre":"Durant"},{"Membre":"Smith"},{"Membre":"Auquart"},{"Membre":"Aubert"},{"Membre":"Lenuze"},{"Membre":"Pradel"}]
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différentes tables :
 
@@ -86,11 +86,11 @@ Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différen
  SET FIELD RELATION([Emp]UUID_Societe;Structure configuration;Do not modify)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [JSON TO SELECTION](json-to-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

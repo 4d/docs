@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP New footer.Summary-->El comando **WP New footer** crea y devuelve el pie de página asociado a la sección o subsección definida por el parámetro *wpSection*.<!-- END REF-->
 
 Si un elemento de pie de página ya está definido para la sección o subsección, se devuelve un objeto indefinido y se genera un error.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea crear un pie de página para las páginas de la izquierda de una sección:
 
@@ -37,7 +37,7 @@ Desea crear un pie de página para las páginas de la izquierda de una sección:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP DELETE FOOTER](wp-delete-footer.md)  
 [WP Get footer](wp-get-footer.md)  

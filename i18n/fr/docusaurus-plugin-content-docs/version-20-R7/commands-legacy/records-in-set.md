@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in set.Summary-->**Records in set** retourne le nombre d'enregistrements présents dans *ensemble*.<!-- END REF--> Si *ensemble* n'existe pas ou s'il n'y a pas d'enregistrements dans *ensemble*, **Records in set** retourne 0.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche une boîte de dialogue d'alerte qui indique le pourcentage des clients qui sont considérés comme les meillleurs :
 
@@ -29,12 +29,12 @@ L'exemple suivant affiche une boîte de dialogue d'alerte qui indique le pourcen
  ALERT(String($Pourcent;"##0%")+" de nos clients sont nos meilleurs clients.")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

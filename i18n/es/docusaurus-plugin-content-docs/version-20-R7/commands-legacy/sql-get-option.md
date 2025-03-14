@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->El comando SQL GET OPTION devuelve el *valor* actual de la opción pasada en el parámetro *opcion*.<!-- END REF-->
 
 Para mayor información sobre las diferentes opciones y sus valores asociados, consulte la descripción del comando [SQL SET OPTION](sql-set-option.md "SQL SET OPTION").
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [SQL SET OPTION](sql-set-option.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP SET TEXT.Summary-->El comando **WP SET TEXT** inserta el texto pasado en el parámetro *nuevoTexto* como texto sin formato en *objRango* en la posición específica designada por el parámetro *posicionTexto*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ En el parámetro *posicionTexto*, la ubicación del texto insertado se puede esp
 Si no pasa un parámetro *alcanceRango*, de forma predeterminada, los contenidos insertados se incluyen en el rango resultante.
 * Si *objRango* no es un rango, se ignora *alcanceRango*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea agregar texto a este documento:
 
@@ -85,6 +85,6 @@ Reemplaza el texto existente:
   //escribe " Hello world!"
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get text](wp-get-text.md)  

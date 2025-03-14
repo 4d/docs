@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET CHANNEL.Summary-->El comando SET CHANNEL abre un puerto serial o un documento.<!-- END REF--> Sólo puede abrir un puerto serial o un documento al tiempo con este comando. Para cerrar un puerto serial abierto, pase SET CHANNEL (11).
 
@@ -30,7 +30,7 @@ La descripción de SET CHANNEL está compuesta de dos secciones:
 * Trabajar con los puertos seriales
 * Trabajar con documentos
 
-#### Trabajar con los puertos seriales - SET CHANNEL (puerto;parametros) 
+## Trabajar con los puertos seriales - SET CHANNEL (puerto;parametros) 
 
 La primera forma del comando SET CHANNEL abre un puerto serial, define el protocolo de comunicación así como otra información del puerto. Los datos pueden ser enviados por los comandos [SEND PACKET](send-packet.md "SEND PACKET"), [SEND RECORD](send-record.md "SEND RECORD") o [SEND VARIABLE](send-variable.md "SEND VARIABLE"), y recibidos con [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [RECEIVE PACKET](receive-packet.md "RECEIVE PACKET"), [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") o [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE").
 
@@ -124,7 +124,7 @@ Si quiere utilizar el puerto COM 25 con el protocolo RTS/CTS, debe utilizar las 
 
 **Truco:** los diferentes valores numéricos a acumular y pasar en *puerto* y *param* (a excepción de los valores de COM1...COM99) están disponibles como constantes predefinidas en el tema Comunicaciones del explorador en el entorno Diseño. Para los valores COM1...COM99, utilice los valores numéricos literales. 
 
-#### Trabajar con documentos en disco - SET CHANNEL(operacion;documento) 
+## Trabajar con documentos en disco - SET CHANNEL(operacion;documento) 
 
 La segunda forma del comando SET CHANNEL le permite crear, abrir, y cerrar un documento. A diferencia de los comandos del tema Documentos del sistema, SET CHANNEL sólo puede abrir un documento a la vez. El documento puede leerse o escribirse. Consulte la sección  para mayor información al respecto.
 
@@ -153,7 +153,7 @@ Todas las operaciones en esta tabla modifican la variable sistema Document si es
 
 Ver los ejemplos de los comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [SET TIMEOUT](set-timeout.md "SET TIMEOUT") y [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 
-#### Ver también 
+## Ver también 
 
 [Append document](append-document.md)  
 *Comunicaciones*  
@@ -169,7 +169,7 @@ Ver los ejemplos de los comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUF
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

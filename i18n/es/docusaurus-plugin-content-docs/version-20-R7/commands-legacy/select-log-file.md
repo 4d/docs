@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->El comando **SELECT LOG FILE** crea, o cierra el archivo historial de acuerdo al valor que se pase en *historial*.<!-- END REF-->
 
@@ -27,19 +27,19 @@ Si pasa *"\*"* en *historial*, **SELECT LOG FILE** cierra el archivo historial a
 
 Si utiliza **SELECT LOG FILE** para crear un archivo historial antes de que el backup haya terminado y el archivo de datos ya contiene registros, 4D genera el error *\-4447,* el cual puede interceptar con un método [ON ERR CALL](on-err-call.md).
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si el archivo histórico es creado o cerrado correctamente.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Se genera el error -4447 si no se puede realizar la operación porque la base de datos necesita una copia de seguridad. Puede interceptar el error con un método [ON ERR CALL](on-err-call.md "ON ERR CALL"). 
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

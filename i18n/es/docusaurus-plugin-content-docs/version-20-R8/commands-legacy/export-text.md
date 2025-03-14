@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->El comando EXPORT TEXT escribe datos de los registros de la selección actual de la *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento de texto Windows o Macintosh en el disco.
 
@@ -30,7 +30,7 @@ El comando utiliza por defecto el conjunto de caracteres UTF-8\. Puede utilizar 
 
 Durante la utilización de EXPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13) bajo macOS y el retorno de carro+retorno a la línea (código 13+código 10) bajo Windows. Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: **FldDelimit** y **RecDelimit**. El usuario puede cambiar los valores por defecto en la caja de diálogo de exportación del entorno Aplicación. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campo o de registro, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo exporta datos a un documento texto. El método primero comienza por definir el formulario de salida se manera que los datos sean exportados por el formulario correcto, cambia los delimitadores, luego efectúa la exportación:
 
@@ -41,18 +41,18 @@ Este ejemplo exporta datos a un documento texto. El método primero comienza por
  EXPORT TEXT([Personas];"Nuevas_Personas.txt") // Exportación del documento "Nuevas_Personas.txt"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

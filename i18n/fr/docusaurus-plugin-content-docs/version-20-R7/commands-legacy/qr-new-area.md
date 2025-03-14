@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR NEW AREA.Summary-->La commande **QR NEW AREA** crée une nouvelle zone d'état rapide et stocke son numéro de référence dans la variable de type Entier long référencée par le pointeur *ptr*.<!-- END REF-->
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB**encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans encryptedBlob.<!-- END REF-->.
 
@@ -34,7 +34,7 @@ En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
 **Note** : Lorsque vous cryptez un objet blob à l'aide de **Encrypt data BLOB**, l'*encryptedBlob* résultant est un multiple de 16 octets en raison de l'algorithme d'encription. Par conséquent, si *blobToEncrypt* n'est pas un multiple de 16 octets, la commande le transforme automatiquement en un multiple de 16 octets en ajoutant des octets nuls à la fin. Pour éviter les erreurs lors du déchiffrement du blob avec [Decrypt data BLOB](decrypt-data-blob.md), vous devez gérer la taille de *blobToEncrypt* lorsque vous travaillez avec des fichiers autres que des fichiers texte. Pour un exemple détaillé sur la façon de procéder, consultez [cet article de blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/). 
 
-#### Exemple 
+## Exemple 
 
 Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de données :
 
@@ -52,7 +52,7 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
  $encryptedFile.setContent($encryptedBlob)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -60,7 +60,7 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

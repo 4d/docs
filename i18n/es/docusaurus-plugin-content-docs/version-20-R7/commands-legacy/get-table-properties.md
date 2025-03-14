@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->El comando GET TABLE PROPERTIES devuelve las propiedades de la tabla pasada por *ptrTabla* o *numTabl* *a*.<!-- END REF--> Puede pasar en el primer parámetro el número de tabla o puntero de la tabla. 
 
@@ -29,13 +29,13 @@ Una vez ejecutado el comando:
 * El parámetro *trigGuardaReg* devuelve True si el trigger “Al guardar un registro existente” se ha activado para la tabla, de lo contrario False.
 * El parámetro *trigBorrarReg* devuelve True si el trigger “Al borrar un registro” se ha activado para esta tabla, de lo contrario False.
 
-#### Ver también 
+## Ver también 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

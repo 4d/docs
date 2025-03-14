@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->SVG Find element IDs by rect コマンドは、 バインドされた四角が選択領域に交差するXML要素のID ("id"または"xml:id"属性) をテキストまたは文字配列の*arrIDs*配列に返します。<!-- END REF-->選択領域は*x*および*y*引数で指定されます。
 
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 バインドされた四角が選択領域に重なるすべての要素が、たとえ他の要素の下になっていても、対象となります。
 
-#### 参照 
+## 参照 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

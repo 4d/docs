@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->La commande **RESOURCE LIST** remplit les tableaux *resNums* et *resNoms* avec les numéros et les noms des ressources dont vous avez passé le type dans *resType*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Si vous ne pré-déclarez pas les tableaux *resNums* et *resNoms* avant d'appele
 
 Après l'appel, vous pouvez tester le nombre de ressources qui ont été trouvées en appliquant la commande [Size of array](size-of-array.md) au tableau *resNums* ou *resNoms*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant remplit les tableaux *$alResNum* et *$atResNom* avec les numéros et les noms des ressources de type Listes de chaînes présentes dans le fichier de structure de la base : 
 
@@ -43,7 +43,7 @@ L'exemple suivant remplit les tableaux *$alResNum* et *$atResNom* avec les numé
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant copie dans la bibliothèque d'images de la base les ressources image présentes dans tous les fichiers de ressources ouverts :
 
@@ -66,11 +66,11 @@ L'exemple suivant copie dans la bibliothèque d'images de la base les ressources
  CLOSE WINDOW
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

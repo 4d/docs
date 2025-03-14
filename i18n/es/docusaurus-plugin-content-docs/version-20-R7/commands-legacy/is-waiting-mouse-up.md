@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->**Tema:** Eventos formulario
 
@@ -27,7 +27,7 @@ El comando devuelve **False** en los siguientes casos:
 
 Este comando debe ser utilizado junto con . Le permite sincronizar el estado interno del objeto de formulario con la aplicación global. Básicamente, permite a su código manejar el caso donde el usuario hizo clic y empezó a mover algo dentro de una imagen objeto de formulario, y esta acción es interrumpida por un evento externo, como un cuadro de diálogo de alerta. En este caso, el estado interno del objeto puede ser suspendido de forma indefinida debido a que se espera un evento mouse up que no ocurrirá. Para abordar este problema, debe proteger el código de movimiento del ratón con un comando **Is waiting mouse up** lo que le asegura que es ejecutado en un contexto válido.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código se puede utilizar para administrar una función de seguimiento del ratón en un objeto imagen:
 
@@ -58,11 +58,11 @@ End case
 
 ```
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

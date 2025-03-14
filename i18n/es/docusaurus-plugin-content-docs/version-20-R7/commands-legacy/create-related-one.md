@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE RELATED ONE.Summary-->CREATE RELATED ONE tiene dos acciones.<!-- END REF--> Si no existe un registro relacionado a *campo* (es decir, si el valor actual de *campo*, no se encuentra en el campo correspondiente de ningún registro de la tabla relacionada), CREATE RELATED ONE crea un nuevo registro relacionado.   
   
@@ -21,11 +21,11 @@ Para guardar en este registro el valor del campo que ha provocado su creación, 
 
 Si ya existe un registro relacionado, CREATE RELATED ONE actúa como [RELATE ONE](relate-one.md "RELATE ONE") y carga el registro relacionado en memoria.
 
-#### Ver también 
+## Ver también 
 
 [SAVE RELATED ONE](save-related-one.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

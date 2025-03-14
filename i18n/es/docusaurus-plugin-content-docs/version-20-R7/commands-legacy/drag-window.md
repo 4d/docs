@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->El comando DRAG WINDOW permite arrastrar la ventana en la cual el usuario hace clic para desplazarla en función de los movimientos del ratón.<!-- END REF--> Generalmente este comando se llama desde un método de objeto de un objeto que pueda responder instantáneamente a los clics del ratón (por ejemplo un botón invisible).
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente formulario, mostrado en el editor de formularios, contiene un fondo de color, sobre el cual hay cuatro botones invisibles para cada lado:
 
@@ -42,12 +42,12 @@ Obtiene una ventana similar a esta:
 
 Luego puede arrastrar la ventana haciendo clic en cualquiera de los bordes.
 
-#### Ver también 
+## Ver también 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

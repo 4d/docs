@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Summary-->La commande **WP EXPORT DOCUMENT** exporte l'objet 4D Write Pro *docWP* dans un document sur disque défini par le paramètre *cheminFichier* ainsi que des paramètres optionnels.<!-- END REF-->
 
@@ -126,7 +126,7 @@ Pour déclencher une exportation PDF "Factur-X", passez les propriétés wk fact
 
 **Note :** Pour un exemple détaillé de la mise en œuvre de l'exportation Factur-X / ZUGFeRD, vous pouvez télécharger [ce projet HDI 4D](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vou souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* aux formats HTML et PDF :
 
@@ -156,7 +156,7 @@ Vou souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* aux formats H
  WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* dans le format .4wp :
 
@@ -178,7 +178,7 @@ Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* dans le form
  End case
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour exporter la deuxième page du document en SVG et exporter les images depuis le document :
 
@@ -192,7 +192,7 @@ Pour exporter la deuxième page du document en SVG et exporter les images depuis
  WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Exportation d'un document PDF conforme à la norme PDF/A-2 :
 
@@ -203,7 +203,7 @@ Exportation d'un document PDF conforme à la norme PDF/A-2 :
  WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Exemples d'exportations PDF de Factur-X :
 
@@ -239,7 +239,7 @@ WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
   

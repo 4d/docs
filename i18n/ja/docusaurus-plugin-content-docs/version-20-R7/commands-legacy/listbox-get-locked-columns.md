@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->**LISTBOX Get locked columns**コマンドは*object*と *\** 引数で指定したリストボックスで横スクロールしない列数を返します。<!-- END REF-->
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 しかしコマンドは列の表示/非表示状態は考慮しません。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->La commande **SET RECENT FONTS** permet de modifier la liste des polices récentes affichées dans le menu contextuel des "polices récentes".<!-- END REF--> 
 
 Ce menu contient les noms des dernières polices sélectionnées durant la session. Il est notamment utilisé par les zones de *Notes de programmation*. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez ajouter une police au menu des polices récentes :
 
@@ -38,11 +38,11 @@ Le menu contient alors :
 
 ![](../assets/en/commands/pict1202031.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

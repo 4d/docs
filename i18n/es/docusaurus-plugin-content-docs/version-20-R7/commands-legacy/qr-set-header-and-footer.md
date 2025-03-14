@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->El comando QR SET HEADER AND FOOTER permite definir el contenido y el tamaño del encabezado y el pie de página de *area*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *selector* es incorrecto, se genera el error -9852.
 
-#### Ejemplo 
+## Ejemplo 
 
 La siguiente instrucción coloca el título “Título del centro” en el encabezado del informe rápido en MiArea y define la altura del encabezado en 200 puntos:
 
@@ -52,11 +52,11 @@ La siguiente instrucción coloca el título “Título del centro” en el encab
  QR SET HEADER AND FOOTER(MiArea;1;"";"Título del centro";"";200)
 ```
 
-#### Ver también 
+## Ver también 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

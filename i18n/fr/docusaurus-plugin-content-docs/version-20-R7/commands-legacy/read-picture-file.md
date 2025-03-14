@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->La commande **READ PICTURE FILE** vous permet d’ouvrir l’image stockée dans le fichier disque désigné par *nomFichier* et de la placer dans le champ ou la variable 4D *image*.<!-- END REF--> 
 
@@ -30,18 +30,18 @@ Passez dans *image* la variable ou le champ image devant recevoir l’image lue.
 
 Si vous passez le paramètre facultatif *\**, la commande acceptera tout type de fichier. Ce principe permet de manipuler des images sans nécessairement disposer des codecs adéquats (cf. description de la commande [BLOB TO PICTURE](blob-to-picture.md)).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l’exécution de la commande est correcte, la variable système Document contient le chemin d’accès complet du fichier ouvert et la variable système OK prend la valeur 1\. En cas d’échec, OK prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 *Introduction aux images*  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

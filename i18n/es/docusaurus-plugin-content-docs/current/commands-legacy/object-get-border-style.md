@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get border style.Summary-->El comando **OBJECT Get border style** devuelve el estilo de línea de borde del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -35,11 +35,11 @@ El comando devuelve un valor que corresponde al estilo de la línea fronteriza. 
 | Border Sunken | Entero largo | 4     | Los objetos aparecen enmarcados con un efecto 3D hundido (relieve inverso)                                          |
 | Border System | Entero largo | 6     | La línea del borde se dibuja en función de las especificaciones gráficas del sistema                                |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET BORDER STYLE](object-set-border-style.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->### Informes en lista 
 
@@ -89,7 +89,7 @@ En este caso, la numeración de las columnas opera como se muestra a continuaci�
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *numColumna* es incorrecto se genera el error -9852.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted ha diseñado el siguiente informe:
 
@@ -110,13 +110,13 @@ Puede escribir:
   //$vResultVar = "C1"
 ```
 
-#### Ver también 
+## Ver también 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

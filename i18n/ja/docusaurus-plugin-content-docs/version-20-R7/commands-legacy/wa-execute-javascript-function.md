@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->WA EXECUTE JAVASCRIPT FUNCTION コマンドは、*\** と *object* で指定したWebエリアで、*jsFunction*に渡したJavaScript関数を実行し、*result* 引数に結果を返します (オプション)。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 **警告**: このコマンドを使用して、ダイアログを表示するようなJavaScript 関数(**alert()**, **print()**...) を直接呼び出すことは推奨されていません。4D コードが実行中のときはユーザーはWeb エリアを操作することができないからです。このようなインターフェースを実装する必要がある場合には、例えば **setTimeout(function(){alert();}, 50))** のようなコードを呼び出すことで、4D コードが実行を完了させたあとにユーザーが入力をできるようにすることができます。
 
-#### 例題 1 
+## 例題 1 
 
 3 つの引数を使用してJavaScript関数を呼び出す:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
  WA EXECUTE JAVASCRIPT FUNCTION(MyWArea;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "getCustomerInfo" という JavaScript ファンクションは、番号ID を引数として受け取り、結果をオブジェクトとして返します:
 
@@ -54,11 +54,11 @@ displayed_sidebar: docs
  WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfo";$Result;$ID)
 ```
 
-#### 参照 
+## 参照 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

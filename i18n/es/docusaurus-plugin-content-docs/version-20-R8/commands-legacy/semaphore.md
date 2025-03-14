@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Semaphore.Summary-->Un semáforo es una bandera compartida entre estaciones de trabajo o entre procesos en la misma estación de trabajo.<!-- END REF--> Un semáforo simplemente existe o no existe. Los métodos que cada usuario ejecuta pueden probar la existencia de un semáforo. Un semáforo sólo puede ser eliminado por la estación de trabajo cliente o proceso que lo creó. Creando y probando semáforos, los métodos pueden comunicarse entre estaciones de trabajo. No utilice semáforos para proteger el acceso a los registros. Esto lo hace automáticamente 4D y 4D Server. Utilice los semáforos para evitar que varios usuarios realice la misma operación al mismo tiempo.
 
@@ -37,7 +37,7 @@ Con 4D, los semáforos globales y locales tienen el mismo alcance porque usted e
 
 **Nota:** los semáforos locales se recomiendan cuando el uso de un semáforo es necesario para manejar un aspecto local para un cliente de la aplicación, tal como la interfaz o un array de valores interproceso. El uso de un semáforo global provocará en este caso, no sólo intercambios de red innecesarios, sino también puede afectar otras máquinas cliente. El uso de un semáforo local evitará estos efectos indeseables.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este es el código típico para utilizar un semáforo:
 
@@ -49,7 +49,7 @@ Este es el código típico para utilizar un semáforo:
  CLEAR SEMAPHORE("MySemaphore")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En este ejemplo, usted quiere evitar que dos usuarios efectúen simultáneamente una actualización global de los precios en una tabla Productos. El siguiente método utiliza semáforos para hacer esto:
 
@@ -62,7 +62,7 @@ En este ejemplo, usted quiere evitar que dos usuarios efectúen simultáneamente
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo utiliza un semáforo local. En una base con varios procesos, usted quiere mantener una lista de "Cosas por hacer". Usted quiere mantener la lista en un array interproceso y no en una tabla. Usted utiliza un semáforo para evitar el acceso simultáneo. En esta situación, sólo necesita utilizar un semáforo local, porque su lista "Cosas por hacer" es sólo para su uso personal. 
 
@@ -90,7 +90,7 @@ Este es el método utilizado para añadir elementos a la lista de cosas por hace
 
 Puede llamar este método desde cualquier proceso.
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este método permite no ejecutar un método si el semáforo está presente; el método informa el método de llamada con un código de error y un texto plano.
 
@@ -142,13 +142,13 @@ Sintaxis:
  $1->:=$T_Message  // El método llamante recibe un código de error y una explicación en texto plano
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Semáforos y señales*  
 [Test semaphore](test-semaphore.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

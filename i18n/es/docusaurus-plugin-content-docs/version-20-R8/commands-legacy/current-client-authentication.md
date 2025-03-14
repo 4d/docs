@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current client authentication.Summary-->El comando **Current client authentication** pide al servidor Active Directory de Windows autenticar al cliente actual y si tiene éxito, devuelve el nombre de inicio de sesión de Windows para este cliente (identificador de sesión).<!-- END REF--> Si la autenticación falla, se devuelve una cadena vacía. 
 
@@ -45,7 +45,7 @@ El nivel de seguridad de la autenticación (es decir, cuánto se puede confiar e
 
 Para más información sobre los requerimientos, por favor consulte el párrafo .
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere configurar su aplicación para que los usuarios remotos 4D en Windows se conecten directamente a 4D Server (no se muestra ningún cuadro de diálogo de contraseña), estando conectado con sus derechos actuales. Para ello, es necesario: 
 
@@ -70,7 +70,7 @@ Con esta configuración, no se muestra un diálogo de contraseña para un 4D rem
 **Nota:** este escenario básico requiere que los nombres de usuario 4D repliquen los nombres del directorio Active, para un mapeo automático. En una aplicación más sofisticada, la información devuelta por el comando se asigna a una tabla \[usuarios\] para crear o seleccionar los usuarios con base en la información del directorio Active.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->**ON EVENT CALL** installe la méthode dont le nom est passé dans *méthodeEvén* comme méthode de gestion des événements.<!-- END REF--> 
 
@@ -67,7 +67,7 @@ Les constantes à utiliser en fonction du *modifier* à tester et de la plate-fo
 
 **Note :** Les variables système MouseDown, KeyCode, Modifiers, MouseX, MouseY et MouseProc ne contiennent des valeurs significatives que dans une méthode de gestion d'événement installée par **ON EVENT CALL**.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant annule l'impression si l'utilisateur appuie sur les touches **Ctrl**+**.** (**Commande+.** sous Mac OS). En premier lieu, la méthode de gestion des événements est installée. Ensuite, un message s'affiche, indiquant que l'impression a été annulée. Si la variable interprocess *◊vbOnStoppe* est égale à Vrai dans la méthode de gestion d'événement, une boîte de dialogue d'alerte s'affiche pour indiquer à l'utilisateur le nombre d'enregistrements qui viennent de s'imprimer. Enfin, la méthode de gestion d'événement est désinstallée :
 
@@ -109,14 +109,14 @@ Notez que **ON EVENT CALL** est utilisé dans cet exemple car un état spécial 
 
 Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-selection.md), vous n'avez pas besoin de gérer les événements permettant à l'utilisateur d'interrompre l'impression, [PRINT SELECTION](print-selection.md) le fait pour vous.
 
-#### Voir aussi 
+## Voir aussi 
 
 [FILTER EVENT](filter-event.md)  
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

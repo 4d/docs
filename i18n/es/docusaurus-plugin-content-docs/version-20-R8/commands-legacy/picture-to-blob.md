@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PICTURE TO BLOB.Summary-->El comando PICTURE TO BLOB convierte una imagen almacenada en una variable o en un campo 4D en otro formato y ubica la imagen resultante en un BLOB.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Una vez el comando ha sido ejecutado, *blobImagen* contiene la imagen en el form
 
 Si la conversión fue exitosa, la variable sistema OK toma el valor 1\. Si la conversión falla (convertidor no disponible), OK toma el valor 0 y el BLOB se genera vacío (0 byte).
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea convertir una imagen de un formato propietario a formato GIF y mostrarlo en una página web estática. Puede utilizar un código como:
 
@@ -46,13 +46,13 @@ Desea convertir una imagen de un formato propietario a formato GIF y mostrarlo e
  WEB SEND BLOB($BLOB;"image/gif")
 ```
 
-#### Ver también 
+## Ver también 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

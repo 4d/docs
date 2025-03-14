@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Find in field.Summary-->El comando Find in field devuelve el número del primer registro cuyo *campoObjetivo* es igual a *valor*.<!-- END REF-->  
 Si no se encuentran registros, Find in field devuelve -1\. 
@@ -31,7 +31,7 @@ Este comando es rápido y muy útil para evitar la creación de entradas dobles 
 
 ****Nota histórica:** en versiones anteriores de 4D, el comando **Find in field** era llamado **Find index key** y sólo funcionaba con campos indexados. A partir de 4D v11 SQL, esta limitación se eliminó y el comando se renombró.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En una base de datos de CDs, durante la entrada de datos asumamos que usted quiere verificar el nombre del cantante para ver si ya existe en la base. Como pueden existir homónimos, usted quiere que el campo \[Cantante\]Nombre sea único. Por lo tanto, en el formulario de entrada, puede escribir el siguiente código en el método de objeto del campo \[Cantante\]Nombre:
 
@@ -47,7 +47,7 @@ En una base de datos de CDs, durante la entrada de datos asumamos que usted quie
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este es un ejemplo que permite verificar la existencia de un valor:
 
@@ -64,7 +64,7 @@ Este es un ejemplo que permite verificar la existencia de un valor:
 Tenga en cuenta >= permite cubrir todos los casos. De hecho, la función devuelve un número de registro y el primer registro tiene el número 0.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

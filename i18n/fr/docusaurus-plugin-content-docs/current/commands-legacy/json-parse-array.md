@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->La commande **JSON PARSE ARRAY** analyse (*parse*) le contenu d’une chaîne formatée en JSON et place les données extraites dans le tableau *tab*.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify array](json-stringify-array.md).
 
@@ -24,7 +24,7 @@ Passez dans *tab* le tableau du type souhaité devant recevoir le résultat de l
 
 **Note :** A compter de 4D v16 R4, la commande **JSON PARSE ARRAY** pourra généralement être remplacée par un appel à la commande [JSON Parse](json-parse.md) qui retourne une **collection**. Les collections sont basées sur les tableaux JSON et permettent de stocker des données de types variés, ce qui procure plus de souplesse que les tableaux. 
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, les données des champs des enregistrements d’une table sont extraites puis placées dans des tableaux d’objets :
 
@@ -54,12 +54,12 @@ Dans cet exemple, les données des champs des enregistrements d’une table sont
            //...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

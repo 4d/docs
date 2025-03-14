@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 
 
 El comando Next window devuelve el número de referencia de la ventana ubicada “detrás” de la ventana que se pasa en *ventana* (en función del orden de las ventanas)
 
-#### Ver también 
+## Ver también 
 
 [Frontmost window](frontmost-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is picture file.Summary-->Is picture file コマンドは*filePath*引数で指定されたファイルをテストし、有効なピクチャファイルであればTrueを返します。<!-- END REF-->ファイルがピクチャファイルでないか、ファイルが見つからない場合はFalseを返します。
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 **Note:** コマンドはWindowsでPDFファイルに対し、Mac OSでEMFファイルに対し、Trueを返します。
 
-#### 参照 
+## 参照 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

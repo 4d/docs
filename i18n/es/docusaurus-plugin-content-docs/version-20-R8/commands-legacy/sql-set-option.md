@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->El comando **SQL SET OPTION** se utiliza para modificar el *valor* de la opción pasada en *opcion*.<!-- END REF-->
 
@@ -39,15 +39,15 @@ displayed_sidebar: docs
    * Bajo Windows, se utiliza ISO8859-1,
    * Bajo Mac OS, se utiliza MAC-ROMAN.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1\. De lo contrario, devuelve 0.
 
-#### Ver también 
+## Ver también 
 
 [SQL GET OPTION](sql-get-option.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->El comando **WEB SERVICE CALL** se utiliza para llamar un servicio web enviando una petición HTTP.<!-- END REF--> Esta petición contiene el mensaje SOAP creado previamente utilizando el comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -158,16 +158,16 @@ El método proxy se llamará de esta forma: *$XMLresultadoBlob:=$DOCproxy\_Metod
 
 El parámetro *\** puede utilizarse para optimizar llamadas. Cuando se pasa, el comando no cierra la conexión utilizada por el proceso al final de su ejecución. En este caso, la próxima llamada a **WEB SERVICE CALL** reutilizará la misma conexión si se pasa el parámetro *\**, etc. Para cerrar la conexión, simplemente ejecute el comando **WEB SERVICE CALL** sin el parámetro *\**. Este mecanismo puede utilizarse para acelerar sensiblemente los procesos en caso de llamadas sucesivas a varios servicios web en el mismo servidor, en particular en una configuración WAN (vía Internet, por ejemplo). Note que este mecanismo depende del parámetro “keep-alive” del servidor web. Este parámetro por lo general define un número máximo de peticiones vía la misma conexión, e incluso puede negar peticiones. Si las peticiones **WEB SERVICE CALL** encadenadas en la misma conexión alcanzan este número máximo, o si las conexiones keep-alive no son permitidas, 4D creará una nueva conexión para cada petición.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la petición se enruta correctamente y el servicio web la acepta, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se devuelve un error.
 
-#### Ver también 
+## Ver también 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

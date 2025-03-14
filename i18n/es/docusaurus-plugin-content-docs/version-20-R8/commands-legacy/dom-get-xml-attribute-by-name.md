@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->El comando DOM GET XML ATTRIBUTE BY NAMEpermite conocer el valor de un atributo especificado por su nombre.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Pase en *refElement* la referencia de un elemento XML y en *nomAtrib* el nombre 
 
 Si no existe ningún atributo *nomAtrib* en el elemento XML, se devuelve un error. Si varios atributos del elemento XML tienen el mismo nombre, sólo se devuelve el valor del primer atributo.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método se utiliza para recuperar un valor de atributo XML utilizando su nombre:
 
@@ -41,16 +41,16 @@ Si este método se aplica al ejemplo a continuación, $NumLinea contiene el valo
 
 ![](../assets/en/commands/pict40184.es.png)
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

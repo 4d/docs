@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->El comando SQL EXECUTE SCRIPT permite ejecutar una serie de instrucciones SQL ubicadas en el archivo de script designado por *rutaScript*.<!-- END REF-->  
 Este comando sólo puede ejecutarse en un equipo local (4D local o procedimiento almacenado en 4D Server). Funciona con la base de datos actual (base interna o externa) 
@@ -59,7 +59,7 @@ Si el script se ejecuta correctamente (no se encuentra ningún error), la variab
 **Nota:** si utiliza este comando para ejecutar acciones consumidoras de memoria tales como importación masiva de datos, puede considerar llamar al comando SQL ALTER DATABASE para desactivar temporalmente las opciones SQL.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Records in selection.Summary-->Records in selection devuelve el número de registros en la selección actual de *tabla*.<!-- END REF--> En contraste, [Records in table](records-in-table.md "Records in table") devuelve el número total de registros en la tabla.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra una técnica de bucle actualmente utilizada para moverse entre los registros de la selección actual. La misma operación puede realizarse con la ayuda del comando [APPLY TO SELECTION](apply-to-selection.md "APPLY TO SELECTION"):
 
@@ -30,11 +30,11 @@ El siguiente ejemplo muestra una técnica de bucle actualmente utilizada para mo
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [Records in table](records-in-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

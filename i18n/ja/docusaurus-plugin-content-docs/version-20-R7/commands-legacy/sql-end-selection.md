@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL End selection.Summary-->SQL End selectionコマンドは、結果セットの境界に達したかどうかを判定するために使用します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 次のコードは、外部データソース（Oracle）へ接続します:
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 このコードは4D変数*vName* にempテーブルの ename を返します。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->La commande **SHOW WINDOW** permet d'afficher la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF-->
 
 La fenêtre doit au préalable avoir été cachée à l'aide de la commande [HIDE WINDOW](hide-window.md). Si la fenêtre est déjà affichée, la commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Voir l'exemple de la commande [HIDE WINDOW](hide-window.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIDE WINDOW](hide-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

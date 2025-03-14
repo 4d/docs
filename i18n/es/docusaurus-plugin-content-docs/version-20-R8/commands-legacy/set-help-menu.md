@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET HELP MENU.Summary-->El comando **SET HELP MENU** le permite reemplazar el menú **Ayuda** por defecto de 4D por la colección de elementos del menù *menuCol* del modo aplicación.<!-- END REF-->
 
@@ -40,7 +40,7 @@ El menú **Ayuda** personalizado mostrará los elementos en el mismo orden que l
 
 Para insertar una línea separadora, pase **null** o un objeto vacío en la colección.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea personalizar el menú **Ayuda** de su aplicación:
 
@@ -56,11 +56,11 @@ Desea personalizar el menú **Ayuda** de su aplicación:
 
 ![](../assets/en/commands/pict6260534.en.png)
 
-#### Ver también 
+## Ver también 
 
 [SET ABOUT](set-about.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

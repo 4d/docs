@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.New log file.Summary-->**Nota preliminar:** este comando sólo funciona con 4D Server.<!-- END REF--> Sólo puede ser ejecutado vía el comando [Execute on server](execute-on-server.md) o en un procedimiento almacenado. 
 
@@ -26,13 +26,13 @@ El archivo se renombra con los números de backup´actuales de la base y el arch
 * Si la base MiBase.4DD ha sido guardada 4 veces, el último archivo de backup se llamará MyBase\[0004\].4BK. El nombre del primer “segmento” del archivo historial será por lo tanto *MiBase\[0004-0001\].journal*.
 * Si la base MiBase.4DD ha sido guardada 3 veces y el archivo historial ha sigo guardado 5 veces, el nombre del sexto backup del archivo historial será *MiBase\[0003-0006\].journal*.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 En caso de que se presente un error, el comando genera un código que puede interceptarse utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

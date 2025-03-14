@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->El comando BUILD APPLICATION lanza el proceso de generación de la aplicación teniendo en cuenta los parámetros definidos en el proyecto de aplicación actual o en el proyecto de aplicación designado por el parámetro *nomProyecto*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si no pasa el parámetro opcional *confCreacionApp*, el comando muestra una caja
 
 Si pasa la ruta de acceso y el nombre de un archivo XML de proyecto de aplicación válido (codificación UTF-8), el comando utilizará los parámetros definidos en el archivo. Para mayor información sobre la estructura y las llaves utilizables en un archivo configuración de creación de aplicación, consulte el manual *4D Llaves XML BuildApplication*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo crea dos aplicaciones en un solo método:
 
@@ -40,19 +40,19 @@ Este ejemplo crea dos aplicaciones en un solo método:
  End if
 ```
 
-#### Variables y conjuntos sistema 
+## Variables y conjuntos sistema 
 
 La variable sistema OK toma el valor 1 si el comando se ha ejecutado correctamente. De lo contrario, toma el valor 0\. La variable sistema Document contiene la ruta de acceso completa al archivo de configuración abierto.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si el comando falla, se genera un error que puede interceptar con la ayuda del comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [Compile project ](compile-project.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

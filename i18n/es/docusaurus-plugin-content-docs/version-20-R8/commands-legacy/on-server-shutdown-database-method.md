@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Server Shutdown.Summary-->El Método base On Server Shutdown se llama una vez en el equipo servidor cuando la base actual se cierra en 4D Server.<!-- END REF--> El Método base On Server Shutdown NO es llamado por otro entorno 4D diferente de 4D Server.
 

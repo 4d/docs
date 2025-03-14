@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.System folder.Summary-->El comando **System folder** devuelve la ruta de acceso a una carpeta particular del sistema operativo o a la carpeta activa del sistema Windows o macOS.<!-- END REF-->
 
@@ -45,12 +45,12 @@ Pase un valor en el parámetro opcional *tipo* indicando el tipo de carpeta del 
 
 Si omite el parámetro *tipo*, la función devolverá la ruta a la carpeta sistema activa (= constante System).
 
-#### Ver también 
+## Ver también 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

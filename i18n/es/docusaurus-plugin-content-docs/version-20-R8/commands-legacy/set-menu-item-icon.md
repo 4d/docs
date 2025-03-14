@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->El comando **SET MENU ITEM ICON** permite modificar el icono asociado a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->  
 Puede pasar -1 en *lineaMenu* para especificar el último elemento añadido a *menu*.
@@ -32,7 +32,7 @@ En *refIcon*, puede pasar el nombre o el número de la imagen de la librería a 
 
 **Nota:** se recomienda el uso de una ruta de archivo de imagen ya que la Librería de imágenes está en desuso y no es compatible con las bases de datos de proyectos 4D. Además, el tipo *file:<relativePathname>* es obsoleto, se recomienda utilizar *path:<filesystem>*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Uso de una imagen ubicada en la carpeta Resources de la base:
 
@@ -40,11 +40,11 @@ Uso de una imagen ubicada en la carpeta Resources de la base:
  SET MENU ITEM ICON($MenuRef;2;"Path:/RESOURCES/english.lproj/spot.png")
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

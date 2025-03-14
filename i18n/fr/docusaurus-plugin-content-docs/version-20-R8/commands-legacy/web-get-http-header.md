@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->La commande **WEB GET HTTP HEADER** retourne, soit sous forme de chaîne, soit sous forme de deux tableaux, l’en-tête HTTP de la requête en cours de traitement.<!-- END REF-->
 
@@ -55,7 +55,7 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
 * Referer : provenance de la requête (par exemple http://monserveurweb/mapage1.html), c’est-à-dire la page que l’utilisateur affiche s’il clique sur le bouton **Précédent** de son navigateur.
 * User-Agent : nom et version du navigateur ou du proxy.
 
-#### Exemple 
+## Exemple 
 
 * Cette méthode permet de récupérer le contenu de tout champ d’en-tête de requête HTTP :
 
@@ -112,12 +112,12 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

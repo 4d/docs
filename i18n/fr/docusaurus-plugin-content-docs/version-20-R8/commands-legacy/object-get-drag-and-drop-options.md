@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->La commande **OBJECT GET DRAG AND DROP OPTIONS** retourne les options de glisser-déposer pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ Chaque paramètre retourne Vrai ou Faux suivant que l’option correspondante es
 * *déposable* \= Vrai : objet acceptant le déposer en mode programmé.
 * *déposableAuto* \= Vrai (utilisable uniquement avec les champs et variables image, texte, combo box et list box) : objet acceptant le déposer en mode automatique.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Instance of.Summary-->La commande **OB Instance of** retourne vrai si *objet* appartient à *classe* ou à l'une de ses classes enfant.<!-- END REF--> Sinon, elle retourne faux.
 
 Si *classe* n'est pas un objet de classe valide, l'erreur -10745 est retournée.
 
-#### Exemple 
+## Exemple 
 
 Vous avez créé la classe Polygone :
 
@@ -43,11 +43,11 @@ Puis, dans une méthode, vous pouvez saisir :
  $instance:=OB Instance of($poly;cs.Circle) // faux
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Class](ob-class.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

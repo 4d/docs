@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->El comando GET RELATION PROPERTIES devuelve las propiedades de la relación (si la hay) que comienza del campo fuente definido por *numTabla* y *numCamp* o por *ptrCamp*.<!-- END REF--> 
 
@@ -36,7 +36,7 @@ Una se haya ejecutado el comando:
 
 **Nota:** los parámetros *autoUno* y *autoMuchos* también devolverán [True](true.md "True") si ninguna relación parte del campo fuente (en este caso devuelven valores no significativos.). El valor de los parámetros *tablaUno* y *campUno* permiten asegurarse de que una relación existe. 
 
-#### Ver también 
+## Ver también 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -44,7 +44,7 @@ Una se haya ejecutado el comando:
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->La commande **SVG Find element IDs by rect** remplit le tableau texte *tabIds* avec les IDs (attribut "id" ou "xml:id") des éléments XML dont le rectangle englobant est en intersection avec le rectangle de sélection à l’emplacement défini par les paramètres *x* et *y*.<!-- END REF-->
 
@@ -37,11 +37,11 @@ Les coordonnées passées dans les paramètres *x* et *y* doivent être exprimé
 
 Tous les ID d’éléments dont le rectangle englobant est en intersection avec le rectangle de sélection sont pris en compte, même ceux situés sous d’autres éléments.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

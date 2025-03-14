@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->**ST SET ATTRIBUTES** コマンドを使用して、 *object*で指定したフォームオブジェクト中の1つ以上のスタイル属性を変更できます。<!-- END REF--> 
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
 | White        | #FFFFFF  |
 | Yellow       | #FFFF00  |
 
-#### 例題 
+## 例題 
 
 この例題ではテキストのサイズやカラーのほか、ボールドおよび下線属性を2番目から4番目の文字に設定します:
 
@@ -92,18 +92,18 @@ displayed_sidebar: docs
  ST SET ATTRIBUTES([MyTable]MyField;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 このコマンド実行後、エラーがなければOKシステム変数に1が設定されます。そうでなければ0が設定されます。これは特にスタイルタグが正しく評価できなかった場合に発生します (正しくない、あるいは失われたタグ)。  
 
 エラーの場合、変数は変更されません。テキストが評価される際に変数にエラーが発生すると、4Dはテキストをプレーンテキストに変換します。結果、"<"、">"、"&"文字はHTML実体参照に変換されます。
 
-#### 参照 
+## 参照 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

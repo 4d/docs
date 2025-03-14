@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOG EVENT.Summary-->La commande **LOG EVENT** vous permet de mettre en place un système personnalisé d'enregistrement des événements internes qui se produisent au cours de l'utilisation de votre application.<!-- END REF--> Vous pouvez ainsi contrôler le déroulement d’une session de travail.
 
@@ -50,7 +50,7 @@ Le paramètre *importance* est utilisé uniquement avec les paramètres *typeSor
 
 :::
 
-#### Exemple 
+## Exemple 
 
 Afin de conserver une trace des lancements de votre base sous Windows, vous pouvez écrire, dans la [On Startup database method](on-startup-database-method.md) :
 
@@ -60,11 +60,11 @@ Afin de conserver une trace des lancements de votre base sous Windows, vous pouv
 
 A chaque ouverture de la base, cette information sera inscrite dans l’Observateur d’événements de Windows, avec le niveau d’importance 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

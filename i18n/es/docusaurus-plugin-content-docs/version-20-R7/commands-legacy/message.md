@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MESSAGE.Summary-->El comando MESSAGE generalmente se utiliza para informar al usuario sobre alguna actividad.<!-- END REF--> Muestra *mensaje* en la pantalla en una ventana de mensaje especial que se abre y cierra cada vez que usted llama a MESSAGE, a menos que usted trabaje con una ventana que abrió previamente utilizando [Open window](open-window.md) (ver los siguientes detalles). El mensaje es temporal y se borra tan pronto como se muestre un formulario o se detenga la ejecución del método. Si se ejecuta otro comando MESSAGE, el mensaje anterior se borra.
 
@@ -30,7 +30,7 @@ Si se abre una ventana con [Open window](open-window.md "Open window"), todas la
 
 **Nota:** **MESSAGE** es compatible con el comando [Open form window](open-form-window.md); sin embargo, en este contexto, el segundo parámetro *\** de [Open form window](open-form-window.md), que guarda el tamaño y la posición de la ventana, no es compatible.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo procesa una selección de registros y llama MESSAGE para informar al usuario sobre el progreso de la operación:
 
@@ -46,7 +46,7 @@ La siguiente ventana aparece y desaparece cada vez que se llama MESSAGE:
 
 ![](../assets/en/commands/pict25453.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Con el fin de evitar la ventana "titilante", puede mostrar los mensajes en una ventana abierta utilizando [Open window](open-window.md "Open window"), como en este ejemplo:
 
@@ -64,7 +64,7 @@ El resultado es el siguiente (en Windows):
 
 ![](../assets/en/commands/pict25454.es.png)
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Añadiendo un retorno de carro mejora la presentación:
 
@@ -82,7 +82,7 @@ Este es el resultado (en Windows):
 
 ![](../assets/en/commands/pict25455.es.png)
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Utilizando [GOTO XY](goto-xy.md "GOTO XY") y escribiendo algunas líneas adicionales:
 
@@ -106,14 +106,14 @@ El resultado es el siguiente (en Windows):
 
 ![](../assets/en/commands/pict25456.es.png)
 
-#### Ver también 
+## Ver también 
 
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

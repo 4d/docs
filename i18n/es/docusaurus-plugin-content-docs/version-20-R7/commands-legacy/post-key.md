@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.POST KEY.Summary-->El comando POST KEY simula una tecla.<!-- END REF--> Tiene el mismo efecto que cuando un usuario digita un carácter en el teclado. 
 
@@ -25,18 +25,18 @@ Si pasa el parámetro *modificadores*, pase una constante o una combinación del
 
 Si pasa el parámetro *proceso*, la tecla se envía al proceso cuyo número de referencia se especifica en *proceso*. Si pasa *0* (cero) o si omite el parámetro, la tecla se envía al nivel de la aplicación y el planificador de 4D la enviará al proceso apropiado.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [Process number](process-number.md "Process number").
 
-#### Ver también 
+## Ver también 
 
 *Códigos ASCII*  
 *Códigos de teclas de función*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

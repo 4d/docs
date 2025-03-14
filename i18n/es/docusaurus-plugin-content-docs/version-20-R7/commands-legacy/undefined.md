@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Undefined.Summary-->Undefined devuelve True si el resultado de la evaluación de *expresion* no es un valor definido, y de lo contrario False.<!-- END REF-->
 
@@ -37,7 +37,7 @@ En algunos casos, es posible que no desee que se evalúe el parámetro (por ejem
  $result:=(Type($ptr->)=Is undefined) //true si la variable apuntada no existe (sin error)
 ```
 
-#### Ejemplo 
+## Ejemplo 
 
 Aquí están los diferentes resultados del comando [Undefined](undefined.md) así como también del comando [Null](null.md) aplicados a las propiedades de objetos, dependiendo del contexto:
 
@@ -57,11 +57,11 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

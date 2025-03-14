@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** busca registros en *tabla*.<!-- END REF-->El comando **QUERY SELECTION** cambia la selección actual de *tabla* para el proceso actual y hace que el primer registro de la nueva selección sea el registro actual. 
 
@@ -28,7 +28,7 @@ Para mayor información, consulte la descripción del comando [QUERY](query.md).
 
 El comando **QUERY SELECTION** es útil cuando una búsqueda no se puede definir utilizando una secuencia de llamadas enlazadas [QUERY](query.md) con el parámetro *\**. Por lo general, es el caso cuando desea consultar una selección actual que no sea resultado de una consulta previa, pero a partir de un comando como [USE SET](use-set.md). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea consultar los registros que han sido resaltados previamente por el usuario en un formulario de lista. Puedes escribir:
 
@@ -40,11 +40,11 @@ Usted desea consultar los registros que han sido resaltados previamente por el u
 
 Va a encontrar todas las empresas ubicadas en la ciudad de Nueva York, con una actividad de Bolsa, entre la selección inicial del usuario.
 
-#### Ver también 
+## Ver también 
 
 [QUERY](query.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

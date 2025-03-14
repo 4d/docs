@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Change string.Summary-->Change string devuelve una cadena resultante de cambiar los caracteres, en la cadena *fuente*, a partir de *posicion* con los caracteres en *nuevo*.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ Si *nuevo* es una cadena vacía (""), Change string devuelve *fuente* sin cambio
 
 Change string se diferencia de [Insert string](insert-string.md "Insert string") en que reemplaza los caracteres en lugar de insertarlos. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo ilustra el uso de Change string. Los resultados se asignan a la variable *vtResult*.
 
@@ -33,13 +33,13 @@ El siguiente ejemplo ilustra el uso de Change string. Los resultados se asignan 
  vtResult:=Change string("noviembre";"dic";1) // vtResult es igual a "diciembre"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

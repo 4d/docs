@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->**SET UPDATE FOLDER**コマンドは、カレントの組み込まれた4Dアプリケーションのアップデート情報を含んだフォルダの場所を指定します。<!-- END REF-->この情報は [RESTART 4D](restart-4d.md)メソッドが呼ばれるまで4Dセッション中は保存されます。アプリケーションが手動で終了した場合、この情報は保存されません。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 コマンドが正常に実行された場合には、OKシステム変数は1に設定されます。それ以外の場合は0に設定されます。このコマンドによって生成されたエラーはどれも [ON ERR CALL](on-err-call.md)コマンドを使用して実装されたメソッドによって割り込み可能です。
 
-#### 例題 
+## 例題 
 
 ディスク上に "MyUpdates"を作成し、その中に "MyApp"アプリケーションの新しいバージョンが入っているとします。また、エラーは表示したくないとします。このアップデートのためには、以下の様に記載します。
 
@@ -53,12 +53,12 @@ displayed_sidebar: docs
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 
-#### 参照 
+## 参照 
 
 [Get last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

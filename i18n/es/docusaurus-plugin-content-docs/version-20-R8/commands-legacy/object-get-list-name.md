@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->El comando OBJECT Get list name devuelve el nombre de la lista asociada al objeto o a un grupo de objetos designados por *objeto*.<!-- END REF--> 4D le permite asociar una lista de opciones (creada con el editor de la listas en modo Diseño) a los objetos de formulario utilizando el editor de formularios o el comando [OBJECT SET LIST BY NAME](object-set-list-by-name.md).  
   
@@ -33,12 +33,12 @@ Puede utilizar el parámetro opcional *tipoLista* para designar el tipo de lista
   
 Si ninguna lista del tipo definido está asociada al *objeto*, el comando devuelve una cadena vacía ("").
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

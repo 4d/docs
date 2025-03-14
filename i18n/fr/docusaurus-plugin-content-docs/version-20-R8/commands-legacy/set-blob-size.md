@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET BLOB SIZE.Summary-->**SET BLOB SIZE** redimensionne *blob* selon la valeur passée dans le paramètre *taille*.<!-- END REF-->
 
@@ -25,11 +25,11 @@ Si vous souhaitez que les nouveaux octets réservés (s'il y en a) pour le BLOB 
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si vous ne pouvez pas redimensionner le BLOB parce qu'il n'y a pas assez de mémoire, l'erreur –*108* est générée. Vous pouvez installer une méthode avec la commande [ON ERR CALL](on-err-call.md) pour interrompre la méthode lorsqu'une erreur survient.
 
-#### Exemple 1 
+## Exemple 1 
 
 Lorsque vous n'avez plus besoin d'un BLOB process ou interprocess, il est préférable de libérer la mémoire qu'il occupe. Pour cela, écrivez le code suivant :
 
@@ -38,7 +38,7 @@ Lorsque vous n'avez plus besoin d'un BLOB process ou interprocess, il est préf�
  SET BLOB SIZE(◊vInterprocessBLOB;0)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 0xFF :
 
@@ -47,11 +47,11 @@ L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 
  SET BLOB SIZE(vxData;16*1024;0xFF)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB size](blob-size.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

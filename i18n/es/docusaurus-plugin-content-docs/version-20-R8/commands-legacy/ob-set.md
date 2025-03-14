@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB SET.Summary-->El comando **OB SET** crea o modifica uno o más pares de *propiedad*/*valor* en el objeto de lenguaje designado por el parámetro *objeto*.<!-- END REF-->debe haber sido definido usando el comando *C\_OBJECT* o designar un campo objeto 4D.
 
@@ -30,7 +30,7 @@ En el parámetro *valor*, pase el valor que desea definir para la propiedad. Se 
 * si pasa un objeto de lenguaje o una colección, el comando utiliza una referencia y no una copia. Toda modificación aplicada al objeto o colección se informará a todas las referencias
 * a partir de 4D v16 R4, puede pasar una imagen de todo tipo soportado (ver *Formatos nativos soportados*).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Creación de un objeto y adición de una propiedad de tipo texto:
 
@@ -40,7 +40,7 @@ Creación de un objeto y adición de una propiedad de tipo texto:
   // $Object = {"FirstName":"John","LastName":"Smith"}
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Creación de un objeto y adición de una propiedad de tipo booleano:
 
@@ -50,7 +50,7 @@ Creación de un objeto y adición de una propiedad de tipo booleano:
   // $Object = {"LastName":"smith","age":42,"client":true}
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Modificación de una propiedad:
 
@@ -60,7 +60,7 @@ Modificación de una propiedad:
   // $Object = {"FirstName":"Paul","LastName":"Smith"}
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Adición de una propiedad:
 
@@ -70,7 +70,7 @@ Adición de una propiedad:
   // $Object = {"FirstName":"Paul","LastName":"Smith","department":"Accounting"}
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Renombrando una propiedad:
 
@@ -84,7 +84,7 @@ Renombrando una propiedad:
   // $Object = {"FirstName":""James","age":35}
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Usando un puntero:
 
@@ -100,7 +100,7 @@ Usando un puntero:
   // $JsonString="{"FirstName":"Paul","LastName":"Wesson"}
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 Usando un objeto:
 
@@ -123,7 +123,7 @@ También puede cambiar un valor sobre la marcha:
   // $string = "{"employee":{"name":"Smyth"}}"
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Si ha definido el campo \[Rect\]Desc como un campo objeto, puede escribir:
 
@@ -134,7 +134,7 @@ Si ha definido el campo \[Rect\]Desc como un campo objeto, puede escribir:
  SAVE RECORD([Rect])
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 Usted quiere exportar datos en JSON que contienen una fecha 4D que desea convertir en una cadena sin información de zona horaria. Note que la conversión ocurre cuando la fecha se guarda en el objeto, debe llamar al comando [SET DATABASE PARAMETER](set-database-parameter.md) antes de llamar a [OB SET](ob-set.md): 
 
@@ -148,7 +148,7 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D que desea convert
 ```
 
   
-#### Ejemplo 10 
+## Ejemplo 10 
 
 En un método formulario, puede escribir:
 
@@ -165,7 +165,7 @@ También puede leer los atributos personalizados de los documentos:
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Ejemplo 11 
+## Ejemplo 11 
 
 Usted desea definir una colección como un valor propiedad. Puede escribir:
 
@@ -178,7 +178,7 @@ Usted desea definir una colección como un valor propiedad. Puede escribir:
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
-#### Ejemplo 12 
+## Ejemplo 12 
 
 Usted desea almacenar una imagen en un campo objeto. Puede escribir:
 
@@ -190,14 +190,14 @@ Usted desea almacenar una imagen en un campo objeto. Puede escribir:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

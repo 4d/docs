@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Find next.Summary-->El comando **WP Find next** busca en *objTarget*, después del rango *buscarDespues*, el *buscarValor* basado en la *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
@@ -78,7 +78,7 @@ Si *objTarget* es un rango o elemento, los valores encontrados se devuelven en e
 
 Se devuelve un rango vacío si no se encuentran resultados.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$nextRange : object
@@ -97,7 +97,7 @@ Se devuelve un rango vacío si no se encuentran resultados.
  $nextRange:=WP Find next($target;$userSel;"alpha";$options)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Find all](wp-find-all.md)  
 [WP Find previous ](wp-find-previous.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SEND RECORD.Summary-->SEND RECORD envía el registro actual de *tabla* al puerto serial o a un documento abierto por el comando [SET CHANNEL](set-channel.md "SET CHANNEL").<!-- END REF--> El registro se envía con un formato interno especial que sólo puede ser leído por [RECEIVE RECORD](receive-record.md "RECEIVE RECORD"). Si no existe un registro actual, SEND RECORD no tiene efecto.
 
@@ -25,17 +25,17 @@ Se envía el registro completo. Esto significa que todos los subregistros, imág
 
 **Nota de compatibilidad**: a partir de la versión 11 de 4D este comando no soporta subtablas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 
-#### Ver también 
+## Ver también 
 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->El comando **OBJECT SET PLACEHOLDER** asocia un texto de ejemplo al objeto o a los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -31,7 +31,7 @@ En *textoEjemplo*, pase el texto de ayuda o la indicación que debe aparecer cua
   
 Este comando sólo se puede utilizar con objetos de formulario de tipo variable, campo o combo box. También puede se asociar a los datos de tipo fecha u hora si el objeto de formulario tiene la propiedad "Vacío si nulo".
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere mostrar el texto "Buscar" un combo box:
 
@@ -41,11 +41,11 @@ Usted quiere mostrar el texto "Buscar" un combo box:
 
 ![](../assets/en/commands/pict1208449.en.png)
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

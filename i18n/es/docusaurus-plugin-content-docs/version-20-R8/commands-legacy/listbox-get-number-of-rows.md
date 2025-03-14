@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->El comando LISTBOX Get number of rows devuelve el número de filas del list box designado por los parámetros objeto y \*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Si pasa el parámetro opcional \*, indica que el parámetro *objeto* es un nombr
 
 **Nota:** si los arrays asociados con las columnas de un list box no tienen todos el mismo tamaño, sólo el número de elementos correspondiente al array más pequeño aparecerá en el list box y de esta manera es devuelto por este comando. 
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |
