@@ -456,7 +456,7 @@ title: Document クラス
 | -------------- | - | ------------------ |
 | `fk overwrite` | 4 | 既存要素があれば、それを上書きします |
 
-**戻り値**
+**Returned value**
 
 コピーされた `File` オブジェクト。
 
@@ -499,7 +499,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 `.getContent()` 関数は、<!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
-**戻り値**
+**Returned value**
 
 `4D.Blob` オブジェクト。
 
@@ -548,7 +548,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 ファイルがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。
 
-**戻り値**
+**Returned value**
 
 ファイルアイコンの [ピクチャー](../Concepts/picture.html)。
 
@@ -606,7 +606,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-**戻り値**
+**Returned value**
 
 ファイルのテキスト。
 
