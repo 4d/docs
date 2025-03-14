@@ -120,7 +120,6 @@ Considerando as propriedades de tabela abaixo:
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Histórico</summary>
@@ -170,7 +169,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
  $allEmp:=ds. Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -221,7 +220,7 @@ $ds. Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -670,7 +669,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -1019,13 +1018,13 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 O comparador "not equal to *value*" (`#` ou `!`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujas "informações". status chegado é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //encontra pessoas cujo valor do atributo é false
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 Se você deseja encontrar pessoas cujas "info.married" status são `false`, null, ou não definidas, você precisa escrever:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
@@ -1062,14 +1061,14 @@ ds.Class.info:
 Considere os seguintes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
-// retorna B e C
-// encontra "entities with 0 in at least one val property"
+ds.Class.query("info.coll[].val = :1";0)
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// retorna apenas A
-// encontra "entities where all val properties are different from 0"
-// que é equivalente a 
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
