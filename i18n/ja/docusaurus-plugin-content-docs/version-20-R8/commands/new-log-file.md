@@ -8,35 +8,35 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-| 引数  | 型    |                             | 説明                               |
-| --- | ---- | --------------------------- | -------------------------------- |
-| 戻り値 | Text | &#8592; | Full pathname of closed log file |
+| 引数  | 型    |                             | 説明              |
+| --- | ---- | --------------------------- | --------------- |
+| 戻り値 | Text | &#8592; | 閉じたログファイルの完全パス名 |
 
 <!-- END REF-->
 
-## 説明
+#### 説明
 
-**Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](../commands-legacy/execute-on-server.md) command or in a stored procedure.
+**前提となる注意:** このコマンドは4D Server でのみ動作します。 [Execute on server](../commands-legacy/execute-on-server.md) コマンド経由か、あるいはストアドプロシージャ内でのみ実行することができます。
 
-<!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->。 This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
+<!--REF #_command_.New log file.Summary-->**New log file** コマンドはカレントのログファイルを閉じてその名前を変更した後、元のものと同じ名前で新しいログファイルを作成し同じ元のものと同じ場所に保存します<!-- END REF-->。 このコマンドは論理ミラーを使用したバックアップシステムをセットアップする際に使用されるよう設計されています(詳細は[4D Server Reference Manual](https://doc/4d.com) 内の*論理ミラーの設定* の章を参照して下さい)。 
 
-The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). This file is stored in the same location as the current log file (specified on the [Configuration page](../Backup/settings.md#configuration) in the Backup theme of the Settings). The command does not carry out any processing (compression, segmentation) on the saved file. ダイアログボックスは表示されません。
+コマンドは閉じられるログファイル("segment" と呼ばれます)の完全パス名(アクセスパス+名前)を返します。 このファイルはカレントのログファイル(データベース設定のバックアップタブ内の[設定ページ](../Backup/settings.md#設定) で指定された場所)と同じ場所に保存されます。 このコマンドは保存されたファイルに対しては何も処理(圧縮や分割など)は行いません。 ダイアログボックスは表示されません。
 
-The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. For instance:
+ファイルはデータベースのカレントバックアップの番号とログファイルの番号を使用して名称変更されます。具体的には、以下のようになります: DatabaseName\[BackupNum-LogBackupNum\].journal 例:
 
-- If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. The name of the first “segment” of the log file will therefore be MyDatabase\[0004-0001\].journal.
-- If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
+- もし MyDatabase.4DD データベースが4回保存されていた場合、最後のバックアップファイルの名前は MyDatabase\[0004\].4BK となります。 そのため、ログファイルの最初の"segment" の名前は、 MyDatabase\[0004-0001\].journal となります。
+- もし MyDatabase.4DD データベースが3回保存されていて、ログファイルがそこから5回保存されていた場合、ログファイルの6つ目のバックアップの名前は MyDatabase\[0003-0006\].journal となります。
 
 :::warning
 
-A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated.
+ログファイルは常にデータファイルと関連づけられている必要があります。 もし、[`SELECT LOG FILE`](select-log-file.md) または [データベース設定ダイアログボックス](../Backup/settings.md#設定) を使用してログファイルを有効化した直後に(バックアップをすることなく)このコマンドを呼び出した場合、必ずデータファイルと合致するコピーがあることを確認して下さい。そうでない場合、ログファイルを統合することはできません。
 
 :::
 
-## エラー管理
+#### エラー管理
 
-In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
+エラーが発生した場合、このコマンドは [ON ERR CALL](../commands-legacy/on-err-call.md) コマンドで割り込み可能なコードを生成します。
 
-## 参照
+#### 参照
 
 [SELECT LOG FILE](select-log-file.md)
