@@ -817,13 +817,13 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 O comparador "not equal to *value*" (`#` ou `!`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujas "informações". status chegado é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //encontra pessoas cujo valor do atributo é false
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 Se você deseja encontrar pessoas cujas "info.married" status são `false`, null, ou não definidas, você precisa escrever:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
