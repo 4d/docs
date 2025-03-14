@@ -23,6 +23,7 @@ Para obter uma visão geral abrangente dessa classe, consulte a postagem do blog
 | [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->                   |
 | [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary --> |
 | [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->    |
+| [<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem().Summary -->                                 |
 | [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary -->                            |
 | [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary -->                                |
 | [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary -->                                |
@@ -314,31 +315,34 @@ O valor devolvido é a chave pública.
 
 Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave privada, será deduzido dela a chave pública RSA ou ECDSA. <!-- END REF -->
 
+<!-- END REF -->
+
 <!-- REF CryptoKey.sign().Desc -->
 
 ## .sign()
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R4   | Adicionado |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R8   | Support of message as Blob |
+| 18 R4   | Adicionado                 |
 
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                                                       |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------- |
-| message    | Text   | ->                          | String mensagem a assinar                                                       |
-| options    | Object | ->                          | Opções de assinatura                                                            |
-| Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Parâmetro  | Tipo          |                             | Descrição                                                                       |
+| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------- |
+| message    | Texto OU Blob | ->                          | Message to sign                                                                 |
+| options    | Object        | ->                          | Opções de assinatura                                                            |
+| Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message*<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *options* fornecidas. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message* ou Blob<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *opções* fornecidas. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
 A `CryptoKey` deve conter uma chave **privada** válida.
 
@@ -349,11 +353,11 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
-| encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                             |
+| encoding          | text    | Representation to be used for result signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                   |
 
 #### *Resultado*
 
-A representação utf8 da string *message*.
+A representação utf8 de *mensagem*.
 
 <!-- END REF -->
 
@@ -403,22 +407,23 @@ Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "EC
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R4   | Adicionado |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R8   | Support of message as Blob |
+| 18 R4   | Adicionado                 |
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                                                                         |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| message    | Text   | ->                          | String de mensagem utilizada para gerar a assinatura                                              |
-| signature  | Text   | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options    | Object | ->                          | Opções de assinatura                                                                              |
-| Resultados | Object | <- | Estado da verificação                                                                             |
+| Parâmetro  | Tipo          |                             | Descrição                                                                                         |
+| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| message    | Texto OU Blob | ->                          | Message that was used to produce the signature                                                    |
+| signature  | Text          | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
+| options    | Object        | ->                          | Opções de assinatura                                                                              |
+| Resultados | Object        | <- | Estado da verificação                                                                             |
 
 <!-- END REF -->
 
