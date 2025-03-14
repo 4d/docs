@@ -456,7 +456,7 @@ S'il existe déjà un dossier portant le même nom dans *destinationFolder*, par
 | -------------- | ------ | --------------------------------------------- |
 | `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
-**Valeur retournée**
+**Returned value**
 
 L'objet `Folder` copié.
 
@@ -503,7 +503,7 @@ La fonction `.file()` crée <!-- REF #directory.file().Summary -->un objet `File
 
 Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
-**Valeur retournée**
+**Returned value**
 
 Un objet `File` ou null si *path* n'est pas valide.
 
@@ -554,7 +554,7 @@ Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la r
 | `fk recursive`        | 1      | La collection contient les fichiers du dossier spécifié ainsi que de ses sous-dossiers |
 | `fk ignore invisible` | 8      | Les fichiers invisibles ne sont pas répertoriés                                        |
 
-**Valeur retournée**
+**Returned value**
 
 Collection d'objets `File`.
 
@@ -613,7 +613,7 @@ La fonction `.folder()` <!-- REF #directory.folder().Summary -->crée un objet `
 
 Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
-**Valeur retournée**
+**Returned value**
 
 Un objet `Folder` object ou null si *path* est invalide.
 
@@ -662,7 +662,7 @@ Par défaut, si vous omettez le paramète *options*, seuls les dossiers à la ra
 | `fk recursive`        | 1      | La collection contient les dossiers du dossier spécifié ainsi que de ses sous-dossiers |
 | `fk ignore invisible` | 8      | Les dossiers invisibles ne sont pas répertoriés                                        |
 
-**Valeur retournée**
+**Returned value**
 
 Collection d'objets `Folder`.
 
@@ -710,7 +710,7 @@ Le paramètre optionnel *size* spécifie les dimensions en pixels de l'icône re
 
 Si le dossier n'existe pas sur disque, une icône vide est retournée par défaut.
 
-**Valeur retournée**
+**Returned value**
 
 [Image](Concepts/dt_picture.md) de l'icône du dossier.
 
