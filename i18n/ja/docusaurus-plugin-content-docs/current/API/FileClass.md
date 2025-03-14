@@ -109,7 +109,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 ファイルがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
-**戻り値**
+**Returned value**
 
 - ファイルが正常に作成された場合には **true**
 - すでに同じ名前のファイルが存在する、あるいはエラーが発生した場合には **false**
@@ -165,7 +165,7 @@ macOS 上では、この関数はデフォルトで標準エイリアスを作�
 
 Windows 上では、常にショートカット (.lnk ファイル) が作成されます (*aliasType* 引数は無視されます)。
 
-**返されるオブジェクト**
+**Returned object**
 
 `isAlias` プロパティが **true** に設定された `4D.File` オブジェクトを返します。
 
@@ -370,7 +370,7 @@ ALERT($info.Copyright)
 
 デフォルトでは、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
-**返されるオブジェクト**
+**Returned object**
 
 移動後の `File` オブジェクト。
 
@@ -498,7 +498,7 @@ $fhandle:=$f.open("read")
 
 この関数はファイルの完全な名前を編集することに留意が必要です。 つまり、*newName* に拡張子を渡さなかった場合、新しいファイル名には拡張子がありません。
 
-**返されるオブジェクト**
+**Returned object**
 
 名称変更された `File` オブジェクト。
 
@@ -512,8 +512,6 @@ $fhandle:=$f.open("read")
 ```
 
 <!-- END REF -->
-
-<!-- REF file.setAppInfo().Desc -->
 
 ## .setAppInfo()
 
@@ -530,25 +528,25 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| 引数   | 型      |    | 説明                                                                                          |
-| ---- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
+| 引数   | 型      |    | 説明                                                                                                               |
+| ---- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
+| info | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.dll**、**.plist** ファイルの情報として書き込みます<!-- END REF -->。
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
 この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**.exe または .dll ファイル用の *info* オブジェクト**
+***info* parameter object with a .exe or .dll file**
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
 
-*info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | 型    | 説明                                                                   |
 | ---------------- | ---- | -------------------------------------------------------------------- |
@@ -562,22 +560,22 @@ $fhandle:=$f.open("read")
 | OriginalFilename | Text |                                                                      |
 | WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
-`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. テキストでない型の値を渡した場合には、文字列に変換されます。
 
-`WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-**.plist ファイル用の *info* オブジェクト**
+***info* parameter object with a .plist file**
 
-*info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+Each valid property set in the *info* object parameter is written in the .plist file as a key. あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
 
-*info* に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. .plist ファイルに既存のそのほかのキーはそのまま維持されます。
 
 > 日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。
 
 #### 例題
 
 ```4d
-  // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
+  // set copyright, version and icon of a .exe file (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -590,15 +588,15 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
+  // set some keys in an info.plist file (all platforms)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2023" // テキスト
-$info.ProductVersion:=12 // 整数
-$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
-$info.CFBundleIconFile:="myApp.icns" // macOS 用
+$info.Copyright:="Copyright 4D 2023" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -622,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| 引数      | 型    |    | 説明            |
-| ------- | ---- | -- | ------------- |
-| content | BLOB | -> | ファイルの新しいコンテンツ |
+| 引数      | 型    |    | 説明                        |
+| ------- | ---- | -- | ------------------------- |
+| content | BLOB | -> | New contents for the file |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setContent()` 関数は、<!-- REF #FileClass.setContent().Summary -->*content* 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 #### 例題
 
@@ -669,11 +667,11 @@ $infoPlistFile.setAppInfo($info)
 
 #### 説明
 
-`.setText()` 関数は、<!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
-`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
 
-*text* には、ファイルに書き込むテキストを渡します。 テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
+In *text*, pass the text to write to the file. テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
 
 任意で、コンテンツの書き込みに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
@@ -684,7 +682,7 @@ $infoPlistFile.setAppInfo($info)
 
 文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに "-no-bom" 接尾辞 (例: "UTF-8-no-bom") が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットを BOMなしで使用します。
 
-*breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | 定数                            | 値 | 説明                                                                                                                                                                |
 | ----------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -696,7 +694,7 @@ $infoPlistFile.setAppInfo($info)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-> **互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 doc.4d.com の[互換性ページ](https://doc.4d.com/4dv19R/help/title/ja/page3239.html) を参照ください。
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### 例題
 
