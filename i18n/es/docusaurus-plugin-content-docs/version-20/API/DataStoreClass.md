@@ -277,7 +277,6 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -386,7 +385,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Histórico</summary>
@@ -448,19 +446,19 @@ Otras funcionalidades y servicios de 4D, como [backup](../Backup/backup.md), [vs
 Desea crear una copia de la carpeta de datos junto con su archivo de historial actual:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
-ds.flushAndLock() //Bloquear operaciones de escritura de otros procesos
+ds.flushAndLock() //Block write operations from other processes
 
-$dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copiar la carpeta de datos
+$dataFolder:=Folder(fk data folder)
+$dataFolder.copyTo($destination) //Copy the data folder
 
-$oldJournalPath:=New log file //Cerrar el historial y crear uno nuevo
-$oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Guardar el antiguo historial con datos
+$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournal:=File($oldJournalPath; fk platform path)
+$oldJournal.moveTo($destination) //Save the old journal with data
 
-ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
+ds.unlock() //Our copy is over, we can now unlock the datastore
 ```
 
 #### Ver también
@@ -468,7 +466,6 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -614,7 +611,7 @@ En un almacén de datos remoto:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -738,7 +735,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Histórico</summary>
@@ -930,7 +927,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -1279,7 +1276,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Histórico</summary>
