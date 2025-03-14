@@ -36,7 +36,6 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 :::
 
-<!-- REF #4D.HTTPAgent.new().Desc -->
 
 ## 4D.HTTPAgent.new()
 
