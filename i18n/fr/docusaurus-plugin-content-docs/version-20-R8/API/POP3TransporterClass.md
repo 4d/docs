@@ -215,7 +215,7 @@ La fonction retourne Null si :
 - *msgNumber* désigne un message inexistant,
 - le message a été marqué pour suppression à l'aide de [`.delete()`](#delete).
 
-**Objet retourné**
+**Returned object**
 
 `.getMail()` renvoie un [objet `Email`](EmailObjectClass.md#objet-email).
 
