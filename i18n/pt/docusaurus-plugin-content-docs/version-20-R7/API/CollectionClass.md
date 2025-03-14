@@ -2407,7 +2407,7 @@ valor de comparação propertyPath {valor de comparação logicalOperator proper
 
 onde:
 
-- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings.
+- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
 - **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
@@ -2426,14 +2426,14 @@ onde:
 
 - **value**: o valor a ser comparado com o valor atual da propriedade de cada elemento da coleção. Pode ser qualquer expressão de valor constante que corresponda à propriedade de tipo de dados do elemento ou um [**placeholder**](#using-placeholders).
  Quando usar um valor constante, as regras abaixo devem ser respeitadas:
- - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
- - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
- - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
- - constantes de tipo **date**: formato "YYYY-MM-DD"
- - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
- - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
+ - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
+ - **boolean** type constants: **true** or **false** (case sensitive).
+ - **numeric** type constants: decimals are separated by a '.' (period).
+ - **date** type constants: "YYYY-MM-DD" format
+ - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
+ - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 
-- **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
+- **logicalOperator**: used to join multiple conditions in the query (optional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
 | Conjunção | Símbolos                                                                            |
 | --------- | ----------------------------------------------------------------------------------- |
@@ -2464,7 +2464,7 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 Dois tipos de placeholders podem ser usados: **placeholders indexados** e **placeholders nomeados**.
 
-- **Placeholders indexados**: parâmetros são inseridos como `:paramIndex` (por exemplo, ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*.
+- **Placeholders indexados**: parâmetros são inseridos como `:paramIndex` (por exemplo, ":1", ":2"...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*.
 
 Exemplo:
 
@@ -2482,21 +2482,21 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-É possível misturar todos os tipos de argumentos em *queryString*. É possível misturar todos os tipos de argumentos em *queryString*.
+You can mix all argument kinds in *queryString*. É possível misturar todos os tipos de argumentos em *queryString*.
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
 
-O uso de placeholders em consultas **é recomendado** pelos seguintes motivos:
+Using placeholders in queries **is recommended** for the following reasons:
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
 ```4d
- $vquery:="status = 'público' & nome = "+meunome //usuário entra em seu nome
+ $vquery:="status = 'public' & name = "+myname //user enters their name
  $result:=$col.query($vquery)
 ```
 
-Essa consulta parece segura, pois os dados não públicos são filtrados. No entanto, se o usuário inserir na área *myname* algo como *"smith OR status='private'*,\* a string de consulta será modificada na etapa de interpretação e poderá retornar dados privados.
+Essa consulta parece segura, pois os dados não públicos são filtrados. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
 
 Ao usar placeholders, não é possível substituir as condições de segurança:
 
@@ -2504,7 +2504,7 @@ Ao usar placeholders, não é possível substituir as condições de segurança:
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*, isso não será interpretado na string de consulta, mas apenas passado como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
+In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
 2. Isso evita que você tenha que se preocupar com problemas de formatação ou caracteres, especialmente ao lidar com parâmetros *propertyPath* ou *value* que podem conter caracteres não alfanuméricos, como ".", "['...
 
