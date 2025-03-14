@@ -277,7 +277,6 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>履歴</summary>
@@ -383,7 +382,6 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>履歴</summary>
@@ -448,16 +446,16 @@ user / password / timeout / tls を指定してリモートデータストアに
 $destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
-ds.flushAndLock() // 他のプロセスからの書き込み操作をブロックします
+ds.flushAndLock() //Block write operations from other processes
 
 $dataFolder:=Folder(fk data folder)
-$dataFolder.copyTo($destination) // データフォルダーをコピーします
+$dataFolder.copyTo($destination) //Copy the data folder
 
-$oldJournalPath:=New log file // ジャーナルを閉じて、新しいものを作成します
+$oldJournalPath:=New log file //Close the journal and create a new one
 $oldJournal:=File($oldJournalPath; fk platform path)
-$oldJournal.moveTo($destination) // 閉じたジャーナルを保存します
+$oldJournal.moveTo($destination) //Save the old journal with data
 
-ds.unlock() // コピー操作をおこなったので、データストアのロックを解除します
+ds.unlock() //Our copy is over, we can now unlock the datastore
 ```
 
 #### 参照
@@ -465,7 +463,6 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>履歴</summary>
@@ -611,7 +608,7 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>履歴</summary>
@@ -735,7 +732,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>履歴</summary>
@@ -927,7 +924,7 @@ When this function is not called, new entity selections can be shareable, depend
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>履歴</summary>
@@ -1276,7 +1273,7 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>履歴</summary>
