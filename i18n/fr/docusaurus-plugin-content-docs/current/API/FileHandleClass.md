@@ -357,7 +357,7 @@ La fonction `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->renvoi
 
 Lorsque cette fonction est exécutée, la position courante ([`.offset`](#offset)) est mise à jour.
 
-:::caution Attention
+:::caution Warning
 
 Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de caractères et non un nombre d'octets. Pour plus d'informations, voir la [ description de .offset](#offset).
 
@@ -402,7 +402,7 @@ La chaîne de caractères *stopChar* n'est pas incluse dans le texte retourné. 
 
 Lorsque cette fonction est exécutée, le ([.offset](#offset)) est placé juste après la chaîne *stopChar*.
 
-:::caution Attention
+:::caution Warning
 
 Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de caractères et non un nombre d'octets. Pour plus d'informations, voir la [ description de .offset](#offset).
 
