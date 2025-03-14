@@ -202,7 +202,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 ## 4D 20.x LTS
 
-Voir [**Release Notes pour 4D 20.x LTS**](../../versioned_docs/version-20/Notes/updates.md).
+Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
 
 ## Tableau des bibliothèques
 

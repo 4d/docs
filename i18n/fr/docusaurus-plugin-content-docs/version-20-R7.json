@@ -68,7 +68,7 @@
     "description": "The label for category Commands in sidebar docs"
   },
   "sidebar.docs.category.4D Environment": {
-    "message": "4D Environment",
+    "message": "Environnement 4D",
     "description": "The label for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays": {
@@ -88,7 +88,7 @@
     "description": "The label for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management": {
-    "message": "Cache Management",
+    "message": "Gestion du cache",
     "description": "The label for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
@@ -100,39 +100,39 @@
     "description": "The label for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Compiler": {
-    "message": "Compiler",
+    "message": "Compilateur",
     "description": "The label for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Data Entry": {
-    "message": "Data Entry",
+    "message": "Saisie",
     "description": "The label for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {
-    "message": "Data Security",
+    "message": "Sécurité des données",
     "description": "The label for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods": {
-    "message": "Database Methods",
+    "message": "Méthodes base",
     "description": "The label for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time": {
-    "message": "Date and Time",
+    "message": "Dates et heures",
     "description": "The label for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access": {
-    "message": "Design Object Access",
+    "message": "Accès objets développement",
     "description": "The label for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop": {
-    "message": "Drag and Drop",
+    "message": "Glisser-Déposer",
     "description": "The label for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control": {
-    "message": "Entry Control",
+    "message": "Gestion de la saisie",
     "description": "The label for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder": {
-    "message": "File and Folder",
+    "message": "Fichier et dossier",
     "description": "The label for category File and Folder in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {
@@ -148,7 +148,7 @@
     "description": "The label for category Formulas in sidebar docs"
   },
   "sidebar.docs.category.Graphs": {
-    "message": "Graphs",
+    "message": "Graphes",
     "description": "The label for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP": {
@@ -156,11 +156,11 @@
     "description": "The label for category HTTP in sidebar docs"
   },
   "sidebar.docs.category.Hierarchical Lists": {
-    "message": "Hierarchical Lists",
+    "message": "Listes hiérarchiques",
     "description": "The label for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export": {
-    "message": "Import and Export",
+    "message": "Import-Export",
     "description": "The label for category Import and Export in sidebar docs"
   },
   "sidebar.docs.category.Interruptions": {
@@ -188,7 +188,7 @@
     "description": "The label for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math": {
-    "message": "Math",
+    "message": "Fonctions mathématiques",
     "description": "The label for category Math in sidebar docs"
   },
   "sidebar.docs.category.Menus": {
@@ -204,15 +204,15 @@
     "description": "The label for category Named Selections in sidebar docs"
   },
   "sidebar.docs.category.Objects (Forms)": {
-    "message": "Objects (Forms)",
+    "message": "Objets (Formulaires)",
     "description": "The label for category Objects (Forms) in sidebar docs"
   },
   "sidebar.docs.category.Objects (Language)": {
-    "message": "Objects (Language)",
+    "message": "Objets (Langage)",
     "description": "The label for category Objects (Language) in sidebar docs"
   },
   "sidebar.docs.category.On a Series": {
-    "message": "On a Series",
+    "message": "Fonctions statistiques",
     "description": "The label for category On a Series in sidebar docs"
   },
   "sidebar.docs.category.PHP": {
@@ -220,7 +220,7 @@
     "description": "The label for category PHP in sidebar docs"
   },
   "sidebar.docs.category.Pasteboard": {
-    "message": "Pasteboard",
+    "message": "Conteneur de données",
     "description": "The label for category Pasteboard in sidebar docs"
   },
   "sidebar.docs.category.Pictures": {
@@ -228,7 +228,7 @@
     "description": "The label for category Pictures in sidebar docs"
   },
   "sidebar.docs.category.Printing": {
-    "message": "Printing",
+    "message": "Impressions",
     "description": "The label for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications)": {
@@ -236,27 +236,27 @@
     "description": "The label for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface)": {
-    "message": "Process (User Interface)",
+    "message": "Process (Interface utilisateur)",
     "description": "The label for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Queries": {
-    "message": "Queries",
+    "message": "Recherches et tris",
     "description": "The label for category Queries in sidebar docs"
   },
   "sidebar.docs.category.Quick Report": {
-    "message": "Quick Report",
+    "message": "Etats rapides",
     "description": "The label for category Quick Report in sidebar docs"
   },
   "sidebar.docs.category.Record Locking": {
-    "message": "Record Locking",
+    "message": "Enregistrements (verrouillage)",
     "description": "The label for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Records": {
-    "message": "Records",
+    "message": "Enregistrements",
     "description": "The label for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations": {
-    "message": "Relations",
+    "message": "Liens",
     "description": "The label for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources": {
@@ -272,11 +272,11 @@
     "description": "The label for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "Protocole sécurisé",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
-    "message": "Selection",
+    "message": "Sélections",
     "description": "The label for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets": {
@@ -284,7 +284,7 @@
     "description": "The label for category Sets in sidebar docs"
   },
   "sidebar.docs.category.Spell Checker": {
-    "message": "Spell Checker",
+    "message": "Correcteur orthographique",
     "description": "The label for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String": {
@@ -292,23 +292,23 @@
     "description": "The label for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access": {
-    "message": "Structure Access",
+    "message": "Définition structure",
     "description": "The label for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text": {
-    "message": "Styled Text",
+    "message": "Texte multistyle",
     "description": "The label for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
-    "message": "Subrecords",
+    "message": "Sous-enregistrements",
     "description": "The label for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
-    "message": "System Documents",
+    "message": "Documents système",
     "description": "The label for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment": {
-    "message": "System Environment",
+    "message": "Environnement système",
     "description": "The label for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table": {
@@ -316,7 +316,7 @@
     "description": "The label for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools": {
-    "message": "Tools",
+    "message": "Outils",
     "description": "The label for category Tools in sidebar docs"
   },
   "sidebar.docs.category.Transactions": {
@@ -352,7 +352,7 @@
     "description": "The label for category Web Services (Client) in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Server)": {
-    "message": "Web Services (Server)",
+    "message": "Web Services (Serveur)",
     "description": "The label for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows": {
@@ -728,7 +728,7 @@
     "description": "The generated-index page title for category Commands in sidebar docs"
   },
   "sidebar.docs.category.4D Environment.link.generated-index.title": {
-    "message": "4D Environment",
+    "message": "Environnement 4D",
     "description": "The generated-index page title for category 4D Environment in sidebar docs"
   },
   "sidebar.docs.category.Arrays.link.generated-index.title": {
@@ -748,7 +748,7 @@
     "description": "The generated-index page title for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management.link.generated-index.title": {
-    "message": "Cache Management",
+    "message": "Gestion du cache",
     "description": "The generated-index page title for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections.link.generated-index.title": {
@@ -760,39 +760,39 @@
     "description": "The generated-index page title for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Compiler.link.generated-index.title": {
-    "message": "Compiler",
+    "message": "Compilateur",
     "description": "The generated-index page title for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Data Entry.link.generated-index.title": {
-    "message": "Data Entry",
+    "message": "Saisie",
     "description": "The generated-index page title for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security.link.generated-index.title": {
-    "message": "Data Security",
+    "message": "Sécurité des données",
     "description": "The generated-index page title for category Data Security in sidebar docs"
   },
   "sidebar.docs.category.Database Methods.link.generated-index.title": {
-    "message": "Database Methods",
+    "message": "Méthodes base",
     "description": "The generated-index page title for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time.link.generated-index.title": {
-    "message": "Date and Time",
+    "message": "Dates et heures",
     "description": "The generated-index page title for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access.link.generated-index.title": {
-    "message": "Design Object Access",
+    "message": "Accès objets développement",
     "description": "The generated-index page title for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop.link.generated-index.title": {
-    "message": "Drag and Drop",
+    "message": "Glisser-Déposer",
     "description": "The generated-index page title for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control.link.generated-index.title": {
-    "message": "Entry Control",
+    "message": "Gestion de la saisie",
     "description": "The generated-index page title for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder.link.generated-index.title": {
-    "message": "File and Folder",
+    "message": "Fichier et dossier",
     "description": "The generated-index page title for category File and Folder in sidebar docs"
   },
   "sidebar.docs.category.Form Events.link.generated-index.title": {
@@ -808,7 +808,7 @@
     "description": "The generated-index page title for category Formulas in sidebar docs"
   },
   "sidebar.docs.category.Graphs.link.generated-index.title": {
-    "message": "Graphs",
+    "message": "Graphes",
     "description": "The generated-index page title for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP.link.generated-index.title": {
@@ -816,11 +816,11 @@
     "description": "The generated-index page title for category HTTP in sidebar docs"
   },
   "sidebar.docs.category.Hierarchical Lists.link.generated-index.title": {
-    "message": "Hierarchical Lists",
+    "message": "Listes hiérarchiques",
     "description": "The generated-index page title for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export.link.generated-index.title": {
-    "message": "Import and Export",
+    "message": "Import-Export",
     "description": "The generated-index page title for category Import and Export in sidebar docs"
   },
   "sidebar.docs.category.Interruptions.link.generated-index.title": {
@@ -852,7 +852,7 @@
     "description": "The generated-index page title for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math.link.generated-index.title": {
-    "message": "Math",
+    "message": "Fonctions mathématiques",
     "description": "The generated-index page title for category Math in sidebar docs"
   },
   "sidebar.docs.category.Menus.link.generated-index.title": {
@@ -868,15 +868,15 @@
     "description": "The generated-index page title for category Named Selections in sidebar docs"
   },
   "sidebar.docs.category.Objects (Forms).link.generated-index.title": {
-    "message": "Objects (Forms)",
+    "message": "Objets (Formulaires)",
     "description": "The generated-index page title for category Objects (Forms) in sidebar docs"
   },
   "sidebar.docs.category.Objects (Language).link.generated-index.title": {
-    "message": "Objects (Language)",
+    "message": "Objets (Langage)",
     "description": "The generated-index page title for category Objects (Language) in sidebar docs"
   },
   "sidebar.docs.category.On a Series.link.generated-index.title": {
-    "message": "On a Series",
+    "message": "Fonctions statistiques",
     "description": "The generated-index page title for category On a Series in sidebar docs"
   },
   "sidebar.docs.category.PHP.link.generated-index.title": {
@@ -884,7 +884,7 @@
     "description": "The generated-index page title for category PHP in sidebar docs"
   },
   "sidebar.docs.category.Pasteboard.link.generated-index.title": {
-    "message": "Pasteboard",
+    "message": "Conteneur de données",
     "description": "The generated-index page title for category Pasteboard in sidebar docs"
   },
   "sidebar.docs.category.Pictures.link.generated-index.title": {
@@ -892,7 +892,7 @@
     "description": "The generated-index page title for category Pictures in sidebar docs"
   },
   "sidebar.docs.category.Printing.link.generated-index.title": {
-    "message": "Printing",
+    "message": "Impressions",
     "description": "The generated-index page title for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications).link.generated-index.title": {
@@ -900,7 +900,7 @@
     "description": "The generated-index page title for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
-    "message": "Process (User Interface)",
+    "message": "Process (Interface utilisateur)",
     "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Processes.link.generated-index.title": {
@@ -908,23 +908,23 @@
     "description": "The generated-index page title for category Processes in sidebar docs"
   },
   "sidebar.docs.category.Queries.link.generated-index.title": {
-    "message": "Queries",
+    "message": "Recherches et tris",
     "description": "The generated-index page title for category Queries in sidebar docs"
   },
   "sidebar.docs.category.Quick Report.link.generated-index.title": {
-    "message": "Quick Report",
+    "message": "Etats rapides",
     "description": "The generated-index page title for category Quick Report in sidebar docs"
   },
   "sidebar.docs.category.Record Locking.link.generated-index.title": {
-    "message": "Record Locking",
+    "message": "Enregistrements (verrouillage)",
     "description": "The generated-index page title for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Records.link.generated-index.title": {
-    "message": "Records",
+    "message": "Enregistrements",
     "description": "The generated-index page title for category Records in sidebar docs"
   },
   "sidebar.docs.category.Relations.link.generated-index.title": {
-    "message": "Relations",
+    "message": "Liens",
     "description": "The generated-index page title for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources.link.generated-index.title": {
@@ -940,11 +940,11 @@
     "description": "The generated-index page title for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol.link.generated-index.title": {
-    "message": "Secured Protocol",
+    "message": "Protocole sécurisé",
     "description": "The generated-index page title for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection.link.generated-index.title": {
-    "message": "Selection",
+    "message": "Sélections",
     "description": "The generated-index page title for category Selection in sidebar docs"
   },
   "sidebar.docs.category.Sets.link.generated-index.title": {
@@ -952,7 +952,7 @@
     "description": "The generated-index page title for category Sets in sidebar docs"
   },
   "sidebar.docs.category.Spell Checker.link.generated-index.title": {
-    "message": "Spell Checker",
+    "message": "Correcteur orthographique",
     "description": "The generated-index page title for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String.link.generated-index.title": {
@@ -960,23 +960,23 @@
     "description": "The generated-index page title for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access.link.generated-index.title": {
-    "message": "Structure Access",
+    "message": "Définition structure",
     "description": "The generated-index page title for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text.link.generated-index.title": {
-    "message": "Styled Text",
+    "message": "Texte multistyle",
     "description": "The generated-index page title for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords.link.generated-index.title": {
-    "message": "Subrecords",
+    "message": "Sous-enregistrements",
     "description": "The generated-index page title for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents.link.generated-index.title": {
-    "message": "System Documents",
+    "message": "Documents système",
     "description": "The generated-index page title for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment.link.generated-index.title": {
-    "message": "System Environment",
+    "message": "Environnement système",
     "description": "The generated-index page title for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table.link.generated-index.title": {
@@ -984,7 +984,7 @@
     "description": "The generated-index page title for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools.link.generated-index.title": {
-    "message": "Tools",
+    "message": "Outils",
     "description": "The generated-index page title for category Tools in sidebar docs"
   },
   "sidebar.docs.category.Transactions.link.generated-index.title": {
@@ -1020,7 +1020,7 @@
     "description": "The generated-index page title for category Web Services (Client) in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Server).link.generated-index.title": {
-    "message": "Web Services (Server)",
+    "message": "Web Services (Serveur)",
     "description": "The generated-index page title for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows.link.generated-index.title": {
