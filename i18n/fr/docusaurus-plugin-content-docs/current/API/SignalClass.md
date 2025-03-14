@@ -198,7 +198,7 @@ La fonction retourne la valeur de la propriété `.signaled`.
 - Evaluer cette valeur permet de savoir si la fonction a retourné à cause de l'appel de `.trigger( )` (`.signaled` est **true**) ou si le *timeout* a expiré (`.signaled` est **false**).
 - **false** if the timeout expired before the signal was triggered.
 
-:::note Attention
+:::note Warning
 
 **Attention** : L'appel de `.wait( )` sans *timeout* dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
 
