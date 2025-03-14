@@ -198,7 +198,7 @@ If the signal is already in the signaled state (i.e. the `.signaled` property is
 - シグナルがトリガーされた場合(`.trigger()` が呼び出された場合)には**true** が返されます。
 - シグナルがトリガーされる前にタイムアウトが失効した場合には**false** が返されます。
 
-:::note 警告
+:::note Warning
 
 *timeout* 引数を渡さずに `.wait()` をメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
 
