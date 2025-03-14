@@ -216,7 +216,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-n
 - *msgNumber* で指定したメッセージが存在しない場合
 - 指定したメッセージが [`.delete()`](#delete) によって削除フラグが立てられていた場合
 
-**返されるオブジェクト**
+**Returned object**
 
 `.getMail()` は [`Email` オブジェクト](EmailObjectClass.md#email-object) を返します。
 
