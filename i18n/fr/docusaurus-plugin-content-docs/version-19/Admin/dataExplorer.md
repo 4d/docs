@@ -68,7 +68,7 @@ La page contient plusieurs zones :
 - Sur le côté gauche, se trouvent la **zone des Dataclass** et la **zone des attributs**, pour sélectionner les dataclass et les attributs à afficher. Les attributs sont classés selon l'ordre de création de la structure sous-jacente. Les clés primaires et les attributs indexés ont une icône spécifique. Vous pouvez filtrer la liste des noms de dataclasses et d'attributs proposés en utilisant les zones de recherche respectives. ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - La partie centrale contient la **Zone de recherche** et la **Grille de données** (liste des entités de la dataclass sélectionnée). Chaque colonne de la grille représente un attribut du datastore.
-  - Par défaut, toutes les entités sont affichées. Vous pouvez filtrer les entités affichées en utilisant la zone de recherche. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced queries with expression](#advanced-queries-with-expression). Vous sélectionnez le mode de requête en cliquant sur le bouton correspondant (le bouton **X** permet de réinitialiser la zone de requête et donc de stopper le filtrage) : ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+  - Par défaut, toutes les entités sont affichées. Vous pouvez filtrer les entités affichées en utilisant la zone de recherche. Deux modes de requête sont disponibles : [Requête sur les attributs](#query-on-attributes) (sélectionné par défaut), et [Requête avancée avec expression](#advanced-queries-with-expression). Vous sélectionnez le mode de requête en cliquant sur le bouton correspondant (le bouton **X** permet de réinitialiser la zone de requête et donc de stopper le filtrage) : ![alt-text](../assets/en/Admin/dataExplorer4b.png)
 
   - Le nom de la dataclass sélectionnée est ajouté sous forme d'onglet au-dessus de la grille de données. A l'aide de ces onglets, vous pouvez passer d'une dataclasse à une autre qui a déjà été sélectionnée. Vous pouvez supprimer une dataclasse référencée en cliquant sur l'icône "supprimer" à droite du nom de la dataclass.
   - Vous pouvez réduire le nombre de colonnes en décochant les attributs dans la partie gauche. Vous pouvez également changer les colonnes dans la grille de données à l'aide du glisser-déposer. Vous pouvez cliquer sur l'en-tête d'une colonne pour [trier les entités](#ordering-entities) en fonction de ses valeurs (lorsque cela est possible).
@@ -169,7 +169,7 @@ Par exemple, avec la dataclass Employee, vous pouvez écrire :
 firstname = "Marie Sophie" ET manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](../API/EntitySelectionClass.md#queryplan) and [`queryPath`](../API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
+Vous pouvez cliquer sur l'icône `v` pour afficher le [`queryPlan`](../API/EntitySelectionClass.md#queryplan) et le [`queryPath`](../API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
