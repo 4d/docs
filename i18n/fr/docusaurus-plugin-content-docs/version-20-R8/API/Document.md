@@ -456,7 +456,7 @@ S'il existe déjà un fichier portant le même nom dans *destinationFolder*, par
 | -------------- | ------ | --------------------------------------------- |
 | `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
-**Valeur retournée**
+**Returned value**
 
 L'objet `File` copié.
 
@@ -499,7 +499,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 La fonction `.getContent()` <!-- REF #document.getContent().Summary -->retourne un objet `4D.Blob` contenant le contenu intégral du fichier<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
-**Valeur retournée**
+**Returned value**
 
 Un objet `4D.Blob`.
 
@@ -548,7 +548,7 @@ Le paramètre optionnel *size* spécifie les dimensions en pixels de l'icône re
 
 Si le fichier n'existe pas sur disque, une icône par défaut vide est retournée.
 
-**Valeur retournée**
+**Returned value**
 
 [Image](../Concepts/picture.html) de l'icône du fichier.
 
@@ -605,7 +605,7 @@ Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiqua
 
 Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
-**Valeur retournée**
+**Returned value**
 
 Texte du fichier.
 
