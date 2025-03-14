@@ -116,7 +116,7 @@ Os nomes das bandeiras personalizadas devem respeitar esta regra: a palavra-chav
 > - Para que uma palavra-chave seja tida em conta, tem de ser true.
 > - A interpretação dos marcadores de palavras-chave pode variar por cliente de correio.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -203,7 +203,7 @@ Charsets possíveis:
 | mail mode UTF8                 | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor padrão**)                                                                                                |
 | modo de correio UTF8 na base64 | US-ASCII_UTF8_B64                                 | headerCharset & bodyCharset: US-ASCII se possível, caso contrário UTF-8 & base64                                                                                                                                                |
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -304,7 +304,7 @@ Pode passar:
 
 O parâmetro destinationBox permite-lhe passar um valor de texto com o nome da caixa de correio onde as cópias das mensagens serão colocadas.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -405,7 +405,7 @@ Por outras palavras, uma tentativa de criar "Projectos/IMAP/Doc" num servidor em
 
 No parâmetro `name`, passe o nome da nova caixa de correio.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -483,7 +483,7 @@ Pode passar:
 
 A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -581,7 +581,7 @@ No parâmetro `name`, passe o nome da caixa de correio a ser excluída.
 > - Todas as mensagens na caixa de correio eliminadas serão também eliminadas.
 > - A capacidade de apagar uma caixa de correio depende do servidor de correio.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -652,7 +652,7 @@ End if
 
 A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->remove todas as mensagens com o sinalizador "deleted" do servidor de e-mail IMAP.<!-- END REF --> O sinalizador "deleted" pode ser definido com os métodos [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -726,7 +726,7 @@ No parâmetro opcional *name*, passe o nome da caixa de correio a ser acessada. 
 
 Se o *nome* da caixa de correio não for selecionável ou não existir, a função gera um erro e retorna **null**.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `boxInfo` retornado contém as seguintes propriedades:
 
@@ -1175,7 +1175,7 @@ O parâmetro destinationBox permite-lhe passar um valor de texto com o nome da c
 
 > Esta função só é suportada por servidores IMAP em conformidade com o RFC [8474](https://tools.ietf.org/html/rfc8474).
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -1357,7 +1357,7 @@ Consulte [.addFlags()](#addflags) para obter mais informações sobre sinalizado
 
 > - Para que uma palavra-chave seja tida em conta, tem de ser true.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -1427,7 +1427,7 @@ No parâmetro `currentName`, passe o nome da caixa de correio a ser renomeada.
 
 Passe o novo nome da caixa de correio no parâmetro `newName`.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -1664,7 +1664,7 @@ O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os va
 > - Se não houver uma conexão aberta, `.selectBox()` abrirá uma conexão.
 > - Se a conexão não tiver sido usada desde o atraso de conexão designado (veja `IMAP New transporter`), a função [`.checkConnection()`](#checkconnection) será automaticamente chamada.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `boxInfo` retornado contém as seguintes propriedades:
 
@@ -1728,7 +1728,7 @@ A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->
 
 No parâmetro `nome`, passe o nome da caixa de correio para adicionar (inscrever) para suas caixas de correio "inscritas".
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
@@ -1801,7 +1801,7 @@ A função `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary
 
 No parâmetro `name`, passe o nome da caixa de correio para remover (cancelar a subscrição) das suas caixas de correio activas.
 
-**Objeto devolvido**
+**Returned object**
 
 A função devolve um objecto que descreve o estado IMAP:
 
