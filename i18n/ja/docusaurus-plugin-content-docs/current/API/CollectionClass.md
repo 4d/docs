@@ -2435,7 +2435,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 詳細は以下の通りです:
 
-- **propertyPath**: クエリの実行対象となるプロパティのパス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 属性パスが `Collection` 型である場合、すべてのオカレンスを管理するには `[]` 記法を使用してください (例: `children[].age` など)。
+- **propertyPath**: クエリの実行対象となるプロパティのパス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
 - **比較演算子**: *propertyPath* 引数と *value* 引数の比較に使用する記号 以下の記号がサポートされます:
 
@@ -2454,14 +2454,14 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 - **値** (value): コレクションの各要素のプロパティのカレント値に対して比較する値。 要素のデータ型に合致する任意の定数値の式または[**プレースホルダー**](#プレースホルダーを仕様する)であることができます。
  定数値を使用する場合、以下の原則に従う必要があります:
- - **テキスト** テキスト型の定数値の場合は単一引用符つき、あるいはなしでも渡すことができます(後述の **引用符を使用する** 参照)。 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
- - **ブール** 型の定数値: **true** または **false** (文字の大小を区別します)
- - **数値** 型の定数値: 浮動小数点は '.' (ピリオド) で区切られます。
- - **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
- - **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
- - IN 記号を使用したクエリの場合、*値* はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
+ - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
+ - **boolean** type constants: **true** or **false** (case sensitive).
+ - **numeric** type constants: decimals are separated by a '.' (period).
+ - **date** type constants: "YYYY-MM-DD" format
+ - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
+ - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 
-- **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
+- **logicalOperator**: used to join multiple conditions in the query (optional). 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
 
 | 結合  | 記号                                                                                  |
 | --- | ----------------------------------------------------------------------------------- |
@@ -2492,7 +2492,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 プレースホルダーには二つの種類があります。**インデックスプレースホルダー** および **命名プレースホルダー** です。
 
-- **インデックスプレースホルダー**: *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。
+- **インデックスプレースホルダー**: *queryString* に `:paramIndex` (例 :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。
 
 例:
 
@@ -2510,21 +2510,21 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-*queryString* には、すべての種類の引数 を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます:
+You can mix all argument kinds in *queryString*. *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
 
-以下の理由から、クエリでのプレースホルダーの使用が **推奨されます**:
+Using placeholders in queries **is recommended** for the following reasons:
 
 1. 悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。 たとえば、以下のようなクエリ文字列を考えます:
 
 ```4d
- $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
+ $vquery:="status = 'public' & name = "+myname //user enters their name
  $result:=$col.query($vquery)
 ```
 
-非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
+非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
 
 プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
 
@@ -2532,7 +2532,7 @@ $c:=$myCol.query(":att=:name";$o)
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-この場合、ユーザーが *myname* エリアに *smith OR status='private'* と入力した場合でも、それはクエリ文字列 とはみなされず、値として渡されるだけです。 "smith OR status='private' " という名前の人物を検索したところで、結果は失敗に終わるだけです。
+In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. "smith OR status='private' " という名前の人物を検索したところで、結果は失敗に終わるだけです。
 
 2. フォーマットや文字の問題を心配する必要がありません。これは、*propertyPath* や *値* がたとえば "."、"[' ...などの英数字でない文字を格納している可能性がある場合にとくに有用です。
 
