@@ -84,7 +84,7 @@
     "description": "The label for category BLOB in sidebar docs"
   },
   "sidebar.docs.category.Boolean": {
-    "message": "Boolean",
+    "message": "Booléens",
     "description": "The label for category Boolean in sidebar docs"
   },
   "sidebar.docs.category.Cache Management": {
@@ -288,7 +288,7 @@
     "description": "The label for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String": {
-    "message": "String",
+    "message": "Chaînes de caractères",
     "description": "The label for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access": {
@@ -356,7 +356,7 @@
     "description": "The label for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows": {
-    "message": "Windows",
+    "message": "Fenêtres",
     "description": "The label for category Windows in sidebar docs"
   },
   "sidebar.docs.category.XML DOM": {
