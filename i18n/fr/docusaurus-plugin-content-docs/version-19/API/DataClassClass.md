@@ -814,18 +814,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Différent des valeurs null ou undefined
+#### Not equal to null or undefined values
 
 Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
