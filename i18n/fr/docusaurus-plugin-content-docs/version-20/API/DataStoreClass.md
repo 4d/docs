@@ -277,7 +277,6 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Historique</summary>
@@ -383,7 +382,6 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Historique</summary>
@@ -445,19 +443,19 @@ D'autres fonctions et services 4D, notamment [backup](../Backup/backup.md), [vss
 Vous voulez créer une copie du dossier de données avec son fichier journal courant :
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
-ds.flushAndLock() //Bloque les opérations d'écriture des autres process
+ds.flushAndLock() //Block write operations from other processes
 
-$dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copie le dossier de données
+$dataFolder:=Folder(fk data folder)
+$dataFolder.copyTo($destination) //Copy the data folder
 
-$oldJournalPath:=New log file //Ferme le journal et en créer un nouveau
-$oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Sauvegarde l'ancien journal avec les données
+$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournal:=File($oldJournalPath; fk platform path)
+$oldJournal.moveTo($destination) //Save the old journal with data
 
-ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller le datastore
+ds.unlock() //Our copy is over, we can now unlock the datastore
 ```
 
 #### Voir également
@@ -465,7 +463,6 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Historique</summary>
@@ -611,7 +608,7 @@ Sur un datastore distant :
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -735,7 +732,7 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Historique</summary>
@@ -927,7 +924,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -1277,7 +1274,7 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Historique</summary>
