@@ -1519,7 +1519,6 @@ We want to disallow formulas, for example when the user enters their query:
 [`.query()`](EntitySelectionClass.md#query) for entity selections
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>History</summary>

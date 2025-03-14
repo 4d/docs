@@ -624,7 +624,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>History</summary>
