@@ -456,7 +456,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 | -------------- | - | ------------------ |
 | `fk overwrite` | 4 | 既存要素があれば、それを上書きします |
 
-**戻り値**
+**Returned value**
 
 コピーされた `Folder` オブジェクト。
 
@@ -503,7 +503,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 *path* には、返すべきファイルの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
-**戻り値**
+**Returned value**
 
 `File` オブジェクト (無効な POSIX *path* の場合には null)。
 
@@ -554,7 +554,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのファイルが含まれます |
 | `fk ignore invisible` | 8 | 非表示設定のファイルは表示されません                    |
 
-**戻り値**
+**Returned value**
 
 `File` オブジェクトのコレクション。
 
@@ -613,7 +613,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 *path* には、返すべきフォルダーの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
-**戻り値**
+**Returned value**
 
 `Folder` オブジェクト (無効な POSIX *path* の場合には null)。
 
@@ -662,7 +662,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのフォルダーが含まれます |
 | `fk ignore invisible` | 8 | 非表示設定のフォルダーは表示されません                    |
 
-**戻り値**
+**Returned value**
 
 `Folder` オブジェクトのコレクション。
 
@@ -710,7 +710,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 フォルダーがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。
 
-**戻り値**
+**Returned value**
 
 フォルダーアイコンの [ピクチャー](Concepts/dt_picture.md)。
 
