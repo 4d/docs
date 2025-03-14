@@ -116,7 +116,7 @@ Los nombres de las banderas personalizadas deben respetar esta regla: la palabra
 > - Para que una palabra clave se tenga en cuenta tiene que ser true.
 > - La interpretación de los indicadores de palabras claves puede variar según el cliente de correo.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -203,7 +203,7 @@ Charsets posibles:
 | mail mode UTF8           | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & Quoted-printable (**valor por defecto**)                                                                                              |
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | headerCharset & bodyCharset: US-ASCII si es posible, de lo contrario UTF-8 & base64                                                                                                                                                   |
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -304,7 +304,7 @@ Puede pasar:
 
 El parámetro *destinationBox* permite pasar un valor texto con el nombre del buzón donde se colocarán las copias de los mensajes.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -405,7 +405,7 @@ En otras palabras, un intento de crear "Projects/IMAP/Doc" en un servidor en el 
 
 En el parámetro `name`, pase el nombre del nuevo buzón.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -483,7 +483,7 @@ Puede pasar:
 
 La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -581,7 +581,7 @@ En el parámetro `name`, pase el nombre del buzón a eliminar.
 > - Todos los mensajes del buzón eliminado también se borrarán.
 > - La posibilidad de eliminar un buzón depende del servidor de correo.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -652,7 +652,7 @@ End if
 
 La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con el marcador "deleted" del servidor de correo IMAP.<!-- END REF --> El marcador "deleted" puede definirse con los métodos [`delete()`](#delete) o [`addFlags()`](#addflags).
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -726,7 +726,7 @@ En el parámetro opcional *name*, pase el nombre del buzón a acceder. El nombre
 
 Si el buzón *name* no es seleccionable o no existe, la función genera un error y devuelve **null**.
 
-**Objeto devuelto**
+**Returned object**
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
@@ -1175,7 +1175,7 @@ El parámetro *destinationBox* permite pasar un valor texto con el nombre del bu
 
 > Esta función sólo es compatible con los servidores IMAP que cumplen la RFC [8474](https://tools.ietf.org/html/rfc8474).
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -1357,7 +1357,7 @@ Consulte [.addFlags()](#addflags) para obtener más información sobre las bande
 
 > - Para que una palabra clave se tenga en cuenta tiene que ser true.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -1427,7 +1427,7 @@ En el parámetro `currentName`, pase el nombre del buzón a renombrar.
 
 Pase el nuevo nombre del buzón en el parámetro `newName`.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -1666,7 +1666,7 @@ El parámetro opcional *state* define el tipo de acceso al buzón. Los valores p
 > - Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.
 > - Si la conexión no ha sido usada desde la demora de conexión designada (ver `IMAP New transporter`), la función [`.checkConnection()`](#checkconnection) es llamada automáticamente.
 
-**Objeto devuelto**
+**Returned object**
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
@@ -1730,7 +1730,7 @@ La función `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary --
 
 En el parámetro `name`, pase el nombre del buzón a añadir (suscribir) a sus buzones "suscritos".
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
@@ -1803,7 +1803,7 @@ La función `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summar
 
 En el parámetro `name`, pase el nombre del buzón a eliminar (darse de baja) de sus buzones activos.
 
-**Objeto devuelto**
+**Returned object**
 
 La función devuelve un objeto que describe el estado IMAP:
 
