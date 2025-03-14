@@ -14,7 +14,7 @@ title: VP SET WORKBOOK OPTIONS
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro     |                  |
 | optionObj  | Object | -> | Objeto que contém as opções do livro a definir | <!-- END REF --> |
 
-## Descrição
+#### Descrição
 
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET OPTIONS.Summary -->
 define as opções da pasta de trabalho em *vpAreaName*<!-- END REF -->.
@@ -90,7 +90,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | tabStripWidth                         | number                  | Width of the tab strip when position is left or right. O padrão e o mínimo são 80.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | useTouchLayout                        | boolean                 | Se deve ser usado o layout de toque para apresentar o componente Spread.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-## Exemplo
+#### Exemplo
 
 Para definir a opção allowExtendpasteRange em "ViewProArea":
 
@@ -101,7 +101,7 @@ $workbookOptions:= New Object
 $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 ```
 
-## Veja também
+#### Veja também
 
 [VP Get workbook options](vp-get-workbook-options.md)
 
