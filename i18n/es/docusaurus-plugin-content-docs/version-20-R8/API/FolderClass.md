@@ -101,7 +101,7 @@ La función `.create()` <!-- REF #FolderClass.create().Summary -->crea una carpe
 
 Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades [platformPath](#platformpath) o [path](#path). Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
 
-**Valor devuelto**
+**Returned value**
 
 - **True** si la carpeta se crea con éxito;
 - **False** si ya existe una carpeta con el mismo nombre o si se ha producido un error.
@@ -170,7 +170,7 @@ Por defecto en macOS, la función crea un alias estándar. También puede crear 
 
 En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro *aliasType* es ignorado).
 
-**Objeto devuelto**
+**Returned object**
 
 Un objeto `4D.File` con la propiedad `isAlias` definida en **true**.
 
@@ -299,7 +299,7 @@ La *destinationFolder* debe existir en el disco, de lo contrario se genera un er
 
 Por defecto, la carpeta conserva su nombre cuando se mueve. Por defecto, la carpeta conserva su nombre cuando se mueve. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-**Objeto devuelto**
+**Returned object**
 
 El objeto `Folder` movido.
 
@@ -355,7 +355,7 @@ La función `.rename()` <!-- REF #FolderClass.rename().Summary -->renombra la ca
 
 El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
-**Objeto devuelto**
+**Returned object**
 
 El objeto `Folder` renombrado.
 
