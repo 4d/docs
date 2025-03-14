@@ -357,7 +357,7 @@ $s:=$fh.readText()
 
 この関数を実行すると、現在の位置 ([`.offset`](#offset)) が更新されます。
 
-:::caution 警告
+:::caution Warning
 
 この関数は、[`.offset`](#offset) プロパティがバイト数ではなく文字数であることを前提としています。 詳細については、[.offset の説明](#offset) を参照ください。
 
@@ -402,7 +402,7 @@ $s:=$fh.readText()
 
 この関数を実行すると、[.offset](#offset) が *stopChar* 文字列の直後に移動します。
 
-:::caution 警告
+:::caution Warning
 
 この関数は、[`.offset`](#offset) プロパティがバイト数ではなく文字数であることを前提としています。 詳細については、[.offset の説明](#offset) を参照ください。
 
