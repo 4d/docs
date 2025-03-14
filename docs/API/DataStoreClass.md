@@ -38,7 +38,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 
 
-<!-- REF DataStoreClass.dataclassName.Desc -->
+
 ## *.dataclassName*
 
 <details><summary>History</summary>
@@ -67,7 +67,6 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
  $sel:=ds.Employee.all()
 ```
 
-<!-- END REF -->
 
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
@@ -104,7 +103,6 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -210,7 +208,6 @@ You want to know the number of encrypted tables in the current data file:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>History</summary>
@@ -290,7 +287,6 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -367,7 +363,6 @@ $info:=$ds.getAllRemoteContexts()
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
 ## .getGlobalStamp()
 
 <details><summary>History</summary>
@@ -487,7 +482,6 @@ On a remote datastore:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
 ## .getRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -608,7 +602,6 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
 ## .locked()
 
 <details><summary>History</summary>
@@ -800,7 +793,6 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
 ## .setGlobalStamp()
 
 <details><summary>History</summary>
@@ -857,7 +849,6 @@ ds.setGlobalStamp($newValue)
 
 [.getGlobalStamp()](#getglobalstamp)
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -1203,7 +1194,6 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
 ## .unlock()
 
 <details><summary>History</summary>

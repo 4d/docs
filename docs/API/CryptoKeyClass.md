@@ -24,6 +24,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 |[<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
+|[<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem().Summary -->|
 |[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary --> |
 |[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary --> |
 |[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary --> |
@@ -296,6 +297,8 @@ The returned value is the public key.
 
 <!-- REF #CryptoKey.pem.Summary -->
 PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
+
+<!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()

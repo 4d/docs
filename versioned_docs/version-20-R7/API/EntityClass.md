@@ -95,7 +95,7 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 #### Description
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->.
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. 
 
 This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
@@ -630,7 +630,6 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
 ## .getRemoteContextAttributes()
 
 <details><summary>History</summary>
