@@ -120,7 +120,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>履歴</summary>
@@ -170,7 +169,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>履歴</summary>
@@ -223,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Persons データクラスのキャッシュ = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -674,7 +673,7 @@ $number:=$ds.Persons.getCount()
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>履歴</summary>
@@ -1020,18 +1019,18 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
  $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
-#### null または未定義の値と等しくない
+#### Not equal to null or undefined values
 
 "*value* と等しくない" 比較演算子は(`#` または `!=`) は値がnull または未定義である属性は返しません。 例えば、以下のクエリは"info.married" のステータスが `false` である人物のみを返し、"info.married" プロパティが"null" または欠けている人物は返しません:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") // 属性の値がfalseである人物のみを探す
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 "info.married" のステータスが`false`、null、あるいは未定義である人物を探したい場合には、以下のような書き方をする必要があります:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") // 属性の値がfalse、null あるいは未定義であるものを探す
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
@@ -1069,13 +1068,13 @@ ds.Class.info:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// B と C を返します
-// "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// A のみを返します
-// "すべての valプロパティ値が 0 と異なるエンティティ" を探します
-// これは、次のクエリと同義です: 
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
