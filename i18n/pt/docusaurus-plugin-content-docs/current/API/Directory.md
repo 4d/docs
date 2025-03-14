@@ -456,7 +456,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 | -------------- | ----- | ----------------------------------------------- |
 | `fk overwrite` | 4     | Sobrescrever os elementos existentes, se houver |
 
-**Valor retornado**
+**Returned value**
 
 O objeto `Folder` copiado.
 
@@ -503,7 +503,7 @@ A função `.file()` cria <!-- REF #directory.file().Summary -->um objeto `File`
 
 In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
 
-**Valor retornado**
+**Returned value**
 
 Um objeto `File` ou null se *path* for inválido.
 
@@ -554,7 +554,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 | `fk recursive`        | 1     | A coleção contém arquivos da pasta especificada e suas subpastas |
 | `fk ignore invisible` | 8     | Arquivos invisíveis não estão listados                           |
 
-**Valor retornado**
+**Returned value**
 
 Coleção de objetos `File`.
 
@@ -613,7 +613,7 @@ A função `.folder()` <!-- REF #directory.folder().Summary -->cria um objeto `F
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
-**Valor retornado**
+**Returned value**
 
 Um objeto `Folder` ou null se *path* for inválido.
 
@@ -662,7 +662,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 | `fk recursive`        | 1     | A coleção contém pastas da pasta especificada e suas subpastas |
 | `fk ignore invisible` | 8     | Pastas invisíveis não estão listados                           |
 
-**Valor retornado**
+**Returned value**
 
 Coleção de objetos `Folder`.
 
@@ -710,7 +710,7 @@ The optional *size* parameter specifies the dimensions in pixels of the returned
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 
-**Valor retornado**
+**Returned value**
 
 [Imagem](Concepts/dt_picture.md) do ícone da pasta.
 
