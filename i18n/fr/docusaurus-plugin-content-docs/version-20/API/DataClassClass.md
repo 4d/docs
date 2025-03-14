@@ -120,7 +120,6 @@ Considérant les propriétés de table suivantes :
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Historique</summary>
@@ -170,7 +169,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Historique</summary>
@@ -223,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -674,7 +673,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Historique</summary>
@@ -1020,18 +1019,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Différent des valeurs null ou undefined
+#### Not equal to null or undefined values
 
 Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
@@ -1069,13 +1068,13 @@ Considérons les résultats suivants :
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// renvoie B et C
-// trouve "entités avec 0 dans au moins une propriété val"
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// renvoie uniquement A
-// trouve les "entités dont toutes les propriétés val sont différentes de 0"
-// ce qui est équivalent à
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
