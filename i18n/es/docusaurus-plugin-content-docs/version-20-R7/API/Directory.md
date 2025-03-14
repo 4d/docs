@@ -456,7 +456,7 @@ Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defe
 | -------------- | ----- | ------------------------------------------------- |
 | `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
-**Valor devuelto**
+**Returned value**
 
 El objeto `Folder` copiado.
 
@@ -503,7 +503,7 @@ La función `.file()` crea <!-- REF #directory.file().Summary -->un objeto `File
 
 En *ruta*, pase una ruta POSIX relativa para designar el archivo a regresar. La ruta se evaluará a partir de la carpeta padre como raíz.
 
-**Valor devuelto**
+**Returned value**
 
 Un objeto `File` o null si *path* no es válido.
 
@@ -554,7 +554,7 @@ Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colec
 | `fk recursive`        | 1     | La colección contiene los archivos de la carpeta especificada y sus subcarpetas |
 | `fk ignore invisible` | 8     | Los archivos invisibles no aparecen en la lista                                 |
 
-**Valor devuelto**
+**Returned value**
 
 Colección de objetos`File`.
 
@@ -613,7 +613,7 @@ La función `.folder()` <!-- REF #directory.folder().Summary -->crea un objeto `
 
 En *path*, pase una ruta relativa POSIX para designar la carpeta a devolver. La ruta se evaluará a partir de la carpeta padre como raíz.
 
-**Valor devuelto**
+**Returned value**
 
 Un objeto `Folder` o null si *path* es inválido.
 
@@ -662,7 +662,7 @@ Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colec
 | `fk recursive`        | 1     | La colección contiene las carpetas de la carpeta especificada y sus subcarpetas |
 | `fk ignore invisible` | 8     | Los archivos invisibles no aparecen en la lista                                 |
 
-**Valor devuelto**
+**Returned value**
 
 Colección de objetos `Folder`.
 
@@ -710,7 +710,7 @@ El parámetro opcional *size* especifica las dimensiones en píxeles del icono d
 
 Si la carpeta no existe en el disco, se devuelve un icono vacío por defecto.
 
-**Valor devuelto**
+**Returned value**
 
 [Imagen](Concepts/dt_picture.md) del icono de la carpeta.
 
