@@ -814,18 +814,18 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
  $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
-#### null または未定義の値と等しくない
+#### Not equal to null or undefined values
 
 "*value* と等しくない" 比較演算子は(`#` または `!=`) は値がnull または未定義である属性は返しません。 例えば、以下のクエリは"info.married" のステータスが `false` である人物のみを返し、"info.married" プロパティが"null" または欠けている人物は返しません:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") // 属性の値がfalseである人物のみを探す
+$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
 ```
 
 "info.married" のステータスが`false`、null、あるいは未定義である人物を探したい場合には、以下のような書き方をする必要があります:
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") // 属性の値がfalse、null あるいは未定義であるものを探す
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
 ```
 
 
