@@ -14,7 +14,7 @@ title: VP SET WORKBOOK OPTIONS
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名    |                  |
 | optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト | <!-- END REF --> |
 
-## 説明
+#### 説明
 
 `VP SET WORKBOOK OPTIONS` コマンドは、<!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->*vpAreaName* 引数で指定した View Pro エリアのワークブックオプションを設定します<!-- END REF -->。
 
@@ -89,7 +89,7 @@ title: VP SET WORKBOOK OPTIONS
 | tabStripWidth                         | number                  | タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | useTouchLayout                        | boolean                 | Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-## 例題
+#### 例題
 
 "ViewProArea" 内で allowExtendpasteRange オプションを設定します:
 
@@ -102,7 +102,7 @@ $workbookOptions.allowExtendPasteRange:=True
 VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 ```
 
-## 参照
+#### 参照
 
 [VP Get workbook options](vp-get-workbook-options.md)
 
