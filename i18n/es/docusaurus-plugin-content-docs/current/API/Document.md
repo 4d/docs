@@ -456,7 +456,7 @@ Si ya existe un archivo con el mismo nombre en la *destinationFolder*, por defec
 | -------------- | ----- | ------------------------------------------------- |
 | `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
-**Valor devuelto**
+**Returned value**
 
 El objeto `File` copiado.
 
@@ -499,7 +499,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un objeto `4D.Blob` que contiene todo el contenido de un archivo<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
-**Valor devuelto**
+**Returned value**
 
 Un objeto `4D.Blob`.
 
@@ -548,7 +548,7 @@ El parámetro opcional *size* especifica las dimensiones en píxeles del icono d
 
 Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 
-**Valor devuelto**
+**Returned value**
 
 [Imagen](../Concepts/picture.html) del icono del archivo.
 
@@ -605,7 +605,7 @@ En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar 
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-**Valor devuelto**
+**Returned value**
 
 Texto del archivo.
 
