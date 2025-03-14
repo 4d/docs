@@ -101,7 +101,7 @@ La fonction `.create()` <!-- REF #FolderClass.create().Summary -->crée un dossi
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le dossier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
-**Valeur retournée**
+**Returned value**
 
 - **Vrai** si le dossier est créé avec succès ;
 - **Faux** si un dossier du même nom existe déjà ou si une erreur s'est produite.
@@ -170,7 +170,7 @@ Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez égaleme
 
 Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre *aliasType* est ignoré).
 
-**Objet retourné**
+**Returned object**
 
 Un objet `4D.File` avec la propriété `isAlias` mise à **true**.
 
@@ -299,7 +299,7 @@ Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
 Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-**Objet retourné**
+**Returned object**
 
 L'objet `Folder` déplacé.
 
@@ -355,7 +355,7 @@ La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dos
 
 Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
-**Objet retourné**
+**Returned object**
 
 L'objet `Folder` renommé.
 
