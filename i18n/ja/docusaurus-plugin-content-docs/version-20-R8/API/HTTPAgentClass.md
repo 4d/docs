@@ -35,69 +35,67 @@ HTTPAgent オブジェクトは共有可能なため、 シングルトンクラ
 
 :::
 
-<!-- REF #4D.HTTPAgent.new().Desc -->
-
 ## 4D.HTTPAgent.new()
 
 <!-- REF #4D.HTTPAgent.new().Syntax -->**4D.HTTPAgent.new**( { *options* : Object } ) : 4D.HTTPAgent<!-- END REF -->
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| 引数      | 型                                                 |                             | 説明                     |
-| ------- | ------------------------------------------------- | :-------------------------: | ---------------------- |
-| options | Object                                            |              ->             | HTTPAgent のデフォルトのオプション |
-| 戻り値     | [4D.HTTPAgent](#httpagent-オブジェクト) | <- | 新規 HTTPAgent オブジェクト    |
+| 引数      | 型                                                 |                             | 説明                                |
+| ------- | ------------------------------------------------- | :-------------------------: | --------------------------------- |
+| options | Object                                            |              ->             | default options for the HTTPAgent |
+| 戻り値     | [4D.HTTPAgent](#httpagent-object) | <- | New HTTPAgent object              |
 
 <!-- END REF -->
 
 #### 説明
 
-`4D.HTTPAgent.new()` 関数は、<!-- REF #4D.HTTPAgent.new().Summary -->*options* 引数で定義される設定で共有可能な HTTPAgent オブジェクトを作成し、`4D.HTTPAgent` オブジェクトを返します<!-- END REF -->。
+The `4D.HTTPAgent.new()` function <!-- REF #4D.HTTPAgent.new().Summary -->creates a shareable HTTPAgent object with the defined *options*, and returns a `4D.HTTPAgent` object<!-- END REF -->.
 
-返された [`HTTPAgentオブジェクト`](#httpagent-オブジェクト) は、HTTPサーバーへの接続をカスタマイズするのに使用します。
+The returned [`HTTPAgent object`](#httpagent-object) is used to customize connections to HTTP servers.
 
 #### `options` 引数
 
-*options* に渡すオブジェクトは、次のプロパティを持つことができます (すべてのプロパティが任意です):
+In the *options* parameter, pass an object that can contain the following properties (all the properties are optional):
 
 :::note
 
-HTTPAgent のオプションは [HTTPRequest のオプション](HTTPRequestClass.md#4dhttprequestnew) と統合されます (HTTPRequest オプションが優先されます)。特定のエージェントが定義されていない場合、グローバルエージェントが使用されます。
+HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#4dhttprequestnew) (HTTPRequest options take precedence); if no specific agent is defined, a global agent is used.
 
 :::
 
-| プロパティ                  | 型       | デフォルト                                                                                                                            | 説明                                      |
-| ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| keepAlive              | Boolean | true                                                                                                                             | 当該エージェントについて keep-alive を有効にします         |
-| maxSockets             | Integer | 65535                                                                                                                            | サーバーあたりの最大ソケット数                         |
-| maxTotalSockets        | Integer | 65535                                                                                                                            | エージェントの最大ソケット数                          |
-| timeout                | Real    | undefined                                                                                                                        | 定義されている場合、未使用のソケットが閉じられるまでのタイムアウト       |
-| certificatesFolder     | Folder  | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用するクライアント証明書フォルダー    |
-| minTLSVersion          | Text    | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに設定する TLS の最小バージョン     |
-| protocol               | Text    | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用されるプロトコル            |
-| validateTLSCertificate | Boolean | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使用したリクエストについて、TLS 証明書の検証をおこなうか |
+| プロパティ                  | 型       | デフォルト                                                                                                                                             | 説明                                                                          |
+| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                          |
+| maxSockets             | Integer | 65535                                                                                                                                             | Maximum number of sockets per server                                        |
+| maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                     |
+| timeout                | Real    | undefined                                                                                                                                         | If defined, timeout after which an unused socket is closed                  |
+| certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Sets the active client certificates folder for the requests using the agent |
+| minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Sets the minimum version of TLS for the requests using this agent           |
+| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocol used for the requests using the agent                              |
+| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent                     |
 
 :::note
 
-同じエージェントを使って複数のサーバーにリクエストすることができます。 その場合各サーバーは、同じエージェントオプションを使用した独自の接続プールを持ちます。
+You can request multiple servers using the same agent. In that case, each server will have its own pool of connections using the same agent options.
 
 :::
 
 #### 例題
 
-HTTPAgent の作成:
+Creating the HTTPAgent:
 
 ```4d
 var $options:={}
-$options.maxSockets:=5 // サーバー毎の最大ソケット数
-$options.maxTotalSockets:=10 // エージェントの最大ソケット数
-$options.validateTLSCertificate:=True // サーバーの証明書を検証します
+$options.maxSockets:=5 //5 is the maximum number of sockets per server
+$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
+$options.validateTLSCertificate:=True //To validate the sever's certificate
 
 var $myAgent:=4D.HTTPAgent.new($options)
 
 ```
 
-任意の都市の現地時間を確認するリクエストを送信します:
+Sending a request to check the local time of any city:
 
 ```4d
 var $options:={}
@@ -109,7 +107,7 @@ var $myRequest:=4D.HTTPRequest.new("http://worldtimeapi.org/api/timezone/Europe/
 
 :::note
 
-HTTPRequest に関連付けられたエージェントがない場合、デフォルト値を持つグローバルエージェントが使用されます。
+When no agent is associated to an HTTPRequest, a global agent with default values is used.
 
 :::
 
@@ -121,7 +119,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 #### 説明
 
-`.options` プロパティオブジェクトは、<!-- REF #HTTPAgentClass.options.Summary -->HTTPAgent が現在使用しているオプション<!-- END REF -->を格納します。
+The `.options` property object contains <!-- REF #HTTPAgentClass.options.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -133,7 +131,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 #### 説明
 
-`.requestsCount` プロパティは、<!-- REF #HTTPAgentClass.requestsCount.Summary -->HTTPAgent によって現在管理されているリクエストの数<!-- END REF -->を格納します。
+The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Summary -->the number of requests currently handled by the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -145,7 +143,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 #### 説明
 
-`.freeSocketsCount` プロパティは、<!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->HTTPAgent に関連付けられた `maxSockets` に対する空きソケット数<!-- END REF -->を格納します。
+The `.freeSocketsCount` property contains <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->the number of free sockets from `maxSockets` associated with the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
