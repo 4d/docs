@@ -101,7 +101,7 @@ A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta 
 
 Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
-**Valor retornado**
+**Returned value**
 
 - **True** se a pasta for criada com sucesso;
 - **False** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
@@ -170,7 +170,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Objeto devolvido**
+**Returned object**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -299,7 +299,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` movido.
 
@@ -355,7 +355,7 @@ A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a past
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` renomeado.
 
