@@ -63,7 +63,7 @@ Usted desea ejecutar una fórmula incluida las llamadas a los comandos y tablas 
 
 ## Ver también 
 
-[Command name](../commands/command-name.md)  
+[Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
