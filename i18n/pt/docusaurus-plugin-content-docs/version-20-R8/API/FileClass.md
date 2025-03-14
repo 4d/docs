@@ -109,7 +109,7 @@ A função `.create()` <!-- REF #FileClass.create().Summary -->cria um arquivo n
 
 Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se o arquivo já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
-**Valor retornado**
+**Returned value**
 
 - **True** se o arquivo for criado com sucesso;
 - **False** se já existir um arquivo com o mesmo nome ou se tiver ocorrido um erro.
@@ -165,7 +165,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Objeto devolvido**
+**Returned object**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -370,7 +370,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `File` movido.
 
@@ -498,7 +498,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `File` renomeado.
 
@@ -512,8 +512,6 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 ```
 
 <!-- END REF -->
-
-<!-- REF file.setAppInfo().Desc -->
 
 ## .setAppInfo()
 
@@ -530,21 +528,21 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                                                                                             |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll |
+| Parâmetro | Tipo   |    | Descrição                                                                                                        |
+| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
+| info      | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo **.exe**, **.dll** ou **.plist** <!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
 A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o ficheiro não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função não faz nada (não é gerado qualquer erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-\***Parâmetro *info* com um arquivo .exe ou .dll**
+***info* parameter object with a .exe or .dll file**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
@@ -566,7 +564,7 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-\***Parâmetro *info* com um arquivo .plist**
+***info* parameter object with a .plist file**
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
@@ -577,25 +575,28 @@ If a key set in the *info* parameter is already defined in the .plist file, its 
 #### Exemplo
 
 ```4d
-  // set copyright and version of a .exe file (Windows)
-var $exeFile : 4D. File
+  // set copyright, version and icon of a .exe file (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info. LegalCopyright:="Copyright 4D 2021"
-$info. ProductVersion:="1.0.0"
+$info.LegalCopyright:="Copyright 4D 2023"
+$info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
   // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D. File
+var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info. Copyright:="Copyright 4D 2021" //text
-$info. ProductVersion:=12 //integer
-$info. ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.Copyright:="Copyright 4D 2023" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -619,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                      |
-| --------- | ---- | -- | ------------------------------ |
-| content   | BLOB | -> | Novos conteúdos para o arquivo |
+| Parâmetro | Tipo |    | Descrição                 |
+| --------- | ---- | -- | ------------------------- |
+| content   | BLOB | -> | New contents for the file |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no BLOB *content*<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 
@@ -666,11 +667,11 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
@@ -681,7 +682,7 @@ Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -693,7 +694,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Consulte a [página Compatibilidade](https://doc.4d.com/4dv19R/help/title/en/page3239.html) em doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Exemplo
 
