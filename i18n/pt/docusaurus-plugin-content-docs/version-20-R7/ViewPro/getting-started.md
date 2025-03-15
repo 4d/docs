@@ -9,13 +9,13 @@ title: Começando
 
 Uma planilha é uma aplicação que contém uma grade de células onde você pode inserir informações, executar cálculos ou exibir imagens. 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://developer.mescius.com/spreadjs) integrada en 4D.
 
-Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
+A incorporação de áreas do 4D View Pro em seus formulários permite importar e exportar documentos de planilhas eletrônicas usando os comandos do 4D View Pro.
 
 ## Instalação e ativação
 
-4D View Pro features are directly included in 4D, making it easy to deploy and manage. Não é necessária qualquer instalação adicional.
+Os recursos do 4D View Pro estão incluídos diretamente no 4D, o que facilita a implementação e o gerenciamento. Não é necessária qualquer instalação adicional.
 
-No entanto, 4D View Pro requer uma licença. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
+No entanto, 4D View Pro requer uma licença. Você precisa ativar essa licença em seu aplicativo para usar seus recursos. Ao usar esse componente sem uma licença, o conteúdo de um objeto que requer um recurso do 4D View Pro não é exibido em tempo de execução; em vez disso, é exibida uma mensagem de erro:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
@@ -33,13 +33,13 @@ Puede [configurar el área](configuring.md) utilizando los comandos de la Lista 
 
 ## Noções básicas de seleção, introdução e navegação
 
-As folhas de cálculo são compostas por linhas e colunas. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. A intersecção de uma linha e de uma coluna constitui uma célula. As células podem ser seleccionadas e o seu conteúdo editado.
+As folhas de cálculo são compostas por linhas e colunas. A cada linha está associado um número. Uma letra (ou grupo de letras, uma vez que o número de colunas ultrapassa o número de letras do alfabeto) é associada a cada coluna. A intersecção de uma linha e de uma coluna constitui uma célula. As células podem ser seleccionadas e o seu conteúdo editado.
 
 ### Seleção de células, colunas e linhas
 
-- To select a cell, simply click on it or use the direction arrows on the keyboard. O seu conteúdo (ou fórmula) é apresentado na célula.
+- Para selecionar uma célula, basta clicar nela ou usar as setas de direção do teclado. O seu conteúdo (ou fórmula) é apresentado na célula.
 
-- To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
+- Para selecionar várias células contínuas, arraste o mouse de uma extremidade da seleção para a outra. Você também pode clicar nas duas extremidades da seleção enquanto mantém pressionada a tecla Shift.
 
 - To select all cells in the spreadsheet, click on the cell at the top left of the area:
  ![](../assets/en/ViewPro/vpSelectAll.PNG)
@@ -54,27 +54,27 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Introdução de dados
 
-Clicar duas vezes em uma célula permite passar para o modo entrada na célula relevante. If the cell is not empty, the insertion cursor is placed after the content of the cell.
+Clicar duas vezes em uma célula permite passar para o modo entrada na célula relevante. Se a célula não estiver vazia, o cursor de inserção será colocado após o conteúdo da célula.
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
-Data can be entered directly once a cell is already selected, even if the insertion cursor is not visible. The input then replaces the content of the cell.
+Os dados podem ser inseridos diretamente quando uma célula já estiver selecionada, mesmo que o cursor de inserção não esteja visível. The input then replaces the content of the cell.
 
 La tecla **Tab** valida la entrada de la celda y selecciona la celda a su derecha. Combinando las teclas **Mayús + Tab** se valida la entrada de la celda y se selecciona la celda a su izquierda.
 
 La tecla **Retorno de carro** valida la entrada de la celda y selecciona la celda de abajo. Combinando las teclas **Mayús + Retorno de carro** se valida la entrada de la celda y se selecciona la celda superior.
 
-The direction keys (arrows) allow you to move a cell in the direction indicated by the arrow.
+As teclas de direção (setas) permitem que você mova uma célula na direção indicada pela seta.
 
 ### Utilizar o menu de contexto
 
-4D View Pro areas benefit from an automatic context menu that offers standard editing features such as copy and paste, but also basic spreadsheet features:
+As áreas do 4D View Pro se beneficiam de um menu de contexto automático que oferece recursos de edição padrão, como copiar e colar, mas também recursos básicos de planilha eletrônica:
 
 ![](../assets/en/ViewPro/vpContext.PNG)
 
-> The Copy/Cut and Paste features of the context menu only work within the spreadsheet area, they do not have access to the system pasteboard. Sin embargo, los atajos del sistema como **Ctrl+c/Ctrl+v** funcionan y pueden utilizarse para intercambiar datos entre el área y otras aplicaciones.
+> Os recursos Copiar/Cortar e Colar do menu de contexto funcionam apenas na área da planilha, não tendo acesso à área de transferência do sistema. Sin embargo, los atajos del sistema como **Ctrl+c/Ctrl+v** funcionan y pueden utilizarse para intercambiar datos entre el área y otras aplicaciones.
 
-Depending on the clicked area, the following options are also available:
+Dependendo da área clicada, as seguintes opções também estão disponíveis:
 
 - haga clic en el encabezado de una columna o línea: **Insertar**, **Borrar**, **Ocultar**, o **Mostrar** el contenido
 - clique numa célula ou num intervalo de células:
@@ -107,7 +107,7 @@ Por exemplo, se quiser definir o número total de colunas de uma área chamada "
 VP SET COLUMN COUNT("myVpArea";5)
 ```
 
-> Cuando se carga un objeto 4D View Pro en un área de formulario, 4D genera el evento formulario [On VP Ready](../Events/onVpReady.md) una vez que se carga toda el área. You must execute any 4D View Pro code handling the area in this event, otherwise an error is returned.
+> Cuando se carga un objeto 4D View Pro en un área de formulario, 4D genera el evento formulario [On VP Ready](../Events/onVpReady.md) una vez que se carga toda el área. Você deve executar qualquer código 4D View Pro que lide com a área neste evento, caso contrário um erro é devolvido.
 
 ### Utilização de objectos de intervalo
 
@@ -129,7 +129,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 - área - O nome da área 4D View Pro
-- intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
+- intervalos - Uma coleção de objeto(s) intervalo. As propriedades disponíveis em cada objeto de intervalo dependem do tipo de objeto de intervalo. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propriedade |                                                                                       | Tipo       | Descrição                                                                                                       | Disponível para                                              |
 | ----------- | ------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -140,7 +140,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 |             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                                                     | célula, células, linha, linhas                               |
 |             | \[ ].rowCount    | number     | Contagem de linhas                                                                                              | células, linhas                                              |
 |             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                                                    | célula, células, coluna, colunas                             |
-|             | \[ ].columnCount | number     | Contagem das colunas                                                                                            | cells, columns                                               |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                                                            | células, colunas                                             |
 
 ## Importação e exportação de documentos
 
