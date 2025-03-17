@@ -630,7 +630,7 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
