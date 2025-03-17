@@ -45,7 +45,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 
 #### Exemplo 2
 
-You need to protect your document while your users can resize rows and columns:
+É necessário proteger o documento enquanto os usuários podem redimensionar linhas e colunas:
 
 ```4d
 var $options : Object
@@ -65,7 +65,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 #### Exemplo 3
 
-You want to customize the colors of your sheet tabs, frozen lines, grid lines, selection background and selection border:
+Você deseja personalizar as cores das guias da planilha, das linhas congeladas, das linhas de grade, do plano de fundo da seleção e da borda da seleção:
 
 ```4d
 var $options : Object
