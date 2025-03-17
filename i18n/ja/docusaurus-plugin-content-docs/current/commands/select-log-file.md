@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-| 引数      | 型    |                             | 説明                         |
-| ------- | ---- | --------------------------- | -------------------------- |
-| logFile | Text | &#8594; | ログファイルの名前                  |
-| \*      |      | &#8594; | Close the current log file |
+| 引数      | 型    |                             | 説明              |
+| ------- | ---- | --------------------------- | --------------- |
+| logFile | Text | &#8594; | ログファイルの名前       |
+| \*      |      | &#8594; | カレントのログファイルを閉じる |
 
 <!-- END REF-->
 
@@ -19,17 +19,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->**SELECT LOG FILE** コマンドは引数内に渡した値に応じて、ログファイルを作成するか、または閉じます<!-- END REF-->。
 
-In *logFile*, pass the name or the full pathname of the log file to be created. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
+*logFile* 引数には、作成したいログファイルの名前または完全パス名を渡します。 名前だけを渡した場合、ファイルはデータベースのストラクチャーファイルと同階層にあるデータベースの"Logs" フォルダ内に作成されます。
 
-If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save File dialog box, allowing the user to choose the name and location of the log file to be created. If the file is created correctly, the OK variable is set to 1\. Otherwise, if the user clicks Cancel or if the log file could not be created, OK is set to 0.
+*logFile* に空の文字列を渡した場合、**SELECT LOG FILE** はファイルを保存ダイアログボックスを表示し、作成するログファイルの名前と場所をユーザーが選択できるようにします。 ファイルが正常に作成されれば、OK 変数は 1\. に設定されます。 そうでない場合、例えばユーザーがキャンセルをクリックしたりログファイルが作成できなかったような場合OK 変数は 0 に設定されます。
 
-**Note:** The new log file is not generated immediately after execution of the command, but after the next backup (the parameter is kept in the data file and will be taken into account even if the database is closed in the meantime) or a call to the [New log file](new-log-file.md) command. You can call the [BACKUP](../commands-legacy/backup.md) command to trigger the creation of the log file.
+**注意:** 新しいログファイルはコマンドの実行直後に生成されるのではなく、次回バックアップ(引数はデータファイル内に保存され、データベースが閉じられたとしてもその引数を考慮します)、または [New log file](new-log-file.md) コマンドを呼び出した後に生成されます。 [BACKUP](../commands-legacy/backup.md) コマンドを呼び出すことで、ログファイルの作成をトリガーすることができます。
 
-If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
+*logFile* 引数に *\** を渡した場合、 **SELECT LOG FILE** はデータベースのカレントのログファイルを閉じます。 ログファイルが閉じられると、 OK 変数は 1 に設定されます。
 
 #### システム変数およびセット
 
-OK is set to 1 if the log file is correctly created, or closed.
+ログファイルが正常に作成、または閉じられた場合には OK 変数は 1 に設定されます。
 
 #### 参照
 
