@@ -26,7 +26,7 @@ HTTPAgent objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #HTTPAgentClass.options.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.options.Summary -->|
+|[<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->|
 |[<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->|
 |[<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary -->|
 
@@ -113,14 +113,14 @@ When no agent is associated to an HTTPRequest, a global agent with default value
 
 :::
 
-<!-- REF #HTTPAgentClass.options.Desc -->
-## .options
+<!-- REF #HTTPAgentClass.params.Desc -->
+## .params
 
-<!-- REF #HTTPAgentClass.options.Syntax -->**options** : Object<!-- END REF -->
+<!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
 
 #### Description
 
-The `.options` property object contains <!-- REF #HTTPAgentClass.options.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
+The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 

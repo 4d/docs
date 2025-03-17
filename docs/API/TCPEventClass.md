@@ -10,6 +10,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 |Release|Changes|
 |---|---|
+|20 R9|New `ip`, and `port` attributes|
 |20 R8|Class added|
 
 </details>
@@ -23,12 +24,14 @@ The following properties are available:
 ||
 |---|
 |[<!-- INCLUDE #4D.TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #4D.TCPEvent.data.Summary -->|
+|[<!-- INCLUDE #4D.TCPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #4D.TCPEvent.ip.Summary -->|
+|[<!-- INCLUDE #4D.TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #4D.TCPEvent.port.Summary -->|
 |[<!-- INCLUDE #4D.TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #4D.TCPEvent.type.Summary -->|
 
 <!-- REF #4D.TCPEvent.data.Desc -->
 ## .data
 
-<!-- REF #4D.TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #4D.TCPEvent.ip.Syntax -->**data** : Blob<!-- END REF -->
 
 #### Description
 
@@ -42,6 +45,30 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 <!-- END REF -->
 
+<!-- REF #4D.TCPEvent.ip.Desc -->
+## .ip
+
+<!-- REF #4D.TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
+
+#### Description
+
+The `.ip` property contains <!-- REF #4D.TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+
+<!-- END REF -->
+
+
+<!-- REF #4D.TCPEvent.port.Desc -->
+## .port
+
+<!-- REF #4D.TCPEvent.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Description
+
+The `.port` property contains <!-- REF #4D.TCPEvent.ip.Summary -->the port number of the remote machine<!-- END REF -->.
+
+
+<!-- END REF -->
 
 
 <!-- REF #4D.TCPEvent.type.Desc -->

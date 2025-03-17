@@ -17,6 +17,7 @@ TCPConnection objects are released when no more references to them exist in memo
 
 |Release|Changes|
 |---|---|
+|20 R9|New `listener`, `address`, and `port` attributes|
 |20 R8|Class added|
 
 </details>
@@ -129,9 +130,12 @@ TCPConnection objects provide the following properties and functions:
 
 ||
 |---|
+|[<!-- INCLUDE #4D.TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #4D.TCPConnection.address.Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #4D.TCPConnection.closed.Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #4D.TCPConnection.errors.Summary -->|
+|[<!-- INCLUDE #4D.TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #4D.TCPConnection.listener.Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->|
+|[<!-- INCLUDE #4D.TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #4D.TCPConnection.port.Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #4D.TCPConnection.send().Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #4D.TCPConnection.shutdown().Summary -->|
 |[<!-- INCLUDE #4D.TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #4D.TCPConnection.wait().Summary -->|
@@ -144,7 +148,7 @@ TCPConnection objects provide the following properties and functions:
 <!-- REF #4D.TCPConnection.new().Syntax -->**4D.TCPConnection.new**( *serverAddress* : Text ; *serverPort* : Number ; *options* : Object  ) : 4D.TCPConnection<!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.new().options -->
+<!-- REF #4D.TCPConnection.new().params -->
 |Parameter|Type| |Description|
 |---|---|---|---|
 |serverAddress|Text|->|Domain name or IP address of the server|
@@ -199,6 +203,18 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 <!-- END REF -->
 
+<!-- REF #4D.TCPConnection.address.Desc -->
+## .address
+
+<!-- REF #4D.TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Description
+
+The `.address` property contains <!-- REF #4D.TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->. 
+
+<!-- END REF -->
+
+
 <!-- REF #4D.TCPConnection.closed.Desc -->
 ## .closed
 
@@ -229,6 +245,21 @@ The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a c
 
 <!-- END REF -->
 
+
+<!-- REF #4D.TCPConnection.listener.Desc -->
+## .listener
+
+<!-- REF #4D.TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
+
+#### Description
+
+The `.listener` property contains <!-- REF #4D.TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. This property is **read-only**.
+
+
+
+<!-- END REF -->
+
+
 <!-- REF #4D.TCPConnection.noDelay.Desc -->
 ## .noDelay
 
@@ -242,12 +273,27 @@ The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->w
 
 <!-- END REF -->
 
+
+<!-- REF #4D.TCPConnection.port.Desc -->
+## .port
+
+<!-- REF #4D.TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Description
+
+The `.port` property contains <!-- REF #4D.TCPConnection.port.Summary -->the port number of the remote machine)<!-- END REF -->. This property is **read-only**.
+
+
+
+<!-- END REF -->
+
+
 <!-- REF #4D.TCPConnection.send().Desc -->
 ## .send()
 
 <!-- REF #4D.TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().options -->
+<!-- REF #4D.TCPConnection.send().params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |data|Blob|->|Data to be sent|
@@ -264,7 +310,7 @@ The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to
 
 <!-- REF #4D.TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().options -->
+<!-- REF #4D.TCPConnection.shutdown().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
@@ -282,7 +328,7 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->close
 
 <!-- REF #4D.TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection..wait().options -->
+<!-- REF #4D.TCPConnection..wait().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Maximum wait time in seconds|
