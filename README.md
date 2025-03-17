@@ -68,3 +68,12 @@ ex: `<!-- REF #_command_.IMAP New transporter.Syntax -->` and `<!-- REF #_comman
 * optional : `{ paramName1 : type }{; paramName2 : type }`
 * optional but only if previous param is passed: `{ paramName1 : type {; paramName2 : type }}`
 
+
+## tools
+
+Exemple:
+
+node tools/overview_build
+-> regénérer page des thèmes en anglais
+
+
