@@ -630,7 +630,7 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
