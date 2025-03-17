@@ -27,7 +27,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especific
 
 > A indexação começa em 0.
 
-The position of a spreadsheet's print lines varies according to that spreadsheet's page breaks.
+A posição das linhas de impressão de uma planilha varia de acordo com as quebras de página dessa planilha.
 
 #### Exemplo
 
