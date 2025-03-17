@@ -123,11 +123,11 @@ Esta área agrupa las opciones genéricas utilizadas durante el proceso de compi
 
 #### Generar el archivo de símbolos
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. El archivo de error se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de errores se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 
 #### Ruta de compilación
@@ -179,7 +179,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). Para más información, consulte el método [`Compiler_Methods`](../Concepts/parameters.md#compiler-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 
@@ -188,7 +188,7 @@ Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero 
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+Si selecciona la opción [**Generar el archivo de simbolos**](#symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
@@ -235,7 +235,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Archivo de errores
 
-Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
+Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](../Project/architecture.md#logs) del proyecto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
