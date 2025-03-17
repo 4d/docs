@@ -24,7 +24,7 @@ Pour une présentation complète de cette classe, nous vous recommandons de lire
 | [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->|
 | [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
 | [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
-| [<!-- INCLUDE #CryptoKey.pem().Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem().Summary -->|
+| [<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem.Summary -->|
 | [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary --> |
 | [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary --> |
 | [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary --> |
@@ -295,8 +295,7 @@ La valeur retournée est la clé publique.
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #CryptoKey.pem.Summary -->
-Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. <!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
