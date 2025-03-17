@@ -630,7 +630,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
