@@ -10,14 +10,14 @@ displayed_sidebar: docs
 
 | 引数      | 型    |                             | 説明                         |
 | ------- | ---- | --------------------------- | -------------------------- |
-| logFile | Text | &#8594; | Name of the log file       |
+| logFile | Text | &#8594; | ログファイルの名前                  |
 | \*      |      | &#8594; | Close the current log file |
 
 <!-- END REF-->
 
 #### 説明
 
-<!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->。
+<!--REF #_command_.SELECT LOG FILE.Summary-->**SELECT LOG FILE** コマンドは引数内に渡した値に応じて、ログファイルを作成するか、または閉じます<!-- END REF-->。
 
 In *logFile*, pass the name or the full pathname of the log file to be created. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
 
