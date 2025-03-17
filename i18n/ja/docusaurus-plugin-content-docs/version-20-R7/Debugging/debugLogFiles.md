@@ -464,7 +464,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 環境に応じて、ログ設定ファイルを有効化する方法はいくつかあります:
 
 - **インターフェース付きの 4D Server**: メンテナンスページを開き、[ログ設定ファイルを読み込む](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。  この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
+- **インタープリタまたはコンパイル済みプロジェクト**: ファイルの名前は `logConfig.json` でプロジェクトの [Settings フォルダ](../Project/architecture.md#settings-user) 内にコピーする必要があります(このフォルダは [`Project` フォルダ](../Project/architecture.md#project-folder) と同階層に位置しています)。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
 - **ビルドしたアプリケーション**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
  - Windows: `Users\[userName]\AppData\Roaming\[application]`
  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
