@@ -73,7 +73,7 @@ ex: `<!-- REF #_command_.IMAP New transporter.Syntax -->` and `<!-- REF #_comman
 
 Exemple:
 
-node tools/overview_build
+`node tools/overview_build`
 -> regénérer page des thèmes en anglais
 
 
