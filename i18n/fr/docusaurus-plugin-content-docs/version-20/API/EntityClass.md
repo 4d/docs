@@ -630,7 +630,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Historique</summary>
