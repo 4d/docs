@@ -38,7 +38,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 > `/rest/\{dataClass\}/Función` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/\{dataClass\}` devuelve todas las entidades de la DataClass como una selección de entidades). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo* ](../WebServer/webServerConfig.md#use-preemptive-processes)es ignorado por el Servidor REST).
 
 ## Parámetros
 
