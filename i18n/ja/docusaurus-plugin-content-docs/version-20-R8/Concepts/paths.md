@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() // データフォルダー内�
 
 ### `.file()` および `.folder()` フォルダー関数
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder) expect relative POSIX pathnames. 例:
+[`folder.file()`](../API/FolderClass.md#file) および [`folder.folder()`](../API/FolderClass.md#folder) などのフォルダーオブジェクトの関数は、相対 POSIX パス名を受け取ります。 例:
 
 ```4d
 var $userImages : 4D.Folder
