@@ -117,7 +117,7 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar ficheiro symbol
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
@@ -181,7 +181,7 @@ Você pode renomear cada um desses métodos nas áreas correspondentes, mas eles
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. It is divided into several parts:
 
 #### Lista das variáveis processo e interprocesso
 
