@@ -113,7 +113,7 @@ Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
+De lo contrario, el editor de código muestra [el comentario de bloque en la parte superior del código del método](../code-editor/write-class-method.md#help-tips).
 
 :::
 
