@@ -61,7 +61,7 @@ $allowed.Byebye.maxParams:=3
 VP SET ALLOWED METHODS($allowed)
 ```
 
-Depois que esse código é executado, as funções definidas podem ser usadas nas fórmulas do 4D View Pro:
+Depois que esse código for executado, as funções definidas podem ser usadas nas fórmulas do 4D View Pro:
 
 ![](../../assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG)
 
