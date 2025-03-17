@@ -31,7 +31,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 #### Exemplo
 
-Pretende atribuir um valor ao intervalo nomeado "Total".
+Suponha que pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
 // name the B5 cell as Total
