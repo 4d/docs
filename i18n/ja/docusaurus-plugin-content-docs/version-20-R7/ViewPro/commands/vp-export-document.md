@@ -23,7 +23,7 @@ title: VP EXPORT DOCUMENT
 | filePath   | Text   | -> | ドキュメントのパス名              |                  |
 | paramObj   | Object | -> | 書き出しのオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP EXPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを、*filePath* と *paramObj* で指定したとおりにディスク上のドキュメントに書き出します<!-- END REF -->。
 
@@ -47,7 +47,7 @@ title: VP EXPORT DOCUMENT
 | -------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format               | テキスト                        | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", ".pdf", or ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used.                                                                                                                                                   |
 | password             | テキスト                        | Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されるパスワード。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| formula              | 4D.Function | 書き出しが完了した際に呼び出されるコールバックメソッド名。 書き出しが非同期でおこなわれる (PDF および Excel 形式での書き出しが該当します) 場合かつ、書き出し後にコードを実行したい場合には、コールバックメソッドが必要です。 The callback method must be passed with the [`Formula`](../../commands/formula.md) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| formula              | 4D.Function | 書き出しが完了した際に呼び出されるコールバックメソッド名。 書き出しが非同期でおこなわれる (PDF および Excel 形式での書き出しが該当します) 場合かつ、書き出し後にコードを実行したい場合には、コールバックメソッドが必要です。 コールバックメソッドは [`Formula`](../../commands/formula.md) コマンドを使って渡す必要があります。 See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | valuesOnly           | boolean                     | フォーミュラ (あれば) の値のみを書き出すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | includeFormatInfo    | boolean                     | フォーマット (書式) 情報を含めるには true、それ以外の場合には false (デフォルトは true)。 フォーマット情報は特定の場合 (例: SVGへの書き出しなど) において有用です。 On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | includeBindingSource | boolean                     | 4DVP および Microsoft Excel のみ。 true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したドキュメントのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。 For data context and cell binding management, see [VP SET DATA CONTEXT](vp-set-data-context.md) and [VP SET BINDING PATH](vp-set-binding-path.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -80,9 +80,9 @@ title: VP EXPORT DOCUMENT
 
 書き出し操作が完了すると、`VP EXPORT DOCUMENT` は自動的に、*paramObj* オブジェクトの *formula* プロパティに設定されたメソッドをトリガーします (設定されていれば)。
 
-#### コールバックメソッド (フォーミュラ) の渡し方
+## コールバックメソッド (フォーミュラ) の渡し方
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. コールバックメソッドは、以下の値をローカルパラメーターに受け取ります:
+コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../../commands/formula.md) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 コールバックメソッドは、以下の値をローカルパラメーターに受け取ります:
 
 | 引数     |                               | 型       | 説明                                |
 | ------ | ----------------------------- | ------- | --------------------------------- |
@@ -94,7 +94,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 |        | .errorCode    | integer | エラーコード。                           |
 |        | .errorMessage | テキスト    | エラーメッセージ。                         |
 
-#### 例題 1
+## 例題 1
 
 "VPArea" エリアのコンテンツをディスク上の 4D View Pro ドキュメントに書き出します:
 
@@ -106,7 +106,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 // MyExport.4VP がディスク上に保存されます
 ```
 
-#### 例題 2
+## 例題 2
 
 カレントシートを PDF に書き出します:
 
@@ -119,7 +119,7 @@ $params.pdfOptions:=New object("title";"Annual Report";"author";Current user)
 VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```
 
-#### 例題 3
+## 例題 3
 
 4D View Pro ドキュメントを ".xlsx" 形式に書き出して、書き出し完了後にそのドキュメントをMicrosoft Excel で開くメソッドを呼び出します:
 
@@ -144,7 +144,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
  End if
 ```
 
-#### 例題 4
+## 例題 4
 
 カレントシートを、縦棒 (|) 区切りの `.txt` ファイルに書き出します:
 
@@ -163,7 +163,7 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### 参照
+## 参照
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>
