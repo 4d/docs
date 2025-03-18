@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->renvoie une collection de tous les objets serveur Web disponibles dans l'application 4D<!-- END REF -->.
 
@@ -37,7 +37,7 @@ Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server lis
 
 Vous pouvez utiliser la propriété [.name](../API/WebServerClass.md#name) de l'objet serveur Web pour identifier le projet ou le composant auquel chaque objet serveur Web de la liste est attaché.
 
-#### Exemple
+## Exemple
 
 Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 
@@ -50,16 +50,16 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
  ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
 ```
 
-#### Voir également
+## Voir également
 
 [WEB Server](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1716                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1716                        |
+| Thread safe        | &check; |
 
 
