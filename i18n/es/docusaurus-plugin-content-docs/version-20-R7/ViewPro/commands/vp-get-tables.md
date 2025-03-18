@@ -23,7 +23,7 @@ title: VP Get tables
 | sheet      | Integer    | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Collection | <- | Colección de textos con todos los nombres de las tablas        | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->devuelve una colección de todos los nombres de tablas definidos en la *hoja*<!-- END REF -->.
 
@@ -33,7 +33,7 @@ En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código devolverá una colección de todos los nombres de tablas de la hoja actual:
 
@@ -43,6 +43,6 @@ $tables:=VP Get tables("ViewProArea")
 
 ```
 
-#### Ver también
+## Ver también
 
 [VP CREATE TABLE](vp-create-table.md)
