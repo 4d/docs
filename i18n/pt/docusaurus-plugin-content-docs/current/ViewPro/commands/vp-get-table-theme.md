@@ -41,9 +41,10 @@ The command returns a full `theme` object even if a [native SpreadJS theme](http
 ```4d
 var $param : cs. ViewPro. TableTheme
 $param:=cs. ViewPro. TableTheme.new()
-$param.theme:="dark10" //use of a native theme name VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
+$param.theme:="dark10" //uso de nome de tema nativo VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
 $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
 $result:=Asserted(Value type($vTheme.theme)=Is object) //true
+
 ```
 
 ## Veja também
