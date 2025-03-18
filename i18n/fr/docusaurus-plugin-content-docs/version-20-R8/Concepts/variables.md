@@ -5,7 +5,7 @@ title: Variables
 
 Fondamentalement, dans 4D, les données peuvent être stockées de deux manières. Les **champs** stockent les données sur disque, de manière permanente ; les **variables** stockent les données en mémoire, de manière temporaire.
 
-Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. Variables are much the same—you also give them names and different types (see [Data types](data-types.md)).
+Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C'est à peu près pareil pour les variables — vous pouvez aussi leur donner des noms et des types différents (voir [Types de données](data-types.md)).
 
 Une fois créée, vous pouvez utiliser une variable partout dans votre application. Par exemple, vous pouvez stocker une variable de type texte dans un champ du même type :
 
