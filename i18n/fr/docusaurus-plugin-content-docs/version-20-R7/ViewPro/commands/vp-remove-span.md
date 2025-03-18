@@ -13,13 +13,13 @@ title: VP REMOVE SPAN
 | ---------- | ------ | -- | ----------- | ---------------- |
 | rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range object of the cell span. Les cellules fusionnées de la plage sont divisées en cellules individuelles.
 
-#### Exemple
+## Exemple
 
 Pour retirer toutes les fusions de cellules de ce document :
 
@@ -38,7 +38,7 @@ Résultat:
 
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
-#### Voir également
+## Voir également
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP Get spans](vp-get-spans.md)
