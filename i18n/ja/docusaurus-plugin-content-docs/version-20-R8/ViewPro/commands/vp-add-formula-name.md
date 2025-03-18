@@ -16,7 +16,7 @@ title: VP ADD FORMULA NAME
 | name       | Text   | -> | フォーミュラの名称               |                  |
 | options    | Object | -> | 命名フォーミュラのオプション          | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD FORMULA NAME` コマンドは、<!-- REF #_method_.VP ADD FORMULA NAME.Summary -->開いているドキュメント内において命名されたフォーミュラを作成、または編集します<!-- END REF -->。
 
@@ -35,13 +35,13 @@ title: VP ADD FORMULA NAME
 | scope   | Number | フォーミュラのスコープ。 シートのインデックス (0起点) を渡すか、あるいは以下の定数を使用することができます: <li>`vk current sheet`</li><li>`vk workbook`</li>スコープは、フォーミュラ名が特定のワークシートに限定されたローカル (*scope* = シートのインデックス または `vk current sheet`) なものか、あるいはワークブック全体で使用できるグローバル (*scope* = `vk workbook`) なものかを決定します。 |
 | comment | Text   | 命名フォーミュラに割り当てられたコメント                                                                                                                                                                                                                                                                                                                   |
 
-#### 例題
+## 例題
 
 ```4d
 VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 ```
 
-#### 参照
+## 参照
 
 [Cell references](../formulas.md#cell-references)<br/>
 [VP Get formula by name](vp-get-formula-by-name.md)<br/>
