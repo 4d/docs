@@ -15,7 +15,7 @@ title: VP SET DATE VALUE
 | dateValue     | Date   | -> | 設定する日付値   |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET DATE VALUE` コマンドは、<!-- REF #_method_.VP SET DATE VALUE.Summary -->指定されたセルレンジに日付値を割り当てます<!-- END REF -->。
 
@@ -34,7 +34,7 @@ title: VP SET DATE VALUE
 
 パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](../configuring.md#日付と時間のフォーマット) の章を参照してください。
 
-#### 例題
+## 例題
 
 ```4d
 // セルの日付をカレントの日付に設定します
@@ -45,7 +45,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
 VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>
