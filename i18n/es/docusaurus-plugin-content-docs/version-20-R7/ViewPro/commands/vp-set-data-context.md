@@ -25,7 +25,7 @@ title: VP SET DATA CONTEXT
 | options    | Object     | -> | Opciones adicionales                             |                  |
 | sheet      | Integer    | -> | Índice de la hoja                                | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. Un contexto de datos es un objeto o una colección vinculada a una hoja de cálculo, y cuyo contenido puede utilizarse para llenar automáticamente las celdas de la hoja, ya sea utilizando una opción de autogeneración o el método [VP SET BINDING PATH](vp-set-binding-path). Por otro lado, el comando [VP Get data context](vp-get-data-context.md) puede devolver un contexto que contenga modificaciones del usuario.
 
@@ -51,7 +51,7 @@ En *sheet*, pase el índice de la hoja que recibirá el contexto de datos. Si no
 
 Si exporta su documento a un objeto utilizando [VP Export to object](vp-export-to-object.md), o a un documento 4DVP utilizando [VP EXPORT DOCUMENT](vp-export-document.md), la opción `includeBindingSource` le permite copiar el contenido de los contextos actuales como valores de celda en el objeto o documento exportado. Para más detalles, consulte la descripción de esos métodos.
 
-#### Ejemplo
+## Ejemplo
 
 Pasa un objeto y vincula los datos del contexto a las celdas en la primera línea:
 
@@ -72,7 +72,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Pasa una colección de objetos y genera columnas automáticamente:
 
@@ -91,7 +91,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-2.png)
 
-#### Ejemplo 3
+## Ejemplo 3
 
 *data* pasado como parámetro es una colección que contiene subcolecciones. Cada subcolección define el contenido de una línea:
 
@@ -112,7 +112,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ![](../../assets/en/ViewPro/vp-set-data-context-3.png)
 
-#### Ejemplo 4 - Sintaxis de fecha y hora
+## Ejemplo 4 - Sintaxis de fecha y hora
 
 ```4d
 var $data : Collection
@@ -138,7 +138,7 @@ Este es el resultado una vez que se generan las columnas:
 
 ![](../../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
-#### Ver también
+## Ver también
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>
