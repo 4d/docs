@@ -16,7 +16,7 @@ title: VP ADD STYLESHEET
 | styleObj   | Object  | -> | Objeto definiendo las propiedades del atributo                 |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->crea o modifica la hoja de estilo *styleName* basándose en la combinación de las propiedades especificadas en *styleObj* en el documento abierto<!-- END REF -->. Si ya existe una hoja de estilo con el mismo nombre e índice en el documento, este comando la sobrescribirá con los nuevos valores.
 
@@ -37,7 +37,7 @@ Si una hoja de estilo *styleName* está definida al nivel del libro de trabajo y
 
 Para aplicar la hoja de estilo, utilice los comandos [VP SET DEFAULT STYLE](vp-set-default-style.md) o [VP SET CELL STYLE](vp-set-cell-style.md).
 
-#### Ejemplo
+## Ejemplo
 
 El código siguiente:
 
@@ -70,7 +70,7 @@ creará y aplicará el siguiente objeto estilo llamado *GreenDashDotStyle*:
 }
 ```
 
-#### Ver también
+## Ver también
 
 [Objetos de Estilo y Hojas de Estilo 4D View Pro](../configuring.md#style-objects--style-sheets)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
