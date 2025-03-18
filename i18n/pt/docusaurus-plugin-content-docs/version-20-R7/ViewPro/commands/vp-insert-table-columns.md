@@ -26,7 +26,7 @@ title: VP INSERT TABLE COLUMNS
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *coluna*     |                  |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)      | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
 
@@ -43,11 +43,11 @@ This command inserts some columns in the *tableName* table, NOT in the sheet. O 
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
-#### Exemplo
+## Exemplo
 
 Consulte os exemplos de [VP INSERT TABLE ROWS](vp-insert-table-rows.md) e [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
-#### Veja também
+## Veja também
 
 [VP INSERT TABLE ROWS](vp-insert-table-rows.md)<br/>
 [VP REMOVE TABLE COLUMNS](vp-remove-table-columns.md)<br/>
