@@ -15,7 +15,7 @@ title: VP SET SHEET NAME
 | name       | Text    | -> | Nuevo nombre para la hoja                    |                  |
 | sheet      | Integer | -> | Índice de la hoja a renombrar                | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->cambia el nombre de una hoja del documento cargado en *vpAreaName*<!-- END REF -->.
 
@@ -38,7 +38,7 @@ El comando no hace nada si:
 - el nuevo nombre ya existe
 - el índice *sheet* pasado no existe
 
-#### Ejemplo
+## Ejemplo
 
 Establezca el nombre de la tercera hoja como "Total first quarter":
 
