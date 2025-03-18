@@ -25,7 +25,7 @@ title: VP Get table dirty rows
 | sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis)                                     |                  |
 | Résultat   | Collection | <- | Collection d'objets avec tous les éléments modifiés depuis la dernière réinitialisation                         | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->retourne une collection d'objets *dirty row*, contenant les éléments qui ont été modifiés depuis la dernière réinitialisation dans la table spécifiée *tableName*<!-- END REF -->.
 
@@ -49,7 +49,7 @@ Chaque objet *dirty row* dans la collection retournée contient les propriétés
 
 Si *tableName* n'est pas trouvé ou s'il ne contient pas de colonne modifiée, la commande retourne une collection vide.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez compter le nombre de lignes éditées :
 
@@ -59,7 +59,7 @@ $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
 
-#### Voir également
+## Voir également
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>
