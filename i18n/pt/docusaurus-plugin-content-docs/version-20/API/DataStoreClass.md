@@ -449,19 +449,19 @@ Outras características e serviços 4D incluindo [backup](../Backup/backup.md), 
 Se quiser criar uma cópia da pasta de dados juntamente com o seu arquivo de diário actual:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive")
+$destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() //Bloqueia operações write de outros processos
 
-$dataFolder:=Folder(fk data folder)
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) //Copia a pasta de dados
 
-$oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path)
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournalPath:=New log file //Fecha o diário e cria um novo
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) //Salva o diário antigo com dados
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 ```
 
 #### Veja também
@@ -808,7 +808,7 @@ A função também retornará `True` se a datastore foi bloqueada por outra func
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->estabelece todas as seleções de entidade como editável como padrão nas datastore de aplicação atuais.<!-- END REF --> (incluindo [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Esta função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
 
