@@ -109,7 +109,7 @@ La fonction `.create()` <!-- REF #FileClass.create().Summary -->crée un fichier
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le fichier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
-**Returned value**
+**Valeur retournée**
 
 - **Vrai** si le fichier est créé avec succès ;
 - **Faux** si un fichier du même nom existe déjà ou si une erreur s'est produite.
@@ -165,7 +165,7 @@ Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez égaleme
 
 Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre *aliasType* est ignoré).
 
-**Returned object**
+**Objet retourné**
 
 Un objet `4D.File` avec la propriété `isAlias` mise à **true**.
 
@@ -370,7 +370,7 @@ Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
 Par défaut, le fichier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le fichier déplacé, passez le nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `File` déplacé.
 
@@ -498,7 +498,7 @@ Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne d
 
 A noter que la fonction modifie le nom complet du fichier, c'est-à-dire que si vous ne passez pas une extension dans le paramètre *newName*, le fichier aura un nom sans extension.
 
-**Returned object**
+**Objet retourné**
 
 L'objet `File` renommé.
 
@@ -528,25 +528,25 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Paramètres | Type   |    | Description                                                                                                      |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
-| info       | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                                                                                                             |
+| ---------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| info       | Object | -> | Propriétés à écrire dans le fichier .plist ou la ressource version du fichier .exe/.dll |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
 La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
-***info* parameter object with a .exe or .dll file**
+**Paramètre *info* avec un fichier .exe or .dll**
 
 > La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
 | Propriété        | Type | Commentaire                                                                                                                                             |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -560,27 +560,27 @@ Each valid property set in the *info* object parameter is written in the version
 | OriginalFilename | Text |                                                                                                                                                         |
 | WinIcon          | Text | Chemin Posix du fichier .ico. Cette propriété ne s'applique qu'aux fichiers exécutables générés par 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Si vous passez une valeur de type autre que Texte, elle est "stringifiée".
+Pour toutes les propriétés à l'exception de `WinIcon`, si vous passez un texte null ou vide comme valeur, une chaîne vide est écrite dans la propriété. Si vous passez une valeur de type autre que Texte, elle est "stringifiée".
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un format incorrect, une erreur est générée.
 
-***info* parameter object with a .plist file**
+**Paramètre *info* avec un fichier .plist**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
+Si une clé définie dans le paramètre *info* est déjà définie dans le fichier .plist, sa valeur est mise à jour tout en conservant son type d'origine. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
 
 > Pour définir une valeur de type Date, le format à utiliser est chaîne de timestamp json formatée en ISO UTC sans les millisecondes ("2003-02-01T01:02:03Z") comme dans l'éditeur de plist Xcode.
 
 #### Exemple
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // définir le copyright, la version et l'icône d'un fichier .exe (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
-$exeFile:=File(Application file; fk platform path)
+$exeFile:=File(Application file ; fk platform path)
 $iconFile:=File("/RESOURCES/myApp.ico")
-$info:=New object
+$info:=Nouvel objet
 $info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
 $info.WinIcon:=$iconFile.path
@@ -588,15 +588,15 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // définir certaines clés dans un fichier info.plist (toutes plateformes)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
+$info:=Nouvel objet
 $info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer
+$info.ProductVersion:=12 //integer .ShipmentDate:="2023-04-22T06:00:00Z" //timestamp .ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.CFBundleIconFile:="myApp.icns" //pour macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -620,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Paramètres | Type |    | Description               |
-| ---------- | ---- | -- | ------------------------- |
-| content    | BLOB | -> | New contents for the file |
+| Paramètres | Type |    | Description                |
+| ---------- | ---- | -- | -------------------------- |
+| content    | BLOB | -> | Nouveau contenu du fichier |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit l'intégralité du contenu du fichier en utilisant les données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
@@ -667,11 +667,11 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Description
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit *text* comme nouveau contenu du fichier<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
+Si le fichier référencé dans l'objet `File` n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
 
-In *text*, pass the text to write to the file. Cela peut être un texte littéral ("my text"), ou un champ / variable texte 4D.
+Dans le paramètre *text*, passez le texte à écrire dans le fichier. Cela peut être un texte littéral ("my text"), ou un champ / variable texte 4D.
 
 Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'écriture du contenu. Vous pouvez passer soit :
 
@@ -682,7 +682,7 @@ Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'�
 
 Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). Si vous n'indiquez pas un jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" sans BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne avant de les stocker dans le fichier. Les constantes suivantes du thème **Documents système** sont disponibles :
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                                                                                                   |
 | ----------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -694,7 +694,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Note de compatibilité** : Des options de compatibilité sont disponibles pour la gestion des fins de ligne et des BOM. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
 
 #### Exemple
 
