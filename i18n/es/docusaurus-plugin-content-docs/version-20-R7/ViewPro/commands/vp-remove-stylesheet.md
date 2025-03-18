@@ -15,7 +15,7 @@ title: VP REMOVE STYLESHEET
 | styleName  | Text    | -> | Nombre del estilo a eliminar                                   |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP REMOVE STYLESHEET` <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->elimina la hoja de estilo pasada en el *styleName* del *vpAreaName*<!-- END REF -->.
 
@@ -28,7 +28,7 @@ Puede definir dónde eliminar el estilo en el parámetro opcional *sheet* utiliz
 - `vk current sheet`
 - `vk workbook`
 
-#### Ejemplo
+## Ejemplo
 
 Para eliminar el objeto estilo *GreenDashDotStyle* de la hoja actual:
 
@@ -36,7 +36,7 @@ Para eliminar el objeto estilo *GreenDashDotStyle* de la hoja actual:
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
