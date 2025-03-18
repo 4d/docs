@@ -15,7 +15,7 @@ title: VP Get sheet name
 | sheet      | Integer | ->                          | Índice da folha                            |                  |
 | Resultado  | Text    | <- | Nome da folha                              | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
 
@@ -27,7 +27,7 @@ Se o índice de folha passado não existir, o método devolve um nome vazio.
 
 > A indexação começa em 0.
 
-#### Exemplo
+## Exemplo
 
 Obtém o nome da terceira folha do documento:
 
@@ -35,6 +35,6 @@ Obtém o nome da terceira folha do documento:
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
-#### Veja também
+## Veja também
 
 [VP Get sheet index](vp-get-sheet-index.md)
