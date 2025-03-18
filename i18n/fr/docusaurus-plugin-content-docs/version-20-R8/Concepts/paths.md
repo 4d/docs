@@ -41,7 +41,7 @@ Avec cette syntaxe :
 - les chemins absolus commencent par un "/"
 - pour remonter d'un dossier dans un chemin relatif, utilisez "../" devant le nom du chemin (par sécurité, vous ne pouvez pas remonter au-dessus du filesystem).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
+Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` avec les commandes [`File`](../commands/file.md) et [`Folder`](../commands/folder.md), par exemple :
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ Les règles suivantes sont pris en charge :
 - le texte contient " :" et "\" comme deuxième et troisième caractère,
 - le texte commence par "\".
 
-Examples with [`Folder`](../commands/folder.md):
+Exemples avec [`Folder`](../commands/folder.md) :
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Les règles suivantes s'appliquent (syntaxe HFS+) :
 - les séparateurs de dossiers sont ":"
 - le chemin ne doit pas commencer par un ":"
 
-Examples with [`Folder`](../commands/folder.md):
+Exemples avec [`Folder`](../commands/folder.md) :
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume doit s'appel
 
 ### Constructeurs `File` et `Folder`
 
-[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
+Les commandes [`File`](../commands/file.md) et [`Folder`](../commands/folder.md) n'acceptent que les **chemins d'accès absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
 
 ```4d
 	//ERREUR
@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //fichier créé dans le dossier
 
 ### Fonctions de folder `.file()` et `.folder()`
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder) expect relative POSIX pathnames. Par exemple :
+Les fonctions des objets folder telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder) attendent des chemins POSIX relatifs. Par exemple :
 
 ```4d
 var $userImages : 4D.Folder
