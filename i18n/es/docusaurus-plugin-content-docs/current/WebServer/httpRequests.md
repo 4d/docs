@@ -80,13 +80,13 @@ Si su aplicación utiliza esta información, deberá analizar el encabezado y el
 
 > For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
-### $BrowserIP - Web client IP address
+### $BrowserIP - Dirección IP del cliente web
 
 The $BrowserIP parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-### $ServerIP - Server IP address
+### $ServerIP - Dirección IP del servidor
 
 The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
