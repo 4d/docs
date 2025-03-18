@@ -34,7 +34,7 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
  Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. Es posible controlar el acceso al menú contextual mediante el comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 #### Gramática JSON
 
