@@ -20,49 +20,49 @@ title: ラベル
 
 :::
 
-You use the Label editor to create, format, and print labels. The Label editor contains settings for designing labels and positioning the labels on label paper. For example, when producing mailing labels, you might want a label design that includes the person’s first and last name on the first line, the street address on the second line, and so on. As part of the design, the Label editor enables you to specify the number of labels on the page and the margins of the label paper so that the label text is centered within the labels.
-When you create a satisfactory label design, you can save it to disk so that you can reuse it.
+ラベルエディターを使用して、ラベルの作成やフォーマット、印刷を行います。 ラベルエディター には、ラベルを設計したり、ラベル用紙上でのラベル位置を決めるための各種設定が用意されています。 例えば、宛名ラベルを作成する場合、1行目に相手先の 名字と名前、2行目にその人の住所を納めたラベルを設計することができます。 ラベルエディターでは、ページ上のラベル数を指定したり、ラベル用紙のマージ ンを指定することで、ラベルテキストがラベルの中央に配置されるようデザインを調整することができます。
+ラベルデザインが完成したら、いつでも再利用できるようにディスクに保存することができます。
 
-To open the Label editor:
+ラベルエディターは、次のように開きます:
 
-- In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
- OR
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- デザインモードでは、**ツール**メニュー、あるいは4Dツールバーにあるツールボタンのメニューから\*\*ラベル...\*\*を選択します。
+ または
+- アプリケーションモードでは、 [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用します。
 
 ![](../assets/en/Desktop/label-wizard.png)
 
-You use the Label page to specify the contents of the label and the Layout page to define the size and position of the labels on the page.
+ラベルページはラベルの内容を指定するために使用し、レイアウトページはページ上のラベルサイズや位置を指定するために使用します。
 
 ![](../assets/en/Desktop/label-buttons.png)
 
-## Label Page
+## ラベルページ
 
-The Label page contains several areas with settings for designing and formatting labels.
+ラベルページには、ラベルのデザインやフォーマットを行うための設定があります。
 
-### List of Fields
+### フィールドのリスト
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+カレントテーブルのフィールド名が階層リスト形式で表示されます。 そのテーブルが別のテーブルにリレートしている場合は、外部キーフィー ルドにプラス記号 (Windows) または矢印 (Macintosh) が表示されます。 リレートフィールドを展開すると、リレートテーブルのフィールドを表示することができます。 リレートテーブルのフィールドはインデント (字下げ) されます。 リストから右のラベルプレビューエリアにドラッグすると、フィールドをラベルテンプレートに追加できます。
 
 :::note 注記
 
-- Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- クイックレポートエディターのフィールドリストには、非表示属性が設定されていないテーブルとフィールドだけが表示されます。
+- [オブジェクト型](../Concepts/dt_object.md) のフィールドは、ラベルエディターではサポートされていません。
 
 :::
 
-The search area allows you to narrow the list of fields displayed to those containing the entered string:
+この検索エリアでは入力した文字列を含むフィールドのみに表示を限定することができます:
 
 ![](../assets/en/Desktop/label-filter.png)
 
-### Label preview
+### ラベルプレビューエリア
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+このエリアを使用して、ラベルに表示させるすべてのオブジェクトの配置を調整し、ラベルを設計します。 白い長方形は一つのラベルを表します(ラベルの大きさは [レイアウトページ](#レイアウトページ)) を指定できます)。ラベルにはフィールドをドラッグすることができます。
 
-- You can drag fields onto the label.
-- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
+- ラベルにはフィールドをドラッグすることができます。
+- 一つ目のフィールドの上に他のフィールをドロップする事で二つのフィールドを結合する事もできます。 これらは自動的にスペースで区切られます。<br/>
  ![](../assets/en/Desktop/label-concat.png)<br/>
- If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+ **Shift** キーを押しながらドロップすると、改行で区切られます。 これによって、住所などの複数のフィールドにまたがるラベル(住所1、住所2など)を、住所が一行で済む場合にも無駄な余白行を作らずに作成する事ができることができます。
+- **フォーミュラ** ツール ![](../assets/en/Desktop/label-tool6.png) (あるいはコンテキストメニュー内の **ツール>フォーミュラ**) を選択しながらエリアを描画することで、ラベルにフォーミュラを追加することができます。 The **Formula editor** is then displayed:
  ![](../assets/en/Desktop/label-formula1.png)<br/>
  For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
 
