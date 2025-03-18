@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
@@ -83,7 +83,7 @@ displayed_sidebar: docs
 |              | \[ \].count          | number              | 許可された接続数                                      | 15 (32767 は無制限を意味します)                                                    |
 |              | \[ \].expirationDate | object              | 有効期限(オプション、上記のものと同じフォーマット) | {"day":1, "month":11, "year":2017}          |
 
-#### 例題
+## 例題
 
 現在の4D Server ライセンスについての情報を取得した場合を考えます:
 
@@ -129,13 +129,13 @@ displayed_sidebar: docs
 }
 ```
 
-#### 参照
+## 参照
 
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |
