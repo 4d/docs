@@ -22,7 +22,7 @@ title: VP Find table
 | rangeObj   | Object | ->                          | Intervalo de células |                  |
 | Resultados | Text   | <- | Nome da tabela       | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
 
@@ -30,7 +30,7 @@ Em *rangeObj*, passar um objeto de intervalo de células. Se as células designa
 
 If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
-#### Exemplo
+## Exemplo
 
 ```4d
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
@@ -41,7 +41,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 End if
 ```
 
-#### Veja também
+## Veja também
 
 [VP Get table range](vp-get-table-range.md)
 
