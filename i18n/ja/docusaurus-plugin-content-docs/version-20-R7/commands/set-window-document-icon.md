@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `SET WINDOW DOCUMENT ICON` コマンドは、<!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->*winRef* ウィンドウ参照の引数に合わせて、 *image* または *file* 引数を使用してマルチウィンドウアプリケーションにおいてウィンドウのアイコンを定義することができます<!-- END REF-->。 アイコンはウィンドウ自身とウィンドウタスクバーにおいて表示され、ユーザーが異なるウィンドウを識別して切り替えるのを助けます。
 
@@ -35,7 +35,7 @@ Windows でのMDI アプリケーションの場合、 *winRef* 引数に`-1` �
 - *file* および *image* 引数の両方が渡された場合、ウィンドウのメニューにはファイルのパスが表示され、渡された画像がウィンドウのアイコンとして使用されます。
 - *winRef* のみが渡された場合、あるいは*image* 引数が空の場合、macOS ではアイコンが削除され、Windows ではデフォルトアイコン(アプリケーションアイコン)が表示されます。
 
-#### 例題
+## 例題
 
 この例題では、4つのウィンドウを作成したい場合を考えます:
 
@@ -75,6 +75,6 @@ Windows でのMDI アプリケーションの場合、 *winRef* 引数に`-1` �
 
 ```
 
-#### 参照
+## 参照
 
 [Create entity selection](create-entity-selection.md)
