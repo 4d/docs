@@ -7,7 +7,7 @@ A classe `IMAPTransporter` permite-lhe recuperar mensagens a partir de um servid
 
 ### Objecto IMAP Transporter
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. Eles oferecem as propriedades abaixo e funções:
+Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporter](../commands/imap-new-transporter.md). Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -481,7 +481,7 @@ Pode passar:
 - no parâmetro `msgsIDs`, uma coleção que contém as IDs exclusivas das mensagens específicas a serem excluídas, ou
 - no parâmetro `allMsgs`, a constante `IMAP all` (inteiro) para excluir todas as mensagens da caixa de correio selecionada.
 
-A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). As mensagens sinalizadas são excluídas do servidor IMAP com a função [`.expunge()`](#expunge) ou selecionando outra caixa de correio ou quando o [objeto transportador](#imap-transporter-object) (criado com [IMAP New transporter](../commands/imap-new-transporter.md)) é destruído.
 
 **Returned object**
 
