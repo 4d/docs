@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo cujas fórmulas você deseja recuperar. If *ra
 A coleção devolvida é bidimensional:
 
 - A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção representa uma linha.
-- Cada subcoleção define os valores das células para a linha. The first-level collection contains subcollections of formulas.
+- Cada subcoleção define os valores das células para a linha. Os valores são elementos de texto que contêm as fórmulas das células.
 
 ## Exemplo
 
