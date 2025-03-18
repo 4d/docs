@@ -7,7 +7,7 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Objet Web Server
 
-Web server objects are instantiated with the [`WEB Server`](../commands/web-server.md) command.
+Les objets serveur Web sont instanciés avec la commande [`WEB Server`](../commands/web-server.md).
 
 Leurs propriétés et fonctions sont les suivantes :
 
