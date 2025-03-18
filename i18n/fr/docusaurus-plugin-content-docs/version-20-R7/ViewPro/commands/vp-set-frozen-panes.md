@@ -17,7 +17,7 @@ title: VP SET FROZEN PANES
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. . Un trait continu s'affiche pour indiquer que des lignes et colonnes sont figées. L'emplacement du trait dépend de l'emplacement de la ligne ou colonne figée dans la feuille :
 
@@ -39,7 +39,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 - `vk current sheet`
 
-#### Exemple
+## Exemple
 
 Vous souhaitez figer les trois premières colonnes de gauche, deux colonnes de droite et la première ligne :
 
@@ -56,6 +56,6 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 ![](../../assets/en/ViewPro/cmd_vpSetFrozenPanes.PNG)
 
-#### Voir également
+## Voir également
 
 [VP Get frozen panes](vp-get-frozen-panes.md)
