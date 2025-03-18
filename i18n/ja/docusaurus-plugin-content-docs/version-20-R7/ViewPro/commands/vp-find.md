@@ -17,7 +17,7 @@ title: VP Find
 | replaceValue    | Text   | ->                          | 置き換え値           |                  |
 | 戻り値             | Object | <- | レンジオブジェクト       | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Find` コマンドは、<!-- REF #_method_.VP Find.Summary -->*rangeObj* に指定したレンジ内で *searchValue* に指定した値を検索します<!-- END REF -->。 任意の引数を渡すことで、検索条件を詳細に指定したり、検索結果を置換したりすることができます。
 
@@ -38,11 +38,11 @@ title: VP Find
 
 任意の *replaceValue* 引数として、*rangeObj* 内で見つかった *searchValue* の値のテキストを置換するテキストを渡すことができます。
 
-#### 返されるオブジェクト
+## 返されるオブジェクト
 
 この関数は、検出または置換された検索値の詳細を格納したレンジオブジェクトを返します。 何も見つからなかった場合には、空のレンジオブジェクトが返されます。
 
-#### 例題 1
+## 例題 1
 
 "Total" という単語が入っている最初のセルを見つけるには:
 
@@ -54,7 +54,7 @@ $range:=VP All("ViewProArea")
 $result:=VP Find($range;"Total")
 ```
 
-#### 例題 2
+## 例題 2
 
 "Total" のセルを検出し、それを "Grand Total" で置き換えるには:
 
