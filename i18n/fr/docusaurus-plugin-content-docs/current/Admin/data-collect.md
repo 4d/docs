@@ -135,7 +135,7 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ## Où sont-elles stockées et envoyées ?
 
-Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
+Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. Le fichier est stocké dans le [dossier 4D actif](../commands-legacy/get-4d-folder.md), c'est-à-dire :
 
 - sous Windows : `Users\[userName]\AppData\Roaming\4D Server`
 - sous macOS : `/Users/[userName]/Library/ApplicationSupport/4D Server`
