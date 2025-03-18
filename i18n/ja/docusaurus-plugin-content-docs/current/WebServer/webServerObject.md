@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv の値は 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](commands/web-server.md) command:
+Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](commands/web-server.md) コマンドを呼び出します。
 
 ```4d
 	// 4D.WebServer クラスのオブジェクト変数を作成します。
