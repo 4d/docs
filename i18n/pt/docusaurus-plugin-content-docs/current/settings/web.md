@@ -74,7 +74,7 @@ Essa área permite configurar como o servidor Web tratará as sessões de usuár
 
 #### Sessões escaláveis (sessões multi-processo)
 
-Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
+Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Veja a [página de sessões do usuário](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sem sessões
 
@@ -84,7 +84,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 - [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
 - [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-processes)
+- [Usar processos preemptivos](#use-preemptive-processes)
 
 #### Sessões herdadas (sessões de processo único)
 
@@ -112,7 +112,7 @@ Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
 Permite processos web preemptivos nas suas aplicações compiladas. Quando **usar processos preventivos** for selecionado, A elegibilidade de seu código relacionado à Web (incluindo tags 4D e métodos de banco de dados web) para a execução preventiva será avaliada durante a compilação. Para mais informações, consulte [Utilizando processos Web preemptivos](../WebServer/preemptiveWeb.md).
 
-> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tempo limite do processo inativo
 
@@ -289,7 +289,7 @@ Inicia e pára o servidor REST. Ver [Configuración del servidor REST](../REST/c
 
 :::info Obsoleto
 
-**Esta seção está obsoleta** a partir de 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
+**Esta seção está obsoleta** a partir de 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. Se o seu projeto já for compatível com o modo [Force login](../REST/authUsers.md#force-login-mode), a seção não estará presente e você poderá ignorar este parágrafo.
 
 :::
 
