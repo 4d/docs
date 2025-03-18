@@ -15,7 +15,7 @@ title: VP SET SHEET NAME
 | name       | Text    | -> | シートの新しい名称               |                  |
 | sheet      | Integer | -> | 名称変更するシートのインデックス        | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET SHEET NAME` コマンドは、<!-- REF #_method_.VP SET SHEET NAME.Summary -->*vpAreaName* 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します<!-- END REF -->。
 
@@ -38,7 +38,7 @@ title: VP SET SHEET NAME
 - 新しい名前が既に存在している
 - *sheet* に渡したインデックスが存在しない
 
-#### 例題
+## 例題
 
 3つ目のシートの名前を "Total first quarter" に変更します:
 
