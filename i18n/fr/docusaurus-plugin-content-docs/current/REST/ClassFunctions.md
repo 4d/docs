@@ -69,7 +69,7 @@ All functions allowed to be called directly from HTTP REST requests (`POST` or `
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+Voir la section [Fonctions exposées vs non exposées](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ### `onHttpGet`
 
@@ -98,7 +98,7 @@ Les règles suivantes s'appliquent :
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Les paramètres doivent être inclus dans une collection (format JSON).
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -134,8 +134,8 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
+- Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
 
 See examples below for creating or updating entities with POST requests.
 See an example of contents downloading using an entity with a GET request.
