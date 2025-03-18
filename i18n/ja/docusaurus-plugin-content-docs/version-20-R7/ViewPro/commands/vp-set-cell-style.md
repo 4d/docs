@@ -14,7 +14,7 @@ title: VP SET CELL STYLE
 | rangeObj | Object | -> | レンジオブジェクト  |                  |
 | styleObj | Object | -> | スタイルオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET CELL STYLE` コマンドは、<!-- REF #_method_.VP SET CELL STYLE.Summary -->*styleObj* に定義されているスタイルを、*rangeObj* で定義されたセルに適用します<!-- END REF -->。
 
@@ -31,7 +31,7 @@ title: VP SET CELL STYLE
 
 スタイルオブジェクトとスタイルシートの詳細については、[スタイルオブジェクト](../configuring.md#スタイルオブジェクト) を参照ください。
 
-#### 例題
+## 例題
 
 ```4d
 $style:=New object
@@ -48,7 +48,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 ![](../../assets/en/ViewPro/cmd_vpSetCellStyle.PNG)
 
-#### 参照
+## 参照
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>
