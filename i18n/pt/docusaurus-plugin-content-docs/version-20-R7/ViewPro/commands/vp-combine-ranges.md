@@ -15,7 +15,7 @@ title: VP Combine ranges
 | otherRangeObj | Object | ->                          | Objeto intervalo                         |                  |
 | Resultados    | Object | <- | Objeto que contém um intervalo combinado | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retorna um novo objeto de intervalo que incorpora dois ou mais objetos de intervalo existentes<!-- END REF -->. Todos os intervalos devem ser da mesma área 4D View Pro.
 
@@ -25,7 +25,7 @@ Em *otherRangeObj*, passe outro objeto de intervalo para combinar com *rangeObj*
 
 > O comando incorpora objetos *rangeObj* e *otherRangeObj* por referência.
 
-#### Exemplo
+## Exemplo
 
 Se quiser combinar objetos de intervalo de células, colunas e linhas em um novo e diferente objeto de intervalo:
 
@@ -37,7 +37,7 @@ Se quiser combinar objetos de intervalo de células, colunas e linhas em um novo
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>
