@@ -221,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
 
 #### Lista das variáveis processo e interprocesso
 
