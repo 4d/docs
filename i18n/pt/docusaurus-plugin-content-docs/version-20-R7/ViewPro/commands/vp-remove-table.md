@@ -24,7 +24,7 @@ title: VP REMOVE TABLE
 | options    | Integer | -> | Opções adicionais                                           |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
 
@@ -42,7 +42,7 @@ Em *options*, você pode especificar o comportamento adicional. Valores possíve
 
 Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
-#### Exemplo
+## Exemplo
 
 Para remover a tabela "pessoas" na segunda folha e manter os dados nas células:
 
@@ -50,6 +50,6 @@ Para remover a tabela "pessoas" na segunda folha e manter os dados nas células:
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 ```
 
-#### Veja também
+## Veja também
 
 [VP CREATE TABLE](vp-create-table.md)
