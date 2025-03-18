@@ -26,7 +26,7 @@ title: VP INSERT TABLE ROWS
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |                  |
 | sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート)       | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP INSERT TABLE ROWS` コマンドは、<!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスに、1つまたは *count* で指定した数の空の行を挿入します<!-- END REF -->。
 
@@ -43,7 +43,7 @@ title: VP INSERT TABLE ROWS
 
 *tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
 
-#### 例題
+## 例題
 
 データコンテキストを使用した表組みを作成します:
 
@@ -72,7 +72,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ![](../../assets/en/ViewPro/table-insert.png)
 
-#### 参照
+## 参照
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)
