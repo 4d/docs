@@ -11,7 +11,7 @@ Um objeto **`4D.Function`** contém um trecho de código que pode ser executado 
 
 ### Objetos de formulários
 
-The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create `4D.Function` objects to execute any 4D expression or code expressed as text.
+Os comandos [Formula](../commands/formula.md) e [Formula from string](../commands/formula-from-string.md) permitem que você crie objetos `4D.Function` para executar qualquer expressão ou código 4D expresso como texto.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
@@ -47,7 +47,7 @@ Você também pode executar uma função usando as funções [`apply()`](#apply)
 
 #### Utilização de parâmetros
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Por exemplo, pode escrever:
+Você pode passar parâmetros para suas fórmulas usando uma sintaxe de parâmetro sequencial baseada em $1, $2...$n. Por exemplo, pode escrever:
 
 ```4d
  var $f : Object
@@ -112,17 +112,17 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #FunctionClass.apply().Params -->
 
-| Parâmetro     | Tipo       |                             | Descrição                                                                                                               |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                     |
-| formulaParams | Collection |              ->             | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultados    | any        | <- | Valores de execução de fórmula                                                                                          |
+| Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
+| ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
+| formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
+| Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual ele é aplicado e retorna o valor resultante<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
+A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual ele é aplicado e retorna o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` ou `Formula from string`.
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
