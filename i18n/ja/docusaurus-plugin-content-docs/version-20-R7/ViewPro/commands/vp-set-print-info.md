@@ -15,7 +15,7 @@ title: VP SET PRINT INFO
 | printInfo  | Object  | -> | 印刷属性を格納するオブジェクト                                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET PRINT INFO` コマンドは、<!-- REF #_method_.VP SET PRINT INFO.Summary -->*vpAreaName* 引数で指定したエリアを印刷する際に使用する属性を定義します<!-- END REF -->。
 
@@ -27,7 +27,7 @@ title: VP SET PRINT INFO
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 以下のコードを実行すると、4D View Pro エリアを PDFドキュメントに出力します:
 
@@ -70,7 +70,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 ![](../../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### 参照
+## 参照
 
 [4D View Pro 印刷属性](../configuring.md#印刷属性)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
