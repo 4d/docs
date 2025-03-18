@@ -15,7 +15,7 @@ title: VP Get active cell
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Objeto rango de una sola celda                                 | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->devuelve un nuevo objeto de rango que hace referencia a la celda que tiene el foco y en la que se introducirán los nuevos datos (la celda activa)<!-- END REF -->.
 
@@ -23,7 +23,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
-#### Ejemplo
+## Ejemplo
 
 ![](../../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
@@ -38,7 +38,7 @@ $activeCell:=VP Get active cell("myVPArea")
   //$activeCell.ranges[0].sheet=0
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>
