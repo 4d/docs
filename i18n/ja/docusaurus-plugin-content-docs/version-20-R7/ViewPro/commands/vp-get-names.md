@@ -15,7 +15,7 @@ title: VP Get names
 | scope      | Integer    | ->                          | ターゲットのスコープ (デフォルト = カレントシート) |                  |
 | 戻り値        | Collection | <- | 定義されたスコープ内に存在する名前                               | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get names` コマンドは、<!-- REF #_method_.VP Get names.Summary -->カレントシートまたは *scope* 引数で指定されたスコープ内において定義されているすべての "名前" のコレクションを返します<!-- END REF -->。
 
@@ -26,7 +26,7 @@ title: VP Get names
 - `vk current sheet`
 - `vk workbook`
 
-##### 返されるコレクション
+### 返されるコレクション
 
 返されるコレクションには、1つの名前につき 1つのオブジェクトが格納されています。 以下のオブジェクトプロパティが返されます:
 
@@ -38,7 +38,7 @@ title: VP Get names
 
 返されるプロパティは、命名された要素のタイプ (命名セル、命名レンジ、または命名フォーミュラ) に応じて異なります。
 
-#### 例題
+## 例題
 
 ```4d
 var $list : Collection
@@ -47,7 +47,7 @@ var $list : Collection
 $list:=VP Get names("ViewProArea";2) // 3番目のシートにある名前
 ```
 
-#### 参照
+## 参照
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
