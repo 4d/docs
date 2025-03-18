@@ -117,7 +117,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 > - キーワードが考慮されるためには、その値が true でなければなりません。
 > - キーワードフラグの解釈は、メールクライアントごとに異なる可能性があります。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -204,7 +204,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mail mode UTF8           | US-ASCII_UTF8_QP                                  | headerCharset &amp; bodyCharset: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)                                                                |
 | mail mode UTF8 in base64 | US-ASCII_UTF8_B64                                 | headerCharset &amp; bodyCharset: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64                                                                                                          |
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -305,7 +305,7 @@ $status:=$imap.append($msg; "Drafts")
 
 *destinationBox* には、メッセージのコピー先メールボックスの名称をテキスト値で渡すことができます。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -405,7 +405,7 @@ $status:=$imap.append($msg; "Drafts")
 
 `name` には、新しいメールボックスの名前を渡します。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -482,9 +482,9 @@ End if
 - `msgsIDs` には、削除するメッセージの固有ID を格納したコレクション
 - `allMsgs` には、選択されているメールボックスの全メッセージを削除するための定数 (倍長整数型):
 
-この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 フラグがつけられたメッセージは、[`.expunge()`](#expunge) を実行したときか、別のメールボックスを選択したとき、あるいは([IMAP New transporter](../commands/imap-new-transporter.md) で作成された) [transporter オブジェクト](#imap-transporter-オブジェクト) が消去されたときにのみ、IMAPサーバーから削除されます。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -583,7 +583,7 @@ End if
 > - 削除されるメールボックス内のメッセージもすべて削除されます。
 > - メールボックス削除の可否はメールサーバーに依存します。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -654,7 +654,7 @@ End if
 
 `.expunge()` 関数は、<!-- REF #IMAPTransporterClass.expunge().Summary -->"deleted" フラグがつけられたメッセージをすべて IMAP メールサーバーから削除します<!-- END REF -->。"deleted" フラグは、[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -728,7 +728,7 @@ $status:=$transporter.expunge()
 
 *name* のメールボックスが選択不可の場合、または見つからない場合には、関数はエラーを生成し、**null** を返します。
 
-**Returned object**
+**返されるオブジェクト**
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -1179,7 +1179,7 @@ ID = 1のメッセージを取得します:
 
 > RFC [8474](https://tools.ietf.org/html/rfc8474) に準拠している IMAPサーバーでのみ、この関数はサポートされます。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -1361,7 +1361,7 @@ ID = 1のメッセージを取得します:
 
 > - キーワードが考慮されるためには、その値が true でなければなりません。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -1431,7 +1431,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 メールボックスの新しい名称は `newName` に渡します。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -1671,7 +1671,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 > - 開いている接続がない場合、`.selectBox()` は接続を開きます。
 > - 接続が指定された時間 (`IMAP New transporter` 参照) 以上に使用されなかった場合には、[`.checkConnection()`](#checkconnection) 関数が自動的に呼び出されます。
 
-**Returned object**
+**返されるオブジェクト**
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -1735,7 +1735,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 `name` には、購読するメールボックスの名前を渡します。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
@@ -1808,7 +1808,7 @@ End if
 
 `name` には、購読を解除するメールボックスの名前を渡します。
 
-**Returned object**
+**返されるオブジェクト**
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
