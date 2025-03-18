@@ -319,7 +319,7 @@ Par exemple, vous pouvez exécuter :
 
 En cas d'erreur lors de l'interprétation, le texte inséré sera de la forme : `<!--#4DEVAL expr-->: ## error # code d'erreur`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter l'[insertion de code malveillant](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -338,7 +338,7 @@ Par exemple, voici les résultats du traitement de la variable texte 4D myvar av
 
 En cas d'erreur d'interprétation, le texte inséré sera `<!--#4DHTML myvar--> : ## error # error code`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter l'[insertion de code malveillant](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF et 4DENDIF
 
