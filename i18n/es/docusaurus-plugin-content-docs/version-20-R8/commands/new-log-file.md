@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 **Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](../commands-legacy/execute-on-server.md) command or in a stored procedure.
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). This file is stored in the same location as the current log file (specified on the [Configuration page](../Backup/settings.md#configuration) in the Backup theme of the Settings). The command does not carry out any processing (compression, segmentation) on the saved file. No aparece ninguna
 caja de diálogo.
 
-The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. For instance:
+The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por ejemplo:
 
 - If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. The name of the first “segment” of the log file will therefore be MyDatabase\[0004-0001\].journal.
 - If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
@@ -34,10 +34,10 @@ A log file must always be related to a data file. If you call this command just 
 
 :::
 
-#### Gestión de errores
+## Gestión de errores
 
 In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
 
-#### Ver también
+## Ver también
 
 [SELECT LOG FILE](select-log-file.md)
