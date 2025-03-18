@@ -14,7 +14,7 @@ title: VP PRINT
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP PRINT` <!-- REF #_method_.VP PRINT.Summary -->abre uma janela de diálogo de impressão para imprimir *vpAreaName*<!-- END REF -->.
 
@@ -31,7 +31,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 > * Os comandos do tema de linguagem 4D **Impressão** não são compatíveis com o `VP PRINT`.
 > * Esse comando é destinado a impressão individual pelo usuário final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](vp-export-document.md) method.
 
-#### Exemplo
+## Exemplo
 
 O seguinte código:
 
@@ -43,7 +43,7 @@ O seguinte código:
 
 ![](../../assets/en/ViewPro/cmd_vpPrint.PNG)
 
-#### Veja também
+## Veja também
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)
