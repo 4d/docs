@@ -176,7 +176,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+Não existe uma palavra-chave final para o código de função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -292,7 +292,7 @@ Parâmetros
 
 :::note
 
-There is no ending keyword for class constructor function code. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+Não existe uma palavra-chave final para o código de função do construtor de classe. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -317,9 +317,9 @@ Só pode haver uma função de construtor em uma classe (caso contrário um erro
 ```4d
 // In a project method
 // You can instantiate an object
-var $o : cs. MyClass
-$o:=cs. MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
+var $o : cs.MyClass
+$o:=cs.MyClass.new("John";42)  
+// $o = {"name":"John";"age":42}
 ```
 
 
@@ -531,7 +531,7 @@ Super($text1) //chama o construtor da superclasse com um parâmetro de texto
 This.param:=$text2 // usa o segundo parâmetro
 ```
 
-2. Inside a [class member function](#function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. No interior de uma função de membro da classe [](#function), `Super` designa o protótipo da superclasse e permite chamar uma função da hierarquia da superclasse.
 
 ```4d
 Super.doSomething(42) //chamada a função "doSomething"  
