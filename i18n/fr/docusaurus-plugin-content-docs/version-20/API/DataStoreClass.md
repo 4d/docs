@@ -269,7 +269,7 @@ La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 
-Vous pouvez imbriquer plusieurs transactions (sous-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
+Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransaction).
 
 #### Exemple
 
@@ -443,19 +443,19 @@ D'autres fonctions et services 4D, notamment [backup](../Backup/backup.md), [vss
 Vous voulez créer une copie du dossier de données avec son fichier journal courant :
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive")
+$destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() //Bloque les opérations d'écriture des autres process
 
-$dataFolder:=Folder(fk data folder)
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) //Copie le dossier de données
 
-$oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path)
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournalPath:=New log file //Ferme le journal et en créer un nouveau
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) //Sauvegarde l'ancien journal avec les données
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller le datastore
 ```
 
 #### Voir également
@@ -800,7 +800,7 @@ La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelections
 
 When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
 > **Compatibilité** : Cette fonction doit être utilisée uniquement dans des projets convertis à partir de versions de 4D antérieures à 4D v18 R5 et contenant des appels [.add()](EntitySelectionClass.md#add). Dans ce contexte, l'utilisation de `.makeSelectionsAlterable()` peut faire gagner du temps en restaurant instantanément le précédent comportement 4D dans les projets existants. En revanche, l'utilisation de cette méthode dans les nouveaux projets créés dans 4D v18 R5 et les versions plus récentes **n'est pas recommandée**, car elle empêche le partage des entity selections, ce qui offre de meilleures performances et une plus grande évolutivité.
 
