@@ -14,7 +14,7 @@ title: VP Object to font
 | fontObj    | Object | ->                          | Objet police                                     |                  |
 | Résultat   | Text   | <- | Police raccourcie (shorthand) | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->retourne une chaîne de raccourci de police de *fontObj*<!-- END REF -->.
 
@@ -32,7 +32,7 @@ Cet objet peut être créé à l'aide de la commande [VP Font to object](vp-font
 
 La chaîne raccourcie retournée peut être affectée à la propriété "font" d'une cellule avec [VP SET CELL STYLE](vp-set-cell-style.md), par exemple.
 
-#### Exemple
+## Exemple
 
 ```4d
 $cellStyle:=VP Get cell style($range)
@@ -46,7 +46,7 @@ $cellStyle.font:=VP Object to font($font)
 //$cellStyle.font contient "bolder oblique small-caps 16pt arial"
 ```
 
-#### Voir également
+## Voir également
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>
