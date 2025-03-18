@@ -2407,7 +2407,7 @@ valor de comparação propertyPath {valor de comparação logicalOperator proper
 
 onde:
 
-- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. No caso de um caminho de atributo cujo tipo é `Collection`, a notação `[]` é usada para lidar todas as ocorrências (por exemplo, `children[].age`).
 
 - **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
@@ -2504,7 +2504,7 @@ Ao usar placeholders, não é possível substituir as condições de segurança:
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
+Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*, isso não será interpretado na string de consulta, mas apenas passado como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
 2. Isso evita que você tenha que se preocupar com problemas de formatação ou caracteres, especialmente ao lidar com parâmetros *propertyPath* ou *value* que podem conter caracteres não alfanuméricos, como ".", "['...
 
@@ -2635,7 +2635,7 @@ Este exemplo devolve as pessoas cujo nome não começa por uma string de uma var
 Este exemplo devolve as pessoas cuja idade não se conhece (propriedade definida como null ou indefinida):
 
 ```4d
- $col:=$c.query("age=null") //placeholders not allowed with "null"
+ $col:=$c.query("age=null") //não são permitidos placeholders ou marcadores de posição com "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
@@ -2643,7 +2643,7 @@ Este exemplo devolve as pessoas contratadas há mais de 90 dias:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] se hoje for 01/10/2018
 ```
 
 #### Exemplo 3
@@ -2658,7 +2658,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page. Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+Mais exemplos de consultas podem ser encontrados na página `dataClass.query()`. Observe, entretanto, que as fórmulas não são compatíveis com a função `collection.query()`, nem no parâmetro *queryString*, nem como parâmetro do objeto *formula*.
 
 :::
 
@@ -2739,7 +2739,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+Com o seguinte método ***Flatten***:
 
 ```4d
  If($1.accumulator=Null)
@@ -2825,10 +2825,10 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
 ```
 
-With the following ***Flatten*** method:
+Com o seguinte método ***Flatten***:
 
 ```4d
-	//Flatten project method
+	//Método projeto Flatten 
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
@@ -3191,7 +3191,7 @@ The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements
 
 > Essa função modifica a coleção original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.sort()` for chamado sem parâmetros, somente os valores escalares (número, texto, data, booleanos) serão classificados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
 1. null
 2. booleans
@@ -3273,7 +3273,7 @@ Apenas elementos numéricos são considerados para cálculos (outros tipos são 
 
 Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade objeto para levar em consideração.
 
-`.sum()` returns 0 if:
+`.sum()` retorna 0 se:
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
