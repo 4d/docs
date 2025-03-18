@@ -277,7 +277,7 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'elles sont utilisées pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-    - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+    - Ne donnez pas le même nom à une table 4D et à une [classe utilisateur](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
     - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). Par exemple, `Class extends EntitySelection` pour une classe d'entity selection.
