@@ -446,16 +446,16 @@ user / password / timeout / tls を指定してリモートデータストアに
 $destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() // 他のプロセスからの書き込み操作をブロックします
 
 $dataFolder:=Folder(fk data folder)
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder.copyTo($destination) // データフォルダーをコピーします
 
-$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournalPath:=New log file // ジャーナルを閉じて、新しいものを作成します
 $oldJournal:=File($oldJournalPath; fk platform path)
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournal.moveTo($destination) // 閉じたジャーナルを保存します
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() // コピー操作をおこなったので、データストアのロックを解除します
 ```
 
 #### 参照
