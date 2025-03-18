@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->**SELECT LOG FILE** コマンドは引数内に渡した値に応じて、ログファイルを作成するか、または閉じます<!-- END REF-->。
 
@@ -27,16 +27,16 @@ displayed_sidebar: docs
 
 *logFile* 引数に *\** を渡した場合、 **SELECT LOG FILE** はデータベースのカレントのログファイルを閉じます。 ログファイルが閉じられると、 OK 変数は 1 に設定されます。
 
-#### システム変数およびセット
+## システム変数およびセット
 
 ログファイルが正常に作成、または閉じられた場合には OK 変数は 1 に設定されます。
 
-#### 参照
+## 参照
 
 [New log file](new-log-file.md)\
 [ON ERR CALL](../commands-legacy/on-err-call.md)
 
-#### プロパティ
+## プロパティ
 
 |            |                             |
 | ---------- | --------------------------- |
