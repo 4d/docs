@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `File` コマンドは、<!-- REF #_command_.File.Summary -->[`4D.File`](../API/FileClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから呼び出されている場合、 `*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
-#### 参照
+## 参照
 
 [`4D.File` class](../API/FileClass.md)
 [Folder](folder.md)
@@ -86,7 +86,7 @@ displayed_sidebar: docs
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |
