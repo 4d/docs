@@ -168,7 +168,7 @@ Por ejemplo, con la clase de datos Employee, puede escribir:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/EntitySelectionClass.md#queryplan) and [`queryPath`](API/EntitySelectionClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
+Puede hacer clic en el ícono `v` para mostrar [`queryPlan`](API/EntitySelectionClass.md#queryplan) y [`queryPath`](API/EntitySelectionClass.md#querypath). En el área, puede pasar sobre los bloques de subconsultas para tener información detallada por subconsulta:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
