@@ -446,19 +446,19 @@ Otras funcionalidades y servicios de 4D, como [backup](../Backup/backup.md), [vs
 Desea crear una copia de la carpeta de datos junto con su archivo de historial actual:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive")
+$destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() //Bloquear operaciones de escritura de otros procesos
 
-$dataFolder:=Folder(fk data folder)
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) //Copiar la carpeta de datos
 
-$oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path)
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournalPath:=New log file //Cerrar el historial y crear uno nuevo
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) //Guardar el antiguo historial con datos
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 ```
 
 #### Ver también
