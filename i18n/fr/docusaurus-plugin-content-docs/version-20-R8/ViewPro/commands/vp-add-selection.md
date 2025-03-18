@@ -13,7 +13,7 @@ title: VP ADD SELECTION
 | ---------- | ------ | -- | ----------- | ---------------- |
 | rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->ajoute les cellules spécifiées aux cellules actuellement sélectionnées<!-- END REF -->.
 
@@ -21,7 +21,7 @@ Dans *rangeObj*, passez un objet plage de plusieurs cellules à ajouter à la s�
 
 > La cellule active n'est pas modifiée.
 
-#### Exemple
+## Exemple
 
 Les cellules sélectionnées sont les suivantes :
 
@@ -38,7 +38,7 @@ Résultat:
 
 ![](../../assets/en/ViewPro/cmd_vpAddSelection2.PNG)
 
-#### Voir également
+## Voir également
 
 [VP Get active cell](vp-get-active-cell.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>
