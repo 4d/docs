@@ -25,7 +25,7 @@ title: VP Get column attributes
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | *column* の属性                                   | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get table column attributes` コマンドは、<!-- REF #_method_.VP Get table column attributes.Summary -->*tableName* で指定した表組みの *column* でインデックスを指定した列のカレント属性を返します<!-- END REF -->。
 
@@ -47,7 +47,7 @@ title: VP Get column attributes
 
 *tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
 
-#### 例題
+## 例題
 
 ```4d
 var $attributes : Object
@@ -57,7 +57,7 @@ If ($attributes.dataField#"")
 End if
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>
