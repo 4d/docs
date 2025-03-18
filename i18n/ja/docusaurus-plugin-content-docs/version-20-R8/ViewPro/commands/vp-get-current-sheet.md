@@ -14,7 +14,7 @@ title: VP Get current sheet
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |                  |
 | 戻り値        | Integer | <- | カレントシートのインデックス          | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get current sheet` コマンドは、<!-- REF #_method_.VP Get current sheet.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートのインデックスを返します。 カレントシートとは、ドキュメント内で選択されているシートのことです。<!-- END REF -->
 
@@ -22,7 +22,7 @@ title: VP Get current sheet
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 3番目のシートが選択されている場合:
 
@@ -34,6 +34,6 @@ title: VP Get current sheet
 $index:=VP Get current sheet("ViewProArea")
 ```
 
-#### 参照
+## 参照
 
 [VP SET CURRENT SHEET](vp-set-current-sheet.md)
