@@ -33,14 +33,14 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In the *attributes* parameter, pass an object that contains the properties to set:
 
-| Propriedade         | Tipo    | Descrição                                                                                                                                                                                                   |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                               |
-| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used. |
-| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)     |
-| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                                  |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
+| Propriedade         | Tipo    | Descrição                                                                                                                                                                                                    |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                                |
+| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. Se esse nome já for usado por outra coluna, ele não é aplicado e um nome padrão é usado automaticamente. |
+| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)      |
+| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                                   |
+| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                 |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                 |
 
 Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
@@ -73,7 +73,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $opti
 
 ![](../../assets/en/ViewPro/table-inserta.png)
 
-Then you want to insert a column with data from the data context and hide some filter buttons:
+Em seguida, você deseja inserir uma coluna com dados do contexto de dados e ocultar alguns botões de filtro:
 
 ```4d
 	//insert a column
