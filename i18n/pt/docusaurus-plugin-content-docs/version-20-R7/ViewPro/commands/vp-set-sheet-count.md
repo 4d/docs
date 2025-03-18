@@ -14,7 +14,7 @@ title: VP SET SHEET COUNT
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
 | number     | Integer | -> | Número de folhas                           | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->define o número de folhas em *vpAreaName*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ Em `number`, passe um número correspondente à quantidade de folhas que o docum
 
 > **Aviso**: O comando excluirá folhas se a quantidade anterior de folhas em seu documento for superior ao número passado. Por exemplo, se houver 5 folhas no seu documento e você definir a contagem de planilha para 3, o comando excluirá as folhas número 4 e 5.
 
-#### Exemplo
+## Exemplo
 
 O documento tem atualmente uma folha:
 
@@ -36,6 +36,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ![](../../assets/en/ViewPro/vp-sheet-3.png)
 
-#### Veja também
+## Veja também
 
 [VP Get sheet count](vp-get-sheet-count.md)
