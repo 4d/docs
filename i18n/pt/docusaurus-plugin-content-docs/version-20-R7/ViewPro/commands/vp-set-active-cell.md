@@ -13,13 +13,13 @@ title: VP SET ACTIVE CELL
 | --------- | ------ | -- | ---------------- | ---------------- |
 | rangeObj  | Object | -> | Objeto intervalo | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define uma célula especificada como ativa<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo contendo uma única célula como um objeto (consulte [VP Cell](vp-cell.md)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
-#### Exemplo
+## Exemplo
 
 Para definir a célula na coluna D, linha 5 como a célula ativa:
 
@@ -30,7 +30,7 @@ VP SET ACTIVE CELL($activeCell)
 
 ![](../../assets/en/ViewPro/cmd_vpSetActiveCell.PNG)
 
-#### Veja também
+## Veja também
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>
