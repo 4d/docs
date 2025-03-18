@@ -46,7 +46,7 @@ Debe declarar estos parámetros de la siguiente manera:
 //Código para el métodod
 ```
 
-Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
+Como alternativa, puede utilizar la sintaxis [parámetros nombrados](../Concepts/parameters.md):
 
 ```4d
 // Método base On Web Connection
