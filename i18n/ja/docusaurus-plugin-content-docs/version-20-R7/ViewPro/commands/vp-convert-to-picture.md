@@ -15,7 +15,7 @@ title: VP Convert to picture
 | rangeObj | Object  | ->                          | レンジオブジェクト                       |                  |
 | 戻り値      | Picture | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Convert to picture` コマンドは、<!-- REF #_method_.VP Convert to picture.Summary -->*vpObject* 引数で指定した 4D View Pro オブジェクト (あるいは *vpObject* 内にある、*rangeObj* 引数で指定したレンジ) を、SVGピクチャーに変換します<!-- END REF -->。
 
@@ -44,11 +44,11 @@ title: VP Convert to picture
 
 > 枠線の表示状態は [VP SET PRINT INFO](vp-set-print-info.md) で定義されたドキュメント属性に依存します。
 
-#### 戻り値
+## 戻り値
 
 コマンドは SVGフォーマットのピクチャーを返します。
 
-#### 例題
+## 例題
 
 4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
 
@@ -59,7 +59,7 @@ $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
 ```
 
-#### 参照
+## 参照
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP Export to object](vp-export-to-object.md)<br/>
