@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descripción
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -382,7 +382,7 @@ Cada elemento de la colección es un objeto con las siguientes propiedades:
 | [].message             | text   | Descripción del error 4D                              |
 | [ ].componentSignature | text   | Firma del componente interno que ha devuelto el error |
 
-If no error occured, `.errors` is undefined.
+Si no se ha producido ningún error, `.errors` es indefinido.
 
 <!-- END REF -->
 
@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descripción
 
-La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. Si el proceso no terminó normalmente, `exitCode` es *undefined*.
 
 Esta propiedad es de **solo lectura**.
 
@@ -439,15 +439,15 @@ Esta propiedad es de **solo lectura**.
 | Parámetros  | Tipo |     | Descripción                                                                            |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto a escribir en el flujo de entrada (stdin) del proceso externo |
-| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
+| messageBLOB | Blob |  -> | Bytes escritos en el flujo de entrada                                                  |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. En el parámetro *mensaje*, pase el texto a escribir en *stdin*.
 
-The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
+La función `.postMessage()` también acepta un valor de tipo Blob en *messageBLOB* para pasar en *stdin*, de forma que se pueden publicar datos binarios.
 
 Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) para hacer que el cuerpo de la respuesta devuelva valores Blob.
 
@@ -559,11 +559,11 @@ Esta propiedad es de **solo lectura**.
 
 La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución del `SystemWorker` o el *timeout* especificado<!-- END REF -->.
 
-In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+En *timeout*, pase un valor en segundos. El script `SystemWorker` esperará al proceso externo durante el tiempo definido en el parámetro *timeout*. Si omite el parámetro *timeout*, la ejecución del script esperará indefinidamente.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
+En realidad, `.wait()` espera hasta el final del procesamiento de la fórmula `onTerminate`, excepto si se alcanza el *timeout*. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, especialmente las retrollamadas provienen de otros eventos o de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
 
 Esta función devuelve el objeto SystemWorker.
 
