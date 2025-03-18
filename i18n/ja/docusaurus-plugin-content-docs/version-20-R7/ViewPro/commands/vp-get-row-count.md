@@ -15,7 +15,7 @@ title: VP Get row count
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Integer | <- | 行の総数                                           | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get row count` コマンドは、<!-- REF #_method_.VP Get row count.Summary -->*sheet* 引数で指定したシートにおける行の総数を返します<!-- END REF -->。
 
@@ -23,7 +23,7 @@ title: VP Get row count
 
 任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、どのシートの行数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 以下のコードを実行すると、4D View Pro エリア内の行の数が返されます:
 
@@ -32,7 +32,7 @@ var $rowCount : Integer
 $rowCount:=VP Get row count("ViewProarea")
 ```
 
-#### 参照
+## 参照
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP SET COLUMN COUNT](vp-set-column-count.md)<br/>
