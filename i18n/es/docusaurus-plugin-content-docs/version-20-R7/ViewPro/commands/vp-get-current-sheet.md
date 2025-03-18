@@ -14,7 +14,7 @@ title: VP Get current sheet
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
 | Resultado  | Integer | <- | Indice de la hoja actual                     | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->devuelve el índice de la hoja actual en *vpAreaName*. La hoja actual es la hoja seleccionada en el documento.<!-- END REF -->
 
@@ -22,7 +22,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 > La indexación comienza en 0.
 
-#### Ejemplo
+## Ejemplo
 
 Cuando se selecciona la tercera hoja:
 
@@ -34,6 +34,6 @@ El comando devuelve 2:
 $index:=VP Get current sheet("ViewProArea")
 ```
 
-#### Ver también
+## Ver también
 
 [VP SET CURRENT SHEET](vp-set-current-sheet.md)
