@@ -16,7 +16,7 @@ title: VP ADD FORMULA NAME
 | name       | Text   | -> | Nome da fórmula                            |                  |
 | options    | Object | -> | Opções para a fórmula nomeada              | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->cria ou modifica uma fórmula nomeada no documento aberto<!-- END REF -->.
 
@@ -35,13 +35,13 @@ Pode passar um objeto com propriedades adicionais para a fórmula nomeada em *op
 | scope       | Number | Escopo da fórmula. Você pode passar o índice da planilha (a contagem começa em 0) ou usar as seguintes constantes: <li>`vk current sheet``vk</li><li> workbook`O</li>escopo determina se o nome de uma fórmula é local para uma determinada planilha (*scope*=sheet index ou `vk current sheet`) ou global para toda a pasta de trabalho (*scope*=`vk workbook`). |
 | comment     | Text   | Comentário associado à fórmula nomeada                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-#### Exemplo
+## Exemplo
 
 ```4d
 VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 ```
 
-#### Veja também
+## Veja também
 
 [Cell references](../formulas.md#cell-references)<br/>
 [VP Get formula by name](vp-get-formula-by-name.md)<br/>
