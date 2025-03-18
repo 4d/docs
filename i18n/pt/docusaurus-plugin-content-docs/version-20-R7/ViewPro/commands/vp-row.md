@@ -15,9 +15,9 @@ title: VP Row
 | row        | Integer | ->                          | Índice de linha                                             |                  |
 | rowCount   | Integer | ->                          | Número de linhas                                            |                  |
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Range object of row(s)                   | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto intervalo de linha(s)             | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->retorna um novo objeto de intervalo referenciando uma linha ou linhas<!-- END REF -->.
 
@@ -31,7 +31,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 
 - `vk current sheet`
 
-#### Exemplo
+## Exemplo
 
 Se quiser definir um objeto de intervalo para a linha exibida abaixo (na planilha atual):
 
@@ -43,7 +43,7 @@ Você pode escrever:
 $row:=VP Row("ViewProArea";9) // linha 10
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>
