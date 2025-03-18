@@ -15,7 +15,7 @@ title: VP Get show print lines
 | sheet      | Integer | <- | シートのインデックス                    |                  |
 | 戻り値        | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get show print lines` コマンドは、<!-- REF #_method_.VP Get show print lines.Summary -->印刷プレビューの線が表示状態であれば `true` を、非表示であれば `false` を返します。<!-- END REF -->
 
@@ -25,7 +25,7 @@ title: VP Get show print lines
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 以下のコードは、ドキュメントの印刷プレビュー線の表示状態をチェックします:
 
@@ -34,6 +34,6 @@ title: VP Get show print lines
  $result:=VP Get show print lines("ViewProArea";1)
 ```
 
-#### 参照
+## 参照
 
 [VP SET SHOW PRINT LINES](vp-set-show-print-lines.md)
