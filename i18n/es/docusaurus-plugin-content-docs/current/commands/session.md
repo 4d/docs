@@ -1,5 +1,5 @@
 ---
-id: sesión
+id: session
 title: Session
 displayed_sidebar: docs
 ---
