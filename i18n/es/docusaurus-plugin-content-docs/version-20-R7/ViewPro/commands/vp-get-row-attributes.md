@@ -14,7 +14,7 @@ title: VP Get row attributes
 | rangeObj   | Object     | ->                          | Objeto rango                         |                  |
 | Resultado  | Collection | <- | Colección de propiedades de la línea | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->devuelve una colección de propiedades para cualquier fila del *rangeObj*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ En *rangeObj*, pase un objeto que contenga un rango de líneas cuyos atributos s
 
 La colección devuelta contiene las propiedades de las filas, hayan sido o no definidas por el método [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md).
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código devuelve una colección de los atributos dentro del rango dado:
 
@@ -36,7 +36,7 @@ $attr:=VP Get row attributes($range)
 
 ![](../../assets/en/ViewPro/cmd_vpGetRowAttributes.PNG)
 
-#### Ver también
+## Ver también
 
 [VP Get column attributes](vp-get-column-attributes.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)<br/>
