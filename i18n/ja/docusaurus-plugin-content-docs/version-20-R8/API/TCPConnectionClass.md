@@ -143,7 +143,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- REF #4D.TCPConnection.new().Syntax -->**4D.TCPConnection.new**( *serverAddress* : Text ; *serverPort* : Number ; *options* : Object  ) : 4D.TCPConnection<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.new().options -->
+<!-- REF #4D.TCPConnection.new().params -->
 
 | 引数            | 型             |                             | 説明                        |
 | ------------- | ------------- | --------------------------- | ------------------------- |
@@ -244,7 +244,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- REF #4D.TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().options -->
+<!-- REF #4D.TCPConnection.send().params -->
 
 | 引数   | 型    |    | 説明      |
 | ---- | ---- | -- | ------- |
@@ -264,7 +264,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- REF #4D.TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().options -->
+<!-- REF #4D.TCPConnection.shutdown().params -->
 
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
@@ -284,7 +284,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- REF #4D.TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection..wait().options -->
+<!-- REF #4D.TCPConnection.wait().params -->
 
 | 引数      | 型    |     | 説明                           |
 | ------- | ---- | :-: | ---------------------------- |
