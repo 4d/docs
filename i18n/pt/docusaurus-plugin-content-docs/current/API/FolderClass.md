@@ -101,7 +101,7 @@ A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta 
 
 Se necessário, a função cria a hierarquia de pastas conforme descrito nas propriedades [platformPath](#platformpath) ou [path](#path). Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
-**Returned value**
+**Valor retornado**
 
 - **True** se a pasta for criada com sucesso;
 - **False** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
