@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 O comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura uma nova conexão IMAP<!-- END REF --> de acordo com o parâmetro *server* e retorna um novo objeto *transporter*. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
@@ -44,13 +44,13 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 > **Aviso**: certifique-se de que o tempo limite definido seja menor que o tempo limite do servidor, caso contrário, o tempo limite do cliente será inútil.
 
-#### Resultados
+## Resultados
 
 A função retorna um [**objeto IMAP transporter**](../API/IMAPTransporterClass.md#imap-transportter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
-#### Exemplo
+## Exemplo
 
 ```4d
 $server:=New object
@@ -69,7 +69,7 @@ If(Not($status.success))
 End if
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |
