@@ -16,7 +16,7 @@ title: VP Get stylesheet
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | スタイルシートオブジェクト                                  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get stylesheet` コマンドは、<!-- REF #_method_.VP Get stylesheet.Summary -->*styleName* で指定した、定義済のプロパティ値を格納したスタイルシートオブジェクトを返します<!-- END REF -->。
 
@@ -29,7 +29,7 @@ title: VP Get stylesheet
 - `vk current sheet`
 - `vk workbook`
 
-#### 例題
+## 例題
 
 以下のコードは:
 
@@ -49,7 +49,7 @@ borderTop:{color:green,style:10}
 }
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート)<br/>
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
