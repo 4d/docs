@@ -43,11 +43,11 @@ La génération ne peut s'effectuer qu'une fois le projet compilé. Si vous sél
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
+Chaque paramètre du générateur d'application est sauvegardé en tant que clé XML dans le fichier XML du projet d'application nommé `buildApp.4DSettings`, situé dans le [dossier `Settings` du projet](../Project/architecture.md#settings-user).
 
 Des paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual.
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. La description de ces clés est détaillée dans le manuel [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
 
 ### Fichier journal
 
@@ -97,7 +97,7 @@ Lorsque vous cochez cette option, tous les dossiers liés au projet sont recopi�
 
 Génère un composant compilé à partir de la structure.
 
-Un [composant](../Extensions/develop-components.md) est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
+Un [composant](../Extensions/develop-components.md) est un fichier de structure 4D standard dans lequel des fonctionnalités spécifiques ont été développées. Une fois que le composant a été configuré et [installé dans un autre projet 4D](../Project/components.md) (le projet de l'application hôte), ses fonctionnalités sont accessibles depuis le projet hôte.
 
 If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
 
@@ -122,7 +122,7 @@ Cet onglet vous permet de créer une version monoposte autonome de votre applica
 
 ### Créer une application autonome
 
-Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project. Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOS, il gère la création de progiciels.
+Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application. Sous Windows, cette fonctionnalité crée un fichier exécutable (.exe). Sous macOS, il gère la création de progiciels.
 
 The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
 
@@ -168,15 +168,15 @@ Si vous avez nommé votre application "MyProject", vous trouverez les fichiers s
  - MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
  - Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
  - Database folder - Includes a Resources folder and  MyProject.4DZ file. Ils constituent la structure compilée du projet et son dossier Resources.
-  **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
- - (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. For more information about this, refer to the [Plugins and components](#plugins--components-page) section.
- - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. For more information about this, refer to the [Licenses & Certificate](#licenses--certificate-page) section.
+  **Note** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#management-of-data-files)).
+ - (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. Pour plus d’informations sur ce point, reportez-vous à la section [Plugins et composants](#plugins--components-page).
+ - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Pour plus d’informations sur ce point, reportez-vous à la section [Licences & Certificat](#licenses--certificate-page).
  - Les éléments supplémentaires éventuellement ajoutés dans le dossier 4D Volume Desktop (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
 Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
 
 - *macOS*
- - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins--components-page) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses--certificate-page) section. **Note**: In macOS, the [Application file](../commands-legacy/application-file.md) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
+ - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins--components-page). Pour plus d’informations sur l’intégration des licences, reportez-vous à la section [Page Licences & Certificat](#licenses--certificate-page). **Note** : Dans macOS, la commande [Application file](../commands-legacy/application-file.md) du langage 4D renvoie le chemin du fichier ApplicationName (situé dans le dossier Contents:macOS du progiciel) et non celui du fichier .comp (dossier Contents:Resources du progiciel).
 
 #### Personnaliser le dossier 4D Volume Desktop
 
@@ -223,7 +223,7 @@ En outre, l’application client/serveur est personnalisée et son maniement est
 - Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur. Il n’est pas nécessaire de sélectionner le fichier projet.
 - Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur. Il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente.
  Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
-- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-inside-the-server-application). Il vous suffit de créer et de distribuer une version initiale de l'application cliente, les mises à jour ultérieures sont gérées à l'aide du mécanisme de mise à jour automatique.
+- Une application client/serveur peut être paramétrée de telle sorte que la partie cliente [puisse être mise à jour automatiquement via le réseau](#copy-of-client-applications-inside-the-server-application). Il vous suffit de créer et de distribuer une version initiale de l'application cliente, les mises à jour ultérieures sont gérées à l'aide du mécanisme de mise à jour automatique.
 - It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) and [RESTART 4D](../commands-legacy/restart-4d.md).
 
 ### Construire application serveur
@@ -242,11 +242,11 @@ Utilisée pour indiquer le numéro de version courante de l'application génér�
 
 **Note préliminaire :** Les termes suivants sont utilisés dans cette section :
 
-| Nom                                    | Définition                                                                                                                                                                                    |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Fichier de répertoire du projet        | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
-| Fichier de répertoire de l'application | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
-| Fichier de répertoire des données      | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
+| Nom                                    | Définition                                                                                                                                                                              |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fichier de répertoire du projet        | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-user) du projet     |
+| Fichier de répertoire de l'application | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-user) du serveur 4D |
+| Fichier de répertoire des données      | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le dossier [Data > Settings](../Project/architecture.md#settings-user-data)   |
 
 Lorsque vous cochez cette option, le fichier du répertoire du projet est copié dans le fichier du répertoire de l'application au moment de la génération.
 
@@ -350,7 +350,7 @@ Dans certains cas, vous pourrez souhaiter que les applications clientes ne puiss
 
 Pour forcer la mise à jour, il vous suffit d’exclure les versions courantes des applications clientes (N-1 et précédentes) de l’intervalle des numéros de version compatibles avec l’application serveur. Dans ce cas, le mécanisme de mise à jour n’autorisera pas la connexion des applications clientes non mises à jour. Par exemple, si la nouvelle version de l’application client-serveur est 6, vous pouvez stipuler que toute application cliente ayant un numéro de version strictement inférieur à 6 ne sera pas autorisé à se connecter.
 
-The [current version number](#current-version) is set on the Client/Server page of the Build Application dialog box. Les intervalles de numéros autorisés sont définis dans le projet d’application via des [clés XML](#buildapp4dsettings) spécifiques.
+Le [numéro de version courante](#current-version) est défini dans la page Client/Serveur du générateur d’application. Les intervalles de numéros autorisés sont définis dans le projet d’application via des [clés XML](#buildapp4dsettings) spécifiques.
 
 #### En cas d’erreur
 
@@ -563,7 +563,7 @@ This option allows you to build a ready-to-use application, in which necessary l
 
 You must designate the files that contain your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
-Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
+Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](../commands-legacy/get-4d-folder.md).
 
 Une fois que vous avez sélectionné un fichier, la liste indique les caractéristiques de la licence qu’il contient.
 
@@ -608,7 +608,7 @@ Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez 
 
 Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
-> On Apple Silicon machines, 4D [components](../Project/components.md) need to be actually signed. Un composant non signé générera une erreur au démarrage de l'application ("lib4d-arm64.dylib can't be opened...").
+> Sur les machines Apple Silicon, les [composants](../Project/components.md) 4D doivent être signés. Un composant non signé générera une erreur au démarrage de l'application ("lib4d-arm64.dylib can't be opened...").
 
 L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications et des composants compatibles avec cette option par défaut.
 
@@ -616,7 +616,7 @@ L'option **Signer l'application** du Générateur d’application de 4D permet d
 
 La notarisation des applications est fortement recommandée par Apple à partir de macOS 10.14.5 (Mojave) et 10.15 (Catalina), car les applications non notariées déployées via Internet sont bloquées par défaut.
 
-The 4D [built-in signing features](#macos-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce post du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description, par étapes, du processus de notarisation.
+Les [fonctionnalités de signature intégrées](#macos-signing-certificate) ont été mises à jour pour répondre à toutes les exigences d'Apple et permettre l'utilisation du service de notarisation d'Apple. La notarisation elle-même doit être réalisée par le développeur et est indépendante de 4D (à noter également qu'elle nécessite l'installation de Xcode). Veuillez vous référer à [ce post du blog 4D](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) qui fournit une description, par étapes, du processus de notarisation.
 
 Pour plus d'informations sur le concept de notarisation, veuillez consulter [cette page sur le site Apple developer](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -636,7 +636,7 @@ Votre fichier d’icône doit avoir le même nom que le fichier du projet et com
 
 Votre fichier d’icône doit avoir le même nom que le fichier de structure interprété et comporter l’extension *.ico*. 4D prend automatiquement ce fichier en compte lors de la génération de l’application exécutable.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) in the buildApp.4DSettings file to designate each icon to use. Les clés suivantes sont disponibles :
+Vous pouvez également définir des [clés XML](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) spécifiques dans le fichier buildApp.4DSettings pour désigner chaque icône devant être utilisée. Les clés suivantes sont disponibles :
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -696,7 +696,7 @@ Ce mode vous permet de dupliquer vos applications fusionnées sans rompre le lie
 
 Vous sélectionnez le mode de liaison des données lors de la phase de génération de l'application. Vous pouvez soit :
 
-- Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+- Utiliser la [Page Application](#application-page) ou la [Page Client/Serveur](#clientserver-page) de boîte de dialogue du Générateur d'applications.
 - Utiliser la clé XML **LastDataPathLookup** (application monoposte ou application serveur).
 
 ### Définir un dossier de données par défaut
@@ -760,12 +760,12 @@ prefsUtilisateur:=Get 4D folder(Dossier 4D actif)
 
 Ce mécanisme permet de prendre en charge le cas où le serveur cible primaire est temporairement indisponible pour une raison quelconque (par exemple pour une opération de maintenance). Lorsque ce cas se produit pour la première fois, la boîte de dialogue de sélection de serveur est affichée (si elle est autorisée, cf. ci-dessous) et l'utilisateur peut manuellement sélectionner un serveur alternatif, dont le chemin est alors sauvegardé si la connexion est établie et validée. Toute indisponibilité ultérieure sera alors automatiquement prise en charge à l'aide des paramètres de connexion présents dans le fichier "lastServer.xml".
 
-> - When client applications cannot permanently benefit from the discovery service, for example because of the network configuration, it is recommended that the developer provide a host name at build time using the [IPAddress](https://doc.4d.com/4Dv20/4D/20/IPAddress.300-6335763.en.html) key in the "BuildApp.4DSettings" file. Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.
+> - Lorsque les applications clientes ne peuvent pas bénéficier en permanence du service de découverte, par exemple en raison de la configuration réseau, il est recommandé que le développeur fournisse un nom d'hôte lors de la génération de l'application en utilisant la clé [IPAddress](https://doc.4d.com/4Dv20/4D/20/IPAddress.300-6335763.en.html) dans le fichier "BuildApp.4DSettings". Le mécanisme de sauvegarde du chemin du dernier serveur est conçu pour les cas d'indisponibilité temporaire uniquement.
 > - Dans tous les cas, il est possible de maintenir la touche **Alt/Option** au démarrage de l'application cliente afin d'afficher la boîte de dialogue de sélection du serveur.
 
 ### Accès à la boîte de dialogue de sélection de serveur en cas d'erreur
 
-Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.en.html) XML key on the machine where the application was built:
+Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. La configuration dépend de la valeur de la clé XML [ServerSelectionAllowed](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.en.html) sur la machine où l'application a été créée :
 
 - **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. L'application ne peut que quitter.\
  L'application ne peut que quitter.\
