@@ -98,7 +98,7 @@ As regras abaixo são válidas:
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Os parâmetros devem ser incluídos numa coleção (formato JSON).
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
 - A entidade e a seleção de entidades podem ser passadas como parâmetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -134,8 +134,8 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 | __ENTITY    | Parâmetros                                                    | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma entidade |
 | __KEY       | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                         |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Se `__KEY` não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
+- Se `__KEY` for fornecido, a entidade correspondente a `__KEY` é carregada no servidor com os atributos fornecidos
 
 See examples below for creating or updating entities with POST requests.
 See an example of contents downloading using an entity with a GET request.
