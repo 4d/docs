@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 <!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time. This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
 
@@ -71,7 +71,7 @@ On the server, the `Process activity` command returns an additional "session" pr
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
 | session             | Object | The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. |   |
 
-#### Exemple 1
+## Exemple 1
 
 You want to get the collection of all user sessions:
 
@@ -91,7 +91,7 @@ You want to get the collection of all user sessions:
  End for
 ```
 
-#### Exemple 2
+## Exemple 2
 
 You want to get all processes related to the current session:
 
@@ -105,7 +105,7 @@ You want to get all processes related to the current session:
 
 ```
 
-#### Voir également
+## Voir également
 
 [Session storage](session-storage.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
