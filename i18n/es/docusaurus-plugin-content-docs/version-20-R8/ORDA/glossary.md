@@ -150,7 +150,7 @@ Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acce
 
 ## Privilegio
 
-The ability to run one or more [actions](#action) on [resources](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+La capacidad de ejecutar una o varias [acciones](#action) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propiedad
 
