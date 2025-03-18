@@ -16,7 +16,7 @@ title: VP Font to object
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `VP Font to object` ユーティリティコマンドは、<!-- REF #_method_.VP Font to object.Summary -->フォントのショートハンド文字列からオブジェクトを返します<!-- END REF -->。 このオブジェクトはその後、オブジェクト記法を通してフォントプロパティ設定を取得・設定するのに使用することができます。
 
@@ -24,7 +24,7 @@ title: VP Font to object
 
 返されるオブジェクトには、フォント属性がプロパティとして格納されています。 利用可能なプロパティの詳細については、[VP Object to font](vp-object-to-font.md) コマンドを参照ください。
 
-#### 例題 1
+## 例題 1
 
 以下のコードを実行すると:
 
@@ -42,11 +42,11 @@ size:16pt
 }
 ```
 
-#### 例題 2
+## 例題 2
 
 [`VP Object to font`](vp-object-to-font.md) の例題を参照ください。
 
-#### 参照
+## 参照
 
 [4D View Pro スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート)<br/>
 [VP Object to font](vp-object-to-font.md)<br/>
