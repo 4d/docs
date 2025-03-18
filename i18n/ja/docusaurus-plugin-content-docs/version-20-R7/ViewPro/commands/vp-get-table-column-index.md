@@ -25,7 +25,7 @@ title: VP Get table column index
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Integer | <- | *columnName* のインデックス                           | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get table column index` コマンドは、<!-- REF #_method_.VP Get table column index.Summary -->*tableName* で指定した表組みの *columnName* で指定した列のインデックスを返します<!-- END REF -->。
 
@@ -39,7 +39,7 @@ title: VP Get table column index
 
 *tableName* で指定した表組み、または *columnName* で指定した列が見つからない場合、コマンドは -1 を返します。
 
-#### 例題
+## 例題
 
 ```4d
 	// 列の名前をもとに、列のインデックスを取得します
@@ -49,7 +49,7 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>
