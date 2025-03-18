@@ -15,7 +15,7 @@ title: VP SET NUM VALUE
 | numberValue   | Number | -> | 設定する数値    |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET NUM VALUE` コマンドは、<!-- REF #_method_.VP SET NUM VALUE.Summary -->指定のセルレンジに数値を割り当てます<!-- END REF -->。
 
@@ -25,7 +25,7 @@ title: VP SET NUM VALUE
 
 任意の *formatPattern* 引数は、*numberValue* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 
-#### 例題
+## 例題
 
 ```4d
 // セルに2という値を設定します
@@ -35,7 +35,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);2)
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 ```
 
-#### 参照
+## 参照
 
 [セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET VALUE](vp-set-value.md)
