@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 **Compile project**<!--REF #_command_.Compile project.Summary--> permite compilar el proyecto local actual o el proyecto especificado en el parámetro *projectFile*.<!-- END REF--> Para más información sobre compilación, consultr la [página de compilación](../Project/compiler.md).
 
@@ -48,11 +48,11 @@ Compilation errors, if any, are returned as objects in the *errors* collection.
 
 **Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
 
-##### Parámetro options
+### Parámetro options
 
 The *options* parameter is an object. Here are the available compilation options:
 
-| **Propiedad**                                                                      | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Propiedad**                                                                      | **Tipo**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | components                                                                         | Collection                       | Collection of 4D.File objects to dependent components (must be already compiled)                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | defaultTypeForButtons                                                              | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -70,11 +70,11 @@ The *options* parameter is an object. Here are the available compilation options
 
 **Note:** When the *warnings* attribute is not defined in the *options* object, the **Compile project** command uses the default warning generation statuses defined in the settings.
 
-##### Resultado
+### Resultado
 
 The object returned by **Compile project** has up to three properties:
 
-| **Propiedad**                                                                                                          | **Type**             | **Description**                                                                                                                          |
+| **Propiedad**                                                                                                          | **Tipo**             | **Description**                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                                                                | Boolean              | True si la acción guardar tiene éxito, false en caso contrario.                                                          |
 | errors                                                                                                                 | Colección de objetos | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings          |
@@ -101,22 +101,22 @@ The object returned by **Compile project** has up to three properties:
 
 Para obtener más información, consulte [Herramientas de compilación](../Project/compiler.md#compilation-tools).
 
-###### variable objects
+## variable objects
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
-| **Propiedad**  | **Type** | **Description**                                                                                           |
+| **Propiedad**  | **Tipo** | **Description**                                                                                           |
 | -------------- | -------- | --------------------------------------------------------------------------------------------------------- |
 | name           | Text     | Name of the variable                                                                                      |
 | type           | number   | Type of the variable (like Value type command)                                         |
 | arrayDimension | number   | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
 | code           | Object   | For process and interprocess variables: descriptor of where the variable has been defined |
 
-###### code object
+## code object
 
 The `code` property in `methods.code` and `errors.code` is an object with the following properties:
 
-| **Propiedad**  | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Propiedad**  | **Tipo**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects) |
 | path           | Text                    | Method path (same format as [METHOD OPEN PATH](../commands-legacy/method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -131,7 +131,7 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 | functionName   | Text                    | Nombre de la función de clase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | databaseMethod | Number                  | Database method index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-#### Ejemplos
+## Ejemplos
 
 To perform a syntax check only, pass an empty collection to the targets parameter:
 
@@ -188,11 +188,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### Ver también
+## Ver también
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |
