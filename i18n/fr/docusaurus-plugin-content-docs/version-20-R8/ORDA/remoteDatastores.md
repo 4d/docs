@@ -5,13 +5,13 @@ title: Datastores distants
 
 Un **datastore distant** est une référence, dans une application 4D locale (4D ou 4D Server), à un [datastore](dsMapping.md#datastore) stocké dans une autre application 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore.md) command.
+L'application 4D locale se connecte et référence le datastore distant à l'aide de la commande [`Open datastore`](../commands/open-datastore.md).
 
 Sur la machine distante, 4D ouvre une [session](../WebServer/sessions.md) pour gérer les requêtes de l'application qui a appelé `Open datastore`. Les requêtes utilisent en interne [l'API REST](../REST/gettingStarted.md), ce qui signifie qu'elles peuvent avoir besoin de [licences disponibles](../REST/authUsers.md).
 
 ## Utiliser des sessions web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../commands/open-datastore.md) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande [`Open datastore`](../commands/open-datastore.md), la connexion avec les process de requête est gérée via des [sessions web](../WebServer/sessions.md) sur la machine distante.
 
 La session web créée sur le datastore distant est identifiée à l'aide d'un ID de session interne, associé au `localID` du côté de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
