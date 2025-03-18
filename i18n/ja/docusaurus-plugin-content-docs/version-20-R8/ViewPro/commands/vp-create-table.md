@@ -26,7 +26,7 @@ title: VP CREATE TABLE
 | source    | Text                                                                                  | -> | 表に表示するデータコンテキストプロパティ名 |                  |
 | options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | 追加のオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP CREATE TABLE` コマンドは、<!-- REF #_method_.VP CREATE TABLE.Summary -->指定のレンジ内に表組みを作成します<!-- END REF -->。 表組みを作成することで、関連するデータの管理や分析をより簡単におこなえます。 表組みは通常、関連するデータを行と列に含み、[データコンテキスト](vp-set-data-context.md) を利用します。
 
@@ -70,7 +70,7 @@ title: VP CREATE TABLE
 
 > これは列を自動生成するときにのみ機能します。 *tableColumns* オプションを使用する場合、スカラーデータのコレクションは使用できません。
 
-#### 例題
+## 例題
 
 データコンテキストを使用した表組みを作成します:
 
@@ -103,7 +103,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### 参照
+## 参照
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
