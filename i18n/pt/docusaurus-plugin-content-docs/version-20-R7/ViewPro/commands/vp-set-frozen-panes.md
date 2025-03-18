@@ -19,14 +19,14 @@ title: VP SET FROZEN PANES
 
 #### Descrição
 
-The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. Uma linha sólida é exibida para indicar que as colunas e linhas estão congeladas. The location of the line depends on where the frozen column or row is on the sheet:
+The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Colunas congeladas e linhas são fixas no lugar e não se movem quando o resto do documento for rolado. Uma linha sólida é exibida para indicar que as colunas e linhas estão congeladas. O local da linha depende de onde a coluna congelada ou a linha está na folha:
 
-- **Columns on the left or right**: For columns on the left of the sheet, the line is displayed on the right side of the last frozen column. For columns on the right side of the sheet, the line is displayed on the left side of the first frozen column.
-- **Linhas na parte superior ou inferior**: para linhas na parte superior da planilha, a linha é exibida abaixo da última linha congelada. For rows at the bottom of the sheet, the line is displayed above the first frozen row.
+- **Columns on the left or right**: For columns on the left of the sheet, the line is displayed on the right side of the last frozen column. Para colunas no lado direito da folha, a linha é exibida no lado esquerdo da primeira coluna congelada.
+- **Linhas na parte superior ou inferior**: para linhas na parte superior da planilha, a linha é exibida abaixo da última linha congelada. Para linhas na parte inferior da folha, a linha é exibida acima da primeira linha congelada.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. Se uma propriedade for definida para menos de zero, o comando não fará nada. Pode passar:
+You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Definindo o valor de qualquer uma das colunas ou das propriedades da linha igual a zero resets (descongelados) a propriedade. Se uma propriedade for definida para menos de zero, o comando não fará nada. Pode passar:
 
 | Propriedade         | Tipo    | Descrição                                                |
 | ------------------- | ------- | -------------------------------------------------------- |
@@ -41,7 +41,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 
 #### Exemplo
 
-You want to freeze the first three columns on the left, two columns on the right, and the first row:
+Você deseja congelar as três primeiras colunas à esquerda, duas colunas à direita e a primeira linha:
 
 ```4d
 C_OBJECT($panes)
