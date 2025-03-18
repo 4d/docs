@@ -24,7 +24,7 @@ title: VP Get table theme
 | sheet      | Integer                                                                           | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値                                 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get table theme` コマンドは、<!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](vp-create-table.md) または [`VP SET TABLE THEME`](vp-set-table-theme.md) コマンド、もしくはインターフェースから設定することができます。
 
@@ -34,7 +34,7 @@ title: VP Get table theme
 
 このコマンドは、現在の表テーマを記述するプロパティと値を格納する、[cs.ViewPro.TableTheme](../classes.md#tabletheme) クラスのオブジェクトを返します。
 
-#### 例題
+## 例題
 
 このコマンドは、テーマの定義に [ネイティブSpreadJSテーマ](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) の名前が使用された場合でも、完全な `theme` オブジェクトを返します。
 
@@ -48,7 +48,7 @@ $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
 $result:=Asserted(Value type($vTheme.theme)=Is object) // true
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP SET TABLE THEME](vp-set-table-theme.md)
