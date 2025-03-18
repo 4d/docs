@@ -91,7 +91,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”.
   Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
+L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la [page Groupes](#configuring-groups).
 
 ### Supprimer un utilisateur
 
