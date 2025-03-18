@@ -2,6 +2,8 @@
 id: Communications
 title: Communications
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GET SERIAL PORT MAPPING.Syntax -->](../../commands-legacy/get-serial-port-mapping.md)<br/>|

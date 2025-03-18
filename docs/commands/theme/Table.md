@@ -2,6 +2,8 @@
 id: Table
 title: Table
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current default table.Syntax -->](../../commands-legacy/current-default-table.md)<br/>|

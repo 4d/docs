@@ -2,6 +2,8 @@
 id: Web_Services_Server
 title: Web Services (Server)
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.SOAP DECLARATION.Syntax -->](../../commands-legacy/soap-declaration.md)<br/>|

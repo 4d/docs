@@ -2,6 +2,8 @@
 id: Form_Events
 title: Form Events
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Activated.Syntax -->](../../commands-legacy/activated.md)<br/>|

@@ -2,6 +2,8 @@
 id: Graphs
 title: Graphs
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GRAPH.Syntax -->](../../commands-legacy/graph.md)<br/>|

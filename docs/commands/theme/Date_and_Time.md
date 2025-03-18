@@ -2,6 +2,8 @@
 id: Date_and_Time
 title: Date and Time
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Add to date.Syntax -->](../../commands-legacy/add-to-date.md)<br/>|

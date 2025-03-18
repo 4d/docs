@@ -2,6 +2,8 @@
 id: XML_DOM
 title: XML DOM
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.DOM Append XML child node.Syntax -->](../../commands-legacy/dom-append-xml-child-node.md)<br/>|

@@ -2,6 +2,8 @@
 id: Menus
 title: Menus
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND MENU ITEM.Syntax -->](../../commands-legacy/append-menu-item.md)<br/>|

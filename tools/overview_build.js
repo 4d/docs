@@ -41,7 +41,7 @@ async function run(inFolder, sidebarObject) {
         let overview = "---\n" +
             `id: ${overview_id}\n` +
             `title: ${category.label}\n` +
-            "---\n"
+            "---\n\n\n";
         overview += "||\n|---|\n";
         for (const command of category.items) {
             const fileName = command.split("/").at(-1) + ".md";

@@ -2,6 +2,8 @@
 id: Drag_and_Drop
 title: Drag and Drop
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Drop position.Syntax -->](../../commands-legacy/drop-position.md)<br/>|

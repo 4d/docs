@@ -2,6 +2,8 @@
 id: Collections
 title: Collections
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ARRAY TO COLLECTION.Syntax -->](../../commands-legacy/array-to-collection.md)<br/>|

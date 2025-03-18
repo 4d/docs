@@ -2,6 +2,8 @@
 id: Data_Entry
 title: Data Entry
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ACCEPT.Syntax -->](../../commands-legacy/accept.md)<br/>|

@@ -2,6 +2,8 @@
 id: HTTP
 title: HTTP
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.HTTP AUTHENTICATE.Syntax -->](../../commands-legacy/http-authenticate.md)<br/>|

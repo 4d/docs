@@ -2,6 +2,8 @@
 id: User_Interface
 title: User Interface
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BEEP.Syntax -->](../../commands-legacy/beep.md)<br/>|

@@ -2,6 +2,8 @@
 id: Printing
 title: Printing
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ACCUMULATE.Syntax -->](../../commands-legacy/accumulate.md)<br/>|

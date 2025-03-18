@@ -2,6 +2,8 @@
 id: Web_Services_Client
 title: Web Services (Client)
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WEB SERVICE AUTHENTICATE.Syntax -->](../../commands-legacy/web-service-authenticate.md)<br/>|

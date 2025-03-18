@@ -2,6 +2,8 @@
 id: Named_Selections
 title: Named Selections
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLEAR NAMED SELECTION.Syntax -->](../../commands-legacy/clear-named-selection.md)<br/>|

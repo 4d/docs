@@ -2,6 +2,8 @@
 id: Resources
 title: Resources
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLOSE RESOURCE FILE.Syntax -->](../../commands-legacy/close-resource-file.md)<br/>|

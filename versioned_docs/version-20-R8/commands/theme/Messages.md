@@ -2,6 +2,8 @@
 id: Messages
 title: Messages
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ALERT.Syntax -->](../../commands-legacy/alert.md)<br/>|

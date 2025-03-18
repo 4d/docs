@@ -2,6 +2,8 @@
 id: Arrays
 title: Arrays
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND TO ARRAY.Syntax -->](../../commands-legacy/append-to-array.md)<br/>|

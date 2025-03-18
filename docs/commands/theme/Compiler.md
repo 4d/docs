@@ -2,6 +2,8 @@
 id: Compiler
 title: Compiler
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Compile project.Syntax -->](../../commands/compile-project.md)<br/>|

@@ -2,6 +2,8 @@
 id: Quick_Report
 title: Quick Report
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.QR BLOB TO REPORT.Syntax -->](../../commands-legacy/qr-blob-to-report.md)<br/>|

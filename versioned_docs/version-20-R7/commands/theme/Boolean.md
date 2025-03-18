@@ -2,6 +2,8 @@
 id: Boolean
 title: Boolean
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Bool.Syntax -->](../../commands-legacy/bool.md)<br/>|

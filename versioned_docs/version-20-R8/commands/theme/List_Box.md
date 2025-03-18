@@ -2,6 +2,8 @@
 id: List_Box
 title: List Box
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.LISTBOX COLLAPSE.Syntax -->](../../commands-legacy/listbox-collapse.md)<br/>|

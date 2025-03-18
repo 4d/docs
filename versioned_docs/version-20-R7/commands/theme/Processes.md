@@ -2,6 +2,8 @@
 id: Processes
 title: Processes
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ABORT PROCESS BY ID.Syntax -->](../../commands-legacy/abort-process-by-id.md)<br/>|

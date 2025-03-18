@@ -2,6 +2,8 @@
 id: Transactions
 title: Transactions
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Active transaction.Syntax -->](../../commands-legacy/active-transaction.md)<br/>|
