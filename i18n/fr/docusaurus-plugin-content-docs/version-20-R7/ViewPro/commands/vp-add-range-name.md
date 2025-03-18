@@ -15,7 +15,7 @@ title: VP ADD RANGE NAME
 | name       | Text   | -> | Nom de la formule            |                  |
 | options    | Object | -> | Options de la formule nommée | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->crée ou modifie une plage nommée dans le document courant<!-- END REF -->.
 
@@ -33,7 +33,7 @@ Vous pouvez passer un objet avec des propriétés supplémentaires pour la plage
 > - Une plage nommée est en réalité une formule nommée contenant des coordonnées. La commande `VP ADD RANGE NAME` facilite la création de plages nommées, mais vous pouvez également utiliser la méthode [`VP ADD FORMULA NAME`](vp-add-formula-name.md) pour créer des plages nommées.
 > - Les formules définissant des plages nommées peuvent être récupérées à l'aide de la commande [`VP Get formula by name`](vp-get-formula-by-name.md).
 
-#### Exemple
+## Exemple
 
 Vous souhaitez créer une plage nommée à partir d'une plage contenant une cellule :
 
@@ -42,7 +42,7 @@ $range:=VP Cell("ViewProArea";2;10)
 VP ADD RANGE NAME($range;"Total1")
 ```
 
-#### Voir également
+## Voir également
 
 [VP Get names](vp-get-names.md)<br/>
 [VP Name](vp-name.md)
