@@ -36,22 +36,24 @@ Estão disponíveis os seguintes selectores:
 
 #### Exemplo
 
-You want to view the cell in column AY, row 51 in the center of the 4D View Pro area:
+Você deseja visualizar a célula na coluna AY, linha 51, no centro da área do 4D View Pro:
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-// Move the view to show the cell VP SHOW CELL($displayCell;vk position center;vk position center)
+// Mova a vista para mostrar a célula
+VP MOS, CÉLLL($displayCell;vk position center;vk position center)
 ```
 
 Resultados:
 
 ![](../../assets/en/ViewPro/cmd_vpShowCell1.PNG)
 
-The same code with the vertical and horizontal selectors changed to show the same cell positioned at the top right of the 4D View Pro area:
+O mesmo código com os seletores vertical e horizontal alterados para mostrar a mesma célula posicionada no canto superior direito da área do 4D View Pro:
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-  // Move the view to show the cell VP SHOW CELL($displayCell;vk position top;vk position right)
+  // Mova a visualização para mostrar a célula
+VP SHOW CELL($displayCell;vk position top;vk position right)
 ```
 
 Resultados:
