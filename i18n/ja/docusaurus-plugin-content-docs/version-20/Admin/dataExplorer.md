@@ -168,7 +168,7 @@ firstname=="Jim"
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/EntitySelectionClass.md#queryplan) and [`queryPath`](API/EntitySelectionClass.md#querypath). このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
+`v` アイコンをクリックすると、 [`queryPlan`](API/EntitySelectionClass.md#queryplan) と [`queryPath`](API/EntitySelectionClass.md#querypath) が表示されます。 このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
