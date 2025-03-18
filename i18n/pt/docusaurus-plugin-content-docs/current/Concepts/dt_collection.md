@@ -57,7 +57,7 @@ Several 4D commands and functions return collections, for example [`Monitored ac
 
 ### Comando `New object`
 
-The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+O comando [`Nova coleção`](../commands/new-collection.md) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
 
 Exemplos:
 
@@ -105,7 +105,7 @@ Se você criar um literal de coleção contendo um único elemento, certifique-s
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções regulares (não compartilhadas), usando o comando [`New collection`] (commands/new-collection.md) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - coleções compartilhadas, usando o comando [`New shared collection`](commands/new-shared-collection.md). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
 
 Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
