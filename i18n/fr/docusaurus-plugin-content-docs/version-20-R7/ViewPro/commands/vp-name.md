@@ -16,7 +16,7 @@ title: VP Name
 | sheet      | Integer | ->                          | Emplacement de la plage (si omis, feuille courante) |                  |
 | Résultat   | Object  | <- | Plage nommée                                                           | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
@@ -29,7 +29,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 - `vk current sheet`
 - `vk workbook`
 
-#### Exemple
+## Exemple
 
 Vous souhaitez assigner une valeur à une plage nommée "Total".
 
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>
