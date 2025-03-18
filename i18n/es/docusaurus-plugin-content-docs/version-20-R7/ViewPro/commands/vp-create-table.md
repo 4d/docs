@@ -26,7 +26,7 @@ title: VP CREATE TABLE
 | source     | Text                                                                                  | -> | Nombre de la propiedad del contexto de datos a mostrar en la tabla |                  |
 | options    | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opciones adicionales                                               | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crea una tabla en el rango especificado<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados.
 
@@ -70,7 +70,7 @@ Aquí los títulos de las columnas serían `LastName` y `FirstName`.
 
 > Esto sólo funciona cuando se generan columnas automáticamente. No puede utilizar una colección de datos escalares con la opción *tableColumns*.
 
-#### Ejemplo
+## Ejemplo
 
 Para crear una tabla utilizando un contexto de datos:
 
@@ -103,7 +103,7 @@ Aquí está el resultado:
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### Ver también
+## Ver también
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
