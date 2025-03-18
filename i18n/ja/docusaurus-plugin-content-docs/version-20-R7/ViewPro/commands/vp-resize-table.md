@@ -22,7 +22,7 @@ title: VP RESIZE TABLE
 | rangeObj  | Object | -> | 表組みの新しいレンジ |                  |
 | tableName | Text   | -> | テーブル名      | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP RESIZE TABLE` コマンドは、<!-- REF #_method_.VP RESIZE TABLE.Summary -->*rangeObj* で指定したレンジの大きさに *tableName* で指定した表組みをリサイズします<!-- END REF -->。
 
@@ -36,7 +36,7 @@ title: VP RESIZE TABLE
 
 *tableName* の表組みが存在しない場合には、何も起こりません。
 
-#### 例題
+## 例題
 
 データコンテキストを使用した表組みを作成します:
 
@@ -64,7 +64,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 ![](../../assets/en/ViewPro/table-resize.png)
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table range](vp-get-table-range.md)
