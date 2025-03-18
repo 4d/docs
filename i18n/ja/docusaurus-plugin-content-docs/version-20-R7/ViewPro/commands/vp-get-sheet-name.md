@@ -15,7 +15,7 @@ title: VP Get sheet name
 | sheet      | Integer | ->                          | シートのインデックス              |                  |
 | 戻り値        | Text    | <- | シート名                    | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get sheet name` コマンドは、<!-- REF #_method_.VP Get sheet name.Summary -->*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF -->
 
@@ -27,7 +27,7 @@ title: VP Get sheet name
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 ドキュメント内の 3つめのシートの名前を取得します:
 
@@ -35,6 +35,6 @@ title: VP Get sheet name
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
-#### 参照
+## 参照
 
 [VP Get sheet index](vp-get-sheet-index.md)
