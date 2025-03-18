@@ -1,6 +1,6 @@
 ---
 id: labels
-title: Labels
+title: Etiquetas
 ---
 
 4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
