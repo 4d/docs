@@ -14,13 +14,13 @@ title: VP Get spans
 | rangeObj   | Object | ->                          | Objeto intervalo                                 |                  |
 | Resultados | Object | <- | Objeto de células fundidas no intervalo definido | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no *rangeObj* designado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. Se *rangeObj* não contiver um intervalo de células, um intervalo vazio será retornado.
 
-#### Exemplo
+## Exemplo
 
 Se quiser centrar o texto das células fusionadas neste documento:
 
@@ -35,7 +35,7 @@ $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal alig
 VP SET CELL STYLE($range;$style)
 ```
 
-#### Veja também
+## Veja também
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP REMOVE SPAN](vp-remove-span.md)
