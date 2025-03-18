@@ -19,10 +19,10 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 ## Cache
 
-| Pode ser definido com              | Nome                                                                                                | Comentários |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Página Opções (I)/Usar o cache 4D Web](../settings/web.md#use-the-4d-web-cache) |             |
-| Caixa de diálogos de configurações | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |             |
+| Pode ser definido com              | Nome                                                                                                      | Comentários |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar o cache 4D Web](../settings/web.md#use-the-4d-web-cache)       |             |
+| Caixa de diálogos de configurações | [Página opções (I) /Tamanho de cache das páginas](../settings/web.md#pages-cache-size) |             |
 
 Ativa e configura a cache da página Web.
 
@@ -70,11 +70,11 @@ Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos al
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                                                                                              | Comentários                                                                                                                                             |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                              | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                               | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| Caixa de diálogos de configurações | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-nameshttp-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
+| Pode ser definido com              | Nome                                                                                                                                     | Comentários                                                                                                                                             |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                     | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-nameshttp-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -252,7 +252,7 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
+> No macOS, a modificação da porta HTTP permite iniciar o servidor web 4D sem ser o usuário raiz da máquina (consulte macOS HelperTool).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 
