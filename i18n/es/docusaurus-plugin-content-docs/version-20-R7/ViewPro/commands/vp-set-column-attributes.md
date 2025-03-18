@@ -14,7 +14,7 @@ title: VP SET COLUMN ATTRIBUTES
 | rangeObj    | Object | -> | Objeto rango                                   |                  |
 | propertyObj | Object | -> | Objeto que contiene las propiedades de columna | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> aplica los atributos definidos en *propertyObj* a las columnas de *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 | redimensionable | boolean | True si la columna puede redimensionarse, si no, false                                    |
 | header          | text    | Texto del encabezado de la columna                                                        |
 
-#### Ejemplo
+## Ejemplo
 
 Para cambiar el tamaño de la segunda columna y definir el encabezado, se escribe:
 
@@ -45,7 +45,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
-#### Ver también
+## Ver también
 
 [VP Column](vp-column.md)<br/>
 [VP Get column attributes](vp-get-column-attributes.md)<br/>
