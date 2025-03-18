@@ -14,13 +14,13 @@ title: VP Get value
 | rangeObj   | Object | ->                          | Objet plage                           |                  |
 | Résultat   | Object | <- | Objet contenant une valeur de cellule | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get value` <!-- REF #_method_.VP Get value.Summary -->récupère la valeur d'une cellule depuis une plage de cellules désignées<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage dont vous souhaitez récupérer la valeur.
 
-#### Objet retourné
+## Objet retourné
 
 L'objet retourné contiendra la propriété `value` et, dans le cas d'une valeur de date js, une propriété `time` :
 
@@ -36,7 +36,7 @@ Si l'objet retourné inclut une date ou une heure, il est traité en tant que da
 
 Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la première cellule est retournée. La commande retourne un objet null si la cellule est vide.
 
-#### Exemple
+## Exemple
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
@@ -46,7 +46,7 @@ If(Value type($value.value)=Is text)
 End if
 ```
 
-#### Voir également
+## Voir également
 
 [VP Get values](vp-get-values.md)<br/>
 [VP SET VALUE](vp-set-value.md)<br/>
