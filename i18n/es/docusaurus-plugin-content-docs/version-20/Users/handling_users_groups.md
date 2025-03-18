@@ -39,7 +39,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la caja de diálogo de gestión de usuarios, los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](../assets/en/Users/iconAdmin.png)
