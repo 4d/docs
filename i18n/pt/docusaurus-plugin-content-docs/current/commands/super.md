@@ -19,7 +19,7 @@ A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas à
 
 `Super` tem dois objectivos diferentes:
 
-1. Inside a [constructor code](../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Dentro de um [código construtor](../Concepts/classes.md#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - Se todos os construtores de classe na árvore de herança não forem correctamente chamados, é gerado o erro -10748. É o programador 4D que se certifica de que as chamadas são válidas.
 - Se o comando `This` for chamado em um objeto cujas superclasses não foram construídas, o erro -10743 será gerado.
@@ -39,7 +39,7 @@ Super.doSomething(42) //chamada a função "doSomething"
 //declarada em superclasses
 ```
 
-#### Exemplo 1
+## Exemplo 1
 
 Este exemplo ilustra o uso do `Super` em um construtor de classe. O comando é chamado para evitar duplicar as partes do construtor que são comuns entre as classes `Rectangle` e `Square`.
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 This example illustrates the use of `Super` in a class function. Você criou a classe `Rectangle` com uma função:
 
@@ -106,11 +106,11 @@ Depois pode escrever num método projecto:
 Parâmetros
 ```
 
-#### Veja também
+## Veja também
 
 [**Página conceito para classes**](../Concepts/classes.md).
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |
