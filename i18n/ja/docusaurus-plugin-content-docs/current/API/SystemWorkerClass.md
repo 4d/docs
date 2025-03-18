@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### 説明
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
 
 このプロパティは **読み取り専用** です。
 
