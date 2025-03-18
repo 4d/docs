@@ -360,10 +360,10 @@ Class constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// プロジェクトメソッドにて
-// オブジェクトをインスタンス化します
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
-$o:=cs.MyClass.new("John";42)
+$o:=cs.MyClass.new("John";42)  
 // $o = {"name":"John";"age":42}
 ```
 
