@@ -15,7 +15,7 @@ title: VP SET COLUMN COUNT
 | columnCount | Integer | -> | Número de columnas                                             |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET COLUMN COUNT` <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->define el número total de columnas en *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ En el parámetro opcional *sheet*, puede designar una hoja de cálculo específi
 
 - `vk current sheet`
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código define cinco columnas en el área de 4D View Pro:
 
@@ -37,7 +37,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnCount.PNG)
 
-#### Ver también
+## Ver también
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP Get row count](vp-get-row-count.md)<br/>
