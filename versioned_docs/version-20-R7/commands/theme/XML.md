@@ -2,6 +2,8 @@
 id: XML
 title: XML
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.XML DECODE.Syntax -->](../../commands-legacy/xml-decode.md)<br/>|

@@ -2,6 +2,8 @@
 id: SQL
 title: SQL
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Begin SQL.Syntax -->](../../commands-legacy/begin-sql.md)<br/>|

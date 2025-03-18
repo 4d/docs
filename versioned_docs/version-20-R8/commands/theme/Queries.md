@@ -2,6 +2,8 @@
 id: Queries
 title: Queries
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.DESCRIBE QUERY EXECUTION.Syntax -->](../../commands-legacy/describe-query-execution.md)<br/>|

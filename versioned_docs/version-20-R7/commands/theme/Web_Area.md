@@ -2,6 +2,8 @@
 id: Web_Area
 title: Web Area
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WA Back URL available.Syntax -->](../../commands-legacy/wa-back-url-available.md)<br/>|

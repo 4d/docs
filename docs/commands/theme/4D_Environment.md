@@ -3,6 +3,7 @@ id: 4D_Environment
 title: 4D Environment
 ---
 
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Application file.Syntax -->](../../commands-legacy/application-file.md)<br/>|

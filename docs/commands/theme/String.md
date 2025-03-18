@@ -2,6 +2,8 @@
 id: String
 title: String
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Change string.Syntax -->](../../commands-legacy/change-string.md)<br/>|

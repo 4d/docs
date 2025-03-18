@@ -2,6 +2,8 @@
 id: Triggers
 title: Triggers
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Trigger event.Syntax -->](../../commands-legacy/trigger-event.md)<br/>|

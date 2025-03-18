@@ -2,6 +2,8 @@
 id: Objects_Language
 title: Objects (Language)
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.New object.Syntax -->](../../commands-legacy/new-object.md)<br/>|

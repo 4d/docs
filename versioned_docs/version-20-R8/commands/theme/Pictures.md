@@ -2,6 +2,8 @@
 id: Pictures
 title: Pictures
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BLOB TO PICTURE.Syntax -->](../../commands-legacy/blob-to-picture.md)<br/>|

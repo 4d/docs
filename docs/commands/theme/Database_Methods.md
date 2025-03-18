@@ -2,6 +2,8 @@
 id: Database_Methods
 title: Database Methods
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.On Backup Shutdown database method.Syntax -->](../../commands-legacy/on-backup-shutdown-database-method.md)<br/>|

@@ -2,6 +2,8 @@
 id: Objects_Forms
 title: Objects (Forms)
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GET STYLE SHEET INFO.Syntax -->](../../commands-legacy/get-style-sheet-info.md)<br/>|

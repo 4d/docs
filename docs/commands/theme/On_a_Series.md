@@ -2,6 +2,8 @@
 id: On_a_Series
 title: On a Series
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Average.Syntax -->](../../commands-legacy/average.md)<br/>|

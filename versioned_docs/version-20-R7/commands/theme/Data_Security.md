@@ -2,6 +2,8 @@
 id: Data_Security
 title: Data Security
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Data file encryption status.Syntax -->](../../commands-legacy/data-file-encryption-status.md)<br/>|

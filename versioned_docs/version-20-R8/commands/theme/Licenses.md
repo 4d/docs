@@ -2,6 +2,8 @@
 id: Licenses
 title: Licenses
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CHANGE LICENSES.Syntax -->](../../commands-legacy/change-licenses.md)<br/>|

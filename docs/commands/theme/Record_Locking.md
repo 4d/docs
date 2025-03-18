@@ -2,6 +2,8 @@
 id: Record_Locking
 title: Record Locking
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.LOAD RECORD.Syntax -->](../../commands-legacy/load-record.md)<br/>|

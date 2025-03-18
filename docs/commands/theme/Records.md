@@ -2,6 +2,8 @@
 id: Records
 title: Records
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE RECORD.Syntax -->](../../commands-legacy/create-record.md)<br/>|

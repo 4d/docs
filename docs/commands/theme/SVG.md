@@ -2,6 +2,8 @@
 id: SVG
 title: SVG
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.SVG EXPORT TO PICTURE.Syntax -->](../../commands-legacy/svg-export-to-picture.md)<br/>|

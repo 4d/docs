@@ -2,6 +2,8 @@
 id: Structure_Access
 title: Structure Access
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE INDEX.Syntax -->](../../commands-legacy/create-index.md)<br/>|

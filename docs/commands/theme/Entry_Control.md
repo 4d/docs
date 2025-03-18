@@ -2,6 +2,8 @@
 id: Entry_Control
 title: Entry Control
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.EDIT ITEM.Syntax -->](../../commands-legacy/edit-item.md)<br/>|

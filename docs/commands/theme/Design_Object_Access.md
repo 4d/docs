@@ -2,6 +2,8 @@
 id: Design_Object_Access
 title: Design Object Access
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current method path.Syntax -->](../../commands-legacy/current-method-path.md)<br/>|

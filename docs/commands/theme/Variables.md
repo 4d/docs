@@ -2,6 +2,8 @@
 id: Variables
 title: Variables
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLEAR VARIABLE.Syntax -->](../../commands-legacy/clear-variable.md)<br/>|

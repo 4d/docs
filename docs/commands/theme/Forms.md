@@ -2,6 +2,8 @@
 id: Forms
 title: Forms
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current form name.Syntax -->](../../commands-legacy/current-form-name.md)<br/>|

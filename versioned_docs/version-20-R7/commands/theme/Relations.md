@@ -2,6 +2,8 @@
 id: Relations
 title: Relations
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE RELATED ONE.Syntax -->](../../commands-legacy/create-related-one.md)<br/>|
