@@ -62,7 +62,7 @@ The first parameter ($url) is the URL entered by users in the address area of th
 
 Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
 
-| URL introduzido no navegador Web                                                                                                                  | Value of parameter $url                                                               |
+| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -80,13 +80,13 @@ Se o seu aplicativo usar essas informações, caberá a você analisar o cabeça
 
 > For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
-### $BrowserIP - Web client IP address
+### $BrowserIP - Endereço IP do cliente Web
 
 The $BrowserIP parameter receives the IP address of the browser’s machine. Essas informações permitem distinguir entre conexões de intranet e de Internet.
 
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-### $ServerIP - Server IP address
+### $ServerIP - Endereço IP do servidor
 
 The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite multi-home que você pode usar máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
