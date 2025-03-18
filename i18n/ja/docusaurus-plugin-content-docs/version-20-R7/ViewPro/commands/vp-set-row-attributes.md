@@ -14,7 +14,7 @@ title: VP SET ROW ATTRIBUTES
 | rangeObj    | Object | -> | 行レンジ               |                  |
 | propertyObj | Object | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET ROW ATTRIBUTES` コマンドは、<!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->*rangeObj* 引数で指定した行に対して *propertyObj* 引数で定義されている属性を適用します<!-- END REF -->。
 
@@ -30,7 +30,7 @@ title: VP SET ROW ATTRIBUTES
 | resizable | boolean | 行がリサイズ可能であれば true、それ以外は false             |
 | header    | テキスト    | 行ヘッダーのテキスト                                |
 
-#### 例題
+## 例題
 
 2番目の行の高さを変更して、ヘッダーを設定します:
 
@@ -45,7 +45,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowAttributes.PNG)
 
-#### 参照
+## 参照
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP get column attributes](vp-get-column-attributes.md)<br/>
