@@ -13,7 +13,7 @@ title: VP DELETE ROWS
 | ---------- | ------ | -- | ----------- | ---------------- |
 | rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP DELETE ROWS` <!-- REF #_method_.VP DELETE ROWS.Summary -->supprime les lignes de *rangeObj*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ Dans *rangeObj*, passez un objet contenant une plage de lignes à supprimer. Si 
 
 > Les lignes sont supprimées du bas vers le haut.
 
-#### Exemple
+## Exemple
 
 Pour supprimer les lignes sélectionnées par l'utilisateur (lignes 1, 2 et 3 de l'image ci-dessous) :
 
@@ -37,7 +37,7 @@ saisissez le code suivant :
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
-#### Voir également
+## Voir également
 
 [VP DELETE ROWS](vp-delete-columns.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>
