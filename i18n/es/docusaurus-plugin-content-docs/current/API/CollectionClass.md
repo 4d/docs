@@ -2824,11 +2824,11 @@ Ejemplo 4
 
 <!-- REF #collection.remove().Params -->
 
-| Parámetros | Tipo       |                             | Descripción                                              |
-| ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
-| index      | Integer    |              ->             | Elemento en el que se inicia la eliminación              |
-| howMany    | Integer    |              ->             | Número de elementos a eliminar, o 1 elemento si se omite |
-| Resultado  | Collection | <- | O                                                        |
+| Parámetros | Tipo       |                             | Descripción                                                       |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------- |
+| index      | Integer    |              ->             | Elemento en el que se inicia la eliminación                       |
+| howMany    | Integer    |              ->             | Número de elementos a eliminar, o 1 elemento si se omite          |
+| Resultado  | Collection | <- | Modified collection without removed element(s) |
 
 <!-- END REF -->
 
