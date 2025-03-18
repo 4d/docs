@@ -14,7 +14,7 @@ title: VP REMOVE SHEET
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
 | index      | Integer | -> | 削除するシートのインデックス          | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP REMOVE SHEET` コマンドは、<!-- REF #_method_.VP REMOVE SHEET.Summary -->*vpAreaName* 引数で指定したエリアにロードされているドキュメントから、*index* 引数で指定したインデックスのシートを削除します<!-- END REF -->。
 
@@ -24,7 +24,7 @@ title: VP REMOVE SHEET
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 ドキュメントには現在 3つのシートがあります:
 
@@ -38,6 +38,6 @@ VP REMOVE SHEET("ViewProArea";2)
 
 ![](../../assets/en/ViewPro/vp-sheet-2.png)
 
-#### 参照
+## 参照
 
 [VP ADD SHEET](vp-add-sheet.md)
