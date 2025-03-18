@@ -16,7 +16,7 @@ title: VP Name
 | sheet      | Integer | ->                          | Ubicación del rango (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Rango de nombre                                                  | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Name` <!-- REF #_method_.VP Name.Summary -->devuelve un nuevo objeto de rango que hace referencia a un rango con nombre<!-- END REF -->.
 
@@ -29,7 +29,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 - `vk current sheet`
 - `vk workbook`
 
-#### Ejemplo
+## Ejemplo
 
 Quiere asignar un valor al rango llamado "Total".
 
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>
