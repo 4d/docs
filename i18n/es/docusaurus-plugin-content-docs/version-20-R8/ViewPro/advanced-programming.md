@@ -27,7 +27,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 Puede aprovechar la librería de métodos Javascript de SpreadJS y llamarlos directamente para controlar sus hojas de cálculo.
 
-4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Workbook).
+4D tiene una propiedad integrada `Utils.spread` que da acceso al documento de la hoja de cálculo (también llamado libro de trabajo) dentro del área 4D View Pro, haciendo más sencillo llamar a los [métodos Workbook]SpreadJS (https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Workbook).
 
 #### Ejemplo
 
