@@ -65,7 +65,7 @@ Les objets attributs retournés contiennent les propriétés suivantes :
 | path             | Text    | Chemin d'un [attribut alias](../ORDA/ordaClasses.md#alias-attributes-1) basé sur une relation                                                                                                                                                                                                                                                                                                 |
 | readOnly         | Boolean | Vrai si l'attribut est en lecture seule. Par exemple, les attributs calculés sans fonction [`set`](../ORDA/ordaClasses.md#function-set-attributename) sont en lecture seule.                                                                                                                                                                                                                  |
 | relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
-| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
+| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris duration ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
 | unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
 
 :::tip
@@ -1019,18 +1019,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Not equal to null or undefined values
+#### Différent des valeurs null ou undefined
 
 Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
 ```
 
 Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
 ```
 
 
@@ -1068,13 +1068,13 @@ Considérons les résultats suivants :
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// renvoie B et C
+// trouve "entités avec 0 dans au moins une propriété val"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
+// renvoie uniquement A
+// trouve les "entités dont toutes les propriétés val sont différentes de 0"
+// ce qui est équivalent à
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
@@ -1533,7 +1533,6 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 [`.query()`](EntitySelectionClass.md#query) pour les entity selections
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Historique</summary>
