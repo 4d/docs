@@ -17,7 +17,7 @@ title: VP Column
 | sheet       | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado   | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Column` <!-- REF #_method_.VP Column.Summary -->devuelve un nuevo objeto de rango que hace referencia a una columna o columnas específicas<!-- END REF -->.
 
@@ -29,7 +29,7 @@ El parámetro opcional *columnCount* permite definir el número total de columna
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual por defecto.
 
-#### Ejemplo
+## Ejemplo
 
 Desea definir un objeto rango para la columna mostrada abajo (en la hoja actual):
 
@@ -41,7 +41,7 @@ El código es el siguiente:
  $column:=VP Column("ViewProArea";3) // columna D
 ```
 
-#### Ver también
+## Ver también
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>
