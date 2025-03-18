@@ -15,7 +15,7 @@ title: VP ADD SELECTION
 
 ## Descrição
 
-O comando `VP ADICIONAR SELECÇÃO` <!-- REF #_method_.VP ADD SELECTION.Sumário --> adiciona as células especificadas às células selecionadas <!-- FIM REF -->.
+O comando `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary --> adiciona as células especificadas às células selecionadas <!-- END REF -->.
 
 Em *rangeObj*, passe um objeto intervalo de células a adicionar à seleção atual.
 
