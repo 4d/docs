@@ -14,7 +14,7 @@ title: VP SET ROW ATTRIBUTES
 | rangeObj    | Object | -> | Intervalo de linhas                         |                  |
 | propertyObj | Object | -> | Objeto que contém as propriedades da linhas | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 | resizable   | boolean | True se a linha puder ser redimensionada, senão false                                    |
 | header      | text    | Texto do cabeçalho da linha                                                              |
 
-#### Exemplo
+## Exemplo
 
 Pretende-se alterar o tamanho da segunda linha e definir o cabeçalho:
 
@@ -45,7 +45,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowAttributes.PNG)
 
-#### Veja também
+## Veja também
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP get column attributes](vp-get-column-attributes.md)<br/>
