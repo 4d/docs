@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `POP3 New transporter` コマンドは、<!-- REF #_command_.POP3 New transporter.Summary -->新規のPOP3 接続を設定します<!-- END REF -->。この POP3 接続は、*server* 引数の指定に応じて設定され、コマンドは新しい[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) オブジェクトを返します。 返される transporter オブジェクトは通常、メールの受信に使用されます。
 
@@ -41,13 +41,13 @@ displayed_sidebar: docs
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                   | 995                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                   | なし                               |
 
-#### 戻り値
+## 戻り値
 
 この関数は[**POP3 transporter オブジェクト**](../API/POP3TransporterClass.md#pop3-transporter-object) を返します。  返されるプロパティはすべて **読み取り専用** です。
 
 > POP3接続は、transporter オブジェクトが消去された時点で自動的に閉じられます。
 
-#### 例題
+## 例題
 
 ```4d
  var $server : Object
@@ -67,7 +67,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |
