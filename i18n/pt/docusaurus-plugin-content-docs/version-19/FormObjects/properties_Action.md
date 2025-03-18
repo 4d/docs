@@ -27,7 +27,7 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de plug-in](pluginArea_overview.md)
 
 #### Veja também
 
@@ -54,7 +54,7 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de plug-in](pluginArea_overview.md)
 
 #### Veja também
 
