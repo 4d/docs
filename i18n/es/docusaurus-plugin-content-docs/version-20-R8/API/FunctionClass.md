@@ -11,7 +11,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 
 ### Objetos fórmula
 
-The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#formula-objects) to execute any 4D expression or code expressed as text.
+Los comandos [Formula](../commands/formula.md) y [Formula from string](../commands/formula-from-string.md) le permiten crear [objetos`4D.Function`](#formula-objects) para ejecutar cualquier expresión 4D o código expresado como texto.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 
