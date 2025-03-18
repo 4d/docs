@@ -14,13 +14,13 @@ title: VP Get formula
 | rangeObj   | Object | ->                          | Objeto rango |                  |
 | Resultado  | Text   | <- | Formula      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->recupera la fórmula de un rango de celdas designado<!-- END REF -->.
 
 En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* designa varias celdas o varios rangos, se devuelve la fórmula de la primera celda. Si *rangeObj* es una celda que no contiene una fórmula, el método devuelve una cadena vacía.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
   //set a formula
@@ -29,7 +29,7 @@ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
 
-#### Ver también
+## Ver también
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP SET FORMULA](vp-set-formula.md)<br/>
