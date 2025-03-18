@@ -1,22 +1,22 @@
 ---
 id: labels
-title: Labels
+title: ラベル
 ---
 
-4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
+4Dのラベルエディターにより、さまざまなラベルを容易に印刷することができます。 ラベルエディターを使用し、次の操作を行うことができます:
 
-- Design labels for mailings, file folders and file cards, and for many other needs,
-- Create and insert decorative items in label templates,
-- Specify the font, font size, and style to be used for the labels,
-- Specify the number of labels across and down on each page,
-- Specify how many labels to print per record,
-- Specify the label page margins,
-- Designate a method to execute when printing each label or record,
-- Create a preview and print the labels.
+- 宛名やファイルフォルダー、ファイルカードなど、その他数々のニーズに対応するラベルをデザインする。
+- 装飾用のオブジェクトを作成し、ラベルテンプレートに挿入する。
+- ラベルに使用するフォント、フォントサイズ、書体を指定する。
+- 各ページの縦と横に印刷するラベル数を指定する。
+- 各レコードにつき印刷するラベル数を指定する。
+- ラベルページのマージンを指定する。
+- 各ラベルまたは各レコードを印刷する際に実行するメソッドを指定する。
+- プレビューを作成し、ラベルを印刷する。
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+ラベルは、[フォームエディター](../FormEditor/formEditor.md) を使用して作成することもできます。 変数を含むラベルや、フォームエディターの描画用ツールを利用する特殊なラベルを作成しそれらをラベルエディターや [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用して印刷したい場合には、フォームエディターを使用してください。
 
 :::
 
