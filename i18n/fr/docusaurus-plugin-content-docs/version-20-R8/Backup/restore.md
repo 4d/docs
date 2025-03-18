@@ -35,7 +35,7 @@ Pour restituer manuellement une application via une boîte de dialogue standard 
 Vous pouvez également cliquer sur le bouton **[...]** et indiquer un autre emplacement.
 3. Cliquez sur le bouton **Restituer**.
 4D extrait tous les fichiers de la sauvegarde à l’emplacement défini.
-Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. Integration is done automatically if the **Integrate last log file...** option is checked (see [Automatic Restore](settings.md#automatic-restore-and-log-integration)).
+Si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme propose de l’intégrer. L’intégration est effectuée automatiquement si l’option **d’intégration automatique de l’historique** est cochée (cf. paragraphe [Restitution automatique](settings.md#automatic-restore-and-log-integration)).
 
 (Facultatif) Cliquez sur **OK** pour intégrer le fichier d’historique dans l'application restituée.
 Si la restitution et l’intégration se sont déroulées correctement, 4D affiche une boîte de dialogue indiquant que l’opération a réussi.
@@ -51,7 +51,7 @@ La [page Restitution](MSC/restore.md) du Centre de sécurité et de maintenance 
 
 ## Intégration manuelle de l’historique
 
-If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-integration-of-several-data-log-files)), a warning dialog box appears during the opening of the application when 4D notices that the log file contains more operations than have been carried out in the data file.
+Si vous n’avez pas coché l’option d’intégration automatique du fichier d’historique dans la page Restitution du CSM (cf. [Intégration successive de plusieurs fichiers d’historique](MSC/restore.md#successive-integration-of-several-data-log-files)), une boîte de dialogue d’alerte apparaît à l’ouverture de l'application lorsque 4D constate que le fichier d’historique contient plus d’opérations qu’il n’en a été effectué dans le fichier de données.
 
 ![](../assets/en/Backup/backup08.png)
 
