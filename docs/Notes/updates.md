@@ -11,7 +11,8 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Highlights
 
 - Support of [session tokens](../WebServer/sessions.md#session-token-otp) handled with [`Session.createOTP()`](../API/SessionClass.md#createotp) and [`Session.restore()`](../API/SessionClass.md#restore) new functions.  
-- The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).  
+- The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).
+- Dependency manager: new [dependency rule](../Project/components.md#defining-a-github-dependency-version-range) to follow the 4D version.
 - New `RDP optimization` database parameter to support shared clipboard when using Remote Desktop Protocol with 4D. 
 
 
