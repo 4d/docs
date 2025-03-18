@@ -138,7 +138,7 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 La formule retournée peut être appelée avec :
 
 *   les méthodes [`.call()`](#call) ou [`.apply()`](#apply), ou
-*   la syntaxe de la notation objet (voir [objet formula](#formula-object)).
+*   object notation syntax (see [formula objects](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
