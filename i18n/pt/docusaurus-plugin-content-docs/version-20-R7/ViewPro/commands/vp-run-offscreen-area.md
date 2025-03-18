@@ -14,7 +14,7 @@ title: VP Run offscreen area
 | parameters | Object | ->                          | Objeto que contém os atributos da área fora do ecrã                       |                  |
 | Resultados | Mixed  | <- | propiedad `.result` do objeto `.onEvent`, ou Null se não retorna um valor | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Summary -->creates an offscreen area in memory which can be used to process 4D View Pro area commands and functions<!-- END REF -->.
 
@@ -45,7 +45,7 @@ Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 - `WA Evaluate JavaScript`
 - `WA EXECUTE JAVASCRIPT FUNCTION`
 
-#### Exemplo 1
+## Exemplo 1
 
 Se quiser criar uma zona fora da área da tela do 4D View Pro e ler o valor de uma célula:
 
@@ -73,7 +73,7 @@ $o:=cs. OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Se quiser carregar um grande documento offscreen, aguardar todos os cálculos para concluir a avaliação e exportá-lo como um PDF:
 
@@ -128,6 +128,6 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### Veja também
+## Veja também
 
 [Publicação de blog: fim de carregamento de documentos](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
