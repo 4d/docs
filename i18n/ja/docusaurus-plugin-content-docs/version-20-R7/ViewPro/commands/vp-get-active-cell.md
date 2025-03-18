@@ -15,7 +15,7 @@ title: VP Get active cell
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | 単一セルのレンジオブジェクト                                 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get active cell` コマンドは、<!-- REF #_method_.VP Get active cell.Summary -->フォーカスを持ち、データ入力されようとしてるセル (アクティブセル) を参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -23,7 +23,7 @@ title: VP Get active cell
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 ![](../../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
@@ -38,7 +38,7 @@ $activeCell:=VP Get active cell("myVPArea")
   //$activeCell.ranges[0].sheet=0
 ```
 
-#### 参照
+## 参照
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>
