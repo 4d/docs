@@ -16,7 +16,7 @@ title: VP SET DATE TIME VALUE
 | timeValue     | Time   | -> | 設定する時間値   |                  |
 | formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET DATE TIME VALUE` コマンドは、<!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->指定されたセルレンジに日付・時間値を割り当てます<!-- END REF -->。
 
@@ -28,7 +28,7 @@ title: VP SET DATE TIME VALUE
 
 任意の *formatPattern* 引数は、*dateValue* および *timeValue* 引数に対するパターンを定義します。 パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](../configuring.md#日付と時間のフォーマット) の章を参照してください。
 
-#### 例題
+## 例題
 
 ```4d
 // セルの値をカレントの日付と時間に設定
@@ -39,7 +39,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk p
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro セルフォーマット](../configuring.md#セルフォーマット)<br/>
 [VP SET DATE VALUE](vp-set-date-value.md)<br/>
