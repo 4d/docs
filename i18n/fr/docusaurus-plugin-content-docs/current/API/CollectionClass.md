@@ -1958,7 +1958,7 @@ Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, 
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](../commands/formula.md)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 
@@ -2432,7 +2432,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 où :
 
-- **propertyPath** : chemin de la propriété sur laquelle vous voulez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple "pays") ou un chemin d'attribut valide (par exemple "pays.nom"). In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **propertyPath** : chemin de la propriété sur laquelle vous voulez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple "pays") ou un chemin d'attribut valide (par exemple "pays.nom"). Dans le cas d'un chemin d'accès à un attribut dont le type est `Collection`, la notation `[]` est utilisée pour traiter toutes les occurrences (par exemple `children[].age`).
 
 - **comparator** : symbole qui compare *propertyPath* et *value*. Les symboles suivants sont pris en charge :
 
@@ -2451,14 +2451,14 @@ où :
 
 - **valeur** : valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de n'importe quelle valeur d'expression constante correspondant au type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
- - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
- - **boolean** type constants: **true** or **false** (case sensitive).
- - **numeric** type constants: decimals are separated by a '.' (period).
- - **date** type constants: "YYYY-MM-DD" format
- - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
- - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+ - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+ - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+ - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
+ - Constantes de type **date** : "YYYY-MM-DD" format
+ - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
+ - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 
-- **logicalOperator**: used to join multiple conditions in the query (optional). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
+- **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                                       |
 | ----------- | ----------------------------------------------------------------------------------- |
@@ -2489,7 +2489,7 @@ Vous pouvez utiliser des parenthèses dans la recherche afin de prioriser les ca
 
 Il existe deux types de placeholders : les **placeholders indexés** et les **placeholders nommés**.
 
-- **Placeholders indexés** : les paramètres sont insérés en tant que `:paramIndex` (par exemple ":1", ":2"...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*.
+- **Placeholders indexés** : les paramètres sont insérés en tant que `:paramIndex` (par exemple ":1", ":2"...) dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*. dans *queryString* et leurs valeurs correspondantes sont fournies par la séquence de paramètres *value*.
 
 Voici un exemple :
 
@@ -2507,21 +2507,21 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-You can mix all argument kinds in *queryString*. Vous pouvez combiner tous les types d'arguments dans *queryString*.
+Vous pouvez combiner tous les types d'arguments dans *queryString*. Vous pouvez combiner tous les types d'arguments dans *queryString*.
 
 - des valeurs directes (pas de placeholders)
 - des placeholders indexés et/ou nommés.
 
-Using placeholders in queries **is recommended** for the following reasons:
+L'utilisation de placeholders dans les recherches **est recommandée** pour les raisons suivantes :
 
 1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
 
 ```4d
- $vquery:="status = 'public' & name = "+myname //user enters their name
+ $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
  $result:=$col.query($vquery)
 ```
 
-Cette recherche semble sécurisée puisque les données non publiques sont filtrées. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone *myname* une chaîne du type *"smith OR status='private'*, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
 
 Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
 
@@ -2529,7 +2529,7 @@ Lorsque vous utilisez des placeholders, le contournement des options de sécurit
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
+Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
 2. Cela évite d'avoir à se préoccuper des problèmes de formatage ou de caractères, en particulier lors de la gestion des paramètres *propertyPath* ou *value* qui peuvent contenir des caractères non alphanumériques tels que ".", "['...
 
@@ -3120,13 +3120,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type                        |                             | Description                                               |
-| ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------- |
-| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation              |
-| formula    | 4D.Function |              ->             | Objet formule                                             |
-| methodName | Text                        |              ->             | Nom de méthode                                            |
-| param      | any                         |              ->             | Paramètre(s) à passer                  |
-| Résultat   | Boolean                     | <- | True if at least one element successfully passed the test |
+| Paramètres | Type                        |                             | Description                                  |
+| ---------- | --------------------------- | :-------------------------: | -------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function |              ->             | Objet formule                                |
+| methodName | Text                        |              ->             | Nom de méthode                               |
+| param      | any                         |              ->             | Paramètre(s) à passer     |
+| Résultat   | Boolean                     | <- | Vrai si au moins un élément a réussi le test |
 
 <!-- END REF -->
 
