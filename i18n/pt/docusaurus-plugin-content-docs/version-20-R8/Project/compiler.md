@@ -83,7 +83,7 @@ Um duplo clique num aviso abre o método correspondente.
 
 ## Parâmetros do compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window-features) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -93,11 +93,11 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. O arquivo de símbolo é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. O arquivo de erro foi criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_errors.xml`.
 
 #### Objectivo de compilação
 
@@ -128,7 +128,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
 - **Caminho de compilação**
-- **Default typing**
+- **Digitação padrão**
 - **Métodos Compilador para...**
 
 These options are only maintained for compatibility with legacy code. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
@@ -221,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
+Se você marcar a opção [**Gerar o arquivo de símbolos**](#symbol-file) nas configurações do compilador, um arquivo de símbolo chamado `ProjectName_symbols. xt` é criado na [pasta Logs](../Project/architecture.md#logs) do projeto durante a compilação. It is divided into several parts:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -269,7 +269,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Arquivo de erros
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. O arquivo de erro é automaticamente chamado `projectName_errors.xml` e é colocado na [pasta de logs](../Project/architecture.md#logs) do projeto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
@@ -334,13 +334,13 @@ Ambos os compiladores estão integrados em 4D. El compilador adecuado se selecci
 
 O compilador clássico gera código compilado nativo para processadores Intel/AMD em qualquer máquina. Não necessita de qualquer configuração específica.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+O código compilado resultante é armazenado na pasta [DerivedData](architecture.md#deriveddata) do projeto.
 
 ### Compilador Silicon
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+O código compilado resultante é armazenado na pasta [Libraries](architecture.md#libraries) do projeto.
 
 #### Requisitos
 
