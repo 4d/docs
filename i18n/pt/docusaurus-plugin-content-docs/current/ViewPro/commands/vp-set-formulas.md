@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo da célula (criada com [VP Cell](vp-cell.md)) 
 O parâmetro *formulasCol* é uma coleção bidimensional:
 
 - A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção define uma linha.
-- Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.
+- Cada subcoleção define os valores das células para a linha. Os valores devem ser elementos de texto que contêm as fórmulas a serem atribuídas às células.
 
 > If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
 > Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
