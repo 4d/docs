@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **前提となる注意:** このコマンドは4D Server でのみ動作します。 [Execute on server](../commands-legacy/execute-on-server.md) コマンド経由か、あるいはストアドプロシージャ内でのみ実行することができます。
 
@@ -33,10 +33,10 @@ displayed_sidebar: docs
 
 :::
 
-#### エラー管理
+## エラー管理
 
 エラーが発生した場合、このコマンドは [ON ERR CALL](../commands-legacy/on-err-call.md) コマンドで割り込み可能なコードを生成します。
 
-#### 参照
+## 参照
 
 [SELECT LOG FILE](select-log-file.md)
