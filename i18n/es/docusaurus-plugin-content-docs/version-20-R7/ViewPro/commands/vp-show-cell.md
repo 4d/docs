@@ -15,7 +15,7 @@ title: VP SHOW CELL
 | vPos       | Integer | -> | Posición vertical de la vista de la celda o de la línea   |                  |
 | hPos       | Integer | -> | Posición horizontal de la vista de la celda o de la línea | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del *rangeObj*<!-- END REF -->.
 
@@ -34,7 +34,7 @@ Los siguientes selectores están disponibles:
 
 > Este comando sólo es eficaz si es posible reposicionar la vista. Por ejemplo, si el *rangeObj* está en la celda A1 (la primera columna y la primera línea) de la hoja actual, reposicionar la vista no supondrá ninguna diferencia porque ya se han alcanzado los límites vertical y horizontal (es decir, no es posible desplazarse más arriba o más a la izquierda). Lo mismo ocurre si *rangeObj* está en la celda C3 y la vista se reposiciona al centro o abajo a la derecha. La vista permanece inalterada.
 
-#### Ejemplo
+## Ejemplo
 
 Quiere ver la celda en la columna AY, línea 51 en el centro del área 4D View Pro:
 
@@ -60,7 +60,7 @@ Resultado:
 
 ![](../../assets/en/ViewPro/cmd_vpShowCell2.PNG)
 
-#### Ver también
+## Ver también
 
 [VP Cell](vp-cell.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>
