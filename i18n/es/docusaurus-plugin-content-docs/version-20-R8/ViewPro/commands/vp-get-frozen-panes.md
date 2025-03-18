@@ -15,7 +15,7 @@ title: VP Get frozen panes
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite)         |                  |
 | Resultado  | Object  | <- | Objeto que contiene la información de las columnas y líneas congeladas | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->devuelve un objeto con información sobre las columnas y filas congeladas en *vpAreaName*<!-- END REF -->.
 
@@ -23,7 +23,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
-##### Objeto devuelto
+### Objeto devuelto
 
 El comando devuelve un objeto que describe las columnas y líneas congeladas. Este objeto puede contener las siguientes propiedades:
 
@@ -34,7 +34,7 @@ El comando devuelve un objeto que describe las columnas y líneas congeladas. Es
 | rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
 | trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
-#### Ejemplo
+## Ejemplo
 
 Quiere recuperar información sobre el número de columnas y líneas congeladas:
 
@@ -49,6 +49,6 @@ El objeto devuelto contiene, por ejemplo:
 
 ![](../../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
-#### Ver también
+## Ver también
 
 [VP SET FROZEN PANES](vp-set-frozen-panes.md)
