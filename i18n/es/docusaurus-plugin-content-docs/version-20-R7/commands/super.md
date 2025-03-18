@@ -39,7 +39,7 @@ Super.doSomething(42) //llama a la función "doSomething"
 //declarada en superclases
 ```
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 This example illustrates the use of `Super` in a class function. Ha creado la clase `Rectangle` con una función:
 
@@ -109,11 +109,11 @@ $square:=cs.Square.new()
 $message:=$square.description() //tengo 4 lados iguales
 ```
 
-#### Ver también
+## Ver también
 
 [**Concept page for Classes**](../Concepts/classes.md).
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |
