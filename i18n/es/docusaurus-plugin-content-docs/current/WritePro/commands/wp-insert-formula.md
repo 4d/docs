@@ -33,7 +33,7 @@ In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 - either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
 - or an object containing two properties:
 
-| **Propiedad** | **Type** | **Description**                                                                                                                                                                             |
+| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                             |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name          | Text     | Name to display for the formula in the document                                                                                                                                             |
 | formula       | Object   | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
