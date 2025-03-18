@@ -26,7 +26,7 @@ In the *targetObj* parameter, you can pass:
 
 - um intervalo, ou
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
-- a 4D Write Pro document.
+- um documento 4D Write Pro.
 
 In the *formula* parameter, pass the 4D formula to evaluate. Pode passar:
 
