@@ -15,7 +15,7 @@ title: VP SET FIELD
 | campo         | Puntero | -> | Referencia al campo en la estructura virtual |                  |
 | formatPattern | Text    | -> | Formato del campo                            | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->asigna un campo virtual de base de datos 4D a un rango de celdas designado<!-- END REF -->.
 
@@ -25,13 +25,13 @@ El parámetro *field* especifica un [campo virtual](../formulas.md#referencing-f
 
 El parámetro opcional *formatPattern* define un modelo para el parámetro *field*. Puede pasar cualquier [formato personalizado] válido(../configuring.md#cell-format).
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 ```
 
-#### Ver también
+## Ver también
 
 [VP SET VALUE](vp-set-value.md)
 
