@@ -14,7 +14,7 @@ title: VP Object to font
 | fontObj | Object | ->                          | フォントオブジェクト      |                  |
 | 戻り値     | Text   | <- | フォントのショートハンド文字列 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Object to font` コマンドは、<!-- REF #_method_.VP Object to font.Summary -->*fontObj* 引数で指定したフォントオブジェクトからフォントのショートハンド文字列を返します<!-- END REF -->。
 
@@ -32,7 +32,7 @@ title: VP Object to font
 
 返されるショートハンド文字列は、たとえば [VP SET CELL STYLE](vp-set-cell-style.md) を使って、セルの "font" プロパティに割り当てることができます。
 
-#### 例題
+## 例題
 
 ```4d
 $cellStyle:=VP Get cell style($range)
@@ -46,7 +46,7 @@ $cellStyle.font:=VP Object to font($font)
 //$cellStyle.font には "bolder oblique small-caps 16pt arial" が格納されます
 ```
 
-#### 参照
+## 参照
 
 [4D View Pro スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>
