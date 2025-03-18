@@ -15,7 +15,7 @@ title: VP REMOVE NAME
 | name       | Text    | -> | Nombre del rango nombrado o fórmula nombrada a eliminar       |                  |
 | scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP REMOVE NAME` <!-- REF #_method_.VP REMOVE NAME.Summary -->elimina el rango con nombre o la fórmula con nombre pasada en el parámetro *name* en el *scope* definido<!-- END REF -->.
 
@@ -28,7 +28,7 @@ Puede definir dónde eliminar el nombre en *scope* utilizando el índice de la h
 - `vk current sheet`
 - `vk workbook`
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
@@ -39,6 +39,6 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
 
-#### Ver también
+## Ver también
 
 [VP Name](vp-name.md)
