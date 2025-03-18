@@ -58,7 +58,7 @@ title: 管理
 
 キャッシュは即座にクリアされます。
 
-> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
+> 特殊なURL [/4DCACHECLEAR](#4dcacheclear) を使用することもできます。
 
 ## ランタイムエクスプローラー
 
