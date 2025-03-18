@@ -15,7 +15,7 @@ title: VP All
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Objeto rango de todas las celdas                               | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ALL` <!-- REF #_method_.VP All.Summary -->devuelve un nuevo objeto de rango que hace referencia a todas las celdas<!-- END REF -->.
 
@@ -23,7 +23,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
-#### Ejemplo
+## Ejemplo
 
 Desea definir un objeto rango para todas las celdas de la hoja de cálculo actual:
 
@@ -31,7 +31,7 @@ Desea definir un objeto rango para todas las celdas de la hoja de cálculo actua
 $all:=VP All("ViewProArea") // todas las celdas de la hoja actual
 ```
 
-#### Ver también
+## Ver también
 
 [VP Cell](vp-cell)<br/>
 [VP Cells](vp-cells)<br/>
