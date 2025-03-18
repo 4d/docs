@@ -27,7 +27,7 @@ title: VP Cells
 | sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados  | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retorna um novo objeto de intervalo que faz referência a células específicas<!-- END REF -->.
 
@@ -43,7 +43,7 @@ O parâmetro *rowCount* permite que você defina o número total de linhas em qu
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se for omitido ou se passar vk current sheet, é utilizada a folha de cálculo atual.
 
-#### Exemplo
+## Exemplo
 
 Você deseja definir um objeto de intervalo para as seguintes células (na planilha atual):
 
@@ -55,7 +55,7 @@ O código seria:
 $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>
