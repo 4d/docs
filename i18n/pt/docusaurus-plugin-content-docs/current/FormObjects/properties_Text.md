@@ -157,7 +157,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 Designa a cor do tipo de letra.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> Esta propriedade também define a cor da borda do objeto (se houver) quando o estilo "plaino" ou "pontilhado" é usado.
 
 A cor pode ser especificada por:
 
