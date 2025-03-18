@@ -56,11 +56,11 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple 
 |                     |                                           |          | 10 = 11                           | False               |
 | Inégalité           | Nombre # Nombre                           | Boolean  | 10 #11                            | True                |
 |                     |                                           |          | 10 # 10                           | False               |
-| Supérieur à         | Number > Number                           | Boolean  | 11 > 10                           | True                |
+| Supérieur à         | Nombre > Nombre                           | Boolean  | 11 > 10                           | True                |
 |                     |                                           |          | 10 > 11                           | False               |
-| Inférieur à         | Number < Number  | Boolean  | 10 < 11  | True                |
+| Inférieur à         | Nombre < Nombre  | Boolean  | 10 < 11  | True                |
 |                     |                                           |          | 11 < 10  | False               |
-| Supérieur ou égal à | Number >= Number                          | Boolean  | 11 >= 10                          | True                |
+| Supérieur ou égal à | Nombre >= Nombre                          | Boolean  | 11 >= 10                          | True                |
 |                     |                                           |          | 10 >= 11                          | False               |
 | Inférieur ou égal à | Number <= Number | Boolean  | 10 <= 11 | True                |
 |                     |                                           |          | 11 <= 10 | False               |
@@ -125,16 +125,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération                        | Opérateur                                            | Syntaxe                                                                       | Retourne                                   |
-| -------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------ |
-| ET                               | &                                | Long & Long                                               | E. long                    |
-| OU (inclusif) | &#124                            | long &#124; E. long                       | E. long                    |
-| OU (exclusif) | &#094; &#124 | Long &#094; &#124; Long               | E. long                    |
-| Décaler bits à gauche            | << | Long << Long                | long (voir note n°1)    |
-| Décaler bits à droite            | > >                                                  | Long >> Long                                                                  | long (voir note n°1)    |
-| Mettre bit à 1                   | ?+                                                   | long ?+ E. E. long                            | long (voir note n°2)    |
-| Mettre bit à 0                   | ?-                                                   | long ??                                                                       | long (voir note n°2)    |
-| Tester bit                       | ??                                                   | long \^&#124; E. E. long | Booléen (voir note n°2) |
+| Opération                        | Opérateur                                            | Syntaxe                                                                                              | Retourne                                   |
+| -------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| ET                               | &                                | Long & Long                                                                      | E. long                    |
+| OU (inclusif) | &#124                            | long &#124; E. long                                              | E. long                    |
+| OU (exclusif) | &#094; &#124 | Long &#094; &#124; Long                                      | E. long                    |
+| Décaler bits à gauche            | << | E. long << E. long | long (voir note n°1)    |
+| Décaler bits à droite            | > >                                                  | E. long >> E. long                                                   | long (voir note n°1)    |
+| Mettre bit à 1                   | ?+                                                   | long ?+ E. E. long                                                   | long (voir note n°2)    |
+| Mettre bit à 0                   | ?-                                                   | long ??                                                                                              | long (voir note n°2)    |
+| Tester bit                       | ??                                                   | long \^&#124; E. E. long                        | Booléen (voir note n°2) |
 
 #### Notes
 
