@@ -15,7 +15,7 @@ title: VP Get row count
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Integer | <- | Número total de líneas                                         | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->devuelve el número total de filas de la *sheet* designada<!-- END REF -->.
 
@@ -23,7 +23,7 @@ En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa u
 
 Puede definir dónde obtener el número de líneas en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código devuelve el número de líneas en el área 4D View Pro:
 
@@ -32,7 +32,7 @@ var $rowCount : Integer
 $rowCount:=VP Get row count("ViewProarea")
 ```
 
-#### Ver también
+## Ver también
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP SET COLUMN COUNT](vp-set-column-count.md)<br/>
