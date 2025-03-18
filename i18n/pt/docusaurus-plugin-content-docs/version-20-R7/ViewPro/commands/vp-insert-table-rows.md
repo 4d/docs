@@ -26,7 +26,7 @@ title: VP INSERT TABLE ROWS
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*             |                  |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)           | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
 
@@ -43,7 +43,7 @@ If the *tableName* table is bound to a [data context](vp-set-data-context.md), t
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
-#### Exemplo
+## Exemplo
 
 Você cria uma tabela com um contexto de dados:
 
@@ -68,7 +68,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ![](../../assets/en/ViewPro/table-insert.png)
 
-#### Veja também
+## Veja também
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)
