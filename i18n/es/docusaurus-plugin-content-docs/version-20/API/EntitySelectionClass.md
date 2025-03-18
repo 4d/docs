@@ -1135,7 +1135,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
