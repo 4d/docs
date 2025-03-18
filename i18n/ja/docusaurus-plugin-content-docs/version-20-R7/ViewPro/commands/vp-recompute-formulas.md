@@ -13,7 +13,7 @@ title: VP RECOMPUTE FORMULAS
 | ---------- | ---- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP RECOMPUTE FORMULAS` コマンドは、<!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->*vpAreaName* 引数で指定したエリアの全フォーミュラを即座に評価します<!-- END REF -->。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 `VP RECOMPUTE FORMULAS` コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは [VP FLUSH COMMANDS](vp-flush-commands.md) コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。
 
@@ -21,7 +21,7 @@ title: VP RECOMPUTE FORMULAS
 
 > `VP RECOMPUTE FORMULAS` コマンドを使用する前に [VP SUSPEND COMPUTING](vp-suspend-computing.md)コマンドが実行されていないようにしてください。
 
-#### 例題
+## 例題
 
 ワークブック内の全フォーミュラを更新します:
 
@@ -29,7 +29,7 @@ title: VP RECOMPUTE FORMULAS
 VP RECOMPUTE FORMULAS("ViewProArea")
 ```
 
-#### 参照
+## 参照
 
 [VP RESUME COMPUTING](vp-resume-computing.md)<br/>
 [VP SUSPEND COMPUTING](vp-suspend-computing.md)
