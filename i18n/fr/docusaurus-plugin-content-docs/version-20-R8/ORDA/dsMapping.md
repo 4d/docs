@@ -7,7 +7,7 @@ La technologie ORDA est fondée sur une cartographie automatique d'une structure
 
 ## Correspondance de la structure
 
-When you call a datastore using the [`ds`](commands/ds.md) or the [`Open datastore`](commands/open-datastore.md) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Lorsque vous appelez un datastore à l'aide de la commande [`ds`](commands/ds.md) ou [`Open datastore`](commands/open-datastore.md), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) renvoyé :
 
 - Les tables correspondent à des dataclasses.
 - Les champs correspondent à des attributs de stockage.
