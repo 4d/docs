@@ -15,7 +15,7 @@ title: VP SET TEXT VALUE
 | textValue     | Text   | -> | Valor texto a definir |                  |
 | formatPattern | Text   | -> | Formato del valor     | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET TEXT VALUE` <!-- REF #_method_.VP SET TEXT VALUE.Summary -->asigna un valor de texto especificado a un rango de celdas designado<!-- END REF -->.
 
@@ -25,13 +25,13 @@ El parámetro *textValue* indica un valor texto que se asignará a *rangeObj*.
 
 El *formatPattern* opcional define un [patrón](../configuring.md#cell-format) para el parámetro *textValue*.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ```
 
-#### Ver también
+## Ver también
 
 [Cell Format](../configuring.md#cell-format)<br/>
 [VP SET VALUE](vp-set-value.md)
