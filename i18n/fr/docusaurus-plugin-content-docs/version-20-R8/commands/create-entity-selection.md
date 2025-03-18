@@ -4,7 +4,7 @@ title: Create entity selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create entity selection.Syntax-->***Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+<!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
 
 <!--REF #_command_.Create entity selection.Params-->
 
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->construit et renvoie une nouvelle entity selection [modifiable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relative à la classe de données correspondant à la *dsTable* fournie, en fonction de la sélection actuelle de cette table<!-- END REF-->.
 
@@ -30,7 +30,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant l
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Nom du [contexte d'optimisation](../ORDA/client-server-optimization.md) appliqué à l'entity selection. |
 
-#### Exemple
+## Exemple
 
 ```4d
 var $employees : cs.EmployeeSelection
@@ -40,13 +40,13 @@ $employees:=Create entity selection([Employee])
 // références vers toutes les entités de la dataclass Employee
 ```
 
-#### Voir également
+## Voir également
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1512                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1512                        |
+| Thread safe        | &check; |
