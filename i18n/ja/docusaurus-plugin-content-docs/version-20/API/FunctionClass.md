@@ -138,7 +138,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
 *   [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-object) 参照)
+*   object notation syntax (see [formula objects](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
