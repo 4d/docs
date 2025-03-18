@@ -15,7 +15,7 @@ title: VP Get stylesheets
 | sheet      | Integer    | ->                          | Cible (par défaut = feuille courante) |                  |
 | Résultat   | Collection | <- | Collection d'objets feuille de style                     | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->retourne la collection d'objets feuille de style définis à partir de la *feuille* désignée<!-- END REF -->.
 
@@ -26,7 +26,7 @@ Vous pouvez définir où lire les feuilles de style via le paramètre *sheet* en
 - `vk current sheet`
 - `vk workbook`
 
-#### Exemple
+## Exemple
 
 Le code suivant retournera une collection de tous les objets style de la feuille courante :
 
@@ -54,7 +54,7 @@ Dans ce cas, la feuille courante utilise deux objets style :
 ]
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
