@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression *formulaExp*<!-- END REF -->. . .
 
@@ -33,8 +33,8 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 
 La formule retournée peut être appelée avec :
 
-- [`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
-- object notation syntax (see [formula object](../commands/formula.md-object)).
+- les méthodes [`call()`](../API/FunctionClass.md#call) ou [`apply()`](../API/FunctionClass.md#apply), ou
+- la syntaxe de la notation objet (voir [objet formula](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ La formule retournée peut être appelée avec :
  $o.myFormula() //retourne 3
 ```
 
-You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+Vous pouvez passer des [paramètres](../API/FunctionClass.md#passing-parameters) à `Formula`, comme le montre l'[exemple 4](#example-4) ci-dessous.
 
 Vous pouvez indiquer l'objet sur lequel la formule est exécutée, comme le montre l'[exemple 5](#example-5). Les propriétés de l'objet sont alors accessibles via la commande `This`.
 
@@ -55,7 +55,7 @@ Si *formuleExp* utilise des variables locales, leurs valeurs sont copiées et st
 
 L'objet créé par `Formula` peut être enregistré, par exemple, dans un champ de base de données ou dans un document blob.
 
-#### Exemple 1
+## Exemple 1
 
 Une formule simple :
 
@@ -69,7 +69,7 @@ Une formule simple :
  $result:=$o.f() // retourne 3
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Une formule utilisant des variables locales :
 
@@ -83,7 +83,7 @@ Une formule utilisant des variables locales :
  $result:=$o.f() // returns 10
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Une formule simple utilisant des paramètres :
 
@@ -92,7 +92,7 @@ Une formule simple utilisant des paramètres :
  $result:=$o.f(10;20) //retourne 30
 ```
 
-#### Exemple 4
+## Exemple 4
 
 Une formule simple utilisant des paramètres :
 
@@ -101,7 +101,7 @@ Une formule simple utilisant des paramètres :
  $result:=$o.f("param1";"param2") // équivalent à $result:=myMethod("param1";"param2")
 ```
 
-#### Exemple 5
+## Exemple 5
 
 Avec l'utilisation de `This` :
 
@@ -112,7 +112,7 @@ Avec l'utilisation de `This` :
  $result:=$o.fullName() //retourne "John Smith"
 ```
 
-#### Exemple 6
+## Exemple 6
 
 Appeler une formule à l'aide de la notation objet :
 
@@ -133,14 +133,14 @@ Appeler une formule à l'aide de la notation objet :
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
-#### Voir également
+## Voir également
 
 [4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |
