@@ -27,7 +27,7 @@ title: VP Cells
 | sheet       | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値         | Object  | <- | 複数セルのレンジオブジェクト                                 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Cells` コマンドは、<!-- REF #_method_.VP Cells.Summary -->指定された複数のセルを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -43,7 +43,7 @@ title: VP Cells
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 (カレントシートにおいて) 以下のセルのレンジオブジェクトを定義します:
 
@@ -55,7 +55,7 @@ title: VP Cells
 $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 ```
 
-#### 参照
+## 参照
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>
