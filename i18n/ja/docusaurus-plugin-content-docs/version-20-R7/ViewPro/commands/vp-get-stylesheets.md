@@ -15,7 +15,7 @@ title: VP Get stylesheets
 | sheet      | Integer    | ->                          | ターゲットのスコープ (デフォルト = カレントシート) |                  |
 | 戻り値        | Collection | <- | スタイルシートオブジェクトのコレクション                            | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get stylesheets` コマンドは、<!-- REF #_method_.VP Get stylesheets.Summary -->*sheet* で指定されたスコープにおいて定義されているスタイルシートのコレクションを返します<!-- END REF -->。
 
@@ -26,7 +26,7 @@ title: VP Get stylesheets
 - `vk current sheet`
 - `vk workbook`
 
-#### 例題
+## 例題
 
 以下のコードは、カレントシート内にある全スタイルオブジェクトのコレクションを返します:
 
@@ -54,7 +54,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 ]
 ```
 
-#### 参照
+## 参照
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
