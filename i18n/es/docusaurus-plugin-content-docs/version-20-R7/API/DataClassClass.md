@@ -469,7 +469,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/client-server-optimization.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/client-server-optimization.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. En este caso, puede ser aconsejable llamar a [`reload()`](EntityClass.md#reload) para asegurarse de recuperar los datos más recientes del servidor.
 
 :::
 
@@ -532,7 +532,7 @@ This example illustrates the use of the *context* property:
 
 #### Descripción
 
-The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->.
+La función `.getCount()` <!-- REF #DataClassClass.getCount().Summary --> devuelve el número de entidades de una clase de datos<!-- END REF -->.
 
 Si se utiliza esta función dentro de una transacción, se tendrán en cuenta las entidades creadas durante la misma.
 
@@ -573,7 +573,7 @@ $number:=$ds.Persons.getCount()
 
 #### Descripción
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -592,7 +592,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ```
 
 ```4d
-  // SearchDuplicate method
+  // método SearchDuplicate 
   // SearchDuplicate(entity_to_search;dataclass_name)
 
  #DECLARE ($pet : Object ; $dataClassName : Text)
@@ -629,7 +629,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve un objeto que suministra información sobre la clase de datos<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Returned object**
 
@@ -646,7 +646,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
  #DECLARE ($entity : Object)  
  var $status : Object
 
- computeEmployeeNumber($entity) //do some actions on entity
+ computeEmployeeNumber($entity) //realizar algunas acciones en la entidad
 
  $status:=$entity.save()
  if($status.success)
@@ -702,7 +702,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 #### Descripción
 
-The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
+La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->.
 
 Calling this function from a 4D single-user application returns `Null`.
 
@@ -790,9 +790,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### Descripción
 
-The `.new()` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+La función `.new()` <!-- REF #DataClassClass.new().Summary -->crea en memoria y devuelve una nueva entidad en blanco relacionada con la Dataclass<!-- END REF -->.
 
-The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. Si la entidad se borra antes de ser guardada, no se puede recuperar.
+El objeto entidad se crea en memoria y no se guarda en la base de datos hasta que se llama a la función [`.save( )`](EntityClass.md#save). Si la entidad se borra antes de ser guardada, no se puede recuperar.
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
 
@@ -838,7 +838,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en memoria<!-- END REF -->.
 
 > For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
