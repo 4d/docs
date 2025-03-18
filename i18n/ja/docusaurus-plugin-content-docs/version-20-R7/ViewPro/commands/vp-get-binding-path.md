@@ -22,7 +22,7 @@ title: VP Get binding path
 | rangeObj | Object | ->                          | レンジオブジェクト       |                  |
 | 戻り値      | Text   | <- | セルにバインドされた属性の名称 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get binding path` コマンドは、<!-- REF #_method_.VP Get binding path.Summary -->*rangeObj* で指定したセルにバインドされた属性の名称を返します<!-- END REF -->。
 
@@ -31,7 +31,7 @@ title: VP Get binding path
 - *rangeObj* のレンジが複数セルを含む場合、コマンドは最初のセルにバインドされている属性名を返します。
 - *rangeObj* 引数が複数のレンジを含む場合、最初のレンジの最初のセルにバインドされた属性名が返されます。
 
-#### 例題
+## 例題
 
 ```4d
 var $p; $options : Object
@@ -49,7 +49,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 ```
 
-#### 参照
+## 参照
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get data context](vp-get-data-context.md)<br/>
