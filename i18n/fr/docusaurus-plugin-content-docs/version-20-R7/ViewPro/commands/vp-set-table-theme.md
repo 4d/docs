@@ -26,7 +26,7 @@ title: VP SET TABLE THEME
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
 
@@ -36,7 +36,7 @@ In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
-#### Exemple 1
+## Exemple 1
 
 Vous souhaitez définir un thème prédéfini pour une table :
 
@@ -47,7 +47,7 @@ $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Vous souhaitez obtenir ce rendu de colonne alterné :
 
@@ -85,7 +85,7 @@ VP SET TABLE THEME("ViewProArea" ; "myTable" ; $param)
 
 ```
 
-#### Voir également
+## Voir également
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table theme](vp-get-table-theme.md)
