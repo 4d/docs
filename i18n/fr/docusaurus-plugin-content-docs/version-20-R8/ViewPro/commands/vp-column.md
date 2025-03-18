@@ -17,7 +17,7 @@ title: VP Column
 | sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat    | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Column` <!-- REF #_method_.VP Column.Summary -->retourne un nouvel objet de plage référencant une ou des colonnes spécifiques<!-- END REF -->.
 
@@ -29,7 +29,7 @@ Le paramètre optionnel *columnCount* permet de définir le nombre total de colo
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez définir une plage pour la colonne ci-dessous (dans la feuille courante) :
 
@@ -41,7 +41,7 @@ Le code est le suivant :
  $column:=VP Column("ViewProArea";3) // colonne D
 ```
 
-#### Voir également
+## Voir également
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>
