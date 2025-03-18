@@ -239,7 +239,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Usando a função dataclass [`.all()`](API/DataClassClassClass.md#all), para selecionar todas as entidades em um dataclass;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Usando a função [`Criar seleção de entidade`](../commands/create-entity-selection.md) ou o [`.newSelection()`](API/DataClassClassClass.md#newselection) de dataclass para criar uma entidade em branco;
 - Usando a [`.copy()`](API/EntitySelectionClass.md#copy) função para duplicar uma seleção de entidade existente;
 - Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
@@ -445,7 +445,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Como definir um filtro restrito
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. O filtro é então ativado automaticamente.
+Você cria um filtro para uma classe de dados definindo uma função `event restrict` na [**classe dataclass**](dsMapping.md#dataclass) da dataclass. O filtro é então ativado automaticamente.
 
 ### `Function event restrict`
 
