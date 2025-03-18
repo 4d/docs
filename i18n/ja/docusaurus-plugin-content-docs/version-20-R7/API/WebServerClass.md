@@ -7,7 +7,7 @@ title: WebServer
 
 ### Webサーバーオブジェクト
 
-Web server objects are instantiated with the [`WEB Server`](../commands/web-server.md) command.
+Webサーバーオブジェクトは [`WEB Server`](../commands/web-server.md) コマンドによってインスタンス化されます。
 
 これらは、次のプロパティや関数を持ちます:
 
