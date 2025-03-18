@@ -15,7 +15,7 @@ title: VP Export to object
 | options    | Object | ->                          | 書き出しのオプション              |                  |
 | 戻り値        | Object | <- | 4D View Pro オブジェクト      | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Export to object` コマンドは、<!-- REF #_method_.VP Export to object.Summary --> *vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを返します<!-- END REF -->。 このコマンドによって、たとえば 4D View Pro エリアを 4Dデータベースのオブジェクトフィールドに保存することができます。
 
@@ -30,7 +30,7 @@ title: VP Export to object
 
 4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](../configuring.md#4d-view-pro-オブジェクト) を参照ください。
 
-#### 例題 1
+## 例題 1
 
 4D View Pro エリアの "version" プロパティを取得します:
 
@@ -42,7 +42,7 @@ $vpAreaObj:=VP Export to object("vpArea")
 $vpVersion:=$vpAreaObj.version
 ```
 
-#### 例題 2
+## 例題 2
 
 フォーマット (書式) 情報を含めてエリアを書き出します:
 
@@ -51,7 +51,7 @@ var $vpObj : Object
 $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 ```
 
-#### 参照
+## 参照
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
