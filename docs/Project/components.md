@@ -239,7 +239,13 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 #### Tags and versions
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.  
+When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+
+:::note
+
+If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).   
+
+:::
 
 - **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
 
@@ -287,6 +293,14 @@ If you do not specify a tag or a version, 4D automatically retrieves the "latest
 
 
 The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range). 
+
+
+#### Naming conventions for 4D version tags
+
+When you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions. 
+
+- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. For example, "20.4" will be used by the Dependency manager for 4D versions 20.4 and next (if no higher tag version is created). The Dependency manager will resolve the tag to "the latest 20.x" if available, and notify the user if such a version does not exist.
+- **R-Release versions**: `xRy` pattern, where `x and y` corresponds to the main 4D R-release version to follow. For example, "20R9" will be used by the Dependency manager for 4D versions 20R9 and next (if no higher tag version is created). The Dependency manager will resolve the tag to "the latest version below 20R10" if available, and notify the user if such a version does not exist.
 
 
 
@@ -480,6 +494,7 @@ You can define the [tag or version](#tags-and-versions) option for a dependency:
 - **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+- **Follow 4D Version**: Download the latest component release that is compatible with the current 4D version. In this case, the release tag must follow a [specific naming convention](#naming-conventions-for-4d-version-tags). 
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
