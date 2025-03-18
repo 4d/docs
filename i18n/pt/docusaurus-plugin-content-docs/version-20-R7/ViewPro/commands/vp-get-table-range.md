@@ -25,7 +25,7 @@ title: VP Get table range
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida)                |                  |
 | Resultados | Object  | <- | Intervalo que contém a tabela                                              | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->retorna o intervalo de *tableName*<!-- END REF -->.
 
@@ -44,7 +44,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especific
 
 Se *tableName* não for encontrado, o comando retornará **null**.
 
-#### Veja também
+## Veja também
 
 [VP RESIZE TABLE](vp-resize-table.md)<br/>
 [VP Find table](vp-find-table.md)
