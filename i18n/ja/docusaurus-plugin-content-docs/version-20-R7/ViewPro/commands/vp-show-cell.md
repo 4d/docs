@@ -15,7 +15,7 @@ title: VP SHOW CELL
 | vPos     | Integer | -> | セルあるいは行の縦方向の表示位置   |                  |
 | hPos     | Integer | -> | セルあるいはカラムの横方向の表示位置 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SHOW CELL` コマンドは、<!-- REF #_method_.VP SHOW CELL.Summary -->*rangeObj* で指定したレンジの表示位置を変更します<!-- END REF -->。
 
@@ -34,7 +34,7 @@ title: VP SHOW CELL
 
 > このコマンドは、表示位置の変更が可能な場合にのみ動作します。 たとえば、*rangeObj* が現在のシートの A1 セル (先頭カラムと先頭行) の場合、すでに縦および横方向の限界に接している (つまり、上にも左にもこれ以上スクロールできない) ため、表示位置を変更しても何も変わりません。 *rangeObj* が C3 セルの場合に、表示位置を中央または右下に変えても同じことが言えます。 表示は変更されません。
 
-#### 例題
+## 例題
 
 AY カラムの 51 行目のセルを 4D View Pro エリアの中央に表示します:
 
@@ -60,7 +60,7 @@ VP SHOW CELL($displayCell;vk position top;vk position right)
 
 ![](../../assets/en/ViewPro/cmd_vpShowCell2.PNG)
 
-#### 参照
+## 参照
 
 [VP Cell](vp-cell.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>
