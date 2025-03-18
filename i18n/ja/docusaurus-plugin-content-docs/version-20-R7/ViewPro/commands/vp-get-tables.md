@@ -23,7 +23,7 @@ title: VP Get tables
 | sheet      | Integer    | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Collection | <- | 表組みの名称をすべて格納するテキストのコレクション                      | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get tables` コマンドは、<!-- REF #_method_.VP Get tables.Summary -->*sheet* で指定されたスコープにおいて定義されている表組み名のコレクションを返します<!-- END REF -->。
 
@@ -33,7 +33,7 @@ title: VP Get tables
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 以下のコードは、カレントシート内にある全表組み名のコレクションを返します:
 
@@ -43,6 +43,6 @@ $tables:=VP Get tables("ViewProArea")
 
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)
