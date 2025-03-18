@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formulario | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
 | formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
 | areaStart  | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
 | areaEnd    | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 <!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
@@ -119,7 +119,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 - Make sure that no dialog box appears on the server machine (except for a specific requirement).
 - In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
@@ -144,11 +144,11 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
  End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command.
 
-#### Ejemplo 3
+## Ejemplo 3
 
 This form is used as dialog, then printed with modifications:
 
@@ -176,18 +176,18 @@ The code that calls the dialog then prints its body:
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-#### Ver también
+## Ver también
 
 [CANCEL](../commands-legacy/cancel.md)\
 [PAGE BREAK](../commands-legacy/page-break.md)\
 [PRINT SETTINGS](../commands-legacy/print-settings.md)\
 [SET PRINT OPTION](../commands-legacy/set-print-option.md)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 5                                                                   |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 5                           |
+| Hilo seguro       | &cross; |
 
 
