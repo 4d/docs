@@ -16,7 +16,7 @@ title: VP ADD FORMULA NAME
 | name       | Text   | -> | Nombre de la fórmula                         |                  |
 | options    | Object | -> | Opciones de la fórmula temporal              | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->crea o modifica una fórmula temporal en el documento abierto<!-- END REF -->.
 
@@ -35,13 +35,13 @@ Puede pasar un objeto con las propiedades adicionales para la fórmula nombrada 
 | scope     | Number | Alcance de la fórmula. Puede pasar el índice de hojas (el conteo comienza en 0) o usar las siguientes constantes: <li>`vk current sheet`</li><li>`vk workbook`</li>El ámbito determina si un nombre de fórmula es local en una hoja de trabajo determinada (*scope*=sheet index o `vk current sheet`), o global en todo el libro de trabajo (*scope*=`vk workbook`). |
 | comment   | Text   | Comentario asociado a una fórmula nombrada                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 ```
 
-#### Ver también
+## Ver también
 
 [Cell references](../formulas.md#cell-references)<br/>
 [VP Get formula by name](vp-get-formula-by-name.md)<br/>
