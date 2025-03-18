@@ -444,7 +444,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Cómo definir un filtro de restricción
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. El filtro se activa automáticamente.
+Se crea un filtro para una dataclass definiendo una función `event restrict` en la [**clase dataclass**](dsMapping.md#dataclass) de la dataclass. El filtro se activa automáticamente.
 
 ### `Function event restrict`
 
