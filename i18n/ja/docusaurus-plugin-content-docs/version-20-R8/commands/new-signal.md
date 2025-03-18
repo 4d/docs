@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `New signal` コマンドは、<!-- REF #_command_.New signal.Summary -->`4D.Signal` オブジェクトを作成します<!-- END REF -->。
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
 
 Signal オブジェクトは共有オブジェクトのため、`Use...End use` 構文を使用することで、[`.description`](#description) プロパティのほか、ユーザー独自のプロパティを管理するのに使用することもできます。
 
-**Returned value**
+**戻り値**
 
-A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
+新規の [`4D.Signal` オブジェクト](../API/SignalClass.md#signal-object)。
 
-#### 例題
+## 例題
 
 以下は、シグナルを設定するワーカーの典型的な例です:
 
@@ -70,7 +70,7 @@ A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
  $signal.trigger() // 処理が完了しました
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |
