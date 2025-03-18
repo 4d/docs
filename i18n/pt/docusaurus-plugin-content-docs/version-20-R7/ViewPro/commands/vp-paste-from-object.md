@@ -23,7 +23,7 @@ title: VP PASTE FROM OBJECT
 | dataObject | Object  | -> | Objeto que contém os dados a colar |                  |
 | options    | Integer | -> | Especifica o que é colado          | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
@@ -46,11 +46,11 @@ As opções de colagem definidas nas [opções de workbook](#vp-set-workbook-opt
 
 If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
-#### Exemplo
+## Exemplo
 
 Veja o exemplo de [VP Copy to object] (vp-copy-to-object.md)
 
-#### Veja também
+## Veja também
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>
