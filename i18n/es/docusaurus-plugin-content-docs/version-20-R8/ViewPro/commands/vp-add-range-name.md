@@ -15,7 +15,7 @@ title: VP ADD RANGE NAME
 | name       | Text   | -> | Nombre de la fórmula            |                  |
 | options    | Object | -> | Opciones de la fórmula temporal | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->crea o modifica un rango con nombre en el documento abierto<!-- END REF -->.
 
@@ -33,7 +33,7 @@ Puede pasar un objeto con las propiedades adicionales para el rango nombrado en 
 > - Un rango nombrado es en realidad una fórmula nombrada que contiene coordenadas. `VP ADD RANGE NAME` facilita la creación de rangos con nombre, pero también puede utilizar el método [`VP ADD FORMULA NAME`](vp-add-formula-name.md) para crear rangos temporales.
 > - Las fórmulas que definen rangos con nombre pueden recuperarse con el método [`VP Get formula by name`](vp-get-formula-by-name.md).
 
-#### Ejemplo
+## Ejemplo
 
 Quiere crear un rango nombrado para un rango de celdas:
 
@@ -42,7 +42,7 @@ $range:=VP Cell("ViewProArea";2;10)
 VP ADD RANGE NAME($range;"Total1")
 ```
 
-#### Ver también
+## Ver también
 
 [VP Get names](vp-get-names.md)<br/>
 [VP Name](vp-name.md)
