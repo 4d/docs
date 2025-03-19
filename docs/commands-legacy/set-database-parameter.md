@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to set the parameter or, Default table if this parameter is omitted |
-| selector | &#8594;  | Code of the database parameter to modify |
+| selector |Integer| &#8594;  | Code of the database parameter to modify |
 | value | Real, Text | &#8594;  | Value of the parameter |
 
 <!-- END REF-->
