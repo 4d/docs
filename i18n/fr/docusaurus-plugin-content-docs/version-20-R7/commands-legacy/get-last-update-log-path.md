@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Last update log path.Summary-->La commande **Get last update log path** retourne le chemin d’accès complet du fichier journal de mise à jour le plus récent sur le poste où elle est appelée.<!-- END REF-->
+<!--REF #_command_.Get last update log path.Summary-->La commande **Get last update log path** retourne le chemin d’accès complet du fichier journal de mise à jour le plus récent sur le poste où elle est appelée.<!-- END REF-->
 
 Le journal de mise à jour est généré par 4D lors des processus de mise à jour automatiques. Il contient les informations relatives aux mises à jour effectuées ainsi que les éventuelles erreurs rencontrées. 
 
