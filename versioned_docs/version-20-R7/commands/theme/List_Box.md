@@ -1,6 +1,7 @@
 ---
 id: List_Box_theme
 title: List Box
+slug: /commands/theme/List-Box
 ---
 
 

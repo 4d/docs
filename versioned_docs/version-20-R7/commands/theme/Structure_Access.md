@@ -1,6 +1,7 @@
 ---
 id: Structure_Access_theme
 title: Structure Access
+slug: /commands/theme/Structure-Access
 ---
 
 

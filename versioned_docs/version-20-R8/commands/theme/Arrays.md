@@ -1,6 +1,7 @@
 ---
 id: Arrays_theme
 title: Arrays
+slug: /commands/theme/Arrays
 ---
 
 

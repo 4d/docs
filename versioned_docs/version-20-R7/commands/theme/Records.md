@@ -1,6 +1,7 @@
 ---
 id: Records_theme
 title: Records
+slug: /commands/theme/Records
 ---
 
 

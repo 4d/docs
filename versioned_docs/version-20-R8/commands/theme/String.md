@@ -1,6 +1,7 @@
 ---
 id: String_theme
 title: String
+slug: /commands/theme/String
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 id: Pasteboard_theme
 title: Pasteboard
+slug: /commands/theme/Pasteboard
 ---
 
 

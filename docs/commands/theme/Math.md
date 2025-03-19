@@ -1,6 +1,7 @@
 ---
 id: Math_theme
 title: Math
+slug: /commands/theme/Math
 ---
 
 

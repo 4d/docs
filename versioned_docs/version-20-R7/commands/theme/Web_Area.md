@@ -1,6 +1,7 @@
 ---
 id: Web_Area_theme
 title: Web Area
+slug: /commands/theme/Web-Area
 ---
 
 

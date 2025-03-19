@@ -1,6 +1,7 @@
 ---
 id: On_a_Series_theme
 title: On a Series
+slug: /commands/theme/On-a-Series
 ---
 
 

@@ -42,6 +42,7 @@ async function run(inFolder, sidebarObject) {
         let overview = "---\n" +
             `id: ${overview_id}\n` +
             `title: ${category.label}\n` +
+            `slug: /commands/theme/${overview_name.replaceAll("_", "-")}\n` +
             "---\n\n\n";
         overview += "||\n|---|\n";
         for (const command of category.items) {

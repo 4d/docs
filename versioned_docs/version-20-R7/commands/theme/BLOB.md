@@ -1,6 +1,7 @@
 ---
 id: BLOB_theme
 title: BLOB
+slug: /commands/theme/BLOB
 ---
 
 

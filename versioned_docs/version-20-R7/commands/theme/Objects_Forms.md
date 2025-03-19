@@ -1,6 +1,7 @@
 ---
 id: Objects_Forms_theme
 title: Objects (Forms)
+slug: /commands/theme/Objects-Forms
 ---
 
 

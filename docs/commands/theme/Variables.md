@@ -1,6 +1,7 @@
 ---
 id: Variables_theme
 title: Variables
+slug: /commands/theme/Variables
 ---
 
 
