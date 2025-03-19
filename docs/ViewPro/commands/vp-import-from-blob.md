@@ -44,6 +44,11 @@ The following parameters can be used in the callback method:
 | |.errorCode|integer|Error code.|
 | |.errorMessage|text|Error message.|
 
+:::note
+
+The callback function specified in the `formula` attribute is triggered after all custom functions within the imported blob have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+
+::::
 
 ## Example
 
