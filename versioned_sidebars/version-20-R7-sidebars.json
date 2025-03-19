@@ -209,7 +209,7 @@
               "label": "4D Environment",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/4D_Environment"
+                "id": "commands/theme/4D_Environment_theme"
               },
               "items": [
                 "commands-legacy/application-file",
@@ -263,7 +263,7 @@
               "label": "Arrays",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Arrays"
+                "id": "commands/theme/Arrays_theme"
               },
               "items": [
                 "commands-legacy/append-to-array",
@@ -305,7 +305,7 @@
               "label": "Backup",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Backup"
+                "id": "commands/theme/Backup_theme"
               },
               "items": [
                 "commands-legacy/backup",
@@ -325,7 +325,7 @@
               "label": "BLOB",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/BLOB"
+                "id": "commands/theme/BLOB_theme"
               },
               "items": [
                 "commands-legacy/blob-properties",
@@ -359,7 +359,7 @@
               "label": "Boolean",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Boolean"
+                "id": "commands/theme/Boolean_theme"
               },
               "items": [
                 "commands-legacy/bool",
@@ -373,7 +373,7 @@
               "label": "Cache Management",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Cache_Management"
+                "id": "commands/theme/Cache_Management_theme"
               },
               "items": [
                 "commands-legacy/adjust-blobs-cache-priority",
@@ -397,7 +397,7 @@
               "label": "Collections",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Collections"
+                "id": "commands/theme/Collections_theme"
               },
               "items": [
                 "commands-legacy/array-to-collection",
@@ -411,7 +411,7 @@
               "label": "Communications",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Communications"
+                "id": "commands/theme/Communications_theme"
               },
               "items": [
                 "commands-legacy/get-serial-port-mapping",
@@ -432,7 +432,7 @@
               "label": "Compiler",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Compiler"
+                "id": "commands/theme/Compiler_theme"
               },
               "items": [
                 "commands-legacy/compile-project",
@@ -444,7 +444,7 @@
               "label": "Data Entry",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Data_Entry"
+                "id": "commands/theme/Data_Entry_theme"
               },
               "items": [
                 "commands-legacy/accept",
@@ -462,7 +462,7 @@
               "label": "Data Security",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Data_Security"
+                "id": "commands/theme/Data_Security_theme"
               },
               "items": [
                 "commands-legacy/data-file-encryption-status",
@@ -479,7 +479,7 @@
               "label": "Database Methods",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Database_Methods"
+                "id": "commands/theme/Database_Methods_theme"
               },
               "items": [
                 "commands-legacy/on-backup-shutdown-database-method",
@@ -507,7 +507,7 @@
               "label": "Date and Time",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Date_and_Time"
+                "id": "commands/theme/Date_and_Time_theme"
               },
               "items": [
                 "commands-legacy/add-to-date",
@@ -531,7 +531,7 @@
               "label": "Design Object Access",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Design_Object_Access"
+                "id": "commands/theme/Design_Object_Access_theme"
               },
               "items": [
                 "commands-legacy/current-method-path",
@@ -561,7 +561,7 @@
               "label": "Drag and Drop",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Drag_and_Drop"
+                "id": "commands/theme/Drag_and_Drop_theme"
               },
               "items": [
                 "commands-legacy/drop-position",
@@ -573,7 +573,7 @@
               "label": "Entry Control",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Entry_Control"
+                "id": "commands/theme/Entry_Control_theme"
               },
               "items": [
                 "commands-legacy/edit-item",
@@ -591,7 +591,7 @@
               "label": "File and Folder",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/File_and_Folder"
+                "id": "commands/theme/File_and_Folder_theme"
               },
               "items": [
                 "commands/file",
@@ -605,7 +605,7 @@
               "label": "Form Events",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Form_Events"
+                "id": "commands/theme/Form_Events_theme"
               },
               "items": [
                 "commands-legacy/activated",
@@ -634,7 +634,7 @@
               "label": "Forms",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Forms"
+                "id": "commands/theme/Forms_theme"
               },
               "items": [
                 "commands-legacy/current-form-name",
@@ -668,7 +668,7 @@
               "label": "Formulas",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Formulas"
+                "id": "commands/theme/Formulas_theme"
               },
               "items": [
                 "commands-legacy/edit-formula",
@@ -685,7 +685,7 @@
               "label": "Graphs",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Graphs"
+                "id": "commands/theme/Graphs_theme"
               },
               "items": [
                 "commands-legacy/graph",
@@ -697,7 +697,7 @@
               "label": "HTTP",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/HTTP"
+                "id": "commands/theme/HTTP_theme"
               },
               "items": [
                 "commands-legacy/http-authenticate",
@@ -715,7 +715,7 @@
               "label": "Hierarchical Lists",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Hierarchical_Lists"
+                "id": "commands/theme/Hierarchical_Lists_theme"
               },
               "items": [
                 "commands-legacy/append-to-list",
@@ -756,7 +756,7 @@
               "label": "Import and Export",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Import_and_Export"
+                "id": "commands/theme/Import_and_Export_theme"
               },
               "items": [
                 "commands-legacy/export-data",
@@ -774,7 +774,7 @@
               "label": "Interruptions",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Interruptions"
+                "id": "commands/theme/Interruptions_theme"
               },
               "items": [
                 "commands-legacy/abort",
@@ -796,7 +796,7 @@
               "label": "JSON",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/JSON"
+                "id": "commands/theme/JSON_theme"
               },
               "items": [
                 "commands-legacy/json-parse",
@@ -814,7 +814,7 @@
               "label": "LDAP",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/LDAP"
+                "id": "commands/theme/LDAP_theme"
               },
               "items": [
                 "commands-legacy/ldap-login",
@@ -828,7 +828,7 @@
               "label": "Language",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Language"
+                "id": "commands/theme/Language_theme"
               },
               "items": [
                 "commands/4d",
@@ -860,7 +860,7 @@
               "label": "Licenses",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Licenses"
+                "id": "commands/theme/Licenses_theme"
               },
               "items": [
                 "commands-legacy/change-licenses",
@@ -876,7 +876,7 @@
               "label": "List Box",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/List_Box"
+                "id": "commands/theme/List_Box_theme"
               },
               "items": [
                 "commands-legacy/listbox-collapse",
@@ -945,7 +945,7 @@
               "label": "Mail",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Mail"
+                "id": "commands/theme/Mail_theme"
               },
               "items": [
                 "commands/imap-new-transporter",
@@ -961,7 +961,7 @@
               "label": "Math",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Math"
+                "id": "commands/theme/Math_theme"
               },
               "items": [
                 "commands-legacy/abs",
@@ -987,7 +987,7 @@
               "label": "Menus",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Menus"
+                "id": "commands/theme/Menus_theme"
               },
               "items": [
                 "commands-legacy/append-menu-item",
@@ -1031,7 +1031,7 @@
               "label": "Messages",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Messages"
+                "id": "commands/theme/Messages_theme"
               },
               "items": [
                 "commands-legacy/alert",
@@ -1049,7 +1049,7 @@
               "label": "Named Selections",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Named_Selections"
+                "id": "commands/theme/Named_Selections_theme"
               },
               "items": [
                 "commands-legacy/clear-named-selection",
@@ -1063,7 +1063,7 @@
               "label": "Objects (Forms)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Objects_Forms"
+                "id": "commands/theme/Objects_Forms_theme"
               },
               "items": [
                 "commands-legacy/get-style-sheet-info",
@@ -1167,7 +1167,7 @@
               "label": "Objects (Language)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Objects_Language"
+                "id": "commands/theme/Objects_Language_theme"
               },
               "items": [
                 "commands-legacy/new-object",
@@ -1197,7 +1197,7 @@
               "label": "On a Series",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/On_a_Series"
+                "id": "commands/theme/On_a_Series_theme"
               },
               "items": [
                 "commands-legacy/average",
@@ -1214,7 +1214,7 @@
               "label": "PHP",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/PHP"
+                "id": "commands/theme/PHP_theme"
               },
               "items": [
                 "commands-legacy/php-execute",
@@ -1228,7 +1228,7 @@
               "label": "Pasteboard",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Pasteboard"
+                "id": "commands/theme/Pasteboard_theme"
               },
               "items": [
                 "commands-legacy/append-data-to-pasteboard",
@@ -1249,7 +1249,7 @@
               "label": "Pictures",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Pictures"
+                "id": "commands/theme/Pictures_theme"
               },
               "items": [
                 "commands-legacy/blob-to-picture",
@@ -1282,7 +1282,7 @@
               "label": "Printing",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Printing"
+                "id": "commands/theme/Printing_theme"
               },
               "items": [
                 "commands-legacy/accumulate",
@@ -1323,7 +1323,7 @@
               "label": "Process (Communications)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Process_Communications"
+                "id": "commands/theme/Process_Communications_theme"
               },
               "items": [
                 "commands-legacy/call-worker",
@@ -1342,7 +1342,7 @@
               "label": "Process (User Interface)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Process_User_Interface"
+                "id": "commands/theme/Process_User_Interface_theme"
               },
               "items": [
                 "commands-legacy/bring-to-front",
@@ -1356,7 +1356,7 @@
               "label": "Processes",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Processes"
+                "id": "commands/theme/Processes_theme"
               },
               "items": [
                 "commands-legacy/abort-process-by-id",
@@ -1389,7 +1389,7 @@
               "label": "Queries",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Queries"
+                "id": "commands/theme/Queries_theme"
               },
               "items": [
                 "commands-legacy/describe-query-execution",
@@ -1420,7 +1420,7 @@
               "label": "Quick Report",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Quick_Report"
+                "id": "commands/theme/Quick_Report_theme"
               },
               "items": [
                 "commands-legacy/qr-blob-to-report",
@@ -1476,7 +1476,7 @@
               "label": "Record Locking",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Record_Locking"
+                "id": "commands/theme/Record_Locking_theme"
               },
               "items": [
                 "commands-legacy/load-record",
@@ -1494,7 +1494,7 @@
               "label": "Records",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Records"
+                "id": "commands/theme/Records_theme"
               },
               "items": [
                 "commands-legacy/create-record",
@@ -1518,7 +1518,7 @@
               "label": "Relations",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Relations"
+                "id": "commands/theme/Relations_theme"
               },
               "items": [
                 "commands-legacy/create-related-one",
@@ -1540,7 +1540,7 @@
               "label": "Resources",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Resources"
+                "id": "commands/theme/Resources_theme"
               },
               "items": [
                 "commands-legacy/close-resource-file",
@@ -1562,7 +1562,7 @@
               "label": "SQL",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/SQL"
+                "id": "commands/theme/SQL_theme"
               },
               "items": [
                 "commands-legacy/begin-sql",
@@ -1594,7 +1594,7 @@
               "label": "SVG",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/SVG"
+                "id": "commands/theme/SVG_theme"
               },
               "items": [
                 "commands-legacy/svg-export-to-picture",
@@ -1610,7 +1610,7 @@
               "label": "Secured Protocol",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Secured_Protocol"
+                "id": "commands/theme/Secured_Protocol_theme"
               },
               "items": [
                 "commands-legacy/generate-certificate-request",
@@ -1622,7 +1622,7 @@
               "label": "Selection",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Selection"
+                "id": "commands/theme/Selection_theme"
               },
               "items": [
                 "commands-legacy/all-records",
@@ -1654,7 +1654,7 @@
               "label": "Sets",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Sets"
+                "id": "commands/theme/Sets_theme"
               },
               "items": [
                 "commands-legacy/add-to-set",
@@ -1679,7 +1679,7 @@
               "label": "Spell Checker",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Spell_Checker"
+                "id": "commands/theme/Spell_Checker_theme"
               },
               "items": [
                 "commands-legacy/spell-add-to-user-dictionary",
@@ -1695,7 +1695,7 @@
               "label": "String",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/String"
+                "id": "commands/theme/String_theme"
               },
               "items": [
                 "commands-legacy/change-string",
@@ -1725,7 +1725,7 @@
               "label": "Structure Access",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Structure_Access"
+                "id": "commands/theme/Structure_Access_theme"
               },
               "items": [
                 "commands-legacy/create-index",
@@ -1759,7 +1759,7 @@
               "label": "Styled Text",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Styled_Text"
+                "id": "commands/theme/Styled_Text_theme"
               },
               "items": [
                 "commands-legacy/st-compute-expressions",
@@ -1784,7 +1784,7 @@
               "label": "Subrecords",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Subrecords"
+                "id": "commands/theme/Subrecords_theme"
               },
               "items": [
                 "commands-legacy/get-subrecord-key"
@@ -1795,7 +1795,7 @@
               "label": "System Documents",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/System_Documents"
+                "id": "commands/theme/System_Documents_theme"
               },
               "items": [
                 "commands-legacy/append-document",
@@ -1838,7 +1838,7 @@
               "label": "System Environment",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/System_Environment"
+                "id": "commands/theme/System_Environment_theme"
               },
               "items": [
                 "commands-legacy/count-screens",
@@ -1872,7 +1872,7 @@
               "label": "Table",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Table"
+                "id": "commands/theme/Table_theme"
               },
               "items": [
                 "commands-legacy/current-default-table",
@@ -1886,7 +1886,7 @@
               "label": "Tools",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Tools"
+                "id": "commands/theme/Tools_theme"
               },
               "items": [
                 "commands-legacy/activity-snapshot",
@@ -1915,7 +1915,7 @@
               "label": "Transactions",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Transactions"
+                "id": "commands/theme/Transactions_theme"
               },
               "items": [
                 "commands-legacy/active-transaction",
@@ -1933,7 +1933,7 @@
               "label": "Triggers",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Triggers"
+                "id": "commands/theme/Triggers_theme"
               },
               "items": [
                 "commands-legacy/trigger-event",
@@ -1946,7 +1946,7 @@
               "label": "User Interface",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/User_Interface"
+                "id": "commands/theme/User_Interface_theme"
               },
               "items": [
                 "commands-legacy/beep",
@@ -1982,7 +1982,7 @@
               "label": "Users and Groups",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Users_and_Groups"
+                "id": "commands/theme/Users_and_Groups_theme"
               },
               "items": [
                 "commands-legacy/blob-to-users",
@@ -2014,7 +2014,7 @@
               "label": "Variables",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Variables"
+                "id": "commands/theme/Variables_theme"
               },
               "items": [
                 "commands-legacy/clear-variable",
@@ -2027,7 +2027,7 @@
               "label": "Web Area",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Web_Area"
+                "id": "commands/theme/Web_Area_theme"
               },
               "items": [
                 "commands-legacy/wa-back-url-available",
@@ -2064,7 +2064,7 @@
               "label": "Web Server",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Web_Server"
+                "id": "commands/theme/Web_Server_theme"
               },
               "items": [
                 "commands-legacy/web-get-body-part",
@@ -2101,7 +2101,7 @@
               "label": "Web Services (Client)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Web_Services_Client"
+                "id": "commands/theme/Web_Services_Client_theme"
               },
               "items": [
                 "commands-legacy/web-service-authenticate",
@@ -2117,7 +2117,7 @@
               "label": "Web Services (Server)",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Web_Services_Server"
+                "id": "commands/theme/Web_Services_Server_theme"
               },
               "items": [
                 "commands-legacy/soap-declaration",
@@ -2132,7 +2132,7 @@
               "label": "Windows",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/Windows"
+                "id": "commands/theme/Windows_theme"
               },
               "items": [
                 "commands-legacy/close-window",
@@ -2172,7 +2172,7 @@
               "label": "XML DOM",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/XML_DOM"
+                "id": "commands/theme/XML_DOM_theme"
               },
               "items": [
                 "commands-legacy/dom-append-xml-child-node",
@@ -2217,7 +2217,7 @@
               "label": "XML SAX",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/XML_SAX"
+                "id": "commands/theme/XML_SAX_theme"
               },
               "items": [
                 "commands-legacy/sax-add-processing-instruction",
@@ -2244,7 +2244,7 @@
               "label": "XML",
               "link": {
                 "type": "doc",
-                "id": "commands/theme/XML"
+                "id": "commands/theme/XML_theme"
               },
               "items": [
                 "commands-legacy/xml-decode",

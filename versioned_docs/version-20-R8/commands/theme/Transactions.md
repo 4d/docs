@@ -1,6 +1,7 @@
 ---
-id: Transactions
+id: Transactions_theme
 title: Transactions
+slug: /commands/theme/Transactions
 ---
 
 

@@ -1,6 +1,7 @@
 ---
-id: Triggers
+id: Triggers_theme
 title: Triggers
+slug: /commands/theme/Triggers
 ---
 
 

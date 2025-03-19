@@ -1,6 +1,7 @@
 ---
-id: SQL
+id: SQL_theme
 title: SQL
+slug: /commands/theme/SQL
 ---
 
 
