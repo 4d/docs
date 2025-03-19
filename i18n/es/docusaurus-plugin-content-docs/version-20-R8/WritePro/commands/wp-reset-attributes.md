@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando **WP RESET ATTRIBUTES** <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> le permite restablecer el valor de uno o más atributos en el rango, elemento o documento pasado como parámetro.<!-- END REF--> Este comando puede eliminar cualquier tipo de atributo interno 4D Write Pro: carácter, párrafo, documento, tabla o imagen. You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once.
 
@@ -41,7 +41,7 @@ When an attribute value is removed using the **WP RESET ATTRIBUTES** command, th
 
 If the attribute to be reset was not defined in the element passed as a parameter, the command does nothing.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 You want to remove several attributes from the following selection:
 
@@ -62,7 +62,7 @@ The resulting document is:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to remove several attributes using a collection:
 
@@ -73,7 +73,7 @@ WP RESET ATTRIBUTES($myRange; $myCollection)
  
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 ```4d
 $section:=WP Get section($document; 3)
@@ -82,7 +82,7 @@ $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
 WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
 ```
 
-#### Ver también
+## Ver también
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](wp-get-attributes.md)\
