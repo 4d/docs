@@ -29,7 +29,7 @@ TCPListener objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #4D.TCPListener.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #4D.TCPConnection.terminate().Summary -->|
+|[<!-- INCLUDE #TCPListener.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #TCPConnection.terminate().Summary -->|
 
 
 <!-- REF #4D.TCPListener.new().Desc -->
@@ -87,12 +87,12 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPListener.terminate().Desc -->
+<!-- REF #TCPListener.terminate().Desc -->
 ## .terminate()
 
-<!-- REF #4D.TCPListener.terminate().Syntax -->**.terminate**()<!-- END REF -->
+<!-- REF #TCPListener.terminate().Syntax -->**.terminate**()<!-- END REF -->
 
-<!-- REF #4D.TCPListener.terminate().params -->
+<!-- REF #TCPListener.terminate().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
@@ -100,7 +100,7 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 #### Description
 
-The `terminate()` function <!-- REF #4D.TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
+The `terminate()` function <!-- REF #TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
 
 
 <!-- END REF -->

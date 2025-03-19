@@ -130,15 +130,15 @@ TCPConnection objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #4D.TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #4D.TCPConnection.address.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #4D.TCPConnection.closed.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #4D.TCPConnection.errors.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #4D.TCPConnection.listener.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #4D.TCPConnection.port.Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #4D.TCPConnection.send().Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #4D.TCPConnection.shutdown().Summary -->|
-|[<!-- INCLUDE #4D.TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #4D.TCPConnection.wait().Summary -->|
+|[<!-- INCLUDE #TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPConnection.address.Summary -->|
+|[<!-- INCLUDE #TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #TCPConnection.closed.Summary -->|
+|[<!-- INCLUDE #TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPConnection.errors.Summary -->|
+|[<!-- INCLUDE #TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #TCPConnection.listener.Summary -->|
+|[<!-- INCLUDE #TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #TCPConnection.noDelay.Summary -->|
+|[<!-- INCLUDE #TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPConnection.port.Summary -->|
+|[<!-- INCLUDE #TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #TCPConnection.send().Summary -->|
+|[<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary -->|
+|[<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->|
 
 
 <!-- REF #4D.TCPConnection.new().Desc -->
@@ -203,37 +203,37 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.address.Desc -->
+<!-- REF #TCPConnection.address.Desc -->
 ## .address
 
-<!-- REF #4D.TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
+<!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
 
 #### Description
 
-The `.address` property contains <!-- REF #4D.TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->. 
+The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->. 
 
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.closed.Desc -->
+<!-- REF #TCPConnection.closed.Desc -->
 ## .closed
 
-<!-- REF #4D.TCPConnection.closed.Syntax -->**closed** : Boolean<!-- END REF -->
+<!-- REF #TCPConnection.closed.Syntax -->**closed** : Boolean<!-- END REF -->
 
 #### Description
 
-The `.closed` property contains <!-- REF #4D.TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.errors.Desc -->
+<!-- REF #TCPConnection.errors.Desc -->
 ## .errors
 
-<!-- REF #4D.TCPConnection.errors.Syntax -->**errors** : Collection<!-- END REF -->
+<!-- REF #TCPConnection.errors.Syntax -->**errors** : Collection<!-- END REF -->
 
 #### Description
 
-The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 |Property||Type|Description|
 |---|---|---|---|
@@ -246,54 +246,54 @@ The `.errors` property contains <!-- REF #4D.TCPConnection.errors.Summary -->a c
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.listener.Desc -->
+<!-- REF #TCPConnection.listener.Desc -->
 ## .listener
 
-<!-- REF #4D.TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
+<!-- REF #TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
 
 #### Description
 
-The `.listener` property contains <!-- REF #4D.TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. This property is **read-only**.
+The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. This property is **read-only**.
 
 
 
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.noDelay.Desc -->
+<!-- REF #TCPConnection.noDelay.Desc -->
 ## .noDelay
 
-<!-- REF #4D.TCPConnection.noDelay.Syntax -->**noDelay** : Boolean<!-- END REF -->
+<!-- REF #TCPConnection.noDelay.Syntax -->**noDelay** : Boolean<!-- END REF -->
 
 #### Description
 
-The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. This property is **read-only**.
+The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. This property is **read-only**.
 
 
 
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.port.Desc -->
+<!-- REF #TCPConnection.port.Desc -->
 ## .port
 
-<!-- REF #4D.TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
+<!-- REF #TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
 
 #### Description
 
-The `.port` property contains <!-- REF #4D.TCPConnection.port.Summary -->the port number of the remote machine)<!-- END REF -->. This property is **read-only**.
+The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine)<!-- END REF -->. This property is **read-only**.
 
 
 
 <!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.send().Desc -->
+<!-- REF #TCPConnection.send().Desc -->
 ## .send()
 
-<!-- REF #4D.TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
+<!-- REF #TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().params -->
+<!-- REF #TCPConnection.send().params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |data|Blob|->|Data to be sent|
@@ -301,16 +301,16 @@ The `.port` property contains <!-- REF #4D.TCPConnection.port.Summary -->the por
 
 #### Description
 
-The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().Desc -->
+<!-- REF #TCPConnection.shutdown().Desc -->
 ## .shutdown()
 
-<!-- REF #4D.TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
+<!-- REF #TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().params -->
+<!-- REF #TCPConnection.shutdown().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
@@ -318,17 +318,17 @@ The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to
 
 #### Description
 
-The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
 
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.wait().Desc -->
+<!-- REF #TCPConnection.wait().Desc -->
 ## .wait()
 
-<!-- REF #4D.TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
+<!-- REF #TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection..wait().params -->
+<!-- REF #TCPConnection..wait().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Maximum wait time in seconds|
@@ -336,7 +336,7 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->close
 
 #### Description
 
-The `wait()` function <!-- REF #4D.TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
 
 :::note 
 
