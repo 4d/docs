@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->RESIZE FORM WINDOW コマンドはカレントフォームウィンドウのサイズを変更します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 このコマンドの動作は[SET WINDOW RECT](set-window-rect.md "SET WINDOW RECT") コマンドの動作と異なることに注意してください。[SET WINDOW RECT](set-window-rect.md "SET WINDOW RECT") コマンドはウィンドウのリサイズ時にフォームのプロパティやコンテンツを考慮に入れません。またこのコマンドはフォームサイズを変更する必要がないことにも留意してください。フォームのサイズをプログラムで変更するには[FORM SET SIZE](form-set-size.md "FORM SET SIZE") コマンドを参照してください。
 
-#### 例題 
+## 例題 
 
 以下のウィンドウがあります (フィールドとフレームに水平方向に拡大のプロパティが設定されています):
 
@@ -40,13 +40,13 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict39549.ja.png)
 
-#### 参照 
+## 参照 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

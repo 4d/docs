@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->**SET GROUP ACCESS** コマンドはカレントセッションにおいて4D ユーザーアカウントの所属情報を変更します。<!-- END REF-->それまでの所属情報は全てリセットされ、*groups* 引数で指定されたグループへの新しい所属が設定されます。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **注:** 指定したグループが"シリアル化された"機能(例: プラグインなど)へのアクセスを提供している場合、それに対応するライセンスはセッションが完了するまで4D ユーザーアカウントが使用し、そのユーザーに割り当てられたままになります。コマンドを呼び出してグループへの所属情報がキャンセルされたとしても変わりません。
 
-#### 例題 
+## 例題 
 
 カレントのユーザーをセッションの間、"admin" および "plugins" グループに所属させたい場合を考えます:
 
@@ -37,14 +37,14 @@ displayed_sidebar: docs
  SET GROUP ACCESS($groups)
 ```
 
-#### 参照 
+## 参照 
 
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

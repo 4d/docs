@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Localized string.Summary-->El comando Localized string devuelve el valor de la cadena designada por el atributo *resNombre* para el lenguaje actual.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Pase en *resNombre* el nombre del recurso de la cadena en la cual quiere obtener
 
 Tenga encuenta que XLIFF es diacrítica.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este es un extracto del archivo .xlf: 
 
@@ -47,15 +47,15 @@ Después de la ejecución de la siguiente instrucción:
 
 ... si el lenguaje actual es el Español, $valorES contiene “Mostrar en el disco”.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable OK toma el valor 1\. Si *resNombre* no se encuentra, el comando devuelve una cadena vacía y la variable OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

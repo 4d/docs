@@ -79,8 +79,8 @@ Cette liste déroulante contient 3 options de couche réseau : **Historique**, *
     - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
     - Lorsque l'option de couche QUIC est sélectionnée :
         - Un message bêta et une icône d'alerte sont affichés près du sélecteur.
-        - Les paramètres de [délai avant déconnexion client-serveur](#Client-Server-Connections-Timeout) sont masqués
-        - L'option [Crypter les communications Client-Serveur](#Crypter-les-communications-Client-Serveur) est masquée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
+        - [Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
+        - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
     - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou une version supérieure avant de passer à la couche réseau QUIC.
 
 :::note

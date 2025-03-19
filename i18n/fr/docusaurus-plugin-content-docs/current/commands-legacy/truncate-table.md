@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->La commande **TRUNCATE TABLE** supprime tous les enregistrements de *laTable* de façon très rapide.<!-- END REF--> Après l’appel de la commande, il n’y a plus de sélection courante ni d’enregistrement courant.
 
@@ -31,15 +31,15 @@ La commande **TRUNCATE TABLE** est donc à manier avec précaution mais est trè
 
 **Note :** Le concept et le fonctionnement de cette commande sont proches de ceux de la commande TRUNCATE (TABLE) du SQL.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE SELECTION](delete-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

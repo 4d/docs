@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.TEXT TO DOCUMENT.Summary-->**TEXT TO DOCUMENT**コマンドは、 *text* を直接ディスク上のファイルへと書き込みます。<!-- END REF-->引数には書き込みたいファイルへのパス名を渡します。ファイルが存在しない場合には新たに作成されます。このファイルが既にディスク上に存在する場合、以前の内容は消去されます。ただし既に開かれていた場合にはその中身はロックされエラーが静背されます。*fileName* に渡せるものは以下の通りです:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **Note:** このコマンドはOK変数を変更しません。失敗した場合には [ON ERR CALL](on-err-call.md) コマンドによって実装されたメソッドを使用することによって割り込み可能なエラーが生成されます。
 
-#### 例題 1 
+## 例題 1 
 
 このコマンドの典型的な使用例:
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
  TEXT TO DOCUMENT("myTest.xml";"This is a test")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ユーザーがファイルを作成する場所を指示できる例:
 
@@ -78,12 +78,12 @@ displayed_sidebar: docs
  End ifi
 ```
 
-#### 参照 
+## 参照 
 
 [Document to text](document-to-text.md)  
 *System Documents*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

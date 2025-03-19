@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->The **GET LIST ITEM ICON** command returns, in *icon*, the icon associated with the item whose reference number is passed in *itemRef* in the list whose reference number or object name is passed in *list*.<!-- END REF-->  
   
@@ -33,12 +33,12 @@ If no icon is associated with the item, the icon variable is returned empty.
 
 **Note:** When the icon associated with an item has been defined via a static reference (resource references or pictures from the picture library), it is possible to find out its number using the [GET LIST ITEM PROPERTIES](get-list-item-properties.md) command*.*
 
-#### See also 
+## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is window maximized.Summary-->**Is window maximized** コマンドは*window* 引数に参照を渡したウィンドウが現在最大化されていれば **True** を、それ以外の場合には**False** を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 ウィンドウの、最大化とその前の状態とを切り替えたい場合を考えます:
 
@@ -30,12 +30,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

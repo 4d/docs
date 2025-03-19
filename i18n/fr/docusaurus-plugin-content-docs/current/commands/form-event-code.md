@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 **Form event code** retourne une valeur numérique qui identifie le type d'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **Form event code** dans une méthode formulaire ou une méthode objet.
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Pour une description des événements, veuillez vous référer à la section [**Evénements formulaire**](../Events/overview.md).
 
-#### Exemple 1
+## Exemple 1
 
 Cet exemple montre l'utilisation de l'événement On Validate pour assigner automatiquement (à un champ) la date de modification de l'enregistrement :
 
@@ -36,7 +36,7 @@ Cet exemple montre l'utilisation de l'événement On Validate pour assigner auto
  End case
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Dans l'exemple suivant, la gestion complète d'un menu déroulant (initialisation, clics et relâchement de l'objet) est placée dans la méthode de l'objet :
 
@@ -57,7 +57,7 @@ Dans l'exemple suivant, la gestion complète d'un menu déroulant (initialisatio
  End case
 ```
 
-#### Exemple 3
+## Exemple 3
 
 L'exemple suivant est une méthode formulaire générique. Elle fait apparaître chacun des événements qui peuvent survenir lorsqu'un formulaire est utilisé comme formulaire sortie :
 
@@ -98,7 +98,7 @@ L'exemple suivant est une méthode formulaire générique. Elle fait apparaître
  End case
 ```
 
-#### Exemple 4
+## Exemple 4
 
 L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](../commands-legacy/display-selection.md) ou [MODIFY SELECTION](../commands-legacy/modify-selection.md). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
 
@@ -137,11 +137,11 @@ L'exemple suivant montre une méthode formulaire générique qui gère les évé
  SET WINDOW TITLE($vaEvénement)
 ```
 
-#### Exemple 5
+## Exemple 5
 
 Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) et [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md).
 
-#### Exemple 6
+## Exemple 6
 
 Cet exemple montre comment traiter les clics et les doubles clics de la même manière dans une zone de défilement :
 
@@ -161,7 +161,7 @@ Cet exemple montre comment traiter les clics et les doubles clics de la même ma
  End case
 ```
 
-#### Exemple 7
+## Exemple 7
 
 L'exemple suivant montre comment traiter les clics et double-clics de manière différente. Notez l'utilisation de l'élément zéro pour conserver la valeur de l'élément sélectionné :
 
@@ -192,7 +192,7 @@ L'exemple suivant montre comment traiter les clics et double-clics de manière d
  End case
 ```
 
-#### Exemple 8
+## Exemple 8
 
 L'exemple suivant montre comment maintenir une zone contenant du texte à partir d'une méthode formulaire à l'aide des événements [`On Getting Focus`](../Events/onGettingFocus.md) et [`On Losing Focus`](../Events/onLosingFocus.md) :
 
@@ -220,7 +220,7 @@ L'exemple suivant montre comment maintenir une zone contenant du texte à partir
  End case
 ```
 
-#### Exemple 9
+## Exemple 9
 
 Cet exemple illustre comment vous pouvez répondre à un événement de fermeture de fenêtre à l'aide d'un formulaire utilisé pour la saisie de données d'enregistrement :
 
@@ -244,7 +244,7 @@ Cet exemple illustre comment vous pouvez répondre à un événement de fermetur
  End case
 ```
 
-#### Exemple 10
+## Exemple 10
 
 L'exemple suivant montre comment mettre en majuscules un champ Texte ou Alphanumérique chaque fois que la valeur est modifiée :
 
@@ -258,7 +258,7 @@ L'exemple suivant montre comment mettre en majuscules un champ Texte ou Alphanum
  End case
 ```
 
-#### Exemple 11
+## Exemple 11
 
 L'exemple suivant propose une manière de gérer une action de suppression dans une liste hiérarchique :
 
@@ -286,7 +286,7 @@ L'exemple suivant propose une manière de gérer une action de suppression dans 
  End if
 ```
 
-#### Exemple 12
+## Exemple 12
 
 Dans cet exemple, l'événement formulaire [`On Scroll`](../Events/onScroll.md) permet de synchroniser l'affichage de deux images dans un formulaire. Le code suivant est ajouté dans la méthode de l'objet "satellite" (champ ou variable image) :
 
@@ -302,7 +302,7 @@ Dans cet exemple, l'événement formulaire [`On Scroll`](../Events/onScroll.md) 
 
 Résultat : https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Exemple 13
+## Exemple 13
 
 Vous souhaitez dessiner un rectangle rouge autour de la cellule sélectionnée d'une list box, et vous voulez que le rectangle se déplace si l'utilisateur fait défiler verticalement la list box. Dans la méthode objet de la list box, vous pouvez écrire :
 
@@ -338,7 +338,7 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 
 ![](../assets/en/commands/pict1900395.en.png)
 
-#### Voir également
+## Voir également
 
 [Form Events](../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
@@ -350,7 +350,7 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                                 |
 | ------------------ | ------------------------------- |

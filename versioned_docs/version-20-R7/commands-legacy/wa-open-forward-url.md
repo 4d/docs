@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->The **WA OPEN FORWARD URL** command loads the next URL in the sequence of URLs opened into the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
 
 If there is no next URL (in other words, if the user has never returned to a previous URL), the command does nothing. You can test whether a next URL is available using the [WA Forward URL available](wa-forward-url-available.md) command.
 
-#### See also 
+## See also 
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

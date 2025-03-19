@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** returns [True](true.md "True") if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).
 
@@ -34,7 +34,7 @@ During data entry, it is usually easier to perform operations in object methods 
 
 **Note:** To operate properly, the **Modified** command is to be used only in a form method or in a method called by a form method.
 
-#### Example 1 
+## Example 1 
 
 The following example tests whether either the *\[Orders\]Quantity* field or the *\[Orders\]Price* field has changed. If either has been changed, then the *\[Orders\]Total* field is recalculated. 
 
@@ -46,7 +46,7 @@ The following example tests whether either the *\[Orders\]Quantity* field or the
 
 Note that the same thing could be accomplished by using the second line as a subroutine called by the object methods for the *\[Orders\]Quantity* field and the *\[Orders\]Price* field within the On Data Change form event.
 
-#### Example 2 
+## Example 2 
 
 You select a record for the table *\[anyTable\]*, then you call multiple subroutines that may modify the field *\[anyTable\]Important field,* but do not save the record. At the end of the main method, you can use the **Modified** command to detect whether you must save the record:
 
@@ -63,12 +63,12 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
  End if
 ```
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

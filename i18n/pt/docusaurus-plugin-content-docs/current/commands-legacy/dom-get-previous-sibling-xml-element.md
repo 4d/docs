@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Get previous sibling XML element.Summary-->O comando DOM Get previous sibling XML element retorna uma referência ao “irmão” anterior do elemento XML passado em referência.<!-- END REF--> Esta referência pode ser utilizada com os outros comandos de análise XML.  
 
@@ -26,15 +26,15 @@ Este comando pode ser utilizado para navegar entre os “filhos” de um element
   
 Antes do primeiro “irmão,” a variável sistema OK tem o valor 0
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente e se o elemento referenciado não for o primeiro "filho" da estrutura, a variável sistema OK assume o valor 1\. Se ocorre um erro ou se o elemento analisado for o primeiro "filho" da estrutura, assume o valo 0.
 
-#### Ver também 
+## Ver também 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

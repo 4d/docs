@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->FORM SET HORIZONTAL RESIZING コマンドを使用すると、プログラムからカレントフォームの水平リサイズプロパティを変更することができます。<!-- END REF-->デフォルトとして、これらのプロパティはデザインモードのフォームエディタにおいて設定することができます。新しいプロパティはカレントプロセスに対して設定され、フォームと一緒に保存されません。
 
@@ -25,17 +25,17 @@ displayed_sidebar: docs
 
 1番目の引数に[True](true.md "True")を渡した場合は、任意の引数*minWidth*と*maxWidth*に最小幅と最大幅の新しい値（ピクセル単位）を渡すことができます。これらの引数を省略した場合、デザインモードで設定した値（設定されている場合）が使用されます。
 
-#### 例題 
+## 例題 
 
 [FORM SET SIZE](form-set-size.md "FORM SET SIZE") コマンドを参照してください。 
 
-#### 参照 
+## 参照 
 
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PUSH RECORD.Summary-->PUSH RECORD apila una copia del registro actual de *tabla* en la pila de registros de la tabla.<!-- END REF--> PUSH RECORD puede ejecutarse antes de que se guarde un registro. 
 
@@ -21,7 +21,7 @@ Si apila un registro que fue desbloqueado, este registro permanece bloqueado par
 
 **Nota de compatibilidad**: a partir de la versión 11 de 4D, este comando no soporta subtablas.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo apila el registro de un cliente: 
 
@@ -29,12 +29,12 @@ El siguiente ejemplo apila el registro de un cliente:
  PUSH RECORD([Cliente]) // Poner el registro del cliente en la pila
 ```
 
-#### Ver también 
+## Ver también 
 
 [POP RECORD](pop-record.md)  
 *Uso de la pila de registros*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

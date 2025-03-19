@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Summary-->El comando LISTBOX MOVED ROW NUMBER devuelve dos números en *antPosicion* y *nuevPosicion* indicando respectivamente la posición anterior y la nueva posición de la fila movida en el list box, especificadas por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -28,12 +28,12 @@ Este comando debe utilizarse con el evento de formulario On row moved (ver el co
 
 **Nota:** este comando no tiene en cuenta el estado oculto/mostrado de las líneas del list box. 
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

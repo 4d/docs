@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Export structure file.Summary-->La commande **Export structure file** décompose la structure de la base de données 4D courante en un ensemble de fichiers de type texte ou de fichiers natifs de type image et les stocke dans le *cheminDossier* spécifié.<!-- END REF--> Par défaut, la structure de la base (méthodes, formulaires, catalogues, etc.) est intégralement exportée. Vous pouvez filtrer les contenus à exporter à l'aide du paramètre *options* (voir ci-dessous).
 
@@ -64,7 +64,7 @@ Le paramètre *options* vous permet de personnaliser le processus de conversion.
 
 **Attention :** Lorsque le paramètre *options* est passé et que l'objet "filter" est utilisé, vous devez déclarer explicitement chaque propriété destinée à l'export avec la valeur **vrai**. Lorsque cet objet est passé, 4D considère que toutes les propriétés sont, par défaut, fixées à **faux**. 
 
-##### Résultat 
+### Résultat 
 
 La commande retourne un objet qui indique le statut final de l'export ainsi que des informations sur les irrégularités et les erreurs survenues, le cas échéant. Les propriétés suivantes sont retournées :
 
@@ -84,7 +84,7 @@ Les erreurs peuvent être notamment :
 * des erreurs liées à la gestion de fichier (fichier déjà existant, fichier verrouillé, disque plein, etc.)
 * une propriété ou un objet formulaire non pris en charge (voir également ).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez exporter le fichier de structure de la base de données dans un dossier "Export" avec les paramètres par défaut :
 
@@ -98,7 +98,7 @@ Vous souhaitez exporter le fichier de structure de la base de données dans un d
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez exporter uniquement les méthodes projet et les méthodes base, ainsi qu'un fichier historique :
 
@@ -111,11 +111,11 @@ Vous souhaitez exporter uniquement les méthodes projet et les méthodes base, a
  $result:=Export structure file("exportWithLog";$option)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

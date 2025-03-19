@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->La commande **OPEN DATA FILE** permet de changer à la volée le fichier de données ouvert par l’application 4D.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Si vous passez une chaîne vide dans *cheminAccès*, la commande rouvre la base 
 
 **4D Server :** A compter de 4D v13, cette commande peut être exécutée avec 4D Server. Dans ce contexte, elle effectue en interne un appel à [QUIT 4D](quit-4d.md) sur le serveur (entraînant l’apparition, sur chaque poste distant, d’une boîte de dialogue signalant que le serveur est en train de quitter) avant d'ouvrir le fichier désigné.
 
-#### Exemple 
+## Exemple 
 
 Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ouvrir ou créer le fichier de données utilisateur dans la méthode base Sur ouverture. Cet exemple utilise le fichier de données par défaut (cf. *Gestion du fichier de données dans les applications finales*) :
 
@@ -51,11 +51,11 @@ Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ou
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE DATA FILE](create-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

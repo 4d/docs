@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->**EXPORT STRUCTURE** コマンドは、カレントの4Dデータベースのストラクチャー定義を*exportedStructure* へと書き出します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ exportedStructure 引数には、ストラクチャー定義を格納したい�
 XML フォーマットで書き出されたストラクチャー定義は他のデータベースで読み込むことができます([IMPORT STRUCTURE](import-structure.md) 参照)。
 * **html フォーマット**: コマンドはHTML コードを生成し、このコードにはピクチャーやcss など、HTML の描画に必要な外部要素を格納したフォルダへの参照が含まれています。このコードを、ブラウザで表示するためのHTML ページとして保存したい場合、**書き出し > ストラクチャー定義を** **HTML ファイルに書き出し...** メニュー項目で作成されるフォルダを再利用するか、または独自のresources フォルダを作成することができます。
 
-#### 例題 1 
+## 例題 1 
 
 カレントデータベースのストラクチャーをテキストファイルに書き出す場合を考えます:
 
@@ -43,7 +43,7 @@ XML フォーマットで書き出されたストラクチャー定義は他の�
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 カレントデータベースのストラクチャーをhtml フォーマットで書き出したい場合を考えます:
 
@@ -53,11 +53,11 @@ XML フォーマットで書き出されたストラクチャー定義は他の�
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-#### 参照 
+## 参照 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

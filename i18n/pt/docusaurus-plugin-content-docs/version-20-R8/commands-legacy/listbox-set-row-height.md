@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->O comando **LISTBOX SET ROW HEIGHT** lhe permite modificar a altura da *fila* especificada no objeto list box designado utilizando os parâmetros *objeto e* *\**.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Se não houver um array de altura de fila associado ao list box, este comando cr
 
 **Nota importante:** se o comando [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) for chamado posteriormente com uma unidade diferente a que se definiu previamente, este valor predeterminado substituirá e reinicializará o array de altura das filas existentes definidas utilizando **LISTBOX SET ROW HEIGHT** (ver o exemplo).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser mudar a altura de umas poucas linhas no list box abaixo:
 
@@ -50,7 +50,7 @@ Se executar este código:
 
 ![](../assets/en/commands/pict3071135.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se definir uma altura de fila predeterminada e depois definir vários valores de altura de fila individuais utilizando o comando **LISTBOX SET ROW HEIGHT**:
 
@@ -78,14 +78,14 @@ Por outro lado, se o código abaixo for executado posteriormente...
 
 ... Então as filas 1, 5 e 11 voltam para a altura global de fila predeterminada estabelecida por [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (ou seja, 2 linhas) já que a unidade mudou de píxels a linhas. Já que não há conversão automática aplicada, a mudança de unidades sempre resulta em altura de fila reinicializada no novo valor como padrão definido.
 
-#### Ver também 
+## Ver também 
 
   
 [LISTBOX Get row height ](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Square root.Summary-->Square root returns the square root of *number*.<!-- END REF-->
 
-#### Example 1 
+## Example 1 
 
 The line:
 
@@ -28,7 +28,7 @@ The line:
 
 assigns the value *1.414213562373* to the variable *$vrSquareRootOfTwo*.
 
-#### Example 2 
+## Example 2 
 
 The following method returns the hypotenuse of the right triangle whose two legs are passed as parameters:
 
@@ -43,7 +43,7 @@ The following method returns the hypotenuse of the right triangle whose two legs
 For instance, Hypotenuse (4;3) returns 5.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

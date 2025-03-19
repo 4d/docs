@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 <!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` コマンドは第一引数 *name* または *id* に渡した名前またはID を持つプロセスの番号を返します。 プロセスが見つからない場合、`Process number` は0 を返します。
 
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 このコマンドが\* 引数付きでサーバーマシン上で実行された場合、返された値は正の値になります。
 
-#### 参照
+## 参照
 
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

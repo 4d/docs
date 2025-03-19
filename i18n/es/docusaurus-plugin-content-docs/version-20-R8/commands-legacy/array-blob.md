@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->El comando **ARRAY BLOB** crea y/o cambia el tamaño de un array de elementos de tipo Blob en memoria .<!-- END REF-->  
   
@@ -30,7 +30,7 @@ Cuando se aplica el comando **ARRAY BLOB** a un array existente:
 * Si amplía su tamaño, los elementos existentes no se cambian y los nuevos elementos se inicializan en un BLOB vacío ([BLOB size](blob-size.md)\= 0).
 * Si reduce su tamaño, se eliminan y pierden los elementos de abajo del array.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array proceso que contiene 100 elementos de tipo BLOB:
 
@@ -38,7 +38,7 @@ Este ejemplo crea un array proceso que contiene 100 elementos de tipo BLOB:
  ARRAY BLOB(arrBlob;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas, que contienen cada una 50 elementos de tipo BLOB:
 
@@ -46,7 +46,7 @@ Este ejemplo crea un array local de 100 filas, que contienen cada una 50 element
  ARRAY BLOB($arrBlob;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos de tipo BLOB. La variable $*vByteValue* recibe el décimo byte del BLOB ubicado en la séptima columna y la quinta fila del array BLOB:
 
@@ -57,11 +57,11 @@ Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos
  $vByteValue:=$arrValues{5}{7}{9}
 ```
 
-#### Ver también 
+## Ver también 
 
 *Creación de arrays*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP PRINT.Summary-->The **WP PRINT** command launches a print job for the 4D Write Pro document specified in *wpDoc*, or adds the document to the current print job if it is called between [OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) and [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md).<!-- END REF--> **WP PRINT** uses print settings defined by the 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) or [SET PRINT OPTION](../../commands-legacy/set-print-option.md) commands, except for page margins which are always based on the 4D Write Pro document page settings. **WP PRINT** uses current page setup options (such as page size and orientation), or those of the document if [WP USE PAGE SETUP](wp-use-page-setup.md) was called previously.
 
@@ -36,7 +36,7 @@ If *printOptions* is omitted, by default the 4D Write Pro layout is used and exp
 
 **Compatibility Note:** The GDI-based legacy printing layer (which can be set using the [SET PRINT OPTION](../../commands-legacy/set-print-option.md) command) **is deprecated** and should not be used with **WP PRINT**, since it may result in rendering artifacts. It is recommended to only use the default printing layer with this command. 
 
-#### Example 
+## Example 
 
 You want to print a 4D Write Pro document in standard or HTML wysiwyg layout depending on the value of a variable:  
 
@@ -49,7 +49,7 @@ You want to print a 4D Write Pro document in standard or HTML wysiwyg layout dep
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP Get position](wp-get-position.md)  
 [WP USE PAGE SETUP](wp-use-page-setup.md)  

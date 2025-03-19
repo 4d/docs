@@ -16,7 +16,7 @@ title: VP SET DATE TIME VALUE
 | timeValue     | Hora   | -> | Valor hora a definir |                  |
 | formatPattern | Text   | -> | Formato do valor     | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET DATE TIME VALUE` command <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->assigns a specified date and time value to a designated cell range<!-- END REF -->.
 
@@ -28,7 +28,7 @@ The *timeValue* parameter specifies a time value (expressed in seconds) to be as
 
 The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. Para informações sobre padrões e caracteres de formatação, por favor, consulte a seção [Formato de Data e Hora](../configuring.md#date-and-time).
 
-#### Exemplo
+## Exemplo
 
 ```4d
 //Set the cell value as the current date and time
@@ -38,7 +38,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk p
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
-#### Veja também
+## Veja também
 
 [4D View Pro cell format](../configuring.md#cell-format)<br/>
 [VP SET DATE VALUE](vp-set-date-value.md)<br/>

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 - **DIALOG**(form;\*) ステートメントの前に、あらかじめウィンドウが作成されている必要があります。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。 プロセスのカレントダイアログウィンドウや、各プロセスにデフォルトで作成されるウィンドウは使用できません。 でなければ、エラー -9909 が生成されます。
 - オプションの *\** 引数を使用する場合、標準アクションまたは[CANCEL](../commands-legacy/cancel.md) コマンドや[ACCEPT](../commands-legacy/accept.md) コマンドを呼び出すと、ウィンドウは自動的に閉じられます。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。 ウィンドウ自身の終了を管理する必要はありません。
 
-#### 例題 1
+## 例題 1
 
 以下の例題はツールパレットを作成するために使用できます:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  DIALOG("doc")
 ```
 
-#### 例題 2
+## 例題 2
 
 人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
@@ -130,7 +130,7 @@ displayed_sidebar: docs
 
 値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 
-#### 例題 3
+## 例題 3
 
 以下の例では、.json フォームへのパスを使用して従業員リスト内のレコードを表示する場合を考えます:
 
@@ -144,7 +144,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### 例題 4
+## 例題 4
 
 以下の例では.json ファイルをオブジェクトとして使用していくつかのプロパティを変更する場合を考えます:
 
@@ -162,11 +162,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### システム変数およびセット
+## システム変数およびセット
 
 **DIALOG** の呼び出し後ダイアログが受け入れられればOK に1 が、キャンセルされれば0 が設定されます。
 
-#### 参照
+## 参照
 
 [ACCEPT](../commands-legacy/accept.md)\
 [ADD RECORD](../commands-legacy/add-record.md)\
@@ -175,7 +175,7 @@ displayed_sidebar: docs
 [Form](form.md)\
 [Open window](../commands-legacy/open-window.md)
 
-#### プロパティ
+## プロパティ
 
 |            |                                                                 |
 | ---------- | --------------------------------------------------------------- |

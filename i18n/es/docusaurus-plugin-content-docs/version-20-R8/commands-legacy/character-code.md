@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Character code.Summary-->El comando **Character code** devuelve el código Unicode UTF-16 (incluído entre 1 y 65535) de *unCaracter*.<!-- END REF-->   
   
@@ -22,7 +22,7 @@ Si hay más de un carácter en la cadena, **Character code** devuelve únicament
 
 La función [Char](char.md) es la contraparte de **Character code**. Devuelve el carácter designado por un código UTF-16\. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Los caracteres en mayúsculas y minúsculas se consideran iguales en una comparación. Puede utilizar Character code para diferenciar entre los caracteres en mayúsculas y en minúsculas. Por lo tanto, esta línea devuelve True:
 
@@ -34,7 +34,7 @@ Por otra parte, esta línea devuelve False:
   
 (Character code("A")=Character code("a"))
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo devuelve el código del primer carácter de la cadena *"ABC"*:
 
@@ -42,7 +42,7 @@ Este ejemplo devuelve el código del primer carácter de la cadena *"ABC"*:
  RecupCod:=Character code("ABC") // RecupCod toma el valor 65, el código del carácter de A
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo prueba los retornos de carro y los tabuladores: 
 
@@ -77,12 +77,12 @@ Cuando se ejecuta muchas veces en textos largos, se ejecutará más rápido, una
 
 El segundo código se ejecuta más rápido por dos razones: sólo referencia un carácter por iteración y utiliza comparaciones de enteros largos en lugar de comparaciones de cadenas para probar los retornos de carro y las tabulaciones. Utilice esta técnica cuando trabaje con códigos comunes tales como CR y TAB.
 
-#### Ver también 
+## Ver también 
 
 [Char](char.md)  
 *Símbolos de referencia de caracteres*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

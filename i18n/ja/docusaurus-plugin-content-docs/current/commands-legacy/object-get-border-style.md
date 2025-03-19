@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get border style.Summary-->**OBJECT Get border style**コマンドは、*object*引数で指定したオブジェクトに設定された境界線スタイルを返します。<!-- END REF--> 
 
@@ -35,11 +35,11 @@ displayed_sidebar: docs
 | Border Sunken | 倍長整数 | 4 | オブジェクトの境界線は沈み込んだような3Dエフェクトになります。       |
 | Border System | 倍長整数 | 6 | オブジェクトの境界線はシステムのグラフィック仕様に沿ったものになります。   |
 
-#### 参照 
+## 参照 
 
 [OBJECT SET BORDER STYLE](object-set-border-style.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

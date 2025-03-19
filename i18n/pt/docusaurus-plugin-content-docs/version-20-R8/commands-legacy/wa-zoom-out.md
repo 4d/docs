@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->O comando WA ZOOM OUT reduz o tamanho do texto mostrado no área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> 
 
@@ -22,11 +22,11 @@ Em OS, o alcance deste comando é a sessão 4D: a configuração realizada por e
   
 Em Windows, o alcance deste comando é global: a configuração se conserva depois de fechar a aplicação 4D.
 
-#### Ver também 
+## Ver também 
 
 [WA ZOOM IN](wa-zoom-in.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ title: VP SET SHEET NAME
 | name       | Text    | -> | Nouveau nom de la feuille               |                  |
 | sheet      | Integer | -> | Index de la feuille à renommer          | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP SET SHEET NAME` <!-- REF #_method_.VP SET SHEET NAME.Summary -->renomme une feuille dans le document chargé dans *vpAreaName*<!-- END REF -->.
 
@@ -38,7 +38,7 @@ La commande ne fait rien si :
 - le nouveau nom existe déjà
 - l'index *sheet* transmis n'existe pas
 
-#### Exemple
+## Exemple
 
 Le nom de la troisième feuille est "Total premier trimestre" :
 

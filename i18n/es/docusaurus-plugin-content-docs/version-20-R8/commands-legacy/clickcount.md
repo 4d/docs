@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Clickcount.Summary-->El comando **Clickcount** devuelve, en el contexto de un evento clic, el número de veces que el usuario ha hecho clic de manera repetida con el mismo botón del ratón.<!-- END REF--> Normalmente, este comando devuelve 2 para un doble clic. 
 
@@ -29,7 +29,7 @@ Cuando ambos eventos formulario On Clicked y On Double Clicked están activados,
 * 2 en el evento On Double Clicked
 * 2+n en el evento On Clicked
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La estructura de código siguiente se puede colocar en un encabezado de listbox para manejar clics simples y dobles:
 
@@ -45,7 +45,7 @@ La estructura de código siguiente se puede colocar en un encabezado de listbox 
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Las etiquetas no son editables pero lo son después de un triple-clic. Si desea permitir a los usuarios editar las etiquetas, puede escribir el método objeto siguiente:
 
@@ -60,7 +60,7 @@ Las etiquetas no son editables pero lo son después de un triple-clic. Si desea 
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

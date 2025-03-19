@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->**GET LIST ITEM PARAMETER** コマンドは、*list* 引数にリスト参照やオブジェクト名で指定したリストの、*itemRef* 項目の、*selector* パラメタに対応する現在値を取得するために使用します。<!-- END REF-->
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
 
 *selector*には“*Hierarchical Lists*”テーマのAdditional text 定数またはStandard action 定数、あるいは任意のカスタム値を渡すことができます。*selector* と *value* 引数に関する詳細は、[SET LIST ITEM PARAMETER](set-list-item-parameter.md) コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 *Hierarchical Lists*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

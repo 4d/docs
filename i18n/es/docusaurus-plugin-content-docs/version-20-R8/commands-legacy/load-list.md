@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Load list.Summary-->Load list crea una lista jerárquica cuyo contenido se copia de la lista pasada en *nomLista*.<!-- END REF--> Luego devuelve el número de referencia de la lista creada recientemente. 
 
@@ -28,7 +28,7 @@ Recuerde llamar [CLEAR LIST](clear-list.md "CLEAR LIST") para borrar la lista cr
 
 **Consejo:** si asocia una lista a un objeto de formulario (lista jerárquica, pestaña, o menú jerárquico) utilizando Lista de valores en la ventana de Lista de propiedades, no necesita llamar Load list o [CLEAR LIST](clear-list.md "CLEAR LIST") en el método del objeto. 4D carga y borra la lista automáticamente por usted.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted crea una base para el mercado internacional y necesita cambiar a los diferentes idiomas mientras utiliza la base. En un formulario, presenta una lista jerárquica, llamada *hlList*, que ofrece una lista de opciones estándar. En el entorno Diseño, usted preparó varias listas, tales como “Opciones EN” para la versión en inglés, “Opciones FR” para la versión en francés, “Opciones ES” para la versión en español, etc. Adicionalmente, usted mantiene una variable interproceso llamada◊*gsIdiomaActual*, donde almacena un código de lenguaje de 2 caracteres, como “EN” para la versión en inglés, “FR” para la versión en francés, “ES” para la versión en español, etc. Para asegurarse de que se cargue la lista correcta utilizando el idioma seleccionado actualmente, puede escribir:
 
@@ -43,13 +43,13 @@ Usted crea una base para el mercado internacional y necesita cambiar a los difer
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

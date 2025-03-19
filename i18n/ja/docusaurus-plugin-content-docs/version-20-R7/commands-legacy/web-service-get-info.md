@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->**WEB SERVICE Get info**コマンドは、リモートのWebサービスに送信された最新のSOAPリクエストの 実行中に生成されたエラーについての情報を返します。<!-- END REF-->このコマンドは一般的に[ON ERR CALL](on-err-call.md)コマンドでインストールされたエラー処理メソッド内から呼び出します。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 情報が利用できない場合、空の文字列が返されます。特に最後のSOAPリクエストがエラーを生成しなかった場合。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

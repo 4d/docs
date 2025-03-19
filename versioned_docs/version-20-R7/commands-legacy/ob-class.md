@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Class.Summary-->The **OB Class** command returns the class of the *object* passed in parameter.<!-- END REF--> In 4D, all objects inherit from the Object class. If *object* is not an existing object, **OB Class** returns null. 
 
-#### Example 
+## Example 
 
 You created the Polygon class:
 
@@ -40,11 +40,11 @@ Then, in a method, you can write:
   //$class contains Class: Polygon
 ```
 
-#### See also 
+## See also 
 
 [OB Instance of](ob-instance-of.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

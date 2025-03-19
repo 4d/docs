@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Locked records info.Summary-->The **Locked records info** command returns an [object](# "Data structured as a native 4D object") containing different information about the currently locked record(s) in *aTable*.<!-- END REF-->The command works only with 4D and 4D Server. It returns an invalid object when called from 4D Remote. However, it can be called in this context if the "Execute on server" option is activated for the calling method. In this case, the object returned will contain information about the server. When called from a component, it always applies to the host database.
 
@@ -65,7 +65,7 @@ The *contextAttributes* object is made up of the following properties:
 | recordNumber | Integer  | Record number of the locked record                                                                                                                  |
 | userAgent    | Text   | User agent of the locker, e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-#### Example 
+## Example 
 
 You execute the following code:
 
@@ -85,11 +85,11 @@ If the code is executed on a 4D Server and the locking is caused by a remote cli
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-#### See also 
+## See also 
 
 [Locked](locked.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

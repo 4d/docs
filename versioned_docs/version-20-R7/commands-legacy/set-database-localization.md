@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->The SET DATABASE LOCALIZATION command is used to modify the current language of the database for the current session.<!-- END REF-->
 
@@ -32,7 +32,7 @@ If the command has been executed correctly, the *OK* system variable is set to 1
 
 **4D Server:** With 4D Server, the languages available are those located on the remote machine that called the command. You must therefore make sure that the **Resources** folders are synchronized. 
 
-#### Example 1 
+## Example 1 
 
 We want to set French as the interface language:
 
@@ -40,7 +40,7 @@ We want to set French as the interface language:
  SET DATABASE LOCALIZATION("fr")
 ```
 
-#### Example 2 
+## Example 2 
 
 The interface of your application uses the static string ":xliff:shopping". The XLIFF files contain more particularly the following information:
 
@@ -66,11 +66,11 @@ The interface of your application uses the static string ":xliff:shopping". The 
   //the string ":xliff:shopping" displays "Magasiner"
 ```
 
-#### See also 
+## See also 
 
 [Get database localization](get-database-localization.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

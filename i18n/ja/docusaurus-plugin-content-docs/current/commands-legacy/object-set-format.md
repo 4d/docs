@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** は、*object*で指定したオブジェクトの表示フォーマットを*displayFormat*で渡したフォーマットに設定します。<!-- END REF-->新しいフォーマットは現在の表示にのみ有効です。フォームには保存されません。
 
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 
 詳細については、[例題データベース](https://download.4d.com/Demos/4D%5Fv15%5FR5/HDI%5FListBox%5FOBJECT%5FSET%5FFORMAT.zip) をダウンロードして参照してください。
 
-##### ブール 
+### ブール 
 
 ブールフィールドをフォーマットするには以下の方法があります:
 
 * (全バージョン) 一つの値を*displayFormat* 引数に渡す。この場合、フィールドはチェックボックスとして表示され、指定した値がラベルになります。
 * (バイナリーデータベースのみ) セミコロン (*;*) で区切った二つの値を*displayFormat* 引数に渡す。この場合フィールドは2つのラジオボタンとして表示されます。
 
-##### 日付 
+### 日付 
 
 日付フィールドや変数をフォーマットするには、Char(n)を*displayFormat*に渡します。このとき*n*は4Dにより提供される以下の定義済み定数のうちいずれかです: 
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
   
 **Note:** Blank if null は他の定数に加算されなければなりません。この定数は日付がヌル値の時、00/00/00ではなく空のエリアとして表示するよう4Dに指示します。
 
-##### ピクチャ 
+### ピクチャ 
 
 ピクチャフィールドや変数をフォーマットするには、Char(n)を*displayFormat*に渡します。このとき*n*は4Dにより提供される以下の定義済み定数のうちいずれかです: 
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 | Truncated centered          | 倍長整数 | 1 |
 | Truncated non centered      | 倍長整数 | 4 |
 
-##### 文字と数値 
+### 文字と数値 
 
 文字や数値のフィールドや変数をフォーマットするには、*displayFormat* 引数に直接フォーマットラベルを渡します。 
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 **Note:** ツールボックスであらかじめ定義した表示フォーマットを*displayFormat*に使用するには、表示フォーマット名の前に縦棒(|)を挿入します。
 
-##### ピクチャボタン 
+### ピクチャボタン 
 
 ピクチャボタンをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
 *cols;lines;picture;flags{;ticks}*
@@ -105,7 +105,7 @@ displayed_sidebar: docs
    このモードは、最後のサムネールフレームをボタンが無効時に表示させるために使用します。このモードが選択されているとき、4Dは最後のサムネールを、ボタ ンが無効にされているときに表示します。このモードが、モード0, 1 および 2とともに使用されていると、最後のサムネールは一連の表示には組み込まれません。子のサムネールはボタンが無効のときにのみ表示されます。
 * *ticks* \= “n チック毎に表示”モードを有効にし、それぞれのピクチャを表示する間隔を設定します。このオプション引数が渡されると、指定された速度でピクチャボタンの コンテンツが繰り返し表示されます。例えば"2;3;?16807;0;10"と指定すると、ピクチャボタンは10tickごとに異なるピクチャを表示し ます。このモードが有効の時は透過モード (64) のみが使用できます。
 
-##### ピクチャポップアップメニュー 
+### ピクチャポップアップメニュー 
 
 ピクチャポップアップメニューをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
 *cols;lines;picture;hMargin;vMargin;flags*  
@@ -121,7 +121,7 @@ displayed_sidebar: docs
    * *mode* \= 0: ピクチャポップアップメニューは透過でない  
    * *mode* \= 64: ピクチャポップアップメニューは透過
 
-##### サーモメーターおよびルーラー 
+### サーモメーターおよびルーラー 
 
 サーモメータやルーラーをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
 *min;max;unit;step;flags{;format{;display}}*  
@@ -143,7 +143,7 @@ displayed_sidebar: docs
    * *display* \= 0 (または省略時): 標準のルーラを表示 / "バーバーショップ"タイプの連続したアニメーションを表示。  
    * *display* \= 1 : ルーラーの"ステッパー"モードを有効にする / サーモメーターの"非同期進捗"モードを有効にする。これらのオプションに関する詳細は*Design Reference*マニュアルを参照してください。
 
-##### ダイアル 
+### ダイアル 
 
 ダイアルをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
 *min;max;unit;step{;flags}*  
@@ -154,7 +154,7 @@ displayed_sidebar: docs
 * *step* \= インジケータ中でカーソル移動の最小間隔
 * *flags* \= ダイアルの処理モード (オプション)。この引数は32鑿を受け入れます: ユーザがインジケータを調整している間、On Data Changeを実行する。この値が使用されない場合、On Data Changeはユーザがインジケータの調整を終了したときにのみ発生します。
 
-##### ボタングリッド 
+### ボタングリッド 
 
 ボタングリッドをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
 *cols;lines*
@@ -164,7 +164,7 @@ displayed_sidebar: docs
 
 **Note:** フォームオブジェクトの表示フォーマットに関する詳細は、4D Design Referenceマニュアルを参照してください。
 
-##### 3D buttons 
+### 3D buttons 
 
   
 3Dボタンをフォーマットするには、*displayFormat* 引数に以下のシンタックスを使用した文字列を渡します:  
@@ -224,7 +224,7 @@ displayed_sidebar: docs
  OBJECT SET FORMAT(myVar;"NiceButton;?256;:562;1;;1;4;5;;5;0;;2")
 ```
 
-##### リストボックスヘッダー 
+### リストボックスヘッダー 
 
 リストボックス内でのアイコンをフォーマットする場合、以下のシンタックスに従う文字列を*displayFormat*引数に渡します:  
 *picture;iconPos*
@@ -239,7 +239,7 @@ displayed_sidebar: docs
 
 この機能は例えば、カスタマイズされた並び替えアイコンを使用したい場合などに有効です。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードは\[Employee\]DateHired フィールドをInternal date longにフォーマットします。  
   
@@ -247,7 +247,7 @@ displayed_sidebar: docs
  OBJECT SET FORMAT([Employee]DateHired;Char(Internal date long))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
 
@@ -256,20 +256,20 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### 例題 3 
+## 例題 3 
 
   
 以下のコードは *\[Company\]ZIP Code* フィールドのフォーマットを、フィールドデータ長に基づいて変更します: 
 
 ```4d
  If(Length([Company]ZIP Code)=9)
-    OBJECT SET FORMAT([Company]ZIP Code;"#####-####")
+    OBJECT SET FORMAT([Company]ZIP Code;"###-##")
  Else
-    OBJECT SET FORMAT([Company]ZIP Code;"#####")
+    OBJECT SET FORMAT([Company]ZIP Code;"###")
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下のコードは *\[Stats\]Results* フィールド値を、値の正負およびゼロであるかに応じてフォーマットします:
 
@@ -277,7 +277,7 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT([Stats]Results;"### ##0.00;(### ##0.00);")
 ```
 
-#### 例題 5 
+## 例題 5 
 
   
 以下のコードはブールフィールドのフォーマットを変更して、Married または Unmarriedが表示されるようにします: 
@@ -286,7 +286,7 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT([Employee]Marital Status;"Married;Unmarried")
 ```
 
-#### 例題 6 
+## 例題 6 
 
 データベースのResourcesフォルダーに"envelope\_open.png"という名前のピクチャーファイルを保存してあった場合、以下のように書く事ができます:
 
@@ -298,7 +298,7 @@ This example formats a date variable and a time variable using [customized forma
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### 例題 7 
+## 例題 7 
 
 以下のコードはブールフィールドのフォーマットを変更して、"Classified"というラベルのチェックボックスが表示されるようにします: 
 
@@ -306,7 +306,7 @@ This example formats a date variable and a time variable using [customized forma
  SET FORMAT([Folder]Classification;"Classified")
 ```
 
-#### 例題 8 
+## 例題 8 
 
 1行4列のサムネイルがあります。このサムネイルをピクチャボタンに使用します (“デフォルト”, “クリック”, “ロールローバー” そして “無効時”)。ロールオーバー時にスイッチとリリース後に元に戻す、そして最後のフレームを無効として使用オプションを有効にします: 
 
@@ -314,7 +314,7 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT(*;"Picture Button";"4;1;?15000;176")
 ```
 
-#### 例題 9 
+## 例題 9 
 
 サーモメータをバーバーショップモードにします: 
 
@@ -323,14 +323,14 @@ This example formats a date variable and a time variable using [customized forma
  $Mythermo:=1 //Start animation
 ```
 
-#### 参照 
+## 参照 
 
   
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

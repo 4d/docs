@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->El comando **SET APPLICATION COLOR SCHEME** define el esquema de color a utilizar a nivel de la aplicación para la sesión actual.<!-- END REF--> Este esquema se aplicará a los formularios que no declaren ya un esquema específico (un esquema de color definido a nivel de formulario tiene prioridad sobre el nivel de aplicación).
 
@@ -25,19 +25,19 @@ En el parámetro *esquemaColor*, pase un esquema de color a aplicar:
 * **"oscuro"** \- la aplicación utilizará el tema oscuro por defecto
 * **"** **heredado"** \- la aplicación heredará del nivel de prioridad más alto (es decir, en Configuración)
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
   // Forzar la aplicación actual a oscuro
  SET APPLICATION COLOR SCHEME("dark")
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get Application color scheme](get-application-color-scheme.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

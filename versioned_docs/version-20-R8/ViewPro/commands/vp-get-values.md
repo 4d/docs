@@ -13,7 +13,7 @@ title: VP Get values
 |rangeObj   |Object|->|Range object|
 |Result  |Collection|<-|Collection of values|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated *rangeObj*<!-- END REF -->.
 
@@ -34,7 +34,7 @@ Dates or times are treated as a datetime and completed as follows:
 * time value - the date portion is completed as December 30, 1899
 * date value - the time portion is completed as midnight (00:00:00:000)
 
-#### Example
+## Example
 
 You want to get values from C4 to G6:
 
@@ -47,7 +47,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 // $result[2]=[null,{time:42,value:2019-05-29T00:00:00.000Z},null,null,null]
 ```
 
-#### See also
+## See also
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `WEB Server` コマンドは、<!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または *option* 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **返されたWeb サーバーオブジェクト** には[Web server プロパティ](../API/WebServerClass.md) のカレントのプロパティが格納されています。
 
-#### 例題
+## 例題
 
 コンポーネント内から、ホストデータベースの Webサーバーが開始されているかどうかを確認します:
 
@@ -51,12 +51,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照
+## 参照
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

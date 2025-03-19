@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Month of.Summary-->El comando Month of devuelve el mes de *fecha*.<!-- END REF-->Month of devuelve el número del mes, no el nombre. (ver ejemplo 1).
 
@@ -35,7 +35,7 @@ Para comparar el valor devuelto por esta función, 4D ofrece las siguientes cons
 | November  | Entero largo | 11    |
 | December  | Entero largo | 12    |
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra el uso de Month of. Los resultados se asignan a la variable *vResult*. Los comentarios describen lo que está en *vResult*:
 
@@ -44,16 +44,16 @@ El siguiente ejemplo muestra el uso de Month of. Los resultados se asignan a la 
  vResult:=Month of(Current date) // vResult obtiene el mes de la fecha actual
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo del comando [Current date](current-date.md "Current date").
 
-#### Ver también 
+## Ver también 
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

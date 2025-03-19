@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->O comando **EXPORT SYLK** escreve os dados dos registros da seleção atual de *tabela* no processo atual.<!-- END REF--> Os dados são escritos em *documento*, um documento Sylk Windows ou Macintosh, no disco.
 
@@ -30,7 +30,7 @@ O comando utiliza por padrão o conjunto de caracteres UTF-8\. Os documentos em 
 
 Durante a utilização de **EXPORT SYLK**, o delimitador de campos padrão é o caractere de tabulação (código 9). O delimitador do registro por padrão é o retorno de carro (código 13) em macOS e o retorno de carro + retorno à linh a (código 13 + códigoi 10) em Windows. Pode modificar estes valores atribuindo novos valores às duas \[#title id="732"/ *FldDelimit* e *RecDelimit*. O usuário pode mudar estes valores na caixa de diálogo de exportação do ambiente Desenho. Preste atenção que se os campos exportados contiverem caracteres definidos como delimitadores de campos ou de registros, estes caracteres são substituídos automaticamente com espaços no arquivo exportado, com o objetivo de naõ perturbar o processo de importação.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir exporta dados a um documento SYLK. O método primeiro define o formulário de saída de maneira que os dados são exportados pelo formulário correto, depois realiza a exportação:
 
@@ -39,18 +39,18 @@ O exemplo a seguir exporta dados a um documento SYLK. O método primeiro define 
  EXPORT SYLK([Pessoas];"Novas _Pessoas.slk") // Exporta ao documento "Novas_Pessoas.slk"
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 OK toma el valor 1 se a exportação termina com sucesso; do contrário, toma o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

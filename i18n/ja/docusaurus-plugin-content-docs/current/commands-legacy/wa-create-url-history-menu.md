@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->**WA Create URL history menu** コマンドは、*\** と *object* で指定したWebエリアがセッション中に訪問したURL間をナビゲートするメニューを作成します。<!-- END REF-->このコマンドを使用して、カスタムのナビゲーションインタフェースを作成できます。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:* 4D v19 R5 以降、このコマンドは* **Windows のシステムレンダリングエンジン を使用しているWeb エリアに対するカレントURL のみを格納したメニューを作成します。*
 
-#### 例題 
+## 例題 
 
 以下のコードを、ポップアップメニューを持つ"戻る"3Dボタンに関連付けることができます:
 
@@ -62,13 +62,13 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

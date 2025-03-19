@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->BOOLEAN ARRAY FROM SETコマンドは、テーブル内の各レコードが指定されたセットに含まれるか含まれないかを示すブール配列を作成します。<!-- END REF-->
 
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 *set*引数を指定しない場合、コマンドはカレントプロセスのUserSetを使用します。
 
-#### 参照 
+## 参照 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

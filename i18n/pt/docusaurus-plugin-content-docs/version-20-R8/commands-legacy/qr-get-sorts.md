@@ -15,27 +15,27 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.QR GET SORTS.Summary-->O comando QR GET SORTS preenche dois arrays:  
+<!--REF #_command_.QR GET SORTS.Summary-->O comando QR GET SORTS preenche dois arrays<!-- END REF-->:  
   
-* *aColunas* Este array inclui todas as colunas que tenham um sentido de ordenação.<!-- END REF-->
+* *aColunas* Este array inclui todas as colunas que tenham um sentido de ordenação.->
 * *aOrdem* Cada elemento deste array contém o sentido de ordenação da coluna correspondente.
 
 > \- Se *aOrdem{$i}* for igual a 1, o sentido da ordenação é ascendente.  
 > \- Se *aOrdem{$i}* for igual -1, o sentido da ordenação é descendente.  
 
-##### Relatório tabelas cruzadas 
+### Relatório tabelas cruzadas 
 
 No caso deste tipo de relatórios, os arrays resultantes não podem ter mais de dois elementos já que a ordenação só pode ser realizada nas colunas (1) e as filas (2). (Valores para *aColunas).*
 
 Se passa um número de área inválido, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SEND BLOB.Summary-->**WEB SEND BLOB**コマンドを使用して *blob* をブラウザへ送ります。<!-- END REF--> 
 
@@ -72,15 +72,15 @@ BLOBに含まれるデータのタイプは *type* によって示されます�
 
 ページ内の4D 変数や *4DSCRIPT* 型タグへの参照は常に解析されます。
 
-#### 例題 
+## 例題 
 
 [PICTURE TO BLOB](picture-to-blob.md)のルーチンの例を参照してください。
 
-#### 参照 
+## 参照 
 
 [WEB SEND FILE](web-send-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

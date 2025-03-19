@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->The **OBJECT SET MULTILINE** command modifies the "Multiline" property of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -32,7 +32,7 @@ In the *multiline* parameter, pass the new value of the option that you want to 
 | Multiline Yes  | Integer | 1     | In single-line areas, the text is displayed up to the first carriage return or until the last word that can be displayed entirely. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.<br/>In multiline areas, 4D carries out automatic line returns. |
 
   
-#### Example 
+## Example 
 
 You want to prohibit multiple lines in an entry area:
 
@@ -40,11 +40,11 @@ You want to prohibit multiple lines in an entry area:
  OBJECT SET MULTILINE(*;"vEntry";Multiline No)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get multiline](object-get-multiline.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

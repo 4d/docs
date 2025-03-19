@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get static columns.Summary-->O comando **LISTBOX Get static columns** devolve o número de colunas estáticas no list box designado pelos parâmetros objeto e *\**.<!-- END REF--> 
 
@@ -28,11 +28,11 @@ Se uma coluna é inserida ou é eliminada por programação dentro de uma conjun
 
 **Nota:** as colunas estáticas e as columnas bloqueadas são duas funções independentes. Para maior informação, consulte o manual de *Desenho*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

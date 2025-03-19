@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Tipos de datos compatíveis
 
-Com parâmetros nomeados, você pode usar os mesmos tipos de dados que são [suportados pela palavra-chave `var`] (variables.md#using-the-var-keyword), incluindo objetos de classe. Por exemplo:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Por exemplo:
 
 ```4d
 Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
@@ -319,7 +319,7 @@ Este caso es tratado por 4D dependendo do contexto:
 
 - em [projetos compilados](interpreted.md), um erro é gerado na etapa de compilação sempre que possível. Senão, um erro é gerado quando o método for chamado.
 - em projetos interpretados:
- - Se o parâmetro tiver sido declarado usando a [named syntax](#named-parameters) (`#DECLARE` ou `Function`), será gerado um erro quando o método for chamado.
+ - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Usando propriedades objeto como parâmetros nomeados

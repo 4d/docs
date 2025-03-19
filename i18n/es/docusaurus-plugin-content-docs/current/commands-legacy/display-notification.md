@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->El comando DISPLAY NOTIFICATION muestra un mensaje de notificación al usuario:
 
@@ -31,17 +31,17 @@ En *titulo* y *texto*, pase el título y el texto del mensaje a mostrar (en el e
 
 Bajo Windows, se muestra la ventana del mensaje si no se detecta actividad en la máquina, o hasta que el usuario haga clic en la casilla de cerrar. El parámetro opcional *duracion*, modifica la duración de visualización por defecto. Note que la visualización de las notificaciones depende de las configuración del sistema.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
  DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
 ```
 
-#### Ver también 
+## Ver también 
 
 [ALERT](alert.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

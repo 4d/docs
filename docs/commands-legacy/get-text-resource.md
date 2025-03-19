@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get text resource.Summary-->The **Get text resource** command returns the text stored in the text (“TEXT”) resource whose ID is passed in *resID*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 **Note:** A text resource can contain up to 32,000 characters.
 
-#### Example 
+## Example 
 
 The following example displays the contents of the text resource ID=20800, which must be located in at least one of the currently open resource files:
 
@@ -33,17 +33,17 @@ The following example displays the contents of the text resource ID=20800, which
  ALERT(Get text resource(20800))
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
-#### See also 
+## See also 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

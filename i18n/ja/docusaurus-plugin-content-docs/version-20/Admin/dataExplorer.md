@@ -67,7 +67,7 @@ title: データエクスプローラー
 - 左側には **データクラスエリア** と **属性エリア** があり、表示するデータクラスおよび属性を選択できます。 属性は、ストラクチャーにおける作成順にしたがって並べられます。 プライマリーキーおよびインデックス付きの属性には、専用アイコンが表示されます。 表示されているデータクラス名と属性名のリストは、それぞれの検索エリアを使ってフィルターできます。 ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - 中央部には、**検索エリア** と **データグリッド** (選択されたデータクラスのエンティティのリスト) があります。 グリッドの各列は、データストアの属性を表します。
-  - デフォルトでは、すべてのエンティティが表示されます。 検索エリアを使用して、表示されるエンティティをフィルターできます。 2つのクエリモードがあります: [属性に基づくクエリ](#query-on-attributes) (デフォルト)、および [式による高度なクエリ](#advanced-query-with-expression) です。 対応するボタンをクリックして、クエリモードを選択します (**X** ボタンは、クエリエリアをリセットして、フィルターを停止します)。 ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+  - デフォルトでは、すべてのエンティティが表示されます。 検索エリアを使用して、表示されるエンティティをフィルターできます。 Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced query with expression](#advanced-queries-with-expression). 対応するボタンをクリックして、クエリモードを選択します (**X** ボタンは、クエリエリアをリセットして、フィルターを停止します)。 ![alt-text](../assets/en/Admin/dataExplorer4b.png)
   - 選択されたデータクラスの名前は、データグリッドの上にタブとして追加されます。 これらのタブを使って、選択されたデータクラスを切り替えることができます。 参照されているデータクラスを削除するには、データクラス名の右に表示される "削除" アイコンをクリックします。
   - 左側の属性のチェックを外すことで、表示されている列数を減らせます。 また、ドラッグ＆ドロップでデータグリッドの列の位置を入れ替えることができます。 列のヘッダーをクリックすると、値に応じて [エンティティを並べ替える](#エンティティの並べ替え) ことができます (可能な場合)。
   - 処理に時間がかかる場合は、進捗バーが表示されます。 赤いボタンをクリックすると、いつでも実行中の処理を停止できます:<br/> ![alt-text](../assets/en/Admin/dataExplorer5.png)
@@ -168,7 +168,7 @@ firstname=="Jim"
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-[`queryPlan`](API/DataClassClass.md#queryplan) と [`queryPath`](API/DataClassClass.md#querypath) を両方表示するには `v` アイコンをクリックします。 このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
+You can click on the `v` icon to display both [`queryPlan`](API/EntitySelectionClass.md#queryplan) and [`queryPath`](API/EntitySelectionClass.md#querypath). このエリアでは、サブクエリのブロックにカーソルを合わせると、サブクエリごとの詳細情報が表示されます。
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 

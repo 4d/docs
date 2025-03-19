@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP DELETE FOOTER.Summary-->El comando **WP DELETE FOOTER** elimina el elemento del pie de página asociado a la sección o subsección definida por el parámetro *wpSection*.<!-- END REF--> 
 
 Si no existe un elemento de pie de página para la sección o subsección, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea eliminar el pie de página de las páginas de la izquierda de una sección:
 
@@ -34,7 +34,7 @@ Desea eliminar el pie de página de las páginas de la izquierda de una sección
  WP DELETE FOOTER($subsection)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get footer](wp-get-footer.md)  
 [WP New footer](wp-new-footer.md)  

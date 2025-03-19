@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->La commande **WEB SET HTTP HEADER** permet de fixer les champs de l’en-tête HTTP de la réponse faite au navigateur Web par 4D.<!-- END REF--> Elle n’a d’effet que dans un process Web.  
 Cette commande vous permet, en particulier, de gérer des “cookies”.
@@ -61,11 +61,11 @@ L’en-tête sera écrit de la manière suivante :
 
 Si vous ne spécifiez pas de statut, celui-ci est automatiquement HTTP/1.0 200 OK. Le champ **Server** est par défaut "4D/<version>". Les champs **Content-Length** et **Date** sont également définis par défaut par 4D.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

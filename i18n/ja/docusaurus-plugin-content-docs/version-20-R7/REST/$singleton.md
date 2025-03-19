@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-[`$catalog`]($catalog.md#シングルトン) コマンドを呼び出すと、`mySingleton` クラスと `sayHello` 関数がリストされます。
+The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
 
 :::
 

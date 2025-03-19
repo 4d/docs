@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP DELETE STYLE SHEET.Summary-->**WP DELETE STYLE SHEET** コマンドは、カレントドキュメントから指定された段落または文字のスタイルシートを削除します。<!-- END REF-->スタイルシートが削除されると、それが適用されていた段落または文字は、元のスタイル(つまりデフォルトのスタイル)に戻されます。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 **注**: デフォルト("通常"の)スタイルシートは削除することができません。
 
-#### 参照 
+## 参照 
 
 [WP Get style sheet](wp-get-style-sheet.md)  
 [WP Get style sheets](wp-get-style-sheets.md)  

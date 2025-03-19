@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Data file encryption status.Summary-->**Data file encryption status** コマンドは、*structurePath* および *dataPath* 引数で指定したデータファイルの、暗号化ステータスをあらわすオブジェクトを返します。<!-- END REF-->それぞれのテーブルについてのステータスも同時に提供されます。
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
    * データファイルが開かれた後に、[Discover data key](discover-data-key.md) コマンドを使用して渡す
 * [Register data key](register-data-key.md) コマンドを使用して渡す
 
-#### 例題 
+## 例題 
 
 カレントのストラクチャーファイルに対応するデータファイルの暗号化ステータスを知りたい場合を考えます:
 
@@ -64,12 +64,12 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
   
 [Encrypt data file](encrypt-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

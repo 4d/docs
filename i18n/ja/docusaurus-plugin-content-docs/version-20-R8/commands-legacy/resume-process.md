@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESUME PROCESS.Summary-->RESUME PROCESSは、実行が停止または遅延されている*process*を再開します。<!-- END REF-->*process*が停止も遅延もされていない場合、RESUME PROCESSは何も行いません。
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **Note:** クライアントマシンから、サーバーマシンで動作するストアドプロシージャ(*process*<0)に対して、このコマンドを使用してはいけません。
 
-#### 参照 
+## 参照 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

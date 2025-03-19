@@ -28,7 +28,7 @@ title: '$lock'
 
 ### 説明
 
-The locks triggered by the REST API are put at the [session](./authUsers.md#opening-sessions) level.
+REST API によるロックは、[セッション](./authUsers.md#opening-sessions) レベルで設定されます。
 
 *ロック* されたエンティティは次のものから操作 (ロック / アンロック / 更新 / 削除) できません:
 

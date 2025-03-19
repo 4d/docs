@@ -15,7 +15,7 @@ title: VP SET PRINT INFO
 | printInfo  | Object  | -> | Objeto que contiene los atributos de impresión                 |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define los atributos que se utilizarán al imprimir *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica a imprimi
 
 - `vk current sheet`
 
-#### Ejemplo
+## Ejemplo
 
 El siguiente código imprimirá un área 4D View Pro en un documento PDF:
 
@@ -70,7 +70,7 @@ El PDF:
 
 ![](../../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### Ver también
+## Ver también
 
 [4D View Pro print attributes](../configuring.md#print-attributes)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>

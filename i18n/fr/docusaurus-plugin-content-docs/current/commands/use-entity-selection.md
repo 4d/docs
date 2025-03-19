@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `USE ENTITY SELECTION` <!--REF #_command_.USE ENTITY SELECTION.Summary-->met à jour la sélection courante de la table correspondant à la classe de données du paramètre *entitySelection*, en fonction du contenu de la entity selection<!-- END REF-->.
 
@@ -32,7 +32,7 @@ Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la séle
 
 :::
 
-#### Exemple
+## Exemple
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,11 +42,11 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee est mise à jour
 ```
 
-#### Voir également
+## Voir également
 
 [Create entity selection](create-entity-selection.md)
 
-#### Propriétés
+## Propriétés
 
 |                           |                                                                 |
 | ------------------------- | --------------------------------------------------------------- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->O comando GET SERIAL PORT MAPPING retorna dois arrays, *numArray* e *nomeArray*, contendo os números de porta serial e os nomes porta serial da máquina atual.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Esse comando é útil no macOS, onde o sistema operacional aloca dinamicamente o
 
 **Nota:** Este comando não retorna valores significativos com portas padrão. Se você endereçar uma porta padrão, você deve passar o seu valor (0 ou 1) diretamente usando o comando [SET CHANNEL](set-channel.md "SET CHANNEL") (operação 4D). 
 
-#### Exemplo 
+## Exemplo 
 
 Este método de projeto pode ser usado para tratar a mesma porta serial (sem protocolo), independentemente do número que foi atribuído a ele: 
 
@@ -46,11 +46,11 @@ Este método de projeto pode ser usado para tratar a mesma porta serial (sem pro
  SET CHANNEL(11) //Fechar a porta
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET CHANNEL](set-channel.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

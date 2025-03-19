@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `ZIP Read archive` コマンドは、<!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 返されたオブジェクトは単一の[`root`](../API/ZipArchiveClass.md#root) プロパティだけを格納しており、その値は`4D.ZipFolder` オブジェクトです。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。 このフォルダーは ZIPアーカイブの全コンテンツを表します。
 
-#### 例題
+## 例題
 
 ZIPFile オブジェクトを取得し、その中身を確認します:
 
@@ -78,14 +78,14 @@ root フォルダーから取り出します:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-#### 参照
+## 参照
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

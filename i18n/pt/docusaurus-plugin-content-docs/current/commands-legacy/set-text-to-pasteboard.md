@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD limpa a área de transferência e depois coloca uma cópia do texto em *texto* na área de transferência.<!-- END REF--> 
 
@@ -25,20 +25,20 @@ Depois de colocar texto na área de transferência, pode recuperá-lo utilizando
 
 **Nota:** o pasteboard está em modo somente de leitura durante o evento de formulário On Drag Over. Não é possível utilizar este comando neste contexto.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o texto se coloca corretamente na área de transferência, a variável OK toma o valor 1\. Se não houver suficiente memória para colocar uma cópia do texto na área de transferência, a variável OK toma o valor 0, mas não é gerado erro.
 
-#### Ver também 
+## Ver também 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

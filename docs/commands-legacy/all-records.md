@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ALL RECORDS.Summary-->ALL RECORDS selects all the records of *aTable* for the current process.<!-- END REF--> ALL RECORDS makes the first record the current record and loads the record from disk. ALL RECORDS returns the records to the default record order, which is the order in which the records are stored on disk.
 
-#### Example 
+## Example 
 
 The following example displays all the records from the \[People\] table:
 
@@ -26,7 +26,7 @@ The following example displays all the records from the \[People\] table:
  DISPLAY SELECTION([People]) // Display records in output form
 ```
 
-#### See also 
+## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
@@ -35,7 +35,7 @@ The following example displays all the records from the \[People\] table:
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -546,7 +546,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 :::note 注記
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
-- BuildApplication の[`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) および [`EvaluationName`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationName.300-7542474.en.html) xml キーを使用すると、評価版を管理することができます。
+- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
 - The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
 
 :::

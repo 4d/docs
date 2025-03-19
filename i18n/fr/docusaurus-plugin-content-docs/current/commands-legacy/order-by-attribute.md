@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->La commande **ORDER BY ATTRIBUTE** trie (réorganise) les enregistrements de la sélection courante de *laTable* pour le process courant, basé sur les contenus des *cheminAttribut* des *champObjet*.<!-- END REF--> Après réorganisation des enregistrements, le nouveau premier enregistrement de la sélection courante devient l'enregistrement courant.
 
@@ -50,7 +50,7 @@ Pour les tris multiples (tris sur plusieurs champs), vous pouvez appeler la comm
 
 Quelle que soit la façon dont le tri a été défini, si l'opération de tri doit prendre du temps, 4D affiche automatiquement un message avec thermomètre de progression. L'affichage de ce message peut être contrôlé grâce aux commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre le tri. Si le tri n'est pas interrompu, la variable OK passe à 1\. Sinon, si le tri est interrompu, la variable OK passe à 0 (zéro). 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez trier la sélection courante par âge (descendant) puis par nom (ascendant). L'ordre par défaut est :
 
@@ -109,11 +109,11 @@ Les enregistrements sont dans l'ordre suivant :
 {"LastName":"Martin","client":true} //age est null (manquant)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

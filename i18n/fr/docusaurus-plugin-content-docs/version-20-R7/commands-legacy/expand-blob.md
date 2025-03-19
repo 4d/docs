@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->**EXPAND BLOB** décompresse le BLOB *blob* préalablement compressé à l'aide de la commande [COMPRESS BLOB](compress-blob.md).<!-- END REF-->
 
@@ -25,7 +25,7 @@ En revanche, si l'erreur est causée par un problème plus important (le BLOB n'
 
 De manière générale, il est préférable d'appeler la commande [BLOB PROPERTIES](blob-properties.md) pour savoir si le BLOB a été compressé avant d'exécuter **EXPAND BLOB**.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, si oui, le décompresse :
 
@@ -36,7 +36,7 @@ L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, si oui, le dé
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant vous permet de sélectionner un document et puis de le décompresser s'il était compressé :
 
@@ -57,16 +57,16 @@ L'exemple suivant vous permet de sélectionner un document et puis de le décomp
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable OK prend la valeur 1 si le BLOB a été correctement décompressé, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

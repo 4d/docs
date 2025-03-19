@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO XY.Summary-->La commande **GOTO XY** est destinée à être utilisée conjointement avec la commande [MESSAGE](message.md) lorsque vous affichez des messages dans une fenêtre ouverte par la commande [Open window](open-window.md).<!-- END REF--> 
 
@@ -24,15 +24,15 @@ L'angle supérieur gauche de la fenêtre représente les coordonnées 0,0\. Le c
 
 Après que **GOTO XY** ait défini l'emplacement du curseur, la commande [MESSAGE](message.md) peut être appelée pour afficher des caractères dans la fenêtre.
 
-#### Exemple 1 
+## Exemple 1 
 
 Reportez-vous à l'exemple de la commande [MESSAGE](message.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple ci-dessous : 
 
@@ -55,11 +55,11 @@ L'exemple ci-dessous :
 
 ![](../assets/en/commands/pict25419.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [MESSAGE](message.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

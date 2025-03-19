@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Find XML element by ID.Summary-->DOM Find XML element by ID コマンドはXMLドキュメント中で、id属性値が引数として渡した*id*と同じである要素を検索します。<!-- END REF-->
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 **警告:** XMLにおいて、id属性はドキュメント要素ごとのユニークIDを関連付けます。ID属性の値は有効なXML名でなければならず、XMLドキュメント内のすべての要素中でユニークでなければなりません (妥当性制約)。DOM Find XML element by IDコマンドが正しく動作するためには、この制約が守られていなければなりません。そうでない場合、結果は保証されません (コマンドはドキュメント中で最初に見つけた要素を返します)。
 
-#### 参照 
+## 参照 
 
 [DOM Find XML element](dom-find-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

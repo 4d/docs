@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->The RESOURCE TYPE LIST command populates the array *resTypes* with the resource types of the resources present in the resource files currently open.<!-- END REF-->
 
@@ -24,7 +24,7 @@ You can predeclare the array *resTypes* as a String or Text array before calling
 
 After the call, you can test the number of resource types found by applying the command [Size of array](size-of-array.md) to the array *resTypes*.
 
-#### Example 1 
+## Example 1 
 
 The following example populates the array *atResType* with the resource types of the resources present in all the resource files currently open:
 
@@ -32,7 +32,7 @@ The following example populates the array *atResType* with the resource types of
  RESOURCE TYPE LIST(atResType)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example tells you if the Macintosh 4D structure file you are using contains old 4D plug-ins that will need to be updated in order to use the database on Windows:
 
@@ -47,7 +47,7 @@ The following example tells you if the Macintosh 4D structure file you are using
 
 **Note:** The structure file is not the only file where old version plug-ins can be stored. The database can also include a Proc.Ext file.
 
-#### Example 3 
+## Example 3 
 
 The following project method returns the number of resources present in a resource file:
 
@@ -77,11 +77,11 @@ Once this project method is implemented in a database, you can write:
  End if
 ```
 
-#### See also 
+## See also 
 
 [RESOURCE LIST](resource-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

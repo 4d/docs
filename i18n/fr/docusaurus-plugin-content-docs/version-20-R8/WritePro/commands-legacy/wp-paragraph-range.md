@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.WP Paragraph range.Summary-->La commande **WP Paragraph range** était nommée **WP Create Paragraph range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
 
-#### Description 
+## Description 
 
 La commande **WP Paragraph range** retourne un objet plage qui référence uniquement les paragraphes qui intersectent l'*objCible* que vous avez passé en paramètre. La plage de paragraphes retournée peut être utilisée avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs de paragraphes uniquement.
 
@@ -27,7 +27,7 @@ Dans *objCible*, vous pouvez passer :
 * une plage 4D Write Pro, ou
 * un élément (tableau / ligne / paragraphe / en-tête / pied / corps / section / sous-section)
 
-#### Exemple 
+## Exemple 
 
 Vous voulez définir la marge intérieure pour les paragraphes uniquement : 
 
@@ -36,7 +36,7 @@ Vous voulez définir la marge intérieure pour les paragraphes uniquement :
  WP SET ATTRIBUTES($oParagraphs;wk padding;20)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Picture range](wp-picture-range.md)  
 [WP Selection range](wp-selection-range.md)  

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota 
+## Nota 
 
 <!--REF #_command_.Session storage.Summary-->El comando **Session storage** devuelve el objeto de almacenamiento de la sesión cuyo identificador único se pasó en el parámetro *id*.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ En *id*, pase el UUID de la sesión para la que desea obtener el almacenamiento.
 
 El objeto devuelto es la propiedad [**.storage**](../API/SessionClass.md#storage) de la sesión. Es un objeto compartido utilizado para almacenar información disponible para todos los procesos de la sesión.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método modifica el valor de una propiedad "settings" almacenada en el objeto de almacenamiento de una sesión específica:
 
@@ -48,12 +48,12 @@ Este método modifica el valor de una propiedad "settings" almacenada en el obje
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [Process activity](../commands/process-activity.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

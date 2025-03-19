@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE SET.Summary-->**USE SET** makes the records in *set* the current selection for the table to which the set belongs.<!-- END REF-->
 
@@ -21,7 +21,7 @@ When you create a set, the current record is “remembered” by the set. **USE 
 
 **WARNING:** Remember that a set is a representation of a selection of records at the moment that the set is created. If the records represented by the set do change, the set may no longer be accurate. Therefore, a set saved to disk should represent a group of records that does not change frequently. A number of things can invalidate a set: modifying a record of the set, deleting a record of the set, or changing the criteria that determined the set.
 
-#### Example 
+## Example 
 
 The following example uses [LOAD SET](load-set.md) to load a set of the Acme locations in New York. It then uses **USE SET** to make the loaded set the current selection:
 
@@ -31,12 +31,12 @@ The following example uses [LOAD SET](load-set.md) to load a set of the Acme loc
  CLEAR SET("NY Acme") // Clear the set from memory
 ```
 
-#### See also 
+## See also 
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

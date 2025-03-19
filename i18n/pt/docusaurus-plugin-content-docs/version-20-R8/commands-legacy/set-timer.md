@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET TIMER.Summary-->O comando SET TIMER permite ativar o evento de formulário On Timer e fixar, para o processo e formulário atual, o número de tics (1 tic = 1/60 de segundo) entre cada evento de formulário On Timer.<!-- END REF--> 
 
@@ -27,7 +27,7 @@ Se passa -1 no parâmetro *ticCont*, o comando ativará o evento de formulário 
 
 Para desativar por programação o disparador do evento de formulário On Timer, chame novamente a SET TIMER e passe 0 em *ticCont*.
 
-#### Exemplo 
+## Exemplo 
 
 Imaginemos que você queira, quando um formulário aparece em tela, que o computador faça um bipe a cada três segundos. Pra fazer isso, escreva o seguinte método de formulário: 
 
@@ -41,12 +41,12 @@ Imaginemos que você queira, quando um formulário aparece em tela, que o comput
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

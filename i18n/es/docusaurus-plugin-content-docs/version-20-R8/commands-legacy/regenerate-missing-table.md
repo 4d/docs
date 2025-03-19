@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->El comando REGENERATE MISSING TABLE reconstruye la tabla faltante cuyo nombre se pasa en el parámetro *nomTabla*.<!-- END REF--> Cuando se reconstruye una tabla faltante, se vuelve visible en el editor de estructura y sus datos son accesibles nuevamente.
 
@@ -21,7 +21,7 @@ Las tablas faltantes son tablas cuyos datos están presentes en el archivo de da
 
 Si la tabla designada por el parámetro *nomTabla* no es una tabla faltante de la base, el comando no hace nada. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método regenera todas las tablas faltantes eventualmente presentes en la base:
 
@@ -56,11 +56,11 @@ Este método regenera todas las tablas faltantes eventualmente presentes en la b
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Dec.Summary-->Decは*number*の小数部を返します。<!-- END REF-->返す値は、常に正の数またはゼロになります。 
 
-#### 例題 
+## 例題 
 
 以下の例は、通貨のドル単位で実数になっている金額を、整数のドルとセントに変換します。金額が7.31ドルの場合、7ドルと31セントになります:
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
  vlCents:=Dec(vrAmount)*100 // Get the fractional part
 ```
 
-#### 参照 
+## 参照 
 
 [Int](int.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

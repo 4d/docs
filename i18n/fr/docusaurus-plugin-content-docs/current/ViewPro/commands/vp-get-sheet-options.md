@@ -15,7 +15,7 @@ title: VP Get sheet options
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet options de la feuille                                                 | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get sheet options` <!-- REF #_method_.VP Obtenir les options de la feuille.Summary -->retourne un objet contenant les options de la feuille courante de la zone *vpAreaName* <!-- END REF -->.
 
@@ -23,13 +23,13 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
-#### Objet retourné
+## Objet retourné
 
 La commande retourne un objet contenant les valeurs courantes pour toutes les options de feuille disponibles. La valeur d'une option peut avoir été modifiée par l'utilisateur ou par la méthode [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
 Pour consulter la liste complète des options, voir [Options feuille](../configuring.md#sheet-options).
 
-#### Exemple
+## Exemple
 
 ```4d
 $options:=VP Get sheet options("ViewProArea")
@@ -38,7 +38,7 @@ $options:=VP Get sheet options("ViewProArea")
  End if
 ```
 
-#### Voir également
+## Voir également
 
 [4D VIEW PRO SHEET OPTIONS](../configuring.md#sheet-options)<br/>
 [VP SET SHEET OPTIONS](vp-set-sheet-options.md)

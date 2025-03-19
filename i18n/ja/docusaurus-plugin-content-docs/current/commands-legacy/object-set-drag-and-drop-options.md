@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->**OBJECT SET DRAG AND DROP OPTIONS**コマンドは*object* と *\** 引数で指定したオブジェクトのドラッグ＆ドロップオプションをカレントプロセス内で動的に設定します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 * *droppable* \= True: プログラムモードでオブジェクトのドロップが可能
 * *automaticDrop* \= True (テキストフィールドや変数、コンボボックス、リストボックスでのみ使用): 自動モードでオブジェクトのドロップが可能
 
-#### 例題 
+## 例題 
 
 テキストエリアの自動ドラッグ＆ドロップを設定します: 
 
@@ -39,11 +39,11 @@ displayed_sidebar: docs
  OBJECT SET DRAG AND DROP OPTIONS(*;"Comments";False;True;False;True)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

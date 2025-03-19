@@ -14,7 +14,7 @@ title: VP PRINT
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP PRINT` コマンドは、<!-- REF #_method_.VP PRINT.Summary -->*vpAreaName* 引数で指定したエリアを印刷する印刷ダイアログウィンドウを開きます<!-- END REF -->。
 
@@ -31,7 +31,7 @@ title: VP PRINT
 > * 4Dコマンドの **印刷** テーマのコマンドは、`VP PRINT` ではサポートされません。
 > * このコマンドは、最終的なエンドユーザーが個別に印刷を実行することを想定しています。 自動化印刷ジョブについては、[VP EXPORT DOCUMENT](vp-export-document.md) コマンドで 4D View Pro エリアを PDF に書き出すことが推奨されます。
 
-#### 例題
+## 例題
 
 以下のコードは:
 
@@ -43,7 +43,7 @@ title: VP PRINT
 
 ![](../../assets/en/ViewPro/cmd_vpPrint.PNG)
 
-#### 参照
+## 参照
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP SET PRINT INFO](vp-set-print-info.md)

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->O comando GET LIST ITEM retorna a informação sobre o elemento especificado por *posiçaoElem* da lista cujo número de referencia ou nome de objeto se passa em *lista*.<!-- END REF--> 
 
@@ -39,7 +39,7 @@ Se passa os parâmetros opcionais *sublista* e *expandida*:
 * *sublista* retorna o número de referência da sub-lista associada ao elemento. Se o elemento não tem sub-lista, *sublista* retorna zero (0).
 * Se o elemento tem uma sub-lista, *expandida* retorna TRUE se a sub-lista está expandida, e FALSE se está contraída.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 *hList* é uma lista cujos elementos têm números de referência únicos. O código a seguir passa por programação ao estado expandido/contraído da sub-lista, se houver, associada ao elemento selecionado: 
 
@@ -53,11 +53,11 @@ Se passa os parâmetros opcionais *sublista* e *expandida*:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Consulte o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
@@ -66,7 +66,7 @@ Consulte o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

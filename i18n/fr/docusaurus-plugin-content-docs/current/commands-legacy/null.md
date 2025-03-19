@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Null.Summary-->**Null** retourne la valeur **null**, de type Null.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Cette fonction vous permet d'affecter ou de comparer la valeur **null** aux éle
 
 **Note :** Cette commande ne peut pas être utilisée avec les champs scalaires de la base de données. Les valeurs Null dans les champs de la base sont prises en charge par le moteur SQL, et sont gérés via les commandes [Is field value Null](is-field-value-null.md) et [SET FIELD VALUE NULL](set-field-value-null.md),
 
-#### Exemple 1 
+## Exemple 1 
 
 Exemples d'affectation et de test de la valeur **null** avec des propriétés d'objets :
 
@@ -51,7 +51,7 @@ Exemples d'affectation et de test de la valeur **null** avec des propriétés d'
 
 **Note :** Cet exemple requiert que la notation objet soit activée dans la base. 
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple d'affectation et de test de la valeur **null** avec une collection d'éléments :
 
@@ -67,7 +67,7 @@ Exemple d'affectation et de test de la valeur **null** avec une collection d'él
 
 **Note :** Cet exemple requiert que la notation objet soit activée dans la base. 
 
-#### Exemple 3 
+## Exemple 3 
 
 Ces exemples illustrent les diverses manières d'affecter ou de comparer la valeur **null** à des variables : 
 
@@ -107,7 +107,7 @@ Ces exemples illustrent les diverses manières d'affecter ou de comparer la vale
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple compare les différents résultats de la commande [Undefined](undefined.md) et de la commande [Null](null.md) appliquées aux propriétés d'objets, en fonction du contexte :
 
@@ -127,13 +127,13 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
  $null:=(vEmp.parent=Null) // Vrai
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->La commande **OBJECT SET SHORTCUT** permet de définir ou de modifier dynamiquement l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
@@ -71,7 +71,7 @@ Passez dans le paramètre *modifiers* une ou plusieurs touche(s) de modification
 
 **Note :** Si vous omettez le paramètre *modifiers*, l’objet sera activé dès que vous appuierez sur la touche définie. Par exemple, si vous avez associé la touche "H" à un bouton, il sera activé dès que vous appuierez sur la touche H. Ce fonctionnement est à réserver à des interfaces spécifiques.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez associer un équivalent clavier différent en fonction de la langue courante de l’application. Dans l’événement sur chargement du formulaire, vous pouvez écrire :
 
@@ -86,11 +86,11 @@ Vous voulez associer un équivalent clavier différent en fonction de la langue 
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

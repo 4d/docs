@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo especialista 
+## Modo especialista 
 
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Summary-->Este comando está reservado para necessidades específicas.<!-- END REF--> Deve ser utilizado com cuidado, já que pode afetar o rendimento do banco de dados.
 
-#### Descrição 
+## Descrição 
 
 O comando **SET INDEX CACHE PRIORITY** estabelece uma *prioridade* específica para o índice relacionado ao cache *Campo* para todos os processos na sessão atual. Este comando devia ser chamado no método de banco de dados **On Startup** ou **On Server Startup**. 
 
@@ -36,7 +36,7 @@ Passe em *prioridade* uma das constantes abaixo do tema "*Gestão de Cache*":
 | Cache priority high      |                                                 |
 | Cache priority very high |                                                 |
 
-#### Exemplo 
+## Exemplo 
 
 Em , se quiser estabelecer uma alta prioridade para os índices campo \[Customer\]LastName:
 
@@ -44,12 +44,12 @@ Em , se quiser estabelecer uma alta prioridade para os índices campo \[Customer
  SET INDEX CACHE PRIORITY([Customer]LastName;Cache priority very high)
 ```
 
-#### Ver também 
+## Ver também 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

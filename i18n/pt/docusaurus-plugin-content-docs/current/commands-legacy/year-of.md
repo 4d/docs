@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Year of.Summary-->O comando Year of retorna o ano de *data*.<!-- END REF-->
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir mostra o uso de Year of. Os resultados são atribuídos à variável *vResult*. 
 
@@ -30,16 +30,16 @@ O exemplo a seguir mostra o uso de Year of. Os resultados são atribuídos à va
  vResult:=Year of(Current date) // vResult toma o valor do ano da data atual
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo do comando [Current date](current-date.md "Current date"). 
 
-#### Ver também 
+## Ver também 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

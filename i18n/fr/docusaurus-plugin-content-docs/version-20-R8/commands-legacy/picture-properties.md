@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE PROPERTIES.Summary-->La commande **PICTURE PROPERTIES** retourne des informations sur l'image que vous avez passée dans le paramètre *image*.<!-- END REF-->
 
@@ -26,11 +26,11 @@ Les paramètres *largeur* et *hauteur* reçoivent la largeur et hauteur réelles
 
 Les paramètres *hOffset*, *vOffset* et *mode* reçoivent la position et le mode de transfert de l'image lorsqu'elle est affichée en arrière-plan dans un formulaire (“Image sur fond”).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Picture size](picture-size.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

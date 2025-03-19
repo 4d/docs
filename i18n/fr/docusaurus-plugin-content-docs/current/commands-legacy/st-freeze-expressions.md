@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->La commande **ST FREEZE EXPRESSIONS** "gèle" le contenu des expressions situées dans le champ ou la variable texte multistyle ou 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> Cette action convertit les expressions dynamiques en textes statiques ou (zones 4D Write Pro uniquement) en images et supprime de l’*objet* les références associées. 
 
@@ -50,7 +50,7 @@ Par défaut, les expressions ne sont pas réévaluées avant d’être figées. 
 
 **Note :** **ST FREEZE EXPRESSIONS** ne fige pas les expressions 4D Write Pro contenant *$wp\_pageNumber* ou *$wp\_pageCount*. Pour plus d'informations, veuillez consulter la section *Gérer des formules*.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez insérer l’heure courante au début du texte et la figer avant de stocker l’enregistrement :
 
@@ -61,12 +61,12 @@ Vous souhaitez insérer l’heure courante au début du texte et la figer avant 
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

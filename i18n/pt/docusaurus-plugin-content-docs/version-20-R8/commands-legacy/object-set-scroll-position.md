@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->O comando OBJECT SET SCROLL POSITION permite deslocar o conteúdo de vários tipos de objetos: linhas de um subformulário, de um formulário listado mostrado utilizando os comandos [MODIFY SELECTION](modify-selection.md), [DISPLAY SELECTION](display-selection.md) ou de uma lista hierárquica, linhas e colunas de um list box ou inclusive os píxels de uma imagem.<!-- END REF-->  
   
@@ -47,7 +47,7 @@ Se passa o segundo parâmetro opcional *\**:
 
 **Nota:** O comando [HIGHLIGHT RECORDS](highlight-records.md) tem um parâmetro opcional *\** que permite delegar a gestão de rolagem nos formulários ao comando OBJECT SET SCROLL POSITION . 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo ilustra a diferença de funcionamento do comando com um list box mostrado em modo padrão e hierárquico:
 
@@ -67,7 +67,7 @@ Por outra parte, se a mesma instrução se aplica ao list box mostrado em modo h
 
 ![](../assets/en/commands/pict197493.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você quer se deslocar por uma imagem que é incluída em uma variável de formulário. Esta montagem mostra a parte visível da imagem, assim como o ponto a mostrar (166 pixels verticalmente e 200 pixels horizontalmente):
 
@@ -85,13 +85,13 @@ A continuação, se obtém o seguinte resultado:
 
 Tenha a certeza de não omitir o segundo parâmetro *\** neste caso, caso contrário a imagem não será deslocada porque o ponto definido já é mostrado.
 
-#### Ver também 
+## Ver também 
 
 [ LISTBOX SELECT ROW ](listbox-select-row.md)  
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get header.Summary-->**WP Get header** コマンドは*wpDoc* 引数で指定したドキュメントの、*targetObj* 引数で指定したレンジ、あるいは*sectionIndex* 引数で指定したインデックスに関連付けられたヘッダーを返します。<!-- END REF-->引数で指定した条件に合致するヘッダーが見つからなかった場合、コマンドは**Null** を返します。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
     
 *subSectionType* 引数が指定されなかった場合、メインセクションのヘッダーが返されます。この場合、サブセクションがアクティブになっている場合、メインセクションのヘッダーオブジェクトは*undefined* となります(メインセクションのヘッダーはアクティブなwk first page あるいは wk left page サブセクションがない場合にのみ利用可能です)。
 
-#### 例題 
+## 例題 
 
 ある4D Write Pro ドキュメントの最初のページのヘッダーを、他の4D Write Pro ドキュメントのすべてのページのヘッダーにコピーしたい場合を考えます:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### 参照 
+## 参照 
 
 *4D Write Pro エリアを使用する*  
 [WP DELETE HEADER](wp-delete-header.md)  

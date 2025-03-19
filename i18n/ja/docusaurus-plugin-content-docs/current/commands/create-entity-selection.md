@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `Create entity selection` コマンドは、<!--REF #_command_.Create entity selection.Summary-->*dsTable* で指定したテーブルに対応するデータクラスの[追加可能な](../ORDA/entities.md#shareable-or-alterable-entity-selections)新規エンティティセレくションを、同テーブルのカレントセレクションに基づいてビルドして返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | ------- | ---- | ----------------------------------------------------------------------------- |
 | context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/client-server-optimization.md) のラベル。 |
 
-#### 例題
+## 例題
 
 ```4d
 var $employees : cs.EmployeeSelection
@@ -40,11 +40,11 @@ $employees:=Create entity selection([Employee])
 // Employee データクラスの全エンティティへの参照が格納されています
 ```
 
-#### 参照
+## 参照
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

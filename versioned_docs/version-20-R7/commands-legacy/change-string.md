@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Change string.Summary-->Change string changes a group of characters in *source* and returns the resulting string.<!-- END REF--> The command overlays *source*, with the characters in *newChars*, at the character described by *where*.
 
@@ -24,7 +24,7 @@ If *newChars* is an empty string (""), Change string returns *source* unchanged.
 
 Change string is different from [Insert string](insert-string.md) in that it overwrites characters instead of inserting them.
 
-#### Example 
+## Example 
 
 The following example illustrates the use of **Change string**. The results are assigned to the variable *vtResult*.
 
@@ -33,13 +33,13 @@ The following example illustrates the use of **Change string**. The results are 
  vtResult:=Change string("November";"Dec";1) // vtResult gets "December"
 ```
 
-#### See also 
+## See also 
 
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

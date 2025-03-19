@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->The **JSON TO SELECTION** command copies the contents of an array of JSON objects *jsonArray* to the selection of records of *aTable*.<!-- END REF--> 
 
@@ -32,7 +32,7 @@ If a selection exists for *aTable* at the time of the call, the elements of the 
 
 If a record is locked by another process during the execution of the command, it is not modified. All the locked records are placed in the *The LockedSet System Set*. After the execution of **JSON TO SELECTION**, you can test whether the *LockedSet* set contains any records that were locked.
 
-#### Example 
+## Example 
 
 Using the **JSON TO SELECTION** command to add records to the \[Company\] table: 
 
@@ -65,11 +65,11 @@ Using the **JSON TO SELECTION** command to add records to the \[Company\] table:
   //Company name and city fields
 ```
 
-#### See also 
+## See also 
 
 [Selection to JSON](selection-to-json.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

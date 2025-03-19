@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->O comando **SET CURRENT PRINTER** utiliza para designar a impressora a utilizar par imprimir com a aplicação 4D atual.<!-- END REF-->  
   
@@ -32,11 +32,11 @@ Este comando pode ser utilizado com os comandos[PRINT SELECTION](print-selection
   
 Os comandos de impressão devem ser chamadas obrigatoriamente com o parâmetro > (onde seja relevante) de modo a que os parâmetros especificados não sejam perdidos.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a seleção de impressora é realizada corretamente, a variável sistema OK toma o valor 1\. Se ocorre o contrário (por exemplo se não se encontra a impressora atribuída), a variável sistema OK toma o valor 0 e a impressora atual permanece sem mudanças. 
 
-#### Exemplo 
+## Exemplo 
 
 Criação de um documento PDF em Windows:
 
@@ -50,12 +50,12 @@ Criação de um documento PDF em Windows:
  SET CURRENT PRINTER("")
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

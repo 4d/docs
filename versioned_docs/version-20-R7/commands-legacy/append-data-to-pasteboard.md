@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->The APPEND DATA TO PASTEBOARD command appends to the pasteboard the data contained in the BLOB *data* under the data type specified in *dataType*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ If you want to clear and append:
 
 However, note that if a BLOB actually contains some text or a picture, you can use the APPEND DATA TO PASTEBOARD command to append a text or a picture to the pasteboard.
 
-#### Example 
+## Example 
 
 Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste schemes that deal with structured data rather than a unique piece of data. In the following example, the two project methods SET RECORD TO PASTEBOARD and GET RECORD FROM PASTEBOARD enable you to treat a whole record as one piece of data to be copied to or from the pasteboard.
 
@@ -206,17 +206,17 @@ You can paste this image of the record to another record, using the method GET R
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the BLOB data is correctly appended to the pasteboard, OK is set to 1; otherwise OK is set to 0 and an error may be generated.
 
-#### See also 
+## See also 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

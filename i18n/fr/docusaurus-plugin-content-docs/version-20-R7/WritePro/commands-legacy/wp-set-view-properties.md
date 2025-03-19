@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET VIEW PROPERTIES.Summary-->La commande **WP SET VIEW PROPERTIES** vous permet de fixer dynamiquement une ou plusieurs propriétés de vue pour la zone 4D Write Pro *zoneWP*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Des modifications peuvent être apportées à toutes les propriétés à tout mo
 
 Une fois fixés pour *zoneWP* à l'aide de cette commande, les propriétés de vue sont appliquées et la zone de formulaire est utilisée tant qu'ils ne sont pas modifiés par un autre appel. Les modifications apportées aux propriétés ne sont pas sauvegardées avec le document ou le formulaire. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez fixer certaines propriétés de vue pour une zone 4D Write Pro :
 
@@ -69,6 +69,6 @@ Vous souhaitez fixer certaines propriétés de vue pour une zone 4D Write Pro :
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get view properties](wp-get-view-properties.md)  

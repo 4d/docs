@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS changes the graph settings for graph displayed in a form.<!-- END REF--> The graph must have already been defined using the [GRAPH](graph.md) command. GRAPH SETTINGS has no effect on a pie chart. This command must be called in the same process as the form.
 
@@ -35,15 +35,15 @@ The *xgrid* and *ygrid* parameters display or hide grid lines. A grid for the x-
 
 The *title* parameter(s) labels the legend.
 
-#### Example 
+## Example 
 
 See example for the [GRAPH](graph.md) command.
 
-#### See also 
+## See also 
 
 [GRAPH](graph.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

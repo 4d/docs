@@ -67,7 +67,7 @@ Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Pre
 
 ## Configurações do arquivo de registro
 
-As [configurações do arquivo de log](settings.md#log-file-management) são baseadas em duas informações: um valor booleano e um caminho.
+The [log file settings](settings.md#log-management) are based on two pieces of information: a boolean value and a path.
 
 1. **Valor booleano**: indicando se o recurso "Usar arquivo de registro" está ativado ou desativado no aplicativo. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. No entanto, quando as [configurações do usuário](../Desktop/user-settings.md) são ativadas, a configuração do arquivo *catalog.4DCatalog* é substituída, e o valor booleano pode então ser definido no arquivo *Backup.4DSettings* [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) ou no arquivo *Backup.4DSettings* [na pasta do projeto](../Project/architecture.md#settings-user) (consulte também a documentação da chave de backup xml `JournalFileEnabled` em [doc.4d.com](https://doc.4d.com)).
 

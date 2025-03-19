@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Path to object.Summary-->O comando **Path to object**  devolve um objeto que contenha as propriedades específicas da *rota* que passou no parâmetro.<!-- END REF--> 
 
@@ -39,7 +39,7 @@ Vai se supor que passou uma rota de pasta se o último caractere da *rota for* u
 
 Lembre que Path to object só maneja strings. Tampouco comprova se a rota for válida com respeito ao tipo de rota, nem a existência real de nenhum arquivo ou pasta.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Os exemplos abaixo mostram vários resultados com rotas de arquivos:
 
@@ -130,7 +130,7 @@ Se a última parte da rota for ".something", se considera como um nome de arquiv
   //$o.isFolder=false
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 É possível combinar este comando com [Object to path](object-to-path.md) para mudar o nome de um arquivo em uma rota:
 
@@ -148,7 +148,7 @@ Se a última parte da rota for ".something", se considera como um nome de arquiv
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser saber a quantidade de subpastas em uma rota:
 
@@ -165,7 +165,7 @@ Se quiser saber a quantidade de subpastas em uma rota:
  ALERT("The path depth is: "+String($count))
 ```
 
-#### Ver também 
+## Ver também 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -174,7 +174,7 @@ Se quiser saber a quantidade de subpastas em uma rota:
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

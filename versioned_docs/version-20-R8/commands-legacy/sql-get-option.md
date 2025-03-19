@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL GET OPTION.Summary-->The **SQL GET OPTION** command returns the current *value* of the option passed in *option*.<!-- END REF-->
 
 For more information on the different options and their associated values, refer to the description of the [SQL SET OPTION](sql-set-option.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was properly executed, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [SQL SET OPTION](sql-set-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

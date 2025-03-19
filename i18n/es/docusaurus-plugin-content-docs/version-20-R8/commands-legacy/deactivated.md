@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Deactivated.Summary-->El comando **Deactivated** devuelve True en un método formulario u objeto cuando la ventana del primer plano del proceso de primer plano, contiene el formulario, se traslada a la parte posterior.<!-- END REF-->
 
@@ -21,12 +21,12 @@ Para que se genere el ciclo de ejecución **Deactivated**, asegúrese de que la 
 
 **Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Deactivate.
 
-#### Ver también 
+## Ver también 
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

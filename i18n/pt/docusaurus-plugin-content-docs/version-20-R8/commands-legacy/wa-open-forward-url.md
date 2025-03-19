@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA OPEN FORWARD URL.Summary-->O comando WA OPEN FORWARD URL carrega na área web designada pelos parâmetros \* e *objeto* a URL passada no parâmetro url.<!-- END REF-->  
 
  Se for passada uma string vazia em url, o comando [WA Forward URL available](wa-forward-url-available.md) não faz nada e não é gerado nenhum erro. Para carregar uma página vazia na área web, passe a cadeia "about:blank" em url.  
 
-#### Ver também 
+## Ver também 
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

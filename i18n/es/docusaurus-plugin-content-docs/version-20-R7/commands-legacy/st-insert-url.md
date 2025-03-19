@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST INSERT URL.Summary-->El comando **ST INSERT URL** inserta un enlace URL en el campo o la variable de texto con estilo designada por el parámetro *objeto* .<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
 
 Una vez insertado el enlace, es activa: el uso de **Ctrl+clic** (Windows) o **Comando+clic** (macOS) abre una página del navegador por defecto en la dirección especificada en el parámetro *direccionURL*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea insertar un enlace al sitio web de 4D para reemplazar el texto seleccionado en el objeto:
 
@@ -59,12 +59,12 @@ Usted desea insertar un enlace al sitio web de 4D para reemplazar el texto selec
  ST INSERT URL(*;"myText";vTitle;vURL;ST Start highlight;ST End highlight)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

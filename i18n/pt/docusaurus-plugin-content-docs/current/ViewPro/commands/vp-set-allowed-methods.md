@@ -17,7 +17,7 @@ title: VP SET ALLOWED METHODS
 
 > For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](vp-set-custom-functions.md) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
-#### Descrição
+## Descrição
 
 The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. Esse comando se aplica a todas as áreas do 4D View Pro inicializadas após sua chamada durante a sessão. Ele pode ser chamado várias vezes na mesma sessão para inicializar diferentes configurações.
 
@@ -36,7 +36,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 |                  | minParams  |                                                                                | Number                 | Número mínimo de parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |                  | maxParams  |                                                                                | Number                 | Número máximo de parâmetros. Passar um número maior que o comprimento dos parâmetros permite declarar parâmetros "opcionais" com o tipo padrão                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-#### Exemplo
+## Exemplo
 
 Pretende permitir dois métodos nas suas áreas 4D View Pro:
 
@@ -67,7 +67,7 @@ Depois que esse código é executado, as funções definidas podem ser usadas na
 
 > Nas fórmulas do 4D View Pro, os nomes das funções são automaticamente exibidos em letras maiúsculas.
 
-#### Veja também
+## Veja também
 
 [4D functions](../formulas.md#4d-functions)<br/>
 [VP SET CUSTOM FUNCTIONS](vp-set-custom-functions.md)

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY WITH ARRAY.Summary-->La commande **QUERY WITH ARRAY** recherche dans la table du champ passé en premier paramètre tous les enregistrements pour lesquels la valeur de *champCible* est égale à au moins une des valeurs des éléments du tableau *tableau*.<!-- END REF--> Les enregistrements trouvés constituent la nouvelle sélection courante.
 
@@ -25,7 +25,7 @@ Cette commande permet de construire rapidement et simplement une recherche sur p
 * Cette commande ne peut pas être utilisée avec des champs de type image et BLOB.
 * *champCible* et *tableau* doivent impérativement être du même type. Exception : vous pouvez utiliser un tableau de type Entier long avec un champ de type Heure.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet de récupérer les enregistrements des clients français et américains :
 
@@ -36,11 +36,11 @@ Cet exemple permet de récupérer les enregistrements des clients français et a
  QUERY WITH ARRAY([Clients]Pays;TabRecherche)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

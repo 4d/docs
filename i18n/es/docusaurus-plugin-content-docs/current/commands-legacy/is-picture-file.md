@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is picture file.Summary-->El comando Is picture file prueba el archivo designado por el parámetro *rutaArchivo* y devuelve True si es un archivo de imagen válido.<!-- END REF--> El comando devuelve False si el archivo no es de tipo imagen o si no se encuentra.   
   
@@ -25,11 +25,11 @@ Si no pasa el parámetro *\**, el comando prueba el archivo buscando su extensi�
   
 **Nota**: el comando devuelve True para los archivos PDF en Windows y archivos EMF bajo Mac OS.
 
-#### Ver también 
+## Ver también 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

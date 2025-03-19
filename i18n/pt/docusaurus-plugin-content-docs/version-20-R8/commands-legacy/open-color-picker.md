@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->O comando **OPEN COLOR PICKER** mostra a caixa de diálogo de seleção de cor do sistema.<!-- END REF-->  
   
@@ -25,11 +25,11 @@ Se passar 0 no parâmetro *textOFondo* ou omite este parâmetro, o color selecio
   
 Se a cor mudou, o evento formulário On After Edit é gerado para o objeto.
 
-#### Ver também 
+## Ver também 
 
 [OPEN FONT PICKER](open-font-picker.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get root XML element.Summary-->DOM Get root XML element コマンドは*elementRef* 引数に渡したXML要素が属するXMLドキュメントのルート要素参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。
 
-#### 参照 
+## 参照 
 
 [DOM Get parent XML element](dom-get-parent-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

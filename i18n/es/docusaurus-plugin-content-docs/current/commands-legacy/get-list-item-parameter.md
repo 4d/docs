@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->El comando GET LIST ITEM PARAMETER permite conocer el *valor* actual del parámetro *selector* para el elemento *refElem* de la lista jerárquica cuya referencia o nombre de objeto se pasa en el parámetro *lista*.<!-- END REF--> 
 
@@ -31,12 +31,12 @@ Finalmente, puede pasar *\** en *refElem:* en este caso, el comando se aplicará
 
 En *selector*, puede pasar la constante Additional text o Standard action (en el tema “*Listas jerárquicas*”) o todo valor personalizado. Para mayor información sobre los parámetros *selector* y *valor*, consulte la descripción del comando [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
 
-#### Ver también 
+## Ver también 
 
 *Listas jerárquicas*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

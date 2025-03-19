@@ -15,7 +15,7 @@ title: VP Get selection
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->retourne un nouvel objet plage référençant les cellules courantes sélectionnées<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
-#### Exemple
+## Exemple
 
 ![](../../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
@@ -40,7 +40,7 @@ $currentSelection:=VP Get selection("myVPArea")
 //$currentSelection.ranges[0].rowCount=6
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>

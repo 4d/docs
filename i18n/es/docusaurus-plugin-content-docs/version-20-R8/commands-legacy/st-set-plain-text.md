@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->El comando ST SET PLAIN TEXT inserta el texto pasado en el parámetro *nuevTexto* en el campo o la variable de texto con estilo designado por el parámetro *objeto* .<!-- END REF--> Este comando aplica únicamente al texto plano del parámetro *objeto*, sin modificar las posibles etiquetas de estilo que contiene. 
 
@@ -27,12 +27,12 @@ A diferencia del comando [ST SET TEXT](st-set-text.md), ST SET PLAIN TEXT insert
 * '<' se convierte en &lt;
 * '>' se convierte en &gt;
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Durante la ejecución, si el objeto tiene el foco, el comando sólo se aplica al objeto que se está editando y no a su fuente de datos (campo o variable). Los cambios sólo se transfieren a la fuente (y a cualquier otro objeto con esta misma fuente) cuando el objeto que se está editando se valida, ya sea por perder el foco o con la tecla **Intro**. Si el objeto no tiene el foco, el comando se aplica directamente a la fuente de datos y los cambios son inmediatamente trasladados a otros objetos con la misma fuente.  
 Si se omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable y se pasa una referencia de campo o variable en lugar de una cadena. El comando se aplica directamente al campo o a la variable y los cambios son transferidos inmediatamente a todos los objetos que utilizan esta fuente, incluyendo el objeto con el foco.
 
-##### 
+### 
 
 En *nuevTexto*, pase el texto plano a insertar. 
 
@@ -58,7 +58,7 @@ El estilo del primer carácter remplazado se utilizará para todo texto *nuevTex
 
 Si *inicioSel* es mayor que *finSel*, el texto no se modifica y la variable OK toma el valor 0 (excepto cuando el valor *endSel* es 0, ver arriba). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Dada la siguiente variable texto multiestilo:
 
@@ -82,18 +82,18 @@ Puede constatar que el texto insertado se encapsuló dentro de un par de etiquet
 
 **Nota:** si utiliza el comando [ST SET TEXT](st-set-text.md) en este caso, 4D no inserta nada porque la presencia del carácter "&" no codificado evita la interpretación de las etiquetas de estilo presentes en la variable. Para mayor información, consulte la descripción de este comando. 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de la ejecución de este comando, la variable OK toma el valor 1 si no hay errores, de lo contrario toma el valor 0\. Este es el caso en particular cuando las etiquetas de estilo no se evalúan correctamente (etiqueta incorrecta o falta).  
   
 En caso de un error, la variable no cambia. Cuando se produce un error en una variable cuando el texto está siendo evaluado, 4D transforma el texto en texto sin formato, como resultado, los caracteres <, > e & se convierten en entidades HTML.
 
-#### Ver también 
+## Ver también 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

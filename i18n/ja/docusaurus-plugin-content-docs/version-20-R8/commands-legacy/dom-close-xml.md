@@ -13,22 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM CLOSE XML.Summary-->DOM CLOSE XML コマンドは*elementRef*で指定されたXMLオブジェクトにより使用されているメモリを開放します。<!-- END REF--> 
 
 *elementRef*がXMLルートオブジェクトでない場合、エラーが生成されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

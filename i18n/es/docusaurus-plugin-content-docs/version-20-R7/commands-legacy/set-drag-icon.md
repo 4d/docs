@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->El comando **SET DRAG ICON** asocia la imagen de icono al cursor durante las operaciones de arrastrar y soltar que se manejan por programación.<!-- END REF-->
 
@@ -30,7 +30,7 @@ En *despH* y *despV*, puede pasar valores de desplazamiento en píxeles:
 
 Si omite este parámetro, el cursor se coloca en el centro del icono.
 
-#### Ejemplo 
+## Ejemplo 
 
 En un formulario, un usuario puede generar una etiqueta por arrastrar y soltar una fila. En el método objeto del lista box, puede escribir:
 
@@ -54,11 +54,11 @@ Note que puede modificar la posición del cursor con respecto a la imagen:
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

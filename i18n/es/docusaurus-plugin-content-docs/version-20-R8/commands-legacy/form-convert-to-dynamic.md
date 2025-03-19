@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->El comando **FORM Convert to dynamic** convierte el *nomFormulario* (formulario clásico) a un formulario dinámico y lo devuelve en un objeto.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Para poder ejecutar el formulario directamente pasando el objeto resultante al c
 
 **Nota:** las referencias al método de formulario y los métodos objeto de formulario se exportan con identificadores internos, que serán válidos solo en la base de datos actual mientras que los métodos *nomFormulario* no se modifiquen. Si desea utilizar el formulario exportado en otro contexto, debe asignar nombres de método de proyecto a la propiedad "método" del formulario u objeto de formulario (ver ejemplo).
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea convertir un formulario clásico, modificarlo y mostrarlo.
 
@@ -53,12 +53,12 @@ Si ejecuta el código:
 
 ![](../assets/en/commands/pict3977362.en.png)
 
-#### Ver también 
+## Ver también 
 
 [DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

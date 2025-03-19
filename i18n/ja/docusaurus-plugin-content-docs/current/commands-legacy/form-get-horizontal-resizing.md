@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->FORM GET HORIZONTAL RESIZING コマンドはカレントフォームの水平サイズ変更プロパティを*resize*、*minWidth*、そして*maxWidth*変数に返します。<!-- END REF-->これらのプロパティはデザインモードのフォームエディタ、またはカレントプロセス用に[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md "FORM SET HORIZONTAL RESIZING") コマンドで設定されます。
 
-#### 参照 
+## 参照 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

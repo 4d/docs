@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 **Compile project**<!--REF #_command_.Compile project.Summary--> vous permet de compiler le projet hôte courant ou le projet spécifié dans le paramètre *projectFile*.<!-- END REF--> Pour plus d'informations sur la compilation, consultez la [page Compilation](../Project/compiler.md).
 
@@ -48,7 +48,7 @@ Les erreurs de compilation, le cas échéant, sont retournées sous forme d'obje
 
 **Note :** Vous ne pouvez pas appeler cette commande quand une autre compilation est en cours d'exécution (par exemple, une compilation lancée depuis la fenêtre de compilation).
 
-##### Paramètre options
+### Paramètre options
 
 Le paramètre *options* est un objet. Voici les options de compilation disponibles :
 
@@ -70,7 +70,7 @@ Le paramètre *options* est un objet. Voici les options de compilation disponibl
 
 **Note:** When the *warnings* attribute is not defined in the *options* object, the **Compile project** command uses the default warning generation statuses defined in the settings.
 
-##### Résultat
+### Résultat
 
 The object returned by **Compile project** has up to three properties:
 
@@ -101,7 +101,7 @@ The object returned by **Compile project** has up to three properties:
 
 Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#compilation-tools).
 
-###### variable objects
+## variable objects
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
@@ -112,7 +112,7 @@ Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#co
 | arrayDimension | number   | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
 | code           | Object   | For process and interprocess variables: descriptor of where the variable has been defined |
 
-###### code object
+## code object
 
 The `code` property in `methods.code` and `errors.code` is an object with the following properties:
 
@@ -131,7 +131,7 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 | functionName   | Text                    | Nom de la fonction de classe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | databaseMethod | Number                  | Database method index                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-#### Exemples
+## Exemples
 
 Pour effectuer un contrôle de syntaxe uniquement, passez une collection vide au paramètre targets :
 
@@ -188,11 +188,11 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### Voir également
+## Voir également
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |

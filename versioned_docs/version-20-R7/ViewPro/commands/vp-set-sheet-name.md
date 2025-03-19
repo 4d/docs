@@ -15,7 +15,7 @@ title: VP SET SHEET NAME
 |name|Text|->|New name for the sheet|
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
 
@@ -38,7 +38,7 @@ The command does nothing if:
 * the new name already exists
 * the passed *sheet* index does not exist
 
-#### Example
+## Example
 
 Set the third sheet's name to "Total first quarter":
 

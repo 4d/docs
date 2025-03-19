@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAVE LIST.Summary-->El comando SAVE LIST guarda la lista cuyo número de referencia pasó en *lista*, en el editor de listas en el entorno Diseño, bajo el nombre que pasó en *nomLista*.<!-- END REF-->
 
@@ -22,11 +22,11 @@ Su contenido se reemplazará si ya hay una lista con el mismo nombre.
 
 **Nota:** este comando no se puede utilizar en una estructura cargada en sólo lectura, como un proyecto .4dz o un componente.
 
-#### Ver también 
+## Ver también 
 
 [Load list](load-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

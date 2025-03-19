@@ -22,10 +22,10 @@ La seguridad de los datos está presente en todas las etapas de las implementaci
 
 - Soporte extendido del [**Protocolo TLS (HTTPS)**](../Admin/tls.md),
 
-- **Autenticación**: flexible y personalizable [funcionalidades de autenticación](authentication.md) basado en configuraciones creadas así como en métodos base de reserva ([`On Web Authentication`](authentication.md#on-web-authentication) para el servidor web y [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) para el servidor REST),
+- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and `On REST Authentication` for the REST server),
 
 - **Control de los contenidos expuestos**: sólo los elementos que exponga explícitamente pueden estar disponibles desde peticiones web directaso peticiones REST. Debe declarar:
-  - [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
+  - [Los métodos proyecto](templates.md#accessing-4d-methods-via-the-web) expuestos a través de peticiones HTTP
   - [Las funciones ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) expuestas a través de peticiones REST
   - [Tablas y campos](REST/configuration.md#exposing-tables-and-fields) que no quiere que estén disponibles para las peticiones REST.
 

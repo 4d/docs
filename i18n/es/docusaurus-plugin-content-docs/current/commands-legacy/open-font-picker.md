@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->El comando **OPEN FONT PICKER** muestra la caja de diálogo de selección de fuente del sistema.<!-- END REF-->  
   
@@ -22,7 +22,7 @@ Si el usuario selecciona una fuente y/o un estilo y valida la caja de diálogo, 
   
 Si se cambia el tipo de fuente, el evento formulario On After Edit se genera para el objeto.
 
-#### Ejemplo 
+## Ejemplo 
 
 En un formulario, usted desea añadir un botón para mostrar el selector de fuente con el fin de permitir a los usuarios modificar la fuente o el estilo de un área de variable texto. Asegúrese de que:
 
@@ -39,11 +39,11 @@ Este es el código del botón:
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

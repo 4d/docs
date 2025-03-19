@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->El comando **COPY DOCUMENT** copia el documento especificado por *nomFuente* en la ubicación especificada por *nomDest*.<!-- END REF--> 
 En este caso, el parámetro *nomFuente* debe contener una ruta de acceso completa del archivo, expresada con respecto a la raíz del volumen.  
@@ -33,7 +33,7 @@ Note que puede pasar un archivo en el parámetro *nomFuente* y una carpeta en el
   
 El parámetro opcional *nuevoNombre*, si se pasa, permite renombrar el documento copiado a su ubicación de destino (archivo o carpeta). Cuando se pasa en el contexto de una copia de archivo, este parámetro remplaza el nombre (si lo hay) pasado en el parámetro *nomDest*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo duplica un documento en su propia carpeta:
 
@@ -41,7 +41,7 @@ El siguiente ejemplo duplica un documento en su propia carpeta:
  COPY DOCUMENT("C:\\CARPETA\\DocNombre";"C:\\CARPETA\\DocNombre2")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo copia un documento en la carpeta de la base (siempre y cuando C:\\\\CARPETA no sea la carpeta de la base):
 
@@ -49,7 +49,7 @@ El siguiente ejemplo copia un documento en la carpeta de la base (siempre y cuan
  COPY DOCUMENT("C:\\CARPETA \\DocNombre";"DocNombre")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo copia un documento de un volumen a otro:
 
@@ -57,7 +57,7 @@ El siguiente ejemplo copia un documento de un volumen a otro:
  COPY DOCUMENT("C:\\CARPETA \\DocNombre";"F:\\Archivos\\DocNombre.OLD")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo duplica un documento en su propia carpeta, sobrescribiendo una copia existente:
 
@@ -65,7 +65,7 @@ El siguiente ejemplo duplica un documento en su propia carpeta, sobrescribiendo 
  COPY DOCUMENT("C:\\CARPETA \\DocNombre";"C:\\CARPETA \\DocNombre2";*)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Copia de un archivo en una carpeta específica conservando el mismo nombre:
 
@@ -73,7 +73,7 @@ Copia de un archivo en una carpeta específica conservando el mismo nombre:
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Copiar un archivo en una carpeta específica conservando el mismo nombrey remplazando el documento existente:
 
@@ -81,7 +81,7 @@ Copiar un archivo en una carpeta específica conservando el mismo nombrey rempla
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 Copia de una carpeta en otra carpeta (ambas carpetas deben existir en el disco):
 
@@ -89,7 +89,7 @@ Copia de una carpeta en otra carpeta (ambas carpetas deben existir en el disco):
  COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Los siguientes ejemplos crean diferentes archivos y carpetas en la carpeta de la base (ejemplos bajo Windows). En cada caso, la carpeta "folder2" debe existir:
 
@@ -113,12 +113,12 @@ Los siguientes ejemplos crean diferentes archivos y carpetas en la carpeta de la
   //crea la carpeta "folder2/new/"
 ```
 
-#### Ver también 
+## Ver también 
 
 *Documentos del sistema*  
 [MOVE DOCUMENT](move-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

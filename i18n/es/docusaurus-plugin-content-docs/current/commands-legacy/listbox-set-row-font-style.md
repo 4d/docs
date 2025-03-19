@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Nota:** este comando sólo funciona con los list boxes de tipo array.<!-- END REF-->  
   
@@ -50,7 +50,7 @@ Si las propiedades de estilo en conflicto se establecen para la columna o el lis
   
 **Nota:** dado que los estilos de array para las columnas tienen prioridad sobre los de los list boxes, al aplicar este comando a un list box, sólo tendrá efecto si no hay estilo de array asignado a las columnas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado un array de tipo list box con las siguientes características:
 
@@ -74,12 +74,12 @@ Dado un array de tipo list box con las siguientes características:
 
 Después de la segunda declaración, todas las celdas de la tercera fila cambian de fila a subrayadas en cursiva, a excepción de la celda de la quinta columna que queda sólo en negrilla (los arrays de estilo de columna tienen prioridad sobre los arrays de list box).
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

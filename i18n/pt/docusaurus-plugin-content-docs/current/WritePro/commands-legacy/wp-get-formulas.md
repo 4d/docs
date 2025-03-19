@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get formulas.Summary-->O comando **WP Get formulas** devolve uma coleção de todas as fórmulas definidas em *objTarget*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ No parámetro *objTarget*, pode passar:
 * Se passar uma subseção como destino, são definidas as fórmulas da seção pai.
 * Se devolverem várias fórmulas, a coleção se ordena com respeito a ordem das fórmulas no destino, exceto os destinos de tipo documento e seção (qualquer ordem neste caso).
 
-#### Exemplo 
+## Exemplo 
 
 Para obter todas as fórmulas em um documento:
 
@@ -66,7 +66,7 @@ Para obter as fórmulas de todas as imagens ancoradas em um documento:
  $formulas:=WP Get formulas(WriteProArea).query("anchoredID # null")
 ```
 
-#### Ver também 
+## Ver também 
 
 *Gestão de fórmulas*  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

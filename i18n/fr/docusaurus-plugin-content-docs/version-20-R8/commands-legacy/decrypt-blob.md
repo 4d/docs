@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->La commande **DECRYPT BLOB** permet de décrypter le contenu du BLOB *aDécrypter* à l’aide de la clé publique de l’émetteur *cléPubEmetteur* ainsi que, optionnellement, de la clé privée du récepteur *cléPrivRécepteur*.<!-- END REF-->
 
@@ -27,16 +27,16 @@ Pour plus d’informations sur le système de cryptage à deux clés, reportez-v
 
 La commande **DECRYPT BLOB** comporte une fonction de vérification d’intégrité (checksum), afin d’empêcher toute modification malveillante ou accidentelle du contenu du BLOB. Si le BLOB crypté est endommagé ou modifié, la commande ne fera rien et retournera une erreur.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous aux exemples de la commande [ENCRYPT BLOB](encrypt-blob.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

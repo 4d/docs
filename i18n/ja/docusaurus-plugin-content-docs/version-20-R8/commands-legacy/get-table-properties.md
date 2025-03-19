@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->GET TABLE PROPERTIESコマンドは、*tablePtr*または*tableNum*で渡したテーブルのプロパティを返します。<!-- END REF-->最初の引数としてテーブル番号またはテーブルへのポインタを渡すことができます。
 
@@ -29,13 +29,13 @@ displayed_sidebar: docs
 * このテーブルに対し既存レコード保存時トリガが設定されている場合、引数*trigSaveRec*にTrueが返され、そうでない場合Falseが返されます。
 * このテーブルに対しレコード削除時トリガが設定されている場合、引数*trigDelRec*にTrueが返され、そうでない場合Falseが返されます。
 
-#### 参照 
+## 参照 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

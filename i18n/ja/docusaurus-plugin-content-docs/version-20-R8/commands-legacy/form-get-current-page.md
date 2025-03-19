@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM Get current page.Summary-->**FORM Get current page**コマンドは、現在表示されているフォームページ、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされたカレントフォームの番号を返します。<!-- END REF-->
 
 *\** 引数は、複数のページを含むサブフォームタイプのページのコンテキストでコマンドが呼び出される場合に使用します。この場合、この引数を渡すと、コマンドは (コマンドを呼び出した) カレントサブフォームのページを変更します。*\** が省略された場合、デフォルトでコマンドは常に親フォームに適用されます。
 
-#### 例題 
+## 例題 
 
 フォームにおいて、メニューバーから任意のメニューを選択、またはそのフォームが別プロセスからの呼び出しを受信した場合に、現在表示されているフォームページに応じて異なる動作を実行することができます。この例を以下に示します: 
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

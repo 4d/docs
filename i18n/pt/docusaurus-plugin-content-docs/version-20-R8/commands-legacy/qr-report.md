@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR REPORT.Summary-->QR REPORT imprime um relatório para *tabela*, criado com o editor de relatórios rápidos .<!-- END REF--> O editor de relatórios rápidos permite aos usuários criar seus próprios relatórios. Para maior informação sobre a criação de relatórios rápidos com a ajuda do editor de relatórios rápidos, consulte *Relatórios rápidos* ou *Relatórios rápidos* no Manual de Desenho de 4D.  
   
@@ -61,7 +61,7 @@ Se o editor de Relatório Rápido não estiver envolvido, a variável OK é esta
  A sintaxe que faz com que o editor de Relatório Rápido apareça não funciona com 4D Server; neste caso, a variável sistema OK é estabelecida como 0.  
  No caso de um problema relativo à impressão (falta de papel, impressora desconectada, etc) nenhuma mensagem de erro é gerada.  
   
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas\], e depois imprime automaticamente o relatório “Lista detalhada”: 
 
@@ -72,7 +72,7 @@ O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas\], e depos selecionar o relatório a imprimir: 
 
@@ -83,7 +83,7 @@ O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas\], e depois mostra o editor de relatórios rápidos de maneira que o usuário possa desenhar, salvar, carregar e imprimir relatórios com ou sem o assistente: 
 
@@ -94,11 +94,11 @@ O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Consulte o exemplo do comando [SET FIELD RELATION](set-field-relation.md "SET FIELD RELATION").
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Você deseja converter o conjunto de caracteres utilizado em um relatório rápido chamado utilizando **QR REPORT** em Mac Roman:
 
@@ -129,13 +129,13 @@ O método myCallbackMeth converte o relatório quando é gerado:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM EDIT.Summary-->La commande **FORM EDIT** ouvre le *formulaire* associé à *uneTable* dans l'éditeur de formulaire 4D.<!-- END REF--> A noter que vous devez avoir accès à l'environnement de développement, sinon l'erreur -9804 ("Impossible d'ouvrir le formulaire") sera générée.
 
@@ -24,7 +24,7 @@ Si vous passez le paramètre optionnel *uneTable*, vous indiquez la table associ
 
 Dans le paramètre *formulaire*, passez le nom du formulaire à ouvrir dans l'éditeur de formulaire 4D. Si vous passez un nom qui n'existe pas, l'erreur 81 est générée ("Le formulaire n’a pas été trouvé").
 
-#### Exemple 
+## Exemple 
 
 Pour ouvrir la table *Contacts* du formulaire *Addresses* :
 
@@ -38,11 +38,11 @@ Pour ouvrir le formulaire projet *ContactList* :
  FORM EDIT("ContactList")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Commandes du thème Accès objets développement*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

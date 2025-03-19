@@ -17,7 +17,7 @@ title: VP Row
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Range object of row(s)                      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devuelve un nuevo objeto de rango que hace referencia a una fila o filas específicas<!-- END REF -->.
 
@@ -31,7 +31,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 
 - `vk current sheet`
 
-#### Ejemplo
+## Ejemplo
 
 Desea definir un objeto rango para la línea que se muestra a continuación (en la hoja de cálculo actual):
 
@@ -43,7 +43,7 @@ Puede escribir:
 $row:=VP Row("ViewProArea";9) // línea 10
 ```
 
-#### Ver también
+## Ver también
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>

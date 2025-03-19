@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->**OBJECT Get indicator type**コマンドは、引数 *object* と *\** で指定したサーモメーターに割り当てられた、カレントのインジケーターの型を返します。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 | Barber shop               | 倍長整数 | 2 | 連続したアニメーションを表示するバー           |
 | Progress bar              | 倍長整数 | 1 | 標準の進捗バー                      |
 
-#### 参照 
+## 参照 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Split string.Summary-->**Split string** コマンドは、*stringToSplit* 引数の文字列を、*separator* 引数で指定した区切り文字によって分割した文字列のコレクションを返します。<!-- END REF-->返されたコレクション内の文字列には、*separator* 引数の区切り文字自身は含まれません。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 | sk ignore empty strings | 倍長整数 | 1 | 結果のコレクションから空の文字列を削除する(空の文字列を無視) |
 | sk trim spaces          | 倍長整数 | 2 | 分割した文字列の先頭と最後にある空白文字(スペース)は切り取る |
 
-#### 例題 1 
+## 例題 1 
 
 ```4d
  var $vt : Text
@@ -42,7 +42,7 @@ displayed_sidebar: docs
  $col:=Split string($vt;";";sk ignore empty strings+sk trim spaces) //["John","Doe","120 jefferson st.","Riverside","NJ","08075"]
 ```
 
-#### 例題 2 
+## 例題 2 
 
 *separator* 引数には複数文字の文字列を指定することも可能です: 
 
@@ -54,11 +54,11 @@ displayed_sidebar: docs
   //$col=["Name","Smith","age","40"]
 ```
 
-#### 参照 
+## 参照 
 
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

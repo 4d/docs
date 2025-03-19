@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Table name.Summary-->The Table name command returns the name of the table whose number or pointer you pass in *tableNum* or *tablePtr*.<!-- END REF-->
 
-#### Example 
+## Example 
 
 The following is an example of a generic method that displays the records of a table. The reference to the table is passed as a pointer to the table. The Table name command is used to include the name of the table in the title bar for the window:
 
@@ -31,7 +31,7 @@ The following is an example of a generic method that displays the records of a t
  DISPLAY SELECTION($1->) //Displays the selection
 ```
 
-#### See also 
+## See also 
 
 [Field name](field-name.md)  
 [Last table number](last-table-number.md)  
@@ -39,7 +39,7 @@ The following is an example of a generic method that displays the records of a t
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

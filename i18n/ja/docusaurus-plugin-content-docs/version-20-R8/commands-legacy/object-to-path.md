@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Object to path.Summary-->**Object to path** コマンドは*pathObject* 引数に渡したパス情報をもとにしたパス名(文字列)を返します。<!-- END REF-->以下のパスがサポートされます:
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 通常、*pathObject* は[Path to object](path-to-object.md) コマンドによって生成されますが、オブジェクトはどのような手段を用いて作成しても構いません。**Object to path** コマンドは文字列を受け取るだけだという点に注意してください。パスが指定されたパスタイプに対して有効であるかをチェックすることはしませんし、指定されたファイルあるいはフォルダが実際に存在するかどうかもチェックはしません。
 
-#### 例題 
+## 例題 
 
 ファイルを同じフォルダ内に複製して名前を変更したい場合を考えます:
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  COPY DOCUMENT($path;Object to path($o))
 ```
 
-#### 参照 
+## 参照 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->**LISTBOX SET AUTO ROW HEIGHT** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さの最小値あるいは最大値を、*value* 引数で設定します。<!-- END REF-->
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注:** コマンドは最小値と最大値の整合性をチェックしません。しかしながら、ランタイムにおいて、最小値と最大値の矛盾があった場合には、最小値が両方の値に対して適用されます。例えば、最小値が5行であり、最大値が3行であった場合、そろリストボックスの行に適用される最大の高さは、5行となります。
 
-#### 例題 
+## 例題 
 
 自動行高が設定されているリストボックスに対して、最小値と最大値を設定したい場合を考えます:
 
@@ -52,13 +52,13 @@ displayed_sidebar: docs
  LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row max height;100;lk pixels) //最大値に100ピクセル
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

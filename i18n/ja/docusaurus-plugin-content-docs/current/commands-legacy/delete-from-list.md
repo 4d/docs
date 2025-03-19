@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->DELETE FROM LIST コマンドは、*list*に指定した参照番号またはオブジェクト名を持つリストから、*itemRef*引数で指定した項目を削除します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 どの項目を削除するかに関わらず、オプションの *\** 引数を渡して、4Dがサブリストも削除するように指示すべきです。*\** 引数を渡さない場合、サブリストのリスト参照番号を事前に取得します。後で[CLEAR LIST](clear-list.md "CLEAR LIST") コマンドを使用してこのリストを削除できます。
 
-#### 例題 
+## 例題 
 
 以下のコードは現在選択されている項目を*hList*リストから削除します。項目にサブリストが添付されていれば、そのサブリストおよびさらにそのサブリストも削除されます:
 
@@ -38,12 +38,12 @@ displayed_sidebar: docs
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### 参照 
+## 参照 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

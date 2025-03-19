@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->The **QR SET DESTINATION** command sets the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ The default field delimiter is the tab character (code 9). The default record de
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If the value of the destination *type* is incorrect, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 The following code sets the destination as being the text file "Mydoc.txt" and executes the Quick Report: 
 
@@ -46,11 +46,11 @@ The following code sets the destination as being the text file "Mydoc.txt" and e
  QR RUN(MyArea)
 ```
 
-#### See also 
+## See also 
 
 [QR GET DESTINATION](qr-get-destination.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

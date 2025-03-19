@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->The REDRAW WINDOW command provokes a graphical update of the window whose reference number you pass in *window*.<!-- END REF-->
 
@@ -21,11 +21,11 @@ If you omit the *window* parameter, REDRAW WINDOW applies to the frontmost windo
 
 **Note:** 4D handles the graphical updates of the windows each time you move a window, resize it, or bring it to the front, as well as when you change the form and/or the values displayed in the window. You will rarely use this command.
 
-#### See also 
+## See also 
 
 [ERASE WINDOW](erase-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

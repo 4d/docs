@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->**SET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡された参照番号またはオブジェクト名のリスト内で、*itemRef*によって指定された項目を変更します。<!-- END REF-->
 
@@ -61,11 +61,11 @@ displayed_sidebar: docs
 
 *color* 引数 (オプション) を使用して、項目テキストの色を変更することができます。この色はRGBフォーマット、例えば0x00RRGGBB形式の4バイトの倍長整数で指定しなくてはなりません。このフォーマットに関する詳細は、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの説明を参照してください。項目をオリジナルの色にリセットするには、*color*引数に-1を渡します。
 
-#### 例題 1 
+## 例題 1 
 
 [APPEND TO LIST](append-to-list.md "APPEND TO LIST")コマンドの例題参照
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題はカレント項目のテキストを太字の赤に変更します: 
 
@@ -73,14 +73,14 @@ displayed_sidebar: docs
  SET LIST ITEM PROPERTIES(list;*;True;Bold;0;0x00FF0000)
 ```
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 *Hierarchical Lists*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

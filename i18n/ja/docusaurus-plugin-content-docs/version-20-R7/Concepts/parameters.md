@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### サポートされているデータ型
 
-名前付き引数の場合、[`var` キーワードでサポートされている](variables.md#var-キーワードによる宣言) データ型 (クラスオブジェクト含む) を使用できます。  例:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. 例:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -319,7 +319,7 @@ method1(42) // 型間違い。 期待されるのはテキスト
 
 - [コンパイル済みプロジェクト](interpreted.md) では、可能な限りコンパイル時にエラーが生成されます。  それ以外の場合は、メソッドの呼び出し時にエラーが生成されます。
 - インタープリタープロジェクトでは:
- - [名前付きシンタックス](#名前付き引数) (`#DECLARE` または `Function`) を使用して引数が宣言されている場合は、メソッドの呼び出し時にエラーが発生します。
+ - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
  - 旧式の (`C_XXX`) シンタックスを使用して宣言されている場合、エラーは発生せず、呼び出されたメソッドは期待される型の空の値を受け取ります。
 
 ## オブジェクトプロパティを名前付き引数として使用する

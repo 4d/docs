@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 O comando `ds` <!-- REF #_command_.ds.Summary -->retorna uma referência ao datastore que corresponde ao banco de dados 4D atual ou ao banco de dados designado por *localID*<!-- END REF -->.
 
@@ -29,7 +29,7 @@ Se nenhum datastore *localID* for encontrado, o comando retornará **Null**.
 
 Os objetos disponíveis no `cs.Datastore` são mapeados a partir do banco de dados de destino conforme as [regras gerais do ORDA](../ORDA/dsMapping.md#general-rules).
 
-#### Exemplo 1
+## Exemplo 1
 
 Usar a datastore principal do banco de dados 4D:
 
@@ -38,7 +38,7 @@ var $result : cs.EmployeeSelection
 $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -64,11 +64,11 @@ $result:=ds.Employee.query("firstName = :1";"S@")
  $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
-#### Veja também
+## Veja também
 
 [Open datastore](open-datastore.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

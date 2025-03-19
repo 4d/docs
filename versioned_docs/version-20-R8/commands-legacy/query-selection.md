@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** looks for records in *aTable*.<!-- END REF--> The **QUERY SELECTION** command changes the current selection of *table* for the current process and makes the first record of the new selection the current record.
 
@@ -28,7 +28,7 @@ For more information, see the description of the [QUERY](query.md) command.
 
 The **QUERY SELECTION** command is useful when a query cannot be defined using a sequence of [QUERY](query.md) calls joined with the *\** parameter. Typically, it is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
 
-#### Example 
+## Example 
 
 You want to query the records that have been previously highlighted by the user in a list form. You can write:
 
@@ -40,11 +40,11 @@ You want to query the records that have been previously highlighted by the user 
 
 You will find all companies located in New York City, with a Stock Exchange activity, among the initial user selection. 
 
-#### See also 
+## See also 
 
 [QUERY](query.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

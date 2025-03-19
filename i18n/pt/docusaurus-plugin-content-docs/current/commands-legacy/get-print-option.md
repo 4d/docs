@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PRINT OPTION.Summary-->O comando **GET PRINT OPTION** devolve os valores atuais de uma opção de impressão.<!-- END REF-->
 
@@ -41,16 +41,16 @@ Um código de opção PDF consta de duas partes, *TipoOpção e* *NomreOpção*,
 
 **Nota:** o comando **GET PRINT OPTION** principalmente é compatível com impressoras PostScript. Pode utilizar este comando com outros tipos de impressoras, como PCL ou tinta, mas neste caso, é possível que algumas opções não estejam disponíveis.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK toma o valor 1 se o comando tiver sido executado corretamente; do contrário, toma o valor 0
 
-#### Ver também 
+## Ver também 
 
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

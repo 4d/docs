@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Generate digest.Summary-->**Generate digest**コマンドはBLOBやテキストのDigestキーを指定したアルゴリズムで生成して返します。<!-- END REF-->引数にはテキストまたはBLOBフィールドや変数を渡します。**Generate digest**コマンドはダイジェストキーを文字列として返します。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **注:** コマンドを空のテキストやBLOBに対して実行すると、エラーは返されず、文字列の値が返されます(例えばMD5 に対しては"d41d8cd98f00b204e9800998ecf8427e"が返されます)
 
-#### 例題 1 
+## 例題 1 
 
 この例題ではMD5 アルゴリズムを使用して二つの画像を比較する場合を考えます
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題ではテキストのダイジェストキーを取得します:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
   // $key2は"408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-#### 参照 
+## 参照 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
@@ -83,7 +83,7 @@ displayed_sidebar: docs
 [WEB Validate digest](web-validate-digest.md)  
 *暗号化プロトコル*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

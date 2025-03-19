@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Version type.Summary-->**Version type** コマンドは、現在実行している4Dや4D Server環境のバージョンタイプを示す数値を返します。<!-- END REF-->4Dでは *4D Environment*テーマ内にある以下の定義済み定数が用意されています。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **注**: **Version type** は*ビットフィールド*の形式で値を返します。ビットワイズ演算子を使用してそれを解析しなければなりません (例題参照)。
 
-#### 例題 
+## 例題 
 
 以下の例によって、あるバージョンが4Dによってビルドされたアプリなのか4Dサーバーによって開かれたデータベースなのかを判別し、それに応じて違うコードを実行する、ということが出来るようになります:
 
@@ -39,12 +39,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

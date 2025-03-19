@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sin.Summary-->**Sin** retourne le sinus de *nombre*.<!-- END REF--> La valeur *nombre* est exprimée en radians.
 
 **Note :** 4D fournit les constantes prédéfinies Pi, Degree et Radian. Pi retourne le nombre Pi (3,14159...), Degree retourne la valeur en radians d'un degré (0,01745...) et Radian retourne la valeur en degrés d'un radian (57,29577...).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

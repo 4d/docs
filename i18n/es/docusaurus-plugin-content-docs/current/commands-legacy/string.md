@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.String.Summary-->El comando String devuelve en forma de cadena alfanumérica la expresión de tipo numérico, Fecha, Hora, cadena o Booleana que se pasa en *expresion*.<!-- END REF-->
 
@@ -179,7 +179,7 @@ Si *expresion* se evalúa como indefinida, el comando devuelve una cadena vacía
 
 Si *expresion* se evalúa como Null, el comando devuelve la cadena "null". Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea una cadena, incluso si puede ser null.
 
-#### Ver también 
+## Ver también 
 
 [Bool](bool.md)  
 [Date](date.md)  
@@ -187,7 +187,7 @@ Si *expresion* se evalúa como Null, el comando devuelve la cadena "null". Esto 
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

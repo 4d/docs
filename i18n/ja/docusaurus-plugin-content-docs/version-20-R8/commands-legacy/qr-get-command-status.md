@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get command status.Summary-->QR Get command status コマンドは、*command*が使用不可であれば0を、使用可能であれば1を返します。<!-- END REF--> 
 
@@ -31,12 +31,12 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*command*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

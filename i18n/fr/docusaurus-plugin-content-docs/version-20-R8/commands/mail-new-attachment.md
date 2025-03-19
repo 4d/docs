@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->vous permet de créer un objet pièce jointe que vous pouvez ajouter à un [objet Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -85,7 +85,7 @@ Par défaut, si le paramètre *disposition* est omis :
 - si le paramètre *cid* est utilisé, l'en-tête `Content-disposition` est défini sur "inline",
 - si le paramètre *cid* n'est pas passé ou est vide, l'en-tête `Content-disposition` est fixé à "attachment".
 
-#### Exemple 1
+## Exemple 1
 
 Vous souhaitez envoyer un e-mail avec un fichier sélectionné par l'utilisateur comme pièce jointe et une image intégrée dans le corps HTML :
 
@@ -123,7 +123,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Vous voulez envoyer un e-mail avec une zone 4D Write Pro en pièce jointe :
 
@@ -149,7 +149,7 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### Propriétés
+## Propriétés
 
 |                    |                                                                 |
 | ------------------ | --------------------------------------------------------------- |

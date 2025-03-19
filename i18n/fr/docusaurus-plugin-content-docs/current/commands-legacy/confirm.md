@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONFIRM.Summary-->La commande **CONFIRM** affiche une boîte de dialogue de confirmation qui se compose d'une icône, d'un message, d'un bouton OK et d'un bouton Annuler.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Le bouton OK est le bouton par défaut. L'utilisateur peut cliquer sur le bouton
 
 **Conseil :** N'appelez pas la commande **CONFIRM** dans une méthode formulaire ou objet qui gère l'événement On Activate ou On Deactivate, car cela provoquerait une boucle sans fin.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple ci-dessous :
 
@@ -47,7 +47,7 @@ L'exemple ci-dessous :
 
 ![](../assets/en/commands/pict4225029.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 La ligne :
 
@@ -59,7 +59,7 @@ La ligne :
 
 ![](../assets/en/commands/pict4225038.fr.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous développez une application 4D pour le marché international. Vous avez écrit les chaines de votre interface ainsi que leurs traductions dans la langue cible dans des fichiers XLIFF. Dans ce cas, le code :
 
@@ -75,7 +75,7 @@ Vous développez une application 4D pour le marché international. Vous avez éc
 
 ![](../assets/en/commands/pict4225048.fr.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 La ligne :
 
@@ -87,12 +87,12 @@ La ligne :
 
 ![](../assets/en/commands/pict4225058.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [ALERT](alert.md)  
 [Request](request.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

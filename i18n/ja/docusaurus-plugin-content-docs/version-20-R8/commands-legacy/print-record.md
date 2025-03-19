@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** は *aTable*のカレントレコードを、カレントセレクションを変更せずに印刷します。<!-- END REF-->カレント出力フォームが印刷に用いられます。*aTable*にカレントレコードが存在しない場合、**PRINT RECORD**は何も行いません。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **警告:** **PRINT RECORD** と一緒に [PAGE BREAK](page-break.md) コマンドを使用してはいけません。[PAGE BREAK](page-break.md) コマンドは [Print form](../commands/print-form.md) で使用されるように設計されています。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例では、\[Invoices\] テーブルのカレントレコードを印刷します。このコードは入力フォームの**印刷**ボタンのオブジェクトメソッド内に記述されています。ユーザがそのボタンをクリックすると、レコードは指定した出力フォームで印刷されます。 
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
  FORM SET OUTPUT([Invoices];"Standard Output") // 出力フォームを元に戻す
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例では、同じカレントレコードを二種類の異なるフォームを使用して印刷しています。このコードは、入力フォームの**印刷**ボタンのオブジェクトメソッド内に記述されています。印刷設定をを行った後、二種類のフォームでその設定を使用することが出来ます。 
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Print form](../commands/print-form.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

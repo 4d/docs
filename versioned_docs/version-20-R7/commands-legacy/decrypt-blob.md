@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->The DECRYPT BLOB command decrypts the content of the BLOB *toDecrypt* using the sender’s public key *sendPubKey* and, optionally, the recipient’s private key *recipPrivKey*.<!-- END REF-->
 
@@ -26,16 +26,16 @@ The BLOB containing the recipient’s private key can be passed in the optional 
 
 The command DECRYPT BLOB offers a checksum functionality in order to avoid any BLOB content modification (deliberate or not). If the encrypted BLOB is damaged or modified, the command will do nothing and an error will be returned. 
 
-#### Example 
+## Example 
 
 Refer to the examples given for the [ENCRYPT BLOB](encrypt-blob.md) command.
 
-#### See also 
+## See also 
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

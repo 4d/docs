@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Caps lock down.Summary-->Caps lock down returns TRUE if the Caps Lock key is pressed.<!-- END REF-->
 
-#### Example 
+## Example 
 
 See example for the [Shift down](shift-down.md) command.
 
-#### See also 
+## See also 
 
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ See example for the [Shift down](shift-down.md) command.
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

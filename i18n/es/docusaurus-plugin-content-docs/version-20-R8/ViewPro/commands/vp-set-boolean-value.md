@@ -14,7 +14,7 @@ title: VP SET BOOLEAN VALUE
 | rangeObj   | Object  | -> | Objeto rango                 |                  |
 | boolValue  | Boolean | -> | Valor del booleano a definir | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->asigna un valor booleano especificado a un rango de celdas designado<!-- END REF -->.
 
@@ -22,13 +22,13 @@ En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro *boolValue* permite pasar el valor booleano (**True** o **False**) que se asignará al *rangeObj*.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 //Establecer el valor de la celda como False
 VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 ```
 
-#### Ver también
+## Ver también
 
 [VP SET VALUE](vp-set-value.md)

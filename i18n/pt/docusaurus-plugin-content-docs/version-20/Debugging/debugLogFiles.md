@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -460,7 +460,7 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 Existem várias formas de ativar o arquivo de configuração do registo, dependendo da sua configuração:
 
 - **Servidor 4D com interface**: pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file) , depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
-- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-1) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
 - **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`

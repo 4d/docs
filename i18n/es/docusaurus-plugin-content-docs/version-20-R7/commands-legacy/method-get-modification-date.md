@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->El comando **METHOD GET MODIFICATION DATE** devuelve en los parámetros *fechaMod* y *horaMod* las fechas y horas de la última modificación de los métodos designados por el parámetro *ruta*.<!-- END REF-->
 
@@ -40,7 +40,7 @@ No es posible combinar las dos sintaxis.
 
 Si el comando se ejecuta desde un componente, se aplica por defecto a los métodos del componente. Si pasa el parámetro *\**, accede a los métodos de la base local.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Quiere conocer las fechas y horas de modificación por varios métodos:
 
@@ -54,7 +54,7 @@ Quiere conocer las fechas y horas de modificación por varios métodos:
  METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Quiere obtener las fechas de modificación de los métodos de un módulo con el prefijo "Web\_". No se puede utilizar el símbolo "@" en una ruta; Sin embargo, puede escribir:
 
@@ -69,7 +69,7 @@ Quiere obtener las fechas de modificación de los métodos de un módulo con el 
   
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

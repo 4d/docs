@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->El comando **EXPORT SYLK** escribe los datos de los registros de la selección actual de *tabla* en el proceso actual.<!-- END REF--> Los datos se escriben en *documento*, un documento Sylk Windows o Macintosh, en el disco.
 
@@ -30,7 +30,7 @@ El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documentos 
 
 Durante la utilización de **EXPORT SYLK**, el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13) en macOS y el retorno de carro+retorno a la línea (código 13 + código 10) bajo Windows. Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* *FldDelimit* y *RecDelimit*. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campos o de registros, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo exporta datos a un documento SYLK. El método primero define el formulario de salida de manera que los datos se exporten por el formulario correcto, luego efectúa la exportación:
 
@@ -39,18 +39,18 @@ El siguiente ejemplo exporta datos a un documento SYLK. El método primero defin
  EXPORT SYLK([Personas];"Nuevas _Personas.slk") // Exporta al documento "Nuevas_Personas.slk"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

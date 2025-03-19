@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Trigger event.Summary-->Called from within a trigger, the **Trigger event** command returns a numeric value that denotes the type of the database event, in other words, the reason why the trigger has been invoked.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Within a trigger, if you perform database operations on multiple records, you ma
 
 When cascading trigger calls, 4D has no limit other than the available memory. To optimize trigger execution, you may want to write the code of your triggers depending not only on the database event, but also on the level of the call when triggers are cascaded. For example, during a deletion database event for the \[Invoices\] table, you may want to skip the update of the \[Customers\] Gross Sales field if the deletion of the \[Invoices\] record is part of the deletion of **all** the invoices related to a \[Customers\] record being deleted. To do so, use the commands [Trigger level](trigger-level.md) and [TRIGGER PROPERTIES](trigger-properties.md).
 
-#### Example 
+## Example 
 
 You use the **Trigger event** command to structure your triggers as follows:
 
@@ -47,14 +47,14 @@ You use the **Trigger event** command to structure your triggers as follows:
  End case
 ```
 
-#### See also 
+## See also 
 
 [In transaction](in-transaction.md)  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

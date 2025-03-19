@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->O comando **OBJECT GET DRAG AND DROP OPTIONS** devolve as opções de arrastar e soltar para o objeto o os objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
   
@@ -33,11 +33,11 @@ Cada parâmetro devolve True ou False dependendo se a opção correspondente est
 * *soltavel* \= True: objeto aceita soltar em modo programado  
 *soltavelAuto* \= True (utilizável unicamente com os campos e variáveis imagem, texto, combo box e list box): Objeto aceita soltar em modo automático
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

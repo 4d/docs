@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table append row.Summary-->**WP Table append row**コマンドは *tableRef* で指定したテーブルの最後に新規行を追加し、各セルに*value*で指定した値を設定して、当該行レンジオブジェクトを戻り値として返します。<!-- END REF--> 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 このコマンドは新規追加行を行レンジオブジェクトとして返します。 
 
-#### 例題 1 
+## 例題 1 
 
 新規テーブルを作成し、様々な大きさの行を複数追加します:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 請求書において、関連する請求項目のテーブルを自動作成します:
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
-#### 参照 
+## 参照 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table get rows](wp-table-get-rows.md)  

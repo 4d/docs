@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OPEN URL.Summary-->O comando **OPEN URL** lança seu navegador web por padrão e o abre com a URL passada no parâmetro *url*.<!-- END REF-->  
   
@@ -43,7 +43,7 @@ Se a aplicação *nomAp* não se encontra, nenhum erro se devolve; o comando se 
   
 **Nota**: este comando não funciona quando for chamado desde um processo web.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Os seguintes exemplos mostram os diferentes tipos de cadeias que são aceitas como URLs pelo comando:   
   
@@ -54,7 +54,7 @@ Os seguintes exemplos mostram os diferentes tipos de cadeias que são aceitas co
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo pode ser utilizado para lançar uma aplicação mais conveniente:   
   
@@ -65,7 +65,7 @@ Este exemplo pode ser utilizado para lançar uma aplicação mais conveniente:
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Pode abrir um arquivo texto com diferentes aplicações:
 
@@ -75,11 +75,11 @@ Pode abrir um arquivo texto com diferentes aplicações:
  OPEN URL("C:\\temp\\cookies.txt";"excel") //abre o arquivo com MS Excel (se está instalado)
 ```
 
-#### Ver também 
+## Ver também 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

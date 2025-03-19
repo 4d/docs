@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->The GET DOCUMENT ICON command returns, in the 4D picture variable or field *icon*, the icon of the document whose name or complete pathname is passed in *docPath*.<!-- END REF-->can specify a file of any type (executable, document, shortcut or alias, etc.) or a folder. 
 
@@ -27,7 +27,7 @@ Pass a 4D picture field or variable in *icon*. After the command is executed, th
 The optional *size* parameter sets the dimensions in pixels of the returned icon. This value actually represents the side length of the square including the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the largest available icon is returned.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

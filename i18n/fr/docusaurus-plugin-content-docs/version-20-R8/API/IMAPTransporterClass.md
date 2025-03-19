@@ -481,7 +481,7 @@ Vous pouvez passer :
 - dans le paramètre `msgsIDs`, une collection contenant les ID uniques des messages spécifiques à supprimer, ou
 - dans le paramètre `allMsgs`, la constante `IMAP all` (integer) pour supprimer tous les messages de la boîte de réception sélectionnée.
 
-L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Les messages marqués sont supprimés du serveur IMAP avec la fonction [`.expunge()`](#expunge) ou en sélectionnant une autre boîte de réception ou lorsque l'objet [transporter](#imap-transporter-object) (créé avec [IMAP New transporter](#imap-new-transporter)) est détruit.
+L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Objet retourné**
 

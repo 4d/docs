@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->**GET PICTURE FROM PASTEBOARD** は、ペーストボード内に存在するピクチャーを*picture*フィールドや変数に返します。<!-- END REF-->
 
 **注:** コピー/ペースト操作では、ペーストボードはクリップボードと同じです。
 
-#### 例題 
+## 例題 
 
 以下のボタンオブジェクトメソッドは、ペーストボード中にピクチャ (jpeg または gif フォーマット)があれば、フィールド \[Employees\]Photoに代入します:
 
@@ -31,17 +31,17 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ピクチャが正しく取り出されるとOKに1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

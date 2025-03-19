@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Validate password.Summary-->La commande **Validate password** retourne Vrai si la chaîne passée dans *motDePasse* est le mot de passe du compte utilisateur dont le n° de référence ou le nom est passé dans *utilisateur*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Ce paramètre est particulièrement utile dans le contexte de l’utilisation de
 
 La commande est temporisée afin d’éviter des attaques par “force brute” (essais automatiques de multiples combinaisons de noms d’utilisateurs/mots de passe). Ainsi, au bout du quatrième appel à la commande, elle n’est exécutée qu’après 10 secondes d’attente. Cette temporisation est globale au poste de travail. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant vérifie que “Laurel” est le mot de passe de l’utilisateur “Hardy” :
 
@@ -47,7 +47,7 @@ L’exemple suivant vérifie que “Laurel” est le mot de passe de l’utilisa
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans la [On REST Authentication database method](on-rest-authentication-database-method.md), vous souhaitez tester une requête de connexion (vous utilisez les utilisateurs 4D de la base). Il vous suffit d’écrire :
 
@@ -55,13 +55,13 @@ Dans la [On REST Authentication database method](on-rest-authentication-database
  $0:=Validate password($1;$2;$3)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

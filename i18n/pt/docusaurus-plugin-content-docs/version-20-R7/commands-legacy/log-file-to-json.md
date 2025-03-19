@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->O comando **LOG FILE TO JSON** salva em formato JSON o arquivo de histórico atual ou todo arquivo de histórico especificado.<!-- END REF-->
 
@@ -51,7 +51,7 @@ O arquivo JSON salvo contém todas as operações registradas no histórico, em 
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 A lista atual de propriedades disponíveis depende do tipo de operação (por exemplo: criar registros, apagar registros, modificar registros, etc.). Aqui estão algumas das propriedades principais:
 
@@ -74,7 +74,7 @@ No caso de valores Blob ou imagem, diferentes informações são oferecidas base
 
 (\*) Nos bancos de dados projeto, a propriedade "user4d\_id" não é devolvida.
 
-#### Exemplo 
+## Exemplo 
 
 Para exportar o arquivo atual de journal em JSON:
 
@@ -88,16 +88,16 @@ Para exportar um arquivo de journal arquivado em JSON:
  LOG FILE TO JSON("c:\\4Dv15\\ExportLogs";0;"c:\\4Dv15\\Backup\\old_myDB.journal";Field attribute with name)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Ocomando **LOG FILE TO JSON** modifica o valor das variáveis OK e Document: se o arquivo JSON for guardado corretamente, OK toma o valor 1 e Document contem o nome de rota do arquivo de histórico. Se for passado "" no parâmetro *rutaLog* e o usuário cancelar o quadro de diálogo de seleção de arquivos, OK toma o valor 0 e o Document contém uma string vazia. Se o usuário selecionar um arquivo não válido, OK toma o valor 0 e o documento contém a rota do arquivo.  
 
-#### Ver também 
+## Ver também 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

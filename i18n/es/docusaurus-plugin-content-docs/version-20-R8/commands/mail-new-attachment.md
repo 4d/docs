@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede agregar a un [objeto de Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -85,7 +85,7 @@ Por defecto, si se omite el parámetro *disposition*:
 - si se utiliza el parámetro *cid*, el encabezado `Content-disposition` se define en "inline",
 - si el parámetro *cid* no se pasa o está vacío, el encabezado `Content-disposition` se establece en "attachment".
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Desea enviar un correo electrónico con un archivo seleccionado por el usuario como adjunto y una imagen integrada en el cuerpo HTML:
 
@@ -123,7 +123,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Desea enviar un correo electrónico con un área 4D Write Pro como archivo adjunto:
 
@@ -149,7 +149,7 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### Propiedades
+## Propiedades
 
 |                   |                                 |
 | ----------------- | ------------------------------- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.UNION.Summary-->UNION cria um novo conjunto que contém todos os registros de *conjunto1 e conjunto2*.<!-- END REF--> A seguinte tabela mostra todos os possíveis resultados de uma operação de união de conjuntos.
 
@@ -35,7 +35,7 @@ O *conjuntoResultado* se cria por UNION. O conjunto resultado substitui todo con
   
 **4D Server**: em modo cliente/Servidor, os conjuntos são "visíveis" dependendo do tipo (interprocesso, processo e local) e onde eles foram criados (servidor ou cliente). UNION exige que todos os três conjuntos estejam na mesma máquina. Para maior informação consulte *4D Server, conjuntos e seleções temporais* no manual de referência de 4D Server.  
   
-#### Exemplo 
+## Exemplo 
 
 Este exemplo adiciona registros ao conjunto de melhores clientes. Os registros são mostrados em tela com a primeira linha. Depois de mostrar os registros na tela, um conjunto dos melhores clientes é carregado a partir do disco, e todos os registros selecionados pelo usuário (o conjunto sistema chamado “UserSet”) se adicionam ao conjunto. Finalmente, o novo conjunto é guardado no disco: 
 
@@ -47,12 +47,12 @@ Este exemplo adiciona registros ao conjunto de melhores clientes. Os registros s
  SAVE SET("$Melhores";"$SalvarMelhores") // Salvar o conjunto dos melhores clientes
 ```
 
-#### Ver também 
+## Ver também 
 
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Storage.Summary-->La commande **Storage** retourne le catalogue des objets partagés et des collections partagées qui ont été enregistré(e)s dans l'objet *Storage* sur la machine ou le composant courant(e).<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Comme le catalogue retourné par **Storage** est un *objet partagé*, il suit le
 * Lorsqu'ils sont encadrés par une structure *Utiliser...Fin utiliser*, les attributs de premier niveau de **Storage** sont verrouillés pour les autres process.
 * A la différence des objets partagés standard, l'objet retourné par **Storage** ne partage PAS son *locking identifier* avec les objets partagés ou les collections partagées qui lui sont ajoutés en tant qu'attributs (pour plus d'informations, reportez-vous à la section *A propos du locking identifier (comment fonctionnent les groupes partagés)*).
 
-#### Exemple 1 
+## Exemple 1 
 
 Il est pratique d'initialiser le contenu de l'objet **Storage** dans la : 
 
@@ -38,7 +38,7 @@ Il est pratique d'initialiser le contenu de l'objet **Storage** dans la :
  End use
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple montre la manière standard de définir les valeurs de **Storage** : 
 
@@ -52,7 +52,7 @@ Cet exemple montre la manière standard de définir les valeurs de **Storage** :
  End use
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 **Storage** permet d'implémenter un singleton en *lazy initialization*, comme proposé dans l'exemple ci-dessous.
 
@@ -79,11 +79,11 @@ Cet exemple montre la manière standard de définir les valeurs de **Storage** :
  $0:=$counterValue
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Objets partagés et collections partagées*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

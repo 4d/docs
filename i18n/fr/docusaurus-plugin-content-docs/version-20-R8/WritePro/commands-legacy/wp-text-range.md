@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.WP Text range.Summary-->La commande **WP Text range** était nommée **WP Create range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
 
-#### Description 
+## Description 
 
 La commande **WP Text range** retourne une nouvelle plage contenant les caractères situés entre *débutPlage* et *finPlage* dans l'objet *objCible*.
 
@@ -38,7 +38,7 @@ Dans *débutPlage* et *finPlage*, passez des valeurs correspondant à la positio
 
 **Note :** Si vous avez passé une référence d'élément tableau, ligne, paragraphe, image en ligne, body, en-tête, pied, section ou sous-section dans *objCible*, les valeurs *débutPlage* et *finPlage* seront relatives aux indices de début et de fin de la plage de l'élément. Par exemple, si un en-tête est passé, wk start text désigne le caractère de début de l'en-tête et wk end text le dernier caractère de l'en-tête ; si une référence d'élément tableau est passée, la commande retourne la plage de texte relative au tableau référencé. Si une section est passée, *débutPlage* et *finPlage* sont relatives au corps du document (zone parente d'une plage créée à partir d'une section). Voir l'exemple 2 ci-dessous.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez sélectionner une plage de 12 caractères à partir du début d'un champ 4D Write Pro. Le champ est affiché dans un objet de formulaire :
 
@@ -55,7 +55,7 @@ Si vous exécutez :
 
 ![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez créer une plage à partir d'une section : 
 
@@ -67,7 +67,7 @@ Vous voulez créer une plage à partir d'une section :
   //$wpRange.end = 111
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP Get body](wp-get-body.md)  

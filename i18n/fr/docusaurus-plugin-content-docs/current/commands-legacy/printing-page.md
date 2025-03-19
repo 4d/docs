@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Printing page.Summary-->**Printing page** retourne le numéro de la page en cours d'impression.<!-- END REF--> Cette fonction vous permet de numéroter automatiquement les pages d'une impression en cours à l'aide de [PRINT SELECTION](print-selection.md) ou du menu Impression dans le mode Développement.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant change la position des numéros de page sur un état pour que l'état puisse être reproduit au format recto-verso. Le formulaire pour l'état comporte deux variables qui affichent les numéros de page. Une variable dans le coin bas à gauche (*vNumGauche*) imprime les numéros de page pairs. Une autre variable dans le coin bas à droite (*vNumDroite*) imprime les numéros de page impairs. L'exemple teste si le numéro de page est pair ou impair, puis utilise et efface les variables appropriées : 
 
@@ -34,11 +34,11 @@ L'exemple suivant change la position des numéros de page sur un état pour que 
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Locked records info.Summary-->O comando **Locked records info** devolve um objeto que contém diferente informação sobre os registros bloqueados atualmente em *aTabela*.<!-- END REF-->
 
@@ -67,7 +67,7 @@ Se o registro foi bloqueado pela petição $lock REST (a nivel de sessão):
 | recordNumber | Inteiro | Número de registro do registro bloqueado                                                                                                                      |
 | userAgent    | Text  | Agente de usuário do locker, por exemplo "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-#### Exemplo 
+## Exemplo 
 
 Execute o seguinte código:
 
@@ -87,11 +87,11 @@ Se o código é executado em um 4D Server e o bloqueio é causado por uma máqui
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                "user_name": "achim",                "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-#### Ver também 
+## Ver também 
 
 [Locked](locked.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

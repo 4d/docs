@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->O comandoINSERT IN LIST insere o elemento designado pelo parâmetro *refElem* na lista cujo número de referência é passado em *lista*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Pode passar o item de número de referência do novo item em itemRef. Apesar de 
   
 Se deseja que o elemento inclua sub elementos, passe um número de referência de lista válido no parâmetro *sublista*. Neste caso, também deve passar o parâmetro *expandida*. Passe [True](true.md "True") ou [False](false.md "False") neste parâmetro de maneira que esta sub-lista é mostrada expandida ou contraída respectivamente.
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir insere um elemento (sem sub-lista associada) justo antes do elemento selecionado atualmente n lista *hList*:
 
@@ -46,12 +46,12 @@ O código a seguir insere um elemento (sem sub-lista associada) justo antes do e
  INSERT IN LIST(hList;*;"Novo elemento";vlUniqueRef)
 ```
 
-#### Ver também 
+## Ver também 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->SET MENU ITEM METHOD コマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に関連付ける4Dプロジェクトメソッドを変更するために使用します。<!-- END REF-->  
 *menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
@@ -27,15 +27,15 @@ displayed_sidebar: docs
 
 **Note:** メニューが階層サブメニューのタイトルに対応する場合、メニューが選択されてもメソッドは呼び出されません。
 
-#### 例題 
+## 例題 
 
 [SET MENU BAR](set-menu-bar.md "SET MENU BAR") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [Get menu item method](get-menu-item-method.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

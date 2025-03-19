@@ -13,13 +13,13 @@ title: VP REMOVE SPAN
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range object of the cell span. The spanned cells in the range are divided into individual cells.  
 
-#### Example
+## Example
 
 To remove all cell spans from this document:
 
@@ -38,7 +38,7 @@ Result:
 
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
-#### See also
+## See also
 
 [VP ADD SPAN](vp-add-span.md)<br/>
 [VP Get spans](vp-get-spans.md)

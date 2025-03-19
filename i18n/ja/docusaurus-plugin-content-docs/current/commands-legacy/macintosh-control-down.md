@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Macintosh control down.Summary-->Macintosh control down コマンドはMacintoshのControlキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、Macintosh control down コマンドは常に[False](false.md "False")を返します。このMacintosh用の同等のキーは、Windows上にありません。
 
-#### 例題 
+## 例題 
 
 [Shift down](shift-down.md "Shift down") コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

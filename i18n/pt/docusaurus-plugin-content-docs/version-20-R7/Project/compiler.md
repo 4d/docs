@@ -93,11 +93,11 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 #### Objectivo de compilação
 
@@ -221,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Está dividido en varias partes:
+If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -269,7 +269,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Arquivo de erros
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
@@ -334,13 +334,13 @@ Ambos os compiladores estão integrados em 4D. El compilador adecuado se selecci
 
 O compilador clássico gera código compilado nativo para processadores Intel/AMD em qualquer máquina. Não necessita de qualquer configuração específica.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 
 ### Compilador Silicon
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder) folder of the project.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
 #### Requisitos
 

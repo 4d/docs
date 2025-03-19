@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Parse XML variable.Summary-->La commande **DOM Parse XML variable** analyse une variable de type BLOB ou Texte contenant une structure XML et retourne une référence pour cette variable.<!-- END REF--> La commande peut valider ou non la structure via une DTD ou un schéma XML (document XSD, XML Schema Definition). le document. 
 
@@ -46,7 +46,7 @@ La commande retourne une chaîne de caractères (RefElément) constituant la ré
 
 **Important :** Une fois que vous n'en avez plus besoin, n'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) avec cette référence afin de libérer la mémoire.
 
-#### Exemple 1 
+## Exemple 1 
 
 Ouverture sans validation d’un objet XML situé dans une variable Texte 4D :
 
@@ -63,7 +63,7 @@ Ouverture sans validation d’un objet XML situé dans une variable Texte 4D :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ouverture sans validation d’un document XML situé dans un BLOB 4D :
 
@@ -75,16 +75,16 @@ Ouverture sans validation d’un document XML situé dans un BLOB 4D :
  $ref_XML_Struct:=DOM Parse XML variable(maVarBlob)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

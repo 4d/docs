@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->La commande **LISTBOX SET GRID** permet d’afficher ou de masquer les traits horizontaux et/ou verticaux composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -24,13 +24,13 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Passez dans les paramètres *horizontal* et *vertical* des valeurs booléennes indiquant si les traits correspondants doivent être affichés (Vrai) ou cachés (Faux). Par défaut, la grille est affichée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

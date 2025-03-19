@@ -12,21 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.START SQL SERVER.Summary-->El comando START SQL SERVER lanza el servidor SQL integrado de la aplicación 4D en la que se ejecuta.<!-- END REF--> Una vez lanzado, el servidor SQL puede responder a las búsquedas SQL externas. 
 
 **Nota:** este comando no afecta el funcionamiento del motor SQL interno de 4D. El motor SQL siempre está disponible para las búsquedas internas.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el servidor SQL ha sido lanzado correctamente, la variable sistema OK toma el valor, de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [STOP SQL SERVER](stop-sql-server.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET USER ALIAS.Summary-->**SET USER ALIAS** コマンドは、カレントのセッションの間、カレントの4D ユーザーアカウント名の代わりに使用できるもう一つのカスタムの名前を定義します。<!-- END REF-->この代わりの名前は、メモリに残されますが、カレントユーザーに対してのみ適用されます。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **注:** [CHANGE CURRENT USER](change-current-user.md) コマンドを呼び出すと、カレントユーザーのエイリアス名はリセットされます。
 
-#### 例題 
+## 例題 
 
 アプリケーションの中で、ユーザーはカスタムのテーブルで管理されており、同じ4D ユーザーアカウントを使用する場合を考えます。それぞれのクライアントマシンで、以下のようなコードを実行することができます:
 
@@ -35,13 +35,13 @@ displayed_sidebar: docs
  SET USER ALIAS([myUsers]userName)
 ```
 
-#### 参照 
+## 参照 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

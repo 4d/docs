@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Value type.Summary-->Value type コマンドは*expression* 引数に渡した式の評価の結果の値の型を返します。<!-- END REF-->
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** 4D v16 R6 以降、日付はオブジェクトプロパティ内では日付型あるいはISO日付フォーマットのテキストとして保存されています。詳細な情報については、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのDates inside objects セレクターを参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 オブジェクトプロパティの値が取り得る様々な型に対応したい場合を考えます:
 
@@ -93,7 +93,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 コレクション内の全ての数値の合計を計算したい場合を考えます:
 
@@ -109,12 +109,12 @@ displayed_sidebar: docs
  ALERT(String($sum)) //95
 ```
 
-#### 参照 
+## 参照 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

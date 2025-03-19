@@ -9,7 +9,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、Webユーザーセッションが利用可能です。  これらは Web および REST 接続に使用され、権限を割り当てることができます。
+- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). これらは Web および REST 接続に使用され、権限を割り当てることができます。
 - [**リモートクライアントユーザー セッション**](../Desktop/clientServer.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**スタンドアロンセッション**](../Project/overview.md#development): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get string resource.Summary-->El comando Get string resource devuelve la cadena almacenada en el recurso cadena (“STR ”) cuyo número de referencia se pasa en *resNum*.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ Si pasa un número de referencia de archivo de recursos válido en *resArchivo*,
 
 **Nota:** un recurso cadena puede contener hasta 255 caracteres.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra los contenidos del recurso cadena de ID=20911, que debe encontrar en al menos uno de los archivos de recursos abiertos:
 
@@ -33,17 +33,17 @@ El siguiente ejemplo muestra los contenidos del recurso cadena de ID=20911, que 
  ALERT(Get string resource(20911))
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si se encuentra el recurso, de lo contrario toma el valor 0 (cero).
 
-#### Ver también 
+## Ver también 
 
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->OBJECT SET FILTER は、*object*で指定されたオブジェクトの入力フィルタを*entryFilter*に設定します。<!-- END REF-->
 
@@ -29,19 +29,19 @@ OBJECT SET FILTER は、入力フォームおよびダイアログ用フォー�
 
 **Note:** ツールボックスであらかじめ定義した入力フィルタを*entryFilter*に使用するには、入力フィルタ名の前に縦棒(|)を挿入します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、郵便番号フィールドに対する入力フィルタを設定します。住所が米国の場合は、米国の郵便番号フィルタを設定します。それ以外の場合は、任意の入力ができるように設定します: 
 
 ```4d
  If([Companies]Country="US") // ZIPコードフォーマットにフィルターを設定
-    OBJECT SET FILTER([Companies]ZIP Code;"&9#####")
+    OBJECT SET FILTER([Companies]ZIP Code;"&9###")
  Else // アルファベットと数字を受け付け、小文字を大文字に変換
     OBJECT SET FILTER([Companies]ZIP Code;"~@")
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題では、“a,” “b,” “c,” そして“g”のみの入力を許可するよう設定します: 
 
@@ -51,12 +51,12 @@ OBJECT SET FILTER は、入力フォームおよびダイアログ用フォー�
 
 **Note:** この例題では入力フィルタを *&"a;b;c;g"##* に設定しています。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

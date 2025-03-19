@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.User in group.Summary-->User in group retorna TRUE se *user* estlver em *group*.<!-- END REF-->
 
 **Nota:** Este comando espera um nome de conta de usuário no parâmetro *user* (não é compatível com aliases/apelidos de usuário). Se tiver deffinido aliases de usuário em seu aplicativo, passe o parâmetro 4D user account ao comando [Current user](current-user.md) para ter certeza que retorna uma conta de usuário (ver exemplo).
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo procura faturas específicas. Se o usuário atual estiver no grupo Executive, poderá acessar os formulários que mostram informação confidencial. Se o usuário não estiver no grupo Executive, aparecem os formulários padrão
 
@@ -39,11 +39,11 @@ O exemplo abaixo procura faturas específicas. Se o usuário atual estiver no gr
  MODIFY SELECTION([Invoices];*)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Current user](current-user.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

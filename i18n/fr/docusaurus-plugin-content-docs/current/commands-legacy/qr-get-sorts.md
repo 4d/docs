@@ -15,28 +15,28 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels :
+<!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels<!-- END REF--> :
 
 * *tabColonnes*  
-Ce tableau contient toutes les colonnes auxquelles un ordre de tri a été associé.<!-- END REF-->
+Ce tableau contient toutes les colonnes auxquelles un ordre de tri a été associé.
 * *tabTris*  
 Chaque élément de ce tableau fournit l'ordre de tri courant de la colonne correspondante.  
 \- si *tabTris{$i}* vaut 1, le tri est croissant.  
 \- si *tabTris{$i}* vaut -1, le tri est décroissant.
 
-##### Etats tableaux croisés 
+### Etats tableaux croisés 
 
 Avec ce type d'état, les tableaux ne peuvent pas comporter plus de deux éléments puisque les tris ne peuvent être effectués que sur les colonnes (1) et les lignes (2) (valeurs pour *tabColonnes*).   
   
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

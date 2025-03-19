@@ -9,7 +9,7 @@ Los parámetros de copia de seguridad se definen a través de tres páginas en e
 - los archivos a incluir en cada copia de seguridad
 - las funcionalidades avanzadas permiten ejecutar tareas automáticas
 
-> Las propiedades definidas en esta caja de diálogo se escriben en el archivo *Backup.4DSettings*, guardado en la carpeta [Settings](Project/architecture.md#settings-folder).
+> Las propiedades definidas en esta caja de diálogo se escriben en el archivo *Backup.4DSettings*, guardado en la carpeta [Settings](Project/architecture.md#settings-user).
 
 ## Backups periódicos
 
@@ -50,8 +50,8 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 
 - **Datos**: archivo de datos de la aplicación. Cuando esta opción está marcada, los siguientes elementos se copian automáticamente al mismo tiempo que los datos:
     - el archivo de historial actual de la aplicación (si existe),
-    - la carpeta `Settings` completa situada [junto al archivo de datos](Project/architecture.md#settings-folder) (si existe), es decir, *los parámetros usuario para los datos*.
-- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. Cuando esta opción está marcada, se hace una copia de seguridad automática de la carpeta completa `Settings` situada [en el mismo nivel que la carpeta Project ](Project/architecture.md#settings-folder-1), es decir, los *parámetros usuario*.
+    - la carpeta `Settings` completa situada [junto al archivo de datos](Project/architecture.md#settings-user-data) (si existe), es decir, *los parámetros usuario para los datos*.
+- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-user-1), i.e. the *user settings*, is automatically backed up.
 - **Archivo de estructura usuario (sólo para bases binaria)**: *funcionalidad obsoleta*
 - **Adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la aplicación. Estos archivos pueden ser de cualquier tipo (documentos o plantillas de plug-ins, etiquetas, informes, imágenes, etc.). Puede definir archivos individuales o carpetas cuyo contenido se respaldará completamente. Cada elemento adjunto aparece con su ruta de acceso completa en el área "Adjuntos ".
     - **Eliminar**: retira el archivo seleccionado de la lista de archivos adjuntos.

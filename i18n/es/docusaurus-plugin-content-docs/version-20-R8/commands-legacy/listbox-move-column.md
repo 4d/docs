@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->El comando **LISTBOX MOVE COLUMN** mueve por programación la columna designada por los parámetros *objeto* y *\** en el contexto del formulario en ejecución (modo Aplicación).<!-- END REF--> El formulario original, generado en modo Diseño, no se modifica.  
   
@@ -29,7 +29,7 @@ El comando en cuenta las propiedades de las columnas estáticas y bloqueadas: po
   
 Esta funcionalidad está presente en 4D en modo Aplicación: el usuario puede mover las columnas no estáticas utilizando el ratón. Sin embargo, a diferencia del desplazamiento efectuado por el usuario, este comando no genera el evento On Column Moved. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere invertir la segunda y tercera columna del list box:
 
@@ -37,11 +37,11 @@ Usted quiere invertir la segunda y tercera columna del list box:
  LISTBOX MOVE COLUMN(*;"column2";3)
 ```
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

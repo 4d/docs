@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->The **OBJECT Get list reference** command returns the reference number (ListRef) of the hierarchical list associated with the object or group of objects designated by *object* and *\**.<!-- END REF--> 
 
@@ -32,12 +32,12 @@ By default, if you omit the *listType* parameter, the command returns the name o
 
 If there is no hierarchical list associated with the object for the *listType* defined, the command returns 0\. 
 
-#### See also 
+## See also 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

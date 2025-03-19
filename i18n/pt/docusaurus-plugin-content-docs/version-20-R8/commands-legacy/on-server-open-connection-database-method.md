@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Quando é chamado o método base On Server Open Connection? 
+## Quando é chamado o método base On Server Open Connection? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->O **On Server Open Connection database method** é chamado uma vez no equipo servidor cada vez que um equipo remoto 4D inicia um processo de conexão.<!-- END REF--> O **On Server Open Connection database method** NÃO é invocado por outro entorno 4D diferente de 4D Server.
 
@@ -37,7 +37,7 @@ Em cada caso com um 4D remoto, três processos são iniciados. Um na máquina cl
  SAVE RECORD([Table_1]) // criação aqui do processo apropriado no servidor
 ```
 
-#### Como se chama ao método base On Server Open Connection? 
+## Como se chama ao método base On Server Open Connection? 
 
 O On Server Open Connection database method é executado no equipo servidor no processo 4D Client que provocou a chamada do método. 
 
@@ -67,7 +67,7 @@ Esta tabela detalha a informação oferecida pelos três parâmetros passados no
 
 Estes números de referencia não são utilizados diretamente como fontes de informação a passar, por exemplo, como parâmetros a um comando 4D. No entanto, oferecem uma maneira particular de identificar um processo 4D Client entre o On Server Open Connection database method e o [On Server Close Connection database method](on-server-close-connection-database-method.md). A combinação destes valores é único no momento de uma seção 4D Server. Ao guardar esta informação em uma tabela ou em um array entre processos, os dois métodos base podem trocar informações. No exemplo ao final desta sessão, os dois métodos base utilizam esta informação para armazenar a data e hora de inicio e fim de uma conexão no mesmo registro de uma tabela.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo mostra como manter um histórico das conexões a base de dados utilizando o On Server Open Connection database method e utilizando o [On Server Close Connection database method](on-server-close-connection-database-method.md). A tabela *\[Server Log\]* (mostrada a continuação) se utiliza para fazer seguimento aos processos de conexão: 
 
@@ -112,7 +112,7 @@ Estas são algumas entradas em \[Server Log\] mostrando várias conexões remota
 
 ![](../assets/en/commands/pict69174.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M. 
 
@@ -124,7 +124,7 @@ O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M.
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

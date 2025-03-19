@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 *arrPtr* 引数には、制御したいプロパティを制御するための配列に対するポインターを渡します。
 
-#### 例題 1 
+## 例題 1 
 
 4列目のフォントカラー配列を10列目にも使いたいという場合を考えます。
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 リストボックス用に行高さ配列を設定します:
 
@@ -60,12 +60,12 @@ displayed_sidebar: docs
  LISTBOX SET ARRAY(*;"LB";lk row height array;->RowHeightArray)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

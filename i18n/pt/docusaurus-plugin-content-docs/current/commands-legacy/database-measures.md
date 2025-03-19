@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Database measures.Summary-->O comando **Database measures** lhe permite obter informação detalhada sobre os eventos do motor de base de dados 4D.<!-- END REF--> A informação devolvida inclui o acesso leitura/escritura dos dados desde/até o disco ou a memória cachê, assim como também o acesso aos índices da base de dados, as pesquisas e as ordenações.  
   
 **Database measures** devolve um único objeto que contém todas as medidas relevantes. O parâmetro *opcoes* lhe permite configurar as opções para a informação devolvida.
 
-##### Apresentação do objeto devolvido 
+### Apresentação do objeto devolvido 
 
 O objeto devolvido contém uma só propriedade chamada "DB", que têm a seguinte estrutura básica:
 
@@ -32,7 +32,7 @@ Este objeto está composto de oito propriedades que contém as medidas básicas 
   
 **Nota**: uma propriedade só está presente no interior do objeto se este recebe conteúdo. Quando uma propriedade não tem nenhum conteúdo, não está incluída no objeto. Por exemplo, se a base foi aberta em modo de leitura e os índices não foram utilizados, o objeto devolvido não conterá "diskWriteBytes", "diskWriteCount", "indexSegment" e "indexes".
 
-##### Propriedades elementares 
+### Propriedades elementares 
 
 As propriedades elementares podem ser encontradas nos diferentes níveis do objeto DB. As propriedades elementares devolvem a mesma informação mas com alcances diferentes. Esta é uma descrição das propriedades elementares:   
   
@@ -70,7 +70,7 @@ Dado que o tamanho máximo do array é 200, se a base de dados se utiliza intens
 Este exemplo pode ser representado no seguinte diagrama:  
 ![](../assets/en/commands/pict1510781.en.png) 
 
-##### dataSegment1 e indexSegment 
+### dataSegment1 e indexSegment 
 
 As propriedades "dataSegment1" e "indexSegment" podem conter até quatro propriedades elementares (quando estão disponíveis): 
 
@@ -121,7 +121,7 @@ Os valores devolvidos correspondem as fórmulas seguintes:
 *diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
 *diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
 
-##### tables 
+### tables 
 
 A propriedade "tables" contém tantas propriedades como tabelas que tenham sido acessadas, seja em modo de leitura ou escritura desde a abertura da base. O nome de cada propriedade é o nome da tabela em questão. Por exemplo:  
   
@@ -214,7 +214,7 @@ Exemplo: desde o momento em que se lança a base, uma só pesquisa foi realizada
     
 **Nota:** o atributo "queries" é criado quando pelo menos uma pesquisa foi realizada na tabela.
 
-##### indexes 
+### indexes 
 
 Este é o objeto mais complexo. Todas as tabelas as quais tiveram acesso utilizando um ou vários de seus índices se armazenam como propriedades e no interior das propriedades, também se incluem os nomes dos índices utilizados como propriedades. Os índices de palavras chaves aparecem por separado e seus nomes estão seguidos por "*(Keyword)*". Por último, cada objeto nome de índice contém as oito propriedades elementares relacionadas com este índice assim como um máximo de quatro sub-objetos em função do uso do índice da base desde seu lançamento (cada sub-objeto só existe se pelo menos uma operação correspondente foi realizado em algum momento desde o lançamento de base).
 
@@ -258,7 +258,7 @@ Exemplo: desde o lançamento da base, vários índices do campo \[Employees\] Em
 }
 ```
 
-##### Parâmetro opções 
+### Parâmetro opções 
 
 O parâmetro *opcoes* lhe permite personalizar a informação real que devolve o comando. Em *opcoes*, se passar um objeto que pode conter até três propriedades: "withHistory", "historyLength" e "path".
 
@@ -271,7 +271,7 @@ O parâmetro *opcoes* lhe permite personalizar a informação real que devolve o
 (\*) Como se descreveu anteriormente, a história não se armazena como uma sequência de segundos, somente com valores relevantes. Se não ocorre nada durante um par de segundos ou mais, nada se armazena e uma brecha aparecerá no array de histórico interno. "time" pode conter, por exemplo, -2, -4, -5, -10, -15, -30 com valores de 200, 300, 250, 400, 500,150\. Se a propriedade "historyLength" está definida em 600 (10 minutos), logo o array devolvido irá conter 0, -1, -2, -3 ... -599 para "time" e só os valores -2, -4, - 5, -10, -15, -30 serão preenchidos. Todos os outros valores ficarão em 0 (zero) como valor. Também como foi descrito anteriormente, o único limite do array interno é o tamanho (200), não o tempo. Isto significa que se há uma baixa atividade para uma propriedade específica, o tempo mais antigo pode ser bem grande (por exemplo: -3600 faz uma hora). Também pode conter menos de 200 valores se a base acabou de iniciar. Nestes casos, se o tempo do histórico interno é menor ao solicitado ou se todos os valores importantes que já foram definidos no array devolvido, o valor devolvido será -1.  
 Exemplo: a base só foi iniciada faz 20 segundos e a história da petição é de 60 segundos. Os valores devolvidos entre 0 e -20 se definem com valores ou zeros e os outros se estabelecerão com -1\. Quando um valor "-1" se devolve, isto significa que, ou bem o tempo de solicitação é muito antigo ou que o valor já não está no array de história interna (ou seja, chegou ao limite dos 200 elementos e foram eliminados os valores maiores).
 
-##### Cliente/servidor e componentes 
+### Cliente/servidor e componentes 
 
 Este comando devolve a informação sobre o uso da base de dados. Isto significa que lhe devolve um objeto válido com valores relevantes só quando é chamado: 
 
@@ -282,7 +282,7 @@ Se o comando é chamado desde um 4D remoto, logo o objeto é deixado vazio.
 Neste contexto, se necessita obter informação sobre a base de dados no servidor, a forma mais simples de realizar esta ação é criar um método com a opção "executar no servidor" ativada.   
 Este princípio também funciona para um recipiente: se o componente se utiliza em um contexto local 4D, devolverá a informação sobre a base local; em um contexto 4D remoto, devolverá a informação sobre a base do servidor.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Você deseja obter o objeto "history" no objeto devolvido:
 
@@ -293,7 +293,7 @@ Você deseja obter o objeto "history" no objeto devolvido:
  $measures:=Database measures($param)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Só queremos saber o número total de bytes lidos na memória cachê ("cacheReadBytes"):   
   
@@ -316,7 +316,7 @@ O objeto devolvido contém, por exemplo:
 }
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
 
@@ -330,7 +330,7 @@ Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

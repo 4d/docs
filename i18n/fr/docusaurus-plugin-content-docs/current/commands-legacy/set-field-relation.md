@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD RELATION.Summary-->La commande **SET FIELD RELATION** permet de définir séparément le statut automatique/manuel de chaque lien de la base pour le process courant, quel que soit son statut initial défini en mode Développement dans la fenêtre de paramétrage des liens.<!-- END REF--> 
 
@@ -36,7 +36,7 @@ Passez dans les paramètres *aller* et *retour* des valeurs indiquant la modific
 
 **Note :** Si vous avez passé la valeur Vrai à la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) durant la même session, les appels à la commande **SET FIELD RELATION** sont ignorés, qu'ils soient placés avant ou après [SET AUTOMATIC RELATIONS](set-automatic-relations.md). Pour "déverrouiller" le mode automatique et prendre en compte les appels à **SET FIELD RELATION**, passez Faux à [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
 
-#### Exemple 
+## Exemple 
 
 Le code suivant vous permet uniquement de configurer ls liens utiles comme automatiques dans l'éditeur d'états rapides :
 
@@ -48,14 +48,14 @@ Le code suivant vous permet uniquement de configurer ls liens utiles comme autom
  QR REPORT([Factures];Char(1))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

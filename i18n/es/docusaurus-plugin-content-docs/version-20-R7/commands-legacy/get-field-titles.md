@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->El comando GET FIELD TITLES llena los arrays *titulosCampos* y *numCampos* con los nombres y los números de los campos de la *tabla*.<!-- END REF--> Los contenidos de estos dos arrays están sincronizados. 
 
@@ -25,12 +25,12 @@ De lo contrario, GET FIELD TITLES devuelve los nombres de los campos de la base 
 
 En ambos casos, el comando no devuelve campos invisibles. 
 
-#### Ver también 
+## Ver también 
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

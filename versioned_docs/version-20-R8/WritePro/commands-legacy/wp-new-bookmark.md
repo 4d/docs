@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP NEW BOOKMARK.Summary-->The **WP NEW BOOKMARK** command creates a new bookmark named *bkName* based upon the 4D Write Pro *targetObj* in the parent document.<!-- END REF-->
 
@@ -31,7 +31,7 @@ In *bkName*, pass the name for the new bookmark. A bookmark name must be complia
 
 You can create as many bookmarks as you want within the same document. Multiple bookmarks can be created using the exact same range. Once created, a bookmark is automatically stored in the parent document and is saved with the document itself. 
 
-#### Example 1 
+## Example 1 
 
 You want to create a new bookmark referencing the currently selected text in the document. You can write:
 
@@ -41,7 +41,7 @@ You want to create a new bookmark referencing the currently selected text in the
  WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to rename an existing bookmark. To do this, you need to create a new bookmark with the same range, and then delete the old one:
 
@@ -65,7 +65,7 @@ You want to rename an existing bookmark. To do this, you need to create a new bo
  End if
 ```
 
-#### See also 
+## See also 
 
   
 [WP Bookmark range](wp-bookmark-range.md)  

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->La commande **GET TABLE PROPERTIES** retourne les propriétés de la table désignée par *ptrTable* ou *numTable*.<!-- END REF--> Vous pouvez passer dans le premier paramètre soit un pointeur vers la table, soit le numéro de la table. 
 
@@ -29,13 +29,13 @@ Après l’exécution de la commande :
 * Le paramètre *trigSvgdeEnr* retourne Vrai si le trigger “Sur sauvegarde enregistrement” a été activé pour la table, Faux sinon.
 * Le paramètre *trigSupprEnr* retourne Vrai si le trigger “Sur suppression enreg” a été activé pour la table, Faux sinon.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

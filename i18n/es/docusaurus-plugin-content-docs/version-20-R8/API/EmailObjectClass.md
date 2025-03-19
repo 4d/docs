@@ -110,7 +110,7 @@ Las propiedades [`textBody`](#textbody) y [`htmlBody`](#htmlbody) sólo se utili
 
 La propiedad `.attachments` contiene una <!-- REF #EmailObjectClass.attachments.Summary -->colección de objetos `4D.MailAttachment`<!-- END REF -->.
 
-Los objetos adjuntos son definidos por el comando [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment). Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas.
+Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment.md) command. Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas.
 
 ## .bcc
 
@@ -130,17 +130,17 @@ La propiedad `.bodyStructure` contiene el <!-- REF #EmailObjectClass.bodyStructu
 
 El objeto `.bodyStructure` contiene las siguientes propiedades:
 
-| Propiedad   | Tipo                 | Valor                                                                                                                                                                                          |
-| ----------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| partID      | Text                 | Identifica la parte de manera única dentro del correo electrónico                                                                                                                              |
-| type        | Text                 | (obligatorio) Valor del campo del encabezado Content-Type de la parte                                                                                                       |
-| charset     | Text                 | Valor del parámetro charset del campo del encabezado Content-Type                                                                                                                              |
-| encoding    | Text                 | Si `isEncodingProblem=true`, se añade el valor de Content-Transfer-Encoding (por defecto indefinido)                                                                        |
-| disposition | Text                 | Valor del campo del encabezado Content-Disposition de la parte                                                                                                                                 |
-| lenguaje    | Colección de textos  | Lista de etiquetas de lenguaje, como se define en [RFC3282](https://tools.ietf.org/html/rfc3282), en el campo del encabezado Content-Language de la parte, si está presente.   |
-| location    | Text                 | URI, tal y como se define en la [RFC2557](https://tools.ietf.org/html/rfc2557), en el campo de encabezado Content-Location de la parte, si está presente.                      |
-| subParts    | Colección de objetos | Partes del cuerpo de cada hijo (colección de objetos *EmailBodyPart*)                                                                                                       |
-| headers     | Colección de objetos | Lista de todos los campos del encabezado de la parte, en el orden en que aparecen en el mensaje (colección de objetos *EmailHeader*, ver la propiedad [headers](#headers-)) |
+| Propiedad   | Tipo                 | Valor                                                                                                                                                                                        |
+| ----------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| partID      | Text                 | Identifica la parte de manera única dentro del correo electrónico                                                                                                                            |
+| type        | Text                 | (obligatorio) Valor del campo del encabezado Content-Type de la parte                                                                                                     |
+| charset     | Text                 | Valor del parámetro charset del campo del encabezado Content-Type                                                                                                                            |
+| encoding    | Text                 | Si `isEncodingProblem=true`, se añade el valor de Content-Transfer-Encoding (por defecto indefinido)                                                                      |
+| disposition | Text                 | Valor del campo del encabezado Content-Disposition de la parte                                                                                                                               |
+| lenguaje    | Colección de textos  | Lista de etiquetas de lenguaje, como se define en [RFC3282](https://tools.ietf.org/html/rfc3282), en el campo del encabezado Content-Language de la parte, si está presente. |
+| location    | Text                 | URI, tal y como se define en la [RFC2557](https://tools.ietf.org/html/rfc2557), en el campo de encabezado Content-Location de la parte, si está presente.                    |
+| subParts    | Colección de objetos | Partes del cuerpo de cada hijo (colección de objetos *EmailBodyPart*)                                                                                                     |
+| headers     | Colección de objetos | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers) property)                    |
 
 ## .bodyValues
 

@@ -111,7 +111,7 @@ Les propriétés prises en charge dépendent du type de list box.
 
 | Propriété                                                                                   | List box tableau | Liste box sélection | List box collection ou entity selection |
 | ------------------------------------------------------------------------------------------- | ---------------- | ------------------- | --------------------------------------- |
-| [Couleur de fond alternée](properties_BackgroundAndBorder.md##alternate-background-color)   | X                | X                   | X                                       |
+| [Couleur de fond alternée](properties_BackgroundAndBorder.md#alternate-background-color)    | X                | X                   | X                                       |
 | [Couleur de fond](properties_BackgroundAndBorder.md#background-color--fill-color)           | X                | X                   | X                                       |
 | [Souligné](properties_Text.md#bold)                                                         | X                | X                   | X                                       |
 | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) |                  | X                   | X                                       |

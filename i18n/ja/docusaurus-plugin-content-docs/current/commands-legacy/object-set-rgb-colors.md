@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->**OBJECT SET RGB COLORS** コマンドは、引数*object*とオプション引数の *\** によって指定されるオブジェクトの前景色と背景色を変更します。<!-- END REF-->コマンドがリストボックスに対して適用される場合、引数を更に使用して奇数行の背景色を変更することができます。
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 | 4-バイトRGB 値                  | 倍長整数  | 4-バイトの倍長整数(フォーマット0x00rrggbb)。16進数の値をとります:<br/> rr = カラーの赤成分 gg = カラーの緑成分 bb = カラーの青成分                                                                                                                                                                                                                                                                                   | 0x00000000, 0x00FF7F7F                                    |
 | 4D "system" カラー定数           | 倍長整数  | オブジェクトを自動カラーで描画する際に4Dが使用するカラー。利用可能定数は以下の通り(*SET RGB COLORS* テーマ):<br/> Background color Background color none (*backgroundColor* および *altBackgrndColor* 引数においてのみ使用可能) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **注:* 自動カラーは、システムに依るとともに、そのカラーが適用されるオブジェクトの種類によっても変わります。* |
 
-#### 例題 1 
+## 例題 1 
 
 以下のフォームには*vsColorValue*と*vsColor*という2つの入力不可変数と*thRed*、*thGreen*、*thBlue*という3つのサーモメータが含まれます。
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4278099.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 背景色を透明に、フォントカラーを明るい色に設定する場合:
 
@@ -99,12 +99,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1210702.en.png)
 
-#### 参照 
+## 参照 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB color](select-rgb-color.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

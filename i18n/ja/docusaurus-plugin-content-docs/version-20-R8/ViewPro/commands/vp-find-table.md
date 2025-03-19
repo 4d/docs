@@ -22,7 +22,7 @@ title: VP Find table
 | rangeObj | Object | ->                          | セルのレンジ     |                  |
 | 戻り値      | Text   | <- | Table name | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Find table` コマンドは、<!-- REF #_method_.VP Find table.Summary -->*rangeObj* で指定したセルが所属する表組みの名称を返します<!-- END REF -->。
 
@@ -30,7 +30,7 @@ title: VP Find table
 
 *rangeObj* 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
 
-#### 例題
+## 例題
 
 ```4d
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
@@ -41,7 +41,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 End if
 ```
 
-#### 参照
+## 参照
 
 [VP Get table range](vp-get-table-range.md)
 

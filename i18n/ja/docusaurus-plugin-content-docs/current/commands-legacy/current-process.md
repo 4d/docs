@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current process.Summary-->Current processは、このコマンドを呼び出したプロセスのプロセス番号を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 [DELAY PROCESS](delay-process.md "DELAY PROCESS")と[PROCESS PROPERTIES](process-properties.md "PROCESS PROPERTIES")の例題参照
 
-#### 参照 
+## 参照 
 
 [Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

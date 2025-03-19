@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Create deployment license.Summary-->La commande **Create deployment license** crée un fichier de licence intégré dans le dossier Licences de l'application construite par la *mergedApp*.<!-- END REF--> Si le dossier Licences n'existe pas dans la *mergedApp*, il est créé par la commande.
 
@@ -44,7 +44,7 @@ La commande renvoie un objet *status* contenant les propriétés suivantes :
 * La licence générée doit être utilisée uniquement avec l'application référencée par mergedApp.
 * Il est nécessaire de régénérer la licence à chaque fois que l'application est reconstruite.
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $status : Object
@@ -55,11 +55,11 @@ La commande renvoie un objet *status* contenant les propriétés suivantes :
  $status:=Create deployment license($application;$license)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

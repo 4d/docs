@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, aunque es un comando heredado, todavía es totalmente compatible y puede permanecer en su aplicación, no es necesario volver a escribir el código existente.<!-- END REF--> Sin embargo, sería mejor utilizar [CREATE INDEX](create-index.md) y [DELETE INDEX](delete-index.md) para administrar los índices porque brindan más funcionalidades.
 
-#### Descripción 
+## Descripción 
 
 El comando **SET INDEX** acepta dos sintaxis:
 
@@ -53,11 +53,11 @@ El parámetro opcional *\** indica una indexación asincrónica (simultánea). U
 * Este comando no permite crear o borrar índices compuestos.
 * Este comando no permite borrar un índice de palabras claves creado por el comando [CREATE INDEX](create-index.md).
 
-#### Nota para despliegue 
+## Nota para despliegue 
 
 Dado que este comando modifica la estructura de la base de datos, no puede utilizarse en el contexto de una aplicación empaquetada de sólo lectura (archivo .4dc instalado en la carpeta Archivos de programa o archivo .4dz). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo indexa el campo *\[Clientes\]ID*:
 
@@ -66,7 +66,7 @@ El siguiente ejemplo indexa el campo *\[Clientes\]ID*:
  SET INDEX([Clientes]ID;True)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere indexar el campo *\[Clientes\]Nombre* en modo asincrónico:
 
@@ -74,7 +74,7 @@ Usted quiere indexar el campo *\[Clientes\]Nombre* en modo asincrónico:
  SET INDEX([Clientes]Nombre;True;*)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Creación de un índice de palabras claves:
 
@@ -82,7 +82,7 @@ Creación de un índice de palabras claves:
  SET INDEX([Libros]Summary;Keywords Index)
 ```
 
-#### Ver también 
+## Ver también 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -90,7 +90,7 @@ Creación de un índice de palabras claves:
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

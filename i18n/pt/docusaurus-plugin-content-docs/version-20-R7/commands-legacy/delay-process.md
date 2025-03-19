@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->DELAY PROCESS permite atrasar um *processo* por um número de ticks (1 tick = 1/60 de segundo).<!-- END REF--> Durante este período, o *processo* atrasado não utiliza tempo de processamento. Ainda que a execução de um processo pode ser retardada, ainda está em memória.
 
@@ -26,20 +26,20 @@ Se o processo não existe, o comando não faz nada.
 
 **Nota:** não pode utilizar este comando para atribuir um procedimento armazenado no equipo servidor de um equipo cliente (*processo*<0).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Ver os exemplos em *Record Locking*.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo do comando [Process number](../commands/process-number.md).
 
-#### Ver também 
+## Ver também 
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

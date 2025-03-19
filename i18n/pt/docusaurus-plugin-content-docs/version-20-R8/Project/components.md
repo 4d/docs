@@ -69,8 +69,8 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- nomes de componentes [armazenado localmente](#declaring-local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
-- names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
+- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -111,7 +111,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ### Componentes locais
 
-Você declara um componente local no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
+You declare a local component in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -195,7 +195,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declarando caminhos
 
-Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
+You declare a component stored on GitHub in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -226,7 +226,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -390,7 +390,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md##applicationname4dproject-file).
+Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -401,11 +401,11 @@ If the selected item is not valid, an error message is displayed.
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environment4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 
-If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
+If no [**environment4d.json**](#environment4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
 
 :::
 

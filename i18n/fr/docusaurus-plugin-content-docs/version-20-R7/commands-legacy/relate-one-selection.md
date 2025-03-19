@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->La commande **RELATE ONE SELECTION** crée une nouvelle sélection d'enregistrements dans *table1* à partir de la sélection d'enregistrements de la *tableN* qui lui est liée et charge le premier enregistrement de la nouvelle sélection en tant qu'enregistrement courant.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Cette commande ne peut être utilisée que s'il existe un lien de N vers *1*. **
 
 **RELATE ONE SELECTION** utilise le chemin "le plus court" pour passer de la table de départ à la table d'arrivée. Si plusieurs chemins existants sont de taille équivalente, vous devez faire appel à la commande [SET FIELD RELATION](set-field-relation.md) si vous souhaitez contrôler le chemin emprunté. 
 
-#### Exemple 
+## Exemple 
 
 Nous souhaitons trouver tous les clients dont les factures arrivent à échéance aujourd'hui.   
 L'exemple suivant propose une méthode pour créer une sélection dans la table *\[Clients\]* à partir d'une sélection d'enregistrements de la table *\[Factures\]* :
@@ -50,14 +50,14 @@ L'exemple suivant parvient au même résultat que le précédent :
  QUERY([Clients];[Factures]PaiementDu=Current date)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Présentation des ensembles*  
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

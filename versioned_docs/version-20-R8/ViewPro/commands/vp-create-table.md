@@ -24,7 +24,7 @@ title: VP CREATE TABLE
 |source|Text|->|Data context property name to display in the table|
 |options|[cs.ViewPro.TableOptions](../classes.md#tableoptions)|->|Additional options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](vp-set-data-context).
 
@@ -68,7 +68,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 > This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
 
 
-#### Example
+## Example
 
 To create a table using a data context:
 
@@ -101,7 +101,7 @@ Here's the result:
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### See also
+## See also
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>

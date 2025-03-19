@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->LISTBOX GET PRINT INFORMATION コマンドは *object*と*\**で指定したリストボックスオブジェクトの印刷に関連する現在の情報を返します。<!-- END REF-->このコマンドを使用してリストボックスの内容の印刷を制御します。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 リストボックスの印刷に関する原則については*リストボックスの印刷*を参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 すべての行が印刷されるまで印刷を行う:
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
  CLOSE PRINTING JOB
 ```
 
-#### 例題 2 
+## 例題 2 
 
 特定の行が隠されていて、リストボックスを最低500行印刷する:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

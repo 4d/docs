@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->The **DISPLAY RECORD** command displays the current record of *aTable*, using the current input form.<!-- END REF--> The record is displayed only until an event redraws the window. Such an event might be the execution of an [ADD RECORD](add-record.md) command, returning to an input form, or returning to the menu bar. **DISPLAY RECORD** does nothing if there is no current record.
 
@@ -23,7 +23,7 @@ If a form method exists, an On Load event will be generated.
 
 **WARNING:** Do not call **DISPLAY RECORD** from within a Web connection process, because the command will be executed on the 4D Web server machine and not on the Web browser client machine.
 
-#### Example 
+## Example 
 
 The following example displays a series of records as a slide show:
 
@@ -37,11 +37,11 @@ The following example displays a series of records as a slide show:
  End for
 ```
 
-#### See also 
+## See also 
 
 [MESSAGE](message.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

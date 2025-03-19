@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 O comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Converter to MIME.Summary --> converte um objeto e-mail em texto MIME<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. Ele pode ser usado para analisar o formato MIME do objeto.
 
@@ -42,7 +42,7 @@ In *options*, you can set a specific charset and encoding configuration for the 
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
 
-#### Exemplo
+## Exemplo
 
 ```4d
 var $mail: Object
@@ -85,7 +85,7 @@ $mime:=MAIL Convert to MIME($mail)
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

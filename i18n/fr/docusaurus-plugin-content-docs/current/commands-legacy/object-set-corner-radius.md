@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->La commande **OBJECT SET CORNER RADIUS** vous permet de modifier le rayon des angles du ou des objet(s) que vous avez passés dans le paramètre *objet*.<!-- END REF--> Le nouveau rayon est défini pour le process uniquement, il n'est pas stocké dans le formulaire. 
 
@@ -33,7 +33,7 @@ Remarque : avec les objets de type zones de saisie et zones de texte, la propri�
 
 Vous pouvez modifier cette valeur au niveau du formulaire à l'aide de la *proprieté corner radius* (voir également *Rayon d'arrondi (rectangles)*).
 
-#### Exemple 1 
+## Exemple 1 
 
 Votre formulaire contient les rectangles suivants, nommés "Rect1" et "Rect2" :
 
@@ -47,7 +47,7 @@ Vous pouvez exécuter le code suivant afin de changer leurs angles arrondis :
 
 ![](../assets/en/commands/pict1629576.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit la zone de texte suivante dans votre formulaire, nommée "required-label":
 
@@ -63,11 +63,11 @@ Si vous exécutez le code suivant :
 
 Notez que pour les zones de texte (ainsi que pour les zones de saisie), contrairement aux rectangles, l'arrondi de l'angle est dessiné en dehors de la zone initiale de l'objet.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

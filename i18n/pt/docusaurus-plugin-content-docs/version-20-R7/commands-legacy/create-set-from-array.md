@@ -15,12 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->O comando CREATE SET FROM ARRAY cria *nomConj* a partir de:   
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->O comando CREATE SET FROM ARRAY cria *nomConj*<!-- END REF--> a partir de:   
 
 * seja um array de número de registros absolutos *arrayReg* da tabela *tabela*,
-* ou um array de booleanos *arrayReg*.<!-- END REF--> Neste caso, os valores do array indicam se cada registro na tabela pertence (*True*) ou não (*False*) a *nomCon*.
+* ou um array de booleanos *arrayReg*. Neste caso, os valores do array indicam se cada registro na tabela pertence (*True*) ou não (*False*) a *nomCon*.
 Quando utilize este comando e passa um array inteiro longo em *arrayReg*, todos os números no array reapresentam a lista de números de registros que está em *nomConjunto*. Se um número for inválido (por exemplo, se um registro não tiver sido criado), se gera o erro -10503.  
   
  Quando utilizar este comando para passar um array inteiro longo em *arrayReg*, todos os números no array representam a lista de números de registros que estejam em *nomConjunto*. Se um número for inválido (por exemplo, se um registro não foi criado), o erro -10503 é gerado.  
@@ -31,16 +31,16 @@ Quando utilize este comando e passa um array inteiro longo em *arrayReg*, todos 
   
  Se não passar o parâmetro *nomConjunto* ou se passar uma string vazia, o comando é aplicado ao conjunto sistema Userset.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Em um array de inteiros longos, se um número de registro não for válido (registro não criado), se gera o erro -10503.  
 
-#### Ver também 
+## Ver também 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

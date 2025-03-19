@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->SAX ADD PROCESSING INSTRUCTIONコマンドは、*document*で参照されるXMLドキュメントにXML処理命令*statement*を追加します。<!-- END REF--> 
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 コマンドはXMLに従ってデータステートメントをフォーマットします。しかしステートメント自身は解析されず、それが有効であることを確認するのは開発者の責任です。
 
-#### 例題 
+## 例題 
 
 以下のコードにおいて: 
 
@@ -38,15 +38,15 @@ displayed_sidebar: docs
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -358,7 +358,7 @@ Vous pouvez appeler directement des méthodes du projet 4D à partir de vos form
 Pour être appelée dans une formule 4D View Pro, une méthode projet doit être :
 
 - **Autorisée** : elle a été déclarée explicitement avec la commande [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
-- **Exécutable** : elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Concepts/components.md#sharing-of-project-methods)).
+- **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
 - **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
 
 > Si ni la commande [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) ni la commande [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro s'appuient sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms de méthode du projet doivent être conformes à la grammaire des identifiants JavaScript (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global dans la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.

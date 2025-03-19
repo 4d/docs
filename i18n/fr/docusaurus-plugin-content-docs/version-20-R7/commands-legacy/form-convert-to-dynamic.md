@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->La commande **FORM Convert to dynamic** convertit le formulaire classique *nomFormulaire* en formulaire dynamique et le retourne sous forme d'objet.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Pour pouvoir exécuter directement le formulaire en passant l'objet résultant �
 
 **Note :** Les références aux méthodes formulaire et aux méthodes objets sont exportées avec des ID internes, qui seront valides uniquement dans la base courante tant que les méthodes de *nomFormulaire* ne seront pas modifiées. Si vous souhaitez utiliser le formulaire exporté dans un autre contexte, vous devez associer des noms de méthodes projet à la propriété "method" du formulaire ou des objets du formulaire (voir l'exemple).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez convertir, modifier et afficher un formulaire classique. 
 
@@ -56,12 +56,12 @@ Si vous exécutez le code :
   
 ![](../assets/en/commands/pict3977362.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

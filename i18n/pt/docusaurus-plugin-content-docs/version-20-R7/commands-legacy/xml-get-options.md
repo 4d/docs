@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->O comando XML GET OPTIONS é utilizado para ler o valor atual de um ou mais dos parâmetros XML definidos para a sessão atual e o usuário atual.<!-- END REF-->
 
@@ -34,11 +34,11 @@ Em seletor, passe uma das constantes do tema "*XML*" indicando a opção a obter
 | XML string encoding            | Inteiro longo | 1     | Especifica a forma como as strings 4D são convertidas em valores de elementos. Não se refere às conversões em atributos para as quais XML impõe o uso de caracteres de escape.<br/>**Valores possíveis:** XML With escaping (valor normal): conversão das strings 4D em valores de elementos XML com substituição de caracteres. Os dados de tipo texto são analisados automaticamente de maneira que os caracteres proibidos (<&>’) são substituidos pelas entidades XML (\[#&/\]amp;\[#&/\]lt;\[#&/\]gt; \[#&/\]apos;\[#&/\]quot;). XML Raw data: as strings 4D são enviadas como dados brutos; 4D não efetua codificação nem análise. Os valores 4D são convertidos se for possível em fragmentos XML e são inseridos como filho do elemento objetivo. Se um valor não puder ser considerado como fragmento XML, se insere em forma de dado bruto em um novo nodo CDATA.                                                                                                                                                                                                                              |
 | XML time encoding              | Inteiro longo | 3     | Define a forma como as horas 4D são convertidas. Por exemplo, ?02/00/46? (hora de Paris). A codificação difere dependendo de se quiser expressar uma hora ou uma duração.<br/>**Valores possíveis para as horas:** XML Datetime UTC: hora expressa em UTC (Universal Time Coordinated). Note que a conversão a UTC é automática. Resultado: "<Duration>0000-00-00T01:00:46Z</Duration>". XML Datetime local: hora expressa com a diferenã horária da máquina de motor de 4D. Resultado: "<Duration>0000-00-00T02:00:46+01:00</Duration>". XML Datetime local absolute (valor padrão): hora expressa sem indicação da zona horária. Sem modificação de valor. Resultado: "<Duration>0000-00-00T02:00:46</Duration>". **Valores possíveis para as durações:** XML Seconds: número de segundos desde a meia noite; sem modificação de valor porque expressa uma duração. Resultado: "<Duration>7246</Duration>". XML Duration: duração expressa conforme a XML Schema Part 2: Datatypes Second Edition. Sem modificação de valor a que expressa uma duração. Resultado: "<Duration>PT02H00M46S</Duration>". |
 
-#### Ver também 
+## Ver também 
 
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

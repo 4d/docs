@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Type de données pris en charge
 
-Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets de classe. Par exemple :
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Par exemple :
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -319,7 +319,7 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
- - si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
+ - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Utilisation des propriétés d'objet comme paramètres nommés

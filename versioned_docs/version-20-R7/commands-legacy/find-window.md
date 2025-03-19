@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find window.Summary-->The **Find window** command returns (if any) the reference number of the first window “touched” by the point whose coordinates passed in *left* and *top*.<!-- END REF-->
 
@@ -24,12 +24,12 @@ The coordinates must be expressed relative to the top left corner of the content
 
 The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. (**Compatibility note:** Starting with 4D v14, the constants of the *Find Window* theme are obsolete). 
 
-#### See also 
+## See also 
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

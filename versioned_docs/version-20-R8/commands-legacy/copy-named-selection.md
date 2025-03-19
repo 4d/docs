@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY NAMED SELECTION.Summary-->**COPY NAMED SELECTION** copies the current selection of *aTable* to the named selection *name*.<!-- END REF--> The default table for the process is used if the optional *table* parameter is not specified. The parameter *name* contains a copy of the selection. The current selection and the current record of *aTable* for the process are not changed.
 
@@ -22,7 +22,7 @@ A named selection does not actually contain the records, but only an ordered lis
 
 Use the [CLEAR NAMED SELECTION](clear-named-selection.md) command to free the memory used by *name*.
 
-#### Example 
+## Example 
 
 The following example allows you to check if there are other overdue invoices in the *\[People*\] table. The selection is sorted and then saved. We search for all records where invoices are due. Then we reuse the selection and clear the named selection in memory. Clearing the named selection in memory is optional, in case the database designer wants to keep the sorted selection for future use:
 
@@ -45,13 +45,13 @@ The following example allows you to check if there are other overdue invoices in
  CLEAR NAMED SELECTION("UserSort")
 ```
 
-#### See also 
+## See also 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

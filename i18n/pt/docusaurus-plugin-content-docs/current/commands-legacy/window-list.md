@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WINDOW LIST.Summary-->O comando WINDOW LIST preenche o array *janelas* com os números de referência das janelas abertas atualmente em todos os processos (processos kernel ou usuário).<!-- END REF--> Apenas janelas "visíveis" (ou seja, não ocultadas) são retornadas. 
 
 Se não passar o parâmetro opcional *\**, as janelas flutuantes são ignoradas.
 
-#### Exemplo 
+## Exemplo 
 
 O método de projeto abaixo coloca em mosaico todas as janelas abertas atualmente, exceto as janelas suspensas e as caixas de diálogo: 
 
@@ -46,12 +46,12 @@ O método de projeto abaixo coloca em mosaico todas as janelas abertas atualment
 
 **Nota:** este método pode ser melhorado adicionando testes do tamanho da janela principal (em Windows) ou do tamanho e localização das telas (em Macintosh).
 
-#### Ver também 
+## Ver também 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->The **Decrypt data BLOB** command decrypts the *blobToDecrypt* parameter with the same algorithm as 4D uses to decrypt data (AES-256) and returns the result in *decryptedBLOB*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ If the decryption is successful, the decrypted data is returned in the *decrypte
 
 In case of error, the BLOB is returned empty and the command returns false.
 
-#### Example 
+## Example 
 
 The following example shows how to decrypt an encrypted file located in the RESOURCES folder of the database:  
   
@@ -52,14 +52,14 @@ The following example shows how to decrypt an encrypted file located in the RESO
 
 The *passPhrase* and *salt* used for decryption are identical to the *passPhrase* and *salt* used for encryption (see the [Encrypt data BLOB](encrypt-data-blob.md) example).
 
-#### See also 
+## See also 
 
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Encrypt your own data with the 4D algorithm](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

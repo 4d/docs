@@ -28,7 +28,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### 
+## 
 
 <!--REF #_command_.HTTP Request.Summary-->O comando **HTTP Request** permite enviar todo tipo de petição HTTP a um URL específico e processar a resposta do servidor HTTP.<!-- END REF-->
 
@@ -90,7 +90,7 @@ O parâmetro *\** permite ativar o mecanismo keep-alive para a conexão ao servi
 O comando devolve o código do estado HTTP padrão (200=OK...) tal qual foi devolvido pelo servidor. A lista de códigos de estado HTTP está no *RFC 2616*.  
 Caso a conexão ao servido não seja possível por uma razão relacionada com a rede (DNS Failed, Server not reachable...), o comando devolve 0 e é gerado um erro.Você pode interceptá-lo usando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Eliminação de um registro em uma base remota:
 
@@ -102,7 +102,7 @@ Eliminação de um registro em uma base remota:
 
 **Nota:** Você deve processar a solicitação da maneira apropriada no servidor remoto, **HTTP Request** somente se encarrega da petição e do resultado devolvido.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Adicionar um registro a uma base remota:
 
@@ -114,7 +114,7 @@ Adicionar um registro a uma base remota:
 
 **Nota:** Você deve processar a solicitação da maneira apropriada no servidor remoto, **HTTP Request** somente se encarrega da petição e do resultado devolvido.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Petição para adicionar um registro em JSON a um banco de dados remoto:
 
@@ -124,11 +124,11 @@ Petição para adicionar um registro em JSON a um banco de dados remoto:
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-#### Ver também 
+## Ver também 
 
 [HTTP Get](http-get.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

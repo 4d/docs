@@ -481,7 +481,7 @@ Puede pasar:
 - en el parámetro `msgsIDs`, una colección contiene los IDs únicos de los mensajes específicos a eliminar, o
 - en el parámetro `allMsgs`, la constante `IMAP all` (entero) para borrar todos los mensajes en el buzón de correo seleccionado.
 
-La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Los mensajes marcados se eliminan del servidor IMAP con la [función `.expunge()`](#expunge) o al seleccionar otro buzón o cuando el [objeto transporter](#imap-transporter-object) (creado con [IMAP New transporter](#imap-new-transporter)) es destruido.
+La ejecución de esta función no elimina realmente los mensajes. Los mensajes con el marcador "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Objeto devuelto**
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->O comando MAXIMIZE WINDOW provoca a expansão da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se for omitido este parâmetro, o efeito é o mesmo mas é aplicado a todas as janelas da aplicação (Windows) ou a janela do primeiro plano do processo atual (Mac OS).  
 
@@ -23,7 +23,7 @@ Um clique posterior no quadro de zoom ou a chamada ao comando [MINIMIZE WINDOW](
 
 Se *janela* já está maximizada, o comando não faz nada.
 
-##### On Windows 
+### On Windows 
 
 A janela é aumentada e se adapta ao tamanho atual da janela da aplicação. A janela maximizada passa ao primeiro plano. Se não passar o parâmetro *janela*, o comando se aplica a todas as janelas da aplicação.  
 ![](../assets/en/commands/pict39344.en.png) 
@@ -35,7 +35,7 @@ Em casos em que se aplica o comando a uma janela cujo tamanho está sujeito a re
 * Se nenhuma restrição de tamanho está em conflito com o tamanho objetivo, a janela se "maximiza" (ou seja, se restaura do tamanho da janela MDI ("Multiple Document Interface"); sua barra de título e seus bordes estão ocultos e seu botões de controle - minimizar, restaurar e fechar - se localizam a direita da barra de menu da aplicação).
 * Se pelo menos uma restrição de tamanho está em conflito (por exemplo, se o comprimento da janela MDI é 100 e a largura máxima da janela de formulário é 80), a janela não se "maximiza", só se restaura a seu tamanho máximo permitido. Este tamanho se define seja pela janela MDI, ou pela restrição. Desta maneira, a interface continua sendo coerente quando se redimensionam janelas com restrições.
 
-##### On Mac OS 
+### On Mac OS 
 
 A janela é aumentada de maneira que possa mostrar a totalidade de seu conteúdo. Se não passa o parâmetro *janela*, o comando se aplica a janela do primeiro plano do processo atual.
 
@@ -45,7 +45,7 @@ A janela é aumentada de maneira que possa mostrar a totalidade de seu conteúdo
 * O zoom é baseado no conteúdo da janela; de maneira, que o comando deve ser chamado em um contexto onde o conteúdo da janela está definido, por exemplo em um método de formulário. Caso contrário, o comando não faz nada.
 * A janela está dimensionada em seu tamanho "máximo". Se a janela é um formulário cujo tamanho se define nas Propriedades do formulário, o tamanho da janela se estabelece nesses valores.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Imagine que deseja seu formulário se aberto em uma janela "aberta totalmente". Para fazer isso, você coloca o código abaixo no método de formulário:
 
@@ -54,7 +54,7 @@ Imagine que deseja seu formulário se aberto em uma janela "aberta totalmente". 
  MAXIMIZE WINDOW
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo ilustra como as restrições de tamanho se manipulam em Windows. O seguinte formulário têm uma restrição de tamanho (largura máxima=400):
 
@@ -74,13 +74,13 @@ Neste contexto, se o usuário fizer clique no botão:
 
 ![](../assets/en/commands/pict1476363.en.png)
 
-#### Ver também 
+## Ver também 
 
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

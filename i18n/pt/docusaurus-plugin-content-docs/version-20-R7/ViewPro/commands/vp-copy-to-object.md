@@ -23,7 +23,7 @@ title: VP Copy to object
 | options    | Object | ->                          | Opções adicionais                                           |                  |
 | Resultados | Object | <- | Objecto devolvido. Contém os dados copiados | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->copia o conteúdo, o estilo e as fórmulas de *rangeObj* para um objeto<!-- END REF -->.
 
@@ -40,7 +40,7 @@ As opções de colagem definidas nas [opções de workbook](#vp-set-workbook-opt
 
 O comando retorna um objeto que contém os dados copiados.
 
-#### Exemplo
+## Exemplo
 
 Esse exemplo de código primeiro armazena o conteúdo, os valores, a formatação e as fórmulas de um intervalo em um objeto e, em seguida, cola-os em outro intervalo:
 
@@ -59,7 +59,7 @@ $targetRange:=VP Cell("ViewProArea"; 4; 0)
 VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```
 
-#### Veja também
+## Veja também
 
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>

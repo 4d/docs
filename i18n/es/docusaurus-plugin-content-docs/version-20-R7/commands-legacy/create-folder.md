@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->El comando **CREATE FOLDER** crea una carpeta en función de la ruta de acceso que se pasa en *rutaCarpeta*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ En *rutaCarpeta*, también puede pasar una jerarquía de carpetas a partir de la
 Si omite el parámetro *\**, se genera un error y ninguna carpeta se crea si ninguna de las carpetas intermediarias existe.   
 Si pasa el parámetro *\**, **CREATE FOLDER** recrea la jerarquía de carpetas si es necesaria y no se genera ningún error. En este caso, puede pasar una ruta de acceso de documento en *rutaCarpeta*. Entonces se ignora el nombre del documento pero la jerarquía de carpetas especificada en *rutaCarpeta* se crea recursivamente.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo crea la carpeta “Archivos” en la carpeta de la base:
 
@@ -32,7 +32,7 @@ El siguiente ejemplo crea la carpeta “Archivos” en la carpeta de la base:
  CREATE FOLDER("Archivos")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo crea la carpeta Archivos en la carpeta de la base, luego crea las subcarpetas “Enero” y “Febrero”:
 
@@ -42,7 +42,7 @@ El siguiente ejemplo crea la carpeta Archivos en la carpeta de la base, luego cr
  CREATE FOLDER("Archivos\\Febrero")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo crea la carpeta “Archivos” en la raíz del volumen C:
 
@@ -50,7 +50,7 @@ El siguiente ejemplo crea la carpeta “Archivos” en la raíz del volumen C:
  CREATE FOLDER("C:\\Archivos")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Creación de la jerarquía de carpetas "C:\\Archives\\2011\\Enero\\":
 
@@ -58,7 +58,7 @@ Creación de la jerarquía de carpetas "C:\\Archives\\2011\\Enero\\":
  CREATE FOLDER("C:\\Archives\\2011\\Enero\\";*)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Creación de la subcarpeta "\\Febrero\\" en la carpeta existente "C:\\Archives\\": 
 
@@ -67,12 +67,12 @@ Creación de la subcarpeta "\\Febrero\\" en la carpeta existente "C:\\Archives\\
   // el archivo "Doc.txt" se ignora
 ```
 
-#### Ver también 
+## Ver también 
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.JSON Parse.Summary-->**JSON Parse**コマンドは、JSONフォーマットの文字列の中身を解析し、4Dのフィールドまた は変数へと保存可能な値を取り出します。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。つまり [JSON Stringify](json-stringify.md)コマンドと逆の挙動をします。
 
@@ -54,7 +54,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
 
  **注:** 返された値が*type* 引数で指定した型と異なる場合、 *\** 引数は無視されます。
 
-#### 例題 1 
+## 例題 1 
 
 単純な変換の例:
 
@@ -79,7 +79,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
  $h:=JSON Parse("5120";Is time) //$h=01:25:20
 ```
 
-#### 例題 2 
+## 例題 2 
 
 日付型のデータの変換の例: 
 
@@ -96,7 +96,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
   //$date3=13/07/17
 ```
 
-#### 例題 3 
+## 例題 3 
 
 カレントの日付保存設定が"日付型"になっている場合、以下のように書くことができます:
 
@@ -113,7 +113,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
 
 **注:** この設定についての詳細な情報については、*互換性ページ*内にある"オブジェクト内ではISO日付フォーマットの代わりに日付型を使用する"を参照して下さい。
 
-#### 例題 4 
+## 例題 4 
 
 ここでは [JSON Stringify](json-stringify.md) と **JSON Parse** コマンドの併用例を紹介しています:
 
@@ -129,7 +129,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
  $Contact2:=JSON Parse($JSONContact)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 JSON配列から4Dコレクションを作成したい場合を考えます:
 
@@ -138,7 +138,7 @@ JSON配列から4Dコレクションを作成したい場合を考えます:
  $myCol:=JSON Parse("[\"Monday\",10,\"Tuesday\",11,\"Wednesday\",12,false]")
 ```
 
-#### 例題 6 
+## 例題 6 
 
 以下の文字列を解析し、それぞれのプロパティの行の位置とオフセットを取得したい場合を考えます:
 
@@ -179,14 +179,14 @@ beta[1].echo:{line:9,offset:12},
 beta[1].golf:{line:10,offset:12}}}
 ```
 
-#### 参照 
+## 参照 
 
 *Field and Variable Types*  
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

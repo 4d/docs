@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Metodo base On Server Close Connection.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
 
@@ -37,6 +37,6 @@ Esta tabla detalla la información ofrecida por los tres parámetros pasados al 
 
 El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](metodo-base-on-server-open-connection.md). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el primer ejemplo para [Método base On Server Open Connection](metodo-base-on-server-open-connection.md).

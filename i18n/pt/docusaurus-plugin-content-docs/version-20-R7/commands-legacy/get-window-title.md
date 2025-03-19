@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get window title.Summary-->O comando Get window title devolve o título da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se a janela não existir, se devolve uma cadeia vazia.  
 
 Se omitir o parâmetro *janela*, Get window title devolve o título da janela do primeiro plano do processo atual.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [SET WINDOW TITLE](set-window-title.md).
 
-#### Ver também 
+## Ver também 
 
 [SET WINDOW TITLE](set-window-title.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

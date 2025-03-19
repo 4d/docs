@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Exp.Summary-->Exp retorna a exponencial Exp = e^n (onde e = 2.71828...) de *numero*.<!-- END REF--> Exp é a função inversa de Log.
 
 **Nota:** 4D oferece a constante pré-definida *e numero* (2.71828...). 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir atribui a exponencial de 1 a *vrE* (o log de *vrE* é 1):
 
@@ -28,11 +28,11 @@ O exemplo a seguir atribui a exponencial de 1 a *vrE* (o log de *vrE* é 1):
  vrE:=Exp(1) // vrE vale 2.17828...
 ```
 
-#### Ver também 
+## Ver também 
 
 [Log](log.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

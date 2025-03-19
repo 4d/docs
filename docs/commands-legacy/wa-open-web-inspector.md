@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->The **WA OPEN WEB INSPECTOR** command opens a web inspector for the web area designated by the *\** and *object* parameters.<!-- END REF-->
 
-#### See also 
+## See also 
 
 *Programmed management of Web Areas*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->The **SET GROUP ACCESS** command modifies the memberships of the 4D user account for the current session.<!-- END REF--> It resets any former group membership and sets the new memberships to the listed *groups*. 
 
@@ -28,7 +28,7 @@ If you omit the *groups* parameter, the memberships of the 4D user account are r
 
 **Note:** When a group membership provides access to a "serialized" feature (e.g. a plug-in), a corresponding license is used and will remain attached to the 4D user account until the end of the session, even if the **SET GROUP ACCESS** command is called and group membership cancelled. 
 
-#### Example 
+## Example 
 
 You want to promote the current user to the "admin" and "plugins" groups for the session:
 
@@ -37,14 +37,14 @@ You want to promote the current user to the "admin" and "plugins" groups for the
  SET GROUP ACCESS($groups)
 ```
 
-#### See also 
+## See also 
 
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

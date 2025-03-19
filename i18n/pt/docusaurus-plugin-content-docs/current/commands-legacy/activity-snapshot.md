@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->O comando **ACTIVITY SNAPSHOT** retorna um array ou vários que descrevem as operações em progresso sobre os dados 4D.<!-- END REF--> Estas operações usualmente mostram uma janela de progresso.
 
@@ -34,7 +34,7 @@ O comando **ACTIVITY SNAPSHOT**  aceita duas sintaxes:
 * sintaxe usando somente um array de objetos.
 * sintaxe utilizando vários arrays.
 
-##### Primeira sintaxe: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
+### Primeira sintaxe: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
 
 Com esta sintaxe, todas as operações se devolvem em um formulário estruturado no array de objetos 4D (*arrAtividades*). Cada elemento do array é um objeto construído da seguinte maneira:
 
@@ -70,7 +70,7 @@ Esta é uma descrição de cada propriedade devolvida:
    * ...
 * *subOperations* (array): array de objetos que contém sub operações da operação atual (se existe). A estrutura de cada sub elemento é idêntica a do objeto principal. Se a operação atual não tem sub operações, então *subOperations* está vazio.
 
-##### Segunda sintaxe: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
+### Segunda sintaxe: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
 
 Com esta sintaxe, todas as operações se devolvem em vários arrays sincronizados (cada operação provoca que um elemento se adiciona a todos os arrays). Os seguintes arrays se devolvem:
 
@@ -83,7 +83,7 @@ Com esta sintaxe, todas as operações se devolvem em vários arrays sincronizad
    * *"dbOperationDetails"* (objeto): ver acima  
    * "subOperacoes". O valor desta propriedade é um array objeto que contém todas as sub operações da operação atual. Se a operação atual não têm sub operações, o valor da propriedade *subOperacoes* é um array vazio. (corresponde a propriedade *subOperacoes* do objeto *arrAtividades*).
 
-#### Exemplo 
+## Exemplo 
 
 Este método, executado em um processo separado em 4D ou 4D Server, oferece uma instantânea das operações que estão em marcha:
 
@@ -106,7 +106,7 @@ Obtém arrays do tipo:
 ![](../assets/en/commands/pict1213741.en.png)
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

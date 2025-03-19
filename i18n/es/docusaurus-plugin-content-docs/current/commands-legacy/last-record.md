@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD** designa el último registro de la selección de *tabla* como registro actual y lo carga en memoria.<!-- END REF--> Si la selección actual está vacía o si el registro actual ya es el último de la selección, **LAST RECORD** no tiene efecto.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo designa el último registro de la tabla \[Personas\] como registro actual:
 
@@ -25,7 +25,7 @@ El siguiente ejemplo designa el último registro de la tabla \[Personas\] como r
  LAST RECORD([Personas])
 ```
 
-#### Ver también 
+## Ver también 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -33,7 +33,7 @@ El siguiente ejemplo designa el último registro de la tabla \[Personas\] como r
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

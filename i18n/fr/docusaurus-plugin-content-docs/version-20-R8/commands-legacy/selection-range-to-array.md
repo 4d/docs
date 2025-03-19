@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crée un ou plusieurs tableau(x) et y copie des données en provenance des champs de la sélection courante ou les numéros des enregistrements de la sélection courante.<!-- END REF--> 
 
@@ -57,7 +57,7 @@ Si vous chargez les numéros des enregistrements, ils sont copiés dans un table
 
 Une fois la commande correctement exécutée, la taille des tableaux résultants est égale à *(fin-début)+1* — sauf si le paramètre *fin* est supérieur au nombre d'enregistrements dans la sélection. Dans ce cas, les tableaux contiennent *(Enregistrements trouves(\[...\])-début)+1* éléments.
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne de code suivante utilise les 50 premiers enregistrements de la sélection courante de la table *\[Factures\]*. Les valeurs du champ *\[Factures\]RéfFacture* et du champ lié *\[Clients\]RéfClient* sont chargées.
 
@@ -65,7 +65,7 @@ La ligne de code suivante utilise les 50 premiers enregistrements de la sélecti
  SELECTION RANGE TO ARRAY(1;50;[Factures]RéfFacture;tlRéfFacture;[Clients]RéfClient;tlRéfClient)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Les lignes de code suivantes utilisent les 50 derniers enregistrements de la sélection courante de la table *\[Factures\]*. Les numéros d'enregistrements de la table *\[Factures\]* ainsi que ceux de la table liée *\[Clients\]* sont chargés :
 
@@ -74,7 +74,7 @@ Les lignes de code suivantes utilisent les 50 derniers enregistrements de la sé
  SELECTION RANGE TO ARRAY(lTailleSél-49;lTailleSél;[Factures];taFactureNum;[Clients];taClientNum)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Les lignes de code suivantes vous permettent de travailler séquentiellement avec des portions de 1000 enregistrements d'une sélection importante qui ne peut pas être chargée dans des tableaux en une seule fois :
 
@@ -88,7 +88,7 @@ Les lignes de code suivantes vous permettent de travailler séquentiellement ave
  End for
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Utilisation des 50 premiers enregistrements courants de la table \[Factures\] pour charger divers tableaux, en exécution différée : 
 
@@ -101,13 +101,13 @@ Utilisation des 50 premiers enregistrements courants de la table \[Factures\] po
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

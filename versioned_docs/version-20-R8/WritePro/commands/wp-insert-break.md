@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
 
@@ -55,7 +55,7 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Example 1 
+## Example 1 
 
 While building invoices, you want to insert page breaks except on the last page:  
 
@@ -69,7 +69,7 @@ While building invoices, you want to insert page breaks except on the last page:
  End for
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to insert a continuous section break to have a single column section and a two-column section on the same page.
 
@@ -92,7 +92,7 @@ You want to insert a continuous section break to have a single column section an
     
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### See also 
+## See also 
 
 [WP Get breaks](../commands-legacy/wp-get-breaks.md)</br>
 [WP Insert document body](wp-insert-document-body.md)  

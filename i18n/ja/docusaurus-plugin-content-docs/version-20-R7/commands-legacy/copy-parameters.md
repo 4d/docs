@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Copy parameters.Summary-->Copy parameters コマンドは、メソッドまたは関数に実際に渡された全ての引数を格納したコレクションを返します。<!-- END REF-->このコマンドはある関数またはメソッドから、また別の関数またはメソッドへと、不定数の引数を転送したい場合に有用です。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 * 他のメソッドまたは関数から呼び出されたメソッド/関数内から呼び出されていない場合
 * 親メソッド/親関数に引数が何も渡されていない場合
 
-#### 例題 1 
+## 例題 1 
 
 最初に引数に応じて呼び出す関数を変え、その関数へと2番目以降の引数を渡す場合を考えます:
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
  This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 コマンドはコレクションを返すため、 **.join()** と組み合わせて使用することで例えば html リストをビルドすることができます:
 
@@ -77,11 +77,11 @@ displayed_sidebar: docs
 
 ```
 
-#### 参照 
+## 参照 
 
 [Count parameters](count-parameters.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

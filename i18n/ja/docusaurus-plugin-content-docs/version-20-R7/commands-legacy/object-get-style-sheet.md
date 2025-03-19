@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->**OBJECT Get style sheet**コマンドは、引数 *object* と *\** で指定したオブジェクトに関連付けられたスタイルシートの名前を返します。<!-- END REF-->
 
@@ -37,16 +37,16 @@ displayed_sidebar: docs
 
 コマンドで複数のオブジェクトを指定した場合、コマンドが最初に見つけたオブジェクトのスタイルシートのみが返されます。
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 **プロジェクトアーキテクチャー**においては、このコマンドがサポートするのは3つの自動スタイルシートだけです。
 
-#### 参照 
+## 参照 
 
 *Font Styles*  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

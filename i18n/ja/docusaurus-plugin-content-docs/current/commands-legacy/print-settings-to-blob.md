@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->**Print settings to BLOB** コマンドは4Dのカレントのプリント設定を *printSettings* BLOBに格納します。<!-- END REF-->*printSettings* は、印刷で使用されるすべての設定を格納します:
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 BLOB が正しく生成されるとコマンドは 1を返します。カレントプリンターが選択されていないと 0を返します。
 
-##### Windows / macOS 
+### Windows / macOS 
 
 *printSettings* BLOB はどちらのプラットフォームでも保存およびロードすることが可能ですが、印刷設定には共有されているものと、ドライバーやシステムバージョンに依存する特有のものがあります。そのため、同じ *printSettings* BLOB を異なるプラットフォームに流用した場合には、ロードされる情報が不完全の場合があります。異なるプラットフォームを併用する環境において印刷設定の復元を最適化するには、それぞれのプラットフォーム用に (つまり二つの) *printSettings* BLOB を管理することが推奨されます。
 
-#### 例題 
+## 例題 
 
 現在のプリント設定をディスクに保存します:
 
@@ -48,12 +48,12 @@ BLOB が正しく生成されるとコマンドは 1を返します。カレン�
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

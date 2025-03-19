@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Match regex.Summary-->La commande **Match regex** permet de tester la conformité d’une chaîne de caractères par rapport à un ensemble de règles synthétisé au moyen d’un méta-langage appelé “expression régulière” ou “expression rationnelle”.<!-- END REF--> L’abrévation regex est communément employée pour désigner ces familles de notations. 
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur les regex, reportez-vous par exemple à l’adres
 Pour plus d’informations sur la syntaxe de l’expression régulière passée dans le paramètre *motif*, reportez-vous à l’adresse suivante :  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-#### Exemple 1 
+## Exemple 1 
 
 Recherche d’égalité complète (syntaxe simple) :  
 *vtrouvé:=Match regex(motif;montexte)*
@@ -56,7 +56,7 @@ Recherche d’égalité complète (syntaxe simple) :
  QUERY BY FORMULA([Employés];Match regex(".*smith.*";[Employés]nom))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Recherche dans le texte par position :  
 *vtrouvé:=Match regex( motif;montexte; début; pos\_trouvée; long\_trouvée)*  
@@ -73,7 +73,7 @@ Exemple pour afficher tous les tags de $1 :
  Until(Not(vtrouvé))
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Recherche avec prise en charge des “groupes capturés” via des parenthèses. ( ) permet de définir des groupes dans les regex :  
 *vtrouvé:=* *Match regex( motif;montexte; début; tab\_pos\_trouvée; tab\_long\_trouvée)*  
@@ -88,7 +88,7 @@ Recherche avec prise en charge des “groupes capturés” via des parenthèses.
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Recherche en limitant la comparaison de motif à la position indiquée :  
 Rajouter une étoile à la fin d’une des deux syntaxes précédentes.
@@ -104,12 +104,12 @@ Rajouter une étoile à la fin d’une des deux syntaxes précédentes.
 
 **Note :** Les positions et longueurs retournées n’ont de sens qu’en mode Unicode ou si le texte manipulé est de type ASCII 7 bits.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 En cas d’erreur, la commande génère une erreur que vous pouvez intercepter via une méthode installée par la commande APPELER SUR ERREUR.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->O comando OBJECT Get font style devolve o estilo atual da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ Pode comparar o valor retornado pelo comando com o valor de um ou mais das segui
 | Italic    | Inteiro longo | 2     |
 | Underline | Inteiro longo | 4     |
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

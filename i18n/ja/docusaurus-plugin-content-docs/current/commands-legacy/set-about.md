@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET ABOUT.Summary-->**SET ABOUT** コマンドは、**ヘルプ** メニュー(Windows) または**アプリケーション** メニュー(macOS) 内の"**4Dについて**"メニューを*itemText* に変更します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注意:** Windows では、このコマンドは、**ヘルプ**メニュー内の[SET HELP MENU](set-help-menu.md) コマンドで作成された"4D について"の行を変更します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は4DについてメニューをAbout Schedulerに置き換えます。ABOUTメソッドはカスタマイズされたアバウトボックスを表示します:
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
  SET ABOUT(“About Scheduler…”;“ABOUT”)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題は4Dについてメニューをリセットします:
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
  SET ABOUT("4Dについて";"")
 ```
 
-#### 参照 
+## 参照 
 
 [SET HELP MENU](set-help-menu.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

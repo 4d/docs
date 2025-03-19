@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つグループのプロパティを返します。<!-- END REF-->[GET GROUP LIST](get-group-list.md) コマンドによって返される有効なグループID番号を必ず渡さなければなりません。
 
@@ -30,17 +30,17 @@ displayed_sidebar: docs
 
 **バイナリデータベースに関する注記:** グループおよびユーザーIDの値は、その作成者に依存します (デザイナー、管理者、または関連したグループオーナー)。詳細については *ユーザーとグループ ID の範囲* を参照ください。
 
-#### エラー管理 
+## エラー管理 
 
  コマンドを呼び出すための特定のアクセス権を持っていない場合や、パスワードシステムが他のプロセスによって既にアクセスされている場合は、アクセス権エラーが生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL") コマンドを使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

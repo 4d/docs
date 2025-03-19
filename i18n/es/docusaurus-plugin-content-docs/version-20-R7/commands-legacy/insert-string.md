@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Insert string.Summary-->Insert string inserta la cadena de caracteres alfanuméricos *ainsertar* en la cadena *fuente* a partir de *posicion* y devuelve la cadena de caracteres resultante.<!-- END REF--> La cadena *ainsertar* se coloca antes del carácter designado por *posicion*. 
 
@@ -26,7 +26,7 @@ Si *posicion* es mayor a la longitud de *fuente*, *ainsertar* se añade al final
 
 Insert string es diferente de [Change string](change-string.md "Change string") en que esta función inserta caracteres en lugar de reemplazarlos.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan a la variable *vtResult*.
 
@@ -36,13 +36,13 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
  vtResult:=Insert string("Indenficación";"ti";6) // vtResult es igual a "Indentación"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

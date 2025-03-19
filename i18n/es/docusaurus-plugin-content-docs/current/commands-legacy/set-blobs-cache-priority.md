@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo experto 
+## Modo experto 
 
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Summary-->Este comando está reservado para necesidades específicas.<!-- END REF--> Debe utilizarse con cuidado, ya que puede afectar el rendimiento de la base.
 
-#### Descripción 
+## Descripción 
 
 El comando **SET BLOBS CACHE PRIORITY** define una *prioridad* específica para los datos "blobs" relacionados con *tabla* in la caché para todos los procesos de la sesión actual. Este comando debe llamarse en el método base **On Startup** u **On Server Startup**.
 
@@ -36,7 +36,7 @@ Pase en *prioridad* una de las siguientes constantes del tema "*Gestión*":
 | Cache priority high      |                                                        |
 | Cache priority very high |                                                        |
 
-#### Ejemplo 
+## Ejemplo 
 
 En el , usted desea definir una prioridad alta para la tabla \[Customer\]:
 
@@ -44,12 +44,12 @@ En el , usted desea definir una prioridad alta para la tabla \[Customer\]:
  SET BLOBS CACHE PRIORITY([Customer];Cache priority very high)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

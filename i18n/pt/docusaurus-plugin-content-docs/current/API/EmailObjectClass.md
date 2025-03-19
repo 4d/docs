@@ -110,7 +110,7 @@ As propriedades [`textBody`](#textbody) e [`htmlBody`](#htmlbody) são usadas so
 
 A propriedade `.attachments` contém uma <!-- REF #EmailObjectClass.attachments.Summary -->coleção de objeto(s) `4D.MailAttachment`<!-- END REF -->.
 
-Os objetos de anexo são definidos por meio do comando [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment). Os objetos anexo têm [propriedades e funções](MailAttachmentClass.md) específicas.
+Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment.md) command. Os objetos anexo têm [propriedades e funções](MailAttachmentClass.md) específicas.
 
 ## .bcc
 
@@ -130,17 +130,17 @@ A propriedade `.bodyStructure` contém o objeto <!-- REF #EmailObjectClass.bodyS
 
 O objeto `.bodyStructure` contém as seguintes propriedades:
 
-| Propriedade | Tipo                   | Valor                                                                                                                                                                                 |
-| ----------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                                   |
-| type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                                    |
-| charset     | Text                   | Valor do parâmetro charset do campo de cabeçalho Content-Type                                                                                                                         |
-| encoding    | Text                   | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                                   |
-| disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                                            |
-| Línguagem   | Coleção de textos      | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.                    |
-| location    | Text                   | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                                      |
-| subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos *EmailBodyPart*)                                                                                                 |
-| headers     | Uma coleção de objetos | Lista de todos os campos de cabeçalho da parte, na ordem em que eles aparecem na mensagem (coleção de objetos *EmailHeader*, ver propriedade [headers](#headers-)) |
+| Propriedade | Tipo                   | Valor                                                                                                                                                                     |
+| ----------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                       |
+| type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                        |
+| charset     | Text                   | Valor do parâmetro charset do campo de cabeçalho Content-Type                                                                                                             |
+| encoding    | Text                   | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                       |
+| disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                                |
+| Línguagem   | Coleção de textos      | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.        |
+| location    | Text                   | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                          |
+| subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos *EmailBodyPart*)                                                                                     |
+| headers     | Uma coleção de objetos | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers) property) |
 
 ## .bodyValues
 

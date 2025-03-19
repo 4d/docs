@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->**WEB SERVICE CALL**コマンドは、HTTPリクエストを送ることでWebサービスを呼び出すために使用します。<!-- END REF-->このリクエストには、事前に[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用して作成したSOAPメッセージが含まれています。
 
@@ -70,7 +70,7 @@ displayed_sidebar: docs
 
 **Note:** 複合XMLタイプであるにも関わらず、4Dはシンプルタイプとしてデータの配列を処理します。
 
-##### RPCモード、シンプルinputとoutput 
+### RPCモード、シンプルinputとoutput 
 
 最も使いやすいのはこの設定です。この場合、引数 *complexType* には定数 Web Service Dynamic が含まれるかこの引数が省略されます。 
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)コマンドの例題を参照してください。
 
-##### RPCモード、複合inputとシンプルoutput 
+### RPCモード、複合inputとシンプルoutput 
 
 この場合、引数 *complexType* には定数 Web Service Manual In が含まれます。この設定ではWebサービスに、[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用してBLOBの形でXMLソースの要素を必ず “手動で” 渡さなければなりません。
 
@@ -94,7 +94,7 @@ displayed_sidebar: docs
  WEB SERVICE GET RESULT($0;"MyOutputVar";*)
 ```
 
-##### RPCモード、シンプルinputと複合output 
+### RPCモード、シンプルinputと複合output 
 
 この場合、引数*complexType*には、定数Web Service Manual Outが含まれます。それぞれの引数outputはBLOBに保存されているXML要素の形でWebサービスから返されます。[WEB SERVICE GET RESULT](web-service-get-result.md)コマンド. を使用してこの引数を取り出します。そして、受け取ったBLOBの内容を4Dの XMLコマンドを使用して解析します。  
   
@@ -110,7 +110,7 @@ displayed_sidebar: docs
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### RPCモード、複合inputとoutput 
+### RPCモード、複合inputとoutput 
 
 この場合、*complexType* 引数にはWeb Service Manual定数を指定します。それぞれのinputとoutput引数は、先に説明した2つの設定に従い、XML要素の形でBLOBに格納しなければなりません。 例題  
   
@@ -123,7 +123,7 @@ displayed_sidebar: docs
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
-##### DOCモード 
+### DOCモード 
 
 DOC Webサービスのプロクシ呼び出しメソッドは、複合型INPUT OUTPUT引数を使用するRPC Webサービスのプロクシ呼び出しメソッドと同様です。  
 これら2つの設定の唯一の違いは、送受信するBLOB引数のXMLの内容レベルにあります。4Dから見ると、SOAPリクエストの構築と送信は同じものです。   
@@ -152,16 +152,16 @@ DOCモード (または複合タイプのRPCモード) で公開されたWebサ�
 
 オプションの *\** 引数を使用して呼び出しを最適化できます。この引数を指定すると、コマンドはその実行後に、処理により使用される接続を閉じません。この場合、次の**WEB SERVICE CALL**は \* 引数が渡されていれば同じ接続を再利用します。接続を閉じるには、**WEB SERVICE CALL**コマンドを \* 引数なしで呼び出します。このメカニズムにより、同じサーバ上の複数の異なるWebサービスを連続して呼び出すような処理が高速化されます。特にWAN環 境 (例えばインターネット経由) の場合に顕著です。この設定はWebサーバの“keep-alive”設定に基づきます。この設定では通常接続ごとの最大リクエスト数を設定し、リクエス トを拒否することもあります。一連の**WEB SERVICE CALL**リクエストがこの最大数の制限に達した場合、またはkeep-alive接続が許可されていない場合、4Dは新しい接続を作成します。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リクエストが正しくルーティングされ、Webサービスがそれを受け入れると、システム変数OKは1に設定されます。そうでなければ0に設定され、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

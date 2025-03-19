@@ -28,7 +28,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Request.Summary-->The **HTTP Request** command enables all types of HTTP requests to be sent to a specific URL and processes the HTTP server response.<!-- END REF-->
 
@@ -89,7 +89,7 @@ The *\** parameter enables the keep-alive mechanism for the server connection. B
 The command returns a standard HTTP status code (200=OK and so on) as returned by the server. The list of HTTP status codes is provided in *RFC 2616*.   
 If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Example 1 
+## Example 1 
 
 Requesting for a record deletion from a remote database:
 
@@ -101,7 +101,7 @@ Requesting for a record deletion from a remote database:
 
 **Note:** You have to process the request appropriately on the remote server, **HTTP Request** only handles the request and the returned result.
 
-#### Example 2 
+## Example 2 
 
 Requesting to add a record to a remote database:
 
@@ -113,7 +113,7 @@ Requesting to add a record to a remote database:
 
 **Note:** You have to process the request appropriately on the remote server, **HTTP Request** only handles the request and the returned result.
 
-#### Example 3 
+## Example 3 
 
 Request to add a record in JSON to a remote database::
 
@@ -123,11 +123,11 @@ Request to add a record in JSON to a remote database::
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-#### See also 
+## See also 
 
 [HTTP Get](http-get.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

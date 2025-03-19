@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESUME PROCESS.Summary-->**RESUME PROCESS** resumes a *process* whose execution has been paused or delayed.<!-- END REF--> If *process* is not paused or delayed, the command does nothing.
 
@@ -21,12 +21,12 @@ If *process* has been delayed before, see the [PAUSE PROCESS](pause-process.md) 
 
 **Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
 
-#### See also 
+## See also 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

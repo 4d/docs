@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE HEADER.Summary-->The **WP DELETE HEADER** command deletes the header element associated to the section or subsection defined by the *wpSection* parameter.<!-- END REF--> 
 
 If no header element exists for the section or subsection, the command does nothing. 
 
-#### Example 
+## Example 
 
 You want to delete the header of the right pages of a section:
 
@@ -34,7 +34,7 @@ You want to delete the header of the right pages of a section:
  WP DELETE HEADER($subsection)
 ```
 
-#### See also 
+## See also 
 
 [WP Get header](wp-get-header.md)  
 [WP New header](wp-new-header.md)  

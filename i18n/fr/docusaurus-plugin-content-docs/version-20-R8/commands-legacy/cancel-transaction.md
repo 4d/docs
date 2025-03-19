@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** annule la transaction ouverte par la commande [START TRANSACTION](start-transaction.md) de niveau correspondant dans le process courant.<!-- END REF-->annule toutes les opérations exécutées sur les données et stockées pendant la transaction. 
 
 **Note :** **CANCEL TRANSACTION** est sans effet sur les modifications éventuellement effectuées dans les enregistrements courants mais non stockées - elles restent affichées après l'exécution de la commande.
 
-#### Voir aussi 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 *Utiliser des transactions*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

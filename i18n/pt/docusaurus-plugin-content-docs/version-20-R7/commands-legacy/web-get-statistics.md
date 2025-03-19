@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->O comando WEB GET STATISTICS permite obter a informação sobre as páginas mais consultadas, carregadas na caché do servidor web.<!-- END REF--> Portanto, estas estatísticas são referentes apenas as páginas estáticas, as imagens GIF, as imagens JPEG <100 KB e as folhas de estilo (.css).  
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
   
 O comando preenche o array de texto páginas com os nomes das páginas mais consultadas. O array inteiro longo *hits* recebe o número de “hits” por cada página. A variável numérica *uso* recebe a porcentagem da caché web utilizada por cada página.
 
-#### Exemplo 
+## Exemplo 
 
 Assumamos que deseja gerar uma página semidinâmica que mostre as estatísticas de utilização da caché web. Para isso, em uma página HTML estática chamada “stats.shtm” (as páginas com sufixo .shtm são analizadas automaticamente pelo servidor web), ponha a etiqueta <!--4DSCRIPT/STATS––> assim como as referências às variáveis vPages e vUsage, por exemplo:  
   
@@ -64,7 +64,7 @@ No método de projeto STATS, escreva o código abaixo:
 Pode enviar a página "stats.shtm" utilizando um link URL ou utilizando o comando [WEB SEND FILE](web-send-file.md).
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

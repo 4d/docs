@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->GET SERIAL PORT MAPPING コマンドはマシンのシリアルポート番号とシリアルポート名を、2つの配列*numArray* と *nameArray*に返します。<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Mac OS Xでは、USBシリアルアダプターの使用時に、OSがポート�
 
 **Note:** このコマンドは標準ポートでは、意味ある値を返しません。標準ポートを使用する場合は、[SET CHANNEL](set-channel.md "SET CHANNEL")コマンドに旧方式である0または1のポート番号を指定してください。
 
-#### 例題 
+## 例題 
 
 このプロジェクトメソッドは、割り当てられたシリアルポート番号に関係なく同じシリアルポートを取得するために使用できます:
 
@@ -46,11 +46,11 @@ Mac OS Xでは、USBシリアルアダプターの使用時に、OSがポート�
  SET CHANNEL(11) // ポートを閉じる
 ```
 
-#### 参照 
+## 参照 
 
 [SET CHANNEL](set-channel.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Shift down.Summary-->Shift down devuelve TRUE si la tecla Mayús está presionada.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente método de objeto para el botón *bUnBoton* efectúa diferentes acciones en función de las teclas de modificación presionadas cuando se hace clic en el botón:
 
@@ -43,7 +43,7 @@ El siguiente método de objeto para el botón *bUnBoton* efectúa diferentes acc
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -52,7 +52,7 @@ El siguiente método de objeto para el botón *bUnBoton* efectúa diferentes acc
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

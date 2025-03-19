@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->O comando SET DATABASE LOCALIZATION é utilizado para modificar o idioma atual do banco de dados para a sessão atual.<!-- END REF-->  
   
@@ -32,7 +32,7 @@ Se o comando foi executado corretamente, a variável de sistema OK é definido c
   
 **4D Server**: com 4D Server, os idiomas disponíveis são aqueles localizados na máquina remota que chamou o comando. Você deve se certificar de que as pastas de recursos estejam sincronizadas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Nós queremos definir o francês como o idioma da interface:
 
@@ -40,7 +40,7 @@ Nós queremos definir o francês como o idioma da interface:
  SET DATABASE LOCALIZATION("fr")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arquivos XLIFF contêm mais particularmente as seguintes informações:
 
@@ -66,11 +66,11 @@ A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arqui
   //the string ":xliff:shopping" displays "Magasiner"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

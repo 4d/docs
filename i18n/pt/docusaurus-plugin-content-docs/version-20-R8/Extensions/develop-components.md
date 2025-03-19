@@ -11,13 +11,13 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 - **Projeto Matrix**: ´projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Projeto Host**: projeto aplicação onde um componente é instalado e usado.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
 
 ## Básicos
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
-- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md#basics).
+- To use a component, you simply need to [install it in your application](../Project/components.md).
 - Um projeto pode ser tanto uma matriz quanto um host, em outras palavras, um projeto de matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - Um componente pode chamar a maioria dos elementos 4D: classes, funções, métodos de projeto, formulários de projeto, barras de menu, listas de opções e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível usar o datastore, as tabelas padrão ou os arquivos de dados nos componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->The **GOTO OBJECT** command is used to select the data entry object *object* as the active area of the form.<!-- END REF--> It is equivalent to the user’s clicking on or tabbing into the field or variable.
 
@@ -24,7 +24,7 @@ To remove any focus in the current form, call the command while passing an empty
 
 The **GOTO OBJECT** command can be used in the context of a subform. When it is called from a subform, it first looks for the object in the subform, then, if the search does not find anything there, it extends the search to objects of the parent form.
 
-#### Example 1 
+## Example 1 
 
 The **GOTO OBJECT** command can be used in both ways: 
 
@@ -33,7 +33,7 @@ The **GOTO OBJECT** command can be used in both ways:
  GOTO OBJECT(*;"AgeArea") // Object Name
 ```
 
-#### Example 2 
+## Example 2 
 
 You don't want any object of the form to have the focus: 
 
@@ -41,16 +41,16 @@ You don't want any object of the form to have the focus:
  GOTO OBJECT(*;"")
 ```
 
-#### Example 3 
+## Example 3 
 
 See the example for the [REJECT](reject.md) command.
 
-#### See also 
+## See also 
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

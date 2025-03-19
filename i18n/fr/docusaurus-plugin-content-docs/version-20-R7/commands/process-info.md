@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
 
@@ -143,7 +143,7 @@ Voici un exemple d'objet de sortie :
 
 ```
 
-#### Exemple
+## Exemple
 
 Vous voulez savoir si le processus est préventif :
 
@@ -155,7 +155,7 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-#### Voir également
+## Voir également
 
 [Count tasks](../commands-legacy/count-tasks.md)\
 [Process activity](process-activity.md)\

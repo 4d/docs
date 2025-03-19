@@ -144,7 +144,7 @@ TCPConnection objects provide the following properties and functions:
 <!-- REF #4D.TCPConnection.new().Syntax -->**4D.TCPConnection.new**( *serverAddress* : Text ; *serverPort* : Number ; *options* : Object  ) : 4D.TCPConnection<!-- END REF -->
 
 
-<!-- REF #4D.TCPConnection.new().options -->
+<!-- REF #4D.TCPConnection.new().params -->
 |Parameter|Type| |Description|
 |---|---|---|---|
 |serverAddress|Text|->|Domain name or IP address of the server|
@@ -247,7 +247,7 @@ The `.noDelay` property contains <!-- REF #4D.TCPConnection.noDelay.Summary -->w
 
 <!-- REF #4D.TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().options -->
+<!-- REF #4D.TCPConnection.send().params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |data|Blob|->|Data to be sent|
@@ -264,7 +264,7 @@ The `send()` function <!-- REF #4D.TCPConnection.send().Summary -->sends data to
 
 <!-- REF #4D.TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().options -->
+<!-- REF #4D.TCPConnection.shutdown().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|
@@ -282,7 +282,7 @@ The `shutdown()` function <!-- REF #4D.TCPConnection.shutdown().Summary -->close
 
 <!-- REF #4D.TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection..wait().options -->
+<!-- REF #4D.TCPConnection.wait().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Maximum wait time in seconds|

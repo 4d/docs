@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->The **IMPORT STRUCTURE** command imports, into the current database, the XML definition of the 4D database structure passed in the *xmlStructure* parameter.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ An error is generated when the structure is in compiled and/or read only mode.
 
 A 4D application operating in remote mode cannot call this command.
 
-#### Note for deployment 
+## Note for deployment 
 
 Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
 
-#### Example 
+## Example 
 
 You want to import a saved structure definition into the current database:
 
@@ -44,11 +44,11 @@ You want to import a saved structure definition into the current database:
  IMPORT STRUCTURE($struc)
 ```
 
-#### See also 
+## See also 
 
 [EXPORT STRUCTURE](export-structure.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Modified.Summary-->**Modified** devuelve **True** si un valor ha sido asignado por programación a *campo* o si ha sido modificado durante la entrada de datos.<!-- END REF--> El comando **Modified**debe utilizarse únicamente en un método de formulario (o una subrutina llamada por un método de formulario).
 
@@ -34,7 +34,7 @@ Durante la entrada de datos, generalmente es más fácil realizar operaciones en
 
 **Nota:** para funcionar correctamente, el comando **Modified** debe utilizarse únicamente en un método de formulario o en un método llamado por un método de formulario.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo prueba si el campo *\[Ordenes\]Cantidad* o el campo *\[Ordenes\]Precio* ha sido modificado. Si alguno de los dos ha cambiado, entonces el campo *\[Ordenes\]Total* se calcula nuevamente. 
 
@@ -46,7 +46,7 @@ El siguiente ejemplo prueba si el campo *\[Ordenes\]Cantidad* o el campo *\[Orde
 
 Note que el mismo resultado puede obtenerse utilizando la segunda línea como una subrutina llamada por los métodos de objeto de los campos *\[Ordenes\]Cantidad* y *\[Ordenes\]Precio* en el evento de formulario On Data Change.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Selecciona un registro para la tabla *\[unaTabla\]*, luego llama múltiples subrutinas que pueden modificar el campo *\[unaTabla\]CampoImportante,* pero no guarda el registro. Al final del método principal, puede utilizar el comando Modified para determinar si debe guardar el registro:
 
@@ -63,12 +63,12 @@ Selecciona un registro para la tabla *\[unaTabla\]*, luego llama múltiples subr
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

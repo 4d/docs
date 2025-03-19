@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Summary-->El comando **OBJECT SET FOCUS RECTANGLE INVISIBLE** permite definir o modificar dinámicamente la opción invisibilidad del rectángulo de foco del objeto designado por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF--> Esta configuración corresponde a la opción **Ocultar rectángulo de foco** disponible para los objetos editables en la Lista de propiedades en modo Diseño.   
   
@@ -25,11 +25,11 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
   
 Pase **True** en el parámetro *invisible* para ocultar el rectángulo de foco y **False** para dejarlo visible.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

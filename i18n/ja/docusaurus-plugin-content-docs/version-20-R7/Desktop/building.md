@@ -21,7 +21,7 @@ title: アプリケーションビルド
 プロジェクトパッケージをビルドするには次の方法があります:
 
 - [`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使う
-- [アプリケーションビルド](#application-builder) ダイアログを使う
+- or the [Build Application dialog](#build-application-dialog).
 
 :::tip
 
@@ -43,7 +43,7 @@ title: アプリケーションビルド
 
 ### buildApp.4DSettings
 
-アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、`buildApp.4DSettings` という名称のアプリケーションプロジェクトファイルに保存されます。 この XML ファイルはプロジェクトの [`Settings` フォルダー](../Project/architecture.md#settings-1) に配置されます。
+Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じプロジェクト内に他に複数のXML 設定を定義することができ、[`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使用してどれを使用するかを選択することができます。
 
@@ -87,7 +87,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準フォーマットを使用したくない場合、[`buildApp.4DSettings`](#build-application-settings) 内において`UseStandardZipFormat` XML キーを値`False` で追加して下さい(より詳細な情報については、[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルを参照して下さい)。
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#buildapp4dsettings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
 
 #### 関連するフォルダーを含む
 
@@ -97,7 +97,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 ストラクチャーからコンパイル済みコンポーネントをビルドします。
 
-[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md#basics) すると、ホストプロジェクトはその機能を利用できるようになります。
+[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
 
 アプリケーション名を *MyComponent* に指定した場合、4D は *Components* フォルダーを作成し、その中に *MyComponent.4dbase* フォルダーを生成します:
 
@@ -164,7 +164,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
  - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
  - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
  - Databaseフォルダー - Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
-  **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
+  **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
  - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
  - (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
  - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
@@ -248,11 +248,11 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 **注記**: ここでは、以下の用語を使用します:
 
-| 名称                  | 定義                                                                                                                                                                           |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| プロジェクトのディレクトリファイル   | プロジェクトの [Settings フォルダー](../Project/architecture.md#settings-1) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-file) ファイル            |
-| アプリケーションのディレクトリファイル | ビルドされた 4D Server の [Settings フォルダー](../Project/architecture.md#settings-1) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-file) ファイル |
-| データのディレクトリファイル      | [Data ＞ Settings フォルダー](../Project/architecture.md#settings) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-ファイル) ファイル               |
+| 名称                  | 定義                                                                                                                                                                                            |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| プロジェクトのディレクトリファイル   | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
+| アプリケーションのディレクトリファイル | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
+| データのディレクトリファイル      | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
 
 このオプションをチェックすると、ビルド時にプロジェクトのディレクトリファイルがアプリケーションのディレクトリファイルとしてコピーされます。
 
@@ -568,7 +568,7 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> Apple Silicon マシンでは、4D [コンポーネント](components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
+> On Apple Silicon machines, 4D [components](../Project/components.md) need to be actually signed. 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 

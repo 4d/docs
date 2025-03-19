@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** は、*aTable*のカレントセレクションを印刷します。<!-- END REF-->レコードは、カレントプロセスのテーブルのカレント出力フォームを使用して印刷されます。**PRINT SELECTION**は、デザインモードの**プリント...**メニューと同じ動作を実行します。セレクションが空の場合、**PRINT SELECTION** は何も行いません。
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * サーバーマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。そのためにはこのコマンドを *\** または *\>* 引数付きで呼び出さなければなりません。
 * プリンター関連の問題が発生しても (用紙切れ、プリンター接続切断等) 、エラーメッセージは生成されません。
 
-#### 例題 
+## 例題 
 
 以下の例は、最初に\[People\]テーブルのすべてのレコードを選択します。次に[DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION")コマンドを使用してすべてのレコードを表示し、ユーザがプリントするレコードを選択します。最後に[USE SET](use-set.md "USE SET")コマンドにより、選択されたレコードをPRINT SELECTIONで印刷します:
 
@@ -55,14 +55,14 @@ displayed_sidebar: docs
  PRINT SELECTION([People]) // 印刷実行
 ```
 
-#### 参照 
+## 参照 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

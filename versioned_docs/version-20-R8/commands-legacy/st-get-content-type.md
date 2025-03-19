@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get content type.Summary-->The **ST Get content type** command returns the type of content found in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
 
@@ -59,7 +59,7 @@ This command returns a value designating the type of contents identified. You ca
 | ST URL type         | Integer | 1     | Selection contains only a URL reference                     |
 | ST User type        | Integer | 5     | Selection contains only a custom reference                  |
 
-#### Example 
+## Example 
 
 You want to display context-menu commands based on the type of contents selected in the area.
 
@@ -102,7 +102,7 @@ You want to display context-menu commands based on the type of contents selected
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

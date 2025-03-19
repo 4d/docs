@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current client authentication.Summary-->The **Current client authentication** command asks the Windows Active Directory server to authenticate the current client and, if successful, returns the Windows login name for this client (session identifier).<!-- END REF--> If the authentication failed, an empty string is returned. 
 
@@ -32,7 +32,7 @@ Optionally, the command can return two text parameters:
 
  These parameters can be used to accept or reject connections if you want to filter access with regard to the domain or protocol. 
 
-##### Authentication security level 
+### Authentication security level 
 
 The security level of the authentication (i.e., how much you can trust the user login) depends on how the user has actually been identified. The value(s) returned in the **Current client authentication** command parameters will allow you to find out what the login (if any) is based on, and thus the security level: 
 
@@ -45,7 +45,7 @@ The security level of the authentication (i.e., how much you can trust the user 
 
 For more information on these requirements, please refer to the paragraph.
 
-#### Example 
+## Example 
 
 In your 4D Server database, you have designed an access control system based on 4D's users and groups feature. You want to configure your application so that 4D remote users on Windows connect directly to 4D Server (no password dialog box is displayed), but while being logged with their actual rights:
 
@@ -74,7 +74,7 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 * use LDAP features to get user credentials.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

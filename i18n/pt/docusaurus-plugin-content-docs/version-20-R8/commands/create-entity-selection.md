@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 O comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->cria e retorna uma nova seleção de entidade [alterável](../ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela<!-- END REF-->.
 
@@ -30,7 +30,7 @@ No parâmetro opcional *settings*, você pode passar um objeto que contenha a se
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
 | context     | Text | Rótulo para o [contexto de otimização](../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
 
-#### Exemplo
+## Exemplo
 
 ```4d
 var $employees : cs. EmployeeSelection ALL RECORDS([Employee])
@@ -39,11 +39,11 @@ $employees:=Create entity selection([Employee])
 // em todas as entidades relacionadas com a classe de dados Employee
 ```
 
-#### Veja também
+## Veja também
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

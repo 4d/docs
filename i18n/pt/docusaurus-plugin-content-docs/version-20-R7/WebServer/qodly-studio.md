@@ -179,7 +179,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
-- A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#exposed-as-rest-server) deve ser ativada.
+- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#expose-as-rest-server) option must be activated.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
@@ -190,7 +190,7 @@ Para ativar a renderização das páginas Qodly, as seguintes opções devem ser
 
 ### Escopo dos formulários Qodly
 
-Ao renderizar formulários Qodly no Qodly Studio, o renderizador se conectará ao servidor web 4D por HTTP ou HTTPS, dependendo das configurações, seguindo o mesmo padrão de conexão HTTP/HTTPS do servidor web [4D WebAdmin](../Admin/webAdmin.md#accept-http-connections-on-localhost). Consulte também [este parágrafo](#about-license_usage) sobre esquemas de URL e uso de licenças.
+Ao renderizar formulários Qodly no Qodly Studio, o renderizador se conectará ao servidor web 4D por HTTP ou HTTPS, dependendo das configurações, seguindo o mesmo padrão de conexão HTTP/HTTPS do servidor web [4D WebAdmin](../Admin/webAdmin.md#accept-http-connections-on-localhost). See also [this paragraph](#about-license-usage-for-rendering) about URL schemes and license usage.
 
 Keep in mind that Qodly Studio runs through the 4D WebAdmin web server. When you use Qodly Studio as a developer, even when you preview a Qodly Page in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
@@ -302,7 +302,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 ### Encerrar sessão
 
-When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
+When the ["force login" mode is enabled](#force-login), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
 Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 
@@ -322,7 +322,7 @@ In default mode when any page is rendered, or in "force login" mode when a page 
 
 A configuração do esquema URL de Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar os formulários Qodly. With the appropriate configuration, you can avoid unnecessary license retaining.
 
-Como explicado na seção [configuração](#configuration), o servidor web WebAdmin fornece um acesso web seguro a Qodly Studio. Por outro lado, o [motor de renderização](#rendering-webforms) se comunica com o servidor web 4D do banco de dados usando solicitações REST. Dessa forma, se comporta como um Cliente 4D convencional.
+Como explicado na seção [configuração](#configuration), o servidor web WebAdmin fornece um acesso web seguro a Qodly Studio. On the other hand, the [renderer](#enabling-rendering) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
 Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 

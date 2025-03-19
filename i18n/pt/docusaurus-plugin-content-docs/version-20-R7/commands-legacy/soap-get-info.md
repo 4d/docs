@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SOAP get info.Summary-->O comando SOAP get info permite recuperar na forma de cadeia de caracteres diferentes tipos de informação relacionadas com uma petição SOAP.<!-- END REF-->  
 
@@ -30,12 +30,12 @@ Passe no parâmetro *numInfo* o número do tipo de informação SOAP que deseja 
   
 **Nota**: Por razões de segurança, é possível obter o tamanho máximo das petições de serviços web enviadas a 4D. Esta configuração é realizada utilizando o comando [SET DATABASE PARAMETER](set-database-parameter.md). 
 
-#### Ver também 
+## Ver também 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

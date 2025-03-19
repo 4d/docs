@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->The **OBJECT GET MAXIMUM VALUE** command returns, in the *maxValue* variable, the current maximum value of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -23,12 +23,12 @@ You can set the "Maximum Value" property using the Property List in Design mode,
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
-#### See also 
+## See also 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

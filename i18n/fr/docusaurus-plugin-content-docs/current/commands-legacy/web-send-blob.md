@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SEND BLOB.Summary-->La commande **WEB SEND BLOB** permet d’envoyer le BLOB *blob* au navigateur.<!-- END REF-->
 
@@ -72,15 +72,15 @@ Voici une liste des types MIME les plus courants :
 
 Les éventuelles références aux variables 4D et balises de type *4DSCRIPT* dans la page sont toujours analysées.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l’exemple de la routine [PICTURE TO BLOB](picture-to-blob.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB SEND FILE](web-send-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

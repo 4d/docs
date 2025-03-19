@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->**GET WINDOW RECT** コマンドは*window*に渡された参照番号を持つウィンドウの座標を返します。<!-- END REF-->ウィンドウが存在しない場合、変数引数は変更されません。
 
@@ -27,16 +27,16 @@ displayed_sidebar: docs
 
 **Note:** Windowsでは*window*に-1を渡すと、**GET WINDOW RECT**はアプリケーションウィンドウ (MDI ウィンドウ) の座標を返します。これらの座標はウィンドウの内容領域 (タイトルバーや枠線は含まれない) に対応します。SDI モードの場合には、**GET WINDOW RECT**は座標として (0;0;0;0) を返します。
 
-#### 例題 
+## 例題 
 
 [WINDOW LIST](window-list.md "WINDOW LIST")コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

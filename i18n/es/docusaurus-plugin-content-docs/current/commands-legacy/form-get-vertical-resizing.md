@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Summary-->El comando FORM GET VERTICAL RESIZING devuelve las propiedades de redimensionamiento vertical del formulario actual en las variables *redimension*, *alturaMin* y *alturaMax*.<!-- END REF--> Estas propiedades pueden haberse definido para el formulario en el editor de formularios en modo Diseño o para el proceso actual vía el comando [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md "FORM SET VERTICAL RESIZING").
 
-#### Ver también 
+## Ver también 
 
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

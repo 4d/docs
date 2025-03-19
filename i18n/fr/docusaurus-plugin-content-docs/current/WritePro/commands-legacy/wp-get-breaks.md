@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get breaks.Summary-->La commande **WP Get breaks** retourne la collection de tous les sauts insérés dans *objCible*.<!-- END REF-->
 
@@ -64,7 +64,7 @@ Si objCible est un document 4D Write Pro, les sauts sont retournés dans l'ordre
 
 Une collection vide est retournée si objCible ne contient aucun saut (ni aucun saut de *typeSaut* demandé).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez remplacer tous les sauts de ligne par des sauts de paragraphe dans un document :
 
@@ -77,7 +77,7 @@ Vous souhaitez remplacer tous les sauts de ligne par des sauts de paragraphe dan
  End for each
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get elements](wp-get-elements.md)  
 [WP INSERT BREAK](../commands/wp-insert-break.md)  

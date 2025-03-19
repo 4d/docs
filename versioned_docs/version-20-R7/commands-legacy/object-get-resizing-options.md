@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->The **OBJECT GET RESIZING OPTIONS** command returns the current resizing options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -40,11 +40,11 @@ The *vertical* parameter returns a value indicating the vertical resizing option
 | Resize vertical move | Integer | 2     | If the window grows by 100 pixels in height, the object is moved 100 pixels towards the bottom. |
 | Resize vertical none | Integer | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
 
-#### See also 
+## See also 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

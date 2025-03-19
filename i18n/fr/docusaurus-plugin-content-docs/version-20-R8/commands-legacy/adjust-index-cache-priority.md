@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Mode expert 
+## Mode expert 
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->Cette commande est réservée pour des besoins spécifiques.<!-- END REF--> Elle doit être utilisée avec précaution car elle peut affecter les performances de la base. 
 
-#### Description 
+## Description 
 
 La commande **ADJUST INDEX CACHE PRIORITY** modifie la valeur de *priorité* du ou des index du champ *leChamp* chargés dans le cache pour le process courant. Un appel à cette commande remplace toute valeur précédente modifiée avec la même commande dans le même process. Cette commande ajuste la priorité pour des besoins ponctuels, par exemple lors de l'exécution d'un import ou d'une recherche.
 
@@ -36,7 +36,7 @@ Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du 
 | Cache priority high      |                                                      |
 | Cache priority very high |                                                      |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez modifier temporairement la priorité des index du champ \[Docs\]Comments dans le cache :
 
@@ -48,12 +48,12 @@ Vous souhaitez modifier temporairement la priorité des index du champ \[Docs\]C
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

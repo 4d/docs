@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Frontmost process.Summary-->**Frontmost process** returns the number of the process whose window (or windows) are in the front.<!-- END REF--> 
 
@@ -25,16 +25,16 @@ When you have one or more floating windows open, there are two window layers:
 
 If the **Frontmost process** function is used from within a floating window form method or object method, the function returns the process reference number of the frontmost floating window in the floating window layer. If you specify the optional *\** parameter, the function returns the process reference number of the frontmost active window in the regular window layer.
 
-#### Example 
+## Example 
 
 See the example for [BRING TO FRONT](bring-to-front.md).
 
-#### See also 
+## See also 
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

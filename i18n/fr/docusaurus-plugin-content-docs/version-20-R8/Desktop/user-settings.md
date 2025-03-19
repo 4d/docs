@@ -50,28 +50,28 @@ Les boîtes de dialogue **Propriétés utilisateur** et **Propriétés utilisate
 
 Le tableau suivant répertorie les pages de paramètres des boîtes de dialogue **Propriétés utilisateur** et **Propriétés utilisateur pour le fichier de données** et décrit leurs principales différences par rapport aux paramètres standard :
 
-| **Page des Propriétés structure**                                                                    | **Page des Propriétés utilisateur**             | **Page des Propriétés utilisateur pour fichier de données** |
-| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
-| [Page Général](../settings/general.md)                                                               | N/a                                             | N/a                                                         |
-| [Page Interface](../settings/interface.md)                                                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Compilateur](../settings/compiler.md)                                                          | N/a                                             | N/a                                                         |
-| [Page Base de données/Stockage des données](../settings/database.md#data-storage)                    | N/a                                             | N/a                                                         |
-| [Page Base de données/Mémoire](../settings/database.md#memory)                                       | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Sauvegarde/Périodicité](../settings/backup.md#scheduler)                                       | N/a                                             | Identique aux Propriétés structure                          |
-| [Page Sauvegarde/Configuration](../settings/backup.md#configuration)                                 | N/a                                             | Identique aux Propriétés structure                          |
-| [Page Sauvegarde/Sauvegarde & Restitution](../settings/backup.md#backup-restore) | N/a                                             | Identique aux Propriétés structure                          |
-| [Page Client-serveur/Réseau](../settings/client-server.md#network-options)                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Client-serveur/Configuration IP](../settings/client-server.md#ip-configuration)                | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Configuration](../settings/web.md#configuration)                                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Options (I)](../settings/web.md#options)                                | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Options (II)](../settings/web.md#options-ii)                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Journal (format)](../settings/web.md#log)                               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Journal (sauvegarde)](../settings/web.md#log)                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Services Web](../settings/web.md#web-services)                                             | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
-| [Page SQL](../settings/sql.md)                                                                       | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page PHP](../settings/php.md)                                                                       | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Sécurité](../settings/security.md)                                                             | N/a                                             | N/a                                                         |
-| [Page Compatibilité](../settings/compatibility.md)                                                   | N/a                                             | N/a                                                         |
+| **Page des Propriétés structure**                                                                     | **Page des Propriétés utilisateur**             | **Page des Propriétés utilisateur pour fichier de données** |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
+| [Page Général](../settings/general.md)                                                                | N/a                                             | N/a                                                         |
+| [Page Interface](../settings/interface.md)                                                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Compilateur](../settings/compiler.md)                                                           | N/a                                             | N/a                                                         |
+| [Database/Data storage page](../settings/database.md#data-storage-page)                               | N/a                                             | N/a                                                         |
+| [Database/Memory page](../settings/database.md#memory-page)                                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Backup/Scheduler page](../settings/../Backup/settings.md#scheduler)                                  | N/a                                             | Identique aux Propriétés structure                          |
+| [Backup/Configuration page](../settings/../Backup/settings.md#configuration)                          | N/a                                             | Identique aux Propriétés structure                          |
+| [Backup/Backup & Restore page](../settings/../Backup/settings.md#backup--restore) | N/a                                             | Identique aux Propriétés structure                          |
+| [Client-server/Network options page](../settings/client-server.md#network-options-page)               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration-page)             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Configuration](../settings/web.md#configuration)                                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Web/Options (I) page](../settings/web.md#options-i)                               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Options (II)](../settings/web.md#options-ii)                             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Web/Log (type) page](../settings/web.md#log-type)                                 | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Web/Log (backup) page](../settings/web.md#log-backup)                             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Services Web](../settings/web.md#web-services)                                              | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
+| [Page SQL](../settings/sql.md)                                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page PHP](../settings/php.md)                                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Sécurité](../settings/security.md)                                                              | N/a                                             | N/a                                                         |
+| [Page Compatibilité](../settings/compatibility.md)                                                    | N/a                                             | N/a                                                         |
 
 Lorsque vous modifiez les paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier correspondant *settings.4DSettings* (voir ci-dessous) ou le fichier *Backup.4DSettings* (consultez la page [Paramètres de sauvegarde](../Backup/settings.md) pour plus d'informations).
 

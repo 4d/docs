@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Contextual click.Summary-->Contextual click コマンドは、コンテキストクリックが行われた場合に[True](true.md "True")を返します。<!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 このコマンドはOn clickedフォームイベントのコンテキストで使用します。したがって、デザインモードにおいて、このイベントがフォームや特定のオブジェクトのプロパティで適切に選択されていることを確認する必要があります。
 
-#### 例題 
+## 例題 
 
 このメソッドをスクロールエリアと組み合わせて使用すると、コンテキストメニューを用いて配列要素の値を変更することができます: 
 
@@ -36,12 +36,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

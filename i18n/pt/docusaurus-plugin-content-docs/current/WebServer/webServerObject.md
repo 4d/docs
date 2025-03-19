@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funções do servidor Web
 
-Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
+A [web server class object](API/WebServerClass.md../commands/web-server.md-object) contains the following functions:
 
 | Funções                                  | Parâmetro                           | Valor retornado                     | Descrição             |
 | ---------------------------------------- | ----------------------------------- | ----------------------------------- | --------------------- |
@@ -86,7 +86,7 @@ $status:=webServer.stop()
 
 ## Propriedades do servidor web
 
-Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
+A web server object contains [various properties](API/WebServerClass.md../commands/web-server.md-object) which configure the web server.
 
 Estas propriedades são definidas:
 

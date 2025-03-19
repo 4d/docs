@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. La commande accepte deux syntaxes :
 
@@ -69,14 +69,14 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 > Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
 
-#### Voir également
+## Voir également
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |

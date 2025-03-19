@@ -74,7 +74,7 @@ Essa área permite configurar como o servidor Web tratará as sessões de usuár
 
 #### Sessões escaláveis (sessões multi-processo)
 
-Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Veja a [página de sessões do usuário](../WebServer/sessions.md#enabling-sessions).
+Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sem sessões
 
@@ -84,7 +84,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 - [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
 - [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
-- [Usar processos preemptivos](#use-preemptive-web-processes)
+- [Use preemptive processes](#use-preemptive-processes)
 
 #### Sessões herdadas (sessões de processo único)
 

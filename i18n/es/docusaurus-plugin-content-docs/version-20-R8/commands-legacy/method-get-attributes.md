@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->El comando **METHOD GET ATTRIBUTES** devuelve, en *atributos*, el valor actual de todos los atributos para los métodos especificados en el parámetro *ruta*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si el comando se ejecuta desde un componente, por defecto se aplica a los métod
 
 **Nota de compatibilidad:** la propiedad *published4DMobile* es obsoleta a partir de 4D v18.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere obtener los atributos del método de proyecto *sendMail*. Puede escribir:
 
@@ -57,11 +57,11 @@ Después de la ejecución, $att contiene, por ejemplo:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

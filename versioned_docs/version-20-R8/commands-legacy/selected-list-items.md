@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Selected list items.Summary-->The **Selected list items** command returns the position or reference of the selected item in the list whose reference number or object name you pass in *list*.<!-- END REF--> 
 
@@ -41,7 +41,7 @@ If the list has sublists, you apply the command to the main list (the one actual
 
 In any case, if no items are selected, the function returns 0.
 
-#### Example 
+## Example 
 
 Here a list named *hList,* shown in the Application environment:
 
@@ -79,12 +79,12 @@ Here a list named *hList,* shown in the Application environment:
   // $arrRefs{1} gets 101, $arrRefs{2} gets 203 (for instance)
 ```
 
-#### See also 
+## See also 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

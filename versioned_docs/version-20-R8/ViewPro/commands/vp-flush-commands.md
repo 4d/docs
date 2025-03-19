@@ -13,7 +13,7 @@ title: VP FLUSH COMMANDS
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.  
 
@@ -21,7 +21,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In order to increase performance and reduce the number of requests sent, the 4D View Pro commands called by the developer are stored in a command buffer. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
 
-#### Example
+## Example
 
 You want to trace the execution of the commands and empty the command buffer:
 

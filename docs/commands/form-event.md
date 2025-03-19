@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF--> Usually, you will use **FORM Event** from within a form or object method.
 
@@ -40,7 +40,7 @@ The event object can contain additional properties, depending on the object for 
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
-#### Example 1 
+## Example 1 
 
 You want to handle the On Clicked event on a button:
 
@@ -50,7 +50,7 @@ You want to handle the On Clicked event on a button:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
@@ -68,7 +68,7 @@ You can sort the column using the On Header Click event:
  End case
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
 
@@ -94,12 +94,12 @@ The resulting list box when rows are selected:
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### See also 
+## See also 
 
 [Form Events](../Events/overview.md)
 [Form event code](form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

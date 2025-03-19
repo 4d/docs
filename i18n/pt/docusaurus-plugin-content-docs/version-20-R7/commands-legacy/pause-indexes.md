@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->O comando **PAUSE INDEXES**  desativa temporariamente todos os índices de *aTabela*, exceto o índice da chave primária .<!-- END REF-->  
   
@@ -33,7 +33,7 @@ Para reativar os índices depois de terminada a operação, pode chamar ao coman
   
 **Nota**: Este comando não pode ser executado desde um 4D remoto.
 
-#### Exemplo 
+## Exemplo 
 
 Exemplo de método de importação massivo de dados:
 
@@ -43,12 +43,12 @@ Exemplo de método de importação massivo de dados:
  RESUME INDEXES([Articles])
 ```
 
-#### Ver também 
+## Ver também 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get subsection.Summary-->O comando **WP Get subsection** devolve uma primeira subseção intersectada pela range ou elemento *targetObj*, ou à subseção especificada *subSectionType* da seção *wpSection*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Se a range ou elemento pertencer a uma imagem ancorada, um erro é retornado.
     
 Se não for definido *subSectionType* para a *wpSection* especificada, o comando devolve um objeto indefinido (não é devolvido nenhum erro).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser aplicar um fundo azul nas páginas da esquerda:
 
@@ -55,7 +55,7 @@ Se quiser aplicar um fundo azul nas páginas da esquerda:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get section](wp-get-section.md)  

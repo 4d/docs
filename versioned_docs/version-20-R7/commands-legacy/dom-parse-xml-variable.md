@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Parse XML variable.Summary-->The DOM Parse XML variable command parses a BLOB or Text type variable containing an XML structure and returns a reference for this variable.<!-- END REF--> The command can validate (or not) the structure via a DTD or an XML schema (XML Schema Definition (XSD) document). 
 
@@ -46,7 +46,7 @@ The command returns a character string (ElementRef) making up the reference in t
 
 **Important:** Once you no longer have any need for it, remember to call the [DOM CLOSE XML](dom-close-xml.md) command with this reference in order to free up the memory.
 
-#### Example 1 
+## Example 1 
 
 Opening an XML object located in a 4D Text variable, without validation:
 
@@ -63,7 +63,7 @@ Opening an XML object located in a 4D Text variable, without validation:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Opening an XML document located in a 4D BLOB, without validation:
 
@@ -75,16 +75,16 @@ Opening an XML document located in a 4D BLOB, without validation:
  $xml_Struct_Ref:=DOM Parse XML variable(myBlobVar)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
 
-#### See also 
+## See also 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get query limit.Summary-->El comando **Get query limit** devuelve el límite del número de registros que una búsqueda puede encontrar en el proceso actual.<!-- END REF-->
 
@@ -21,11 +21,11 @@ Se define este límite utilizando el comando [SET QUERY LIMIT](set-query-limit.m
 
 Por defecto, si ningún límite se ha definido, el comando devuelve 0.
 
-#### Ver también 
+## Ver también 
 
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

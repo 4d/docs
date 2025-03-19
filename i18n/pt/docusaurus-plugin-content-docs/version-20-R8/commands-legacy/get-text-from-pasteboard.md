@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard devolve o texto na área de transferência.<!-- END REF--> 
 
@@ -23,17 +23,17 @@ Se o container de dados contém texto enriquecido (por exemplo em formato RTF), 
 
 Note que os campos e variáveis de tipo texto de 4D podem conter até 2 GB de texto.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o texto for extraído corretamente, OK toma o valor 1; do contrário OK toma o valor 0 e é gerado um erro.
 
-#### Ver também 
+## Ver também 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

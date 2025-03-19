@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get body.Summary-->The **WP Get body** command returns the body element of the *wpDoc* 4D Write Pro document.<!-- END REF-->
 
@@ -24,7 +24,7 @@ This element can be passed to the:
 * [WP Text range](wp-text-range.md) command to define the body as a range.
 * [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) and [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) commands to handle the body's attributes.
 
-#### Example 
+## Example 
 
 You want to copy the body of a 4D Write Pro document to another 4D Write Pro document:
 
@@ -41,6 +41,6 @@ You want to copy the body of a 4D Write Pro document to another 4D Write Pro doc
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### See also 
+## See also 
 
 [WP Text range](wp-text-range.md)  

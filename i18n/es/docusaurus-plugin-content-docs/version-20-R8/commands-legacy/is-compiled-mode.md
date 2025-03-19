@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is compiled mode.Summary-->Is compiled mode prueba si la base se está ejecutando en modo compilado (True) o interpretado (False).<!-- END REF--> 
 
@@ -28,7 +28,7 @@ El parámetro opcional *\** es útil en caso de una arquitectura que utilice com
   
 • Cuando el comando se llama desde un método de una base local, devuelve [True](true.md "True") o [False](false.md "False") dependiendo del modo de ejecución de la base local.
 
-#### Ejemplo 
+## Ejemplo 
 
 En una de sus rutinas, usted incluyó el código de depuración de la base, útil únicamente cuando está en modo interpretado. Puede preceder este código con una prueba que llama a Is compiled mode:
 
@@ -40,12 +40,12 @@ En una de sus rutinas, usted incluyó el código de depuración de la base, úti
   // ...
 ```
 
-#### Ver también 
+## Ver también 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

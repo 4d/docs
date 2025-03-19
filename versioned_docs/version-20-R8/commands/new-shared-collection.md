@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md). 
 
@@ -54,7 +54,7 @@ Unlike standard (not shared) collections, shared collections do not support pict
 :::
 
 
-#### Example
+## Example
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -65,13 +65,13 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 
 
-#### See also 
+## See also 
 
 [New collection](new-collection.md)  
 [New shared object](../commands-legacy/new-shared-object.md)  
 *Shared objects and shared collections*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

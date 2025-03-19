@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.IDLE.Summary-->O comando IDLE está desenhado para ser utilizado unicamente com o compilador.<!-- END REF--> Este comando é utilizado apenas em bancos compilados nas quais os métodos definidos pelo usuário são escritos de maneira que não são chamados ao motor de 4D. Por exemplo, se um método tem um loop For na qual não se executam comandos 4D, o loop não pode ser interrompido por um processo instalado por [ON EVENT CALL](on-event-call.md), e o usuário também não pode mudar a outra aplicação. Neste caso, deve inserir IDLE para permitir que 4D intercepte os eventos. Se não deseja interrupções, omita IDLE.
 
-#### Exemplo 
+## Exemplo 
 
 No seguinte Exemplo, o loop não terminaria nunca em um banco compilado sem chamar a IDLE:
 
@@ -47,12 +47,12 @@ com:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 *Comandos de Compilação*  
 [ON EVENT CALL](on-event-call.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

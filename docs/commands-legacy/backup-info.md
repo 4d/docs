@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BACKUP INFO.Summary-->The BACKUP INFO command gets information related to the last backup performed on the database data.<!-- END REF-->
 
@@ -28,11 +28,11 @@ Pass the type of information to get in *selector*. The type and content of the *
 | Last backup status      | Integer | 2     | *info1* returns the number and *info2* the text of the status of the last backup                                                                                                         |
 | Next backup date        | Integer | 4     | *info1* returns the date and *info2* the time of the next scheduled backup                                                                                                               |
 
-#### See also 
+## See also 
 
 [RESTORE](restore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

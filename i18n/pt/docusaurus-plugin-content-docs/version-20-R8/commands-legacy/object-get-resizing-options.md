@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->O comando **OBJECT GET RESIZING OPTIONS** devolve as opções de redimensionar atualmente os objetos designados pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -40,11 +40,11 @@ O parâmetro *vertical* devolve um valor indicando a opção de redimensionament
 | Resize vertical move | Inteiro longo | 2     | Se a janela cresce 100 pixeles de alto, o objeto cresce 100 pixeles para abaixo |
 | Resize vertical none | Inteiro longo | 0     | Se a janela cresce de altura, nem o largo nem a posição do objeto mudam         |
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

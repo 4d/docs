@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB Get.Summary-->O comando **OB Get** devolve o valor atual da *propriedade* do *objeto*, convertido opcionalmente no *tipo* definido.<!-- END REF-->deve ter sido definido com o comando *C\_OBJECT* ou designar um campo objeto 4D..
 
@@ -53,7 +53,7 @@ O comando devolve o valor da *propriedade*. Vários tipos de dados estão suport
 * (4D Write Pro) Em versões anteriores a v16 R6, quando *propriedade* definia um atributo de imagem 4D Write Pro (como wk image) um valor de texto contendo um dado URI era sempre retornado. A partir de 4D v16 R6, os atributos de imagem 4D Write Pro são sempre retornados como valores de imagem. Deve usar uma *propriedade* especifica como wk image url para obter o dado URI.
 * Em versões anteriores a v16 R4, quando *propriedade* continha um valor null e se o parâmetro *tipo* não fosse usado, 4D retornava uma string vazia. Em 4D v16 R4, a constante Is null é retornada nesse caso. Para preservar a compatiblidade, esta mudança é realizada só se a opção "Utilizar a notação objetos para acessar às propriedades de objetos (exige Unicode)" for ativada no banco de dados (ver o parágrafo *Página Compatibilidade*).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Recuperação de um valor de tipo texto:
 
@@ -64,7 +64,7 @@ Recuperação de um valor de tipo texto:
  $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Recuperação de um valor real convertido em inteiro longo:
 
@@ -74,7 +74,7 @@ Recuperação de um valor real convertido em inteiro longo:
  $age:=OB Get($ref ;"age";Is longint) // $age é um inteiro longo
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Recuperação dos valores de um objeto:
 
@@ -86,7 +86,7 @@ Recuperação dos valores de um objeto:
  $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Modificando a idade de um empregado duas vezes:
 
@@ -107,7 +107,7 @@ Modificando a idade de um empregado duas vezes:
  End for
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Quando recuperando uma data, o valor resultante depende das configurações atuais de data no banco de dados.
 
@@ -133,7 +133,7 @@ Quando recuperando uma data, o valor resultante depende das configurações atua
 
 **Nota:** Para saber mais sobre essa configuração, veja *Página Compatibilidade*.
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Utilização de objetos aninhados:
 
@@ -152,7 +152,7 @@ Utilização de objetos aninhados:
   // $childName = "Monroe" (text)
 ```
 
-#### Exemplo 7 
+## Exemplo 7 
 
 Recuperação em 4D de uma hora armazenada em um objeto:
 
@@ -168,7 +168,7 @@ Recuperação em 4D de uma hora armazenada em um objeto:
   // $get_h = ?01:00:01?
 ```
 
-#### Exemplo 8 
+## Exemplo 8 
 
 Exemplos de manipulação de campos objeto 4D:
 
@@ -182,7 +182,7 @@ Exemplos de manipulação de campos objeto 4D:
  $lastName:=OB Get([People]Identity_OB;"Last name")
 ```
 
-#### Exemplo 9 
+## Exemplo 9 
 
 Em um método formulário, pode escrever:
 
@@ -199,7 +199,7 @@ Também pode ler os atributos personalizados dos documentos:
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Exemplo 10 
+## Exemplo 10 
 
 Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
 
@@ -215,13 +215,13 @@ Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
  $vPict:=OB Get($object;"photo") //"is picture" é inútil neste caso
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 *Tipos de campos e variáveis*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

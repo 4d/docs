@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->La commande **PROCESS 4D TAGS** provoque le traitement des balises de transformation 4D contenues dans le paramètre *templateEntrée* en leur injectant optionnellement des valeurs via le(s) paramètre(s) *param* et retourne le résultat dans *résultatSortie*.<!-- END REF--> Pour une description complète de ces balises, veuillez vous reporter à la section *Balises de transformation 4D*.
 
@@ -40,7 +40,7 @@ Le paramètre *résultatSortie* peut être un champ ou une variable de type Text
 
 **Note :** Cette commande ne provoque jamais l'appel de la [On Web Authentication database method](on-web-authentication-database-method.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple charge un document de type 'template', traite les balises qu'il contient puis le stocke :
 
@@ -53,7 +53,7 @@ Cet exemple charge un document de type 'template', traite les balises qu'il cont
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple permet de générer un texte à l'aide de données dans des tableaux :
 
@@ -69,11 +69,11 @@ Cet exemple permet de générer un texte à l'aide de données dans des tableaux
   // $output = "éléments = hello world"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Balises de transformation 4D*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL Get current data source.Summary-->El comando *Get current data source* devuelve el nombre de la fuente de datos actual de la aplicación.<!-- END REF--> La fuente de datos actual recibe las búsquedas SQL ejecutadas dentro de las estructuras [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL"). 
 
@@ -21,7 +21,7 @@ Cuando la fuente de datos actual es la base 4D local, el comando devuelve la cad
 
 Este comando permite verificar la fuente de datos actual, generalmente antes de ejecutar una búsqueda SQL.
 
-#### Ver también 
+## Ver también 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
@@ -29,7 +29,7 @@ Este comando permite verificar la fuente de datos actual, generalmente antes de 
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

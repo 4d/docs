@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP GET ATTRIBUTES.Summary-->La commande **WP GET ATTRIBUTES** retourne la valeur courante d'attribut(s) dans une plage, un élément ou un document 4D Write Pro.<!-- END REF--> Cette commande donne accès à tous les types d'attributs internes de 4D Write Pro : caractère, paragraphe, document, tableau ou image. 
 
@@ -36,7 +36,7 @@ S'il y a des valeurs différentes pour un même attribut dans l'élément passé
 
 **Note :** Si objCible contient des feuilles de style de paragraphe et de caractère, les noms des feuilles de style sont retournés.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez obtenir la couleur de fond de la zone sélectionnée :
 
@@ -45,7 +45,7 @@ Vous souhaitez obtenir la couleur de fond de la zone sélectionnée :
  WP GET ATTRIBUTES($range;wk background color;$bcol)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Attributs 4D Write Pro*  
 *Constantes 4D Write Pro*  

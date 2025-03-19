@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->La commande **PHP GET OPTION** permet de connaître la valeur courante d’une option relative à l’éxécution de scripts PHP.<!-- END REF--> 
 
@@ -33,12 +33,12 @@ Passez dans le paramètre *option* une constante du thème *PHP* désignant l’
 
 **Note :** Seul le compte utilisateur est retourné lorsque vous utilisez l'option PHP privileges avec la commande **PHP GET OPTION** (le mot de passe n'est pas retourné).
 
-#### Voir aussi 
+## Voir aussi 
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

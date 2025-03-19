@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->Get file from pasteboard コマンドは、ドラッグ＆ドロップ処理に含まれるファイルの完全パス名を返します。<!-- END REF-->複数のファイルを同時に選択し、移動することができます。*xIndex* 引数を使用して選択したファイル中でファイルを指定することができます。
 
 ペーストボードにX番目のファイルがない場合、コマンドは空の文字列を返します。
 
-#### 例題 
+## 例題 
 
 以下の例題は、ドラッグ＆ドロップ処理に含まれるすべてのファイルのパス名を配列に格納します:
 
@@ -38,11 +38,11 @@ displayed_sidebar: docs
  Until($vfileArray="")
 ```
 
-#### 参照 
+## 参照 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

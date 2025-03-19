@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OLD RELATED MANY.Summary-->OLD RELATED MANYは、1フィールドの更新前の内容を使用してリレート処理を実行する以外は、[RELATE MANY](relate-many.md "RELATE MANY")コマンドと同じ処理を行います。<!-- END REF-->
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 OLD RELATED MANYはリレートテーブルのセレクションを変更し、カレントレコードとしてそのセレクションの最初のレコードを選択します。
 
-#### 参照 
+## 参照 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

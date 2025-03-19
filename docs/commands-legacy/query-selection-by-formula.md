@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 
 
@@ -25,13 +25,13 @@ displayed_sidebar: docs
 
 For more information, see the description of the [QUERY BY FORMULA](query-by-formula.md) command.
 
-#### See also 
+## See also 
 
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

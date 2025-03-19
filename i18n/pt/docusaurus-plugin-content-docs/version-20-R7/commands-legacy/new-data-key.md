@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.New data key.Summary-->O comando **New data key** gera uma chave de cifrado de dados binários a partir do texto passado no parâmetro *frasePasse*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ O objeto devolvido contém a propriedade abaixo:
 
 Se passar uma string vazia em *frasePasse*, o comando devolve *null*.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser salvar uma chave de criptografia em um arquivo .4DKeyChain:
 
@@ -47,7 +47,7 @@ Se quiser salvar uma chave de criptografia em um arquivo .4DKeyChain:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -56,7 +56,7 @@ Se quiser salvar uma chave de criptografia em um arquivo .4DKeyChain:
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP INSERT PICTURE.Summary-->O comando **WP INSERT PICTURE** insere a *imagem* no *objFaixa* de acordo com o *modo* de inserção especificado.<!-- END REF--> A imagem se insertará como um carácter em *objFaixa*.
 
@@ -52,7 +52,7 @@ No parâmetro *modo*, passe uma das seguintes constantes para indicar o modo de 
 Se não passar um parâmetro *rangeUpdate*, como padrão a imagem inserida é incluida na range resultado.
 * Se *targetObj* não for uma range, *rangeUpdate* é ignorada.
 
-#### Exemplo 
+## Exemplo 
 
 No exemplo abaixo, um usuário seleciona a imagem que deseja inserir no objeto de faixa e se lhe avisará se esta imagem não puder ser inserida:
 
@@ -83,7 +83,7 @@ No exemplo abaixo, um usuário seleciona a imagem que deseja inserir no objeto d
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [WP INSERT DOCUMENT](wp-insert-document.md)  

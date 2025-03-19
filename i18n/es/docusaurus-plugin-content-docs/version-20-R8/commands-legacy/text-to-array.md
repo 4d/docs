@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->El comando **TEXT TO ARRAY** transforma una variable texto en un array texto.<!-- END REF--> El texto original (con estilo o no) se divide y cada parte se convierte en un elemento del array *arrText* que es devuelto por el comando. Este comando se puede utilizar por ejemplo para llenar las páginas o las columnas con texto de un tamaño fijo.  
   
@@ -53,7 +53,7 @@ Este parámetro es opcional; cuando se omite, se utiliza el estilo Normal.
   
 El parámetro opcional *\**, si se pasa, permite forzar el que se tenga en cuenta los parámetros *nomFuente*, *tamFuente* y/o *estiloFuente* para los textos multiestilos cuando estos parámetros no están definidos en el texto original. Sin embargo, si estos parámetros están definidos en el texto original, los parámetros pasados al comando se ignoran en todos los casos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Queremos dividir un texto multistyle en líneas con un tamaño máximo de 200 píxeles:
 
@@ -62,7 +62,7 @@ Queremos dividir un texto multistyle en líneas con un tamaño máximo de 200 p�
   // los atributos Arial, 20 y Normal sólo se tienen en cuenta si no están definidos en el texto
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Queremos dividir un texto en líneas de un tamaño máximo de 350 píxeles en fuente Bodoni negrita 14\. Como el comando no funciona correctamente si la fuente no está disponible, es útil verificar su presencia:
 
@@ -78,7 +78,7 @@ Queremos dividir un texto en líneas de un tamaño máximo de 350 píxeles en fu
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Un texto multiestilo debe imprimirse sin estilo en la fuente Arial normal 12 con un ancho máximo de 600 píxeles:
 
@@ -89,7 +89,7 @@ Un texto multiestilo debe imprimirse sin estilo en la fuente Arial normal 12 con
  TEXT TO ARRAY($RawText;TextArray;600;"Arial";12)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Debe imprimir en un área de 400 píxeles de largo un texto de un máximo de 80 líneas con la fuente más grande posible (sin exceder los 24 puntos). Puede escribir:
 
@@ -103,13 +103,13 @@ Debe imprimir en un área de 400 píxeles de largo un texto de un máximo de 80 
  Until($n<=80)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->La commande **WP TABLE MERGE CELLS**fusionne la sélection de cellules dans *targetObj* ou *tableRef* (défini par *startColumn*, *startRow*, *columnCount*, et *rowCount*).<!-- END REF-->
 
@@ -45,7 +45,7 @@ Si rowCount est omis, cela équivaut à passer 1 (valeur par défaut). Si column
 
 Si startColumn plus ColumnCount ou *startRow* plus rowCount dépasse le nombre de colonnes/lignes dans tableRef, ou si startColumn ou *startRow* est supérieur au nombre de colonnes/lignes dans tableRef, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que l'ensemble du tableau sera fusionné en une seule grande cellule.  
 
-#### Example 
+## Example 
 
 L'exemple suivant consiste à désigner une plage de cellules et à la fusionner :
 
@@ -64,7 +64,7 @@ Les données existantes des cellules d'origine sont concaténées dans la cellul
 
 Pour plus de détails, veuillez consulter *Fusionner et fractionner des cellules*.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Manipuler des tableaux*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  

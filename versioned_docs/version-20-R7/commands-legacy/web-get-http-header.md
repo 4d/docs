@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->The **WEB GET HTTP HEADER** command returns either a string or two arrays, containing the HTTP header used for the currently processed request.<!-- END REF-->
 
@@ -55,7 +55,7 @@ Here is a list of some HTTP fields that can be used in a request:
 * **Referer**: request origin (for example http://mywebserver/mypage1.html), i.e. the page which is displayed when clicking on the **Previous** button.
 * **User-Agent**: browser or proxy name and version.
 
-#### Example 
+## Example 
 
 The following method allows getting any HTTP request header field content: 
 
@@ -113,12 +113,12 @@ The following method allows getting any HTTP request header field content:
  End case
 ```
 
-#### See also 
+## See also 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

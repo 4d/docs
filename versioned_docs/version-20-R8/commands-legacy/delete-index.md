@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE INDEX.Summary-->The DELETE INDEX command deletes one or more existing indexes from the database.<!-- END REF-->  
 You can pass either a pointer to a field or the name of an index in the parameter:
@@ -26,11 +26,11 @@ The optional *\** parameter, when it is passed, performs deindexing in asynchron
 
 If there is no index corresponding to *fieldPtr* or *indexName*, the command does nothing.
 
-#### Note for deployment 
+## Note for deployment 
 
 Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
 
-#### Example 
+## Example 
 
 This example illustrates both syntaxes of the command: 
 
@@ -41,13 +41,13 @@ This example illustrates both syntaxes of the command:
  DELETE INDEX("CityZip")
 ```
 
-#### See also 
+## See also 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

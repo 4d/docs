@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->LISTBOX EXPAND コマンドは*object*と*\**で指定したリストボックスオブジェクトのブレーク行を展開するために使用します。<!-- END REF-->
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 選択あるいはリストボックスがブレーク行を含んでいないか、すべてのブレーク行がすでに展開されている場合、コマンドはなにも行いません。
 
-#### 例題 
+## 例題 
 
 以下の例題では、コマンドのさまざまな利用方法を示します。以下の配列がリストボックスに表示されているものとします:
 
@@ -76,11 +76,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict175855.en.png)
 
-#### 参照 
+## 参照 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

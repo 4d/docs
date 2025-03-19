@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->The TRANSFORM PICTURE command applies a transformation of the *operator* type to the picture passed in the *picture* parameter.<!-- END REF-->This command extends the functionalities offered by conventional picture transformation operators. These operators remain entirely usable in 4D.
 
@@ -46,7 +46,7 @@ In *operator*, pass the number of the operation to be carried out and in *param*
 * Fade to grey scale: The picture is switched to gray scale (no parameter is required). This transformation cannot be undone.
 * Transparency: A transparency mask is applied to the picture based on the color passed in *param1*. For example, if you pass 0x00FFFFFF (white color) in *param1*, all the white pixels in the original picture will be transparent in the transformed picture. This operation can be applied to bitmap or vector pictures. By default, if the *param1* parameter is omitted, the color white (0x00FFFFFF) is set as the target color. This function is specially designed to handle transparency in pictures converted from the deprecated PICT format pictures, but can be used with pictures of any type. This transformation cannot be undone.
 
-#### Example 1 
+## Example 1 
 
 You want to set the white parts of a picture to transparent. To do this, you can use the following code:
 
@@ -58,7 +58,7 @@ You will get the following result:
 
 ![](../assets/en/commands/pict1359750.en.png)
 
-#### Example 2 
+## Example 2 
 
 Here is an example of cropping a picture (the picture is displayed in the form with the “Truncated (non-centered)” format): 
 
@@ -68,11 +68,11 @@ Here is an example of cropping a picture (the picture is displayed in the form w
 
 ![](../assets/en/commands/pict28288.en.png)
 
-#### See also 
+## See also 
 
 [COMBINE PICTURES](combine-pictures.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

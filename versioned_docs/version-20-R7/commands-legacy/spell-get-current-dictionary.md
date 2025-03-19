@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->The **SPELL Get current dictionary** command returns the ID number of the dictionary being used.<!-- END REF-->
 
-#### Example 
+## Example 
 
 We want to display the language of the current dictionary: 
 
@@ -30,11 +30,11 @@ We want to display the language of the current dictionary:
  ALERT("Current dictionary: "+$countryName) // Spanish
 ```
 
-#### See also 
+## See also 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

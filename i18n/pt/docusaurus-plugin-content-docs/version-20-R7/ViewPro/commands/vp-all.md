@@ -15,7 +15,7 @@ title: VP All
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto intervalo de todas as células                        | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP ALL` <!-- REF #_method_.VP All.Summary -->retorna um novo objeto de intervalo que faz referência a todas as células<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
-#### Exemplo
+## Exemplo
 
 Pretende definir um objeto intervalo para todas as células da folha atual:
 
@@ -31,7 +31,7 @@ Pretende definir um objeto intervalo para todas as células da folha atual:
 $all:=VP All("ViewProArea") // todas as células da folha atual
 ```
 
-#### Veja também
+## Veja também
 
 [VP Cell](vp-cell)<br/>
 [VP Cells](vp-cells)<br/>

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->La commande **QR BLOB TO REPORT** place l’état contenu dans le paramètre *blob* dans la zone d'état rapide désignée par le paramètre *zone*.<!-- END REF--> 
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *blob* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 1 
+## Exemple 1 
 
 Le code suivant affiche dans la zone MaZone l'état rapide “etat.4qr”, stocké à côté du fichier de structure de la base. A noter que le fichier d'état peut avoir été créé avec une version de 4D antérieure à la 2003 :
 
@@ -32,7 +32,7 @@ Le code suivant affiche dans la zone MaZone l'état rapide “etat.4qr”, stock
  QR BLOB TO REPORT(MaZone;$doc)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'instruction suivante affiche l'état stocké dans le champ ChampBlob dans la zone MaZone :
 
@@ -40,11 +40,11 @@ L'instruction suivante affiche l'état stocké dans le champ ChampBlob dans la z
  QR BLOB TO REPORT(MaZone;[Table 1]ChampBlob)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

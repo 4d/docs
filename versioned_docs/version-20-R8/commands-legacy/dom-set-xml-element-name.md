@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->The DOM SET XML ELEMENT NAME command modifies the name of the element set by *elementRef*.<!-- END REF--> 
 
 Pass the reference of the element to rename in *elementRef* and the new name of the element in *elementName*. The command also takes charge of updating the open and close tags of the element. 
 
-#### Example 
+## Example 
 
 In the following XML source:
 
@@ -44,22 +44,22 @@ We get:
 </BestSeller>
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
-#### Error management 
+## Error management 
 
 An error is generated when:
 
 * The element reference is invalid
 * The new name of the element to create is invalid (for example, if it starts with a number).
 
-#### See also 
+## See also 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CANCEL.Summary-->No contexto de entrada de dados, **CANCEL** realiza a mesma ação que se o usuário tivesse pressionado a tecla de cancelação (**Esc**).<!-- END REF--> Também é possível colocar no método de caixa de fechamento opcional de uma janela criada pelo comando[Open window](open-window.md)
 
@@ -33,25 +33,25 @@ Finalmente, este comando pode ser utilizado não evento de formulário On Printi
 
 **Nota:** esta operação é diferente da do comando [PAGE BREAK](page-break.md)(\*)que cancela TODOS os formulários que estão a espera de impressão.
 
-##### Modo Headless 
+### Modo Headless 
 
 **O comando CANCEL** é permitido no modo headless (computador sem periféricos), no contexto de áreas offscreen criadas por *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER"). 
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Quando o comando CANCEL é executado (anulação de formulário ou de impressão), a variável sistema OK assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

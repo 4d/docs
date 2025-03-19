@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Character code.Summary-->The **Character code** command returns the Unicode UTF-16 code (included between 1 and 65535) of *character*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ If there is more than one character in the string, **Character code** returns on
 
 The [Char](char.md) function is the counterpart of **Character code**. It returns the character that the UTF-16 code represents. 
 
-#### Example 1 
+## Example 1 
 
 Uppercase and lowercase characters are considered equal within a comparison. You can use Character code to differentiate between uppercase and lowercase characters. Thus, this line returns True:
 
@@ -36,7 +36,7 @@ On the other hand, this line returns False:
  (Character code("A")=Character code("a"))
 ```
 
-#### Example 2 
+## Example 2 
 
 This example returns the code of the first character of the string *"ABC"*:
 
@@ -44,7 +44,7 @@ This example returns the code of the first character of the string *"ABC"*:
  GetCode:=Character code("ABC") // GetCode gets 65, the character code of A
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example tests for carriage returns and tabs:
 
@@ -79,12 +79,12 @@ When executed multiple times on large texts, this test will run faster when comp
 
 The second piece of code runs faster for two reasons: it does only one character reference by iteration and uses LongInt comparisons instead of string comparisons to test for carriage returns and tabs. Use this technique when working with common codes such as CR and TAB.
 
-#### See also 
+## See also 
 
 [Char](char.md)  
 *Character Reference Symbols*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

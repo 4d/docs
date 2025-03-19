@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->La commande **ACTIVITY SNAPSHOT** retourne un ou plusieurs tableau(x) décrivant les opérations en cours de progression sur les données de 4D.<!-- END REF--> Ces opérations entraînent généralement l’affichage d’une fenêtre de progression. 
 
@@ -33,7 +33,7 @@ La commande **ACTIVITY SNAPSHOT** admet deux syntaxes :
 * syntaxe utilisant uniquement un tableau objet.
 * syntaxe utilisant plusieurs tableaux.
 
-##### Première syntaxe : LIRE APERCU ACTIVITE (tabActivités{; \*}) 
+### Première syntaxe : LIRE APERCU ACTIVITE (tabActivités{; \*}) 
 
 Avec cette syntaxe, toutes les opérations sont retournées sous forme structurée dans le tableau d’objets 4D *tabActivités*. Chaque élément du tableau est un objet construit de la manière suivante :
 
@@ -69,7 +69,7 @@ Voici une description de chaque propriété retournée :
    * ...
 * *subOperations* (tableau) : tableau d'objets contenant les sous-opérations de l'opération courante (le cas échéant). La structure de chaque sous-élément est identique à celle de l'objet principal. Si l'opération courante n'a pas de sous-opérations, *subOperations* est vide.
 
-##### Seconde syntaxe : LIRE APERCU ACTIVITE (tabUUID ;tabDébut;tabDurée; tabInfo {;tabDétails}{; \*}) 
+### Seconde syntaxe : LIRE APERCU ACTIVITE (tabUUID ;tabDébut;tabDurée; tabInfo {;tabDétails}{; \*}) 
 
 Avec cette syntaxe, toutes les opérations sont retournées sous forme de plusieurs tableaux synchronisés (chaque opération entraîne l’ajout d’un élément dans tous les tableaux). Les tableaux suivants sont retournés :
 
@@ -82,7 +82,7 @@ Avec cette syntaxe, toutes les opérations sont retournées sous forme de plusie
    * *"dbOperationDetails"* (objet) : cf. ci-dessus  
    * "subOperations". La valeur de cette propriété est un tableau objet contenant toutes les sous-opérations de l’opération courante. Si l’opération courante n’a pas de sous-opérations, la valeur de la propriété *subOperations* est un tableau vide (correspond à la propriété *subOperations* de l'objet *tabActivités*).
 
-#### Exemple 
+## Exemple 
 
 Cette méthode, exécutée dans un process séparé sous 4D ou 4D Server, permet d’obtenir un instantané des opérations en progression :
 
@@ -105,7 +105,7 @@ Vous obtenez des tableaux du type :
 ![](../assets/en/commands/pict1213741.fr.png)
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

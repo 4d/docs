@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLEAR NAMED SELECTION.Summary-->CLEAR NAMED SELECTION borra *temp* de la memoria y libera la memoria utilizada por *temp*.<!-- END REF-->CLEAR NAMED SELECTION no afecta las tablas, selecciones, o registros. Como las selecciones temporales utilizan memoria, es recomendable borrar las selecciones temporales cuando ya no se necesiten.
 
 Si *temp* fue creado por el comando [CUT NAMED SELECTION](cut-named-selection.md "CUT NAMED SELECTION") y luego manipulado utilizando el comando [USE NAMED SELECTION](use-named-selection.md "USE NAMED SELECTION"), t*emp* no existe más en memoria. En este caso, no es necesario utilizar el comando CLEAR NAMED SELECTION.
 
-#### Ver también 
+## Ver también 
 
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

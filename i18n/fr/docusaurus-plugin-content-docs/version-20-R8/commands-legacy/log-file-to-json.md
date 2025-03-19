@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->La commande **LOG FILE TO JSON** sauvegarde au format JSON le fichier d'historique courant ou tout fichier d'historique spécifié.<!-- END REF-->
 
@@ -51,7 +51,7 @@ Note : Si vous passez Field attribute with name dans le paramètre *attribChamp*
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 La liste effective des propriétés dépend du type d'opération (i.e.: création, suppression ou modification de l'enregistrement, créer Blob, etc.). Les principales propriétés sont les suivantes :
 
@@ -73,7 +73,7 @@ La liste effective des propriétés dépend du type d'opération (i.e.: créatio
 
 (\*) Dans les bases projets, la propriété "user4d\_id" n'est pas retournée.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez sauvegarder le fichier d'historique courant en JSON :
 
@@ -87,16 +87,16 @@ Vous voulez sauvegarder un fichier d'historique spécifique en JSON avec les cha
  LOG FILE TO JSON("c:\\4Dv15\\ExportLogs";0;"c:\\4Dv15\\Backup\\old_myDB.journal";Field attribute with name)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La commande **LOG FILE TO JSON** modifie la valeur des variables système OK et Document : si le fichier JSON a été correctement sauvegardé, OK prend la valeur 1 et Document contient le chemin du fichier d'historique. Si vous avez passé "" dans le paramètre *logPath* et que l'utilisateur a annulé la boîte de dialogue de sélection de fichier, OK prend la valeur 0 et Document contient une chaîne vide. Si l'utilisateur a sélectionné un fichier invalide, OK prend la valeur 0 et Document contient le chemin du fichier invalide.
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

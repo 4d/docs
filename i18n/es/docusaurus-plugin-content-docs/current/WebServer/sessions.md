@@ -467,7 +467,7 @@ A new user is created, and some information is stored in the session, especially
 
 ### Lifespan
 
-A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
+A session token has a lifespan, and the session itself has a lifespan. El tiempo de vida útil del token de sesión puede definirse [en la creación de tokens](../API/SessionClass.md#createotp). Por defecto, el tiempo de vida del token es el mismo valor que el valor de [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Choose.Summary-->**Choose** コマンドは、引数*criterion* の値に応じて、引数*value1*、*value2* などに渡された値の1つを返します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
  $res:=Choose(True;"red1";"blue"+2) //error  
 ```
 
-#### 例題 1 
+## 例題 1 
 
 ブール型条件を用いた、このコマンドの典型的な使用例を以下に示します。
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 数値型条件を用いた、このコマンドの典型的な使用例を以下に示します。 
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

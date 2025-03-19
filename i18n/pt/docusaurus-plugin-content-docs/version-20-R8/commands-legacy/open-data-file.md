@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->O comando **OPEN DATA FILE** permite alterar os dados do arquivo aberto pela aplicação 4D on-the-fly.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Se você passar uma string vazia em *accessPath*, o comando irá reabrir o banco
 
 **4D Server:** Começando com 4D v13, este comando pode ser executado com o 4D Server. Neste contexto, o comando faz uma chamada interna ao comando [QUIT 4D](quit-4d.md) no servidor (o qual faz que apareça uma caixa de diálogo em cada computador remoto indicando que o servidor está no processo de saída) antes de abrir o arquivo designado.
 
-#### Exemplo 
+## Exemplo 
 
 No contexto de implementação de uma aplicação fusionada, se quiser abrir ou criar o arquivo de dados de usuário no método de banco de dados On Startup. Este exemplo usa o arquivo de dados padrão (ver *Gerenciamento de arquivo de dados em aplicativos finais*):
 
@@ -51,11 +51,11 @@ No contexto de implementação de uma aplicação fusionada, se quiser abrir ou 
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [CREATE DATA FILE](create-data-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

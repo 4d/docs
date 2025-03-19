@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET DOCUMENT SIZE.Summary-->O comando SET DOCUMENT SIZE define o tamanho de um documento para o número de bytes que são passados em *tamanho*.<!-- END REF-->  
 
@@ -22,13 +22,13 @@ Se o documento está aberto, passe seu número de referencia em *docRef*.
   
 Em Macintosh, é modificado o tamanho do data fork do documento
 
-#### Ver também 
+## Ver também 
 
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

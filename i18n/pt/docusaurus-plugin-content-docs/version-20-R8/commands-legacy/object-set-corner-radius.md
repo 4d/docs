@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->O comando **OBJECT SET CORNER RADIUS** modifica o rádio das esquinas dos objetos retângulo arredondado cujos nomes passou no parâmetro *objeto*.<!-- END REF--> O novo rádio só se define para o processo e não é guardado no formulário. 
 
@@ -31,7 +31,7 @@ No parâmetro *radio*, passe um novo valor do rádio em píxels a aplicar nas es
 
 **Nota:** também pode modificar este valor a nível de formulário utilizando a lista de propriedades (ver   *Nova propriedade Arredondada de esquinas para retângulo arredondado*).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Você têm os seguintes retângulos em seu formulário, chamados respectivamente "Rect1" e "Rect2":
 
@@ -45,7 +45,7 @@ Pode executar o seguinte código para mudar seu rádio:
 
 ![](../assets/en/commands/pict1629576.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 You have the following text area in your form, named "required-label":
 
@@ -61,11 +61,11 @@ If you execute the following code:
 
 Note that for text areas (as well as inputs), unlike for rectangles, the corner roundness is drawn outside the initial area of the object.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

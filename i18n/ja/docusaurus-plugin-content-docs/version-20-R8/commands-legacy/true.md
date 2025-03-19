@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.True.Summary-->Trueは、ブール値のTrueを返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 この例は、変数*vbOptions*にTrueを代入します:
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
  vbOptions:=True
 ```
 
-#### 参照 
+## 参照 
 
 [False](false.md)  
 [Not](not.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

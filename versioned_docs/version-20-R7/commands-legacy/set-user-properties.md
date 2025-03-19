@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties lets you change and update the properties of an existing user account whose unique user ID number you pass in *userID*, or add a new user.<!-- END REF-->
 
@@ -50,11 +50,11 @@ If you pass the optional *memberships* parameter, you change all the memberships
 
 **Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a user affiliated with the Designer, pass -1 in userID. To create a user affiliated with the Administrator, pass -2 in userID.
 
-#### Error management 
+## Error management 
 
 If you do not have the proper access privileges for calling Set user properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### See also 
+## See also 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -63,7 +63,7 @@ If you do not have the proper access privileges for calling Set user properties 
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

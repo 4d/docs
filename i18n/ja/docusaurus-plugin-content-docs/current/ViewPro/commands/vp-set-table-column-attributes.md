@@ -25,7 +25,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | attributes | Object  | -> | *column* の列に適用する属性                             |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET TABLE COLUMN ATTRIBUTES` コマンドは、<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->*tableName* で指定した表組みの *column* でインデックスを指定した列に *attributes* の属性を適用します<!-- END REF -->。
 
@@ -48,7 +48,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 *tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは何もしません。
 
-#### 例題
+## 例題
 
 データコンテキストを使用した表組みを作成します:
 
@@ -98,7 +98,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 ![](../../assets/en/ViewPro/table-insertb.png)
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

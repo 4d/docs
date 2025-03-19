@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Trigger level.Summary-->La commande **Trigger level** retourne le niveau d'exécution du trigger.<!-- END REF-->
 
 Reportez-vous à la description des *Triggers en cascade*.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Présentation des triggers*  
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->La commande **OBJECT SET PRINT VARIABLE FRAME** vous permet de modifier la propriété d’impression en taille variable de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -39,11 +39,11 @@ Le paramètre optionnel *fixeSousForm* vous permet de définir une option suppl�
 | Print Frame fixed with multiple records | Entier long | 2      | La taille initiale de la zone du sous-formulaire est conservée mais 4D imprime le formulaire plusieurs fois pour imprimer tous les enregistrements.                                          |
 | Print Frame fixed with truncation       | Entier long | 1      | 4D n’imprime que les enregistrements qui apparaissent dans la zone du sous-formulaire. Le formulaire n’est imprimé qu’une fois et les enregistrements qui ne sont pas imprimés sont ignorés. |
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

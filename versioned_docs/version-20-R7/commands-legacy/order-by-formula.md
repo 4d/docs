@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record. **Note**: you must specify *aTable*. You cannot use a default table.
 
@@ -33,7 +33,7 @@ No matter how a sort has been defined, if the actual sort operation is going to 
 
 > **Compatibility note:** Until 4D Server v11, this command was executed on the client machine. For reverse compatibility, this behavior is maintained in converted databases. However, a compatibility property or a selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command enables server-side execution in converted databases.
 
-#### Example 
+## Example 
 
 This example orders the records of the \[People\] table in descending order, based on the length of each person’s last name. The record for the person with the longest last name will be first in the current selection:
 
@@ -41,11 +41,11 @@ This example orders the records of the \[People\] table in descending order, bas
  ORDER BY FORMULA([People];Length([People]Last Name);<)
 ```
 
-#### See also 
+## See also 
 
 [ORDER BY](order-by.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->GET FIELD RELATIONを使用すると、カレントプロセスの、*manyField*から開始するリレートの自動/マニュアルのステータスを調べることができます。<!-- END REF-->ストラクチャウィンドウで設定した自動リレートをはじめとして、あらゆるリレートを調べることができます。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 * オプションの引数 *\** を使用すると、プログラムから修正されていない場合でも、リレートのカレントステータスを“強制的に”読み込むことができます。言い換えれば引数 *\** を渡した場合、引数*one*および*many*には値2または3だけが返されます。
 
-#### 例題 
+## 例題 
 
 以下のようなストラクチャがあります:
 
@@ -78,14 +78,14 @@ displayed_sidebar: docs
  GET FIELD RELATION([Employees]Company;one;many;*) //3,3を返す
 ```
 
-#### 参照 
+## 参照 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

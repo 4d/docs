@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->La commande **GET PRINTABLE AREA** retourne dans les paramètres *hauteur* et *largeur* la taille en pixels de la zone d’impression.<!-- END REF--> Cette taille dépend des paramètres d’impression courants, de l’orientation du papier, etc. 
 
@@ -34,12 +34,12 @@ Pour connaître la taille totale de la page, vous pouvez :
 
 **Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

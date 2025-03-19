@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->The QUIT 4D command exits the current 4D application and returns to the Desktop.<!-- END REF--> 
 
 The command processing is different whether it is executed on 4D (local or remote mode) or on 4D Server. 
 
-##### With 4D local mode and remote mode 
+### With 4D local mode and remote mode 
 
 After you call QUIT 4D, the current process stops its execution, then 4D acts as follows:
 
@@ -37,7 +37,7 @@ A third strategy is also possible. Before calling QUIT 4D, you check whether a w
 
 **Note:** The *time* parameter cannot be used with 4D in local or remote mode.
 
-##### With 4D Server (Stored procedure) 
+### With 4D Server (Stored procedure) 
 
 The QUIT 4D command can be executed on the server machine, in a stored procedure. In this case, it accepts the *time* optional parameter.  
   
@@ -51,7 +51,7 @@ If there is an *On Server Shutdown Database Method*, it is executed after the de
 
 The action of the QUIT 4D command used in a stored procedure is the same as the one for the Quit command of the 4D Server File menu: it causes a dialog box to appear on each client machine indicating that the server is about to quit.
 
-#### Example 
+## Example 
 
 The project method listed here is associated with the Quit or Exit menu item in the File menu.
 
@@ -64,11 +64,11 @@ The project method listed here is associated with the Quit or Exit menu item in 
  End if
 ```
 
-#### See also 
+## See also 
 
 [On Exit database method](on-exit-database-method.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

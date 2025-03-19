@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Summary-->SELECT LIST ITEMS BY POSITION コマンドは、*list*に渡された参照番号のリストにおいて、*itemPos*ならびにオプションとして*positionsArray*に渡された位置にある項目を選択します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 **Note:** 階層リスト内で複数のリスト項目を同時に選択するには（手動、あるいはプログラムから）、そのリストに対して複数選択可プロパティを有効に設定しておかなくてはなりません。このプロパティの設定は、[SET LIST PROPERTIES](set-list-properties.md "SET LIST PROPERTIES")コマンドを使用して行います。
 
-#### 例題 
+## 例題 
 
 アプリケーションモードで以下のように表示される階層リスト*hList*があります:
 
@@ -66,13 +66,13 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict22760.en.png)
 
-#### 参照 
+## 参照 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

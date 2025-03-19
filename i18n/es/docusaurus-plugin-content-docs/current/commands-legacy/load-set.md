@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LOAD SET.Summary-->LOAD SET carga un conjunto desde el archivo *documento,* creado con el comando [SAVE SET](save-set.md "SAVE SET").<!-- END REF-->
 
@@ -25,7 +25,7 @@ El parámetro *documento* es el nombre del documento disco que contiene el conju
 
 Recuerde que un conjunto es una representación de una selección de registros en el momento en que el conjunto se crea. Si los registros representados por el conjunto cambian, el conjunto podría volverse inválido. Por lo tanto, un conjunto cargado desde un disco debe representar a un grupo de registros que no cambia con frecuencia. Múltiples eventos pueden volver un conjunto inválido: modificación o eliminación de un registro del conjunto, o modificación de los criterios que determinan la creación del conjunto.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo utiliza LOAD SET para cargar un conjunto de sedes de la empresa Acme en Nueva York:
 
@@ -35,15 +35,15 @@ El siguiente ejemplo utiliza LOAD SET para cargar un conjunto de sedes de la emp
  CLEAR SET("NY Acme") // Borrar el conjunto de la memoria
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el usuario hace clic en Cancelar en la caja de diálogo de abrir archivos, o si se produce un error durante la carga, la variable sistema OK toma el valor 0\. De lo contrario, toma el valor 1.
 
-#### Ver también 
+## Ver también 
 
 [SAVE SET](save-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN URL.Summary-->El comando OPEN URL abre el archivo o URL pasado en el parámetro *ruta* con la aplicación indicada en *nomAp* (si hay).<!-- END REF-->   
 
@@ -44,7 +44,7 @@ Si la aplicación *nomAp* no se encuentra, ningún error se devuelve; el comando
   
 **Nota:** este comando no funciona cuando se llama desde un proceso web.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Los siguientes ejemplos muestran los diferentes tipos de cadenas que son aceptadas como URLs por el comando:  
 
@@ -55,7 +55,7 @@ Los siguientes ejemplos muestran los diferentes tipos de cadenas que son aceptad
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo puede utilizarse para lanzar la aplicación más conveniente:  
 
@@ -66,7 +66,7 @@ Este ejemplo puede utilizarse para lanzar la aplicación más conveniente:
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el parámetro *nomAp*:
 
@@ -78,11 +78,11 @@ Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el par
 
   
 
-#### Ver también 
+## Ver también 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

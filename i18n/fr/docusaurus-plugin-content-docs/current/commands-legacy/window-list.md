@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WINDOW LIST.Summary-->La commande **WINDOW LIST** remplit le tableau *fenêtres* avec les numéros de référence des fenêtres actuellement ouvertes dans tous les process (process moteur et process utilisateur).<!-- END REF--> Seules les fenêtres "visibles" (i.e. non cachées) sont retournées. 
 
 Si vous ne passez pas le paramètre optionnel *\**, les fenêtres flottantes sont ignorées.
 
-#### Exemple 
+## Exemple 
 
 La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (à l'exception des fenêtres flottantes et des boîtes de dialogue) :
 
@@ -46,12 +46,12 @@ La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (
 
 **Note :** Cette méthode pourrait être améliorée par l'ajout de tests sur la taille de la fenêtre principale (sous Windows) ou sur la taille et l'emplacement du ou des écran(s) (sous Mac OS).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

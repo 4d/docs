@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Window process.Summary-->O comando Window process devolve o número de processo que executa a janela cujo número de referência é passado em *janela*.<!-- END REF--> Se a janela não existir, o comando devolve *0 (zero)*.  
 
 Se omitir o parâmetro *janela*, Window process devolve o número do processo da janela do primeiro plano do processo atual.
 
-#### Ver também 
+## Ver também 
 
 [Current process](current-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

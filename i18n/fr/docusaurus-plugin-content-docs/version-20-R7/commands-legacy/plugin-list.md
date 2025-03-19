@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PLUGIN LIST.Summary-->La commande **PLUGIN LIST** remplit les tableaux *tabNuméros* et *tabNoms* avec les numéros et les noms des plug-ins chargés par l'application 4D et utilisables.<!-- END REF--> Les deux tableaux sont automatiquement dimensionnés et synchronisés par la commande.
 
@@ -22,14 +22,14 @@ displayed_sidebar: docs
 
 **PLUGIN LIST** prend en compte tous les plug-ins, y compris les plug-ins intégrés (par exemple 4D Chart) et les plug-ins des éditeurs tiers. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [COMPONENT LIST](component-list.md)  
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

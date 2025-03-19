@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->La commande **LISTBOX SELECT ROWS**  provoque la sélection des lignes d'une list box entity selection ou une list box collection correspondant aux entités ou objets contenus dans le paramètre *sélection*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ Si le paramètre optionnel *action* est passé, il permet de définir l'action d
 
 **Note :** La commande s'attend à ce que chaque objet ou entity s'affiche une seule fois uniquement dans la list box.
 
-#### Exemple 1 
+## Exemple 1 
 
 Ce code vous permet de sélectionner les factures d'une entity selection à l'aide d'une requête de serveur :
 
@@ -67,7 +67,7 @@ Ce code vous permet de sélectionner les factures d'une entity selection à l'ai
  LISTBOX SELECT ROWS(*;"Factures";$cash;lk replace selection)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple avec une collection d'objets :
 
@@ -81,11 +81,11 @@ Exemple avec une collection d'objets :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

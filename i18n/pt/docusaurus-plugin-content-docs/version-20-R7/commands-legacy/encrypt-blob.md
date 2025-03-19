@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->O comando ENCRYPT BLOB criptograma o conteúdo do BLOB *toEncrypt* com a chave privada do remetente *sendPrivKey*, bem como, opcionalmente, a chave pública do destinatário *recipPubKey*.<!-- END REF--> Estas chaves devem ser geradas pelo comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) (no âmbito do tema "Protocolo Seguro").
 
@@ -37,7 +37,7 @@ Além disso, se chave pública do destinatário opcional foi usada para criptogr
 
 **Nota:** A cifra inclui uma funcionalidade de verificação a fim de evitar qualquer alteração de conteúdo BLOB (deliberadamente ou não). Por conseguinte, um BLOB criptografado não deve ser modificado, de outra forma não poderia ser decifrado.
 
-##### Otimização Comandos de Criptografia 
+### Otimização Comandos de Criptografia 
 
 A criptografia de dados atrasa a execução de suas aplicações, especialmente se um par de chaves é usado. No entanto, você pode considerar as seguintes dicas de otimização: 
 
@@ -48,7 +48,7 @@ Caso contrário, por razões de segurança, o modo síncrono é utilizado. Este 
 
 * Quanto aos BLOBs, você pode criptografar apenas uma pequena parte "estratégica" do BLOB, a fim de reduzir o tamanho dos dados a serem processados, bem como o tempo de processamento.
 
-#### Exemplo 
+## Exemplo 
 
 * **Usando uma chave única**
 
@@ -179,14 +179,14 @@ A empresa quer usar a Internet para trocar informações. Cada filial recebe inf
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

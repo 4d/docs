@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CALL WORKER.Summary-->The **CALL WORKER** command creates or calls the worker process whose name or ID you passed in *process*, and requests the execution of the code designated by *formula* in its context with the optional *param* parameter(s).<!-- END REF-->
 
@@ -44,7 +44,7 @@ You can also pass parameters to the *formula* using one or more optional *param*
 
 A worker process remains alive until the application is closed or the [KILL WORKER](kill-worker.md) command is explicitly called for it. To free up memory, do not forget to call this command once a worker process is no longer needed.
 
-#### Example 
+## Example 
 
 In a form, a button starts a computation: for example, statistics for the selected year. The button creates or calls a worker process that computes the data while the user can continue to work in the form.
 
@@ -70,14 +70,14 @@ The code of *workerMethod* is:
  CALL FORM($window;Formula(displayStats);$vStatResults)
 ```
 
-#### See also 
+## See also 
 
 *About workers*  
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

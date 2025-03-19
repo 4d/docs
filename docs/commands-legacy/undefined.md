@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Undefined.Summary-->Undefined returns True if the result of the evaluation of *expression* is not a defined value, and False otherwise.<!-- END REF-->
 
@@ -37,7 +37,7 @@ In some cases, you may not want the parameter to be evaluated (for example, when
  $result:=(Type($ptr->)=Is undefined) //true if the pointed variable does not exist (no error)
 ```
 
-#### Example 
+## Example 
 
 Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
 
@@ -57,11 +57,11 @@ Here are the different results of the [Undefined](undefined.md) command as well 
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### See also 
+## See also 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

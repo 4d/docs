@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->The **METHOD GET CODE** command returns, in the *code* parameter, the contents of the method(s) designated by the *path* parameter.<!-- END REF--> This command can return the code of all types of methods: database methods, class definitions, triggers, project methods, form methods and object methods.
 
@@ -65,11 +65,11 @@ Code exported with tokens is independent from any subsequent renaming of languag
 
 If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
-#### Example 1 
+## Example 1 
 
 Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 
-#### Example 2 
+## Example 2 
 
 This example illustrates the effect of the *option* parameter.
 
@@ -114,12 +114,12 @@ The resulting document will contain:
   //%attributes = {"lang":"en"} comment added and reserved by 4DCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
 ```
 
-#### See also 
+## See also 
 
 [METHOD SET CODE](method-set-code.md)  
 *Using tokens in formulas*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

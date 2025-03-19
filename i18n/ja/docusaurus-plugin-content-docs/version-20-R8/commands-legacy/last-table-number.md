@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Last table number.Summary-->Last table numberは、データベース中のテーブルの数を返します。<!-- END REF-->テーブルは作成された順番に番号が付けられます。テーブルがデータベースから何も削除されていない場合、コマンドはデータベースにあるテーブルの数を返します。データベースのテーブル番号でループを繰り返す場合は、[Is table number valid](is-table-number-valid.md "Is table number valid")コマンドを使用してテーブルが削除されているかを確認します。 
 
-#### 例題 
+## 例題 
 
 以下の例は、配列*asTables*の配列要素を構築します。この配列はフォーム上のドロップダウンリスト（またはタブコントロール、スクロールエリアなど）に割り当てられ、データベース内のテーブルのリストを表示するために使用されます。
 
@@ -34,13 +34,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

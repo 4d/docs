@@ -19,7 +19,7 @@ title: VP Cell
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 La commande `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant une cellule spécifique<!-- END REF -->.
 
@@ -35,7 +35,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez indiquer l'index de la feuille
 
 > l'indexation démarre à 0.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez définir une plage pour la cellule de la feuille courante (sur la feuille courante) :
 
@@ -47,7 +47,7 @@ Le code est le suivant :
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### Voir également
+## Voir également
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

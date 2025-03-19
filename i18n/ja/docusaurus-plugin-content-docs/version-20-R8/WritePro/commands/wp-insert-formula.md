@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Insert formula** コマンドは、<!--REF #_command_.WP Insert formula.Summary-->*targetObj* 引数で指定したターゲット内に*formula* 引数のフォーミュラを、*mode* 引数で指定したモードで挿入しその結果のテキストレンジを返します。<!-- END REF-->
 
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 *formula* 引数には、評価される 4D フォーミュラを渡します。 以下のものを渡すことができます:
 
-- [**Formula**](../../API/FunctionClass.md#formula) または [**Formula from string**](../../API/FunctionClass.md#formula-from-string) コマンドで作成された[フォーミュラオブジェクト](../../API/FunctionClass.md#formula-objects)
+- either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
 - または以下の2つのプロパティを格納しているオブジェクト:
 
-| **プロパティ** | **型**  | **Description**                                                                                                                                                                                      |
-| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                                                |
-| formula   | Object | [**Formula**](../../API/FunctionClass.md#formula) または [**Formula from string**](../../API/FunctionClass.md#formula-from-string) コマンドで作成された[フォーミュラオブジェクト](../../API/FunctionClass.md#formula-objects) |
+| **プロパティ** | **型**  | **Description**                                                                                                                                                                             |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                                       |
+| formula   | Object | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
 
 フォーミュラの*name* プロパティがあるオブジェクトを使用する場合、ドキュメント内で、フォーミュラが参照として表示される場合にはフォーミュラ参照ではなくそのname の名前が表示され、値または記号として表示される場合にはフォーミュラtip に名前が表示されます。 *name* プロパティが空の文字列を格納しているか省略されている場合、それはオブジェクトから削除され、デフォルトでフォーミュラが表示されます。 詳細な情報については、[フォーミュラの管理](../managing-formulas.md) のページを参照してください。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題 1
+## 例題 1
 
 全てのCurrent date フォーミュラを、フォーマットされた文字列で置き換えたい場合を考えます:
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 例題 2
+## 例題 2
 
 顧客の名前にフォーミュラによる名前を使用したい場合を考えます:
 
@@ -115,7 +115,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### 例題 3
+## 例題 3
 
 フォーミュラを黄色でハイライトしたい場合を考えます:
 
@@ -132,7 +132,7 @@ WP SET ATTRIBUTES($range1; wk background color; "yellow")
 
 ![](../../assets/en/WritePro/commands/WPpic1.png)
 
-#### 参照
+## 参照
 
 *Managing formulas*\
 [WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>

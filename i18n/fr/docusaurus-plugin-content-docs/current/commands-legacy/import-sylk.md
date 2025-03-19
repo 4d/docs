@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->La commande **IMPORT SYLK** lit les données de *document* (document SYLK Windows ou Mac OS) et les écrit dans la table *laTable* en créant de nouveaux enregistrements.<!-- END REF-->
 
@@ -32,7 +32,7 @@ La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au f
 
 Lors de l'utilisation de **IMPORT SYLK**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrements par défaut est le retour chariot (code 13). Vous pouvez modifier ces valeurs par défaut en assignant de nouvelles valeurs aux variables système FldDelimit et RecDelimit. L'utilisateur peut modifier ces valeurs par défaut dans la boîte de dialogue d'import du mode Développement. Comme les champs Texte peuvent contenir des Retours chariot, soyez prudent si vous utilisez le Retour chariot comme délimiteur entre les champs à importer.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple importe des données d'un document SYLK. Cette méthode commence par le choix du formulaire puis déclenche l'import :
 
@@ -41,18 +41,18 @@ Cet exemple importe des données d'un document SYLK. Cette méthode commence par
  IMPORT SYLK([Personnes];"Nouvelles Personnes.slk") // Import du document “Nouvelles Personnes.slk”
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

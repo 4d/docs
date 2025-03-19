@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Time string.Summary-->La fonction **Time string** retourne sous forme de chaîne alphanumérique sur 24 heures l'expression de type Heure passée dans *secondes*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Si vous passez un nombre de secondes supérieur à celui qu'il y a dans un jour 
 
 **Note :** Si vous voulez obtenir sous forme de chaîne une expression de type Heure dans des formats plus variés, utilisez la fonction [String](string.md). 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “46800 secondes représentent 13:00:00” :
 
@@ -32,12 +32,12 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
  ALERT("46800 secondes représentent "+Time string(46800))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [String](string.md)  
 [Time](time.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

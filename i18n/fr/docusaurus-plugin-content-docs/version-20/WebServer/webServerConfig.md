@@ -23,7 +23,7 @@ Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la port
 | Peut être configuré via          | Nom                                                                              | Commentaires |
 | -------------------------------- | -------------------------------------------------------------------------------- | ------------ |
 | Boîte de dialogue des Propriétés | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |              |
-| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |              |
+| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |              |
 
 Active et configure le cache des pages web.
 
@@ -72,11 +72,11 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 
 ## Paramètres CORS
 
-| Peut être configuré via          | Nom                                                                                                                                   | Commentaires                                                                            |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                  | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                   | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| Boîte de dialogue des Propriétés | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-names-HTTP-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
+| Peut être configuré via          | Nom                                                                                                                                  | Commentaires                                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                 | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                  | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| Boîte de dialogue des Propriétés | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-nameshttp-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
 Liste des hôtes et méthodes autorisé(e)s pour le service CORS.
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->La commande **LISTBOX SET COLUMN WIDTH** permet de modifier par programmation la largeur d’une ou de toutes les colonne(s) de l’objet (list box, colonne ou en-tête) désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Passez dans le paramètre *largeur* la nouvelle largeur (en pixels) de l’objet
 
 Les paramètres optionnels *largeurMini* et *largeurMaxi* permettent de fixer des limites au redimensionnement manuel de la colonne. Vous pouvez passer dans *largeurMini* et *largeurMaxi* respectivement des valeurs de largeur minimale et maximale, exprimées en pixels. Si vous souhaitez que l’utilisateur ne puisse pas redimensionner la colonne, il suffit de passer la même valeur dans *largeur*, *largeurMini* et *largeurMaxi*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

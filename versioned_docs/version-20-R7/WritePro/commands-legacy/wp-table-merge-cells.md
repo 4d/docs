@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE MERGE CELLS.Summary-->The **WP TABLE MERGE CELLS** command merges the selection of cells in the *targetObj* or *tableRef* (defined by *startColumn*, *startRow*, *columnCount*, and *rowCount*).<!-- END REF-->
 
@@ -45,7 +45,7 @@ If rowCount is omitted, it is the equivalent of passing 1 (default value). If bo
 
 If startColumn plus ColumnCount or *startRow* plus rowCount exceeds the number of columns/rows in *tableRef*, or if startColumn or *startRow* is greater than the number of columns/rows in *tableRef*, the returned range contains the maximum possible columns/rows which means the whole table is merged into one big cell.
 
-#### Example 
+## Example 
 
 You want to designate a range of cells and merge it together:
 
@@ -64,7 +64,7 @@ Existing data from the original cells is concatenated in the resulting merged ce
 
 For more details, please refer to *Merging and splitting cells*.
 
-#### See also 
+## See also 
 
 *Handling tables*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  

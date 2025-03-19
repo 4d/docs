@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get root XML element.Summary-->The DOM Get root XML element command returns a reference to the root element of the document to which the XML element that is passed in the *elementRef* parameter belongs.<!-- END REF--> This reference can be used with the other XML parsing commands.
 
-#### See also 
+## See also 
 
 [DOM Get parent XML element](dom-get-parent-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

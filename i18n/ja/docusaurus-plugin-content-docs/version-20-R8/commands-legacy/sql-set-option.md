@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->**SQL SET OPTION** コマンドを使用して、optionに渡したオプションのvalueを変更します。<!-- END REF-->
 
@@ -38,15 +38,15 @@ displayed_sidebar: docs
    * Windowsでは ISO8859-1が使用されます。  
    * Mac OSではMAC-ROMANが使用されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとOKシステム変数に1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [SQL GET OPTION](sql-get-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

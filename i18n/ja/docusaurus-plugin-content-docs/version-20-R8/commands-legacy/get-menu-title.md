@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu title.Summary-->Get menu title コマンドは、*menu*に渡されたメニュー番号または参照を持つメニューのタイトルを返します。<!-- END REF-->  
   
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 **Note:** *menu*に[MenuRef](# "Unique ID (16-character alphanumeric) of a menu")を渡した場合、*process* 引数は意味を持たず、無視されます。
 
-#### 参照 
+## 参照 
 
 [Count menus](count-menus.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

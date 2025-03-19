@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT PICTURE.Summary-->The **WP INSERT PICTURE** command inserts the *picture* in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameter.<!-- END REF--> The picture will be inserted as a character in the *targetObj*. 
 
@@ -52,7 +52,7 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Example 
+## Example 
 
 In the following example, a user selects the picture they want to insert into the range object and will be warned if this picture could not be inserted:  
 
@@ -83,7 +83,7 @@ In the following example, a user selects the picture they want to insert into th
  End if
 ```
 
-#### See also 
+## See also 
 
   
 [WP INSERT DOCUMENT](wp-insert-document.md)  

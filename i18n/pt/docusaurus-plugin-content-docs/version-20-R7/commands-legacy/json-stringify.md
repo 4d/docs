@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.JSON Stringify.Summary-->O comando **JSON Stringify** converte o parâmetro *valor* em uma cadeia JSON.<!-- END REF--> Este comando serializa os dados em JSON, realiza a ação inversa do comando [JSON Parse](json-parse.md).  
   
@@ -37,7 +37,7 @@ No caso de um objeto, que pode incluir todo tipo de valores (ver o parágrafo *T
 * Ponteiros ao campo, variável ou array são avaliados quando stringfied
 Pode passar o parâmetro opcional *\** com o propósito de incluir caracteres com formato na cadeia resultante. Esta opção melhora a apresentação dos dados JSON (conhecida como pretty formatting).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Conversão de valores escalares:
 
@@ -54,7 +54,7 @@ Conversão de valores escalares:
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Conversão de uma cadeia que contém caracteres especiais:
 
@@ -65,7 +65,7 @@ Conversão de uma cadeia que contém caracteres especiais:
   // $p={"name":"john"}
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Exemplos de serialização de um objeto 4D com e sem o parâmetro *\**:
 
@@ -89,7 +89,7 @@ A vantagem deste formato é clara quando o JSON se mostra em uma área web:
 * Formato melhorado:  
 ![](../assets/en/commands/pict1205011.fr.png)
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Exemplo utilizando um ponteiro em uma variável:
 
@@ -108,7 +108,7 @@ Exemplo utilizando um ponteiro em uma variável:
   //$jsonstring = "{"name" : "Smith"}"
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Serialização de um objeto 4D:
 
@@ -126,7 +126,7 @@ Serialização de um objeto 4D:
   // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Serialização de um objeto 4D contendo um valor de data (fuso horário de Paris). A string resultante depende das configurações atuais de data do banco de dados.
 
@@ -148,7 +148,7 @@ Serialização de um objeto 4D contendo um valor de data (fuso horário de Paris
 
 **Note:** Para saber mais, veja *Página Compatibilidade*.
 
-#### Exemplo 7 
+## Exemplo 7 
 
 Conversão de uma coleção (fuso horário de Paris). A string resultante depende das configurações atuais de data no banco de dados.
 
@@ -170,12 +170,12 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 **Nota:** Para saber mais sobre essa opção, veja *Página Compatibilidade*.
 
-#### Ver também 
+## Ver também 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

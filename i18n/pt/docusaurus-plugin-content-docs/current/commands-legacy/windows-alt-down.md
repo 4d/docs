@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Windows Alt down retorna TRUE se a tecla Alt Windows estiver pressionada.  
 
 **Nota**: quando chamado numa plataforma Macintosh, Windows Alt down retorna TRUE se a tecla Macintosh Opção estiver pressionada.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [Shift down](shift-down.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -32,7 +32,7 @@ Ver exemplo do comando [Shift down](shift-down.md).
 [Shift down](shift-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get section.Summary-->El comando **WP Get section** devuelve la primera sección intersectada por el rango *targetObj* o elemento, o al *indiceSeccion* especificado del documento *wpDoc*.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Si no se define ninguna sección para el *indiceSeccion* especificado, el comand
 
 **Nota:** utilice el comando [WP Get subsection](wp-get-subsection.md) para obtener una subsección de una sección o de un rango.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea obtener la referencia de la primera sección:
 
@@ -41,7 +41,7 @@ Desea obtener la referencia de la primera sección:
  $section:=WP Get section(wpDoc;1)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get sections](wp-get-sections.md)  
 [WP Get subsection](wp-get-subsection.md)  

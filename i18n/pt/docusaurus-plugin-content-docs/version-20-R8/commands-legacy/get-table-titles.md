@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET TABLE TITLES.Summary-->O comando GET TABLE TITLES preenche os arrays *tituloTabelas* e *numTabelas* com os nomes e números das tabelas da banco definidas na janela de estrutura ou através do comando [SET TABLE TITLES](set-table-titles.md).<!-- END REF--> O conteúdo desses dois arrays está sincronizado.  
 
@@ -24,12 +24,12 @@ Do contrário, GET TABLE TITLES retorna os nomes das tabelas da banco definidos 
   
 Em ambos os casos, o comando não retorna as tabelas invisíveis.
 
-#### Ver também 
+## Ver também 
 
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

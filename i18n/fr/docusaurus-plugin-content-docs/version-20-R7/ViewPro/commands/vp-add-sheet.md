@@ -15,7 +15,7 @@ title: VP ADD SHEET
 | sheet      | Integer | -> | Indice de la nouvelle feuille           |                  |
 | name       | Text    | -> | Nom de la feuille                       | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère une feuille dans le document chargé dans *vpAreaName*.<!-- END REF -->
 
@@ -27,7 +27,7 @@ Dans *sheet*, vous pouvez passer le numéro de la nouvelle feuille. Si l'*index*
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
 
-#### Exemple
+## Exemple
 
 Le document comporte actuellement 3 feuilles :
 
@@ -41,7 +41,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 ![vp-add-sheet](../../assets/en/ViewPro/vp-add-sheet.png)
 
-#### Voir également
+## Voir également
 
 [VP REMOVE SHEET](vp-remove-sheet.md)
 

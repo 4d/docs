@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->O comando **SPELL Get current dictionary** devolve o número de ID do dicionário que está sendo utilizado.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Queremos mostrar a linguagem do dicionário atual: 
 
@@ -30,11 +30,11 @@ Queremos mostrar a linguagem do dicionário atual:
  ALERT("Dicionário atual: "+$countryName) // Espanhol
 ```
 
-#### Ver também 
+## Ver também 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

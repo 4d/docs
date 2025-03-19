@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->El comando **EXPORT STRUCTURE** exporta la definición de la estructura de la base 4D actual en *estructuraE* *xportada*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ El comando genera el mismo código XML o HTML que el elemento de menú **Exporta
 * **Formato xml**: la "gramática" interna de las definiciones de estructura 4D se documenta mediante archivos DTD, también utilizados para la validación de archivos XML. Los archivos DTD utilizados por 4D están agrupados en la carpeta DTD, que se encuentra junto a la aplicación 4D. Los archivos **base\_core.dtd** y **common.dtd** se utilizan para las definiciones de estructura. Para más información, puede consultar estos archivos junto con los comentarios que contienen.Una definición de estructura exportada en formato XML puede ser importada en otra base de datos (ver [IMPORT STRUCTURE](import-structure.md)).
 * **Formato** **html**: el comando genera código HTML puro que incluye referencias a una carpeta que contiene recursos externos como imágenes o css, necesarios para la representación HTML. Si desea guardar este código en una página HTML para mostrarla en un navegador, puede reutilizar la carpeta creada por la opción de menú **Exportar > Definición de estructura a archivo HTML...**, o crear su propia carpeta de recursos.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea exportar la estructura de la base a un documento de texto:
 
@@ -42,7 +42,7 @@ Usted desea exportar la estructura de la base a un documento de texto:
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea exportar la estructura actual de la base de datos en formato html:
 
@@ -52,11 +52,11 @@ Desea exportar la estructura actual de la base de datos en formato html:
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-#### Ver también 
+## Ver también 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

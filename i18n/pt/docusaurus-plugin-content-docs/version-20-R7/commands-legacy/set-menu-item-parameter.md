@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->O comando SET MENU ITEM PARAMETER permite associar uma cadeia de caracteres personalizada com uma linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 
 
 Este parâmetro é utilizado principalmente pelo comando [Dynamic pop up menu](dynamic-pop-up-menu.md "Dynamic pop up menu").
 
-#### Exemplo 
+## Exemplo 
 
 Este código oferece um menu que inclui os nomes das janelas abertas e permite recuperar o número da janelas escolhida:
 
@@ -36,13 +36,13 @@ Este código oferece um menu que inclui os nomes das janelas abertas e permite r
  RELEASE MENU($tMenuRef)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

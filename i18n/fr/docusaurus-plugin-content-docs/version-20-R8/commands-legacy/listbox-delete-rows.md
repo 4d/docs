@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->La commande **LISTBOX DELETE ROWS** supprime une ou plusieurs ligne(s) à partir de la ligne numéro *positionLigne* (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -31,12 +31,12 @@ Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux
 
 **Note :** Cette commande ne tient pas compte de l'éventuel statut masqué/affiché des lignes de la list box. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

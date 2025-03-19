@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->O comando **LISTBOX SET GRID COLOR** lhe permite modificar a cor da grade do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -30,13 +30,13 @@ Os parâmetros *horizontal* e *vertical* lhe permitem especificar as linhas as q
 * Se passar [True](true.md "True") em *horizontal*, a cor será aplicada às linhas horizontais da matriz. Se passa [False](false.md "False"), a cor das linhas horizontais não mudará.
 * Se passar [True](true.md "True") em *vertical*, a cor se aplicará às linhas verticais da matriz. Se passar [False](false.md "False"), a cor das linhas verticais não mudará
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

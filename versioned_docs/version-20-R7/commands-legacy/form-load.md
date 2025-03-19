@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF--> There can only be one current form per process.
 
@@ -28,7 +28,7 @@ In the *form* parameter, you can pass:
 
 When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
 
-##### formData 
+### formData 
 
 Optionally, you can pass parameters to the *form* using the *formData* object. Any properties of the *formData* object will then be available from within the form context through the [Form](form.md) command. For example, if you pass an object containing {"version","12"} in *formData*, you will be able to get or set the value of the "version" property in the form by calling:
 
@@ -43,7 +43,7 @@ The *formData* object is available in the On Load form event.
 
 **Note:** If you do not pass the *formData* parameter or if you pass an undefined object, **FORM LOAD** automatically creates a new empty object bound to the *form*, available through the [Form](form.md) command.
 
-##### Printing data 
+### Printing data 
 
 In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](open-printing-job.md) command. The [OPEN PRINTING JOB](open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](form-unload.md) command, so in this context it is necessary to execute [FORM LOAD](form-load.md). Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](print-object.md) command, work with this form.
 
@@ -55,7 +55,7 @@ To preserve the graphic consistency of forms, it is recommended to apply the "Pr
 
 The current printing form is automatically closed when the [CLOSE PRINTING JOB](close-printing-job.md) command is called.
 
-##### Parsing form contents 
+### Parsing form contents 
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 
@@ -65,7 +65,7 @@ Note that in all cases, the form on screen remains loaded (it is not affected by
 
 **Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](form-unload.md) to avoid any risk of memory overflow.
 
-#### Example 1 
+## Example 1 
 
 Calling a project form in a print job:
 
@@ -75,7 +75,7 @@ Calling a project form in a print job:
   // execution of events and object methods
 ```
 
-#### Example 2 
+## Example 2 
 
 Calling a table form in a print job:
 
@@ -85,7 +85,7 @@ Calling a table form in a print job:
   // execution of events and object methods
 ```
 
-#### Example 3 
+## Example 3 
 
 Parsing of form contents to carry out processing on text input areas:
 
@@ -101,7 +101,7 @@ Parsing of form contents to carry out processing on text input areas:
  FORM UNLOAD //do not forget to unload the form
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example returns the number of objects on a JSON form:
 
@@ -120,7 +120,7 @@ the result shown is:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### Example 5 
+## Example 5 
 
 You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
 
@@ -161,7 +161,7 @@ You want to print a form containing a list box. During the *on load* event, you 
  End case
 ```
 
-#### See also 
+## See also 
 
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
@@ -169,7 +169,7 @@ You want to print a form containing a list box. During the *on load* event, you 
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

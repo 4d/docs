@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD は、ペーストボードを消去し、*text*に渡したテキストのコピーをペーストボードに置きます。<!-- END REF-->
 
@@ -25,21 +25,21 @@ displayed_sidebar: docs
 
 **Note:** On Drag Over フォームイベント中ペーストボードは読み込みのみモードです。このコンテキストではこのコマンドは使用できません。
 
-#### 例題 
+## 例題 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD") コマンドの例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 テキストのコピーが正しくペーストボードに置かれると、OK変数は1に設定されます。  
 ペーストボードにテキストを置くためのメモリが十分にない場合、OK変数は0に設定されますが、エラーは生成されません。
 
-#### 参照 
+## 参照 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

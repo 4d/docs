@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Uppercase.Summary-->**Uppercase** retourne une chaîne de caractères égale à *laChaîne* dont tous les caractères alphabétiques ont été convertis en majuscules.<!-- END REF-->
 
 Le paramètre facultatif *\**, s'il est passé, indiqueque les éventuels caractères accentués présents dans *laChaîne* doivent être retournés sous forme de majuscules accentuées. Par défaut, lorsque ce paramètre est omis, les caractères accentués “perdent” leur accent une fois la conversion effectuée. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple compare les résultats obtenus suivant que le paramètre \* a été passé ou non :
 
@@ -30,15 +30,15 @@ Cet exemple compare les résultats obtenus suivant que le paramètre \* a été 
  $lachaine:=Uppercase("hélène";*) // $lachaine vaut « HÉLÈNE »
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de [Lowercase](lowercase.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Lowercase](lowercase.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

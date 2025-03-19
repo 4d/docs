@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** returns the current UTC time in ISO format with milliseconds, i.<!-- END REF-->e. yyyy-MM-ddTHH:mm:ss.SSSZ. Note that the "Z" character indicates the GMT time zone. 
 
@@ -21,7 +21,7 @@ Each time returned by **Timestamp** is expressed according to the ISO 8601 stand
 
 **Note:** This function is not suitable for timing purposes; you should use [Milliseconds](milliseconds.md) when you want to measure elapsed time.
 
-#### Example 
+## Example 
 
 You can use **Timestamp** in a log file to know precisely when the events occurred. As shown below, you may have several operations occurring during the same second:
 
@@ -37,13 +37,13 @@ Result:
 2016-12-12T13:31:29.477Z   Log with timestamp2016-12-12T13:31:29.478Z   Connection of user12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'2016-12-12T13:31:29.492Z   Click on button16842016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
 ```
 
-#### See also 
+## See also 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

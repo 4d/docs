@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QUERY WITH ARRAY.Summary-->コマンドは、*targetField*の値が少なくとも*array*要素のうち1つに等しいレコードを、 *targetField*が属するテーブルの全レコードの中から検索します。<!-- END REF-->検索されたレコードはカレントセレクションとなります。
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * このコマンドはピクチャまたはBLOB 型のフィールドには使用できません。
 * *targetFieldとarray*は同じデータタイプでなければなりません。例外: 時間型のフィールドに対しては倍長整数配列を使用できます。
 
-#### 例題 
+## 例題 
 
 以下の例題では、フランスとアメリカの顧客を検索します:
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
  QUERY WITH ARRAY([Clients]Country;SearchArray)
 ```
 
-#### 参照 
+## 参照 
 
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

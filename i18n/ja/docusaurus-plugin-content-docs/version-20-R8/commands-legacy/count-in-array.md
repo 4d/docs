@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Count in array.Summary-->Count in array コマンドは、*array*内で見つかった*value*の数を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 *value*と一致する項目が*array*内に存在しない場合、コマンドは0を返します。
 
-#### 例題 1 
+## 例題 1 
 
 次の例題は、リストボックス内で選択された行の数を表示します: 
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
  ALERT(String(Count in array(tBList;True))+" 行がリストボックスで選択されています。")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクト配列内のオブジェクト参照を数えたい場合を考えます:
 
@@ -53,12 +53,12 @@ displayed_sidebar: docs
  $n:=Count in array($objects;$o2) // $n = 0
 ```
 
-#### 参照 
+## 参照 
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

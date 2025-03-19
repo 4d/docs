@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->**OBJECT SET DATA SOURCE**コマンドは、引数 *object* と *\** で指定したオブジェクトのデータソースを変更します。<!-- END REF-->
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 変更不可能なデータソースに対してこのコマンドが使用された場合、何も起こりません。
 
-#### 例題 
+## 例題 
 
 入力エリアに対してデータソースを変更する場合:
 
@@ -45,12 +45,12 @@ displayed_sidebar: docs
  OBJECT SET DATA SOURCE(*;"Input";$ptrField)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

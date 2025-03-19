@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get 4D file.Summary-->**Get 4D file**コマンドは、*file* パラメーターで指定された4D環境ファイルへのパス名を返します。<!-- END REF-->パスはシステムシンタックスで返されます。
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 User settings file for data および User settings file の両ファイルに関しては、"データベース設定" ダイアログボックスの**外部ファイルのユーザー設定を有効にする** オプション( 参照)にチェックを入れている場合にのみ、パスが返されます。
 
-#### 例題 
+## 例題 
 
 最終バックアップファイルのパスを取得します:
 
@@ -64,11 +64,11 @@ User settings file for data および User settings file の両ファイルに�
   // 例: $path = "C:\Backups\Countries\Countries[0025].4BK"
 ```
 
-#### 参照 
+## 参照 
 
 [File](../commands/file.md)    
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

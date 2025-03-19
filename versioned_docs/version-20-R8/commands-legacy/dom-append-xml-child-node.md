@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->The DOM Append XML child node command is used to append the *childValue* value to the XML node designated by *elementRef*.<!-- END REF--> 
 
@@ -35,7 +35,7 @@ In *childValue*, pass the data to be inserted. You can pass a string or a 4D var
 
 **Note:** If the *elementRef* parameter designates the Document node (top level node), the command inserts a "Doctype" node before any other node. The same goes for processing instructions and comments, which are always inserted before the root node (but after the Doctype node). 
 
-#### Example 1 
+## Example 1 
 
 Adding a text type node:
 
@@ -54,7 +54,7 @@ Result:
 <myElement>Hello<br/>New<br/>York</myElement>
 ```
 
-#### Example 2 
+## Example 2 
 
 Adding a processing instruction type node:
 
@@ -69,7 +69,7 @@ Result (inserted before first element):
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-#### Example 3 
+## Example 3 
 
 Adding a comment type node:
 
@@ -83,7 +83,7 @@ Result:
 <!--Hello world-->
 ```
 
-#### Example 4 
+## Example 4 
 
 Adding a CDATA type node:
 
@@ -97,7 +97,7 @@ Result:
 <element><![CDATA[12 < 18]]></element>
 ```
 
-#### Example 5 
+## Example 5 
 
 Adding or replacing a Doctype declaration type node:
 
@@ -111,7 +111,7 @@ Result (inserted before first element):
 <!DOCTYPE Books SYSTEM  "Book.DTD">
 ```
 
-#### Example 6 
+## Example 6 
 
 Adding or replacing an Element type node.
 
@@ -141,12 +141,12 @@ Result:
 
 If the contents of *childValue* are not valid, an error is returned. 
 
-#### See also 
+## See also 
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

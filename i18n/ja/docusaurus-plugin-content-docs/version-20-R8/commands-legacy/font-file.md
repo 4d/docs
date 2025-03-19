@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Font file.Summary-->**Font file** コマンドは、*fontFamily* 引数で指定したフォントファミリーに対応するOS 内にあるフォントファイルの詳細を格納したオブジェクトを返します。<!-- END REF-->また、*fontStyle* 引数で取得するフォントスタイルを指定することもできます。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 | Italic | 倍長整数 | 2 |
 | Plain  | 倍長整数 | 0 |
 
-#### 例題 
+## 例題 
 
 テキストエリア内で使用されているフォントが正しく表示されるために、ユーザーシステム上で利用可能かどうかを確認したい場合を考えます:
 
@@ -45,11 +45,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

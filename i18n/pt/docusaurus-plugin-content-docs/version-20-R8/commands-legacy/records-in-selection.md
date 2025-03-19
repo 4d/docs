@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Records in selection.Summary-->Records in selection retorna o número de registros na seleção atual de *tabela*.<!-- END REF--> Por outro lado, [Records in table](records-in-table.md) retorna o número total de registros na tabela.  
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo mostra uma técnica de loop comumente utilizada para se movimentar entre os registros da seleção atual. A mesma operação pode ser realizado com a ajuda do comando [APPLY TO SELECTION](apply-to-selection.md): 
 
@@ -32,11 +32,11 @@ End for
 
   
 
-#### Ver também 
+## Ver também 
 
 [Records in table](records-in-table.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

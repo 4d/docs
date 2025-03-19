@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET lee los caracteres desde un puerto serial o desde un documento.<!-- END REF-->
 
@@ -47,7 +47,7 @@ Cuando intente leer después del final de un archivo RECEIVE PACKET devuelve los
 
 **Nota:** en modo no Unicode (compatibilidad) cuando utiliza el comando RECEIVE PACKET para leer caracteres de un documento Windows y no quiere utilizar mapas ASCII para convertir los caracteres Windows en caracteres Mac OS, puede utilizar la función *Win to Mac*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo lee 20 caracteres de un puerto serial en la variable *recupVeinte*:
 
@@ -55,7 +55,7 @@ El siguiente ejemplo lee 20 caracteres de un puerto serial en la variable *recup
  RECEIVE PACKET(recupVeinte;20)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo lee datos del documento referenciado por la variable *miDoc* en la variable *vData*. El comando lee hasta que encuentra un retorno de carro:
 
@@ -63,7 +63,7 @@ El siguiente ejemplo lee datos del documento referenciado por la variable *miDoc
  RECEIVE PACKET(miDoc;vData;Char(Carriage return))
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo lee datos desde el documento referenciado por la variable *miDoc* en la variable *vData*. El comando lee hasta que encuentra una etiqueta HTML de fin de tabla *</TD>*:
 
@@ -71,7 +71,7 @@ El siguiente ejemplo lee datos desde el documento referenciado por la variable *
  RECEIVE PACKET(miDoc;vData;"")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo lee datos de un documento y los pone en campos. Los datos se almacenan como campos de longitud fija. El método llama a una subrutina para eliminar espacios (espacios al final de la cadena). La subrutina sigue el método: 
 
@@ -103,11 +103,11 @@ Los espacios al final de los datos son eliminados por el siguiente método, llam
  $0:=Delete string($1;-$i;Length($1)) // Borrar los espacios
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de un llamado a RECEIVE PACKET, la variable sistema OK toma el valor 1 si el paquete se recibe sin errores. De lo contrario, la variable sistema OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -116,7 +116,7 @@ Después de un llamado a RECEIVE PACKET, la variable sistema OK toma el valor 1 
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

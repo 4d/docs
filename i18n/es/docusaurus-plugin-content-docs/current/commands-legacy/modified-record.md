@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Modified record.Summary-->Modified record devuelve True si el registro actual de *tabla* se modificó pero no guardó; de lo contrario devuelve False.<!-- END REF--> Esta función permite determinar rápidamente si el registro necesita ser guardado. En los formularios de entrada, puede efectuar la prueba antes de pasar al siguiente registro. Esta función siempre devuelve [TRUE](true.md "TRUE") para un nuevo registro.
 
@@ -27,7 +27,7 @@ Note que esta función siempre devuelve True en los siguientes contextos:
  [Table_1]Field_1:=[Table_1]Field_1  
 ```
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra una utilización típica de Modified record:
 
@@ -37,13 +37,13 @@ El siguiente ejemplo muestra una utilización típica de Modified record:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

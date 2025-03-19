@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
@@ -73,7 +73,7 @@ This form then reacts “normally” to user actions and is closed using a stand
 - You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
 - When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 The following example can be used to create a tool palette:
 
@@ -86,7 +86,7 @@ The following example can be used to create a tool palette:
  DIALOG("doc")
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
@@ -132,7 +132,7 @@ The form displays information for each child:
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
 
-#### Ejemplo 3
+## Ejemplo 3
 
 The following example uses the path to a .json form to display the records in an employee list:
 
@@ -146,7 +146,7 @@ que muestra:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Ejemplo 4
+## Ejemplo 4
 
 The following example uses a .json file as an object and modifies a few properties:
 
@@ -164,11 +164,11 @@ The altered form is displayed with the title, logo and border modified:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### System variables and sets
+## System variables and sets
 
 After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
 
-#### Ver también
+## Ver también
 
 [ACCEPT](../commands-legacy/accept.md)\
 [ADD RECORD](../commands-legacy/add-record.md)\
@@ -177,7 +177,7 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [Form](form.md)\
 [Open window](../commands-legacy/open-window.md)
 
-#### Propiedades
+## Propiedades
 
 |                    |                                                                     |
 | ------------------ | ------------------------------------------------------------------- |

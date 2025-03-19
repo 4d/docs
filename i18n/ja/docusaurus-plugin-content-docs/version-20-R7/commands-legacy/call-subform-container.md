@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->**CALL SUBFORM CONTAINER** コマンドを使用してサブフォームインスタンスからそれを含むサブフォームコンテナにイベントを送信できます。<!-- END REF-->そしてサブフォームコンテナは親フォームのコンテキストでイベントを処理できます。
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict166755.en.png)
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

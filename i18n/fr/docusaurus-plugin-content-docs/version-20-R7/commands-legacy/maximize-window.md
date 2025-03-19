@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->La commande **MAXIMIZE WINDOW** provoque le zoom de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF--> 
 
@@ -23,7 +23,7 @@ Un clic ultérieur sur la case de zoom ou l'appel de la commande [MINIMIZE WINDO
 
 Si *fenêtre* est déjà maximisée, la commande ne fait rien.
 
-##### Sous Windows 
+### Sous Windows 
 
 La fenêtre est agrandie et s'adapte à la taille courante de la fenêtre de l'application (mode MDI) ou de l'écran (mode SDI). Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont maximisées. La fenêtre maximisée est passée au premier plan. 
 
@@ -35,7 +35,7 @@ Dans le cas où la commande est appliquée à une fenêtre dont la taille est so
 * Si aucune des containtes de taille n'est en conflit avec la taille cible, la fenêtre est placée dans son état "maximisé" : elle est redimensionnée à la taille de la fenêtre de l'application parente (mode MDI) ou de l'écran (mode SDI) ; sa barre de titre et ses bordures sont cachées et ses boutons de contrôle - minimiser, restaurer et fermer - sont déplacés à droite de la barre de menus de l'application.
 * Si au moins une des contraintes de taille est en conflit (par exemple, si la largeur de la fenêtre MDI est de 100 et que la largeur maximale de la fenêtre formulaire est 80), la fenêtre n'est pas placée dans son état "maximisé", mais uniquement redimensionnée à sa taille maximale autorisée. Cette taille est définie soit par la fenêtre MDI, soit par la contrainte. Avec ce fonctionnement, l'interface reste cohérente lorsque les fenêtres avec contraintes sont redimensionnées.
 
-##### Sous Mac OS 
+### Sous Mac OS 
 
 La fenêtre est agrandie de manière à afficher la totalité de son contenu. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre du premier plan du process courant est maximisée. 
 
@@ -45,7 +45,7 @@ Case de zoom sous Mac OS
 * Le zoom étant calculé par rapport au contenu de la fenêtre, cette commande doit être appelée dans un contexte où ce contenu est défini, par exemple une méthode formulaire. Sinon, la commande ne fait rien.
 * La fenêtre est dimensionnée à sa taille "maximale". Si la fenêtre est un formulaire dont la taille maximale a été définie dans les Propriétés du formulaire, le zoom de la fenêtre se limitera à cette taille.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez que votre formulaire s'ouvre sur une fenêtre "plein écran". Pour cela, vous placez la commande **MAXIMIZE WINDOW** dans la méthode du formulaire :
 
@@ -55,7 +55,7 @@ Vous souhaitez que votre formulaire s'ouvre sur une fenêtre "plein écran". Pou
  MAXIMIZE WINDOW
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple illustre la prise en charge des contraintes de taille sous Windows en mode MDI. Le formulaire suivant comporte une contrainte de taille (largeur maximale=400) :
 
@@ -75,13 +75,13 @@ Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 
 ![](../assets/en/commands/pict1476363.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

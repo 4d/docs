@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->La commande **OBJECT GET RGB COLORS** retourne les couleurs d’avant-plan et d’arrière-plan de l'objet ou du groupe d'objets désigné(s) par *objet*.<!-- END REF-->
 
@@ -32,11 +32,11 @@ Les valeurs de couleurs RVB retournées dans les paramètres *couleurAvantPlan*,
 
 Pour plus d’informations sur le format des paramètres *couleurAvantPlan*, *couleurArrièrePlan* et *couleurArrièrePlanAlt*, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

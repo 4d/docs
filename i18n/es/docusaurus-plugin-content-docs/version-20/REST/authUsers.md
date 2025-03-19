@@ -22,7 +22,7 @@ Si no se ha definido el método base `On REST Authentication`, se abre una sesi�
 
 En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.
 

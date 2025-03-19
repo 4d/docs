@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get number of rows.Summary-->LISTBOX Get number of rowsコマンドは、*object*引数および *\** で指定されたリストボックスの行の数を返します。<!-- END REF-->
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 
 **Note:** リストボックスのカラムに関連付けられたすべての配列が同じサイズではない場合、最小の配列サイズだけがリストボックスに表示され、またこのコマンドもその数値を返します。
 
-#### 参照 
+## 参照 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

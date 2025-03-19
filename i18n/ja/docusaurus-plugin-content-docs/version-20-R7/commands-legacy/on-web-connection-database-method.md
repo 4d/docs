@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Web Connection database method.Summary-->**On Web Connectionデータベースメソッド**は以下のケースで呼び出されます:
 
@@ -98,7 +98,7 @@ $5 と $6 引数は、ブラウザが表示する標準の認証ダイアログ�
     
 **注:** ブラウザから送信されたユーザ名が4Dに存在する場合、$6 引数 (ユーザパスワード) はセキュリティのため渡されません。
 
-#### On Web Connection データベースメソッドの呼び出し 
+## On Web Connection データベースメソッドの呼び出し 
 
 **On Web Connectionデータベースメソッド** は*4DCGI* URLまたはカスタマイズされたコマンドURLを使用したWebサーバーへのアクセスのエントリポイントとして使用できます。
 

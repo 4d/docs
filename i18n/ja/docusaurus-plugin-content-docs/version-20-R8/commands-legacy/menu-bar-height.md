@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height はメニューバーの高さをピクセル数で返します。<!-- END REF-->
 
@@ -24,13 +24,13 @@ displayed_sidebar: docs
 
 **注:** Windows の SDI モードでアプリケーションが実行されている場合、ウィンドウが狭められた影響でメニューバーが複数行に折り返されていても、**Menu bar height** はメニューバー1行分の高さを返します。
 
-#### 参照 
+## 参照 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Table get cells.Summary-->El comando **WP Table get cells** devuelve un nuevo objeto de rango de celdas que contiene la selección de celdas en *objTarget* o *refTabla* (definida por *colIni*, *filaIni*, *numCol* y *numFilas*).<!-- END REF-->
 
@@ -41,7 +41,7 @@ Si se omite *numFilas*, se devuelve una sola fila. Si se omiten *numCol* y *numF
 
 Si *colIni* más *numCol* o *filaIni* más *numFilas* exceden el número de columnas/filas en *refTabla*, o si *colIni* o *filaIni* es mayor que el número de columnas/filas en *refTabla*, el rango devuelto contiene el máximo posible de columnas/filas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea modificar los atributos de un rango de celdas:
 
@@ -67,7 +67,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict3307320.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Para obtener un rango de celdas desde la celda "5x7" hasta el final de la fila:
 
@@ -88,7 +88,7 @@ Para obtener un rango de celdas desde la celda "5x7" hasta el final de la tabla:
 ```
 
   
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea recuperar las celdas que un usuario ha seleccionado:
 
@@ -100,7 +100,7 @@ Desea recuperar las celdas que un usuario ha seleccionado:
  $cells:=WP Table get cells($userSelection)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Table get columns ](wp-table-get-columns.md)  
 [WP Table get rows](wp-table-get-rows.md)  

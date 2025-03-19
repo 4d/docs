@@ -15,7 +15,7 @@ title: VP Get active cell
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet plage d'une seule cellule                                             | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Get active cell` command <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
-#### Exemple
+## Exemple
 
 ![](../../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
@@ -38,7 +38,7 @@ $activeCell:=VP Get active cell("myVPArea")
   //$activeCell.ranges[0].sheet=0
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>

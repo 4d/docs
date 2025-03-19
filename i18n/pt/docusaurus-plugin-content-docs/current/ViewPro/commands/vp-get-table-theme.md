@@ -24,7 +24,7 @@ title: VP Get table theme
 | sheet      | Integer                                                                           | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | <- | Valores de propriedade do tema da tabela atual              | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
 
@@ -34,7 +34,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme.
 
-#### Exemplo
+## Exemplo
 
 The command returns a full `theme` object even if a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
@@ -46,7 +46,7 @@ $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
 $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 ```
 
-#### Veja também
+## Veja também
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP SET TABLE THEME](vp-set-table-theme.md)

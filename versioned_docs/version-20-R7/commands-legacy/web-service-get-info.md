@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->The **WEB SERVICE Get info** command returns information about any error generated during the execution of the last SOAP request sent to a remote Web Service.<!-- END REF--> This command should generally be called within an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
 
@@ -30,7 +30,7 @@ The *infoType* parameter allows you to indicate the type of information that you
 An empty string is returned when no information is available, more particularly when the last SOAP request did not generate any errors.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

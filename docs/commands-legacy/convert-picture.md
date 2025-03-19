@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT PICTURE.Summary-->The **CONVERT PICTURE** command converts *picture* into a new type.<!-- END REF-->
 
@@ -30,7 +30,7 @@ The optional *compression* parameter, if passed, can be used to specify the comp
 
 **Note:** If you want to call **CONVERT PICTURE** with a picture type that is not supported in 4D 64-bit versions (such as PICT), make sure the conversion is performed on a 4D 32-bit version, where the original type is supported. For more information, please refer to the *Changing from 32-bit versions to 64-bit versions* page.   
 
-#### Example 1 
+## Example 1 
 
 Conversion of the vpPhoto picture to the jpeg format: 
 
@@ -38,7 +38,7 @@ Conversion of the vpPhoto picture to the jpeg format:
  CONVERT PICTURE(vpPhoto;".jpg")
 ```
 
-#### Example 2 
+## Example 2 
 
 Conversion of a picture with 60% quality:
 
@@ -46,11 +46,11 @@ Conversion of a picture with 60% quality:
  CONVERT PICTURE(vPicture;".JPG";0.6)
 ```
 
-#### See also 
+## See also 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

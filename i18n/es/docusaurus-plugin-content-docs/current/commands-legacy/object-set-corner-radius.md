@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->El comando **OBJECT SET CORNER RADIUS** modifica el *radio* de las esquinas de los objetos pasados en el parámetro *objeto*.<!-- END REF--> El nuevo radio sólo se define para el proceso y no se guarda en el formulario. 
 
@@ -32,7 +32,7 @@ En el parámetro *radio*, pase un nuevo valor del radio en píxeles a aplicar en
 
 También puede modificar este valor a nivel de formulario utilizando la *propiedad Radio de esquina* (ver también *Radio de la esquina (rectángulos)*).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted tiene los siguientes rectángulos en su formulario, llamados respectivamente "Rect1" y "Rect2":
 
@@ -46,7 +46,7 @@ Puede ejecutar el siguiente código para cambiar su radio:
 
 ![](../assets/en/commands/pict1629576.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Tiene la siguiente área de texto en su formulario, llamada "required-label":
 
@@ -62,11 +62,11 @@ Si ejecuta el siguiente código:
 
 Tenga en cuenta que para las áreas de texto (así como las entradas), a diferencia de los rectángulos, la redondez de la esquina se dibuja fuera del área inicial del objeto.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get corner radius](object-get-corner-radius.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

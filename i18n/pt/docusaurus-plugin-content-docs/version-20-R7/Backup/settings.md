@@ -133,7 +133,7 @@ When this option is checked, the program automatically integrates the current lo
 
 :::note
 
-Esta funcionalidade implica que o programa analise todos os ficheiros de registo na pasta de ficheiros de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados ficheiros de registo inúteis na pasta.
+Esta funcionalidade implica que o programa analise todos os ficheiros de registo na pasta de ficheiros de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados arquivos de registo inúteis na pasta.
 
 :::
 

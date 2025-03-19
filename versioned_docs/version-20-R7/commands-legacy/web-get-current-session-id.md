@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Get current session ID.Summary-->The **WEB Get current session ID** command returns the ID of the session open for the Web request.<!-- END REF--> This ID is generated automatically by 4D as an UUID. 
 
 If this command is called outside of the context of a Web session, it returns an empty string "". 
 
-#### See also 
+## See also 
 
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 *Web Sessions Management (Legacy)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

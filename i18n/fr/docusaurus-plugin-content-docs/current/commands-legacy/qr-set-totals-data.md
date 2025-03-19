@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note :** Cette commande ne crée pas de sous-total.<!-- END REF-->
 
-##### Etat en liste 
+### Etat en liste 
 
 La commande **QR SET TOTALS DATA** permet de définir le contenu d'une ligne de rupture spécifique (sous-total ou total général). 
 
@@ -58,7 +58,7 @@ Si vous souhaitez saisir à la fois du texte et des opérateurs, vous pouvez uti
 \- ##D sera remplacé par l'écart type.  
 \- ##xx, où xx est un numéro de colonne. Ce code sera remplacé par la valeur de la colonne désignée, dans son propre formatage. Si la colonne n'existe pas, le code apparaît dans l'état. 
 
-##### Etat tableau croisé 
+### Etat tableau croisé 
 
 La commande **QR SET TOTALS DATA** vous permet de définir le contenu d'une cellule spécifique.
 
@@ -75,7 +75,7 @@ L'illustration suivante précise la manière dont les paramètres *numColonne* e
 
 ![](../assets/en/commands/pict31186.fr.png)
 
-##### Types de données acceptés 
+### Types de données acceptés 
 
 Vous pouvez passer deux types de données : des libellés et des opérateurs.
 
@@ -92,11 +92,11 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
 Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

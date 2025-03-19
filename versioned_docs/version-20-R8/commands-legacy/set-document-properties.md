@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->The **SET DOCUMENT PROPERTIES** command changes the information about the document whose name or pathname you pass in *document*.<!-- END REF-->
 
@@ -32,11 +32,11 @@ Before the call:
 
 The dates and times of creation and last modification are managed by the file manager of your system each time you create or access a document. Using this command, you can change those properties for special purpose. See example for the command [GET DOCUMENT PROPERTIES](get-document-properties.md).
 
-#### See also 
+## See also 
 
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

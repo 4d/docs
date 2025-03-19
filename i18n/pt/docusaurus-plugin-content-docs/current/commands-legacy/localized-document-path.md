@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Localized document path.Summary-->O comando Localized document path retorna a rota completa (absoluta) de um documento designado por *rotaRelativa* e localizado na pasta xxx.<!-- END REF-->lproj.  
 
@@ -44,7 +44,7 @@ A rota de acesso absoluta retornada pelo comando é sempre expressa na sintaxe d
 
 Se *rotaRelativa* não for encontrada em nenhuma destas localizações, o comando retorna uma string vazia.
 
-#### Exemplo 
+## Exemplo 
 
 Para transformar um arquivo XML em HTML, queremos utilizar um arquivo de transformação "log.xsl". Este arquivo difere dependendo do idioma atual. Você deseja conhecer a rota do arquivo "log.xsl" a utilizar.  
 Estes são os conteúdos da pasta Resources:
@@ -62,11 +62,11 @@ Se a linguagem atuarl for, por exemplo, francês canadense (fr-ca), o comando de
 * em Windows: C:users……… resources \_ca.lprojxsllog.xsl
 * em Mac OS: "HardDisk:users:…:…:…:resources:fr\_ca.lproj:xsl:log.xsl"
 
-#### Ver também 
+## Ver também 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

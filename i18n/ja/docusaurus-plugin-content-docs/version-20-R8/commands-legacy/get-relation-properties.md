@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->GET RELATION PROPERTIESコマンドは、*tableNum*および*fieldNum*、または*fieldPtr*で指定した元のフィールドを起点とするリレート（存在する場合）のプロパティを返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **Note:** 引数*autoOne*および*autoMany*は、起点フィールドから始まるリレートが存在しない場合にも[True](true.md "True")を返します。（この場合、返す値には意味がありません）。2つの引数*oneTable*および*oneField*の値により、リレートが存在するかどうかを確認できます。
 
-#### 参照 
+## 参照 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

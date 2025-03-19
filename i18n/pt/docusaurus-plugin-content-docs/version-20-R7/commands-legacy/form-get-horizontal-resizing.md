@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->O comando FORM GET HORIZONTAL RESIZING retorna as propriedades de redimensionamento horizontal do formulário atual nas variáveis *redimension*, *larguraMin* e *larguraMax*.<!-- END REF--> Estas propriedades podem ser definidas para o formulário no editor de formulários em modo Desenho ou para o proceso atual através do comando [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md "FORM SET HORIZONTAL RESIZING").
 
-#### Ver também 
+## Ver também 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

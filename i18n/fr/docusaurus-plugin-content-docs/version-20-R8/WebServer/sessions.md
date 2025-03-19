@@ -38,7 +38,7 @@ Dans tous les cas, ce paramètre est local à la machine ; il peut donc être di
 
 ## Implémentation des sessions
 
-Lorsque [les sessions sont activées](#activation-des-sessions), des mécanismes automatiques sont mis en place, basés sur un cookie privé défini par 4D lui-même : "4DSID_*NomApp*", où *NomApp* est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Ce cookie référence la session web courante pour l'application.
 
 :::info
 

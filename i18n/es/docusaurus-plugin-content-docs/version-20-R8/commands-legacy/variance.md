@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Variance.Summary-->**Variance** devuelve la varianza para *series*.<!-- END REF--> Si *series* es un campo indexado, el índice se utiliza para calcular la varianza.
 
@@ -28,7 +28,7 @@ La varianza de un conjunto de valores es el promedio de los cuadrados de las des
 
 Si los valores no se consideran una muestra, multiplique el valor devuelto por **Variance** por (n-1)/n.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo es un método de objeto para la variable *var*. El método de objeto asigna la suma de cuadrados de una serie de datos a *var*:
 
@@ -49,7 +49,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
 
 **Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre el proceso de rupturas, consulte *Impresión*.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo permite obtener la varianza de valores ubicados en un array:
 
@@ -60,14 +60,14 @@ Este ejemplo permite obtener la varianza de valores ubicados en un array:
  vVariance:=Variance($ArrGrades)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

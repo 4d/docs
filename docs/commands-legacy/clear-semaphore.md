@@ -13,23 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** erases *semaphore* previously set by the [Semaphore](semaphore.md) function.<!-- END REF-->
 
 As a rule, all semaphores that have been created should be cleared. If semaphores are not cleared, they remain in memory until the process that creates them ends. A process can only clear semaphores that it has created. If you try to clear a semaphore from within a process that did not create it, nothing happens.
 
-#### Example 
+## Example 
 
 See the example for [Semaphore](semaphore.md).
 
-#### See also 
+## See also 
 
 [Semaphore](semaphore.md)  
 *Semaphores and signals*  
 [Test semaphore](test-semaphore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

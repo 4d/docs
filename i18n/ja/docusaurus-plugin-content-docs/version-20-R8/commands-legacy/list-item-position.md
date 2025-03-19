@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.List item position.Summary-->List item position コマンドは、*list*に渡された項目参照番号またはオブジェクト名リスト中で、*itemRef*で指定した項目の位置を返します。<!-- END REF-->
 
@@ -34,12 +34,12 @@ displayed_sidebar: docs
 
 項目が存在しない場合、LList item positionは0を返します。
 
-#### 参照 
+## 参照 
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

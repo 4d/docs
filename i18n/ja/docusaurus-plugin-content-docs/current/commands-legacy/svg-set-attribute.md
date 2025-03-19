@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG SET ATTRIBUTE.Summary-->**SVG SET ATTRIBUTE**コマンドは 表示されている画像のSVG描画ツリーまたは画像の内部DOMツリー中で、既存の属性の値を更新するために使用します。<!-- END REF-->
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
 
 コマンドがフォームのコンテキストで実行されないか無効な*pictureObject*が渡された場合、*OK* 変数に0が設定されます。コマンドが正しく実行されると1が設定されます。
 
-#### 例題 
+## 例題 
 
 テキスト型の要素の内容を更新する:
 
@@ -89,11 +89,11 @@ displayed_sidebar: docs
 
 **Note:** 衝突の恐れなしにCSSスタイルシート内で属性を使用するため、名前空間がありません。 
 
-#### 参照 
+## 参照 
 
 [SVG GET ATTRIBUTE](svg-get-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

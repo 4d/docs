@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->El comando OPEN SECURITY CENTERmuestra la ventana del Centro de seguridad y mantenimiento (CSM).<!-- END REF-->Para más información, consulte la página *Centro de seguridad y mantenimiento*.   
   
@@ -23,11 +23,11 @@ Dependiendo de los privilegios de acceso del usuario actual, ciertas funciones d
 * Este comando funciona con el mismo principio que una llamada a [DIALOG](dialog.md) con el parámetro *\**: el CSM se muestra en una ventana y el comando devuelve inmediatamente el control al código 4D. Si el proceso actual termina, la ventana se cierra automáticamente mediante la simulación de un [CANCEL](cancel.md). Por lo que debe gestionar su visualización a través del código del proceso en ejecución.
 * Este comando no se puede ejecutar en una aplicación 4D remota.
 
-#### Ver también 
+## Ver también 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

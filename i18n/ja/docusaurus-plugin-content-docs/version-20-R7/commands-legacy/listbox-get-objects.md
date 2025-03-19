@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->**LISTBOX GET OBJECTS** コマンドは 、*object* と*\** 演算子で指定したリストボックスを構成するオブジェクトの、それぞれの名前を含んだ配列を返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 このコマンドは [FORM LOAD](form-load.md)、[FORM GET OBJECTS](form-get-objects.md) と [OBJECT Get type](object-get-type.md) コマンドを使用してフォームを解析する際に有用です。必要に応じてリストボックスのサブオブジェクトの名前を取得するために使用することができます。
 
-#### 例題 
+## 例題 
 
 フォームをロードし、そこに内包される全てのリストボックスオブジェクトの一覧を取得する場合:
 
@@ -55,12 +55,12 @@ displayed_sidebar: docs
  FORM UNLOAD
 ```
 
-#### 参照 
+## 参照 
 
 [FORM LOAD](form-load.md)  
 [OBJECT Get type](object-get-type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

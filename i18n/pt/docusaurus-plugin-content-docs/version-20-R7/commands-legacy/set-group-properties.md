@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties permite modificar e atualizar as propriedades de um grupo existente cujo número de referência único se passa em *refGrupo*, ou para adicionar um novo grupo
 
@@ -47,17 +47,17 @@ Para eliminar todos os membros de um grupo, passe um array vazio no parâmetro *
 * Valores de ID de Grupo e Usuário dependem do criador (Designer, Administrador ou proprietário de grupo afiliado). Para saber mais veja o parágrafo *User and group ID ranges*. Para criar um grupo afiliado com o Designer, passe -1 em grupoID. Para criar um grupo afiliado com o Administrador, passe -2 em grupoID.
 * o proprietário de um grupo não está definido automaticamente como membro do grupo que possuir. É sua decisão incluir ao proprietário do grupo no grupo, utilizando o parâmetro *membros*.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se você não tiver os acessos de privilégio para chamar Set group properties ou se o sistema de senhas já estiver acessado para outro processo, um erro de privilégio de acesso é gerado. Você pode interceptar o erro com um método de gestão de erros instalado usando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

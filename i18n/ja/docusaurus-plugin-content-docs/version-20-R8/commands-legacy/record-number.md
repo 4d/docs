@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Record number.Summary-->**Record number**は、*aTable*のカレントレコードの物理レコード番号を返します。<!-- END REF-->レコードポインタがカレントセレクションの前後にある場合等、カレントレコードがない場合、**Record number**は-1を返します。カレントレコードが保存されていない新しいレコードの場合、**Record number**は-3を返します。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注:** レコードが作成中であるかをテストする目的では、[Is new record](is-new-record.md)コマンドの利用をお勧めします。
 
-#### 例題 
+## 例題 
 
 以下の例は、カレントレコードのレコード番号を変数に格納し、他に同じデータを持つレコードがないかを検索します:
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
  GOTO RECORD([People];$RecNum) // 元のレコードに戻る
 ```
 
-#### 参照 
+## 参照 
 
 [GOTO RECORD](goto-record.md)  
 [Is new record](is-new-record.md)  
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 [Sequence number](sequence-number.md)  
 *レコード番号について*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

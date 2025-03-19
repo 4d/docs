@@ -19,11 +19,11 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->O comando **HTTP Get certificates folder** devolve a rota completa da pasta de certificados ativa do cliente.<!-- END REF--> 
 
-#### Exemplo 
+## Exemplo 
 
 Você quer mudar temporalmente a pasta de certificados:
 
@@ -35,11 +35,11 @@ Você quer mudar temporalmente a pasta de certificados:
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restabelecer a pasta anterior
 ```
 
-#### Ver também 
+## Ver também 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

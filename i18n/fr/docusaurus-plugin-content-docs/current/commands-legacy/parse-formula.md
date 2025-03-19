@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Parse formula.Summary-->La commande **Parse formula** inspecte le contenu de la *formule* 4D, vérifie sa syntaxe, et la retourne sous une forme normalisée.<!-- END REF--> Cette opération permet à la formule de rester valide dans le cas où un élément du langage 4D ou de la structure est renommé (commande, constante, table, champ ou plug-in 4D). 
 
@@ -50,7 +50,7 @@ Quels que soient les types de noms utilisés dans *formule*, par défaut **Parse
   
 Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur est retourné dans le paramètre optionnel *messageErr*. Si aucune erreur n'est détectée, une chaîne vide est retournée. 
 
-#### Exemple 1 
+## Exemple 1 
 
 ```4d
  ARRAY TEXT($t1;1)
@@ -78,7 +78,7 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
   //retourne Chaine:C10([Table_1:1]Champ_2:2)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 ```4d
   //demander à l'utilisateur de saisir sa formule
@@ -96,14 +96,14 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
  EXECUTE FORMULA([users_preferences]formula)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utiliser des tokens dans les formules*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

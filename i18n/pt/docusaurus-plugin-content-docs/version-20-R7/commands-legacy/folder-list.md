@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FOLDER LIST.Summary-->O comando FOLDER LIST preenche o array de tipo Texto ou Alfa *diretorios* com os nomes das pastas localizadas na rota de acesso que se passa em *rotaAcesso*.<!-- END REF-->  
 
@@ -22,12 +22,12 @@ displayed_sidebar: docs
   
 Se não houver pastas na localização especificada, o comando retorna um array vacío. Se a rota de acesso que se passa em *rotaAcesso* é incorreta, FOLDER LIST gera um erro do administrador de arquivos que pode interceptar utilizando um método [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

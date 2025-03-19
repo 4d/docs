@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Count menus.Summary-->Count menus コマンドは、メニューバー上にあるメニューの数を返します。<!-- END REF-->
 
 *process*引数を省略すると、Count menusコマンドはカレントプロセスのメニューバーに適用されます。そうでなければ、*process*に渡されたプロセス参照番号のプロセスのメニューに適用されます。
 
-#### 参照 
+## 参照 
 
 [Count menu items](count-menu-items.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

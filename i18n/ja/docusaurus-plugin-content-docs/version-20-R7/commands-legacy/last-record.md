@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD**は、*aTable*のカレントセレクションの最後のレコードをディスクからロードし、カレントレコードに設定します。<!-- END REF-->カレントセレクションが空の場合、または当該レコードが既にカレントレコードである場合、**LAST RECORD**は何も行いません。
 
-#### 例題 
+## 例題 
 
 以下の例は、\[People\]テーブルの最後のレコ－ドをカレントレコ－ドにします。:
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
  LAST RECORD([People])
 ```
 
-#### 参照 
+## 参照 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

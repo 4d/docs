@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. L'objet transporteur retourné sera alors utilisé pour l'envoi d'emails.
 
@@ -54,11 +54,11 @@ Dans le paramètre *server*, passez un objet contenant les propriétés suivante
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 100                                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | aucun                                                                                            |
 
-#### Résultat
+## Résultat
 
 La fonction retourne un [**objet SMTP transporter**](../API/SMTPTransporterClass.md#smtp-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
-#### Exemple
+## Exemple
 
 ```4d
  $server:=New object
@@ -86,7 +86,7 @@ La fonction retourne un [**objet SMTP transporter**](../API/SMTPTransporterClass
  End if
 ```
 
-#### Propriétés
+## Propriétés
 
 |                    |                                                                 |
 | ------------------ | --------------------------------------------------------------- |

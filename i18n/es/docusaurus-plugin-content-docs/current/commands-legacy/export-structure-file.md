@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Export structure file.Summary-->El comando **Export structure file** divide la estructura actual de la base 4D en un conjunto de archivos de texto o archivos de imagen nativos y los almacena en la *rutaCarpeta* especificada.<!-- END REF--> Por defecto, se exporta la totalidad de la estructura de la base (métodos, formularios, catálogo, etc.). Puede filtrar los contenidos a exportar utilizando el parámetro *opciones* (ver abajo).
 
@@ -64,7 +64,7 @@ El parámetro *opciones* le permite personalizar el proceso de conversión. El o
 
 **Atención**: cuando se pasa el parámetro *opciones* y se usa el objeto "filtro", debe declarar explícitamente cada propiedad para exportar con el valor **true**. Cuando se pasa este objeto, 4D asume que todas las propiedades están en **false** por defecto.
 
-##### Resultado 
+### Resultado 
 
 El comando devuelve un objeto que ofrece el estado final de la exportación, así como también información sobre problemas encontrados o errores, si los hay. Se devuelven las siguientes propiedades:
 
@@ -83,7 +83,7 @@ Los posibles errores incluyen:
 * elementos duplicados
 * errores de gestión de archivos (el archivo ya existe, archivo bloqueado, disco lleno, etc.)
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea exportar el archivo de estructura de la base en una carpeta "Export" con la configuración predeterminada:
 
@@ -97,7 +97,7 @@ Desea exportar el archivo de estructura de la base en una carpeta "Export" con l
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea exportar solo los métodos proyecto y base, y un archivo de registro:
 
@@ -110,11 +110,11 @@ Desea exportar solo los métodos proyecto y base, y un archivo de registro:
  $result:=Export structure file("exportWithLog";$option)
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

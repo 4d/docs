@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->**SET REAL COMPARISON LEVEL** コマンドは、実数値と式の同等性を比較するために4Dが使用するイプシロン値を設定します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 **注:** **SET REAL COMPARISON LEVEL** コマンドは、実数値のフィールドに対して実行されるクエリと並べ替えに関しては何の効力も持ちません。4Dランゲージに対してのみ適用されます。 
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

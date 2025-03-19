@@ -18,7 +18,7 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 - **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
 - **Form Editor**: Modifique seus formulários usando o **[Form Editor] (FormEditor/formEditor.md)**.
-- **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture.md#sources-folder). Exemplo:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). Exemplo:
 
 ```
 {

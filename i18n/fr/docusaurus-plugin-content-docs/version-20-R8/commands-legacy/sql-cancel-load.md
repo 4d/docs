@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->La commande **SQL CANCEL LOAD** met fin à la requête SELECT courante et initialise les paramètres du curseur.<!-- END REF--> 
 
 Cette commande permet d’exécuter plusieurs requêtes SELECT au sein d’une même connexion (c’est-à-dire un même curseur) initiée par la commande [SQL LOGIN](sql-login.md). 
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, deux requêtes sont exécutées dans la même connexion : 
 
@@ -43,16 +43,16 @@ Dans cet exemple, deux requêtes sont exécutées dans la même connexion :
  End while
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

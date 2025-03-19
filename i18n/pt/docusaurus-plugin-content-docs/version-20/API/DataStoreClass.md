@@ -16,7 +16,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
@@ -269,7 +269,7 @@ A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().S
 
 A função `.cancelTransaction()` cancela qualquer mudança realizado nos dados durante a transação.
 
-Pode aninhar várias transações (subtransações). Se a transação principal for cancelada, todas suas subtransações também são canceladas, mesmo se validadas individualmente usando a função [`.validateTransaction()`](#validatetransactions).
+Pode aninhar várias transações (subtransações). Se a transação principal for cancelada, todas suas sub transações também são canceladas, mesmo se validadas individualmente usando a função [`.validateTransaction()`](#validatetransaction).
 
 #### Exemplo
 
@@ -500,7 +500,7 @@ A função `.isAdminProtected()` <!-- REF #DataStoreClass.getAllRemoteContexts()
 
 > Para mais informações sobre como podem ser criados contextos, ver [optimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Cada objeto da coleção devolvida ccontém as propriedades listadas na seção.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
+Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
 
 #### Exemplo
 
@@ -813,7 +813,7 @@ A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsA
 
 When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta função não modifica as seleções de entidades criadas por [`.copy()`](#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
+> Esta função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
 
 > **Compatibilidade**: esta função só deve ser utilizada em projetos convertidos desde versões de 4D anteriores a 4D v18 R5 e que contenham chamadas [.add()](EntitySelectionClass.md#add). Nste contexto, o uso de `.makeSelectionsAlterable()` pode poupar tempo ao restaurar instantaneamente o comportamento anterior de 4D nos projetos existentes. Por outro lado, utilizar este método em projetos novos criados em 4D v18 R5 e superiores **não é recomendável**, já que impede compartir as seleções de entidades, o que oferece maior rendimento e escalabilidade.
 

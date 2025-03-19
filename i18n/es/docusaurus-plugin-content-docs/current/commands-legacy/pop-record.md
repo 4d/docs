@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.POP RECORD.Summary-->POP RECORD carga el primer registro de la pila de registros de la tabla y lo vuelve el registro actual.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ Si apila un registro, luego crea una nueva selección actual que no incluye el r
 
 Si utiliza un comando que mueva el puntero del registro actual antes de guardar el registro, perderá la copia apilada en memoria.  
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo recupera el registro de un cliente en la pila:
 
@@ -29,12 +29,12 @@ El siguiente ejemplo recupera el registro de un cliente en la pila:
  POP RECORD([Clientes]) // Desapilar el registro
 ```
 
-#### Ver también 
+## Ver también 
 
 [PUSH RECORD](push-record.md)  
 *Uso de la pila de registros*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

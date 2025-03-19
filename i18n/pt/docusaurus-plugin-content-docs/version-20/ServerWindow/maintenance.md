@@ -19,7 +19,7 @@ Este botão pode ser usado para iniciar a operação de verificação diretament
 
 Todos os registros e todos os índices do banco de dados são verificados. Se você quer ser capaz de direcionar a verificação ou ter opções adicionais disponíveis, você precisará usar o [Manutenção e Centro de Segurança](MSC/overview.md) (MSC).
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
 
 ### Compactar dados...
 
@@ -33,7 +33,7 @@ Quando a compactação terminar, o servidor 4D reinicia automaticamente o aplica
 
 > Se o pedido de compactação foi realizado a partir de uma máquina remota 4D remota, esta máquina é automaticamente reconectada pelo Servidor 4D.
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs-folder) folder. Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
+After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. Botão **Visualizar Relatório** (chamado **Download Relatório** se a operação foi realizada de uma máquina remota) permite que você exiba o arquivo em seu navegador.
 
 
 ## Tempo de funcionamento

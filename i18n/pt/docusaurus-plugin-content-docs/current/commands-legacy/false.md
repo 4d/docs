@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.False.Summary-->False retorna o valor booleano Falso (False).<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo atribui a variável *vbOpcoes* Falso:
 
@@ -25,12 +25,12 @@ O exemplo atribui a variável *vbOpcoes* Falso:
  vbOpcoes:=False
 ```
 
-#### Ver também 
+## Ver também 
 
 [Not](not.md)  
 [True](true.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.POP RECORD.Summary-->POP RECORD carrega o primeiro registro da pilha de registros da tabela e o transforma no registro atual.<!-- END REF-->  
 
@@ -21,7 +21,7 @@ Se empilha um registro, depois cria uma nova seleção atual que não inclui o r
   
 Se utiliza um comando que mova o ponteiro do registro atual antes de guardar o registro, perderá a cópia empilhada em memória.  
   
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir recupera o registro de um cliente na pilha:
 
@@ -29,12 +29,12 @@ O exemplo a seguir recupera o registro de um cliente na pilha:
  POP RECORD([Clientes]) // Desempilhar o registro
 ```
 
-#### Ver também 
+## Ver também 
 
 [PUSH RECORD](push-record.md)  
 *Usar a Pilha de Registros*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

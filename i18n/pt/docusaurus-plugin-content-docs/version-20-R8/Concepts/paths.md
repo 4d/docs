@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
+Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder) expect relative POSIX pathnames. Por exemplo:
 
 ```4d
 var $userImages : 4D.Folder

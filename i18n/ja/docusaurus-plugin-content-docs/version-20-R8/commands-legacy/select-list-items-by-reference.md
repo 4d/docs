@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->SELECT LIST ITEMS BY REFERENCE コマンドは、*list*に渡された参照番号のリストにおいて、*itemRef*ならびにオプションとして*refArray*に渡された項目参照番号を持つ項目を選択します。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については[APPEND TO LIST](append-to-list.md "APPEND TO LIST")の説明を参照してください。
 
-#### 例題 
+## 例題 
 
 *hList*は一意の参照番号が付いた項目を持つリストです。以下のボタン用オブジェクトメソッドは、現在選択されている項目に親項目が存在する場合にはその親項目を選択します:
 
@@ -45,13 +45,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

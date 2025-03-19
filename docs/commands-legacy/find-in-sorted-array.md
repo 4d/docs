@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in sorted array.Summary-->The **Find in sorted array** command returns **true** if at least one element in the sorted *array* matches the *value*, and optionally returns position(s) of matched element(s).<!-- END REF--> Unlike [Find in array](find-in-array.md), **Find in sorted array** only works with a sorted *array* and provides information about the position of occurrences, which allows you to insert elements if necessary.
 
@@ -37,7 +37,7 @@ In case the command returns **False**, the value returned in *posFirst* can be p
 
 The value returned in *posLast* can be combined with the value returned in *posFirst* to iterate on each element of the array matching the *value* (with a [ARRAY TO LIST](array-to-list.md) loop) or to find the number of occurrences (as would be found by [Count in array](count-in-array.md), but faster).
 
-#### Example 1 
+## Example 1 
 
 You want to insert a value, if necessary, while keeping the array sorted:
 
@@ -51,7 +51,7 @@ You want to insert a value, if necessary, while keeping the array sorted:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to find the number of occurrences of strings starting with "test" and create a string that concatenates all these elements:
 
@@ -66,13 +66,13 @@ You want to find the number of occurrences of strings starting with "test" and c
  End for
 ```
 
-#### See also 
+## See also 
 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

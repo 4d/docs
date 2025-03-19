@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Stringify array.Summary-->The **JSON Stringify array** command converts the 4D array *array* into a serialized JSON array.<!-- END REF--> This command performs the opposite action of the [JSON PARSE ARRAY](json-parse-array.md) command.
 
@@ -25,7 +25,7 @@ In *array*, pass a 4D array containing the data to be serialized. This array may
 
 You can pass the optional *\** parameter to use pretty formatting in the resulting string. This improves the presentation of JSON data by including formatting characters when it is displayed in a Web page.
 
-#### Example 1 
+## Example 1 
 
 Conversion of a text array:
 
@@ -39,7 +39,7 @@ Conversion of a text array:
   // $jsonString = "["John","Jim"]"
 ```
 
-#### Example 2 
+## Example 2 
 
 Conversion of a text array containing numbers:
 
@@ -51,7 +51,7 @@ Conversion of a text array containing numbers:
   // $string = "["555-0100","555-0120"]"
 ```
 
-#### Example 3 
+## Example 3 
 
 Conversion of an object array:
 
@@ -73,7 +73,7 @@ Conversion of an object array:
 
 ![](../assets/en/commands/pict1205072.fr.png)
 
-#### Example 4 
+## Example 4 
 
 Conversion of a 4D selection in an object array:
 
@@ -104,12 +104,12 @@ Conversion of a 4D selection in an object array:
   //"ALMANZA",...}]"
 ```
 
-#### See also 
+## See also 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

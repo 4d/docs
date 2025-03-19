@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT TEXT.Summary-->The EXPORT TEXT command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh text document on the disk.
 
@@ -30,7 +30,7 @@ By default, the command uses by default the UTF-8 character set. You can use the
 
 Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under macOS and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
-#### Example 
+## Example 
 
 This example exports data to a text document. The method first sets the output form so that the data will be exported through the correct form, changes the 4D delimiter variables, then performs the export:
 
@@ -41,18 +41,18 @@ This example exports data to a text document. The method first sets the output f
  EXPORT TEXT([People];"NewPeople.txt") // Export to the "NewPeople.txt" document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

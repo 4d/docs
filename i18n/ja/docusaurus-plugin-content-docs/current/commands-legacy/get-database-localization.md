@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get database localization.Summary-->**Get database localization**コマンドは、データベースのデフォルトランゲージ、または*languageType*で指定されたデータベースの言語を、RFC 3066で定義された標準で返します。<!-- END REF-->例えばコマンドは英語の場合“en”を、日本語の場合“ja”を返します。この標準およびコマンドから返される値の情報については、*Design Reference*マニュアルの*付録 B: XLIFFアーキテクチャー*を参照してください。
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
 
 **Note**: データベースに.lprojフォルダがない場合、4Dは以下の優先順位を適用します。1\. システムランゲージ、2\. English (システムランゲージを決定できなかった場合)
 
-#### 参照 
+## 参照 
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

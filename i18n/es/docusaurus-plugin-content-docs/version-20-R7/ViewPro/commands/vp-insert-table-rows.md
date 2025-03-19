@@ -26,7 +26,7 @@ title: VP INSERT TABLE ROWS
 | insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` *fila*      |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserta una o *count* fila(s) vacía(s) en el *tableName* especificado en el índice *row* especificado<!-- END REF -->.
 
@@ -43,7 +43,7 @@ Si la tabla *tableName* está vinculada a un [contexto de datos](vp-set-data-con
 
 Si *tableName* no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
 
-#### Ejemplo
+## Ejemplo
 
 Usted crea una tabla con un contexto de datos:
 
@@ -72,7 +72,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 ![](../../assets/en/ViewPro/table-insert.png)
 
-#### Ver también
+## Ver también
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)

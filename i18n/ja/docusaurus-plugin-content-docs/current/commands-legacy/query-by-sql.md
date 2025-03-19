@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->4Dに統合されたSQLカーネルのメリットを利用ためにQUERY BY SQLコマンドを使用できます。<!-- END REF-->このコマンドで以下のような簡単なSELECTクエリを実行できます:
 
@@ -50,7 +50,7 @@ QUERY BY SQLは、テーブルセレクションの各レコードに*sqlFormula
 
 **注:** コンパイルモードではローカル変数への参照を使用することはできません。4DにおけるSQLプログラミングの情報は*SQLコマンドの概要*を参照してください。  
 
-##### リレーションについて 
+### リレーションについて 
 
 4Dのストラクチャエディタで定義されたテーブル間で、QUERY BY SQLはリレーションを使用しません。関連するデータを利用したい場合、クエリへJOINを追加する必要があります。例えば、\[Persons\]Cityから\[Cities\]Nameの間に、N対1リレーションを持つ以下のストラクチャがあると仮定します:
 
@@ -72,7 +72,7 @@ QUERY BY SQLを使用して、リレーションの存在の有無に関わら�
 
 **Note:** QUERY BY SQLは、[QUERY BY FORMULA](query-by-formula.md "QUERY BY FORMULA")と異なる方法で、1対NとN対Nリレーションを扱います。
 
-#### 例題 1 
+## 例題 1 
 
 売上高が100を超えるオフィスを表示します。SQLは以下のようになります: 
 
@@ -88,7 +88,7 @@ QUERY BY SQL コマンドを使用すると、
  QUERY BY SQL([Offices];$queryFormula)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 3000から4000件の範囲に分類される注文を表示します。SQLは以下のようになります: 
 
@@ -104,7 +104,7 @@ QUERY BY SQL コマンドを使用すると、
  QUERY BY SQL([Orders];$queryFormula)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 指定された条件で並び替えされたクエリ結果の取得方法を説明します。SQLは以下のようになります: 
 
@@ -120,7 +120,7 @@ QUERY BY SQL コマンドを使用すると、
  QUERY BY SQL([People];$queryFormula)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 4Dのリレートテーブルを使用するクエリをこの例で示します。SQLでは、JOINを使用してリレーションを表わします。以下の2つのテーブルがあると仮定します: 
 
@@ -149,15 +149,15 @@ QUERY BY SQL コマンドを使用する場合:
  QUERY BY SQL([Lines_Invoices];$queryFormula)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 検索条件のフォーマットが正しければ、OKシステム変数は1に設定されます。そうでなければこのコマンドの結果のセレクションは空になり、エラーが返され、OK変数の値は0に設定されます。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされるエラー処理メソッドでとらえることができます。
 
-#### 参照 
+## 参照 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

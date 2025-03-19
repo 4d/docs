@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is license available.Summary-->O comando Is license available permite conhecer a disponibilidade de um plug-in.<!-- END REF--> É útil, por exemplo, para mostrar ou ocultar funções que necessitam da presença de um plug-in.  
   
@@ -41,7 +41,7 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 
 * Passe no parâmetro licença o número de identificação do recurso “4BNX” do plug-in. Neste caso, o comando se comporta como foi indicado anteriormente.
 
-#### Ver também 
+## Ver também 
 
 [CHANGE LICENSES](change-licenses.md)  
 [License info](../commands/license-info.md)  
@@ -49,7 +49,7 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -26,7 +26,7 @@ displayed_sidebar: docs
 |Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -77,7 +77,7 @@ If the target *fileConstant* does not exist, a null object is returned. No error
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.  
 
-#### See also 
+## See also 
 
 [`4D.File` class](../API/FileClass.md)  
 [Folder](folder.md)  
@@ -87,7 +87,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

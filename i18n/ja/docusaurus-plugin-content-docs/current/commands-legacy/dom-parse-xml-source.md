@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->DOM Parse XML sourceコマンドはXML構造を含むドキュメントを解析し、XMLツリーへの参照を返します。<!-- END REF-->このコマンドはDTDやXMLスキーマ (XML Schema Definition (XSD) ドキュメント) を使用して、ドキュメントを検証したり、あるいはしないこともできます。  
 ドキュメントはディスク上あるいはイントラネットやインターネット上に存在できます。
@@ -54,7 +54,7 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
 
 **重要**: 参照の利用が終了したら、[DOM CLOSE XML](dom-close-xml.md "DOM CLOSE XML") コマンドを使用してこの参照が使用しているメモリを解放することを忘れないでください。
 
-#### 例題 1 
+## 例題 1 
 
  検証なしでディスク上のXMLドキュメントを開きます: 
 
@@ -62,7 +62,7 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
  $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml")
 ```
 
-#### 例題 2 
+## 例題 2 
 
  検証なしで、データベースストラクチャと同階層にあるXMLドキュメントを開きます: 
 
@@ -70,7 +70,7 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
  $xml_Struct_Ref:=DOM Parse XML source("import.xml")
 ```
 
-#### 例題 3 
+## 例題 3 
 
  ディスク上のDTDを使用した検証を行い、ディスク上のXMLドキュメントを開きます: 
 
@@ -78,7 +78,7 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
  $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml";True;"C:\\import_dtd.xml")
 ```
 
-#### 例題 4 
+## 例題 4 
 
  検証なしで特定のURLに存在するXMLドキュメントを開きます: 
 
@@ -86,16 +86,16 @@ DTDやXSDが存在しなかったりURLが正しくない場合など検証が�
  $xml_Struct_Ref:=DOM Parse XML source("http://www.4D.com/xml/import.xml")
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
  コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->**PHP SET OPTION** コマンドを使用して、[PHP Execute](php-execute.md) コマンド呼び出し前に、特定のオプションを設定することができます。<!-- END REF-->このコマンドのスコープはカレントプロセスです。
 
@@ -33,12 +33,12 @@ option引数には、変更するオプションを指定する"*PHP*"テーマ�
 
 デフォルトで**PHP SET OPTION** はプロセス内で後に続くすべての[PHP Execute](php-execute.md) のオプションを設定します。 次の呼び出しにのみ有効なオプションを設定するためには、アスタリスク (*\**) 引数を渡します。
 
-#### 参照 
+## 参照 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

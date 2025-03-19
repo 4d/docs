@@ -51,7 +51,7 @@ Pour plus d’informations sur ce point, reportez-vous à la section *Présentat
 
 **Rappel :** Les références aux variables locales ne sont pas possibles en mode compilé. Pour plus d'informations sur la programmation SQL dans 4D, reportez-vous à la section *Présentation des commandes du thème SQL*.   
 
-##### A propos des liens 
+### A propos des liens 
 
 **QUERY BY SQL** n’utilise pas les liens entre les tables définis dans l’éditeur de structure de 4D. Si vous souhaitez tirer parti des données liées, vous devez ajouter une clause JOIN dans la requête. Par exemple, considérons la structure suivante, dans laquelle un lien N vers 1 relie les champs \[Personnes\]Ville à \[Villes\]Nom :
 

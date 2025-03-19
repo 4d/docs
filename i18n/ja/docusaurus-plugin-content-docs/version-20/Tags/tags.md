@@ -70,7 +70,7 @@ title: 変換タグ
 
 `<!--#4DBASE -->` タグは `<!--#4DINCLUDE-->` タグで使用されるワーキングディレクトリを指定します。
 
-Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ページ内であとに続くすべての `<!--#4DINCLUDE-->` 呼び出しのディレクトリを変更します (次の `<!--#4DBASE -->` があるまで)。 If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ページ内であとに続くすべての `<!--#4DINCLUDE-->` 呼び出しのディレクトリを変更します (次の `<!--#4DBASE -->` があるまで)。 組み込まれたファイル内で `<!--#4DBASE -->`フォルダーが変更されると、親のファイルから元となる値を取得します。
 
 *folderPath* 引数には現在のページに対する相対パスを指定し、パスは "`/`" で終わっていなければなりません。 また、指定フォルダーは Webフォルダー内になければなりません。
 

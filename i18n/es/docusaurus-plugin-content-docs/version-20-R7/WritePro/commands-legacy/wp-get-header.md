@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get header.Summary-->El comando **WP Get header** devuelve el encabezado asociado al rango *objRango* o al *indiceSeccion* del documento *wpDoc*.<!-- END REF--> Si no se encuentra ningún encabezado con respecto a los parámetros, el comando devuelve **Null**.
 
@@ -33,7 +33,7 @@ Si se pasa el parámetro *tipoSubSeccion*, el comando devuelve el encabezado aso
     
 Si no se especifica el *tipoSubSeccion*, se devolverá el encabezado de la sección principal. En este caso, si una subsección está activa, el objeto de encabezado de la sección principal está *indefinido* (el encabezado de la sección principal sólo está disponible si no hay ninguna subsección wk first page o wk left page activa).
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea copiar el encabezado de la primera página de un documento 4D Write Pro a los encabezados de todas las páginas de otro documento 4D Write Pro:
 
@@ -49,7 +49,7 @@ Usted desea copiar el encabezado de la primera página de un documento 4D Write 
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Utilizar un área 4D Write Pro*  
 [WP DELETE HEADER ](wp-delete-header.md)  

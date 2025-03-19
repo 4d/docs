@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->The **OBJECT Get multiline** command returns the current state of the "Multiline" option for the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -33,11 +33,11 @@ The value returned corresponds to one of the following constants, found in the "
 
 **Note:** If you apply the **OBJECT Get multiline** command to an object that does not support the "Multiline" option, the command returns 0.  
 
-#### See also 
+## See also 
 
 [OBJECT SET MULTILINE](object-set-multiline.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->OBJECT GET RGB COLORS コマンドは*object*で指定されたオブジェクトまたはオブジェクトグループの描画色や背景色を返します。<!-- END REF-->.
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 *foregroundColor*、*backgroundColor*、および*altBackgrndColor* 引数のフォーマットに関する詳細は[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドを参照してください。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

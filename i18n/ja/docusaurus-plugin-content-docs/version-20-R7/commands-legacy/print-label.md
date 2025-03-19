@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** は、*aTable*のセレクションのデータを使用してラベルを印刷します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 * ラベルエディターが表示されるシンタックスは4D Serverでは動作しません。この場合システム変数OKは0に設定されます。
 * プリンター関連の問題が発生しても (用紙切れ、プリンター接続切断等) 、エラーメッセージは生成されません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、テーブルの出力フォームを使用してラベルを印刷します。この例では2つのメソッドを使用します。最初のプロジェクトメソッドは正しい出力フォームを設定し、ラベルを印刷します: 
 
@@ -70,7 +70,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例では、ユーザが\[People\]テーブルを検索し、自動で“My Labels”ラベルを印刷します:
 
@@ -81,7 +81,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例では、ユーザが\[People\]テーブルを検索し、印刷するラベルを選択します:
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例では、ユーザが\[People\]テーブルを検索し、ラベルウィザードを表示して任意のラベルの設計、保存、ロード、印刷を行います:
 
@@ -103,12 +103,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

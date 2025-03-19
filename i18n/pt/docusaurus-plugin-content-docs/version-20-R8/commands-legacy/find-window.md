@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Find window.Summary-->O comando Find window devolve (se existe) o número de referência da primeira janela “tocada” pelo ponto cujas coordenadas se passam em *esquerda e superior*.<!-- END REF-->  
 
@@ -24,12 +24,12 @@ As coordenadas devem ser expressas com relação a esquina superior esquerda da 
   
 O parâmetro *parteJanela*, devolve 3 se toca a janela, caso contrário 0\. (**Nota de compatibilidade:** a partir de 4D v14, as constantes do tema *Buscar janela* são obsoletas).
 
-#### Ver também 
+## Ver também 
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

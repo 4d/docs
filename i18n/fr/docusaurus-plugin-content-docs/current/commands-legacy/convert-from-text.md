@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->La commande **CONVERT FROM TEXT** permet de convertir un texte exprimé dans le jeu de caractères courant de 4D en un texte exprimé dans un autre jeu de caractères.<!-- END REF-->
 
@@ -178,15 +178,15 @@ Pour plus d’informations sur les noms des jeux de caractères, reportez-vous �
 
 Après l’exécution de la commande, le texte converti est retourné dans le BLOB *blobConverti*. Ce BLOB pourra être relu par la commande [Convert to text](convert-to-text.md). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Convert to text](convert-to-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

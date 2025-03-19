@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** creates one or more arrays and copies data from the fields or record numbers from the current selection into the arrays.<!-- END REF--> 
 
@@ -59,7 +59,7 @@ If you load record numbers, they are copied into a Long Integer array.
 
 If the command is successful, the size of each resulting array is equal to *(end-start)+1*, except if the *end* parameter exceeded the number of records in the selection. In such a case, each resulting array contains *(Records in selection(\[...\])-start)+1* elements.
 
-#### Example 1 
+## Example 1 
 
 The following code addresses the first 50 records from the current selection for the *\[Invoices\]* table. It loads the values from the *\[Invoices\]Invoice ID* field and the *\[Customers\]Customer ID* related field.
 
@@ -67,7 +67,7 @@ The following code addresses the first 50 records from the current selection for
  SELECTION RANGE TO ARRAY(1;50;[Invoices]Invoice ID;alInvoID;[Customers]Customer ID;alCustID)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following code addresses the last 50 records from the current selection for the *\[Invoices\]* table. It loads the record numbers of the *\[Invoices\]* records as well as those of the *\[Customers\]* related records:
 
@@ -76,7 +76,7 @@ The following code addresses the last 50 records from the current selection for 
  SELECTION RANGE TO ARRAY(lSelSize-49;lSelSize;[Invoices];alInvRecN;[Customers];alCustRecN)
 ```
 
-#### Example 3 
+## Example 3 
 
 The following code process, in sequential “chunks”of 1000 records, a large selection that could not be downloaded in its entirety into arrays:
 
@@ -90,7 +90,7 @@ The following code process, in sequential “chunks”of 1000 records, a large s
  End for
 ```
 
-#### Example 4 
+## Example 4 
 
 Use the first 50 current records of the \[Invoices\] table to load various arrays, in deferred execution: 
 
@@ -103,13 +103,13 @@ Use the first 50 current records of the \[Invoices\] table to load various array
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-#### See also 
+## See also 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

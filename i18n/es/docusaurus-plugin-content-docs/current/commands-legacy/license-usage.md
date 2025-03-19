@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.License usage.Summary-->El comando **License usage** devuelve una colección de objetos que contienen información sobre las licencias retenidas.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Cada objeto de la colección devuelta tiene los siguientes atributos:
 
 Dependiendo del tipo de sesión (cliente 4D o REST, por ejemplo), el contenido del objeto de sesión en la tabla anterior variará. Ver más abajo para más detalles.
 
-#### objeto de sesión para sesiones de clientes 4D 
+## objeto de sesión para sesiones de clientes 4D 
 
 Dentro de la colección devuelta para las sesiones 4D, cada elemento contiene un objeto de sesión idéntico al devuelto por el comando [Process activity](../commands/process-activity.md):
 
@@ -50,7 +50,7 @@ Dentro de la colección devuelta para las sesiones 4D, cada elemento contiene un
 | ID                         | Texto          | UUID de la sesión                                                            |
 | persistentID               | Texto          | ID persistente de la sesión                                                  |
 
-#### objeto sesión para sesiones SQL 
+## objeto sesión para sesiones SQL 
 
 Esta tabla detalla el contenido del objeto de sesión para las sesiones SQL:
 
@@ -61,7 +61,7 @@ Esta tabla detalla el contenido del objeto de sesión para las sesiones SQL:
 | userName                   | Texto    | Nombre de usuario         |
 | userId                     | Número   | ID de usuario             |
 
-#### objeto sesión para sesiones REST 
+## objeto sesión para sesiones REST 
 
 Esta tabla detalla el contenido del objeto de sesión para las sesiones REST:
 
@@ -73,7 +73,7 @@ Esta tabla detalla el contenido del objeto de sesión para las sesiones REST:
 | isDatastore                | Boolean  | True si la solicitud REST proviene de un datastore |
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

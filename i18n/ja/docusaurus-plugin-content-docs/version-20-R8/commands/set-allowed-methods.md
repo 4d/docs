@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題
+## 例題
 
 この例は、名前が“formula”で始まるすべてのメソッドと、“Total\_general” メソッドを、保護されたコンテキスト下においてユーザーによって入力できるようにします:
 
@@ -53,12 +53,12 @@ displayed_sidebar: docs
  SET ALLOWED METHODS(methodsArray)
 ```
 
-#### 参照
+## 参照
 
 [EDIT FORMULA](../commands-legacy/edit-formula.md)\
 [GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                                                 |
 | ------- | --------------------------------------------------------------- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Convert to text.Summary-->El comando Convert to text convierte el texto contenido en el parámetro *blob* y lo devuelve en texto expresado en el juego de caracteres de 4D.<!-- END REF--> 4D utiliza por defecto el conjunto de caracteres UTF-16\. 
 
@@ -24,15 +24,15 @@ Si el BLOB contiene texto copiado desde 4D, el texto del BLOB será probablement
 
 Convert to text soporta BOMs (Byte Order Marks). Si el conjunto de caracteres especificado es de tipo Unicode (UTF-8, UTF-16 o UTF-32), 4D intenta identificar un BOM entre los primeros bytes recibidos. Si lo detecta, se filtra del resultado y 4D utiliza el conjunto de caracteres definido en lugar del conjunto de caracteres especificado. 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable OK toma el valor 1\. De lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [CONVERT FROM TEXT](convert-from-text.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

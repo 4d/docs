@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get group access.Summary-->The **Get group access** command returns the memberships of the 4D user account for the current session.<!-- END REF--> If the user does not belong to any group in the session, an empty collection is returned. 
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Collection of strings: group names to which the 4D user account belongs. 
 
-#### Example 
+## Example 
 
 You want to check if the current user belongs to the "plugins" group:
 
@@ -32,11 +32,11 @@ You want to check if the current user belongs to the "plugins" group:
  End if
 ```
 
-#### See also 
+## See also 
 
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

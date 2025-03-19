@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get picture file name.Summary-->O comando **Get picture file name** retorna o nome atual por defeito como padrão da imagem passada como parâmetro.<!-- END REF-->
 
@@ -22,11 +22,11 @@ O nome padrão é usado durante a exportação da imagem em um arquivo de disco.
 
 Se a imagem nao tiver um nome por defeito, o comando devolve uma cadeia vazia.
 
-#### Ver também 
+## Ver também 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

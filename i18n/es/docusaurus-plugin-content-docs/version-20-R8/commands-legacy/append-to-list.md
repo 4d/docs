@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->El comando APPEND TO LIST añade un nuevo elemento a la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ La referencia de la lista que pasa en *sublista* debe hacer referencia a una lis
 * Para insertar un nuevo elemento en una lista, utilice [INSERT IN LIST](insert-in-list.md). Para cambiar el texto de un elemento existente o modificar su lista hija al igual que su estado desplegado, utilice [SET LIST ITEM](set-list-item.md).
 * Para cambiar la apariencia del nuevo elemento añadido utilice [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Esta es una vista parcial de la estructura de una base:
 
@@ -147,14 +147,14 @@ Cuando el formulario se ejecuta, la lista se verá de esta forma:
 
 **Nota:** este ejemplo es útil para propósitos de interfaz de usuario si trabaja con un número limitado de registros. Recuerde que las listas se conservan en memoria, no construya interfaces de usuario con listas jerárquicas que contengan millones de elementos. 
 
-#### Ver también 
+## Ver también 
 
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

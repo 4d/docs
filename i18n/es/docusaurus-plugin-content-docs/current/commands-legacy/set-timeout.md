@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET TIMEOUT.Summary-->El comando SET TIMEOUT especifica cuánto tiempo tiene para la ejecución un comando de puerto serial.<!-- END REF--> Si el comando no termina dentro del tiempo especificado, *segundos*, el comando del puerto serial se cancela, se genera un error -9990, y la variable sistema OK toma el valor 0\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
@@ -25,7 +25,7 @@ Los comandos que se afectan por el parámetro timeout son:
 * [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")
 * [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los datos se leen con [RECEIVE PACKET](receive-packet.md "RECEIVE PACKET"). Si los datos no se reciben en el tiempo definido, ocurre un error:
 
@@ -42,7 +42,7 @@ El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los 
  ON ERR CALL("")
 ```
 
-#### Ver también 
+## Ver también 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -50,7 +50,7 @@ El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

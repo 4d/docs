@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET CHANNEL.Summary-->SET CHANNEL コマンドはシリアルポートまたはドキュメントを開きます。<!-- END REF-->このコマンドでは、同時に1つのポートまたは1つのドキュメントファイルしか開くことができません。開いたシリアルポートを閉じるにはSET CHANNEL(11)を用います。
 
@@ -30,7 +30,7 @@ SET CHANNELの説明は、２つの部分からなります:
 * シリアルポートに使用
 * ドキュメントに使用
 
-#### シリアルポートに使用 - SET CHANNEL (port;settings) 
+## シリアルポートに使用 - SET CHANNEL (port;settings) 
 
 SET CHANNEL コマンドの第一の形式はシリアルポートを開き、プロトコルや他のポート情報を設定します。データの送信は、[SEND PACKET](send-packet.md "SEND PACKET"), [SEND RECORD](send-record.md "SEND RECORD") または [SEND VARIABLE](send-variable.md "SEND VARIABLE")で行えます。データの受信は、[RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [RECEIVE PACKET](receive-packet.md "RECEIVE PACKET"), [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") または [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")で行います。
 
@@ -54,14 +54,14 @@ SET CHANNEL コマンドの第一の形式はシリアルポートを開き、�
 
 **重要**: *port*に渡す値は、オペレーションシステムで認識される既存のシリアルCOMポートを示すものでなくてはなりません。例えば、101、103、125という値を使用できるようにするには、シリアルポートCOM1、COM3、COM25が必ず設定されている必要があります。
 
-##### シリアルポートの注意点 
+### シリアルポートの注意点 
 
 標準の設定で、Mac OSとWindowsでは2つのシリアルポートが提供されています。Mac OSではモデムポートとプリンタポート、WindowsではCOM1とCOM2ポートです。しかしながら、シリアルポートはエクステンションボードを使用 して追加することができます。もともと4Dは2つの標準のシリアルポートのみサポートし、のちに追加されたポートをサポートしました。互換性のため、両方 をサポートするシステムとなっています。  
 
 * 標準のシリアルポート（プリンター/COM2またはモデム/COM1）にアクセスするには、*port*引数に0、1、20、21、30、31のいずれかを指定（以前の使用法に相当）するか、100以上の値にします（以下の説明を参照）。
 * 追加したシリアルポートにアクセスするには、値をＮ+100にする必要があります（Nはポート番号）。ソフトウェアフローまたはハードウェアフローを選択するために、先の値（Ｎ+100）に100または200を加えることも考慮します。
 
-##### 例題 1 
+### 例題 1 
 
 無手順のプリンタ/COM2ポートを使用する場合は、以下のシンタックスの1つを使用します: 
 
@@ -75,7 +75,7 @@ SET CHANNEL コマンドの第一の形式はシリアルポートを開き、�
  SET CHANNEL(102;param)
 ```
 
-##### 例題 2 
+### 例題 2 
 
 ソフトウェアフロー制御（XON/XOFF）のモデム/COM1ポートを使用する場合は、以下のシンタックスを使う必要があります: 
 
@@ -89,7 +89,7 @@ SET CHANNEL コマンドの第一の形式はシリアルポートを開き、�
  SET CHANNEL(201;param)
 ```
 
-##### 例題 3 
+### 例題 3 
 
 ハードウェアフロー制御（RTS/CTS等）のCOM25を使用する場合は、以下のシンタックスを使用する必要があります: 
 
@@ -132,7 +132,7 @@ SET CHANNEL コマンドの第一の形式はシリアルポートを開き、�
 
 **Tip:** *port* と *settings* に計算され渡されるさまざまな数値は、COM1...COM99の値を除き、テーマの定義済み変数で提供されています。COM1...COM99はリテラル数値を使用してください。
 
-#### ディスク上のドキュメントを操作 - SET CHANNEL(operation;document) 
+## ディスク上のドキュメントを操作 - SET CHANNEL(operation;document) 
 
 SET CHANNELコマンドの第2の形式は、ドキュメントファイルの作成やオープンおよび、クローズを行います。コマンドと異なり、同時に1つのドキュメントファイルしか開くことができません。ドキュメントファイルは、読み込みと書き込みの両方が可能です。 
 
@@ -154,11 +154,11 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 
 この表に示した処理はすべて、適切な場合、システム変数Documentに値を設定します。また、処理が正常に行われると、システム変数OKに1が代入されます。それ以外の場合には0が代入されます。
 
-##### 例題 4 
+### 例題 4 
 
 [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [SET TIMEOUT](set-timeout.md "SET TIMEOUT") そして [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")の例題を参照。
 
-#### 参照 
+## 参照 
 
 [Append document](append-document.md)  
 *Communications*  
@@ -174,7 +174,7 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -12,12 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN RUNTIME EXPLORER.Summary-->El comando OPEN RUNTIME EXPLORER muestra el explorador de ejecución en una ventana flotante.<!-- END REF-->
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

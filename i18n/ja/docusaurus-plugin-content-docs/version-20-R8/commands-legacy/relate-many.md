@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RELATE MANY.Summary-->RELATE MANYには、2つの形式があります。<!-- END REF-->
 
@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 **Note:** RELATE MANYを実行する際に、1テーブルのカレントセレクションが空の場合、このコマンドは何も行いません。
 
-##### 
+### 
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 例題 
+## 例題 
 
 以下の例は、3つのテーブルが自動リレートで関連付けられています。\[People\]テーブルと\[Parts\]テーブルは両方とも\[Companies\]テーブルに対してn対1のリレート関係にあります。
 
@@ -63,12 +63,12 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.READ WRITE.Summary-->READ WRITE changes the state of *aTable* to read/write for the process in which it is called.<!-- END REF--> If the optional \* parameter is specified, all tables are changed to read/write state.
 
@@ -25,13 +25,13 @@ Use READ WRITE when you must modify a record and save the changes. Also use READ
 
 **Note:** This command is not retroactive. A record is loaded according to the table’s read/write status at the time of loading. To load a record from a read-only table in read/write mode, you must first change the table state to read/write.
 
-#### See also 
+## See also 
 
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

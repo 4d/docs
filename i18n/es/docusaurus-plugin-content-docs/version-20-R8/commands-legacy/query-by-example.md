@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->QUERY BY EXAMPLE efectúa la misma acción que el comando de menú Búsqueda por formulario.<!-- END REF-->.. en el entorno Diseño. Este comando muestra el formulario de entrada actual como ventana de búsqueda. QUERY BY EXAMPLE busca en *tabla* los datos que el usuario introduce en la ventana de búsqueda. El formulario debe contener los campos que usted quiere utilizar para efectuar la búsqueda. La búsqueda se optimiza; los campos indexados se utilizan automáticamente para optimizar la búsqueda.
 
 Ver el manual de Diseño de 4D para mayor información sobre la utilización del comando de menú Búsqueda por formulario... del entorno Diseño. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El método en este ejemplo muestra el formulario miBusqueda. Si el usuario acepta el formulario y ejecuta la búsqueda (es decir, si la variable sistema OK toma el valor 1), se muestran los registros que cumplen con el criterio de búsqueda:
 
@@ -32,16 +32,16 @@ El método en este ejemplo muestra el formulario miBusqueda. Si el usuario acept
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el usuario hace clic en el botón Aceptar o presionan la tecla Enter, la variable sistema OK toma el valor 1 y la búsqueda se realiza. Si el usuario hace clic en el botón Cancelar o presiona la tecla de anulación, la variable sistema OK toma el valor 0 y la búsqueda se cancela.
 
-#### Ver también 
+## Ver también 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

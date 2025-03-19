@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE LIST.Summary-->La commande **SAVE LIST** sauvegarde la liste dont vous avez passé le numéro de référence dans *liste*, sous le nom que vous avez passé dans *nomListe*.<!-- END REF--> La liste est stockée en tant qu'énumération dans l'éditeur d'énumérations du mode Développement.
 
@@ -22,11 +22,11 @@ Si une énumération de même nom existe déjà, son contenu est remplacé.
 
 **Note** : Cette commande ne peut pas être utilisée dans une structure chargée en **lecture seule**, telle qu'un projet .4dz ou un composant.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Load list](load-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

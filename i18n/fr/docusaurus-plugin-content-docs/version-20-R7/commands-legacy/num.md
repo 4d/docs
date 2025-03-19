@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Num.Summary-->La fonction **Num** retourne sous forme de numérique l'expression de type chaîne, Booléen ou numérique que vous avez passée dans le paramètre *expression*.<!-- END REF--> Le paramètre facultatif *séparateur* permet de désigner un séparateur décimal pour l’évaluation des expressions de type chaîne. 
 
@@ -42,7 +42,7 @@ Si vous passez une expression numérique dans le paramètre *expression*, **Num*
 **Expressions indéfinies**  
 Si l'évaluation de *expression* donne une valeur indéfinie, **Num** retourne 0\. Ce fonctionnement est utile lorsque le code attend toujours un numérique alors que l'évaluation de *expression* peut parfois aboutir au type **indéfini** (cas par exemple des attributs d'objets).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre la manière dont Num fonctionne lorsqu'un argument de type chaîne lui est passé. A chaque ligne, un numérique est assigné à la variable *vRésultat*. Les commentaires décrivent les résultats :
 
@@ -55,7 +55,7 @@ L'exemple suivant illustre la manière dont Num fonctionne lorsqu'un argument de
  vRésultat:=Num("-123e2") // vRésultat vaut -12300
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans l'exemple suivant, *\[Client\]Dette* est comparé à la valeur 1000\. La fonction Num appliquée à cette comparaison retourne 0 ou 1\. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide. En définitive, le champ *\[Client\]Risque* reçoit la valeur “Acceptable” ou “Inacceptable” :
 
@@ -65,7 +65,7 @@ Dans l'exemple suivant, *\[Client\]Dette* est comparé à la valeur 1000\. La fo
  [Client]Risque:=("Acceptable"*Num([Client]Dettes<1000))+("Inacceptable"*Num([Client]Dettes>=1000))
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple compare les résultats obtenus en fonction du séparateur “courant” :
 
@@ -77,13 +77,13 @@ Cet exemple compare les résultats obtenus en fonction du séparateur “courant
   // $lenum vaut bien 33 333,33 quel que soit le système
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

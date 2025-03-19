@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.KILL WORKER.Summary-->**KILL WORKER** コマンドは *process* に指定した番号、または名称のワーカープロセスにメッセージを送信し、現在の処理が完了次第、未処理のメッセージすべて無視して実行を終了するよう命令します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 **KILL WORKER** コマンドによって終了させられたワーカーに、[CALL WORKER](call-worker.md) コマンドを呼び出してメッセージを送ろうとした場合、新しいプロセスが開始されます。一つのワーカーに対して一つのプロセスのみが実行中であるようにするために、新しいプロセスは、その前のプロセスが実際に終了されたあとに開始されます。ただし、[CALL WORKER](call-worker.md) がワーカーから呼び出されて自分自身にメッセージを送信しようとたものの、その直後にプロセスが**KILL WORKER** によって終了されていた場合、コマンドは何もしないという点に注意してください。
 
-#### 例題 
+## 例題 
 
 例えばフォームなどで次のようなコードを実行し、ワーカーの終了をトリガーします:
 
@@ -48,13 +48,13 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 *ワーカーについて*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

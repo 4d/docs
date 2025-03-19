@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST Get content type.Summary-->**ST Get content type**コマンドは、 *object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内で見つかったコンテンツの型を返します。<!-- END REF-->
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 | ST URL type         | 倍長整数 | 1 | セレクションにはURL参照のみ含まれます。                      |
 | ST User type        | 倍長整数 | 5 | セレクションには、カスタムの参照のみ含まれます。                   |
 
-#### 例題 
+## 例題 
 
 エリア内で選択されたコンテンツのタイプによって表示されるコンテキストメニューを変えたい場合:
 
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

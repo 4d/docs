@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares** returns the sum of the squares of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the sum of the squares.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
 
-#### Example 1 
+## Example 1 
 
 The following example is an object method for the variable *vSquares*. The object method assigns the sum of squares for a data series to *vSquares*. The *vSquares* variable is printed in the last break of the report:
 
@@ -41,7 +41,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
-#### Example 2 
+## Example 2 
 
 This example gets the sum of the squares of the values placed in an array:
 
@@ -52,14 +52,14 @@ This example gets the sum of the squares of the values placed in an array:
  vSumSquares:=Sum squares($ArrGrades)
 ```
 
-#### See also 
+## See also 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

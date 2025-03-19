@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New shared object.Summary-->The **New shared object** command creates a new empty or prefilled shared object and returns its reference.<!-- END REF--> Adding or editing a property to this object must be surrounded by the *Use...End use* structure, otherwise an error is generated. Reading a property without a *Use...End use* structure is, however, possible. 
 
@@ -41,7 +41,7 @@ Optionally, you can prefill the new object by passing one or several *property*/
     
 (\*)When a shared object or collection is added to a shared object, they share the same locking identifier. For more information on this point, refer to the *About the locking identifier (how shared groups work)* section.
 
-#### Example 1 
+## Example 1 
 
 You want to create a new prefilled shared object:
 
@@ -50,7 +50,7 @@ You want to create a new prefilled shared object:
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to create and modify a shared object. The structure must be called for this object:   
 
@@ -62,13 +62,13 @@ You want to create and modify a shared object. The structure must be called for 
  End use
 ```
 
-#### See also 
+## See also 
 
 [New object](new-object.md)  
 [New shared collection](../commands/new-shared-collection.md)  
 *Shared objects and shared collections*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

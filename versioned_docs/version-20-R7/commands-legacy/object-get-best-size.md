@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->The **OBJECT GET BEST SIZE** command returns the *bestWidth* and *bestHeight* parameters, the “optimal” width and height of the form object designated by the *\** and *object* parameters.<!-- END REF--> These values are expressed in pixels. This command is particularly useful for displaying or printing complex reports, associated with the [OBJECT MOVE](object-move.md) command.
 
@@ -39,16 +39,16 @@ The following objects are handled by this command:
 
 For all other form object types (group areas, tabs, rectangles, straight lines, circles/ovals, external areas, etc.), the **OBJECT GET BEST SIZE** command returns the current object size (defined in the form editor and possibly using the [OBJECT MOVE](object-move.md) command).
 
-#### Example 
+## Example 
 
 Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command. 
 
-#### See also 
+## See also 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

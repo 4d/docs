@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->**OBJECT SET THREE STATES CHECKBOX**コマンドは、引数 *object* と *\** で指定したチェックボックスの"スリーステート"のプロパティを、カレントのプロセスにおいて変更します。<!-- END REF-->
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 *threeStates* 引数には、 スリーステートモードをオンにしたい場合には **True** を、オフにしたい場合は **False** を渡します。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

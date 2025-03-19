@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `MAIL New attachment` コマンドは、<!-- REF #_command_.MAIL New attachment.Summary -->[Email オブジェクト](../API/EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
 - *cid* 引数が使われていた場合、`Content-disposition` ヘッダーは "inline" に設定されます。
 - *cid* 引数が渡されていない、あるいは空の文字列が渡されていた場合、`Content-disposition` ヘッダーは "attachment" に設定されます。
 
-#### 例題 1
+## 例題 1
 
 ユーザーが選択したファイルを添付し、HTML 本文に画像を埋め込んだメールを送信します:
 
@@ -123,7 +123,7 @@ $transporter.send($email) // メールを送信します
 End if
 ```
 
-#### 例題 2
+## 例題 2
 
 4D Write Pro エリアを添付したメールを送信します:
 
@@ -149,7 +149,7 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

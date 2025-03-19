@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->**SET LIST PROPERTIES** コマンドは、*list*引数に渡された参照番号を持つ階層リストの行の高さとセレクションプロパティを設定します。<!-- END REF-->
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 オプションの引数*editable*を使用すると、データ入力中にリストがフィールドや変数に関連付けられた選択リストとして表示された際に、ユーザによる編集を可能にするかどうかを指示することができます。リストが編集可である場合、選択リストウインドウに**変更**ボタンが追加され、ユーザはエディタを用いて、値の追加や削除、並び替えを行うことができます。  
 *editable*引数に値1を渡すか省略すると、そのリストは編集可能になります。0を渡すと、リストを編集することはできません。
 
-#### 例題 
+## 例題 
 
 ダブルクリックによるサブリストの展開/折りたたみを許可しない場合を考えます。フォームメソッドのように以下のように記述することができます:
 
@@ -55,13 +55,13 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

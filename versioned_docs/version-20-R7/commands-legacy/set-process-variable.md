@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->The **SET PROCESS VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values passed in *expr1* (*expr2*, etc.).<!-- END REF-->
 
@@ -30,7 +30,7 @@ The current process “pokes” the variables of the destination process—the d
 
 **Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **SET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As client machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
 
-##### Restrictions 
+### Restrictions 
 
 SET PROCESS VARIABLE does not accept local variables as destination variables. 
 
@@ -42,7 +42,7 @@ SET PROCESS VARIABLE accepts any type of destination process or interprocess var
 
 The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
 
-#### Example 1 
+## Example 1 
 
 This line of code sets (to the empty string) the text variable *vtCurStatus* of the process whose number is *$vlProcess*:
 
@@ -50,7 +50,7 @@ This line of code sets (to the empty string) the text variable *vtCurStatus* of 
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")
 ```
 
-#### Example 2 
+## Example 2 
 
 This line of code sets the text variable *vtCurStatus* of the process whose number is *$vlProcess* to the value of the variable *$vtInfo* from the executing method in the current process:
 
@@ -58,7 +58,7 @@ This line of code sets the text variable *vtCurStatus* of the process whose numb
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-#### Example 3 
+## Example 3 
 
 This line of code sets the text variable *vtCurStatus* of the process whose number is *$vlProcess* to the value of the same variable in the current process:
 
@@ -68,7 +68,7 @@ This line of code sets the text variable *vtCurStatus* of the process whose numb
 
 **Note:** The first *vtCurStatus* designates the instance of the variable in the destination process. The second *vtCurStatus* designates the instance of the variable in the current process.
 
-#### Example 4 
+## Example 4 
 
 This example sequentially sets to uppercase all elements of a process array from the process indicated by *$vlProcess*:
 
@@ -82,7 +82,7 @@ This example sequentially sets to uppercase all elements of a process array from
 
 **Note:** In this example, the process variable *vl\_IPCom\_Array* contains the size of the array *at\_IPCom\_Array* and must be maintained by the source/destination process.
 
-#### Example 5 
+## Example 5 
 
 This example writes the destination process instance of the variables *v1*, *v2* and *v3* using the instance of the same variables from the current process:
 
@@ -90,14 +90,14 @@ This example writes the destination process instance of the variables *v1*, *v2*
  SET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### See also 
+## See also 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 *Processes*  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

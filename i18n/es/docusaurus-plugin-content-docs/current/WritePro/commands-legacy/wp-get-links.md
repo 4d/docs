@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get links.Summary-->**WP Get links** devuelve la colección de todos los enlaces definidos en *objRango*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ En el parámetro *objRango*, puede pasar:
 | \[ \].bookmark  | Texto           | Nombre del marcador para el enlace                                   | enlaces de marcadores              |
 | \[ \].range     | Objeto          | Rango de la etiqueta del enlace. Ver *Comandos de gestión de rangos* | todos los enlaces                  |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea cambiar el color de todas las etiquetas de enlace url en un documento 4D Write Pro:
 
@@ -53,7 +53,7 @@ Usted desea cambiar el color de todas las etiquetas de enlace url en un document
  End for each
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP Get formulas](wp-get-formulas.md)  

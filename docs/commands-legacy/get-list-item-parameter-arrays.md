@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->The **GET LIST ITEM PARAMETER ARRAYS** command lets you retrieve all the parameters in a single call (as well as, optionally, their values) that are associated with the *itemRef* item in the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
 
@@ -29,7 +29,7 @@ If you pass the first optional *\** parameter, this indicates that *list* is an 
 
 *arrValues* must be a text type array. If you have associated values that are not Text (number or Boolean), they are converted to strings (True="1", False="0").
 
-#### Example 
+## Example 
 
 Given the following hierarchical list: 
 
@@ -71,11 +71,11 @@ If you want to get the parameter values as well, you write:
   // arrParamValues{5} contains "Dallas"
 ```
 
-#### See also 
+## See also 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

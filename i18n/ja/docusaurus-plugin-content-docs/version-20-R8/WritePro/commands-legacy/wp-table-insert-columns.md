@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table insert columns.Summary-->**WP Table insert columns** コマンドは、4D Write Pro の表に一つまたは複数のカラムを挿入します。<!-- END REF-->
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 コマンドは、挿入されたカラムを表すカラムレンジを返すか、あるいは何も挿入されなかった場合にはNull を返します。
 
-#### 例題 
+## 例題 
 
 *Invoice* の最初のカラムの終わりにカラムを3つ追加したい場合を考えます。以下のコードを実行すると:
 
@@ -54,6 +54,6 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict4680283.en.png)
 
-#### 参照 
+## 参照 
 
 [WP Table insert rows](wp-table-insert-rows.md)  

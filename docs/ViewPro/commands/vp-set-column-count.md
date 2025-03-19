@@ -14,7 +14,7 @@ title: VP SET COLUMN COUNT
 |columnCount|Integer|->|Number of columns|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 * `vk current sheet`
 
-#### Example
+## Example
 
 The following code defines five columns in the 4D View Pro area:
 
@@ -37,7 +37,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnCount.PNG)
 
-#### See also
+## See also
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP Get row count](vp-get-row-count.md)<br/>

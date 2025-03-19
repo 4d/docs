@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->The **GET FIELD PROPERTIES** command returns information about the field specified by *fieldPtr* or by *tableNum* and *fieldNum*.<!-- END REF-->
 
@@ -53,7 +53,7 @@ After the call:
 * The *unique* parameter returns True if the field is set to “Unique”, else False.
 * The *invisible* parameter returns True if the field is set to “Invisible”, else False. The Invisible attribute can be used to hide a given field in 4D standard editor (label, charts...).
 
-#### Example 1 
+## Example 1 
 
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the third field of the first table:
 
@@ -61,7 +61,7 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
  GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the field named \[Table3\]Field2:
 
@@ -69,13 +69,13 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
  GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
-#### See also 
+## See also 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

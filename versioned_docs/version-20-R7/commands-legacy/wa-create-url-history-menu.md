@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Create URL history menu.Summary-->The **WA Create URL history menu** command creates and fills a menu that can be used directly for navigation among the URLs visited during the session in the Web area designated by the *\** and *object* parameters.<!-- END REF--> It can be used to build a custom navigation interface.
 
@@ -37,7 +37,7 @@ Call the [RELEASE MENU](release-menu.md) command to delete a URL history menu wh
 
 **Compatibility Note:* As of 4D v19 R5, this command fills a menu with only the current URL for web areas using the Windows system rendering engine.* 
 
-#### Example 
+## Example 
 
 The following code can be associated with a 3D button having a pop-up menu entitled "Previous":
 
@@ -62,13 +62,13 @@ The following code can be associated with a 3D button having a pop-up menu entit
  End case
 ```
 
-#### See also 
+## See also 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

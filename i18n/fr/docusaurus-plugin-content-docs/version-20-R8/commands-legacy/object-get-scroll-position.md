@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->La commande **OBJECT GET SCROLL POSITION** retourne dans les paramètres *positionLigne* et *positionH* des informations relatives à la position des barres de défilement de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -28,11 +28,11 @@ Si *objet* désigne un objet de type liste (sous-formulaire, liste hiérarchique
 
 Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le décalage vertical et *positionH* le décalage horizontal de l’image. Ces valeurs sont exprimées en pixels par rapport à l’origine de l’image dans le système de coordonnées locales. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

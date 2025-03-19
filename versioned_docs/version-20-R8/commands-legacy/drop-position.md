@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Drop position.Summary-->The Drop position command can be used to find out the location, in a “complex” destination object, where an object has been (dragged and) dropped.<!-- END REF-->
 
@@ -30,7 +30,7 @@ If you call Drop position when handling an event that is not a drag-and-drop eve
 
 **Important:** A form object accepts dropped data if its **Droppable** property has been selected. Also, its object method must be activated for On Drag Over and/or On Drop, in order to process these events.
 
-#### Example 
+## Example 
 
 In the following example, a list of amounts paid must be broken down per month and per person. This is carried out by drag and drop between two list boxes:
 
@@ -89,11 +89,11 @@ The left (destination) list box object method contains the following code:
  End case
 ```
 
-#### See also 
+## See also 
 
 *Drag and Drop*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

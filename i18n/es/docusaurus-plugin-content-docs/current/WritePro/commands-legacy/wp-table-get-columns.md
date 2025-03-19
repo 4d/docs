@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Table get columns.Summary-->El comando **WP Table get columns**  devuelve un nuevo objeto de rango de celdas que contiene la selección de columnas *objTarget* o *refTabla* (definida por *colIni* y *numCol*).<!-- END REF--> 
 
@@ -38,7 +38,7 @@ Si *objTarget* no se cruza con una tabla o rango de texto donde se puede recuper
     
 Si *colIni* más *numCol* excede el número de columnas en *refTabla*, o si *colIni* es mayor que el número de columnas en *refTabla*, el rango devuelto contiene el máximo posible de columnas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea modificar algunos atributos de las dos últimas columnas de una tabla:
 
@@ -60,7 +60,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Para obtener un rango de columnas desde el 10 hasta el final:
 
@@ -68,7 +68,7 @@ Para obtener un rango de columnas desde el 10 hasta el final:
  WP Table get columns(tableRef;10;MAXLONG)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea recuperar las columnas que un usuario ha seleccionado:
 
@@ -80,7 +80,7 @@ Desea recuperar las columnas que un usuario ha seleccionado:
  $columns:=WP Table get columns($userSelection)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get rows](wp-table-get-rows.md)  

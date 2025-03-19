@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP New footer.Summary-->**WP New footer** コマンドは、*wpSection* 引数で定義されたセクションまたはサブセクションに割り当てられるフッターを作成し、それを返します。<!-- END REF-->
 
 指定したセクションまたはサブセクションにフッター要素が既に定義されている場合、*未定義*のオブジェクトが返され、エラーが生成されます。
 
-#### 例題 
+## 例題 
 
 セクションの左ページに対して、フッターを作成したい場合を考えます:
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE FOOTER](wp-delete-footer.md)  
 [WP Get footer](wp-get-footer.md)  

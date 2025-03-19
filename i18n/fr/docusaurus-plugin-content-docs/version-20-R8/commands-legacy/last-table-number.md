@@ -13,12 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last table number.Summary-->**Last table number** retourne le numéro de table le plus élevé parmi les tables de la base.<!-- END REF-->   
 Les tables sont numérotées dans l’ordre dans lequel elles ont été créées. Si aucune table n’a été supprimée dans la base, cette commande retourne donc le nombre de tables présentes dans la base. Dans le cadre de boucles itératives sur les numéros de tables de la base, vous devez utiliser la commande [Is table number valid](is-table-number-valid.md) afin de vérifier que la table n’a pas été supprimée.
 
-#### Exemple 
+## Exemple 
 
 L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau peut être utilisé comme liste déroulante (ou onglets, zone de défilement, etc.) pour afficher dans un formulaire la liste des tables de la base :
 
@@ -35,13 +35,13 @@ L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau p
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

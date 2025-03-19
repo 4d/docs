@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->O comando **DELETE FOLDER** apaga a pasta cujo nome ou rota completa for passada em *pasta*.<!-- END REF--> 
 
@@ -38,12 +38,12 @@ Como padrão, por razões de segurança, se omitir o parâmetro *deleteOption*, 
 
 Pode interceptar estes erros usando o método isntalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

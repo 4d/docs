@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.List item parent.Summary-->The **List item parent** command returns the item reference number of a parent item.<!-- END REF-->
 
@@ -34,7 +34,7 @@ If there is no item with the item reference number you passed, or if you have pa
 
 If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
 
-#### Example 
+## Example 
 
 Given the list named *hList* shown here in the Application environment:
 
@@ -64,14 +64,14 @@ The item reference numbers are set as follows:
 * If the item “a - 1” is selected, the variable *$vlParentItemRef* gets 100, the item reference number of the item “a”.
 * If the item “a” or “b” is selected, the variable *$vlParentItemRef* gets 0, because these items have no parent item.
 
-#### See also 
+## See also 
 
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica o número de níveis de quebra em um relatório realizado utilizando [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -26,7 +26,7 @@ Cada nível de quebra gerado imprimirá as áreas de quebras e de cabeçalho cor
 
 O segundo parâmetro, opcional, *saltoPagina*, se utiliza para provocar saltos de página durante a impressão. 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção é ordenada em quatro níveis, mas o comando **BREAK LEVEL** especifica apenas dois níveis de quebra. Um campo se acumula com o comando [ACCUMULATE](accumulate.md) :
 
@@ -38,14 +38,14 @@ O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção
  PRINT SELECTION([Emp]) // Imprimir o relatório
 ```
 
-#### Ver também 
+## Ver também 
 
 [ACCUMULATE](accumulate.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

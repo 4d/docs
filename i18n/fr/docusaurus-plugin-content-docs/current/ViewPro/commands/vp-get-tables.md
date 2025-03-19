@@ -23,7 +23,7 @@ title: VP Get tables
 | sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Collection | <- | Collection de textes avec tous les noms des tables                          | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne une collection de tous les noms de tables définis dans *sheet*<!-- END REF -->.
 
@@ -33,7 +33,7 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 > La numérotation démarre à 0.
 
-#### Exemple
+## Exemple
 
 Le code suivant retournera une collection de tous les noms de tables de la feuille courante :
 
@@ -43,6 +43,6 @@ $tables:=VP Get tables("ViewProArea")
 
 ```
 
-#### Voir également
+## Voir également
 
 [VP CREATE TABLE](vp-create-table.md)

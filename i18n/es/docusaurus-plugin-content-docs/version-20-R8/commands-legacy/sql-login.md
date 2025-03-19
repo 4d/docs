@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL LOGIN.Summary-->El comando **SQL LOGIN** permite conectarse a una fuente de datos SQL especificada en el parámetro *entradaDatos* y designa el objetivo de las búsquedas SQL ejecutadas posteriormente en el proceso actual: 
 
@@ -90,7 +90,7 @@ El alcance de este comando es el proceso; en otras palabras, si quiere ejecutar 
 * conexión vía ODBC desde la aplicación en ejecución hacia ella misma
 * conexión vía ODBC desde una aplicación 4D a 4D Server cuando una conexión cliente/servidor clásica ya está abierta entre estas dos aplicaciones.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Esta instrucción provoca la visualización de la caja de diálogo Seleccionar origen de datos ODBC: 
 
@@ -98,7 +98,7 @@ Esta instrucción provoca la visualización de la caja de diálogo Seleccionar o
  SQL LOGIN
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Apertura de una conexión vía el protocolo ODBC con la fuente de datos externa "MyOracle". Las búsquedas SQL ejecutadas vía el comando [SQL EXECUTE](sql-execute.md "SQL EXECUTE") y búsquedas incluidas dentro de las etiquetas [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") se redireccionará para esta conexión. Esta instrucción conectará la fuente de datos ODBC llamada “MyOracle” utilizando Scott/tiger como nombre/contraseña: 
 
@@ -106,7 +106,7 @@ Apertura de una conexión vía el protocolo ODBC con la fuente de datos externa 
  SQL LOGIN("ODBC:MyOracle";"Scott";"tiger";*)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Apertura de una conexión con el motor SQL interno de 4D:
 
@@ -114,7 +114,7 @@ Apertura de una conexión con el motor SQL interno de 4D:
  SQL LOGIN(SQL_INTERNAL;$user;$password)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Apertura de una conexión directa con la aplicación 4D Server ejecutada en la máquina con la dirección IP 192.168.45.34 y respondiendo en el puerto TCP por defecto. Las búsquedas SQL ejecutadas vía el comando [SQL EXECUTE](sql-execute.md "SQL EXECUTE") se redireccionan a esta conexión; las búsquedas incluidas dentro de las etiquetas [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") no se redireccionarán. 
 
@@ -122,7 +122,7 @@ Apertura de una conexión directa con la aplicación 4D Server ejecutada en la m
  SQL LOGIN("IP:192.168.45.34";"Juan";"azerty")
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Apertura de una conexión directa con la aplicación 4D Server ejecutada en la máquina con la dirección IP 192.168.45.34 y respondiendo al puerto TCP 20150\. Las búsquedas SQL ejecutadas vía el comando [SQL EXECUTE](sql-execute.md "SQL EXECUTE") y las búsquedas incluidas dentro de las etiquetas [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") se redireccionarán a esta conexión. 
 
@@ -130,7 +130,7 @@ Apertura de una conexión directa con la aplicación 4D Server ejecutada en la m
  SQL LOGIN("IP:192.168.45.34:20150";"Juan";"azerty";*)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Apertura de una conexión directa en SSL con la aplicación 4D Server ejecutada en la máquina con la dirección IP 192.168.45.34 y responder en el puerto TCP por defecto. Debe tener activado SSL para el servidor SQL en la aplicación 4D Server:
 
@@ -138,7 +138,7 @@ Apertura de una conexión directa en SSL con la aplicación 4D Server ejecutada 
  SQL LOGIN("IP:192.168.45.34:19812:ssl";"Admin";"sd156") // Note the ":ssl" after of the IP address and TCP port
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 Apertura de una conexión directa con la aplicación 4D Server ejecutada en la máquina que tiene la dirección IPv6 2a01: e35:2e41:c960:dc39:3eb0:f29b:3747 y responde en el puerto TCP 20150\. Las consultas SQL ejecutadas a través del comando [SQL EXECUTE](sql-execute.md) serán redirigidas a esta conexión; Las consultas incluidas en las etiquetas [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) no se redirigirán.
 
@@ -146,7 +146,7 @@ Apertura de una conexión directa con la aplicación 4D Server ejecutada en la m
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Apertura de una conexión directa con la aplicación 4D Server que publica en la red local una base cuyo nombre de publicación es "Accounts\_DB." El puerto TCP utilizado por el servidor SQL de ambas bases (definido en la página "SQL" de las Propiedades de la base) debe ser el mismo (19812 por defecto). Las búsquedas SQL ejecutadas vía el comando [SQL EXECUTE](sql-execute.md "SQL EXECUTE") se redireccionarán a esta conexión; las búsquedas incluidas dentro de las etiquetas [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") no se redireccionarán. 
 
@@ -154,7 +154,7 @@ Apertura de una conexión directa con la aplicación 4D Server que publica en la
  SQL LOGIN("4D:Accounts_DB";"Juan";"azerty")
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 Este ejemplo muestra las posibilidades de conexión ofrecidas por el comando SQL LOGIN:   
   
@@ -192,17 +192,17 @@ Este ejemplo muestra las posibilidades de conexión ofrecidas por el comando SQL
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la conexión es exitosa, el variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. 
 
-#### Ver también 
+## Ver también 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

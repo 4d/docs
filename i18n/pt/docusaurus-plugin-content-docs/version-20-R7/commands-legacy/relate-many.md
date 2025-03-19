@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RELATE MANY.Summary-->RELATE MANY tem duas sintaxes.<!-- END REF-->   
 
@@ -23,11 +23,11 @@ A segunda sintaxe, RELATE MANY(campo1), estabelece a relação Um a Muitos para 
   
 **Nota**: Se a seleção atual da tabela Um está vazia no momento da execução de RELATE MANY, o comando não faz nada
 
-##### 
+### 
 
 **Nota:** Este comando não é compatível com campos tipo Objeto
 
-#### Exemplo 
+## Exemplo 
 
 No seguinte exemplo, três tabelas estão relacionadas com relações automáticas. As duas tabelas \[Pessoas\] e \[Partes\] tem uma relação Muitos a Um com a tabela \[Empresas\].  
   
@@ -62,12 +62,12 @@ Note que é necessário o comando RELATE MANY, mesmo que as relações sejam aut
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

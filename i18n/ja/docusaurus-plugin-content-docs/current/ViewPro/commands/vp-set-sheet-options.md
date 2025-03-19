@@ -15,7 +15,7 @@ title: VP SET SHEET OPTIONS
 | sheetOptions | Object  | -> | 設定するシートオプション                                   |                  |
 | sheet        | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET SHEET OPTIONS` コマンドは、<!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->*vpAreaName* 引数で名前を指定した View Pro エリアの様々なシートオプションを設定します<!-- END REF -->。
 
@@ -27,7 +27,7 @@ title: VP SET SHEET OPTIONS
 
 - `vk current sheet`
 
-#### 例題 1
+## 例題 1
 
 C5:D10 のレンジ以外のセルをすべて保護します:
 
@@ -43,7 +43,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### 例題 2
+## 例題 2
 
 ドキュメントを保護しつつ、ユーザーが行とカラムをリサイズできるようにします:
 
@@ -63,7 +63,7 @@ $options.protectionOptions.allowResizeColumns=True;
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-#### 例題 3
+## 例題 3
 
 シートのタブ、固定化された線、枠線、選択範囲の背景と選択範囲の境界線のカラーをカスタマイズします:
 
@@ -95,7 +95,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options;2)
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
-#### 例題 4
+## 例題 4
 
 枠線と、行ヘッダー/カラムヘッダーを非表示にします:
 
@@ -117,7 +117,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### 参照
+## 参照
 
 [4D View Pro シートオプション](../configuring.md#シートオプション)<br/>
 [VP Get sheet options](vp-get-sheet-options.md)

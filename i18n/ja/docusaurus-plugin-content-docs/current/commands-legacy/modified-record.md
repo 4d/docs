@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Modified record.Summary-->**Modified record** は、*aTable*のレコードが更新されたが保存されていない場合に[True](true.md "True")を返します。<!-- END REF-->それ以外は[False](false.md "False")を 返します。この関数は、保存する必要があるレコードかどうかを判定する場合に使用します。これは、入力フォーム上で次のレコードに移動する前にカレントレコードを保存するかどうかチェックする際に特に有効です。このコマンドは新規レコードについては、常に[True](true.md "True")を返します。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
  [Table_1]Field_1:=[Table_1]Field_1  
 ```
 
-#### 例題 
+## 例題 
 
 以下の例は、Modified recordの典型的な使用方法です:
 
@@ -37,13 +37,13 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

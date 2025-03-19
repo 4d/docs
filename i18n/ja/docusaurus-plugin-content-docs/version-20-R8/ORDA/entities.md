@@ -451,7 +451,7 @@ ORDAでは、あらゆるデータクラスにおいて、エンティティへ�
 
 ### 制限フィルターの定義
 
-データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass-class) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. すると、フィルターは自動的に有効になります。
 
 ### `Function event restrict`
 

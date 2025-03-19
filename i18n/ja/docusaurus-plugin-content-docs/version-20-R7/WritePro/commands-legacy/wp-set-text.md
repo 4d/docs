@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP SET TEXT.Summary-->**WP SET TEXT** コマンドは、*newText* 引数に渡されたテキストを、*targetObj* 引数で指定したターゲット内の、*textPosition* 引数で指定された位置に標準テキストとして挿入します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 *rangeUpdate* 引数を省略した場合、デフォルトでは挿入された小運転つは返されるレンジ内に含まれます。
 * *targetObj* 引数がレンジじゃない場合、*rangeUpdate* 引数は無視されます。
 
-#### 例題 
+## 例題 
 
 以下のドキュメントにテキストを追加したい場合を考えます:
 
@@ -85,6 +85,6 @@ displayed_sidebar: docs
   //書き換えたあとは" Hello world!"となる
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get text](wp-get-text.md)  

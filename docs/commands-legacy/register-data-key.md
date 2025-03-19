@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Register data key.Summary-->The **Register data key** command adds the data encryption key passed in parameter to the 4D keychain.<!-- END REF-->
 
@@ -30,7 +30,7 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
 * **True** if the encryption key is successfully loaded in the 4D keychain.
 * **False** if the same encryption key was already present in the 4D keychain.
 
-#### Example 
+## Example 
 
 ```4d
  var $passphrase : Text
@@ -44,12 +44,12 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
  End if
 ```
 
-#### See also 
+## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

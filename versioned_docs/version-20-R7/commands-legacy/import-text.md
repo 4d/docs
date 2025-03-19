@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->The **IMPORT TEXT** command reads data from *document*, a Windows or Macintosh text document, into the table *aTable* by creating new records for that table.<!-- END REF-->
 
@@ -32,7 +32,7 @@ By default, the command uses the UTF-8 character set. You can use the [USE CHARA
 
 Using **IMPORT TEXT**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter *System Variables*: *FldDelimit* and *RecDelimit*. The user can change the defaults in the Design environment’s Import Data dialog box. Text fields may contain carriage returns, therefore, be careful when using a carriage return as a delimiter if you are importing text fields.
 
-#### Example 
+## Example 
 
 The following example imports data from a text document. The method first sets the input form so that the data will be imported through the correct form, changes the 4D delimiter variables, then performs the import:
 
@@ -43,18 +43,18 @@ The following example imports data from a text document. The method first sets t
  IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the import is successfully completed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

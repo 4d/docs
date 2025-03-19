@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT displays the *object* using the font specified in the *font* parameter.<!-- END REF--> The *font* parameter must contain a valid font name.
 
@@ -23,7 +23,7 @@ If you specify the optional *\** parameter, you indicate an object name (a strin
 
 **Note:** If you use this command on an *object* that was using a style sheet, the reference to the style sheet is automatically deleted from the object -- even if you assign the same attributes as those of the style sheet.
 
-#### Example 1 
+## Example 1 
 
 The following example sets the font for a button named *bOK*: 
 
@@ -31,7 +31,7 @@ The following example sets the font for a button named *bOK*:
  OBJECT SET FONT(bOK;"Arial")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example sets the font for all the form objects whose name contains "info": 
 
@@ -39,7 +39,7 @@ The following example sets the font for all the form objects whose name contains
  OBJECT SET FONT(*;"@info@";"Times")
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example uses the special *%password* option, designed for entry and display of “password” type fields. When you pass "%password" in the *font* parameter:
 
@@ -52,7 +52,7 @@ The following example uses the special *%password* option, designed for entry an
  OBJECT SET FONT([Users]Password;"%password")
 ```
 
-#### See also 
+## See also 
 
 [Font file](font-file.md)  
 [FONT LIST](font-list.md)  
@@ -61,7 +61,7 @@ The following example uses the special *%password* option, designed for entry an
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 *Programming Notes*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

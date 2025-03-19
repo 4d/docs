@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->La commande **DISPLAY NOTIFICATION** provoque l’affichage d’un message de notification à destination de l'utilisateur.<!-- END REF--> 
 
@@ -31,17 +31,17 @@ Passez dans les paramètres *titre* et *contenu* le titre et le texte du message
 
 Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'a été détectée sur la machine, ou jusqu’à ce que l’utilisateur clique sur sa case de fermeture. Le paramètre facultatif *durée* permet de modifier la durée d'affichage par défaut. A noter que l'affichage des notifications dépend des configurations système. 
 
-#### Exemple 
+## Exemple 
 
 ```4d
  DISPLAY NOTIFICATION("Exportation 4D";"Les données sont prêtes pour l’exportation")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ALERT](alert.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

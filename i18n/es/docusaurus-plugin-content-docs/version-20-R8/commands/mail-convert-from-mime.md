@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convierte un documento MIME en un objeto de correo electrónico válido<!-- END REF -->.
 
@@ -31,11 +31,11 @@ El comando `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.S
 
 Pase en *mime* un documento MIME válido a convertir. Puede ser suministrado por cualquier servidor o aplicación de correo. Puede ser suministrado por cualquier servidor o aplicación de correo. Si el MIME proviene de un archivo, se recomienda utilizar un parámetro BLOB para evitar problemas relacionados con las conversiones del conjunto de caracteres y los saltos de línea.
 
-#### Objeto devuelto
+## Objeto devuelto
 
 Objeto Email.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Quiere cargar una plantilla de correo guardada como MIME en un documento de texto y enviar un correo electrónico:
 
@@ -59,7 +59,7 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 En este ejemplo, se envía directamente un documento de 4D Write Pro que contiene imágenes:
 
@@ -91,7 +91,7 @@ $status:=$transporter.send($email)
 \| mime | BLOB, Texto | →  | Email en MIME |
 \| Resultado de función | Objeto | ← | Objeto Email |
 
-#### Propiedades
+## Propiedades
 
 |                   |                                 |
 | ----------------- | ------------------------------- |

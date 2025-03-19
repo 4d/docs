@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get previous sibling XML element.Summary-->DOM Get previous sibling XML element コマンドは参照として渡したXML要素の前の兄弟要素の参照を返します。<!-- END REF--> この参照は他のXML解析コマンドで使用できます。
 
@@ -27,15 +27,15 @@ displayed_sidebar: docs
 
 最初の兄弟要素の前、システム変数は0に設定されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行され、解析された要素が参照された要素の最初の子要素でない場合、システム変数OKに1が設定されます。エラーが発生したり、解析された要素が参照された要素の最初の子要素である場合、0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

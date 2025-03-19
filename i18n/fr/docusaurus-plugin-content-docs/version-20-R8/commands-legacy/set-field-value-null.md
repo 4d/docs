@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->La commande **SET FIELD VALUE NULL** attribue la valeur NULL au champ désigné par le paramètre *leChamp*.<!-- END REF-->
 
@@ -24,12 +24,12 @@ La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’information
 * Il est possible d’interdire la valeur Null pour les champs 4D au niveau de l’éditeur de Structure (cf. manuel Mode Développement).
 * **SET FIELD VALUE NULL** efface le contenu des champs objet.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ title: VP SET COLUMN ATTRIBUTES
 | rangeObj    | Object | -> | レンジオブジェクト           |                  |
 | propertyObj | Object | -> | カラムプロパティを格納したオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET COLUMN ATTRIBUTES` コマンドは、<!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> *rangeObj* 引数で指定したカラムに対して *propertyObj* 引数で定義されている属性を適用します<!-- END REF -->。
 
@@ -30,7 +30,7 @@ title: VP SET COLUMN ATTRIBUTES
 | resizable | boolean | カラムがリサイズ可能であれば true、それ以外は false             |
 | header    | テキスト    | カラムヘッダーのテキスト                                |
 
-#### 例題
+## 例題
 
 2列目のカラムの幅を変更して、ヘッダーを設定します:
 
@@ -45,7 +45,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
-#### 参照
+## 参照
 
 [VP Column](vp-column.md)<br/>
 [VP Get column attributes](vp-get-column-attributes.md)<br/>

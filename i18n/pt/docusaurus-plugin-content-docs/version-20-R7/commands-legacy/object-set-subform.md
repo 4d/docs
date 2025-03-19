@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->O comando **OBJECT SET SUBFORM** permite modificar dinamicamente o formulário detalhado assim também, opcionalmente, o formulário listado associado ao objeto sub-formulário designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -38,12 +38,12 @@ Nos parâmetros *subFormDet*, e listSubForm passe ou :
   
 Quando modifica um sub-formulário página, o comando pode executar-se em qualquer momento; as seleções atuais não se modificam. No entanto, quando modifica um sub-formulário listado, só pode modificar-se quando mostra a lista. Se o comando se executa quando o formulário detalhado é mostrado depois de um doble clic na lista, é gerado um erro.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

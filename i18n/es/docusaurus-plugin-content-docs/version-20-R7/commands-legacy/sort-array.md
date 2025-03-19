@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SORT ARRAY.Summary-->El comando SORT ARRAY ordena uno o más arrays en orden ascendente o descendente.<!-- END REF-->
 
@@ -25,7 +25,7 @@ El último parámetro especifica si ordenar el *array* en orden ascendente o des
 
 Si se especifica más de un array, los arrays se ordenan siguiendo el definido para el primer array; las ordenaciones multiniveles no son posibles. En su lugar puede utilizar el comando [MULTI SORT ARRAY](multi-sort-array.md) si desea ordenar arrays sincronizados.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo crea dos arrays y luego los ordena en función del nombre de la empresa:
 
@@ -43,7 +43,7 @@ Sin embargo, como SORT ARRAY no realiza ordenaciones multinivel, los nombres de 
  SELECTION TO ARRAY([Personas]Nombre;asNombres;[Personas]Empresa;asEmpresas)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante. Cuando hace clic en los botones en la ventana, puede ordenar esta lista de nombres de A a Z o de Z a A. Como varias personas pueden tener el mismo nombre, también puede utilizar un campo *\[Personas\]Numero ID*, el cual es un campo indexado único. Cuando hace clic en un nombre de la lista, usted recupera el registro para el nombre correspondiente. Manteniendo un array sincronizado y oculto de números de identificación, se asegura de acceder al registro correspondiente al nombre seleccionado:
 
@@ -74,14 +74,14 @@ Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante.
  SORT ARRAY(asNames;alIDs;<)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

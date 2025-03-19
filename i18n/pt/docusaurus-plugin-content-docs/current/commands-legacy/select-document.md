@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Select document.Summary-->O comando Select document mostra uma caixa de diálogo padrão de abertura de documentos, permitindo ao usuário definir um ou mais arquivos e devolver o nome e/ou rota de acesso completa dos arquivos selecionados.<!-- END REF-->  
   
@@ -60,7 +60,7 @@ Nota: em Mac OS, um pacote selecionado se considera como sendo uma pasta. A rota
 
 O comando retorna o nome (nome + extensão em Windows) do arquivo selecionado. Se forem selecionados vários arquivos, o comando retorna o nome do primeiro arquivo da lista de arquivos selecionados. A lista de arquivos pode ser recuperada no parâmetro selecionados. Se nenhum arquivo for selecionado, o comando retorna uma string vazia.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo é utilizado para especificar um arquivo de dados 4D: 
 
@@ -76,7 +76,7 @@ Este exemplo é utilizado para especificar um arquivo de dados 4D:
  $Doc:=Select document("";$DocTipo;"Selecionar o arquivo de dados";$Opções)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de um documento personalizado pelo usuário:
 
@@ -87,18 +87,18 @@ Criação de um documento personalizado pelo usuário:
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente e for selecionado um documento válido, a variável sistema OK toma o valor 1 e a variável sistema Document conterá a rota de acesso completa do arquivo selecionado.  
   
 Se não for selecionado nenhum arquivo (por exemplo, se o usuário clicar no botão **Cancelar** na caixa de diálogo de abertura de arquivos), a variável sistema OK toma o valor 0 e a variável Document estará vazia.
 
-#### Ver também 
+## Ver também 
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

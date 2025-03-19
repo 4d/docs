@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Find in sorted array.Summary-->O novo comando **Find in sorted array** devolve **true** se pelo menos um elemento no *array* ordenado com o *valor* e opcionalmente devolve a posição dos elementos correspondentes.<!-- END REF--> Diferente de [Find in array](find-in-array.md), **Find in sorted array** só funciona com um *array* ordenado e oferece informação sobre a posição das ocorrências, o que lhe permite inserir elementos se for necessário.
 
@@ -38,7 +38,7 @@ Em caso de que o comando devolva **False**, o valor devolvido em *posPrim* pode 
   
 O valor devolvido em *postUlt* pode ser combinado com o valor devolvido em *posPrim* para realizar sobre cada elemento do array que coincida com o *valor* (sob um [ARRAY TO LIST](array-to-list.md)) ou para encontrar o número total de ocorrências (como o encontraria [Count in array](count-in-array.md) porém mais rápido).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Você deseja inserir um valor, se for necessário, mantendo o array ordenado:
 
@@ -52,7 +52,7 @@ Você deseja inserir um valor, se for necessário, mantendo o array ordenado:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
   
 Você quer encontrar o número de ocorrências das cadeias que começam por "test" e criar uma cadeia que vincula todos estes elementos:
@@ -68,13 +68,13 @@ Você quer encontrar o número de ocorrências das cadeias que começam por "tes
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

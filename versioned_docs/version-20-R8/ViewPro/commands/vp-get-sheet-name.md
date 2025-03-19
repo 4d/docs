@@ -14,7 +14,7 @@ title: VP Get sheet name
 |sheet| Integer|->|Sheet index|
 |Function result|Text|<-|Sheet name|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
 
@@ -26,7 +26,7 @@ If the passed sheet index does not exist, the method returns an empty name.
 
 >Indexing starts at 0.
 
-#### Example
+## Example
 
 Get the name of the third sheet in the document:
 
@@ -36,6 +36,6 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 
 
-#### See also
+## See also
 
 [VP Get sheet index](vp-get-sheet-index.md)

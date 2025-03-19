@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Day number.Summary-->The **Day number** command returns a number representing the weekday on which *aDate* falls.<!-- END REF-->**Day number** returns *2* for null dates. 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Note:** **Day number** returns a value between 1 and 7\. To get the day number within the month for a date, use the command [Day of](day-of.md).
 
-#### Example 
+## Example 
 
 The following example is a function that returns the current day as a string:
 
@@ -56,11 +56,11 @@ The following example is a function that returns the current day as a string:
  End case
 ```
 
-#### See also 
+## See also 
 
 [Day of](day-of.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](true.md "True")を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **注:** 処理を正しく実行するため、**Modified** コマンドはフォームメソッドまたは、フォームメソッドから呼び出されるメソッド内でのみ使用します。
 
-#### 例題 1 
+## 例題 1 
 
 次の例は、*\[Orders\]Quantity* フィールドや*\[Orders\]Price* フィールドが変更されたかどうかを判定します。どちらかが変更されると、*\[Orders\]Total* フィールドを再計算します。 
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 2番目の行をサブルーチンにして、*\[Orders\]Quantity* フィールドと*\[Orders\]Price* フィールドのオブジェクトメソッドのOn Data Changeフォームイベントでそのサブルーチンを呼び出しても、同じ結果となります。
 
-#### 例題 2 
+## 例題 2 
 
 *\[anyTable\]*テーブルのレコードを選択し、次に*\[anyTable\]Important field*フィールドが修正される可能性がある複数のサブルーチンを呼び出しますが、これらのメソッドはレコードの保存を行いません。メインのメソッドの終わりで、Modified コマンドを使用してレコードを保存する必要があるかどうかを調べています: 
 
@@ -63,12 +63,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

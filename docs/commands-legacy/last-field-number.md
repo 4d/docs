@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last field number.Summary-->The **Last field number** command returns the highest field number among the fields in the table whose number or pointer you pass in *tableNum* or *tablePtr*.<!-- END REF-->
 
 Fields are numbered in the order in which they are created. If no field has been deleted from the table, then this command returns the number of fields that the table contains. In the case of iterative loops on the field numbers of the table, you must use the [Is field number valid](is-field-number-valid.md) command in order to check whether the field has been deleted.
 
-#### Example 
+## Example 
 
 The following project method builds the array *asFields*, consisting of the field names, for the table whose pointer is received as first parameter:
 
@@ -36,14 +36,14 @@ The following project method builds the array *asFields*, consisting of the fiel
  End for
 ```
 
-#### See also 
+## See also 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

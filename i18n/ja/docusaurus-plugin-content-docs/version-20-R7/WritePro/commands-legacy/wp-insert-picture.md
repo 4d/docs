@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP INSERT PICTURE.Summary-->**WP INSERT PICTURE** コマンドは、指定した挿入モード *mode* に従って、*picture* のピクチャーを *targetObj* で指定したレンジに挿入します。<!-- END REF-->ピクチャーは文字として *targetObj* に挿入されます。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 *targetObj* 引数がレンジではなかった場合、*rangeUpdate* 引数は無視されます。
 
-#### 例題 
+## 例題 
 
 この例題では、ユーザーが選択したピクチャーがレンジオブジェクトに挿入できなかった場合に警告します:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP INSERT DOCUMENT](wp-insert-document.md)  

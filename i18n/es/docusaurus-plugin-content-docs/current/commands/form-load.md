@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
 
@@ -29,14 +29,14 @@ In the *form* parameter, you can pass:
 
 When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
 
-##### formData
+### formData
 
 Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
 El objeto de datos del formulario está disponible en el [evento de formulario `On Load`](../Events/onLoad.md).
 
 Para obtener información detallada sobre el objeto de datos del formulario, consulte el comando [`DIALOG`](dialog.md).
 
-##### Printing data
+### Printing data
 
 In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command. The [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](../commands-legacy/form-unload.md) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
 
@@ -48,7 +48,7 @@ To preserve the graphic consistency of forms, it is recommended to apply the "Pr
 
 The current printing form is automatically closed when the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command is called.
 
-##### Parsing form contents
+### Parsing form contents
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 
@@ -58,7 +58,7 @@ Note that in all cases, the form on screen remains loaded (it is not affected by
 
 **Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](../commands-legacy/form-unload.md) to avoid any risk of memory overflow.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Calling a project form in a print job:
 
@@ -68,7 +68,7 @@ Calling a project form in a print job:
   // execution of events and object methods
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Calling a table form in a print job:
 
@@ -78,7 +78,7 @@ Calling a table form in a print job:
   // execution of events and object methods
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Parsing of form contents to carry out processing on text input areas:
 
@@ -94,7 +94,7 @@ Parsing of form contents to carry out processing on text input areas:
  FORM UNLOAD //do not forget to unload the form
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 The following example returns the number of objects on a JSON form:
 
@@ -113,7 +113,7 @@ the result shown is:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### Ejemplo 5
+## Ejemplo 5
 
 You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
 
@@ -154,7 +154,7 @@ You want to print a form containing a list box. During the *on load* event, you 
  End case
 ```
 
-#### Ver también
+## Ver también
 
 [Current form name](../commands-legacy/current-form-name.md)\
 [FORM UNLOAD](../commands-legacy/form-unload.md)\
@@ -162,7 +162,7 @@ You want to print a form containing a list box. During the *on load* event, you 
 [OBJECT Get type](../commands-legacy/object-get-type.md)\
 [Print object](../commands-legacy/print-object.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                                                                     |
 | ----------------- | ------------------------------------------------------------------- |

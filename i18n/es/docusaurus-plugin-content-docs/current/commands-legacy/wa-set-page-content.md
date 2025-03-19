@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->Este comando histórico ya no es realmente útil.<!-- END REF--> A medida que se refuerza la seguridad en los navegadores modernos, hay cada vez más restricciones para modificar el contenido de las páginas "sobre la marcha". Un enfoque más confiable es crear un archivo local (por ejemplo, en la carpeta temporal) y utilizar [WA OPEN URL](wa-open-url.md) para cargarlo. Para borrar el contenido, basta con llamar a WA OPEN URL(myArea; "about:blank").
 
-#### Descripción 
+## Descripción 
 
 El comando WA SET PAGE CONTENT reemplaza la página mostrada en el área web designada por los parámetros *\** y *objeto* por el código HTML pasado en el parámetro *contenido*. 
 
@@ -30,7 +30,7 @@ Bajo Windows, este parámetro no tiene efecto y el URL de base no está definido
 
 **Nota:** bajo Windows, es imperativo que una página haya sido cargada en el área web antes de que se llame este comando. Si es necesario, puede pasar el URL "about:blank" con el fin de cargar una página vacía.
 
-#### Ejemplo 
+## Ejemplo 
 
 Mostrar la frase "¡Hola mundo!" y definición de un URL de base "file:///" base URL (Mac OS únicamente):
 
@@ -42,11 +42,11 @@ Mostrar la frase "¡Hola mundo!" y definición de un URL de base "file:///" base
 ";"file:///")
 ```
 
-#### Ver también 
+## Ver también 
 
 [WA Get page content](wa-get-page-content.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

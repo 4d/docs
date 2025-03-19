@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD clears the pasteboard and puts a copy of the picture passed in *picture* into it.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ The picture is transported in its native format (jpeg, tif, png, etc.).
 
 After you have put a picture into the pasteboard, you can retrieve it using the [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) command or for example [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.picture.gif";...).
 
-#### Example 
+## Example 
 
 Using a floating window, you display a form that contains the array *asEmployeeName*, which lists the names of the employees from an \[Employees\] table. Each time you click on a name, you want to copy the employee's picture to the pasteboard. In the object method for the array, you write:
 
@@ -38,17 +38,17 @@ Using a floating window, you display a form that contains the array *asEmployeeN
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If a copy of the picture is correctly put into the pasteboard, the OK variable is set to 1.  
 If there is not enough memory to paste the picture into the pasteboard, the OK variable is set to 0, but no error is generated.
 
-#### See also 
+## See also 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

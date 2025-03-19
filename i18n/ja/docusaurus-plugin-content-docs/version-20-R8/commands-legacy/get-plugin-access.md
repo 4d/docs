@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get plugin access.Summary-->Get plugin accessコマンドは引数 *plugIn* に渡した番号を持つプラグインの使用を許可されているユーザグループの名前を返します。<!-- END REF-->プラグインに割り当てられているグループが存在しない場合、コマンドは空の文字列 ("") を返します。 
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
 | 4D View license        | 倍長整数 | 808465207 |
 | 4D Write license       | 倍長整数 | 808464697 |
 
-#### 参照 
+## 参照 
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

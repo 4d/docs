@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Before.Summary-->**Before** devuelve True para el ciclo de ejecución Before.<!-- END REF-->
 
@@ -21,11 +21,11 @@ Para que el ciclo de ejecución **Before** se genere, asegúrese de que la propi
 
 **Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Load.
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

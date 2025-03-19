@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->El comando **SET PRINT OPTION** se utiliza para modificar por programación el valor de una opción de impresión.<!-- END REF--> Cada opción definida utilizando este comando se aplica a los [parámetros de impresión actuales 4D](../settings/compatibility.md) siempre que no se llame otro comando que modifique los parámetros de impresión ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) sin el parámetro *\>* parámetro, etc.). Si se ha abierto un trabajo de impresión (por ejemplo con [OPEN PRINTING JOB](open-printing-job.md)), la opción se define para el trabajo y no puede modificarse mientras el trabajo no haya finalizado (excepto para Orientation option, ver más adelante).
 
-##### opciones y valores 
+### opciones y valores 
 
 El parámetro *opcion* le permite indicar la opción a modificar. Puede pasar una de las constantes predefinidas del tema *Opciones de impresión*, o un código de opción PDF (utilizable con el driver PDFCreator bajo Windows únicamente).   
 Pase en los parámetros *valor1* y *valor2* (opcionalmente) los nuevos valores de la *opcion* especificada. El número y naturaleza de los valores pasados depende del tipo de opción especificada.
@@ -45,7 +45,7 @@ Una vez fijado utilizando este comando, una opción de impresión se conservará
 * Es indispensable utilizar el parámetro opcional *\>* con los comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md) y [PAGE BREAK](page-break.md) para evitar reinicializar las opciones de impresión que fueron definidas utilizando el comando **SET PRINT OPTION**.
 * El comando **SET PRINT OPTION** sólo opera con impresoras PostScript. Puede utilizar este comando con otros tipos de impresoras, tales como PCL o tinta, pero en este caso, es posible que algunas opciones no estén disponibles.
 
-#### Ejemplo 
+## Ejemplo 
 
 El valor de Orientation option puede modificarse en el mismo trabajo de impresión. Note que la opción debe haberse definido antes del comando [PAGE BREAK](page-break.md):
 
@@ -64,15 +64,15 @@ El valor de Orientation option puede modificarse en el mismo trabajo de impresi�
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctamente; de lo contrario, toma el valor 0.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si el valor pasado por una *opción* es incorrecto o si no está disponible en la impresora, el comando devuelve un error (que puede interceptar utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL")) y el valor actual de la opción permanece sin cambios. 
 
-#### Ver también 
+## Ver también 
 
 [GET PRINT OPTION](get-print-option.md)  
 *Opciones de impresión*  
@@ -80,7 +80,7 @@ Si el valor pasado por una *opción* es incorrecto o si no está disponible en l
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

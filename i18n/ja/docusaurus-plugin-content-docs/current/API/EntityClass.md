@@ -673,7 +673,7 @@ vCompareResult1 (すべての差異が返されています):
 
 `.getRemoteContextAttributes()` 関数は、 <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->エンティティによって使われている最適化コンテキストの情報を返します <!-- END REF -->。
 
-エンティティについて [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) が存在しない場合、関数は空のテキストを返します。
+If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity, the function returns an empty Text.
 
 #### 例題
 
@@ -702,7 +702,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 参照
 
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 
@@ -1620,7 +1620,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <!-- REF EntityClass.touched().Desc -->
 
-## .touched( )
+## .touched()
 
 <details><summary>履歴</summary>
 
@@ -1667,7 +1667,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
 
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>履歴</summary>
 

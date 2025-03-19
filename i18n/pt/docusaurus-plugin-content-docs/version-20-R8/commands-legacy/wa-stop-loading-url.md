@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->O comando WA STOP LOADING URL para de carregar os recurso da URL atual da área web determinada pelos parâmetros *\** e *objeto*.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

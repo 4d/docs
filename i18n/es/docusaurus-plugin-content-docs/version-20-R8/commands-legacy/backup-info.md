@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BACKUP INFO.Summary-->El comando BACKUP INFO permite obtener información relacionada con el último backup efectuado en los datos de la base.<!-- END REF-->
 
@@ -28,11 +28,11 @@ Pase el tipo de información a obtener en *selector*. El tipo y el contenido de 
 | Last backup status      | Entero largo | 2     | *info1* devuelve el número e *info2* el texto del estado de la última copia de seguridad                                                                                                                                                            |
 | Next backup date        | Entero largo | 4     | *info1* devuelve la fecha e *info2* la hora de la próxima copia de seguridad programada                                                                                                                                                             |
 
-#### Ver también 
+## Ver también 
 
 [RESTORE](restore.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

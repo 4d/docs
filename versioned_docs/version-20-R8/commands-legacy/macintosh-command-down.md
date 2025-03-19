@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Macintosh command down.Summary-->**Macintosh command down** returns TRUE if the Macintosh command key is pressed.<!-- END REF-->When called on a Windows platform, **Macintosh command down** returns TRUE if the Windows Ctrl key is pressed.
 
-#### Example 
+## Example 
 
 See example for the [Shift down](shift-down.md) command.
 
-#### See also 
+## See also 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ See example for the [Shift down](shift-down.md) command.
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

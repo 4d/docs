@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Type.Summary-->**Type** retourne une valeur numérique qui indique le type du champ ou de la variable que vous avez passé(e) dans le paramètre *champVar*.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Vous pouvez appliquer la fonction **Type** aux champs, variables interprocess, v
 * Vous ne pouvez pas appliquer la fonction **Type** aux expressions scalaires telles que les propriétés d'objets (*emp.name*) ou les éléments de collections (*maColl\[5\]*). Pour cela, vous devez utiliser la commande [Value type](value-type.md).
 * En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $1...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
 
-#### Exemple 1 
+## Exemple 1 
 
 La méthode projet suivante efface une partie ou la totalité des champs de l'enregistrement courant de la table vers laquelle pointe le pointeur passé en paramètre, et ce, sans supprimer l'enregistrement ou changer d'enregistrement courant :
 
@@ -122,7 +122,7 @@ Une fois cette méthode projet implémentée dans votre base, vous pouvez écrir
  VIDER ENREGISTREMENT(->[Choses à faire];-1?-Is alpha field)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans certains cas, par exemple pour écrire du code générique, il peut être nécessaire de savoir si un tableau est tableau standard indépendant ou une “ligne” d’un tableau 2D. Dans ce cas, il suffit d’utiliser le code suivant :
 
@@ -136,17 +136,17 @@ Dans certains cas, par exemple pour écrire du code générique, il peut être n
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

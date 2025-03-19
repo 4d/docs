@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->El comando SET PICTURE METADATA permite escribir o modificar el contenido de los metadatos (o meta-etiquetas) presentes en *imagen* (campo o una variable imagen 4D), cuando son modificables.<!-- END REF--> 
 
@@ -44,7 +44,7 @@ Bajo Windows, si ocurre un error durante la ejecución del comando, la variable 
 * Sólo ciertos formatos de imágenes (específicamente JPEG y TIFF) soportan los metadatos. Por el contrario, los formatos tales como GIF o BMP no aceptan los metadatos. Cuando convierte una imagen con metadatos a un formato que no los soporta, se pierde la información.
 * Bajo macOS versión 10.7 (Lion), un bug del framework nativo utilizado para la codificación y decodificación de los metadatos puede causar errores de precisión en las coordenadas de GPS. En este caso, se recomienda una actualización a macOS 10.8 (Mountain Lion) o 10.9 (Maverick).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Escritura de varios valores del metadato "Keywords" por medio de arrays:
 
@@ -55,7 +55,7 @@ Escritura de varios valores del metadato "Keywords" por medio de arrays:
  SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Escritura del bloque GPS vía una referencia DOM:
 
@@ -72,18 +72,18 @@ Escritura del bloque GPS vía una referencia DOM:
  DOM CLOSE XML($domMetas)
 ```
 
-#### Nota 
+## Nota 
 
 Cuanto todos los metadatos se manipulan vía una referencia de elementos DOM, las etiquetas se guardan como atributos asociados a un elemento (hijo del elemento referenciado) cuyo nombre es el nombre del bloque (TIFF, IPTC, etc.). Cuando se manipula un bloque de metadatos específico, las etiquetas del bloque se almacenan como atributos directamente asociados al elemento referenciado por el comando. 
 
-#### Ver también 
+## Ver también 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Nombres de metadatos imágenes*  
 *Picture Metadata Values*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

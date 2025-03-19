@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Variance.Summary-->**Variance** returns the variance for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the variance.
 
@@ -28,7 +28,7 @@ The variance of a set of values is their average squared deviation from the mean
 
 If the values considered are not a sample, multiple the value returned by **Variance** by (n-1)/n.
 
-#### Example 1 
+## Example 1 
 
 The following example is an object method for the variable *var*. The object method assigns the sum of squares for a data series to *var*:
 
@@ -49,7 +49,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
-#### Example 2 
+## Example 2 
 
 This example gets the variance of the values placed in an array:
 
@@ -60,14 +60,14 @@ This example gets the variance of the values placed in an array:
  vVariance:=Variance($ArrGrades)
 ```
 
-#### See also 
+## See also 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -38,7 +38,7 @@ In *arrType*, pass the type of array to associate with the list box or column. Y
 
 In the *arrPtr* parameter, you pass a pointer to the array to use to support the property type.
 
-#### Example 1 
+## Example 1 
 
 You want to reuse the font color array of the 4th column for the 10th column:
 
@@ -52,7 +52,7 @@ You want to reuse the font color array of the 4th column for the 10th column:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to set a row height array for a list box:
 
@@ -60,12 +60,12 @@ You want to set a row height array for a list box:
  LISTBOX SET ARRAY(*;"LB";lk row height array;->RowHeightArray)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

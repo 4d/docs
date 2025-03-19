@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Match regex.Summary-->El comando Match regex permite probar la conformidad de una cadena de caracteres con respecto a un conjunto de reglas sintetizadas por medio de un metalenguaje llamado “expresión regular” o “expresión racional.<!-- END REF-->” La abreviación regex es comúnmente empleada para indicar esto tipos de notaciones.
 
@@ -47,7 +47,7 @@ Para mayor información sobre regex, consulte la siguiente dirección:
 Para mayor información sobre la sintaxis de las expresiones regulares pasadas en el parámetro *patrón*, consulte la siguiente dirección:  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Búsqueda de igualdad completa (sintaxis simple):  
   
@@ -58,7 +58,7 @@ Búsqueda de igualdad completa (sintaxis simple):
 ```
 
   
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Búsqueda en el texto por posición:
 
@@ -79,7 +79,7 @@ Ejemplo para mostrar todas las etiquetas de $1:
  Until(Not(vencont))
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Búsqueda con soporte de “grupos capturados” vía paréntesis. ( ) se utilizan para especificar grupos en los regex:    
 *vencont:=Match regex(motivo;mitexto; inicio; pos\_encont; long\_encont\_array)* 
@@ -94,7 +94,7 @@ Búsqueda con soporte de “grupos capturados” vía paréntesis. ( ) se utiliz
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Búsqueda limitando la comparación del motivo a la posición indicada:  
 Añadir una estrella al final de una de las dos sintaxis anteriores.
@@ -110,12 +110,12 @@ Añadir una estrella al final de una de las dos sintaxis anteriores.
 
 **Nota:** las posiciones y largos devueltos son significativosn sólo en modo Unicode o si el texto manipulado es de tipo ASCII 7-bits.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 En caso de error, el comando genera un error que puede interceptar vía un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

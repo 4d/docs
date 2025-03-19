@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->HIDE PROCESS oculta todas as janelas que pertencem ao *processo*.<!-- END REF--> Todos os elementos de interface de *processo* se ocultam até o seguinte [SHOW PROCESS](show-process.md "SHOW PROCESS"). A barra de menus do processo também se oculta. Isso significa que a abertura de uma janela enquanto o processo está oculto não provocará nenhuma mudança na visualização em tela. Se o processo já estiver oculto, o comando não tem nenhum efeito.  
 
@@ -23,7 +23,7 @@ Se não quer que um *processo* se mostre quando for criado, HIDE PROCESS deve se
   
 Ainda que um processo esteja oculto, o processo está ainda em execução.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir oculta todas as janelas que pertencem ao processo atual:
 
@@ -31,12 +31,12 @@ O exemplo a seguir oculta todas as janelas que pertencem ao processo atual:
  HIDE PROCESS(Current process)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

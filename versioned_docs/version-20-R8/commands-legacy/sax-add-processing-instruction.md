@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->In the XML document referenced by *document*, the SAX ADD PROCESSING INSTRUCTION command adds an XML processing *statement*.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ A processing statement lets you indicate the application type and when necessary
 
 The command formats the data of the statement in conformity with XML. However, the statements themselves are not parsed and it is up to the developer to make sure that they are valid.
 
-#### Example 
+## Example 
 
 The following code: 
 
@@ -38,15 +38,15 @@ The following code:
  
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
-#### See also 
+## See also 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

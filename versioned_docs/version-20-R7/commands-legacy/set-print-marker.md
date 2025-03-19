@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](print-form.md) commands, this command allows you to adjust the size of the print areas. 
 
@@ -65,7 +65,7 @@ When the \* parameter is used, it is possible to position the *markNum* marker b
 * This command modifies only the existing marker position. It does not allow the addition of markers. If you designate a marker that does not exist in the form, the command will not do anything.
 * The print marker mechanism in the Design mode is retained: a marker cannot go any higher than the one that precedes it, nor any lower than the one that follows it (when the \* parameter is not used).
 
-#### Example 
+## Example 
 
 This complete example enables you to generate the printing of a three-column report, the height of each row being calculated on the fly according to the contents of the fields.   
 The output form used for printing is as follows:
@@ -169,7 +169,7 @@ The Print\_List3 form method is as follows:
  End case
 ```
 
-#### See also 
+## See also 
 
 [Get print marker](get-print-marker.md)  
 [OBJECT GET BEST SIZE](object-get-best-size.md)  
@@ -180,7 +180,7 @@ The Print\_List3 form method is as follows:
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

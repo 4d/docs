@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Append document.Summary-->El comando Append document hace lo mismo que [Open document](open-document.md "Open document"): permite abrir un documento en disco.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ La única diferencia es que Append document define la ubicación del archivo al 
 
 Para mayor información consulte la descripción del comando Open document.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena “y hasta pronto” seguida por un retorno de carro al final del documento, y cierra el documento. Si el documento ya contiene la cadena “Adiós”, el documento contendrá ahora la cadena “Adiós y hasta pronto”, seguido por un retorno de carro:
 
@@ -34,12 +34,12 @@ El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena 
  CLOSE DOCUMENT(vhDocRef) // Cerrar el documento
 ```
 
-#### Ver también 
+## Ver también 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

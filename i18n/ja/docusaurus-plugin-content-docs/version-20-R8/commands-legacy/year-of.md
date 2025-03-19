@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Year of.Summary-->Year of コマンドは、*date*から年を返します。<!-- END REF-->
 
-#### 例題 1 
+## 例題 1 
 
 以下はYear ofの使用例です。結果を*vResult*変数に代入します。 
 
@@ -30,16 +30,16 @@ displayed_sidebar: docs
  vResult:=Year of(Current date) // vResult gets year of current date
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Current date](current-date.md "Current date")の例を参照。
 
-#### 参照 
+## 参照 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

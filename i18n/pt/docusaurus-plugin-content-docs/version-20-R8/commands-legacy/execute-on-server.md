@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Execute on server.Summary-->O comando Execute on server inicia um novo processo na máquina servidor (quando se chama em Cliente/Servidor) ou na mesma máquina (se é chamado em monousuário) e devolve o número deste processo.<!-- END REF-->
 
@@ -28,11 +28,11 @@ Se chamado Execute on server em uma máquina cliente, o comando devolve um núme
 
 Se o processo não foi possível criar (por exemplo, se não há suficiente memória), Execute on server devolve (0) e é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-##### Método de processo 
+### Método de processo 
 
  Em *proced*, passe o nome do método de processo para o novo processo. Uma vez 4D seja definido o contexto para o novo processo, começa a execução deste método, o qual é convertido no método de processo. 
 
-##### Pilha de processo 
+### Pilha de processo 
 
 O parâmetro *pilha* permite indicar a quantidade de memória atribuída para a pilha do processo. É o espaço em memória utilizada para "empilhar" chamadas de método, as variáveis ​​locais, parâmetros nas sub-rotinas e registros empilhados.  
 
@@ -41,7 +41,7 @@ O parâmetro *pilha* permite indicar a quantidade de memória atribuída para a 
 
 **Nota**: A pilha **não** é o total de memória para o processo. Processos compartilham memória para registros, variáveis ​​entre processos, e assim por diante. Um processo também usa memória extra para armazenar suas variáveis ​​de processo. A pilha contém vários itens de informações internas 4D; a quantidade de informação guardada na pilha depende do número de método aninhada chama o processo empregará, o número de formularios que irão abrir antes de fechar os e o número e tamanho das variáveis ​​locais utilizadas em cada chamada de método aninhada.  
 
-##### Nome do processo 
+### Nome do processo 
 
 O nome do novo processo é passado em *nome*. Em monousuário, este nome aparece na lista de processos ambiente de Design, e será devolvido pelo comando[Process info](../commands/process-info.md) quando aplicada a este novo processo. Em Cliente / Servidor, esse nome aparece em azul na lista de **procedimentos armazenados** da janela principal de 4D Server.  
 
@@ -49,7 +49,7 @@ Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma 
   
 **Atenção**: Ao contrário do comando [New process](new-process.md), não tente fazer com que o processo seja local em escopo,  colocando o prefixo cifrão (*$*) enquanto usa o comando **Execute on server.** Isso irá funcionar corretamente em um único usuário, porque **Execute on server age**  como [New process](new-process.md) neste ambiente. Por outro lado, em cliente / servidor, este irá gerar um erro.
 
-##### Parâmetros do método processo 
+### Parâmetros do método processo 
 
  Pode passar parâmetros ao método de processo. Pode passar parâmetros da mesma forma como os passaria a uma sub rotina. No entanto, há uma restrição, não pode passar expressões de tipo ponteiro. Igualmente, lembre que os arrays não podem ser passados como parâmetros a um método. Uma vez comece a execução no contexto do novo processo, o método de processo recebe os valores dos parâmetros em *$1*, *$2*, etc.
 
@@ -57,11 +57,11 @@ Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma 
 
 Se passar um objeto 4D (*C\_OBJECT*) ou uma coleção (*C\_COLLECTION*) como param, uma cópia é enviada (e não uma referência) e a forma JSON se utiliza em UTF-8 para o servidor. Se o objeto ou coleção contiver ponteiros, se enviam seus valores não referenciados, e não os ponteiros mesmos.
 
-##### Parâmetro opcional \* 
+### Parâmetro opcional \* 
 
 Se passado este último parâmetro lhe pede a 4D verificar primeiro se está executando um processo com o mesmo nome que passou em *nome*. Se é assim, 4D não inicia um novo processo e devolve o número do processo com este nome.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser registrar certa informação desde o lado remoto em um arquivo de texto na máquina do servidor.
 
@@ -78,7 +78,7 @@ O método WriteLog será executado no servidor. Contém, por exemplo:
  TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo mostra como a importação de dados pode ser acelerada de maneira dramática em Cliente/Servidor. O método Importacion Clasica listado abaixo permite medir quanto tempo leva uma importação de registros utilizando o comando [IMPORT TEXT](import-text.md) no lado Cliente  
 
@@ -188,16 +188,16 @@ CLIENTE IMPORTAR (->\[Tabla1\];"Import")
 
 Com algumas provas comparativas, pode comprovar que com este tipo de método, a importação dos registros pode ser 60 vezes mais rápida que uma importação clássica. 
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Consulte a seção *Serviços baseados nos procedimentos armazenados (exemplo)* no manual de *Referencia de 4D Server*.
 
-#### Ver também 
+## Ver também 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

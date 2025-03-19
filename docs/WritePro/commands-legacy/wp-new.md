@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The **WP New** command<!--REF #_command_.WP New.Summary--> creates and returns a 4D Write Pro object.<!-- END REF--> The returned object is a complete document that can be passed to the [WP Insert document body](../commands/wp-insert-document-body.md) command, for example.
 
@@ -46,7 +46,7 @@ By defaut, HTML expressions inserted in legacy 4D Write documents are not import
 
 **Compatibility Note**: *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Legacy character style sheets are not imported and are no longer referenced in the document.*
 
-#### Example 1 
+## Example 1 
 
 You want to create an empty 4D Write Pro object:
 
@@ -54,7 +54,7 @@ You want to create an empty 4D Write Pro object:
  myWPObject:=WP New
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to create a new 4D Write Pro object using a 4D Write Pro document stored on disk:
 
@@ -65,7 +65,7 @@ You want to create a new 4D Write Pro object using a 4D Write Pro document store
  myWPArea:=WP New($BlobDoc)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to create a 4D Write Pro object containing a simple 4D expression reference:
 
@@ -76,7 +76,7 @@ You want to create a 4D Write Pro object containing a simple 4D expression refer
  myWPA:=WP New(myText)
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to initialize your Write Pro area with a previously-created template:
 
@@ -90,7 +90,7 @@ You want to initialize your Write Pro area with a previously-created template:
  myNewWPA:=WP New(wpTemplate)
 ```
 
-#### Example 5 
+## Example 5 
 
 You want to import a document stored in a BLOB field of the current record from the former 4D Write plug-in into a new 4D Write Pro area, and keep HTML expressions:
 
@@ -99,7 +99,7 @@ You want to import a document stored in a BLOB field of the current record from 
  wpArea=WP New([Templates]Reference_;wk import html expressions as text)
 ```
 
-#### Example 6 
+## Example 6 
 
 You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.   
 
@@ -116,7 +116,7 @@ You have defined a template document with different preformatted parts, each of 
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP Import document](../commands/wp-import-document.md)  
 [WP Insert document body](../commands/wp-insert-document-body.md)  

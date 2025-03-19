@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ALERT.Summary-->**ALERT** コマンドは、注意アイコンとメッセージ、OKボタンで構成される警告ダイアログボックスを表示します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **Tip:** フォームあるいはオブジェクトメソッド中で、On Activate や On Deactivateを処理するセクションからALERTコマンドを呼ばないでください。これは永久ループを引き起こします。
 
-#### 例題 1 
+## 例題 1 
 
 この例は、会社に関する情報を示すアラートボックスを表示します。表示する文字列中にキャリッジリターンが含まれてることに注目してください。これは、キャリッジリターンから後ろの文字列を次の行に改行するためです
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4224938.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードを実行すると:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4224959.en.png)
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードを実行すると:
 
@@ -62,13 +62,13 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4224968.en.png)
 
-#### 参照 
+## 参照 
 
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

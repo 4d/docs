@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New style sheet.Summary-->The **WP New style sheet** command creates a new (empty) style sheet object for the designated *wpDoc*.<!-- END REF-->
 
@@ -42,7 +42,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 * A style sheet only modifies the display of a character or paragraph, not how it is stored in the document. If a style sheet is removed, the text will revert to the default style.
 * Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see *Style sheet commands*.
 
-#### Example 
+## Example 
 
 The following code creates and defines a paragraph style sheet:
 
@@ -64,7 +64,7 @@ The following code creates and defines a paragraph style sheet:
  End if
 ```
 
-#### See also 
+## See also 
 
 *Accessing document contents by programming*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

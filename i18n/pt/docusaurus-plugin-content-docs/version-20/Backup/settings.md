@@ -9,7 +9,7 @@ Os parâmetros da cópia de segurança são definidas através de três páginas
 - os arquivos a incluir em cada backup
 - as funcionalidades avançadas que permitem executar tarefas automáticas
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
+> As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na pasta [Settings](Project/architecture.md#settings-user).
 
 ## Backups periódicos
 
@@ -50,8 +50,8 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 
 - **Data**: arquivo de dados do Banco. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
     - o arquivo de histórico atual da aplicação (se houver),
-    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
-- **Arquivo de estrutura**: pastas e arquivos do banco de dados. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](../Project/architecture.md#settings-user), i.e. the *user settings*, is automatically backed up.
+    - a pasta `Settings` completa localizada [ao lado do arquivo de dados](Project/architecture.md#settings-user-data) (se existir), ou seja, *as configurações do usuário para os dados*.
+- **Arquivo de estrutura**: pastas e arquivos do banco de dados. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa `Settings` situada [no mesmo nível que a pasta Project](../Project/architecture.md#settings-user), ou seja, os *parâmetros usuário*.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: esta área permite especificar um conjunto de arquivos ou pastas que sofrerão o backup no mesmo momento que o banco de dados. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
     - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
@@ -87,7 +87,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 - **Conservar unicamente os últimos X arquivos de cópia de segurança**: este parâmetro ativa e configura o mecanismo utilizado para eliminar os arquivos de cópia de segurança mais antigos, o que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço). Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança. Para desativar o mecanismo, simplesmente desmarque a opção.
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: quando marcar esta opção, 4D inicia as cópias de segurança programadas só dados tiverem sido adicionados, modificados ou eliminados desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: quando marcar esta opção, 4D inicia as cópias de segurança programadas só dados tiverem sido adicionados, modificados ou eliminados desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar o tempo da máquina para o backup das aplicações usadas principalmente para fins de visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
 - **Eliminar o arquivo de cópia de segurança mais antigo antes/depois da cópia de segurança**: esta opção só se utiliza se a opção "Conservar só os últimos X arquivos de cópia de segurança" estiver marcada. Especifica se 4D deve começar apagando o último arquivo antes de começar o backup (opção**antes**) ou se deve apagar depois que o backup tiver sido concluído (opção**depois**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
@@ -102,14 +102,14 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 ### Arquivo
 Essas opções se aplicam aos arquivos de cópia de segurança principais e aos arquivos de cópia de segurança do histórico.
 
-- **Segment Size (Mb)** 4D allows you to segment archives, i.e., to cut it up into smaller sizes. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. **Segment Size (Mb)** 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.). O menu **Tamanho do segmento** é um combo box que permite estabelecer o tamanho em MB de cada segmento da cópia de segurança. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se passar 0, não se produz nenhuma segmentação (isso equivale a passar **Nenhum**).
+- **Segment Size (Mb) (Tamanho do segmento)** 4D permite segmentar arquivos, ou seja, cortá-los em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. Cada segmento é chamado MyApplication[xxxx-yyyy].4BK, em que xxxx é o número do backup e yyyy é o número do segmento. Por exemplo, os três segmentos do backup do MyApplication são chamados MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK e MyApplication[0006-0003].4BK. O menu **Tamanho do segmento** é um combo box que permite estabelecer o tamanho em MB de cada segmento da cópia de segurança. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se passar 0, não se produz nenhuma segmentação (isso equivale a passar **Nenhum**).
 
-- **Compression Rate** By default, 4D compresses backups to help save disk space. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Compression Rate** permite ajustar a compressão de arquivo:
+- **Taxa de Compressão** Por padrão, 4D compõe backups para ajudar a economizar espaço em disco. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Compression Rate** permite ajustar a compressão de arquivo:
     - **Nenhum:** Não se aplica compressão de arquivos. O backup é mais rápido, mas os arquivos são bem maiores.
     - **Rápido** (padrão): Essa opção é um compromisso entre a velocidade de backup e tamanho de arquivo.
     - **Compactar** : a taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus contém para essas opções as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
+- **Taxa de entrelaçamento e taxa de redundância** 4D gera arquivos usando algoritmos específicos que se baseiam em mecanismos de otimização (entrelaçamento) e segurança (redundância). Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus contém para essas opções as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
     - **Taxa de Entrelaçamento**: O Interlacing consiste de armazenar dados em setores não adjacentes para limitar riscos no caso de danos de setor. Quanto maior a taxa, maior a segurança; entretanto, o processamento de dados usa mais memória.
     - **Taxa de redundância**: Redundância permite a segurança de dados  em arquivos repetindo a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
 
@@ -118,26 +118,26 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 #### Restaurar o último backup se o banco de dados estiver danificado
 
-When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
+Quando essa opção estiver marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido do aplicativo, se for detectada uma anomalia (arquivo corrompido, por exemplo) durante a inicialização do aplicativo. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-#### Integrate the latest logs if the database is incomplete
+#### Integrar os últimos logs se o banco de dados estiver incompleto
 
-When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
+Quando essa opção estiver marcada, o programa integra automaticamente o arquivo de registro atual se ele contiver operações que não estejam presentes no arquivo de dados. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
 
 :::note
 
-Esta funcionalidade implica que o programa analise todos os ficheiros de registo na pasta de ficheiros de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados ficheiros de registo inúteis na pasta.
+Esta funcionalidade implica que o programa analise todos os ficheiros de registo na pasta de ficheiros de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados arquivos de registo inúteis na pasta.
 
 :::
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 
-> In the case of an automatic restore, only the following elements are restored:
+> No caso de uma restauração automática, somente os seguintes elementos são restaurados: - Arquivo .4DD - Arquivo .4DIndx - Arquivo .4DSyncData - Arquivo .4DSyncHeader - Pasta de dados externos
 > 
 > Se quiser os arquivos anexados ou os arquivos de projeto, precisa fazer uma restauração  manual
 
 :::caution
 
-Se o [ficheiro de dados é encriptado](../MSC/encrypt.md), certifique-se de que [guardou a chave de encriptação de dados](../MSC/encrypt#saving-the-encryption-key) num ficheiro `.4DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa aceder-lhe se a funcionalidade de restauração automática ativada. Caso contrário, será devolvido um erro durante a sequência de restauro.
+Se o [arquivo de dados for criptografado](../MSC/encrypt.md), certifique-se de que [guardou a chave de encriptação de dados](../MSC/encrypt#saving-the-encryption-key) num arquivo`.4DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa ser acessado se a funcionalidade de restauração automática for ativada. Caso contrário, será devolvido um erro durante a sequência de restauro.
 
 :::

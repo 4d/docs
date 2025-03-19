@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->El comando **ST COMPUTE EXPRESSIONS** actualiza las expresiones dinámicas 4D encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> 
 
@@ -53,7 +53,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
   
 **Nota**: Si *inicioSel* es mayor que *finSel* (excepto cuando *finSel* es 0), el comando no hace nada y la variable *OK* toma el valor 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea actualizar las referencias incluidas en la selección de texto:
 
@@ -61,12 +61,12 @@ Usted desea actualizar las referencias incluidas en la selección de texto:
  ST COMPUTE EXPRESSIONS(*;"myText";ST Start highlight;ST End highlight)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

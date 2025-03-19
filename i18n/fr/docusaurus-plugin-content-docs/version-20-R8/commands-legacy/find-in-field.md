@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in field.Summary-->La commande **Find in field** retourne le numéro du premier enregistrement dont le champ *champCible* est égal à la valeur *valeur*.<!-- END REF-->  
 Si aucun enregistrement ne correspond au critère, **Find in field** retourne -1\. 
@@ -31,7 +31,7 @@ Cette fonction, très rapide, est particulièrement utile pour prévenir la cré
 
 **Note historique :** Dans les anciennes versions de 4D, la commande **Find in field** était nommée **Trouver clef index** et ne fonctionnait qu'avec les champs indexés. La commande a été renommée et la limitation supprimée à compter de 4D v11 SQL. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans une base de données de CD audio, vous souhaitez vérifier, au moment de la saisie d’un nouveau nom de chanteur, si celui-ci n’existe pas déjà dans la base. Comme il peut exister des homonymes, vous ne souhaitez pas toutefois que le champ \[Chanteur\]Nom soit unique. Pour cela, dans le formulaire d’entrée, vous écrivez dans la méthode objet du champ \[Chanteur\]Nom :
 
@@ -47,7 +47,7 @@ Dans une base de données de CD audio, vous souhaitez vérifier, au moment de la
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici un exemple permettant de vérifier l'existence d'une valeur :
 
@@ -64,7 +64,7 @@ Voici un exemple permettant de vérifier l'existence d'une valeur :
 Remarquez le >= qui permet de couvrir tous les cas. En effet, la fonction retourne un numéro d'enregistrement et le premier enregistrement porte le numéro 0.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

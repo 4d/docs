@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Records in set.Summary-->Records in set devuelve el número de registros en *conjunto*.<!-- END REF--> Si *conjunto* no existe, o si no hay registros en *conjunto*, Records in set devuelve 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra una alerta indicando el porcentaje de clientes que se consideran como los mejores:
 
@@ -29,12 +29,12 @@ El siguiente ejemplo muestra una alerta indicando el porcentaje de clientes que 
  ALERT(String($Porcentaje ;"##0%")+" de nuestros clientes son los mejores.")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

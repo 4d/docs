@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY WITH ARRAY.Summary-->The QUERY WITH ARRAY command searches all the records for which the value of *targetField* is equal, at least, to one of the values of the elements in *array*.<!-- END REF--> The records found will become the new current selection. 
 
@@ -25,7 +25,7 @@ This command allows you to quickly and simply build a search on multiple values.
 * This command cannot be used with fields of the Picture or BLOB type.
 * *targetField* and *array* must be of the same data type. Exception: you can use a Longint array with a field of the Time type.
 
-#### Example 
+## Example 
 
 The following example allows you to retrieve the records of both French and American clients:
 
@@ -36,11 +36,11 @@ The following example allows you to retrieve the records of both French and Amer
  QUERY WITH ARRAY([Clients]Country;SearchArray)
 ```
 
-#### See also 
+## See also 
 
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

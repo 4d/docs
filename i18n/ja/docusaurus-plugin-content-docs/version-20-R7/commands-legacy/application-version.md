@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Application version.Summary-->**Application version** コマンドは、現在使用している4D環境のバージョン番号を表すエンコードされた文字列を返します。<!-- END REF--> 
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 **注**: 4D Volume Licenceがマージされたアプリケーションにおいては 返される "build" 番号に意味はありません。この状況ではバージョン情報は開発者により管理されます。
 
-#### 例題 1 
+## 例題 1 
 
 次の例は、4D環境のバージョン番号を表示します。   
 
@@ -81,7 +81,7 @@ displayed_sidebar: docs
  $vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、最終版の4Dを使用しているかどうかを検査します。
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 コマンドから返されたアプリケーションの短いバージョン番号の値を使用して4Dアプリケーションのリリース名を表示したい場合を考えます。以下の様に書くことが出来ます:
 
@@ -115,12 +115,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

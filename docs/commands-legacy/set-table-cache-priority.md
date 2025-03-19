@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Expert mode 
+## Expert mode 
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
 
-#### Description 
+## Description 
 
 The **SET TABLE CACHE PRIORITY** command sets a specific *priority* to the data related to *aTable* in cache for all processes in the current session. This command should be called in the **On Startup** or **On Server Startup** database method.
 
@@ -36,7 +36,7 @@ In the *priority* parameter, pass one of the following constants from the "*Cach
 | Cache priority high      |                                              |
 | Cache priority very high |                                              |
 
-#### Example 
+## Example 
 
 In the , you want to set a high priority for the \[Customer\] scalar data:
 
@@ -44,13 +44,13 @@ In the , you want to set a high priority for the \[Customer\] scalar data:
  SET TABLE CACHE PRIORITY([Customer];Cache priority very high)
 ```
 
-#### See also 
+## See also 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

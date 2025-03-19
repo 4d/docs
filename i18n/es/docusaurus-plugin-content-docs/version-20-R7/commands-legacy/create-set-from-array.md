@@ -15,12 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon* a partir de: 
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon*<!-- END REF--> a partir de: 
 
 * Un array de número de registros absolutos *arrayReg* de la tabla *tabla*,
-* o un array de booleanos *arrayReg*.<!-- END REF--> En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](true.md "True")) o no ([False](false.md "False")) a *nomCon*.
+* o un array de booleanos *arrayReg*. En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](true.md "True")) o no ([False](false.md "False")) a *nomCon*.
 
 Cuando utilice este comando y pasa un array entero largo en *arrayReg*, todos los números en el array representan la lista de números de registros que está en *nomCon*. Si un número es inválido (por ejemplo, si un registro no ha sido creado), se genera el error -10503.
 
@@ -30,16 +30,16 @@ Cuando utilice este comando y pase un array booleano en *arrayReg*, el elemento 
 
 Si no pasa el parámetro *nomCon* o si pasa una cadena vacía, el comando se aplica al conjunto sistema Userset.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 En un array de enteros largos, si un número de registro no es válido (registro no creado), se genera el error -10503.
 
-#### Ver también 
+## Ver también 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

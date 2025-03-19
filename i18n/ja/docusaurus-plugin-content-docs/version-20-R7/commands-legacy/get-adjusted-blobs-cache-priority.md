@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get adjusted blobs cache priority.Summary-->**Get adjusted blobs cache priority** コマンドは*aTable* 引数で指定されたテーブルの"blob"データにキャッシュマネージャーによって適用されたカレントの調整済みキャッシュ優先度値を返します。<!-- END REF-->このコマンドはローカルモード(4D Server と4D)でのみ動作します。リモートモードの4Dでは使用できません。
 
-#### 参照 
+## 参照 
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
 *データベースキャッシュ内の優先度を管理*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

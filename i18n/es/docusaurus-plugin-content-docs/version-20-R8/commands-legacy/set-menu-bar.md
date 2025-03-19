@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET MENU BAR.Summary-->MENU BAR reemplaza la barra de menús actual con la especificada por *barra* en el proceso actual únicamente.<!-- END REF--> En el parámetro *barra*, puede pasar el número o nombre de la nueva barra. Igualmente puede pasar una referencia única de menú (tipo [MenuRef](# "Unique ID (16-character alphanumeric) of a menu"), cadena de 16 caracteres). Cuando trabaja con referencias, los menús pueden ser utilizados como barras de menú y viceversa (ver la sección *Gestión de menús*). 
 
@@ -37,7 +37,7 @@ Si SET MENU BAR(1;\*) se ejecuta, la barra de menús conservará su estado anter
 
 Cuando un usuario entra al entorno Aplicación, se muestra la primera barra de menús (Barra #1). Puede cambiar esta barra de menús por defecto abriendo la base y especificando la barra de menús deseada en el Método de base On Startup o en el método de inicio asociado a un usuario individual.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo cambia la barra de menús actual por la barra de menús #3 y restablece el estado de los comandos de menú a sus estados originales:
 
@@ -45,7 +45,7 @@ El siguiente ejemplo cambia la barra de menús actual por la barra de menús #3 
  SET MENU BAR(3)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo cambia la barra de menús actual por la barra de menús llamada “BarraForm1” y guarda el estado de los comandos de menús. Comandos de menús que fueron desactivados previamente aparecerán inactivos.
 
@@ -53,7 +53,7 @@ El siguiente ejemplo cambia la barra de menús actual por la barra de menús lla
  SET MENU BAR("BarraForm1";*)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo reemplaza la barra de menús actual por la barra de menús #3 mientras los registros son modificados. Una vez los registros sean modificados, la barra de menús #2 se restaura. El estado de los comandos de menú se conserva:
 
@@ -64,7 +64,7 @@ El siguiente ejemplo reemplaza la barra de menús actual por la barra de menús 
  SET MENU BAR(2;*)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 En este ejemplo, crearemos por programación, una barra de menús incluyendo los siguientes menús Archivo y Edición: 
 
@@ -115,11 +115,11 @@ En este ejemplo, crearemos por programación, una barra de menús incluyendo los
  SET MENU BAR(main_Bar)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Gestión de menús*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU BAR.Summary-->**SET MENU BAR** replaces the current menu bar with the one specified by *menuBar* for the current process only.<!-- END REF--> In the *menuBar* parameter, you can pass either the number or name of the new menu bar. You can also pass a menu ID ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type, 16-character string). When you work with references, the menus can be used as menu bars and vice versa (see the *Managing Menus* section).
 
@@ -37,7 +37,7 @@ If **SET MENU BAR** **(1;\*)** is executed, the menu bar will retain the same st
 
 When a user enters the Application environment, the first menu bar is displayed (Menu Bar #1). You can change this menu bar when opening a database by specifying the desired menu bar in the or in the startup method for an individual user.
 
-#### Example 1 
+## Example 1 
 
 The following example changes the current menu bar to menu bar #3 and resets the states of the menu commands to their original states:
 
@@ -45,7 +45,7 @@ The following example changes the current menu bar to menu bar #3 and resets the
  SET MENU BAR(3)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example changes the current menu bar to the menu bar named “FormMenuBar1” and saves the states of the menu commands. Menu commands that were previously disabled will appear disabled.
 
@@ -53,7 +53,7 @@ The following example changes the current menu bar to the menu bar named “Form
  SET MENU BAR("FormMenuBar1";*)
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example sets the current menu bar to menu bar #3 while records are being modified. After the records have been modified, the menu bar is reset to menu bar #2, with the menu state saved:
 
@@ -64,7 +64,7 @@ The following example sets the current menu bar to menu bar #3 while records are
  SET MENU BAR(2;*)
 ```
 
-#### Example 4 
+## Example 4 
 
 In this comprehensive example, we will create, by programming, a menu bar including the following File and Edit menus: 
 
@@ -115,11 +115,11 @@ In this comprehensive example, we will create, by programming, a menu bar includ
  SET MENU BAR(main_Bar)
 ```
 
-#### See also 
+## See also 
 
 *Managing Menus*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE RECORD.Summary-->**SAVE RECORD** saves the current record of *aTable* in the current process.<!-- END REF--> If there is no current record, then **SAVE RECORD** is ignored.
 
@@ -34,7 +34,7 @@ You should not execute a **SAVE RECORD** during the On Validate event for a form
 
 **Note:** Saving a record that contains edited object field(s) usually requires that you notify explicitely 4D before calling **SAVE RECORD**. For more information, please refer to the *Saving Object fields* section. 
 
-#### Example 
+## Example 
 
 The following example is part of a method that reads records from a document. The code segment receives a record, and then, if it is received properly, saves it:
 
@@ -45,13 +45,13 @@ The following example is part of a method that reads records from a document. Th
  End if
 ```
 
-#### See also 
+## See also 
 
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Triggers*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

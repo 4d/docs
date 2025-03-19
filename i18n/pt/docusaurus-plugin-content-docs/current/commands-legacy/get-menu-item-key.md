@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu item key.Summary-->O comando Get menu item key devolve o código do atalho **Ctrl** (Windows) ou **Comando** (Mac OS) para o comando de menu cujo número ou referência de menu se passa em *menu* e cujo número de comando se passa em *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*
 
@@ -26,7 +26,7 @@ Se omite o parâmetro *processo*, Get menu item key é aplicado a barra de menus
 
 Se o comando de menu não tiver nenhum atalho associado ou se o parâmetro *menuItem* designa um submenu hierárquico, Get menu item key devolve *0* (zero).
 
-#### Exemplo 
+## Exemplo 
 
 Para obter um atalho associado com um comando de menu, é útil implementar uma estrutura de programação do seguinte tipo: 
 
@@ -43,12 +43,12 @@ Para obter um atalho associado com um comando de menu, é útil implementar uma 
     End caseEnd if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

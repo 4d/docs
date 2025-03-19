@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Month of.Summary-->The **Month of** command returns the month of *aDate*.<!-- END REF-->**Month of** returns the number of the month, not the name (see Example 1).
 
@@ -36,7 +36,7 @@ To compare the value returned by this function, 4D provides the following predef
 | December  | Integer | 12    |
 
   
-#### Example 1 
+## Example 1 
 
 The following example illustrates the use of **Month of**. The results are assigned to the variable *vResult*. The comments describe what is put in *vResult*:
 
@@ -45,16 +45,16 @@ The following example illustrates the use of **Month of**. The results are assig
  vResult:=Month of(Current date) // vResult gets month of current date
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [Current date](current-date.md) command.
 
-#### See also 
+## See also 
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

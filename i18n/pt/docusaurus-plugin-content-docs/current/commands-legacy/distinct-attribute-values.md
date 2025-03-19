@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->**Tema:** Arrays
 
@@ -27,11 +27,11 @@ O array que passou em *arrayValores* deve ser do mesmo tipo que o atributo *rota
 
 Depois da chamada, o tamanho do array é igual ao número de valores diferentes que se encontram na seleção. O comando não muda a seleção atual ou o registro atual.
 
-##### Usar a propriedade virtual comprimento 
+### Usar a propriedade virtual comprimento 
 
 Pode usar a propriedade virtual "comprimento" com este comando. Está automaticamente disponível para todos os atributos do tipo array e oferece o tamanho do array, ou seja, o número de elementos contidos pelo array. Esta propriedade foi criada para ser usada em pesquisas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)). Pode também ser usada com o comando **DISTINCT ATTRIBUTE VALUES** para obter os diversos tamanhos de array para um atributo.
 
-#### Exemplo 
+## Exemplo 
 
 Se seu banco de dados contiver um campo objeto \[Customer\]full\_Data (indexado) com 12 registros:
 
@@ -60,12 +60,12 @@ O array *aLAges* obtém os seguintes 9 elementos:
   //aLAges{9}=60
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

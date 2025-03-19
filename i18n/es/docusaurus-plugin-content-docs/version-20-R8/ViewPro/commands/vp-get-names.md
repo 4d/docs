@@ -15,7 +15,7 @@ title: VP Get names
 | scope      | Integer    | ->                          | Alcance objetivo (por defecto= hoja actual) |                  |
 | Resultado  | Collection | <- | Nombres existentes en el alcance definido                      | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->devuelve una colección de todos los "nombres" definidos en la hoja actual o en el ámbito designado por el parámetro *scope*<!-- END REF -->.
 
@@ -26,7 +26,7 @@ Puede definir dónde obtener los nombres en *scope* utilizando el índice de la 
 - `vk current sheet`
 - `vk workbook`
 
-##### Colección devuelta
+### Colección devuelta
 
 La colección devuelta contiene un objeto por nombre. Las propiedades de objetos siguientes pueden ser devueltas:
 
@@ -38,7 +38,7 @@ La colección devuelta contiene un objeto por nombre. Las propiedades de objetos
 
 Las propiedades disponibles dependen del tipo de elemento con nombre (celda con nombre, rango con nombre o fórmula con nombre).
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 var $list : Collection
@@ -47,7 +47,7 @@ var $list : Collection
 $list:=VP Get names("ViewProArea";2) //nombres en la 3a hoja
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST コマンドは、パスワードエディターに表示されるグループ名とユニークなID番号を配列 *groupNames* と *groupNumbers* に返します。<!-- END REF-->
 
@@ -23,17 +23,17 @@ displayed_sidebar: docs
 * プロジェクトデータベースにおいて、グループID番号は 15001 から始まり、起動時に動的に割り当てられたものがセッション中は維持されます。
 * バイナリデータベースにおいて、グループID番号は保存されており、グループ作成者に応じた特定の範囲内にあります。詳細については *ユーザーとグループ ID の範囲* を参照ください。
 
-#### エラー管理 
+## エラー管理 
 
  コマンドを呼び出すための特定のアクセス権を持っていない場合や、パスワードシステムが他のプロセスによって既にアクセスされている場合は、アクセス権エラーが生成されます。ON ERR CALL コマンドを使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

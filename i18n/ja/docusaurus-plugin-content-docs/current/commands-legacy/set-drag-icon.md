@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->**SET DRAG ICON**コマンドは、指定したアイコンを、ドラッグ＆ドロップ中のカーソルと関連付けます。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 引数省略時にはカーソルがアイコンの中央に位置するようになります。
 
-#### 例題 
+## 例題 
 
 フォーム内で、ユーザーが行をドラッグ＆ドロップするとラベルを生成することができるようにします。この場合リストボックスのオブジェクトメソッドは以下の様になります:
 
@@ -54,11 +54,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

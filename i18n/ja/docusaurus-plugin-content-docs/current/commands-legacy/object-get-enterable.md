@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->OBJECT Get enterable コマンドはobjectで指定されたオブジェクトまたはオブジェクトグループが**入力可属性**を持つ場合にTrueを、そうでなければFalseを返します。<!-- END REF-->
 
 オプションの *\** 引数を渡すと、*object*引数はオブジェクト名 (文字) です。この引数を渡さないと、*object*はフィールドまたは変数です。この場合、文字ではなくフィールドまたは変数への参照 (フィールドまたは変数オブジェクトのみ) を渡します。 
 
-#### 参照 
+## 参照 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

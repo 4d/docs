@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->The On Backup Shutdown database method is called every time a database backup ends.<!-- END REF--> The reasons for the stoppage of a backup can be the end of the copy, user interruption or an error.  
 This concerns all 4D environments: 4D (all modes), 4D Server as well as 4D applications compiled and merged with 4D Volume Desktop. 

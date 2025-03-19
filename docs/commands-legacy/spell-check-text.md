@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->The **SPELL CHECK TEXT** command checks the contents of the *text* parameter beginning from the *checkPos* character and returns the position of the first unknown word it finds (if any).<!-- END REF-->
 
@@ -27,7 +27,7 @@ If the check starts without error and an unknown word is found, the OK system va
 
 **Note macOS:** Under macOS, when the native spell checker is enabled, this command does not support grammar correction. 
 
-#### Example 
+## Example 
 
 We want to count the number of possible errors in a text:
 
@@ -48,12 +48,12 @@ We want to count the number of possible errors in a text:
   // In the end $errCount=Size of array($tErrors)
 ```
 
-#### See also 
+## See also 
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

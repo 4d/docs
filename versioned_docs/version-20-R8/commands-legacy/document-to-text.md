@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Document to text.Summary-->The **Document to text** command lets you retrieve the contents of a file directly on disk in a 4D text variable or text field.<!-- END REF-->
 
@@ -51,7 +51,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Example 
+## Example 
 
 Given the following text document (fields are separated by tabs):
 
@@ -73,12 +73,12 @@ When you execute this code:
   // \r = CR
 ```
 
-#### See also 
+## See also 
 
 *System Documents*  
 [TEXT TO DOCUMENT](text-to-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

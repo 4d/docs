@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->La commande **Decrypt data BLOB**décrypte le paramètre blobToDecrypt avec le même algorithme utilisé par 4D pour décrypter les données (AES-256) et retourne le résultat dans decryptedBLOB.<!-- END REF-->.
 
@@ -32,7 +32,7 @@ Si le déchiffrement est réussi, les données déchiffrées sont retournées da
 
 En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant montre comment décrypter un fichier chiffré situé dans le dossier RESOURCES de la base de données :  
   
@@ -52,14 +52,14 @@ L'exemple suivant montre comment décrypter un fichier chiffré situé dans le d
 
 Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont identiques aux paramètres *passPhrase* et *salt* utilisés pour le cryptage (voir l'exemple [Encrypt data BLOB](encrypt-data-blob.md)).
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

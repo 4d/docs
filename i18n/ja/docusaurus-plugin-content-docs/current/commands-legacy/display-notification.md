@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->DISPLAY NOTIFICATION コマンドは ユーザーへの通知メッセージを表示します。<!-- END REF-->
 
@@ -31,17 +31,17 @@ Appleの仕様に基づけ、通知メッセージは、アプリケーション
 
 Windows 環境下では、メッセージウィンドウは何らかの動作がマシンで確認できるか、ユーザーが閉じるボタンをクリックするまで表示され続けます。任意の *duration* 引数を使用するとデフォルトの表示時間を設定することができます。通知の表示はシステム環境設定によるという点に注意して下さい。
 
-#### 例題 
+## 例題 
 
 ```4d
  DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
 ```
 
-#### 参照 
+## 参照 
 
 [ALERT](alert.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

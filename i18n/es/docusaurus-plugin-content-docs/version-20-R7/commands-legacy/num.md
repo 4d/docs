@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Num.Summary-->El comando Num devuelve en forma numérica la expresión de tipo cadena, booleano, o numérica que pasó en *expresion*.<!-- END REF--> El parámetro opcional *separador* puede utilizarse para designar un separador decimal para la evaluación de las expresiones de tipo cadena. 
 
@@ -46,7 +46,7 @@ Si pasa una expresión numérica en el parámetro *expresion*, Num devuelve tal 
 **Expresiones indefinidas**  
 Si la *expresion* se evalúa como indefinida, el comando devuelve 0 (cero). Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea un número, incluso si puede ser indefinido.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo ilustra cómo funciona Num cuando se pasa un argumento de tipo cadena. Cada línea asigna un número a la variable *vResult*. Los comentarios describen los resultados:
 
@@ -59,7 +59,7 @@ El siguiente ejemplo ilustra cómo funciona Num cuando se pasa un argumento de t
  vResult:=Num("-123e2") // vResult vale -12300
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En este ejemplo, *\[Cliente\]Deuda* se compara con el valor *$1000*. El comando Num aplicado a esta comparación devuelve 1 o 0\. La multiplicación de una cadena por 1 ó 0 devuelve la cadena o la cadena vacía. Como resultado, *\[Cliente\]Riesgo* recibe el valor “Aceptable” o “Inaceptable”:
 
@@ -69,7 +69,7 @@ En este ejemplo, *\[Cliente\]Deuda* se compara con el valor *$1000*. El comando 
  [Cliente]Riesgo:=("Aceptable"*Num([Cliente]Deuda<1000))+("Inaceptable"*Num([Cliente]Deuda>=1000))
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo compara los resultados obtenidos dependiendo del separador “actual”:
 
@@ -82,13 +82,13 @@ Este ejemplo compara los resultados obtenidos dependiendo del separador “actua
   // por ejemplo, 33 333,33 en un sistema francés
 ```
 
-#### Ver también 
+## Ver también 
 
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

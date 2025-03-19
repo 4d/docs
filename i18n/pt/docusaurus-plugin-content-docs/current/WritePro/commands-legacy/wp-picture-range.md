@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidade 
+## Compatibilidade 
 
 <!--REF #_command_.WP Picture range.Summary-->**WP Picture range** era chamado **WP Get pictures** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeado para ter mais claridade.. 
 
-#### Descrição 
+## Descrição 
 
 O novo comando **WP Picture range** devolve uma faixa de objeto específica que se refere unicamente as imagens contidas em *faixaObj*   
 que foi passada como parâmetro. A gama de objetos imagem devolvida deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos imagem unicamente.
@@ -28,7 +28,7 @@ Em *faixaObj*, pode passar:
 * uma faixa, ou
 * um elemento (tabela / fila / parágrafo / cabeçalho / rodapé / corpo/seção/subseção)
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar apenas a cor da borda das imagens:
 
@@ -37,7 +37,7 @@ Se quiser mudar apenas a cor da borda das imagens:
  WP SET ATTRIBUTES($oPicts;wk border color;"blue")
 ```
 
-#### Ver também 
+## Ver também 
 
 *Gerenciar Imagens*  
 *Utilizar os comandos do tema Texto com estilo*  

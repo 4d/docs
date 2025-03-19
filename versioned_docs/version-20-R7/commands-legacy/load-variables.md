@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD VARIABLES.Summary-->The **LOAD VARIABLES**  command loads one or more variables from the document specified by *document*.<!-- END REF--> The document must have been created using the [SAVE VARIABLES](save-variables.md) command.
 
@@ -26,7 +26,7 @@ In compiled databases, each variable must be of the same type as those loaded fr
 
 **WARNING:** This command does not support array variables. Use the new BLOB commands instead.
 
-#### Example 
+## Example 
 
 The following example loads three variables from a document named UserPrefs:
 
@@ -34,11 +34,11 @@ The following example loads three variables from a document named UserPrefs:
  LOAD VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the variables are loaded properly, the OK system variable is set to 1; otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -46,7 +46,7 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

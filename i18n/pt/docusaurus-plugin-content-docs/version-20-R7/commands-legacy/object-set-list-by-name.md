@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->O comando OBJECT SET LIST BY NAME define ou substitui a lista associada ao objeto o grupo de objetos designado por *objeto* A lista cujo nome é passado no parâmetro *lista* deve ter sido criada no editor de listas, em modo Desenho*.<!-- END REF-->*  
   
@@ -45,7 +45,7 @@ Lista de valores existentes são substituidas dependendo de como a lista é asso
 * usar um array: a lista é copiada em elementos array.
 * usar um objeto (não compatível com bancos de dados binários): a lista é copiada como elementos coleção na propriedade valores do objeto.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir define uma lista associada a um campo Envio. Se o envio deve ser realizado na noite, então a lista mostra as empresas que realizam envios na noite. Caso contrário, são atribuídas as empresas de envios comum:
 
@@ -60,7 +60,7 @@ OBJECT SET LIST BY NAME([Envios]Empresa;"Envios de noite")
 
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Associa a lista "color\_choice" como uma lista deslocável simples chamada "DoorColor":
 
@@ -69,7 +69,7 @@ Associa a lista "color\_choice" como uma lista deslocável simples chamada "Door
   // neste caso, o terceiro parâmetro (constante) pode ser omitido
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Você deseja associar a lista "color\_choice" ao combo box "WallColor". Como este combo box é editável, você deseja que não seja possível usar certas cores como o "preto", "morado", etc. Estas cores se colocam na lista "excl\_colors":
 
@@ -78,7 +78,7 @@ Você deseja associar a lista "color\_choice" ao combo box "WallColor". Como est
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Você quer eliminar a lista de associações:
 
@@ -89,12 +89,12 @@ Você quer eliminar a lista de associações:
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

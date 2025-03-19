@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MEMORY STATISTICS.Summary-->El comando **MEMORY STATISTICS** recupera la información relativa al uso de la caché de datos por 4D.<!-- END REF-->. Esta información puede utilizarse en el análisis del funcionamiento de la aplicación.
 
@@ -24,11 +24,11 @@ El parámetro *tipoInfo* especifica el tipo de información solicitada. En versi
 
 Después de ejecutar el comando, las estadísticas solicitadas se entregan en los arrays *arraysNombres*, *arraysValores* y *ArrayContador*. Esta información también está disponible vía el explorador de ejecución: tamaño de memoria física, virtual, libre, ocupada, etc. Para mayor información sobre la interpretación avanzada de estos datos, contacte al departamento de servicio técnico de 4D.
 
-#### Ver también 
+## Ver también 
 
 [Cache info](cache-info.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->The SET FIELD VALUE NULL command assigns the NULL value to the field designated by the *aField* parameter.<!-- END REF-->
 
@@ -24,12 +24,12 @@ The NULL value is used by the SQL kernel of 4D. For more information, please ref
 * It is possible to disallow the Null value for 4D fields at the Structure editor level (see the Design Reference manual).
 * **SET FIELD VALUE NULL** erases the contents of object fields.
 
-#### See also 
+## See also 
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

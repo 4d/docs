@@ -23,7 +23,7 @@ title: VP Get data context
 | sheet      | Integer | ->                          | Indice de la feuille de laquelle obtenir le data context |                  |
 | Résultat   | Variant | <- | Data context. Object or Collection       | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
 
@@ -31,7 +31,7 @@ In *sheet*, pass the index of the sheet to get the data context from. If no inde
 
 The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
 
-#### Exemple
+## Exemple
 
 To get the data context bound to the following cells:
 
@@ -43,7 +43,7 @@ var $dataContext : Object
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
 
-#### Voir également
+## Voir également
 
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>

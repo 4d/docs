@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY INTEGER.Summary-->O comando ARRAY INTEGER cria e/ou redimensiona um array de elementos de tipo *Inteiro* de 2 bytes de memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
@@ -26,7 +26,7 @@ Enquanto se aplica ARRAY INTEGER para um array já existente:
 * se você aumentar o tamanho de um array, os elementos existentes não sofrem mudanças, e os novos elementos se iniciam em 0.
 * se você reduzir o tamanho de um array, os últimos elementos são deletados do array e se perdem.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array de processo de 2 bytes de 100 elementos de tipo [Inteiro](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)"):
 
@@ -34,7 +34,7 @@ Este exemplo cria um array de processo de 2 bytes de 100 elementos de tipo [Inte
  ARRAY INTEGER(aiValores;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 2 bytes de 100 linhas de 50 elementos do tipo [Inteiro](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)"):
 
@@ -42,7 +42,7 @@ Este exemplo cria um array local de 2 bytes de 100 linhas de 50 elementos do tip
  ARRAY INTEGER($aiValores;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo cria um array interprocesso de 2 bytes de 50 elementos do tipo *Inteiro* e determina a cada elemento seu número de elemento:
 
@@ -53,12 +53,12 @@ Este exemplo cria um array interprocesso de 2 bytes de 50 elementos do tipo *Int
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

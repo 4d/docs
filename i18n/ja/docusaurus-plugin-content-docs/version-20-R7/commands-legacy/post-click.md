@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.POST CLICK.Summary-->POST CLICK コマンドはマウスクリックをシミュレートします。<!-- END REF-->これは、ユーザが実際にマウスボタンをクリックした場合と同様の結果を生じます。
 
@@ -24,12 +24,12 @@ displayed_sidebar: docs
 
 引数 *process* を指定すると、クリックは *process* に渡したプロセス番号を持つプロセスへ送られます。0 (ゼロ) を渡したりこの引数を省略すると、クリックはアプリケーションレベルに送られます。そして、4Dスケジューラーがそれを適切なプロセスにディスパッチします。
 
-#### 参照 
+## 参照 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

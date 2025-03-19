@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CANCEL.Summary-->**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
 
@@ -33,25 +33,25 @@ displayed_sidebar: docs
 
 **Note:** この処理はすべての印刷待ちフォームをキャンセルする[PAGE BREAK](page-break.md)(\*) コマンドとは動作が異なります。
 
-##### ヘッドレスモード 
+### ヘッドレスモード 
 
 **CANCEL** コマンドは、*VP Run offscreen area* あるいは [WA Run offscreen area](wa-run-offscreen-area.md) で作成されたオフスクリーンエリアのコンテキストならば、ヘッドレスモードでも使用ができます。
 
-#### 例題 
+## 例題 
 
 [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER")の例題を参照 
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 CANCELコマンドが実行される (フォームや印刷がキャンセルされた) とシステム変数OKは0に設定されます。
 
-#### 参照 
+## 参照 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

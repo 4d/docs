@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Structure file.Summary-->O comando Structure file retorna o nome completo do arquivo de estrutura do banco de dados com o qual você está trabalhando atualmente.<!-- END REF-->
 
@@ -41,7 +41,7 @@ O arquivo de estrutura do componente corresponde ao arquivo .4db or .4dc do comp
   
 • Quando o comando é chamado de um método de banco de dados do host, ele sempre retorna o nome completo do arquivo de estrutura do banco de dados de host, independentemente de haver ou não o parâmetro *\**.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo exibe o nome e localização do arquivo de estrutural atualmente em uso:
 
@@ -58,7 +58,7 @@ Este exemplo exibe o nome e localização do arquivo de estrutural atualmente em
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir pode ser usado para descobrir se o método é chamado de um componente:
 
@@ -68,13 +68,13 @@ O exemplo a seguir pode ser usado para descobrir se o método é chamado de um c
   // $0=True se o método é chamado desde um componente
 ```
 
-#### Ver também 
+## Ver também 
 
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

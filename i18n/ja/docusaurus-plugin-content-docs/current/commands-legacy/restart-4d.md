@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESTART 4D.Summary-->**RESTART 4D**コマンドは、カレントの4Dアプリケーションを再起動します。<!-- END REF-->
 
@@ -30,12 +30,12 @@ displayed_sidebar: docs
 
 コマンドが正常に実行されれば、OKシステム変数は1に設定されます。それ以外の場合は0に設定され、アプリケーションは再起動します。このコマンドによって生成されるエラーは全て [ON ERR CALL](on-err-call.md) コマンドによって実装されたメソッドによって割り込み可能です。
 
-#### 参照 
+## 参照 
 
 [Get last update log path](last-update-log-path.md)  
 [SET UPDATE FOLDER](set-update-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

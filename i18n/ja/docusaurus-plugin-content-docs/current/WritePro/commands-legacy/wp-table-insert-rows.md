@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table insert rows.Summary-->**WP Table insert rows** コマンドは、4D Write Pro の表に一つまたは複数の行を挿入します。<!-- END REF-->
 
@@ -38,7 +38,7 @@ rowNumber 引数の番号がの表内にある行数より大きい場合、行�
 
 コマンドは、挿入された行を表す行レンジを返すか、あるいは何も挿入されなかった場合にはNull を返します。
 
-#### 例題 
+## 例題 
 
 *Invoice* の表の終わりに行を二つ追加したい場合を考えます。以下のコードを実行すると:
 
@@ -59,6 +59,6 @@ rowNumber 引数の番号がの表内にある行数より大きい場合、行�
 
 ![](../../assets/en/WritePro/commands/pict4680266.en.png)
 
-#### 参照 
+## 参照 
 
 [WP Table insert columns](wp-table-insert-columns.md)  

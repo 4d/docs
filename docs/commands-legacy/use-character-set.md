@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET** modifies the character set used by 4D during data transfer between the database and a document or a serial port for the current process.<!-- END REF--> Transfer operations include the import and export of text, DIF, and SYLK files. A character map also works on data transferred with [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for text type packets) and [RECEIVE BUFFER](receive-buffer.md). It has no effect on transfers of data done with [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for BLOB type packets) and [RECEIVE VARIABLE](receive-variable.md). 
 
@@ -25,7 +25,7 @@ If *mapInOut* is 0, the map is set for exporting. If *mapInOut* is 1, the map is
 When the *\** parameter is passed, the default character set is restored (import or export map depending on the value of *mapInOut*).   
 In 4D, the default character set is UTF-8\. 
 
-#### Example 
+## Example 
 
 The following example (Unicode mode) uses the UTF-16 character set to export a text, then the default character set is restored:
 
@@ -35,11 +35,11 @@ The following example (Unicode mode) uses the UTF-16 character set to export a t
  USE CHARACTER SET(*;0) // Restore the default character set
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
@@ -51,7 +51,7 @@ The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

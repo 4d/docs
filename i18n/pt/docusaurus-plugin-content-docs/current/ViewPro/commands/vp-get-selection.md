@@ -15,7 +15,7 @@ title: VP Get selection
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
-#### Exemplo
+## Exemplo
 
 ![](../../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
@@ -40,7 +40,7 @@ $currentSelection:=VP Get selection("myVPArea")
 //$currentSelection.ranges[0].rowCount=6
 ```
 
-#### Veja também
+## Veja também
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>

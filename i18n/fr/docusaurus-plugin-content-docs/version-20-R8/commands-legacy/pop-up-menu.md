@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Pop up menu.Summary-->La commande **Pop up menu** fait apparaître un pop up à l'emplacement courant du curseur de la souris ou à l'emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->
 
@@ -54,7 +54,7 @@ Lorsqu'un élément du pop up menu est sélectionné, la commande retourne son n
 
 **Note :** Utilisez les pop up menus avec un nombre "raisonnable" d'éléments. Si, par exemple, vous voulez afficher plus de 50 éléments, envisagez plutôt d'employer une zone de défilement dans un formulaire.
 
-#### Exemple 
+## Exemple 
 
 La méthode projet MON RACCOURCI fait apparaître un pop up menu de navigation :
 
@@ -95,12 +95,12 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 
 ![](../assets/en/commands/pict36394.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

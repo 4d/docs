@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Convert to text.Summary-->Convert to textコマンドは、*blob*引数に含まれているテキストを変換して、4Dの文字セットで記述されているテキストで返します。<!-- END REF--> 4DはデフォルトでUnicode 文字コードを使用します。  
 
@@ -23,15 +23,15 @@ displayed_sidebar: docs
 
 Convert to textはByte Order Marks (BOM) をサポートします。指定された文字セットがUnicodeタイプ (UTF-8, UTF-16またはUTF-32) であるとき、4Dは受信した最初のバイトでBOMの識別を試みます。BOMが検知できると、BOMは結果から取り除かれ、4Dは*charSet*ではなくBOMが指定した文字セットを使用します。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [CONVERT FROM TEXT](convert-from-text.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

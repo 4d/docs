@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Cette commande modifie les valeurs présentes dans les tableaux de couleurs éve
 
 Si des valeurs de couleur contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-#### Exemple 
+## Exemple 
 
 Dans une list box tableau, on souhaite définir des paramétrages de couleur pour une ligne et pour une cellule de cette ligne : 
 
@@ -57,14 +57,14 @@ Dans une list box tableau, on souhaite définir des paramétrages de couleur pou
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 *List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

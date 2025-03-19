@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MODIFY RECORD.Summary-->The **MODIFY RECORD** command modifies the current record for the table *aTable* or for the default table if you omit the *aTable* parameter.<!-- END REF--> **MODIFY RECORD** loads the record, if it is not already loaded for the current process, and displays the current input form. If there is no current record, then **MODIFY RECORD** does nothing. **MODIFY RECORD** does not affect the current selection.
 
@@ -33,15 +33,15 @@ After a call to **MODIFY RECORD**, OK is set to 1 if the record is accepted, to 
 
 If you are using **MODIFY RECORD** and the user does not change any of the data in the record, the record is not considered to be modified, and accepting the record does not cause it to be saved again. Actions such as changing variables, checking check boxes, and selecting radio buttons do not qualify as modifications. Only changing data in a field, either through data entry or through a method, causes the record to be saved.
 
-#### Example 
+## Example 
 
 See example for the [ADD RECORD](add-record.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 Accepting the record sets the OK system variable to 1; canceling it sets the OK system variable to 0\. The OK system variable is set only after the record is accepted or canceled.
 
-#### See also 
+## See also 
 
 [ADD RECORD](add-record.md)  
 [Locked](locked.md)  
@@ -49,7 +49,7 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 [READ WRITE](read-write.md)  
 [UNLOAD RECORD](unload-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

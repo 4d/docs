@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REJECT.Summary-->**REJECT** has two forms.<!-- END REF--> The first form has no parameters. It rejects the entire data entry and forces the user to stay in the form. The second form rejects only *aField* and forces the user to stay in the field. 
 
@@ -30,7 +30,7 @@ With this syntax, it is imperative that you call the **REJECT** command in the O
 
 You can use [HIGHLIGHT TEXT](highlight-text.md) to select the data in the field that is being rejected.
 
-#### Example 1 
+## Example 1 
 
 The following example is for a bank transaction record. It shows the first form of REJECT being used in an Accept button object method. The Enter key is set as an equivalent for the button. This means that even if the user presses the Enter key to accept the record, the button’s object method will be executed. If the transaction is a check, then there must be a check number. If there is no check number, the validation is rejected: 
 
@@ -43,7 +43,7 @@ The following example is for a bank transaction record. It shows the first form 
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example is part of an object method for an *\[Employees\]Salary* field. The object method tests the *Employees\]Salary* field and rejects the field if it is less than $10,000\. You could perform the same operation by specifying a minimum value for the field in the form editor:
 
@@ -57,13 +57,13 @@ The following example is part of an object method for an *\[Employees\]Salary* f
  End case
 ```
 
-#### See also 
+## See also 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

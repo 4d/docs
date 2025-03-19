@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -85,7 +85,7 @@ By default, if the *disposition* parameter is omitted:
 - if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 - if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
-#### Exemplo 1
+## Exemplo 1
 
 Se quiser enviar um email com um arquivo selecionado pelo usuário como um anexo e uma imagem embebida no corpo HTML:
 
@@ -123,7 +123,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Se quiser enviar um email com uma área 4D Write pro como um anexo:
 
@@ -149,7 +149,7 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                                 |
 | -------------- | ------------------------------- |

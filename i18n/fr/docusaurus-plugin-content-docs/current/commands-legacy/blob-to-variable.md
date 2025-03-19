@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB TO VARIABLE.Summary-->**BLOB TO VARIABLE** réécrit la variable *variable* avec les données stockées dans le BLOB *blob* à l'offset d'octet (à partir de zéro) spécifié par *offset*.<!-- END REF-->
 
@@ -30,19 +30,19 @@ La variable OK prend la valeur 1 si l'opération s'est correctement déroulée. 
 
 **Note sur l'indépendance de plate-forme :** **BLOB TO VARIABLE** et [VARIABLE TO BLOB](variable-to-blob.md) utilisent un format interne à 4D pour gérer les variables stockées dans les BLOBs. Vous n'avez donc pas besoin de vous préoccuper de la conversion des octets ("byte swapping") entre les différentes plates-formes lors de l'utilisation de ces deux commandes. Un BLOB créé sous Windows à l'aide de ces deux commandes peut être réutilisé sans la moindre manipulation sous Mac OS et vice-versa.
 
-#### Exemple 
+## Exemple 
 
 Référez-vous aux exemples de [VARIABLE TO BLOB](variable-to-blob.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable OK prend la valeur 1 si la variable a été correctement réécrite, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

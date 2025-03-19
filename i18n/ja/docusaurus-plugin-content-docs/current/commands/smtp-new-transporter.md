@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `SMTP New transporter` コマンドは、<!-- REF #_command_.SMTP New transporter.Summary -->新規のSMTP 接続を設定します<!-- END REF -->。このSMTP 接続は*server* 引数の指定に応じて設定され、コマンドは新しい [SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) オブジェクトを返します。 返された transporter オブジェクトは、通常メールの送信に使用されます。
 
@@ -54,11 +54,11 @@ displayed_sidebar: docs
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                          | 100                                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                               | なし                                                                                               |
 
-#### 戻り値
+## 戻り値
 
 この関数は [**SMTP transporter オブジェクト**](../API/SMTPTransporterClass.md#smtp-transporter-object) を返します。 返されるプロパティはすべて **読み取り専用** です。
 
-#### 例題
+## 例題
 
 ```4d
  $server:=New object
@@ -86,7 +86,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

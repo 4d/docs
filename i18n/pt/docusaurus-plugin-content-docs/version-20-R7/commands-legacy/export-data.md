@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EXPORT DATA.Summary-->O comando EXPORT DATA exporta dados no arquivo *nomArquivo*.<!-- END REF--> 4D pode exportar dados nos seguintes formatos: Texto, Texto de longitude fixa, XML, SYLK, DIF, DBF (dBase) e 4D. 
 
@@ -34,7 +34,7 @@ O parâmetro opcional *\**, se for especificado, que apareça a caixa de diálog
 
 Se a exportação foi exitosa, a variável sistema OK é igual a 1.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo apresenta o uso do comando EXPORT DATA para exportar dados em formato binário.
 
@@ -77,7 +77,7 @@ Este exemplo apresenta o uso do comando EXPORT DATA para exportar dados em forma
  DOM CLOSE XML($ref)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um projeto vazio e guarda os parâmetros definidos pelo usuário na caixa de diálogo de exportação: 
 
@@ -86,18 +86,18 @@ Este exemplo cria um projeto vazio e guarda os parâmetros definidos pelo usuár
  EXPORT DATA("DocExport.txt";$exportParams;*) // Visualização da caixa de diálogo de exportação
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o usuário clicar em **Cancelar** na caixa de diálogo padrão de abrir arquivos ou de exportação, a variável sistema OK toma o valor 0\. Se a exportação foi exitosa, a variável sistema OK toma o valor 1\. 
 
-#### Ver também 
+## Ver também 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

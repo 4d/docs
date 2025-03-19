@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** コマンドは、*form*または*userForm*を*aTable*のカレント出力フォームとして設定します。<!-- END REF-->このフォームは*aTable*に属するものでなければなりません。   
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 出力フォームは3つのコマンドグループ（画面上にレコードをリスト表示するグループ、レポートを作成するグループ、データを書き出すグループ）で使用されます。[DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) コマンドは、出力フォームを使用してレコードのリストを表示します。[PRINT LABEL](print-label.md) や 60 コマンドを使用してレポートを作成する際にも出力フォームを使用します。各データ書き出しコマンド（[EXPORT DIF](export-dif.md)、85 そして [EXPORT TEXT](export-text.md)）でも出力フォームを使用します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、**FORM SET OUTPUT** コマンドの典型的な使用方法です。この例では**FORM SET OUTPUT** コマンドを出力フォームが使用される直前に記述していますが、直前である必要はありません。実際、この**FORM SET OUTPUT**コマンドがこのメソッドの前に同じプロセス内で実行されていれば、このコマンドを全く別のメソッドで実行しても構いません:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
  MODIFY SELECTION([Parts]) //このコマンドは両フォームを使用する
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は.json フォームへのパスを使用して従業員リスト内のレコードを印刷する場合を考えます:
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
  PRINT SELECTION([Personnel])
 ```
 
-#### 参照 
+## 参照 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -70,7 +70,7 @@ displayed_sidebar: docs
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

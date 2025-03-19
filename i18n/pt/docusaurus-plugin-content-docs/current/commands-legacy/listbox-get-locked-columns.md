@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->O comando **LISTBOX Get locked columns** devolve o número de colunas bloquedas no list box designado pelos parâmetros objeto e *\**.<!-- END REF-->
 
@@ -26,11 +26,11 @@ As colunas podem ser desbloqueadas via a Lista de propriedades ou com a ajuda do
 Se uma coluna é inserida ou é eliminada por programação dentro de uma área de bloqueio, o número de colunas devolvidas por este comando têm em conta esta mudança.  
  No entanto, o comando não tem em conta o estado visível/invisível das colunas.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

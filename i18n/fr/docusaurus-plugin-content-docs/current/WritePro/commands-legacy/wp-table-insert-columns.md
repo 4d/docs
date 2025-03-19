@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table insert columns.Summary-->La commande **WP Table insert columns** insère une ou plusieurs colonnes dans un tableau 4D Write Pro.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Le paramètre optionnel nbCols définit le nombre de colonnes à insérer dans o
 
 La commande retourne une plage de colonne représentant une ou plusieurs colonnes insérées, ou retourne Null si rien n'a été inséré. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez insérer deux colonnes après la première colonne du tableau *Invoice*. Le code suivant :
 
@@ -54,6 +54,6 @@ Insèrera la nouvelle colonne à l'emplacement souhaité :
 
 ![](../../assets/en/WritePro/commands/pict4680283.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Table insert rows](wp-table-insert-rows.md)  

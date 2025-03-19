@@ -11,7 +11,7 @@ Un objet **`4D.Function`** contient un morceau de code qui peut être exécuté 
 
 ### Objets Formula
 
-Les commandes [Formula](../commands/formula.md) et [Formula from string](../commands/formula-from-string.md) vous permettent de créer des objets [`4D.Function`](#objets-formula) pour exécuter n'importe quelle expression ou code 4D exprimé sous forme de texte.
+The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#formula-objects) to execute any 4D expression or code expressed as text.
 
 Les objets Formula peuvent être encapsulés dans des propriétés d'objet :
 
@@ -47,7 +47,7 @@ Vous pouvez également exécuter une fonction en utilisant les fonctions [`apply
 
 #### Passer des paramètres
 
-Vous pouvez passer des paramètres à vos formules en utilisant [la syntaxe séquentielle des paramètres](Concepts/parameters.md#sequential-parameters) basée sur $1, $2...$n. Par exemple, vous pouvez écrire :
+You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Par exemple, vous pouvez écrire :
 
 ```4d
  var $f : Object

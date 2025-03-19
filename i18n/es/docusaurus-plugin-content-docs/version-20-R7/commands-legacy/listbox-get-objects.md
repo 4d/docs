@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->El comando **LISTBOX GET OBJECTS** devuelve un array que contiene los nombres de todos los objetos que componen el list box designado por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -36,7 +36,7 @@ El array devuelve los nombres de los objetos de todas las columnas (incluyendo l
   
 Este comando es útil en el contexto del análisis de un formulario utilizando los comandos [FORM LOAD](form-load.md), [FORM GET OBJECTS](form-get-objects.md) y [OBJECT Get type](object-get-type.md). Se puede utilizar, cuando sea necesario, para obtener los nombres de los sub objetos de los list box.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere cargar un formulario y obtener la lista de todos los objetos de los list boxes que contiene.
 
@@ -55,12 +55,12 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
  FORM UNLOAD
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM LOAD](form-load.md)  
 [OBJECT Get type](object-get-type.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

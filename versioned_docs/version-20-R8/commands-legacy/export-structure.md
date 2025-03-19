@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->The **EXPORT STRUCTURE** command exports the structure definition of the current 4D database in *exportedStructure*.<!-- END REF-->
 
@@ -33,7 +33,7 @@ The command generates the same XML or HTML code as the **Export >** **Structure 
 A structure definition exported in XML format can be imported in another database (see [IMPORT STRUCTURE](import-structure.md)).
 * **html format**: the command generates raw HTML code which includes references to a folder containing external resources such as pictures or css, required for HTML representation. If you want to save this code in an HTML page to be displayed in a browser, you can reuse the folder created by the **Export >** **Structure definition to HTML file...** menu item, or create your own resources folder.
 
-#### Example 1 
+## Example 1 
 
 You want to export the current database structure in a text file:
 
@@ -43,7 +43,7 @@ You want to export the current database structure in a text file:
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to export the current database structure in html format:
 
@@ -53,11 +53,11 @@ You want to export the current database structure in html format:
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-#### See also 
+## See also 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

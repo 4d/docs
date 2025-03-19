@@ -17,7 +17,7 @@ title: VP Row
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Range object of row(s)                                   | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
 
@@ -31,7 +31,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 - `vk current sheet`
 
-#### Exemple
+## Exemple
 
 |
 
@@ -43,7 +43,7 @@ Vous pouvez écrire :
 $row:=VP Row("ViewProArea";9) // row 10
 ```
 
-#### Voir également
+## Voir également
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>

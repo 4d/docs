@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->The **DOCUMENT LIST** command populates the Text array *documents* with the names of the documents located at the location you pass in *pathname*.<!-- END REF-->You must pass an absolute pathname in the *pathname* parameter. 
 
@@ -36,7 +36,7 @@ By default, if you omit the *options* parameter, only the names of documents are
 
 If there are no documents at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **DOCUMENT LIST** generates a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
 
-#### Example 1 
+## Example 1 
 
 List of all documents in a folder (default syntax):
 
@@ -48,7 +48,7 @@ List of all documents in a folder (default syntax):
  Text1.txt  
  Text2.txt
 
-#### Example 2 
+## Example 2 
 
 List of all documents in a folder in absolute mode:
 
@@ -60,7 +60,7 @@ List of all documents in a folder in absolute mode:
  C:\\Text1.txt  
  C:\\Text2.txt
 
-#### Example 3 
+## Example 3 
 
 List of all documents in recursive (relative) mode:
 
@@ -77,7 +77,7 @@ List of all documents in recursive (relative) mode:
  \\Folder2\\Text5.txt  
  \\Folder2\\Folder3\\Picture1.png
 
-#### Example 4 
+## Example 4 
 
 List of all documents in recursive absolute mode:
 
@@ -93,7 +93,7 @@ List of all documents in recursive absolute mode:
  C:\\MyFolder\\Folder2\\MyText5.txt  
  C:\\MyFolder\\Folder2\\Folder3\\MyPicture1.png
 
-#### Example 5 
+## Example 5 
 
 List of all documents in recursive Posix (relative) mode:
 
@@ -109,12 +109,12 @@ List of all documents in recursive Posix (relative) mode:
  Folder2/MyText5.txt  
  Folder2/Folder3/MyPicture1.png
 
-#### See also 
+## See also 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

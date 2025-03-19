@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Generate digest.Summary-->El comando **Generate digest** devuelve el extracto de un BLOB o de un texto después de la aplicación de un algoritmo de encripción.<!-- END REF-->
 
@@ -40,7 +40,7 @@ El valor devuelto por el mismo objeto es el mismo en todas las plataformas (macO
 
 **Nota:** si utiliza el comando con un texto/BLOB vacío, no devolverá void sino un valor cadena (por ejemplo "d41d8cd98f00b204e9800998ecf8427e" para MD5).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo compara dos documentos utilizando el algoritmo MD5: 
 
@@ -66,7 +66,7 @@ Este ejemplo compara dos documentos utilizando el algoritmo MD5:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Estos ejemplos ilustran cómo recuperar el extracto de un texto:
 
@@ -77,7 +77,7 @@ Estos ejemplos ilustran cómo recuperar el extracto de un texto:
   // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-#### Ver también 
+## Ver también 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
@@ -85,7 +85,7 @@ Estos ejemplos ilustran cómo recuperar el extracto de un texto:
 *Protocolo seguro*  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

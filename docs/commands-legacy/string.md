@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.String.Summary-->The String command returns the string form of the numeric, Date, Time, string or Boolean expression you pass in *expression*.<!-- END REF-->
 
@@ -180,7 +180,7 @@ If *expression* is evaluated to undefined, the command returns an empty string. 
 **Null Expressions**  
 If *expression* is evaluated to Null, the command returns the "null" string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be null.
 
-#### See also 
+## See also 
 
 [Bool](bool.md)  
 [Date](date.md)  
@@ -188,7 +188,7 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

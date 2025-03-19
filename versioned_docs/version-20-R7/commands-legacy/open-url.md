@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN URL.Summary-->The **OPEN URL** command opens the file or URL passed in the *path* parameter with the application indicated in *appName* (if any).<!-- END REF--> 
 
@@ -45,7 +45,7 @@ When the *appName* application is not found, no error is returned; the command i
 
 **Note:** This command does not work when called from a Web process.
 
-#### Example 1 
+## Example 1 
 
 The following examples illustrate different types of strings that are accepted as URLs by the command:
 
@@ -56,7 +56,7 @@ The following examples illustrate different types of strings that are accepted a
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-#### Example 2 
+## Example 2 
 
 This example can be used to launch the most suitable application: 
 
@@ -67,7 +67,7 @@ This example can be used to launch the most suitable application:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The *appName* parameter lets you open the same text file using different applications:
 
@@ -77,11 +77,11 @@ The *appName* parameter lets you open the same text file using different applica
  OPEN URL("C:\\temp\\cookies.txt";"excel") //open the file with MS Excel (if installed)
 ```
 
-#### See also 
+## See also 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

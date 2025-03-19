@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last table number.Summary-->**Last table number** returns the highest table number among the tables in the database.<!-- END REF--> Tables are numbered in the order in which they are created. If no table has been deleted from the database, this command then returns the number of tables present in the database. In the case of repeated loops on the table numbers of the database, you must use the [Is table number valid](is-table-number-valid.md) command in order to check that the table has not been deleted.
 
-#### Example 
+## Example 
 
 The following example builds an array, named asTables*,* with the names of tables defined in the database. This array can be used as a drop-down list (or tab control, scrollable area, and so on) to display the list of the tables, within a form:
 
@@ -34,13 +34,13 @@ The following example builds an array, named asTables*,* with the names of table
  End if
 ```
 
-#### See also 
+## See also 
 
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

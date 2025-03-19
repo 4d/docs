@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Value type.Summary-->El comando Value type devuelve el tipo del valor resultante de la evaluación de la *expresion* que pasó como parámetro.<!-- END REF--> 
 
@@ -77,7 +77,7 @@ Otras diferencias están relacionadas con arrays (la evaluación de una array de
 
 **Nota de compatibilidad:** a partir de 4D v16 R6, las fechas se almacenan en las propiedades objeto, ya sea con el tipo fecha o como texto en formato de fecha ISO. Para más información, consulte el selector Dates inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea manejar los varios tipos posibles de un valor propiedad objeto:
 
@@ -93,7 +93,7 @@ Usted desea manejar los varios tipos posibles de un valor propiedad objeto:
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea obtener la suma de todos los valores numéricos en una colección:
 
@@ -109,12 +109,12 @@ Desea obtener la suma de todos los valores numéricos en una colección:
  ALERT(String($sum)) //95
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

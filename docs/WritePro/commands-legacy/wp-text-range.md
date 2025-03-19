@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility 
+## Compatibility 
 
 <!--REF #_command_.WP Text range.Summary-->**WP Text range** was named **WP Create range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
 
-#### Description 
+## Description 
 
 The **WP Text range** command returns a new range object containing the selection between *startRange* and *endRange* in the *targetObj*.
 
@@ -38,7 +38,7 @@ In *startRange* and *endRange*, pass values corresponding to the position of the
 
 **Note:** If you passed a table, row, paragraph, inline picture, body, header, footer, section or subsection element reference in *targetObj*, *startRange* and *endRange* will be relative to the element range starting and ending index. For example, if a header is passed, wk start text designates the header starting character and wk end text the header ending character; if a table element reference is passed, the command will return a text range relative to the table referenced by *targetObj*; if a section is passed, *startRange* and *endRange* are relative to the document body (parent area of a range created from a section). See example 2.
 
-#### Example 1 
+## Example 1 
 
 You want to select a range of 12 characters starting from the beginning of the 4D Write Pro field. The field is displayed in a form object:
 
@@ -55,7 +55,7 @@ If you execute:
 
 ![](../../assets/en/WritePro/commands/pict2644270.en.png)
 
-#### Example 2 
+## Example 2 
 
 You want to create a range from a section:
 
@@ -67,7 +67,7 @@ You want to create a range from a section:
   //$wpRange.end = 111
 ```
 
-#### See also 
+## See also 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP Get body](wp-get-body.md)  

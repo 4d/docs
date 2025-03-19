@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->The **QR SET INFO ROW** command shows/hides the row whose reference was passed in *row*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *row* value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 The following statement hides the detail row:
 
@@ -46,13 +46,13 @@ The following statement hides the detail row:
  QR SET INFO ROW(area;qr detail;1)
 ```
 
-#### See also 
+## See also 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

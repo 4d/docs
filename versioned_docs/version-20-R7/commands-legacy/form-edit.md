@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor.<!-- END REF--> Note that you must have access to the Design environment, otherwise the error -9804 ("Cannot open form") is generated.
 
@@ -24,7 +24,7 @@ If you pass the optional *aTable* parameter, you indicate the table associated w
 
 In the *form* parameter, pass the name of the form to open in the 4D Form editor. If you pass a name that does not exist, the error 81 is generated ("Form not found"). 
 
-#### Example 
+## Example 
 
 To open the *Contacts* table *Address* form:
 
@@ -38,11 +38,11 @@ To open the *ContactList* project form:
  FORM EDIT("ContactList")
 ```
 
-#### See also 
+## See also 
 
 *Design Object Access Commands*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

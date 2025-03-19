@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->El comando LISTBOX Get number of columns devuelve el número total de columnas (visibles o invisibles) presentes en el list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Si omite este parámetro, indica que el parámetro *objeto* es una variable. En ese caso, no pasa una cadena, sino una referencia de variable. Para mayor información sobre nombres de objetos, consulte la sección *Propiedades de los objetos*. 
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

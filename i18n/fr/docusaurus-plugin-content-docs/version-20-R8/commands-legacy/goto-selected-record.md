@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->La commande **GOTO SELECTED RECORD** fait de l'enregistrement spécifié parmi la sélection courante de *laTable* l'enregistrement courant.<!-- END REF--> La sélection courante n'est pas modifiée. Le paramètre *enregistrement* n'est pas équivalent au numéro retourné par [Record number](record-number.md). Ce paramètre représente la position de l'enregistrement au sein de la sélection courante. Cette position dépend de la manière dont la sélection a été créée et si elle a été triée.  
 Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la section *A propos des numéros d'enregistrements*.
@@ -27,7 +27,7 @@ Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la
 
 Si vous passez 0 dans *enregistrement*, il n’y a plus d’enregistrement courant dans *laTable*. Ce mécanisme permet de n'avoir plus aucun enregistrement sélectionné dans une liste, notamment dans les sous-formulaires inclus, lorsque le mode de sélection est “unique”. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant charge les valeurs du champ \[Personnes\]Nom dans le tableau *taNoms*. Un tableau d'entiers longs, *numEnr*, est rempli avec des numéros qui représenteront ceux des enregistrements sélectionnés. Les deux tableaux sont alors triés :
 
@@ -58,11 +58,11 @@ La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bo
        End ifEnd case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Selected record number](selected-record-number.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

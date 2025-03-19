@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->The **OB GET ARRAY** command retrieves, in *array*, the array of values stored in the *property* of the language object designated by the *object* parameter.<!-- END REF-->can be an object variable or a 4D object field.
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
 
-#### Example 1 
+## Example 1 
 
 Given an object array defined in the example of the [OB SET ARRAY](ob-set-array.md) command:
 
@@ -36,7 +36,7 @@ We want to retrieve these values:
 
 ![](../assets/en/commands/pict1213151.en.png)
 
-#### Example 2 
+## Example 2 
 
 We want to change a value in the first element of the array:
 
@@ -47,12 +47,12 @@ We want to change a value in the first element of the array:
  OB SET($refs{1};"age";25)
 ```
 
-#### See also 
+## See also 
 
 [OB SET ARRAY](ob-set-array.md)  
 *Type conversions between collections and 4D arrays*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

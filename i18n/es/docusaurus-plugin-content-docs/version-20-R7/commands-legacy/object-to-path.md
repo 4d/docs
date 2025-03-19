@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Object to path.Summary-->El comando **Object to path** devuelve un nombre de ruta (cadena) en función de la información de ruta que pasó en el parámetro *objRuta*.<!-- END REF--> Las siguientes rutas son soportadas:
 
@@ -32,7 +32,7 @@ En *objRuta*, pase un objeto que define la ruta que desea generar. Debe contener
 
 Por lo general, *objRuta* se generará con el comando [Path to object ](path-to-object.md), sin embargo, el objeto se puede generar con cualquier medio. Tenga en cuenta que **Object to path** solo maneja cadenas. Tampoco comprueba si la ruta es válida con respecto al tipo de ruta, ni la existencia real de ningún archivo o carpeta.
 
-#### Ejemplo 
+## Ejemplo 
 
 Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 
@@ -47,7 +47,7 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
  COPY DOCUMENT($path;Object to path($o))
 ```
 
-#### Ver también 
+## Ver también 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -56,7 +56,7 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 [Path to object ](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

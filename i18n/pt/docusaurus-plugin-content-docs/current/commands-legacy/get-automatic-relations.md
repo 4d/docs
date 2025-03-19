@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->O comando GET AUTOMATIC RELATIONS lhe permite saber se o estado automático/manual de todas as relações manuais Muitos a Um e Um a Muitos do banco tenham sido modificadas no processo atual.<!-- END REF-->
 
@@ -23,17 +23,17 @@ Este parâmetro devolve [False](false.md "False") se o comando [SET AUTOMATIC RE
 * *muitos*: este parâmetro devolve [True](true.md "True") se a chamada prévia ao comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") torna automática todas as relações manuais Um a Muitos, por exemplo SET AUTOMATIC RELATIONS(True;True).
 Este parâmetro devolve [False](false.md "False") se o comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") não foi chamado ou se sua execução prévia não modificou as relações manuais Um a Muitos, por exemplo SET AUTOMATIC RELATIONS(True;False).
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo do comando [GET FIELD RELATION](get-field-relation.md "GET FIELD RELATION").
 
-#### Ver também 
+## Ver também 
 
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

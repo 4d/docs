@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Test path name.Summary-->La fonction **Test path name** vérifie si le document ou le dossier dont vous avez passé le chemin d'accès et le nom dans *cheminAccès* est présent sur le disque.<!-- END REF--> Vous pouvez passer un chemin d'accès relatif ou absolu, exprimé dans la syntaxe du système courant. 
 
@@ -29,7 +29,7 @@ Si un document est trouvé, **Test path name** retourne 1\. Si un dossier est tr
 
 Si aucun document ou dossier n'est trouvé, **Test path name** retourne une valeur négative (par exemple -43 pour "Fichier non trouvé").
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant teste la présence du document “Journal” dans le dossier de la base et le crée s'il n'existe pas :
 
@@ -42,7 +42,7 @@ L'exemple suivant teste la présence du document “Journal” dans le dossier d
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
@@ -50,7 +50,7 @@ L'exemple suivant teste la présence du document “Journal” dans le dossier d
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

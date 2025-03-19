@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->O comando XML SET OPTIONS é utilizado para modificar o valor de um ou mais parâmetros XML para estrutura passada no primeiro parâmetro.<!-- END REF-->
 
@@ -52,7 +52,7 @@ As opções abaixo permitem que modifique algumas das propriedades padrão xml p
 | XML external entity resolution | Inteiro longo | 7     | Controla se as entidades externas são resolvidas em documentos XML. De forma pré-determinada, por razões de segurança, os analisadores XML DOM e SAX 4D não permitem a resolução de entidades externas.<br/>**<br/>Valores possíveis:**<br/>XML enabled: permite a resolução de entidades externas em documentos XMLXML disabled (valor predeterminado): não permite a resolução de entidades externas (uma declaração de entidade externa gera um erro de análise)                       |
 | XML line ending                | Inteiro longo | 10    | Caracteres de final de linha em documentos XML escritos.<br/>**Valores possíveis:** XML por padrão (por padrão): utiliza a configuração atual do banco de dados. Por padrão é LF em macOS e CRLF em Windows. Entretanto, em macOS, nos bancos/projetos criados com versões de 4D antes de v19,x, por padrão era CR para DOM e CRLF para SAX. Ver também Parâmetros de compatibilidade. XML LF: utiliza LF (quebra de linha) XML CR: utiliza CR (carriage return/retorno de carro) XML CRLF: utiliza CR+LF |
 
-#### Exemplo 
+## Exemplo 
 
 Inserir uma imagem SVG:
 
@@ -62,7 +62,7 @@ Inserir uma imagem SVG:
  DOM SET XML ATTRIBUTE($pictElemRef;"xlink:href";PictVar)
 ```
 
-#### Ver também 
+## Ver também 
 
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
@@ -70,7 +70,7 @@ Inserir uma imagem SVG:
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

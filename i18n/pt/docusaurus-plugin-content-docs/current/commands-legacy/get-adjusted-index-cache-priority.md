@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get adjusted index cache priority.Summary-->O comando **Get adjusted index cache priority** devolve o valor de prioridade de cache ajustado atual aplicado pelo gestor de cache para os índices de campo.<!-- END REF--> Este comando só é necessário para propósitos de depuração.
 
 **Nota:** este comando só funciona em modo local (4D Server e 4D); Não pode ser utilizado em modo remoto 4D.
 
-#### Ver também 
+## Ver também 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 *Gerenciar prioridades em cache de banco de dados*  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

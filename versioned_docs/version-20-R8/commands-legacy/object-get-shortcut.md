@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->The **OBJECT GET SHORTCUT** command returns the keyboard shortcut associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -37,11 +37,11 @@ If there are no modifier keys for the shortcut, *modifiers* returns 0\.
 
 **Note:** If the *object* parameter designates several objects in the form that have different settings, the command returns "" in *key* and 0 in *modifiers*. 
 
-#### See also 
+## See also 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

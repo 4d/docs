@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->The **SELECTION TO ARRAY** command creates one or more arrays and copies data in the fields or record numbers from the current selection into the arrays.<!-- END REF-->
 
@@ -47,7 +47,7 @@ As with the [QUERY](query.md) command, this lets you break up a complex statemen
 
 **Note:** After a call to **SELECTION TO ARRAY**, the current selection and current record remain the same, but the current record is no longer loaded. If you need to use the values of the fields in the current record, use the [LOAD RECORD](load-record.md) command after the **SELECTION TO ARRAY** command.
 
-#### Example 1 
+## Example 1 
 
 In the following example, the *\[People\]* table has an automatic relation to the \[Company\] table. The two arrays *asLastName* and *asCompanyAddr* are sized according to the number of records selected in the *\[People\]* table and will contain information from both tables:
 
@@ -55,7 +55,7 @@ In the following example, the *\[People\]* table has an automatic relation to th
  SELECTION TO ARRAY([People]Last Name;asLastName;[Company]Address;asCompanyAddr)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example returns the *\[Clients\]* record numbers in the array *alRecordNumbers* and the *\[Clients\]Names* field values in the array *asNames*:
 
@@ -71,7 +71,7 @@ The same example can be written:
  SELECTION TO ARRAY
 ```
 
-#### See also 
+## See also 
 
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
@@ -80,7 +80,7 @@ The same example can be written:
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

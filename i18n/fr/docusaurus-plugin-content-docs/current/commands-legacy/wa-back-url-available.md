@@ -15,18 +15,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Back URL available.Summary-->La commande **WA Back URL available** permet de savoir s’il existe un URL précédent disponible dans la séquence d’URLs ouverts dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->  
   
 La commande retourne Vrai si un URL existe et Faux sinon. Cette commande permet notamment, dans la cadre d’une interface personnalisée, d’activer ou d’inactiver des boutons de navigation.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA Forward URL available](wa-forward-url-available.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get resource properties.Summary-->**Get resource properties**コマンドは、*resType*に渡されるタイプかつ*resID*に渡されるIDを持つリソースの属性を返します。<!-- END REF-->
 
@@ -26,16 +26,16 @@ displayed_sidebar: docs
 
 **Get resource properties**によって返される数値は、ビットが特別の意味を持っているビットフィールド値として理解する必要があります。
 
-#### 例題 
+## 例題 
 
 [Get resource name](get-resource-name.md "Get resource name")の例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リソースが存在しない場合OK変数は0に、そうでなければ1に設定されます。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

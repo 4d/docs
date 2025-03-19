@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DIALOG.Summary-->La commande **DIALOG** présente le *formulaire* à l'utilisateur en lui passant des paramètres via *formData* (optionnel).<!-- END REF--> 
 
@@ -62,7 +62,7 @@ Ce formulaire réagit alors “normalement” aux actions de l’utilisateur et 
 * Vous devez créer une fenêtre avant d'appeler l'instruction **DIALOG**(form;\*), il n'est pas possible d'utiliser la fenêtre du dialogue en cours dans le process ni la fenêtre créée par défaut pour chaque process. Dans le cas contraire, l'erreur -9909 est générée.
 * Lorsque le paramètre *\** est utilisé, la fenêtre est refermée automatiquement à la suite d'une action standard ou de l'appel de la commande [CANCEL](cancel.md) ou [ACCEPT](accept.md). Vous ne devez pas gérer vous-même la fermeture de la fenêtre.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant permet de créer une palette d'outils :
 
@@ -75,7 +75,7 @@ L'exemple suivant permet de créer une palette d'outils :
  DIALOG("doc")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
@@ -123,7 +123,7 @@ Le formulaire affiche les informations pour chaque enfant :
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant utilise le chemin d'un fichier .json décrivant un formulaire permettant d'afficher les enregistrements d'une liste d'employés :
 
@@ -137,7 +137,7 @@ Résultat :
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant crée un objet à partir d'un fichier .json décrivant un formulaire et en modifie certaines propriétés : 
 
@@ -155,11 +155,11 @@ Le formulaire est affiché avec la bordure, le logo et le titre modifiés :
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur valide le dialogue, la variable système OK prend la valeur 1, si le dialogue est annulé OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [ADD RECORD](add-record.md)  
@@ -168,7 +168,7 @@ Si l'utilisateur valide le dialogue, la variable système OK prend la valeur 1, 
 [Form](form.md)  
 [Open window](open-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

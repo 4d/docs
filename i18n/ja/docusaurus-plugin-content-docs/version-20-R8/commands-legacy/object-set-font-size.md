@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** は*object* で指定したフォームオブジェクトが、*size*に渡したフォントサイズを使用して表示されるよう設定します。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **注意:** *object* 引数に、既にスタイルシートを使用しているオブジェクトを指定してこのコマンドを使用した場合、オブジェクトからそのスタイルシートへの参照は自動的に削除されてしまいます。これはコマンドで割り当てた属性がスタイルシートのものと同じでも参照は削除されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、*vtInfo*変数のフォントサイズを設定します: 
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
  OBJECT SET FONT SIZE(vtInfo;14)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、“hl”という名前で始まるすべてのフォームオブジェクトのフォントサイズを設定します: 
 
@@ -43,14 +43,14 @@ displayed_sidebar: docs
  OBJECT SET FONT SIZE(*;"hl@";14)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 *プログラミングに関する注意*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->O comando QR DELETE OFFSCREEN AREA apaga da memória a área fora de tela do relatório rápido cuja referência se passa no parâmetro *area*.<!-- END REF--> 
 
 Se passa um número de *area* incorreto, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

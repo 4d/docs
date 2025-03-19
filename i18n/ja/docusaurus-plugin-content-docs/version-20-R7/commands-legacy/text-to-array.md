@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->**TEXT TO ARRAY**コマンドはテキスト変数をテキスト配列変換します。<!-- END REF-->元の*varText*テキストは (スタイル付きであってもなくても) 分割され、*arrText*配列の要素となり、コマンドから返されます。このコマンドを使用して例えば適切な位置でテキストが分割されたメール本文を作成することができます。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を指定すると、マルチスタイルテキストの場合で、元のテキストにテキスト属性が指定されていない場合、*fontName*, *fontSize* そして *fontStyle* 引数に渡した値を使用するよう指示することができます。しかしこれらの属性が元のテキスト内で定義されていた場合は無視されます。
 
-#### 例題 1 
+## 例題 1 
 
 スタイル付きテキストを200ピクセル幅で分割します:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
   // Arial, 20, そして Normal 属性はマルチスタイルテキスト中でこれらの属性が指定されていない場合にのみ使用されます
 ```
 
-#### 例題 2 
+## 例題 2 
 
 スタイルなしテキストを350ピクセル幅、Bodoni Boldフォント、サイズ14で分割します。フォントが利用できない場合コマンドは正しく動作しないので、フォントの存在をチェックしなければなりません:
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 スタイル付きテキストをスタイルなしのArial Normalフォント、サイズ12、最大幅600ピクセルで印刷したいとします:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
  TEXT TO ARRAY($RawText;TextArray;600;"Arial";12)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 400ピクセル幅のエリアを印刷します。テキストは最大80行で可能な限り大きなフォント (最大24ポイント) を使用します:
 
@@ -103,13 +103,13 @@ displayed_sidebar: docs
  Until($n<=80)
 ```
 
-#### 参照 
+## 参照 
 
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

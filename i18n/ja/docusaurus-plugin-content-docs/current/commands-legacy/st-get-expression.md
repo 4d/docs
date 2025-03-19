@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST Get expression.Summary-->**ST Get expression**コマンドは、*object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数内のカレントセレクションの中で、最初に見つけた 4D 式を返します。<!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 選択範囲の中に4D式が何もない場合、コマンドは空の文字列を返します。
 
-#### 例題 1 
+## 例題 1 
 
 ダブルクリックイベントがあると、4D式が実際にあるかどうかをチェックし、あった場合にはユーザーがそれを変更できるようにその値を取得したダイアログボックスを表示する、という場合:
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ユーザーがリンクをクリックしたときに4Dメソッドを実行したい場合:
 
@@ -88,11 +88,11 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

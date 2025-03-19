@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->La commande **PRINTERS LIST** remplit le ou les tableau(x) passé(s) en paramètre(s) avec les noms ainsi que, facultativement, les emplacements ou les noms personnalisés et les modèles des imprimantes disponibles pour le poste.<!-- END REF-->
 
@@ -35,16 +35,16 @@ Utilisez les commandes [SET CURRENT PRINTER](set-current-printer.md) et [Get cur
 Sous Windows, le nom d’une imprimante peut être modifié manuellement au niveau du système d’exploitation. En revanche, son emplacement et son modèle sont liés à ses caractéristiques physiques. Vous pouvez donc utiliser les valeurs des tableaux optionnels pour vérifier les caractéristiques de l’imprimante sélectionnée — typiquement, vous pouvez vérifier que tous les clients utilisent la même imprimante.  
 Sous macOS, cette vérification peut s’effectuer sur le nom de l’imprimante (nom du serveur d’impression), qui est le même pour chaque poste connecté.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la commande a été exécutée correctement, sinon elle prend la valeur 0 et les tableaux sont retournés vides. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

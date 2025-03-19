@@ -15,7 +15,7 @@ title: VP SET FIELD
 | フィールド         | Pointer | -> | 仮想ストラクチャーのフィールドへの参照 |                  |
 | formatPattern | Text    | -> | フィールドのフォーマット        | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET FIELD` コマンドは、<!-- REF #_method_.VP SET FIELD.Summary -->指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます<!-- END REF -->。
 
@@ -25,13 +25,13 @@ title: VP SET FIELD
 
 任意の *formatPattern* 引数は、*field* 引数に対するパターンを定義します。 有効な [カスタムフォーマット](../configuring.md#セルフォーマット) を渡すことができます。
 
-#### 例題
+## 例題
 
 ```4d
 VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 ```
 
-#### 参照
+## 参照
 
 [VP SET VALUE](vp-set-value.md)
 

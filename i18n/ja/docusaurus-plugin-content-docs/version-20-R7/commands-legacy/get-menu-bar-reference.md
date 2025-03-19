@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu bar reference.Summary-->**Get menu bar reference** コマンドはカレントのメニューバーあるいは指定されたプロセスのメニューバーのIDを返します。<!-- END REF-->
 
@@ -32,15 +32,15 @@ displayed_sidebar: docs
 
 *process* 引数は、カレントのメニューバーIDを取得するプロセスを指定するために使用できます。この引数を省略すると、コマンドはカレントプロセスのメニューバーIDを返します。
 
-#### 例題 
+## 例題 
 
 [GET MENU ITEMS](get-menu-items.md "GET MENU ITEMS") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [SET MENU BAR](set-menu-bar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

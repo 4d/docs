@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET HELP MENU.Summary-->The **SET HELP MENU** command allows you to replace the default 4D **Help** menu with the *menuCol* collection of menu items in the application mode.<!-- END REF--> 
 
@@ -40,7 +40,7 @@ The customized **Help** menu will display items in the same order as the collect
 
 To insert a separator line, pass **null** or an empty object in the collection. 
 
-#### Example 
+## Example 
 
 You want to customize the **Help** menu for your application:
 
@@ -56,11 +56,11 @@ You want to customize the **Help** menu for your application:
 
 ![](../assets/en/commands/pict6260534.en.png)
 
-#### See also 
+## See also 
 
 [SET ABOUT](set-about.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

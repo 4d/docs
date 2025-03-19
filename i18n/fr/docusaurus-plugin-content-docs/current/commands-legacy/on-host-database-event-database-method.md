@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->La **On Host Database Event database method** permet aux composants 4D d’exécuter du code lors de l’ouverture et de la fermeture de la base hôte.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Pour traiter un événement, vous devez tester la valeur du paramètre *$1* à l
 
 Ce principe permet aux composants 4D de charger et de sauvegarder des préférences ou des états utilisateurs liés à l’exploitation de la base hôte. 
 
-#### Exemple 
+## Exemple 
 
 Exemple de structure type d’une méthode base sur événement base hôte :
 

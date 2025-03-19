@@ -118,7 +118,7 @@ The current state of the debugger window is automatically saved in the project. 
 - the size and position of the window,
 - the position of the division lines,
 - el [modo de visualización](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -322,7 +322,7 @@ El modo de visualización que se utilizará para todas las ventanas del depurado
 Las siguientes opciones están disponibles:
 
 - **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Expresiones de línea**: muestra y evalúa automáticamente el mismo contenido que el elemento [Expresiones de línea](#line-expressions) de la Lista de expresiones.
 - **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Gestión de expresiones
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
+You can enter any expression to evaluate. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pinning-an-expression).
 
 Hay varias formas de añadir expresiones a la lista:
 

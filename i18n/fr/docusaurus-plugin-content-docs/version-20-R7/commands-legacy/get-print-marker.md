@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get print marker.Summary-->La commande **Get print marker** permet de récupérer la position courante d’un taquet lors d’une impression.<!-- END REF--> Les coordonnées sont retournées en pixels (1 pixel = 1/72 pouce). 
 
@@ -51,16 +51,16 @@ Passez dans le paramètre *numTaquet* une des constantes du thème "*Zone de for
 | Form header8  | Entier long | 208    |
 | Form header9  | Entier long | 209    |
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l’exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ title: Forms
 
 - **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
-- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources-フォルダー) に保存します。 例:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). 例:
 
 ```
 {

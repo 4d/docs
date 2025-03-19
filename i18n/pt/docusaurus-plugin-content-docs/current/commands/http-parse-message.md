@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 The `HTTP Parse message` command <!--REF #_command_.HTTP Parse message.Summary-->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
 
@@ -34,7 +34,7 @@ HTTP em si, é um protocolo de comunicação sem estado. Neste quadro, os client
 
 :::
 
-#### Exemplo
+## Exemplo
 
 No exemplo a seguir, analisamos os dados de um arquivo de texto que contém solicitações HTTP.
 
@@ -80,7 +80,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 //}
 ```
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

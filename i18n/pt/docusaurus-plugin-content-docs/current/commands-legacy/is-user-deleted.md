@@ -14,23 +14,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is user deleted.Summary-->O comando Is user deleted testa a conta de usuário cujo número de identificação único se passa em *numUsuario*.<!-- END REF-->  
 
 Se a conta de usuário não existir ou tiver sido apagada, Is user deleted retorna TRUE. Do contrário, retorna FALSE.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se não tiver os privilégios de acesso adequados para chamar Is user deleted ou se o sistema de Senhas já tiver sido acessado por outro processo, um erro de privilégio de acesso será gerado. Você pode interceptar o erro com um método de gestão de erros instalado usando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [DELETE USER](delete-user.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

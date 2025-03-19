@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** remplace le filtre de saisie pour *objet* par *filtreSaisie* dans le formulaire courant affiché à l'écran.<!-- END REF--> 
 
@@ -29,19 +29,19 @@ Pour enlever un filtre, passez une chaîne vide dans le paramètre *filtreSaisie
 
 **Note :** Pour pouvoir exploiter les filtres de saisie que vous avez créés dans la Boîte à outils, préfixez le nom du filtre, dans le paramètre *filtreSaisie*, d'une barre verticale (|). 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant définit le filtre de saisie pour le champ code postal. Si l'adresse se trouve en France, le filtre est paramétré pour les codes postaux français. Sinon, le filtre peut accepter toute valeur saisie :   
 
 ```4d
  If(Pays="France") // Fixer le filtre au format du code postal français
-    OBJECT SET FILTER([Sociétés]Code postal;"&#####")
+    OBJECT SET FILTER([Sociétés]Code postal;"&###")
  Else // Fixer le filtre pour qu'il accepte toute valeur alphanumérique
     OBJECT SET FILTER([Sociétés]Code postal;"~@")
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant autorise uniquement la saisie des lettres “a”, “b”, “c” ou “g” dans un champ comportant deux lettres : 
 
@@ -51,12 +51,12 @@ L'exemple suivant autorise uniquement la saisie des lettres “a”, “b”, �
 
 **Note :** Cet exemple définit le filtre de saisie *&"a;b;c;g"##*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

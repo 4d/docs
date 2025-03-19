@@ -13,7 +13,7 @@ title: VP INSERT COLUMNS
 | ---------- | ------ | -- | ----------- | ---------------- |
 | rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->insère les colonnes définies dans l'objet *rangeObj*<!-- END REF -->.
 
@@ -21,7 +21,7 @@ Dans *rangeObj*, passer un objet contenant une plage de la colonne de début (la
 
 De nouvelles colonnes sont insérées sur la gauche, directement avant la première colonne de *rangeObj*.
 
-#### Exemple
+## Exemple
 
 Pour insérer 3 colonnes avant la deuxième colonne :
 
@@ -33,7 +33,7 @@ Le résultat est le suivant :
 
 ![](../../assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
-#### Voir également
+## Voir également
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>

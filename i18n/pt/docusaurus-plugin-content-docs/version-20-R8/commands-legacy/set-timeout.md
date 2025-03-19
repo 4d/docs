@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET TIMEOUT.Summary-->O comando SET TIMEOUT especifica quanto tempo um comando de porta serial tem para terminar.<!-- END REF--> Se o comando da porta serial não for concluído dentro do tempo especificado, em *segundos*, o comando da porta serial é cancelado, um erro -9990 é gerado, e a variável de sistema OK é definida como 0\. Você pode pegar o erro com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
@@ -25,7 +25,7 @@ Os comandos que são afetados pela configuração de tempo limite são:
 * [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")
 * [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir define a porta serial para receber dados. Em seguida, ele define um limite de tempo. Os dados são lidos com [RECEIVE PACKET](receive-packet.md). Se os dados não forem recebidos em tempo, ocorre um erro:
 
@@ -42,7 +42,7 @@ O exemplo a seguir define a porta serial para receber dados. Em seguida, ele def
  ON ERR CALL("")
 ```
 
-#### Ver também 
+## Ver também 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -50,7 +50,7 @@ O exemplo a seguir define a porta serial para receber dados. Em seguida, ele def
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

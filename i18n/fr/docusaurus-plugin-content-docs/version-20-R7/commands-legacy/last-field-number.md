@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Last field number.Summary-->La commande **Last field number** retourne le numéro de champ le plus élevé parmi les champs de la table dont le numéro ou le pointeur est passé dans le paramètre *numTable* ou *ptrTable*.<!-- END REF-->
 
 Les champs sont numérotés dans l'ordre où ils ont été créés. Si aucun champ n’a été supprimé dans la table, cette commande retourne donc le nombre de champs que contient la table. Dans le cadre de boucles itératives sur les numéros de champs de la table, vous devez utiliser la commande [Is field number valid](is-field-number-valid.md) afin de vérifier que le champ n’a pas été supprimé.
 
-#### Exemple 
+## Exemple 
 
 La méthode projet suivante crée le tableau *taChamps* avec les noms des champs de la table dont le pointeur est reçu en paramètre :
 
@@ -36,14 +36,14 @@ La méthode projet suivante crée le tableau *taChamps* avec les noms des champs
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

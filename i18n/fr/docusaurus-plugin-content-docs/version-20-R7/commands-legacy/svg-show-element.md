@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->La commande **SVG SHOW ELEMENT** déplace le document SVG *objetImage* de façon à rendre visible l’élement dont l’attribut "id" est désigné par le paramètre *id*.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ Cette commande n’a d’effet qu’en mode d’affichage "top left" (avec barre
 Si la commande est exécutée en-dehors du contexte d'un formulaire ou si un *objetImage* invalide est passé, la variable OK prend la valeur 0\. Si la commande a été exécutée correctement, elle prend la valeur 1\. 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

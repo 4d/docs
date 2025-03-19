@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->La commande **VARIABLE TO VARIABLE** écrit la valeur de la ou des variable(s) *varSource1* (*varSource2*, etc.), dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont vous avez passé le numéro dans *process*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Pour chaque association *varDestination;varSource*, le type de la variable sourc
 
 Lorsque le process courant écrit les variables du process de destination, ce dernier n'est averti en aucune manière de l'écriture de l'instance de ses variables par un autre process.
 
-##### Restrictions 
+### Restrictions 
 
 **VARIABLE TO VARIABLE** n'accepte pas de variables locales comme variables de destination. 
 
@@ -42,7 +42,7 @@ Lorsque le process courant écrit les variables du process de destination, ce de
 
 Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, une erreur est retournée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant récupère un tableau process depuis le process désigné par *$vlProcess*, passe séquentiellement tous ses éléments en caractères majuscules puis réécrit entièrement le tableau :
 
@@ -54,13 +54,13 @@ L'exemple suivant récupère un tableau process depuis le process désigné par 
  VARIABLE TO VARIABLE($vlProcess;at_IPCom_Tab;$anTab)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Introduction aux process*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

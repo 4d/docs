@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Num.Summary-->O comando Num devolve em forma numérica a expressão de tipo cadeia, booleano, ou numérica que passou em *expressao*.<!-- END REF--> O parâmetro opcional *separador* pode ser utilizado para determinar um separador decimal para a avaliação das expressões de tipo cadeia.  
   
@@ -44,7 +44,7 @@ Se passar uma expressão numérica no parâmetro *expressao*, Num devolve o valo
 **Expressões indefinidas**  
 Se a *expressao* for avaliada como indefinida, o comando devolve 0 (zero). Isso é útil quando se espera que o resultado de uma expressão (por exemplo, um atributo objeto) seja um número, mesmo se puder ser indefinido.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo ilustra como funciona Num quando for passado um argumento de tipo cadeia. Cada linha atribui um número à variável *vResult*. Os comentários descrevem os resultados: 
 
@@ -57,7 +57,7 @@ O exemplo abaixo ilustra como funciona Num quando for passado um argumento de ti
  vResult:=Num("-123e2") // vResult vale -12300
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Neste exemplo, *\[Cliente\]Dívida* é comparado com o valor *$1000*. O comando Num aplicado a esta comparação devolve 1 ou 0\. A multiplicação de uma cadeia por 1 ou 0 devolve a cadeia ou a cadeia vazia. Como resultado, *\[Cliente\]Risco* recebe o valor “Aceitável” ou “Inaceitável”:   
   
@@ -67,7 +67,7 @@ Neste exemplo, *\[Cliente\]Dívida* é comparado com o valor *$1000*. O comando 
  [Cliente]Risco:=("Aceitável"*Num([Cliente]Dívida<1000))+("Inaceitável"*Num([Cliente]Dívida>=1000))
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo compara os resultados obtidos dependendo do separador “atual”: 
 
@@ -80,13 +80,13 @@ Este exemplo compara os resultados obtidos dependendo do separador “atual”:
   // por exemplo, 33 333,33 em um sistema francês
 ```
 
-#### Ver também 
+## Ver também 
 
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Position.Summary-->**Position** コマンドは、*aString* の中で*find* が最初に現われる位置を返します。<!-- END REF-->の中に*find* が見つからない場合は、Positionはゼロ(0) を返します。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 
 **警告:** **Position** に対して@ワイルドカード記号を使用することはできません。例えば、*find*に"abc@" を渡すと、このコマンドは"abc" で始まる文字ではなく、単なる文字として"abc@" を検索します。
 
-#### 例題 1 
+## 例題 1 
 
 Position関数の使用例を次に示します。結果を変数*vlResult*に代入します。コメントは、変数*vlResult*に代入される値についての説明です。  
   
@@ -78,7 +78,7 @@ Position関数の使用例を次に示します。結果を変数*vlResult*に�
  vlResult:=Position("œ";"Bœuf";1;$length) // vlResult =2, $length = 1
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例では*lengthFound*引数を使用して、テキスト中に現れるすべての"aegis" を検索します。
 
@@ -90,7 +90,7 @@ Position関数の使用例を次に示します。結果を変数*vlResult*に�
  Until(vlResult=0)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例題では、ある文字列を全て見つけて、それを置き換える場合を考えます:
 
@@ -111,12 +111,12 @@ Position関数の使用例を次に示します。結果を変数*vlResult*に�
  Until($p<=0) // 戻り値: $string -> Hello Joëlle and Joël!
 ```
 
-#### 参照 
+## 参照 
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

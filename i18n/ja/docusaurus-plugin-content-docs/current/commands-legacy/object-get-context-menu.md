@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->**OBJECT Get context menu**コマンドは、引数 *object* と *\** で指定したオブジェクトの、"コンテキストメニュー"オプションのカレントの状態を返します。<!-- END REF-->
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 *object* で指定したオブジェクトにおいてコンテキストメニューが使用可能になっている場合は **True** を、そうでない場合には **False** を返します。 
 
-#### 参照 
+## 参照 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->**METHOD GET PATHS FORM**コマンドはすべてのフォームオブジェクトとフォームメソッドの内部的なパス名と名前を*arrPaths*配列に返します。<!-- END REF-->フォームメソッドには{formMethod}とラベルが付けられます。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 コマンドが複製されたメソッド名を検知した場合、-9802エラー("オブジェクトパスが固有ではありません")が生成されます。この場合、MSCを使用してデータベースストラクチャーを検証することが望ましいと言えます。
 
-#### 例題 1 
+## 例題 1 
 
 \[Employees\]テーブルの"input"フォームのすべてのオブジェクトをリストします。テーブルフォームメソッド (そしてプロジェクトフォームメソッド) はフォームに属するオブジェクトとして処理される点に留意してください:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
   // [tableForm]/input/bCancel -> オブジェクトメソッド
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "dial"プロジェクトフォームのオブジェクトをリスト:
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
  METHOD GET PATHS FORM(arrPaths;"dial")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 コンポーネントから\[Employees\]テーブル中"input"で始まるフォームのすべてのオブジェクトをリスト:
 
@@ -66,11 +66,11 @@ displayed_sidebar: docs
  METHOD GET PATHS FORM(([Employees];arrPaths;"input@";*)
 ```
 
-#### 参照 
+## 参照 
 
 [FORM GET NAMES](form-get-names.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

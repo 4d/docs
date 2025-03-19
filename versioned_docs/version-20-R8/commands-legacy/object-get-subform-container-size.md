@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->The **OBJECT GET SUBFORM CONTAINER SIZE** command returns the *width* and *height* (in pixels) of a "current" subform object, displayed in the parent form.<!-- END REF-->
 
@@ -27,12 +27,12 @@ The On Resize event is generated in the subform form method if the subform objec
 * If the command is called from a form that is not being used as a subform, it returns the current size of the form window.
 * If the command is called outside of the context of screen display (for example, during form printing), it returns 0 in *width* and *height*.
 
-#### See also 
+## See also 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Lowercase.Summary-->**Lowercase** devolve uma *cadeia* de caracteres igual ao parâmetro *cadeia* com todos os caracteres alfabéticos convertidos para minúsculas.<!-- END REF-->  
 
 O parâmetro opcional *\**, se for passado, indica que os eventuais caracteres acentuados presentes no parâmetro *cadeia* devem ser devolvidas como caracteres em minúsculas com acentos. Como padrão, quando se omite este parâmetro, os caracteres acentuados “perdem” seus acentos depois de que se realiza a conversão.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte método de projeto converte a maiúsculas o primeiro caractere da string ou do texto recebido como parâmetro. Por exemplo, Nom:= Maius ("mário") devolve "Mário". 
 
@@ -35,7 +35,7 @@ O seguinte método de projeto converte a maiúsculas o primeiro caractere da str
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo compara os resultados obtidos de acordo com se é passado ou não o parâmetro *\**: 
 
@@ -44,11 +44,11 @@ Este exemplo compara os resultados obtidos de acordo com se é passado ou não o
  $minhacadeia:=Lowercase("DÉJÀ VU";*) // $minhacadeia é "déjà vu"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Uppercase](uppercase.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

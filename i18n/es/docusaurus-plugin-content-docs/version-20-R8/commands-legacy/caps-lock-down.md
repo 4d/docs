@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Caps lock down.Summary-->Caps lock down devuelve TRUE si la tecla Bloq Mayús está presionada.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 
-#### Ver también 
+## Ver también 
 
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

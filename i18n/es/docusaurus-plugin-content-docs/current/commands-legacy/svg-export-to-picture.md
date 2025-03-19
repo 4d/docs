@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->El comando **SVG EXPORT TO PICTURE** permite guardar en la variable o campo imagen indicado por el parámetro *VarImag* una imagen en formato SVG contenida en un árbol XML.<!-- END REF-->para mayor información sobre el formato SVG, consulte la sección *Presentación de los comandos XML utilitarios* .
 
@@ -31,7 +31,7 @@ El parámetro opcional *tipoExport* permite definir la manera cómo la fuente de
 | Get XML data source  | Entero largo | 0     | 4D sólo lee la fuente de datos XML; no se conserva con la imagen. Esto acelera notablemente la ejecución del comando; sin embargo, como el árbol DOM no se conserva, no es posible guardar o exportar la imagen.                                                              |
 | Own XML data source  | Entero largo | 2     | 4D exporta el árbol DOM con la imagen. La imagen puede almacenarse o exportarse y la ejecución del comando es rápida. Sin embargo, la referencia XML *elementRef* ya no puede ser utilizada por otros comandos 4D.                                                            |
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imagen 4D:
 
@@ -47,12 +47,12 @@ El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imag
 
 ![](../assets/en/commands/pict14520.es.png)
 
-#### Ver también 
+## Ver también 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

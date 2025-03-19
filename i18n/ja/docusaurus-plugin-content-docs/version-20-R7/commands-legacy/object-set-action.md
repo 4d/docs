@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->**OBJECT SET ACTION**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられた標準アクションを、カレントプロセスにおいて変更します。<!-- END REF-->
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** レガシーコンテンツ(テーマ内で \_o\_ の接頭辞がついているもの)は4D v16 R3以降は廃止予定となっています。しかしながら、これらは互換性のためにサポートはされています。
 
-#### 例題 
+## 例題 
 
 ボタンの標準アクションを**OK**に設定したい場合、以下のように記述します:
 
@@ -84,11 +84,11 @@ displayed_sidebar: docs
  OBJECT SET ACTION(*;"bValidate";ak accept)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get action](object-get-action.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Find XML element.Summary-->La commande **DOM Find XML element** vous permet de rechercher des éléments XML spécifiques dans une structure XML.<!-- END REF--> La recherche débute à l’élément désigné par le paramètre *refElément*.
 
@@ -51,7 +51,7 @@ Le noeud XML à chercher est défini et exprimé en notation XPath à l'aide du 
 
 La commande retourne la référence XML de(s) élément(s) trouvé(s). Lorsque le tableau chaîne *tabRefEléments* est passé, la commande le remplit avec la liste des références XML trouvées. Dans ce cas, la commande retourne en résultat le premier élément du tableau *tabRefEléments*. Ce paramètre est utile lorsque plusieurs éléments de même nom existent à l’emplacement désigné par le paramètre *xPath*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Soit la structure XML suivante :
 
@@ -77,7 +77,7 @@ La même recherche peut également être effectuée ainsi :
  ALERT("La valeur de l’élément est : \""+valeur+"\"") // Apprendre le XML
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit la structure XML suivante : 
 
@@ -93,7 +93,7 @@ Le code suivant permet de récupérer la référence de chaque élément Elem2 d
  vTrouvé:=DOM Find XML element(vRefElem;"/Racine/Elem1/Elem2";tAtrouvés)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez sélectionner tous les éléments "rect" avec des attributs "class" contenant la chaîne "bgcontainer" :
 
@@ -101,23 +101,23 @@ Vous souhaitez sélectionner tous les éléments "rect" avec des attributs "clas
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Une erreur est générée lorsque :
 
 * la référence de l’élément n’est pas valide
 * le chemin xPath passé n’est pas valide.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RECEIVE RECORD.Summary-->**RECEIVE RECORD** ajoute dans *laTable* un enregistrement reçu par l'intermédiaire du port série ou d'un document ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> L'enregistrement doit avoir été envoyé par la commande [SEND RECORD](send-record.md). Lorsque vous exécutez **RECEIVE RECORD**, un nouvel enregistrement est automatiquement créé dans *laTable*. Si l'enregistrement a été correctement reçu, vous pouvez le sauvegarder à l'aide de [SAVE RECORD](save-record.md).
 
@@ -26,7 +26,7 @@ L'enregistrement est reçu en totalité, ce qui signifie que les images et BLOBs
 1. Si vous recevez un enregistrement provenant d'un document avec cette commande, le document doit avoir été ouvert par la commande [SET CHANNEL](set-channel.md). Vous ne pouvez pas utiliser **RECEIVE RECORD** avec un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md).
 2. Pendant l'exécution d'un **RECEIVE RECORD**, l'utilisateur peut interrompre l'opération en appuyant sur les touches **Ctrl**+**Alt**+**Maj** (sous Windows) ou **Commande**+**Option**+**Maj** (sous Mac OS). Cette interruption génère une erreur -9994 que vous pouvez intercepter à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Généralement, vous devez gérer les interruptions d'une réception uniquement lors d'une communication série.
 
-#### Exemple 
+## Exemple 
 
 L'utilisation combinée de [SEND VARIABLE](send-variable.md), [SEND RECORD](send-record.md), [RECEIVE VARIABLE](receive-variable.md) et **RECEIVE RECORD** est idéale pour archiver des données ou échanger des données entre des bases monopostes identiques utilisées à différents endroits. Certes, vous pouvez échanger des données entre des bases 4D à l'aide des commandes d'import/export telles que [EXPORT TEXT](export-text.md) et [IMPORT TEXT](import-text.md). Cependant, si vos données contiennent des images et/ou des tables liées, l'utilisation de [SEND RECORD](send-record.md) et **RECEIVE RECORD** est, de loin, plus pratique. 
 
@@ -143,17 +143,17 @@ Voici la méthode projet (simplifiée) d'import de la documentation :
 
 Notez que nous n'avons pas testé la variable OK pendant la réception des données, ni intercepté les éventuelles erreurs. Cependant, comme nous avons stocké dans le document des variables décrivant le document lui-même, si ces variables, une fois reçues, sont correctes, la probabilité d'erreur est très faible. Si par exemple un utilisateur ouvre un mauvais document, le premier test stoppe l'opération entière.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si l'enregistrement est correctement reçu, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get Application color scheme.Summary-->O comando **Get Application color scheme** retorna o nome do esquema de cor atual para uso ao nível da aplicação.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ O parâmetro *\** é útil quando o comando for chamado de um componente: quando
 
 Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) para detalhes sobre os nomes de esquema de cores. 
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
  var $colorScheme : Text
@@ -39,12 +39,12 @@ Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-col
  $colorScheme:=Get Application color scheme(*)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->La commande **RECEIVE PACKET** lit des caractères depuis un port série ou un document.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Lors de la lecture d'un document, le premier **RECEIVE PACKET** commence par lir
 
 En cas de tentative de lecture après la fin d'un document, **RECEIVE PACKET** retourne les données lues jusqu'à ce point et la variable système OK prend la valeur 1\. Les **RECEIVE PACKET** suivants retourneront une chaîne vide et OK prendra la valeur zéro.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant lit 20 caractères depuis un port série et les place dans la variable RécupVingt :
 
@@ -52,7 +52,7 @@ L'exemple suivant lit 20 caractères depuis un port série et les place dans la 
  RECEIVE PACKET(RécupVingt;20)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant lit des données depuis le document référencé par la variable MonDoc et les place dans la variable *vData*. La commande récupère les données jusqu'à ce qu'elle rencontre un retour chariot :
 
@@ -60,7 +60,7 @@ L'exemple suivant lit des données depuis le document référencé par la variab
  RECEIVE PACKET(MonDoc;vData;Char(Carriage return))
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant lit des données du document référencé par la variable MonDoc et les place dans la variable *vData*. La commande récupère les données jusqu'à ce qu'elle rencontre une balise HTML de fin de tableau (*</TD>*) : 
 
@@ -68,7 +68,7 @@ L'exemple suivant lit des données du document référencé par la variable MonD
  RECEIVE PACKET(MonDoc;vData;"")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant lit des données d'un document et les place dans des champs. Les données sont stockées dans des champs de longueur fixe. La méthode fait appel à une sous-routine pour éliminer les espaces superflus (situés derrière les valeurs). Le code de la sous-routine est présenté après la méthode : 
 
@@ -100,11 +100,11 @@ Les espaces superflus derrière les valeurs sont éliminés par la méthode suiv
  $0:=Delete string($1;-$i;Length($1)) // Suppression des espaces
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Après un appel à **RECEIVE PACKET**, la variable système OK prend la valeur 1 si le paquet est reçu sans erreur. Sinon, OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -113,7 +113,7 @@ Après un appel à **RECEIVE PACKET**, la variable système OK prend la valeur 1
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

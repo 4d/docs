@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->WA SET PREFERENCE コマンドを使用して、引数 *\** と *object* によって指定されたWebエリアに対して、さまざまな環境設定を行います。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 各環境設定を起動するには*value* 引数に **True** を渡し、無効にするには**False** を渡します。
 
-#### 例題 
+## 例題 
 
 'myarea' というWebエリア内でURLドロップを有効化したい場合:
 
@@ -46,11 +46,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

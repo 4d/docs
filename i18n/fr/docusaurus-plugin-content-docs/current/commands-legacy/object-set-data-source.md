@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->La commande **OBJECT SET DATA SOURCE** vous permet de modifier la source de données de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Dans le cas des list box, les points suivants sont à considérer :
 
 Si la commande est appliquée à une source de données non modifiable, elle ne fait rien. 
 
-#### Exemple 
+## Exemple 
 
 Modification de la source de données d’une zone de saisie :
 
@@ -45,12 +45,12 @@ Modification de la source de données d’une zone de saisie :
  OBJECT SET DATA SOURCE(*;"Input";$ptrChp)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->La commande **CONVERT COORDINATES** permet de convertir les coordonnées (x;y) d'un point depuis un système de coordonnées vers un autre système de coordonnées.<!-- END REF--> Les systèmes de coordonnées pris en charge sont les formulaires (ainsi que les sous-formulaires), les fenêtres et l'écran. Par exemple, vous pouvez utiliser cette commande pour obtenir les coordonnées, dans le formulaire principal, d'un objet appartenant à un sous-formulaire. Ce principe facilite notamment la création de menus contextuels à des emplacements personnalisés. 
 
@@ -43,7 +43,7 @@ Lorsque le sélecteur *depuis* contient XY Current form et que le point à conve
 * Si la commande est appelée en-dehors de l'événement On Display Detail mais qu'un enregistrement est en cours de modification, le point résultant est situé dans le périmètre d'affichage de l'enregistrement en cours d'édition.
 * Sinon, le point résultant est situé dans le périmètre d'affichage du premier enregistrement.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "MonObjet" :
 
@@ -66,7 +66,7 @@ Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la souris. Sous Windows, vous devez convertir les coordonnées car [MOUSE POSITION](mouse-position.md) (avec le paramètre \*) retourne des valeurs basées sur la position de la fenêtre MDI :
 
@@ -80,14 +80,14 @@ Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la sour
  CLOSE WINDOW($window)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

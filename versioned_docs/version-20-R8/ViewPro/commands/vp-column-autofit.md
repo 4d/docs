@@ -12,13 +12,13 @@ title: VP COLUMN AUTOFIT
 |---|---|---|---|
 |rangeObj| Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in *rangeObj* according to their contents<!-- END REF -->.
 
 In *rangeObj*, pass a range object containing a range of the columns whose size will be automatically handled.
 
-#### Example  
+## Example  
 
 The following columns are all the same size and don't display some of the text:
 
@@ -34,7 +34,7 @@ Selecting the columns and running this code:
 
 ![](../../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
-#### See also
+## See also
 
 [VP ROW AUTOFIT](vp-row-autofit.md)
 

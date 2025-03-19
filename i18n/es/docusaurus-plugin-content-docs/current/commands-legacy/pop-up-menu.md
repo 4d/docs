@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Pop up menu.Summary-->El comando Pop up menu muestra un menú pop up en la ubicación actual del ratón.<!-- END REF-->
 
@@ -56,7 +56,7 @@ Si selecciona un elemento de menú, el comando devuelve su número; de lo contra
 
 **Nota:** utilice los menús pop up con un número razonable de elementos. Si quiere mostrar más de 50 elementos, puede utilizar mejor un área de desplazamiento en un formulario.
 
-#### Ejemplo 
+## Ejemplo 
 
 El método de proyecto MI MENU RAPIDO hace aparecer un menú de navegación pop up:
 
@@ -98,12 +98,12 @@ El siguiente es el menú pop-up tal como aparece en Windows (izquierda) y Macint
 
 ![](../assets/en/commands/pict36394.es.png)
 
-#### Ver también 
+## Ver también 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

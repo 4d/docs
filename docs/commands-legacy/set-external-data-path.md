@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->The **SET EXTERNAL DATA PATH** command sets or modifies, for the current record, the external storage location for the *aField* field passed as parameter.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Once this command is executed, 4D automatically maintains the link between the f
 
 **Note:** The **SET EXTERNAL DATA PATH** command can only be executed on a local 4D or on 4D Server. It does nothing when it is executed on a remote 4D.
 
-#### Example 
+## Example 
 
 You want to save an existing file in the picture field, stored outside of the data, in the database folder:
 
@@ -58,12 +58,12 @@ You want to save an existing file in the picture field, stored outside of the da
  SAVE RECORD([Photos])
 ```
 
-#### See also 
+## See also 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

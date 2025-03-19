@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Pasteboard data size.Summary-->O comando Pasteboard data size permite testar se hay dados do tipo *tipoDatos* na área de transferência.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ Depois de verificar que a área de transferência contém dados do tipo que dese
 * Se o clipboard contém uma rota de acesso ao arquivo, pode extraí-la utilizando o comando [Get file from pasteboard](get-file-from-pasteboard.md) , que devolve a rota de acesso do arquivo.
 * Para qualquer outro tipo de dados, utilize o comando [GET PASTEBOARD DATA](get-pasteboard-data.md), o qual devolve os dados em um BLOB.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O código a seguir prova se a área de transferência contém uma imagem jpeg e se for assim, copia a imagem em uma variável 4D:   
   
@@ -42,7 +42,7 @@ O código a seguir prova se a área de transferência contém uma imagem jpeg e 
 ```
   
   
-#### Exemplo 2 
+## Exemplo 2 
 
 Geralmente, as aplicações cortam e copiam dados de tipo TEXT ou PICT na área de transferência, porque a maioria das aplicações reconhecem estes dois tipos de dados padrão. Entretanto, uma aplicação pode colocar na área de transferência várias instâncias dos mesmos dados em formatos diferentes. Por exemplo, cada vez que corta ou copia parte de uma folha de cálculo, a aplicação da folha de cálculo pode colocar os dados em um formato hipotético ‘SPSH’, como também nos formatos SYLK e TEXT. A instância ‘SPSH’ contém os dados estruturados no formato utilizado pela aplicação. A cópia SYLK contém os mesmos dados, mas no formato SYLK, reconhecido pela maioria dos outros programas de folhas de cálculo. Por último, o formato TEXT contém os mesmos dados, sem a informação extra incluída no formato SYLK ou no formato hipotético ‘SPSH’. Neste ponto, quando escreva rotinas de Cortar/Copiar/Colar entre 4D e uma aplicação de folha de cálculo hipotética, assumindo que conhece a descrição do formato ‘SPSH’ e que está preparado para analizar os dados SYLK, pode escrever o código a seguir: 
 
@@ -62,7 +62,7 @@ Geralmente, as aplicações cortam e copiam dados de tipo TEXT ou PICT na área 
 
 Em outras palavras, você tenta extrair da área de transferência a instância de dados que tenha mais informação original.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser arrastar alguns dados privados de diferentes objetos em seu formulário pode escrever:
 
@@ -80,18 +80,18 @@ Se quiser arrastar alguns dados privados de diferentes objetos em seu formulári
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver também 
+## Ver também 
 
 *Área de trabalho*  
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

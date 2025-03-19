@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->FORM GET PROPERTIES コマンドは*formName*フォームのプロパティを返します。<!-- END REF-->
 
@@ -36,13 +36,13 @@ displayed_sidebar: docs
 
 *title* 引数には、フォームエディターのプロパティリスト内で定義されているフォームのウインドウタイトルを返します。名前が定義されていないと*title*引数に空文字を返します。
 
-#### 参照 
+## 参照 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

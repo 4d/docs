@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST KEY.Summary-->La commande **POST KEY** simule la frappe d'une touche sur le clavier.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur tape réellement un caractère au clavier. 
 
@@ -50,18 +50,18 @@ Par exemple, pour simuler la touche Majuscule, passez la valeur Shift key mask.
 
 Si vous passez le paramètre *process*, la frappe clavier est envoyée au process dont le numéro de référence est spécifié. Si vous passez *0* (zéro) dans ce paramètre ou si vous l'omettez, la frappe clavier est envoyée au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 *Codes ASCII*  
 *Codes des touches de fonction*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

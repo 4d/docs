@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->The **QR SET AREA PROPERTY** command shows or hides the interface element whose reference is passed in *property*.<!-- END REF-->
 
@@ -30,11 +30,11 @@ You can use the following constant from the *QR Area Properties* theme in *prope
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *property* parameter, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR Get area property](qr-get-area-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->O comando QR SET TEXT PROPERTY permite definir as propriedades de texto da célula determinada pelos parâmetros *numColuna* e *numLinha*.<!-- END REF-->  
   
@@ -62,7 +62,7 @@ Se o parâmetro *numColuna* incorreto, se gera o erro -9852.
 Se o parâmetro *numLinha* incorreto, se gera o erro -9853.  
 Se o parâmetro *propriedade* incorreto, se gera o erro -9854.
 
-#### Exemplo 
+## Exemplo 
 
 Este método define vários atributos para o título da primeira coluna:
 
@@ -81,11 +81,11 @@ Este método define vários atributos para o título da primeira coluna:
  QR SET TEXT PROPERTY(qr_area;1;-1;qr text color;0x0000FF00)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR Get text property](qr-get-text-property.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

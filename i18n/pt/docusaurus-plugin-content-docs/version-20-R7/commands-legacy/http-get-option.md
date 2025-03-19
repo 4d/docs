@@ -21,7 +21,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 :::
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP GET OPTION.Summary-->O comando **HTTP GET OPTION** devolve o valor atual das opções HTTP (opções utilizadas pelo cliente para a próxima solicitação provocada pelo comando [HTTP Get](http-get.md) ou [HTTP Request](http-request.md)).<!-- END REF--> O valor atual de uma opção pode ser o valor por defeito ou pode ter sido modificado utilizando o comando [HTTP SET OPTION](http-set-option.md).
 
@@ -41,11 +41,11 @@ Passe no parâmetro *opção* o número da opção cujo valor quer ler. Pode uti
 
 No parâmetro *valor*, passe uma variável para receber o valor atual da *opção*.
 
-#### Ver também 
+## Ver também 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

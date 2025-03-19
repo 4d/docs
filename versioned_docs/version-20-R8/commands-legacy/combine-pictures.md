@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->The **COMBINE PICTURES** command combines the *pict1* and *pict2* pictures in *operator* mode in order to produce a third, *resultingPict*.<!-- END REF--> The resulting picture is of the compound type and keeps all the characteristics of the source pictures.
 
@@ -33,7 +33,7 @@ If the optional *horOffset* and *vertOffset* parameters are used, a translation 
 
 **Note:** Superimposition carried out by the **COMBINE PICTURES** command differs from the superimposition provided by the conventional & and |operators (exclusive and inclusive superimposition). While the **COMBINE PICTURES** command preserves the characteristics of each source picture in the resulting picture, the & and | operators process each pixel and generate a bitmap picture in all cases. These operators, originally intended for black and white pictures, are now obsolete.
 
-#### Example 
+## Example 
 
 Given the following pictures: 
 
@@ -47,11 +47,11 @@ Result:
 
 ![](../assets/en/commands/pict27794.en.png)
 
-#### See also 
+## See also 
 
 [TRANSFORM PICTURE](transform-picture.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

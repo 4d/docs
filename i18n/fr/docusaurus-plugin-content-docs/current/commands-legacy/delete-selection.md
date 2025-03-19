@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE SELECTION.Summary-->La commande **DELETE SELECTION** supprime la sélection courante d'enregistrements de *laTable*.<!-- END REF--> Si la sélection courante est vide, **DELETE SELECTION** ne fait rien. Après la suppression des enregistrements, la sélection courante est vide. Les enregistrements supprimés pendant une transaction sont verrouillés pour les autres utilisateurs et/ou process jusqu'à ce que la transaction soit validée ou annulée. 
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Désélectionner l'option **Enregistrement(s) définitivement supprimé(s)** dans l'Inspecteur des tables vous permet d'augmenter la vitesse des suppressions lors de l'utilisation de **DELETE SELECTION** (cf. paragraphe *Enregistrement(s) définitivement supprimé(s)* dans le manuel *Mode Développement*).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] et permet à l'utilisateur de sélectionner ceux qu'il souhaite effacer. L'exemple est en deux parties. La première est la méthode affichant les enregistrements. La seconde est la méthode objet d'un bouton 'Supprimer'. Voici la première méthode : 
 
@@ -44,7 +44,7 @@ Voici la méthode objet du bouton Supprimer, apparaissant dans le pied de page d
  ALL RECORDS([Personnes]) // Sélection de tous les enregistrements
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci n'est pas supprimé. Tous les enregistrements verrouillés sont placés dans un ensemble système nommé LockedSet. Après l'exécution de **DELETE SELECTION**, vous pouvez tester cet ensemble afin de vérifier si des enregistrements étaient verrouillés. La boucle suivante s'exécutera jusqu'à ce que tous les enregistrements aient été supprimés.
 
@@ -57,7 +57,7 @@ Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci
  Until(Records in set("LockedSet")=0) // Jusqu'à ce qu'il n'y en ait plus
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
@@ -65,7 +65,7 @@ Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci
 [TRUNCATE TABLE](truncate-table.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

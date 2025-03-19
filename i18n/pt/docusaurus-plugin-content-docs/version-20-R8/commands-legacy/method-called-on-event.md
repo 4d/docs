@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Method called on event.Summary-->O comando Method called on event devolve o nome do método instalado pelo comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").<!-- END REF--> 
 
 Se nenhum método do tipo for instalado, uma cadeia vazia ("") é retornada.
 
-#### Ver também 
+## Ver também 
 
 [ON EVENT CALL](on-event-call.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

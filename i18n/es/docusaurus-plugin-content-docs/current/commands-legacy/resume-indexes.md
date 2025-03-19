@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->El comando **RESUME INDEXES** reactiva todos los índices de la *tabla* cuando se han detenido anteriormente utilizando el comando [PAUSE INDEXES](pause-indexes.md).<!-- END REF--> Si los índices de *tabla* no se han detenido, el comando no hace nada.  
   
@@ -23,12 +23,12 @@ Si pasa el parámetro opcional *\**, la reconstrucción de los índices se reali
   
 El comando **RESUME INDEXES** sólo se puede llamar desde 4D Server o un 4D local. Si este comando se ejecuta desde un equipo 4D remoto, se genera el error -10513\. Este error puede ser interceptado utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).
 
-#### Ver también 
+## Ver también 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ title: VP SET FROZEN PANES
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `VP SET FROZEN PANES` コマンドは、<!-- REF #_method_.VP SET FROZEN PANES.Summary -->*vpAreaName* 引数で指定した View Pro エリア内の、*paneObj* 引数のカラムと行の固定化ステータスを設定します<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 そのカラムと行が固定化されていることを示すために、太い実線が表示されます。 実線の位置は、固定化されたカラムまたは行がシートのどこにあるかによって変わります:
 
@@ -39,7 +39,7 @@ title: VP SET FROZEN PANES
 
 - `vk current sheet`
 
-#### 例題
+## 例題
 
 左側の最初の 3つのカラム、右側にある 2つのカラム、そして最初の行を固定化します:
 
@@ -56,6 +56,6 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 ![](../../assets/en/ViewPro/cmd_vpSetFrozenPanes.PNG)
 
-#### 参照
+## 参照
 
 [VP Get frozen panes](vp-get-frozen-panes.md)

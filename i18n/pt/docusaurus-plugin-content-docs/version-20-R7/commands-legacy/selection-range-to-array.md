@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** cria um ou mais arrays e copia os dados dos campos ou números de registro da seleção atual para os arrays.<!-- END REF--> 
 
@@ -59,7 +59,7 @@ Se você carregar um número de registros, eles são copiados para um array Inte
 
 Se o comando for bem sucedido, o tamanho de cada matriz resultante é igual a *(fim-inicio)+1*, exceto se o parâmetro *fim* excedeu o número de registros da seleção. Nesse caso, cada array resultante contém *(Registros em seleção(\[...\])-inicio)+1* elementos.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O código a seguir endereça os 50 primeiros registros da seleção atual para a tabela *\[Faturas\].* Ele carrega os valores do campo *\[Faturas\]Fatura ID* e de *\[Clientes\]Cliente ID* do campo relacionado.
 
@@ -67,7 +67,7 @@ O código a seguir endereça os 50 primeiros registros da seleção atual para a
  SELECTION RANGE TO ARRAY(1;50;[Faturas]Faturas ID;alInvoID;[Clientes]Clientes ID;alCustID)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O código a seguir endereça os últimos 50 registros da seleção atual para a tabela *\[Faturas\]*. Ele carrega os números de registro da tabela *\[Faturas\]*, bem como as do registros relacionados de *\[Clientes\]*:
 
@@ -76,7 +76,7 @@ O código a seguir endereça os últimos 50 registros da seleção atual para a 
  SELECTION RANGE TO ARRAY(lSelTam-49;lSelTam;[Faturas];alFacRegN;[Faturas];alCliRegN)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O seguinte processo de código seqüencial divice em "pedaços" de 1.000 registros, uma seleção que não podia ser baixada na íntegra em arrays:
 
@@ -90,7 +90,7 @@ O seguinte processo de código seqüencial divice em "pedaços" de 1.000 registr
  End for
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Use os 50 primeiros registros atuais da tabela \[facturas\] para carregar vários arrays, em execução diferida:
 
@@ -103,13 +103,13 @@ Use os 50 primeiros registros atuais da tabela \[facturas\] para carregar vário
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-#### Ver também 
+## Ver também 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->LISTBOX COLLAPSE コマンドを使用して *object*と*\** で指定したリストボックスのブレーク行を折りたたみます。<!-- END REF-->
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 選択あるいはリストボックスがブレーク行を含んでいないか、すべてのブレーク行がすでに折りたたまれている場合、コマンドはなにも行いません。
 
-#### 例題 
+## 例題 
 
 この例はリストボックス中、選択されたブレーク行の第一レベルを折りたたみます:
 
@@ -47,11 +47,11 @@ displayed_sidebar: docs
  LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX EXPAND](listbox-expand.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

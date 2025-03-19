@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** は、*aTable* のフィールドや変数の現在の値を使用して *form* 引数で指定したフォームを印刷します。 通常は、印刷処理を完全に制御する必要のある非常に複雑なレポートを印刷するために使用します。 **Print form** はレコード処理、ブレーク処理、改ページ処理を全く行いません。 これらの処理はすべて開発者が行います。 **Print form** は固定されたサイズの枠のなかにフィ－ルドや変数を印刷します。
 
@@ -119,7 +119,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 - サーバマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。
 - プリンタ関連の問題が発生しても (用紙切れ、プリンタ接続切断等) 、エラーメッセージは生成されません。
 
-#### 例題 1
+## 例題 1
 
 以下の例は [PRINT SELECTION](../commands-legacy/print-selection.md)コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
 
@@ -144,11 +144,11 @@ form data オブジェクトについての詳細な情報については、[`DI
  End if
 ```
 
-#### 例題 2
+## 例題 2
 
 [SET PRINT MARKER](../commands-legacy/set-print-marker.md) コマンドの例題参照
 
-#### 例題 3
+## 例題 3
 
 このフォームはダイアログとして使用され、変更されたあと印刷されます:
 
@@ -176,14 +176,14 @@ form data オブジェクトについての詳細な情報については、[`DI
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-#### 参照
+## 参照
 
 [CANCEL](../commands-legacy/cancel.md)\
 [PAGE BREAK](../commands-legacy/page-break.md)\
 [PRINT SETTINGS](../commands-legacy/print-settings.md)\
 [SET PRINT OPTION](../commands-legacy/set-print-option.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                                                 |
 | ------- | --------------------------------------------------------------- |

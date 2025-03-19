@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
@@ -55,7 +55,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
 
 `Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
 
-#### 例題 1
+## 例題 1
 
 単純なフォーミュラの例:
 
@@ -69,7 +69,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $result:=$o.f() // 3 を返します
 ```
 
-#### 例題 2
+## 例題 2
 
 ローカル変数を使用するフォーミュラの例:
 
@@ -81,7 +81,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $result:=$o.f() // 10 を返します
 ```
 
-#### 例題 3
+## 例題 3
 
 引数を用いたシンプルなフォーミュラの例:
 
@@ -90,7 +90,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $result:=$o.f(10;20) // 30 を返します
 ```
 
-#### 例題 4
+## 例題 4
 
 引数を用いたプロジェクトメソッドを使用する例:
 
@@ -99,7 +99,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $result:=$o.f("param1";"param2") // $result:=myMethod("param1";"param2") と同等です
 ```
 
-#### 例題 5
+## 例題 5
 
 `This` を使用する例:
 
@@ -110,7 +110,7 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $result:=$o.fullName() // "John Smith" を返します
 ```
 
-#### 例題 6
+## 例題 6
 
 オブジェクト記法を使用してフォーミュラを呼び出す例:
 
@@ -131,14 +131,14 @@ You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Fo
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
-#### 参照
+## 参照
 
 [4D Blog - フォーミュラ: シンプルさの裏にある、さらなるパワー](https://blog.4d.com/ja/new-formula-more-power-behind-simplicity/)\
 [4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
 [4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

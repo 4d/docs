@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->El comando OBJECT Get enterable devuelve True si el objeto o grupo de objetos designado por *objeto* tiene el atributo **editable**; de lo contrario, devuelve False.<!-- END REF--> 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro objeto es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable (campo o variable objeto únicamente) en lugar de una cadena.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

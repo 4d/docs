@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Expert mode 
+## Expert mode 
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
 
-#### Description 
+## Description 
 
 The **ADJUST INDEX CACHE PRIORITY** command modifies the *priority* value of the index(es) related to the *aField* in cache for the current process. A call to this command replaces any priority value previously adjusted through the same command in the same process. This command adjusts the priority for a temporary need, for example when executing an import or a query. 
 
@@ -36,7 +36,7 @@ Pass one of the following constants from the "*Cache Management*" theme in the *
 | Cache priority high      |                                              |
 | Cache priority very high |                                              |
 
-#### Example 
+## Example 
 
 You want to temporarily change the cache priority for the \[Docs\]Comments field index(es):
 
@@ -48,12 +48,12 @@ You want to temporarily change the cache priority for the \[Docs\]Comments field
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
-#### See also 
+## See also 
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

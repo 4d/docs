@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->O comando QR REPORT TO BLOB coloca o relatório cuja referência foi passada em *area* em um *BLOB* (variável ou campo).<!-- END REF-->
 
 Se passa um número de *area* incorreto, se gera o erro -9850.
 
-#### Exemplo 
+## Exemplo 
 
 A seguinte instrução atribui o relatório rápido armazenado na área MinhaArea a um campo BLOB.
 
@@ -28,11 +28,11 @@ A seguinte instrução atribui o relatório rápido armazenado na área MinhaAre
  QR REPORT TO BLOB(MinhaArea;[Tabela 1]Campo4)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

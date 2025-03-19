@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.License usage.Summary-->**License usage** コマンドは、使用されているライセンスについての情報を格納したオブジェクトのコレクションを返します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 セッションの種類(例えば4D クライアントか、RESTかなど)に応じて、上記の表で説明されている*session* オブジェクトの中身は変化します。詳細については以下を参照してください。
 
-#### 4D クライアントセッションにおけるsessionオブジェクト 
+## 4D クライアントセッションにおけるsessionオブジェクト 
 
 4D セッションについての返されたコレクションの中のそれぞれの要素には、[Process activity](../commands/process-activity.md) コマンドで返されるものと同じセッションオブジェクトが格納されています:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 | ID               | テキスト          | セッションUUID                                                |
 | persistentID     | テキスト          | セッションの永続的なID                                             |
 
-#### SQLセッションにおけるsessionオブジェクト 
+## SQLセッションにおけるsessionオブジェクト 
 
 この表は、SQL セッションでのsession オブジェクトの中身を表しています:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 | userName   | テキスト  | ユーザー名         |
 | userId     | 数値    | ユーザー ID       |
 
-#### RESTセッションにおけるsessionオブジェクト 
+## RESTセッションにおけるsessionオブジェクト 
 
 この表は、REST セッションでのsession オブジェクトの中身を表しています:
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 | isDatastore | ブール   | REST リクエストがデータストアから来たものであればTrue |
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

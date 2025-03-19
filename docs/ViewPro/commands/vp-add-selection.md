@@ -13,7 +13,7 @@ title: VP ADD SELECTION
 |---|---|---|---|
 |rangeObj| Object|->|Range object |<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD SELECTION` command <!-- REF #_method_.VP ADD SELECTION.Summary -->adds the specified cells to the currently selected cells<!-- END REF -->.
 
@@ -21,7 +21,7 @@ In *rangeObj*, pass a range object of cells to add to the current selection.
 
 >The active cell is not modified.
 
-#### Example  
+## Example  
 
 You have cells currently selected:
 
@@ -38,7 +38,7 @@ Result:
 
 ![](../../assets/en/ViewPro/cmd_vpAddSelection2.PNG)
 
-#### See also
+## See also
 
 [VP Get active cell](vp-get-active-cell.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>

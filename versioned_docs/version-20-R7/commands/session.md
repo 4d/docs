@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
 
@@ -35,7 +35,7 @@ For more information, see the [Session types](../command/session.md-types) parag
 
 If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
-#### Web sessions
+## Web sessions
 
 The `Session` object of web sessions is available from any web process:
 
@@ -47,7 +47,7 @@ The `Session` object of web sessions is available from any web process:
 
 For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
 
-#### Remote client sessions
+## Remote client sessions
 
 The `Session` object of remote client sessions is available from:
 
@@ -57,7 +57,7 @@ The `Session` object of remote client sessions is available from:
 
 For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
 
-#### Stored procedures session
+## Stored procedures session
 
 All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
 
@@ -66,7 +66,7 @@ All stored procedure processes share the same virtual user session. The `Session
 
 For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
-#### Example
+## Example
 
 You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". You call the method by entering the following URL in your browser:
 
@@ -94,7 +94,7 @@ IP:port/4DACTION/action_Session
 [Session API](../API/SessionClass.md)  
 [Web server user sessions](../WebServer/sessions.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

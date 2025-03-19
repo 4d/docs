@@ -15,7 +15,7 @@ title: VP SET BORDER
 | borderStyleObj | Object | -> | 境界線スタイルを格納したオブジェクト |                  |
 | borderPosObj   | Object | -> | 境界線の位置を格納したオブジェクト  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET BORDER` コマンドは、<!-- REF #_method_.VP SET BORDER.Summary -->*rangeObj* のレンジに *borderStyleObj* および *borderPosObj* で定義される境界線スタイルを適用します<!-- END REF -->。
 
@@ -42,7 +42,7 @@ title: VP SET BORDER
 | innerHorizontal | boolean | 境界線スタイルは内側の横の境界にのみ適用されます。 |
 | innerVertical   | boolean | 境界線スタイルは内側の縦の境界にのみ適用されます。 |
 
-#### 例題 1
+## 例題 1
 
 以下のコードは、レンジ全体の外周に境界線を生成します:
 
@@ -54,7 +54,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER1.PNG)
 
-#### 例題 2
+## 例題 2
 
 以下のコードは、`VP SET BORDER` と [`VP SET CELL STYLE`](vp-set-cell-style.md) で境界線を設定した場合の違いを示します:
 
@@ -73,6 +73,6 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER2.PNG)
 
-#### 参照
+## 参照
 
 [VP SET CELL STYLE](vp-set-cell-style.md)

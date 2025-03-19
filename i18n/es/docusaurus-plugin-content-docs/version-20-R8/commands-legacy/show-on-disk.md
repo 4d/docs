@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SHOW ON DISK.Summary-->El comando SHOW ON DISK muestra en una ventana estándar del sistema operativo el archivo o la carpeta en la cual la ruta de acceso se pasa en el parámetro *nombreRuta.<!-- END REF-->*  
   
@@ -22,7 +22,7 @@ En una interfaz de usuario, este comando permite designar la ubicación de un ar
 
 Por defecto, si *nombreRuta* designa una carpeta, el comando muestra el nivel de la carpeta misma. Si pasa el parámetro opcional *\**, el comando abre la carpeta y muestra su contenido en la ventana. Si *nombreRuta* designa un archivo, se ignora el parámetro *\**. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Los siguientes ejemplos ilustran el funcionamiento del comando:
 
@@ -44,12 +44,12 @@ Los siguientes ejemplos ilustran el funcionamiento del comando:
 
 ![](../assets/en/commands/pict35009.es.png)
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el comando se ejecuta correctamente, de lo contrario toma el valor 0\. 
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

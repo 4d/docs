@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Date.Summary-->El comando Date evalúa *expresion* y devuelve una fecha.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Los siguientes caracteres son separadores de fecha válidos: barra oblicua (/), 
 **Expresión tipo fecha**  
 Si la *expresion* es del tipo de fecha, **Date** devuelve la fecha pasada en el parámetro 'tal como está'. Esto es particularmente útil en el contexto de la programación genérica utilizando punteros o atributos de objeto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo utiliza una caja para que el usuario introduzca una fecha. La cadena introducida por el usuario se convierte en una fecha y se guarda en la variable *reqFecha*:
 
@@ -54,7 +54,7 @@ El siguiente ejemplo utiliza una caja para que el usuario introduzca una fecha. 
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Los siguientes ejemplos muestran varios casos:
 
@@ -68,7 +68,7 @@ Los siguientes ejemplos muestran varios casos:
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Fecha de evaluación basada en una fecha en formato ISO:
 
@@ -78,7 +78,7 @@ Fecha de evaluación basada en una fecha en formato ISO:
   //$vDate representa el 5 de junio de 2013 sin importar el lenguaje del sistema
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de almacenamiento de fecha del atributo actual:
 
@@ -90,12 +90,12 @@ Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de 
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Bool](bool.md)  
 [String](string.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

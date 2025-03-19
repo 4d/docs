@@ -108,7 +108,7 @@ Le [PFS](https://en.wikipedia.org/wiki/Forward_secrecy) ajoute une couche de sé
 
 Lorsque TLS est activé sur le serveur Web de 4D Web, PFS est automatiquement activé. Si le fichier *dhparams.pem* (document contenant la clé DH privée du serveur) n'existe pas déjà, 4D le génère automatiquement avec une taille de clé de 2048. La génération initiale de ce fichier peut prendre plusieurs minutes. Le fichier est placé avec les fichiers [*key.pem* et *cert.pem*](#installing-certificate-files).
 
-Si vous utilisez une [liste de chiffrement personnalisée](WebServer/webServerConfig.md##cipher-list) et souhaitez activer PFS, vérifiez que votre liste contient des entrées avec des algorithmes DH ou ECDH (courbes elliptiques de Diffie–Hellman).
+If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
 
 ## Activation de TLS avec les autres serveurs
 

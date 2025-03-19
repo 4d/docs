@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Localized document path.Summary-->Localized document path コマンドはxxx.<!-- END REF-->lprojフォルダ内に存在する、相対パスで指定されたドキュメントの完全 (絶対) パス名を返します。
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 *relativePath*がこれらのパスのどこにも存在しない場合、コマンドは空の文字列を返します。
 
-#### 例題 
+## 例題 
 
 XMLやHTMLファイルを変換する目的で、"log.xsl"変換ファイルを使用したいとします。このファイルはカレント言語により異なるため、どの"log.xsl"ファイルを使用するか決定する必要があります。  
 Resources フォルダの中身は以下のようになっています:
@@ -63,11 +63,11 @@ Resources フォルダの中身は以下のようになっています:
 * Windows: C:\\users\\…\\…\\…\\resources\\ja.lproj\\xsl\\log.xsl
 * Mac OS: "HardDisk:users:…:…:…:resources:ja.lproj:xsl:log.xsl"
 
-#### 参照 
+## 参照 
 
 [Get database localization](get-database-localization.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

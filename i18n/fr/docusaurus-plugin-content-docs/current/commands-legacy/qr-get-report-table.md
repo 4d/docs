@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get report table.Summary-->La commande **QR Get report table** retourne le numéro de la table courante de l'état désigné par le paramètre *zone*.<!-- END REF--> 
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET REPORT TABLE](qr-set-report-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

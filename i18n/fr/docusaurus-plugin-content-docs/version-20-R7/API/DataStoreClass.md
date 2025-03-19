@@ -16,7 +16,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
 | [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
@@ -94,7 +94,7 @@ La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 
-Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions le sont également, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransaction).
+Vous pouvez imbriquer plusieurs transactions (sous-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
 
 #### Exemple
 
@@ -318,7 +318,7 @@ La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
-Chaque objet de la collection renvoyée possède les propriétés énumérées dans la section [`.getRemoteContextInfo()`](#properties-of-the-returned-object).
+Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
 
 #### Exemple
 
@@ -522,12 +522,12 @@ Pour plus d'informations sur la façon dont les contextes peuvent être créés,
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété                                  | Type | Description                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| name                                       | Text | Nom du contexte                                                                                                                                                                                                                                                                                                                            |
-| main                                       | Text | Attribut(s) associé(s) au contexte (les noms d'attributs sont séparés par des virgules)                                                                                                                                                                                           |
-| dataclass                                  | Text | Nom de la dataclass                                                                                                                                                                                                                                                                                                                        |
-| currentItem (optionnel) | Text | Attributs du [mode page](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités) si le contexte est lié à une list box. Retourn `Null` ou un élément de texte vide si le contexte n'est pas utilisé pour une list box, ou s'il n'y a pas de contexte pour l'élément courant (currentItem) |
+| Propriété                                  | Type | Description                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                                       | Text | Nom du contexte                                                                                                                                                                                                                                                                                                                                       |
+| main                                       | Text | Attribut(s) associé(s) au contexte (les noms d'attributs sont séparés par des virgules)                                                                                                                                                                                                      |
+| dataclass                                  | Text | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                   |
+| currentItem (optionnel) | Text | The attributes of the [page mode](../ORDA/client-server-optimization.md#entity-selection-based-list-box) if the context is linked to a list box. Retourn `Null` ou un élément de texte vide si le contexte n'est pas utilisé pour une list box, ou s'il n'y a pas de contexte pour l'élément courant (currentItem) |
 
 Comme les contextes se comportent comme des filtres d'attributs, si *main* est retourné vide, cela signifie qu'aucun filtre n'est appliqué et que le serveur donc retourne tous les attributs de la dataclass.
 
@@ -679,7 +679,7 @@ La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelections
 
 When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Cette fonction ne modifie pas les entity selections créées par [`.copy()`](#copy) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
+> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
 
 > **Compatibilité** : Cette fonction doit être utilisée uniquement dans des projets convertis à partir de versions de 4D antérieures à 4D v18 R5 et contenant des appels [.add()](EntitySelectionClass.md#add). Dans ce contexte, l'utilisation de `.makeSelectionsAlterable()` peut faire gagner du temps en restaurant instantanément le précédent comportement 4D dans les projets existants.
 > En revanche, l'utilisation de cette méthode dans les nouveaux projets créés dans 4D v18 R5 et les versions plus récentes **n'est pas recommandée**, car elle empêche le partage des entity selections, ce qui offre de meilleures performances et une plus gran
@@ -915,7 +915,7 @@ Si *attributes* est un texte vide, ou si *attributesColl* est une collection vid
 Vous pouvez passer un *contextType* pour spécifier si le contexte est standard ou s'il s'agit du contexte de l'élément courant de l'entity selection affichée dans une list box :
 
 - Si sa valeur est "main" (défaut), *contextName* désigne un contexte standard.
-- Si sa valeur est "currentItem", les attributs passés sont intégrés dans le contexte de l'élément courant.  Voir  [Listbox basée sur une sélection d'entités](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités).
+- Si sa valeur est "currentItem", les attributs passés sont intégrés dans le contexte de l'élément courant.  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 Dans *pageLength*, spécifiez le nombre d'entités de dataclass à demander au serveur.
 

@@ -5,7 +5,7 @@ title: Usuarios y sesiones
 
 ## Sesiones
 
-Cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions) (recomendadas), las peticiones REST pueden crear y usar [sesiones usuario web](WebServer/sessions.md), ofreciendo funcionalidades adicionales como la gestión de múltiples peticiones, el intercambio de datos entre procesos web clientes y el control de los privilegios usuario.
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizan la misma cookie de sesión.
 
@@ -18,7 +18,7 @@ Una sesión se abre después de que el usuario haya iniciado sesión correctamen
 
 :::note Compatibilidad
 
-El modo de inicio de sesión heredado basado en el método base `On REST Authentication` está **obsoleto** a partir de 4D 20 R6. Ahora se recomienda [utilizar el **modo Force login**](../ORDA/privileges.md#rolesjson-file) (activado automáticamente en nuevos proyectos) e implementar la función [`ds.authentify()`](#dsauthentify). En proyectos convertidos, [un botón en la caja de diálogo de Parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayudará a actualizar su configuración. En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
+El modo de inicio de sesión heredado basado en el método base `On REST Authentication` está **obsoleto** a partir de 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#function-authentify). En proyectos convertidos, [un botón en la caja de diálogo de Parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayudará a actualizar su configuración. En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
 
 :::
 
@@ -29,7 +29,7 @@ La secuencia de inicio de sesión del usuario es la siguiente:
     Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia.\
     Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
-2. Usted llama a su [función `authentify()`](#authentify) (creada previamente), en la que revisa las credenciales de usuario y llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) con los privilegios apropiados. `authentify()` debe ser una [función datastore class](../ORDA/ordaClasses.md#datastore-class).
+2. You call your [`authentify()` function](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` debe ser una [función datastore class](../ORDA/ordaClasses.md#datastore-class).
 
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de inicio de sesión básico que no tenga acceso a datos; puede ser una [página Qodly](. /WebServer/qodly-studio.md) (llamada a través de la solicitud `/rest/$getWebForm`).
 

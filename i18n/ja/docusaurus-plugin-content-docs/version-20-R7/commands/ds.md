@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `ds` コマンドは、<!-- REF #_command_.ds.Summary -->カレントの 4Dデータベース、または *localID* で指定したデータベースに合致するデータストアの参照を返します<!-- END REF -->。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 `cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](../ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
-#### 例題 1
+## 例題 1
 
 4Dデータベースのメインデータストアを使用します:
 
@@ -38,7 +38,7 @@ var $result : cs.EmployeeSelection
 $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### 例題 2
+## 例題 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -64,11 +64,11 @@ $result:=ds.Employee.query("firstName = :1";"S@")
  $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
-#### 参照
+## 参照
 
 [Open datastore](open-datastore.md)
 
-#### プロパティ
+## プロパティ
 
 |         |                                 |
 | ------- | ------------------------------- |

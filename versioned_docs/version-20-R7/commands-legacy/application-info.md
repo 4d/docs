@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 <!--REF #_command_.Application info.Summary-->The **Application info** command returns an object providing detailed information about the active application's activity and network configuration.<!-- END REF-->
 
@@ -45,7 +45,7 @@ The returned object contains the following properties:
 
 (\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Application info** command in the [On Startup database method](on-startup-database-method.md). 
 
-#### Example
+## Example
 
 The following code returns an object containing information about the running application:
 
@@ -125,14 +125,14 @@ If the code is executed on 4D Server, the object contains (for example):
 }
 ```
 
-#### See also 
+## See also 
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

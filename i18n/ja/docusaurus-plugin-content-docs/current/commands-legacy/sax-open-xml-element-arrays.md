@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->SAX OPEN XML ELEMENT ARRAYS コマンドコマンドを使用して、*document* で参照されるXMLドキュメント中に新しい要素およびオプションで属性とその値を配列で指定して追加できます。<!-- END REF--> 
 
@@ -28,7 +28,7 @@ SAX OPEN XML ELEMENT ARRAYS は日付、数値、ブール、そしてピクチ�
 
 配列は事前に作成され、属性名と属性値のペアで構成されていなければなりません。複数の配列を渡すことができ、それぞれの配列に複数の配列要素を含めることができます。
 
-#### 例題 
+## 例題 
 
 以下のメソッドは:
 
@@ -49,13 +49,13 @@ SAX OPEN XML ELEMENT ARRAYS は日付、数値、ブール、そしてピクチ�
 <Book Font="Arial" Style="Bold">
 ```
 
-#### 参照 
+## 参照 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

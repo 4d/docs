@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Sum squares.Summary-->**Sum squares** devolve a soma de quadrados de *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para calcular a soma de quadrados. Só pode utilizar um campo com esta função quando imprime um relatório.  
   
 Você pode passar um array (uma ou duas dimensões) em *series*. Neste caso, o array deve ser do tipo inteiro, inteiro longo ou real.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é um método para a variável *vQuadrados*. O método de objeto atribui a soma de quadrados de uma série de dados a *vQuadrados*. A variável *vQuadrados* se imprime na última quebra do relatório:
 
@@ -41,7 +41,7 @@ O método a seguir se chama para imprimir os registros na seleção e ativar o p
 
 **Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre o processo de quebras, consulte os comandos do capítulo *Imprimir*. 
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo permite obter a soma de quadrados dos valores localizados num array:
 
@@ -52,14 +52,14 @@ Este exemplo permite obter a soma de quadrados dos valores localizados num array
  vSumSquares:=Sum squares($ArrGrades)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

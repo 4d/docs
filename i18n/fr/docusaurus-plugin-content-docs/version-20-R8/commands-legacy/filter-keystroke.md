@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->**FILTER KEYSTROKE** vous permet de remplacer le caractère saisi par l'utilisateur dans un champ ou une zone saisissable par le premier caractère de la chaîne *carFiltré*.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Utilisez la commande **FILTER KEYSTROKE** dans les cas suivants :
 
 **ATTENTION :** si vous appelez la commande [Keystroke](keystroke.md) après avoir appelé **FILTER KEYSTROKE**, c'est le caractère passé à cette commande qui sera retourné et non le caractère réellement saisi.
 
-#### Exemple 1 
+## Exemple 1 
 
 Avec le code suivant :
 
@@ -49,7 +49,7 @@ Avec le code suivant :
 
 ... tous les chiffres saisis dans la zone *monObjet* seront transformés en astérisques. 
 
-#### Exemple 2 
+## Exemple 2 
 
 Le code ci-dessous définit le comportement d'une zone de saisie de mot de passe, dans laquelle les caractères saisis sont remplacés à l'écran par des caractères aléatoires : 
 
@@ -71,7 +71,7 @@ Le code ci-dessous définit le comportement d'une zone de saisie de mot de passe
 
 Une fois la zone validée, vous récupérez le mot de passe réellement saisi par l'utilisateur dans la variable *vaMotPasseRéel*. La méthode Gérer frappe clavier est listée dans l'exemple de la commande [Keystroke](keystroke.md). 
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous disposez dans votre application de diverses zones de texte dans lesquelles vous pouvez saisir quelques phrases. Votre application comporte également une table de glossaire contenant les termes les plus fréquemment utilisés dans votre base. Lors de l'édition de vos zones de texte, vous voulez pouvoir rapidement, à partir du glossaire, retrouver et insérer des mots en fonction des caractères sélectionnés dans le texte. Pour cela, vous avez deux solutions : soit placer des boutons avec des touches associées qui vont exécuter l'opération, soit intercepter les frappes clavier spéciales pendant la saisie. L'exemple ci-dessous utilise la seconde solution, basée sur la touche **Aide**. 
 
@@ -234,14 +234,14 @@ La méthode obtenirTexteSelectionne est la suivante :
 ```
 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

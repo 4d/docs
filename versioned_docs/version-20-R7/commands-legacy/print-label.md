@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** enables you to print labels with the data from the selection of *aTable*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ If you specify the *document* parameter, the labels are printed with the label s
 * The syntax which makes the label editor appear does not work with 4D Server; in this case, the system variable OK is set to 0.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 1 
+## Example 1 
 
 The following example prints labels using the output form of a table. The example uses two methods. The first is a project method that sets the correct output form and then prints labels: 
 
@@ -69,7 +69,7 @@ The second method is the form method for the form *"Label Out"*. The form contai
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example lets the user query the \[People\] table, and then automatically prints the labels “My Labels”:
 
@@ -80,7 +80,7 @@ The following example lets the user query the \[People\] table, and then automat
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example lets the user query the \[People\] table, and then lets the user choose the labels to be printed:
 
@@ -91,7 +91,7 @@ The following example lets the user query the \[People\] table, and then lets th
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example lets the user query the \[People\] table, and then displays the Label Wizard so the user can design, save, load and print any labels:
 
@@ -102,12 +102,12 @@ The following example lets the user query the \[People\] table, and then display
  End if
 ```
 
-#### See also 
+## See also 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

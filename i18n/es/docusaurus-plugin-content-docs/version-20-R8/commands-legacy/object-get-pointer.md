@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->El comando **OBJECT Get pointer** devuelve un puntero a la variable de un objeto de formulario.<!-- END REF-->   
   
@@ -36,7 +36,7 @@ Este comando se puede utilizar para designar diferentes tipos de objetos en func
 El parámetro opcional *nomSubForm* permite recuperar un puntero a un objeto *nomObjeto* que no pertenece al contexto actual, es decir, al formulario padre. Para poder utilizar este parámetro, debe haber pasado el selector Object named.   
 Cuando se pasa el parámetro *nomSubForm*, el comando **OBJECT Get pointer** primero busca el objeto subformulario objeto llamado *nomSubForm* en el formulario actual, luego busca al interior de este subformulario un objeto llamado *nomObjeto*. Si este objeto se encuentra, se devuelve un puntero a la variable de este objeto.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formulario padre. Los objetos subformularios se llaman "SF1" y "SF2". El formulario "SF" contiene un objeto llamado *ValorActual*. En el evento "On Load" del método de formulario del formulario padre, queremos inicializar el objeto *Valor Actual* de SF1 en "Enero" y el de SF2 en "Febrero": 
 
@@ -48,7 +48,7 @@ Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formu
  $Ptr->:="Febrero"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Focus object](focus-object.md)  
 [OBJECT Get name](object-get-name.md)  
@@ -57,7 +57,7 @@ Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formu
 *Objetos de formulario (Acceso)*  
 [Self](self.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

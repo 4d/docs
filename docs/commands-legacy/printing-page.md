@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Printing page.Summary-->**Printing page** returns the printing page number.<!-- END REF--> It can be used only when you are printing with [PRINT SELECTION](print-selection.md) or the Print menu in the Design environment.
 
-#### Example 
+## Example 
 
 The following example changes the position of the page numbers on a report so that the report can be reproduced in a double-sided format. The form for the report has two variables that display page numbers. A variable in the lower-left corner (*vLeftPageNum*) will print the even page numbers. A variable in the lower-right corner (*vRightPageNum*) will print the odd page numbers. The example tests for even pages, then clears and sets the appropriate variables:
 
@@ -34,11 +34,11 @@ The following example changes the position of the page numbers on a report so th
  End case
 ```
 
-#### See also 
+## See also 
 
 [PRINT SELECTION](print-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

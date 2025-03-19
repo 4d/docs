@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Null.Summary-->**Null** は、Null 型の値**null** を返します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドはスカラーデータベースフィールドと使用することはできません。データベース内のNull 値はSQL エンジンによって管理されており、[Is field value Null](is-field-value-null.md) と[SET FIELD VALUE NULL](set-field-value-null.md) コマンドを通して管理されているからです。
 
-#### 例題 1 
+## 例題 1 
 
 **null** 値をオブジェクトプロパティに割り当ててテストをしたい場合を考えます:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 **注:** この例題ではデータベースでオブジェクト記法が有効化されている必要があります。
 
-#### 例題 2 
+## 例題 2 
 
 コレクション要素に**null** 値を割り当てて比較をしたい場合を考えます:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例では、**null** 値を変数に割り当てて比較する様々な方法を紹介しています:
 
@@ -108,7 +108,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 オブジェクトプロパティを対象に、このコマンドおよび [Null](null.md) コマンドを使用した場合の結果の例です:
 
@@ -128,13 +128,13 @@ displayed_sidebar: docs
  $null:=(vEmp.parent=Null) //True
 ```
 
-#### 参照 
+## 参照 
 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

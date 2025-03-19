@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->REMOVE FROM SET removes the current record of *aTable* from *set*.<!-- END REF--> The set must already exist; if it does not, an error occurs. If a current record does not exist for *aTable*, the command has no effect.
 
-#### See also 
+## See also 
 
 [ADD TO SET](add-to-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current process name.Summary-->El comando **Current process name** devuelve el nombre del proceso en el que este comando se llama.<!-- END REF-->
 
 Este comando es particularmente útil en el contexto de los procesos de trabajo (ver la sección *Sobre workers*). Puede ser utilizado para identificar el proceso worker a llamar al escribir código genérico. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Quiere llamar a un proceso worker y pasar el nombre del proceso de llamada como parámetro:
 
@@ -27,13 +27,13 @@ Quiere llamar a un proceso worker y pasar el nombre del proceso de llamada como 
  CALL WORKER(1;"myMessage";Current process name;"Start:"+String(vMax))
 ```
 
-#### Ver también 
+## Ver también 
 
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 *Sobre workers*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

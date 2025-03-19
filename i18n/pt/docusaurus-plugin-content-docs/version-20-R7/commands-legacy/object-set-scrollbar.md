@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->O comando OBJECT SET SCROLLBAR lhe permite mostrar ou ocultar as barras de rolagem horizontal ou vertical no objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -37,14 +37,14 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos indicando s
 
 **Nota:** para obter mais informação sobre o modo automático, consulte *Barra de rolagem*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -12,19 +12,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESUME TRANSACTION.Summary-->O comando **RESUME TRANSACTION** reativa a transação que foi suspensa utilizando *ServerSpecialBuild*  no nível correspondente no processo atual.<!-- END REF--> Todas as operações que são executadas depois deste comando são realizadas sob o controle de transações (exceto quando várias transações suspensas estão aninhadas).
 
 Para saber mais, consulte *Suspender as transações*.
 
-#### Ver também 
+## Ver também 
 
 [Active transaction](active-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *Suspender as transações*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

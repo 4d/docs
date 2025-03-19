@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->El comando **LISTBOX SET COLUMN FORMULA** modifica la *formula* asociada a la columna de list box designada por los parámetros *objeto* y *\**.<!-- END REF--> Las fórmulas no se pueden utilizar cuando la propiedad “Fuente de datos” del list box es **Selección actual**, **Selección temporal** o **Colección** o **Selección de entidades**.
 
@@ -37,12 +37,12 @@ Cuando se llama el comando, la fórmula se analiza y luego se ejecuta.
   
 El parámetro *tipoDatos* designa el tipo de datos resultantes de la ejecución de la fórmula. En este parámetro, pase una de las constantes del tema *Tipos de campos y variables*. Si el resultado de la fórmula no corresponde al tipo de datos esperado, se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX Get column formula](listbox-get-column-formula.md)  
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

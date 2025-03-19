@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ In *wpDoc*, pass the 4D Write Pro document that contains the style sheet.
 
 The *styleSheetName* parameter allows you to specify the name of the style sheet to return. If the style sheet name does not exist in *wpDoc*, an null object is returned.
 
-#### Example 
+## Example 
 
 To retrieve the "Main title" style sheet:
 
@@ -36,7 +36,7 @@ To retrieve the "Main title" style sheet:
  End if
 ```
 
-#### See also 
+## See also 
 
 *Accessing document contents by programming*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

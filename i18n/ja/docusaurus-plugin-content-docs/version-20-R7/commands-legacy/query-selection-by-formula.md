@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->QUERY SELECTION BY FORMULAは、*aTable*からレコードを検索します。<!-- END REF-->QUERY SELECTION BY FORMULAは、カレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。
 
@@ -25,13 +25,13 @@ QUERY SELECTION BY FORMULAは[QUERY BY FORMULA](query-by-formula.md "QUERY BY FO
 
 詳細については、[QUERY BY FORMULA](query-by-formula.md "QUERY BY FORMULA")の説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

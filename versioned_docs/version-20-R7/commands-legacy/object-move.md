@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->The OBJECT MOVE command allows you to move the object(s) in the current form, defined by the *\** and *object* parameters *moveH* pixels horizontally and *moveV* pixels vertically.<!-- END REF--> 
 
@@ -45,7 +45,7 @@ This command works in the following contexts:
 * Headers and footers of Output forms displayed with [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands,
 * Form printing events.
 
-#### Example 1 
+## Example 1 
 
 The following statement moves “button\_1” 10 pixels to the right, 20 pixels to the top and resizes it to 30 pixels in width and 40 in height: 
 
@@ -54,7 +54,7 @@ The following statement moves “button\_1” 10 pixels to the right, 20 pixels 
 ```
 
   
-#### Example 2 
+## Example 2 
 
 The following statement moves “button\_1” to the following coordinates (10;20) (30;40):
 
@@ -62,13 +62,13 @@ The following statement moves “button\_1” to the following coordinates (10;2
  OBJECT MOVE(*;"button_1";10;20;30;40;*)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |
