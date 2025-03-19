@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to set the parameter or, Default table if this parameter is omitted |
-| selector |Integer| &#8594;  | Code of the database parameter to modify |
+| selector | Integer | &#8594;  | Code of the database parameter to modify |
 | value | Real, Text | &#8594;  | Value of the parameter |
 
 <!-- END REF-->
@@ -21,7 +21,9 @@ displayed_sidebar: docs
 
 The *selector* designates the database parameter to modify. 4D offers predefined constants, which are located in the “*Database Parameters*” theme. The following table lists each constant, describes its scope and indicates whether any changes made are kept between two sessions: 
 
-### 4D Server timeout**Scope**: 4D application if *value* positive
+### 4D Server timeout (13)
+
+**Scope**: 4D application if *value* positive
 
 **Kept between two sessions**: Yes if *value* positive
 
@@ -33,11 +35,13 @@ The server timeout sets the maximum period "authorized" to wait for a client res
 
 You also have two options:
 
-If you pass a **positive** value in the *value*parameter, you set a global and permanent timeout: the new value is applied to all process and is stored in the preferences of the 4D application (equivalent to change in the Preferences dialog box). If you pass a **negative** value in the *value*parameter, you set a local and temporary timeout: The new value is applied to the calling process only (the other processes keep the default values) and is reset to default as soon as the server receives any signal of activity from the client — for example, when the operation is finished. This option is useful for managing long operations initiated by 4D plug-ins. To set the "No timeout" option, pass 0 in *value*. See example 1.
+If you pass a **positive** value in the *value*parameter, you set a global and permanent timeout: the new value is applied to all process and is stored in the preferences of the 4D application (equivalent to change in the Preferences dialog box).If you pass a **negative** value in the *value*parameter, you set a local and temporary timeout: The new value is applied to the calling process only (the other processes keep the default values) and is reset to default as soon as the server receives any signal of activity from the client — for example, when the operation is finished. This option is useful for managing long operations initiated by 4D plug-ins. To set the "No timeout" option, pass 0 in *value*. See example 1.
 
 
 
-### 4D Remote mode timeout**Scope** (legacy network layer only): 4D application if *value* positive
+### 4D Remote mode timeout (14)
+
+**Scope** (legacy network layer only): 4D application if *value* positive
 
 **Kept between two sessions**: Yes if *value* positive
 
@@ -47,7 +51,9 @@ The 4D Remote mode timeout selector is only taken into account if you are using 
 
 
 
-### Port ID**Scope**: 4D local, 4D Server
+### Port ID (15)
+
+**Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: No
 
@@ -57,7 +63,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Character set**Scope**: 4D local, 4D Server
+### Character set (17)
+
+**Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: Yes
 
@@ -65,7 +73,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Max concurrent Web processes**Scope**: 4D local, 4D Server
+### Max concurrent Web processes (18)
+
+**Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: Yes
 
@@ -73,7 +83,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Client port ID**Scope**: All 4D remote machines
+### Client port ID (22)
+
+**Scope**: All 4D remote machines
 
  **Kept between two** **sessions**: Yes
 
@@ -83,7 +95,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Client character set**Scope**: All 4D remote machines
+### Client character set (24)
+
+**Scope**: All 4D remote machines
 
  **Kept between two** **sessions**: Yes
 
@@ -93,7 +107,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Client max concurrent Web proc**Scope**: All 4D remote machines
+### Client max concurrent Web proc (25)
+
+**Scope**: All 4D remote machines
 
  **Kept between two** **sessions**: Yes
 
@@ -103,7 +119,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Maximum Web requests size**Scope**: 4D local, 4D Server
+### Maximum Web requests size (27)
+
+**Scope**: 4D local, 4D Server
 
  Kept between two **sessions**: Yes
 
@@ -111,7 +129,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### 4D Server log recording**Scope**: 4D Server, 4D remote*
+### 4D Server log recording (28)
+
+**Scope**: 4D Server, 4D remote*
 
 * **Kept between two sessions**: No
 
@@ -123,7 +143,9 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 
 
-### Client Web log recording**Scope**:All 4D remote machines
+### Client Web log recording (30)
+
+**Scope**:All 4D remote machines
 
  **Kept between two sessions**: Yes
 
@@ -135,7 +157,9 @@ The operation of this selector is identical to that of selector 29; however, it 
 
 
 
-### Table sequence number**Scope**:4D application
+### Table sequence number (31)
+
+**Scope**:4D application
 
  **Kept between two sessions**: Yes
 
@@ -147,7 +171,9 @@ By default, this unique number is set by 4D and corresponds to the order of reco
 
 
 
-### Debug log recording**Scope**: 4D application
+### Debug log recording (34)
+
+**Scope**: 4D application
 
 Kept between two **sessions**: No
 
@@ -197,7 +223,9 @@ For any type of interpreted or compiled 4D application (4D all modes, 4D Server,
 
 
 
-### Client Server port ID**Scope**:Database 
+### Client Server port ID (35)
+
+**Scope**:Database 
 
  **Kept between two** **sessions**: Yes
 
@@ -213,7 +241,9 @@ When you modify this value, it is necessary to restart the server machine in ord
 
 
 
-### HTTPS Port ID**Scope**:4D local, 4D Server
+### HTTPS Port ID (39)
+
+**Scope**:4D local, 4D Server
 
  Kept between two **sessions**: Yes
 
@@ -221,7 +251,9 @@ When you modify this value, it is necessary to restart the server machine in ord
 
 
 
-### Client HTTPS port ID**Scope**:All 4D remote machines
+### Client HTTPS port ID (40)
+
+**Scope**:All 4D remote machines
 
  **Kept between two** **sessions**: Yes
 
@@ -235,7 +267,9 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 
 
-### SQL Autocommit**Scope**:Database
+### SQL Autocommit (43)
+
+**Scope**:Database
 
  **Kept between two** **sessions**: Yes
 
@@ -247,7 +281,9 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 
 
-### SQL Engine case sensitivity**Scope**: Database
+### SQL Engine case sensitivity (44)
+
+**Scope**: Database
 
 Kept between two **sessions**: Yes
 
@@ -261,7 +297,9 @@ By default, the value is 1 (case-sensitive): the SQL engine differentiates betwe
 
 
 
-### Client log recording**Scope**: Remote 4D machine 
+### Client log recording (45)
+
+**Scope**: Remote 4D machine 
 
 Kept between two **sessions**: No
 
@@ -275,7 +313,9 @@ These text files store various information concerning each request in a simple t
 
 
 
-### Query by formula on server**Scope**: Current table and process
+### Query by formula on server (46)
+
+**Scope**: Current table and process
 
  **Kept between two sessions**: No
 
@@ -295,7 +335,9 @@ Refer to example 2.
 
 
 
-### Order by formula on server**Scope**:Current table and process
+### Order by formula on server (47)
+
+**Scope**:Current table and process
 
  **Kept between two** **sessions**: No
 
@@ -309,7 +351,9 @@ When using a database in client-server mode, this command can be executed either
 
 
 
-### Auto synchro resources folder**Scope**:4D remote machine
+### Auto synchro resources folder (48)
+
+**Scope**:4D remote machine
 
  **Kept between two** **sessions**: No
 
@@ -325,7 +369,9 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 
 
-### Query by formula joins**Scope**:Current process
+### Query by formula joins (49)
+
+**Scope**:Current process
 
  **Kept between two** **sessions**: No
 
@@ -341,7 +387,9 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 
 
-### HTTP compression level**Scope**:4D application
+### HTTP compression level (50)
+
+**Scope**:4D application
 
  Kept between two **sessions**: No
 
@@ -349,7 +397,9 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 
 
-### HTTP compression threshold**Scope**:4D application
+### HTTP compression threshold (51)
+
+**Scope**:4D application
 
  **Kept between two** **sessions**: No
 
@@ -357,7 +407,9 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 
 
-### Server base process stack size**Scope**: 4D Server
+### Server base process stack size (53)
+
+**Scope**: 4D Server
 
  Kept between two **sessions**: No
 
@@ -373,7 +425,9 @@ In order to be taken into account, this parameter must be executed on the server
 
 
 
-### Idle connections timeout**Scope**:4D application unless value is negative
+### Idle connections timeout (54)
+
+**Scope**:4D application unless value is negative
 
 **Kept between two** **sessions**: No
 
@@ -389,7 +443,9 @@ This parameter must be set on the client side. Usually, you do not need to chang
 
 
 
-### PHP interpreter IP address**Scope**:4D application
+### PHP interpreter IP address (55)
+
+**Scope**:4D application
 
  Kept between two   **sessions**: No
 
@@ -401,7 +457,9 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 
 
-### PHP interpreter port**Scope**:4D application
+### PHP interpreter port (56)
+
+**Scope**:4D application
 
  **Kept between two** **sessions**: No
 
@@ -411,7 +469,9 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 
 
-### SSL cipher list**Scope**: 4D application
+### SSL cipher list (64)
+
+**Scope**: 4D application
 
 Kept between two **sessions**: No
 
@@ -429,7 +489,9 @@ To reset the cipher list to its default value (stored permanently in the SLI fil
 
 
 
-### Cache unload minimum size**Scope**: 4D application
+### Cache unload minimum size (66)
+
+**Scope**: 4D application
 
 **Kept between two sessions**: No
 
@@ -443,7 +505,9 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 
 
-### Direct2D status**Scope**: 4D application 
+### Direct2D status (69)
+
+**Scope**: 4D application 
 
 **Kept between two sessions**: No
 
@@ -457,11 +521,13 @@ Direct2D Hardware (1): Use Direct2D as graphics hardware context for entire 4D a
 
 Direct2D Software (3) (Default mode): Beginning with Windows 7, use Direct2D graphics software context for entire 4D application. 
 
-**Warning: This selector is provided for debugging purposes only. Since several 4D features rely on Direct2D, it must not be disabled in deployed applications. Only the default mode (Direct2D Software) is approved for deployed applications.*
+**Warning:* This selector is provided for debugging purposes only. Since several 4D features rely on Direct2D, it must not be disabled in deployed applications. Only the default mode (Direct2D Software) is approved for deployed applications.*
 
 
 
-### Direct2D get active status**Note**: You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+### Direct2D get active status (74)
+
+**Note**: You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
 
 **Description**: Returns active implementation of Direct2D under Windows. 
 
@@ -479,7 +545,9 @@ For example, if you execute:
 
 
 
-### Diagnostic log recording**Scope**: 4D application
+### Diagnostic log recording (79)
+
+**Scope**: 4D application
 
 Kept between two **sessions**: No
 
@@ -493,7 +561,9 @@ Note that you can include custom information in this file using the [LOG EVENT](
 
 
 
-### Log command list**Scope**: 4D application
+### Log command list (80)
+
+**Scope**: 4D application
 
 Kept between two **sessions**: No
 
@@ -507,7 +577,9 @@ This selector restricts the quantity of information saved in the debugging file 
 
 
 
-### Spellchecker**Scope**: 4D application
+### Spellchecker (81)
+
+**Scope**: 4D application
 
  **Kept between two sessions**: No
 
@@ -517,7 +589,9 @@ This selector restricts the quantity of information saved in the debugging file 
 
 
 
-### Dates inside objectsScope: Current process
+### Dates inside objects (85)
+
+Scope: Current process
 
  Kept between two **sessions**: No
 
@@ -531,7 +605,9 @@ Passing String type with time zone in this selector will convert 4D dates into I
 
 
 
-### Diagnostic log level**Scope:** 4D application 
+### Diagnostic log level (86)
+
+**Scope:** 4D application 
 
 **Kept between two sessions:** No
 
@@ -541,7 +617,9 @@ Passing String type with time zone in this selector will convert 4D dates into I
 
 
 
-### Use legacy network layer**Scope**: 4D in local mode, 4D Server
+### Use legacy network layer (87)
+
+**Scope**: 4D in local mode, 4D Server
 
 **Kept between two sessions**: Yes
 
@@ -555,7 +633,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### SQL Server Port ID**Scope**: 4D local, 4D Server.
+### SQL Server Port ID (88)
+
+**Scope**: 4D local, 4D Server.
 
 **Kept between two sessions**: Yes
 
@@ -567,7 +647,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### Circular log limitation**Scope**: 4D local, 4D Server.
+### Circular log limitation (90)
+
+**Scope**: 4D local, 4D Server.
 
 **Kept between two sessions**: No
 
@@ -577,7 +659,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### Number of formulas in cache**Scope**: 4D application
+### Number of formulas in cache (92)
+
+**Scope**: 4D application
 
 **Kept between two sessions**: No
 
@@ -589,7 +673,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### OpenSSL version**Scope**: all 4D machines*
+### OpenSSL version (94)
+
+**Scope**: all 4D machines*
 
 * **Kept between two sessions**: No
 
@@ -597,7 +683,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### Cache flush periodicity**Scope**: 4D local, 4D Server
+### Cache flush periodicity (95)
+
+**Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: No
 
@@ -607,7 +695,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 
-### Remote connection sleep timeout**Scope**: 4D Server application
+### Remote connection sleep timeout (98)
+
+**Scope**: 4D Server application
 
 **Kept between two sessions**: No
 
@@ -619,7 +709,9 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 
 
-### Tips enabled**Scope:** 4D application
+### Tips enabled (101)
+
+**Scope:** 4D application
 
 **Kept between two sessions:** No
 
@@ -631,7 +723,9 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 
 
-### Tips delay**Scope:** 4D application
+### Tips delay (102)
+
+**Scope:** 4D application
 
 **Kept between two sessions:** No
 
@@ -641,7 +735,9 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 
 
-### Tips duration**Scope:** 4D application
+### Tips duration (103)
+
+**Scope:** 4D application
 
 **Kept between two sessions:** No
 
@@ -651,7 +747,9 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 
 
-### Min TLS version**Scope**: 4D Server, 4D Web Server and 4D SQL Server
+### Min TLS version (105)
+
+**Scope**: 4D Server, 4D Web Server and 4D SQL Server
 
 **Kept between two sessions**: No
 
@@ -667,7 +765,9 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 
 
-### User param value**Scope:** 4D local, 4D Server
+### User param value (108)
+
+**Scope:** 4D local, 4D Server
 
 **Kept between two sessions:** No
 
@@ -679,7 +779,9 @@ When used with [SET DATABASE PARAMETER](set-database-parameter.md), defines a ne
 
 
 
-### Times inside objectsScope: 4D local, 4D Server (all processes)
+### Times inside objects (109)
+
+Scope: 4D local, 4D Server (all processes)
 
  Kept between two **sessions**: No
 
@@ -693,7 +795,9 @@ In previous releases, time values were converted and stored as number of millise
 
 
 
-### SMTP Log**Scope**: 4D local, 4D Server*
+### SMTP Log (110)
+
+**Scope**: 4D local, 4D Server*
 
 * **Kept between two sessions**: No
 
@@ -705,7 +809,9 @@ For more information on the 4DSMTPLog\_X.txt files, please refer to the *Descrip
 
 
 
-### Current process debug log recording**Scope:** 4D application
+### Current process debug log recording (111)
+
+**Scope:** 4D application
 
 **Kept between two sessions:** No
 
@@ -717,7 +823,9 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### Is current database a project**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+### Is current database a project (112)
+
+**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -725,7 +833,9 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### Is host database a project**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+### Is host database a project (113)
+
+**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -733,7 +843,9 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### Libldap version**Scope**: Current 4D machine
+### Libldap version (114)
+
+**Scope**: Current 4D machine
 
 **Kept between two sessions**: n/a
 
@@ -741,7 +853,9 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### Libsasl version**Scope**: Current 4D machine
+### Libsasl version (115)
+
+**Scope**: Current 4D machine
 
 **Kept between two sessions**: n/a
 
@@ -749,7 +863,9 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 
 
-### POP3 Log**Scope:** 4D local, 4D Server
+### POP3 Log (116)
+
+**Scope:** 4D local, 4D Server
 
 **Kept between two sessions:** No
 
@@ -761,7 +877,9 @@ For more information on the 4DPOP3Log\_X.txt files, please refer to the *Descrip
 
 
 
-### Is host database writable**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+### Is host database writable (117)
+
+**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -769,7 +887,9 @@ For more information on the 4DPOP3Log\_X.txt files, please refer to the *Descrip
 
 
 
-### IMAP Log**Scope**: 4D local, 4D Server
+### IMAP Log (119)
+
+**Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: No
 
@@ -781,7 +901,9 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 
-### Libzip version**Scope:** Current 4D machine
+### Libzip version (120)
+
+**Scope:** Current 4D machine
 
 **Kept between two sessions:** n/a
 
@@ -789,43 +911,47 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 
-### Pause logging**Scope**: 4D application
+### Pause logging (121)
+
+**Scope**: 4D application
 
 **Kept between two** **sessions**: No
 
 **Possible values**: 0 (resume logs), 1 (pause logs)
 
-This selector allows to suspend/resume all logging operations started on the application (except ORDA logs). This feature can be useful to temporarily lighten the 4D application tasks or schedule logging operations.
+**Description:** This selector allows to suspend/resume all logging operations started on the application (except ORDA logs). This feature can be useful to temporarily lighten the 4D application tasks or schedule logging operations.
 
 
 
-### TCP log**Scope:** 4D application.
+### TCP log (131)
+
+**Scope:** 4D application.
 
 **Kept between two sessions:** No.
 
 **Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
 
- **Description:** Enables or disables the `4DTCPLog.txt` file for logging TCP  events.
+**Description:** Enables or disables the `4DTCPLog.txt` file for logging TCP  events.
 
 
 
-### RDP optimization**Scope:** 4D application.
+### RDP optimization (133)
+
+**Scope:** 4D application.
 
 **Kept between two sessions:** No.
 
 **Possible values:** `0`: Disabled (default), `1`: Enabled. 
 
- **Description:** Enables or disables optimizations for RDP (Remote Desktop Protocol). When enabled, optimizes in particular the use of shared clipboard in RDP connections, which can otherwise lead to freezing issues. Note that this selector disables the support in clipboard for images encoded as data uri in raw text (only concerns images dropped or explicitly copied as text from a browser).
+**Description:** Enables or disables optimizations for RDP (Remote Desktop Protocol). When enabled, optimizes in particular the use of shared clipboard in RDP connections, which can otherwise lead to freezing issues. Note that this selector disables the support in clipboard for images encoded as data uri in raw text (only concerns images dropped or explicitly copied as text from a browser). 
 
 
-
-
-
-
-**Notes:** 
+:::note 
 
 * The *table* parameter is only used by selectors 31, 46 and 47\. In all other cases, it is ignored if it is passed.
 * If a setting is not kept between sessions, but you want to ensure that it's always applied, you can execute it in the [On Startup database method](on-startup-database-method.md) or [On Server Startup database method](on-server-startup-database-method.md).
+
+:::
 
 ## Thread-safe selectors 
 
