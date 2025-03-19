@@ -1,5 +1,5 @@
 ---
-id: Resources
+id: Resources_theme
 title: Resources
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: Printing
+id: Printing_theme
 title: Printing
 ---
 

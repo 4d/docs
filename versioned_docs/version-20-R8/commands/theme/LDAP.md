@@ -1,5 +1,5 @@
 ---
-id: LDAP
+id: LDAP_theme
 title: LDAP
 ---
 

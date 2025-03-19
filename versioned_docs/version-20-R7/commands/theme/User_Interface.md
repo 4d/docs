@@ -1,5 +1,5 @@
 ---
-id: User_Interface
+id: User_Interface_theme
 title: User Interface
 ---
 

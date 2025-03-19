@@ -1,5 +1,5 @@
 ---
-id: Math
+id: Math_theme
 title: Math
 ---
 

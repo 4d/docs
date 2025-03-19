@@ -1,5 +1,5 @@
 ---
-id: BLOB
+id: BLOB_theme
 title: BLOB
 ---
 

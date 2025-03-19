@@ -1,5 +1,5 @@
 ---
-id: Formulas
+id: Formulas_theme
 title: Formulas
 ---
 

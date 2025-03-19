@@ -1,5 +1,5 @@
 ---
-id: Web_Area
+id: Web_Area_theme
 title: Web Area
 ---
 

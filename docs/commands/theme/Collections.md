@@ -1,5 +1,5 @@
 ---
-id: Collections
+id: Collections_theme
 title: Collections
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: PHP
+id: PHP_theme
 title: PHP
 ---
 

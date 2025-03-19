@@ -1,5 +1,5 @@
 ---
-id: Database_Methods
+id: Database_Methods_theme
 title: Database Methods
 ---
 

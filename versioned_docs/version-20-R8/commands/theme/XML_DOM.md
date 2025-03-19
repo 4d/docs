@@ -1,5 +1,5 @@
 ---
-id: XML_DOM
+id: XML_DOM_theme
 title: XML DOM
 ---
 

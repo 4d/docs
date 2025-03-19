@@ -1,5 +1,5 @@
 ---
-id: Compiler
+id: Compiler_theme
 title: Compiler
 ---
 

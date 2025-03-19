@@ -1,5 +1,5 @@
 ---
-id: Drag_and_Drop
+id: Drag_and_Drop_theme
 title: Drag and Drop
 ---
 

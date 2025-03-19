@@ -1,5 +1,5 @@
 ---
-id: SQL
+id: SQL_theme
 title: SQL
 ---
 

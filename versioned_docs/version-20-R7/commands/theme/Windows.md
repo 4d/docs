@@ -1,5 +1,5 @@
 ---
-id: Windows
+id: Windows_theme
 title: Windows
 ---
 

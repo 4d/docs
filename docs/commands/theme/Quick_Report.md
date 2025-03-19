@@ -1,5 +1,5 @@
 ---
-id: Quick_Report
+id: Quick_Report_theme
 title: Quick Report
 ---
 

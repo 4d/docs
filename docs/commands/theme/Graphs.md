@@ -1,5 +1,5 @@
 ---
-id: Graphs
+id: Graphs_theme
 title: Graphs
 ---
 

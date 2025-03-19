@@ -1,5 +1,5 @@
 ---
-id: System_Documents
+id: System_Documents_theme
 title: System Documents
 ---
 

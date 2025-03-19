@@ -1,5 +1,5 @@
 ---
-id: Mail
+id: Mail_theme
 title: Mail
 ---
 

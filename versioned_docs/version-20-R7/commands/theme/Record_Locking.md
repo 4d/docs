@@ -1,5 +1,5 @@
 ---
-id: Record_Locking
+id: Record_Locking_theme
 title: Record Locking
 ---
 

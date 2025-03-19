@@ -1,5 +1,5 @@
 ---
-id: Triggers
+id: Triggers_theme
 title: Triggers
 ---
 

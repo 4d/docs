@@ -1,5 +1,5 @@
 ---
-id: Table
+id: Table_theme
 title: Table
 ---
 

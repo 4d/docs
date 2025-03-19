@@ -1,5 +1,5 @@
 ---
-id: Cache_Management
+id: Cache_Management_theme
 title: Cache Management
 ---
 

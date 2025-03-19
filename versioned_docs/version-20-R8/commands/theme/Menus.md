@@ -1,5 +1,5 @@
 ---
-id: Menus
+id: Menus_theme
 title: Menus
 ---
 

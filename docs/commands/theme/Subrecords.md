@@ -1,5 +1,5 @@
 ---
-id: Subrecords
+id: Subrecords_theme
 title: Subrecords
 ---
 

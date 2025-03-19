@@ -1,5 +1,5 @@
 ---
-id: Arrays
+id: Arrays_theme
 title: Arrays
 ---
 

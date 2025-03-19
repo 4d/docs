@@ -1,5 +1,5 @@
 ---
-id: Entry_Control
+id: Entry_Control_theme
 title: Entry Control
 ---
 

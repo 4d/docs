@@ -1,5 +1,5 @@
 ---
-id: Boolean
+id: Boolean_theme
 title: Boolean
 ---
 

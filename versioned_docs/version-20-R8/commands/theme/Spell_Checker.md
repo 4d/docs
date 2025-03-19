@@ -1,5 +1,5 @@
 ---
-id: Spell_Checker
+id: Spell_Checker_theme
 title: Spell Checker
 ---
 

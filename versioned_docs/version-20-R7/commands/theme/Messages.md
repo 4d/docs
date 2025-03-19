@@ -1,5 +1,5 @@
 ---
-id: Messages
+id: Messages_theme
 title: Messages
 ---
 

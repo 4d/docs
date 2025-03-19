@@ -1,5 +1,5 @@
 ---
-id: Licenses
+id: Licenses_theme
 title: Licenses
 ---
 

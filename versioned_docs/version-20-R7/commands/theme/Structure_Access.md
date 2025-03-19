@@ -1,5 +1,5 @@
 ---
-id: Structure_Access
+id: Structure_Access_theme
 title: Structure Access
 ---
 

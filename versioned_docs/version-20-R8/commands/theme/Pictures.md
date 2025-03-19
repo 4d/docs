@@ -1,5 +1,5 @@
 ---
-id: Pictures
+id: Pictures_theme
 title: Pictures
 ---
 
