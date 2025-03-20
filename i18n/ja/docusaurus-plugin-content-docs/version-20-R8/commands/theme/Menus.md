@@ -1,6 +1,7 @@
 ---
-id: メニュー
+id: Menus_theme
 title: メニュー
+slug: /commands/theme/Menus
 ---
 
 |                                                                                                                                       |
