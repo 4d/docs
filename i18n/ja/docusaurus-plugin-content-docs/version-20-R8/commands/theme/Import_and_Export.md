@@ -1,6 +1,7 @@
 ---
-id: Import_and_Export
+id: Import_and_Export_theme
 title: インポート＆エクスポート
+slug: /commands/theme/Import-and-Export
 ---
 
 |                                                                                             |
