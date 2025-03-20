@@ -3,6 +3,12 @@ id: vp-import-from-object
 title: VP IMPORT FROM OBJECT
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Support of *paramObj* parameter|
+</details>
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Syntax -->
 **VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object { ; *paramObj* : Object} } ) <!-- END REF -->
@@ -27,18 +33,18 @@ In *viewPro*, pass a valid 4D View Pro object. This object can have been created
 
 An error is returned if the *viewPro* object is invalid.
 
-In *paramObj*, you can pass several properties:
+In *paramObj*, you can pass the following property:
 
 | Property | Type | Description |
 |----------|------|-------------|
-| formula  | 4D.Function | (Optional) Callback function to be executed when the object is loaded and all custom functions have responded. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
+| formula  | 4D.Function | (Optional) Callback function to be executed when the object is loaded and all 4D custom functions have responded. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
 
 The following parameters can be used in the callback method:
 
 | Parameter |  | Type | Description |
 |-----------|----|------|-------------|
 | param1    |  | Text | The name of the 4D View Pro area object |
-| param2    |  | Object | The imported 4D View Pro object |
+| param2    |  | Text | The file path of the exported 4D View Pro object |
 | param3    |  | Object | A reference to the command's *paramObj* parameter |
 | param4    |  | Object | An object returned by the method with a status message |
 |           | .success | Boolean | `True` if import was successful, `False` otherwise |
@@ -47,25 +53,24 @@ The following parameters can be used in the callback method:
 
 :::note
 
-The callback function specified in the `formula` attribute is triggered after all custom functions within the imported object have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, occur only after all formula-based computations are fully resolved.
+The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 
 ## Example
 
-You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all custom functions have responded:
+You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 
-VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; New object("formula"; Formula(onImportComplete)))
+VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onImportComplete)})
 ```
 
 ```4d
-// Callback function executed after all custom functions have finished calculating
-Function onImportComplete($param1 : Text; $param2 : Object; $param3 : Object; $param4 : Object)
+// Method 'onImportComplete'
+#DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
    ALERT("The document has been imported, and all custom functions have finished processing.")
-End function
 ```
 
 ## See also
