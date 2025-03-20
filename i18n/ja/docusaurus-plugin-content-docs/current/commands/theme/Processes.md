@@ -1,6 +1,7 @@
 ---
-id: プロセス
+id: Processes_theme
 title: プロセス
+slug: /commands/theme/Processes
 ---
 
 |                                                                                                                   |
