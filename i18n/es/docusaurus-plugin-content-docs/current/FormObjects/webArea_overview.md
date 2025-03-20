@@ -37,17 +37,27 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 :::
 
-### Objeto $4d
+## $4d Object
 
-El [motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine) suministra el área con un objeto JavaScript llamado $4d que puede asociar con cualquier método de proyecto 4D usando la notación de objeto ".".
+The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la siguiente declaración:
+For example, calling the `HelloWorld` method in 4D:
 
 ```js
 $4d.HelloWorld();
 ```
 
-> JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+
+### Controlling $4d Access
+
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+
+To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
+
+For more information, please refer to [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md).
+
+### Calling 4D Methods from JavaScript
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
@@ -72,8 +82,8 @@ Dado un método proyecto 4D llamado `today`que no recibe parámetros y devuelve 
 Código 4D del método `today`:
 
 ```4d
- #DECLARE : Text
- return String(Current date;System date long)
+#DECLARE -> $result : Text
+$result := String(Current date;System date long)
 ```
 
 En el área web, el método 4D puede ser llamado con la siguiente sintaxis:
@@ -105,19 +115,29 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+Instead of using a standalone method, we can also define a **class** to handle the calculation.
 
-Código 4D del método `calcSum`:
+Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
 ```4d
- #DECLARE (... : Real) -> $sum : Real 
-  // recibe n parámetros de tipo Real 
-  // y devuelve un Real
- var $i; $n : Integer
- $n:=Count parameters
- For($i;1;$n)
-    $0:=$0+${$i}
- End for
+// SumCalculator user class
+
+Function calcSum(... : Real) -> $sum : Real
+   // receives n Real type parameters
+   // and returns a Real
+  var $i; $n : Integer
+  $n := Count parameters
+
+  For ($i; 1; $n)
+    $sum += ${$i}
+  End for
+```
+
+In another method, we create an instance and assign it to $4d
+
+```4d
+var $myCalculator := cs.SumCalculator.new()
+WA SET CONTEXT OBJECT(*; "myWebArea"; $myCalculator)
 ```
 
 El código JavaScript que se ejecuta en el área web es el siguiente:
