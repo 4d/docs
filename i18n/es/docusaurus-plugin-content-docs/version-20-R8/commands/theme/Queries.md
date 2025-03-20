@@ -1,6 +1,7 @@
 ---
-id: Queries
-title: Queries
+id: Queries_theme
+title: Búsquedas
+slug: /commands/theme/Queries
 ---
 
 |                                                                                                                               |
