@@ -1,6 +1,7 @@
 ---
-id: リレーション
+id: Relations_theme
 title: リレーション
+slug: /commands/theme/Relations
 ---
 
 |                                                                                                                     |
