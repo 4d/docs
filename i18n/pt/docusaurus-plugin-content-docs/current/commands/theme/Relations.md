@@ -1,6 +1,7 @@
 ---
-id: Relações
+id: Relations_theme
 title: Relações
+slug: /commands/theme/Relations
 ---
 
 |                                                                                                                     |
