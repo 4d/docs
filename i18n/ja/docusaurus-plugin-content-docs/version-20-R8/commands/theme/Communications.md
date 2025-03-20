@@ -1,6 +1,7 @@
 ---
-id: 通信
+id: Communications_theme
 title: 通信
+slug: /commands/theme/Communications
 ---
 
 |                                                                                                                     |
