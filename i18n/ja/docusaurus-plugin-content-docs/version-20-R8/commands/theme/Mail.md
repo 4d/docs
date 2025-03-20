@@ -1,6 +1,7 @@
 ---
-id: メール
+id: Mail_theme
 title: メール
+slug: /commands/theme/Mail
 ---
 
 |                                                                                                            |
