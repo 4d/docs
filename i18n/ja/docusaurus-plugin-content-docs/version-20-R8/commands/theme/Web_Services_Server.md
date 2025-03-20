@@ -1,6 +1,7 @@
 ---
-id: Web_Services_Server
+id: Web_Services_Server_theme
 title: Webサービス (サーバー)
+slug: /commands/theme/Web-Services-Server
 ---
 
 |                                                                                                                       |
