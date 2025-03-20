@@ -1,6 +1,7 @@
 ---
-id: Web_Server
+id: Web_Server_theme
 title: Serveur Web
+slug: /commands/theme/Web-Server
 ---
 
 |                                                                                                                                         |
