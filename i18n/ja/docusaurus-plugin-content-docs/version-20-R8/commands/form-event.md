@@ -37,8 +37,8 @@ displayed_sidebar: docs
 
 イベントオブジェクトには、イベントが発生したオブジェクト によっては追加のプロパティが含まれていることがあります。  これは以下のオブジェクトで生成された *eventObj* オブジェクトが対象です:
 
-- リストボックスまたはカラムオブジェクト。詳細は*developer.4d.com でのリストボックスのドキュメント* を参照してください。
-- 4D View Pro エリア。詳細は*On VP Ready フォームイベント* を参照してください。
+- List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
+- 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 ***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。
 
