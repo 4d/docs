@@ -1,6 +1,7 @@
 ---
-id: File_and_Folder
+id: File_and_Folder_theme
 title: Fichier et dossier
+slug: /commands/theme/File-and-Folder
 ---
 
 |                                                                                                    |
