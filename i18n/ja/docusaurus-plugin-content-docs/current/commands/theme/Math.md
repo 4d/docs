@@ -1,6 +1,7 @@
 ---
-id: 算術関数
+id: Math_theme
 title: 算術関数
+slug: /commands/theme/Math
 ---
 
 |                                                                                                                         |
