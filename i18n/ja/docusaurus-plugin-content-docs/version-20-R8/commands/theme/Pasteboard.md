@@ -1,6 +1,7 @@
 ---
-id: ペーストボード
+id: Pasteboard_theme
 title: ペーストボード
+slug: /commands/theme/Pasteboard
 ---
 
 |                                                                                                                             |
