@@ -1,6 +1,7 @@
 ---
-id: 変数
+id: Variables_theme
 title: 変数
+slug: /commands/theme/Variables
 ---
 
 |                                                                                                   |
