@@ -103,9 +103,9 @@ La zone de liste résultante lorsque des lignes sont sélectionnées :
 
 ## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1606                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1606                        |
+| Thread safe        | &check; |
 
 

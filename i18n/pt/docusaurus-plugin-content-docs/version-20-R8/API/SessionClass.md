@@ -9,7 +9,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 
 The following types of sessions are supported by this class:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
+- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
@@ -362,18 +362,18 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote
 
 The `.info` object contains the following properties:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                               |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                 |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                      |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                    |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                           |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                        |
-| creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                             |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                        |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                        |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                          |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                            |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                                 |
+| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor. Standalone session: name of the machine |
+| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                               |
+| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                                      |
+| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                                   |
+| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão. Standalone session: date and time of application startup                                                                                                         |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                   |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                                   |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                           |
 
 :::note
 

@@ -87,9 +87,9 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1637                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1637                        |
+| Thread safe    | &check; |
 
 

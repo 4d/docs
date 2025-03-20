@@ -111,7 +111,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 `.attachments` プロパティは、<!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクション<!-- END REF -->を格納します。
 
-Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment.md) command. MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
+MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
 
 ## .bcc
 

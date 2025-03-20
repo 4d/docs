@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
-- [`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
+- [`.call()`](../API/FunctionClass.md#call) あるいは [`.apply()`](../API/FunctionClass.md#apply) 関数
 - object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d

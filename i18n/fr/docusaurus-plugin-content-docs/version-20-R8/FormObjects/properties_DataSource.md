@@ -47,8 +47,7 @@ Vous pouvez également associer des listes de choix à des objets à l'aide des 
 
 #### Objets pris en charge
 
-[Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -170,7 +169,7 @@ L'utilisation de l'option de **Référence élément sélectionné** nécessite 
 
 Liste des valeurs qui seront utilisées comme valeurs par défaut pour la colonne de la list box (type tableau uniquement). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. En utilisant le langage, vous pouvez gérer l'objet en vous référant à ce tableau.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
+> Ne pas confondre cette propriété avec la propriété["default value](properties_RangeOfValues.md#default-value)" qui permet de définir la valeur d'un champ dans les nouveaux enregistrements.
 
 Vous devez saisir une liste de valeurs. Dans l'éditeur de formulaires, une boîte de dialogue spécifique vous permet de saisir des valeurs séparées par des retours à la ligne :
 

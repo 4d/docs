@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descrição
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+A propriedade `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -382,7 +382,7 @@ Cada elemento da coleção é um objeto com as seguintes propriedades:
 | [].message             | text   | Descrição do erro 4D                                 |
 | [ ].componentSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-If no error occured, `.errors` is undefined.
+Se não ocorrer nenhum erro, `.errors` será undefined.
 
 <!-- END REF -->
 
@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descrição
 
-A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída retornado pelo processo externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída retornado pelo processo externo<!-- END REF -->. Parâmetro Parâmetro Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
 
 Essa propriedade é **somente leitura**.
 
@@ -439,13 +439,13 @@ Essa propriedade é **somente leitura**.
 | Parâmetro   | Tipo |     | Descrição                                                                              |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
-| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
+| messageBLOB | Blob |  -> | Bytes escritos no fluxo de entrada                                                     |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite que você escreva no fluxo de entrada (stdin) do processo externo<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -511,7 +511,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -551,7 +551,7 @@ Essa propriedade é **somente leitura**.
 | Parâmetro  | Tipo                            |                             | Descrição                                        |
 | ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
 | timeout    | Real                            |              ->             | Tempo de espera (em segundos) |
-| Resultados | 4D.SystemWorker | <- | SystemWorker object                              |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker                             |
 
 <!-- END REF -->
 
@@ -559,7 +559,7 @@ Essa propriedade é **somente leitura**.
 
 The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
 
-In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
 
 Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 

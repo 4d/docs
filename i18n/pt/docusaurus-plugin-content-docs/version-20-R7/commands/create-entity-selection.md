@@ -4,7 +4,7 @@ title: Criar uma seleção de entidades (entity selection)
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create entity selection.Syntax-->***Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+<!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
 
 <!--REF #_command_.Create entity selection.Params-->
 
@@ -45,9 +45,9 @@ $employees:=Create entity selection([Employee])
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1512                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1512                        |
+| Thread safe    | &check; |
 
 

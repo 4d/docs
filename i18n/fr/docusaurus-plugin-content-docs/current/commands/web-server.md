@@ -58,9 +58,9 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 1674                            |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1674                        |
+| Thread safe        | &cross; |
 
 

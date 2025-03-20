@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo  |                             | Descripción                                                                               |
 | ---------- | ----- | --------------------------- | ----------------------------------------------------------------------------------------- |
 | aTable     | Tabla | &#8594; | Table owning the form or If omitted: default table or use of project form |
-| form       | Text  | &#8594; | Nombre del formulario                                                                     |
+| formulario | Text  | &#8594; | Nombre del formulario                                                                     |
 | object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                       |
 
 <!-- END REF-->
@@ -66,9 +66,9 @@ Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" se
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1749                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1749                        |
+| Hilo seguro       | &cross; |
 
 

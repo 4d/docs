@@ -68,9 +68,9 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 ## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1601                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1601                        |
+| Thread safe        | &check; |
 
 

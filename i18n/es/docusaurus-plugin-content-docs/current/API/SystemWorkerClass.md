@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descripción
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -382,7 +382,7 @@ Cada elemento de la colección es un objeto con las siguientes propiedades:
 | [].message             | text   | Descripción del error 4D                              |
 | [ ].componentSignature | text   | Firma del componente interno que ha devuelto el error |
 
-If no error occured, `.errors` is undefined.
+Si no se ha producido ningún error, `.errors` es indefinido.
 
 <!-- END REF -->
 
@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descripción
 
-La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. Si el proceso no terminó normalmente, `exitCode` es *undefined*.
 
 Esta propiedad es de **solo lectura**.
 
@@ -439,15 +439,15 @@ Esta propiedad es de **solo lectura**.
 | Parámetros  | Tipo |     | Descripción                                                                            |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto a escribir en el flujo de entrada (stdin) del proceso externo |
-| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
+| messageBLOB | Blob |  -> | Bytes escritos en el flujo de entrada                                                  |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. En el parámetro *mensaje*, pase el texto a escribir en *stdin*.
 
-The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
+La función `.postMessage()` también acepta un valor de tipo Blob en *messageBLOB* para pasar en *stdin*, de forma que se pueden publicar datos binarios.
 
 Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) para hacer que el cuerpo de la respuesta devuelva valores Blob.
 

@@ -3,18 +3,18 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
-Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
+Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](./dt_object.md) et [`Collection`](./dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
 - to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
-- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
+- pour créer une collection partagée, utilisez la commande [`New shared collection`](../commands/new-shared-collection.md).
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
-A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Un catalogue unique et global, retourné par la commande [`Storage`](../commands-legacy/storage.md), est toujours disponible dans l'application et ses composants, et peut être utilisé pour stocker tous les objets partagés et collections.
 
 ## Utilisation des objets et collections partagés
 
@@ -33,7 +33,7 @@ Keep in mind that objects or collections set as the content of a shared object o
 
 :::
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated.
+Toute instruction de modification dans un objet partagé ou une collection partagée doit être protégée à l'intérieur d'un bloc [`Use...End use`](#useend-use), sinon une erreur est générée.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -112,7 +112,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
-- [collection functions](../API/CollectionClass.md) that modify shared collections,
+- [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées,
 - [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
 - [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
 - [fonctions partagées](classes.md#fonctions-partagees) (définies dans les [classes partagées](classes.md#classes-partagees)).

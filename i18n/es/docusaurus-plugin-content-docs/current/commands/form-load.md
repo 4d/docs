@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | aTable     | Tabla        | &#8594; | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form       | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
+| formulario | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
 | formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
 | \*         | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
 
@@ -164,9 +164,9 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1103                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1103                        |
+| Hilo seguro       | &cross; |
 
 

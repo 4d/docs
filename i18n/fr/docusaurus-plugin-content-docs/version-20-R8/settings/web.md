@@ -74,7 +74,7 @@ Cette zone vous permet de configurer, par le serveur Web, la gestion des session
 
 #### Sessions extensibles (sessions multi-process)
 
-Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
+Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. Voir la [page Sessions utilisateur](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Pas de sessions
 
@@ -84,7 +84,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 - [Process Web simultanés maxi](#maximum-concurrent-web-processes)
 - [Réutilisation des contextes temporaires (en mode distant)](#reuse-temporary-context)
-- [Use preemptive processes](#use-preemptive-processes)
+- [Utiliser des process préemptifs](#use-preemptive-processes)
 
 #### Anciennes sessions (sessions process uniques)
 
@@ -112,7 +112,7 @@ Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
 Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
 
-> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  Voir [Activer le mode préemptif pour le serveur web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Conservation des process inactifs
 

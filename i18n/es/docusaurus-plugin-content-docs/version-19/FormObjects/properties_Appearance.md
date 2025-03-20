@@ -93,7 +93,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista Jerárquica](list_overview.md) - [Subformulario](subform_overview.md) - [Lista](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
 
@@ -222,7 +222,7 @@ Muestra/oculta la regla horizontal cuando la vista del documento está en modo [
 
 ---
 
-## Show HTML WYSIWYG
+## Mostrar HTML WYSIWYG
 
 Activa/desactiva la vista HTML WYSIWYG, en la que se eliminan los atributos avanzados de 4D Write Pro que no son compatibles con todos los navegadores.
 
@@ -365,7 +365,7 @@ Valores disponibles:
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista Jerárquica](list_overview.md) - [Subformulario](subform_overview.md) - [Lista](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Ver también
 

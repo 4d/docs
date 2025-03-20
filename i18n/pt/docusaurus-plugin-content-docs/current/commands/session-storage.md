@@ -61,7 +61,7 @@ This method modifies the value of a "settings" property stored in the storage ob
 ## Veja também
 
 [Process activity](process-activity.md)\
-[Session](session.md)
+[Session](./session.md)
 
 ## Propriedades
 

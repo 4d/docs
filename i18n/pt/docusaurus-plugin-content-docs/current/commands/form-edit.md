@@ -66,9 +66,9 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1749                            |
-| Thread safe    | &amp;cross; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1749                        |
+| Thread safe    | &cross; |
 
 

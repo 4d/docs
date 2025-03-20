@@ -164,9 +164,9 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 1103                            |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1103                        |
+| Thread safe        | &cross; |
 
 

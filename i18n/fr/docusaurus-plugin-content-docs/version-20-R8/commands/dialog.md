@@ -175,9 +175,9 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 
 ## Propriétés
 
-|                       |                                 |
-| --------------------- | ------------------------------- |
-| Numéro de commande    | 40                              |
-| Thread safe           | &amp;cross; |
-| Modifie les variables | OK, error                       |
+|                       |                             |
+| --------------------- | --------------------------- |
+| Numéro de commande    | 40                          |
+| Thread safe           | &cross; |
+| Modifie les variables | OK, error                   |
 

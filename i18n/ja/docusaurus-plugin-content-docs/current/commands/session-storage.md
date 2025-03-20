@@ -60,8 +60,8 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Process activity](process-activity.md)\
-[Session](session.md)
+[Process activity](process-activity.md)
+[Session](./session.md)
 
 ## プロパティ
 

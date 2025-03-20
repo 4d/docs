@@ -193,7 +193,7 @@ To prevent blocking code, you can pass a maximum waiting time in seconds in the 
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-The function returns the value of the .signaled property:
+A função devolve o valor da propriedade .signaled:
 
 - **true** if the signal was triggered (`.trigger()` was called).
 - **false** if the timeout expired before the signal was triggered.

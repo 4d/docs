@@ -1060,8 +1060,6 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-
 ## .getRemoteContextAttributes()
 
 <details><summary>Historia</summary>
@@ -1088,7 +1086,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la entity selection<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+Si no hay un [contexto de optimización](../ORDA/client-server-optimization.md) para la entity selection, la función devuelve un texto vacío.
 
 #### Ejemplo
 
@@ -2021,10 +2019,10 @@ La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelv
 
 La entity selection devuelta contiene las entidades especificadas por *startFrom* y todas las entidades subsiguientes hasta, pero sin incluir, la entidad especificada por *end*. Si sólo se especifica el parámetro *startFrom*, la entity selection devuelta contiene todas las entidades entre *startFrom* y la última entidad de la entity selection original.
 
-- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). If the calculated value < 0, *startFrom* is set to 0.
+- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). Descripción
 - Si *startFrom >= length*, la función devuelve una entity selection vacía.
 - Si *end* < 0, se recalcula como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Este ejemplo permite reducir varios elementos de la colección a uno solo:
 
 <code>.sum()</code> devuelve 0 si la entity selection está vacía.
 

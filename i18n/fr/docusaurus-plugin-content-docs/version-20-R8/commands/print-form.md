@@ -95,7 +95,7 @@ Optionally, you can pass parameters to the *form* using either the *formData* ob
 
 Pour des informations détaillées sur l'objet de données formulaire, veuillez vous référer à la commande [`DIALOG`](dialog.md).
 
-**Return value**
+**Valeur retournée**
 
 The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
 
@@ -185,9 +185,9 @@ The code that calls the dialog then prints its body:
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 5                               |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 5                           |
+| Thread safe        | &cross; |
 
 

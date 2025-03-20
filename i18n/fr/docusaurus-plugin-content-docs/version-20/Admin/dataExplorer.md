@@ -168,7 +168,7 @@ Par exemple, avec la dataclass Employee, vous pouvez écrire :
 firstname = "Marie Sophie" ET manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/EntitySelectionClass.md#queryplan) and [`queryPath`](API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
+Vous pouvez cliquer sur l'icône `v` pour afficher le [`queryPlan`](API/EntitySelectionClass.md#queryplan) et le [`queryPath`](API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 

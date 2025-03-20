@@ -11,7 +11,7 @@ Um objeto **`4D.Function`** contém um trecho de código que pode ser executado 
 
 ### Objetos de formulários
 
-The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#formula-objects) to execute any 4D expression or code expressed as text.
+Os comandos [Formula](../commands/formula.md) e [Formula from string](../commands/formula-from-string.md) permitem que você crie [objetos`4D.Function`](#formula-objects) para executar qualquer expressão ou código 4D expresso como texto.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 

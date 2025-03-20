@@ -29,7 +29,7 @@ La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `S
 
 Selon le process à partir duquel la commande est appelée, la session utilisateur courante peut être :
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
+- une session web (lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-web-sessions)),
 - une session de client distant,
 - la session des procédures stockées.
 
@@ -47,7 +47,7 @@ L'objet `Session` des sessions web est disponible depuis n'importe quel process 
 - méthodes base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) pour les requêtes mobiles,
 - Fonctions ORDA [appelées via des requêtes REST](../REST/ClassFunctions.md).
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+Pour plus d'informations sur les sessions utilisateur web, veuillez consulter la section [Sessions web](../WebServer/sessions.md).
 
 ## Sessions clients distants
 
@@ -66,7 +66,7 @@ Tous les process des procédures stockées partagent la même session d'utilisat
 - les méthodes appelées avec la commande [`Execute on server`](../commands-legacy/execute-on-server.md),
 - Les méthodes base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, et `On System event`.
 
-For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
+Pour des informations sur la session d'utilisateur virtuel des procédures stockées, veuillez vous référer à la page [4D Server et langage 4D](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
 
 ## Exemple
 

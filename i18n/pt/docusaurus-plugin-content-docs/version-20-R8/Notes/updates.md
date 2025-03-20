@@ -5,7 +5,7 @@ title: Notas de lançamento
 
 ## 4D 20 R8
 
-Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/), the blog post that lists all new features and enhancements in 4D 20 R8.
+Leia [**O que há de novo no 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R8.
 
 #### Destaques
 
@@ -26,7 +26,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Línguagem 4D:
     - Comandos modificados: [`FORM EDIT`](../commands/form-edit.md)
     - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R8): lista de todos os bugs corrigidos em 4D 20 R8.
 
 #### Mudanças de comportamento
 

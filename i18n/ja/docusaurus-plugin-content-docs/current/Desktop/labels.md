@@ -1,133 +1,133 @@
 ---
 id: labels
-title: Labels
+title: ラベル
 ---
 
-4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
+4Dのラベルエディターにより、さまざまなラベルを容易に印刷することができます。 ラベルエディターを使用し、次の操作を行うことができます:
 
-- Design labels for mailings, file folders and file cards, and for many other needs,
-- Create and insert decorative items in label templates,
-- Specify the font, font size, and style to be used for the labels,
-- Specify the number of labels across and down on each page,
-- Specify how many labels to print per record,
-- Specify the label page margins,
-- Designate a method to execute when printing each label or record,
-- Create a preview and print the labels.
+- 宛名やファイルフォルダー、ファイルカードなど、その他数々のニーズに対応するラベルをデザインする。
+- 装飾用のオブジェクトを作成し、ラベルテンプレートに挿入する。
+- ラベルに使用するフォント、フォントサイズ、書体を指定する。
+- 各ページの縦と横に印刷するラベル数を指定する。
+- 各レコードにつき印刷するラベル数を指定する。
+- ラベルページのマージンを指定する。
+- 各ラベルまたは各レコードを印刷する際に実行するメソッドを指定する。
+- プレビューを作成し、ラベルを印刷する。
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+ラベルは、[フォームエディター](../FormEditor/formEditor.md) を使用して作成することもできます。 変数を含むラベルや、フォームエディターの描画用ツールを利用する特殊なラベルを作成しそれらをラベルエディターや [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用して印刷したい場合には、フォームエディターを使用してください。
 
 :::
 
-You use the Label editor to create, format, and print labels. The Label editor contains settings for designing labels and positioning the labels on label paper. For example, when producing mailing labels, you might want a label design that includes the person’s first and last name on the first line, the street address on the second line, and so on. As part of the design, the Label editor enables you to specify the number of labels on the page and the margins of the label paper so that the label text is centered within the labels.
-When you create a satisfactory label design, you can save it to disk so that you can reuse it.
+ラベルエディターを使用して、ラベルの作成やフォーマット、印刷を行います。 ラベルエディター には、ラベルを設計したり、ラベル用紙上でのラベル位置を決めるための各種設定が用意されています。 例えば、宛名ラベルを作成する場合、1行目に相手先の 名字と名前、2行目にその人の住所を納めたラベルを設計することができます。 ラベルエディターでは、ページ上のラベル数を指定したり、ラベル用紙のマージ ンを指定することで、ラベルテキストがラベルの中央に配置されるようデザインを調整することができます。
+ラベルデザインが完成したら、いつでも再利用できるようにディスクに保存することができます。
 
-To open the Label editor:
+ラベルエディターは、次のように開きます:
 
-- In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
- OR
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- デザインモードでは、**ツール**メニュー、あるいは4Dツールバーにあるツールボタンのメニューから\*\*ラベル...\*\*を選択します。
+ または
+- アプリケーションモードでは、 [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用します。
 
 ![](../assets/en/Desktop/label-wizard.png)
 
-You use the Label page to specify the contents of the label and the Layout page to define the size and position of the labels on the page.
+ラベルページはラベルの内容を指定するために使用し、レイアウトページはページ上のラベルサイズや位置を指定するために使用します。
 
 ![](../assets/en/Desktop/label-buttons.png)
 
-## Label Page
+## ラベルページ
 
-The Label page contains several areas with settings for designing and formatting labels.
+ラベルページには、ラベルのデザインやフォーマットを行うための設定があります。
 
-### List of Fields
+### フィールドのリスト
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+カレントテーブルのフィールド名が階層リスト形式で表示されます。 そのテーブルが別のテーブルにリレートしている場合は、外部キーフィー ルドにプラス記号 (Windows) または矢印 (Macintosh) が表示されます。 リレートフィールドを展開すると、リレートテーブルのフィールドを表示することができます。 リレートテーブルのフィールドはインデント (字下げ) されます。 リストから右のラベルプレビューエリアにドラッグすると、フィールドをラベルテンプレートに追加できます。
 
 :::note 注記
 
-- Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- クイックレポートエディターのフィールドリストには、非表示属性が設定されていないテーブルとフィールドだけが表示されます。
+- [オブジェクト型](../Concepts/dt_object.md) のフィールドは、ラベルエディターではサポートされていません。
 
 :::
 
-The search area allows you to narrow the list of fields displayed to those containing the entered string:
+この検索エリアでは入力した文字列を含むフィールドのみに表示を限定することができます:
 
 ![](../assets/en/Desktop/label-filter.png)
 
-### Label preview
+### ラベルプレビューエリア
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+このエリアを使用して、ラベルに表示させるすべてのオブジェクトの配置を調整し、ラベルを設計します。 白い長方形は一つのラベルを表します(ラベルの大きさは [レイアウトページ](#レイアウトページ)) を指定できます)。ラベルにはフィールドをドラッグすることができます。
 
-- You can drag fields onto the label.
-- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
+- ラベルにはフィールドをドラッグすることができます。
+- 一つ目のフィールドの上に他のフィールをドロップする事で二つのフィールドを結合する事もできます。 これらは自動的にスペースで区切られます。<br/>
  ![](../assets/en/Desktop/label-concat.png)<br/>
- If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+ **Shift** キーを押しながらドロップすると、改行で区切られます。 これによって、住所などの複数のフィールドにまたがるラベル(住所1、住所2など)を、住所が一行で済む場合にも無駄な余白行を作らずに作成する事ができることができます。
+- **フォーミュラ** ツール ![](../assets/en/Desktop/label-tool6.png) (あるいはコンテキストメニュー内の **ツール>フォーミュラ**) を選択しながらエリアを描画することで、ラベルにフォーミュラを追加することができます。 すると **フォーミュラエディター** が表示されます:
  ![](../assets/en/Desktop/label-formula1.png)<br/>
- For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+ 例えば、 [`String`](../commands-legacy/string.md) コマンドを使用してフィールドにフォーマットを適用することができます:<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+フォーミュラエディター内では、データベースにおいて"許可された"メソッドしか入力できないという点に注意して下さい。 許可されたメソッドは [プロジェクト設定](../settings/security.md#オプション) と [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) コマンドによります。
 
 :::
 
-- You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
+- OS のデスクトップからピクチャーファイル、またはラベルファイル(".4lbp" ファイル) をドラッグ&ドロップすることができます。
 
-- To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
+- エリアを変更するには、中身をダブルクリックして編集モードにスイッチして下さい。 フィールドやフォーミュラをダブルクリックすると、 **フォーミュラエディター** が表示され、これにより項目を削除や変更することができます:
  ![](../assets/en/Desktop/label-formula.png)
 
-### Form to use
+### 使用するフォーム
 
-This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
-When you use a form, 4D executes any form or object methods associated with it. When using this option, you can also designate a project method to execute for each record or label and then assignate variables (see [this example](#printing-labels-using-forms-and-methods-example) below). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
+このドロップダウンリストを使用すると選択したテーブルフォームをラベルテンプレートとして定義できるようになります。 選択されたフォームはラベルの作成に特化している必要があります。
+この場合、ラベルエディターは部分的に無効化される事になります：[レイアウトページ](#layout-page) の機能のみが使用可能です。これによりフォームに基づいたページの設定が可能です。 選択されたフォームのイメージは、ラベルプレビューエリアに表示されます。
+フォームを使用する場合、4Dはそれに関連づけられたあらゆるフォームメソッド・オブジェクトメソッドを実行します。 このオプションを使用する場合、各レコードあるいは各ラベルに対して実行するプロジェクトメソッドを指定し、変数を割り当てることができます(以下の [この例題](#フォームとメソッドを使用してラベルを印刷する) を参照して下さい)。 エディター自身を使用してラベルを作成したい場合、**フォームなし** オプションを選ぶ必要があります。
 
 :::note 注記
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
-- If the database does not contain any table forms, this menu is not displayed.
+- このメニューに表示されるフォームは、[特定のJSON ファイル](#controlling-available-forms-and-methods) を使用する事によって制限する事ができます。
+- データベースにテーブルフォームが何も含まれていない場合には、このメニューは表示されません。
 
 :::
 
-### Graphic area commands
+### グラフィックエリアコマンド
 
-The graphic area of the editor includes both a tool bar and a context menu that you can use to design your label template.
+エディターのグラフィックエリアではツールバーとコンテキストメニューの両方が使え、これを使ってラベリテンプレートをデザインするすることができます。
 
-The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
+ツールバーの左側にはオブジェクトの選択と挿入のためのコマンドを含めるためのツールバーがあります。 これらのツールはエリアのコンテキストメニュー内の**ツール >** コマンドによってもアクセスする事ができます。
 
-| アイコン                                      | Tool name          | 説明                                                                                                                                                                                                                 |
-| ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | セレクション             | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation | For Rectangle or Rounded rectangle.                                                                                                                                                                |
-| ![](../assets/en/Desktop/label-tool4.png) | Circle creation    |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Text insertion     | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
-| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| アイコン                                      | ツール名        | 説明                                                                                                                       |
+| ----------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Desktop/label-tool1.png) | セレクション      | 選択ツール。単一のオブジェクトをクリックするか、複数のオブジェクトを指定する選択範囲を選んでください。 隣り合っていない複数のオブジェクトを選択するためには、 **Shift** キーを押しながら選択したオブジェクトを一つずつ選んで下さい。 |
+| ![](../assets/en/Desktop/label-tool2.png) | 線作成ツール      |                                                                                                                          |
+| ![](../assets/en/Desktop/label-tool3.png) | 四角作成ツール     | 四角または角の丸い四角を作成できます。                                                                                                      |
+| ![](../assets/en/Desktop/label-tool4.png) | 円作成ツール      |                                                                                                                          |
+| ![](../assets/en/Desktop/label-tool5.png) | テキスト挿入ツール   | 四角形を描画して内部にテキストを入力して下さい。 テキストエリアであればどのようなものでも編集可能です。フィールド参照を含んでいるものも編集可能で、これらに対してはダブルクリックして下さい。                          |
+| ![](../assets/en/Desktop/label-tool6.png) | フォーミュラ挿入ツール | 四角形を描画して **フォーミュラエディター** を表示して下さい。これを使用して動的なラベルコンテンツ(フィールドやフォーミュラ)を定義することができます。                       |
 
-There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
+以下のショートカットを使用する事で、キーボードの矢印キーを使用してより細かくオブジェクトを移動・リサイズすることができます:
 
-- Keyboard arrow keys move the selection of objects 1 pixel at a time.
-- **Shift** + arrow keys move the selection of objects 10 pixels at a time.
-- **Ctrl** + arrow keys enlarge or reduce the selection of objects by 1 pixel.
-- **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
+- キーボードの矢印キーを押すと、選択されたオブジェクトを1ピクセルずつ移動させます。
+- **Shift** + 矢印キーは、選択されたオブジェクトを10ピクセルずつ移動させます。
+- **Ctrl** + 矢印キーは、オブジェクトの選択範囲を1ピクセルずつ拡大または縮小させます。
+- **Ctrl** + **Shift** + 矢印キーは、オブジェクトの選択範囲を10ピクセルずつ拡大または縮小します。
 
-The right-hand side of the tool bar contains commands used to modify items of the label template:
+右側のツールバーにはラベルテンプレートの項目を変更するのに使用するコマンドが含まれます:
 
-| アイコン                                       | Tool name                  | 説明                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Fill Color                 | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
-| ![](../assets/en/Desktop/label-tool8.png)  | 線カラー                       |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
-| ![](../assets/en/Desktop/label-tool11.png) | Alignment and distribution | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
-| ![](../assets/en/Desktop/label-tool12.png) | Object level               | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
+| アイコン                                       | ツール名      | 説明                                                                                                                                                          |
+| ------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Desktop/label-tool7.png)  | 塗りカラー     | 全てのカラーアイコンは選択されたカラーを表示します                                                                                                                                   |
+| ![](../assets/en/Desktop/label-tool8.png)  | 線カラー      |                                                                                                                                                             |
+| ![](../assets/en/Desktop/label-tool9.png)  | 線の太さ      |                                                                                                                                                             |
+| ![](../assets/en/Desktop/label-tool10.png) | フォントメニュー  | フォントとそのサイズに加え、テキストスタイル、選択されたテキストのブロックのカラーと行揃えを設定します。                                                                                                        |
+| ![](../assets/en/Desktop/label-tool11.png) | 揃えと間隔ツール  | 揃えオプションを利用するためには二つ以上のオブジェクトを選択する必要があります。 "間隔"ツールは三つ以上のオブジェクトに対して水平あるいは垂直方向の間隔を自動的に同じ幅に揃えることを意味します。 最終的な間隔は選択範囲内にある既存の幅(または高さ)全ての平均になります。 |
+| ![](../assets/en/Desktop/label-tool12.png) | オブジェクトレベル | オブジェクトを最前面に、あるいは複数のオブジェクトを一つレベルを上げるか下げるかします。                                                                                                                |
 
-## Layout Page
+## レイアウトページ
 
-The Layout page contains controls for printing labels based on the requirements of your current print settings.
+レイアウトページには、現在の印刷条件に基づいたラベル印刷用の各種設定が用意されています。
 
 ![](../assets/en/Desktop/label-layout.png)
 

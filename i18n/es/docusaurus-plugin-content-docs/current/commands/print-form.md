@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formulario | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
 | formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
 | areaStart  | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
 | areaEnd    | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
@@ -185,9 +185,9 @@ The code that calls the dialog then prints its body:
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 5                                                                   |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 5                           |
+| Hilo seguro       | &cross; |
 
 

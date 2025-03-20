@@ -360,11 +360,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name" : "HelloWorld" ; "age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 ### `propriété`
@@ -733,11 +733,11 @@ Les classes Singleton ne sont pas prises en charge par [les classes ORDA](../ORD
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton créé sur | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
-| **4D Server**      | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode** | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
+| Singleton créé sur      | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D mono-utilisateur** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
+| **4D Server**           | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
+| **4D mode distant**     | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
 
 Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 

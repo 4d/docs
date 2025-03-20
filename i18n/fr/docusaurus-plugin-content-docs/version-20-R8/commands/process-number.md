@@ -42,9 +42,9 @@ If the command is executed with the \* parameter from a process on the server ma
 
 ## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 372                                                             |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 372                         |
+| Thread safe        | &check; |
 
 

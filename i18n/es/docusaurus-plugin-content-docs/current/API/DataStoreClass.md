@@ -34,8 +34,6 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
 
-<!-- REF DataStoreClass.dataclassName.Desc -->
-
 ## *.dataclassName*
 
 <details><summary>Historia</summary>
@@ -63,8 +61,6 @@ Cada dataclass en un datastore está disponible como propiedad del objeto [DataS
   //también puede escribir directamente:
  $sel:=ds.Employee.all()
 ```
-
-<!-- END REF -->
 
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
@@ -94,15 +90,13 @@ La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
-Puede anidar varias transacciones (subtransacciones). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
+Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransaction).
 
 #### Ejemplo
 
 Ver el ejemplo de la función [`.startTransaction() `](#starttransaction).
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 
 ## .clearAllRemoteContexts()
 
@@ -210,8 +204,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
-
 ## .flushAndLock()
 
 <details><summary>Historia</summary>
@@ -288,8 +280,6 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
-
 ## .getAllRemoteContexts()
 
 <details><summary>Historia</summary>
@@ -318,7 +308,7 @@ La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Para obtener más información sobre cómo se pueden crear contextos, consulte [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Cada objeto de la colección devuelta tiene las propiedades enumeradas en la sección [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Ejemplo
 
@@ -364,8 +354,6 @@ $info:=$ds.getAllRemoteContexts()
 #### Ver también
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
-
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
 
 ## .getGlobalStamp()
 
@@ -449,7 +437,7 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devuelve 
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | type       | string  | <li>"4D": datastore principal, disponible a través de ds </li><li>"4D Server": datastore remoto, abrir con Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | networked  | boolean | <li>True: el datastore se alcanza a través de una conexión de red.</li><li>False: el datastore no se alcanza a través de una conexión de red (base de datos local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| localID    | text    | ID del almacén de datos en la máquina. Corresponde a la cadena localId dada con el comando `Open datastore`. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| localID    | text    | ID del almacén de datos en la máquina. ID del almacén de datos en la máquina. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>nombre de host</td><td>texto</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>booleano</td><td>True si se utiliza una conexión segura con el datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>usuario</td><td>texto</td><td>Usuario autenticado en el almacén de datos remoto</td></tr></table> |
 
 - Si la función `.getInfo()` se ejecuta en un 4D Server o en un 4D monopuesto, `networked` es False.
@@ -486,8 +474,6 @@ En un almacén de datos remoto:
 ```
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
 
 ## .getRemoteContextInfo()
 
@@ -613,8 +599,6 @@ Por defecto, se concede acceso al Data Explorer para las sesiones `webAdmin`, pe
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.locked().Desc -->
-
 ## .locked()
 
 <details><summary>Historia</summary>
@@ -679,7 +663,7 @@ La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelections
 
 Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](./EntitySelectionClass.md#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 > **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes.
 > Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
@@ -806,8 +790,6 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
-
 ## .setGlobalStamp()
 
 <details><summary>Historia</summary>
@@ -862,8 +844,6 @@ ds.setGlobalStamp($newValue)
 #### Ver también
 
 [.getGlobalStamp()](#getglobalstamp)
-
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 
 ## .setRemoteContextInfo()
 
@@ -1010,11 +990,11 @@ End case
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                                                        |
-| ---------- | ----------------------- | -- | ---------------------------------------------------------------------------------- |
-| file       | 4D.File | -> | Objeto File                                                                        |
-| options    | Integer                 | -> | Opción de registro de respuesta (servidor únicamente)           |
-| reqNum     | Integer                 | -> | Número de peticiones a mantener en memoria (cliente únicamente) |
+| Parámetros | Tipo                    |    | Descripción                                                              |
+| ---------- | ----------------------- | -- | ------------------------------------------------------------------------ |
+| file       | 4D.File | -> | Objeto File                                                              |
+| options    | Integer                 | -> | Opción de registro de respuesta (servidor únicamente) |
+| reqNum     | Integer                 | -> | Number of requests to keep in memory (client only)    |
 
 <!-- END REF -->
 
@@ -1033,6 +1013,7 @@ Para una descripción del formato del registro de peticiones ORDA, por favor con
 Para crear un registro de peticiones ORDA del lado del cliente, llame a esta función en una máquina remota. El registro puede enviarse a un archivo o a la memoria, según el tipo de parámetro:
 
 - Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+ En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
  Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
@@ -1043,7 +1024,7 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 #### Del lado del servidor
 
-Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Los datos del registro se escriben en un archivo en formato `.jsonl`. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
 - Si ha pasado el parámetro *file*, los datos de registro se escriben en este archivo, en la ubicación solicitada. - Si omite el parámetro *file* o si es null, los datos del registro se escriben en un archivo llamado *ordaRequests.jsonl* y se almacenan en la carpeta "/LOGS".
 - El parámetro *options* puede utilizarse para especificar si la respuesta del servidor debe registrarse y si debe incluir el cuerpo. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
@@ -1208,8 +1189,6 @@ Esta función no hace nada si el registro de peticiones ORDA no se inició en la
 Ver ejemplos para [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.unlock().Desc -->
 
 ## .unlock()
 

@@ -15,7 +15,7 @@ title: VP Row
 | row        | Integer | ->                          | Índice de la línea                                             |                  |
 | rowCount   | Integer | ->                          | Número de líneas                                               |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Resultado  | Object  | <- | Range object of row(s)                      | <!-- END REF --> |
+| Resultado  | Object  | <- | Rango de línea(s)                           | <!-- END REF --> |
 
 ## Descripción
 

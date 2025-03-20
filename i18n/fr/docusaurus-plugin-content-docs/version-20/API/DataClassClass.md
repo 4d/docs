@@ -65,7 +65,7 @@ Les objets attributs retournés contiennent les propriétés suivantes :
 | path             | Text    | Chemin d'un [attribut alias](../ORDA/ordaClasses.md#alias-attributes-1) basé sur une relation                                                                                                                                                                                                                                                                                                 |
 | readOnly         | Boolean | Vrai si l'attribut est en lecture seule. Par exemple, les attributs calculés sans fonction [`set`](../ORDA/ordaClasses.md#function-set-attributename) sont en lecture seule.                                                                                                                                                                                                                  |
 | relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
-| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
+| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris duration ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
 | unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
 
 :::tip
@@ -120,7 +120,6 @@ Considérant les propriétés de table suivantes :
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Historique</summary>
@@ -170,7 +169,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Historique</summary>
@@ -223,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -674,7 +673,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Historique</summary>
@@ -1534,7 +1533,6 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 [`.query()`](EntitySelectionClass.md#query) pour les entity selections
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Historique</summary>

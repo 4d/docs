@@ -34,7 +34,7 @@ Tener una fórmula como objeto permite pasarla como parámetro (atributo calcula
 La fórmula devuelta puede ser llamada con:
 
 - los métodos [`.call()`](../API/FunctionClass.md#call) o [`.apply()`](../API/FunctionClass.md#apply), o
-- object notation syntax (see [formula object](../commands/formula.md-object)).
+- la sintaxis de notación objeto (ver [objeto formula](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Propiedad** | **Type** | **Description**                                                                                                                                                                               |
+| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                               |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
 | code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
@@ -103,9 +103,9 @@ The resulting list box when rows are selected:
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1606                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1606                        |
+| Hilo seguro       | &check; |
 
 

@@ -134,8 +134,8 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
+- `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
 See examples below for creating or updating entities with POST requests.
 See an example of contents downloading using an entity with a GET request.

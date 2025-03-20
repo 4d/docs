@@ -13,7 +13,7 @@ Cuando se ejecuta en modo *cooperativo*, todos los procesos son gestionados por 
 
 Como resultado, en modo apropiativo, se mejora el rendimiento general de la aplicación, especialmente en máquinas de múltiples núcleos, ya que varios procesos (hilos) pueden ejecutarse realmente de forma simultánea. Sin embargo, las ganancias reales dependen de las operaciones que se ejecuten. A cambio, dado que cada hilo es independiente de los demás en modo apropiativo y no es administrado directamente por la aplicación, existen restricciones específicas aplicadas al código que se desea que cumpla con el uso apropiativo. Además, la ejecución apropiativa sólo está disponible en determinados contextos específicos.
 
-## Disponibilidad del modo apropiativo
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 El uso del modo apropiativo está soportado en los siguientes contextos de ejecución:
 

@@ -23,7 +23,7 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#database-method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
