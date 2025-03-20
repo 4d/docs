@@ -1,6 +1,7 @@
 ---
-id: コンパイラー
+id: Compiler_theme
 title: コンパイラー
+slug: /commands/theme/Compiler
 ---
 
 |                                                                                              |
