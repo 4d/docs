@@ -1,6 +1,7 @@
 ---
-id: 文字列
+id: String_theme
 title: 文字列
+slug: /commands/theme/String
 ---
 
 |                                                                                                         |
