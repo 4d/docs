@@ -128,14 +128,14 @@ TCPConnection オブジェクトは共有不可のオブジェクトです。
 
 TCPConnection オブジェクトは以下のプロパティと関数を提供します:
 
-|                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #4D.TCPConnection.closed.Summary -->           |
-| [<!-- INCLUDE #4D.TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #4D.TCPConnection.errors.Summary -->           |
-| [<!-- INCLUDE #4D.TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #4D.TCPConnection.noDelay.Summary -->        |
-| [<!-- INCLUDE #4D.TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #4D.TCPConnection.send().Summary -->             |
-| [<!-- INCLUDE #4D.TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #4D.TCPConnection.shutdown().Summary --> |
-| [<!-- INCLUDE #4D.TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #4D.TCPConnection.wait().Summary -->             |
+|                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #TCPConnection.closed.Summary -->           |
+| [<!-- INCLUDE #TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPConnection.errors.Summary -->           |
+| [<!-- INCLUDE #TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #TCPConnection.noDelay.Summary -->        |
+| [<!-- INCLUDE #TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #TCPConnection.send().Summary -->             |
+| [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
+| [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
 
 <!-- REF #4D.TCPConnection.new().Desc -->
 
@@ -195,27 +195,27 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.closed.Desc -->
+<!-- REF #TCPConnection.closed.Desc -->
 
 ## .closed
 
-<!-- REF #4D.TCPConnection.closed.Syntax -->**closed** : Boolean<!-- END REF -->
+<!-- REF #TCPConnection.closed.Syntax -->**closed** : Boolean<!-- END REF -->
 
 #### 説明
 
-`.closed` プロパティには<!-- REF #4D.TCPConnection.closed.Summary -->接続が閉じられたかどうかの情報が格納されています<!-- END REF -->。  エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
+The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.errors.Desc -->
+<!-- REF #TCPConnection.errors.Desc -->
 
 ## .errors
 
-<!-- REF #4D.TCPConnection.errors.Syntax -->**errors** : Collection<!-- END REF -->
+<!-- REF #TCPConnection.errors.Syntax -->**errors** : Collection<!-- END REF -->
 
 #### 説明
 
-`.errors` プロパティには、<!-- REF #4D.TCPConnection.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。  各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -226,25 +226,25 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.noDelay.Desc -->
+<!-- REF #TCPConnection.noDelay.Desc -->
 
 ## .noDelay
 
-<!-- REF #4D.TCPConnection.noDelay.Syntax -->**noDelay** : Boolean<!-- END REF -->
+<!-- REF #TCPConnection.noDelay.Syntax -->**noDelay** : Boolean<!-- END REF -->
 
 #### 説明
 
-`.noDelay` プロパティには、<!-- REF #4D.TCPConnection.noDelay.Summary -->whether Nagle のアルゴリズムが無効化されている(`true`) か有効化されている(`false`) かの情報が格納されています<!-- END REF -->。 このプロパティは **読み取り専用** です。
+The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().Desc -->
+<!-- REF #TCPConnection.send().Desc -->
 
 ## .send()
 
-<!-- REF #4D.TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
+<!-- REF #TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.send().params -->
+<!-- REF #TCPConnection.send().params -->
 
 | 引数   | 型    |    | 説明      |
 | ---- | ---- | -- | ------- |
@@ -254,17 +254,17 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-`send()` 関数は<!-- REF #4D.TCPConnection.send().Summary -->データをサーバーに送信します<!--END REF -->。  接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
+The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().Desc -->
+<!-- REF #TCPConnection.shutdown().Desc -->
 
 ## .shutdown()
 
-<!-- REF #4D.TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
+<!-- REF #TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.shutdown().params -->
+<!-- REF #TCPConnection.shutdown().params -->
 
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
@@ -274,17 +274,17 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-`shutdown()` 関数は、<!-- REF #4D.TCPConnection.shutdown().Summary -->接続の*write* チャンネル(クライアントからサーバーへのストリーム)を閉じます<!-- END REF -->。その一方で、*read* チャンネル(サーバーからクライアントへのストリーム)は開かれたままとなります。これによって、接続がサーバーによって完全に閉じられるか、エラーが発生するまでは、データを受信し続けることができます。
+The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPConnection.wait().Desc -->
+<!-- REF #TCPConnection.wait().Desc -->
 
 ## .wait()
 
-<!-- REF #4D.TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
+<!-- REF #TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #4D.TCPConnection.wait().params -->
+<!-- REF #TCPConnection.wait().params -->
 
 | 引数      | 型    |     | 説明                           |
 | ------- | ---- | :-: | ---------------------------- |
@@ -294,7 +294,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-`wait()` 関数は<!-- REF #4D.TCPConnection.wait().Summary -->TCP 接続が閉じられるか、あるいは`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
+The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
 
 :::note
 
