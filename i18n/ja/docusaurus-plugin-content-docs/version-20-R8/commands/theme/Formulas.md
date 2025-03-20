@@ -1,6 +1,7 @@
 ---
-id: フォーミュラ
+id: Formulas_theme
 title: フォーミュラ
+slug: /commands/theme/Formulas
 ---
 
 |                                                                                                             |
