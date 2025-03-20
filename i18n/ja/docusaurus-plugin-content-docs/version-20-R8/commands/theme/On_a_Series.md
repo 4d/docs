@@ -1,6 +1,7 @@
 ---
-id: On_a_Series
+id: On_a_Series_theme
 title: 統計関数
+slug: /commands/theme/On-a-Series
 ---
 
 |                                                                                                 |
