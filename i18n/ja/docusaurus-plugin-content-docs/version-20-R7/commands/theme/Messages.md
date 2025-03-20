@@ -1,6 +1,7 @@
 ---
-id: メッセージ
+id: Messages_theme
 title: メッセージ
+slug: /commands/theme/Messages
 ---
 
 |                                                                                                               |
