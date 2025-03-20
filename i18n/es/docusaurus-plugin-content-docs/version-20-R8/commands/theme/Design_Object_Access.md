@@ -1,6 +1,7 @@
 ---
-id: Design_Object_Access
+id: Design_Object_Access_theme
 title: Design Object Access
+slug: /commands/theme/Design-Object-Access
 ---
 
 |                                                                                                                               |
