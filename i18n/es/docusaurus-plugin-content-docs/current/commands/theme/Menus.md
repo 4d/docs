@@ -1,6 +1,7 @@
 ---
-id: Menús
+id: Menus_theme
 title: Menús
+slug: /commands/theme/Menus
 ---
 
 |                                                                                                                                       |
