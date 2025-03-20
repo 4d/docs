@@ -1,6 +1,7 @@
 ---
-id: Fórmulas
+id: Formulas_theme
 title: Fórmulas
+slug: /commands/theme/Formulas
 ---
 
 |                                                                                                             |
