@@ -1,6 +1,7 @@
 ---
-id: On_a_Series
+id: On_a_Series_theme
 title: Fonctions statistiques
+slug: /commands/theme/On-a-Series
 ---
 
 |                                                                                                 |
