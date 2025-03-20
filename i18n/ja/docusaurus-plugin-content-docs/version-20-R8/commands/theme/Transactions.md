@@ -1,6 +1,7 @@
 ---
-id: トランザクション
+id: Transactions_theme
 title: トランザクション
+slug: /commands/theme/Transactions
 ---
 
 |                                                                                                               |
