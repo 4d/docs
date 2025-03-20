@@ -1,6 +1,7 @@
 ---
-id: Quick_Report
+id: Quick_Report_theme
 title: Etats rapides
+slug: /commands/theme/Quick-Report
 ---
 
 |                                                                                                                       |
