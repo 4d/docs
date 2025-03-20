@@ -1,6 +1,7 @@
 ---
-id: Styled_Text
+id: Styled_Text_theme
 title: Texte multistyle
+slug: /commands/theme/Styled-Text
 ---
 
 |                                                                                                                   |
