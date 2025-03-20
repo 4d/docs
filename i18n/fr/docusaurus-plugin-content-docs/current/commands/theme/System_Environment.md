@@ -1,6 +1,7 @@
 ---
-id: System_Environment
+id: System_Environment_theme
 title: Environnement système
+slug: /commands/theme/System-Environment
 ---
 
 |                                                                                                                                 |
