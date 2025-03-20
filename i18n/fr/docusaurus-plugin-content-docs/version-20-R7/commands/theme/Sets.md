@@ -1,6 +1,7 @@
 ---
-id: Ensembles
+id: Sets_theme
 title: Ensembles
+slug: /commands/theme/Sets
 ---
 
 |                                                                                                                 |
