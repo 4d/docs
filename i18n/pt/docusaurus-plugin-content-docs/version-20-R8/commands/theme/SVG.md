@@ -1,6 +1,7 @@
 ---
-id: SVG
+id: SVG_theme
 title: SVG
+slug: /commands/theme/SVG
 ---
 
 |                                                                                                                                           |
