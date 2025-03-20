@@ -1,6 +1,7 @@
 ---
-id: Secured_Protocol
+id: Secured_Protocol_theme
 title: 暗号化プロトコル
+slug: /commands/theme/Secured-Protocol
 ---
 
 |                                                                                                                               |
