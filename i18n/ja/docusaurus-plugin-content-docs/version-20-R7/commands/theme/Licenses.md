@@ -1,6 +1,7 @@
 ---
-id: ライセンスリスト
+id: Licenses_theme
 title: ライセンスリスト
+slug: /commands/theme/Licenses
 ---
 
 |                                                                                                                         |
