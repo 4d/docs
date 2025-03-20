@@ -36,7 +36,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | machineName         | Text                                    | Name of the remote machine                                                                         |
 | systemUserName      | Text                                    | Name of the system session opened on the remote machine                                            |
 | IPAddress           | Text                                    | Dirección IP de la máquina remota                                                                  |
-| hostType            | Text (enum)          | Host type. Possible values: "windows", "mac", "browser"            |
+| hostType            | Text (enum)          | Tipo de host. Possible values: "windows", "mac", "browser"         |
 | creationDateTime    | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
 | state               | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
 | ID                  | Text                                    | Session UUID                                                                                       |
