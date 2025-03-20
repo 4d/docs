@@ -1,6 +1,7 @@
 ---
-id: セット
+id: Sets_theme
 title: セット
+slug: /commands/theme/Sets
 ---
 
 |                                                                                                                 |
