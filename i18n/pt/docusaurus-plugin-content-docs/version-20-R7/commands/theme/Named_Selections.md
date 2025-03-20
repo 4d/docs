@@ -1,6 +1,7 @@
 ---
-id: Named_Selections
+id: Named_Selections_theme
 title: Seleções temporárias
+slug: /commands/theme/Named-Selections
 ---
 
 |                                                                                                                 |
