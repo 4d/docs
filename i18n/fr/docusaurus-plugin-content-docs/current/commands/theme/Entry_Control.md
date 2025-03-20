@@ -1,6 +1,7 @@
 ---
-id: Entry_Control
+id: Entry_Control_theme
 title: Gestion de la saisie
+slug: /commands/theme/Entry-Control
 ---
 
 |                                                                                                       |
