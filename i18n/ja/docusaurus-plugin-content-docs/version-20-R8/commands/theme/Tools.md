@@ -1,6 +1,7 @@
 ---
-id: ツール
+id: Tools_theme
 title: ツール
+slug: /commands/theme/Tools
 ---
 
 |                                                                                                                             |
