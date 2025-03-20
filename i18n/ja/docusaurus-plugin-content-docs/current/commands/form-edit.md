@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-*デザインオブジェクトアクセスコマンド*
+[Design Object Access Commands](../commands/theme/Design_Object_Access.md)
 
 ## プロパティ
 
