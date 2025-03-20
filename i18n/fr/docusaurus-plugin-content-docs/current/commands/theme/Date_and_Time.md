@@ -1,6 +1,7 @@
 ---
-id: Date_and_Time
+id: Date_and_Time_theme
 title: Dates et heures
+slug: /commands/theme/Date-and-Time
 ---
 
 |                                                                                                             |
