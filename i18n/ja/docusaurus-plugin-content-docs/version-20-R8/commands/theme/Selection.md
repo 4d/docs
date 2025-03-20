@@ -1,6 +1,7 @@
 ---
-id: セレクション
+id: Selection_theme
 title: セレクション
+slug: /commands/theme/Selection
 ---
 
 |                                                                                                                             |
