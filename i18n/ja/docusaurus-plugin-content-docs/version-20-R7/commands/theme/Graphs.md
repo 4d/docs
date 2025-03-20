@@ -1,6 +1,7 @@
 ---
-id: グラフ
+id: Graphs_theme
 title: グラフ
+slug: /commands/theme/Graphs
 ---
 
 |                                                                                                   |
