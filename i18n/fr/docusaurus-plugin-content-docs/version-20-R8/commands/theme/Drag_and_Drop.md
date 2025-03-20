@@ -1,6 +1,7 @@
 ---
-id: Drag_and_Drop
+id: Drag_and_Drop_theme
 title: Glisser-Déposer
+slug: /commands/theme/Drag-and-Drop
 ---
 
 |                                                                                                 |
