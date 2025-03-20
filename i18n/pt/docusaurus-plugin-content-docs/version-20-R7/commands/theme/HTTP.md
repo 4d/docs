@@ -1,6 +1,7 @@
 ---
-id: HTTP
+id: HTTP_theme
 title: HTTP
+slug: /commands/theme/HTTP
 ---
 
 |                                                                                                                               |
