@@ -1,6 +1,7 @@
 ---
-id: XML_SAX
+id: XML_SAX_theme
 title: XML SAX
+slug: /commands/theme/XML-SAX
 ---
 
 |                                                                                                                                           |
