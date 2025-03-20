@@ -24,14 +24,14 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 ## Resources
 
-You can assign specific permission actions to the following resources in your project:
+Vous pouvez assigner des actions de permission spécifiques aux ressources suivantes dans votre projet :
 
 - le datastore
 - une dataclass
 - un attribut (y compris calculé et alias)
 - une fonction de classe du modèle de données
 
-Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
+Chaque fois qu'on accède à une ressource dans une session (quelle que soit la manière dont on y accède), 4D vérifie que la session dispose des autorisations appropriées et rejette l'accès s'il n'est pas autorisé.
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 
