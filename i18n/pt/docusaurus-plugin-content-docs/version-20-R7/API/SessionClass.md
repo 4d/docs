@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). Esses objetos fornecem ao desenvolvedor uma interface que permite gerenciar a sessão atual do usuário e executar ações como armazenar dados contextuais, compartilhar informações entre processos de sessão, iniciar processos preemptivos relacionados à sessão ou (somente na Web) gerenciar [privilégios](../ORDA/privileges.md).
 
 ### Tipos de sessão
 
