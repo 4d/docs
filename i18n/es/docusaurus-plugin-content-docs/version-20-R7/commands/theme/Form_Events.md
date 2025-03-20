@@ -1,6 +1,7 @@
 ---
-id: Form_Events
+id: Form_Events_theme
 title: Eventos formulario
+slug: /commands/theme/Form-Events
 ---
 
 |                                                                                                                         |
