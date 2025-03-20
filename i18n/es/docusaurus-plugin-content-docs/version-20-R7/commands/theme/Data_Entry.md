@@ -1,6 +1,7 @@
 ---
-id: Data_Entry
-title: Data Entry
+id: Data_Entry_theme
+title: Entrada
+slug: /commands/theme/Data-Entry
 ---
 
 |                                                                                                 |
