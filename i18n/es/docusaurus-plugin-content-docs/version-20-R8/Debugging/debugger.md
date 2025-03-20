@@ -391,7 +391,7 @@ El panel de código fuente muestra el código fuente del método o de la funció
 
 Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakpoints.md).
 
-### Prototype
+### Prototipo
 
 The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
 
