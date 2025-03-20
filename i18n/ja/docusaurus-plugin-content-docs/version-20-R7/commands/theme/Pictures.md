@@ -1,6 +1,7 @@
 ---
-id: ピクチャー
+id: Pictures_theme
 title: ピクチャー
+slug: /commands/theme/Pictures
 ---
 
 |                                                                                                                             |
