@@ -1,6 +1,7 @@
 ---
-id: Images
+id: Pictures_theme
 title: Images
+slug: /commands/theme/Pictures
 ---
 
 |                                                                                                                             |
