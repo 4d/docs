@@ -1,6 +1,7 @@
 ---
-id: Página de Backup
+id: Backup_theme
 title: Página de Backup
+slug: /commands/theme/Backup
 ---
 
 |                                                                                                                         |
