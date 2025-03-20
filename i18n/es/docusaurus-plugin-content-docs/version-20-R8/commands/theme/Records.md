@@ -1,6 +1,7 @@
 ---
-id: Registros
+id: Records_theme
 title: Registros
+slug: /commands/theme/Records
 ---
 
 |                                                                                                       |
@@ -10,7 +11,7 @@ title: Registros
 | [<!-- INCLUDE #_command_.DISPLAY RECORD.Syntax -->](../../commands-legacy/display-record.md)<br/>     |
 | [<!-- INCLUDE #_command_.DUPLICATE RECORD.Syntax -->](../../commands-legacy/duplicate-record.md)<br/> |
 | [<!-- INCLUDE #_command_.GOTO RECORD.Syntax -->](../../commands-legacy/goto-record.md)<br/>           |
-| [<!-- INCLUDE #_command_.Is new record.Syntax -->](../../commands-legacy/is-new-record.md)<br/>       |
+| [<!-- INCLUDE #_command_.GOTO RECORD.Syntax -->](../../commands-legacy/goto-record.md)<br/>           |
 | [<!-- INCLUDE #_command_.Is record loaded.Syntax -->](../../commands-legacy/is-record-loaded.md)<br/> |
 | [<!-- INCLUDE #_command_.Modified record.Syntax -->](../../commands-legacy/modified-record.md)<br/>   |
 | [<!-- INCLUDE #_command_.POP RECORD.Syntax -->](../../commands-legacy/pop-record.md)<br/>             |
