@@ -119,7 +119,7 @@ Si aucun agent n'est associé à une requête HTTP, un agent global avec des val
 
 #### Description
 
-The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
+La propriété `.params` contient <!-- REF #HTTPAgentClass.params.Summary -->les options actuellement utilisées par le HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
