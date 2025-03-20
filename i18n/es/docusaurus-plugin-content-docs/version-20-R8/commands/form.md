@@ -1,5 +1,5 @@
 ---
-id: formulario
+id: form
 title: Formulario
 displayed_sidebar: docs
 ---
