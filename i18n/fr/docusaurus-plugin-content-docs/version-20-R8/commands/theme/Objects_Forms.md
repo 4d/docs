@@ -1,6 +1,7 @@
 ---
-id: Objects_Forms
+id: Objects_Forms_theme
 title: Objets (Formulaires)
+slug: /commands/theme/Objects-Forms
 ---
 
 |                                                                                                                                               |
