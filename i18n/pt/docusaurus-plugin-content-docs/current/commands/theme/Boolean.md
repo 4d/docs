@@ -1,6 +1,7 @@
 ---
-id: Parâmetros
+id: Boolean_theme
 title: Parâmetros
+slug: /commands/theme/Boolean
 ---
 
 |                                                                                 |
