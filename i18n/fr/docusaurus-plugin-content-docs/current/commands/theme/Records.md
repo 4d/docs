@@ -1,6 +1,7 @@
 ---
-id: Enregistrements
+id: Records_theme
 title: Enregistrements
+slug: /commands/theme/Records
 ---
 
 |                                                                                                       |
