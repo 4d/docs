@@ -1,6 +1,7 @@
 ---
-id: Design_Object_Access
+id: Design_Object_Access_theme
 title: Accès objets développement
+slug: /commands/theme/Design-Object-Access
 ---
 
 |                                                                                                                               |
