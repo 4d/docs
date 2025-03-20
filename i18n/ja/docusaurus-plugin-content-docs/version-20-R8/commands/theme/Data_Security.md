@@ -1,6 +1,7 @@
 ---
-id: Data_Security
+id: Data_Security_theme
 title: データセキュリティ
+slug: /commands/theme/Data-Security
 ---
 
 |                                                                                                                             |
