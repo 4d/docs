@@ -1,6 +1,7 @@
 ---
-id: Outils
+id: Tools_theme
 title: Outils
+slug: /commands/theme/Tools
 ---
 
 |                                                                                                                             |
