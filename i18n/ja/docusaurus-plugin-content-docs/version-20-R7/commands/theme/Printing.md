@@ -1,6 +1,7 @@
 ---
-id: 印刷
+id: Printing_theme
 title: 印刷
+slug: /commands/theme/Printing
 ---
 
 |                                                                                                                   |
