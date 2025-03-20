@@ -1,6 +1,7 @@
 ---
-id: Tableaux
+id: Arrays_theme
 title: Tableaux
+slug: /commands/theme/Arrays
 ---
 
 |                                                                                                                               |
