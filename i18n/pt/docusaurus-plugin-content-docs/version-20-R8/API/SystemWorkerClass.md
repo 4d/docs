@@ -557,13 +557,13 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->aguarda até o final da execução do `SystemWorker` ou até o *timeout* especificado<!-- END REF -->.
 
-Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+Em *timeout*, passe um valor em segundos. O script `SystemWorker` aguardará o processo externo pelo período de tempo definido no parâmetro *timeout*. Se você omitir o parâmetro *timeout*, a execução do script aguardará indefinidamente.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
+Na verdade, `.wait()` aguarda até o final do processamento da fórmula `onTerminate`, exceto se o *timeout* for atingido. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
+Durante uma execução `.wait()`, as funções de retorno de chamada são executadas, especialmente retornos de chamada de outros eventos ou de outras instâncias do `SystemWorker`. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 Esta função devolve o objecto SystemWorker.
 
