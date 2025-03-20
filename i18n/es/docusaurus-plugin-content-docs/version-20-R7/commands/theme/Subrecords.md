@@ -1,6 +1,7 @@
 ---
-id: Subrecords
-title: Subrecords
+id: Subrecords_theme
+title: Subregistros
+slug: /commands/theme/Subrecords
 ---
 
 |                                                                                                         |
