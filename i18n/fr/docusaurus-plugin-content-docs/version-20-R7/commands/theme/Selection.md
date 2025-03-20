@@ -1,6 +1,7 @@
 ---
-id: Sélections
+id: Selection_theme
 title: Sélections
+slug: /commands/theme/Selection
 ---
 
 |                                                                                                                             |
