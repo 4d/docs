@@ -1,6 +1,7 @@
 ---
-id: ランゲージ
+id: Language_theme
 title: ランゲージ
+slug: /commands/theme/Language
 ---
 
 |                                                                                                             |
