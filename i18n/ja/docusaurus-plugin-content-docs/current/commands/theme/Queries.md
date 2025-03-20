@@ -1,6 +1,7 @@
 ---
-id: クエリ
+id: Queries_theme
 title: クエリ
+slug: /commands/theme/Queries
 ---
 
 |                                                                                                                               |
