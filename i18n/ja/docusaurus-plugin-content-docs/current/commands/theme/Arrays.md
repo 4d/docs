@@ -1,6 +1,7 @@
 ---
-id: 配列
+id: Arrays_theme
 title: 配列
+slug: /commands/theme/Arrays
 ---
 
 |                                                                                                                               |
