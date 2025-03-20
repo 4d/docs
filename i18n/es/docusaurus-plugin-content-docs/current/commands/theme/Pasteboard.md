@@ -1,6 +1,7 @@
 ---
-id: Pasteboard
-title: Pasteboard
+id: Pasteboard_theme
+title: Portapapeles
+slug: /commands/theme/Pasteboard
 ---
 
 |                                                                                                                             |
