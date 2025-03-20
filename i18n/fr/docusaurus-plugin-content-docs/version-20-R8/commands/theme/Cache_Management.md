@@ -1,6 +1,7 @@
 ---
-id: Cache_Management
+id: Cache_Management_theme
 title: Gestion du cache
+slug: /commands/theme/Cache-Management
 ---
 
 |                                                                                                                                         |
