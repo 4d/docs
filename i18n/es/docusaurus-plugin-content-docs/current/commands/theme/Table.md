@@ -1,6 +1,7 @@
 ---
-id: Tabla
+id: Table_theme
 title: Tabla
+slug: /commands/theme/Table
 ---
 
 |                                                                                                                 |
