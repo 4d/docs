@@ -1,6 +1,7 @@
 ---
-id: Recherches et tris
+id: Queries_theme
 title: Recherches et tris
+slug: /commands/theme/Queries
 ---
 
 |                                                                                                                               |
