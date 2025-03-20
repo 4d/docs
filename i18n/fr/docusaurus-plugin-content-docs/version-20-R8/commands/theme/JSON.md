@@ -1,6 +1,7 @@
 ---
-id: JSON
+id: JSON_theme
 title: JSON
+slug: /commands/theme/JSON
 ---
 
 |                                                                                                                 |
