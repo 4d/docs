@@ -12,7 +12,7 @@ title: リリースノート
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).
 - New commands [WA SET CONTEXT OBJECT](../commands/wa-set-context-object.md) and [WA Get context object](../commands/wa-get-context-object.md) to control [$4d](../FormObjects/webArea_overview.md#4d-object) contents in web areas.
-- New `RDP optimization` database parameter to support shared clipboard when using Remote Desktop Protocol with 4D.
+- New `RDP optimization` database parameter to optimize for instance shared clipboard when using Remote Desktop Protocol with 4D.
 
 ## 4D 20 R8
 
