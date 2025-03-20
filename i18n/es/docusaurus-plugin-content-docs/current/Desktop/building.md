@@ -21,7 +21,7 @@ El generador de aplicaciones le permite:
 Generar un paquete de proyecto puede realizarse utilizando:
 
 - ya sea con el comando [`BUILD APPLICATION`](../commands-legacy/build-application.md),
-- or the [Build Application dialog](#build-application-dialog).
+- o en la [caja de diálogo Crear aplicación](#build-application-dialog).
 
 :::tip
 
