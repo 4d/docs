@@ -1,6 +1,7 @@
 ---
-id: Web_Area
+id: Web_Area_theme
 title: Zones Web
+slug: /commands/theme/Web-Area
 ---
 
 |                                                                                                                                   |
