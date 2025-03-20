@@ -1,6 +1,7 @@
 ---
-id: Structure_Access
+id: Structure_Access_theme
 title: ストラクチャーアクセス
+slug: /commands/theme/Structure-Access
 ---
 
 |                                                                                                                           |
