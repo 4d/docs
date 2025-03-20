@@ -1,6 +1,7 @@
 ---
-id: バックアップ
+id: Backup_theme
 title: バックアップ
+slug: /commands/theme/Backup
 ---
 
 |                                                                                                                         |
