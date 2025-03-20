@@ -274,7 +274,7 @@ The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to th
 
 #### Descripción
 
-The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+La función `shutdown()`<!-- REF #TCPConnection.shutdown().Summary -->cierra el canal *write* de la conexión (cliente a servidor)<!-- END REF --> mientras se mantiene abierto el canal *read* (servidor al flujo del cliente) permitiéndole continuar recibiendo datos hasta que la conexión sea completamente cerrada por el servidor o se produzca un error.
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 #### Descripción
 
-The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+La función `wait()` <!-- REF #TCPConnection.wait().Summary -->espera hasta que se cierre la conexión TCP o se alcance el `timeout` especificado<!-- END REF -->
 
 :::note
 
