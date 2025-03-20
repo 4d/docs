@@ -1,6 +1,7 @@
 ---
-id: List_Box
+id: List_Box_theme
 title: リストボックス
+slug: /commands/theme/List-Box
 ---
 
 |                                                                                                                                     |
