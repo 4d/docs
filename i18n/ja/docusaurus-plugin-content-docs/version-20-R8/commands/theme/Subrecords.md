@@ -1,6 +1,7 @@
 ---
-id: サブレコード
+id: Subrecords_theme
 title: サブレコード
+slug: /commands/theme/Subrecords
 ---
 
 |                                                                                                         |
