@@ -1,6 +1,7 @@
 ---
-id: 割り込み
+id: Interruptions_theme
 title: 割り込み
+slug: /commands/theme/Interruptions
 ---
 
 |                                                                                                                   |
