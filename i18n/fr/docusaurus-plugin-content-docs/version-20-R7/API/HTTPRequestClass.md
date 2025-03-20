@@ -414,7 +414,7 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
-Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Decimals are accepted.
+Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Les décimales sont acceptées.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
 
