@@ -1,6 +1,7 @@
 ---
-id: Process_Communications
+id: Process_Communications_theme
 title: Processo (Comunicações)
+slug: /commands/theme/Process-Communications
 ---
 
 |                                                                                                               |
