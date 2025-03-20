@@ -8,34 +8,34 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-| Paramètres | Type |                             | Description                      |
-| ---------- | ---- | --------------------------- | -------------------------------- |
-| Résultat   | Text | &#8592; | Full pathname of closed log file |
+| Paramètres | Type |                             | Description                             |
+| ---------- | ---- | --------------------------- | --------------------------------------- |
+| Résultat   | Text | &#8592; | Chemin complet du fichier journal fermé |
 
 <!-- END REF-->
 
 ## Description
 
-**Preliminary note:** This command only works with 4D Server. It can only be executed via the [Execute on server](../commands-legacy/execute-on-server.md) command or in a stored procedure.
+**Note préliminaire:** Cette commande ne fonctionne qu'avec 4D Server. Elle ne peut être exécutée que via la commande [Execute on server](../commands-legacy/execute-on-server.md) ou via une procédure stockée.
 
-<!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
+<!--REF #_command_.New log file.Summary-->La commande **New log file** referme le fichier journal courant, le renomme et en crée un nouveau avec le même nom et le même emplacement que le précédent<!-- END REF-->. Cette commande est destinée à la mise en place d'un système de sauvegarde utilisant un miroir logique (voir la section *Mise en place d'un miroir logique* dans le [manuel de référence de 4D Server](https://doc/4d.com)). 
 
-The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). This file is stored in the same location as the current log file (specified on the [Configuration page](../Backup/settings.md#configuration) in the Backup theme of the Settings). The command does not carry out any processing (compression, segmentation) on the saved file. Aucune boîte de dialogue n'apparaît.
+La commande renvoie le chemin d'accès complet (chemin d'accès + nom) du fichier journal en cours de fermeture (appelé "segment"). Ce fichier est stocké au même endroit que le fichier journal courant (spécifié dans la [page Configuration](../Backup/settings.md#configuration) du thème Sauvegarde des Settings). La commande n'effectue aucun traitement (compression, segmentation) sur le fichier sauvegardé. Aucune boîte de dialogue n'apparaît.
 
-The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Par exemple:
+Le fichier est renommé avec les numéros de sauvegarde courants de la base de données et du fichier journal, comme indiqué dans l'exemple suivant : DatabaseName\[BackupNum-LogBackupNum\].journal. Par exemple:
 
-- If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. The name of the first “segment” of the log file will therefore be MyDatabase\[0004-0001\].journal.
-- If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
+- Si la base MyDatabase.4DD a été sauvegardée 4 fois, le dernier fichier de sauvegarde sera nommé MyDatabase[0004\].4BK. Le nom du premier "segment" du fichier journal sera donc MyDatabase\[0004-0001\].journal.
+- Si la base MyDatabase.4DD a été sauvegardée 3 fois et que le fichier journal a été sauvegardé 5 fois depuis, le nom de la 6e sauvegarde du fichier journal sera MyDatabase[0003-0006\].journal.
 
 :::warning
 
-A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated.
+Un fichier journal doit toujours être associé à un fichier de données. Si vous appelez cette commande juste après l'activation d'un fichier journal (sans sauvegarde) en utilisant [`SELECT LOG FILE`](select-log-file.md) ou la [boîte de dialogue des Settings](../Backup/settings.md#configuration), assurez-vous d'avoir une copie correspondante de votre fichier de données, sinon le fichier journal ne pourrait pas être intégré.
 
 :::
 
 ## Gestion des erreurs
 
-In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](../commands-legacy/on-err-call.md) command.
+En cas d'erreur, la commande génère un code qui peut être intercepté à l'aide de la commande [ON ERR CALL](../commands-legacy/on-err-call.md).
 
 ## Voir également
 
