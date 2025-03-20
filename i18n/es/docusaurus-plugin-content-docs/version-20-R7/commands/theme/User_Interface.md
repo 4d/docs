@@ -1,6 +1,7 @@
 ---
-id: User_Interface
+id: User_Interface_theme
 title: Interfaz de usuario
+slug: /commands/theme/User-Interface
 ---
 
 |                                                                                                                               |
