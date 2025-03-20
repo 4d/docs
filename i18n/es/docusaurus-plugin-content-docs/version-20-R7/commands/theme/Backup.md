@@ -1,6 +1,7 @@
 ---
-id: Copia de seguridad
+id: Backup_theme
 title: Copia de seguridad
+slug: /commands/theme/Backup
 ---
 
 |                                                                                                                         |
