@@ -1,6 +1,7 @@
 ---
-id: 4D_Environment
+id: 4D_Environment_theme
 title: Entorno 4D
+slug: /commands/theme/4D-Environment
 ---
 
 |                                                                                                                                               |
