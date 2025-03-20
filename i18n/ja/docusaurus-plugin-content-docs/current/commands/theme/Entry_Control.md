@@ -1,6 +1,7 @@
 ---
-id: Entry_Control
+id: Entry_Control_theme
 title: 入力制御
+slug: /commands/theme/Entry-Control
 ---
 
 |                                                                                                       |
