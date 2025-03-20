@@ -1,6 +1,7 @@
 ---
-id: Fonctions mathématiques
+id: Math_theme
 title: Fonctions mathématiques
+slug: /commands/theme/Math
 ---
 
 |                                                                                                                         |
