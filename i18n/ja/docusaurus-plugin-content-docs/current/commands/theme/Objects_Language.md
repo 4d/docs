@@ -1,6 +1,7 @@
 ---
-id: Objects_Language
+id: Objects_Language_theme
 title: オブジェクト (ランゲージ)
+slug: /commands/theme/Objects-Language
 ---
 
 |                                                                                                                 |
