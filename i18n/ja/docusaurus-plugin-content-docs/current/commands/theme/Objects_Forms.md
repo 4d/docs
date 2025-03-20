@@ -1,6 +1,7 @@
 ---
-id: Objects_Forms
+id: Objects_Forms_theme
 title: オブジェクト (フォーム)
+slug: /commands/theme/Objects-Forms
 ---
 
 |                                                                                                                                               |
