@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** retourne un objet contenant des informations sur l'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **FORM Event** à partir d'une méthode formulaire ou objet.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** retourne un objet contenant des informations sur l'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **FORM Event** à partir d'une méthode formulaire ou objet.
 
 **Objet retourné**
 
-Chaque objet retourné comprend les principales propriétés suivantes :
+Chaque objet retourné contient les principales propriétés suivantes :
 
-| **Propriété** | **Type** | **Description**                                                                                                                                                                               |
-| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName    | text     | Nom de l'objet générant l'événement - Non inclus si l'événement est déclenché par le formulaire                                                                                               |
-| code          | integer  | Valeur numérique de l'événement formulaire.                                                                                                                                   |
-| Description   | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propriété** | **Type** | **Description**                                                                                                                                                                        |
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName    | text     | Nom de l'objet générant l'événement - Non inclus si l'événement est déclenché par le formulaire                                                                                        |
+| code          | integer  | Valeur numérique de l'événement formulaire.                                                                                                                            |
+| Description   | text     | Nom de l'événement de formulaire (par exemple "On After Edit"). Voir la section [**Evénements formulaire**](../Events/overview.md). |
 
 Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriétés suivantes :
 
@@ -37,14 +37,14 @@ Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriét
 
 L'objet événement peut contenir des propriétés supplémentaires, en fonction de l'objet pour lequel l'événement se produit. Pour les objets *eventObj* générés sur:
 
-- List box or list box column objects, see the *list box documentation on developer.4d.com*.
-- 4D View Pro areas, see *On VP Ready form event*.
+- des objets de type list box ou colonne de list box, voir [cette section](../FormObjects/listbox_overview.md#additional-properties).
+- des zones 4D View Pro, voir événement formumaire [on VP Ready](../Events/onVpReady.md).
 
-**Note:** If there is no current event, **FORM Event** returns a null object.
+**Note:** S'il n'y a pas d'événement courant, **FORM Event** renvoie un objet null.
 
 ## Exemple 1
 
-You want to handle the On Clicked event on a button:
+Vous souhaitez gérer l'événement On Clicked sur un bouton :
 
 ```4d
  If(FORM Event.code=On Clicked)
@@ -54,7 +54,7 @@ You want to handle the On Clicked event on a button:
 
 ## Exemple 2
 
-If you set the column object name with a real attribute name of a dataclass like this:
+Si vous définissez le nom de l'objet colonne avec un véritable nom d'attribut d'une dataclass comme ceci :
 
 ![](../assets/en/commands/pict4843820.en.png)
 
