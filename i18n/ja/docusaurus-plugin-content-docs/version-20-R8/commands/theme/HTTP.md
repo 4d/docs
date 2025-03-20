@@ -1,6 +1,7 @@
 ---
-id: HTTPクライアント
+id: HTTP_theme
 title: HTTPクライアント
+slug: /commands/theme/HTTP
 ---
 
 |                                                                                                                               |
