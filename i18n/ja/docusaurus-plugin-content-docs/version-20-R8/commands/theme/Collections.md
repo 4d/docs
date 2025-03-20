@@ -1,6 +1,7 @@
 ---
-id: コレクション
+id: Collections_theme
 title: コレクション
+slug: /commands/theme/Collections
 ---
 
 |                                                                                                             |
