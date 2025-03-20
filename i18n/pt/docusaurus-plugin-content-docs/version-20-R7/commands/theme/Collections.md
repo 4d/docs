@@ -1,6 +1,7 @@
 ---
-id: Coleções
+id: Collections_theme
 title: Coleções
+slug: /commands/theme/Collections
 ---
 
 |                                                                                                             |
