@@ -1,6 +1,7 @@
 ---
-id: Graphes
+id: Graphs_theme
 title: Graphes
+slug: /commands/theme/Graphs
 ---
 
 |                                                                                                   |
