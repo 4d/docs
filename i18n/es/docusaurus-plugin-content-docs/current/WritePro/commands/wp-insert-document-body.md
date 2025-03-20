@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the range of the inserted document body.<!-- END REF-->
+El comando **WP Insert document body**<!--REF #_command_.WP Insert document body.Summary--> inserta el cuerpo del documento *wpDoc* en el *targetObj* especificado según los parámetros *mode* y *rangeUpdate* de inserción pasados, y devuelve el rango del cuerpo del documento insertado.<!-- END REF-->
 
 En *targetObj*, pase:
 
