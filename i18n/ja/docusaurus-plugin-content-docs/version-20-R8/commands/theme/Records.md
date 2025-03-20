@@ -1,6 +1,7 @@
 ---
-id: レコード
+id: Records_theme
 title: レコード
+slug: /commands/theme/Records
 ---
 
 |                                                                                                       |
