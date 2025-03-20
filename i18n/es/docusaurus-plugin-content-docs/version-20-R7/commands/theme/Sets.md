@@ -1,6 +1,7 @@
 ---
-id: Conjuntos
+id: Sets_theme
 title: Conjuntos
+slug: /commands/theme/Sets
 ---
 
 |                                                                                                                 |
