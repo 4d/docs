@@ -834,7 +834,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crée une nouvelle entity selection vierge, non partageable, liée à la dataclass, dans la mémoire<!-- END REF -->.
 
-> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-alterable-entity-selections).
+> Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités.
 
@@ -903,7 +903,7 @@ où :
 - **formula** : Une formule valide passée en `Text` ou en `Object`. La formule sera évaluée pour chaque entité traitée et doit retourner une valeur booléenne. Dans la formule, l'entité est disponible via l'objet `This`.
 
  - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
- - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command.
+ - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md).
 
 > * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
@@ -1026,13 +1026,13 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 
 #### Différent des valeurs null ou undefined
 
-The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+Le comparateur "différent de *value*" (`#` ou `!=`) ne renvoie pas les attributs dont la valeur est nulle ou indéfinie. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
 ```
 
-If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
@@ -1176,7 +1176,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 Au lieu d'insérer une formule dans le paramètre *queryString* (voir ci-dessus), vous pouvez directement passer un objet formule en tant que critère de recherche booléen. L'utilisation d'un objet formule pour les recherches est **recommandée** car vous bénéficiez de la tokenisation et le code est plus facile à rechercher/lire.
 
-The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command. Dans ce cas :
+La formule doit avoir été créée à l'aide de la commande [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md). Dans ce cas :
 
 - *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
 - dans *formula*, l'entité est disponible via l'objet `This`.
