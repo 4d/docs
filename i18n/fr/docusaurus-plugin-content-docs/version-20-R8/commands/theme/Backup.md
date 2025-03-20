@@ -1,6 +1,7 @@
 ---
-id: Sauvegarde
+id: Backup_theme
 title: Sauvegarde
+slug: /commands/theme/Backup
 ---
 
 |                                                                                                                         |
