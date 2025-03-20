@@ -1,6 +1,7 @@
 ---
-id: Formularios
+id: Forms_theme
 title: Formularios
+slug: /commands/theme/Forms
 ---
 
 |                                                                                                                               |
