@@ -1,6 +1,7 @@
 ---
-id: Users_and_Groups
+id: Users_and_Groups_theme
 title: ユーザー＆グループ
+slug: /commands/theme/Users-and-Groups
 ---
 
 |                                                                                                               |
