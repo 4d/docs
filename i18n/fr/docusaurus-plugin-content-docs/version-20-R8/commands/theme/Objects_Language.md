@@ -1,6 +1,7 @@
 ---
-id: Objects_Language
+id: Objects_Language_theme
 title: Objets (Langage)
+slug: /commands/theme/Objects-Language
 ---
 
 |                                                                                                                 |
