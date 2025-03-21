@@ -158,12 +158,12 @@ To facilitate component tuning in the context of a host project, you can directl
 - the package folder of the component [contains the interpreted code](../Project/components.md#interpreted-and-compiled-components),
 - the component is not loaded from the [local cache](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
 
-In this case, when the [component namespace is declared](#declaring-the-component-namespace), [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be opened and edited in the code editor. Specific Explorer and Code editor icons indicate this status:
+In this case, when the [component namespace is declared](#declaring-the-component-namespace), [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be opened and edited in the code editor. 
 
-- In the Explorer, a component code is editable:<br/>
+- In the Explorer, a specific icon indicates that the component code is editable:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
-- In the Code editor, the current edited code is from a component:<br/>
+- In the Code editor, a specific icon indicates that the class or method belongs to a component:<br/>
 ![](../assets/en/Develop/editable-component-2.png)
 
 
