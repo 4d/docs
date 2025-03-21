@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in list.Summary-->La commande **Find in list** retourne la position ou la référence du premier élément de *liste* qui équivaut à la chaîne passée dans *valeur*.<!-- END REF--> Si plusieurs éléments sont trouvés, la fonction peut également remplir le tableau *tabEléments* avec la position ou la référence de chaque élément.
 
@@ -39,7 +39,7 @@ Les positions sont exprimées relativement à l’élément supérieur de la lis
 
 Si aucun élément ne correspond à la *valeur* recherchée, la fonction retourne 0 et le tableau *tabEléments* est retourné vide.
 
-#### Exemple 
+## Exemple 
 
 Soit la liste hiérarchique suivante :
 
@@ -63,7 +63,7 @@ Soit la liste hiérarchique suivante :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

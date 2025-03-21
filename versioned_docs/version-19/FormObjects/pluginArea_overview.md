@@ -6,7 +6,7 @@ title: Plug-in Area
 
 A plug-in area is an area on the form that is completely controlled by a plug-in. The ability to incorporate plug-ins into forms gives you unlimited possibilities when creating custom applications.
 
-When opening an application, 4D creates an internal list of the plug-ins [installed in your application](../Concepts/plug-ins.md#installing-plug-ins). Once you have inserted a Plug-in Area in a form, you can assign a plug-in to the area directly in the **Type** list in the Property List:
+When opening an application, 4D creates an internal list of the plug-ins [installed in your application](../Concepts/plug-ins.md#how-to-install-a-plug-in). Once you have inserted a Plug-in Area in a form, you can assign a plug-in to the area directly in the **Type** list in the Property List:
 
 ![](../assets/en/FormObjects/pluginArea.png)
 

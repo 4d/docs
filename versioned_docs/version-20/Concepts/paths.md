@@ -11,6 +11,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
 
+## Filesystem pathnames
 
 4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
 

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->The **GET PICTURE RESOURCE** command returns in the picture field or variable *resData* the picture stored in the picture (“PICT”) resource whose ID is passed in *resID*.<!-- END REF-->
 
@@ -26,23 +26,23 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 **Note:** A picture resource can be at least several megabytes in size.
 
-#### Example 
+## Example 
 
 See example for the [RESOURCE LIST](resource-list.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
-#### Error management 
+## Error management 
 
 If there is not enough memory to load the picture, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-#### See also 
+## See also 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in field.Summary-->The **Find in field** command returns the number of the first record whose *targetField* field is equal to *value*.<!-- END REF-->  
 If no records are found, **Find in field** returns -1\. 
@@ -30,7 +30,7 @@ It is fast and particularly useful to avoid creating double entries during data 
 
 **Historical note:** In earlier versions of 4D, the **Find in field** command was named **Find index key** and only worked with indexed fields. Beginning with 4D v11 SQL, this limitation was removed and the command was renamed. 
 
-#### Example 1 
+## Example 1 
 
 In an audio CD database, during data entry let’s assume that you want to verify the singer’s name to see if it already exists in the database. Because homonyms can exist, you don’t want the \[Singer\]Name field to be unique. Therefore, in the input form, you can write the following code in the \[Singer\]Name field’s object method:
 
@@ -46,7 +46,7 @@ In an audio CD database, during data entry let’s assume that you want to verif
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Here is an example that lets you verify the existence of a value:
 
@@ -63,7 +63,7 @@ Here is an example that lets you verify the existence of a value:
 Note the >= that lets you cover all cases. In fact, the function returns a record number and the first record is numbered 0.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

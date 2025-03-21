@@ -20,7 +20,7 @@ Vous pouvez créer différents types de listes déroulantes avec différentes fo
 | Enumération enregistrée en tant que valeur    | Construit sur une liste de choix (standard)                             | Liste             | Valeur de l'élément sélectionné    | `dataSourceTypeHint: text` + `saveAs: value`                                                                                          |
 | Enumération enregistrée en tant que référence | Construit sur une liste de choix. La position de l'élément est sauvegardée | Liste             | Référence de l'élément sélectionné | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                   |
 | Enumération hiérarchique                      | Peut afficher un contenu hiérarchique                                                      | Liste             | Référence de liste                 | `dataSourceTypeHint: integer`                                                                                                         |
-| Action standard                               | Construit automatiquement par l'action                                                     | _any_             | _any except List reference_        | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
+| Action standard                               | Construit automatiquement par l'action                                                     | *any*             | *any except List reference*        | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                     |
 
 ## Gestion des listes déroulantes
 
@@ -89,7 +89,7 @@ Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
 In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-- Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Par exemple :
+- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. Par exemple :
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,13 +103,13 @@ Si vous voulez stocker dans un champ le choix de l’utilisateur, il est nécess
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) //new record
+          aCities:=3 //display a default value
+       Else //existing record, display stored value
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) //user modified selection
+       City:=aCities{aCities} //field gets new value
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -125,7 +125,7 @@ If you want to use a drop-down list to manage the values of an input area (liste
 
 Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. If you use a hierarchical list, only the first level is displayed and can be selected.
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 
@@ -137,7 +137,7 @@ Lorsque le formulaire est exécuté, 4D gère automatiquement la liste déroulan
 
 #### Valeur de l'élément sélectionné ou Référence de l'élément sélectionné
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
 
 ### Utiliser une énumération hiérarchique
 
@@ -158,12 +158,12 @@ You can build automatically a drop-down list using a [standard action](propertie
 - Use of the `gotoPage` standard action. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe). Au moment de l'exécution, la liste déroulante affiche par défaut les numéros de page (1, 2...).
 
 - Use of a standard action that displays a sublist of items, for example `backgroundColor`. Cette fonctionnalité nécessite que :
-  - a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  - the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list.
-    Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
+ - a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
+ - the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list.
+  Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
 
 > Cette fonctionnalité ne peut pas être utilisée avec une liste déroulante hiérarchique.
 
 ## Propriétés prises en charge
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)

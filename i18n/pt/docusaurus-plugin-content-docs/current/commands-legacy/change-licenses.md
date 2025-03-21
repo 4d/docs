@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->O comando CHANGE LICENSES mostra a caixa de diálogo de atualização de licenças 4D .<!-- END REF-->  
   
@@ -24,7 +24,7 @@ CHANGE LICENSES é uma forma conveniente de permitir o licenciamento e adicionar
   
 Para maior informação sobre o funcionamento desta caixa de diálogo, consulte a seção *Instalação e ativação* do Guia de instalação de 4D.
 
-#### Exemplo 
+## Exemplo 
 
 Em uma caixa de diálogo de configuração ou de preferências personalizada, coloque um botão com o método abaixo:  
   
@@ -36,12 +36,12 @@ Em uma caixa de diálogo de configuração ou de preferências personalizada, co
   
 Desta forma um usuário pode ativar licenças sem ter que modificar a base.  
 
-#### Ver também 
+## Ver também 
 
 [License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

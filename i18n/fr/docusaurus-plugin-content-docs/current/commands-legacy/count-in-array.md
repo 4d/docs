@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Count in array.Summary-->La commande **Count in array** retourne le nombre d’occurrences de *valeur* dans *tableau*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Cette commande peut être utilisée avec des tableaux de type Texte, Numérique,
 
 Si aucun élément de *tableau* ne correspond à *valeur*, la commande retourne 0.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant permet d’afficher le nombre de lignes sélectionnées dans une list box : 
 
@@ -34,7 +34,7 @@ L’exemple suivant permet d’afficher le nombre de lignes sélectionnées dans
  ALERT(String(Compter dans tableau(tBList;Vrai))+" ligne(s) sélectionnée(s) dans la list box")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez compter les références d'objets dans un tableau d'objets :
 
@@ -53,12 +53,12 @@ Vous voulez compter les références d'objets dans un tableau d'objets :
  $n:=Count in array($objects;$o2) // n = 0
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

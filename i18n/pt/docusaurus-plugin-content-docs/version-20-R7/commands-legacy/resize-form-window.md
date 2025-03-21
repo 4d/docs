@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->O comando RESIZE FORM WINDOW permite modificar o tamanho da janela do formulário atual.<!-- END REF-->  
 
@@ -24,7 +24,7 @@ Este comando produce exactamente o mesmo resultado que um redimensionamento manu
   
 Por favor note que este comportamento é diferente do comportamento do comando [SET WINDOW RECT](set-window-rect.md), o qual não considera as propriedades do formulário nem seu conteúdo quando redimensionar a janela. Igualmente, note que este comando não necessariamente modifica o tamanho do formulário. Para modificar o tamanho de um formulário por programação, por favor consulte a descrição do comando [FORM SET SIZE](form-set-size.md)
 
-#### Exemplo 
+## Exemplo 
 
 Dada a janela abaixo (os campos e o marco tem a propriedade de dimensionamento horizontal “Aumentar”): 
 
@@ -40,13 +40,13 @@ Depois da execução desta linha:
 
 ![](../assets/en/commands/pict39549.en.png)
 
-#### Ver também 
+## Ver também 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

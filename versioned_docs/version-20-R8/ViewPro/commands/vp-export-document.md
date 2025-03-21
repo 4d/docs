@@ -24,7 +24,7 @@ title: VP EXPORT DOCUMENT
 |filePath| Text|->|Pathname of the document|
 |paramObj| Object|->|Export options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP EXPORT DOCUMENT` command <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area *vpAreaName* to a document on disk according to the *filePath* and *paramObj* parameters<!-- END REF -->.
 
@@ -48,7 +48,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |---|---|---|---|
 |format|| text| (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", ".pdf", or ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used.|
 |password|| text| Microsoft Excel only (optional) - Password used to protect the MS Excel document|
-|formula|| 4D.Function |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
+|formula|| 4D.Function |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../../commands/formula.md) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
 |valuesOnly|| boolean| Specifies that only the values from formulas (if any) will be exported.|
 |includeFormatInfo|| boolean| True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.|
 |includeBindingSource|| boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](vp-set-data-context.md) and [VP SET BINDING PATH](vp-set-binding-path.md).|
@@ -111,9 +111,9 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
-#### Passing a callback method (formula)  
+## Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
 
 |Parameter|  |Type| Description|
 |---|---|---|---|
@@ -125,7 +125,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 ||.errorCode |integer| Error code.|
 ||.errorMessage |text| Error message.|
 
-#### Example 1
+## Example 1
 
 You want to export the contents of the "VPArea" area to a 4D View Pro document on disk:
 
@@ -137,7 +137,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP is saved on your disk
 ```
 
-#### Example 2
+## Example 2
 
 You want to export the current sheet in PDF:
 
@@ -149,7 +149,7 @@ $params.pdfOptions:=New object("title";"Annual Report";"author";Current user)
 VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```
 
-#### Example 3
+## Example 3
 
 You want to export a 4D View Pro document in ".xlsx" format and call a method that will launch Microsoft Excel with the document open once the export has completed:
 
@@ -173,7 +173,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
  End if
 ```
 
-#### Example 4
+## Example 4
 
 You want to export the current sheet to a `.txt` file with pipe-separated values:
 
@@ -191,7 +191,7 @@ Here's the result:
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### See also
+## See also
 
 
 [VP Convert to picture](vp-convert-to-picture.md)<br/>

@@ -7,7 +7,7 @@ Un área de grupo es un objeto estático que permite ensamblar visualmente vario
 
 ![](../assets/en/FormObjects/groupBox.png)
 
-> El nombre de una caja de grupo es texto estático; puede utilizar una referencia "localizable" como con cualquier etiqueta 4D (ver [Utilización de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) y la sección _Arquitectura XLIFF_ en Referencia de Diseño 4D.
+> El nombre de una caja de grupo es texto estático; puede utilizar una referencia "localizable" como con cualquier etiqueta 4D (ver [Utilización de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html) y la sección *Arquitectura XLIFF* en Referencia de Diseño 4D.
 
 #### Ejemplo JSON:
 

@@ -5,7 +5,7 @@ title: Acción
 
 ## Método
 
-Referencia de un método adjunto al formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. Ver [Métodos especializados](Concepts/methods.md#specialized-methods).
+Referencia de un método adjunto al formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. See [methods](../Concepts/methods.md).
 
 No llame a un método formulario - 4D lo llama automáticamente cuando un evento implica el formulario al que el método está asociado.
 
@@ -28,3 +28,4 @@ Se soportan varios tipos de referencias de métodos:
 | Nombre | Tipos de datos | Valores posibles                                                                  |
 | ------ | -------------- | --------------------------------------------------------------------------------- |
 | method | text           | Ruta estándar o personalizada del método formulario, o nombre del método proyecto |
+

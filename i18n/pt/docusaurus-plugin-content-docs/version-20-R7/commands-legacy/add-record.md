@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidade 
+## Compatibilidade 
 
 <!--REF #_command_.ADD RECORD.Summary-->Esse comando foi implementado em 4D em lançamentos anteriores e é ainda útil para desenvolvimento básico ou protótipos.<!-- END REF--> Entretanto, para construir interfaces personalizadas e modernas, agora não é recomendado usar formulários genéricos baseados no comando *[DIALOG](dialog.md) que oferece propriedades avançadas e melhor controle sobre o fluxo de dados*
 
-#### Descrição 
+## Descrição 
 
 O comando ADD RECORD permite ao usuário adicionar um novo registro na tabela *tabela* ou na tabela por padrão, se omitir o parâmetro *tabela*. 
 
@@ -40,7 +40,7 @@ O registro não é guardado (cancelado) se o usuário clicar no botão Cancelar 
 
 **Nota:** o registro permanece em memória, inclusive quando é cancelado, e pode ser guardado se é executado \[#cmd id="53"\] antes de que mude o ponteiro do registro atual. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo é um loop utilizado geralmente para adicionar novos registros a um banco: 
 
@@ -51,7 +51,7 @@ O seguinte exemplo é um loop utilizado geralmente para adicionar novos registro
  Until(OK=0) // Até que o usuário cancele
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O seguinte exemplo procura um cliente no banco. Dependendo dos resultados da busca, acontecerá uma destas coisas. Se não se encontrar um cliente, então é permitido ao usuário adicionar um novo cliente com ADD RECORD. Se encontrar ao menos um cliente, se lhe apresenta ao usuário o primeiro registro encontrado, o qual pode ser modificada com [MODIFY RECORD](modify-record.md "MODIFY RECORD"): 
 
@@ -74,11 +74,11 @@ O seguinte exemplo procura um cliente no banco. Dependendo dos resultados da bus
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A variável OK não toma nenhum valor até que o registro tenha sido confirmado ou anulado.
 
-#### Ver também 
+## Ver também 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
@@ -86,7 +86,7 @@ A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

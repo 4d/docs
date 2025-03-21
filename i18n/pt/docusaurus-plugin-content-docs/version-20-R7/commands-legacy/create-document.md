@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Create document.Summary-->O comando Create document cria um novo documento e retorna seu número de referência.<!-- END REF-->  
   
@@ -41,7 +41,7 @@ Quando tiver criado e aberto um documento, pode escrever ou ler os valores do do
   
 Não esqueça de finalmente chamar [CLOSE DOCUMENT](close-document.md) para o documento.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo e cria e abre um novo documento chamado Nota, escreve a string “Olá” e fecha o documento: 
 
@@ -54,7 +54,7 @@ O exemplo abaixo e cria e abre um novo documento chamado Nota, escreve a string 
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo cria documentos com extensões que não são padrão em Windows: 
 
@@ -64,16 +64,16 @@ O exemplo abaixo cria documentos com extensões que não são padrão em Windows
  $vtMeuDoc:=Create document("Doc.") //Sem extensão (o ponto "." é obrigatório)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o documento for criado corretamente, a variável sistema OK assume o valor 1 e a variável sistema Document contem a rota completa e o nome do arquivo *documento*.
 
-#### Ver também 
+## Ver também 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

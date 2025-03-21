@@ -9,12 +9,12 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 | Sintaxe                                                                                                                                                                                      | Exemplo                                                                      | Descrição                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera um conjunto de entidades existente                                                    |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera um conjunto de entidades existente                                                    |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
 
 ## $entityset/\{entitySetID\}
 
-Recupera un conjunto de entidades existente (_p. ej._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Recupera un conjunto de entidades existente (*p. ej.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### Descrição
 
@@ -41,7 +41,7 @@ Criar outro conjunto de entidades com base em conjuntos de entidades criados ant
 
 ### Descrição
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Os dois conjuntos de entidades devem estar na mesma classe de dados.
+&$otherCollection`syntax, the`$logicOperator`property (whose values are shown below), and another entity set (entity set #2) defined by the`$otherCollection`property. After creating an entity set (entity set #1) by using`$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... Os dois conjuntos de entidades devem estar na mesma classe de dados.
 
 A continuación, puede crear otro conjunto de entidades que contenga los resultados de esta llamada utilizando el `$method=entityset` al final de la petición REST.
 

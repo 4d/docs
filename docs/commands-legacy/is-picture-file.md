@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is picture file.Summary-->The Is picture file command tests the file designated by the *filePath* parameter and returns True if it is a valid picture file.<!-- END REF--> The command returns False if the file is not of the picture type or if it is not found. 
 
@@ -25,11 +25,11 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 
 **Note:** The command returns True for PDF files under Windows and EMF files under Mac OS. 
 
-#### See also 
+## See also 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

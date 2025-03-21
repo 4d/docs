@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->El comando **LISTBOX SET PROPERTY** define el valor de la propiedad de la columna list box o list box especificada utilizando los parámetros objeto y \*.<!-- END REF-->
 
@@ -63,7 +63,7 @@ En los parámetros *propiedad* y *valor*, se indica, respectivamente la propieda
 
 **Nota:** si pasa una *propiedad* que no existe, o que no está disponible para el list box o columna especificado, por ejemplo lk font style expression en el caso de un list box de tipo array, el comando no hace nada y no se dispara ningún error.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted quiere asegurarse de que todas las columnas del list box "MyListbox" sean redimensionables:
 
@@ -71,7 +71,7 @@ Usted quiere asegurarse de que todas las columnas del list box "MyListbox" sean 
  LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //Todas las columnas del list box "MyListbox" se definen como redimensionables
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea definir el ancho máximo de la columna "ProductNumber":
 
@@ -79,13 +79,13 @@ Usted desea definir el ancho máximo de la columna "ProductNumber":
  LISTBOX SET PROPERTY(*;"ProductNumber";lk column max width;200) //Esta columna tendrá un ancho máximo de 200
 ```
 
-#### Ver también 
+## Ver también 
 
   
 *Listbox*  
 [LISTBOX Get property](listbox-get-property.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

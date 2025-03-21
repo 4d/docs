@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAVE VARIABLES.Summary-->SAVE VARIABLES コマンドを使用して、引数 *document* に渡した名前を持つドキュメントに 1つまたは複数の変数を保存します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **警告:** このコマンドは、配列変数をサポートしません。BLOBコマンドを使用してください。
 
-#### 例題 
+## 例題 
 
 以下の例題を使用して、UserPrefsという名前のドキュメントに3つの変数を保存します。
 
@@ -36,11 +36,11 @@ displayed_sidebar: docs
  SAVE VARIABLES("User Prefs";vsName;vlCode;vgIconppicture)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 変数が正しく保存されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 [VARIABLE TO BLOB](variable-to-blob.md)  
 *システム変数*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ When run in *cooperative* mode, all processes are managed by the parent applicat
 
 As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
 
-## Availability of preemptive mode   
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 The use of preemptive mode is supported in the following execution contexts:
 

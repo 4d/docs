@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EDIT ITEM.Summary-->La commande **EDIT ITEM** permet de passer en “mode édition” l’élément courant ou l’élément de numéro *élément* du tableau ou de la liste désigné(e) par le paramètre *objet*.<!-- END REF-->   
 Le mode édition signifie que l’élément est sélectionné et prêt à être modifié : la saisie d’un caractère remplacera intégralement le contenu de l’élément.
@@ -40,7 +40,7 @@ Le paramètre facultatif *élément* vous permet de désigner la position de l�
 * Dans le cadre des sous-formulaires et des formulaires liste, la commande passe en édition le premier champ de la ligne spécifiée, dans l’ordre de saisie.
 * Dans le cadre d'une list box affichée en mode hiérarchique, si l'élément visé appartient à un niveau hiérarchique contracté, le niveau ainsi que les éventuels niveaux parents sont automatiquement déployés afin que la ligne soit visible.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cette commande peut être utile notamment lors de la création d’un nouvel élément de liste hiérarchique. Au moment de l’appel de la commande, le dernier élément ajouté ou inséré dans la liste devient automatiquement éditable, sans que l’utilisateur n’ait à effectuer d’action spécifique.   
 Le code suivant pourrait être la méthode d’un bouton permettant d’insérer un nouvel élément dans une liste existante. Le libellé “Nouvel\_élément” proposé par défaut est automatiquement placé en mode édition :
@@ -53,7 +53,7 @@ Le code suivant pourrait être la méthode d’un bouton permettant d’insérer
 
 ![](../assets/en/commands/pict21419.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Soient deux colonnes d’une list box dont les noms de variables associées sont respectivement “Tableau1” et “Tableau2”. L’exemple suivant insère un nouvel élément dans les deux tableaux et passe le nouvel élément du tableau 2 en mode édition : 
 
@@ -67,13 +67,13 @@ Soient deux colonnes d’une list box dont les noms de variables associées sont
 
 ![](../assets/en/commands/pict21420.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

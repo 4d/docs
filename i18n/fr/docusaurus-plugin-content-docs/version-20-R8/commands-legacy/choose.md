@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Choose.Summary-->La commande **Choose** retourne l’une des valeurs passées dans les paramètres *valeur*, *valeur2*, etc.<!-- END REF--> en fonction de la valeur du paramètre *critère*. 
 
@@ -38,7 +38,7 @@ Cette commande permet de générer du code concis en remplacement des tests du t
  $res:=Choose(True;"red1";"blue"+2) //erreur  
 ```
 
-#### Exemple 1 
+## Exemple 1 
 
 Voici une utilisation type de la commande avec un critère booléen :
 
@@ -56,7 +56,7 @@ Ce code est strictement équivalent à :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici une utilisation type de la commande avec un critère numérique :
 
@@ -80,7 +80,7 @@ Ce code est strictement équivalent à :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

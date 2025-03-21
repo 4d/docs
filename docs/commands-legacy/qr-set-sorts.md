@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET SORTS.Summary-->The QR SET SORTS command sets the sort orders for the columns in the report whose reference is passed in *area*.<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * If *aOrders{$i}* is 1, the sort order is ascending.
 * If *aOrders{$i}* is -1, the sort order is descending.
 
-##### Cross-table mode 
+### Cross-table mode 
 
 In the case of cross-table mode, you cannot have more than two items in the array. You can only sort columns (1) and rows (2). The data (that are the intersection of columns and rows) cannot be sorted.
 
@@ -42,11 +42,11 @@ Here is the code to sort only the rows in the case of a cross-table report:
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

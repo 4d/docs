@@ -28,7 +28,7 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Request.Summary-->La commande **HTTP Request** permet d’envoyer tout type de requête HTTP vers un URL spécifique et de traiter la réponse du serveur HTTP.<!-- END REF-->
 
@@ -88,7 +88,7 @@ Le paramètre *\** permet d’activer le mécanisme de *keep-alive* pour la conn
 La commande retourne le code de statut HTTP standard (200=OK...) tel que renvoyé par le serveur. La liste des codes de statut HTTP est fournie dans la *RFC 2616*.   
 Si la connexion au serveur est impossible pour une raison liée au réseau (*DNS Failed*, *Server not reachable*...) la commande retourne 0 et une erreur est générée. Vous pouvez intercepter les erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Demande de suppression d’un enregistrement dans une base distante :
 
@@ -100,7 +100,7 @@ Demande de suppression d’un enregistrement dans une base distante :
 
 **Note :** Il vous appartient de traiter la demande de manière appropriée au niveau du serveur distant, la commande **HTTP Request** gère uniquement la requête et le résultat retourné.
 
-#### Exemple 2 
+## Exemple 2 
 
 Demande d'ajout d’un enregistrement dans une base distante :
 
@@ -112,7 +112,7 @@ Demande d'ajout d’un enregistrement dans une base distante :
 
 **Note :** Il vous appartient de traiter la demande de manière appropriée au niveau du serveur distant, la commande **HTTP Request** gère uniquement la requête et le résultat retourné.
 
-#### Exemple 3 
+## Exemple 3 
 
 Demande d’ajout d’enregistrement en JSON dans une base distante :
 
@@ -122,11 +122,11 @@ Demande d’ajout d’enregistrement en JSON dans une base distante :
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [HTTP Get](http-get.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](default-table.md) takes priority when you use, for example, the [DIALOG](../commands/dialog.md) command with a project form and there is a default table form with the same name.
 
@@ -50,7 +50,7 @@ because a default table had been set.
 
 In 4D, all tables are “open” and ready for use. **DEFAULT TABLE** does not open a table, set a current table, or prepare the table for input or output. **DEFAULT TABLE** is simply a programming convenience to reduce the amount of typing and make the code easier to read.
 
-#### Example 
+## Example 
 
 The following example first shows code without the DEFAULT TABLE command. It then shows the same code, with DEFAULT TABLE. The code is a loop commonly used to add new records to a database. The [FORM SET INPUT](form-set-input.md) and [ADD RECORD](add-record.md) commands both require a table as the first parameter:
 
@@ -71,12 +71,12 @@ Specifying the default table results in this code:
  Until(OK=0)
 ```
 
-#### See also 
+## See also 
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

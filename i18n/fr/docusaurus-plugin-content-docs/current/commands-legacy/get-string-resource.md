@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get string resource.Summary-->La commande **Get string resource** retourne la chaîne stockée dans la ressource chaîne ("STR ") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 **Note :** Une ressource chaîne peut contenir jusqu'à 255 caractères.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche le contenu de la ressource chaîne d'ID=20911 qui doit se trouver dans au moins un des fichiers de ressources ouverts :
 
@@ -33,17 +33,17 @@ L'exemple suivant affiche le contenu de la ressource chaîne d'ID=20911 qui doit
  ALERT(Get string resource(20911))
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get indexed string](get-indexed-string.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

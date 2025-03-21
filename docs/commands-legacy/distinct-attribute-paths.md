@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->The **DISTINCT ATTRIBUTE PATHS** command returns the list of distinct paths found in the indexed object field you passed in *objectField* for the current selection of the table to which this field belongs.<!-- END REF-->
 
@@ -29,7 +29,7 @@ After the call, the size of *pathArray* is equal to the number of distinct paths
 * Records with an undefined value in the *objectField* are not taken into account.
 * Attribute paths created during a transaction are taken into account by the command. It is important to note that these paths are kept in the index of the object field even if the transation has been canceled.
 
-#### Example 
+## Example 
 
 Your database contains a \[Customer\]full\_Data (indexed) object field with 15 records:
 
@@ -63,12 +63,12 @@ The *aTPaths* array receives the following elements:
 
 **Note:** "length" is a *virtual property* that is automatically available for all array type attributes. It provides the size of the array, i.e. the number of elements, and can be used in queries. For more information, please refer to the *Using the .length virtual property* paragraph. 
 
-#### See also 
+## See also 
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

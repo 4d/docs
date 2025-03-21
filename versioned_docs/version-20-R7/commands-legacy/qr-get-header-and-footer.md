@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->The QR GET HEADER AND FOOTER command retrieves the contents and size of the header or footer.<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *selector* value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 The following code retrieves the values of the header titles as well as the header size and displays them in alerts:
 
@@ -63,11 +63,11 @@ The following code retrieves the values of the header titles as well as the head
  ALERT("The height of the header is "+String($height))
 ```
 
-#### See also 
+## See also 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

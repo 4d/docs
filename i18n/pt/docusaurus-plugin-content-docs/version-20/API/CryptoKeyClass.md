@@ -24,6 +24,7 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 | [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->|
 | [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
 | [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
+| [<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem.Summary -->|
 | [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary --> |
 | [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary --> |
 | [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary --> |
@@ -42,19 +43,19 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                          |
-| ---------- | ------------ | -- | -------------------------------------------------- |
-| settings   | Object       | -> | Parâmetros para gerar ou carregar um par de chaves |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
+| Parâmetro  | Tipo         |    | Descrição                                         |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 <!-- END REF -->
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
 | Propriedade     | Tipo    | Descrição                                                                                                  |
 | --------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| [type](#type)   | text    | Define o tipo da chave a criar: <li>"RSA": gera um par de chaves RSA usando [.size](#size) como size.</li><li>"ECDSA": gera um par de chaves Elliptic Curve Digital Signature Algorithm, usando [.curve](#curve) como curve. Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.</li><li>"PEM": carrega uma definição de par de chaves em formato PEM, usando [.pem](#pem).</li> |
+| [type](#type)   | text    | Define o tipo da chave a criar: <li>"RSA": gera um par de chaves RSA, usando [.size](#size) como tamanho.</li><li>"ECDSA": gera um par de chaves Elliptic Curve Digital Signature Algorithm, usando [.curve](#curve) como curve. Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.</li><li>"PEM": carrega uma definição de par de chaves em formato PEM, usando [.pem](#pem).</li> |
 | [curve](#curve) | text    | Nome da curva ECDSA                                                                                        |
 | [pem](#pem)     | text    | Definição PEM de uma chave de cifrado a carregar                                                           |
 | [size](#size)   | integer | Tamanho da chave RSA em bits                                                                               |
@@ -62,7 +63,7 @@ A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um 
 
 #### *CryptoKey*
 
-O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um objeto compartido, portanto, pode ser utilizado por vários processos 4D simultaneamente.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
 
 #### Exemplo 1
 
@@ -167,7 +168,7 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 
 A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâmetro *mensagem* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-"RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 #### *options*
 
@@ -213,7 +214,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 
 A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o parâmetro *mensagem* utilizando a chave **public**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-"RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 ##### *options*
 
@@ -294,31 +295,33 @@ O valor devolvido é a chave pública.
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #CryptoKey.pem.Summary -->
-Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave privada, será deduzido dela a chave pública RSA ou ECDSA. <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave privada, será deduzido dela a chave pública RSA ou ECDSA. <!-- END REF -->
+
+<!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R4   | Adicionado |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R8   | Support of message as Blob |
+| 18 R4   | Adicionado                 |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                       |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message    | Text   | -> | String mensagem a assinar                                                       |
-| options    | Object | -> | Opções de assinatura                                                            |
-| Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Parâmetro  | Tipo          |    | Descrição                                                                       |
+| ---------- | ------------- | -- | ------------------------------------------------------------------------------- |
+| message    | Texto OU Blob | -> | Message to sign                                                                 |
+| options    | Object        | -> | Opções de assinatura                                                            |
+| Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 
@@ -329,11 +332,11 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                             |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                                                     |
-| encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                         |
+| encoding          | text    | Representation to be used for result signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                               |
 
 #### *Resultados*
 
-`CryptoKey` deve conter uma chave válida **privada**.
+The utf8 representation of the *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -380,21 +383,22 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R4   | Adicionado |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R8   | Support of message as Blob |
+| 18 R4   | Adicionado                 |
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                                                          |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
-| message    | Text   | -> | String de mensagem utilizada para gerar a assinatura                                                               |
-| signature  | Text   | -> | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
-| options    | Object | -> | Opções de assinatura                                                                                               |
-| Resultados | Object | <- | Estado da verificação                                                                                              |
+| Parâmetro  | Tipo          |    | Descrição                                                                                                          |
+| ---------- | ------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
+| message    | Texto OU Blob | -> | Message that was used to produce the signature                                                                     |
+| signature  | Text          | -> | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
+| options    | Object        | -> | Opções de assinatura                                                                                               |
+| Resultados | Object        | <- | Estado da verificação                                                                                              |
 <!-- END REF -->
 
 

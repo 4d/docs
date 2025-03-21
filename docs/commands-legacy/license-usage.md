@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.License usage.Summary-->The **License usage** command returns a collection of objects containing information on the retained licenses.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Each object in the returned collection has the following attributes:
 
 Depending on the type of session (4D client or REST for example), the contents of the *session* object in the above table will vary. See below for details.
 
-#### session object for 4D client sessions 
+## session object for 4D client sessions 
 
 Inside the returned collection for 4D sessions, each element contains a session object identical to the one returned by the [Process activity](../commands/process-activity.md) command:
 
@@ -50,7 +50,7 @@ Inside the returned collection for 4D sessions, each element contains a session 
 | ID                | Text          | Session UUID                                                              |
 | persistentID      | Text          | Session's persistent ID                                                   |
 
-#### session object for SQL sessions 
+## session object for SQL sessions 
 
 This table details the contents of the session object for SQL sessions:
 
@@ -61,7 +61,7 @@ This table details the contents of the session object for SQL sessions:
 | userName          | Text     | User Name                 |
 | userId            | Number   | User ID                   |
 
-#### session object for REST sessions 
+## session object for REST sessions 
 
 This table details the contents of the session object for REST sessions:
 
@@ -73,7 +73,7 @@ This table details the contents of the session object for REST sessions:
 | isDatastore       | Boolean  | True if the REST request comes from a datastore  |
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

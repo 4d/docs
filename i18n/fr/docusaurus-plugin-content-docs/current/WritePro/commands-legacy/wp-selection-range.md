@@ -18,11 +18,11 @@ displayed_sidebar: docs
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.WP Selection range.Summary-->La commande **WP Selection range** était nommée **WP Get selection** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
 
-#### Description 
+## Description 
 
 La commande **WP Selection range** retourne une nouvelle plage de sélection ou une nouvelle image basée sur la sélection courante dans la zone 4D Write Pro *zoneWP*.
 
@@ -32,7 +32,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *zo
 
 Si une image ancrée (image à emplacement fixe) est sélectionnée dans *wpArea*, **WP Selection range** retourne un objet contenant une référence d'image et non un objet plage (pour plus d'informations, reportez-vous à la description de la commande [WP Add picture](../commands/wp-add-picture.md)). Sinon, **WP Selection range** retourne un nouvel objet de type objPlage (pour plus d'informations, reportez-vous au paragraphe *Gestion des plages*).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez récupérer le texte sélectionné dans une zone 4D Write Pro :
 
@@ -40,7 +40,7 @@ Vous souhaitez récupérer le texte sélectionné dans une zone 4D Write Pro :
  $range:=WP Selection range(*;"WParea")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Picture range](wp-picture-range.md)  

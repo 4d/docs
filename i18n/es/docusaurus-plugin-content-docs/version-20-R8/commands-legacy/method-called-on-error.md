@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Method called on error.Summary-->El comando **Method called on error** devuelve el nombre del método instalado por el comando [ON ERR CALL](on-err-call.md) para el proceso actual o el *alcance* definido.<!-- END REF-->
 
@@ -28,7 +28,7 @@ En el parámetro *alcance*, se pasa el contexto de ejecución para el que se des
 
 Si no se ha instalado ningún método para el *alcance*, se devuelve una cadena vacía ("").
 
-#### Ejemplo 
+## Ejemplo 
 
 Este comando es particularmente útil en el contexto de componentes porque le permite cambiar temporalmente y luego restaurar los métodos de intercepción de errores:
 
@@ -41,12 +41,12 @@ Este comando es particularmente útil en el contexto de componentes porque le pe
  ON ERR CALL($metActual)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Gestión de errores*  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

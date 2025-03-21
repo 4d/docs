@@ -1,6 +1,6 @@
 ---
 id: command-index
-title: 4D Write Pro Commands
+title: Comandos 4D Write Pro
 ---
 
 [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [I](#I) - [N](#N) - [P](#P) - [R](#R) - [S](#S) - [T](#T) - [U](#U)
@@ -30,8 +30,8 @@ title: 4D Write Pro Commands
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](wp-export-document.md) ***Modified 4D 20 R8***<br/>
-[`WP EXPORT VARIABLE`](../commands-legacy/wp-export-variable.md)
+[`WP EXPORT DOCUMENT`](wp-export-document.md) **Modified 4D 20 R9**<br/>
+[`WP EXPORT VARIABLE`](wp-export-variable.md) **Modified 4D 20 R9**
 
 <a id="F"><b>F</b></a>
 

@@ -14,16 +14,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is a list.Summary-->Is a list コマンドは、*list* 引数で指定された値が階層リストの有効な参照の場合[True](true.md "True")を返します。<!-- END REF-->それ以外の場合[False](false.md "False")を返します。
 
-#### 例題
+## 例題
 
 [CLEAR LIST](clear-list.md "CLEAR LIST")コマンドの例題参照
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

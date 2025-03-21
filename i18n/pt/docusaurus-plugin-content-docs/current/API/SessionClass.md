@@ -9,7 +9,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 
 The following types of sessions are supported by this class:
 
-- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
+- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
@@ -116,7 +116,7 @@ This function is only available with web user sessions. It returns an empty stri
 
 The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
 
-For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
+Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
 By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored.
 
@@ -321,11 +321,11 @@ End if
 
 #### Descrição
 
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the user session<!-- END REF -->. With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
+A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificador único (UUID) da sessão do usuário<!-- END REF -->. With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands/session-storage.md) command.
+Você pode usar essa propriedade para obter o objeto [`.storage`](#storage) de uma sessão graças ao comando [`storage`](../commands/session-storage.md).
 
 :::
 
@@ -412,18 +412,18 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote
 
 The `.info` object contains the following properties:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                               |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                 |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                      |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                    |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                           |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                        |
-| creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                             |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                        |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                        |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                          |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                            |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                                 |
+| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor. Standalone session: name of the machine |
+| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                               |
+| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                                      |
+| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                                   |
+| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão. Standalone session: date and time of application startup                                                                                                         |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                   |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                                   |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                           |
 
 :::note
 
@@ -508,7 +508,7 @@ This function is only available with web user sessions. It returns False in othe
 
 :::
 
-The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
+A função `.restore()` <!-- REF #SessionClass.restore().Summary -->substitui a sessão do usuário da web pela sua sessão original correspondente ao *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
 
 If the original user session has been correctly restored, the function returns `true`.
 
@@ -572,7 +572,7 @@ This function does nothing and always returns **False** with remote client, stor
 
 :::
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
+A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associa os privilégios e/ou papéis definidos no parâmetro para a sessão e retorna **True** se a execução foi bem sucedida <!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
@@ -592,7 +592,7 @@ Os privilégios e as funções são definidos no arquivo [`roles.json`](../ORDA/
 
 :::
 
-If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+Se a propriedade `privileges` ou `roles` tiverem um nome que não seja declarado no arquivo [`roles.json`](../ORDA/privileges.md#rolesjson-file), ele será ignorado.
 
 Como padrão quando não houver um privilégio associado à sessão, a sessão é uma [Sessão de convidados](#isguest).
 
@@ -639,7 +639,7 @@ End if
 
 #### Descrição
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all processes of the session<!-- END REF -->.
+A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary --> um objeto compartilhado que pode ser usado para armazenar informações disponíveis para todos os processos da sessão<!-- END REF -->.
 
 Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Since it is a shared object, this property will be available in the `Storage` object of the server.
 
@@ -693,7 +693,7 @@ End use
 
 #### Descrição
 
-The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
+A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 - Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.

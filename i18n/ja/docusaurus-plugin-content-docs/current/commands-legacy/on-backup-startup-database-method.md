@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Backup Startup database method.Summary-->**On Backup Startupデータベースメソッド**は、データベースのバックアップを開始しようとするたびに呼び出されます（手動でのバックアップ、定期的自動バックアップ、または[BACKUP](backup.md "BACKUP") コマンドによるバックアップ）。<!-- END REF-->  
 これはすべての4D環境: 4D (すべてのモード), 4D Server、4D Volume Desktopが統合されたコンパイル済みアプリケーションに当てはまります。

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get database localization.Summary-->O comando Get database localization \[#descv\] retorna o idioma padrão ou a linguagem do banco de dados especificado pelo *tipoLinguagem*, expresso no padrão definido pela RFC 3066\.<!-- END REF--> \[#descv\] Normalmente, o comando retorna "en" para Inglês, "es" para o espanhol, etc Para mais informações sobre esta norma e os valores retornados por este comando, consulte o manual de referência de design.  
   
@@ -48,12 +48,12 @@ O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj o
 
 **Nota:** Se o banco não tem uma pasta .lproj, 4D aplica a seguinte ordem de prioridade: 1\. Idioma do Sistema, 2\. Inglês (caso o idioma do sistema não possa ser identificado).
 
-#### Ver também 
+## Ver também 
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

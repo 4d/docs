@@ -15,9 +15,9 @@ Una copia de seguridad puede iniciarse de tres maneras:
 ## Copia de seguridad manual
 
 1. Seleccione el elemento **Copia de seguridad...** en el menú **Archivo** de 4D.
-   La ventana de copia de seguridad aparece:
-   ![](../assets/en/Backup/backup01.png)
-   Puede ver la ubicación de la carpeta de copia de seguridad usando el menú emergente junto al área de "destino de copia de seguridad". Esta ubicación se define en la página **Copia de seguridad/configuración** de las Propiedades de la base.
+ La ventana de copia de seguridad aparece:
+ ![](../assets/en/Backup/backup01.png)
+ Puede ver la ubicación de la carpeta de copia de seguridad usando el menú emergente junto al área de "destino de copia de seguridad". Esta ubicación se define en la página **Copia de seguridad/configuración** de las Propiedades de la base.
 
 - También puede abrir el [Centro de mantenimiento y seguridad](MSC/overview.md) de 4D y mostrar la [página de copias de seguridad](MSC/backup.md).
 
@@ -33,7 +33,7 @@ Las copias de seguridad se realizan automáticamente a las horas definidas en es
 
 ## Comando BACKUP
 
-Puede utilizar los métodos base `On Backup Startup` and `On Backup Shutdown` para controlar el proceso de copia de seguridad (consulte el manual _Lenguaje de 4D_). Puede utilizar el método base `On Backup Startup` y `On Backup Shutdown`, para controlar el proceso de backup (ver el manual _Lenguaje de 4D_).
+Puede utilizar los métodos base `On Backup Startup` and `On Backup Shutdown` para controlar el proceso de copia de seguridad (consulte el manual *Lenguaje de 4D*). Puede utilizar el método base `On Backup Startup` y `On Backup Shutdown`, para controlar el proceso de backup (ver el manual *Lenguaje de 4D*).
 
 ## Cómo funciona la copia de seguridad
 
@@ -67,7 +67,7 @@ En todos los casos, tenga en cuenta que el estado de la última copia de segurid
 - **Interrupción del usuario**: el botón **Parar** de la caja de diálogo de progreso permite a los usuarios interrumpir la copia de seguridad en cualquier momento. En este caso, la copia de elementos se detiene y se genera el error 1406. Puedes interceptar este error en el método base `On Backup Shutdown`.
 - **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la aplicación y de los archivos adjuntos accesibles) y devuelve un error.
 - **Copia de seguridad imposible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, application not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. La espera entre los dos intentos se define en la página **Backup/Backup y Restauración** de las Propiedades.
-  Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
+ Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
 
 ## Historial de copias de seguridad (Backup Journal)
 
@@ -80,7 +80,7 @@ El historial de copia de seguridad se llama "Backup Journal[001].txt" y se coloc
 En determinadas estrategias de copia de seguridad (por ejemplo, en el caso de que se realicen copias de seguridad de numerosos archivos adjuntos), el historial de copias de seguridad puede alcanzar rápidamente un gran tamaño. Se pueden utilizar dos mecanismos para controlar este tamaño:
 
 - **Copia de seguridad automática**: antes de cada copia de seguridad, la aplicación examina el tamaño del archivo historial de copia de seguridad actual. Si es superior a 10 MB, se archiva el archivo actual y se crea un nuevo archivo con el número [xxx] incrementado, por ejemplo "Backup Journal[002].txt”. Una vez alcanzado el número de archivo 999, la numeración vuelve a empezar por el 1 y los archivos existentes serán sustituidos.
-- **Posibilidad de reducir la cantidad de información registrada**: para ello, basta con modificar el valor de la llave `VerboseMode` en el archivo _Backup.4DSettings_ del proyecto. Por defecto, esta llave está definida como True. Si cambia el valor de esta llave a False, sólo se almacenará en el diario de copias de seguridad la información principal: fecha y hora de inicio de la operación y los errores encontrados. Las llaves XML relativas a la configuración de la copia de seguridad se describen en el manual _Backup de las llaves XML 4D_.
+- **Posibilidad de reducir la cantidad de información registrada**: para ello, basta con modificar el valor de la llave `VerboseMode` en el archivo *Backup.4DSettings* del proyecto. Por defecto, esta llave está definida como True. Si cambia el valor de esta llave a False, sólo se almacenará en el diario de copias de seguridad la información principal: fecha y hora de inicio de la operación y los errores encontrados. Las llaves XML relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*.
 
 ## backupHistory.json
 

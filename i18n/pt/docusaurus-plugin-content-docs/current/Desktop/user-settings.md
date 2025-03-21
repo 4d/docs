@@ -5,9 +5,9 @@ title: Propriedades usuário
 
 4D oferece dois modos de operação para as configurações dos projetos:
 
-- Modo **Padrão**: todos os [settings](../settings/overview.md) são armazenados no arquivo [_settings.4DSettings_ no nível do projeto](../Project/architecture.md#sources) e são aplicados em todos os casos. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
+- Modo **Padrão**: todos os [settings](../settings/overview.md) são armazenados no arquivo [*settings.4DSettings* no nível do projeto](../Project/architecture.md#sources) e são aplicados em todos os casos. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
 
-- Modo **Configurações do Usuário**: parte das configurações personalizadas são armazenadas em um arquivo _settings.4DSettings_ [na pasta de configurações](../Project/architecture.md#settings-user) (para todos os arquivos de dado) ou [na pasta de dados](../Project/architecture.md#settings-user-data) (para este arquivo de dados) e são usados em vez das configurações de estrutura. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Você ativa este modo usando uma opção localizada na [Página de segurança](../settings/security.md) das Configurações.
+- Modo **Configurações do Usuário**: parte das configurações personalizadas são armazenadas em um arquivo *settings.4DSettings* [na pasta de configurações](../Project/architecture.md#settings-user) (para todos os arquivos de dado) ou [na pasta de dados](../Project/architecture.md#settings-user-data) (para este arquivo de dados) e são usados em vez das configurações de estrutura. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Você ativa este modo usando uma opção localizada na [Página de segurança](../settings/security.md) das Configurações.
 
 Ao definir as definições do utilizador, pode manter as definições personalizadas entre actualizações das suas aplicações 4D, ou gerir diferentes definições para a mesma aplicação 4D implementada em vários sites diferentes. Permite igualmente utilizar a programação para gerir os arquivos de configuração através de XML.
 
@@ -38,7 +38,7 @@ Você pode acessar essas caixas de diálogo usando o menu **Design > Configuraç
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) com o seletor _settingsType_ apropriado.
+Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) com o seletor *settingsType* apropriado.
 
 A caixa de diálogo Configurações da estrutura é idêntica às Configurações standard e dá acesso a todas as suas propriedades (que podem ser substituídas por configurações do utilizador).
 
@@ -50,30 +50,30 @@ As caixas de diálogo **Configurações do Usuário** e **Configurações do Usu
 
 A tabela seguinte lista as páginas das definições encontradas nas caixas de diálogo User Settings e User Settings for Data File e descreve as suas principais diferenças em relação às definições padrão:
 
-| **Página de definições de estrutura**                                                    | **Página das definições do usuário**         | **Página de Propriedades do Usuário para Arquivo de Dados** |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
-| [Página general](../settings/general.md)                                                 | N/a                                          | N/a                                                         |
-| [Página Interface](../settings/interface.md)                                             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                                         |
-| [Página Banco de dados/Armazenamento de dados](../settings/database.md#data-storage)     | N/a                                          | N/a                                                         |
-| [Página Banco de dados/Memória](../settings/database.md#memory)                          | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Backup/Agendador](../settings/backup.md#scheduler)                               | N/a                                          | Idêntico às propriedades padrão                             |
-| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Idêntico às propriedades padrão                             |
-| [Página de Backup/Backup e restauração](../settings/backup.md#backup-restore)            | N/a                                          | Idêntico às propriedades padrão                             |
-| [Página Cliente-Servidor/rede](../settings/client-server.md#network-options)             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Cliente-Servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Web/Configuração](../settings/web.md#configuration)                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Web/Options (I)](../settings/web.md#options)                  | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Web/Opções (II)](../settings/web.md#options-ii)               | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Web/Log (tipo)](../settings/web.md#log)                       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Web/Log (backup)](../settings/web.md#log)                     | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| Página [Serviços Web](../settings/web.md#web-services)                                   | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível                |
-| [Página SQL](../settings/sql.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página PHP](../settings/php.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página Segurança](../settings/security.md)                                              | N/a                                          | N/a                                                         |
-| [Página Compatibilidade](../settings/compatibility.md)                                   | N/a                                          | N/a                                                         |
+| **Página de definições de estrutura**                                                         | **Página das definições do usuário**         | **Página de Propriedades do Usuário para Arquivo de Dados** |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| [Página general](../settings/general.md)                                                      | N/a                                          | N/a                                                         |
+| [Página Interface](../settings/interface.md)                                                  | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Compilador](../settings/compiler.md)                                                  | N/a                                          | N/a                                                         |
+| [Página Banco de dados/Armazenamento de dados](../settings/database.md#data-storage-page)     | N/a                                          | N/a                                                         |
+| [Página Banco de dados/Memória](../settings/database.md#memory-page)                          | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Backup/Agendador](../settings/../Backup/settings.md#scheduler)                        | N/a                                          | Idêntico às propriedades padrão                             |
+| [Página Backup/Configuração](../settings/../Backup/settings.md#configuration)                 | N/a                                          | Idêntico às propriedades padrão                             |
+| [Página de Backup/Backup e restauração](../settings/../Backup/settings.md#backup--restore)    | N/a                                          | Idêntico às propriedades padrão                             |
+| [Página Cliente-Servidor/rede](../settings/client-server.md#network-options-page)             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Cliente-Servidor/Configuração IP](../settings/client-server.md#ip-configuration-page) | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Web/Configuração](../settings/web.md#configuration)                                   | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Web/Options (I)](../settings/web.md#options-i)                     | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Web/Opções (II)](../settings/web.md#options-ii)                    | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Web/Log (tipo)](../settings/web.md#log-type)                       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Web/Log (backup)](../settings/web.md#log-backup)                   | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| Página [Serviços Web](../settings/web.md#web-services)                                        | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível                |
+| [Página SQL](../settings/sql.md)                                                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página PHP](../settings/php.md)                                                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
+| [Página Segurança](../settings/security.md)                                                   | N/a                                          | N/a                                                         |
+| [Página Compatibilidade](../settings/compatibility.md)                                        | N/a                                          | N/a                                                         |
 
-Quando você editar as configurações nesta caixa de diálogo, elas são automaticamente armazenadas nas _configurações correspondentes. DConfigurações_ arquivo (veja abaixo) ou o arquivo _Backup.4DSettings_ (confira as [configurações de backup](../Backup/settings.md) da página para obter mais informações).
+Quando você editar as configurações nesta caixa de diálogo, elas são automaticamente armazenadas nas *configurações correspondentes. DConfigurações* arquivo (veja abaixo) ou o arquivo *Backup.4DSettings* (confira as [configurações de backup](../Backup/settings.md) da página para obter mais informações).
 
 ## `SET DATABASE PARAMETER` e configurações de usuário
 
@@ -93,7 +93,7 @@ O arquivo de definições do utilizador padrão é criado automaticamente e colo
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
 
-... onde _ProjectFolder_ é o nome da pasta que contém o arquivo da estrutura do projeto.
+... onde *ProjectFolder* é o nome da pasta que contém o arquivo da estrutura do projeto.
 
 Nas aplicações fusionadas, o arquivo de definições do utilizador é colocado na seguinte localização:
 
@@ -106,7 +106,7 @@ O arquivo de definições do usuário ligado ao arquivo de dados é automaticame
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 
-... onde _Dados_ é o nome da pasta que contém o arquivo de dados atual da aplicação.
+... onde *Dados* é o nome da pasta que contém o arquivo de dados atual da aplicação.
 
 > Quando o arquivo de dados estiver localizado ao mesmo nível que o arquivo da estrutura do projeto, os arquivos de definições do utilizador baseados na estrutura e nos dados partilham a mesma localização e o mesmo arquivo. O comando de menu **Configurações do Usuário para o Arquivo de Dados...** não é proposto.
 
@@ -122,8 +122,8 @@ As definições podem ser guardadas em três níveis. Cada configuração defini
 
 | **Nível de prioridade**           | **Name**                                                                                                                  | **Localização**                                                                                                                                                                                                                    | **Comments**                                                                                                                                                                       |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | _**settings.4DSettings**_ arquivo na pasta de Origem (bancos de dados do projeto) ou na pasta Settings como o mesmo nível do arquivo de estrutura (bancos de dados binários) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
-| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | _**settings.4DSettings**_ arquivo na pasta Settings no mesmo nível que a pasta do projeto                                                                                                                          | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
-| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | _**settings.4DSettings**_ arquivo na pasta Settings ao mesmo nível que o arquivo de dados                                                                                                                          | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
+| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | ***settings.4DSettings*** arquivo na pasta de Origem (bancos de dados do projeto) ou na pasta Settings como o mesmo nível do arquivo de estrutura (bancos de dados binários) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
+| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | ***settings.4DSettings*** arquivo na pasta Settings no mesmo nível que a pasta do projeto                                                                                                                          | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
+| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | ***settings.4DSettings*** arquivo na pasta Settings ao mesmo nível que o arquivo de dados                                                                                                                          | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
 
 Lembre que os arquivo de definições do utilizador contêm apenas um subconjunto de definições relevantes, enquanto o arquivo de estrutura contém todas as definições personalizadas, incluindo as definições principais.

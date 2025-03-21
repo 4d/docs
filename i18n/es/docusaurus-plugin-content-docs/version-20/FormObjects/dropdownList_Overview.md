@@ -28,7 +28,7 @@ Puede crear diferentes tipos de listas desplegables con distintas funcionalidade
 
 > Esta funcionalidad sólo está disponible en proyectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. El objeto debe contener las siguientes propiedades:
+Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection.md) puede utilizarse como fuente de datos de una lista desplegable. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                      |
 | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ Si el objeto contiene otras propiedades, se ignoran.
 
 Para inicializar el objeto asociado a la lista desplegable, puede:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Static List&#062;`    en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
 
 * Ejecutar código que crea el objeto y sus propiedades. Por ejemplo, si "myList" es la variable [](properties_Object.md#variable-or-expression) asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
 
@@ -73,7 +73,7 @@ Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se ha
 
 Para inicializar el array asociado a la lista desplegable, puede:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Static List&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
 * Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
@@ -124,7 +124,7 @@ Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempr
 Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la lista desplegable. Esto facilita la gestión de los campos/variables listados.
 
 Por ejemplo, en el caso de un campo "Color" que sólo puede contener los valores "Blanco", "Azul", "Verde" o "Rojo", es posible crear una lista que contenga estos valores y asociarla a una lista desplegable que haga referencia al campo "Color" 4D. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
-> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. Si quiere mostrar contenido jerárquico, necesita usar una [lista de selección jerárquica](#using-a-hierarchical-choice-list).
+> Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar.
 
 Para asociar una lista desplegable a un campo o variable, introduzca directamente el nombre del campo o variable como campo [Variable o Expresión](properties_Object.md#variable-or-expression) de la lista desplegable en la Lista de propiedades.
 > No es posible utilizar esta funcionalidad con una lista desplegable de objetos o arrays. Si introduce un nombre de campo en el área "Variable o expresión", deberá utilizar una lista de selección.
@@ -135,7 +135,7 @@ Cuando se ejecuta el formulario, 4D gestiona automáticamente la lista desplegab
 
 #### Valor del elemento seleccionado o Referencia del elemento seleccionado
 
-Cuando haya asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type) en **valor del elemento seleccionado** o **referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
+Cuando ha asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type-list) como **Valor del elemento seleccionado** o **Referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Uso de una lista de selección jerárquica
 
@@ -163,4 +163,4 @@ Puede crear automáticamente una lista desplegable utilizando una [acción está
 
 ## Propiedades soportadas
 
-[Formato alfa](properties_Display.md#alpha-format) - [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Lista de opciones](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipo de datos (tipo de expresión)](properties_DataSource.md#data-type-expression-type) - [Tipo de datos (lista)](properties_DataSource.md#data-type-list) - [Formato de fecha](properties_Display.md#date-format) - [Tipo de expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Guardar valor](properties_Object.md#save-value) - [Hora Formato](properties_Display.md#time-format) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)  
+[Formato Alfa](properties_Display.md#alpha-format) - [Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Lista de selección](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipo de datos (tipo de expresión)](properties_DataSource.md#data-type-list-expression-type) - [Tipo de datos (lista)](properties_DataSource.md#data-type-list-list) - [Formato Fecha](properties_Display.md#date-format) - [Tipo de expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Alineamiento horizontal](properties_Text.md#horizontal-alignment) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - [Nombre de objeto](properties_Object.md#object-name) - [Derecho](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Guardar valor](properties_Object.md#save-value) - [Formato hora](properties_Display.md#time-format) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)  

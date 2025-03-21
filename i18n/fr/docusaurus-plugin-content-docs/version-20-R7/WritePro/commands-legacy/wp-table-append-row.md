@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table append row.Summary-->La commande **WP Table append row** ajoute une ligne au tableau *refTableau*, le remplit avec les *valeur*(s) et retourne l'objet correspondant à la plage de la ligne.<!-- END REF-->
 
@@ -29,7 +29,7 @@ La commande ajoute autant de cellules dans la ligne qu'il y a de valeurs dans le
 
 La commande retourne la nouvelle ligne en tant qu'objet plage de ligne. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez créer un tableau vide et y ajouter plusieurs lignes de taille différente. Vous pouvez écrire :
 
@@ -44,7 +44,7 @@ Vous souhaitez créer un tableau vide et y ajouter plusieurs lignes de taille di
 
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans une facturation, vous souhaitez créer un tableau automatiquement rempli avec la sélection les lignes facture :
 
@@ -73,7 +73,7 @@ Dans une facturation, vous souhaitez créer un tableau automatiquement rempli av
 
 ![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table get rows](wp-table-get-rows.md)  

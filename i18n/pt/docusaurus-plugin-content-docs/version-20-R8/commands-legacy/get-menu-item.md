@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu item.Summary-->O comando Get menu item devolve o texto do comando de menu cujos números de menu e de comando são passados em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu*. 
 
@@ -24,12 +24,12 @@ Se omite o parâmetro *processo*, Get menu item é aplicado a barra de menus do 
 
 **Nota:** se passa um [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") em *menu*, o parâmetro *processo* é inútil e será ignorado. 
 
-#### Ver também 
+## Ver também 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM](set-menu-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

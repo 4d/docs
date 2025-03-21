@@ -16,7 +16,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 |[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 |[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
@@ -38,7 +38,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 
 
-<!-- REF DataStoreClass.dataclassName.Desc -->
+
 ## *.dataclassName*
 
 <details><summary>History</summary>
@@ -67,7 +67,6 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
  $sel:=ds.Employee.all()
 ```
 
-<!-- END REF -->
 
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
@@ -96,7 +95,7 @@ The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction()
 
 The `.cancelTransaction()` function cancels any changes made to the data during the transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
+You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
 
 #### Example
 
@@ -104,7 +103,6 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -210,7 +208,6 @@ You want to know the number of encrypted tables in the current data file:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>History</summary>
@@ -290,7 +287,6 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -318,7 +314,7 @@ The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteCont
 
 > For more information on how contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
+Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
 
 #### Example
 
@@ -367,7 +363,6 @@ $info:=$ds.getAllRemoteContexts()
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
 ## .getGlobalStamp()
 
 <details><summary>History</summary>
@@ -487,7 +482,6 @@ On a remote datastore:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
 ## .getRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -525,7 +519,7 @@ The returned object has the following properties:
 |name|Text|Name of the context|
 |main|Text|Attribute(s) associated to the context (attribute names are separated by a comma) |
 |dataclass|Text|Dataclass name|
-|currentItem (optional)|Text|The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem|
+|currentItem (optional)|Text|The attributes of the [page mode](../ORDA/client-server-optimization.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem|
 
 Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
 
@@ -608,7 +602,6 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
 ## .locked()
 
 <details><summary>History</summary>
@@ -672,9 +665,9 @@ The function will also return `True` if the datastore was locked by another admi
 
 The `.makeSelectionsAlterable()` function <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). It is intended to be used once, for example in the `On Startup` database method.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
 
 > **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects.
 On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity.
@@ -800,7 +793,6 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
 ## .setGlobalStamp()
 
 <details><summary>History</summary>
@@ -857,7 +849,6 @@ ds.setGlobalStamp($newValue)
 
 [.getGlobalStamp()](#getglobalstamp)
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -907,7 +898,7 @@ If *attributes* is an empty Text, or *attributesColl* is an empty collection, al
 You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
 
 * If set to "main" (default), the *contextName* designates a standard context.
-* If set to "currentItem", the attributes passed are put in the context of the current item.  See  [Entity selection-based list box](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
+* If set to "currentItem", the attributes passed are put in the context of the current item.  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 In *pageLength*, specify the number of dataclass entities to request from the server.
 
@@ -1203,7 +1194,6 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
 ## .unlock()
 
 <details><summary>History</summary>

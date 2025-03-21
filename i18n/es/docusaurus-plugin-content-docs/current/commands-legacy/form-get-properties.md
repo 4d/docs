@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->El comando \[#current\_title devuelve las propiedades del formulario *nomForm*.<!-- END REF-->
 
@@ -36,13 +36,13 @@ Los parámetros *largoFijo* y *altoFijo* indican si el largo y el alto del formu
 
 El parámetro *título* devuelve el título de la ventana del formulario, tal como fue definido en la Lista de propiedades del editor de formularios. Si no se definió ningún nombre, el parámetro *título* devuelve una cadena vacía.
 
-#### Ver también 
+## Ver también 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

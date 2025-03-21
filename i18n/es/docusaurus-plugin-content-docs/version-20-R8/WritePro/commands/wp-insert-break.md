@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
+El comando **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->inserta una nueva ruptura de tipo *breakType* en el *targetObj* de acuerdo con los parámetros de inserción *mode*  y *rangeUpdate* especificados, y devuelve el rango de texto del caracter de ruptura<!-- END REF-->
 
-In *targetObj*, pass:
+En *targetObj*, pase:
 
 - un rango, o
 - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
@@ -58,21 +58,21 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted contents a
 
 - If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 While building invoices, you want to insert page breaks except on the last page:
 
 ```4d
  $nbInvoices:=Records in selection([INVOICE])
  For($j;1;$nbInvoices)
-    ... //processing invoices
-    If($j#$nbInvoices) //insert page break except for last page
+    ... //procesando facturas
+    If($j#$nbInvoices) //insertar ruptura de página excepto para la última página
        WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
     End if
  End for
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to insert a continuous section break to have a single column section and a two-column section on the same page.
 
@@ -93,7 +93,7 @@ You want to insert a continuous section break to have a single column section an
 
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### Ver también
+## Ver también
 
 [WP Get breaks](../commands-legacy/wp-get-breaks.md)</br>
 [WP Insert document body](wp-insert-document-body.md)

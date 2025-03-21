@@ -23,7 +23,7 @@ There are different ways to configure the 4D web server settings, depending on t
 |Can be set with|Name|Comments|
 |---|---|---|
 |Settings dialog box|[Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
-|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)||
+|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)||
 
 Enables and configures the web page cache. 
 
@@ -78,7 +78,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 |---|---|---|
 |webServer object|[`CORSSettings`](API/WebServerClass.md#corssettings)|Collection of objects (List of allowed hosts and methods for the CORS service)|
 |`WEB SET OPTION`|`Web CORS settings`|Collection of objects (List of allowed hosts and methods for the CORS service)|
-|Settings dialog box|[Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed)|Click on the [+] button to add an allowed domain name and its method(s)|
+|Settings dialog box|[Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-nameshttp-methods-allowed)|Click on the [+] button to add an allowed domain name and its method(s)|
 
 List of allowed hosts and methods for the CORS service. 
 
@@ -267,7 +267,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 
 Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database. 
 
-> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see [macOS HelperTool](#macos-helpertool)).
+> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
 
 From a web browser, you need to include the non-default HTTP port number into the address you enter for connecting to the web application. The address must have a suffix consisting of a colon followed by the port number. For example, if you are using the HTTP port number 8080, you will specify "123.4.567.89:8080".
 

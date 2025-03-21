@@ -150,13 +150,13 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Privilège
 
-La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
+La possibilité de lancer une ou plusieurs [actions](#action) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
 
 ## Propriété
 
 Voir [Attribut](#attribute).
 
-> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les attributs et les propriétés sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 

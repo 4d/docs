@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->El comando VOLUME ATTRIBUTES devuelve en bytes el tamaño, el espacio utilizado y el espacio libre del volumen cuyo nombre se pasa en *volumen*.<!-- END REF-->si *volumen* indica un volumen remoto no montado, la variable OK toma el valor 0 y los tres parámetros devuelven -1\. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Su aplicación incluye algunas operaciones por lotes que se ejecutan en la noche o los fines de semana para almacenar archivos temporales grandes en disco. Para que este proceso sea tan automático y flexible como sea posible, usted escribe una rutina que buscará automáticamente el primer volumen cuyo espacio libre sea suficiente para sus archivos temporales. He aquí el método:
 
@@ -92,11 +92,11 @@ Una vez se añade este método de proyecto a su aplicación, puede escribir:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [VOLUME LIST](volume-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

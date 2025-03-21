@@ -159,7 +159,7 @@ End if
 
 A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um alias (macOS) ou um atalho (Windows)<!-- END REF --> para a pasta com o nome *aliasName* especificado na pasta designada pelo objeto *destinationFolder*.
 
-Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName*.
+Passar o nome do alias ou atalho para criar no parâmetro *aliasName*.
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
@@ -170,7 +170,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Objeto devolvido**
+**Returned object**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -230,10 +230,10 @@ Quando `Delete only if empty` for passado ou se você omitir o parâmetro de op�
 Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
-  **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
+ **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
 - Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
 - Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido.
-  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+ (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -295,11 +295,11 @@ Quando `Delete with contents` é passado:
 
 A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objeto `Folder` (pasta de origem) para a *destinationFolder* especificada<!-- END REF -->.
 
-A *destinationFolder* deve existir em disco, senão um erro é gerado.
+The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` movido.
 
@@ -353,9 +353,9 @@ Quer mover-se e renomear uma pasta:
 
 A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que você passou em *newName* e retorna o objeto `Folder` renomeado<!-- END REF -->.
 
-O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` renomeado.
 

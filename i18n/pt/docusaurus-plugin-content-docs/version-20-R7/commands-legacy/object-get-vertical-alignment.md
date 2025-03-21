@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->O comando **OBJECT Get vertical alignment** devolve um valor indicando o tipo de alinhamento vertical aplicada ao objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -37,13 +37,13 @@ O alinhamento vertical pode ser aplicado aos seguintes tipos de objetos de formu
 * colunas de list box,
 * cabeçalhos e rodapés de list box.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

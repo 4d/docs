@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->La commande **DISTINCT ATTRIBUTE PATHS** retourne la liste des chemins d'attributs différents présents dans le champ objet indexé passé dans *champObjet* et ce, pour la sélection courante de la table à laquelle le champ appartient.<!-- END REF-->
 
@@ -31,7 +31,7 @@ La commande ne modifie pas la sélection courante ni l'enregistrement courant.
 * Les enregistrements pour lesquels la valeur de *champObjet* est indéfinie ne sont pas pris en compte.
 * Les chemins d'attributs créés pendant une transaction sont pris en compte par la commande. Attention, ces chemins sont conservés dans l'index du champ objet même si la transaction a été annulée.
 
-#### Exemple 
+## Exemple 
 
 Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements. Le champ est indexé :
 
@@ -65,12 +65,12 @@ Le tableau *aTPaths* reçoit les éléments suivants :
 
 **Note :** "length" est une *propriété virtuelle* qui est disponible automatiquement pour tous les attributs de type tableau. Elle fournit la taille du tableau, c'est-à-dire le nombre d'éléments, et peut être utilisée dans les requêtes. Pour plus d'informations, reportez-vous au paragraphe *Using the .length virtual property*. 
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

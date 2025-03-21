@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->**OBJECT Get help tip**コマンドは*object* と*\** 引数で指定したオブジェクトに割り当てられたカレントプロセスのヘルプメッセージを返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 このコマンドは指定したオブジェクトにデザインモードあるいは[OBJECT SET HELP TIP](object-set-help-tip.md)コマンドでカレントプロセスに関連付けられた、現在のヘルプメッセージを返します。返される文字列はフォームが実行されたときに表示されるメッセージです。4D参照やxliff resnameなどの可変な値が含まれる場合、文脈に基づき解析された結果が返されます。
 
-#### 例題 
+## 例題 
 
 ピクチャーボタンのタイトルがヘルプメッセージとして格納されています。このタイトルはxliffファイルに記述されていて、アプリケーションのカレント言語に基づき変わります: 
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
   // $helpmessageには例えば日本語環境では"はい"、英語環境では"YES"が返されます (xliffにそのように記述されていれば)。
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

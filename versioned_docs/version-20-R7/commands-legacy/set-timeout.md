@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TIMEOUT.Summary-->**SET TIMEOUT** specifies how much time a serial port command has to complete.<!-- END REF--> If the serial port command does not complete within the specified time, *seconds*, the serial port command is canceled, an error -9990 is generated, and the OK system variable is set to 0\. You can catch the error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
@@ -25,7 +25,7 @@ The commands that are affected by the timeout setting are:
 * [RECEIVE RECORD](receive-record.md)
 * [RECEIVE VARIABLE](receive-variable.md)
 
-#### Example 
+## Example 
 
 The following example sets the serial port to receive data. It then sets a time-out. The data is read with [RECEIVE PACKET](receive-packet.md). If the data is not received in time, an error occurs:
 
@@ -42,7 +42,7 @@ The following example sets the serial port to receive data. It then sets a time-
  ON ERR CALL("")
 ```
 
-#### See also 
+## See also 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -50,7 +50,7 @@ The following example sets the serial port to receive data. It then sets a time-
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

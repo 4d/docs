@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get external data path.Summary-->The **Get external data path** command returns the full pathname of the external storage file for the data of the field passed in the *aField* parameter, for the current record.<!-- END REF--> You must pass fields of the Text, BLOB or Picture type in the parameter. The command returns the pathname of the storage file even if the file does not exist or is not accessible.
 
@@ -28,11 +28,11 @@ More particularly, this command lets you recopy the external file.
 * The field has a Null value (and does not contain a pathname).
 * The command is executed from a remote 4D.
 
-#### See also 
+## See also 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

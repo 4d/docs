@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IDLE.Summary-->The IDLE command is designed only for use with the compiler.<!-- END REF--> This command is only used in compiled databases in which user-defined methods are written so that no calls are made back to the 4D engine. For example, if a method has a For loop in which no 4D commands are executed, the loop could not be interrupted by a process installed with [ON EVENT CALL](on-event-call.md), nor could a user switch to another application. In this case, you should insert IDLE to allow 4D to trap events. If you do not want any interruptions, omit IDLE.
 
-#### Example 
+## Example 
 
 In the following example, the loop would never terminate in a compiled database without the call to IDLE:
 
@@ -47,12 +47,12 @@ with:
  End if
 ```
 
-#### See also 
+## See also 
 
 *Compiler Commands*  
 [ON EVENT CALL](on-event-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->The **OBJECT Get horizontal alignment** command returns a code indicating the type of horizontal alignment applied to the object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -52,13 +52,13 @@ The form objects to which alignment can be applied are as follows:
 * List box footers
 * *4D Write Pro Reference* areas
 
-#### See also 
+## See also 
 
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

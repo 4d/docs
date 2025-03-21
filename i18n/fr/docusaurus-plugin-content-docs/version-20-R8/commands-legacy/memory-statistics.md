@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MEMORY STATISTICS.Summary-->La commande **MEMORY STATISTICS** permet de récupérer des informations relatives à l’utilisation du cache de données par 4D.<!-- END REF--> Ces informations peuvent être utiles à l’analyse du fonctionnement de l’application. 
 
@@ -24,11 +24,11 @@ Le paramètre *typeInfo* indique le type d'informations que vous souhaitez obten
 
 A l’issue de l’exécution de la commande, les statistiques demandées sont fournies dans les tableaux *tabNoms*, *tabValeurs* et *tabNombre*. Ces informations sont également disponibles via l’Explorateur d’exécution : taille de mémoire physique, virtuelle, libre, occupée, mémoire pile (stack memory) et mémoire pile disponible (free stack memory). Pour plus d’informations sur l’interprétation avancée de ces données, veuillez contacter le service technique de 4D SAS.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Cache info](cache-info.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

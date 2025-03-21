@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->**CONVERT COORDINATES**コマンドは、ある点の(x;y)座標を一つの座標系から別の座標系へと変換します。<!-- END REF-->サポートされる入力・出力座標系はフォーム(およびサブフォーム)、ウィンド、そしてスクリーンです。例えば、このコマンドを使用して、メインフォーム内にある、サブフォームに属しているオブジェクトの座標を取得する事ができます。これにより、どんなカスタムオプションに対してもコンテキストメニューを作成する事が容易になります。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | ----------------- | ---- | - | ------------------------------------------------------------------- |
 | XY Current form   | 倍長整数 | 1 | 原点はカレントフォームの左上端                                                     |
 | XY Current window | 倍長整数 | 2 | 原点はカレントウィンドウの左上端                                                    |
-| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 OS X:XY Screenと同じ                           |
+| XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 macOS:XY Screenと同じ                           |
 | XY Screen         | 倍長整数 | 3 | 原点はメインスクリーンの左上端([SCREEN COORDINATES](screen-coordinates.md)コマンドと同じ) |
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 * コマンドがOn Display Detailイベント内で、レコードが編集中に呼び出されていた場合、出力点は編集中のレコード内の表示内に位置します。
 * それ以外の場合には、出力点は銭湯レコードの表示内に位置します。
 
-#### 例題 1 
+## 例題 1 
 
 "MyObject"というオブジェクト内の左下端にポップアップメニューを開きたい場合を考えます。
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 マウスカーソルの位置にポップアップウィンドウを開きたい場合を考えます。Windowsにおいては、[MOUSE POSITION](mouse-position.md)コマンド(\* 引数を使用)はMDIウィンドウの位置に基づいた値を返すため、座標系を変換する必要があります:
 
@@ -78,14 +78,14 @@ displayed_sidebar: docs
  CLOSE WINDOW($window)
 ```
 
-#### 参照 
+## 参照 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

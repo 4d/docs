@@ -23,12 +23,12 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D sólo evalúa las peticiones HTTP [que requieren una autenticación](#database-method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
 - ou delegar a autenticação do usuário a um aplicativo de terceiros (por exemplo, uma rede social, SSO);
-- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código: O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
+- o bien, ofrecer una interfaz al usuario (por ejemplo, un formulario web) para que pueda crear su cuenta en su base de datos clientes; luego, puede autenticar a los usuarios con cualquier algoritmo personalizado (ver [este ejemplo](sessions.md#example) del O importante é que você nunca armazene a senha de forma não protegida, usando esse código: O importante é que você nunca armazene a senha de forma não protegida, usando esse código: O importante é que você nunca armazene a senha de forma não protegida, usando esse código:
 
 ```4d
 //... criar conta de usuário
@@ -38,7 +38,7 @@ ds.webUser.save()
 
 Ver también [este ejemplo](gettingStarted.md#authenticating-users) del capítulo "Cómo comenzar".
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
+Se nenhuma autenticação personalizada for fornecida, 4D chama o método banco de dados [`On Web Authentication`](#on-web-authentication) (se existir). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
 
 > **Atención**: si el método de base de datos `On Web Authentication` no existe, las conexiones se aceptan automáticamente (modo de prueba).
 
@@ -51,8 +51,8 @@ Quando um usuário se conecta ao servidor, uma caixa de diálogo padrão é exib
 Os valores introduzidos são então avaliados:
 
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
-  - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
-  - Se o nome de usuário não existir na tabela de usuários 4D, o método de banco de dados [`On Web Authentication`](#on-web-authentication) será chamado. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+ - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
+ - Se o nome de usuário não existir na tabela de usuários 4D, o método de banco de dados [`On Web Authentication`](#on-web-authentication) será chamado. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) para que você possa processá-los. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Com o servidor da Web 4D Client, lembre-se de que todos os sites publicados pelas máquinas 4D Client compartilharão a mesma tabela de usuários. Validação de usuários/senhas é realizada pela aplicação 4D Server.
@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
-- quando o servidor da Web recebe um URL que começa com `rest/` e o servidor REST é iniciado (nesse caso, a autenticação é tratada por meio da função [`ds.authentify`](../REST/authUsers#force-login-mode) ou (obsoleto) o método de banco de dados [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) ou [Configurações de estrutura](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### Sintaxe
@@ -115,7 +115,7 @@ Estes parâmetros devem ser declarados da seguinte forma:
 
 :::note
 
-Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-mode) seleccionado).
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
 
 :::
 

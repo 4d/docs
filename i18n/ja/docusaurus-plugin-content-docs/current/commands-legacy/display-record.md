@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->DISPLAY RECORDコマンドは、カレント入力フォームを使って、*aTable*のカレントレコードを表示します。<!-- END REF-->レコードはイベントがウィンドウを更新するまでのみ表示されます。このイベントとは、[ADD RECORD](add-record.md "ADD RECORD")を実行する、または入力フォームへ戻る、メニューバーに戻ることです。DISPLAY RECORDは、カレントレコードが存在しない場合には何も行いません。
 
@@ -23,7 +23,7 @@ DISPLAY RECORDは、しばしばオリジナルの進捗メッセージを表示
 
 **警告:** DISPLAY RECORDをWeb接続プロセスから呼び出さないでください。このコマンドは、Webブラウザクライアントマシン上ではなく、4D Webサーバマシン上で実行されるためです。
 
-#### 例題 
+## 例題 
 
 以下の例は一連のレコードをスライドショーとして表示します:
 
@@ -37,11 +37,11 @@ DISPLAY RECORDは、しばしばオリジナルの進捗メッセージを表示
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [MESSAGE](message.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

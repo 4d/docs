@@ -14,8 +14,8 @@ Un proyecto 4D puede iniciar y monitorizar un servidor web para la aplicación p
 El servidor web principal de 4D puede iniciarse de diferentes maneras:
 
 - Utilizando un botón o comando de menú.
-  - 4D: **Ejecutar\>Iniciar el servidor Web** menú<br/>![](../assets/en/WebServer/start1.png)
-  - 4D Server: botón **Iniciar servidor HTTP** de la página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
+    - 4D: **Ejecutar\>Iniciar el servidor Web** menú<br/>![](../assets/en/WebServer/start1.png)
+    - 4D Server: botón **Iniciar servidor HTTP** de la página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 - Se inicia automáticamente cada vez que se abre la aplicación 4D. Para ello, despliegue la página **Web\/Configuración** de la Configuración y active la casilla **Lanzar servidor web al iniciar**:<br/>![](../assets/en/WebServer/config.png)
 
@@ -45,7 +45,7 @@ Al seleccionar este comando, la página de inicio del sitio web publicado por la
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](#http-port) especificado en los parámetros.
+Este comando permite verificar que el servidor web, la visualización de la página de inicio, etc. funcionan correctamente. La página se llama utilizando la URL *localhost*, que es el atajo estándar que designa la dirección IP de la máquina en la que se ejecuta el navegador web. El comando tiene en cuenta el número de [puerto de publicación TCP](./webServerConfig.md#http-port) especificado en los parámetros.
 
 ## Borrar la caché
 
@@ -58,7 +58,7 @@ Para ello, puede:
 
 La caché se borra inmediatamente.
 
-> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
+> También puede utilizar la URL [/4DCACHECLEAR](#4dcacheclear).
 
 ## Explorador de ejecución
 
@@ -226,7 +226,7 @@ Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límit
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
-  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
 

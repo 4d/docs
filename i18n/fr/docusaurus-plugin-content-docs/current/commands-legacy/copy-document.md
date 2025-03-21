@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->La commande **COPY DOCUMENT** copie le fichier ou dossier désigné par *nomSource* à l'emplacement désigné par *nomDest* et le renomme optionnellement.<!-- END REF--> 
 Dans ce cas, le paramètre *nomSource* peut contenir :  
@@ -37,7 +37,7 @@ A noter que vous pouvez passer un fichier dans le paramètre *nomSource* et un d
 
 Le paramètre optionnel *nouvNom*, s'il est passé, permet de renommer le document copié à son emplacement de destination (fichier ou dossier). Lorsqu’il est passé dans le contexte d’une copie de fichier, ce paramètre remplace le nom éventuellement passé via le paramètre *nomDest*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant duplique un document dans son propre dossier :
 
@@ -45,7 +45,7 @@ L'exemple suivant duplique un document dans son propre dossier :
  COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"C:\\DOSSIER\\LeDoc2")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant copie un document dans le dossier de la base (dans la mesure où C:\\\\DOSSIER n'est pas le dossier de la base) :
 
@@ -53,7 +53,7 @@ L'exemple suivant copie un document dans le dossier de la base (dans la mesure o
  COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"LeDoc")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant copie un document d'un volume vers un autre :
 
@@ -61,7 +61,7 @@ L'exemple suivant copie un document d'un volume vers un autre :
  COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"F:\\Archives\\LeDoc.OLD")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant duplique un document dans son propre dossier, écrasant la précédente copie si elle existe :
 
@@ -69,7 +69,7 @@ L'exemple suivant duplique un document dans son propre dossier, écrasant la pr�
  COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"C:\\DOSSIER\\LeDoc2";*)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Copie d’un fichier dans un dossier spécifique en conservant le même nom :
 
@@ -77,7 +77,7 @@ Copie d’un fichier dans un dossier spécifique en conservant le même nom :
  COPY DOCUMENT("C:\\Projets\\NomDoc";"C:\\Projets\\")
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Copie d’un fichier dans un dossier spécifique en conservant le même nom et en remplaçant le document existant : 
 
@@ -85,7 +85,7 @@ Copie d’un fichier dans un dossier spécifique en conservant le même nom et e
  COPY DOCUMENT("C:\\Projets\\NomDoc";"C:\\Projets\\"; *)
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 Copie d’un dossier dans un autre dossier (les deux dossiers doivent exister sur le disque) : 
 
@@ -93,7 +93,7 @@ Copie d’un dossier dans un autre dossier (les deux dossiers doivent exister su
  COPY DOCUMENT("C:\\Projets\\";"C\\Archives\\2011\\")
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 Les exemples suivants créent différents fichiers et dossiers dans le dossier de la base (exemples Windows). Dans tous le cas, le dossier "dossier2" doit exister :
 
@@ -117,12 +117,12 @@ Les exemples suivants créent différents fichiers et dossiers dans le dossier d
      //crée le dossier "dossier2/nouveauté/"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [MOVE DOCUMENT](move-document.md)  
 *Présentation des documents système*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

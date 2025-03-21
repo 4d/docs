@@ -9,9 +9,9 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 - **funciones usuario**, creadas en [clases usuario](Concepts/classes.md) utilizando la [palabra clave Function](Concepts/classes.md#function).
 - **funciones de fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
 
-### Objetos Fórmula
+### Objetos fórmula
 
-Los comandos [Formula](../commands/formula.md) y [Formula from string](../commands/formula-from-string.md) le permiten crear [objetos`4D.Function`](#about-4dfunction-objects) para ejecutar cualquier expresión 4D o código expresado como texto.
+Los comandos [Formula](../commands/formula.md) y [Formula from string](../commands/formula-from-string.md) le permiten crear [objetos`4D.Function`](#formula-objects) para ejecutar cualquier expresión 4D o código expresado como texto.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 
@@ -47,7 +47,7 @@ También puede ejecutar una función utilizando las funciones [`apply()`](#apply
 
 #### Paso de parámetros
 
-Puede pasar parámetros a sus fórmulas utilizando la [sintaxis secuencial de los parámetros](Concepts/parameters.md#sequential-parameters) basada en $1, $2...$n. Por ejemplo, puede escribir:
+Puede pasar parámetros a sus fórmulas utilizando una sintaxis secuencial de parámetros basada en $1, $2...$n. Por ejemplo, puede escribir:
 
 ```4d
  var $f : Object
@@ -116,7 +116,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 | ------------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
 | thisObj       | Object     |              ->             | Objeto a devolver por el comando This en la fórmula                                                                        |
 | formulaParams | Collection |              ->             | Colección de valores que se pasan como $1...$n cuando se ejecuta `formula` |
-| Result        | any        | <- | Valor obtenido de la ejecución de la fórmula                                                                               |
+| Resultado     | any        | <- | Valor obtenido de la ejecución de la fórmula                                                                               |
 
 <!-- END REF -->
 

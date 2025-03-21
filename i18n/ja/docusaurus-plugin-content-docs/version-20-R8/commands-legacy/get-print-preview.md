@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get print preview.Summary-->**Get print preview**コマンドはカレントプロセスで[SET PRINT PREVIEW](set-print-preview.md)が**True**で呼ばれている場合、Trueを返します。<!-- END REF-->
 
 ユーザーは印刷ダイアログでこのオプションを変更できる点に留意してください。最終的な印刷モードを判定するには[Is in print preview](is-in-print-preview.md)コマンドを使用します。
 
-#### 参照 
+## 参照 
 
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE INDEX.Summary-->**CREATE INDEX**コマンドを使用して以下のインデックスを作成します。<!-- END REF-->
 
@@ -45,11 +45,11 @@ displayed_sidebar: docs
 
 コマンドを実行している間に問題が発生する場合 (非インデックスフィールド、1つ以上のフィールドでキーワードインデックスを作成する試み等) エラーが発生します。このエラーは、エラー処理メソッドで検知できます。
 
-#### 配布に関する注意 
+## 配布に関する注意 
 
 このコマンドはデータベースストラクチャーを変更するため、読み出し専用のパッケージアプリ(*Program Files* フォルダ内にまたは.4dz ファイル内にインストールされている.4dc ファイル)のコンテキストにおいては使用することができません。
 
-#### 例題 1 
+## 例題 1 
 
 \[Customers\]テーブルの"Last Name" フィールドと"Telephone" フィールドに標準インデックスをそれぞれ作成。
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustTelIdx")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 \[Customers\]テーブルの"Observations"フィールドにキーワードインデックスを作成。
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
  CREATE INDEX([Customers];fieldPtrArr;Keywords Index;"CustObsIdx")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 \[Customers\]テーブルの"City"フィールドと"Zipcode"フィールドに複合インデックスを作成。
 
@@ -82,13 +82,13 @@ displayed_sidebar: docs
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
 ```
 
-#### 参照 
+## 参照 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->QR SET DOCUMENT PROPERTY コマンドを使用し、印刷ダイアログの表示の有無、またはドキュメントで使用する単位の指定を行うことができます。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 無効な*area* 番号を渡した場合、エラー番号-9850が生成されます。  
 無効な値を*property* または*value* 引数に渡した場合、それぞれに対応するエラー番号(-9852 または -9853)が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR Get document property](qr-get-document-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

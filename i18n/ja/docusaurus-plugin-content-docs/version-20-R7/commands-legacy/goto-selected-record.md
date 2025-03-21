@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD**は、*aTable*のカレントセレクション内の指定されたレコードに移動し、そのレコードをカレントレコードにします。<!-- END REF-->カレントセレクションは変更されません。*record*にはカレントセレクション内のレコードの位置を指定します。[Record number](record-number.md)で求められるレコード番号ではありません。このレコード位置はセレクションの作成方法およびセレクションがソートされているかどうかによって変わります。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 *record*に0を渡すと、*aTable*のカレントレコードが存在しなくなります。単一選択モードが選択されている場合、特に組み込みサブフォームで、これによりリスト中のレコードの選択を解除できます。
 
-#### 例題 
+## 例題 
 
 以下の例は、\[People\]Last Nameフィールドの内容を*atNames*配列に取り込みます。*alRecNum*倍長整数配列にレコード位置番号を設定します。両方の配列をソートし、その配列を使用してセレクション内のレコードを参照します:
 
@@ -58,11 +58,11 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Selected record number](selected-record-number.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->O comando **METHOD SET ACCESS MODE** permite definir o comportamento de 4D quando intenta acessar em escritura a um objeto que já foi carregado em modificação por outro usuário ou processo .<!-- END REF--> O alcance deste comando é a sessão atual.
 
@@ -26,7 +26,7 @@ Em *modo*, passe uma das seguintes constantes do tema *Design Object Access*:
 | On object locked retry   | Inteiro longo | 1     | 4D tenta carregar o objeto até que seja liberado                                                                                                          |
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

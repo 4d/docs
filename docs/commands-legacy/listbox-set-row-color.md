@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -42,7 +42,7 @@ This command modifies values found in the array of colors that may have been def
 
 If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
 
-#### Example 
+## Example 
 
 In an array type list box, we want to set colors for a row and for one cell in this row:
 
@@ -57,14 +57,14 @@ In an array type list box, we want to set colors for a row and for one cell in t
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
-#### See also 
+## See also 
 
 *List Box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

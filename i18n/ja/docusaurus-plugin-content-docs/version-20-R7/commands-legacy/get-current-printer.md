@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get current printer.Summary-->**Get current printer** コマンドは、4Dアプリケーションに定義されたカレントプリンター名を返します。<!-- END REF-->デフォルトで4Dの起動時には、システムで定義されたプリンターがカレントプリンターとなります。
 
@@ -23,16 +23,16 @@ displayed_sidebar: docs
 
 **注:** [SET CURRENT PRINTER](set-current-printer.md) で Generic PDF driver のオプションを有効にしている場合、[Get current printer](get-current-printer.md) コマンドの戻り値は "\_4d\_pdf\_printer" または実際の PDF ドライバーの名称です。
 
-#### エラー管理 
+## エラー管理 
 
 プリンターがインストールされていなければ、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

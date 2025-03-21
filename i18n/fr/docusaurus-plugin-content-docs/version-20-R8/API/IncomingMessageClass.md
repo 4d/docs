@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
 Here is the response:
 
@@ -87,8 +87,8 @@ There are 2 url parts - Url parts are: start - example
 | [<!-- INCLUDE #IncomingMessageClass.getText().Syntax -->](#gettext)<br/><!-- INCLUDE #IncomingMessageClass.getText().Summary -->          |
 | [<!-- INCLUDE #IncomingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #IncomingMessageClass.headers.Summary -->              |
 | [<!-- INCLUDE #IncomingMessageClass.url.Syntax -->](#url)<br/><!-- INCLUDE #IncomingMessageClass.url.Summary -->                          |
-| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlPath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
-| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlQuery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
+| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlpath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
+| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlquery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
 | [<!-- INCLUDE #IncomingMessageClass.verb.Syntax -->](#verb)<br/><!-- INCLUDE #IncomingMessageClass.verb.Summary -->                       |
 
 :::note
@@ -347,3 +347,4 @@ HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 The `.verb` property is read-only.
 
 <!-- END REF -->
+

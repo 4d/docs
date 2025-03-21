@@ -16,16 +16,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST Get plain text.Summary-->El comando ST Get plain textremueve las etiquetas de estilo de la variable o campo de texto designado por los parámetros *\** y *objeto* y devuelve el texto plano.<!-- END REF-->
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Durante la ejecución, si el objeto tiene el foco, el comando devuelve información sobre el objeto que está siendo editado, sin embargo, cuando el objeto no tiene el foco, el comando devuelve información sobre la fuente de datos (campo o variable) del objeto.  
 Si omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable. En este caso, pase una referencia campo o variable en lugar de una cadena y durante la ejecución, el comando devuelve información sobre este campo o variable.
 
-##### 
+### 
 
 El parámetro opcional *modoRef* indica la forma en que las referencias que se encuentran en *objeto* deben ser devueltas. En *modoRef*, pase una de las siguientes constantes, que se encuentran en el tema "*Texto multiestilo*" (puede pasar una sola constante o una combinación):
 
@@ -49,7 +49,7 @@ El parámetro opcional *modoRef* indica la forma en que las referencias que se e
 * dado que el texto plano sigue siendo el mismo, independientemente de los valores pasados ​​en el parámetro *modoRef*, el parámetro *modoRef* opcional sólo es útil cuando el texto contiene referencias.
 * si un documento 4D Write Pro contiene tablas, el contenido de cada celda se trata como párrafos individuales y se devuelve como texto separado por pestañas. Las filas están separadas por retornos de carro.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted está buscando el texto "muy bien" entre los valores de un campo de texto multiestilo. El valor se guardó de la siguiente forma: "El clima está muy bien **hoy**".
 
@@ -64,7 +64,7 @@ Usted está buscando el texto "muy bien" entre los valores de un campo de texto 
  QUERY([Comments];[Comments]Weather="@muybien@")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Dado el siguiente texto ubicado en el área multiestilo "MyArea":
 
@@ -97,20 +97,20 @@ Si ejecuta el siguiente código:
   //$txt = "es ahora    u openW"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de ejecutar este comando, la variable OK toma el valor 1 si no se presenta ningún error; de lo contrario, toma el valor 0\. Este es el caso particularmente cuando las etiquetas de estilo no se evalúan correctamente (etiquetas incorrectas o faltantes).   
 
 En caso de error, no cambia la variable. Cuando ocurre un error en una variable cuando se está evaluando el texto, 4D transforma el texto en texto plano; como resultado, los caracteres <, > y & se convierten en entidades HTML.
 
-#### Ver también 
+## Ver también 
 
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

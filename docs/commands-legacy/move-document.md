@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MOVE DOCUMENT.Summary-->The **MOVE DOCUMENT** command moves or renames a document.<!-- END REF-->
 
@@ -22,7 +22,7 @@ You specify the full pathname to the document in *srcPathname* and the new name 
 
 **Warning:** Using **MOVE DOCUMENT**, you can move a document from and to any directory on the same volume. If you want to move a document between two distinct volumes, use [COPY DOCUMENT](copy-document.md) to “move” the document then delete the original copy of the document using [DELETE DOCUMENT](delete-document.md).
 
-#### Example 1 
+## Example 1 
 
 The following example renames the document DocName:
 
@@ -30,7 +30,7 @@ The following example renames the document DocName:
  MOVE DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\NewDocName")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example moves and renames the document DocName:
 
@@ -38,7 +38,7 @@ The following example moves and renames the document DocName:
  MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\NewDocName")
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example moves the document DocName:
 
@@ -48,11 +48,11 @@ The following example moves the document DocName:
 
 **Note:** In the last two examples, the destination folder *"C:\\\\FOLDER2"* must exist. The MOVE DOCUMENT command only moves a document; it does not create folders.
 
-#### See also 
+## See also 
 
 [COPY DOCUMENT](copy-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

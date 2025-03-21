@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get rows.Summary-->The **WP Table get rows** command returns a new row range object containing a selection of rows from *targetObj* or *tableRef*.<!-- END REF--> 
 
@@ -45,7 +45,7 @@ If *startRow* plus *numRows* exceeds the number of rows in *tableRef*, or if *st
     
 In that case, the command returns a row range containing the repeated header rows (if passed, the *numRows* parameter is ignored). The command returns Null if there are no defined header rows.
 
-#### Example 1 
+## Example 1 
 
 You want to set a specific background color for the first two rows of a table, and modify the border of the third row:
 
@@ -70,7 +70,7 @@ You want to set a specific background color for the first two rows of a table, a
   
 ![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
-#### Example 2 
+## Example 2 
 
 To get a range of rows starting from the 10th to the end:
 
@@ -78,7 +78,7 @@ To get a range of rows starting from the 10th to the end:
  WP Table get rows(tableRef;10;MAXLONG)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to retrieve the rows a user has selected:
 
@@ -90,7 +90,7 @@ You want to retrieve the rows a user has selected:
  $rows:=WP Table get rows($userSelection)
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example:
 
@@ -111,7 +111,7 @@ The following example:
  
 ```
 
-#### See also 
+## See also 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table append row](../commands/wp-table-append-row.md)  

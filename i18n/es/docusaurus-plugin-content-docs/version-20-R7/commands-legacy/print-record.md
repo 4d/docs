@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** imprime el registro actual de *tabla*, sin modificar la selección actual.<!-- END REF--> El formulario de salida actual se utiliza para la impresión. Si no hay registro actual para *tabla*, **PRINT RECORD** no hace nada.
 
@@ -33,7 +33,7 @@ Puede suprimir esta caja de diálogo utilizando el parámetro opcional asterisco
 * Asegúrese que ninguna caja de diálogo aparezca en el equipo servidor (excepto para una necesidad específica). Para hacer esto, es necesario llamar al comando con el parámetro *\** o *\>*.
 * En caso de un problema con la impresora (sin papel, impresora desconectada, etc.), no se genera mensaje de error.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
  El siguiente ejemplo imprime el registro actual de la tabla \[Facturas\]. El código está en el método de objeto de un botón **Imprimir** en el formulario de entrada. Cuando el usuario hace clic en el botón, el registro se imprime utilizando un formulario de salida diseñado para este propósito. 
 
@@ -43,7 +43,7 @@ Puede suprimir esta caja de diálogo utilizando el parámetro opcional asterisco
  FORM SET OUTPUT([Facturas];"Standard Output") // Restauración del formulario de salida anterior
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo imprime el mismo registro actual en dos formularios diferentes. El código está en el método de objeto de un botón **Imprimir** en el formulario de entrada. Usted quiere definir parámetros de impresión personalizados y luego utilizarlos en dos formularios. 
 
@@ -58,11 +58,11 @@ El siguiente ejemplo imprime el mismo registro actual en dos formularios diferen
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Print form](print-form.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

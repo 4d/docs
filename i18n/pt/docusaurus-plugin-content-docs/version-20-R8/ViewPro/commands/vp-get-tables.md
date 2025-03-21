@@ -23,9 +23,9 @@ title: VP Get tables
 | sheet      | Integer    | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Collection | <- | Coleção de texto com todos os nomes das tabelas             | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
+O comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary --> retorna uma coleção de todos os nomes das tabelas definidos na *sheet*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -33,7 +33,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especific
 
 > A indexação começa em 0.
 
-#### Exemplo
+## Exemplo
 
 O código abaixo devolverá uma coleção de todos os nomes de tabelas da folha atual:
 
@@ -43,6 +43,6 @@ $tables:=VP Get tables("ViewProArea")
 
 ```
 
-#### Veja também
+## Veja também
 
 [VP CREATE TABLE](vp-create-table.md)

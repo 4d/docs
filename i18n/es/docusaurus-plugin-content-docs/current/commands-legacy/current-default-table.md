@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current default table.Summary-->Current default table devuelve un puntero hacia la tabla pasada a la última llamada de DEFAULT TABLE para el proceso actual.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 Siempre y cuando se haya definido una tabla por defecto, la siguiente línea de código asigna como título de la ventana al nombre de la tabla por defecto actual:
 
@@ -25,13 +25,13 @@ Siempre y cuando se haya definido una tabla por defecto, la siguiente línea de 
  SET WINDOW TITLE(Table name(Current default table))
 ```
 
-#### Ver también 
+## Ver también 
 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

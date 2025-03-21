@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Table get rows.Summary-->El comando **WP Table get rows** \[#descv\]devuelve un nuevo objeto de rango de líneas que contiene una selección de las líneas de *objTarget* o *refTabla*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Si *lineaIni* más *numLineas* exceden el número de filas en *refTabla*, o si *
     
 En ese caso, el comando devuelve un rango de líneas que contiene las líneas de encabezado repetidas (si se pasa, se ignora el parámetro numFilas). El comando devuelve Null si no hay filas de encabezado definidas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea definir un color de fondo específico para las dos primeras líneas de una tabla y modificar el borde de la tercera línea:
 
@@ -70,7 +70,7 @@ Desea definir un color de fondo específico para las dos primeras líneas de una
   
 ![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Para obtener un rango de líneas desde el 10 hasta el final:
 
@@ -78,7 +78,7 @@ Para obtener un rango de líneas desde el 10 hasta el final:
  WP Table get rows(tableRef;10;MAXLONG)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea recuperar las líneas que un usuario ha seleccionado:
 
@@ -90,7 +90,7 @@ Desea recuperar las líneas que un usuario ha seleccionado:
  $rows:=WP Table get rows($userSelection)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo:
 
@@ -111,7 +111,7 @@ El siguiente ejemplo:
  
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table append row](../commands/wp-table-append-row.md)  

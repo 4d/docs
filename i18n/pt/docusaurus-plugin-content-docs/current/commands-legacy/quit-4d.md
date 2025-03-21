@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUIT 4D.Summary-->O comando QUIT 4Dfinaliza a aplicação 4D atual e retorna para o Desktop.<!-- END REF-->
 
 O processamento de comando é diferente se for executado em 4D (modo local ou remoto) ou em 4D Server. 
 
-##### Com o modo local 4D e modo remoto 
+### Com o modo local 4D e modo remoto 
 
 Depois que você chamar QUIT 4D, o atual processo pára a sua execução, em seguida, 4D atua da seguinte forma:
 
@@ -36,7 +36,7 @@ Uma terceira estratégia também é possível. Antes de chamar QUIT 4D, você ve
 
 **Nota:** O parâmetro *tempo* não pode ser usado com 4D.
 
-##### Com 4D Server (Stored procedure) 
+### Com 4D Server (Stored procedure) 
 
 O comando QUIT 4D pode ser executado na máquina do servidor, em um procedimento armazenado. Neste caso, ele aceita o parâmetro de *tempo* opcional.  
   
@@ -50,7 +50,7 @@ Se houver um método *Método banco de dados On Server Shutdown*, ele é executa
 
 A ação do comando *Método banco de dados On Server Shutdown* utilizado em um procedimento armazenado é o mesmo que o outro para o comando Sair do menu Arquivo 4D Server: faz com que uma caixa de diálogo aparecer em cada máquina cliente indicando que o servidor está prestes a sair.
 
-#### Exemplo 
+## Exemplo 
 
 O método de projeto listado aqui está associado com o item Quit ou Exit do menu no menu Arquivo.
 
@@ -63,11 +63,11 @@ O método de projeto listado aqui está associado com o item Quit ou Exit do men
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

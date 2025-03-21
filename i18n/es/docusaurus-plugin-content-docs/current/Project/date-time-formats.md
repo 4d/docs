@@ -112,7 +112,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 
 ### `L` (monopuesto) vs `M`
 
-En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "_rendez-vous_ in January".
+En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 
@@ -130,7 +130,7 @@ En general, cuando el número de letras de la cadena de formato es superior al e
 
 Algunas partes de las salidas, como "medianoche" o "martes" están localizadas, según la configuración regional.
 
-Por ejemplo, para la hora `13:25:34`, "B" aparecerá _in the afternoon_ en un sistema estadounidense, y _après-midi_ en un sistema francés.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá *in the afternoon* en un sistema estadounidense, y *après-midi* en un sistema francés.
 
 ### Letras adicionales
 
@@ -151,7 +151,7 @@ Por ejemplo:
 
 ## Ejemplos
 
-| Fecha u hora                             | Modelo                       | Result                           | Comentarios        |
+| Fecha u hora                             | Modelo                       | Resultado                        | Comentarios        |
 | ---------------------------------------- | ---------------------------- | -------------------------------- | ------------------ |
 | 15/06/2000                               | "QQQQ"                       | "2do trimestre"                  | localizado         |
 | 17/03/2001                               | "D"                          | "76"                             | 76º día del año    |

@@ -37,7 +37,7 @@ Affiche/masque les graduations à côté des étiquettes.
 
 ## Unité de graduation
 
-Mesure de l'affichage de la graduation.
+Mesure de l'affichage de l'échelle.
 
 #### Grammaire JSON
 

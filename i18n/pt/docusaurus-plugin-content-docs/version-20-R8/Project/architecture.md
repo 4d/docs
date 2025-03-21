@@ -6,20 +6,20 @@ title: Arquitetura de um projeto 4D
 Um projeto 4D é composto por várias pastas e arquivos, armazenados numa pasta raiz do projeto (pasta de pacotes). Por exemplo:
 
 - MyPackage (*carpeta raíz del proyecto*)
-  - `Componentes`
-  - `Data`
-    - `Logs`
+    - `Componentes`
+    - `Data`
+        - `Logs`
+        - `Parâmetros`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Parâmetros`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Parâmetros`
-  - `userPreferences.username`
-  - `WebFolder`
+    - `userPreferences.username`
+    - `WebFolder`
 
 > Se o seu projeto tiver sido convertido a partir de uma base de dados binária, poderão existir pastas adicionais. Ver "Conversión de bases en proyectos" en [doc.4d.com](https://doc.4d.com).
 
@@ -29,12 +29,12 @@ A pasta Project contém normalmente a seguinte hierarquia:
 
 - archivo `<applicationName>.4DProject`
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Página Métodos`
-  - `Formulários`
-  - `TableForms`
-  - `Triggers`
+    - `Classes`
+    - `DatabaseMethods`
+    - `Página Métodos`
+    - `Formulários`
+    - `TableForms`
+    - `Triggers`
 - `DerivedData`
 - `Trash` (si hay)
 
@@ -57,7 +57,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | catalog_editor.json     | Custom positions and colors of tables, fields, and links in the Structure editor. Depende de un [parámetro de compatibilidad](../settings/compatibility.md) en los proyectos convertidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | JSON    |
 | folders.json                                 | Definições de pasta do Explorer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
 | menus.json                                   | Definições de menus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | JSON    |
-| roles.json                                   | [Privileges, permissions](../ORDA/privileges.md#rolesjson-files) and other security settings for the project                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | JSON    |
+| roles.json                                   | [Privilégios, permissões](../ORDA/privileges.md#rolesjson-file) e outras configurações de segurança do projeto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | JSON    |
 | settings.4DSettings                          | Propiedades de la base *Structure*. No se tienen en cuenta si se definen *[parámetros de usuario](#settings-user)* o *[parámetros de usuario para datos](#settings-user-data)* (ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings). **Atención**: en las aplicaciones compiladas, la configuración de la estructura se almacena en el archivo .4dz (de sólo lectura). Para las necesidades de despliegue, es necesario [habilitar](../Desktop/user-settings.md#enabling-user-settings) y utilizar *parámetros usuario* o *parámetros usuario para datos* para definir parámetros personalizados. | XML     |
 | tips.json                                    | Dicas definidas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
 | lists.json                                   | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | JSON    |
@@ -124,7 +124,7 @@ A pasta Trash contém métodos e formulários eliminados do projeto (se existire
 - `Formulários`
 - `TableForms`
 
-Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
+Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
 
 ### `DerivedData`
 
@@ -161,7 +161,7 @@ A pasta Data contém o ficheiro de dados e todos os arquivo e pastas relacionado
 
 ### `Settings` (datos del usuario)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
+Essa pasta contém [**configurações de usuário para os dados**](../Desktop/user-settings.md#user-settings-for-data-file) usadas para a administração de aplicações.
 
 > Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 

@@ -7,7 +7,7 @@ In 4D, data are handled according to their type in two places: database fields a
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-|Data Types	|Database support(1)	|Language support|[`var` declaration](variables.md#using-the-var-keyword) |[`ARRAY` declaration](arrays.md)|
+|Data Types	|Database support(1)	|Language support|[`var` declaration](variables.md) |[`ARRAY` declaration](arrays.md)|
 |---|----|---|---|---|
 |[Alphanumeric](dt_string.md)	|Yes	|Converted to text|-|-
 |[Text](Concepts/dt_string.md)	|Yes	|Yes|`Text`|`ARRAY TEXT`

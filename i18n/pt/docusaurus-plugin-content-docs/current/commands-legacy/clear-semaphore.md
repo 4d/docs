@@ -13,23 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CLEAR SEMAPHORE.Summary-->CLEAR SEMAPHORE apaga o *semáforo* previamente criada pela função [Semaphore](semaphore.md "Semaphore").<!-- END REF-->
 
 A regra de utilização é que todos os semáforos devem ser apagados quando já não forem necessários. Se não se apagam os semáforos, permanecem na memória até que o processo que os criou termine. Um processo só pode apagar os semáforos que foram criados. Se você tenta apagar um semáforo desde um processo que não o criou, não acontece nada.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo de [Semaphore](semaphore.md "Semaphore").
 
-#### Ver também 
+## Ver também 
 
 *Semáforos e Sinais*  
 [Semaphore](semaphore.md)  
 [Test semaphore](test-semaphore.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

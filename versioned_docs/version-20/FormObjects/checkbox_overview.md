@@ -426,7 +426,7 @@ All check boxes share the same set of basic properties:
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
 > (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Additional specific properties are available, depending on the [button style](#button-styles):
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Three-States](properties_Display.md#three-states)

@@ -27,15 +27,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 |                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4d-systemworker-new)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                        |
+| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4dsystemworkernew)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                          |
 | [<!-- INCLUDE #SystemWorkerClass.closeInput().Syntax -->](#closeinput)<br/><!-- INCLUDE #SystemWorkerClass.closeInput().Summary -->               |
 | [<!-- INCLUDE #SystemWorkerClass.commandLine.Syntax -->](#commandline)<br/><!-- INCLUDE #SystemWorkerClass.commandLine.Summary -->                |
 | [<!-- INCLUDE #SystemWorkerClass.currentDirectory.Syntax -->](#currentdirectory)<br/><!-- INCLUDE #SystemWorkerClass.currentDirectory.Summary --> |
-| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#dataype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                          |
+| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #SystemWorkerClass.encoding.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #SystemWorkerClass.errors.Summary -->                               |
 | [<!-- INCLUDE #SystemWorkerClass.exitCode.Syntax -->](#exitcode)<br/><!-- INCLUDE #SystemWorkerClass.exitCode.Summary -->                         |
-| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hideWindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
+| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hidewindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
 | [<!-- INCLUDE #SystemWorkerClass.pid.Syntax -->](#pid)<br/><!-- INCLUDE #SystemWorkerClass.pid.Summary -->                                        |
 | [<!-- INCLUDE #SystemWorkerClass.postMessage().Syntax -->](#postmessage)<br/><!-- INCLUDE #SystemWorkerClass.postMessage().Summary -->            |
 | [<!-- INCLUDE #SystemWorkerClass.response.Syntax -->](#response)<br/><!-- INCLUDE #SystemWorkerClass.response.Summary -->                         |
@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` y `onDataError` se ejecutan una o varias veces
 2. si se llama, `onError` se ejecuta una vez (detiene el procesamiento del system worker)
 3. si no se ha producido ningún error, `onResponse` se ejecuta una vez
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 :::info
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descripción
 
-La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4d-systemworker-new)<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -328,9 +328,7 @@ Esta propiedad es de **solo lectura**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -550,24 +548,26 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parámetros | Tipo                            |                             | Descripción                                       |
-| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------- |
-| timeout    | Real                            |              ->             | Tiempo de espera (en segundos) |
-| Result     | 4D.SystemWorker | <- | Objeto SystemWorker                               |
+| Parámetros | Tipo                            |                             | Descripción                  |
+| ---------- | ------------------------------- | :-------------------------: | ---------------------------- |
+| timeout    | Real                            |              ->             | Maximum wait time in seconds |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker          |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución del `SystemWorker` o el *timeout* especificado<!-- END REF -->.
+La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución de `SystemWorker` o se alcanza el *timeout* especificado<!-- END REF -->.
 
-En *timeout*, pase un valor en segundos. El script `SystemWorker` esperará al proceso externo durante el tiempo definido en el parámetro *timeout*. Si omite el parámetro *timeout*, la ejecución del script esperará indefinidamente.
+The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
 
-En realidad, `.wait()` espera hasta el final del procesamiento de la fórmula `onTerminate`, excepto si se alcanza el *timeout*. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
+If you pass a *timeout* value, .wait() waits for the external process for the amount of time defined in the *timeout* parameter.
 
-Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, especialmente las retrollamadas provienen de otros eventos o de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+:::note
 
-Esta función devuelve el objeto SystemWorker.
+During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+
+:::
 
 > Esta función no es necesaria si creó el `SystemWorker` desde un proceso worker 4D.
 

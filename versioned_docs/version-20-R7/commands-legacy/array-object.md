@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->The **ARRAY OBJECT** command creates and/or resizes an array of language Object type elements in memory.<!-- END REF-->
 
@@ -30,7 +30,7 @@ When you apply the **ARRAY OBJECT** command to an existing array:
 * If you enlarge its size, existing elements are not changed and new elements are undefined. You can test whether an element is defined using the [OB Is defined](ob-is-defined.md) command.
 * If you reduce its size, elements at the "bottom" of the array are deleted and lost.
 
-#### Example 1 
+## Example 1 
 
 Creation of a process array of 100 Object-type elements:
 
@@ -38,7 +38,7 @@ Creation of a process array of 100 Object-type elements:
  ARRAY OBJECT(arrObjects;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 Creation of a local array of 100 rows each containing 50 Object-type elements:
 
@@ -46,7 +46,7 @@ Creation of a local array of 100 rows each containing 50 Object-type elements:
  ARRAY OBJECT($arrObjects;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 Creation and filling of a local object array:
 
@@ -64,12 +64,12 @@ Creation and filling of a local object array:
   // $arrayChildren{3} -> {"name":"James","age":3}
 ```
 
-#### See also 
+## See also 
 
 *Creating Arrays*  
 *Objects (Language)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

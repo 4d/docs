@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note 
+## Note 
 
 <!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ In *id*, pass the UUID of the session for which you want to get the storage. It 
 
 The returned object is the [**.storage**](https://developer.4d.com/docs/API/SessionClass#storage) property of the session. It is a shared object used to store information available to all processes of the session.
 
-#### Example 
+## Example 
 
 This method modifies the value of a "settings" property stored in the storage object of a specific session:
 
@@ -48,12 +48,12 @@ This method modifies the value of a "settings" property stored in the storage ob
  End if
 ```
 
-#### See also 
+## See also 
 
 [Process activity](../commands/process-activity.md)  
 [Session](https://developer.4d.com/docs/API/SessionClass#session)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

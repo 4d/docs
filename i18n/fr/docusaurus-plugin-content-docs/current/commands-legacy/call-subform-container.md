@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->La commande **CALL SUBFORM CONTAINER** permet à une instance de sous-formulaire d’envoyer l’*événement* à l’objet sous-formulaire qui la contient.<!-- END REF--> L’objet sous-formulaire peut alors traiter l’*événement* dans le contexte du formulaire parent. 
 
@@ -25,12 +25,12 @@ Vous pouvez passer dans *événement* tout événement formulaire prédéfini de
 
 ![](../assets/en/commands/pict166755.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

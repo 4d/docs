@@ -14,7 +14,7 @@ title: VP SET SHEET COUNT
 |vpAreaName |Text|->|4D View Pro area form object name|
 |number |Integer|->|Number of sheets|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET SHEET COUNT` command <!-- REF #_method_.VP SET SHEET COUNT.Summary -->sets the number of sheets in *vpAreaName*<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In `number`, pass a number corresponding to how many sheets the document will co
 
 >**Warning**: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
 
-#### Example
+## Example
 
 The document currently has one sheet:
 
@@ -36,6 +36,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ![](../../assets/en/ViewPro/vp-sheet-3.png)
 
-#### See also
+## See also
 
 [VP Get sheet count](vp-get-sheet-count.md)

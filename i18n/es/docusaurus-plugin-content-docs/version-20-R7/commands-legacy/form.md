@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado con el formulario actual, si lo hay.<!-- END REF--> 4D asocia automáticamente un objeto al formulario actual en los siguientes casos:
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 * el formulario actual es un subformulario,
 * actualmente se muestra un formulario tabla en la pantalla.
 
-##### Formulario DIALOG 
+### Formulario DIALOG 
 
 Si el formulario actual se muestra mediante una llamada al comando [DIALOG](dialog.md), **Form** devuelve un objeto vacío, o el objeto *formData* pasado como parámetro a este comando, si existe.
 
-##### Subformulario 
+### Subformulario 
 
 Si el formulario actual es un subformulario, el objeto devuelto depende de la variable del contenedor padre:
 
@@ -38,7 +38,7 @@ En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la
 
 Para más información, consulte la sección *Subformularios en página*.
 
-##### Formulario Tabla 
+### Formulario Tabla 
 
 **Form** devuelve el objeto asociado al formulario tabla que se muestra en la pantalla. En el contexto de un formulario de entrada que se muestra desde un formulario de salida (es decir, después de hacer doble clic en un registro), el objeto devuelto contiene la siguiente propiedad:
 
@@ -46,7 +46,7 @@ Para más información, consulte la sección *Subformularios en página*.
 | ------------- | -------- | ---------------------------------------------- |
 | parentForm    | objeto   | **Form** objeto del formulario de salida padre |
 
-#### Ejemplo 
+## Ejemplo 
 
 En un formulario, usted asignó algunas propiedades de objeto [Form](form.md) a variables:
 
@@ -67,11 +67,11 @@ El formulario muestra los valores que ha pasado:
 
 **Nota:** este ejemplo requiere que la notación de objeto esté habilitada en la base de datos (ver *Página Compatibilidad*).
 
-#### Ver también 
+## Ver también 
 
 [DIALOG](dialog.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

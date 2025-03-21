@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->**SET ENVIRONMENT VARIABLE**コマンドを用いて、macOS とWindowsで環境変数値を設定できます。<!-- END REF-->このコマンドは[LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドと共に使用します。また[PHP Execute](php-execute.md)コマンドとも動作します。
 
@@ -28,15 +28,15 @@ displayed_sidebar: docs
     
 これらの変数の詳細については、[LAUNCH EXTERNAL PROCESS](launch-external-process.md) コマンドの詳細を参照してください。
 
-#### 例題 
+## 例題 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドの例題を参照してください。 
 
-#### 参照 
+## 参照 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

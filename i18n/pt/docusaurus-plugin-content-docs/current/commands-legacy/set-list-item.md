@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->O comando SET LIST ITEM modifica o elemento designado pelo parâmetro *refElem* na lista cujo número de referência ou nome de objeto se passa em *lista*.<!-- END REF--> 
 
@@ -41,7 +41,7 @@ Se não deseja mudar as propriedades da sub-lista do elemento, passe *\-1* em *s
 
 **Nota:** inclusive se são opcionais, os parâmetros *sublista* e *expandida* devem ser passados de maneira conjunta.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 *hList* é uma lista cujos elementos tem números de referência únicos. O método a seguir de objeto de um botão adiciona um item filho ao elemento atualmente selecionado na lista.
 
@@ -62,15 +62,15 @@ Se não deseja mudar as propriedades da sub-lista do elemento, passe *\-1* em *s
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver exemplo do comando [GET LIST ITEM](get-list-item.md "GET LIST ITEM").
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Ver exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
@@ -78,7 +78,7 @@ Ver exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

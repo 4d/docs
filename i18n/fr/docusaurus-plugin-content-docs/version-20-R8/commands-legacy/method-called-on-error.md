@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Method called on error.Summary-->La commande **Method called on error** retourne le nom de la méthode installée par la commande [ON ERR CALL](on-err-call.md) pour le process courant ou la *portée* définie.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Dans le paramètre *portée*, passez le contexte d'exécution pour lequel vous v
 
 Si aucune méthode d’appel sur erreur n’a été installée pour la *portée*, une chaîne vide ("") est retournée.
 
-#### Exemple 
+## Exemple 
 
 Cette commande est particulièrement utile dans le cadre des composants, car elle permet de changer temporairement puis de rétablir les méthodes d’interception d’erreurs :
 
@@ -41,12 +41,12 @@ Cette commande est particulièrement utile dans le cadre des composants, car ell
  ON ERR CALL($methCourante)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gestionnaire d'erreur*  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table insert rows.Summary-->The **WP Table insert rows** command inserts one or several row(s) into a 4D Write Pro table.<!-- END REF-->
 
@@ -37,7 +37,7 @@ The optional *numRows* parameter defines the number of rows to insert into *targ
   
 The command returns a row range representing inserted row(s), or Null if nothing was inserted. 
 
-#### Example 
+## Example 
 
 You want to insert two rows at the end of the *Invoice* table: 
 
@@ -58,6 +58,6 @@ will insert the two new rows at the correct location:
 
 ![](../../assets/en/WritePro/commands/pict4680266.en.png) 
 
-#### See also 
+## See also 
 
 [WP Table insert columns](wp-table-insert-columns.md)  

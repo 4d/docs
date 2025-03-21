@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET TEXT.Summary-->The **WP SET TEXT** command inserts the text passed in the *newText* parameter as plain text in the *targetObj* at the position designated by the *textPosition* parameter.<!-- END REF--> 
 
@@ -46,7 +46,7 @@ In the *textPosition* parameter, the location of the inserted text can be specif
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Example 
+## Example 
 
 You want to to add text to this document:
 
@@ -85,6 +85,6 @@ Replace the existing text:
   //writes " Hello world!"
 ```
 
-#### See also 
+## See also 
 
 [WP Get text](wp-get-text.md)  

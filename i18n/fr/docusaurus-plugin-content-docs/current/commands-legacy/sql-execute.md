@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->La commande **SQL EXECUTE** permet d’exécuter une commande SQL et d’associer le résultat à des objets 4D (tableaux, variables ou champs) liés.<!-- END REF--> 
 
@@ -38,7 +38,7 @@ Dans le cas d’une variable 4D, un seul enregistrement est récupéré à la fo
 
 **Note :** Pour plus d'informations sur le référencement des expressions 4D dans les requêtes SQL, reportez-vous à la section *Présentation des commandes du thème SQL*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans cet exemple, nous récupérons la colonne ename de la table emp dans la source de données. Le résultat est stocké dans le champ 4D \[Employés\]Nom. Les enregistrements 4D seront créés automatiquement : 
 
@@ -48,7 +48,7 @@ Dans cet exemple, nous récupérons la colonne ename de la table emp dans la sou
  SQL LOAD RECORD(SQL all records)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Pour mieux contrôler la création des enregistrements, il est possible d’inclure le code au sein d’une transaction et de ne la valider que si le déroulement de l’opération s’est avéré satisfaisant :
 
@@ -64,7 +64,7 @@ Pour mieux contrôler la création des enregistrements, il est possible d’incl
  VALIDATE TRANSACTION //Validation de la transaction
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Dans cet exemple, nous récupérons la colonne ename de la table emp dans la source de données. Le résultat est stocké dans le tableau *tNoms*. Nous récupérons les enregistrements 10 par 10.
 
@@ -77,7 +77,7 @@ Dans cet exemple, nous récupérons la colonne ename de la table emp dans la sou
  End while
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Dans cet exemple, nous récupérons les colonnes ename et job de la table emp pour un ID spécifique (clause WHERE) de la source de données. Le résultat est stocké dans les variables 4D *vNom* and *vJob*. Seul le premier enregistrement est récupéré.
 
@@ -87,7 +87,7 @@ Dans cet exemple, nous récupérons les colonnes ename et job de la table emp po
  SQL LOAD RECORD
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Dans cet exemple, nous récupérons la colonne Champ\_Blob de la table Test dans la source de données. Le résultat est stocké dans une variable BLOB dont la valeur est mise à jour à chaque chargement d’enregistrement.
 
@@ -102,7 +102,7 @@ Dans cet exemple, nous récupérons la colonne Champ\_Blob de la table Test dans
  End while
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vous souhaitez récupérer en local des données stockées sur une base 4D Server distante. Pour cela, vous devez passer par des tableaux intermédiaires :
 
@@ -151,15 +151,15 @@ Vous souhaitez récupérer en local des données stockées sur une base 4D Serve
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

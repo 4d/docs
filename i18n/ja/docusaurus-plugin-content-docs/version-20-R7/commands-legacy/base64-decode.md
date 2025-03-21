@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->**BASE64 DECODE** コマンドは、*toDecode* 引数に渡された、Base64 または Base64URL フォーマットにエンコードされたテキストまたはBlob をデコードします。<!-- END REF-->Base64 およびBase64URL フォーマットについての詳細な情報については、[BASE64 ENCODE](base64-encode.md) コマンドの詳細を参照してください。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 *toDecode* 引数に無効なBase64 コンテンツが含まれていた場合、空のテキストまたはBlob が返されます。
 
-#### 例題 
+## 例題 
 
 この例題ではBLOBを使用してピクチャーを転送します:
 
@@ -49,14 +49,14 @@ displayed_sidebar: docs
   // Base64にエンコードされたバイナリは$blobTargetにデコードされる
 ```
 
-#### 参照 
+## 参照 
 
 [BASE64 ENCODE](base64-encode.md)  
 [Generate digest](generate-digest.md)  
 [XML DECODE](xml-decode.md)  
 *XML DOMコマンドの概要*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

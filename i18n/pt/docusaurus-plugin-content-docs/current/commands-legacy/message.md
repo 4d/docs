@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MESSAGE.Summary-->O comando **MESSAGE** geralmente se utiliza para informar ao usuário sobre alguma atividade.<!-- END REF--> Mostra *mensagem* na tela em uma janela de mensagem especial que se abre e fecha cada vez que chamar a **MESSAGE**, a menos que trabalhe com uma janela que abriu previamente utilizando [Open window](open-window.md) (ver detalhes abaixo). A mensagem é temporária e é apagada assim que um formulário for exibido ou o método parar de executar. Se outra **MESSAGE** for executada, a mensagem antiga é apagada.
 
@@ -30,7 +30,7 @@ Se abrir uma janela com [Open window](open-window.md), todas as chamadas a **MES
 
 **Nota:** **MESSAGE** é compatível com o comando [Open form window](open-form-window.md); entretanto, no contexto do segundo parâmetro *\** de [Open form window](open-form-window.md), que salva o tamanho e posição da janela, não é suportado 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir processa uma seleção de registros e chama MESSAGE para informar ao usuário sobre o progresso da operação: 
 
@@ -46,7 +46,7 @@ A janela a seguir aparece e desaparece cada vez que se chama MESSAGE:
 
 ![](../assets/en/commands/pict25453.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Com o objetivo de evitar a janela "piscante", pode mostrar as mensagens em uma janela aberta utilizando [Open window](open-window.md "Open window"), como em este exemplo: 
 
@@ -64,7 +64,7 @@ O resultado é o seguinte (em Windows):
 
 ![](../assets/en/commands/pict25454.en.png)
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Adicionar um retorno de carro melhora a presentação: 
 
@@ -82,7 +82,7 @@ Este é o resultado (em Windows):
 
 ![](../assets/en/commands/pict25455.en.png)
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Utilizando [GOTO XY](goto-xy.md "GOTO XY") e escrevendo algumas linhas adicionais: 
 
@@ -106,14 +106,14 @@ O resultado é o seguinte (em Windows):
 
 ![](../assets/en/commands/pict25456.en.png)
 
-#### Ver também 
+## Ver também 
 
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
 [Open window](open-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Trigger level.Summary-->El comando Trigger level devuelve el nivel de ejecución del trigger.<!-- END REF--> 
 
 Para mayor información sobre niveles de ejecución, consulte el tema *Triggers en cascada* en la sección "Triggers". 
 
-#### Ver también 
+## Ver también 
 
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *Triggers*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

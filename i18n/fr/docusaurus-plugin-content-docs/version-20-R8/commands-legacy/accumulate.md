@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** désigne les champ(s) ou variable(s) à cumuler dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -25,18 +25,18 @@ Exécutez **ACCUMULATE** avant d'imprimer un état à l'aide de [PRINT SELECTION
 
 Utilisez la fonction [Subtotal](subtotal.md) dans la méthode formulaire ou une méthode objet pour retourner le sous-total d'un des objets spécifié dans *objet*.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [BREAK LEVEL](break-level.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [BREAK LEVEL](break-level.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -472,7 +472,7 @@ You can pass:
 * in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 * in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
 
-Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
 
 **Returned object**
 

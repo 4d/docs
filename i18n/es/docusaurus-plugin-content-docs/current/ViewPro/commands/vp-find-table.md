@@ -20,9 +20,9 @@ title: VP Find table
 | Parámetros | Tipo   |                             | Descripción        |                  |
 | ---------- | ------ | --------------------------- | ------------------ | ---------------- |
 | rangeObj   | Object | ->                          | Rango de celdas    |                  |
-| Result     | Text   | <- | Nombre de la tabla | <!-- END REF --> |
+| Resultado  | Text   | <- | Nombre de la tabla | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->devuelve el nombre de la tabla a la que pertenece la celda *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ En *rangeObj*, pase un objeto de rango de celdas. Si las celdas designadas no pe
 
 Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
@@ -41,6 +41,10 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 End if
 ```
 
-#### Ver también
+## Ver también
 
 [VP Get table range](vp-get-table-range.md)
+
+
+
+

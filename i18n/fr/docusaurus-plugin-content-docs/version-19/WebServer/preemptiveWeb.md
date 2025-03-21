@@ -31,7 +31,7 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 - Serveur de services Web : gère les requêtes SOAP
 - Ancien REST: requêtes directes aux méthodes 4D (`/rest/{table}/{methodName}`)
 - ***paramètre web*** signifie que le mode préemptif dépend d'un paramétrage :
-  - lorsque l'option [**Sessions évolutives**](sessions.md#enabling-sessions) est sélectionnée, le [mode préemptif est automatiquement utilisé](sessions.md#preemptive-mode) pour les process web.
+  - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
   - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
   - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. Vous devez simplement sélectionner la propriété "Peut être exécutée dans un process préemptif" pour les méthodes de serveur SOAP publiées (voir Publication d'un service Web avec 4D) ou les méthodes de client proxy (voir Abonnement à un service Web dans 4D) et vous assurer qu'elles sont confirmées comme étant thread-safe par le compilateur.
 

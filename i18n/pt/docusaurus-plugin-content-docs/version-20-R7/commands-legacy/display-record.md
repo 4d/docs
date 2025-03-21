@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->O comando DISPLAY RECORD mostra o registro atual de *tabela*, utilizando o formulário de entrada atual.<!-- END REF--> O registro se mostra até que um evento provoque um redesenho da janela. Tal evento pode ser a execução de um comando ADD RECORD, o regresso ao formulário de entrada, ou a barra de menus. DISPLAY RECORD não faz nada se não houver registro atual.  
 
@@ -23,7 +23,7 @@ Se existir um método de formulário, se gerará um evento On Load.
   
 **Advertência**: Não chame DISPLAY RECORD desde um processo de conexão Web, porque o comando será executado na máquina do servidor Web de 4D e não na máquina do cliente do navegador Web.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir mostra uma série de registros como uma apresentação de slides
 
@@ -37,11 +37,11 @@ O exemplo a seguir mostra uma série de registros como uma apresentação de sli
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [MESSAGE](message.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->**Dynamic pop up menu**はマウスの現在位置またはオプションの*xCoord* と *yCoord*引数で指定した位置に階層ポップアップメニューを表示します。<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * ak standard action title 定数を使用してアクションのタイトルが設定されていた場合には、そのローカライズされた名前がメニューに表示されます。
 * アイテムが選択された時、関連付けられた標準アクションが呼び出されます(実行は非同期で行われます)。
 
-#### 例題 
+## 例題 
 
 このコードを使用すると、標準アクションに基づいたダイナミックな階層ポップアップメニューを作成することができます:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
-#### 参照 
+## 参照 
 
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
@@ -92,7 +92,7 @@ displayed_sidebar: docs
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -158,14 +158,14 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Cuando se utilizan punteros a variables de proceso o locales, hay que asegurarse de que la variable a la que se apunta ya está definida cuando se utilice el puntero. Tenga en cuenta que las variables locales se borran cuando el método que las creó ha terminado su ejecución y las variables de proceso se borran al final del proceso que las creó. Cuando un puntero llama a una variable que ya no existe, esto provoca un error de sintaxis en modo interpretado (variable no definida) pero puede generar un error más grave en modo compilado.
 
-Los punteros a variables locales permiten guardar las variables del proceso en muchos casos. Los punteros a variables locales sólo pueden utilizarse dentro del mismo proceso. En el depurador, cuando se muestra un puntero a una variable local que ha sido declarada en otro método, el nombre del método original se indica entre paréntesis, después del puntero. For example, if you write in _Method1_:
+Los punteros a variables locales permiten guardar las variables del proceso en muchos casos. Los punteros a variables locales sólo pueden utilizarse dentro del mismo proceso. En el depurador, cuando se muestra un puntero a una variable local que ha sido declarada en otro método, el nombre del método original se indica entre paréntesis, después del puntero. For example, if you write in *Method1*:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-_Method2_:
+*Method2*:
 
 ```4d
 #DECLARE($param : Pointer)
@@ -223,10 +223,10 @@ Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo si
 Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
-  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
- #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  //método proyecto takeTwo
+  //$changeUp - Puntero a un campo cadena o variable. Cámbielo a mayúsculas.
+  //$changeLow - Puntero a un campo o variable cadena. Cámbielo a minúsculas.
+ #DECLARE($changeUp : Puntero ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```
@@ -258,15 +258,15 @@ Muestra un cuadro de alerta con la palabra "Goodbye".
 A continuación se explica cada línea del ejemplo:
 
 - $MyVar:="Hello"
-  \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
+ \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
 - $PointerOne:=-$MyVar
-  \--> $PointerOne ahora contiene un puntero a $MyVar.
+ \--> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
+ \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+ \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
 - ALERT (($PointerTwo->)->)
-  \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
+ \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 
@@ -281,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** la desreferenciación múltiple requiere paréntesis.
+
+

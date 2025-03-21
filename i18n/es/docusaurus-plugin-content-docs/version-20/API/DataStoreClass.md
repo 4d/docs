@@ -16,7 +16,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
@@ -50,7 +50,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | Parámetros | Tipo         |    | Descripción                                               |
 | ---------- | ------------ | -- | --------------------------------------------------------- |
 | localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
-| Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
+| Resultado  | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
 
 |
 
@@ -120,7 +120,7 @@ Utilizando el almacén de datos principal de la base 4D:
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Result         | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
+| Resultado      | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
 
 |
 
@@ -269,7 +269,7 @@ La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
-Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransactions).
+Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransaction).
 
 #### Ejemplo
 
@@ -277,7 +277,6 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -327,7 +326,7 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                         |
 | ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
+| Resultado  | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
 
 |
 
@@ -386,7 +385,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Histórico</summary>
@@ -468,7 +466,6 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -485,7 +482,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 | Parámetros | Tipo       |    | Descripción                                                               |
 | ---------- | ---------- | -- | ------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
 
 |
 
@@ -497,7 +494,7 @@ La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
+Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Ejemplo
 
@@ -562,7 +559,7 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
+| Resultado  | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
 |
 
@@ -614,7 +611,7 @@ En un almacén de datos remoto:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -632,7 +629,7 @@ En un almacén de datos remoto:
 | Parámetros  | Tipo   |    | Descripción                                                         |
 | ----------- | ------ | -- | ------------------------------------------------------------------- |
 | contextName | Text   | -> | Nombre del contexto                                                 |
-| Result      | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
+| Resultado   | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
 
 |
 
@@ -682,7 +679,7 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Parámetros | Tipo       |    | Descripción                                                                              |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
 |
 
@@ -721,7 +718,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                                                |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
+| Resultado  | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
 
 |
 
@@ -738,7 +735,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Histórico</summary>
@@ -755,7 +752,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- REF #DataStoreClass.locked().Params -->
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
-| Result     | Boolean | <- | True si bloqueado|<!-- END REF -->
+| Resultado  | Boolean | <- | True si bloqueado|<!-- END REF -->
 
 
 |
@@ -804,9 +801,9 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas las selecciones de entidades como alterables por defecto en los almacenes de datos de la aplicación actual<!-- END REF --> (incluyendo [datastores remotas](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
 
-Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](./EntitySelectionClass.md#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 > **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes. Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
 
@@ -831,7 +828,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
 | curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
-| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
+| Resultado     | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
 
 |
 
@@ -850,7 +847,7 @@ Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de
 * todas las modificaciones de datos en las tablas encriptadas se cifran en el disco (.4DD, .journal. 4Dindx)
 * todos los datos cargados desde tablas encriptadas se descifran en memoria
 
-**Result**
+**Resultado**
 
 El resultado de la orden se describe en el objeto devuelto:
 
@@ -930,7 +927,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -1279,7 +1276,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Histórico</summary>

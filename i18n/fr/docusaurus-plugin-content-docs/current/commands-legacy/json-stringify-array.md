@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Stringify array.Summary-->La commande **JSON Stringify array** convertit le tableau 4D *tab* en un tableau JSON sérialisé.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON PARSE ARRAY](json-parse-array.md).
 
@@ -25,7 +25,7 @@ Passez dans *tab* un tableau 4D contenant les données à sérialiser. Le tablea
 
 Vous pouvez passer le paramètre optionnel *\** afin d’inclure des caractères de formatage dans la chaîne résultante. Cette option permet d’améliorer la présentation des données JSON lorsqu’elles sont affichées dans une page Web (*pretty formatting*).
 
-#### Exemple 1 
+## Exemple 1 
 
 Conversion d’un tableau texte :
 
@@ -39,7 +39,7 @@ Conversion d’un tableau texte :
      // $jsonString = "["John","Jim"]"
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Conversion d’un tableau texte contenant des nombres :
 
@@ -51,7 +51,7 @@ Conversion d’un tableau texte contenant des nombres :
      // $string = "["555-0100","555-0120"]"
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Conversion d’un tableau objet :
 
@@ -73,7 +73,7 @@ Conversion d’un tableau objet :
 
 ![](../assets/en/commands/pict1205072.fr.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 Conversion d’une sélection 4D dans un tableau objet :
 
@@ -104,12 +104,12 @@ Conversion d’une sélection 4D dans un tableau objet :
      //"ALMANZA",...}]"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

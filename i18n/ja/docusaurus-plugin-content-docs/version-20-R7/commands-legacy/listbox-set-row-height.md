@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->**LISTBOX SET ROW HEIGHT** コマンドは、*object* および *\** パラメーターで指定されたリストボックスの、*row* で指定された行の高さを変更します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 **重要な注記:** このコマンドのあとに、異なる高さの単位を指定して [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) コマンドを呼び出した場合、このコマンドで設定された値がデフォルト値として扱われ、**LISTBOX SET ROW HEIGHT**で設定された行の高さはどれも置き換えられ初期化されます (例題2参照)。
 
-#### 例題 1 
+## 例題 1 
 
 以下のリストボックス内のいくつかの行の高さを変更したい場合を考えます:
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict3071135.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 まずデフォルトの行高さを設定し、その後 **LISTBOX SET ROW HEIGHT** コマンドを使って、個別に行高さを指定します:
 
@@ -76,14 +76,14 @@ displayed_sidebar: docs
 
 高さの単位がピクセルから行数に変更されたため、行1、5、11の高さ設定が [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) で指定されたグローバルのデフォルト値 (2行) にリセットされます。設定値が自動変換されないため、単位の変更は設定の初期化につながります。
 
-#### 参照 
+## 参照 
 
   
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get adjusted table cache priority.Summary-->The **Get adjusted table cache priority** command returns the adjusted cache priority value applied in cache by the cache manager for the *aTable* scalar data.<!-- END REF--> This command is only needed for debugging purposes.
 
@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 Scalar data field types include fields of date/hour, numeric, or string type. 
 
-#### See also 
+## See also 
 
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 *Managing priorities in database cache*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

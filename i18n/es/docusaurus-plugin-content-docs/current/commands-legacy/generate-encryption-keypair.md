@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->El comando GENERATE ENCRYPTION KEYPAIR genera un nuevo par de llaves RSA.<!-- END REF--> Estas llaves permiten funcionalidades de encripción asimétricas en 4D, generalmente necesarias cuando necesita asegurar intercambios de datos seguros en la red (es decir, utilizando el servidor web 4D y el protocolo TSL). 
 
@@ -33,7 +33,7 @@ Este comando genera llaves en formato PKCS codificadas en base64, lo que signifi
 
 **Advertencia:** la llave privada siempre debe mantenerse en secreto.
 
-#### RSA, llaves privadas y llaves públicas 
+## RSA, llaves privadas y llaves públicas 
 
 El algoritmo de cifrado RSA utilizado por **GENERATE ENCRYPTION KEYPAIR** está basado en un sistema de cifrado de doble llave: una llave privada y una llave pública. Como su nombre lo indica, la llave pública puede ser entregada a una tercera persona y utilizada para descifrar la información. La llave pública corresponde a una llave privada única, utilizada para cifrar la información. De esta forma, la llave privada se utiliza para el cifrado; la llave pública para descifrar (o viceversa). La información cifrada con una llave sólo puede ser descifrada con la otra.
 
@@ -43,17 +43,17 @@ Este modo de cifrado también lo utiliza la primera sintaxis de los comandos [EN
 
 Es posible combinar las llaves públicas y privadas de dos personas para cifrar información de manera que el receptor sea la única persona que pueda descifrar los datos y el emisor la única persona que puede cifrarlos. Es el principio de la segunda sintaxis de los comandos [ENCRYPT BLOB](encrypt-blob.md) y [DECRYPT BLOB](decrypt-blob.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [ENCRYPT BLOB](encrypt-blob.md "ENCRYPT BLOB").
 
-#### Ver también 
+## Ver también 
 
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

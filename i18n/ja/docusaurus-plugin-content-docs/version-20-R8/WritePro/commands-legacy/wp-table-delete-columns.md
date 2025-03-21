@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Summary-->**WP TABLE DELETE COLUMNS** コマンドは、4D Write Pro の表から一つまたは複数のカラムを削除します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 全てのカラムを表から削除した場合、表全体が削除されます。
 
-#### 例題 
+## 例題 
 
 *Invoice* の表からカラムを一つ削除したい場合を考えます。以下のコードを実行すると:
 
@@ -49,6 +49,6 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict4680318.en.png)
 
-#### 参照 
+## 参照 
 
 [WP TABLE DELETE ROWS](wp-table-delete-rows.md)  

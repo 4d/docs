@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY DATE.Summary-->O comando ARRAY DATE cria e/ou redimensiona um array de elementos de tipo Data em memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos no array.
@@ -26,7 +26,7 @@ Enquanto se aplica ARRAY DATE para um array já existente:
 * se você aumentar o tamanho de um array, os elementos existentes não sofrem mudanças, e os novos elementos se iniciam em data nula (!00/00/00!).
 * se você reduzir o tamanho de um array, os últimos elementos deletados do array são perdidos.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array de processo de 100 elementos de tipo Data:
 
@@ -34,7 +34,7 @@ Este exemplo cria um array de processo de 100 elementos de tipo Data:
  ARRAY DATE(adValores;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 100 linhas de 50 elementos do tipo Data:
 
@@ -42,7 +42,7 @@ Este exemplo cria um array local de 100 linhas de 50 elementos do tipo Data:
  ARRAY DATE($adValores;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo cria um array interprocesso de 50 elementos do tipo Data e determina a cada elemento a data atual mais um número de dias igual ao número de elemento:
 
@@ -54,7 +54,7 @@ Este exemplo cria um array interprocesso de 50 elementos do tipo Data e determin
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

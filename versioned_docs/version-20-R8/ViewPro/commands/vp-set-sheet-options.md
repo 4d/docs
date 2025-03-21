@@ -14,7 +14,7 @@ title: VP SET SHEET OPTIONS
 |sheetOptions |Object|->|Sheet option(s) to set|
 |sheet |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
 
@@ -26,7 +26,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet (cou
 
 * `vk current sheet`
 
-#### Example 1
+## Example 1
 
 You want to protect all cells except the range C5:D10:
 
@@ -42,7 +42,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### Example 2
+## Example 2
 
 You need to protect your document while your users can resize rows and columns:
 
@@ -62,7 +62,7 @@ $options.protectionOptions.allowResizeColumns=True;
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-#### Example 3
+## Example 3
 
 You want to customize the colors of your sheet tabs, frozen lines, grid lines, selection background and selection border:
 
@@ -94,7 +94,7 @@ Result:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
-#### Example 4
+## Example 4
 
 You want to hide the grid lines as well as the row and column headers.
 
@@ -115,7 +115,7 @@ Result:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### See also
+## See also
 
 [4D View Pro sheet options](../configuring.md#sheet-options)<br/>
 [VP Get sheet options](vp-get-sheet-options.md)

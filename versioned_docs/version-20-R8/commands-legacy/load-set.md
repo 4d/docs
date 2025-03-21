@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD SET.Summary-->**LOAD SET** loads a set from *document* that was saved with the [SAVE SET](save-set.md) command.<!-- END REF-->
 
@@ -25,7 +25,7 @@ The *document* parameter is the name of the disk document containing the set. Th
 
 Remember that a set is a representation of a selection of records at the moment that the set is created. If the records represented by the set change, the set may no longer be accurate. Therefore, a set loaded from disk should represent a group of records that does not change frequently. A number of things can make a set invalid: modifying a record of the set, deleting a record of the set, or changing the criteria that determined a set.
 
-#### Example 
+## Example 
 
 The following example uses LOAD SET to load a set of the Acme locations in New York:
 
@@ -35,15 +35,15 @@ The following example uses LOAD SET to load a set of the Acme locations in New Y
  CLEAR SET("NY Acme") // Clear the set from memory
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks Cancel in the Open File dialog box, or there is an error during the load operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
 
-#### See also 
+## See also 
 
 [SAVE SET](save-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

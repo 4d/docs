@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PICTURE PROPERTIES.Summary-->O comando PICTURE PROPERTIES devolve a informação sobre a imagem que passa no parâmetro *imagem*.<!-- END REF-->
 
@@ -26,11 +26,11 @@ Os parâmetros *largura* e *altura* devolvem a largura e altura da imagem.
 
 Os parâmetros *hDesp*, *vDesp*, e *modo* devolvem as posições horizontal e vertical e o modo de transferência da imagem quando se mostra no fundo em um formulário (“Imagem de fundo”).
 
-#### Ver também 
+## Ver também 
 
 [Picture size](picture-size.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

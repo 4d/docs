@@ -3,7 +3,7 @@ id: queryplan
 title: $queryplan
 ---
 
-4D Server に渡したクエリを返します (_例_: `$queryplan=true`)
+4D Server に渡したクエリを返します (*例*: `$queryplan=true`)
 
 ## 説明
 

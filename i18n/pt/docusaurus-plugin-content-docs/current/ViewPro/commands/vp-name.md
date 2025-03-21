@@ -16,9 +16,9 @@ title: VP Name
 | sheet      | Integer | ->                          | Localização do intervalo (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto intervalo de nome                                             | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
-The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
+O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->retorna um novo objeto de intervalo referenciando uma faixa de nome<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -29,9 +29,9 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 - `vk current sheet`
 - `vk workbook`
 
-#### Exemplo
+## Exemplo
 
-Pretende atribuir um valor ao intervalo nomeado "Total".
+Suponha que pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
 // name the B5 cell as Total
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### Veja também
+## Veja também
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>

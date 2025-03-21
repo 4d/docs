@@ -27,15 +27,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 |                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4d-systemworker-new)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                        |
+| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4dsystemworkernew)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                          |
 | [<!-- INCLUDE #SystemWorkerClass.closeInput().Syntax -->](#closeinput)<br/><!-- INCLUDE #SystemWorkerClass.closeInput().Summary -->               |
 | [<!-- INCLUDE #SystemWorkerClass.commandLine.Syntax -->](#commandline)<br/><!-- INCLUDE #SystemWorkerClass.commandLine.Summary -->                |
 | [<!-- INCLUDE #SystemWorkerClass.currentDirectory.Syntax -->](#currentdirectory)<br/><!-- INCLUDE #SystemWorkerClass.currentDirectory.Summary --> |
-| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#dataype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                          |
+| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #SystemWorkerClass.encoding.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #SystemWorkerClass.errors.Summary -->                               |
 | [<!-- INCLUDE #SystemWorkerClass.exitCode.Syntax -->](#exitcode)<br/><!-- INCLUDE #SystemWorkerClass.exitCode.Summary -->                         |
-| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hideWindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
+| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hidewindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
 | [<!-- INCLUDE #SystemWorkerClass.pid.Syntax -->](#pid)<br/><!-- INCLUDE #SystemWorkerClass.pid.Summary -->                                        |
 | [<!-- INCLUDE #SystemWorkerClass.postMessage().Syntax -->](#postmessage)<br/><!-- INCLUDE #SystemWorkerClass.postMessage().Summary -->            |
 | [<!-- INCLUDE #SystemWorkerClass.response.Syntax -->](#response)<br/><!-- INCLUDE #SystemWorkerClass.response.Summary -->                         |
@@ -112,7 +112,7 @@ Voici la séquence des appels de callbacks :
 1. `onData` et `onDataError` sont exécutés une ou plusieurs fois
 2. s'il est appelé, `onError` est exécuté une fois (arrête le traitement du system worker)
 3. si aucune erreur ne s'est produite, `onResponse` est exécuté une fois
-4. `onTerminate` est toujours exécuté
+4. `onTerminate` is always executed
 
 :::info
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Description
 
-La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4d-systemworker-new)<!-- END REF -->.
+La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -328,9 +328,7 @@ Cette propriété est en **lecture seule**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Description
 

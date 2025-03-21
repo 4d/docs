@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen はメニューバーが表示されている画面の番号を返します。<!-- END REF-->
 
 **Windows note**: Windowsでは、Menu bar screenはいつも1を返します。
 
-#### 参照 
+## 参照 
 
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

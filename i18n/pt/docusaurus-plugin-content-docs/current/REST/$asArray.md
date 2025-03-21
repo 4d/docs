@@ -7,7 +7,7 @@ Devolve o resultado de uma consulta num array (ou seja, uma coleção) em vez de
 
 ## Descrição
 
-Si desea obtener la respuesta en un array, sólo tiene que añadir `$asArray` a su petición REST (_e.g._, `$asArray=true`).
+Si desea obtener la respuesta en un array, sólo tiene que añadir `$asArray` a su petición REST (*e.g.*, `$asArray=true`).
 
 ## Exemplo
 
@@ -119,3 +119,5 @@ Os mesmos dados no seu formato JSON predefinido:
 "__SENT": 3
 }
 ```
+
+

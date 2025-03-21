@@ -7,7 +7,7 @@ title: Impression
 
 Permet de définir des paramètres d'impression spécifiques pour le formulaire. Cette fonctionnalité est utile pour afficher les limites de pages d'impression dans l'éditeur de formulaire.
 
-> **Compatibilité** : Même si ces paramètres sont pris en compte lors de l'impression du formulaire en mode Application, il est déconseillé de s'appuyer sur cette fonctionnalité pour stocker les paramètres d'impression du formulaire, en raison des limitatio It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
+> **Compatibilité** : Même si ces paramètres sont pris en compte lors de l'impression du formulaire en mode Application, il est déconseillé de s'appuyer sur cette fonctionnalité pour stocker les paramètres d'impression du formulaire, en raison des limitatio It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful. Propriétés
 
 Vous pouvez modifier les paramètres d'impression suivants :
 
@@ -29,3 +29,11 @@ Vous pouvez modifier les paramètres d'impression suivants :
 | scale       | number          | minimum : 0                                                                                                                             |
 
 ---
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ La API clase `WebServer` le permite iniciar y controlar un servidor web para la 
 
 ### Objeto servidor web
 
-Los objetos servidor web se instancian con el comando [`WEB Server`](#web-server).
+Los objetos servidor web se instancian con el comando [`WEB Server`](../commands/web-server.md).
 
 Ofrecen las siguientes propiedades y funciones:
 
@@ -128,16 +128,16 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 Contiene la <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y de métodos autorizados para el servicio CORS<!-- END REF --> (ver la propiedad [`CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
 
 - **host** (texto, obligatorio): nombre de dominio o dirección IP desde donde las páginas externas pueden enviar solicitudes de datos al Servidor a través de CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. Si *host* no está presente o está vacío, el objeto se ignora. Se soportan varias sintaxis:
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\\\\\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\\\\\\\\\\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (texto, opcional): método(s) HTTP aceptado(s) para el host CORS correspondiente. Separe cada método con un ";" (por ejemplo: "post;get"). Separe cada método con un ";" (por ejemplo: "post;get").
 
@@ -236,7 +236,7 @@ El estado del protocolo <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP<!--
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
-El <!-- REF #WebServerClass.HTTPPort.Summary -->escuchando número de puerto IP para HTTP<!-- END REF -->.
+El <!-- REF #WebServerClass.HTTPPort.Summary -->número de puerto IP de escucha para HTTP<!-- END REF -->.
 
 Por defecto = 80
 
@@ -487,7 +487,7 @@ El campo <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" de la 
 
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie utilizada para almacenar el ID de sesión<!-- END REF -->.
 
 *Propiedad de sólo lectura*
 
@@ -560,7 +560,7 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 | Parámetros | Tipo   |                             | Descripción                                     |
 | ---------- | ------ | --------------------------- | ----------------------------------------------- |
 | settings   | Object | ->                          | Parámetros del servidor web a definir al inicio |
-| Result     | Object | <- | Estado del inicio del servidor web              |
+| Resultado  | Object | <- | Estado del inicio del servidor web              |
 
 <!-- END REF -->
 
@@ -568,7 +568,7 @@ La función `.start()` <!-- REF #WebServerClass.start().Summary -->inicia el ser
 
 El servidor web se inicia con los parámetros por defecto definidos en el archivo de configuración del proyecto o (base host únicamente) utilizando el comando `WEB SET OPTION`. Sin embargo, utilizando el parámetro *settings*, se pueden definir propiedades personalizadas para la sesión del servidor web.
 
-Todas los parámetros de los [objetos Servidor Web](#web-server-object) pueden personalizarse, excepto las propiedades de sólo lectura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) y [.sessionCookieName](#sessioncookiename)).
+Todas los parámetros de los [objetos Servidor Web](../commands/web-server.md-object) pueden personalizarse, excepto las propiedades de sólo lectura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) y [.sessionCookieName](#sessioncookiename)).
 
 Los parámetros de sesión personalizados se reiniciarán cuando se llame la función [`.stop()`](#stop).
 

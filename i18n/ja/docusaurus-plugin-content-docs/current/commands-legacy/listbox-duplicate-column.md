@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->**LISTBOX DUPLICATE COLUMN**コマンドは、 *object* と *\** 演算子によって指定された列を、プログラムによって実行中のフォームにおいて複製します。<!-- END REF-->(アプリケーションモード)
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 このコマンドはフォーム表示中に使用される必要があります。通常、フォームの On Load イベント内か、ユーザーのアクションへの反応(On Clicked イベント) にて使用されます。
 
-##### 動的な複製 
+### 動的な複製 
 
 リストボックスカラムを動的に複製すると、必要な変数(カラム、フッター、ヘッダー)の定義を4Dに自動的に行わせることができます。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ヘッダー変数とフッター変数は常に特定のタイプで作成されるという点に注意して下さい(ヘッダーは倍長整数、フッターはテキスト)。反対に、カラム変数は作成時にタイプを指定することはできません。リストボックスはカラム変数に対して、異なるタイプの配列(テキスト配列、倍長整数配列、等々)を受け入れることができるからです。これはつまり配列のタイプを手動で設定しなければならないという事です(例題2を参照して下さい)。こういったタイプの指定は、配列に新しい要素を挿入するために[LISTBOX INSERT ROWS](listbox-insert-rows.md) などのコマンドを呼び出す前に実行しなければなりません。その他には、 [APPEND TO ARRAY](append-to-array.md) を使用して配列の型を指定し、要素を挿入することができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のような配列型のリストボックスの中で、 "First Name" の列を複製して入力できるようにしたい場合:
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1205359.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 ブール型のカラムを追加し、そのタイトルを変えます:
 
@@ -90,11 +90,11 @@ displayed_sidebar: docs
  OBJECT SET TITLE(headprt->;"New duplicated column")
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

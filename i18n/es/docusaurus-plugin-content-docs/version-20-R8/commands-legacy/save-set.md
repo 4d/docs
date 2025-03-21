@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAVE SET.Summary-->SAVE SET guarda *conjunto* en el archivo *documento*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ SAVE SET con frecuencia se utiliza para guardar en disco los resultados de una b
 
 **Advertencia:** recuerde que un conjunto es una representación de una selección de registros en el momento en que se crea el conjunto. Si los registros representados por el conjunto cambian, el conjunto podría volverse inválido. Por lo tanto, un conjunto guardado en disco debe representar a un grupo de registros que no cambia con frecuencia. Múltiples eventos pueden volver un conjunto inválido: modificación o eliminación de un registro del conjunto, o modificación de los criterios que determinan la creación del conjunto. Igualmente recuerde que los conjuntos no guardan valores de campos. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra la caja de diálogo estándar de guardar archivos con el fin de permitir al usuario introducir el nombre del documento que contiene el conjunto:
 
@@ -34,15 +34,15 @@ El siguiente ejemplo muestra la caja de diálogo estándar de guardar archivos c
  SAVE SET("UnConjunto";"")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el usuario hace clic en el botón Cancelar en la caja de diálogo de guardar archivos, o si hay un error durante la operación de carga, la variable sistema OK toma el valor 0\. De lo contrario, toma el valor 1.
 
-#### Ver también 
+## Ver también 
 
 [LOAD SET](load-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

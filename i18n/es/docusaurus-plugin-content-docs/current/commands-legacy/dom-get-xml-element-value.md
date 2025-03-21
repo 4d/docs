@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->El comando **DOM GET XML ELEMENT VALUE** devuelve en el parámetro *valorElement*, el valor del elemento XML designado por *refElement*.<!-- END REF--> 4D intentará convertir el valor obtenido en el tipo de variable pasada como parámetro. Si el tipo de variable no está definido, el valor es devuelto en el tipo texto por defecto. 
 
@@ -23,7 +23,7 @@ El parámetro opcional *cDATA* se utiliza para recuperar los contenidos de las s
 
 **Nota:** si el elemento designado por *refElement* es un BLOB procesado por el comando [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md), ha sido codificado automáticamente en base64\. Por lo tanto, el comando intentará automáticamente de decodificar en base 64.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método devuelve el valor del elemento $xml\_Element\_Ref:
 
@@ -34,17 +34,17 @@ Este método devuelve el valor del elemento $xml\_Element\_Ref:
  DOM GET XML ELEMENT VALUE($xml_Element_Ref;$valor)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valor 1\. Si ocurre un error, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

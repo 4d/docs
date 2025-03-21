@@ -170,7 +170,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Objeto devolvido**
+**Returned object**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -230,10 +230,10 @@ Quando `Delete only if empty` for passado ou se você omitir o parâmetro de op�
 Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
-  **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
+ **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
 - Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
 - Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido.
-  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+ (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -299,7 +299,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` movido.
 
@@ -355,7 +355,7 @@ A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a past
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-**Objeto devolvido**
+**Returned object**
 
 O objeto `Folder` renomeado.
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Mod.Summary-->La fonction **Mod** divise *nombre1* par *nombre2* et retourne le reste sous forme d'un nombre entier.<!-- END REF-->
 * **Mod** accepte des expressions de type Entier, Entier long et Réel (numérique). Cependant, si *nombre1* et/ou *nombre2* sont des nombres réels, ils sont arrondis avant le calcul du **Mod**.
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Vous pouvez également utiliser l'opérateur "%" pour calculer le reste d'une division (reportez-vous à la section *C\_TIME*). Toutefois, cet opérateur retourne des résultats valides uniquement avec des expressions de type Entier et Entier long. Si vous voulez calculer le modulo de nombres réels, vous devez utiliser la commande **Mod**. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre le fonctionnement de **Mod** dans différents cas de figure. A chaque ligne, un nombre est assigné à la variable *vRésultat*. Les commentaires fournissent le résultat obtenu :
 
@@ -34,7 +34,7 @@ L'exemple suivant illustre le fonctionnement de **Mod** dans différents cas de 
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

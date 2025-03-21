@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->O comando SAX OPEN XML ELEMENT permite adicionar um novo elemento no documento XML referenciado por *documento*, assim como, opcionalmente, atributos e seus valores.<!-- END REF-->  
   
@@ -28,7 +28,7 @@ Em *etiqueta*, passe o nome do elemento a criar. Este nome apenas pode conter le
   
 Opcionalmente, o comando permite passar um ou vários pares de atributos/valores (em forma de variáveis, campos ou valores literais) utilizando os parâmetros *nomeAtributo e valorAtributo*. Pode passar tantos pares atributo/valor como queira.
 
-#### Exemplo 
+## Exemplo 
 
 A seguinte instrução: 
 
@@ -43,16 +43,16 @@ A seguinte instrução:
  <book< pre=""></book<>
 ```
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se passar em tag um caractere inválido, se gera um erro. 
 
-#### Ver também 
+## Ver também 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

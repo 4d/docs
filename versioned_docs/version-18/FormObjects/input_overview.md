@@ -5,7 +5,7 @@ title: Input
 
 ## Overview
 
-Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+Inputs allow you to add enterable or non-enterable expressions such as database fields and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
 
 ![](../assets/en/FormObjects/input.png)
 

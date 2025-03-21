@@ -15,7 +15,7 @@ title: VP Get frozen panes
 | sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet contenant des informations sur les colonnes et lignes figées          | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
-##### Objet retourné
+### Objet retourné
 
 La commande retourne un objet décrivant les lignes et colonnes figées. Cet objet peut avoir les propriétés suivantes :
 
@@ -34,7 +34,7 @@ La commande retourne un objet décrivant les lignes et colonnes figées. Cet obj
 | rowCount            | Integer | Le nombre de lignes figées en haut de la feuille         |
 | trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille          |
 
-#### Exemple
+## Exemple
 
 Vous souhaitez récupérer des informations sur le nombre de colonnes et de lignes figées :
 
@@ -49,6 +49,6 @@ L'objet retourné contient, par exemple :
 
 ![](../../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
-#### Voir également
+## Voir également
 
 [VP SET FROZEN PANES](vp-set-frozen-panes.md)

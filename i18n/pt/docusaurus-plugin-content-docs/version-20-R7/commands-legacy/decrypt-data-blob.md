@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->O comando **Decrypt data BLOB** realiza a descriptografia do parâmetro *blobDecriptografia* com o mesmo algoritmo que 4D usa para a criptografia de dados (AES-256) e retorna o resultado em *blobDecriptografado*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Se a decriptografia tiver sucesso, os dados decriptografados serão retornados n
 
 No caso de um erro, o BLOB é retornado vazio e o comando retorna false.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado na pasta RESOURCES do banco de dados:
 
@@ -53,14 +53,14 @@ O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado 
 
 *passefrase* e *salt* usados para a descriptografia são idênticos a *passefrase* e *salt* usados para criptografar (ver o exemplo [Encrypt data BLOB](encrypt-data-blob.md)).
 
-#### Ver também 
+## Ver também 
 
   
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [New data key](new-data-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** devolve o próximo número automático de *tabela*.<!-- END REF--> O número de sequência é único para cada tabela. É um valor que não se repete e é incrementado (\*) para cada novo registro criado pela tabela.  
   
@@ -42,7 +42,7 @@ Se a numeração deve começar em um valor diferente de 1, simplesmente adiciona
  [Tabela1]NumAuto:=Sequence number([Tabela1])+999
 ```
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é parte de um método de formulário. Estas linhas de código testam se é um novo registro (se o número de fatura for igual a uma cadeia vazia). Se for um novo registro, o método atribui um número de fatura. O número de fatura está formado por duas partes: o número de sequência, e o identificador do operador, o qual foi introduzido ao abrir o banco. O número de sequência é formatado como uma cadeia de cinco caracteres: 
 
@@ -54,13 +54,13 @@ O exemplo a seguir é parte de um método de formulário. Estas linhas de códig
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 *Sobre Números de Registros*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,12 +17,12 @@ La classe `WebFormItem` est décrite en détail dans la [documentation de Qodly]
 
 ### Objet WebFormItem
 
-|                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #WebFormItemClass.addCSSClass().Syntax -->](#addclass)<br/><!-- INCLUDE #WebFormItemClass.addCSSClass().Summary -->          |
-| [<!-- INCLUDE #WebFormItemClass.hide().Syntax -->](#hide)<br/><!-- INCLUDE #WebFormItemClass.hide().Summary -->                            |
-| [<!-- INCLUDE #WebFormItemClass.removeCSSClass().Syntax -->](#removeclass)<br/><!-- INCLUDE #WebFormItemClass.removeCSSClass().Summary --> |
-| [<!-- INCLUDE #WebFormItemClass.show().Syntax -->](#show)<br/><!-- INCLUDE #WebFormItemClass.show().Summary -->                            |
+|                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #WebFormItemClass.addCSSClass().Syntax -->](#addcssclass)<br/><!-- INCLUDE #WebFormItemClass.addCSSClass().Summary -->          |
+| [<!-- INCLUDE #WebFormItemClass.hide().Syntax -->](#hide)<br/><!-- INCLUDE #WebFormItemClass.hide().Summary -->                               |
+| [<!-- INCLUDE #WebFormItemClass.removeCSSClass().Syntax -->](#removecssclass)<br/><!-- INCLUDE #WebFormItemClass.removeCSSClass().Summary --> |
+| [<!-- INCLUDE #WebFormItemClass.show().Syntax -->](#show)<br/><!-- INCLUDE #WebFormItemClass.show().Summary -->                               |
 
 ### .hide()
 
@@ -95,3 +95,6 @@ Pour plus d'informations, veuillez vous référer à la [description de `.addCSS
 La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->supprime la classe *className* du composant<!-- END REF -->.
 
 Pour plus d'informations, veuillez vous référer à la [description de `.removeCSSClass()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).
+
+
+

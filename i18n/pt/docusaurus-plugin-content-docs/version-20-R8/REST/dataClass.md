@@ -9,7 +9,7 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 
 | Sintaxe                                                                                                                                  | Exemplo                               | Descrição                                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                                                                        | `/Employee`                           | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass |
+| [**\{dataClass\}**](#dataclass)                                                                                                        | `/Employee`                           | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                          | `/Employee[22]`                       | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados         |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                                | `/Employee:firstName(John)`           | Retorna os dados para uma entidade na qual os valores de atributo são definidas                     |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)                                                         | `/City/getCity`                       | Executa uma função de classe de uma dataclass                                                       |
@@ -24,7 +24,7 @@ Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase
 
 ### Descrição
 
-Quando você chama este parâmetro em sua solicitação REST as primeiras 100 entidades são retornadas a menos que você tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
+When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Aqui está uma descrição dos dados retornados:
 
@@ -44,7 +44,7 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                                                 |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company/name,address`
 
@@ -143,7 +143,7 @@ Passando a classe de dados e uma chave, pode recuperar toda a informação públ
 
 Para más información sobre los datos devueltos, consulte [\{dataClass\}](#dataclass).
 
-Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company[1]/name,address`
 
@@ -190,7 +190,7 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-Se você quiser especificar quais atributos você deseja devolver, defina-os usando a seguinte sintaxe [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 
@@ -203,3 +203,4 @@ Si desea utilizar un atributo relacional utilizando [$attributes.md">]($attribut
 A petição abaixo retorna todos os dados públicos do funcionário chamado "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+

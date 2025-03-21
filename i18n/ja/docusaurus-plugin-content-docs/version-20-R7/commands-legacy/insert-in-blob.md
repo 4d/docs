@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->INSERT IN BLOB コマンドは、*blob*の*offset*で指定した位置に、*len*で指定した数のバイトを挿入します。<!-- END REF-->BLOBは*len*バイトだけ大きくなります。
 
@@ -24,15 +24,15 @@ displayed_sidebar: docs
 
 呼び出し前に、*offset*引数にはBLOBの先頭から相対的な挿入位置を設定します。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### 参照 
+## 参照 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

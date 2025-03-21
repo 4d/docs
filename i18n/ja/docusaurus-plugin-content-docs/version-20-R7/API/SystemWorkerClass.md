@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )  を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
+システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )   を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
 
 `SystemWorker` クラスは、`4D` クラスストアにて提供されています。
 
@@ -27,15 +27,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 |                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4d-systemworker-new)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                        |
+| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4dsystemworkernew)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                          |
 | [<!-- INCLUDE #SystemWorkerClass.closeInput().Syntax -->](#closeinput)<br/><!-- INCLUDE #SystemWorkerClass.closeInput().Summary -->               |
 | [<!-- INCLUDE #SystemWorkerClass.commandLine.Syntax -->](#commandline)<br/><!-- INCLUDE #SystemWorkerClass.commandLine.Summary -->                |
 | [<!-- INCLUDE #SystemWorkerClass.currentDirectory.Syntax -->](#currentdirectory)<br/><!-- INCLUDE #SystemWorkerClass.currentDirectory.Summary --> |
-| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#dataype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                          |
+| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #SystemWorkerClass.encoding.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #SystemWorkerClass.errors.Summary -->                               |
 | [<!-- INCLUDE #SystemWorkerClass.exitCode.Syntax -->](#exitcode)<br/><!-- INCLUDE #SystemWorkerClass.exitCode.Summary -->                         |
-| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hideWindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
+| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hidewindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
 | [<!-- INCLUDE #SystemWorkerClass.pid.Syntax -->](#pid)<br/><!-- INCLUDE #SystemWorkerClass.pid.Summary -->                                        |
 | [<!-- INCLUDE #SystemWorkerClass.postMessage().Syntax -->](#postmessage)<br/><!-- INCLUDE #SystemWorkerClass.postMessage().Summary -->            |
 | [<!-- INCLUDE #SystemWorkerClass.response.Syntax -->](#response)<br/><!-- INCLUDE #SystemWorkerClass.response.Summary -->                         |
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4d-systemworker-new) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
+`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
 
 このプロパティは **読み取り専用** です。
 
@@ -328,9 +328,7 @@ $output:=$worker.response
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### 説明
 
@@ -346,7 +344,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。
+`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。 とりうる値: "text" または "blob"。
 
 このプロパティは **読み取り専用** です。
 
@@ -360,7 +358,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
+`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
 
 このプロパティは **読み取り専用** です。
 
@@ -396,7 +394,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
+`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
 
 このプロパティは **読み取り専用** です。
 
@@ -441,17 +439,17 @@ $output:=$worker.response
 | 引数          | 型    |     | 説明                                                  |
 | ----------- | ---- | :-: | --------------------------------------------------- |
 | message     | Text |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
-| messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト数                                    |
+| messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト                                     |
 
 <!-- END REF -->
 
 #### 説明
 
-`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。
+`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。
 
 `.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
 
-[options オブジェクト](#options-object) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
+[options オブジェクト](#options-オブジェクト) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
 
 <!-- END REF -->
 

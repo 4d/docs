@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT DATA.Summary-->La commande **IMPORT DATA** permet d’importer des données depuis le fichier *nomFichier*.<!-- END REF--> 4D peut importer des données au format Texte, Texte de longueur fixe, XML, SYLK, DIF, DBF (dBase), et 4D. 
 
@@ -35,18 +35,18 @@ Le paramètre optionnel *\**, s’il est est spécifié, provoque l’affichage 
 
 **Note :** Reportez-vous à la commande [EXPORT DATA](export-data.md) pour un exemple de définition de projet vide. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (de sélection de projet ou de paramétrage d'import), la variable système OK prend la valeur 0\. Si l’import se déroule correctement, la variable système OK prend la valeur 1.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT DATA](export-data.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

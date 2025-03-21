@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->**ARRAY TO SELECTION**コマンドは、1つ以上の配列をレコードのセレクションにコピーします。<!-- END REF-->すべてのフィールドは同一テーブルのものでなければなりません。 
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **4D Server:** このコマンドは4D Server用に最適化されています。配列はクライアントマシンからサーバへ渡され、レコードの修正や追加はサーバ上で実行されます。この処理は同期的に 行われるため、クライアントマシンは処理が正常に終了するまで待機しなくてはなりません。マルチユーザ・マルチプロセス環境では、ロックされたレコードは 上書きされません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、*asLastNames*と*asCompanies*の2つの配列のデータを*\[People\]*テーブルにコピーします。配列*asLastNames*のデータは*\[People\]Last Name*フィールドに、配列*asCompanies*のデータは*\[People\]Company*フィールドに、それぞれ書き込まれます:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  ARRAY TO SELECTION(asLastNames;[People]Last Name;asCompanies;[People]Company)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オプションの値に応じてフィールドを選択し、そのレコードのセレクションをアーカイブテーブルへとコピーしたい場合を考えます:
 
@@ -76,12 +76,12 @@ displayed_sidebar: docs
  ARRAY TO SELECTION
 ```
 
-#### 参照 
+## 参照 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *システム変数*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->**RESOLVE POINTER** récupère l'information de l'objet référencé par *pointeur* et la retourne dans les paramètres *nomVar*, *numTable* et *numChamp*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Selon la nature de l'objet référencé par le pointeur, **RESOLVE POINTER** ret
 * Si la valeur que vous passez dans le paramètre *pointeur* n'est pas de type pointeur, une erreur de syntaxe est générée.
 * La commande **RESOLVE POINTER** ne fonctionne pas avec les pointeurs vers des variables locales. En effet, par définition plusieurs variables locales de même nom pouvant exister à différents emplacements, il n’est pas possible pour la commande de connaître la variable à dépointer.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans un formulaire, vous créez un groupe de 100 variables saisissables qui s'appellent v1, v2... v100\. Pour cela, vous procédez de la manière suivante : 
 
@@ -60,7 +60,7 @@ Dans un formulaire, vous créez un groupe de 100 variables saisissables qui s'ap
 
 * En suivant ces étapes, vous avez écrit une fois seulement les méthodes objet pour les 100 variables : vous n'avez pas eu besoin d'écrire FaireQuelqueChose(1), FaireQuelqueChose(2)..., FaireQuelqueChose(100)).
 
-#### Exemple 2 
+## Exemple 2 
 
 Pour des raisons de débogage, vous voulez vérifier si le deuxième paramètre ($2) d'une méthode est un pointeur vers une table. Le début de votre méthode peut être écrit ainsi : 
 
@@ -76,11 +76,11 @@ Pour des raisons de débogage, vous voulez vérifier si le deuxième paramètre 
   // ...
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*. 
 
-#### Exemple 4 
+## Exemple 4 
 
 Voici un exemple de pointeur vers un tableau 2D :
 
@@ -98,7 +98,7 @@ Voici un exemple de pointeur vers un tableau 2D :
   //$colNum="5"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -106,7 +106,7 @@ Voici un exemple de pointeur vers un tableau 2D :
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

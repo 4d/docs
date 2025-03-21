@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->La commande **LISTBOX GET CELL COORDINATES** retourne dans les variables ou champs *gauche*, *haut*, *droite* et *bas* les coordonnées (en points) de la cellule désignée par les paramètres *colonne* et *ligne* dans la list box définie par *\** et *objet*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Par cohérence avec la commande [OBJECT GET COORDINATES](object-get-coordinates.
 
 Pour plus d'informations, veuillez vous reporter à la description de la commande [OBJECT GET COORDINATES](object-get-coordinates.md).
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée dans une list box :
 
@@ -49,12 +49,12 @@ Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée d
 
 ![](../assets/en/commands/pict1741070.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

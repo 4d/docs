@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get 4D file.Summary-->The **Get 4D file** command returns the pathname to the 4D environment file specified by the *file* parameter.<!-- END REF--> The path is returned using the system syntax. 
 
@@ -56,7 +56,7 @@ When the command is called from a component, pass the optional *\** parameter to
 
 Regarding User settings file for data and User settings file, a path is returned only if the **Enable User Settings in External File** security option has been checked in the "Database Settings" dialog box (see ). 
 
-#### Example 
+## Example 
 
 You want to get the path of the last backup file:
 
@@ -66,11 +66,11 @@ You want to get the path of the last backup file:
   // $path = "C:\Backups\Countries\Countries[0025].4BK" for example
 ```
 
-#### See also 
+## See also 
 
 [File](../commands/file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

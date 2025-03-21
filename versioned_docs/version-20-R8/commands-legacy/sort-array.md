@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SORT ARRAY.Summary-->The SORT ARRAY command sorts one or more arrays into ascending or descending order.<!-- END REF-->
 
@@ -25,7 +25,7 @@ The last parameter specifies whether to sort *array* in ascending or descending 
 
 If more than one array is specified, the arrays are sorted following the sort order of the first array; no multi-level sorting is performed here. Instead you can use the [MULTI SORT ARRAY](multi-sort-array.md) command when you want to sort synchronized arrays.
 
-#### Example 1 
+## Example 1 
 
 The following example creates two arrays and then sorts them by company:
 
@@ -43,7 +43,7 @@ However, because SORT ARRAY does not perform multi-level sorts, you will end up 
  SELECTION TO ARRAY([People]Name;asNames;[People]Company;asCompanies)
 ```
 
-#### Example 2 
+## Example 2 
 
 You display the names from a *\[People\]* table in a floating window. When you click on buttons present in the window, you can sort this list of names from A to Z or from Z to A. As several people may have the same name, you also can use a *\[People\]ID number* field, which is indexed unique. When you click in the list of names, you will retrieve the record for the name you clicked. By maintaing a synchronized and hidden array of ID numbers, you are sure to access the record corresponding to the name you clicked: 
 
@@ -74,14 +74,14 @@ You display the names from a *\[People\]* table in a floating window. When you c
  SORT ARRAY(asNames;alIDs;<)
 ```
 
-#### See also 
+## See also 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->**WEB SET HTTP HEADER**コマンドを使用して、4DからWebブラウザーへ送信されるHTTPヘッダーにフィールドを設定します。<!-- END REF-->このコマンドはWebプロセスでのみ機能します。  
 このコマンドで "Cookie" を管理することが可能です。
@@ -60,11 +60,11 @@ HTTPヘッダーのシンタックスに関する詳細は、[http://www.w3c.org
 
 X-VERSIONとX-STATUSを指定しないと、自動的にHTTP/1.0 200 OKが設定されます。Server フィールドのデフォルト値は"4D/<version>" です。**Date** と **Content-Length** のフィールドも4Dによって設定されます。
 
-#### 参照 
+## 参照 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

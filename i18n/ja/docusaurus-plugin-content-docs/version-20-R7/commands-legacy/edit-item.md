@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EDIT ITEM.Summary-->**EDIT ITEM** コマンドは*object* 引数で指定された項目、または指定された配列やリスト中*item* で指定された項目を編集状態にします。<!-- END REF-->
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 * サブフォームとリストフォームでは、コマンドは指定された行の、最初の入力順のフィールドを編集モードにします。
 * 階層表示モードのリストボックスでは、ターゲットの項目が折りたたまれた階層レベルに属する場合、このレベル (およびすべての親レベル) は自動で展開され、項目が表示されます。
 
-#### 例題 1 
+## 例題 1 
 
 このコマンドは特に階層リストに新規項目を作成する際に有用です。このコマンドが呼び出されると、最後に追加あるいは挿入された項目が自動で編集モードになります。   
 以下のコードは既存のリストに新規項目を挿入するボタンメソッドです。デフォルトの“New\_item”テキストが自動で編集可能状態になります:
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict21419.ja.png)
 
-#### 例題 2 
+## 例題 2 
 
 変数名“Array1” と “Array2”が指定された2つの列を持つリストボックスがあります。以下の例題では2つの配列に新規項目を挿入し、Array2を編集モードにします: 
 
@@ -67,13 +67,13 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict21420.ja.png)
 
-#### 参照 
+## 参照 
 
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

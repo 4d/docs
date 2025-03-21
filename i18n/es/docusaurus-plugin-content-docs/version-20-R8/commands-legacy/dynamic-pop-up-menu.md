@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->El comando **Dynamic pop up menu** hace aparecer un menú desplegable jerárquico en la ubicación actual del ratón o en la ubicación definida por los parámetros opcionales *Coordx* y *Coordy*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Si una acción estándar está asociada a un elemento de menú, es tenida en cue
 * Si el título de la acción se ha ajustado al elemento usando la constante ak standard action title, el nombre localizado se mostrará en el menú.
 * Cuando se selecciona el elemento, se invoca la acción estándar asociada (la ejecución es asíncrona).
 
-#### Ejemplo 
+## Ejemplo 
 
 Este código permite crear un menú emergente dinámico jerárquico basado en acciones estándar:
 
@@ -84,7 +84,7 @@ Este código permite crear un menú emergente dinámico jerárquico basado en ac
  paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
@@ -92,7 +92,7 @@ Este código permite crear un menú emergente dinámico jerárquico basado en ac
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

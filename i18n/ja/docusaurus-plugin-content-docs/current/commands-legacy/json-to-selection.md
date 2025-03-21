@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->**JSON TO SELECTION**コマンドは、JSONオブジェクト配列 *jsonArray* の中身を、 *aTable* のレコードのセレクションへとコピーします。<!-- END REF-->. 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 コマンド実行中、保存先のレコードが他の処理などでロックされていた場合、その中身は変更されません。ロックされたレコードは、 *LockedSet システムセット*内に保存されています。 **JSON TO SELECTION**コマンドを実行し終えたあと、 *LockedSet* 内にロックされたレコードが保存されているかどうか検証することが出来ます。
 
-#### 例題 
+## 例題 
 
 **JSON TO SELECTION** コマンドを使用して、 \[Company\] テーブルへレコードを追加します。 
 
@@ -65,11 +65,11 @@ displayed_sidebar: docs
   //持つレコードを4つ作成しました。
 ```
 
-#### 参照 
+## 参照 
 
 [Selection to JSON](selection-to-json.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

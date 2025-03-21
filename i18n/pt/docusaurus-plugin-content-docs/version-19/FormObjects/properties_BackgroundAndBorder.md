@@ -16,7 +16,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -59,7 +59,7 @@ Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET P
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -75,7 +75,7 @@ Permite definir um estilo padrão para o contorno do objeto.
 
 #### Objectos suportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -113,7 +113,7 @@ Pode remover estas linhas vazias selecionando esta opção. A parte inferior do 
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -135,7 +135,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 > Essa propriedade também está disponível para objetos baseados em texto e, nesse caso, ela designa a cor da fonte e as linhas do objeto; consulte [Cor da fonte](properties_Text.md#font-color).
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
@@ -151,7 +151,7 @@ Designa a espessura de uma linha.
 | ----------- | ------------- | ------------------------------------------------------------------------------------- |
 | strokeWidth | number        | 0 para a largura mais pequena num formulário impresso, ou qualquer valor inteiro < 20 |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
@@ -193,7 +193,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 | ------------- | ------------- | --------------------------- |
 | rowFillSource | string        | O nome de um array longint. |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
@@ -209,9 +209,9 @@ Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de
 | ---- | ------------- | ----------------- |
 | fill | text          | "transparent"     |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Veja também
 

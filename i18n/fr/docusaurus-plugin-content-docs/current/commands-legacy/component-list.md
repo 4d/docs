@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->La commande **COMPONENT LIST** dimensionne et remplit le tableau *tabComposants* avec les noms des composants chargés par l’application 4D pour la base hôte courante.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Les noms des composants sont les noms des fichiers de structure des bases matric
 
 Pour plus d'informations sur les composants 4D, reportez-vous au manuel *Mode Développement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [PLUGIN LIST](plugin-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -27,7 +27,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 Vous pouvez exploiter la bibliothèque de méthodes Javascript de SpreadJS et les appeler directement pour gérer vos feuilles de calcul.
 
-4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Workbook).
+4D dispose d'une propriété intégrée `Utils.spread` qui donne accès au document de feuille de calcul (également appelé workbook) à l'intérieur de la zone 4D View Pro, ce qui simplifie l'appel des [méthodes de Workbook SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Workbook).
 
 #### Exemple
 
@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Dépôt 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) est un dépôt GitHub qui contient un projet rempli de fonctions utiles pour vous permettre de gérer les images flottantes, de trier les colonnes ou les lignes, de créer une culture personnali N'hésitez pas à le cloner et à l'expérimenter !
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) est un dépôt GitHub qui contient un projet rempli de fonctions utiles pour vous permettre de gérer les images flottantes, de trier les colonnes ou les lignes, de créer une culture personnali N'hésitez pas à le cloner et à l'expérimenter ! N'hésitez pas à le cloner et à l'expérimenter !

@@ -7,7 +7,7 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 ## プロジェクトファイル
 
-4D プロジェクトファイルは 4D または 4D Server で開いて編集します。 With 4D, full-featured editors are available to manage files, including a structure editor, a [Code Editor](../code-editor/write-class-method.md), a [form editor](../FormEditor/formEditor.md), a menu editor...
+4D プロジェクトファイルは 4D または 4D Server で開いて編集します。 4D ではファイルなどを管理するために必要な機能を全て備えた様々なエディターが利用できます。このエディターにはストラクチャーエディター、[コードエディター](../code-editor/write-class-method.md)、[フォームエディター](../FormEditor/formEditor.md)、そしてメニューエディターなどがあります。
 
 また、人間にも解読可能なテキストファイル (JSON、XML等) 形式で提供されているため、プロジェクトの読み書きは任意のコードエディターでおこなうことも可能です。
 
@@ -27,4 +27,4 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 - [モバイル](https://developer.4d.com/go-mobile/) アプリケーション
 - [デスクトップ](Desktop/building.md) アプリケーション (クライアント/サーバーまたはシングルユーザー)
 
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume Desktop](../Desktop/building.md).
+バックエンドアプリケーションは、4D Server または 4D で運用するほか、[4D Volume Desktopライセンスと統合](../Desktop/building.md) することも可能です。

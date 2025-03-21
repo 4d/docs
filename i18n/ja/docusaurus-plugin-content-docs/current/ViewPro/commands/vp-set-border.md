@@ -15,7 +15,7 @@ title: VP SET BORDER
 | borderStyleObj | Object | -> | 境界線スタイルを格納したオブジェクト |                  |
 | borderPosObj   | Object | -> | 境界線の位置を格納したオブジェクト  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET BORDER` コマンドは、<!-- REF #_method_.VP SET BORDER.Summary -->*rangeObj* のレンジに *borderStyleObj* および *borderPosObj* で定義される境界線スタイルを適用します<!-- END REF -->。
 
@@ -25,7 +25,7 @@ title: VP SET BORDER
 
 | プロパティ | 型       | 説明                             | とりうる値                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----- | ------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color | text    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                                                     |
+| color | テキスト    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                                                     |
 | style | Integer | 境界線のスタイルを定義します。 デフォルト = empty。 | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 *borderStyleObj* の境界線スタイルの位置 (どこに境界線を引くか) は *borderPosObj* 引数で定義します:
@@ -42,7 +42,7 @@ title: VP SET BORDER
 | innerHorizontal | boolean | 境界線スタイルは内側の横の境界にのみ適用されます。 |
 | innerVertical   | boolean | 境界線スタイルは内側の縦の境界にのみ適用されます。 |
 
-#### 例題 1
+## 例題 1
 
 以下のコードは、レンジ全体の外周に境界線を生成します:
 
@@ -54,7 +54,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER1.PNG)
 
-#### 例題 2
+## 例題 2
 
 以下のコードは、`VP SET BORDER` と [`VP SET CELL STYLE`](vp-set-cell-style.md) で境界線を設定した場合の違いを示します:
 
@@ -73,6 +73,6 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER2.PNG)
 
-#### 参照
+## 参照
 
 [VP SET CELL STYLE](vp-set-cell-style.md)

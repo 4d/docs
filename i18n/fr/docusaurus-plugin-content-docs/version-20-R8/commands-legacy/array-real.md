@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY REAL.Summary-->La commande **ARRAY REAL** crée et/ou redimensionne un tableau d'éléments de type Réel en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
@@ -26,7 +26,7 @@ Lorsque vous appliquez la commande **ARRAY REAL** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à 0.
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Réel](# "Number between ±1.7e±308 (15 digits)") :
 
@@ -34,7 +34,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Réel](# 
  ARRAY REAL(tabRéel;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type Réel : 
 
@@ -42,7 +42,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY REAL($tabRéel;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess de 50 éléments de type [Réel](# "Number between ±1.7e±308 (15 digits)") et affecte à chaque élément son numéro :
 
@@ -53,12 +53,12 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Réel](# "Nu
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

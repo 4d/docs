@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New subsection.Summary-->The **WP New subsection** command creates and returns a new subsection of the *subSectionType* type in the *wpSection* 4D Write Pro section.<!-- END REF-->
 
@@ -33,7 +33,7 @@ The *subSectionType* parameter specifies the subsection to create. You can pass 
 
 If the *subSectionType* already exists, an error is returned.
 
-#### Example 
+## Example 
 
 You want to create left and right subsections:
 
@@ -45,7 +45,7 @@ You want to create left and right subsections:
  $subsection:=WP New subsection($section;wk left page)
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get subsection](wp-get-subsection.md)  

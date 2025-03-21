@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Locked.Summary-->**Locked** tests whether or not the current record of *aTable* is locked.<!-- END REF--> Use this function to find out whether or not the record is locked; then take appropriate action, such as giving the user the choice of waiting for the record to be free or skipping the operation.
 
@@ -28,14 +28,14 @@ If you try to load a record that has been deleted, **Locked** continues to retur
 
 During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are often used to test record availability. If a record is locked, it is common to cancel the transaction. 
 
-#### See also 
+## See also 
 
 [Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

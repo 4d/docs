@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Import document.Summary-->**WP Import document** コマンドは既存の4D Write Proドキュメント/4D Write ドキュメント(.4w7 または .4wt)を新規の4D Write Proオブジェクトへと変換します。<!-- END REF-->
 
@@ -61,14 +61,14 @@ displayed_sidebar: docs
 * *旧式の4D Write ドキュメント内で使用される文字スタイルシートは独自の機構が使用されており、これは4D Write Pro ではサポートされていないものです。インポートされたテキストを可能な限り再現するため、スタイルシート属性は"ハードコード"スタイル属性へと変換されています。旧式の文字スタイルシートは読み込まれず、今後ドキュメント内では参照されることはありません。*
 * *.docx フォーマットからの読み込みのサポートはMicrosoft Word 2010 以降でのみ認定されています。それ以前のバージョン、具体的には* *Microsoft Word 2007 などでは、正しく読み込まれない可能性があります。*
 
-#### 例題 1 
+## 例題 1 
 
 ```4d
  var WPDoc : Object
  WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 .docx ドキュメントを読み込み、段落境界線がMS Word のように折りたたまれていてほしい場合を考えます:
 
@@ -97,6 +97,6 @@ displayed_sidebar: docs
  wpDoc:=WP Import document("mydoc.docx";$options)
 ```
 
-#### 参照 
+## 参照 
 
 [WP New](wp-new.md)  

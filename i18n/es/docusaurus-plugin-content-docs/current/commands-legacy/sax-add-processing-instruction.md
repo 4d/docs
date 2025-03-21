@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->El comando SAX ADD PROCESSING INSTRUCTION añade en el documento XML referenciado por *documento*, una *instruccion* de procesamiento XML.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Una instrucción de procesamiento le permite indicar el tipo de aplicación y cu
 
 El comando da formato a los datos de la instrucción conforme con XML. Sin embargo, las instrucciones misma no son analizadas y depende del desarrollador asegúrarse de que sean válidas. 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código: 
 
@@ -38,15 +38,15 @@ El siguiente código:
  
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

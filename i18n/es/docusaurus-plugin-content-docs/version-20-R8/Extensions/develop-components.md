@@ -11,13 +11,13 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 
 - **Base proyecto**: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente.
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
-- **Componente**: proyecto matriz que puede compilarse y [crearse](Desktop/building.md#build-component), [instalarse en la aplicación principal](../Project/components.md#basics) y cuyo contenido se utiliza en la aplicación principal.
+- **Componente**: proyecto matriz que puede compilarse y [crearse](Desktop/building.md#build-component), [instalarse en la aplicación principal](../Project/components.md) y cuyo contenido se utiliza en la aplicación principal.
 
 ## Básicos
 
 La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 
-- Para utilizar un componente, sólo tiene que [instalarlo en su aplicación](../Project/components.md#basics).
+- Para utilizar un componente, sólo tiene que [instalarlo en su aplicación](../Project/components.md).
 - Un proyecto puede ser a la vez matriz y local, es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar subcomponentes por sí mismo.
 - Un componente puede llamar a la mayoría de los elementos de 4D: clases, funciones, métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. No puede llamar a los métodos base ni a los triggers.
 - No es posible utilizar el datastore, las tablas estándar o los archivos de datos en los componentes 4D. Sin embargo, un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
@@ -193,7 +193,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 - El comando `Get pointer` no devolverá un puntero a una variable del proyecto local si se llama desde un componente y viceversa.
 
 - La arquitectura de componentes permite la coexistencia, dentro del mismo proyecto interpretado, de componentes interpretados y compilados (a la inversa, en un proyecto compilado sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado.
-  Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.
+ Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.
 
 - Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
 

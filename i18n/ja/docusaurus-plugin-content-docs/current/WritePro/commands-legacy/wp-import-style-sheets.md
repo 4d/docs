@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->**WP IMPORT STYLE SHEETS** コマンドは、*sourceDoc* 引数で指定したドキュメント内の全てのスタイルシートを、*targetDoc* 引数で指定したドキュメント内へと読み込みます。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注**: *sourceDoc* のスタイルシートに、*targetDoc* のスタイルシートと同じ名前のものがあった場合、読み込まれたスタイルシートは*targetDoc* 内の同名のスタイルシートを上書き(置き換え)します。
 
-#### 例題 
+## 例題 
 
 テンプレートスタイルシートを読み込み、読み込んだスタイルシートのタイプごとの数の通知を受け取りたい場合を考えます:
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
  ALERT(String($nb1)+" paragraph style sheet(s) and "+string($nb2)+" character style sheet(s) imported))
 ```
 
-#### 参照 
+## 参照 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->**COMPRESS BLOB**コマンドは、圧縮アルゴリズムを使用してBLOB *blob*を圧縮します。<!-- END REF-->
 
@@ -40,7 +40,7 @@ BLOBが圧縮されているかどうかを知るには[BLOB PROPERTIES](blob-pr
 
 **警告:** 圧縮されたBLOBもBLOBであり、そのコンテンツを編集できます。しかしそうしてしまうと、[EXPAND BLOB](expand-blob.md)コマンドは正しくBLOBを解凍できなくなります。
 
-#### 例題 1 
+## 例題 1 
 
 この例題 はBLOB *vxMyBlob*が圧縮されているかテストし、されていなければ圧縮します:
 
@@ -53,7 +53,7 @@ BLOBが圧縮されているかどうかを知るには[BLOB PROPERTIES](blob-pr
 
 すでに圧縮されているBLOBにCOMPRESS BLOBを適用した場合、コマンドはそれを検知し、何も行いません。
 
-#### 例題 2 
+## 例題 2 
 
 この例題は、ドキュメントを選択させ、それを圧縮します:
 
@@ -71,7 +71,7 @@ BLOBが圧縮されているかどうかを知るには[BLOB PROPERTIES](blob-pr
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 GZIPで圧縮されたraw HTTPデータを送信します:
 
@@ -83,16 +83,16 @@ GZIPで圧縮されたraw HTTPデータを送信します:
  WEB SEND RAW DATA($blob ;*)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 BLOBが正しく圧縮されると、システム変数OKは1に設定されます。そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -3,7 +3,7 @@ id: web
 title: Page Web
 ---
 
-Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d’informations sur les services Web de 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
+Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d'informations sur la prise en charge des Services Web dans 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R4/4D/19-R4/Publication-et-utilisation-de-Services-Web.200-5736722.fr.html).
 
 ## Configuration
 
@@ -35,7 +35,7 @@ Permet de modifier le numéro du port TCP/IP utilisé par le serveur Web pour le
 
 #### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
 
-_Note de compatibilité :_ Cette option est [obsolète](../WebServer/webServerConfig.md#deprecated-settings). Pour l'accès aux bases de données via HTTP, il est désormais recommandé d'utiliser les fonctionnalités de stockage de données à distance ORDA et les requêtes REST.
+*Note de compatibilité :* Cette option est [obsolète](../WebServer/webServerConfig.md#deprecated-settings). Pour l'accès aux bases de données via HTTP, il est désormais recommandé d'utiliser les fonctionnalités de stockage de données à distance ORDA et les requêtes REST.
 
 ### Chemins
 
@@ -74,7 +74,7 @@ Cette zone vous permet de configurer, par le serveur Web, la gestion des session
 
 #### Sessions extensibles (sessions multi-process)
 
-Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. Voir la [page Sessions utilisateur](../WebServer/sessions.md#enabling-sessions).
+Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. Voir la [page Sessions utilisateur](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Pas de sessions
 
@@ -84,13 +84,13 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 - [Process Web simultanés maxi](#maximum-concurrent-web-processes)
 - [Réutilisation des contextes temporaires (en mode distant)](#reuse-temporary-context)
-- [Utiliser des process préemptifs](#use-preemptive-web-processes)
+- [Utiliser des process préemptifs](#use-preemptive-processes)
 
 #### Anciennes sessions (sessions process uniques)
 
-_Note de compatibilité :_ Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
+*Note de compatibilité :* Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
 
-Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Voir [Garder session](../WebServer/webServerConfig.md#keep-session).
+Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Voir [Keep Session](../WebServer/webServerConfig.md#keep-session).
 
 L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts) est automatiquement cochée (et verrouillée).
 
@@ -112,7 +112,7 @@ Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
 Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
 
-> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  Voir [Activer le mode préemptif pour le serveur web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  Voir [Activer le mode préemptif pour le serveur web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Conservation des process inactifs
 
@@ -126,7 +126,7 @@ Définit le système d'authentification que vous souhaitez utiliser pour le serv
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section _Développement Web_.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section *Développement Web*.
 
 ## Options (II)
 
@@ -158,7 +158,7 @@ Liste des hôtes et méthodes autorisé(e)s pour le service CORS. Voir [Paramèt
 
 ### Format du journal (logweb.txt)
 
-Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier _logweb.txt_ et définit son format. Voir [Enregistrement des logs](../WebServer/webServerConfig.md#enregistrement-des-logs).
+Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Voir [Enregistrement des logs](../WebServer/webServerConfig.md#enregistrement-des-logs).
 
 > L’activation et la désactivation du fichier d’historique des requêtes peut également être effectuée par programmation, à l’aide de la commande [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -167,12 +167,12 @@ Le menu de format du journal propose les options suivantes :
 - **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
 - **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, telle que :\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
+    host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
-  - hôte : adresse IP du client (ex. 192.100.100.10)
-  - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
-  - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).
-  - JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
+    - hôte : adresse IP du client (ex. 192.100.100.10)
+    - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
+    - utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).
+    - JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
 
 > La date et heure sont locales au serveur.
 
@@ -194,8 +194,8 @@ Le menu de format du journal propose les options suivantes :
 
 - **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
-  - Referer : contient l’URL de la page pointant vers le document demandé.
-  - User-agent : contient le nom et la version du navigateur ou du logiciel client à l’origine de la requête.
+    - Referer : contient l’URL de la page pointant vers le document demandé.
+    - User-agent : contient le nom et la version du navigateur ou du logiciel client à l’origine de la requête.
 
 > Le format DLF ne peut pas être personnalisé.
 
@@ -243,7 +243,7 @@ Paramètres d’archivage automatique du journal des requêtes. D'abord, vous de
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
 
-  - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
+    - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
@@ -261,7 +261,7 @@ Pour plus d'informations sur la prise en charge des Services Web dans 4D, report
 
 Cette zone affiche les options relatives à l’utilisation de 4D en tant que “serveur” de Web Services, c’est-à-dire publiant des méthodes projet sous forme de Web Services.
 
-- **Autoriser requêtes Web Services** : Cette option permet d’initialiser la publication de Web Services. Si cette option n’est pas cochée, 4D refuse les requêtes SOAP et ne génère pas de WSDL — même si des méthodes disposent de l’attribut _Disponible via Web Service_. Lorsque cette option est cochée, 4D crée le fichier WSDL.
+- **Autoriser requêtes Web Services** : Cette option permet d’initialiser la publication de Web Services. Si cette option n’est pas cochée, 4D refuse les requêtes SOAP et ne génère pas de WSDL — même si des méthodes disposent de l’attribut *Disponible via Web Service*. Lorsque cette option est cochée, 4D crée le fichier WSDL.
 - **Nom Web Service**: cette zone permet de modifier le “nom générique” du Web Service. Ce nom permet de différencier les services au niveau du serveur SOAP (lorsque le serveur publie plusieurs Web Services), ainsi que dans les annuaires de Web Services. Par défaut, 4D utilise le nom A_WebService.
 - **Espace de nommage Web Services** : cette zone permet de modifier l’espace de nommage (le namespace) des Web Services publiés par 4D. Chaque Web Service publié sur Internet doit être unique. L’unicité des noms de Web Services est assuré à l’aide des espaces de nommage XML (XML namespace). Un espace de nommage est une chaîne de caractères arbitraire permettant d’identifier de manière unique un ensemble de balises XML. Typiquement, l’espace de nommage début par l’URL de la société (http://masociete.com/monespacedenommage). Dans ce cas, il n’est pas indispensable qu’il y ait quelque chose à l’URL défini, il importe simplement que la chaîne de caractères utilisée soit unique. Par défaut, 4D utilise l’espace de nommage http://www.4d.com/namespace/default.
 

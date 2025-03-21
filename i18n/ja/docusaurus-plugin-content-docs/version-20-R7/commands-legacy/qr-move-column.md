@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->**QR MOVE COLUMN**コマンドは、*column* 変数の位置にあるカラムを*newPos* 変数で指定した位置へと移動させます。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドはリスト型のレポートに対してのみ使用できます。
 
-#### 例題 
+## 例題 
 
 以下のようなレポートをデザインした場合を考えます:
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict2569472.en.png)
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

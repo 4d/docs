@@ -96,7 +96,7 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 |                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
@@ -328,7 +328,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 | プロパティ    | 型    | 説明                                                                                                                                                                                                                                  | デフォルト     |
 | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                 | undefined |
-| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
+| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | テキスト      |
 
 
 <!-- REF #WebSocketServerClass.connections.Desc -->

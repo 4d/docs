@@ -33,7 +33,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 
 |Property|Description|Possible Values|
 |---|---|---|
-|<a id="a">**a**</a>|||
+<a id="a"><b>a<b/></a>
 |[`action`](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[`allowFontColorPicker`](properties_Text.md#allow-fontcolor-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
 |[`alternateFill`](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"; "automaticAlternate"|
@@ -41,7 +41,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**b**|||
 |[`booleanFormat`](properties_Display.md#text-when-falsetext-when-true)|Specifies only two possible values.|true, false|
 |[`borderRadius`](properties_CoordinatesAndSizing.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
-|[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
+|[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double"|
 |[`bottom`](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a id="c"></a>|
 |**c**|||
 |[`choiceList`](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
@@ -91,7 +91,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**g**|||
 |[`graduationStep`](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a id="h"></a>|
 |**h**|||
-|[`header`](properties_Headers.md#headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
+|[`header`](./listbox_overview.md#list-box-headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
 |[`headerHeight`](properties_Headers.md#height)|Used to set the row height |positive decimal + px &#124; em |
 |[`height`](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
 |[`hideExtraBlankRows`](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows.	|true, false|
@@ -105,7 +105,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`iconPlacement`](properties_TextAndPicture.md#icon-location)|Designates the placement of an icon in relation to the form object.|"none", "left", "right"|
 |[`imageHugsTitle`](properties_TextAndPicture.md#image-hugs-title)|Defines whether the title and the picture of the button should be visually adjoined.|true (default), false<a id="k"></a>|
 |**k**|||
-|[`keyboardDialect`](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a id="l"></a>|
+|[`keyboardDialect`](properties_Entry.md#keyboard-layout)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a id="l"></a>|
 |**l**|||
 |[`labels`](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
 |[`labelsPlacement`](properties_Scale.md#label-location) (objects)<br/>[`labelsPlacement`](properties_Appearance.md#tab-control-direction) (tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
@@ -188,8 +188,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`stroke`](properties_Text.md#font-color) (text)<br/> [`stroke`](properties_BackgroundAndBorder.md#line-color) (lines)<br/>[`stroke`](properties_Text.md#font-color) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
 |[`strokeDashArray`](properties_BackgroundAndBorder.md#dotted-line-type)|Describes dotted line type as a sequence of black and white points|Number array or string|
 |[`strokeWidth`](properties_BackgroundAndBorder.md#line-width) |Designates the thickness of a line.|An integer or 0 for smallest width on a printed form|
-|[`style`](properties_TextAndPicture.md#multi-style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
-|[`styledText`](properties_Text.md#style)|Enables the possibility of using specific styles in the selected area.|true, false|
+|[`style`](properties_TextAndPicture.md#button-style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|
+|[`styledText`](properties_Text.md#multi-style)|Enables the possibility of using specific styles in the selected area.|true, false|
 |[`switchBackWhenReleased`](properties_Animation.md#switch-back-when-released)|Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released.|true, false|
 |[`switchContinuously`](properties_Animation.md#switch-continuously-on-clicks)|Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation).|true, false|
 |[`switchWhenRollover`](properties_Animation.md#switch-when-roll-over)|Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.|true, false<a id="t"></a>|

@@ -33,13 +33,13 @@ Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Ativar HTTP
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Permitir o acesso ao banco de dados por meio de URLs 4DSYNC
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
-_Nota de compatibilidade_: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados por meio de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
+*Nota de compatibilidade*: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
 ### Caminhos
 
-#### Raiz HTML padrão
+#### Raiz HTML predefinida
 
 Define a localização padrão dos arquivos do site e indicar o nível hierárquico no disco acima do qual os arquivos não serão acessíveis. Ver [Pasta Raiz](../WebServer/webServerConfig.md#root-folder).
 
@@ -47,7 +47,7 @@ Define a localização padrão dos arquivos do site e indicar o nível hierárqu
 
 Designar uma página inicial padrão para o servidor Web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
 
-## Opções (I)
+## Options (I)
 
 ### Cache
 
@@ -74,21 +74,21 @@ Essa área permite configurar como o servidor Web tratará as sessões de usuár
 
 #### Sessões escaláveis (sessões multi-processo)
 
-Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Veja a [página de sessões do usuário](../WebServer/sessions.md#enabling-sessions).
+Quando selecionat esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Veja a [página de sessões do usuário](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sem sessões
 
-Quando esta opção é selecionada, o servidor web não fornece nenhum suporte específico para [sessões de usuários](../WebServer/sessions.md). As solicitações sucessivas de clientes da Web são sempre independentes e nenhum contexto é mantido no servidor.
+Quando esta opção é selecionada, o servidor web não fornece nenhum suporte específico para [sessões de usuários](../WebServer/sessions.md). As solicitações sucessivas dos clientes Web são sempre independentes e nenhum contexto é mantido no servidor.
 
 Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 - [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
 - [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
-- [Usar processos preemptivos](#use-preemptive-web-processes)
+- [Usar processos preemptivos](#use-preemptive-processes)
 
 #### Sessões herdadas (sessões de processo único)
 
-_Nota de compatibilidad:_ esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
+*Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
 Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)] (https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
@@ -108,27 +108,25 @@ Permite otimizar a operação do servidor Web 4D no modo remoto. Veja [Reutiliza
 
 #### Utilizar processos preemptivos
 
-Não disponível com [sessões escalonáveis](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
 Permite processos web preemptivos nas suas aplicações compiladas. Quando **usar processos preventivos** for selecionado, A elegibilidade de seu código relacionado à Web (incluindo tags 4D e métodos de banco de dados web) para a execução preventiva será avaliada durante a compilação. Para mais informações, consulte [Utilizando processos Web preemptivos](../WebServer/preemptiveWeb.md).
 
-> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tempo limite do processo inativo
 
-Não disponível com [sessões escalonáveis](../WebServer/sessions.md).
+Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
 Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor. Veja [Tempo Limite do Processo Inativo](../WebServer/webServerConfig.md#inactive-process-timeout).
 
-### Senhas da Web
+### Palavras-passe Web
 
 Defina o sistema de autenticação que você deseja aplicar ao seu servidor Web. São propostas três opções:
 
-Personalizado (padrão)
-Senhas com protocolo BASIC
-Senhas com protocolo DIGEST
+Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação _Desenvolvimento Web_.
+É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
 
 ## Opções (II)
 
@@ -160,7 +158,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parámetros CORS
 
 ### Formato do histórico
 
-Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo _logweb.txt_ e define seu formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
+Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
 > A ativação e desativação do arquivo de log de solicitações também pode ser realizada pela programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -169,13 +167,13 @@ O menu de formato do histórico oferece as seguintes opções:
 - **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
 
 - **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
-  host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
-  Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
+    host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
+    Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
 
-  - host: endereço IP do cliente (ex. 192.100.100.10)
-  - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
-  - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
-  - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
+    - host: endereço IP do cliente (ex. 192.100.100.10)
+    - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
+    - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
+    - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
 
 > A data e a hora são locais para o servidor.
 
@@ -195,10 +193,10 @@ O menu de formato do histórico oferece as seguintes opções:
 > 500: Internal error
 > O formato CLF não pode ser personalizado.
 
-- **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa exatamente a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
+- **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
 
-  - Referer: contém o URL da página que aponta para o documento solicitado.
-  - User-agent: Contém o nome e a versão do navegador ou software do cliente que origina a solicitação.
+    - Referer: contém o URL da página que aponta para o documento solicitado.
+    - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
 
 > O formato DLF não pode ser personalizado.
 
@@ -207,7 +205,7 @@ O menu de formato do histórico oferece as seguintes opções:
 - **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
 **Configuração dos campos**
-Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. Para fazer isso, use os botões de seta ou simplesmente arraste e solte os campos desejados na área "Tokens Selecionados".
+Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. You will need to select each field to be included in the log. To do so, check the desired fields.
 
 **Nota**: Não é possível selecionar o mesmo campo duas vezes.
 
@@ -242,16 +240,16 @@ A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfab
 
 ## Histórico (backup)
 
-Configure os parâmetros de backup automático para o registro de solicitações. Primeiro, você deve escolher a frequência (dias, semanas, etc.) ou o critério de limite de tamanho de arquivo clicando no botão de rádio correspondente. Você deve então especificar o momento exato do backup, se necessário.
+Configure the automatic backup parameters for the request log. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
-- **Sem Backup**: a função de backup agendada está desativada.
-- **A cada X hora(s)**: Esta opção é utilizada para programar backups de forma horária. Pode digitar um valor entre 1 e 24.
+- **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
+- **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
 
-  - **iniciando em**: Usado para definir a hora em que o primeiro backup começará.
-- **A cada X dia(s) às X**: Esta opção é usada para programar backups diários. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
-- **A cada X semana(s), dia em X**: Essa opção é usada para programar backups semanais. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar. Por exemplo, você pode usar essa opção para definir dois backups semanais: um às quartas-feiras e outro às sextas-feiras.
-- **A cada X mês(es), dia X às X**: Essa opção é usada para programar backups mensais. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
-- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+- **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
+- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
+- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > No caso de backups programados, se o servidor Web não foi iniciado quando o backup estava programado para ocorrer, na próxima inicialização o 4D considera o backup como falho e aplica as configurações apropriadas, definidas nas Propriedades.
 
@@ -265,11 +263,11 @@ Para obter mais informações sobre o suporte de serviços da Web em 4D, consult
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "servidor" de serviços da Web, ou seja, a publicação de métodos projeto na forma de serviços Web.
 
-- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo _Published in WSDL_. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 - **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
 - **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
-> Em conformidade com o padrão XML para nomes de tags, as cadeias de caracteres usadas não devem conter espaços nem começar com um número. Além disso, para evitar qualquer risco de incompatibilidade, recomendamos que você não use nenhum caractere estendido (como caracteres acentuados).
+> Em conformidade com o padrão XML para nomes de etiquetas, as cadeias de caracteres usadas não devem conter espaços nem começar com um número. Além disso, para evitar qualquer risco de incompatibilidade, recomendamos que você não use nenhum caractere estendido (como caracteres acentuados).
 
 ### Cliente
 
@@ -279,7 +277,7 @@ Essa área contém várias opções relacionadas ao uso de 4D como um "cliente" 
 
 ## Funcionalidades Web
 
-Essa página contém as opções usadas para ativar e controlar recursos avançados da Web, como o servidor REST.
+Essa página contém as opções usadas para ativar e controlar recursos atacantes da Web, como o servidor REST.
 
 ### Publicação
 
@@ -291,7 +289,7 @@ Inicia e pára o servidor REST. Ver [Configuración del servidor REST](../REST/c
 
 :::info Obsoleto
 
-**Esta seção está obsoleta** a partir de 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
+**Esta seção está obsoleta** a partir de 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. Se o seu projeto já for compatível com o modo [Force login](../REST/authUsers.md#force-login-mode), a seção não estará presente e você poderá ignorar este parágrafo.
 
 :::
 

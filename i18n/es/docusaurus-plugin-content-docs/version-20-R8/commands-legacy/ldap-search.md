@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LDAP Search.Summary-->El comando **LDAP Search** busca la primera ocurrencia que coincida con los criterios definidos en el servidor LDAP objetivo.<!-- END REF--> Este comando debe ser ejecutado dentro de una conexión a un servidor LDAP abierta con *RuntimeVLIncludeIt*; de lo contrario se devuelve un error 1003.
 
@@ -43,7 +43,7 @@ Por defecto, el comando devuelve los atributos en forma de colección si se encu
 * Cuando pase **true** en un elemento, el elemento correspondiente del parámetro *atributos* será devuelto en una colección. Si se encuentra un solo valor, el comando devuelve una colección con un solo elemento.
 * Cuando pase **false** en un elemento, el elemento correspondiente del parámetro *atributos* será devuelto en una variable simple. Si se encuentran varias entradas, el comando devuelve sólo el primer elemento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea conseguir el número de teléfono del usuario "smith" en el directorio de la empresa:
 
@@ -57,7 +57,7 @@ Usted desea conseguir el número de teléfono del usuario "smith" en el director
  LDAP LOGOUT
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Queremos obtener una array de todas las entradas que se encuentran en el atributo "memberOf":
 
@@ -79,12 +79,12 @@ Queremos obtener una array de todas las entradas que se encuentran en el atribut
   // en $_arrMemberOf tenemos un array que contiene todos los grupos de la entrada
 ```
 
-#### Ver también 
+## Ver también 
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

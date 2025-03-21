@@ -65,7 +65,7 @@ L'entité modifiée est retournée :
 
 ## Exemple avec un client 4D HTTP
 
-L'exemple suivant montre comment télécharger un fichier _.pdf_ vers le serveur à l'aide du client 4D HTTP.
+L'exemple suivant montre comment télécharger un fichier *.pdf* vers le serveur à l'aide du client 4D HTTP.
 
 ```4d
 var $params : Text

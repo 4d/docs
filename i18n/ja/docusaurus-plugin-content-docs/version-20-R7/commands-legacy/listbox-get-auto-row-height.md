@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->**LISTBOX Get auto row height** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さのカレンとの最小値あるいは最大値を返します。<!-- END REF-->
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 | lk lines  | 倍長整数 | 1 | 高さを行数で指定。4Dはフォント設定に応じて高さを計算します。 |
 | lk pixels | 倍長整数 | 0 | 高さをピクセルで指定 (デフォルト)。             |
 
-#### 例題 
+## 例題 
 
 リストボックスの行の、最大の高さが何行であるのかを取得したい場合を考えます:
 
@@ -50,13 +50,13 @@ displayed_sidebar: docs
  vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

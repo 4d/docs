@@ -19,10 +19,10 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 ## Caché
 
-| Puede ajustarse con           | Nombre                                                                                                          | Comentarios |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Página Opciones (I)/Utilizar la caché 4D Web](../settings/web.md#use-the-4d-web-cache)      |             |
-| Caja de diálogo de parámetros | [Página Opciones (I) /Tamaño de la caché de las páginas](../settings/web.md#page-cache-size) |             |
+| Puede ajustarse con           | Nombre                                                                                                           | Comentarios |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Utilizar la caché 4D Web](../settings/web.md#use-the-4d-web-cache)       |             |
+| Caja de diálogo de parámetros | [Página Opciones (I) /Tamaño de la caché de las páginas](../settings/web.md#pages-cache-size) |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -36,7 +36,7 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 | Puede ajustarse con | Nombre              | Comentarios                                                                                                                                                   |
 | ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer    | `certificateFolder` | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()`. |
+| objeto webServer    | `certificateFolder` | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro *settings* de la función `start()`. |
 
 Carpeta donde se encuentran los archivos del certificado TLS para el servidor web.
 
@@ -44,7 +44,7 @@ Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la [carpe
 
 Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recursos locales de la base de datos en la máquina remota (ver `Carpeta base 4D Client` del comando `Get 4D folder`). Debe copiar estos archivos manualmente en la máquina remota.
 
-> Los archivos de certificados TLS son _key.pem_ (documento que contiene la llave de cifrado privada) y _cert.pem_ (documento que contiene el certificado).
+> Los archivos de certificados TLS son *key.pem* (documento que contiene la llave de cifrado privada) y *cert.pem* (documento que contiene el certificado).
 
 ## Conjunto de caracteres
 
@@ -70,11 +70,11 @@ Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de l
 
 ## Parámetros CORS
 
-| Puede ajustarse con           | Nombre                                                                                                                                        | Comentarios                                                                                                                                                                      |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                          | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
-| `WEB SET OPTION`              | `Web CORS settings`                                                                                                                           | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
-| Caja de diálogo de parámetros | [Página Opciones (II)/Nombres de dominio y métodos HTTP autorizados](../settings/web.md#domain-names-HTTP-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
+| Puede ajustarse con           | Nombre                                                                                                                                       | Comentarios                                                                                                                                                                      |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                         | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
+| `WEB SET OPTION`              | `Web CORS settings`                                                                                                                          | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)                                                                              |
+| Caja de diálogo de parámetros | [Página Opciones (II)/Nombres de dominio y métodos HTTP autorizados](../settings/web.md#domain-nameshttp-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
 
 Lista de hosts y métodos permitidos para el servicio CORS.
 
@@ -119,15 +119,15 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 | objeto webServer    | `debugLog`      | number      |
 | `WEB SET OPTION`    | `Web debug log` | number      |
 
-Estado del archivo de registro de peticiones HTTP del servidor web ([_HTTPDebugLog_nn.txt_](../Debugging/debugLogFiles.md#httpdebuglogtxt), almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
+Estado del archivo de registro de peticiones HTTP del servidor web ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
-| Valor | Constante                      | Descripción                                                                                                                      |
-| ----- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                                         |
-| 1     | wdl enable without body        | Los debug logs Web HTTP son activados sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
-| 3     | wdl enable with response body  | Los debug logs Web HTTP son activados con la partes del cuerpo únicamente                                                        |
-| 5     | wdl enable with request body   | Los debug logs Web HTTP son activados con la partes del cuerpo en la petición únicamente                                         |
-| 7     | wdl enable with all body parts | Los debug logs Web HTTP son activados con las partes del cuerpo en respuesta y petición                                          |
+| Valor | Constante                      | Descripción                                                                                                            |
+| ----- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                               |
+| 1     | wdl enable without body        | Web HTTP debug log activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
+| 3     | wdl enable with response body  | Web HTTP debug log activado con la partes del cuerpo únicamente                                                        |
+| 5     | wdl enable with request body   | Web HTTP debug log activado con la partes del cuerpo en la petición únicamente                                         |
+| 7     | wdl enable with all body parts | Web HTTP debug log activado con las partes del cuerpo en respuesta y petición                                          |
 
 ## Página de inicio por defecto
 
@@ -252,7 +252,7 @@ Pasa el tamaño expresado en bytes como valor. Por defecto, el umbral de compres
 
 Número de puerto IP (TCP) de escucha para HTTP. Por defecto, 4D publica una aplicación web en el puerto web HTTP normal (puerto TCP), que es el puerto 80. Si ese puerto ya es utilizado por otro servicio web, debe cambiar el puerto HTTP utilizado por 4D para esta base de datos.
 
-> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
+> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver macOS HelperTool).
 
 Desde un navegador web, es necesario incluir el número de puerto HTTP no predeterminado en la dirección que se introduce para conectarse a la aplicación web. La dirección debe tener un sufijo formado por dos puntos seguido del número de puerto. Por ejemplo, si está utilizando el puerto HTTP número 8080, especificará "123.4.567.89:8080".
 
@@ -357,7 +357,7 @@ Estado de activación de la gestión de sesiones heredada para el servidor web 4
 | `WEB SET OPTION`              | `Web log recording`                                                        |             |
 | Caja de diálogo de parámetros | [Página Historial(tipo)](../settings/web.md#log-format) | Menú popup  |
 
-Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Por defecto, las peticiones no se registran (0/Sin archivo de registro). Cuando se activa, el archivo _logweb.txt_ se coloca automáticamente en la carpeta Logs.
+Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Por defecto, las peticiones no se registran (0/Sin archivo de registro). Cuando se activa, el archivo *logweb.txt* se coloca automáticamente en la carpeta Logs.
 
 Este parámetro permite seleccionar el formato de este archivo. Valores disponibles:
 
@@ -504,7 +504,7 @@ En este caso, los robots no pueden acceder a todo el sitio.
 
 | Puede ajustarse con           | Nombre                                                                             | Comentarios                                                                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                                   | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()` |
+| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                                   | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro *settings* de la función `start()` |
 | `WEB SET ROOT FOLDER`         |                                                                                    |                                                                                                                                              |
 | Caja de diálogo de parámetros | [Página Configuración/Raíz HTML por defecto](../settings/web.md#default-html-root) |                                                                                                                                              |
 
@@ -599,7 +599,7 @@ Los parámetros siguientes siguen siendo compatibles, pero se basan en funcional
 
 #### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
-Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas _/4DSYNC_.
+Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
 
 #### Validación de la dirección IP de la sesión
 
@@ -624,7 +624,8 @@ En algunos casos, se pueden invocar otras funciones internas optimizadas. Las co
 Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión le permite evitar la inundación del servidor debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p>
-  El valor por defecto (100) puede aumentarse o disminuirse en función de los recursos de la máquina que aloja el Servidor Web 4D.</p>
+   El valor por defecto (100) puede aumentarse o disminuirse en función de los recursos de la máquina que aloja el Servidor Web 4D.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez transcurrido este periodo, el servidor cierra la conexión.<p>
-  Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>
+   Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>
+

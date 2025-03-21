@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->REGISTER CLIENT コマンドは、4Dクライアントステーションを、*clientName*で指定した名前で4D Serverに登録し、他のクライアントもしくは4D Server (ストアドプロシージャから) が登録されたマシン上で、[EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT")コマンドを使ってメソッドを実行できるようにします。<!-- END REF-->一旦登録されると、4Dクライアントは他のクライアント用に1つまたはそれ以上のメソッドを実行することができます。 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 一度コマンドが実行されると、4Dクライアント名を動的に変更することはできません。これを実行するには、UNREGISTERCLIENTコマンドを呼び出し、再度REGISTER CLIENTコマンドを呼び出します。
 
-#### 例題 
+## 例題 
 
 以下の例題では小さなメッセージングシステムを作成し、クライアントワークステーション間の通信を可能にします。  
   
@@ -110,17 +110,17 @@ displayed_sidebar: docs
  UNREGISTER CLIENT
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 4Dクライアントが正しく登録されるとOKシステム変数に1が設定されます。4Dクライアントが既に登録されている場合、コマンドはなにも行わずOKは0に設定されます。
 
-#### 参照 
+## 参照 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

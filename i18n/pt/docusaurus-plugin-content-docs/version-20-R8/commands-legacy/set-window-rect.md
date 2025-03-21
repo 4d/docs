@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->O comando SET WINDOW RECT modifica as coordenadas globais da janela cujo número de referência for passado em janela.<!-- END REF--> Se a janela não existir, o comando não faz nada.  
 
@@ -34,11 +34,11 @@ Por padrão, executar este comando, automaticamente move a janela designada pelo
   
 Este comando não afeta os objetos de formulário. Se a janela contiver um formulário, os objetos do formulário não são movidos ou redimensionados pelo comando (sem importar suas propriedades). Apenas se modifica a janela. Para modificar uma janela de formulário considerando suas propriedades de redimensionamento e os objetos que contém, deve utilizar o comando [RESIZE FORM WINDOW](resize-form-window.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Ver o exemplo do comando [WINDOW LIST](window-list.md).
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Dada a janela abaixo: 
 
@@ -54,14 +54,14 @@ A janela aparece desta forma:
 
 ![](../assets/en/commands/pict832313.pt.png)
 
-#### Ver também 
+## Ver também 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

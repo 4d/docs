@@ -25,7 +25,7 @@ title: VP SET DATA CONTEXT
 | options    | Object     | -> | Opções adicionais                                |                  |
 | sheet      | Integer    | -> | Índice da folha                                  | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. On the other hand, the [VP Get data context](vp-get-data-context.md) command can return a context containing user modifications.
 
@@ -42,16 +42,16 @@ Para passar um valor de tempo em *dataObj* ou *dataColl*, encapsule-o em um obje
 
 Em *options*, você pode passar um objeto que especifica opções adicionais. As propriedades possíveis são:
 
-| Propriedade         | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| reset               | Object | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| autoGenerateColumns | Object | Apenas utilizado quando os dados são uma coleção. True (default) to specify that columns must be generated automatically when the data context is bound. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). A primeira subcoleção determina o número de colunas criadas.</li></ul> |
+| Propriedade         | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reset               | Object | True para redefinir o conteúdo da planilha antes de carregar o novo contexto; caso contrário, False (padrão).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| autoGenerateColumns | Object | Apenas utilizado quando os dados são uma coleção. True (padrão) para especificar que as colunas devem ser geradas automaticamente quando o contexto de dados é vinculado. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). A primeira subcoleção determina o número de colunas criadas.</li></ul> |
 
 In *sheet*, pass the index of the sheet that will receive the data context. Se nenhum índice for passado, o contexto será aplicado à folha atual.
 
 If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
 
-#### Exemplo
+## Exemplo
 
 Passa um objeto e associa os dados de contexto às células da primeira linha:
 
@@ -72,7 +72,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Exemplo 2
+## Exemplo 2
 
 Passe uma coleção de objetos e gere colunas automaticamente:
 
@@ -89,7 +89,7 @@ $options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProAr
 
 ![](../../assets/en/ViewPro/vp-set-data-context-2.png)
 
-#### Exemplo 3
+## Exemplo 3
 
 The *data* passed as a parameter is a collection that contains subcollections. Cada subcoleção define o conteúdo de uma linha:
 
@@ -108,7 +108,7 @@ $options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProAr
 
 ![](../../assets/en/ViewPro/vp-set-data-context-3.png)
 
-#### Exemplo 4 - Sintaxe de data e hora
+## Exemplo 4 - Sintaxe de data e hora
 
 ```4d
 var $data : Collection
@@ -132,7 +132,7 @@ Eis o resultado após as colunas serem geradas:
 
 ![](../../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
-#### Veja também
+## Veja também
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get binding path](vp-get-binding-path.md)<br/>

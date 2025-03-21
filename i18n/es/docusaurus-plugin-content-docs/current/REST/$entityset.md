@@ -9,12 +9,12 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 | Sintaxis                                                                                                                                                                                     | Ejemplo                                                                      | Descripción                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera un conjunto de entidades existente                                                         |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera un conjunto de entidades existente                                                         |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crea un nuevo conjunto de entidades a partir de la comparación de conjuntos de entidades existentes |
 
 ## $entityset/\{entitySetID\}
 
-Recupera un conjunto de entidades existente (_p. ej._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Recupera un conjunto de entidades existente (*p. ej.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### Descripción
 

@@ -28,11 +28,11 @@ displayed_sidebar: docs
 | cid         | Text                              | &#8594;           | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
 | type        | Text                              | &#8594;           | Valor del encabezado content-type                                                                  |
 | disposition | Text                              | &#8594;           | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | &#8592;           | Objeto adjunto                                                                                     |
+| Resultado   | 4D.MailAttachment | &#8592;           | Objeto adjunto                                                                                     |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede agregar a un [objeto de Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -85,7 +85,7 @@ Por defecto, si se omite el parámetro *disposition*:
 - si se utiliza el parámetro *cid*, el encabezado `Content-disposition` se define en "inline",
 - si el parámetro *cid* no se pasa o está vacío, el encabezado `Content-disposition` se establece en "attachment".
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Desea enviar un correo electrónico con un archivo seleccionado por el usuario como adjunto y una imagen integrada en el cuerpo HTML:
 
@@ -123,7 +123,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Desea enviar un correo electrónico con un área 4D Write Pro como archivo adjunto:
 
@@ -149,9 +149,11 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1644                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1644                        |
+| Hilo seguro       | &check; |
+
+

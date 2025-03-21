@@ -14,7 +14,7 @@ title: VP SET CUSTOM FUNCTIONS
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | formulaObj | Object | -> | Objet formule                           | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
 
@@ -42,7 +42,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) command (if any) are ignored in the 4D View Pro area.
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
-#### Exemple
+## Exemple
 
 You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender and the company's peak month:
 
@@ -86,7 +86,7 @@ Case of
 End case
 ```
 
-#### Voir également
+## Voir également
 
 [4D functions](../formulas.md#4d-functions)<br/>
 [VP SET ALLOWED METHODS](vp-set-allowed-methods.md)<br/>

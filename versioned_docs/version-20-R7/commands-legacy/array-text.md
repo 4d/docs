@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TEXT.Summary-->The ARRAY TEXT command creates and/or resizes an array of [Text](# "A character string that may contain from 0 to 2 GB of text") elements in memory.<!-- END REF-->parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.
@@ -26,7 +26,7 @@ While applying ARRAY TEXT to an existing array:
 * If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to "" (empty string).
 * If you reduce the array size, the last elements deleted from the array are lost.
 
-#### Example 1 
+## Example 1 
 
 This example creates a process array of 100 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
 
@@ -34,7 +34,7 @@ This example creates a process array of 100 [Text](# "A character string that ma
  ARRAY TEXT(atValues;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates a local array of 100 rows of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
 
@@ -42,7 +42,7 @@ This example creates a local array of 100 rows of 50 [Text](# "A character strin
  ARRAY TEXT($atValues;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example creates an interprocess array of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements and sets each element to the value “Element #” followed by its element number:
 
@@ -55,7 +55,7 @@ This example creates an interprocess array of 50 [Text](# "A character string th
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Selection to JSON.Summary-->O comando **Selection to JSON** devolve uma cadeia JSON que contém os valores dos campos da seleção atual de *aTabela*.<!-- END REF--> Cada elemento do array é um objeto JSON contendo as etiquetas e valores dos campos da seleção.
 
@@ -35,7 +35,7 @@ Este comando suporta campos tipo Objeto: os dados desses campos são automaticam
 
 **Nota:** Depois de uma chamada a **Selection to JSON**, a seleção atual e registro atual permanecem o mesmo, mas o registro atual não é mais carregado. e poderia ter mudado (o último registro da seleçao atual é então o registro atual). Depois do comando Selection to JSON, utilize os comandos [LOAD RECORD](load-record.md) em combinação com [GOTO SELECTED RECORD](goto-selected-record.md) (se for necessário) utilize os valores dos campos no registro atual.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Quer criar uma cadeia JSON que represente esta seleção:
 
@@ -72,7 +72,7 @@ Quer criar uma cadeia JSON que represente esta seleção:
   // {"LastName":"Leonard"},{"LastName":"Pradel"}]
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Pode usar a sintaxe *modelo* para exportar campos de tabelas diferentes:
 
@@ -88,11 +88,11 @@ Pode usar a sintaxe *modelo* para exportar campos de tabelas diferentes:
  SET FIELD RELATION([Emp]UUID_Company;Structure configuration;Do not modify)
 ```
 
-#### Ver também 
+## Ver também 
 
 [JSON TO SELECTION](json-to-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->**BASE64 ENCODE** コマンドは、*toEncode* 引数に渡されたテキストまたはBlob値を、Base64 またはBase64URL フォーマットにエンコードします。<!-- END REF--> 
 
@@ -32,14 +32,14 @@ Bse64 エンコーディングは、8-bit のコードされたデータを編�
 
 デフォルトで、 *\** 引数が省略された場合、コマンドはBase64 エンコーディングを使用します。 *\** 引数を渡した場合、コマンドはBase64URL エンコーディングを使用します。
 
-#### 参照 
+## 参照 
 
 [BASE64 DECODE](base64-decode.md)  
 [Generate digest](generate-digest.md)  
 [XML DECODE](xml-decode.md)  
 *XML DOMコマンドの概要*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

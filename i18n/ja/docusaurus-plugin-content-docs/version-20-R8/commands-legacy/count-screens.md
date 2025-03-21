@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Count screens.Summary-->Count screensコマンドは、マシンに接続されている画面モニターの数を返します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN COORDINATES](screen-coordinates.md)  
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

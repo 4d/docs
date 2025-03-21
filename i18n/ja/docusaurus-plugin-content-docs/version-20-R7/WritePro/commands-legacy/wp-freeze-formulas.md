@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP FREEZE FORMULAS.Summary-->**WP FREEZE FORMULAS** コマンドは、*targetObj* 引数で指定したターゲット内のフォーミュラの中身を"固定化"させます。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 **警告:** *キャリーオーバー行* があった場合には、これらはtargetObj を固定化したときに通常の行へと変換されます。結果として、ページサイズや向きが変更された場合、あるいはドキュメントが書き出された場合、最終的なレイアウトにおいてはこれらは移動している可能性があります。
 
-#### 例題 
+## 例題 
 
 ドキュメント内のフォーミュラを固定化する場合:
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
  WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
 ```
 
-#### 参照 
+## 参照 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

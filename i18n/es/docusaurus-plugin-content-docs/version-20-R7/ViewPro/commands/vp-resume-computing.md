@@ -13,7 +13,7 @@ title: VP RESUME COMPUTING
 | ---------- | ---- | -- | -------------------------------------------- | ---------------- |
 | vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP RESUME COMPUTING` <!-- REF #_method_.VP RESUME COMPUTING.Summary --> reinicia el cálculo de las fórmulas en *vpAreaName*<!-- END REF -->.
 
@@ -23,11 +23,11 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 > El servicio de cálculo de 4D View Pro mantiene un contador de acciones de suspensión/reanudación. Por lo tanto, cada ejecución de `VP RESUME COMPUTING` debe equilibrarse con una ejecución correspondiente del comando [VP SUSPEND COMPUTING](vp-suspend-computing.md).
 
-#### Ejemplo
+## Ejemplo
 
 Ver ejemplo en [VP SUSPEND COMPUTING](vp-suspend-computing.md).
 
-#### Ver también
+## Ver también
 
 [VP RECOMPUTE FORMULAS](vp-recompute-formulas.md)<br/>
 [VP SUSPEND COMPUTING](vp-suspend-computing.md)

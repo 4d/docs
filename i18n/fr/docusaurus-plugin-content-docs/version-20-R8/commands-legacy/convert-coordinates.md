@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->La commande **CONVERT COORDINATES** permet de convertir les coordonnées (x;y) d'un point depuis un système de coordonnées vers un autre système de coordonnées.<!-- END REF--> Les systèmes de coordonnées pris en charge sont les formulaires (ainsi que les sous-formulaires), les fenêtres et l'écran. Par exemple, vous pouvez utiliser cette commande pour obtenir les coordonnées, dans le formulaire principal, d'un objet appartenant à un sous-formulaire. Ce principe facilite notamment la création de menus contextuels à des emplacements personnalisés. 
 
@@ -30,12 +30,12 @@ Dans le paramètre *depuis*, passez le système d'origine dans lequel sont expri
 | ----------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
 | XY Current form   | Entier long | 1      | L'origine est le coin supérieur gauche du formulaire courant                                                              |
 | XY Current window | Entier long | 2      | L'origine est le coin supérieur gauche de la fenêtre courante                                                             |
-| XY Main window    | Entier long | 4      | Windows : L'origine est le coin supérieur gauche de la fenêtre principale ; OS X : identique à XY Screen                  |
+| XY Main window    | Entier long | 4      | Windows : L'origine est le coin supérieur gauche de la fenêtre principale ; macOS : identique à XY Screen                  |
 | XY Screen         | Entier long | 3      | L'origine est le coin supérieur de l'écran principal (comme pour la commande [SCREEN COORDINATES](screen-coordinates.md)) |
 
 Lorsque cette commande est appelée depuis la méthode d'un sous-formulaire ou d'un objet du sous-formulaire, si l'un des sélecteurs est XY Current form, les coordonnées correspondantes sont relatives au sous-formulaire lui-même, et non celles de son formulaire parent. 
 
-Lorsque vous effectuez une conversion depuis/vers la position d'une fenêtre de formulaire (par exemple une conversion depuis les résultats de [GET WINDOW RECT](get-window-rect.md), ou vers des valeurs passées à [Open form window](open-form-window.md)), le sélecteur XY Main window doit être utilisé car il s'agit du système de coordonnées utilisé par les commandes de gestion des fenêtres sous Windows. Ce sélecteur peut également être utilisé dans ce but sous OS X, où il est équivalent à XY Screen.
+Lorsque vous effectuez une conversion depuis/vers la position d'une fenêtre de formulaire (par exemple une conversion depuis les résultats de [GET WINDOW RECT](get-window-rect.md), ou vers des valeurs passées à [Open form window](open-form-window.md)), le sélecteur XY Main window doit être utilisé car il s'agit du système de coordonnées utilisé par les commandes de gestion des fenêtres sous Windows. Ce sélecteur peut également être utilisé dans ce but sous macOS, où il est équivalent à XY Screen.
 
 Lorsque le sélecteur *depuis* contient XY Current form et que le point à convertir est situé dans la zone de corps d'un formulaire liste, le résultat dépend du contexte d'appel de la commande : 
 
@@ -43,7 +43,7 @@ Lorsque le sélecteur *depuis* contient XY Current form et que le point à conve
 * Si la commande est appelée en-dehors de l'événement On Display Detail mais qu'un enregistrement est en cours de modification, le point résultant est situé dans le périmètre d'affichage de l'enregistrement en cours d'édition.
 * Sinon, le point résultant est situé dans le périmètre d'affichage du premier enregistrement.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "MonObjet" :
 
@@ -66,7 +66,7 @@ Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la souris. Sous Windows, vous devez convertir les coordonnées car [MOUSE POSITION](mouse-position.md) (avec le paramètre \*) retourne des valeurs basées sur la position de la fenêtre MDI :
 
@@ -80,14 +80,14 @@ Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la sour
  CLOSE WINDOW($window)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

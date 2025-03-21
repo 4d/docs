@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->The **SET MACRO PARAMETER** command inserts the *paramText* text into the method from which it has been called.<!-- END REF-->
 
@@ -27,7 +27,7 @@ If text has been selected in the method, the *selector* parameter can be used to
 
 If no text has been selected, *paramText* is inserted into the method.
 
-#### Note 
+## Note 
 
  In order for the [GET MACRO PARAMETER](get-macro-parameter.md) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
 
@@ -37,7 +37,7 @@ If no text has been selected, *paramText* is inserted into the method.
 </macro>
 ```
 
-#### Example 
+## Example 
 
 This macro builds a new text that will be returned to the calling method:
 
@@ -53,11 +53,11 @@ This macro builds a new text that will be returned to the calling method:
   //Replaces the selected text by the new code
 ```
 
-#### See also 
+## See also 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

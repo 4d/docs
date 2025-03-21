@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-Uma caixa de combinação é semelhante a uma [lista suspensa] (dropdownList_Overview.md#overview), exceto pelo fato de que ela aceita texto digitado pelo teclado e tem opções adicionais.
+Uma caixa de combinação é semelhante a uma [lista suspensa] (dropdownList_Overview.md), exceto pelo fato de que ela aceita texto digitado pelo teclado e tem opções adicionais.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,13 +13,13 @@ Em outros aspectos, você deve tratar uma combo box como uma área editável que
 
 Use o evento [`On Data Change`] (Events/onDataChange.md) para gerenciar as entradas na área de entrada, como faria com qualquer objeto de formulário de entrada.
 
-Você inicializa uma caixa de combinação exatamente da mesma forma que uma [lista suspensa] (dropdownList_Overview.md#overview): usando um objeto, uma matriz ou uma lista de opções.
+Você inicializa uma caixa de combinação exatamente da mesma forma que uma [lista suspensa] (dropdownList_Overview.md): usando um objeto, uma matriz ou uma lista de opções.
 
 ### Utilização de um objecto
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-Um [objeto](Concepts/dt_object.md) encapsulando uma [coleção](../Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma caixa de combinação. O objeto deve conter as seguintes propriedades:
+Um [objeto](../Concepts/dt_object.md) encapsulando uma [coleção](../Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma caixa de combinação. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                                |
 | -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -55,7 +55,7 @@ Objetos do tipo combo box aceitam duas opções específicas referentes a listas
 - [Inserção automática](properties_DataSource.md#automatic-insertion): permite adicionar automaticamente um valor à fonte de dados quando um usuário insere um valor que não é encontrado na lista associada à caixa de combinação.
 - [Excluded List](properties_RangeOfValues.md#excluded-list) (lista de valores excluídos): permite definir uma lista cujos valores não podem ser inseridos na caixa de combinação. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 
-> A associação de uma [lista de valores obrigatórios] (properties_RangeOfValues.md#required-list) não está disponível para caixas de combinação. Em uma interface, se um objeto precisar propor uma lista finita de valores necessários, você deverá usar um objeto [drop-down list] (dropdownList_Overview.md#overview).
+> A associação de uma [lista de valores obrigatórios] (properties_RangeOfValues.md#required-list) não está disponível para caixas de combinação. Em uma interface, se um objeto precisar propor uma lista finita de valores necessários, você deverá usar um objeto [drop-down list] (dropdownList_Overview.md).
 
 ## Propriedades compatíveis
 

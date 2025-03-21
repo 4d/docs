@@ -16,13 +16,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->La commande **VOLUME ATTRIBUTES** retourne la taille, la place utilisée et la place libre sur le volume dont le nom est passé dans *volume*.<!-- END REF--> Ces valeurs sont exprimées en octets.
 
 **Note :** Si *volume* indique un volume distant non monté, la variable OK prend la valeur 0 et les trois paramètres retournent -1\. 
 
-#### Exemple 
+## Exemple 
 
 Votre application comprend des opérations par lots qui sont exécutées la nuit ou pendant le week-end. Ces opérations stockent des fichiers temporaires sur disque. Pour que cette méthode soit aussi autonome et souple que possible, vous écrivez une routine qui va automatiquement chercher et utiliser le premier volume ayant de la place disponible pour les fichiers temporaires. Voici la méthode :
 
@@ -94,11 +94,11 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [VOLUME LIST](volume-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

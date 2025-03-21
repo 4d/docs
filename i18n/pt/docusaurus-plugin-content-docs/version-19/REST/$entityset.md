@@ -9,12 +9,13 @@ Após [criar um conjunto de entidades]($method.md#methodentityset) utilizando `$
 
 | Sintaxe                                                                                                        | Exemplo                                                                            | Descrição                                                                                      |
 | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                                                    |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                                                    |
 | [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
 
 ## $entityset/\{entitySetID\}
 
 Recupera um conjunto de entidades existente (*, por exemplo,*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+
 
 ### Descrição
 

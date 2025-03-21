@@ -46,7 +46,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 //Code de la méthode base
 ```
 
-Alternativement, vous pouvez utiliser la syntaxe des [paramètres nommés](Concepts/parameters.md#named-parameters) :
+Alternativement, vous pouvez utiliser la syntaxe des [paramètres nommés](../Concepts/parameters.md) :
 
 ```4d
 // On Web Connection
@@ -160,7 +160,7 @@ Il existe deux méthodes pour soumettre un formulaire (toutes deux pouvant être
 
 > Lorsque le serveur Web reçoit un formulaire posté, il appelle la méthode base `On Web Authentication` (si elle existe).
 
-Dans la méthode appelée, vous devez utiliser la commande `WEB GET VARIABLES` afin de [récupérer les noms et les valeurs](#getting-values-from-the-requests) de tous les champs inclus dans une page HTML soumise au serveur.
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 Exemple pour définir l'action d'un formulaire :
 
@@ -279,7 +279,7 @@ Les principales caractéristiques de cette page sont les suivantes :
 - Elle comprend trois boutons **Submit** : `vsbLogOn`, `vsbRegister` et `vsbInformation`.
 - Lorsque vous cliquez sur **Log On**, la soumission du formulaire est d'abord traitée par la fonction JavaScript `LogOn`. Si aucun nom n'est saisi, le formulaire n'est même pas envoyé à 4D et une alerte JavaScript est affichée.
 - Le formulaire a une méthode 4D POST ainsi qu'un script Submit (*GetBrowserInformation*) qui copie les propriétés du navigateur dans les quatre objets cachés dont les noms commencent par *vtNav_App*.
-  Il inclut également l'objet `vtUserName`.
+ Il inclut également l'objet `vtUserName`.
 
 Examinons la méthode 4D `WWW_STD_FORM_POST` qui est appelée lorsque l'utilisateur clique sur l'un des boutons du formulaire HTML.
 

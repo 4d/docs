@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get subsection.Summary-->The **WP Get subsection** command returns first subsection intersected by the *targetObj* range or element, or to the specified *subSectionType* subsection of the *wpSection* section.<!-- END REF-->
 
@@ -36,7 +36,7 @@ If the range or element belongs to an anchored picture, an error is returned.
     
 If no *subSectionType* subsection is defined for the specified *wpSection*, the command returns an undefined object (no error is returned).
 
-#### Example 
+## Example 
 
 You want to apply a blue background on left pages:
 
@@ -55,7 +55,7 @@ You want to apply a blue background on left pages:
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get section](wp-get-section.md)  

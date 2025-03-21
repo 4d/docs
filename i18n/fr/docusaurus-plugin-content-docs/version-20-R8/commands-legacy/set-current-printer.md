@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->La commande **SET CURRENT PRINTER** permet de désigner l’imprimante à utiliser pour les impressions avec l’application 4D courante.<!-- END REF-->
 
@@ -31,22 +31,22 @@ Si vous passez une chaîne vide dans *nomImpr*, l’imprimante courante définie
 * **A partir de Windows 10 :**  
 Windows 10 inclut un pilote d'impression PDF natif, permettant à 4D de créer directement des PDFs sans qu'il soit nécessaire d'utiliser un pilote tiers comme PDFCreator.  
 Le nom du pilote est "Microsoft Print to PDF" (cf. exemple présenté dans la section [SET PRINTABLE MARGIN](set-printable-margin.md)).
-* **Sous OS X et à partir de Windows 10 (4D v15 R5 64 bits et suivantes) :**  
+* **Sous macOS et à partir de Windows 10 (4D v15 R5 64 bits et suivantes) :**  
 Une constante du thème *Options d'impression* vous permet de désigner automatiquement l'imprimante PDF générique, quelle que soit la plate-forme. Ce principe facilite l'écriture de code générique.  
 | Constante          | Type   | Valeur             | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |  
 | ------------------ | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| Generic PDF driver | Chaîne | \_4d\_pdf\_printer | **Note :** Cette fonctionnalité n'est pas disponible dans les versions 32 bits de 4D.<br/>Sous OS X, déclare le pilote par défaut comme imprimante courante. Ce pilote n'est pas visible et ne se trouve pas dans la liste retournée par la commande [PRINTERS LIST](printers-list.md). Notez que le chemin d’accès pour le document PDF doit être défini en utilisant la commande [SET PRINT OPTION](set-print-option.md), sinon l'erreur 3107 est retournée.Sous Windows, déclare le pilote PDF de Windows (nommé "Microsoft Print to PDF") comme imprimante courante. Cette constante est disponible sous Windows 10 uniquement, lorsque l'option PDF est installée. Avec d'autres versions de Windows, ou lorsqu'il n'y a pas de pilote PDF disponible, la commande ne fait rien et la variable système *OK* prend la valeur 0\. |
+| Generic PDF driver | Chaîne | \_4d\_pdf\_printer | **Note :** Cette fonctionnalité n'est pas disponible dans les versions 32 bits de 4D.<br/>Sous macOS, déclare le pilote par défaut comme imprimante courante. Ce pilote n'est pas visible et ne se trouve pas dans la liste retournée par la commande [PRINTERS LIST](printers-list.md). Notez que le chemin d’accès pour le document PDF doit être défini en utilisant la commande [SET PRINT OPTION](set-print-option.md), sinon l'erreur 3107 est retournée.Sous Windows, déclare le pilote PDF de Windows (nommé "Microsoft Print to PDF") comme imprimante courante. Cette constante est disponible sous Windows 10 uniquement, lorsque l'option PDF est installée. Avec d'autres versions de Windows, ou lorsqu'il n'y a pas de pilote PDF disponible, la commande ne fait rien et la variable système *OK* prend la valeur 0\. |
 
 La commande **SET CURRENT PRINTER** doit être appelée avant [SET PRINT OPTION](set-print-option.md) afin que les options disponibles correspondent à l'imprimante sélectionnée. En revanche, **SET CURRENT PRINTER** doit être appelée après *\_o\_PAGE SETUP* (le cas échéant), sinon le paramétrage d'imprimante n'est pas conservé.
 
 Cette commande peut être utilisée avec les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form.md), [QR REPORT](qr-report.md) et s’applique à toutes les impressions de 4D, y compris en mode Développement.  
 Les commandes d'impression doivent impérativement être appelées avec le paramètre *\>* (le cas échéant) afin que le paramétrage défini soit conservé. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la sélection d’imprimante est correctement effectuée, la variable système OK prend la valeur 1\. Dans le cas contraire (par exemple l’imprimante désignée est introuvable), la variable système OK prend la valeur 0 et l’imprimante courante est inchangée. 
 
-#### Exemple 
+## Exemple 
 
 Création d'un document PDF sous Windows :
 
@@ -60,12 +60,12 @@ Création d'un document PDF sous Windows :
  SET CURRENT PRINTER("")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

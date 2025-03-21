@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->La commande **OB SET ARRAY** permet de définir le *tableau* à associer à la *propriété* dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
@@ -28,7 +28,7 @@ Passez dans le paramètre *tableau* le tableau devant être passé comme valeur 
 * Les variables simples sont prises en charge dans le paramètre *tableau*, auquel cas un tableau à valeur unique est créé et associé à la propriété.
 * Il n’est pas possible d’utiliser de tableaux à deux dimensions.
 
-#### Exemple 1 
+## Exemple 1 
 
 Utilisation d’un tableau texte :
 
@@ -43,7 +43,7 @@ Utilisation d’un tableau texte :
      // Valeur de $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ajout d’un élément dans un tableau :
 
@@ -60,7 +60,7 @@ Ajout d’un élément dans un tableau :
      // $Employees = {"Employés":["Smith","White","Brown"]}
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Utilisation d’un tableau texte avec sélection d’un élément :
 
@@ -70,7 +70,7 @@ Utilisation d’un tableau texte avec sélection d’un élément :
      //$Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Utilisation d’un tableau objet :
 
@@ -99,7 +99,7 @@ L’objet est représenté ainsi dans le débogueur :
 
 ![](../assets/en/commands/pict1211436.fr.png)
 
-#### Exemple 5 
+## Exemple 5 
 
 Utilisation d'un champ objet :
 
@@ -113,15 +113,15 @@ Utilisation d'un champ objet :
 
 ![](../assets/en/commands/pict1899097.fr.png)
 
-#### Exemple 6 
+## Exemple 6 
 
-#### Voir aussi 
+## Voir aussi 
 
 *Conversions de type entre les collections et les tableaux 4D*  
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

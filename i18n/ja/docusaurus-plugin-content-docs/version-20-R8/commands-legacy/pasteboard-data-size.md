@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Pasteboard data size.Summary-->Pasteboard data size コマンドを使用して、*dataType* に渡したデータがペーストボード内に存在するかどうかを調べることができます。<!-- END REF--> 
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 * ペーストボードがファイルパス名を含む場合、ファイルパス名を返す[Get file from pasteboard](get-file-from-pasteboard.md "Get file from pasteboard") コマンドを使用します。
 * 上記以外の任意のデータタイプに対しては、データをBLOBに返す[GET PASTEBOARD DATA](get-pasteboard-data.md "GET PASTEBOARD DATA")を使用します。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードは、ペーストボードにピクチャーが存在するかどうかをテストし、存在する場合にはそのピクチャーを4D変数にコピーします:
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 通常、アプリケーションはテキストタイプまたはピクチャタイプのデータをペーストボードにカットおよびコピーします。これは、ほとんどのアプリケーションでこの2つの標準データタイプが認識されているためです。ただし、アプリケーションは1つのデータを複数の異なるインスタンスのフォーマットでペーストボードに追加することができます。例えば、スプレッドシートの一部をカットまたはコピーするたびに、スプレッドシートアプリケーションはそのデータをSYLKフォーマットやTEXTフォーマットの他に、仮想的なSPSHフォーマットでも追加することができます。SPSHインスタンスにはアプリケーションのデータ構造を使用してフォーマットされたデータが含まれています。SYLK形式には同じデータが含まれていますが、SYLKフォーマットを用いると、他の多くのスプレッドシートプログラムからも認識されます。最後に、TEXTフォーマットには同じデータが含まれますが、SYLKやSPSHフォーマットに含まれる追加のな情報は入っていません。この点で、4Dとその仮想的なスプレッドシートアプリケーション間でのカット/コピー/ペーストルーチンを記述する際に、SPSHフォーマットの内容を知り、SYLKデータの解析準備ができた場合には、以下のようなコードを作成することができます:
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 つまり、オリジナルの情報の大部分を含むデータのインスタンスをペーストボードから取り出そうとしています。
 
-#### 例題 3 
+## 例題 3 
 
 You want to drag some private data from different objects in your form. You can write:
 
@@ -82,18 +82,18 @@ You want to drag some private data from different objects in your form. You can 
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 *Pasteboard*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Count XML attributes.Summary-->O comando DOM Count XML attributes devolve o número dos atributos XML presentes no elemento XML determinado por *refElemento*.<!-- END REF--> Para maior informação sobre os atributos XML, consulte a seção *Visão Geral dos comandos XML DOM* .
 
-#### Exemplo 
+## Exemplo 
 
 Antes de recuperar os valores dos elementos em um array, caso você queira conhecer o número de atributos no elemento abaixo: 
 
@@ -45,15 +45,15 @@ No exemplo anterior, $numAtributos é igual a 3, tAtrib{1} contém “Font,” t
 
 **Nota:** O número de índice não corresponde à localização do atributo no arquivo XML mostrado na forma de texto. Em XML, o índice de um atributo indica sua posição entre os atributos classificados por ordem alfabética (dependendo de seu nome).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável sistema OK assume o valor 1\. Se ocorre um erro, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

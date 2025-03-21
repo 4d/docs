@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The **WP Import document** command<!--REF #_command_.WP Import document.Summary--> converts an existing 4D Write Pro / 4D Write document (.4wp, .4w7 or .4wt) or MS Word document (.docx) to a new 4D Write Pro object.<!-- END REF-->
+El comando **WP Import document**<!--REF #_command_.WP Import document.Summary--> convierte un documento 4D Write Pro / 4D Write (.4wp, .4w7 o .4wt) o documento MS Word (.docx) en un nuevo objeto 4D Write Pro.<!-- END REF-->
 
 You can pass either a *filePath* or *fileObj*:
 
@@ -41,7 +41,7 @@ The optional *option* parameter allows defining import options for:
 
 - **longint**
 
-By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant, HTML expressions will be imported as raw text within `##htmlBegin##` and `##htmlEnd##` tags -- which will require formatting actions afterward. Por ejemplo:
+By default, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). Si pasa la constante wk import html expressions as text, Las expresiones HTML se importarán como texto sin formato dentro de las etiquetas `##htmlBegin##` y `##htmlEnd##` -- las cuales requerirán acciones de formato posteriores. Por ejemplo:
 
 ```html
 ##htmlBegin##Imported titlebold##htmlEnd##  
@@ -51,11 +51,11 @@ By default, HTML expressions inserted in legacy 4D Write documents are not impor
 
 You can pass an object to define how the following attributes are handled during the import operation:
 
-| **Atributo**            | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Atributo**            | **Tipo** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | anchoredTextAreas       | Text     | For MS Word (.docx) documents only. Specifies how Word anchored text areas are handled. Available values:<br/><br/> **anchored** (default) - Anchored text areas are treated as text boxes. **inline** \- Anchored text areas are treated as inline text at the position of the anchor. **ignore** \- Anchored text areas are ignored. **Note**: The layout and the number of pages in the document may change. See also *How to import .docx format*                                                                                                                                                                                                                                                                                   |
 | anchoredImages          | Text     | For MS Word (.docx) documents only. Specifies how anchored images are handled. Available values:<br/><br/> **all** (default) - All anchored images are imported as anchored images with their text wrapping properties (exception: the .docx wrapping option "tight" is imported as wrap square). **ignoreWrap** \- Anchored images are imported, but any text wrapping around the image is ignored. **ignore** \- Anchored images are not imported.                                                                                                                                                                                                                                                                                 |
-| sections                | Text     | For MS Word (.docx) documents only. Specifies how section are handled. Available values:<br/><br/> **all** (default) - All sections are imported. Continuous, even, or odd sections are converted to standard sections. **ignore** \- Sections are converted to default 4D Write Pro sections (A4 portrait layout without header or footer). **Note**: Section breaks of any type but continuous are converted to section breaks with page break. Continuous section breaks are imported as continuous section breaks.                                                                                                                                                                                                |
+| secciones               | Text     | For MS Word (.docx) documents only. Specifies how section are handled. Available values:<br/><br/> **all** (default) - All sections are imported. Continuous, even, or odd sections are converted to standard sections. **ignore** \- Sections are converted to default 4D Write Pro sections (A4 portrait layout without header or footer). **Note**: Section breaks of any type but continuous are converted to section breaks with page break. Continuous section breaks are imported as continuous section breaks.                                                                                                                                                                                                |
 | fields                  | Text     | For MS Word (.docx) documents only. Specifies how .docx fields that can't be converted to 4D Write Pro formulas are handled. Available values:<br/><br/> **ignore** \- .docx fields are ignored. **label** \- .docx field references are imported as labels within double curly braces ("{{ }}"). Ex: The "ClientName" field would be imported as {{ClientName}}. **value** (default) - The last computed value for the .docx field (if available) is imported. **Note**: If a .docx field corresponds to a 4D Write Pro variable, the field is imported as a formula and this option is ignored. |
 | borderRules             | Text     | For MS Word (.docx) documents only. Specifies how paragraph borders are handled. Available values:<br/><br/> **collapse** \- Paragraph formatting is modified to mimic automatically collapsed borders. Note that the collapse property only applies during the import operation. If a stylesheet with a automatic border collapse setting is reapplied after the import operation, the setting will be ignored. **noCollapse** (default) - Paragraph formatting is not modified.                                                                                                                                                                                                                                                                                        |
 | preferredFontScriptType | Text     | For MS Word (.docx) documents only. Specifies the preferred typeface to use when different typefaces are defined for a single font property in OOXML. Available values:<br/><br/> **latin** (default) - Latin script **bidi** \- Bidrectional script. Suitable if document is mainly bidirectional left-to-right (LTR) or right-to-left (RTL) text (e.g., Arabic or Hebrew). **eastAsia** \- East Asian script. Suitable if document is mainly Asian text.                                                                                                                                                                                                                     |
@@ -67,14 +67,14 @@ You can pass an object to define how the following attributes are handled during
 - *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Legacy character style sheets are not imported and are no longer referenced in the document.*
 - *Support for importing in .docx format is only certified for Microsoft Word 2010 and newer. Older versions, particularly Microsoft Word 2007, may not import correctly.*
 
-#### Ejemplo 1
+## Ejemplo 1
 
 ```4d
  var WPDoc : Object
  WPDoc:=WP Import document("C:\\documents\\4DWriteDocs\\Letter.4w7")
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to import a .docx document and would like that paragraph borders are collapsed as they are in MS Word:
 
@@ -103,7 +103,7 @@ You want to import a .docx document whose text is mostly in Japanese:
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 You want to import a document on disk using a File object:
 
@@ -115,6 +115,6 @@ $file:=File("/RESOURCES/myFile.4wp")
 WParea:=WP Import document($file)
 ```
 
-#### Ver también
+## Ver también
 
 [WP New](../commands-legacy/wp-new.md)

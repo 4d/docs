@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->The **OBJECT Get style sheet** command returns the name of the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -37,16 +37,16 @@ The command can return either:
 
 If the command designates several objects, the style sheet returned is only meaningful if the style sheet is assigned to all of the objects. 
 
-#### Compatibility Note 
+## Compatibility Note 
 
 In **project architecture**, only the three automatic style sheets are supported by this command. 
 
-#### See also 
+## See also 
 
 *Font Styles*  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

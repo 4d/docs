@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RELATE ONE.Summary-->RELATE ONE aceita duas sintaxes.<!-- END REF-->  
   
@@ -42,11 +42,11 @@ Um usuário pode digitar LLC@ para ver uma lista de empresas cujos nomes começa
 
 Especificar *choiceField* é o mesmo que especificar uma escolha coringa quando estabeleça uma relação tabela. Para mais informação sobre especificar uma escolha coringa, veja o manual de Design 4D. 
 
-##### 
+### 
 
 **Nota:** Este comando não é compatível com campos tipo Objeto
 
-#### Exemplo 
+## Exemplo 
 
 No exemplo a seguir, a tabela *\[Faturas\]* está relacionada a tabela *\[Clientes\]* por duas relações manuais. Uma relação parte do campo *\[Faturas\]Cobrar de* ao campo *\[Clientes\]ID*, e a outra relação vai de *\[Faturas\]Enviar* a \[*Clientes\]ID*. #note\] \\\\srv-ftp-private.private.4d.fr\\FTP-PRIVATE\\International\\Filiales\\For\_All\\4Dv15DatabasesForDoc\[#/note\]  
   
@@ -81,16 +81,16 @@ Este é o método de objeto para o campo *\[Faturas\]Enviar a:*
  vCodigo2:=[Clientes]CodigoPostal
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente e se os registros relacionados forem carregados, a variável sistema OK toma o valor 1\. Se o usuário clicar em **Cancelar** na caixa de diálogo de selecção do registro (que aparece quando o registro relacionado tiver sido modificado), a variável ***OK*** toma o valor 0\. 
 
-#### Ver também 
+## Ver também 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

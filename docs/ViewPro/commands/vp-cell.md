@@ -17,7 +17,7 @@ title: VP Cell
 |Result|Object|<-|Range object of a single cell|
 <!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range object referencing a specific cell<!-- END REF -->.
 
@@ -33,7 +33,7 @@ In the optional *sheet* parameter, you can indicate the index of the sheet where
 
 > indexing starts at 0.
 
-#### Example  
+## Example  
 
 You want to define a range object for the cell shown below (on the current spreadsheet):
 
@@ -45,7 +45,7 @@ The code would be:
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### See also
+## See also
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

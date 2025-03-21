@@ -12,16 +12,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.CANCEL.Summary-->The **CANCEL** command is used in form or object methods (or in a subroutine) to:
+The **CANCEL** command is used in form or object methods (or in a subroutine) to:
 
-* cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
+* cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
 * cancel a form displayed with the [DIALOG](../commands/dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
 * cancel the printing of a form that is about to be printed using the [Print form](../commands/print-form.md) command (see below).
 
-In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).
+<!--REF #_command_.CANCEL.Summary-->In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).<!-- END REF-->
 
 **CANCEL** is commonly executed as a result of a menu command being chosen. **CANCEL** is also commonly used in the object method of a “no action” button.
 
@@ -33,25 +33,25 @@ Finally, this command can be used in the On Printing Detail form event, when usi
 
 **Note:** This operation differs from that of the [PAGE BREAK](page-break.md)(\*) command that cancels ALL the forms waiting to be printed.
 
-##### Headless mode 
+### Headless mode 
 
 The **CANCEL** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 When the [CANCEL](cancel.md) command is executed (form or printing cancelled), the system variable OK is set to 0.
 
-#### See also 
+## See also 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

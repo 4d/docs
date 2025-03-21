@@ -15,12 +15,12 @@ title: Pointer
 
 | 型      | 参照時                     | 使用時                      | 代入時                      |
 | ------ | ----------------------- | ------------------------ | ------------------------ |
-| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | 変数     | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | 配列     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## ポインターの使用例
@@ -86,14 +86,14 @@ $MyVar:="Goodbye"
 |     |                   |         | vPtrA # vPtrB | false |
 
 
-:::warning Null Pointers
+:::警告 Null ポインター
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例:
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // 初期化されていないポインター (Nil 値)
+$v:=$p-> // エラー
+$p->:=$v // エラー
 ```
 
 このようなエラーを防ぐためには、以下のような書き方をすることができます:
@@ -146,7 +146,7 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 プロセス変数またはローカル変数のポインターを使う場合、参照される変数はポインターが使用される時点ですでに定義されていなければなりません。 ローカル変数は、それらを作成したメソッドの実行が終わると破棄され、プロセス変数もそれを作成したプロセスの終了時に削除される点に留意してください。 存在しない変数をポインターで呼び出そうとすると、インタープリターモードでは (「変数が設定されていません」という内容の) シンタックスエラーが起きます。コンパイルモードでは、さらに重大なエラーが発生する可能性があります。
 
-ローカル変数のポインターを使用すると、プロセス変数の使用を控えることができます。 ローカル変数へのポインターは、同じプロセス内でのみ使用することができます。 デバッガーにおいて、別のメソッドで宣言されたローカル変数へのポインターを表示すると、ポインターの後ろの括弧内にそのメソッド名が表示されます。 For example, if you write in *Method1*:
+ローカル変数のポインターを使用すると、プロセス変数の使用を控えることができます。 ローカル変数へのポインターは、同じプロセス内でのみ使用することができます。 デバッガーにおいて、別のメソッドで宣言されたローカル変数へのポインターを表示すると、ポインターの後ろの括弧内にそのメソッド名が表示されます。 例として、*Method1* で以下のように書いたとします:
 
 ```4d
  $MyVar:="Hello world"
@@ -201,12 +201,10 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ポインターは引数としてメソッドに渡すことができます。 メソッド内で、ポインターの参照先の値を変更することができます。 たとえば、以下のメソッド `takeTwo` は、2つのポインターを引数として受け取ります。 そして、最初の引数の参照先を大文字に変換し、2つめの引数の参照先を小文字に変換します。 当該プロジェクトメソッドのコードです:
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. これを大文字に変換します。
-  これを大文字に変換します。
-  //$changeLow – Pointer to a string field or variable. これを小文字に変換します。
- これを小文字に変換します。
- #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  //takeTwo プロジェクトメソッド
+  //$changeUp – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
+  //$changeLow – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
+  #DECLARE($changeUp : Pointer ; $changeLow : Pointer) 
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```

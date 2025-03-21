@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR LIST.Summary-->La commande **CLEAR LIST** efface de la mémoire la liste hiérarchique dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Si vous voulez supprimer une sous-liste rattachée à un élément (à tout nive
 2\. Appelez [SET LIST ITEM](set-list-item.md) avec l'élément parent pour dissocier la sous-liste de l'élément de liste avant de l'effacer.  
 3\. Appelez **CLEAR LIST** pour effacer la sous-liste dont vous avez obtenu le numéro de référence à l'aide de [GET LIST ITEM](get-list-item.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous disposez, dans votre application, d'une routine de "nettoyage" chargée d'effacer tous les objets et données dont vous n'avez plus besoin lorsque, par exemple, une fenêtre ou un formulaire est refermé(e). A un endroit de cette routine, vous supprimez une liste hiérarchique qui peut avoir déjà été supprimée, suivant les actions de l'utilisateur dans le formulaire. Vous utilisez la fonction [Is a list](is-a-list.md) pour effacer la liste uniquement si c'est nécessaire :
 
@@ -38,21 +38,21 @@ Vous disposez, dans votre application, d'une routine de "nettoyage" chargée d'e
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la fonction [Load list](load-list.md).
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

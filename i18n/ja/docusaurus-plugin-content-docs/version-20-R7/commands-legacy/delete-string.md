@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Delete string.Summary-->Delete stringは、*where*から*numChars*分の文字を*source*から削除した文字列を返します。<!-- END REF-->  
   
@@ -29,7 +29,7 @@ Delete stringは、以下のような場合に*source*と同じ文字列を返�
   
 *where*と*numChars*の和が*source*の長さと等しいかまたは大きい場合は、*where*から文字列の最後まで文字を削除します。
 
-#### 例題 
+## 例題 
 
 Delete stringの使用例を次に示します。結果を変数*vtResult*に代入します。
 
@@ -39,13 +39,13 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
  vtResult:=Delete string(vtOtherVar;3;32000) // vtResultはvtOtherVarの最初の2文字のみ
 ```
 
-#### 参照 
+## 参照 
 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -11,7 +11,7 @@ Forms provide the interface through which information is entered, modified, and 
 Forms can also contain other forms through the following features:
 
 - [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## Creating forms
 
@@ -19,7 +19,7 @@ You can add or modify 4D forms using the following elements:
 
 - **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
 - **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
-- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Example:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). Example:
 
 ```
 {

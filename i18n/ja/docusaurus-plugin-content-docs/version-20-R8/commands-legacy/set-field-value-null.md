@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->SET FIELD VALUE NULL コマンドは、*aField* 引数によって指定されたフィールドにNULL値を割り当てます。<!-- END REF--> 
 
@@ -24,12 +24,12 @@ NULL値は、4DのSQLカーネルによって使用されます。詳細につ�
 * ストラクチャエディタレベルで、4DフィールドへのNULL値を非許可にすることができます(Design Referenceマニュアルを参照) 。
 * **SET FIELD VALUE NULL** はオブジェクトフィールドの中身を消去します。
 
-#### 参照 
+## 参照 
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

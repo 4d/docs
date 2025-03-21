@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.POST CLICK.Summary-->El comando POST CLICK simula un clic del ratón.<!-- END REF--> Tiene el mismo efecto que cuando el usuario hace clic en el botón del ratón. 
 
@@ -24,12 +24,12 @@ Pase las coordenadas horizontal y vertical del clic en *ratonX* y *ratonY*. Si p
 
 Si especifica el parámetro proceso *proceso*, el clic se envía al proceso cuyo número de proceso se pasa en *proceso*. Si pasa *0* (cero) o si omite el parámetro, el clic se envía a nivel de la aplicación y el planificador 4D la enviará al proceso apropiado.
 
-#### Ver también 
+## Ver también 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

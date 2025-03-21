@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->DOM Append XML child node コマンドを使用して、*elementRef*で指定したXMLノードに*childValue*の値を追加できます。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **Note:** *elementRef* がドキュメントノード (トップレベルノード) を指す場合、コマンドは他のノードの前に"Doctype"ノードを挿入します。同じことが処理命令やコメントにも言えます。これらは常にルートノードの前 (かつDoctypeノードの後) に挿入されます。
 
-#### 例題 1 
+## 例題 1 
 
 テキストタイプのノードを追加します:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 <myElement>Hello<br/>New<br/>York</myElement>
 ```
 
-#### 例題 2 
+## 例題 2 
 
 処理命令タイプのノードを追加します:
 
@@ -70,7 +70,7 @@ displayed_sidebar: docs
 <?xml-stylesheet type="text/xsl"  href="style.xsl"?>
 ```
 
-#### 例題 3 
+## 例題 3 
 
 コメントタイプのノードを追加する:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
 <!--Hello  world-->
 ```
 
-#### 例題 4 
+## 例題 4 
 
 CDATAタイプのノードを追加する:
 
@@ -98,7 +98,7 @@ CDATAタイプのノードを追加する:
 <element><![CDATA[12  < 18]]></element>
 ```
 
-#### 例題 5 
+## 例題 5 
 
 Doctype 線減退のノードを追加あるいは置き換える:
 
@@ -112,7 +112,7 @@ Doctype 線減退のノードを追加あるいは置き換える:
 <!DOCTYPE  Books SYSTEM  "Book.DTD">
 ```
 
-#### 例題 6 
+## 例題 6 
 
 要素タイプのノードを追加あるいは置き換える。
 
@@ -142,12 +142,12 @@ Result:
 
 *childValue* の内容が有効でない場合、エラーが返されます。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

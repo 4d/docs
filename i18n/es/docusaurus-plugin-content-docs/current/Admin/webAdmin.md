@@ -26,7 +26,7 @@ Seleccione la opción **Iniciar servidor WebAdmin al inicio** en la caja de diá
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento _Interfaz de línea de comandos_:
+- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento *Interfaz de línea de comandos*:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -50,7 +50,7 @@ La configuración del componente `WebAdmin` es obligatoria, en particular para d
 
 Puede configurar el componente `WebAdmin` utilizando la [caja de diálogo Parámetros de la administración web](#settings-dialog-box) (ver abajo).
 
-> Si utiliza una aplicación 4D sin interfaz, puede utilizar los [argumentos de la _Interfaz de Línea de Comandos_](#webadmin-headless-configuration) para definir la configuración básica. Tendrá que personalizar el archivo de configuración para definir los parámetros avanzados.
+> Si utiliza una aplicación 4D sin interfaz, puede utilizar los [argumentos de la *Interfaz de Línea de Comandos*](#webadmin-headless-configuration) para definir la configuración básica. Tendrá que personalizar el archivo de configuración para definir los parámetros avanzados.
 
 ### Caja de diálogo de parámetros
 
@@ -64,7 +64,7 @@ Se muestra la siguiente caja de diálogo:
 
 #### Iniciar el servidor WebAdmin al inicio
 
-Marque esta opción si desea que el servidor web `WebAdmin` se lance automáticamente cuando la aplicación 4D o 4D Server se inicie ([ver arriba](#lanzamiento-al-inicio)). Por defecto, esta opción no está seleccionada.
+Marque esta opción si desea que el servidor web `WebAdmin` se lance automáticamente cuando la aplicación 4D o 4D Server se inicie ([ver arriba](#launch-at-startup)). Por defecto, esta opción no está seleccionada.
 
 #### Conexiones HTTP en localhost aceptadas
 
@@ -93,7 +93,7 @@ Ruta de la carpeta donde se encuentran los archivos del certificado TLS. Por def
 
 #### Modo de registro de depuración
 
-Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog__nn_.txt, almacenado en la carpeta "Logs" de la aplicación -- _nn_ es el número de archivo). Las siguientes opciones están disponibles:
+Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog_*nn*.txt, almacenado en la carpeta "Logs" de la aplicación -- *nn* es el número de archivo). Las siguientes opciones están disponibles:
 
 - **Desactivado** (por defecto)
 - **Con todas las partes del body** - activado con las partes del cuerpo en respuesta y petición
@@ -110,7 +110,7 @@ La configuración de una llave de acceso es obligatoria para desbloquear el acce
 Una llave de acceso es similar a una contraseña pero no está asociada a un inicio de sesión.
 
 - Para definir una nueva llave de acceso: haga clic en el botón **Definir**, introduzca la cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**. La etiqueta del
-  botón se convierte en **Modificar**.
+    botón se convierte en **Modificar**.
 - Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
 - Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
 
@@ -153,3 +153,5 @@ Ejemplo:
 - Cuando se accede a una página de gestión web directamente desde un elemento de menú de 4D o 4D Server (como **Registros > Explorador de datos** o **Ventana > Explorador de datos** (4D Server)), el acceso se concede sin autenticación, el usuario se autentifica automáticamente.
 
 Una vez concedido el acceso, se crea una [sesión web](WebServer/sessions.md) con el privilegio "WebAdmin" en la aplicación 4D. Mientras la sesión actual tenga el privilegio "WebAdmin", el componente `WebAdmin` entrega las páginas solicitadas.
+
+

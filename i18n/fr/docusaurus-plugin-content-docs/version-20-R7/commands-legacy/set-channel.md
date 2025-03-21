@@ -51,14 +51,14 @@ Le tableau suivant liste les valeurs possibles du paramètre *port* :
 
 **Important :** La valeur que vous passez dans *port* doit désigner un port série "logique" reconnu par votre système d'exploitation. Par exemple, pour que vous puissiez utiliser les valeurs 101, 203 et 325, les ports série COM1, COM3 et COM25 doivent avoir été correctement configurés. 
 
-##### Note sur les ports série 
+### Note sur les ports série 
 
 En standard, les systèmes Mac OS et Windows reconnaissent deux ports série logiques : sous Mac OS, le port modem et le port imprimante ; sous Windows, les ports COM1 et COM2\. Toutefois, des ports série supplémentaires peuvent être ajoutés, par l'intermédiaire de cartes d'extension. 4D n’adressait à l'origine que les deux ports série standard, et a intégré par la suite la gestion des ports série supplémentaires. Pour des raisons de compatibilité, les deux systèmes d’adressage ont été conservés.  
 
 * Si vous souhaitez adresser uniquement un port série standard (imprimante/COM2 ou modem/COM1), vous pouvez passer dans le paramètre *port* soit une des valeurs 0, 1, 20, 21, 30 et 31 (correspondant à l’ancien mode de fonctionnement de 4D), soit une valeur > 100 (cf. ci-dessous).
 * Si vous souhaitez adresser des ports série "étendus", vous devez passer dans *port* (pour adresser le Nième port série) la valeur N+100, augmentée éventuellement de 100 ou de 200, si vous voulez utiliser respectivement un protocole logiciel ou matériel.
 
-##### Exemple 1 
+### Exemple 1 
 
 Vous souhaitez utiliser le port imprimante/COM2 sans protocole, vous pouvez utiliser l'une des syntaxes suivantes :
 
@@ -72,7 +72,7 @@ ou
  SET CHANNEL(102;param)
 ```
 
-##### Exemple 2 
+### Exemple 2 
 
 Vous souhaitez utiliser le port modem/COM1 avec le protocole XON/XOFF, vous pouvez utiliser l'une des syntaxes suivantes :
 
@@ -86,7 +86,7 @@ ou
  SET CHANNEL(201;param)
 ```
 
-##### Exemple 3 
+### Exemple 3 
 
 Vous souhaitez utiliser le port COM25 avec le protocole RTS/CTS, vous devez utiliser la syntaxe suivante : 
 
@@ -152,7 +152,7 @@ La première colonne fournit les valeurs possibles du paramètre *opération*. L
 
 Toutes les opérations décrites dans ce tableau modifient la variable système Document en conséquence. De plus, la variable système OK prend la valeur 1 si l'opération s'est déroulée correctement, 0 sinon.
 
-##### Exemple 4 
+### Exemple 4 
 
 Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) et [RECEIVE RECORD](receive-record.md).
 

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB Instance of.Summary-->El comando **OB Instance of** devuelve true si *objeto* pertenece a *clase* o una de sus clases hijo, y en caso contrario false.<!-- END REF-->
 
 Si *clase* no es un objeto Clase válido, se devuelve el error -10745.
 
-#### Ejemplo 
+## Ejemplo 
 
 Creó la clase Polygon:
 
@@ -50,11 +50,11 @@ Luego, en un método, puede escribir:
   // false
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Class](ob-class.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

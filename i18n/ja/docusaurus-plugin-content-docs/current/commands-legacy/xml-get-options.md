@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->**XML GET OPTIONS** コマンドは、カレントセッションおよびカレントユーザで使用されている1つ以上のXMLパラメタの現在値を取得するために使用します。<!-- END REF-->引数に返されます:
 
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 | XML string encoding            | 倍長整数 | 1 | 4D文字列を要素値に変換する方法を指定します。これはXMLでエスケープ文字の利用が必須である属性の変換には影響しません。<br/>とりうる値:<br/>XML With escaping (デフォルト値): 4D文字列をXML要素値に変換する際、文字の置き換えを行います。テキスト型のデータは自動で解析され、禁止されている文字 (<&>") はXML実体参照 (&<> '") に置き換えられます。XML Raw data: 4D文字列は生データとして送信されます。4Dはエンコードや解析を行いません。4Dの値は可能であればXMLフラグメントに変換され、ターゲット要素の子要素として挿入されます。値をXMLフラグメントとして扱えない場合、新しいCDATAノードに生データとして挿入されます。                                                                                                                                                                                                                                                                                                                                         |
 | XML time encoding              | 倍長整数 | 3 | 4Dの時間を変換する方法を指定します。例：?02/00/46? (日本時間)。エンコーディングは時刻を表すか時間を表すかにより異なります。<br/>時刻の場合:<br/>XML Datetime UTC: UTC (Universal Time Coordinated) で表現された時刻。UTCへの変換は自動です。結果: "<Duration>0000-00-00T17:00:46Z</Duration>".XML Datetime local: 時刻は4Dエンジンが実行されているマシンの時差を使用して表現されます。結果: "<Duration>0000-00-00T02:00:46+09:00</Duration>".XML Datetime local absolute (デフォルト値): 時刻は時差なしで表現されます。値は変更されません。結果: "<Duration>0000-00-00T02:00:46</Duration>". 時間の場合:<br/>XML Seconds: 00:00:00からの経過秒数。時間をあらわすため、値は変更されません。結果: "<Duration>7246</Duration>".XML Duration: XML Schema Part 2に準拠した時間表現。時間をあらわすため、値は変更されません。結果: "<Duration>PT02H00M46S</Duration>".                                                 |
 
-#### 参照 
+## 参照 
 
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

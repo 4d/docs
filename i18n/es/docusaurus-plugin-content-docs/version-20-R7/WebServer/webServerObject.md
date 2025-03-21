@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //el valor de $nbSrv es 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](commands/web-server.md) command:
+Para instanciar un objeto servidor web, llame al comando [`WEB Server`](commands/web-server.md):
 
 ```4d
 //crear una variable objeto de la clase 4D.WebServer
@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funciones del servidor web
 
-Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
+Un [objeto de clase Web srver](API/WebServerClass.md../commands/web-server.md-object) contiene las siguientes funciones:
 
 | Funciones                                | Parámetros                          | Valor devuelto                     | Descripción             |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------- | ----------------------- |
@@ -86,7 +86,7 @@ $status:=webServer.stop()
 
 ## Propiedades del servidor web
 
-Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
+Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md../commands/web-server.md-object) que configuran el servidor web.
 
 Estas propiedades son definidas:
 

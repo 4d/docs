@@ -7,4 +7,4 @@ Os seguintes eventos de formulário estão disponíveis na lista de propriedades
 
 ![](vpFormEvents.PNG)
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Os eventos específicos do formulário 4D View Pro fornecem informação adicional no objecto devolvido pelo comando `FORM Event` quando são gerados para as áreas 4D View Pro. O quadro seguinte mostra que eventos são padrão e quais são eventos específicos do formulário View Pro 4D:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Os eventos específicos do formulário 4D View Pro fornecem informação adicional no objecto devolvido pelo comando `FORM Event` quando são gerados para as áreas 4D View Pro. O quadro seguinte mostra que eventos são padrão e quais são eventos específicos do formulário View Pro 4D:

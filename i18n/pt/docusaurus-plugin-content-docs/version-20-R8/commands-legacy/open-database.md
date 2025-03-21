@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota 
+## Nota 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->O comando **OPEN DATABASE** fecha o banco de dados 4D atual e abre, com o processo em andamento, o banco definido por *rotaArquivo*.<!-- END REF--> Este comando é útil para realizar provas automáticas ou para voltar a abrir uma base de forma automática depois de uma compilação, , ou para permitir fusionar uma aplicação remota 4D para selecionar o servidor do banco de dados ao qual vai conectar.
 
@@ -21,7 +21,7 @@ No parâmetro *rotaArquivo*, passe o nome ou a rota de acesso completa da base a
 
 * .4db (arquivo de estrutura interpretado),
 * .4dc (arquivo de estrutura compilado),
-* .4dbase (pacote OS X),
+* .4dbase (pacote macOS),
 * 4dproject (arquivo do banco de dados projeto)
 * .4dz (arquivo de lançamento dos bancos de dados projeto)
 * .4dlink (arquivo de acesso direto).
@@ -37,13 +37,13 @@ Logo, a aplicação se comporta como se o comando **Sair** do menu **Arquivo** e
 
 Se o arquivo da base objetivo não se encontra ou é inválido, se devolve um erro sistema estandarte do administrador de arquivos e 4D não faz nada.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 ```4d
  OPEN DATABASE("C:\\databases\\Invoices\\Invoices.4db")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser selecionar um servidor no início desde uma aplicação monousuário. Pode executar este código desde um processo lançado por [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md):
 
@@ -72,7 +72,7 @@ Se quiser selecionar um servidor no início desde uma aplicação monousuário. 
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

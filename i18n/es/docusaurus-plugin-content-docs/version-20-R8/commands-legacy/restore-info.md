@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESTORE INFO.Summary-->El comando RESTORE INFO permite obtener información relacionada con la última restauración automática de la base.<!-- END REF-->
 
@@ -32,11 +32,11 @@ El tipo y el contenido de los parámetros *info1* e *info2* dependen del valor d
 
 **Nota:** este comando no tiene en cuenta restauraciones manuales de la base.
 
-#### Ver también 
+## Ver también 
 
 [RESTORE](restore.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

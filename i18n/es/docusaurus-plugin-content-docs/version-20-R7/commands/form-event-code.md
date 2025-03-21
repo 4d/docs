@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Parámetros | Tipo    |                             | Descripción       |
-| ---------- | ------- | --------------------------- | ----------------- |
-| Resultado  | Integer | &#8592; | Form event number |
+| Parámetros | Tipo    |                             | Descripción                 |
+| ---------- | ------- | --------------------------- | --------------------------- |
+| Resultado  | Integer | &#8592; | Número de evento formulário |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 **Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 This example shows the On Validate event being used to automatically assign (to a field) the date that the record is modified:
 
@@ -35,12 +35,12 @@ This example shows the On Validate event being used to automatically assign (to 
  End case
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
 
 ```4d
-  //asBurgerSize Drop-down list Object Method
+  //Método Objeto lista desplegable asBurgerSize 
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asBurgerSize;3)
@@ -56,7 +56,7 @@ In this example, the complete handling of a drop-down list (initialization, user
  End case
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
 
@@ -97,7 +97,7 @@ This example is a template for a form method. It shows each of the possible even
  End case
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
@@ -136,16 +136,16 @@ This example shows the template of a form method that handles the events that ca
  SET WINDOW TITLE($vsTheEvent)
 ```
 
-#### Ejemplo 5
+## Ejemplo 5
 
 For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
 
-#### Ejemplo 6
+## Ejemplo 6
 
 This example shows how to treat clicks and double clicks in the same way in a scrollable area:
 
 ```4d
-  //asChoices scrollable area object method
+  //Método objeto para el área de desplazamiento asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -153,73 +153,73 @@ This example shows how to treat clicks and double clicks in the same way in a sc
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
+  //Al hacer clic en un elemento, hacer algo aquí
   //...
        End if
   //...
  End case
 ```
 
-#### Ejemplo 7
+## Ejemplo 7
 
 This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
 
 ```4d
-  //asChoices scrollable area object method
- Case of
-    :(Form event code=On Load)
-       ARRAY TEXT(asChoices;...)
-  // ...
-       asChoices:=0
-       asChoices{0}:="0"
-    :(Form event code=On Clicked)
-       If(asChoices#0)
-          If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
-  //...
-  //Save the new selected element for the next time
-             asChoices{0}:=String(asChoices)
-          End if
-       Else
-          asChoices:=Num(asChoices{0})
-       End if
-    :(Form event code=On Double Clicked)
-       If(asChoices#0)
-  //An item has been double clicked, do something different here
-       End if
-  // ...
- End case
+//Método objeto área de desplazamiento asChoices
+ Case of
+    :(Form event code=On Load)
+       ARRAY TEXT(asChoices;...)
+  // ...
+       asChoices:=0
+       asChoices{0}:="0"
+    :(Form event code=On Clicked)
+       If(asChoices#0)
+          If(asChoices#Num(asChoices))
+//Un nuevo elemento ha sido presionado, hacer algo aquí
+//...
+//Guardar el nuevo elemento seleccionado para la próxima vez
+asChoices{0}:=String(asChoices)
+End if
+other
+Choices:=Num(asChoices{0})
+End if
+:(Form event code=On Double Clicked)
+Sif(asChoices#0)
+//Se hizo doble clic en un elemento, hacer algo diferente aquí
+       End if
+  // ...
+ End case
 ```
 
-#### Ejemplo 8
+## Ejemplo 8
 
 This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
 
 ```4d
-  //[Contacts];"Data Entry" form method
- Case of
-    :(Form event code=On Load)
-       var vtStatusArea : Text
-       vtStatusArea:=""
-    :(Form event code=On Getting Focus)
-       RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
-       If(($vlTableNum#0)&($vlFieldNum#0))
-          Case of
-             :($vlFieldNum=1) //Last name field
-                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
-  //...
-             :($vlFieldNum=10) //Zip Code field
-                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
-  //...
-          End case
-       End if
-    :(Form event code=On Losing Focus)
-       vtStatusArea:=""
-  //...
- End case
+//Método formulario [Contacts];"Data Entry"
+ Case of
+    :(Form event code=On Load)
+       var vtStatusArea : Text
+       vtStatusArea:=""
+    :(Form event code=On Getting Focus)
+       RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
+       If(($vlTableNum#0)&($vlFieldNum#0))
+          Case of
+             :($vlFieldNum=1) //Campo Apellido
+                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
+  //...
+             :($vlFieldNum=10) //Campo Código postal
+                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
+  //...
+          End case
+       End if
+    :(Form event code=On Losing Focus)
+       vtStatusArea:=""
+  //...
+ End case
 ```
 
-#### Ejemplo 9
+## Ejemplo 9
 
 Este ejemplo muestra cómo responder a un evento de cierre de ventana con un formulario utilizado para la entrada de datos de registro:
 
@@ -243,7 +243,7 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
  End case
 ```
 
-#### Ejemplo 10
+## Ejemplo 10
 
 This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
 
@@ -257,7 +257,7 @@ This example shows how to capitalize a text or alphanumeric field each time its 
  End case
 ```
 
-#### Ejemplo 11
+## Ejemplo 11
 
 The following example illustrates how to manage a deletion action in a hierarchical list:
 
@@ -285,7 +285,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Ejemplo 12
+## Ejemplo 12
 
 In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
 
@@ -301,7 +301,7 @@ In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us t
 
 Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Ejemplo 13
+## Ejemplo 13
 
 You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
 
@@ -336,7 +336,7 @@ As a result, the red rectangle follows the scrolling of the list box:
 
 ![](../assets/en/commands/pict1900395.en.png)
 
-#### Ver también
+## Ver también
 
 [Form Events](../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)\
@@ -348,9 +348,11 @@ As a result, the red rectangle follows the scrolling of the list box:
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 388                                                                 |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 388                         |
+| Hilo seguro       | &cross; |
+
+

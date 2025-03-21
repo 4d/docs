@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), ou [HTTP SET OPTION](../commands-legacy/http-set-option.md) e são armazenados na [pasta Logs](../Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -17,6 +17,7 @@ Informação gravada precisa ser analisada para detectar e corrigir os problemas
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Nota: quando um arquivo de histórico for gerado seja em 4D Server ou em cliente remoto, a palavra "Server" é adicionada ao nome do arquivo do lado servidor, por exemplo "4DRequestsLogServer.txt"
 
@@ -65,11 +66,11 @@ Para cada petição, os campos abaixo estão logados:
 | time                                                                                                   | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                                                                                                                                                      |
 | systemid                                                                                               | ID de sistema                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | componente                                                                                             | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                                                                                                         |
-| process\_info_                                                                                        | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                                                                                                                                                                                       |
+| process\*info*                                                                                        | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                                                                                                                                                                                       |
 | request                                                                                                | [ID da petição C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou mensagem para as solicitações SQL ou mensagens `LOG EVENT`                                                                                                                                                                                                                                                                                                                  |
 | bytes_in                                                                          | Número de bytes recebidos                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_out                                                                         | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| server\_duration &#124; exec\_duration | Depende de onde o registro é gerado:<li>_server\_duration_ quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>_exec\_duration_ when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
+| server\_duration &#124; exec\_duration | Depende de onde o registro é gerado:<li>_server\*duration* quando gerado no cliente --Tempo gasto em microssegundos para que o servidor processe a solicitação e retorne uma resposta. B to F in image below, OR</li><li>_exec\*duration* when generated on the server --Time taken in microseconds for the server to process the request. B a E na imagem abaixo.</li> |
 | write\_duration                                                                  | Tempo em microssegundos para enviar a:<li>Solicitação (quando executado no cliente). A to B in image below.</li><li>Response (when run on the server). E a F na imagem abaixo.</li>                                                                                                                                                                           |
 | task_kind                                                                         | Preemptivo ou cooperativo (respectivamente 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                           |
 | rtt                                                                                                    | Tempo estimado em microssegundos para o cliente enviar a petição e o servidor para reconhecê-la. De A a D e de E a H na imagem abaixo.<li>Somente medido ao usar a camada de rede ServerNet, retorna 0 quando usado com a camada de rede legada.</li><li>Para as versões de Windows anteriores a Windows 10 ou Windows Server 2016, a chamada retornará 0.</li>                                                     |
@@ -256,7 +257,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 ### Níveis de registo de diagnóstico
 
-O arquivo _4DDiagnosticLog.txt_ pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
+O arquivo *4DDiagnosticLog.txt* pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
 
 Pode selecionar o nível das mensagens utilizando o seletor Diagnostic log level do comando SET DATABASE PARAMETER , consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
@@ -281,15 +282,15 @@ Esses históricos registram cada troca entre a aplicação 4D e o servidor de ma
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
+- IMAP - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Os arquivos de histórico podem ser produzidos em duas versões:
 
 - uma versão comum:
-  - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  - sem anexos
-  - usa um arquivo circular automático que é reciclado a cada 10MB
-  - para depurações comuns
+ - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+ - sem anexos
+ - usa um arquivo circular automático que é reciclado a cada 10MB
+ - para depurações comuns
 
 Para começar esse histórico:
 
@@ -304,9 +305,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta rota do histórico é retornada pelo comando `Get 4D file`.
 
 - uma versão estendida:
-  - attachment(s) included no automatic recycling
-  - nome personalizado
-  - guardado para propósitos específicos
+ - attachment(s) included no automatic recycling
+ - nome personalizado
+ - guardado para propósitos específicos
 
 Para começar esse histórico:
 
@@ -396,7 +397,7 @@ Eis um exemplo de um registo de ficheiro de registo ORDA do lado do cliente:
 
 ### Do lado do servidor
 
-O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo servidor, bem como a resposta do servidor (opcional). As informações de registro são salvas em um arquivo .jsonl no disco da máquina do servidor (por padrão, _ordaRequests.jsonl_).
+O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo servidor, bem como a resposta do servidor (opcional). As informações de registro são salvas em um arquivo .jsonl no disco da máquina do servidor (por padrão, *ordaRequests.jsonl*).
 
 Como iniciar esse log:
 
@@ -451,6 +452,43 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Como iniciar esse log:
+
+- Use the `SET DATABASE PARAMETER` command:
+
+ ```4d
+ SET DATABASE PARAMETER(TCP log; 1)
+ ```
+
+- Configure o log através de um [arquivo de configuração JSON](#using-a-log-configuration-file):
+
+ ```json
+ {
+     "TCPLogs":{
+       "state" : 1
+          }
+ }
+ ```
+
+Os campos abaixo estão registrados para cada evento:
+
+| Campo nome  | Tipo      | Descrição                                                                                  |
+| ----------- | --------- | ------------------------------------------------------------------------------------------ |
+| time        | Date/Time | Date and time of the event in ISO 8601 format                                              |
+| localPort   | Number    | Local port used for the connection                                                         |
+| peerAddress | Text      | IP address of the remote peer                                                              |
+| peerPort    | Number    | Port of the remote peer                                                                    |
+| protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
+| "event"     | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt | Text      | First 10 bytes of data in text format                                                      |
+| comment     | Text      | Additional information about the event, such as error details or encryption status         |
+
 ## Utilizar um ficheiro de configuração de log
 
 Você pode usar um **arquivo de configuração de log** para gerenciar facilmente a gravação de logs em um ambiente de produção. Este arquivo é pré-configurado pelo programador. Normalmente, pode ser enviado aos clientes para que estes apenas tenham de o selecionar ou copiar para uma pasta local. Uma vez ativado, o arquivo de configuração de registos desencadeia a gravação de registos específicos.
@@ -460,16 +498,16 @@ Você pode usar um **arquivo de configuração de log** para gerenciar facilment
 Existem várias formas de ativar o arquivo de configuração do registo, dependendo da sua configuração:
 
 - **Servidor 4D com interface**: você pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file), depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
-- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-1) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
+- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-user) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
 - **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows: `Users\[userName]\AppData\Roaming\[application]`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos os projetos com um 4D autônomo ou remoto**: o arquivo deve chamar-se `logConfig.json` e ser copiado para a pasta seguinte:
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos os projetos com 4D Server**: o arquivo deve ser nomeado `logConfig.json` e copiado para a seguinte pasta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -628,7 +666,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

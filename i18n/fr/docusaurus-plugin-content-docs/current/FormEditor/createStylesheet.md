@@ -43,9 +43,9 @@ Bien qu'elles soient adaptées pour répondre aux besoins spécifiques des formu
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
-- un _sélecteur_ - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
+- un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
 
-- une _déclaration_ - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
+- une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
 
 ## Sélecteurs de feuilles de style
 
@@ -57,7 +57,7 @@ Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à ap
 
 > Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
 
-Dans l'exemple suivant, tous les objets du type _bouton_ afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
+Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -259,7 +259,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
 
-> Les valeurs spécifiques à 4D (_par exemple_, `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
+> Les valeurs spécifiques à 4D (*par exemple*, `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 #### Valeurs d'attributs spécifiques
 
@@ -272,13 +272,13 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-  - Nom la couleur CSS : `fill: red;`
-  - Valeur hexadécimale : `fill: #FF0000;`
-  - fonction `rgb()` : `fill:rgb(255,0,0)`
+ - Nom la couleur CSS : `fill: red;`
+ - Valeur hexadécimale : `fill: #FF0000;`
+ - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
-  - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
+ - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordre de priorité
 
@@ -337,7 +337,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 >
 > - Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
-> - Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (_ex :_, "/RESOURCES", "/DATA")
+> - Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Voir également
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->The **DISTINCT ATTRIBUTE VALUES** command creates and populates the *valuesArray* with non-repeated (unique) values coming from the *path* attribute in the *objectField* field for the current selection of the table to which this field belongs.<!-- END REF--> Note that *objectField* must be of the Object type, otherwise an error is returned. The command can be used with indexed or non-indexed fields. 
 
@@ -27,11 +27,11 @@ If the command is called from within a transaction, records created during the t
 
 After the call, the size of the array is equal to the number of distinct values found in the selection. The command does not change the current selection or the current record. 
 
-##### Using the .length virtual property 
+### Using the .length virtual property 
 
 You can use the "length" virtual property with this command. It is automatically available for all attributes of the array type, and provides the size of the array, i.e. the number of elements it contains. This property is designed to be used in queries (see [QUERY BY ATTRIBUTE](query-by-attribute.md)). You can also use it with the **DISTINCT ATTRIBUTE VALUES** command to get the different array sizes for an attribute.
 
-#### Example 
+## Example 
 
 Your database contains a \[Customer\]full\_Data object field with 15 records:
 
@@ -89,12 +89,12 @@ The *aLChildNum* array receives the following elements:
 | 2           | 2         |
 | 3           | 3         |
 
-#### See also 
+## See also 
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

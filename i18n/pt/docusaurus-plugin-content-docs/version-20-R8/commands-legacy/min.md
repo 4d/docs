@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Min.Summary-->Min devolve o mínimo valor em *series*.<!-- END REF--> Se *series* for um campo indexado, o índice é utilizado para encontrar o valor mínimo.   
   
@@ -29,7 +29,7 @@ Apenas valores de atributos numéricos são computados. Se estes valores no atri
 
 Se o comando é executado corretamente, a variável sistema OK toma o valor 1\. Se for interrompida (por exemplo se o usuario cliar no botão Parar o termômetro de progresso), a variável OK toma o valor 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é um método de objeto para a variável *vMin* localizada na área de quebra 0 do formulário. A variável é impressa ao final do relatório. O método de objeto atribui o valor mínimo do campo à variável, a qual se imprime na última quebra do relatório: 
 
@@ -52,7 +52,7 @@ O método a seguir é chamado para imprimir os registros na seleção e ativar o
 
 **Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre quebras, consulte os comandos do tema *Imprimir*. 
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir procura a venda mais baixa de um empregado e mostra o resultado em uma caixa de diálogo de alerta. As quantidades vendidas são guardadas no subcampo \[Empregados\]VendasDolares: 
 
@@ -60,7 +60,7 @@ O exemplo a seguir procura a venda mais baixa de um empregado e mostra o resulta
  ALERT("Vendaminima = "+String(Min([Empregados]VendasDolares)))
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo obtém o valor mínimo no array:
 
@@ -71,15 +71,15 @@ Este exemplo obtém o valor mínimo no array:
  vMin:=Min($ArrGrades)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](average.md).
 
-#### Ver também 
+## Ver também 
 
 [Max](max.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

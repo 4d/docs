@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**Nota:** este comando sólo funciona con los list box de tipo array.<!-- END REF-->
 
@@ -33,7 +33,7 @@ En *linea*, pase el número de la línea cuyo estilo desea obtener.
 
 **Atención:** un estilo asignado a una línea no se muestra necesariamente en todas las celdas de línea (ver el ejemplo). Si se definen valores de estilo contradictorios usando las propiedades del list box o de la columna, se aplica un orden de prioridad. Para obtener más información, consulte el Manual de *Diseño*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado el siguiente list box: 
 
@@ -46,11 +46,11 @@ Dado el siguiente list box:
   // vStyle2 contiene 6 (Italic + Underline)
 ```
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

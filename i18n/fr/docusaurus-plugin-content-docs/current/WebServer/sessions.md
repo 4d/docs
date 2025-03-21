@@ -24,13 +24,13 @@ Les sessions Web sont utilisées par :
 La gestion de session peut être activée et désactivée sur votre serveur Web 4D. Il y a différentes façons d'activer la gestion de session :
 
 - Using the **Scalable sessions** OTPion on the "Web/OTPions (I)" page of the Settings (permanent setting):
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+ ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 This OTPion is selected by default in new projects. It can however be disabled by selecting the **No sessions** OTPion, in which case the web session features are disabled (no `Session` object is available).
 
-- En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre _settings_ de la fonction [`.start()`](API/WebServerClass.md#start) ). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start) ). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The [`WEB SET OTPION`](../commands-legacy/web-set-OTPion.md) command can also set the session mode for the main Web server.
+> The [`WEB SET OTPION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
 
 Dans tous les cas, ce paramètre est local à la machine ; il peut donc être différent sur le serveur Web 4D Server et les serveurs Web des machines 4D distantes.
 
@@ -38,7 +38,7 @@ Dans tous les cas, ce paramètre est local à la machine ; il peut donc être di
 
 ## Implémentation des sessions
 
-When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. Ce cookie référence la session web courante pour l'application.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Ce cookie référence la session web courante pour l'application.
 
 :::info
 
@@ -61,7 +61,7 @@ La création d'une session web pour une requête REST peut nécessiter qu'une li
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](commands/session.md) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -84,9 +84,9 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide
@@ -136,7 +136,7 @@ http://localhost:8044/authenticate.shtml
 
 > Dans un environnement de production, il est nécessaire d'utiliser une [connexion HTTPS](API/WebServerClass.md#httpsenabled) pour éviter la circulation d'informations non chiffrées sur le réseau.
 
-2. La page `authenticate.shtml` est un formulaire contenant des champs de saisie _userId_ et _password_ et envoie une action POST 4DACTION :
+2. La page `authenticate.shtml` est un formulaire contenant des champs de saisie *userId* et *password* et envoie une action POST 4DACTION :
 
 ```html
 <!DOCTYPE html>
@@ -153,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. La méthode de projet d'authentification recherche la personne _userID_ et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table _SalesPersons_ :
+3. La méthode de projet d'authentification recherche la personne *userID* et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table *SalesPersons* :
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
@@ -250,10 +250,10 @@ In both cases, you need to extract the token from the custom parameter and to ca
 
 The OTP token is considered invalid if:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- le token de session a déjà été utilisé,
+- le token de session a expiré,
+- le token de session n'existe pas,
+- la session d'origine elle-même a expiré.
 
 In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
 
@@ -378,7 +378,7 @@ shared singleton Class constructor()
 
 ### Example of email validation with $4DSID
 
-1. A user account is created in a _Users_ dataclass. A _$info_ object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
 
 ```4d
 //cs.Users class
@@ -421,7 +421,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 ]
 ```
 
-The _validateEmail()_ function of the RequestHandler singleton:
+The *validateEmail()* function of the RequestHandler singleton:
 
 ```4d
 //validateEmail class

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ALERT.Summary-->El comando **ALERT** muestra una caja de diálogo de alerta compuesta de un icono, de un mensaje y de un botón OK.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Por defecto, el título del botón OK es “Aceptar.” Para cambiar el título 
 
 **Consejo:** no llame al comando **ALERT** desde la sección de un formulario o método objeto que maneja los eventos de formulario On Activate o On Deactivate; esto provocará un bucle sin fin.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo muestra una caja de diálogo de alerta que muestra información sobre una empresa. Note que el mensaje contiene retornos de carro, que hacen que el texto pase a la línea siguiente:
 
@@ -38,7 +38,7 @@ Esta línea de código muestra la siguiente caja de diálogo de alerta (en Windo
 
 ![](../assets/en/commands/pict4224938.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La línea :
 
@@ -50,7 +50,7 @@ muestra la caja de diálogo de alerta (en Windows):
 
 ![](../assets/en/commands/pict4224959.en.png)
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 La línea:
 
@@ -62,13 +62,13 @@ Muestra la siguiente caja de diálogo de alerta (en Windows):
 
 ![](../assets/en/commands/pict4224968.en.png)
 
-#### Ver también 
+## Ver también 
 
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

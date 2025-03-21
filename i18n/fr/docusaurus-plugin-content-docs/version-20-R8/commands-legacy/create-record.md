@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crée un nouvel enregistrement vide pour *laTable*, mais ne l'affiche pas à l'écran.<!-- END REF--> Vous devez utiliser la commande [ADD RECORD](add-record.md) pour créer un nouvel enregistrement et l'afficher dans un formulaire entrée. 
 
@@ -23,7 +23,7 @@ L'enregistrement est créé uniquement en mémoire et doit être sauvegardé à 
 
 **Note :** Cette commande ne nécessite pas que *laTable* soit en mode lecture/écriture. Elle peut être utilisée même lorsque la table est en mode lecture seulement (cf. section *Verrouillage d'enregistrements*). 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette opération est réalisée par la création d'enregistrements dans une table d'archive. Une fois l'opération terminée, les enregistrements archivés sont supprimés de la table *\[Comptes\]* :
 
@@ -41,13 +41,13 @@ L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette 
  DELETE SELECTION([Comptes]) // Suppression des enregistrements
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

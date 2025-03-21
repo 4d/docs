@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESIZE FORM WINDOW.Summary-->The **RESIZE FORM WINDOW** command lets you change the size of the current form window.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ This command produces the exact same result as a manual window resize using the 
 
 Please note that this behavior is different than that of the [SET WINDOW RECT](set-window-rect.md) command, which does not take form properties nor content into account when resizing the window. Also, note that this command does not necessarily modify the form size. To modify the size of a form by programming, please see the [FORM SET SIZE](form-set-size.md) command.
 
-#### Example 
+## Example 
 
 Given the following window (the fields and frame have the “Grow” property for horizontal resizing):
 
@@ -40,13 +40,13 @@ After execution of this line:
 
 ![](../assets/en/commands/pict39549.en.png)
 
-#### See also 
+## See also 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

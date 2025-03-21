@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->La commande **XML GET OPTIONS** permet de lire la valeur d’un ou plusieurs paramètre(s) XML définis pour la session courante et l’utilisateur courant.<!-- END REF--> 
 
@@ -34,11 +34,11 @@ Passez dans *sélecteur* une des constantes du thème *XML* ci-dessous, indiquan
 | XML string encoding            | Entier long | 1      | Définit la manière dont les chaînes 4D sont converties en valeurs d’éléments. Il ne concerne pas les conversions en attributs pour lesquelles le XML impose l’utilisation de caractères d’échappement.<br/>**Valeurs possibles :**<br/>XML with escaping (valeur par défaut) : conversion des chaînes 4D en valeurs d’éléments XML avec remplacement des caractères. Les données de type texte sont automatiquement analysées de manière à ce que les caractères interdits (<&>’) soient remplacés par des entités XML (&amp;&lt;&gt; &apos;&quot;).XML raw data : les chaînes 4D sont envoyées en tant que données brutes, 4D n’effectue ni encodage ni analyse. Les valeurs 4D seront converties si possible en fragments XML et insérées en tant qu’enfant de l’élément cible. Si une valeur ne peut pas être considérée comme fragment XML, elle est insérée sous forme de donnée brute dans un nouveau noeud CDATA                                                                                                                                                                                                                                                                                 |
 | XML time encoding              | Entier long | 3      | Définit la manière dont les heures 4D seront converties. Par exemple, ?02/00/46? (heure de Paris). L’encodage diffère suivant que vous souhaitez exprimer une heure ou une durée.<br/>**Valeurs possibles pour les heures :**<br/>XML datetime UTC : heure exprimée en UTC (Temps Universel Coordonné). A noter que la conversion en UTC est automatique. Résultat : "<Duree>0000-00-00T01:00:46Z</Duree>". XML datetime local : heure exprimée avec le décalage horaire de la machine du moteur de 4D. Résultat : "<Duree>0000-00-00T02:00:46+01:00</Duree>". XML datetime local absolute (valeur par défaut) : heure exprimée sans indication de fuseau horaire. Pas de modification de la valeur. Résultat : "<Duree>0000-00-00T02:00:46</Duree>". **Valeurs possibles pour les durées :**<br/>XML seconds : nombre de secondes depuis minuit, pas de modification de la valeur puisqu’elle exprime une durée. Résultat : "<Duree>7246</Duree>". XML duration : durée exprimée de manière conforme au XML Schema Part 2: Datatypes Second Edition. Pas de modification de la valeur puisqu’elle exprime une durée. Résultat : "<Duree>PT02H00M46S</Duree>".                                  |
 
-#### Voir aussi 
+## Voir aussi 
 
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->**WRITE PICTURE FILE**コマンドを使用し、 引数*picture*に渡されたピクチャを、指定した*codec*でディスクに保存することができます。<!-- END REF--> 
 
@@ -40,14 +40,14 @@ displayed_sidebar: docs
 
 コマンドが正しく実行されると、システム変数Documentには作成されたファイルのフルパス名が、システム変数OKには1が設定されます。そうでなければOKは0に設定されます。
 
-#### 参照 
+## 参照 
 
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 *ピクチャ*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

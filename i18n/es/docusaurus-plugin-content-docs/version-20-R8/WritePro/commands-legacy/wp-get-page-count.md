@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get page count.Summary-->El comando **WP Get page count** devuelve el número total de páginas definido en el *objRango* pasado en parámetro.<!-- END REF-->
 
@@ -34,7 +34,7 @@ La misma configuración de visualización que para el comando [WP PRINT](wp-prin
 
 Si *objRango* se muestra en un área de formulario 4D Write Pro, asegúrese de que la configuración de visualización del área coincida con la configuración de visualización del comando para obtener información coherente. Tenga en cuenta también que si estas configuraciones son diferentes en el área, 4D Write Pro tendrán que "clonar" el documento para calcular el diseño en cada llamada del comando, lo que puede llevar mucho tiempo. Por motivos de rendimiento, en este caso, se recomienda construir el documento fuera de línea y copiarlo en el área de objetos de formulario solo cuando se complete la compilación.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere saber el número total de páginas de documentos 4D Write Pro almacenados en el campo "Manual" dentro de la selección actual de elementos. Puede escribir:
 

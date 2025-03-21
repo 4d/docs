@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->The **LISTBOX SET GRID COLOR** command allows you to modify the color of the grid in the list box object set using the *object* and *\** parameters.<!-- END REF-->
 
@@ -30,13 +30,13 @@ The *horizontal* and *vertical* parameters allow you to set the grid lines to wh
 * If you pass **True** in *horizontal*, the color will be applied to horizontal grid lines. If you pass **False**, their color is not changed.
 * If you pass **True** in *vertical*, the color will be applied to vertical grid lines. If you pass **False**, their color is not changed.
 
-#### See also 
+## See also 
 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

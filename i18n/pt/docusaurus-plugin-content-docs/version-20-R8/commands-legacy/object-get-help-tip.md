@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->O comando **OBJECT Get help tip** devolve a mensagem de ajuda associado ao objeto ou aos objetos designados pelos parâmetros *objeto* e *\** no processo atual.<!-- END REF-->  
   
@@ -23,7 +23,7 @@ Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um no
   
 O comando devolve a mensagem de ajuda atual associado ao objeto, tal como está definido no modo Desenho ou para o processo utilizando o comando [OBJECT SET HELP TIP](object-set-help-tip.md). La cadeia outra vez mostra o mensagem como aparece quando se executa o formulário. Se contém elementos variáveis (*resname* xliff ou referencias 4D), se interpretam em função do contexto. 
 
-#### Exemplo 
+## Exemplo 
 
 O título de um botão imagem é guardado em forma de mensagem de ajuda. Este título se guarda em um arquivo xliff e difere em função da linguagem atual de la aplicação: 
 
@@ -33,11 +33,11 @@ O título de um botão imagem é guardado em forma de mensagem de ajuda. Este t�
   // $helpmessage contém por exemplo "Découvrir" com um 4D francês e "Discover" com um 4D inglês.
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

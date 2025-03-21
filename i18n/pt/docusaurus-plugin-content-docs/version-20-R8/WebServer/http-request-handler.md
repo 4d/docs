@@ -22,6 +22,12 @@ Custom HTTP Request handlers are supported:
 - quando as [sessões escalonáveis](./sessions.md#enabling-web-sessions) estão ativadas,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
+:::warning
+
+[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+
+:::
+
 ## Arquivo HTTPHandlers.json
 
 You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
@@ -67,11 +73,10 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+   Ex: `"regexPattern" : "/docs/**/index.html"`
 
 - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+   Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 
@@ -121,10 +126,10 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
-- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
+- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Deve ser uma classe [**compartilhada**](../Concepts/classes.md#shared-singleton) e [**singleton**](../Concepts/classes.md#singleton-classes).
 - "method": class function belonging to the class.
 
-[See below](#request-handler-code) for information about the request handler code.
+[Veja abaixo](#request-handler-code) para informações sobre o código do manipulador de pedidos.
 
 ### Verbs
 
@@ -320,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## Veja também
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/perfect-mastery-of-your-back-end-business-logic-thanks-to-HTTP-requests-handlers) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)

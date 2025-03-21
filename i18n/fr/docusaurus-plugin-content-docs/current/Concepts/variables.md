@@ -5,7 +5,7 @@ title: Variables
 
 Fondamentalement, dans 4D, les données peuvent être stockées de deux manières. Les **champs** stockent les données sur disque, de manière permanente ; les **variables** stockent les données en mémoire, de manière temporaire.
 
-Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. Variables are much the same—you also give them names and different types (see [Data types](data-types.md)).
+Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C'est à peu près pareil pour les variables — vous pouvez aussi leur donner des noms et des types différents (voir [Types de données](data-types.md)).
 
 Une fois créée, vous pouvez utiliser une variable partout dans votre application. Par exemple, vous pouvez stocker une variable de type texte dans un champ du même type :
 
@@ -136,7 +136,7 @@ var $mycol:=[]  // Inferred as a Collection
 
 :::note
 
-Le type déduit peut être différent entre le [mode interprété et compilé](interpreted.md) si l'évaluation de la valeur est trop ambiguë. Dans ce cas, un warning est généré par le compilateur et un type variant est utilisé. For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
+Le type déduit peut être différent entre le [mode interprété et compilé](interpreted.md) si l'évaluation de la valeur est trop ambiguë. Dans ce cas, un warning est généré par le compilateur et un type variant est utilisé. For example, in the following *$a* type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and *$a* will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -163,7 +163,7 @@ var $a; $b : Integer:=15 //erreur
 
 ## Assigner des valeurs
 
-Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Mettre des données dans une variable s'appelle **assigner les données à la variable** et s'effectue avec l'opérateur d'assignation (:=) (aussi appelé opérateur d'affectation). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
+Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
 
 L’opérateur d’assignation est un premier moyen pour créer une variable et lui donner une valeur. Vous placez le nom de la variable que vous voulez créer à gauche de l’opérateur. Par exemple :
 
@@ -171,17 +171,17 @@ L’opérateur d’assignation est un premier moyen pour créer une variable et 
 MonNombre:=3
 ```
 
-crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
+crée la variable *MonNombre* et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
 > Il n'est généralement pas recommandé de créer des variables sans [déclarer leur type](#declaring-variables).
 
-Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous aviez besoin de mettre la valeur de MonNombre dans un champ appelé [Produits]Taille, vous écririez _MonNombre_ à droite de l'opérateur d'assignation :
+Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous aviez besoin de mettre la valeur de MonNombre dans un champ appelé [Produits]Taille, vous écririez *MonNombre* à droite de l'opérateur d'assignation :
 
 ```4d
 [Produits]Taille:=MonNombre
 ```
 
-Dans ce cas, _[Produits]Taille_ vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
+Dans ce cas, *[Produits]Taille* vaudrait 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
 
 ## Variables locales, process et interprocess
 
@@ -259,7 +259,7 @@ System variables are used by [4D commands](../commands/command-index.md). Report
 | `MouseDown`                                            | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Prend la valeur 1 si le bouton de la souris a été enfoncé, sinon prend la valeur 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `MouseX`, `MouseY`                                     | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. <li>In a `MouseDown=1` event, `MouseX` and `MouseY` are respectively set to the vertical and horizontal coordinates of the click. Les deux valeurs sont exprimées en pixels et avec le système de coordonnées locales de la fenêtre. </li><li>In case of a picture field or variable, `MouseX` and `MouseY` return the local coordinates of a mouse click in the [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) and [`On Mouse Up`](../Events/onMouseUp.md) form events. Les coordonnées locales du curseur de la souris sont également retournées dans les événements [`On Mouse Enter`](../Events/onMouseEnter.md) et [`On Mouse Move`](../Events/onMouseMove.md) . For more information, see the [Mouse Coordinates in a picture](../FormEditor/pictures.md#mouse-coordinates-in-a-picture) section.</li> |
 | `KeyCode`                                              | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Définit le code de caractère de la touche qui vient d'être pressée. If the key is a function key, `KeyCode` is set to a special code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `Modifiers`                                            | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Contient les codes des modifiers du clavier (Ctrl/Commande, Alt/Option, Maj, Verr. Maj).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `Modifiers`                                            | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Contient les codes des modifiers du clavier (Ctrl/Commande, Alt/Option, Maj, Verr.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `MouseProc`                                            | Integer       | Used in a method installed by the [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html) command. Contient le numéro du process dans lequel le dernier événement a eu lieu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 :::note

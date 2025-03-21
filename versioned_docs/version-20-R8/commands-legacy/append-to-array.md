@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->The APPEND TO ARRAY command adds a new element at the end of *array* and assigns *value* to the element.<!-- END REF--> In interpreted mode, if *array* does not exist, the command creates it with regard to the type of *value*. 
 
@@ -25,7 +25,7 @@ The type of *value* must match the array type, otherwise the syntax error 54 “
 * A string *array* (Text or String) accepts any *value* of the Text or String type.
 * A number *array* (Integer, Longint or Real) accepts any *value* of the Integer, Longint, Real or Time type.
 
-#### Example 
+## Example 
 
 The following code:
 
@@ -40,12 +40,12 @@ The following code:
  APPEND TO ARRAY($myarray;$myvalue)
 ```
 
-#### See also 
+## See also 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

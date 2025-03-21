@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `USE ENTITY SELECTION` コマンドは、<!--REF #_command_.USE ENTITY SELECTION.Summary-->*entitySelection* 引数のデータクラスに合致するテーブルのカレントセレクションを、渡したエンティティセレクションの内容で更新します<!-- END REF-->。
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 :::note
 
-`USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+`USE ENTITY SELECTION` の呼び出し後、更新された(空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
 
 :::
 
-#### 例題
+## 例題
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,15 +42,17 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されます
 ```
 
-#### 参照
+## 参照
 
 [Create entity selection](create-entity-selection.md)
 
-#### プロパティ
+## プロパティ
 
-|                 |                                                                 |
-| --------------- | --------------------------------------------------------------- |
-| コマンド番号          | 1513                                                            |
-| スレッドセーフ         | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
-| カレントレコードを変更する   |                                                                 |
-| カレントセレクションを変更する |                                                                 |
+|                 |                             |
+| --------------- | --------------------------- |
+| コマンド番号          | 1513                        |
+| スレッドセーフ         | &check; |
+| カレントレコードを変更する   |                             |
+| カレントセレクションを変更する |                             |
+
+

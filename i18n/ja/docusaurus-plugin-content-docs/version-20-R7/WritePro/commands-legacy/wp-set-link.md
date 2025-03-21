@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP SET LINK.Summary-->**WP SET LINK** は*targetObj* 引数で指定したターゲットオブジェクトに、ハイパーリンク参照を割り当てます。<!-- END REF-->URL、4Dメソッド、そしてブックマークへのリンクがサポートされます。リンクは、ユーザーがそれをクリック(あるいはURLを開くのにテキストが編集可能な場合、Windows では**Ctrl+クリック**、macOS では**Cmd+クリック**)をすることでアクションがトリガーされます。
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 * 4D Write Pro ドキュメントから4D メソッドへのリンクは、ドキュメントがHTML、MIME HTML、あるいは .docx フォーマットに書き出される際に除去されます。
 * *targetObj* のターゲットオブジェクトからリンクを除去したい場合、*リンクコマンド* の段落を参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 ウェブサイトへのリンクを、ドキュメントのフッターエリアに追加したい場合を考えます:
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
  WP SET LINK($footer;New object("url";"http://www.4d.com"))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ドキュメント内での全てのブックマークを使用して、リンクつきの目次ページを作成したい場合を考えます:
 
@@ -88,7 +88,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ドキュメントの"4D"という文字列にそれぞれ4Dメソッドへのリンクを設定したい場合を考えます:
 
@@ -111,7 +111,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP Get links](wp-get-links.md)  

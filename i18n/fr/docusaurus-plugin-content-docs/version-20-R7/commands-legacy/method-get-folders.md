@@ -15,23 +15,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.METHOD GET FOLDERS.Summary-->La commande **METHOD GET FOLDERS** retourne dans le tableau *tabNoms* les noms des dossiers créés dans la page Démarrage de l’Explorateur de 4D :
+<!--REF #_command_.METHOD GET FOLDERS.Summary-->La commande **METHOD GET FOLDERS** retourne dans le tableau *tabNoms* les noms des dossiers créés dans la page Démarrage de l’Explorateur de 4D <!-- END REF-->:
 
 ![](../assets/en/commands/pict837666.fr.png)
 
-Comme les noms des dossiers doivent être uniques, la hiérarchie n’est pas retournée dans le tableau.<!-- END REF--> 
+Comme les noms des dossiers doivent être uniques, la hiérarchie n’est pas retournée dans le tableau. 
 
 Vous pouvez restreindre la liste des dossiers en passant une chaîne de comparaison dans le paramètre *filtre* : dans ce cas, seuls les dossiers dont le nom correspond au filtre seront retournés. Vous pouvez utiliser le caractère @ afin de définir des filtres de type "commence par", "se termine par" ou "contient". Si vous passez une chaîne vide, le paramètre *filtre* est ignoré. 
 
 Si la commande est exécutée depuis un composant, elle retourne par défaut les chemins des méthodes du composant. Si vous passez le paramètre *\**, le tableau contiendra les chemins des méthodes de la base hôte.
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

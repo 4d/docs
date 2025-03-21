@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA**は*aTable*からレコードを検索します。<!-- END REF-->**QUERY BY FORMULA**は、カレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。後方互換性のために、この振る舞いは変換されたデータベースでは維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのセレクターを使用することで、変換されたデータベースでもサーバー側での実行が有効化されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、すべての年の12月に作成された請求書のレコードを検索します。これは[Month of](month-of.md "Month of")関数を各レコードに適用して検索します。このような検索は月の情報を別のフィールドとして持たない限り、他の方法では実現できません:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  QUERY BY FORMULA([Invoice];Month of([Invoice]Entered)=12) // Find the invoices entered in December
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、名前が10文字を超える人のレコードを検索します:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
  QUERY BY FORMULA([People];Length([People]Name)>10) // Find names longer than ten characters
 ```
 
-#### 例題 3 
+## 例題 3 
 
 この例題では、テーブルにリレーションがありませんが、"ACME" クライアントからの請求書の全ての行をクエリするのにJOIN を使用する場合を考えます:
 
@@ -92,14 +92,14 @@ displayed_sidebar: docs
  QUERY BY FORMULA([invoice_line];([invoice_line]invoice_id=[invoice]id&[invoice]client="ACME"))
 ```
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

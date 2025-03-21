@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->La commande **QR Get HTML template** retourne le modèle HTML utilisé pour la zone d'état rapide référencée par *zone*.<!-- END REF--> La valeur retournée, de type texte, contient la totalité du code HTML utilisé comme modèle. 
 
@@ -23,11 +23,11 @@ A noter que si le format de destination HTML n'a pas été défini pour l'état 
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

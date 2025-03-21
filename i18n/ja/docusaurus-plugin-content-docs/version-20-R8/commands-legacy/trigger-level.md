@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Trigger level.Summary-->Trigger levelコマンドはトリガの実行レベルを返します。<!-- END REF-->
 
 実行レベルについての詳細は、*トリガのカスケード*の節にあるトリガのカスケードを参照してください。
 
-#### 参照 
+## 参照 
 
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 *トリガ*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

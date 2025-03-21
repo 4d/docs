@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Read only state.Summary-->This function tests whether or not the state of *aTable* is read-only for the process in which it is called.<!-- END REF--> Read only state returns TRUE if the state of *aTable* is read-only. Read only state returns FALSE if the state of *aTable* is read/ write.
 
-#### Example 
+## Example 
 
 The following example tests the state of an \[Invoice\] table. If the state of the \[Invoice\] table is read-only, it is set to read/write, and then the current record is reloaded.
 
@@ -31,13 +31,13 @@ The following example tests the state of an \[Invoice\] table. If the state of t
 
 **Note:** The invoice record is reloaded to allow the user to modify it. A record that was previously loaded in a read-only state will remain locked until it is reloaded in a read/write state.
 
-#### See also 
+## See also 
 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

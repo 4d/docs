@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. O objecto transportador devolvido será então normalmente utilizado para enviar mensagens de correio electrónico.
 
@@ -33,7 +33,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 >
 > A coleção SMTP é automaticamente fechada:
 >
-> - when the transporter object is destroyed if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is true (default),
+> - quando o objeto transporter for destruído se a propriedade [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) for true (padrão),
 > - after each  [`.send()`](../API/SMTPTransporterClass.md#send) function execution if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is set to false.
 
 No parâmetro server, passe um objeto contendo as propriedades abaixo:
@@ -54,11 +54,11 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](../API/SMTPTransporterClass.md#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                         | 100                                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/SMTPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | nenhum                                                                                           |
 
-#### Resultados
+## Resultados
 
 A função retorna um [**objeto SMTP transporter**](../API/SMTPTransporterClass.md#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
-#### Exemplo
+## Exemplo
 
 ```4d
  $server:=New object
@@ -86,9 +86,11 @@ A função retorna um [**objeto SMTP transporter**](../API/SMTPTransporterClass.
  End if
 ```
 
-#### Propriedades
+## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1608                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1608                        |
+| Thread safe    | &check; |
+
+

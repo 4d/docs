@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->La commande **NO DEFAULT TABLE** permet d’annuler l’effet de la commande [DEFAULT TABLE](default-table.md).<!-- END REF--> Après l’exécution de cette commande, il n’y a plus de table par défaut définie pour le process.   
 Si la commande [DEFAULT TABLE](default-table.md) n’avait pas été appelée au préalable, cette commande ne fait rien.
@@ -27,7 +27,7 @@ Dans une base contenant un formulaire projet nommé “LeForm” et un formulair
 
 Ce principe est toutefois caduc lorsque la commande [DEFAULT TABLE](default-table.md) a été exécutée et que la base contient un formulaire projet et un formulaire table du même nom. En effet, dans ce cas 4D utilisera le formulaire table de la table par défaut, même si le paramètre *laTable* n’est pas passé. Dans ce cas, pour permettre l’utilisation de formulaires projet, il suffit d’exécuter la commande **NO DEFAULT TABLE**. 
 
-#### Exemple 
+## Exemple 
 
 Dans une base contenant un formulaire projet nommé “LeForm” et un formulaire table du même nom pour la table \[Table1\] : 
 
@@ -38,11 +38,11 @@ Dans une base contenant un formulaire projet nommé “LeForm” et un formulair
  DIALOG("LeForm") //4D utilise le formulaire projet
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DEFAULT TABLE](default-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

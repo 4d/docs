@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->O comando **SET CURRENT PRINTER** utiliza para designar a impressora a utilizar par imprimir com a aplicação 4D atual.<!-- END REF-->  
   
@@ -24,7 +24,7 @@ Se passa uma string vazia em *nomImpr*, se utilizará a impressora atual definid
 
 | Constante          | Valor              | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Generic PDF driver | \_4d\_pdf\_printer | **Nota:** esta funcionalidade não está disponível nas versões 32 bits de 4D.<br/>Em OS X, declara o driver pré-determinado como impressora atual. Este driver não é visível e não está na lista devolvida pelo comando [PRINTERS LIST](printers-list.md). a rota de acesso ao documento PDF deve ser definida utilizando o comando [SET PRINT OPTION](set-print-option.md), se não, se devolve o erro 3107.Em Windows, declara o driver PDF de Windows (chamado "Microsoft Print to PDF") como impressora atual. Esta constante está disponível em Windows 10 unicamente, quando está instalada a opção PDF. Com outras versões de Windows, ou quando não houver nenhum driver PDF disponível, o comando não faz nada e a variável *OK* toma o valor 0. |
+| Generic PDF driver | \_4d\_pdf\_printer | **Nota:** esta funcionalidade não está disponível nas versões 32 bits de 4D.<br/>Em macOS, declara o driver pré-determinado como impressora atual. Este driver não é visível e não está na lista devolvida pelo comando [PRINTERS LIST](printers-list.md). a rota de acesso ao documento PDF deve ser definida utilizando o comando [SET PRINT OPTION](set-print-option.md), se não, se devolve o erro 3107.Em Windows, declara o driver PDF de Windows (chamado "Microsoft Print to PDF") como impressora atual. Esta constante está disponível em Windows 10 unicamente, quando está instalada a opção PDF. Com outras versões de Windows, ou quando não houver nenhum driver PDF disponível, o comando não faz nada e a variável *OK* toma o valor 0. |
 
 O comando **SET CURRENT PRINTER** deve ser chamado antes de [SET PRINT OPTION](set-print-option.md), de maneira que as opções disponíveis correspondam à impressora selecionada. Por outra parte, **SET CURRENT PRINTER** deve ser chamada depois de*\_o\_PAGE SETUP*, do contrário os parâmetros da impressora são perdidos.
 
@@ -32,11 +32,11 @@ Este comando pode ser utilizado com os comandos[PRINT SELECTION](print-selection
   
 Os comandos de impressão devem ser chamadas obrigatoriamente com o parâmetro > (onde seja relevante) de modo a que os parâmetros especificados não sejam perdidos.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a seleção de impressora é realizada corretamente, a variável sistema OK toma o valor 1\. Se ocorre o contrário (por exemplo se não se encontra a impressora atribuída), a variável sistema OK toma o valor 0 e a impressora atual permanece sem mudanças. 
 
-#### Exemplo 
+## Exemplo 
 
 Criação de um documento PDF em Windows:
 
@@ -50,12 +50,12 @@ Criação de um documento PDF em Windows:
  SET CURRENT PRINTER("")
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

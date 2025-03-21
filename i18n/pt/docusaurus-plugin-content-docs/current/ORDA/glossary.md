@@ -138,7 +138,7 @@ Nesta documentação, o tipo de dados "Misto" é utilizado para designar os vár
 - collection
 - imagem(\*)
 
-_(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como_ `entitySelection.max( )`.
+*(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como* `entitySelection.max( )`.
 
 ## Bloqueio optimista
 
@@ -150,7 +150,7 @@ Um "bloqueio pessimista" significa que uma entidade é bloqueada antes de ser ac
 
 ## Privilégio
 
-La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+La capacidad de ejecutar una o varias [acciones](#action) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propriedade
 

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New header.Summary-->The **WP New header** command creates and returns the header associated to the section or subsection defined by the *wpSection* parameter.<!-- END REF--> 
 
 If a header element is already defined for the section or subsection, an *undefined* object is returned and an error is generated. 
 
-#### Example 
+## Example 
 
 You want to create a header for the right pages of a section:
 
@@ -37,7 +37,7 @@ You want to create a header for the right pages of a section:
  End if
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE HEADER](wp-delete-header.md)  
 [WP Get header](wp-get-header.md)  

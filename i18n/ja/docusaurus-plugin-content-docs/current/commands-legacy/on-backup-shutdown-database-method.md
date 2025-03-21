@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Backup Shutdown database method.Summary-->**On Backup Shutdownデータベースメソッド**は、データベースのバックアップが終了するたびに呼び出されます。<!-- END REF-->バックアップが終了する理由には、コピーの終了、 ユーザによる中断、そしてエラーがあります。  
 これはすべての4D環境: 4D (すべてのモード), 4D Server、4D Volume Desktopが統合されたコンパイル済みアプリケーションに当てはまります。

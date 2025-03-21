@@ -5,7 +5,7 @@ title: Composants
 
 A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\\\\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that can be found on GitHub.
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
@@ -34,7 +34,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-local-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -56,8 +56,8 @@ The **dependencies.json** file references all components required in your 4D pro
 
 It can contain:
 
-- names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
+- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -96,7 +96,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ### Local components
 
-You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
+You declare a local component in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -180,7 +180,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declaring paths
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+You declare a component stored on GitHub in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
 ```json
 {
@@ -211,7 +211,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 When you create a release in GitHub, you specify a **tag** and a **version**.
 
-- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
+- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
 
 ```json
 {
@@ -305,10 +305,10 @@ In an opened project, you can add, remove, and get information about dependencie
 To display the Dependencies panel:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 
@@ -322,7 +322,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Make sure the **Local** tab is selected and click on the **...** button. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
+Make sure the **Local** tab is selected and click on the **...** button. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -333,11 +333,11 @@ If the selected item is not valid, an error message is displayed.
 Click **Add** to add the dependency to the project.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environment4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
 
 :::note
 
-If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
+If no [**environment4d.json**](#environment4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
 
 :::
 

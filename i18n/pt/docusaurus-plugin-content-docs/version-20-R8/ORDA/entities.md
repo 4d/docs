@@ -3,7 +3,7 @@ id: entities
 title: Trabalhar com dados
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
+No ORDA, você acessa os dados através de [entidades](dsMapping.md#entity) e [seleções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 ## Criar uma entidade
 
@@ -90,7 +90,7 @@ Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referen
 
 :::info
 
-Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Não há também bloqueio automático em uma entidade (veja [bloqueio de Entity](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
+Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. Não há também bloqueio automático em uma entidade (veja [bloqueio de Entity](#entity-locking)). Quando uma entidade é carregada, ela usa o mecanismo [lazy loading](glossary.md#lazy-loading), o que significa que somente as informações necessárias são carregadas. No entanto, no cliente/servidor, a entidade pode ser carregada automaticamente de forma direta, se necessário.
 
 :::
 
@@ -105,7 +105,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 
 :::info
 
-For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Para obter mais informações sobre o tipo de atributos, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 :::
 
@@ -239,7 +239,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Usando a função dataclass [`.all()`](API/DataClassClassClass.md#all), para selecionar todas as entidades em um dataclass;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Usando a função [`Criar seleção de entidade`](../commands/create-entity-selection.md) ou o [`.newSelection()`](API/DataClassClassClass.md#newselection) de dataclass para criar uma entidade em branco;
 - Usando a [`.copy()`](API/EntitySelectionClass.md#copy) função para duplicar uma seleção de entidade existente;
 - Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
@@ -312,9 +312,9 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - a nova entity selection é baseada numa relação:
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+ - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
+ - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
+ - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Exemplos:
 
@@ -445,7 +445,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Como definir um filtro restrito
 
-Você cria um filtro para uma classe de dados definindo uma função `event restrict` na [**classe dataclass**](dsMapping.md#dataclass-class) da dataclass. O filtro é então ativado automaticamente.
+Você cria um filtro para uma classe de dados definindo uma função `event restrict` na [**classe dataclass**](dsMapping.md#dataclass) da dataclass. O filtro é então ativado automaticamente.
 
 ### `Function event restrict`
 
@@ -554,9 +554,9 @@ Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", sendo p
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
+ - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
-  - Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
+ - Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 

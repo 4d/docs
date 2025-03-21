@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY PICTURE.Summary-->O comando ARRAY PICTURE cria e/ou redimensiona um array de elementos [Imagem](# "Can be any Windows or Macintosh picture") na memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
@@ -26,7 +26,7 @@ Enquanto se aplica ARRAY PICTURE para um array já existente:
 * se você aumentar o tamanho de um array, os elementos existentes não sofrem mudanças, e os novos elementos se iniciam para imagems vazias. Isto significa que [Picture size](picture-size.md "Picture size") aplicados a um destes elementos vai retornar *0*.
 * se você reduzir o tamanho de um array, os últimos elementos deletados do array são perdidos.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array de processo de 100 elementos de tipo [Imagem](# "Can be any Windows or Macintosh picture"):
 
@@ -34,7 +34,7 @@ Este exemplo cria um array de processo de 100 elementos de tipo [Imagem](# "Can 
  ARRAY PICTURE(agValores;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 100 linhas de 50 elementos de tipo [Imagem](# "Can be any Windows or Macintosh picture"):
 
@@ -42,7 +42,7 @@ Este exemplo cria um array local de 100 linhas de 50 elementos de tipo [Imagem](
  ARRAY PICTURE($agValores;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo cria um array de interprocesso de tipo [Imagem](# "Can be any Windows or Macintosh picture") e carrega cada imagem de um dos elementos do array. O tamanho do array é igual ao número de recursos *'PICT'* disponíveis na base. O nome do recurso do array começa por *"User Intf/"*:
 
@@ -61,7 +61,7 @@ Este exemplo cria um array de interprocesso de tipo [Imagem](# "Can be any Windo
 ```
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

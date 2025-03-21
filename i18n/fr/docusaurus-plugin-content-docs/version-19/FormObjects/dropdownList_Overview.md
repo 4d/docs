@@ -15,7 +15,7 @@ Vous pouvez créer différents types de listes déroulantes avec différentes fo
 
 | Type                                          | Fonctionnalités                                                            | Type d’expression | Type de données                               | Définition JSON                                                                                                                                               |
 | --------------------------------------------- | -------------------------------------------------------------------------- | ----------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objet                                         | Construit sur une collection                                               | Objet             | Numérique, texte, date ou heure               | `dataSourceTypeHint: object` + `numberFormat: <format>` ou `textFormat: <format>` ou `dateFormat: <format>` ou `timeFormat: <format>` |
+| Object                                        | Construit sur une collection                                               | Object            | Numérique, texte, date ou heure               | `dataSourceTypeHint: object` + `numberFormat: <format>` ou `textFormat: <format>` ou `dateFormat: <format>` ou `timeFormat: <format>` |
 | Tableau                                       | Construit sur un tableau                                                   | Tableau           | Numérique, texte, date ou heure               | `dataSourceTypeHint: arrayNumber` ou `arrayText` or `arrayDate` ou `arrayTime`                                                                                |
 | Enumération enregistrée en tant que valeur    | Construit sur une liste de choix (standard)                                | Liste             | Valeur de l'élément sélectionné               | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Enumération enregistrée en tant que référence | Construit sur une liste de choix. La position de l'élément est sauvegardée | Liste             | Référence de l'élément sélectionné            | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
@@ -135,7 +135,7 @@ Lorsque le formulaire est exécuté, 4D gère automatiquement la liste déroulan
 
 #### Valeur de l'élément sélectionné ou Référence de l'élément sélectionné
 
-Lorsque vous avez associé une liste déroulante avec une liste déroulante et avec un champ ou une variable, vous pouvez configurer la propriété [**Type de données**](properties_DataSource.md#data-type) sur **Valeur de l'élément sélectionné** ou **Référence de l'élément sélectionné**. Cette option permet d'optimiser la taille des données stockées.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
 
 ### Utiliser une énumération hiérarchique
 

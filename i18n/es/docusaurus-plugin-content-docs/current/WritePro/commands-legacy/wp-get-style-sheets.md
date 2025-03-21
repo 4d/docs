@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get style sheets.Summary-->El comando **WP Get style sheets** devuelve una colección de todos los objetos de hoja de estilo del *tipo* definido en *wpDoc*.<!-- END REF-->
 
@@ -26,7 +26,7 @@ El parámetro *tipo* especifica el tipo de hoja a devolver. Los tipos disponible
 * wk type character para hojas de estilo de caracteres
 * wk type paragraph para hojas de estilo de párrafo
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea recuperar una colección de todas las hojas de estilo de caracteres:
 
@@ -35,7 +35,7 @@ Desea recuperar una colección de todas las hojas de estilo de caracteres:
  $styleSheets:=WP Get style sheets(myDoc;wk type character)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

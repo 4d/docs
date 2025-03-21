@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->The **RESUME INDEXES** command reactivates all the indexes of *aTable* when they have been paused previously using the [PAUSE INDEXES](pause-indexes.md) command.<!-- END REF--> If the indexes of *aTable* have not been paused, this command does nothing. 
 
@@ -23,12 +23,12 @@ If you pass the optional *\** parameter, the rebuilding of the indexes is perfor
 
 The **RESUME INDEXES** command can only be called from 4D Server or a local 4D. If this command is executed from a remote 4D machine, the error -10513 is generated. This error can be intercepted using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Ver também 
+## Ver também 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

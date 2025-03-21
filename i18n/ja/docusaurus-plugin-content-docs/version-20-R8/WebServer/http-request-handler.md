@@ -3,34 +3,40 @@ id: http-request-handler
 title: HTTP Request handler
 ---
 
-By default, HTTP requests received by the 4D web server are handled through [built-in processing features](httpRequests.md) or the [REST server](../REST/REST_requests.md).
+デフォルトで、4D Web サーバーで受信されたHTTP リクエストは[ビルトイン処理機能](httpRequests.md) または[REST サーバー](../REST/REST_requests.md) で管理されます。
 
-In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code.
+これに加えて、4D では**カスタムのHTTP リクエストハンドラー** の実装をサポートしており、これによって受信した特定のHTTP リクエストに割り込み、自分のコードを使用して処理することができるようになります。
 
-When a custom HTTP request handler intercepts a request, it is processed directly and no other processing features (e.g. [On Web authentication](./authentication.md#on-web-authentication) or [On Web connection](./httpRequests.md#on-web-connection) database methods) are called.
+カスタムのHTTP リクエストハンドラーがリクエストに割り込んだ場合、そのリクエストは直接処理され、他の処理機能(例: [On Web authentication](./authentication.md#on-web-authentication) データベースメソッドや [On Web connection](./httpRequests.md#on-web-connection) データベースメソッド)が呼び出されることはありません。
 
-Custom HTTP request handlers meet various needs, including:
+カスタムのHTTP リクエストハンドラーを使用することで、以下のような用途に応えることができます:
 
-- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
-- redirecting on specific pages according to a context (user authenticated, privileges granted...),
-- handle an authentication via oAuth 2.0.
+- 与えられたURL をリソースプロバイダやファイルアップロードボックスとして使用する(これにより様々なファイルのダウンロード/アップロードが可能になります)。
+- コンテキスト(認証されたユーザー、与えられた権限など)に応じて、特定のページへとリダイレクトする
+- oAuth 2.0 経由での認証を管理する
 
 ## 要件
 
-Custom HTTP Request handlers are supported:
+カスタムのHTTP リクエストハンドラーは以下の条件の元にサポートされます:
 
-- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
-- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+- [スケーラブルセッション](./sessions.md#enabling-web-sessions) が有効化されていること
+- メインのWeb サーバーでのみ利用可能です([コンポーネントのWeb サーバー](../WebServer/webServerObject.md) で定義されていたHTTP リクエストハンドラーがあったとしてもそれは無視されます)。
 
-## HTTPHandlers.json File
+:::warning
 
-You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
 
-This file contains all listened URL patterns, the handled verbs, and the code to be called. Handlers are provided as a collection in JSON format.
+:::
 
-At runtime, the first pattern matching the URL is executed, the others are ignored.
+## HTTPHandlers.json ファイル
 
-Here is an example of a *HTTPHandlers.json* file contents:
+カスタムHTTP リクエストハンドラーは、[`Project/Sources`](../Project/architecture.md#sources) にある**HTTPHandlers.json** という設定ファイル内で定義します。
+
+このファイルはサーバーが聞いている全てのURL パターン、管理される動詞(メソッド)、そして呼び出されるべきコードが格納されています。  ハンドラーはJSON フォーマットのコレクションとして提供されます。
+
+ランタイムでは、URLに合致する最初のパターンのみが実行され、他のパターンは無視されます。
+
+以下は*HTTPHandlers.json* ファイルのコンテンツの一例です:
 
 ```json
 
@@ -44,45 +50,44 @@ Here is an example of a *HTTPHandlers.json* file contents:
 ]
 ```
 
-This handler declaration can be read as: when any request starting by `/start/` with a `GET` or `POST` verb is received by the server, the `gettingStarted` function of the `GeneralHandling` singleton is executed.
+このハンドラー宣言は以下のように解釈することができます: `/start/` から始まり`GET` または`POST`動詞がついたリクエストがサーバーで受信された場合、`GeneralHandling` シングルトンクラスの`gettingStarted` 関数が実行されます。
 
 :::note
 
-You must restart the Web server so that modifications made in this file are taken into account.
+このファイルに対して行った変更が反映されるためには、Web サーバーを再起動する必要があります。
 
 :::
 
-## Handler definition
+## ハンドラー定義
 
-A handler is defined by:
+ハンドラーは以下の3つの要素から定義されます:
 
-- a listened URL pattern
-- a function and its class where the code is implemented to handle the listened URL pattern
-- the verbs with which the URL can be called to trigger the handler
+- 聞くべきURL パターン
+- 受信したURL パターンを処理するためのコードが実装されているクラスとその関数
+- そのURL とともに使用することでハンドラーをトリガーする動詞(メソッド)
 
-The handler identifier is the couple [pattern + a verb among the verbs list].
+ハンドラーの識別子は、[パターン + 動詞のリストの中にある動詞]の組み合わせとなります。
 
-### URL patterns
+### URL パターン
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+URL パターンは**接頭辞** として、あるいは**正規表現** を使用して定義することできます。
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- 接頭辞パターンを宣言するためには、HTTPHandlers.json ファイル内の"pattern" プロパティ名を使用します。 接頭辞は `/` の開始と終了をすでに含んでいる正規表現とみなされます。\
+   Ex: `"pattern" : "docs"` または `"pattern" : "docs/invoices"`
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。 正規表現パターンは直接管理されます。
+   Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
-"Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
+"Pattern" と "regexPattern" プロパティは同じハンドラー定義内で同時に使用することはできません(使用した場合、"regexPattern" プロパティのみが有効となります)。
 
-#### Pattern matching
+#### パターンの合致
 
-URL patterns are triggered in the given order:
+URL パターンは以下の指定された順番に基づいてトリガーされます:
 
-- the first matching pattern is executed
-- the following patterns are not executed even if they match the URL
+- 最初に合致したパターンが実行されます。
+- それ以降のパターンは、URL に合致していたとしても実行されません。
 
-As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.
+結果として、ハンドラーを作成する際には正確な戦略を適用する必要があります。つまり、もっとも詳細なパターンを先に、そして最も一般的なパターンを後に書く必要があります。
 
 ```json
 [
@@ -108,49 +113,49 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### 禁止されているパターン
 
-URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
+カスタムの HTTP ハンドラーでは、4D ビルトインのHTTP 処理機能に合致するURL パターンは許可されていません。 例えば、以下のようなパターンは管理することができません:
 
 - `/4DACTION`
 - `/rest`
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### クラスとメソッド
 
-You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
+定義されたURL パターンを検知して割り込んだときに実行されるべきコードを宣言するためには、"class" および "method" プロパティを使用します。
 
-- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
-- "method": class function belonging to the class.
+- "class": `cs.` を除いたクラス名。例: `cs.UsersHandling` ユーザークラスの場合は、"UsersHandling" 。 このクラスは[**共有**](../Concepts/classes.md#共有シングルトン) クラスかつ[**シングルトン**](../Concepts/classes.md#シングルトンクラス) クラスである必要があります。
+- "method": クラスに属性ているクラス関数
 
-[See below](#request-handler-code) for information about the request handler code.
+リクエストハンドラーコードについての情報に関しては、[後述の説明](#リクエストハンドラーコード) を参照してください。
 
 ### Verbs
 
-You can use the "verbs" property in the handler definition to declare HTTP verbs that are supported in incoming requests for this handler. A request that uses a verb that is not explicitely allowed is automatically rejected by the server.
+ハンドラー定義内で "verbs" プロパティを使用することで、そのハンドラーが受信するリクエスト内でサポートされるHTTP 動詞(メソッド) を宣言することができます。 明示的に許可されていない動詞を使用するリクエストは、サーバーによって自動的に拒否されます。
 
-You can declare several verbs, separated by a comma. Verb names are not case sensitive.
+カンマで区切ることで、複数の動詞を宣言することができます。  動詞の名前の大文字・小文字は区別されます。
 
-Ex: `"verbs" : "PUT, POST"`
+例: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+動詞名に対する制約はありません。 全ての動詞名を使用することが可能です。
 
 :::
 
-By default, if the "verbs" property is not used for a handler, **all** HTTP verbs are supported in incoming requests for this handler (except those possibly used beforehand in a more detailed pattern, as shown in the example above).
+デフォルトで、"verbs" プロパティがハンドラーにおいて使用されていない場合、そのハンドラーが受信するリクエストに対しては、**全ての** HTTP 動詞がサポートされることになります(ただし前述の例のように、より詳細なパターンによって先に使用されているものを除く)。
 
 :::note
 
-The HTTP verb can also be evaluated [using the `.verb` property within the request handler code](../API/IncomingMessageClass.md#verb) to be accepted or rejected.
+HTTP 動詞はまた、[リクエストハンドラーコード内で`.verb` プロパティを使用](../API/IncomingMessageClass.md#verb) して評価することで受け入れるか拒否するかを決めることができます。
 
 :::
 
 ## 例題
 
-Here is a detailed example of a HTTPHandlers.json file:
+以下はHTTPHandlers.json ファイルの詳細な例です:
 
 ```json
 
@@ -158,42 +163,42 @@ Here is a detailed example of a HTTPHandlers.json file:
    {
         "class": "GeneralHandling",
         "method": "handle",
-        "pattern": "info", //URL prefix
+        "pattern": "info", //URL 接頭辞
         "verbs": "GET"
     }, 
     {
         "class": "UsersHandling",
         "method": "manageAccount",
-        "pattern": "userAccount/update",   //URL prefix
+        "pattern": "userAccount/update",   //URL 接頭辞
         "verbs": "PUT,POST"
     }, 
     {
         "class": "FinancialHandling",
         "method": "handleInvoices",
-        "regexPattern": "/docs/invoices/(past|today)", //URL prefix given as a regex
+        "regexPattern": "/docs/invoices/(past|today)", // 正規表現として指定されたURL 接頭辞
         "verbs": "GET"
     },
     {
         "class": "DocsHandling",
         "method": "handleDocs",
-        "regexPattern": "/docs/myPage.html",  //URL prefix given as a regex
+        "regexPattern": "/docs/myPage.html",  // 正規表現として指定されたURL 接頭辞
         "verbs": "GET"
     },
     {
         "class": "InvoicesHandling",
         "method": "handleTheInvoice",
-        "pattern": "docs/invoices/details/theInvoice", // The most specific URL first
+        "pattern": "docs/invoices/details/theInvoice", // 最も厳密なURL を最初に
         "verbs": "GET,POST"
     },
     {
         "class": "InvoicesHandling",
         "method": "handleDetails",
-        "pattern": "docs/invoices/details",    // The general URLs after
+        "pattern": "docs/invoices/details",    // 一般的なURL を後に
         "verbs": "GET"
     },
     {
         "class": "InvoicesHandling",
-        "method": "handleInvoices",   // The general URLs after
+        "method": "handleInvoices",   // 一般的なURL を後に
         "pattern": "docs/invoices",
         "verbs": "GET"
     }
@@ -201,66 +206,66 @@ Here is a detailed example of a HTTPHandlers.json file:
 
 ```
 
-In this example, you must implement the following functions:
+この例においては、以下の関数を実装する必要があります:
 
-- *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
-- *handleDocs* in the *DocsHandling* class
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *GeneralHandling* クラス内の*handle 関数*
+- *UsersHandling* クラス内の *manageAccount*
+- *FinancialHandling* クラス内の *handleInvoices*
+- *DocsHandling* クラス内の *handleDocs*
+- *InvoicesHandling* クラス内の *handleTheInvoice* / *handleDetails* / *handleInvoices*
 
-Examples of URLs triggering the handlers:
+以下はハンドラーをトリガーするURL の一例です:
 
-`IP:port/info/` with a GET verb
-`IP:port/info/general` with a GET verb
+`IP:port/info/` とGET 動詞
+`IP:port/info/general` とGET 動詞
 
-`IP:port/userAccount/update/` with a POST verb
-`IP:port/userAccount/update/profile` with a POST verb
+`IP:port/userAccount/update/` とPOST 動詞
+`IP:port/userAccount/update/profile` とPOST 動詞
 
-`IP:port/docs/invoices/past` with a GET verb
-`IP:port/docs/invoices/today/latest` with a GET verb
+`IP:port/docs/invoices/past` とGET 動詞
+`IP:port/docs/invoices/today/latest` とGET 動詞
 
-`IP:port//docs/myPage.html` with a GET verb
+`IP:port//docs/myPage.html` とGET 動詞
 
-`IP:port//docs/invoices/` with a GET verb, calls *handleInvoices* function (*InvoicesHandling* class)
-`IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
-`IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
+`IP:port//docs/invoices/` を GET 動詞と使用すると、*handleInvoices* 関数を呼び出します(*InvoicesHandling* クラス)
+`IP:port//docs/invoices/details/` を GET 動詞と使用すると、*handleDetails* 関数を呼び出します(*InvoicesHandling* クラス)
+`IP:port//docs/invoices/details/theInvoice/xxxxxx` を GET 動詞と使用すると、*handleTheInvoice* 関数を呼び出します(*InvoiceslHandling* クラス)
 
-## Request handler code
+## リクエストハンドラーコード
 
 ### Function configuration
 
-The HTTP Request handler code must be implemented in a function of a [**Shared**](../Concepts/classes.md#shared-singleton) [**singleton class**](../Concepts/classes.md#singleton-classes).
+HTTP リクエストハンドラーコードは、[**共有された**](../Concepts/classes.md#共有シングルトン) 、 [**シングルトンクラス**](../Concepts/classes.md#シングルトンクラス) の関数内に実装されている必要があります。
 
-If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
+シングルトンがないかあるいは共有されていない場合、"シングルトンが見つかりません" エラーがサーバーから返されます。 HTTPHandlers.json 内で[ハンドラーとして定義されている](#ハンドラー定義) クラスまたは関数が見つからない場合、"シングルトン関数が見つかりません" エラーがサーバーによって返されます。
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. In this case, you need to declare its functions with the [`shared` keyword](../Concepts/classes.md#shared-functions).
+リクエストハンドラーのプロパティが関数によってアップデートされていない限り、リクエストハンドラー関数は必ずしも共有されているわけではありません。  この場合、[`shared` キーワード](../Concepts/classes.md#共有関数) を使用して関数を宣言する必要があります。
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+[`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) または [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードを使用してリクエストハンドラー関数を外部REST 呼び出しへと公開することは**推奨されていません**。
 
 :::
 
-### Input: an instance of the 4D.IncomingMessage class
+### 入力: 4D.IncomingMessage クラスのインスタンス
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+ハンドラーがリクエストを検知して割り込んだ場合、[4D.IncomingMessage クラス](../API/IncomingMessageClass.md) のインスタンスとしてサーバーで受信されます。
 
-All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
+リクエストURL、動詞、ヘッダー、そしてあれば(URL 内に渡された)引数や本文など、リクエストに関して必要な情報は全てこのオブジェクト内に揃っています。
 
-Then, the request handler can use this information to trigger appropriate business logic.
+そのため、リクエストハンドラーはこれらの情報を使用して適切なビジネスロジックをトリガーすることができます。
 
-### Output: an instance of the 4D.OutgoingMessage class
+### 出力: 4D.OutgoingMessage クラスのインスタンス
 
-The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutgoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
+リクエストハンドラーは[4D.OutGoingMessage クラス](../API/OutgoingMessageClass.md)のオブジェクトインスタンスを返すことができます。つまりファイルのコンテンツなど、ブラウザが管理可能な完全なWeb コンテンツを返すことができるということです。
 
 ### 例題
 
-The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides functions to get the [headers](../API/IncomingMessageClass.md#headers) and the [body](../API/IncomingMessageClass.md#gettext) of the request.
+[4D.IncomingMessage クラス](../API/IncomingMessageClass.md) は、リクエストの[ヘッダー](../API/IncomingMessageClass.md#headers) および[本文](../API/IncomingMessageClass.md#gettext) を取得するための関数を提供しています。
 
-Here is a simple example to upload a file on the server.
+以下はサーバーにファイルをアップロードするためのシンプルな例です。
 
-The **HTTPHandlers.json** file:
+**HTTPHandlers.json** ファイル:
 
 ```json
 [
@@ -273,12 +278,12 @@ The **HTTPHandlers.json** file:
 ]
 ```
 
-The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
+呼び出されたURL: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+ファイルのバイナリーのコンテンツはリクエストの本文に置かれ、またPOST 動詞が使用されています。 ファイル名はURL 内に引数(*fileName*) として渡されています。 これはリクエストの[`urlQuery`](../API/IncomingMessageClass.md#urlquery) オブジェクト内に受け取られます。
 
 ```4d
-    //UploadFile class
+    //UploadFile クラス
 
 shared singleton Class constructor()
 	
@@ -320,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## 参照
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/perfect-mastery-of-your-back-end-business-logic-thanks-to-HTTP-requests-handlers) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)

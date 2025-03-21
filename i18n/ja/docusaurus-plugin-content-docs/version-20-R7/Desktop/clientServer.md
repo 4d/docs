@@ -29,8 +29,8 @@ title: クライアント/サーバー管理
 4D Server で実行されているプロジェクトに接続するには:
 
 1. 次のいずれかの方法をおこないます:
-   - Welcome ウィザードにて **4D Serverに接続** を選択します。
-   - **ファイル** メニューより \*\*開く ＞ リモートプロジェクト...\*\*を選択するか、**開く** ツールバーボタンより同様に選択します。
+  - Welcome ウィザードにて **4D Serverに接続** を選択します。
+  - **ファイル** メニューより \*\*開く ＞ リモートプロジェクト...\*\*を選択するか、**開く** ツールバーボタンより同様に選択します。
 
 4D Server に接続するためのダイアログが表示されます。 ダイアログには **最近使用**、**利用可**、および **カスタム** という、3つのタブがあります。
 
@@ -87,7 +87,7 @@ title: クライアント/サーバー管理
 
 ## リモートユーザーセッション
 
-On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+サーバー上では、[`Session`](../commands/session.md) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 ### 効果
 
@@ -113,3 +113,4 @@ On the server, the [`Session`](../commands/session.md) command returns a `sessio
 ### 関連項目 (ブログ記事)
 
 [クライアント/サーバー接続とストアドプロシージャーに対応した新しい 4Dリモートセッションオブジェクト](https://blog.4d.com/ja/new-4d-remote-session-object-with-client-server-connection-and-stored-procedure/)。
+

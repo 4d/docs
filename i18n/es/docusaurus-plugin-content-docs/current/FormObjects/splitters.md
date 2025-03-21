@@ -16,7 +16,7 @@ Algunas de las características generales del separador:
 - Los topes de los separadores se calculan para que los objetos desplazados permanezcan totalmente visibles en el formulario o no pasen por debajo/al lado de otro separador. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 - Si se redimensiona un formulario mediante un separador, las nuevas dimensiones del formulario se guardan sólo mientras se muestra el formulario. Una vez que se cierra un formulario, se restablecen las dimensiones iniciales.
 
-Una vez insertado, el separador aparece como una línea. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md#line-color).
+Una vez insertado, el separador aparece como una línea. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md#line-color).
 
 #### Ejemplo JSON:
 
@@ -39,13 +39,13 @@ Una vez insertado, el separador aparece como una línea. Puede modificar su [est
 
 En un formulario, los separadores interactúan con los objetos que están a su alrededor según las opciones de cambio de tamaño de estos objetos:
 
-| Opciones de redimensionamiento de los objetos | Objeto(s) por encima de un separador horizontal o a la izquierda de un separador vertical (1)                             | Objeto(s) debajo de un separador horizontal _no empujador_ o a la derecha de un separador vertical _no empujador_                                                                                                                               | Objeto(s) debajo de un separador horizontal _Empujador_ o a la derecha de un separador vertical _Empujador_                                                                                  |
+| Opciones de redimensionamiento de los objetos | Objeto(s) por encima de un separador horizontal o a la izquierda de un separador vertical (1)                             | Objeto(s) debajo de un separador horizontal *no empujador* o a la derecha de un separador vertical *no empujador*                                                                                                                               | Objeto(s) debajo de un separador horizontal *Empujador* o a la derecha de un separador vertical *Empujador*                                                                                  |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ninguno                                       | Permanece como está                                                                                                                                             | Se desplazan con el separador (la posición respecto al separador no se modifica) hasta la siguiente parada. El tope cuando se mueve hacia abajo o hacia la derecha es el borde de la ventana, u otro separador. | Se desplazan con el separador (la posición respecto al separador no se modifica) indefinidamente. No se aplica ninguna parada ( ver el siguiente párrafo) |
 | Redimensionamiento                            | Conservan la(s) posición(es) original(es), pero se redimensionan según la nueva posición del separador |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                 |
 | Mover                                         | Se mueven con el separador                                                                                                                                      |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                 |
 
-_(1) No puede arrastrar el separador más allá del lado derecho (horizontal) o inferior (vertical) de un objeto situado en esta posición._
+*(1) No puede arrastrar el separador más allá del lado derecho (horizontal) o inferior (vertical) de un objeto situado en esta posición.*
 
 > Un objeto completamente contenido en el rectángulo que define el separador se mueve al mismo tiempo que el separador.
 
@@ -53,7 +53,7 @@ _(1) No puede arrastrar el separador más allá del lado derecho (horizontal) o 
 
 Puede asociar un método objeto a un separador y será llamado con el evento `On Clicked` durante todo el movimiento.
 
-A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo _Longint_. Esta variable se puede utilizar en su objeto y/o métodos de formulario. Su valor indica la posición actual del separador, en píxeles, en relación con su posición inicial.
+A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo *Longint*. Esta variable se puede utilizar en su objeto y/o métodos de formulario. Su valor indica la posición actual del separador, en píxeles, en relación con su posición inicial.
 
 - Si el valor es negativo: el separador se ha movido hacia arriba o hacia la izquierda,
 - Si el valor es positivo: el separador se ha movido hacia el fondo o hacia la derecha,

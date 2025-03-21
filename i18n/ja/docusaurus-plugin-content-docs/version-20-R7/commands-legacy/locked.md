@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Locked.Summary-->**Locked**は、*aTable*のカレントレコードがロックされているかを調べます。<!-- END REF-->このコマンドを使用してレコードがロックされているかどうかを調べた後、レコードが開放されるまで待機するか、処理をスキップするかの選択をユーザに与える等の適切な処理を行ってください。
 
@@ -28,14 +28,14 @@ displayed_sidebar: docs
 
 トランザクション処理の実行中、レコードがロックされているかどうかを調べるために[LOAD RECORD](load-record.md) と**Locked**がしばしば使用しされます。レコードがロックされている場合、トランザクション処理をキャンセルするのが一般的です。
 
-#### 参照 
+## 参照 
 
 [Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
 *レコードのロック*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

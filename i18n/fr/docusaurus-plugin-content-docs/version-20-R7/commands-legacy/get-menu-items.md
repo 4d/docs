@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->La commande **GET MENU ITEMS** retourne dans les tableaux *tabTitresMenu* et *tabRefsMenu* les libellés et les identifiants de toutes les lignes du menu ou de la barre de menus désigné(e) par le paramètre *menu*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Réf�
 
 Lorsqu'aucune référence de menu n’est rattachée à une ligne, une chaîne vide est retournée dans l’élément de tableau correspondant.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaître le contenu de la barre de menus du process courant : 
 
@@ -35,7 +35,7 @@ Vous souhaitez connaître le contenu de la barre de menus du process courant :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Document to text.Summary-->The **Document to text** command lets you retrieve the contents of a file directly on disk in a 4D text variable or text field.<!-- END REF-->
 
@@ -33,7 +33,7 @@ If the document contains a Byte Order Mark (BOM), 4D uses the character set that
 If the document does not contain a BOM and if the *charSet* parameter is omitted, by default 4D uses the following character sets:
 
 * under Windows: ANSI
-* under OS X: MacRoman
+* under macOS: MacRoman
 
 In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters in the document. You can pass one of the following constants, found in the "*System Documents*" theme:
 
@@ -51,7 +51,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### Example 
+## Example 
 
 Given the following text document (fields are separated by tabs):
 
@@ -73,12 +73,12 @@ When you execute this code:
   // \r = CR
 ```
 
-#### See also 
+## See also 
 
 *System Documents*  
 [TEXT TO DOCUMENT](text-to-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current client authentication.Summary-->La commande **Current client authentication** envoie au serveur Active Directory de Windows une requête d'authentification du client courant et, en cas de succès, retourne le nom d'utilisateur Windows de ce client (identifiant de session).<!-- END REF--> Si l'authentification échoue, une chaîne vide est retournée. 
 
@@ -32,7 +32,7 @@ Optionnellement, la commande peut retourner deux paramètres de type texte :
 
  Ces paramètres peuvent être utilisés pour accepter ou rejeter les connexions si vous souhaitez filtrer les accès en fonction du domaine du client ou du protocole utilisé. 
 
-##### Niveau de sécurité de l'authentification 
+### Niveau de sécurité de l'authentification 
 
 Le niveau de sécurité de l'authentification (c'est-à-dire le degré de confiance que vous pouvez avoir dans le nom d'utilisateur récupéré par la commande) dépend de la manière dont l'utilisateur a été identifié. Les valeurs retournées dans les différents paramètres de la commande **Current client authentication** vous permettent de savoir quelles informations ont été utilisées pour l'identification et donc, le niveau de sécurité :
 
@@ -45,7 +45,7 @@ Le niveau de sécurité de l'authentification (c'est-à-dire le degré de confia
 
 Pour plus d'informations sur les configurations, veuillez vous reporter au paragraphe *Configuration requise pour le SSO*.
 
-#### Exemple 
+## Exemple 
 
 Dans votre base 4D Server, vous avez conçu un système de contrôle d'accès basé sur la fonctionnalité des utilisateurs et des groupes de 4D. Vous souhaitez configurer votre application de manière à ce que les utilisateurs 4D distants sous Windows puissent se connecter directement à 4D Server (sans qu'aucune boîte de dialogue de mot de passe ne s'affiche), tout en étant connectés avec leurs propres droits d'accès.
 
@@ -74,7 +74,7 @@ Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée
 * utilisation des fonctions LDAP afin de récupérer les droits d'accès de l'utilisateur.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

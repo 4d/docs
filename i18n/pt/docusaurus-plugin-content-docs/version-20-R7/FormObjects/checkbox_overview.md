@@ -327,11 +327,11 @@ Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação"
 
 - *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
 - *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -359,9 +359,9 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 
 - [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname)
 - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de 4 estados](properties_TextAndPicture.md#background-pathname).
 
 #### Exemplo JSON:
 
@@ -392,7 +392,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 > (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
 > (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
-Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#button-styles):
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Três estados](properties_Display.md#three-states)

@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-Un combo box es similar a una [lista desplegable](dropdownList_Overview.md#overview), excepto que acepta texto introducido desde el teclado y tiene opciones adicionales.
+Un combo box es similar a una [lista desplegable](dropdownList_Overview.md), excepto que acepta texto introducido desde el teclado y tiene opciones adicionales.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ Fundamentalmente, debe considerar un combo box como un área editable que utiliz
 
 Utilice el evento [`On Data Change`](Events/onDataChange.md) para gestionar las entradas en el área editable, como lo haría con cualquier objeto de formulario de entrada.
 
-Un combo box se inicializa exactamente igual que una [lista desplegable](dropdownList_Overview.md#overview): utilizando un objeto, un array o una lista de selección.
+Un combo box se inicializa exactamente igual que una [lista desplegable](dropdownList_Overview.md): utilizando un objeto, un array o una lista de selección.
 
 ### Utilizar un objeto
 
@@ -55,7 +55,7 @@ Los objetos de tipo combo box aceptan dos opciones específicas:
 - [Inserción automática](properties_DataSource.md#automatic-insertion): permite añadir automáticamente un valor a la fuente de datos cuando un usuario introduce un valor que no se encuentra en la lista asociada al combo box.
 - [Exclusión](properties_RangeOfValues.md#excluded-list) (lista de valores excluidos): permite establecer una lista cuyos valores no pueden introducirse en el combo box. Si se introduce un valor excluido, no se acepta y se muestra un mensaje de error.
 
-> Asociar una [lista de valores obligatorios](properties_RangeOfValues.md#required-list) no está disponible para combo boxes. En una interfaz, si un objeto debe proponer una lista finita de valores requeridos, entonces debe utilizar un objeto [lista desplegable](dropdownList_Overview.md#overview).
+> Asociar una [lista de valores obligatorios](properties_RangeOfValues.md#required-list) no está disponible para combo boxes. En una interfaz, si un objeto debe proponer una lista finita de valores requeridos, entonces debe utilizar un objeto [lista desplegable](dropdownList_Overview.md).
 
 ## Propiedades soportadas
 

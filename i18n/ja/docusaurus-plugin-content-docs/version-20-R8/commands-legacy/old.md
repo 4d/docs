@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Old.Summary-->Old コマンドは、プログラムにより値が代入されたり、データ登録で修正される前に*aField*に納められていた値を返します。<!-- END REF-->
 
@@ -38,11 +38,11 @@ Oldは、すべてのフィールドタイプに適用できます。
  $size :=BLOB size($oldBLOB) //CORRECT
 ```
 
-#### 参照 
+## 参照 
 
 [Modified](modified.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

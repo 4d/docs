@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->LISTBOX SORT COLUMNS コマンドは、1つ以上の列の値に基づいて、*object* 引数および*\**で指定されたリストボックスの行に対して、標準の並べ替えを適用します。<!-- END REF-->
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 **注意:** **LISTBOX SORT COLUMNS** コマンドは、*Sortable* リストボックスプロパティを考慮しません。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

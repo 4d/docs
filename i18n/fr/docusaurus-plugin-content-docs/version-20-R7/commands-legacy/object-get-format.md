@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get format.Summary-->La commande **OBJECT Get format** retourne le format d’affichage courant appliqué à l’objet spécifié par le paramètre *objet*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Cette commande retourne le format d’affichage courant de l’objet, c’est-à
 
 Lorsque la commande **OBJECT Get format** est appliquée à des objets dont le format a été défini à l'aide d'une constante longint (objets date, heure ou image), la chaîne retournée correspond au code de caractère de la constante. Pour obtenir la valeur de la constante, il suffit d'appliquer la fonction [Character code](character-code.md) au résultat (voir ci-dessous).
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple permet d’obtenir la valeur de la constante de formatage appliquée à la variable image dont le nom d’objet est “maphoto” :
 
@@ -40,7 +40,7 @@ Cet exemple permet d’obtenir la valeur de la constante de formatage appliquée
   //Affichage de la valeur "3"
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple permet d’obtenir le formatage appliqué au champ booléen \[Adhérents\]Etat\_civil : 
 
@@ -50,7 +50,7 @@ Cet exemple permet d’obtenir le formatage appliqué au champ booléen \[Adhér
  ALERT($format) //Affichage du format, par exemple "Marié;Célibataire"
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Les formats personnalisés sont retournés inchangés :
 
@@ -60,11 +60,11 @@ Les formats personnalisés sont retournés inchangés :
  $format:=OBJECT Get format(*;"timeinput") // ":m"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

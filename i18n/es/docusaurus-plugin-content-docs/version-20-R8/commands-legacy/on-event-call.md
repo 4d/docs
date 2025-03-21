@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->El comando **ON EVENT CALL** instala el método, cuyo nombre se pasa en *metodoEvento*, como método de gestión de eventos.<!-- END REF--> 
 
@@ -57,17 +57,17 @@ Puede utilizar una de las siguientes constantes, dependiendo de la tecla del mod
 | ------------------------------------ | -------------------------------------- |  
 | Mayúscula                            | Shift key bit / Shift key mask         |  
 | Bloqueo de mayúsculas                | Caps lock key bit / Caps lock key mask |  
-| Alt (también llamado Opción en OS X) | Option key bit / Option key mask       |  
+| Alt (también llamado Opción en macOS) | Option key bit / Option key mask       |  
 | Ctrl en Windows                      | Command key bit / Command key mask     |  
-| Ctrl en OS X                         | Control key bit / Control key mask     |  
-| Comando en OS X                      | Command key bit / Command key mask     |  
+| Ctrl en macOS                         | Control key bit / Control key mask     |  
+| Comando en macOS                      | Command key bit / Command key mask     |  
 | Clic derecho                         | Control key bit / Control key mask     |
 * Las variables sistema MouseX y MouseY contienen las posiciones horizontal y vertical del clic del ratón, expresadas en el sistema de coordenadas locales de la ventana donde el clic se produjo. La esquina superior izquierda de la ventana es la posición 0,0\. Estas variables son significativas sólo cuando hay un clic del ratón.
 * La variable sistema MouseProc contiene el número de referencia del proceso en el cual ocurrió el evento (clic del ratón).
 
 **Importante:** las variables sistema MouseDown, KeyCode, Modifiers, MouseX, MouseY y MouseProc sólo contienen valores significativos en un método de gestión de eventos instalado con **ON EVENT CALL**.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo cancela la impresión si el usuario presiona las teclas Ctrl+punto. Primero, el método de gestión de eventos se instala. Luego aparece un mensaje, anunciando que el usuario puede cancelar la impresión. Si la variable interproceso *vbWeStop* es igual a True en el método de gestión de eventos, una caja de diálogo de alerta aparece para mostrar al usuario el número de registros que han sido impresos. Luego el método de gestión de eventos se desinstala:
 
@@ -108,14 +108,14 @@ Si se ha presionado la combinación Ctrl+punto, el método de gestión de evento
 Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](../commands/print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
 Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION"), NO necesita administrar los eventos que permiten al usuario interrumpir la impresión; [PRINT SELECTION](print-selection.md "PRINT SELECTION") hace esto por usted.
 
-#### Ver también 
+## Ver también 
 
 [FILTER EVENT](filter-event.md)  
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

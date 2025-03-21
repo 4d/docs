@@ -27,15 +27,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 |                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4d-systemworker-new)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                        |
+| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4dsystemworkernew)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                          |
 | [<!-- INCLUDE #SystemWorkerClass.closeInput().Syntax -->](#closeinput)<br/><!-- INCLUDE #SystemWorkerClass.closeInput().Summary -->               |
 | [<!-- INCLUDE #SystemWorkerClass.commandLine.Syntax -->](#commandline)<br/><!-- INCLUDE #SystemWorkerClass.commandLine.Summary -->                |
 | [<!-- INCLUDE #SystemWorkerClass.currentDirectory.Syntax -->](#currentdirectory)<br/><!-- INCLUDE #SystemWorkerClass.currentDirectory.Summary --> |
-| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#dataype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                          |
+| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #SystemWorkerClass.encoding.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #SystemWorkerClass.errors.Summary -->                               |
 | [<!-- INCLUDE #SystemWorkerClass.exitCode.Syntax -->](#exitcode)<br/><!-- INCLUDE #SystemWorkerClass.exitCode.Summary -->                         |
-| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hideWindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
+| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hidewindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
 | [<!-- INCLUDE #SystemWorkerClass.pid.Syntax -->](#pid)<br/><!-- INCLUDE #SystemWorkerClass.pid.Summary -->                                        |
 | [<!-- INCLUDE #SystemWorkerClass.postMessage().Syntax -->](#postmessage)<br/><!-- INCLUDE #SystemWorkerClass.postMessage().Summary -->            |
 | [<!-- INCLUDE #SystemWorkerClass.response.Syntax -->](#response)<br/><!-- INCLUDE #SystemWorkerClass.response.Summary -->                         |
@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` y `onDataError` se ejecutan una o varias veces
 2. si se llama, `onError` se ejecuta una vez (detiene el procesamiento del system worker)
 3. si no se ha producido ningún error, `onResponse` se ejecuta una vez
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 :::info
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descripción
 
-La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4d-systemworker-new)<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 
@@ -328,9 +328,7 @@ Esta propiedad es de **solo lectura**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -553,7 +551,7 @@ Esta propiedad es de **solo lectura**.
 | Parámetros | Tipo                            |                             | Descripción                                       |
 | ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------- |
 | timeout    | Real                            |              ->             | Tiempo de espera (en segundos) |
-| Result     | 4D.SystemWorker | <- | Objeto SystemWorker                               |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker                               |
 
 <!-- END REF -->
 

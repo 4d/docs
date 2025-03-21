@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current time.Summary-->Current time コマンドは、システムクロックの現在の時刻を返します。<!-- END REF--> 
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **4D Server:** この関数を実行する際に、リモートモードの4Dでアスタリスク (\*) 引数を使用すると、サーバの現在時刻が返されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題は、処理時間を計測する方法を紹介しています。ここでは、LongOperation メソッドの実行にかかる時間を計っています:
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
  ALERT("The operation took "+String($vhEndTime-$vhStartTime)+" seconds.") //経過時間を表示
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題は現在時刻から時間、分、秒を取り出します:
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
  ALERT("Current second is: "+String($vhNow%60))
 ```
 
-#### 参照 
+## 参照 
 
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

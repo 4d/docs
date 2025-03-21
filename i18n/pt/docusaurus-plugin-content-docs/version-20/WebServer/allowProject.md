@@ -4,7 +4,7 @@ title: Permitir métodos projeto
 ---
 
   
-As etiquetas 4D tais como `4DEVAL`, `4DTEXT`, `4DHTML`... assim como [`/4DACTION URL`](httpRequests.md#/4daction) permitem-lhe desencadear a execução de qualquer método de um projeto 4D publicado na Web. Por exemplo, o pedido *http://www.server.com/4DACTION/login* provoca a execução do método de projeto ***login*** , se existir.
+The 4D tags such as `4DEVAL`, `4DTEXT`, `4DHTML`... as well as the [`/4DACTION URL`](./httpRequests.md#4daction) allow you to trigger the execution of any project method of a 4D project published on the Web. Por exemplo, o pedido *http://www.server.com/4DACTION/login* provoca a execução do método de projeto ***login*** , se existir.
 
 Este mecanismo representa, portanto, um risco de segurança para a aplicação, em especial se um utilizador da Internet acionar intencionalmente (ou não) um método não destinado a ser executado através da Web. Este risco pode ser evitado das seguintes formas:
 

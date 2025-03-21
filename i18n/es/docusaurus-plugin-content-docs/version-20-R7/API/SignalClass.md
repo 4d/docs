@@ -126,7 +126,7 @@ Esta propiedad está en **lectura-escritura**.
 
 #### Descripción
 
-Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
+La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
 
 Esta propiedad es de **solo lectura**.
 
@@ -181,7 +181,7 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 | Parámetros | Tipo    |                             | Descripción                                     |
 | ---------- | ------- | --------------------------- | ----------------------------------------------- |
 | timeout    | Real    | ->                          | Tiempo máximo de espera de la señal en segundos |
-| Result     | Boolean | <- | Estado de la propiedad `.signaled`              |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`              |
 
 <!-- END REF -->
 
@@ -193,7 +193,7 @@ Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera e
 
 > **Atención**: la llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
 
-Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
 La función devuelve el valor de la propiedad `.signaled`. Evaluar este valor permite saber si la función retornó porque el `.trigger( )` ha sido llamado (`.signaled` es **true**) o si el *timeout* expiró (`.signaled` es **false**).
 

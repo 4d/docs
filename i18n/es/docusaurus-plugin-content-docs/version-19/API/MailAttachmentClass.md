@@ -34,7 +34,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
 | type        | Text              | -> | Valor del encabezado content-type                                                       |
 | disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
+| Resultado   | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
 
 |
 
@@ -169,7 +169,7 @@ $transporter.send($email)
 | cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
 | type        | Text              | -> | Valor del encabezado content-type                                                       |
 | disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
+| Resultado   | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
 
 |
 
@@ -204,13 +204,13 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | Parámetros | Tipo |    | Descripción                                    |
 | ---------- | ---- |:--:| ---------------------------------------------- |
-| Result     | Blob | <- | Contenido del anexo|<!-- END REF -->
+| Resultado  | Blob | <- | Contenido del anexo|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un BLOB<!-- END REF -->. Puede utilizar esta función con los objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
+La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un BLOB<!-- END REF -->. Puede utilizar esta función con los objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](./EmailObjectClass.md#mail-convert-from-mime).
 
 ## .name
 

@@ -32,7 +32,7 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 - **Fonts...**: displays the font system dialog box
 - **Recent fonts**: displays the names of recent fonts selected during the session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
-  When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+ When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
@@ -176,13 +176,13 @@ Cette propriété est disponible pour les [objets de zone de saisie](input_overv
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
 - In multiline inputs, 4D carries out automatic line returns:\
-  ![](../assets/en/FormObjects/multilineAuto.png)
+ ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Non
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
 - Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
-  ![](../assets/en/FormObjects/multilineNo.png)
+ ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Oui
 

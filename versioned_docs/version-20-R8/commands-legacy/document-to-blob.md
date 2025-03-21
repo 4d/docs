@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB loads the whole contents of *document* into *blob*.<!-- END REF--> You must pass the name of an existing document that is not already open, otherwise an error will be generated. To let the user choose the document to be loaded into the BLOB, use the command [Open document](open-document.md) and the process variable *document* (see Example).
 
-#### Example 
+## Example 
 
 You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button that allows you to load a document into a BLOB field. The method for this button could be:
 
@@ -34,11 +34,11 @@ You write an Information System that enables you to quickly store and retrieve d
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the document is correctly loaded, otherwise OK is set to 0 and an error is generated.
 
-#### Error Handling 
+## Error Handling 
 
 * If you try to load (into a BLOB) a document that does not exist or that is already open by another process or application, the appropriate File Manager error is generated.
 * An I/O error can occur if the document is locked, located on a locked volume, or if there is problem in reading the document.
@@ -46,12 +46,12 @@ OK is set to 1 if the document is correctly loaded, otherwise OK is set to 0 and
 
 In each case, you can trap the error using an [ON ERR CALL](on-err-call.md) interruption method.
 
-#### See also 
+## See also 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

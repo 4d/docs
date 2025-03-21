@@ -5,13 +5,13 @@ title: Componentes
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\\\\\\\\\\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que se pueden encontrar en GitHub.
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
 ## Componentes interpretados y compilados
 
-Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
+Components can be interpreted or [compiled](../Desktop/building.md).
 
 - Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados.
 - Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
@@ -22,8 +22,8 @@ La carpeta del paquete de un componente puede contener:
 
 - para **componentes interpretados**: una [Carpeta Project](../Project/architecture.md) estándar. El nombre de la carpeta del paquete debe llevar el sufijo **.4dbase** si desea instalarlo en la carpeta [**Componentes** de su proyecto](architecture.md#components).
 - para **componentes compilados**:
-  - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta _Resources_, un archivo _Info.plist_ (arquitectura recomendada)
-  - o directamente un archivo .4DZ con otras carpetas como _Resources_.
+ - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta *Resources*, un archivo *Info.plist* (arquitectura recomendada)
+ - o directamente un archivo .4DZ con otras carpetas como *Resources*.
 
 :::note
 
@@ -69,8 +69,8 @@ El archivo **dependencies.json** hace referencia a todos los componentes requeri
 
 Puede contener:
 
-- nombres de componentes [almacenados localmente](#declaring-local-components) (ruta por defecto o ruta definida en un archivo **environment4d.json**),
-- nombres de componentes [almacenados en repositorios de GitHub](#declaring-components-stored-on-github) (su ruta puede definirse en este archivo o en un archivo **environment4d.json**).
+- nombres de componentes [almacenados localmente](#local-components) (ruta por defecto o ruta definida en un archivo **environment4d.json**),
+- nombres de componentes [almacenados en repositorios de GitHub](#components-stored-on-github) (su ruta puede definirse en este archivo o en un archivo **environment4d.json**).
 
 #### environment4d.json
 
@@ -107,11 +107,11 @@ flowchart TB
     id3("3<br/>User 4D components")
 ```
 
-Cuando un componente no puede cargarse debido a otra instancia del mismo componente situada en un nivel de prioridad superior, ambos obtienen un [estado] específico (#dependency-status): el componente no cargado recibe el estado _Overloaded_, mientras que el componente cargado tiene el estado _Overloading_.
+Cuando un componente no puede cargarse debido a otra instancia del mismo componente situada en un nivel de prioridad superior, ambos obtienen un [estado] específico (#dependency-status): el componente no cargado recibe el estado *Overloaded*, mientras que el componente cargado tiene el estado *Overloading*.
 
 ### Componentes locales
 
-Declara un componente local en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
+Declara un componente local en el archivo [**dependencies.json**](#dependenciesjson) de la siguiente manera:
 
 ```json
 {
@@ -124,7 +124,7 @@ Declara un componente local en el archivo [**dependencies.json**](#dependencyjso
 
 ... donde "myComponent1" y "myComponent2" son el nombre de los componentes a cargar.
 
-De forma predeterminada, si "myComponent1" y "myComponent2" no están declarados en un archivo [**environment4d.json**](#environment4djson), 4D buscará la carpeta del paquete del componente (_es decir_, la carpeta raíz del proyecto del componente) al mismo nivel que la carpeta del paquete de su proyecto de 4D, por ejemplo:
+De forma predeterminada, si "myComponent1" y "myComponent2" no están declarados en un archivo [**environment4d.json**](#environment4djson), 4D buscará la carpeta del paquete del componente (*es decir*, la carpeta raíz del proyecto del componente) al mismo nivel que la carpeta del paquete de su proyecto de 4D, por ejemplo:
 
 ```
 	/MyProjectRoot/
@@ -141,7 +141,7 @@ Si no desea utilizar la arquitectura **dependencies.json**, puede instalar compo
 
 #### Personalizar rutas de componentes
 
-Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado _No encontrado_ [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
+Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el estado *No encontrado* [status](dependency-status), incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
 
 Puede utilizar rutas **relativas** o **absolutas** (ver abajo).
 
@@ -159,7 +159,7 @@ Ejemplos:
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the _Not found_ [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
 
@@ -195,7 +195,7 @@ Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub
 
 #### Declarando rutas
 
-Declare un componente almacenado en GitHub en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
+Declare un componente almacenado en GitHub en el archivo [**dependencies.json**](#dependenciesjson) de la siguiente manera:
 
 ```json
 {
@@ -226,7 +226,7 @@ Declare un componente almacenado en GitHub en el archivo [**dependencies.json**]
 
 Cuando se crea una versión en GitHub, se le asocia una **etiqueta** y una **versión**. El gestor de dependencias utiliza esta información para gestionar la disponibilidad automática de los componentes.
 
-- **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependencyjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
+- **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependenciesjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
 
 ```json
 {
@@ -239,7 +239,7 @@ Cuando se crea una versión en GitHub, se le asocia una **etiqueta** y una **ver
 }
 ```
 
-- Una versión también se identifica por una **versión**. The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. Del mismo modo que para las etiquetas, puede indicar la versión del componente que desea utilizar en su proyecto, como en este ejemplo:
+- Una versión también se identifica por una **versión**. The versioning system used is based on the [*Semantic Versioning*](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. Del mismo modo que para las etiquetas, puede indicar la versión del componente que desea utilizar en su proyecto, como en este ejemplo:
 
 ```json
 {
@@ -308,16 +308,16 @@ En un proyecto abierto, puede añadir, eliminar, actualizar y obtener informaci�
 Para mostrar el panel Dependencias:
 
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
 ![dependency](../assets/en/Project/dependency.png)
 
-La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server).
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
 
 ### Filtrado de dependencias
 
@@ -325,7 +325,7 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias _overloading_, las cuales son realmente cargadas. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias *overloading*, las cuales son realmente cargadas. Las dependencias *Overloaded* se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
 - **Conflicto**: dependencias que se cargan pero que sobrecargan al menos otra dependencia de menor [nivel de prioridad](#prioridad). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
 
@@ -390,7 +390,7 @@ Para añadir una dependencia local, haga clic en el botón **+** en el área de 
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md##applicationname4dproject-file).
+Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 Si el elemento seleccionado es válido, su nombre y ubicación se muestran en la caja de diálogo.
 
@@ -401,11 +401,11 @@ Si el elemento seleccionado no es válido, se mostrará un mensaje de error.
 Haga clic en **Añadir** para añadir la dependencia al proyecto.
 
 - Si selecciona un componente situado junto a la carpeta del paquete del proyecto (ubicación predeterminada), se declara en el archivo [**dependencies.json**](#dependenciesjson).
-- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environmen4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
+- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environment4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
 
 :::note
 
-Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environmen4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
+Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environment4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
 
 :::
 
@@ -559,3 +559,5 @@ Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
 Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-dependencia) se marca automáticamente como "Descargar tras reinicio". Se descargará cuando se reinicie la aplicación.
+
+

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Size of array.Summary-->**Size of array** retourne le nombre d'éléments de *tableau*.<!-- END REF--> 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant retourne la taille du tableau *monTableau* :
 
@@ -26,7 +26,7 @@ L'exemple suivant retourne la taille du tableau *monTableau* :
  vTaille:=Size of array(monTableau) // vTaille reçoit la taille de monTableau
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant retourne le nombre de lignes d'un tableau à deux dimensions :
 
@@ -34,7 +34,7 @@ L'exemple suivant retourne le nombre de lignes d'un tableau à deux dimensions :
  vlLignes:=Size of array(t2DTableau) // vlLignes reçoit la taille de t2DTableau
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deux dimensions :
 
@@ -42,12 +42,12 @@ L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deu
  vlColonnes:=Size of array(t2DTableau{10}) // vlColonnes reçoit la taille de t2DTableau{10}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

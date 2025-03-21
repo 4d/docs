@@ -38,7 +38,7 @@ Certaines données sont également collectées à intervalles réguliers.
 | license                 | Object                                   | Nom commercial et description des licences des produits                                                                              |
 | isRosetta               | Boolean                                  | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).             |
 | uniqueID                | Text                                     | ID unique du serveur 4D                                                                                                              |
-| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (_Hachage par roulement polynomial du nom de la base de données_) |
+| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
 | dataFileSize            | Number                                   | Taille du fichier de données en octets                                                                                               |
 | indexesSize             | Number                                   | Taille des index en octets                                                                                                           |
 | cacheSize               | Number                                   | Taille du cache en octets                                                                                                            |
@@ -135,7 +135,7 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ## Où sont-elles stockées et envoyées ?
 
-Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
+Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. Le fichier est stocké dans le [dossier 4D actif](../commands-legacy/get-4d-folder.md), c'est-à-dire :
 
 - sous Windows : `Users\[userName]\AppData\Roaming\4D Server`
 - sous macOS : `/Users/[userName]/Library/ApplicationSupport/4D Server`

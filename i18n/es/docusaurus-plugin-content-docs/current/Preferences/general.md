@@ -14,7 +14,7 @@ Esta opción permite configurar la visualización por defecto de 4D al inicio, c
 - **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
 - **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
 - **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
-  > Para forzar la visualización de la caja de diálogo de apertura cuando se selecciona esta opción, mantenga presionada la tecla **Alt** (Windows) u **Option** (macOS) mientras lanza el proyecto.
+    > Para forzar la visualización de la caja de diálogo de apertura cuando se selecciona esta opción, mantenga presionada la tecla **Alt** (Windows) u **Option** (macOS) mientras lanza el proyecto.
 - **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
 - **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
 
@@ -100,7 +100,7 @@ Si tiene intención de utilizar VCS o los editores de código externos con sus n
 
 > Esta opción sólo puede aplicarse a proyectos (las bases de datos binarias siempre incluyen tokens).
 
-> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro _option_.
+> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro *option*.
 
 #### Exclusión de los tokens en los proyectos existentes
 

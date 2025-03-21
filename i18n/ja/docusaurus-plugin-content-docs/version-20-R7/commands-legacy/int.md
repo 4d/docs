@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Int.Summary-->Int は*number*の整数部を取り出して返します。<!-- END REF-->*number*が負の場合は、ゼロから遠い数値に丸めます。
 
-#### 例題 
+## 例題 
 
 以下の例は、負の数値と正の数値に対してIntがどのように機能するかを示しています。数値の少数点以下の部分が取り除かれている点に注目してください:
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
  vlResult:=Int(-123.4) // vlResult gets -124
 ```
 
-#### 参照 
+## 参照 
 
 [Dec](dec.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

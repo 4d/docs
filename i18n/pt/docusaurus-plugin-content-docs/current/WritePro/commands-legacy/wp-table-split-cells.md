@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->O comando **WP TABLE SPLIT CELLS** divide a seleção de intersecção de células em *targetObj* ou *tableRef* (definido por *startColumn*, *startRow*, *columnCount* e *rowCount*).<!-- END REF--> Uma célula será dividida só se tiver sido combinada horizontalmente, verticalmente, ou ambas; do contrario, a célula não será modificada.
 
@@ -43,7 +43,7 @@ Se *targetObj* intersectar uma ou muitas células que não forem fusionadas ante
     
 Se rowCount for omitido, é equivalente de passar 1 (valor normal). Se tanto columnCount quanto rowCount, forem omitidos, equivale a dividir una única célula e se não forem fusionados antes não acontece nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser atribuir a um intervalo de células (que contenha algumas células já combinadas) e dividí-lo:
 
@@ -62,7 +62,7 @@ Os dados da célula já fusionada são mantidos todos na primeira célula (super
 
 Para mais detalles, consulte *Fundir e separar células*.
 
-#### Ver também 
+## Ver também 
 
 *Gerenciar tabelas*  
 [WP TABLE MERGE CELLS](wp-table-merge-cells.md)  

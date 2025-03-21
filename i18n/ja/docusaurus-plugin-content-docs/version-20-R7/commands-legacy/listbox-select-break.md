@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->**LISTBOX SELECT BREAK** を使用して *object*と*\**で指定したリストボックス中でブレーク行を選択できます。<!-- END REF-->リストボックスは階層モードで表示されていなければなりません。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 * 利用可能なオプションを仕様してリストボックスセレクションを可視状態にする必要があります。このやり方の詳細な情報については、*選択行の見た目をカスタマイズ*を参照してください。
 * この場合には、階層リストボックスのブレーク行をハイライトすることはできません(*階層リストボックスの制限*参照)。
 
-#### 例題 
+## 例題 
 
 リストボックスに表示されている以下の配列があります:
 
@@ -57,12 +57,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict185059.en.png)
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

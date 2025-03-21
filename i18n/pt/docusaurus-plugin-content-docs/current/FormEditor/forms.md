@@ -10,7 +10,7 @@ Os formulários constituem a interface através da qual a informação é introd
 Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
 - [objetos de subformulário](FormObjects/subform_overview.md)
-- [formulários herdados](properties_FormProperties.md#inherited-forms)
+- [formulários herdados](./properties_FormProperties.md#inherited-form-name)
 
 ## Criar formulários
 
@@ -18,7 +18,7 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 - **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
 - **Form Editor**: Modifique seus formulários usando o **[Form Editor] (FormEditor/formEditor.md)**.
-- **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture.md#sources-folder). Exemplo:
+- **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture#sources). Exemplo:
 
 ```
 {
@@ -87,7 +87,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 
 - Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
 - Organize cada tópico na sua própria página.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
+- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](formEditor.md#data-entry-order).
 - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
@@ -98,7 +98,7 @@ Um formulário de múltiplas páginas possui tanto uma página de fundo quanto v
 
 ## Formulários herdados
 
-Formulários 4D podem usar e ser usados como "formulários herdados," o que significa que todos os objetos do _Formulário A_ podem ser usados no _Formulário B_. Neste caso, _Formulário B_ "herda" os objetos do _Formulário A_.
+Formulários 4D podem usar e ser usados como "formulários herdados," o que significa que todos os objetos do *Formulário A* podem ser usados no *Formulário B*. Neste caso, *Formulário B* "herda" os objetos do *Formulário A*.
 
 Referências a um formulário herdado estão sempre ativas: se um elemento de um formulário herdado for modificado (estilos de botão, por exemplo), todos os formulários que utilizam esse elemento serão automaticamente modificados.
 
@@ -111,7 +111,7 @@ Quando um formulário é executado, os objetos são carregados e combinados na s
 3. Página zero do formulário aberto
 4. Página actual do formulário aberto.
 
-This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
+Essa ordem determina a [ordem de entrada](formEditor.md#data-entry-order) padrão dos objetos no formulário.
 
 > Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 

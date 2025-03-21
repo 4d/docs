@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->O comando BLOB TO USERS adiciona as contas de usuários presentes no BLOB *usuarios* ao banco de dados.<!-- END REF--> O BLOB *usuarios* está criptografado e deve ter sido criado usando o comando [USERS TO BLOB](users-to-blob.md).
 
@@ -39,15 +39,15 @@ este comando causa a substituição de quaisquer contas e grupos existentes cria
  BLOB TO USERS(blob)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
  Se o comando tiver sido executado corretamente, a variável sistema OK assume o valor 1\. Senão, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [USERS TO BLOB](users-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

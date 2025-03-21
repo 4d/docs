@@ -198,9 +198,9 @@ A maneira mais simples e segura para registrar um usuário no servidor da Web 4D
 2. Escreva e execute o seguinte código para criar um usuário:
 
 ```4d
-var $webUser : cs.WebUsersEntity
+var $webUser : cs. WebUsersEntity
 
-$webUser:=ds.WebUsers.new()
+$webUser:=ds. WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
 // a senha seria inserida pelo usuário
@@ -274,3 +274,4 @@ As credenciais incorretas serão rejeitadas:
 ![](../assets/en/WebServer/login2.png)
 
 Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).
+

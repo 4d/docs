@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get border style.Summary-->The **OBJECT Get border style** command returns the border line style of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -35,11 +35,11 @@ The command returns a value corresponding to the border line style. You can comp
 | Border Sunken | Integer | 4     | Objects appear framed with a sunken 3D effect                                                   |
 | Border System | Integer | 6     | The border line is drawn based on the graphic specifications of the system                      |
 
-#### See also 
+## See also 
 
 [OBJECT SET BORDER STYLE](object-set-border-style.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

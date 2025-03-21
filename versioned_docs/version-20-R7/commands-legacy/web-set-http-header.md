@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->The **WEB SET HTTP HEADER** command allows you to set the fields in the HTTP header of the reply sent to the Web browser by 4D.<!-- END REF--> It only has an effect in a Web process.   
 This command allows you to manage “cookies”.
@@ -60,11 +60,11 @@ The HTTP header is defined through two text arrays, *fieldArray* and *valueArray
 
 If you do not specify a state, it will automatically be HTTP/1.0 200 OK. By default, the **Server** field is "4D/<version>". The **Date** and **Content-Length** fields are also set by default by 4D. 
 
-#### See also 
+## See also 
 
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Test semaphore.Summary-->O comando Test semaphore lhe permite provar a existência de um semáforo.<!-- END REF-->
 
 A diferença entre a função [Semaphore](semaphore.md "Semaphore") e Test semaphore é que Test semaphore não cria o *semaforo* se este não existe. Se o *semaforo* existe, a função devolve [True](true.md "True"). Do contrário, devolve [False](false.md "False"). 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir lhe permite conhecer o estado de um processo (em nosso caso, a modificação de um código) sem modificar *semaforo*:
 
@@ -38,12 +38,12 @@ O exemplo a seguir lhe permite conhecer o estado de um processo (em nosso caso, 
  CLOSE WINDOW
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

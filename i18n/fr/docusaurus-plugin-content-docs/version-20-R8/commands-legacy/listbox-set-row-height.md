@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->La commande **LISTBOX SET ROW HEIGHT** permet de modifier la hauteur de la ligne spécifiée dans le paramètre *ligne* dans la List box désignée par les paramètres *objet* et éventuellement *\**.<!-- END REF-->
 
@@ -30,7 +30,7 @@ La commande **LISTBOX SET ROW HEIGHT** modifie le tableau de hauteur de lignes s
 
 **Important :** Si la commande globale [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) est appelée par la suite avec une unité différente de celle définie précédemment, la valeur par défaut de cette commande remplacera et réinitialisera toute hauteur de ligne définie à l'aide de **LISTBOX SET ROW HEIGHT** (voir exemple 2).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez modifier la hauteur de quelques lignes de la list box suivante :
 
@@ -48,7 +48,7 @@ Si vous exécutez ce code :
 
 ![](../assets/en/commands/pict3071135.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous devez fixer une hauteur de ligne par défaut puis mettre en place individuellement des hauteurs de lignes spécifiques pour certaines d'entre elles en utilisant la commande **LISTBOX SET ROW HEIGHT** :
 
@@ -76,14 +76,14 @@ En revanche, si le code suivant est exécuté :
 
 … alors les lignes 1, 5 et 11 sont réinitialisées à la valeur globale par défaut mise en place par la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (c'est-à-dire 2 lignes) car l'unité est passée de "pixels" à "lignes". Comme il n'y a pas de conversion automatique, le changement d'unité aboutit toujours à la réinitialisation des hauteurs de lignes avec la nouvelle valeur par défaut.
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

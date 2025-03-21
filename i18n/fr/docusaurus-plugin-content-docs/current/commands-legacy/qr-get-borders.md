@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->La commande **QR GET BORDERS** retourne les attributs d'encadrement d'une cellule spécifique de *zone*.<!-- END REF-->
 
@@ -65,11 +65,11 @@ Si le paramètre *colonne* est incorrect, l’erreur -9852 est générée.
 Si le paramètre *ligne* est incorrect, l’erreur -9853 est générée.  
 Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET BORDERS](qr-set-borders.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in selection.Summary-->**Records in selection** returns the number of records in the current selection of *aTable*.<!-- END REF--> In contrast, [Records in table](records-in-table.md) returns the total number of records in the table.
 
-#### Example 
+## Example 
 
 The following example shows a loop technique commonly used to move through all the records in a selection. The same action can also be accomplished with the [APPLY TO SELECTION](apply-to-selection.md) command:
 
@@ -30,11 +30,11 @@ The following example shows a loop technique commonly used to move through all t
  End for
 ```
 
-#### See also 
+## See also 
 
 [Records in table](records-in-table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

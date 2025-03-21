@@ -27,7 +27,7 @@ Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -80,7 +80,7 @@ Pour créer une nouvelle classe, vous pouvez :
 
 - sélectionner la catégorie **Classes** et cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) .
 - sélectionner **Nouvelle classe...** dans le menu d'actions en bas de la fenêtre de l'Explorateur ou dans le menu contextuel du groupe Classes.
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - sélectionnez **Nouveau> Classe...** dans le menu contextuel de la page d'accueil de l'Explorateur.
 
 #### Prise en charge du code de classe
@@ -88,10 +88,10 @@ Pour créer une nouvelle classe, vous pouvez :
 Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, explorateur d'exécution), le code de classe est essentiellement géré comme une méthode projet avec quelques spécificités :
 
 - Dans l'éditeur de code :
-  - une classe ne peut pas être exécutée
-  - une fonction de classe est un bloc de code
-  - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
-  - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
+ - une classe ne peut pas être exécutée
+ - une fonction de classe est un bloc de code
+ - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
+ - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
 - Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées avec le constructeur `<ClassName>` ou le format `<ClassName>.<FunctionName>`.
 
 ## Class stores
@@ -149,7 +149,7 @@ Vous voulez lister les classes 4D intégrées :
  ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -238,8 +238,8 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
 
 - utilisation de l'opérateur `()`. Par exemple, `myObject.methodName("hello")`
 - utilisation d'une méthode membre de la classe "4D.Function" :
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning Note importante thread-safety
 
@@ -347,7 +347,7 @@ Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (v
 
 L'utilisation du mot-clé `shared` crée une **classe partagée**, utilisée pour n'instancier que des objets partagés. Pour plus d'informations, reportez-vous au paragraphe [Classes partagées](#shared-classes).
 
-L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe. Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes).
+Un `singleton session` crée une seule instance par session. Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#singleton-classes). L'utilisation du mot-clé `singleton` crée un **singleton**, utilisé pour créer une seule instance de la classe.
 
 #### Exemple
 
@@ -360,11 +360,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name" : "HelloWorld" ; "age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 ### `propriété`
@@ -409,8 +409,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                 | Valeur collection                                                         |
 | `Variant`                    | Valeur variant                                                            |
 | `Object`                     | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`             | Object de la classe 4D className                                          |
-| `cs.<className>`             | Object de la classe utilisateur className                                 |
+| `4D.<className>`             | Objet de la classe 4D className                                           |
+| `cs.<className>`             | Objet de la classe utilisateur className                                  |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>`                  |
 
 Si vous omettez le type dans la ligne de déclaration, la propriété est créée en tant que variant.
@@ -511,7 +511,7 @@ Dans le fichier de définition de la classe, les déclarations de propriétés c
 
 Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété.
 
-Si la fonction est déclarée dans une [classe partagée](#shared-classes), vous pouvez utiliser le mot-clé `shared` pour que la fonction puisse être appelée sans [structure `Use. .End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
+If the functions are declared in a [shared class](#shared-classes), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
 
 Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
@@ -733,11 +733,11 @@ Les classes Singleton ne sont pas prises en charge par [les classes ORDA](../ORD
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton créé sur | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
-| **4D Server**      | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode** | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
+| Singleton créé sur      | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D mono-utilisateur** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
+| **4D Server**           | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
+| **4D mode distant**     | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
 
 Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 

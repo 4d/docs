@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->**FONT STYLE LIST**コマンドは*fontFamily*引数で定義されたフォントファミリーによってサポートされているフォントスタイルの一覧と、サポートされているフォント名の完全な一覧を返します。<!-- END REF-->このコマンドを使用すると、特に4D Write Proエリアのコンテキストにおいて、フォントとフォントスタイルを管理するインターフェースをデザインする事ができます(*4D Write Proリファレンス*)。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 *fontFamily*で指定したフォントファミリーがマシン上に見つからない場合、空の配列が返されます。マシン上で使用可能なフォントファミリーの一覧を取得するためには、[FONT LIST](font-list.md)コマンドを使用して下さい。
 
-#### 例題 
+## 例題 
 
 "Verdana"フォントファミリー(使用可能であれば)のスタイルを選択したい場合を考えます:
 
@@ -55,11 +55,11 @@ displayed_sidebar: docs
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
-#### 参照 
+## 参照 
 
 [FONT LIST](font-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

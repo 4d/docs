@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM BLOB.Summary-->The DELETE FROM BLOB command deletes the number of bytes specified by *len* from the BLOB *blob* at the position specified by *offset* (expressed relative to the beginning of the BLOB).<!-- END REF--> The BLOB then becomes *len* bytes smaller.
 
-##### Note 
+### Note 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### See also 
+## See also 
 
 [INSERT IN BLOB](insert-in-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

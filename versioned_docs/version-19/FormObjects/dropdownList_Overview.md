@@ -137,7 +137,7 @@ When the form is executed, 4D automatically manages the drop-down list during in
 
 #### Selected item value or Selected item reference
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. This option lets you optimize the size of the data saved.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. This option lets you optimize the size of the data saved.
 
 ### Using a hierarchical choice list
 

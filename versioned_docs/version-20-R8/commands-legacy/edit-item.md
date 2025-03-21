@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EDIT ITEM.Summary-->The **EDIT ITEM** command allows you to edit the current item or the item number *item* in the array or the list set in the *object* parameter.<!-- END REF-->   
 This means that the selected item can be modified; entering a character entirely replaces the item content.
@@ -39,7 +39,7 @@ The optional *item* parameter allows you to set the position of the item (hierar
 * In subforms and list forms, the command changes the first field of a specified row to edit mode, in the order of entry.
 * In listboxes displayed in hierarchical mode, if the targeted item belongs to a hierarchical level that is collapsed, this level (as well as any parent levels) will be expanded automatically so that the item is visible.
 
-#### Example 1 
+## Example 1 
 
 This command can be particularly useful when creating a new item in a hierarchical list. When the command is called, the last item added or inserted in the list automatically becomes editable without the user having to do anything.   
 The following code may be the method of a button that allows you to insert a new item in an existing list. The default text “New\_item” is automatically ready to be changed:
@@ -52,7 +52,7 @@ The following code may be the method of a button that allows you to insert a new
 
 ![](../assets/en/commands/pict21419.en.png)
 
-#### Example 2 
+## Example 2 
 
 Given two columns in a list box whose variable names are “Array1” and “Array2” respectively. The following example inserts a new item in the two arrays and passes the new item of Array2 into editing mode: 
 
@@ -66,13 +66,13 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 
 ![](../assets/en/commands/pict21420.en.png)
 
-#### See also 
+## See also 
 
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->El comando GET ALLOWED METHODS devuelve, en *arrMetodos*, los nombres de los métodos que pueden utilizarse para escribir fórmulas.<!-- END REF--> Estos métodos están listados al final de la lista de comandos en el editor.
 
@@ -23,7 +23,7 @@ GET ALLOWED METHODS devuelve exactamente lo que se le pasó a [SET ALLOWED METHO
 
 Este comando es útil para conservar los parámetros del conjunto actual de métodos autorizados antes de la ejecución de una fórmula en un contexto específico (por ejemplo, un informe rápido). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo autoriza un conjunto de métodos específicos para crear un informe: 
 
@@ -40,11 +40,11 @@ Este ejemplo autoriza un conjunto de métodos específicos para crear un informe
  SET ALLOWED METHODS(arrMetodos)
 ```
 
-#### Ver también 
+## Ver también 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

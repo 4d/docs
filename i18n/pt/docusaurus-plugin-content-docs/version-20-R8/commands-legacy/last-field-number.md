@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Last field number.Summary-->O comando Last field number retorna o número de campo mais alto dos campos na tabela cujo número ou ponteiro se passa en *numTabela* ou *pontTabela*.<!-- END REF-->  
   
 Os campos estão numerados na ordem na qual foram criados. Se nenhum campo foi apagado da tabela, este comando retorna o número de campos que a tabela contém. No caso de loops interativos sobre os números de campo da tabela, deve utilizar o comando [Is field number valid](is-field-number-valid.md) com o objetivo de verificar que o campo não tenha sido eliminado.
 
-#### Exemplo 
+## Exemplo 
 
  O seguinte método de projeto cria o array *arrayCampos*, com os nomes dos campos da tabela cujo ponteiro se recebe como primeiro parâmetro   
   
@@ -36,14 +36,14 @@ Os campos estão numerados na ordem na qual foram criados. Se nenhum campo foi a
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

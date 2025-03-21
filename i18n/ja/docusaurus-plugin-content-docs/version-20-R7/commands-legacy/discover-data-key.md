@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Discover data key.Summary-->**Discover data key** コマンドは、現在開かれているデータファイルに対応する有効な暗号化キーを、接続されている全てのデバイスのルートレベルで検索し、それに成功した場合には**True** を返します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
    * 暗号化キーは4D キーチェーンに追加されます。
 * 現在開かれているデータファイルに対して有効な暗号化キーが見つからなかった場合には**False** が返され、この場合にはデータへのアクセスは不可能となります。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $status : Object
@@ -45,12 +45,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [New data key](new-data-key.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

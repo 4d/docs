@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Validate password.Summary-->Validate password コマンドは引数 *password* に渡された文字列が、引数 *userID* に渡されたID番号または名前を持つユーザアカウントのパスワードである場合、Trueを返します。<!-- END REF--> 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 フラッディング ( ブルートフォース攻撃 ) 、言い換えれば複数のユーザ名とパスワードの組み合わせによる試みを防ぐために、コマンドは遅れて実行されます。その結果、このコマンドを4回呼び出す と、10秒間の遅延が発生します。この遅れは、ワークステーション全体を通して発生します。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題を使用して、ユーザ “Hardy” のパスワードが “Laurel” であるかどうかを調べます。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [On REST Authentication データベースメソッド](on-rest-authentication-database-method.md) において、接続リクエストを(データベースの4Dユーザーを使用して)テストしたい場合:
 
@@ -55,13 +55,13 @@ displayed_sidebar: docs
  $0:=Validate password($1;$2;$3)
 ```
 
-#### 参照 
+## 参照 
 
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -23,7 +23,7 @@ Il est fortement recommandé d'installer une méthode globale de gestion des err
 
 ## Erreur ou statut
 
-De nombreuses fonctions des classes 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet _status_. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
+De nombreuses fonctions des classes 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
 D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être gérée par une méthode de gestion des erreurs ou un mot-clé `Try()`.
 
@@ -33,7 +33,7 @@ Dans 4D, toutes les erreurs peuvent être détectées et traitées par des méth
 
 Une fois installés, les gestionnaires d'erreurs sont automatiquement appelés en mode interprété ou compilé en cas d'erreur dans l'application 4D ou l'un de ses composants. Un gestionnaire d'erreur différent peut être appelé en fonction du contexte d'exécution (voir ci-dessous).
 
-Pour _installer_ une méthode projet de gestion des erreurs, vous devez simplement appeler la commande [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/fr/page155.html) avec en paramètre le nom de la méthode projet et (optionnellement) sa portée. Par exemple :
+Pour *installer* une méthode projet de gestion des erreurs, vous devez simplement appeler la commande [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/fr/page155.html) avec en paramètre le nom de la méthode projet et (optionnellement) sa portée. Par exemple :
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installe une méthode locale de gestion des erreurs
@@ -87,10 +87,10 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 
 - des variables système dédiées :
 
-  - `Error` (entier long): Code d'erreur
-  - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
-  - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
-  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
+ - `Error` (entier long): Code d'erreur
+ - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
+ - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
+ - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
 
 :::info
 
@@ -149,15 +149,15 @@ Try (expression) : any | Undefined
 
 ```
 
-_expression_ peut être n'importe quelle expression valide.
+*expression* peut être n'importe quelle expression valide.
 
-Si une erreur s'est produite pendant son exécution, elle est interceptée et aucune fenêtre d'erreur n'est affichée, qu'une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) ait été installée ou non avant l'appel à `Try()`. Si _expression_ retourne une valeur, `Try()` retourne la dernière valeur évaluée, sinon elle retourne `Undefined`.
+Si une erreur s'est produite pendant son exécution, elle est interceptée et aucune fenêtre d'erreur n'est affichée, qu'une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) ait été installée ou non avant l'appel à `Try()`. Si *expression* retourne une valeur, `Try()` retourne la dernière valeur évaluée, sinon elle retourne `Undefined`.
 
-Vous pouvez gérer les erreurs en utilisant la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html). Si _expression_ génère une erreur dans une pile d'appels `Try()`, le flux d'exécution s'arrête et retourne au dernier `Try()` exécuté (le premier trouvé en remontant dans la pile d'appels).
+Vous pouvez gérer les erreurs en utilisant la commande [`Last errors`](https://doc.4d.com/4dv20/help/command/fr/page1799.html). Si *expression* génère une erreur dans une pile d'appels `Try()`, le flux d'exécution s'arrête et retourne au dernier `Try()` exécuté (le premier trouvé en remontant dans la pile d'appels).
 
 :::note
 
-Si une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) est installée par _expression_, elle est appelée en cas d'erreur.
+Si une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) est installée par *expression*, elle est appelée en cas d'erreur.
 
 :::
 
@@ -228,19 +228,19 @@ End try
 Le code placé entre les mots-clés `Try` et `Catch` est d'abord exécuté, puis le flux dépend des erreurs rencontrées lors de cette exécution.
 
 - Si aucune erreur n'est levée, l'exécution du code se poursuit après le mot clé `End try` correspondant. Le code placé entre les mots-clés `Catch` et `End try` n'est pas exécuté.
-- Si l'exécution du bloc de code génère une _erreur non différée_, le flux d'exécution s'arrête et exécute le bloc de code `Catch` correspondant.
-- If the code block calls a method that throws a _deferred error_, the execution flow jumps directly to the corresponding `Catch` code block.
+- Si l'exécution du bloc de code génère une *erreur non différée*, le flux d'exécution s'arrête et exécute le bloc de code `Catch` correspondant.
+- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
 - If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
 
 :::note
 
-Si une erreur _différée_ est générée en dehors du bloc `Try`, l'exécution du code se poursuit jusqu'à la fin de la méthode ou de la fonction.
+Si une erreur *différée* est générée en dehors du bloc `Try`, l'exécution du code se poursuit jusqu'à la fin de la méthode ou de la fonction.
 
 :::
 
 :::info
 
-Pour plus d'informations sur les erreurs _différées_ et _non différées_, veuillez vous reporter à la description de la commande [`throw`](https://doc.4d.com/4dv20R/help/command/fr/page1805.html).
+Pour plus d'informations sur les erreurs *différées* et *non différées*, veuillez vous reporter à la description de la commande [`throw`](https://doc.4d.com/4dv20R/help/command/fr/page1805.html).
 
 :::
 

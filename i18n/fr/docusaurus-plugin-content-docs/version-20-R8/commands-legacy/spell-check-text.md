@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL CHECK TEXT.Summary-->La commande **SPELL CHECK TEXT** vérifie le contenu du paramètre *leTexte* à partir du caractère *posVérif* et retourne la position du premier mot inconnu rencontré (le cas échéant).<!-- END REF-->
 
@@ -25,9 +25,9 @@ La commande retourne la position du premier caractère de ce mot dans *posErr* e
 
 Si la vérification démarre sans erreur et qu’un mot inconnu est rencontré, la variable système OK prend la valeur 0\. Si une erreur d’initialisation se produit lors de la vérification ou si aucun mot n’est inconnu, OK prend la valeur 1\. 
 
-**Note OS X :** Sous OS X lorsque le correcteur natif est activé, cette commande ne prend pas en charge la correction grammaticale. 
+**Note macOS :** Sous macOS lorsque le correcteur natif est activé, cette commande ne prend pas en charge la correction grammaticale. 
 
-#### Exemple 
+## Exemple 
 
 On souhaite compter le nombre de fautes potentielles dans un texte :
 
@@ -49,12 +49,12 @@ On souhaite compter le nombre de fautes potentielles dans un texte :
   // fr: $errCount=Taille tableau($tErrors)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

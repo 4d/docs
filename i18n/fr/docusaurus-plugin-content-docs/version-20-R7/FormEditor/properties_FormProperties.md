@@ -61,7 +61,7 @@ Cette propriété est le nom du formulaire lui-même et est utilisée pour faire
 
 #### Grammaire JSON
 
-Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. See [project architecture](Project/architecture.md#sources-folder) for more information.
+Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. See [project architecture](Project/architecture#sources) for more information.
 
 ---
 
@@ -179,3 +179,5 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 | Nom         | Type de données | Valeurs possibles                                             |
 | ----------- | --------------- | ------------------------------------------------------------- |
 | windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |
+
+

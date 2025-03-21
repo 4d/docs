@@ -94,7 +94,7 @@ Una entidad es un objeto que corresponde a un modelo de dataclass. Una entidad c
 
 Una entidad puede verse como una instancia de la dataclass, como un registro de la tabla correspondiente a la dataclass en su datastore asociado. Sin embargo, una entidad también contiene los datos relacionados. La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar).
 
-For more information, see [entities](entities.md).
+Para más información, consulte las [entidades](entities.md).
 
 ## Entity selection
 
@@ -159,7 +159,7 @@ Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acce
 
 ## Privilegio
 
-La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+The ability to run one or more [actions](#action) on [resources](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propiedad
 

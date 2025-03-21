@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->The QR Get HTML template command returns the HTML template currently used for the Quick Report *area*.<!-- END REF--> The returned value is a text value and includes all the contents of the HTML template.
 
@@ -22,11 +22,11 @@ If no specific template was defined, the template that is returned is the defaul
 
 If you pass an invalid area number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

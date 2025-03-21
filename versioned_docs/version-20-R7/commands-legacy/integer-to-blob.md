@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INTEGER TO BLOB.Summary-->The INTEGER TO BLOB command writes the 2-byte Integer value *integer* into the BLOB *blob*.<!-- END REF-->
 
@@ -39,11 +39,11 @@ If you pass the *offset* variable parameter, the 2-byte Integer value is written
 
 After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therefore, you can reuse that same variable with another BLOB writing command to write another value.
 
-##### Note 
+### Note 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### Example 1 
+## Example 1 
 
 After executing this code:
 
@@ -58,7 +58,7 @@ After executing this code:
 * The other bytes of the BLOB are left unchanged
 * The variable *vlOffset* has been incremented by 2 (and is now equal to 52)
 
-#### Example 2 
+## Example 2 
 
 After executing this code:
 
@@ -69,7 +69,7 @@ After executing this code:
 * The size of *vxBlob* is 2 bytes
 * On all platforms *vxBLOB{0}* \= *$06* and *vxBLOB{1}* \= *$02*
 
-#### Example 3 
+## Example 3 
 
 After executing this code:
 
@@ -82,7 +82,7 @@ After executing this code:
 * On all platforms *vxBLOB{100}* \= *$06* and *vxBLOB{101}* \= *$02*
 * The other bytes of the BLOB are left unchanged
 
-#### Example 4 
+## Example 4 
 
 After executing this code:
 
@@ -94,7 +94,7 @@ After executing this code:
 * On PowerPC platform: *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
 * On Intel platform: *vxBLOB{0}* \= *$06* and *vxBLOB{1}* \= *$02*
 
-#### Example 5 
+## Example 5 
 
 After executing this code:
 
@@ -105,7 +105,7 @@ After executing this code:
 * The size of *vxBlob* is 2 bytes
 * On all platforms *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
 
-#### See also 
+## See also 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -115,7 +115,7 @@ After executing this code:
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

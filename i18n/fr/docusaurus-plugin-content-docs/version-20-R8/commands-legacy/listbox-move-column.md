@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->La commande **LISTBOX MOVE COLUMN** permet de déplacer par programmation la colonne désignée par le(s) paramètre(s) *objet* et *\** dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
 
@@ -29,7 +29,7 @@ La commande tient compte des propriétés de colonnes statiques et verrouillées
 
 Cette fonctionnalité est présente dans 4D en mode Application : l’utilisateur peut déplacer des colonnes non statiques à l’aide de la souris. En revanche, à la différence du déplacement effectué par l’utilisateur, la commande ne génère pas l’événement On Column Moved. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
 
@@ -37,11 +37,11 @@ Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
  LISTBOX MOVE COLUMN(*;"colonne2";3)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

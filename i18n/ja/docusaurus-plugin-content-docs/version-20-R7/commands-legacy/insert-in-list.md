@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->INSERT IN LIST コマンドは、*list*に渡されたリスト参照番号またはオブジェクト名のリストに *itemRef*が指定する新規項目を挿入します。<!-- END REF-->
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 項目にサブ項目を設定する場合は、*sublist* に有効なリスト参照を渡します。この場合サブリストを展開または縮小を指定する*expanded*引数を渡さなければなりません。[True](true.md "True")または[False](false.md "False")の指定に従い、サブリストは展開または折りたたまれます。
 
-#### 例題 
+## 例題 
 
 以下のコードは、リスト*hList*の現在選択されている項目の直前に項目を挿入します（サブリストは添付されていません）:
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
  INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
-#### 参照 
+## 参照 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

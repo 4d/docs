@@ -90,7 +90,7 @@ Por padrão, o estilo Plano tem um fundo branco com um rótulo no centro, cantos
 ```
 
 
-Apenas os estilos Regular e Plano oferecem a propriedade [Botão padrão](properties_Appearance.md#default-button).
+Apenas os estilos Regular e Flat oferecem a propriedade [Botão Padrão](properties_Appearance.md#default-button).
 
 ### Barra de ferramentas
 

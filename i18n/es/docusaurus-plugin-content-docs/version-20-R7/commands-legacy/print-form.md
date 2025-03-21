@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Print form.Summary-->Print form simplemente imprime *formulario* con los valores actuales de los campos y variables.<!-- END REF--> Generalmente este comando se utiliza para imprimir informes muy complejos que necesiten un control total del proceso de impresión. Print form no procesa registros, ni rupturas o saltos de páginas. Estas operaciones son su responsabilidad. Print form imprime campos y variables en un marco de tamaño fijo únicamente.
 
@@ -110,7 +110,7 @@ Print form genera sólo un evento On Printing Detail para el método formulario.
 * Asegúrese de que no aparezca ninguna caja de diálogo en el equipo servidor (excepto para un requerimiento específico).
 * En el caso de un problema relacionado con la impresora (sin papel, impresora desconectada, etc.), no se genera un mensaje de error.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Print form no imprime subformularios. Para imprimir sólo un formulario con tales objetos, utilice mejor [PRINT RECORD](print-record.md "PRINT RECORD").  
   
@@ -121,7 +121,7 @@ Print form genera únicamente un evento On Printing Detail por método de formul
 * Asegúrese de que no aparezca ninguna caja de diálogo en el equipo servidor (excepto para una necesidad específica).
 * En el caso de un problema relacionado con la impresora (sin papel, impresora desconectada, etc.), no se genera un mensaje de error.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo funciona como lo haría un comando [PRINT SELECTION](print-selection.md "PRINT SELECTION"). Sin embargo, el informe utiliza uno de los dos formularios diferentes, dependiendo de si el registro es para un cheque o para un depósito:
 
@@ -146,7 +146,7 @@ El siguiente ejemplo funciona como lo haría un comando [PRINT SELECTION](print-
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este formulario se utiliza como diálogo y luego se imprime con modificaciones:
 
@@ -174,14 +174,14 @@ El código que llama al diálogo luego imprime su cuerpo:
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-#### Ver también 
+## Ver también 
 
 [CANCEL](cancel.md)  
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

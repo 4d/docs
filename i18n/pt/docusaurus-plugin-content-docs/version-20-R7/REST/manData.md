@@ -45,7 +45,7 @@ Qualquer entidade que apagar não será mais parte do conjunto de entidades. How
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), você pode combinar dois conjuntos de entidades criados anteriormente. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
+Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -226,6 +226,6 @@ Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
 ## Recuperar apenas uma entidade
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
+Pode usar a sintaxe [`\{dataClass\}:\{attribute\}(valor)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
 
 `GET  /rest/Company:companyCode("Acme001")`

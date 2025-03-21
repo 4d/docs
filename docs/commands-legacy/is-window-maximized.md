@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is window maximized.Summary-->The **Is window maximized** command returns **True** if the window whose reference number is passed in *window* is currently maximized, and **False** otherwise.<!-- END REF--> 
 
-#### Example 
+## Example 
 
 You want to switch between the maximized and previous states:
 
@@ -30,12 +30,12 @@ You want to switch between the maximized and previous states:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

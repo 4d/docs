@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->* O comando **SET EXTERNAL DATA PATH**, define ou modifica, para o atual registro, a localização do armazenamento externo para o campo *aCampo* passado como parâmetro.<!-- END REF-->
 
@@ -26,7 +26,7 @@ Em *rota*, pode passar um nome de rota padrão ou uma constante designando uma l
 
 * **Rota padrão ao arquivo**  
 Neste caso, você utiliza armazenamento externo no "modo padrão." Algumas funções do banco de dados 4D não estão disponíveis automaticamente neste modo (veja o Manual de Desenho 4D), em especial você deve gerenciar a criação ou modificação dos arquivos você mesmo.  
-Você pode passar uma rota relativa ao arquivo de dados ou uma rota absoluta, incluindo o nome e a extensão do arquivo de armazenamento. Deverá usar a sintaxe do sistema. Para definir uma rota relativa, passar "../" (no Windows) ou "..:" (OS X) no início da string. Poderá designar qualquer pasta, incluindo a pasta padrão dos arquivos externos do banco de dados (nomeBanco.DadosExternos) - Neste caso, os arquivos de backup do banco de dados são incluídos quando o banco de dados é salvo.  
+Você pode passar uma rota relativa ao arquivo de dados ou uma rota absoluta, incluindo o nome e a extensão do arquivo de armazenamento. Deverá usar a sintaxe do sistema. Para definir uma rota relativa, passar "../" (no Windows) ou "..:" (macOS) no início da string. Poderá designar qualquer pasta, incluindo a pasta padrão dos arquivos externos do banco de dados (nomeBanco.DadosExternos) - Neste caso, os arquivos de backup do banco de dados são incluídos quando o banco de dados é salvo.  
 O arquivo designado pelo parâmetro *rota* deve existir ser acessível quando o comando for executado. Se a rota for inválida (uma pasta ou um arquivo não existirem), um erro é retornado só nos casos onde rota foi definido como um absoluto. Quando uma rota relativa foi especificada, deve ter certeza de sua validez, já que não é retornado um erro se o arquivo não for encontrado.  
 Se você salvar os dados externos na mesma pasta que o arquivo de dados ou uma das suas pastas internas, 4D considera que o caminho especificado é relativo ao arquivo de dados e mantêm o link mesmo quando a pasta do arquivo de dados for movida ou renomeada.  
 Note que isto significa que é possível "compartir" o mesmo arquivo externo entre vários registros. Quaisquer que sejam as mudanças feitas ao arquivo externo, estão disponíveis em todos os registros. Neste caso, se muitos processos podem escrever nos mesmos campos ao mesmo tempo, deverá ter cuidado a fim de prevenir acessos simultâneos através de semáforos, para não correr o risco de danificar os arquivos externos.
@@ -42,7 +42,7 @@ Quando esse comando for executado, 4D automaticamente mantém o link entre o cam
 
 **Nota:** O comandoSET EXTERNAL DATA PATH só pode ser executado numa máquina 4D local ou num servidor 4D. Não faz nada quando for executado numa máquina 4D remota.
 
-#### Exemplo 
+## Exemplo 
 
 Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, armazenado fora dos dados, na pasta do banco de dados:
 
@@ -54,12 +54,12 @@ Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, arm
  SAVE RECORD([Photos])
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

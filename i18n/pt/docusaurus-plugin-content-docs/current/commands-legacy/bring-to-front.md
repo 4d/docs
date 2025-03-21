@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONT passa todas as janelas que pertencem a *processo* ao primeiro plano.<!-- END REF--> Se o processo já está no primeiro plano, o comando não faz nada. Se o processo estiver oculto, deve utilizar [SHOW PROCESS](show-process.md "SHOW PROCESS") para mostrar o processo, do contrário BRING TO FRONT não tem efeito.
 
@@ -21,7 +21,7 @@ Os processos Principal e Desenho podem ser passados ao primeiro plano utilizando
 
 **Nota:** Quando o processo contém várias janelas e quer passar ao primeiro plano uma janela específica, é preferível utilizar por exemplo, o comando [SET WINDOW RECT](set-window-rect.md).
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é um método que pode ser executado desde um menu. Ele verifica se o processo do primeiro plano é o processo *<>Clientes*. Se não, o método o passa ao primeiro plano:
 
@@ -31,13 +31,13 @@ O exemplo a seguir é um método que pode ser executado desde um menu. Ele verif
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

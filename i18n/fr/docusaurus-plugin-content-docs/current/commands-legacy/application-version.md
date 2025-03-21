@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application version.Summary-->**Application version** retourne une chaîne encodée qui exprime le numéro de version de l'environnement 4D que vous utilisez.<!-- END REF-->
 
@@ -71,7 +71,7 @@ La commande **Application version** peut retourner une information supplémentai
 
 **Note :** Dans le cas des applications compilées et fusionnées avec 4D Volume Licence, le numéro de build retourné n'est pas significatif. Dans ce contexte, les informations de version sont gérées par le développeur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple affiche le numéro de version de l'environnement 4D : 
 
@@ -80,7 +80,7 @@ Cet exemple affiche le numéro de version de l'environnement 4D :
  ALERT("Vous utilisez la version "+String(Num(Sous chaine($vs4Dversion;1;2)))+"."+$vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple teste si vous utilisez une version finale :
 
@@ -91,7 +91,7 @@ Cet exemple teste si vous utilisez une version finale :
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Le code suivant reconstitue le numéro de version de l'application et permet de distinguer les versions v14 "bug fix" des versions v14 "R" :
 
@@ -114,12 +114,12 @@ Le code suivant reconstitue le numéro de version de l'application et permet de 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

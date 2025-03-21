@@ -42,7 +42,7 @@ Les feuilles de calcul sont composées de lignes et de colonnes. Un numéro est 
 - Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
 
 - Pour sélectionner toutes les cellules dans la feuille de calcul, cliquez sur la cellule en haut à gauche de la zone :
-  ![](../assets/en/ViewPro/vpSelectAll.PNG)
+ ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 - Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
 
@@ -78,10 +78,10 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
 
 - cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 - cliquez sur une cellule ou une plage de cellules :
-  - **Filtrer** : permet de masquer la ligne via des filtres (voir "Filtrer les lignes" dans la [documentation SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
-  - **Trier** : permet de trier le contenu des colonnes.
-  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :\
-    ![](../assets/en/ViewPro/vpContext2.PNG)
+ - **Filtrer** : permet de masquer la ligne via des filtres (voir "Filtrer les lignes" dans la [documentation SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
+ - **Trier** : permet de trier le contenu des colonnes.
+ - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :\
+  ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilisation des commandes 4D View Pro
 
@@ -99,7 +99,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-La plupart des commandes 4D View Pro nécessitent un paramètre _vpAreaName_, qui correspond au [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+La plupart des commandes 4D View Pro nécessitent un paramètre *vpAreaName*, qui correspond au [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Certaines commandes 4D View Pro nécessitent un paramètre _rangeObj_. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des commandes 4D View Pro, vous pouvez créer des plages et les passer à d'autres commandes pour lire ou écrire dans des emplacements spécifiques de votre document.
+Certaines commandes 4D View Pro nécessitent un paramètre *rangeObj*. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des commandes 4D View Pro, vous pouvez créer des plages et les passer à d'autres commandes pour lire ou écrire dans des emplacements spécifiques de votre document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
@@ -129,7 +129,7 @@ Ensuite, vous pouvez passer `$myRange` à une autre méthode 4D View Pro pour mo
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
 - area - Le nom de la zone 4D View Pro
-- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés _.column_ et _.sheet_.
+- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
 
 | Propriété |                                                                                       | Type       | Description                                                                                                                      | Disponible pour                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |

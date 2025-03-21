@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->La commande **SCREEN DEPTH** retourne dans les paramètres *profondeur* et *couleur* les caractéristiques du moniteur utilisé.<!-- END REF-->
 
@@ -40,7 +40,7 @@ Si le moniteur est configuré pour afficher des couleurs, le paramètre *couleur
 
 Le paramètre optionnel *écran* vous permet de spécifier le numéro du moniteur sur lequel vous souhaitez obtenir des informations. Si vous omettez ce paramètre, la commande retourne la profondeur de l'écran principal.
 
-#### Exemple 
+## Exemple 
 
 Votre application affiche de nombreux graphiques en couleurs. Vous pouvez écrire, quelque part dans votre base :
 
@@ -51,12 +51,12 @@ Votre application affiche de nombreux graphiques en couleurs. Vous pouvez écrir
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count screens](count-screens.md)  
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

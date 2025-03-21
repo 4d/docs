@@ -23,16 +23,16 @@ A documentação é exibida na área de visualização (painel do lado direito) 
 Ele também pode ser parcialmente exposto como [dicas do editor de código](#viewing-documentation-in-the-code-editor).
 
 
-## Arquivos de documentação
+## Ficheiros documentação
 
-### Nome do arquivo de documentação
+### Nome do ficheiro de documentação
 
 Os arquivos de documentação têm o mesmo nome do elemento anexado, com a extensão ".md". Por exemplo, o arquivo de documentação anexado ao método projeto `myMethod.4dm` será denominado `myMethod.md`.
 
-No Explorer, o 4D exibe automaticamente o arquivo de documentação com o mesmo nome do elemento selecionado (veja abaixo).
+No Explorer, 4D exibe automaticamente o arquivo de documentação com o mesmo nome do elemento selecionado (veja abaixo).
 
 
-### Arquitetura do arquivo de documentação
+### Arquitetura dos ficheiros de documentação
 
 Todos os arquivos de documentação são armazenados na pasta `Documentation`, localizada no primeiro nível da pasta do pacote.
 
@@ -81,7 +81,7 @@ Para visualizar a documentação na janela do Explorer:
 
 - Caso contrário, se houver um arquivo de documentação para o elemento selecionado, o conteúdo será exibido na área. Os conteúdos não são diretamente editáveis no painel.
 
-### Edição do arquivo de documentação
+### Editar o ficheiro de documentação
 
 Você pode criar e/ou editar um arquivo de documentação Markdown na janela Explorer para o elemento selecionado.
 
@@ -113,12 +113,12 @@ Se um arquivo chamado `\&#060;MethodName&#062;. d` existe na pasta `\&#060;packa
 
 :::note
 
-Caso contrário, o editor de código exibe [o comentário do bloco na parte superior do código do método](../code-editor/write-class-method.md#using-help-tips).
+Caso contrário, o editor de código exibe [o comentário do bloco na parte superior do código do método](../code-editor/write-class-method.md#help-tips).
 
 :::
 
 
-## Definição do arquivo de documentação
+## Definição do ficheiro de documentação
 
 4D usa um modelo básico para criar ficheiros de documentação. Esse modelo sugere recursos específicos que permitem que você [exiba informações no editor de código](#viewing-documentation-in-the-code-editor).
 
@@ -168,7 +168,7 @@ _italic_
 ```md
 | Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea | Text |Área de escrita profissional|
+| wpArea | Text |Área Write pro|
 | toolbar | Text |Nome da barra de ferramentas |
 ```
 

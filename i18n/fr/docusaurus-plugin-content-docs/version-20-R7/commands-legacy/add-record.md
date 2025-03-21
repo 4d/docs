@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.ADD RECORD.Summary-->*Cette commande est apparue dans les premières versions de 4D et reste toujours utile pour créer des prototypes ou effectuer des développements simples.<!-- END REF--> Toutefois, pour construire des interfaces modernes et personnalisées, il est désormais recommandé d'utiliser des formulaires génériques basés sur la commande [DIALOG](dialog.md) qui fournit des fonctionnalités avancées et un meilleur contrôle du flux de données.* 
 
-#### Description 
+## Description 
 
 La commande **ADD RECORD** permet à l'utilisateur de créer un nouvel enregistrement dans *laTable* ou dans la table par défaut si ce paramètre est omis.
 
@@ -44,7 +44,7 @@ Après un appel à **ADD RECORD**, la variable système OK prend la valeur 1 si 
 
 **Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé avec la commande [SAVE RECORD](save-record.md) si celle-ci est exécutée avant que le pointeur d'enregistrement courant ne soit modifié.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est une boucle souvent utilisée pour créer des enregistrements dans une base : 
 
@@ -55,7 +55,7 @@ L'exemple suivant est une boucle souvent utilisée pour créer des enregistremen
  Until(OK=0) // Jusqu'à ce que l'utilisateur annule
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant permet de rechercher un client dans la base. Le déroulement de la méthode dépend du résultat de la recherche. Si aucun client n'a été trouvé, l'utilisateur est autorisé à créer un nouveau client à l'aide de la commande **ADD RECORD**. Si au moins un client a été trouvé, le premier enregistrement est affiché pour modification, à l'aide de la commande [MODIFY RECORD](modify-record.md) :
 
@@ -78,11 +78,11 @@ L'exemple suivant permet de rechercher un client dans la base. Le déroulement d
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s'il est annulé.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
@@ -90,7 +90,7 @@ La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

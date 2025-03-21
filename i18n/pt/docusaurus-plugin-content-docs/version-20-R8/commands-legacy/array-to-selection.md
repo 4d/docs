@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->O comando **ARRAY TO SELECTION** copia um ou mais arrays em uma seleção de registros.<!-- END REF--> Todos os campos listados devem pertencer a mesma tabela.
 
@@ -36,7 +36,7 @@ Quando você passar o parâmetro *\**, 4D não executar a linha de instrução c
 
 **4D Server:** o comando é otimizado por 4D Server. Os arrays são enviados pela equipe do cliente para o servidor, e os registros são modificados ou criados na equipe do servidor. Como este pedido é controlado de modo sincronizado, a equipe cliente deve esperar que a operação se complete com êxito. No ambiente de multi-usuários ou multi-processos, nenhum registro bloqueado será reescrito. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 No exemplo a seguir, os arrays *asSobrenomes* e *asEmpresas* escrevem dados na tabela *\[Pessoas\]*. Os valores do array *asSobrenomes* são localizados no campo *\[Pessoas\]Sobrenome* e os valores do array *asEmpresas* são localizados no campo *\[Pessoas\]Empresa*:
 
@@ -44,7 +44,7 @@ No exemplo a seguir, os arrays *asSobrenomes* e *asEmpresas* escrevem dados na t
  ARRAY TO SELECTION(asSobrenomes;[Pessoas]Sobrenome;asEmpresas;[Pessoas]Empresa)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionando os campos de acordo com o valor da opção:
 
@@ -76,12 +76,12 @@ Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionan
  ARRAY TO SELECTION
 ```
 
-#### Ver também 
+## Ver também 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variáveis sistema*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

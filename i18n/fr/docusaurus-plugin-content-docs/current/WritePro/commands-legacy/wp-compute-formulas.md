@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP COMPUTE FORMULAS.Summary-->La commande **WP COMPUTE FORMULAS** évalue les formules dans *objCible*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Dans le paramètre objCible, vous pouvez passer :
 
 **Note :** Quand vous passez une section dans objCible, seules les formules d'image ou les formules des zones de texte ancrées à cette section (ou à toutes les sections) sont calculées. Si elles sont ancrées à une page ou à la vue intégrée, leurs formules ne sont pas calculées. Passez le document dans objCible pour calculer toutes les formules d'éléments ancrés.
 
-#### Exemple 
+## Exemple 
 
 Pour mettre à jour les formules d'un document :
 
@@ -41,7 +41,7 @@ Pour mettre à jour toutes les formules de la première section d'un document :
  WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gérer des formules*  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  

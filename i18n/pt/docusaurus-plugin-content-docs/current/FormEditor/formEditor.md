@@ -30,8 +30,8 @@ Quando um formulário é aberto no editor, os elementos da interface são exibid
 
 - as opções de **exibição padrão do novo formulário** definidas nas Preferências - as opções não marcadas não podem ser exibidas por padrão.
 - o [tipo de formulário] atual (properties_FormProperties.md#form-type):
-  - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
-  - O papel é apresentado por defeito nos formulários "para impressão".
+ - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
+ - O papel é apresentado por defeito nos formulários "para impressão".
 
 #### Exibir/ocultar elementos
 
@@ -126,7 +126,7 @@ Pode utilizar os seguintes atalhos na Lista de Propriedades:
 
 É possível adicionar objetos a formulários de várias maneiras:
 
-- Desenhando o objeto diretamente na forma após selecionar o seu tipo na barra de objeto (veja [Usando a barra do objeto](#using-the-object-bar))
+- Desenhando o objeto diretamente na forma após selecionar o seu tipo na barra de objeto (veja [Usando a barra do objeto](#object-bar))
 - Arrastando e soltando o objeto da barra de objetos
 - Por meio de operações de arrastar e soltar ou copiar e colar em um objeto selecionado da [biblioteca de objetos] pré-configurada (objectLibrary.md),
 - Ao arrastar e largar um objeto de outro formulário,
@@ -155,7 +155,7 @@ Para selecionar um objeto usando a barra de ferramentas:
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual.
-   Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
+ Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
 
 > Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
 
@@ -186,7 +186,7 @@ Para duplicar um ou mais objectos:
 1. Seleccione os objectos que pretende agrupar.
 2. Escolha **Duplicar** no menu **Editar**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
 3. Deslocar a cópia para a localização pretendida.
-   Se você selecionar o item de menu Duplicar novamente, o 4D criará outra cópia de cada objeto e a moverá exatamente na mesma distância e direção da primeira cópia. Se precisar distribuir cópias do objeto ao longo de uma linha, use o procedimento a seguir. Duplique o objeto original, mova a cópia para outro local no formulário e, em seguida, duplique a cópia. A segunda cópia é automaticamente colocada na mesma relação com a primeira cópia que a primeira cópia estava em relação ao objeto original. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
+ Se você selecionar o item de menu Duplicar novamente, o 4D criará outra cópia de cada objeto e a moverá exatamente na mesma distância e direção da primeira cópia. Se precisar distribuir cópias do objeto ao longo de uma linha, use o procedimento a seguir. Duplique o objeto original, mova a cópia para outro local no formulário e, em seguida, duplique a cópia. A segunda cópia é automaticamente colocada na mesma relação com a primeira cópia que a primeira cópia estava em relação ao objeto original. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
@@ -201,7 +201,7 @@ A caixa de diálogo "Duplicate Many" é exibida quando você seleciona um ou mai
 - Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
 - Se você deseja criar uma matriz de variáveis, selecione a opção **Variáveis de número** e selecione a direção na qual as variáveis estão a ser numeradas, seja por linha(s) ou por coluna(s).
-  Esta opção só está activa quando o objecto seleccionado é uma variável. Para obter mais informações sobre essa opção, consulte **Duplicação em uma matriz** no _Design Reference_.
+ Esta opção só está activa quando o objecto seleccionado é uma variável. Para obter mais informações sobre essa opção, consulte **Duplicação em uma matriz** no *Design Reference*.
 
 ### Mover objetos
 
@@ -241,8 +241,8 @@ Para agrupar objectos:
 
 1. Selecione o objecto agrupado que pretende desagrupar.
 2. Elija **Agrupar** en el menú Objetos. OU
-   Clique no botão Group (Agrupar<p>)</p> na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
-   4D marca o limite dos objetos recém-agrupados com alças. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
+ Clique no botão Group (Agrupar<p>)</p> na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
+ 4D marca o limite dos objetos recém-agrupados com alças. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
 
 Para desagrupar objetos:
 
@@ -324,7 +324,7 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 3. Nas áreas de Alinhamento Esquerdo/Direita e/ou Topo/Bottom Alinhamento, clique no ícone de distribuição padrão: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(ícone padrão de distribuição horizontal)</p>A área de exemplo exibe os resultados da sua seleção.
 
-4. Para executar uma distribuição que use o esquema padrão, clique em **Preview** ou _Apply_.<p>Nesse caso, o 4D executará uma distribuição padrão, de modo que os objetos sejam dispostos com uma quantidade igual de espaço entre eles</p>. OU:<p>Para executar uma distribuição específica, selecione a opção **Distribute** (por exemplo, se quiser distribuir os objetos com base na distância até o lado direito). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
+4. Para executar uma distribuição que use o esquema padrão, clique em **Preview** ou *Apply*.<p>Nesse caso, o 4D executará uma distribuição padrão, de modo que os objetos sejam dispostos com uma quantidade igual de espaço entre eles</p>. OU:<p>Para executar uma distribuição específica, selecione a opção **Distribute** (por exemplo, se quiser distribuir os objetos com base na distância até o lado direito). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
 
 - Horizontalmente, os ícones correspondem às seguintes distribuições: igualmente com relação aos lados esquerdos, centros (hor.) e os lados direito dos objetos selecionados.
 - Verticalmente, os ícones correspondem às seguintes distribuições: uniformemente em relação às bordas superiores, centros (vert.) e as bordas inferiores dos objetos selecionados.
@@ -381,7 +381,7 @@ Para ver ou alterar a ordem de entrada:
 
 1. Selecione **Pedido de entrada** no menu **Formulário** ou clique no botão na barra de ferramentas da janela:<p>![](../assets/en/FormEditor/zOrder.png)</p>
 
-   O ponteiro se transforma em um ponteiro de ordem de entrada e 4D desenha uma linha na forma mostrando a ordem em que ele seleciona objetos durante a entrada de dados. A visualização e alteração da ordem de introdução de dados são as únicas acções que pode realizar até clicar em qualquer ferramenta na paleta Ferramentas.
+ O ponteiro se transforma em um ponteiro de ordem de entrada e 4D desenha uma linha na forma mostrando a ordem em que ele seleciona objetos durante a entrada de dados. A visualização e alteração da ordem de introdução de dados são as únicas acções que pode realizar até clicar em qualquer ferramenta na paleta Ferramentas.
 
 2. Para mudar a ordem de entrada de dados, posicione o ponteiro em um objeto no formulário e, enquanto mantém pressionado o botão do mouse, arraste o ponteiro para o objeto que deseja na ordem de entrada de dados.<img src="../assets/en/FormEditor/entryOrder3.png" alt="" />4D ajustará a ordem de entrada de acordo.
 
@@ -397,7 +397,7 @@ Enquanto estiver alterando a ordem de entrada de dados, é possível selecionar 
 
 Para criar um grupo de entrada de dados:
 
-1. Selecione **Entry Order** no menu _Formulário_ ou clique no botão na barra de ferramentas.
+1. Selecione **Entry Order** no menu *Formulário* ou clique no botão na barra de ferramentas.
 2. Desenhe uma seleção ao redor dos objetos que você deseja agrupar para entrada de dados.
 
 Quando você solta o botão do mouse, os objetos contidos ou tocados pelo retângulo seguem a ordem padrão de entrada de dados. A ordem de entrada de dados para os restantes objetos ajustam-se conforme necessário.
@@ -542,7 +542,7 @@ Essa função funciona da seguinte forma: Cada escudo é associado a uma proprie
 
 ### Usando escudos
 
-Para ativar um escudo, clique no ícone _Escudo_ na barra de ferramentas até que o escudo desejado seja selecionado. Você também pode clicar no lado direito do botão e selecionar o tipo de escudo para exibir diretamente no menu associado:
+Para ativar um escudo, clique no ícone *Escudo* na barra de ferramentas até que o escudo desejado seja selecionado. Você também pode clicar no lado direito do botão e selecionar o tipo de escudo para exibir diretamente no menu associado:
 
 Se você não quer exibir escudos, selecione **Sem Escudos** no menu de seleção.
 
@@ -729,33 +729,33 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 Você pode mostrar ou ocultar objetos pertencentes a uma visualização a qualquer momento na página atual do formulário. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
-Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone _Show/Hide_:
+Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone *Show/Hide*:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-Para ocultar uma exibição, clique no ícone _Mostrar/Ocultar_. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
+Para ocultar uma exibição, clique no ícone *Mostrar/Ocultar*. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
 
 ![](../assets/en/FormEditor/hidden.png)
 
 > A [Visualização atual] (#before-you-begin) não pode ser ocultada.
 
-Para mostrar uma visualização oculta, simplesmente selecione-a ou clique no ícone _Mostrar/Ocultar_ para essa exibição.
+Para mostrar uma visualização oculta, simplesmente selecione-a ou clique no ícone *Mostrar/Ocultar* para essa exibição.
 
 #### Bloqueio de objetos de uma vista
 
 É possível bloquear os objectos de uma vista. Isto impede que sejam selecionados, alterados ou eliminados do formulário. Una vez bloqueado, un objeto no puede seleccionarse mediante un clic, un rectángulo o el comando **Seleccionar objetos similares** del menú contextual. Esta função é útil para evitar erros de tratamento.
 
-Por padrão, todas as visualizações estão desbloqueadas, conforme indicado pelo ícone _Lock/Unlock_ ao lado de cada visualização:
+Por padrão, todas as visualizações estão desbloqueadas, conforme indicado pelo ícone *Lock/Unlock* ao lado de cada visualização:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-Para bloquear os objetos de uma visualização, clique no ícone _Lock/Unlock_ (Bloquear/Desbloquear). O cadeado está fechado, o que significa que a vista está agora bloqueada:
+Para bloquear os objetos de uma visualização, clique no ícone *Lock/Unlock* (Bloquear/Desbloquear). O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
 
 > La [vista actual](#antes-del-comienzo) no se puede bloquear.
 
-Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono _Bloquear/Desbloquear_ de esa vista.
+Para desbloquear una vista que está bloqueada, basta con seleccionarla o hacer clic en el icono *Bloquear/Desbloquear* de esa vista.
 
 ## Zoom
 

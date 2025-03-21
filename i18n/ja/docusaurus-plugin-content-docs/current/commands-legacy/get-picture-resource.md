@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PICTURE RESOURCE.Summary-->GET PICTURE RESOURCE コマンドは、*resID*のIDを持つピクチャ ("PICT") リソースに格納されているピクチャを*resData*のピクチャフィールドまたは変数に返します。<!-- END REF-->
 
@@ -26,23 +26,23 @@ displayed_sidebar: docs
 
 **Note:** ピクチャリソースは、少なくとも数メガバイトのサイズになる可能性があります。
 
-#### 例題 
+## 例題 
 
 [RESOURCE LIST](resource-list.md "RESOURCE LIST")コマンドの例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リソースが見つかるとOKは1に、そうでなければ0に設定されます。
 
-#### エラー管理 
+## エラー管理 
 
 ピクチャをロードするための十分なメモリがない場合、エラーが生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")を使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

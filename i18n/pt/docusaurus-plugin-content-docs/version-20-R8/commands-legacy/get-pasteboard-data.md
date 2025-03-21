@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->O comando GET PASTEBOARD DATA devolve no campo ou variável de tipo BLOB ou na variável *dados*, os dados que se encontram na área de transferência e cujo tipo se passa em *tipoDados*.<!-- END REF-->(Se a cópia contiver texto copiado dentro de 4D, então o conjunto de caracteres do BLOB é provavelmente UTF-16)
 
@@ -24,7 +24,7 @@ Passe em *tipoDados* um valor que defina o tipo de dados a extrair. Pode passar 
 
 **Nota:** Não pode ler arquivos de tipo dados com este comando, para fazer isso deve usar o comando [Get file from pasteboard](get-file-from-pasteboard.md). 
 
-#### Exemplo 
+## Exemplo 
 
 Os métodos de objeto a seguir são os dos botões que copiam e colam dados no array *asOpçoes* (menu pop-up, lista pop up,...) localizado num formulário:
 
@@ -44,17 +44,17 @@ Os métodos de objeto a seguir são os dos botões que copiam e colam dados no a
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se os dados são extraídos corretamente, a variável OK toma o valor 1; do contrário OK toma o valor 0 e é gerado um erro.
 
-#### Ver também 
+## Ver também 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

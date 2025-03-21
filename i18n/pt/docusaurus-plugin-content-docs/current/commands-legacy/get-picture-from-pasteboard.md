@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD devolve a imagem presente na área de transferência no campo ou variável imagem *imagem*.<!-- END REF-->
 
 **Nota**: no caso de uma operação copiar/colar, o container de dados corresponde a área de transferência
 
-#### Exemplo 
+## Exemplo 
 
 O método a seguir de objeto de um botão atribui a imagem presente na área de transferência (se houver) ao campo \[Empregados\]Foto:
 
@@ -31,17 +31,17 @@ O método a seguir de objeto de um botão atribui a imagem presente na área de 
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a imagem for extraída corretamente, OK toma o valor 1; do contrário OK toma o valor 0 e se gera um erro.
 
-#### Ver também 
+## Ver também 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

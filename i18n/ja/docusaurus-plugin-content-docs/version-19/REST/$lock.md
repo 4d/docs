@@ -28,7 +28,7 @@ title: '$lock'
 
 ### 説明
 
-REST API によるロックは、[セッション](authUsers.md#セッションの開始) レベルで設定されます。
+REST API によるロックは、[セッション](./authUsers.md#opening-sessions) レベルで設定されます。
 
 *ロック* されたエンティティは次のものから操作 (ロック / アンロック / 更新 / 削除) できません:
 
@@ -52,9 +52,9 @@ REST API によってロックされたエンティティは、次の場合に�
 | success      |  | boolean | ロックに成功した場合 (あるいはエンティティがすでにカレントセッションでロックされていた場合) には true、それ以外は false (この場合は返されません)。 |
 |              |  |         | ***エラーの場合にのみ利用可能:***                                                               |
 | status       |  | number  | エラーコード、以下参照                                                                        |
-| statusText   |  | text    | エラーの詳細、以下参照                                                                        |
+| statusText   |  | テキスト    | エラーの詳細、以下参照                                                                        |
 | lockKind     |  | number  | ロックコード                                                                             |
-| lockKindText |  | text    | "Locked by session" RESTセッションによるロック、"Locked by record" 4Dプロセスによるロック                |
+| lockKindText |  | テキスト    | "Locked by session" RESTセッションによるロック、"Locked by record" 4Dプロセスによるロック                |
 
 
 エラー時には *__STATUS* オブジェクトの *status* および *statusText* プロパティに以下のいずれかの値が返されます:

@@ -25,7 +25,7 @@ displayed_sidebar: docs
 <!-- END REF -->
 
 
-#### Description
+## Description
 
 The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
 
@@ -33,8 +33,8 @@ Having a formula as an object allows it to be passed as a parameter (calculated 
 
 The returned formula can be called with:
 
-*	[`.call()`](#call) or [`.apply()`](#apply) methods, or
-*	object notation syntax (see [formula object](#formula-object)).
+*	[`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
+*	object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ The returned formula can be called with:
  $o.myFormula() //returns 3
 ```
 
-You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
 You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
 
@@ -56,7 +56,7 @@ If *formulaExp* uses local variables, their values are copied and stored in the 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
 
 
-#### Example 1
+## Example 1
 
 A simple formula:
 
@@ -70,7 +70,7 @@ A simple formula:
  $result:=$o.f() // returns 3
 ```
 
-#### Example 2
+## Example 2
 
 A formula using local variables:
 
@@ -85,7 +85,7 @@ A formula using local variables:
 ```
 
 
-#### Example 3
+## Example 3
 
 A simple formula using parameters:
 
@@ -95,7 +95,7 @@ A simple formula using parameters:
 ```
 
 
-#### Example 4
+## Example 4
 
 A formula using a project method with parameters:
 
@@ -105,7 +105,7 @@ A formula using a project method with parameters:
 ```
 
 
-#### Example 5
+## Example 5
 
 Using `This`:
 
@@ -116,7 +116,7 @@ Using `This`:
  $result:=$o.fullName() //returns "John Smith"
 ```
 
-#### Example 6
+## Example 6
 
 Calling a formula using object notation:
 
@@ -138,7 +138,7 @@ Calling a formula using object notation:
 ```
 
 
-#### See also 
+## See also 
 
 [4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)  
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)  
@@ -147,7 +147,7 @@ Calling a formula using object notation:
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

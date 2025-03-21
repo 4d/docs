@@ -74,7 +74,7 @@ Essa propriedade é o nome do próprio formulário sendo usada para fazer refer�
 
 #### Gramática JSON
 
-O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture.md#sources-folder) para obter mais informações.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture#sources) para obter mais informações.
 
 ---
 
@@ -209,3 +209,5 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 | Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
 | windowTitle | string        | O nome da janela como texto simples ou como referência |
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->O comando WA SET URL FILTERS permite colocar um ou mais filtros para a área Web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
 
@@ -36,7 +36,7 @@ Quando tiver executado o comando, os filtros são transformados em propriedade d
   
 **Importante**: o filtro dos URLs realizado por este comando apenas aplica a qualquer requisição para mudar a URL primária da página, seja do usuário, código javascript ou código 4D, exceto para o comando \[#cmd id="1020"/\] e URLs iniciando com "javascript:".
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Imagine que deseja permitir acesso todos sites web .org, .net e .fr: 
 
@@ -53,7 +53,7 @@ Imagine que deseja permitir acesso todos sites web .org, .net e .fr:
  WA SET URL FILTERS(MinhaWArea;$filtros;$permitirRecusar)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Imagine que deseja acessar todos os websites exceto russos (.ru): 
 
@@ -68,7 +68,7 @@ Imagine que deseja acessar todos os websites exceto russos (.ru):
  WA SET URL FILTERS(MinhaWArea;$filtros;$permitirRecusar)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Você pode permitir acesso ao web site 4Ds (.com, .fr, .es, etc.): 
 
@@ -83,7 +83,7 @@ Você pode permitir acesso ao web site 4Ds (.com, .fr, .es, etc.):
  WA SET URL FILTERS(MinhaWArea;$filtros;$permitirRecusar)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Você quer autorizar o acesso local à documentação apenas (que fica na pasta C://doc):  
 
@@ -104,7 +104,7 @@ Você quer autorizar o acesso local à documentação apenas (que fica na pasta 
  WA SET URL FILTERS(MinhaWArea;$filtros;$PermitirRecusar)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Imagine que deseja permitir acesso para todos os sites, exceto um, por exemplo o site Elcaro: 
 
@@ -118,7 +118,7 @@ Imagine que deseja permitir acesso para todos os sites, exceto um, por exemplo o
  WA SET URL FILTERS(MinhaWArea;$filtros;$permitirRecusar)
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Imagine que deseja negar o acesso a endereços IP específicos:   
 
@@ -135,12 +135,12 @@ Imagine que deseja negar o acesso a endereços IP específicos:
   //(Note que o endereço IP de um domínio pode variar).
 ```
 
-#### Ver também 
+## Ver também 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

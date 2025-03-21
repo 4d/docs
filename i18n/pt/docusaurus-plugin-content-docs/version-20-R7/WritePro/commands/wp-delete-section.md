@@ -12,13 +12,13 @@ displayed_sidebar: docs
 | Parâmetro   | Tipo    |                             | Descrição                          |
 | ----------- | ------- | --------------------------- | ---------------------------------- |
 | section     | Object  | &#8594; | 4D Write Pro section               |
-| wpDoc       | Object  | &#8594; | 4D Write Pro document              |
+| wpDoc       | Object  | &#8594; | Documento 4D Write Pro             |
 | indexNumber | Integer | &#8594; | Index of the section to be deleted |
 | count       | Integer | &#8594; | Number of sections to be deleted   |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
 
@@ -32,7 +32,7 @@ If an image or textbox is anchored to a page (e.g., page 20) and this page no lo
 
 :::
 
-#### Exemplos
+## Exemplos
 
 To remove the first section of the document:
 
@@ -85,7 +85,7 @@ WP DELETE SECTION($section)
 
 ```
 
-#### Veja também
+## Veja também
 
 [WP Get section](../commands-legacy/wp-get-section.md)\
 [WP RESET ATTRIBUTES](wp-reset-attributes.md)

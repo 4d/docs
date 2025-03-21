@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo   |                             | Descripción                                                              |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
 | param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto                                                         |
+| Resultado  | Object | <- | Padre del objeto                                                         |
 
 <!-- END REF -->
 
@@ -19,7 +19,7 @@ La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a l
 
 `Super` tiene dos propósitos diferentes:
 
-1. Inside a [constructor code]((../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Dentro de un código [constructor](../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
 - Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.
@@ -32,14 +32,14 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Dentro de una [función de clase](../Concepts/classes.md#function), `Super` designa el prototipo de la [`superclase`](../API/ClassClass.md#superclass) y permite llamar a una función de la jerarquía de superclase.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  
 //declarada en superclases
 ```
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 This example illustrates the use of `Super` in a class function. Ha creado la clase `Rectangle` con una función:
 
@@ -109,13 +109,15 @@ $square:=cs.Square.new()
 $message:=$square.description() //tengo 4 lados iguales
 ```
 
-#### Ver también
+## Ver también
 
 [**Concept page for Classes**](../Concepts/classes.md).
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1706                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1706                        |
+| Hilo seguro       | &check; |
+
+

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->The **DELETE FOLDER** command deletes the folder whose name or full path has been passed in *folder*.<!-- END REF--> 
 
@@ -34,16 +34,16 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
    * If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(\*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use [Last errors](last-errors.md)  command to retrieve the name and path of the offending file.  
    * If the folder specified does not exist, the command does nothing and no error is returned.  
    (\*) under Windows: -54 (Attempt to open locked file for writing)  
-   under OS X: -45 (The file is locked or the pathname is not correct)
+   under macOS: -45 (The file is locked or the pathname is not correct)
 
 You can intercept these errors using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

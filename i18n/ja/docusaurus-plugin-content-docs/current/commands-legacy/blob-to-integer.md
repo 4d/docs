@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB to integer.Summary-->BLOB to integer コマンドは、*blob* BLOBから2バイトの整数値を読み込み、その値を返します。<!-- END REF-->
 
@@ -41,7 +41,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 呼び出し後、*offset*変数は、読み込まれたバイト数分だけインクリメントされます。したがって、同じ*offset*変数を別のBLOB読み込みコマンドにも使用し、別の値をBLOBから読みだすことができます。
 
   
-#### 例題 
+## 例題 
 
 以下の例ではBLOBから、オフセット0x200から開始して整数値を20個読み込んでいます:
 
@@ -53,7 +53,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  
@@ -63,7 +63,7 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

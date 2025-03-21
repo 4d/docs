@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->The **OBJECT Get indicator type** command returns the current indicator type assigned to the thermometer(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -31,11 +31,11 @@ You can compare the value returned by the command with the following constants, 
 | Barber shop               | Integer | 2     | Bar displaying continuous animation                |
 | Progress bar              | Integer | 1     | Standard progress bar                              |
 
-#### See also 
+## See also 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

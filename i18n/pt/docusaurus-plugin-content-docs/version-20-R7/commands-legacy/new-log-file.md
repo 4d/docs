@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.New log file.Summary-->**Nota preliminar:** este comando só funciona com 4D Server.<!-- END REF--> Só é possível ser executado através do comando [Execute on server](execute-on-server.md) ou em um procedimento armazenado. 
 
@@ -26,13 +26,13 @@ O arquivo é renomeado com os números de backups atuais do banco de dados e o a
 * Se o banco de dados MeuBanco.4DD foi salvo 4 vezes, o último arquivo de backup se chamará *MeuBanco\[0004\].4BK*. O nome do primeiro “segmento” do arquivo de histórico será, portanto *MeuBanco\[0004-0001\].journal*.
 * Se o banco de dados MeuBanco.4DD foi salvo 3 vezes e o arquivo de histórico foi salvo 5 vezes, o nome do sexto backup do arquivo de histórico será *MeuBanco\[0003-0006\].journal*.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Caso se apresente um erro, o comando gera um código que pode ser interceptado utilizando o comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

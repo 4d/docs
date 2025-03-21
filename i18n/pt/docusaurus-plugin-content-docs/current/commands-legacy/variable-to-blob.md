@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->O comando VARIABLE TO BLOB armazena a *variável* no BLOB *blob*.<!-- END REF-->
 
@@ -44,15 +44,15 @@ Após a chamada, se a variável foi armazenada com sucesso, a variável OK é de
 
 **Nota sobre a independência de plataforma:** VARIABLE TO BLOB e [BLOB TO VARIABLE](blob-to-variable.md) usam um formato interno de 4D para lidar com variáveis armazenadas em BLOBs. Como benefício, você não precisa se preocupar com a troca de bytes entre as plataformas ao usar esses dois comandos. Em outras palavras, um BLOB criado no Windows usando um desses comandos podem ser reutilizados em Macintosh, e vice-versa.
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidade**: como este comando altera o blob passado como parâmetro, não é compatível com objetos blob (tipo 4D.Blob). Ver *Passing blobs and blob objects to 4D commands* em developer.4d.com
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável OK é definida como 1 se a variável foi armazenada com sucesso, caso contrário, ela é definido como 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente qualquer conjunto de variáveis de/para um BLOB:
 
@@ -89,7 +89,7 @@ Depois que estes métodos foram adicionados ao seu aplicativo, você pode escrev
  RECUPERAR VARIABLES DEL BLOB(->vxBLOB;->vgImagem;->comoUmArray;->aoOutroArray)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente arrays e documentos em disco:
 
@@ -130,13 +130,13 @@ Depois que esses métodos foram adicionados a sua aplicação, pode escrever:
  LOAD ARRAY($vsDocName;->asAnyArray)
 ```
 
-#### Ver também 
+## Ver também 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

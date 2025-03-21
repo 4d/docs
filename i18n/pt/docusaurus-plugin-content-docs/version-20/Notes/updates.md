@@ -14,6 +14,12 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 #### Destaques
 
+:::info Evaluation applications
+
+Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+
+:::
+
 - 4D 20.6 LTS is certified on Windows Server 2025
 
 :::warning KNOWN ISSUE ON WINDOWS SERVER 2025
@@ -22,8 +28,8 @@ On Windows Server 2025, some custom options in the new Windows Print dialog box 
 
 :::
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- Capacidade de [construir aplicações autônomas sem licenças incorporadas](../Desktop/building.md#licenses).
+- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.6): lista de todos os erros corrigidos no 4D 20.6 LTS.
 
 
 
@@ -115,7 +121,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 :::
 
 - Nova propriedade `plugins` no parâmetro *opções* para o comando [`Compilar projeto`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
-- O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
+- O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore-and-log-integration).
 - [Classe IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.
 - Novo [WebSocketServer](../API/WebSocketServerClass.md) e [WebSocketConnection](../API/WebSocketConnectionClass.md) classes para criar e gerir ligações WebSocket a partir de 4D.
 - Apoio da palavra-chave [`property`](../Concepts/classes.md#property) em definições de classe de utilizador.
@@ -134,7 +140,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 - [Explorador de Dados](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e será exibido em uma janela 4D.
 - Novas propriedades para botões, caixas de seleção e botões de rádio: [Imagem abraça título](../FormObjects/properties_TextAndPicture.md#image-hugs-title) e [Alinhamento horizontal](../FormObjects/properties_Text.md#horizontal-alignment).
 - Suporte do `WinIcon` na função [`file.setAppInfo()`](../API/FileClass.md#setappinfo).
-- Nova opção `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar a validação automática do certificado.
+- Nova opção `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) que permite controlar a validação automática do certificado.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
 - [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20): lista de todos os erros corrigidos no 4D 20 LTS.
@@ -143,10 +149,10 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 #### Mudanças de comportamento
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
-- Os certificados TLS agora são validados automaticamente por 4D ao enviar solicitações HTTP com [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) e rejeitados com um erro se forem inválidos. Uma nova propriedade *option* permite-lhe controlar esta validação.
+- Os certificados TLS agora são validados automaticamente por 4D ao enviar solicitações HTTP com [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) e rejeitados com um erro se forem inválidos. Uma nova propriedade *option* permite-lhe controlar esta validação.
 - TLS v1.0 e TLS v1.1 são obsoletos, não são mais suportados como `Min TLS versão` no 4D Server. A versão 1.3 agora é selecionada por padrão sendo usada automaticamente se as constantes `_o_TLSv1_0` ou `_o_TLSv1_1` forem definidas com [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
 - Para fins de consistência, todos os botões, caixas de seleção e botões de rádio agora são renderizados com um tipo "3D" em tempo de execução: respectivamente `Object type 3D button`, `Object type 3D checkbox`e `Object type 3D radio button` são retornados por [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) para esses objetos.
-- Se um projeto convertido usar recursos do componente [4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), certifique-se de instalá-lo também na pasta "Components" do projeto. A partir de 4D 20, [4D para Mobile](https://developer.4d.com/go-mobile/) não está mais instalado por padrão no ambiente 4D. Para se beneficiar da 4D para recursos de desenvolvimento móvel em 4D, você precisa [instalar o componente 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) na pasta ["Components"](../Project/architecture.md#components) de seus projetos.
+- Para se beneficiar da 4D para recursos de desenvolvimento móvel em 4D, você precisa [instalar o componente 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) na pasta ["Components"](../Project/architecture.md#components) de seus projetos. Se um projeto convertido usar recursos do componente [4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), certifique-se de instalá-lo também na pasta "Components" do projeto. A partir de 4D 20, [4D para Mobile](https://developer.4d.com/go-mobile/) não está mais instalado por padrão no ambiente 4D.
 
 
 ### 4D 19 R8
@@ -172,7 +178,7 @@ Leia [**O que há de novo no 4D v19 R2**](https://blog.4d.com/en-whats-new-in-4d
 #### Mudanças de comportamento
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- Quando um botão bevel[com menu pop-up vinculado](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) é atribuído a uma ação padrão, a ação padrão não é mais gerada se uma opção de menu pop-up for selecionada.
 - Nas áreas da Web que usam blink (CEF), as caixas de diálogo exibidas a partir de scripts externos agora estão bloqueando se não forem chamadas a partir de uma função `setTimeout()` JS. Isso se deve às atualizações atuais da CEF, nas quais as caixas de diálogo exibidas por funções como `alert()` ou `print()` não são mais tratadas pelo sistema operacional, mas pela área da Web. Veja [`WA Avaliar JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) e [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
@@ -188,7 +194,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - Nova classe [FileHandle](../API/FileHandleClass.md) e nova [`.open()`](../API/FileClass.md#open) função na classe `File`.
 - [Classe de seleção de entidade](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) suporta um parâmetro *entitySelection*, [`.minus()`](../API/EntitySelectionClass.md#minus) suporta um parâmetro *keepOrder*.
 - Suporte às opções *automaticRedirections* e *decodeData* em [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew).
-- Novo arquivo histórico [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog).
+- Novo arquivo histórico [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlogtxt).
 - 4D View Pro: novos comandos de tablea [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes).
 - Os namespaces de componentes agora são [exibidos no Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
 - Os objetos de área de texto e formulário de entrada agora suportam a propriedade [corner radius](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
@@ -222,7 +228,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 ### 4D 19 R5
 
-- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+- O [arquivo directory.json](../Users/handling_users_groups.md#directoryjson-file) do projeto agora pode ser [incorporado ao servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) no momento da compilação, permitindo a implementação de uma aplicação cliente/servidor com uma configuração básica de segurança de usuário e grupos.
 - Agora você pode [desmarcar módulos inúteis](../Desktop/building.md#deselecting-modules) em seus aplicativos criados.
 - A biblioteca *MeCab* está incluída por padrão em todos os aplicativos 4D no macOS. Em versões anteriores, essa biblioteca, especificamente projetada para gerenciar texto em japonês, estava disponível apenas na versão japonesa do 4D no macOS. Se não precisar dessa biblioteca em seus aplicativos finais, agora você pode [desmarcá-la](../Desktop/building.md#deselecting-modules).
 - [Otimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): novas funções de classe permitem que você manipule o cache ORDA e o conteúdo de um contexto de otimização. Consulte [pré-configurando contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) e [Cache ORDA](../ORDA/remoteDatastores.md#orda-cache) para obter mais informações.
@@ -296,12 +302,12 @@ ALERT($param1+" "+$param2)
  $class.concate() // Displays " "
 ```
 Para obter informações pormenorizadas, consulte [esta publicação do blogue](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). Para beneficiar desta simplificação global, é necessário recompilar tanto os métodos chamados como os que são chamados; assim, os componentes devem ser recompilados.
-- A depuração das sessões do servidor web [é mais fácil no 4D Server](../WebServer/sessions.md#preemptive-mode).
+- A depuração das sessões do servidor web [é mais fácil no 4D Server](../WebServer/sessions.md).
 - O novo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite que você se conecte a APIs de terceiros, como o Microsoft Graph.
 - Esse novo algoritmo é usado automaticamente quando uma senha é alterada usando a Caixa de ferramentas, o comando `CHANGE PASSWORD` ou o comando `Set user properties` . 4D 19 R3 usa um algoritmo hash mais forte para senhas de usuários 4D: Bcrypt. Depois que a senha for modificada, abrir o banco de dados com uma versão anterior ao 4D 19 R3 causará uma recusa de autenticação para essa conta. Se você usa senhas 4D, é altamente recomendável fazer backup do arquivo .4db (bancos de dados binários) ou do arquivo directory.json (projetos) antes de atualizar para o 4D 19 R3 ou posterior.
 - Para fins de precisão, a constante `4D digest` foi renomeada para `4D REST digest`.
 
-- Gerenciamento de fim de linha e BOM para comandos XML: Quando abertos no 4D 19 R3, os projetos ou bancos de dados criados com versões anteriores se comportam de forma diferente em relação aos caracteres de fim de linha padrão e ao gerenciamento de BOM em documentos XML: os caracteres de avanço de linha (LF) são usados em vez de CR (no macOS) e as marcas de ordem de byte (BOM) não são incluídas. Isso permite uma melhor compatibilidade com as ferramentas VCS. Isso permite uma melhor compatibilidade com as ferramentas VCS. Se necessário, você pode restaurar o comportamento da v19 R2 usando o comando `XML SET OPTIONS` . Em projetos ou bancos de dados convertidos de versões anteriores ao 19 R2, essas opções são gerenciadas por duas configurações de compatibilidade.
+- Gerenciamento de fim de linha e BOM para comandos XML: Quando abertos no 4D 19 R3, os projetos ou bancos de dados criados com versões anteriores se comportam de forma diferente em relação aos caracteres de fim de linha padrão e ao gerenciamento de BOM em documentos XML: os caracteres de avanço de linha (LF) são usados em vez de CR (no macOS) e as marcas de ordem de byte (BOM) não são incluídas. Isso permite uma melhor compatibilidade com as ferramentas VCS. Isso permite uma melhor compatibilidade com as ferramentas VCS. Isso permite uma melhor compatibilidade com as ferramentas VCS. Se necessário, você pode restaurar o comportamento da v19 R2 usando o comando `XML SET OPTIONS` . Em projetos ou bancos de dados convertidos de versões anteriores ao 19 R2, essas opções são gerenciadas por duas configurações de compatibilidade.
 - Atalho do Runtime Explorer removido em projetos criados: O atalho **Cmd/Ctrl+Shift+F9** não exibe mais a janela do Runtime Explorer em aplicativos de projetos mesclados de usuário único. Esse atalho agora pode ser um atalho de aplicativo do usuário. Você pode chamar a janela do Runtime Explorer usando o novo comando `OPEN RUNTIME EXPLORER` .
 - Recursos de depuração ampliados com o 4D Server: No modo interpretado, o 4D Server agora pode depurar todos os tipos de processos, incluindo sessões da Web escalonáveis. Isso está disponível quando o depurador está conectado ao servidor ou a um cliente remoto.   
   *Aviso: No modo interpretado, para disponibilizar a depuração estendida no computador do servidor, todos os processos do servidor agora são executados automaticamente no modo cooperativo quando o depurador está conectado ao servidor (configuração padrão). Isso pode ter um impacto significativo no desempenho de seus aplicativos convertidos quando eles são executados com o 4D Server v19 R3 e superior. Para restaurar a execução preemptiva no servidor nesse caso, tudo o que você precisa fazer é desconectar o depurador do servidor (e conectá-lo a um cliente remoto, se necessário).*

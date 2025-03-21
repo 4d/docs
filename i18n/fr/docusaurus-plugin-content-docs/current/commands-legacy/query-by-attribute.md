@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
@@ -70,7 +70,7 @@ Voici la structure type d'une recherche par attribut :
 
 **Note :** La présence de l'attribut dans le champ objet est un critère implicite pour tous les opérateurs (hormis #). En revanche, pour l'opérateur #, il peut être indéfini (cf. ci-dessous). 
 
-##### Utilisation de l'opérateur # (prise en charge des valeurs Null) 
+### Utilisation de l'opérateur # (prise en charge des valeurs Null) 
 
 Lorsque vous effectuez une recherche par attribut à l'aide de l'opérateur #, vous devez prendre en considération les cas où un attribut n'est pas présent dans un enregistrement. Considérons par exemple ce qui suit :   
 
@@ -101,7 +101,7 @@ Ce principe s'applique également aux attributs tableaux. Par exemple, la recher
   
 **Note :** Pour obtenir spécifiquement les enregistrements dans lesquels l'attribut est indéfini, vous pouvez utiliser un objet vide (cf. exemple 2). A noter toutefois que la recherche de valeurs NULL dans les éléments de tableaux n'est prise en charge.
 
-##### Construire des recherches multiples 
+### Construire des recherches multiples 
 
 Voici les règles à observer pour la construction de recherche par attribut à lignes multiples :
 
@@ -118,7 +118,7 @@ Quelle que soit la manière dont la recherche a été définie :
 * Si l'exécution d'une recherche nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ce type de message peut être désactivé à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton Stop pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
 * Si des champs objet indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération.
 
-##### Valeurs date dans l'objet 
+### Valeurs date dans l'objet 
 
 Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
@@ -145,11 +145,11 @@ Attention, la portée de ce paramètre est limitée au process. Si vous exécute
  QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
 ```
 
-##### Utilisation de la propriété virtuelle length 
+### Utilisation de la propriété virtuelle length 
 
 Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle peut être utilisée dans le contexte de l'exécution de la commande **QUERY BY ATTRIBUTE** (cf. exemple 4).
 
-##### Lier les critères pour les recherches dans les éléments de tableau 
+### Lier les critères pour les recherches dans les éléments de tableau 
 
 (Nouveauté 4D v16 R2) Lorsque vous effectuez des recherches multiples combinées via l'opérateur "ET" parmi des éléments de tableaux, vous pouvez souhaiter que seuls les enregistrements dont au moins un élément de tableau répond à tous les critères soient trouvés, et non ceux répondant à tous les critères mais dans différents éléments. Pour cela, vous devez *lier* les critères de recherche afin que seuls les éléments individuels contenant tous les critères liés soient trouvés. 
 
@@ -199,7 +199,7 @@ Avec les mêmes enregistrements que précédemment, si vous écrivez :
 
 **Note :** Utiliser la syntaxe liée dans une ligne de recherche unique donnera les mêmes résultats qu'une recherche standard, hormis avec l'opérateur "#" : dans ce cas, des résultats invalides peuvent être retournés. Par conséquent, cette syntaxe spécifique n'est pas prise en charge. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous souhaitons trouver les personnes dont l'âge est situé entre 20 et 29\. Les deux premières lignes interrogent l'attribut en tant qu'entier (>=20 et < 30) et les suivantes interrogent l'attribut en tant que chaîne (débute par "2" mais est différent de "2").
 
@@ -210,7 +210,7 @@ Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous s
  QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";#;"2") //pas de * final pour lancer l'exécution
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enregistrements dans lesquels certains attributs sont définis (ou non définis). Pour cela, vous devez utiliser un objet vide : 
 
@@ -228,7 +228,7 @@ La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enre
 
 **Note :** Cette syntaxe spécifique n'est pas prise en charge avec les attributs de type tableau. La recherche de valeurs NULL dans les attributs de tableau donne des résultats invalides. 
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux enregistrements suivants :
 
@@ -267,7 +267,7 @@ Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux en
   //trouve "smith"
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple illustre l'utilisation de la propriété virtuelle "length". Votre base de données comporte un champ objet \[Customer\]full\_Data avec les données suivantes :
 
@@ -279,7 +279,7 @@ Vous souhaitez obtenir les enregistrements des clients qui ont deux enfants ou p
  QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Ces exemples illustrent les différentes combinaisons de liaisons de critères disponibles avec les tableaux. Soit une base contenant les enregistrements suivants :
 
@@ -396,7 +396,7 @@ Recherche des personnes qui ont un enfant de 15 ans nommé "Harry" qui a une voi
   //retourne "Sam" et "Louis"
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la recherche est correctement effectuée, la variable système OK prend la valeur 1.  
 La variable OK prend la valeur 0 si :
@@ -404,13 +404,13 @@ La variable OK prend la valeur 0 si :
 * l'utilisateur clique sur le bouton **Annuler** / **Stop**,
 * en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 *Structure des objets de langage 4D*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

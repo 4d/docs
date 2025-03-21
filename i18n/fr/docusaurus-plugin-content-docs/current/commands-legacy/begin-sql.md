@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Begin SQL.Summary-->**Begin SQL** est un mot-clé permettant d'indiquer dans l'éditeur de méthodes le début d'une séquence de commandes SQL, qui devront être interprétées par la source de données courante du process (moteur SQL intégré de 4D ou toute source définie via la commande [SQL LOGIN](sql-login.md)).<!-- END REF-->
 
@@ -38,13 +38,13 @@ ou :
 
 A noter que le *Débogueur* de 4D évaluera le code SQL ligne par ligne. Dans certains cas, il peut être préférable d’utiliser plusieurs lignes.
 
-#### Voir aussi 
+## Voir aussi 
 
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

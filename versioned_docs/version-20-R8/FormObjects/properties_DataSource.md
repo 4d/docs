@@ -48,7 +48,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 #### Objects Supported
 
 [Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -84,7 +84,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -170,7 +170,7 @@ Using the **Selected item reference** option requires compliance with the follow
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
@@ -253,7 +253,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -307,7 +307,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -327,4 +327,4 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Objects Supported
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

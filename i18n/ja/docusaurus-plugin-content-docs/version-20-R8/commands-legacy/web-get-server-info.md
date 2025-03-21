@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Get server info.Summary-->**WEB Get server info** コマンドは、4D Web サーバーのカレントのセッションの詳細なランタイム情報を格納したオブジェクトを返します。<!-- END REF-->返された情報にはSOPA サーバーのものも含まれます。
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 **4D Server:** コマンドはローカルのWeb サーバーについての情報を返します。4D Server のWeb サーバーをリモートからモニターしたい場合にはメソッドの"サーバーで実行"プロパティを適用する必要があります。
 
-##### cacheプロパティ 
+### cacheプロパティ 
 
 *withCache* 引数に**true** を渡した場合、コマンドは以下の中身を格納した"cache" オブジェクトプロパティを返します:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 | nbCachedObjects | Number     | キャッシュ内のオブジェクトの数                                                                                            |
 | cachedObjects   | Collection | キャッシュ内のオブジェクトのコレクション。それぞれのキャッシュされたオブジェクトは異なるプロパティ(url、mimeType、expirationType、lastModified、等)によって定義されています。 |
 
-#### 例題 
+## 例題 
 
 以下のコードを実行した場合:
 
@@ -85,13 +85,13 @@ displayed_sidebar: docs
 {   "started": true,   "uptime": 40,   "SOAPServerStarted": true,   "startMode": "manual",   "httpRequestCount": 0,   "options": {      "CORSEnabled": false,      "CORSSettings": null,      "webCharacterSet": "UTF-8",      "webHTTPCompressionLevel": 1,      "webHTTPCompressionThreshold": 1024,      "webHTTPSPortID": 443,      "webIPAddressToListen": ["192.168.xxx.xxx"],      "webInactiveProcessTimeout": 28800,      "webInactiveSessionTimeout": 28800,      "webMaxConcurrentProcesses": 100,      "webPortID": 80   },   "security": {      "HTTPEnabled": true,      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",      "perfectForwardSecrecy": true,      "minTLSVersion": "1.2"    },    "cache": {        "cacheUsage": 1,        "numOfLoads": 24,        "currentSize": 154219,        "maxSize": 10485760,        "objectMaxSize": 524288,        "enabled": true,        "nbCachedObjects": 23,        "cachedObjects": [            {...},{...}         ]   }}
 ```
 
-#### 参照 
+## 参照 
 
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

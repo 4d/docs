@@ -24,7 +24,7 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "Propiedades",
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Development Environment": {
@@ -136,19 +136,19 @@
     "description": "The generated-index page title for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Compiler": {
-    "message": "Compiler",
+    "message": "Compilador",
     "description": "The label for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Compiler.link.generated-index.title": {
-    "message": "Compiler",
+    "message": "Compilador",
     "description": "The generated-index page title for category Compiler in sidebar docs"
   },
   "sidebar.docs.category.Data Entry": {
-    "message": "Data Entry",
+    "message": "Entrada",
     "description": "The label for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Entry.link.generated-index.title": {
-    "message": "Data Entry",
+    "message": "Entrada",
     "description": "The generated-index page title for category Data Entry in sidebar docs"
   },
   "sidebar.docs.category.Data Security": {
@@ -384,11 +384,11 @@
     "description": "The generated-index page title for category PHP in sidebar docs"
   },
   "sidebar.docs.category.Pasteboard": {
-    "message": "Pasteboard",
+    "message": "Portapapeles",
     "description": "The label for category Pasteboard in sidebar docs"
   },
   "sidebar.docs.category.Pasteboard.link.generated-index.title": {
-    "message": "Pasteboard",
+    "message": "Portapapeles",
     "description": "The generated-index page title for category Pasteboard in sidebar docs"
   },
   "sidebar.docs.category.Pictures": {
@@ -400,11 +400,11 @@
     "description": "The generated-index page title for category Pictures in sidebar docs"
   },
   "sidebar.docs.category.Printing": {
-    "message": "Printing",
+    "message": "Impresiones",
     "description": "The label for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Printing.link.generated-index.title": {
-    "message": "Printing",
+    "message": "Impresiones",
     "description": "The generated-index page title for category Printing in sidebar docs"
   },
   "sidebar.docs.category.Process (Communications)": {
@@ -428,11 +428,11 @@
     "description": "The generated-index page title for category Processes in sidebar docs"
   },
   "sidebar.docs.category.Queries": {
-    "message": "Queries",
+    "message": "Búsquedas",
     "description": "The label for category Queries in sidebar docs"
   },
   "sidebar.docs.category.Queries.link.generated-index.title": {
-    "message": "Queries",
+    "message": "Búsquedas",
     "description": "The generated-index page title for category Queries in sidebar docs"
   },
   "sidebar.docs.category.Quick Report": {
@@ -492,11 +492,11 @@
     "description": "The generated-index page title for category SVG in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The label for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Secured Protocol.link.generated-index.title": {
-    "message": "Secured Protocol",
+    "message": "Protocolo seguro",
     "description": "The generated-index page title for category Secured Protocol in sidebar docs"
   },
   "sidebar.docs.category.Selection": {
@@ -548,11 +548,11 @@
     "description": "The generated-index page title for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
-    "message": "Subrecords",
+    "message": "Subregistros",
     "description": "The label for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.Subrecords.link.generated-index.title": {
-    "message": "Subrecords",
+    "message": "Subregistros",
     "description": "The generated-index page title for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
@@ -696,7 +696,7 @@
     "description": "The label for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.title": {
-    "message": "Class Functions",
+    "message": "Clases",
     "description": "The generated-index page title for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.description": {

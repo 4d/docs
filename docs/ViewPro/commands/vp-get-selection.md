@@ -14,7 +14,7 @@ title: VP Get selection
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
-#### Example
+## Example
 
 ![](../../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
@@ -39,7 +39,7 @@ $currentSelection:=VP Get selection("myVPArea")
 //$currentSelection.ranges[0].rowCount=6
 ```
 
-#### See also
+## See also
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>

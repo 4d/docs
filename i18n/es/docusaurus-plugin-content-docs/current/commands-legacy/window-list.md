@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WINDOW LIST.Summary-->El comando WINDOW LIST llena el array *ventanas* con los números de referencia de las ventanas abiertas actualmente en todos los procesos (procesos kernel o usuario).<!-- END REF--> Sólo las ventanas "visibles" (ventanas no ocultas) se devuelven. 
 
 Si no pasa el parámetro opcional *\**, se ignoran las ventanas flotantes.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente método de proyecto coloca en mosaico todas las ventanas abiertas actualmente, excepto las ventanas flotantes y las cajas de diálogo: 
 
@@ -46,12 +46,12 @@ El siguiente método de proyecto coloca en mosaico todas las ventanas abiertas a
 
 **Nota:** este método puede mejorarse añadiendo pruebas del tamaño de la ventana principal (en Windows) o del tamaño y ubicación de las pantallas (en Macintosh).
 
-#### Ver también 
+## Ver también 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

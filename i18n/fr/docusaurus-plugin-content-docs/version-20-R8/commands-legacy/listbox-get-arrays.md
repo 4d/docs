@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->La commande **LISTBOX GET ARRAYS** retourne un ensemble de tableaux synchronisés fournissant diverses informations sur chaque colonne (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -44,13 +44,13 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
    * pour chaque paramétrage défini via une variable, un pointeur vers la variable,  
    * pour chaque paramétrage défini via une expression, un pointeur Nil.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

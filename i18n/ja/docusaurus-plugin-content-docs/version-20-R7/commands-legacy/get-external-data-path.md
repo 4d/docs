@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get external data path.Summary-->**Get external data path**コマンドはカレントレコードの、*aField*引数に渡したフィールドデータの外部ストレージファイルのフルパス名を返します。<!-- END REF-->*aField*引数にはテキスト、BLOB、またはピクチャー型のフィールドを渡さなくてはなりません。コマンドは、ファイルが存在しない、またはアクセス不能の場合でも、ストレージファイルのパス名を返します。  
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 * フィールドがNull値(でパス名が格納されて外部ファイルが作成されていない)場合。
 * このコマンドがリモートの4Dから実行されている場合。
 
-#### 参照 
+## 参照 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

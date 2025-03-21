@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Validate digest.Summary-->**WEB Validate digest**コマンドを使用して、Webサーバに接続しているユーザのID情報 (名前とパスワード) の有効性をチェックします。<!-- END REF-->必ずダイジェストモードのWeb認証のコンテキストで、 *On Web Authenticationデータベースメソッド* でこのコマンドを使用します (*接続セキュリティ* を参照)。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **Note:** ブラウザがダイジェスト認証をサポートしていない場合、エラーが返されます (認証エラー) 。
 
-#### 例題 
+## 例題 
 
 ダイジェストモードで *On Web Authenticationデータベースメソッド* を使用します:
 
@@ -52,12 +52,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

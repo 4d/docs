@@ -9,10 +9,10 @@ Independientemente de la simplicidad o la complejidad de un método o de una fun
 - **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de rama es la estructura [`Case of...Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
 - **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para hacer frente a esta necesidad, el lenguaje 4D ofrece las siguientes estructuras de bucle:
 
-  - [`While...End while`](#whileend-while)
-  - [`Repeat...Until`](#repeatuntil)
-  - [`For...End for`](#forend-for)
-  - [`For each...End for each`](#for-eachend-for-each)
+ - [`While...End while`](#whileend-while)
+ - [`Repeat...Until`](#repeatuntil)
+ - [`For...End for`](#forend-for)
+ - [`For each...End for each`](#for-eachend-for-each)
 
 Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
 
@@ -563,8 +563,8 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 - Por defecto, los *statement(s)* adjuntos se ejecutan para cada valor de *Expression*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
 - Los parámetros opcionales *begin* y *end* pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
 - El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
-  - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
-  - dentro del bucle cuando sólo hay que modificar algunos elementos/propiedades y no es necesario gestionar la integridad.
+ - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
+ - dentro del bucle cuando sólo hay que modificar algunos elementos/propiedades y no es necesario gestionar la integridad.
 
 Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
@@ -808,3 +808,4 @@ logConsole($message)
 // 5A
 
 ```
+

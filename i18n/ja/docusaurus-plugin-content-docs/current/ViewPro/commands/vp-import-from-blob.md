@@ -15,7 +15,7 @@ title: VP IMPORT FROM BLOB
 | vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob |                  |
 | paramObj   | Object                  | -> | 読み込みのオプション                | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP IMPORT FROM BLOB` コマンドは、<!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](vp-export-to-blob.md) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
 
@@ -36,15 +36,15 @@ title: VP IMPORT FROM BLOB
 
 | 引数     |                               | 型                       | 説明                                |
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
-| param1 |                               | text                    | 4D View Pro エリアのオブジェクト名           |
+| param1 |                               | テキスト                    | 4D View Pro エリアのオブジェクト名           |
 | param2 |                               | 4D.Blob | インポートされた Blob                     |
 | param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
 |        | .success      | boolean                 | 読み込みに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
-|        | .errorMessage | text                    | エラーメッセージ。                         |
+|        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
-#### 例題
+## 例題
 
 myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
 
@@ -54,6 +54,6 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 ```
 
-#### 参照
+## 参照
 
 [VP EXPORT TO BLOB](vp-export-to-blob.md)

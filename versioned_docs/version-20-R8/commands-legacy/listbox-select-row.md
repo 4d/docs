@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->The LISTBOX SELECT ROW command selects the row whose number is passed in *position* in the list box set in the *object* and *\** parameters.<!-- END REF-->
 
@@ -44,7 +44,7 @@ After execution of the method, the arrays are synchronized: if the source array 
 * If the number passed in *position* corresponds to a hidden row in the list box, the row is selected but not displayed.
 * If you have checked the **Hide selection highlight** option for a list box, you will need to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
 
-#### See also 
+## See also 
 
 [EDIT ITEM](edit-item.md)  
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
@@ -53,7 +53,7 @@ After execution of the method, the arrays are synchronized: if the source array 
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

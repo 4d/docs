@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get window title.Summary-->The **Get window title** command returns the title of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, an empty string is returned.
 
 If you omit the *window* parameter, **Get window title** returns the title of the frontmost window for the current process.
 
-#### Example 
+## Example 
 
 See example for the [SET WINDOW TITLE](set-window-title.md) command.
 
-#### See also 
+## See also 
 
 [SET WINDOW TITLE](set-window-title.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

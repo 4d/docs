@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Request.Summary-->The **Request** command displays a request dialog box composed of a message, a text input area, an **OK** button, and a **Cancel** Button.<!-- END REF-->
 
@@ -33,7 +33,7 @@ The user can enter text into the text input area. To specify a default value, pa
 
 **Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](dialog.md), rather than presenting a succession of **Request** dialog boxes.
 
-#### Example 1 
+## Example 1 
 
 The line:
 
@@ -45,7 +45,7 @@ will display the request dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225119.en.png)
 
-#### Example 2 
+## Example 2 
 
 The line:
 
@@ -62,7 +62,7 @@ will display the request dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225137.en.png)
 
-#### Example 3 
+## Example 3 
 
 The line:
 
@@ -74,12 +74,12 @@ will display the request dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225146.en.png)
 
-#### See also 
+## See also 
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

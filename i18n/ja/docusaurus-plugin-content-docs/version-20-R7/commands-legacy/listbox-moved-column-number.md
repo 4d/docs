@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->LISTBOX MOVED COLUMN NUMBER コマンドは、引数*object*および *\** で指定されたリストボックス内で移動された列の以前の位置*oldPosition*と新しい位置*newPosition*を返します。<!-- END REF-->
 
@@ -26,12 +26,12 @@ displayed_sidebar: docs
 
 **Note:** このコマンドは、非表示の列を考慮します。
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

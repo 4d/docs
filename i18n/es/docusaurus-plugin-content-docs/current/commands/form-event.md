@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
 
 **Objeto devuelto**
 
 Each returned object includes the following main properties:
 
-| **Propiedad** | **Type** | **Description**                                                                                                                                                                               |
+| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                               |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
 | code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
@@ -37,12 +37,12 @@ For example, in the case of a click on a button, the object contains the followi
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
-- List box or list box column objects, see the *list box documentation on developer.4d.com*.
-- 4D View Pro areas, see *On VP Ready form event*.
+- List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
+- 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 You want to handle the On Clicked event on a button:
 
@@ -52,7 +52,7 @@ You want to handle the On Clicked event on a button:
  End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
@@ -70,13 +70,13 @@ You can sort the column using the On Header Click event:
  End case
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+El método *setColor*:
 
 ```4d
  var $event;$0;$meta : Object
@@ -96,14 +96,16 @@ The resulting list box when rows are selected:
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### Ver también
+## Ver también
 
 [Form Events](../Events/overview.md)
 [Form event code](form-event-code.md)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1606                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1606                        |
+| Hilo seguro       | &check; |
+
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.INTERSECTION.Summary-->INTERSECTIONコマンドは、*set1*と*set2*を比較し、*set1*と*set2*の両方に存在するレコードだけを選択します。<!-- END REF-->下表に、INTERSECTIONコマンドの処理で考えられるすべての組み合わせを示します。
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **4D Server:** クライアント/サーバモードにおいて、セットはタイプ (インタープロセス、プロセスおよびローカル) およびそれらがどこで作成されたか (サーバまたはクライアント) によって、アクセス可能かどうかが決定されます。INTERSECTIONでは3つのセットが同じマシン上でアクセスできる必要があります。詳細は4D Server Referenceマニュアルの*4D Server: セットと命名セレクション*に関する説明を参照してください。
 
-#### 例題 
+## 例題 
 
 以下の例は、“Joe”と“Abby”という2人の販売担当者が重複して担当する顧客を検索します。販売担当者は、各自の顧客を表すセット“Joe”と“Abby”を持っています。
 
@@ -45,12 +45,12 @@ displayed_sidebar: docs
  DISPLAY SELECTION([Customers]) // 両方が担当する顧客を表示
 ```
 
-#### 参照 
+## 参照 
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

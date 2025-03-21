@@ -23,7 +23,7 @@ Pour un aperçu détaillé de l'architecture des permissions, veuillez lire l'ar
 
 ## Resources
 
-You can assign specific permission actions to the following resources in your project:
+Vous pouvez assigner des actions de permission spécifiques aux ressources suivantes dans votre projet :
 
 - le datastore
 - une dataclass
@@ -31,7 +31,7 @@ You can assign specific permission actions to the following resources in your pr
 - une fonction de classe du modèle de données
 - une fonction [singleton](../REST/$singleton.md)
 
-Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
+Chaque fois qu'on accède à une ressource dans une session (quelle que soit la manière dont on y accède), 4D vérifie que la session dispose des autorisations appropriées et rejette l'accès s'il n'est pas autorisé.
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 
@@ -64,9 +64,9 @@ Les actions disponibles sont liées à la ressource cible.
 - Il est possible d'accéder à un attribut calculé même s'il n'y a pas de permissions sur les attributs sur lesquels il est construit.
 - Vous pouvez assigner une action de permission à une classe singleton (type `singleton`), auquel cas elle sera appliquée à toutes ses fonctions exposées, ou bien à une fonction de singleton (type `singletonMethod`).
 - Valeurs par défaut : dans l'implémentation actuelle, seul *Null* est disponible en tant que valeur par défaut.
-- In REST [force login mode](../REST/authUsers.md#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- En mode REST [force login](../REST/authUsers.md#force-login-mode), la fonction [`authentify()`](../REST/authUsers.md#function-authentify) est toujours exécutable par les utilisateurs guest, quelle que soit la configuration des permissions.
 
-Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
+Le paramétrage des permissions nécessite d'être cohérent, en particulier les permissions **update** et **drop** ont également besoin d'une permission **read** (mais **create** n'en a pas besoin).
 
 ## Privilèges et Rôles
 
@@ -147,7 +147,7 @@ Le fichier par défaut a le contenu suivant :
 
 ```
 
-Pour un niveau de sécurité maximal, le privilège "none" est attribué à toutes les permissions du datastore, désactivant ainsi l'accès aux données pour tout l'objet `ds` par défaut. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
+Pour un niveau de sécurité maximal, le privilège "none" est attribué à toutes les permissions du datastore, désactivant ainsi l'accès aux données pour tout l'objet `ds` par défaut. Il est recommandé de ne pas modifier ou utiliser ce privilège de verrouillage, mais d'ajouter des permissions spécifiques à chaque ressource que vous souhaitez rendre disponible à partir de requêtes web ou REST ([voir l'exemple ci-dessous](#example-of-privilege-configuration)).
 
 :::caution
 

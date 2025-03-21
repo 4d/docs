@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->SET FILE TO PASTEBOARD コマンドは*filePath* 引数に渡した完全パス名を追加します。<!-- END REF-->このコマンドは例えば、4Dオブジェクトをデスクトップ上のファイルにドラッグ＆ドロップさせるインタフェースのセットアップに使用できます。
 
@@ -24,11 +24,11 @@ displayed_sidebar: docs
 
 **Note:** On Drag Over フォームイベント中ペーストボードは読み込みのみモードです。このコンテキストではこのコマンドは使用できません。
 
-#### 参照 
+## 参照 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

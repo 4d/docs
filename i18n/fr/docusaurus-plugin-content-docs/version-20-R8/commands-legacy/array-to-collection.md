@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->La commande **ARRAY TO COLLECTION** copie un ou plusieurs *tableau*(x) dans les éléments ou les valeurs *nomPropriété* de *collection*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Cette commande peut être utilisée avec une *collection* qui contient des valeu
 * Si vous omettez le paramètre *nomPropriété*, la commande copie tous les éléments du *tableau* vers la *collection*. Si la *collection* n'était pas vide, les éléments existants sont remplacés et de nouveaux éléments sont ajoutés si la taille du *tableau* est plus grande que la longueur de la *collection*. Après l'exécution de cette commande, la longueur de la *collection* est identique à la taille du *tableau*.
 * Si vous passez un ou plusieurs paramètres *nomPropriété*(s), la commande crée ou remplace les éléments de la *collection* avec des objets. Chaque objet est construit avec une propriété dont le nom est fourni dans le paramètre *nomPropriété*, et dont la valeur est l'élément de tableau correspondant. Si la *collection* n'était pas vide, les éléments existants sont remplacés et de nouveaux éléments sont ajoutés si la taille du *tableau* était plus grande que la collection. Aprés l'exécution de la commande, la longueur de la *collection* est identique à la celle du *tableau* le plus grand.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez copier un tableau texte dans une collection :
 
@@ -42,7 +42,7 @@ Vous souhaitez copier un tableau texte dans une collection :
   //...
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez copier les valeurs de champs dans une collection d'objets via des tableaux :
 
@@ -59,7 +59,7 @@ Vous souhaitez copier les valeurs de champs dans une collection d'objets via des
   //...
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaiter copier un tableau texte dans une collection partagée :
 
@@ -78,12 +78,12 @@ Vous souhaiter copier un tableau texte dans une collection partagée :
  End use
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Conversions de type entre les collections et les tableaux 4D*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

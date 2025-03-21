@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET TIMEOUT.Summary-->SET TIMEOUT は、シリアルポートコマンドの許容される待ち時間を設定します。<!-- END REF-->シリアルポートコマンドが指定した時間*seconds*以内に終了しないと、そのシリアルポートコマンドは取り消され、エラー-9990が生成され、システム変数OKに0が代入されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされるエラー処理メソッドを使用して、エラーをとらえることができます。
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")
 * [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")
 
-#### 例題 
+## 例題 
 
 以下の例はシリアルポートからデータを受信します。タイムアウトを設定し、[RECEIVE PACKET](receive-packet.md "RECEIVE PACKET")でデータを受け取ります。設定した時間内にデータを受け取れない場合、エラーが発生します:
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
  ON ERR CALL("")
 ```
 
-#### 参照 
+## 参照 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

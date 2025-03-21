@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidade 
+## Nota de compatibilidade 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, apesar de ser um comando herdado, ainda é compatível e pode permanecer em sua aplicação, não é necessário voltar a escrever o código existente.<!-- END REF--> Entretanto, é melhor usar [CREATE INDEX](create-index.md) y [DELETE INDEX](delete-index.md) para administrar os índices porque oferecem mais funcionalidades.
 
-#### Descrição 
+## Descrição 
 
 O comando SET INDEX aceita duas sintaxes:
 
@@ -53,11 +53,11 @@ O parâmetro opcional *\** indica uma indexação asincrônica (simultânea). Um
 * Este comando não permite criar ou apagar índices compostos.
 * Este comando não permite apagar um índice de palavras chaves criado pelo comando [CREATE INDEX](create-index.md)
 
-#### Nota para lançamento 
+## Nota para lançamento 
 
 Dado que este comando modifica a estrutura do banco de dados, não pode ser utilizado no contexto de uma aplicação empacotada de apenas leitura (arquivo .4dc instalado na pasta *Arquivos de programa* ou arquivo .4dz).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo indexa o campo *\[Clientes\]ID*: 
 
@@ -66,7 +66,7 @@ O exemplo abaixo indexa o campo *\[Clientes\]ID*:
  SET INDEX([Clientes]ID;True)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Suponha que queira indexar o campo *\[Clientes\]Nome* em modo assincrônico:
 
@@ -74,7 +74,7 @@ Suponha que queira indexar o campo *\[Clientes\]Nome* em modo assincrônico:
  SET INDEX([Clientes]Nome;True;*)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo indexa o campo *\[Clientes\]Num*: 
 
@@ -83,7 +83,7 @@ O exemplo abaixo indexa o campo *\[Clientes\]Num*:
  SET INDEX([Clientes]Num;True)
 ```
 
-#### Ver também 
+## Ver também 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -91,7 +91,7 @@ O exemplo abaixo indexa o campo *\[Clientes\]Num*:
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

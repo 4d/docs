@@ -198,7 +198,7 @@ Exemplo em macOS:
 
   ![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
+> em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
 
 
 #### Exemplo JSON:
@@ -390,7 +390,7 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
 - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
+Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo ](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Exemplo JSON:
 
@@ -424,7 +424,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
+Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#check-box-button-styles):
 
 - Personalizado: [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 - [Três Estados](properties_Display.md#three-states) (Flat, Clássico)

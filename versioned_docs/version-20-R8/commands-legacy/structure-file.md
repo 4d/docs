@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Structure file.Summary-->The **Structure file** command returns the pathname of the structure file for the database with which you are currently working.<!-- END REF-->file.
 * With project databases, the command returns the pathname of the **.4dproject** file.
@@ -33,7 +33,7 @@ The optional *\** parameter is useful in the case of an architecture using compo
          * In the case of a component installed as a .4dbase folder/package, the command returns the pathname of the file located within this folder/package.
 * When the command is called from a method of the host database, it always returns the pathname of the structure/project file of the host database, regardless of whether or not the *\** parameter is passed.
 
-#### Example 1 
+## Example 1 
 
 This example displays the name and the location of the structure file currently in use:
 
@@ -50,7 +50,7 @@ This example displays the name and the location of the structure file currently 
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example can be used to find out whether the method is called from a component:
 
@@ -60,13 +60,13 @@ The following example can be used to find out whether the method is called from 
   // $0=True if method is called from a component
 ```
 
-#### See also 
+## See also 
 
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

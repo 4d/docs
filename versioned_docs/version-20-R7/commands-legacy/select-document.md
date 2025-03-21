@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Select document.Summary-->The **Select document** command displays a standard open document dialog box which allows the user to set one or more files and returns the name and/or full access path of the selected file(s).<!-- END REF-->
 
@@ -50,7 +50,7 @@ The *options* parameter allows you to specify advanced functions that are allowe
 | Multiple files    | Integer | 1     | Authorizes the simultaneous selection of several files using the key combinations **Shift+click** (adjacent selection) and **Ctrl+click** (Windows) or **Command+click** (Mac OS). In this case, the *selected* parameter, if passed, contains the list of all selected files. By default, if this constant is not used, the command will not allow the selection of multiple files.                                                    |
 | Package open      | Integer | 2     | (macOS only): Authorizes the opening of packages as folders and thus the viewing /selection of their contents. By default, if this constant is not used, the command will not allow the opening of packages.                                                                                                                                                                                                                            |
 | Package selection | Integer | 4     | (macOS only): Authorizes the selection of packages as entities (default if omitted). Use Package open if you want to allow users to view/select package contents.                                                                                                                                                                                                                                                                       |
-| Use sheet window  | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the Mac OS X interface which have graphic animation (for more information, refer to the *Window Types (compatibility)* section). By default, if this constant is not used, the command will display a standard dialog box.                                            |
+| Use sheet window  | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the macOS interface which have graphic animation (for more information, refer to the *Window Types (compatibility)* section). By default, if this constant is not used, the command will display a standard dialog box.                                            |
 
 If you do not want to use an option, pass 0 in the *options* parameter.
 
@@ -60,7 +60,7 @@ The optional *selected* parameter allows you to get the full access path (access
 
 The command returns the name (name + extension under Windows) of the selected file. If several files are selected, the command returns the name of the first file in the list of selected files. The list of files can be obtained in the *selected* parameter. If no file is selected, the command returns an empty string.
 
-#### Example 1 
+## Example 1 
 
 This example is used to specify a 4D data file: 
 
@@ -76,7 +76,7 @@ This example is used to specify a 4D data file:
  $Doc:=Select document("";$DocType;"Select the data file";$Options)
 ```
 
-#### Example 2 
+## Example 2 
 
 Creation of a custom document by user:
 
@@ -87,17 +87,17 @@ Creation of a custom document by user:
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed and a valid document was selected, the system variable OK is set to 1 and the system variable Document will contain the full access path of the selected file.   
 If no file was selected (for example, if the user clicked on the **Cancel** button in the open file dialog box), the system variable OK is set to 0 and the system variable Document will be empty. 
 
-#### See also 
+## See also 
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

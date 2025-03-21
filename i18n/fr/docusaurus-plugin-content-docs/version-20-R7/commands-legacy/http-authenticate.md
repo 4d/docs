@@ -22,7 +22,7 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->La commande **HTTP AUTHENTICATE** vous permet d’effectuer des requêtes HTTP vers des serveurs nécessitant l’authentification de l’application cliente.<!-- END REF--> Les méthodes BASIC et DIGEST sont prises en charge ainsi que la présence d’un proxy.
 
@@ -41,7 +41,7 @@ Si vous passez le paramètre *\**, vous indiquez que les informations d’authen
 
 Par défaut, les informations d’authentification sont conservées et réutilisées dans le process courant. Vous pouvez toutefois les effacer après chaque requête à l’aide d'une option de la commande [HTTP SET OPTION](http-set-option.md). Dans ce cas, il sera nécessaire d’exécuter la commande **HTTP AUTHENTICATE** avant tout appel à [HTTP Request](http-request.md) ou [HTTP Get](http-get.md).
 
-#### Exemple 
+## Exemple 
 
 Exemples de requêtes avec authentification :
 
@@ -53,11 +53,11 @@ Exemples de requêtes avec authentification :
  $httpStatus:=HTTP Get(...)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

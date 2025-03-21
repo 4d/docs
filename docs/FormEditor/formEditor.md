@@ -128,7 +128,7 @@ You can use the following shortcuts in the Property List:
 
 You can add objects to forms in several ways:
 
-- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
+- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#object-bar))
 - By dragging and dropping the object from the object bar
 - By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
 - By dragging and dropping an object from another form,

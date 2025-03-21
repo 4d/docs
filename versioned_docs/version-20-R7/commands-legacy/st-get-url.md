@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST GET URL.Summary-->The **ST GET URL** command returns the text label and address of the first URL detected in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
 
@@ -46,7 +46,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 **Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
 
-#### Example 
+## Example 
 
 When there is a double-click event, you check that there is in fact an URL, and if so, you display a dialog where you have retrieved its values so that the user can modify them:
 
@@ -67,11 +67,11 @@ When there is a double-click event, you check that there is in fact an URL, and 
  End case
 ```
 
-#### See also 
+## See also 
 
 [ST INSERT URL](st-insert-url.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

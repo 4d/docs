@@ -70,4 +70,4 @@ Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Log
 - *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".
 
-Quando clica no botão **Abrir arquivo de registo**, 4D mostra o arquivo de registo mais recente no navegador predefinido da máquina.
+Quando clica no botão **Abrir arquivo de registo** , 4D mostra o arquivo de registo mais recente no navegador predefinido da máquina.

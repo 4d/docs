@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MOVE DOCUMENT.Summary-->El comando MOVE DOCUMENT mueve o renombra un documento.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Pase la ruta de acceso completa al documento existente en *rutaFuente* y el nuev
 
 **Advertencia:** utilizando MOVE DOCUMENT, puede mover un documento desde y hacia cualquier directorio en el mismo volumen. Si quiere mover un documento entre dos volúmenes diferentes, utilice el comando [COPY DOCUMENT](copy-document.md "COPY DOCUMENT") para “mover” el documento luego borre la copia original con el comando [DELETE DOCUMENT](delete-document.md "DELETE DOCUMENT").
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo renombra el documento DocNombre:
 
@@ -30,7 +30,7 @@ El siguiente ejemplo renombra el documento DocNombre:
  MOVE DOCUMENT("C:\\CARPETA\\DocNombre";"C:\\CARPETA\\NewDocNombre")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo mueve y renombre el documento DocNombre:
 
@@ -38,7 +38,7 @@ El siguiente ejemplo mueve y renombre el documento DocNombre:
  MOVE DOCUMENT("C:\\CARPETA1\\DocNombre";"C:\\CARPETA2\\NewDocNombre")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo mueve el documento DocName:
 
@@ -48,11 +48,11 @@ El siguiente ejemplo mueve el documento DocName:
 
 **Nota:** en los dos últimos ejemplos, debe existir la carpeta de destino *"C:\\\\CARPETA2"*. El comando MOVE DOCUMENT sólo mueve un documento; no crea carpetas.
 
-#### Ver también 
+## Ver también 
 
 [COPY DOCUMENT](copy-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

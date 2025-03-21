@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->O comando FORM GET OBJECTS retorna em forma de array(s) a lista de todos os objetos presentes no formulário atual da tabela atual.<!-- END REF--> Esta lista pode estar restrita à página atual do formulário. O comando pode ser utilizado com os formulários de entrada e de saída.
 
@@ -45,7 +45,7 @@ O parâmetro opcional *opcaoPag* permite designar a(s) parte(s) do formulário d
   
 **Nota de compatibilidade**: passar o parâmetro *\** é equivalente a passar Form current page+Form inherited. A sintaxe com o parâmetro *\** agora é obsoleta e não deve ser mais utilizada.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Você quer receber informação sobre todas as páginas, incluindo objetos do formulário herdado (se existir):
 
@@ -62,7 +62,7 @@ O:
  FORM GET OBJECTS(arrayObjetos;arrayVariaveis;arrayPaginas;Form all pages+Form inherited)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você deseja obter os objetos da página atual do formulário carregado, incluindo a página 0 do formulário e os objetos dos formulários herdados (se existir):
 
@@ -72,7 +72,7 @@ Você deseja obter os objetos da página atual do formulário carregado, incluin
  FORM GET OBJECTS(arrayObjetos;arrayVariaveis;arrayPag;Formulario página atual+Formulário herdado)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Quer obter informação sobre todos os objetos no formulário herdado (se os houver). Se não há formulários herdados, os arrays se devolverão vazios.
 
@@ -81,7 +81,7 @@ Quer obter informação sobre todos os objetos no formulário herdado (se os hou
  FORM GET OBJECTS(arrayObjetos;arrayVariaveis;arrayPag;Formulário herdado)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Você quer obter os objetos da página 4, incluindo os da página 0, mas sem os objetos de formulários herdados (se existir):
 
@@ -91,7 +91,7 @@ Você quer obter os objetos da página 4, incluindo os da página 0, mas sem os 
  FORM GET OBJECTS(arrayObjetos;arrayVariables;arrayPag;Formulario página actual)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Você quer obter informação dos objetos de todas as páginas, mas sem objetos de formulário herdado (se existissem):
 
@@ -100,7 +100,7 @@ Você quer obter informação dos objetos de todas as páginas, mas sem objetos 
  FORM GET OBJECTS(arrayObjetos;arrayVariaveis;arrayPaginas;Form todas as páginas)
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Você quer carregar um formulário e obter a lista de todos os objetos dos list boxes que contém.
 
@@ -119,13 +119,13 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
  FORM UNLOAD
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

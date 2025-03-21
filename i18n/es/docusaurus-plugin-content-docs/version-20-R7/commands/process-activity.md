@@ -24,9 +24,9 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time. This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time. This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
 
 By default when used without any parameters, **Process activity** returns an object containing the following properties:
 
@@ -67,11 +67,11 @@ The "processes" property contains a collection of process objects describing all
 
 On the server, the `Process activity` command returns an additional "session" property:
 
-| Additional property | Tipo   | Descripción                                                                                                                                                                                |   |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| session             | Object | The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. |   |
+| Additional property | Tipo   | Descripción                                                                                                                                                                                      |   |
+| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
+| session             | Object | La propiedad [`.info`](../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined if the `Processes only` parameter is passed. |   |
 
-#### Ejemplo 1
+## Ejemplo 1
 
 You want to get the collection of all user sessions:
 
@@ -91,7 +91,7 @@ You want to get the collection of all user sessions:
  End for
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to get all processes related to the current session:
 
@@ -105,7 +105,7 @@ You want to get all processes related to the current session:
 
 ```
 
-#### Ver también
+## Ver también
 
 [Session storage](../commands-legacy/session-storage.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)

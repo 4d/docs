@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Table insert rows.Summary-->O comando **WP Table insert rows** insere uma ou várias linhas em uma tabela 4D Write Pro.<!-- END REF-->
 
@@ -37,7 +37,7 @@ O parâmetro opcional *numLinhas* define o número de linhas a inserir em objTar
   
 O comando devolve uma range de linhas que representa as linhas inseridas ou Null se não inserir nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser inserir duas linhas ao final da tabela *Invoice (faturas)*: 
 
@@ -58,6 +58,6 @@ Insere as duas filas novas na localização corrcta:
 
 ![](../../assets/en/WritePro/commands/pict4680266.en.png)
 
-#### Ver também 
+## Ver também 
 
 [WP Table insert columns](wp-table-insert-columns.md)  

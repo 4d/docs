@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Not.Summary-->A função Not retorna a negação do *booleano*, mudando Verdadeiro por Falso ou Falso por Verdadeiro.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da variável a Falso, e logo novamente a Verdadeiro.
 
@@ -28,12 +28,12 @@ Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da v
  vResultado:=Not(vResultado) // vResultado recebe o Verdadeiro
 ```
 
-#### Ver também 
+## Ver também 
 
 [False](false.md)  
 [True](true.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

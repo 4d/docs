@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR RUN.Summary-->QR RUNコマンドは、出力先を含め、クイックレポートの現在の設定を使用して、*area*引数に渡された参照番号のレポートエリアを実行します。<!-- END REF-->[QR SET DESTINATION](qr-set-destination.md "QR SET DESTINATION")コマンドで出力タイプを変更できます。 
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 **4D Serverの場合:** このコマンドは4D Server上でストアドプロシージャ―の一部として実行する事ができます。この場合、サーバーマシン上でダイアログボックスが表示されることがないように注意して下さい(ただし特定の条件の場合は除く)。4D Server上で実行するためには、[QR SET DESTINATION](qr-set-destination.md) コマンドに "\*" 引数を渡して呼び出します。プリンターに問題があった場合(用紙切れ、プリンターと接続できない、等)は、エラーメッセージは何も表示されません。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

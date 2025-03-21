@@ -40,3 +40,4 @@ Si define las siguientes páginas personalizadas en su carpeta web:
 - la página "4xx.html" se servirá para cualquier otro estado de error 4xx (400, 401, etc.),
 
 - la página "5xx.html" se servirá para cualquier estado de error 5xx.
+

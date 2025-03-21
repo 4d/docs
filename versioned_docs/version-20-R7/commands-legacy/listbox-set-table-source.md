@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->The **LISTBOX SET TABLE SOURCE** command can be used to modify the source of the data displayed in the listbox that is designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -34,11 +34,11 @@ If the listbox already contains columns, their contents will be updated after th
 
 **Note:** For optimization purposes, this command is processed in an asynchronous manner; in other words, the source of the listbox is changed only after the complete execution of the method in which the command is called. 
 
-#### See also 
+## See also 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

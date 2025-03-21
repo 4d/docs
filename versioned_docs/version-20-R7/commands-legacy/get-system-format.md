@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET SYSTEM FORMAT.Summary-->The **GET SYSTEM FORMAT** command returns the current value of several regional parameters defined in the operating system.<!-- END REF--> This command can be used to build “automatic” custom formats based on the system preferences.
 
@@ -39,11 +39,11 @@ In the *format* parameter, pass the type of parameter whose value you want to kn
 | Thousand separator         | Integer | 1     | Thousand separator (e.g.: “,”)                                                        |
 | Time separator             | Integer | 14    | Separator used in time formats (e.g.: “:”)                                            |
 
-#### See also 
+## See also 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

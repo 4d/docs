@@ -5,7 +5,7 @@ title: Managing formulas
 
 ## Generalidades
 
-4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Specific information such as the page number can also be referenced through formulas (see [Inserting document and page expressions](#inserting-date-and-time-formulas) below).
+4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Información específica como el número de página también puede ser referenciada a través de fórmulas (ver [Inserción de documentos y expresiones de página](#inserting-date-and-time-formulas) más abajo).
 
 Inserting formulas in 4D Write Pro areas is done with the [**WP INSERT FORMULA**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. They are also returned by the [**WP Get text**](commands-legacy/wp-get-text.md) command.
 
@@ -123,14 +123,14 @@ When a document is displayed in "display expressions" mode, references to tables
 
 :::
 
-## Displaying formulas
+## Mostrar fórmulas
 
 You can control how formulas are displayed in your documents:
 
 - as *values* or as *references*
 - when shown as references, display source text, symbol, or name.
 
-### References or Values
+### Referencias o Valores
 
 By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
 
@@ -174,7 +174,7 @@ To display formula references as symbols, you can:
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
 - use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
 
-### References as names
+### Referencias como nombres
 
 You can assign names to formulas, making 4D Write Pro template documents easier to read and understand for end-users. When formulas are displayed as references (and not displayed as symbols) and you have defined a name for a formula, the formula name is displayed.
 
@@ -210,18 +210,18 @@ Whatever the formula display mode, you can get additional information on formula
 
 - When formulas do not have names, tips provide the source text of formulas:
 
-  ![](../assets/en/WritePro/wp-formulas7.png)
+ ![](../assets/en/WritePro/wp-formulas7.png)
 
 - When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
 
-  ![](../assets/en/WritePro/wp-formulas8.png)
+ ![](../assets/en/WritePro/wp-formulas8.png)
 
 In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
 
 - When formulas have names and are displayed as names, no tip is displayed by default.
-  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
-  [
-  ![](../assets/en/WritePro/wp-formulas9.png)
+ You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
+ [
+ ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### Ver también
 

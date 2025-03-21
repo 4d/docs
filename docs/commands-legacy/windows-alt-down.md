@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Windows Alt down.Summary-->**Windows Alt down** returns TRUE if the Windows Alt key is pressed.<!-- END REF-->When called on a Macintosh platform, **Windows Alt down** returns TRUE if the Macintosh Option key is pressed.
 
-#### Example 
+## Example 
 
 See example for the [Shift down](shift-down.md) command.
 
-#### See also 
+## See also 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -30,7 +30,7 @@ See example for the [Shift down](shift-down.md) command.
 [Shift down](shift-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

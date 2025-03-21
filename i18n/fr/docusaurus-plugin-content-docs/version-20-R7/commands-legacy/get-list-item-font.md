@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get list item font.Summary-->La commande **Get list item font** retourne le nom de la police de caractères courante de l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
@@ -27,11 +27,11 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

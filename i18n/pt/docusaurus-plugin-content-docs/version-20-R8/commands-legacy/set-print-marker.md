@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->O comando SET PRINT MARKER permite definir a posição de um marcador durante a impressão.<!-- END REF--> Combinado com os comandos [Get print marker](get-print-marker.md "Get print marker"), OBJECT MOVE ou [Print form](../commands/print-form.md "Print form"), este comando lhe permite ajustar o tamanho das áreas de impressão.  
   
@@ -65,7 +65,7 @@ SET PRINT MARKER pode ser utilizado em dois contextos:
  • Este comando modifica só a posição de os marcadores existentes. Não permite a adição de marcadores. Se atribuir um marcador que não existe no formulário, o comando não fará nada.  
  • O funcionamento dos marcadores de impressão em modo Desenho se conserva: um marcador não pode ir mais acima do que o antecede, nem mais abaixo do que o que segue (quando o parâmetro \* não se utiliza).
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo completo permite gerar a impressão de um relatório de três colunas, a altura de cada linha se calcula de acordo com os conteúdos dos campos.  
 
@@ -176,7 +176,7 @@ El método de formulario List\_Imp3 es el siguiente:
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get print marker](get-print-marker.md)  
 [OBJECT GET BEST SIZE](object-get-best-size.md)  
@@ -187,7 +187,7 @@ El método de formulario List\_Imp3 es el siguiente:
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Locked records info.Summary-->**Locked records info** コマンドは、*aTable* で指定したテーブル内で現在ロックされているレコードについての様々な情報を含んだobject を返します。<!-- END REF-->このコマンドは 4D と 4D Server に対してのみ有効です。4D リモートまたはコンポーネントから呼び出された場合には無効なオブジェクトを返します。ただし、呼び出しメソッドに"Execute on server" オプションが有効化されている場合には呼び出し可能です。この場合返されるオブジェクトには、サーバーの情報が含まれます。コンポーネントから呼び出された場合には、常にホストデータベースに対して適用されます。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 | recordNumber | 数値    | ロックされているレコードのレコード番号                                                                                                                     |
 | userAgent    | 文字列   | ロッカーのユーザーエージェント 例: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-#### 例題 
+## 例題 
 
 以下のコードを実行します:
 
@@ -85,11 +85,11 @@ displayed_sidebar: docs
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-#### 参照 
+## 参照 
 
 [Locked](locked.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

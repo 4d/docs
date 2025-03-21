@@ -125,7 +125,7 @@ If you want to use a drop-down list to manage the values of an input area (liste
 
 Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. If you use a hierarchical list, only the first level is displayed and can be selected.
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 
@@ -137,7 +137,7 @@ Lorsque le formulaire est exécuté, 4D gère automatiquement la liste déroulan
 
 #### Valeur de l'élément sélectionné ou Référence de l'élément sélectionné
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
 
 ### Utiliser une énumération hiérarchique
 
@@ -158,9 +158,9 @@ You can build automatically a drop-down list using a [standard action](propertie
 - Use of the `gotoPage` standard action. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe). Au moment de l'exécution, la liste déroulante affiche par défaut les numéros de page (1, 2...).
 
 - Use of a standard action that displays a sublist of items, for example `backgroundColor`. Cette fonctionnalité nécessite que :
-  - a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  - the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list.
-    Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
+ - a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
+ - the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list.
+  Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
 
 > Cette fonctionnalité ne peut pas être utilisée avec une liste déroulante hiérarchique.
 

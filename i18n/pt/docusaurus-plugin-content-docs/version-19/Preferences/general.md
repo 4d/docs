@@ -18,7 +18,7 @@ Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usu
 
 * **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
 * **Abra a caixa de diálogo Welcome Wizard** (configuração de fábrica): O 4D exibe a caixa de diálogo Welcome Wizard (Assistente de boas-vindas).
-> > > > **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
+> > > > > **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
 
 ### Criação de formulários automática
 

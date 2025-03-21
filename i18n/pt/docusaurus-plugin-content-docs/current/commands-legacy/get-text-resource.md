@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get text resource.Summary-->O comando Get text resource retorna o texto guardado no recurso texto (“TEXT”) cujo número de identificação é passado em *resNum*.<!-- END REF-->  
   
@@ -25,7 +25,7 @@ Se passa um número de referência de arquivo de recursos válido em *resArquivo
   
 **Nota**: um recurso texto pode conter até 32 000 caracteres.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir mostra o conteúdo do recurso texto de ID=20800, que deve estar localizado em pelo menos um dos arquivos de recursos que estejam abertos:
 
@@ -33,17 +33,17 @@ O exemplo a seguir mostra o conteúdo do recurso texto de ID=20800, que deve est
  ALERT(Get text resource(20800))
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o recurso for encontrado, OK assume o valor 1\. Do contrário, assume o valor 0 (zero).
 
-#### Ver também 
+## Ver também 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

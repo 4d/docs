@@ -3,11 +3,11 @@ id: expand
 title: $expand
 ---
 
-Expande una imagen almacenada en un atributo Image (_e.g._, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+Expande una imagen almacenada en un atributo Image (*e.g.*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
 o<br/>
 Expande un atributo BLOB para guardarlo.
 
-> **Compatibilidad**: por razones de compatibilidad, $expand puede utilizarse para expandir un atributo relacional (_por ejemplo_, `Company(1)?$expand=staff` o `Employee/?$filter="firstName BEGIN a"&$expand=employer`). No obstante, se recomienda utilizar [`$attributes`]($attributes.md) para esta función.
+> **Compatibilidad**: por razones de compatibilidad, $expand puede utilizarse para expandir un atributo relacional (*por ejemplo*, `Company(1)?$expand=staff` o `Employee/?$filter="firstName BEGIN a"&$expand=employer`). No obstante, se recomienda utilizar [`$attributes`]($attributes.md) para esta función.
 
 ## Visualización de un atributo de imagen
 

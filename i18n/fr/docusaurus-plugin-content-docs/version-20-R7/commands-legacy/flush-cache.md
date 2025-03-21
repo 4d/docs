@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FLUSH CACHE.Summary-->La commande **FLUSH CACHE** sauvegarde immédiatement le cache de données sur le disque.<!-- END REF--> Toutes les modifications apportées à la base sont alors stockées sur disque.
 
@@ -26,12 +26,12 @@ Par défaut, cette commande n'affecte pas le contenu courant du cache, ce qui si
 
 En temps normal, vous n'avez pas à appeler cette commande, car 4D sauvegarde régulièrement les modifications. Il est préférable d'utiliser l'option **Ecriture cache toutes les X mn**/**secondes** (option de la page [Base de données](../settings/database.md) des Propriétés de la base), qui spécifie les intervalles de sauvegarde des données, afin de contrôler l'écriture du cache de données sur le disque. Il est recommandé d'utiliser la valeur par défaut, qui est de 20 secondes. Notez également que le paramètre Cache flush periodicity peut être utilisé avec les commandes [SET DATABASE PARAMETER](set-database-parameter.md) et [Get database parameter](get-database-parameter.md) pour fixer ou lire cet intervalle.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

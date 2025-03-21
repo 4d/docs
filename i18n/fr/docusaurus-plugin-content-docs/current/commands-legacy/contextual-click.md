@@ -13,16 +13,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Contextual click.Summary-->La commande **Contextual click** retourne Vrai si un clic de type contextuel a été effectué :
+<!--REF #_command_.Contextual click.Summary-->La commande **Contextual click** retourne Vrai si un clic de type contextuel a été effectué<!-- END REF--> :
 
-* Sous Windows et Mac OS, les clics contextuels sont effectués avec le bouton droit de la souris.<!-- END REF-->
+* Sous Windows et Mac OS, les clics contextuels sont effectués avec le bouton droit de la souris.
 * Sous Mac OS, des clics contexuels peuvent également être générés à l’aide de la combinaison **Control+clic**.
 
 Cette commande doit être appelée uniquement dans le cadre de l’événement formulaire On Clicked. Il est donc nécessaire de vérifier en mode Développement que cet événement a bien été coché dans les Propriétés du formulaire et/ou de l’objet.
 
-#### Exemple 
+## Exemple 
 
 Cette méthode, associée à une zone de défilement, permet de changer la valeur d’un élément de tableau à l’aide d’un menu contextuel : 
 
@@ -36,12 +36,12 @@ Cette méthode, associée à une zone de défilement, permet de changer la valeu
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

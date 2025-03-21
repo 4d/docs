@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get type.Summary-->**OBJECT Get type**コマンドは、カレントフォーム内の、引数 *object* と *\** で指定したオブジェクトのタイプを返します。<!-- END REF-->
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 | Object type web area                | 倍長整数 | 40 |
 | Object type write pro area          | 倍長整数 | 41 |
 
-#### 例題 
+## 例題 
 
 フォームをロードし、そこに内包される全てのリストボックスオブジェクトの一覧を取得する場合:
 
@@ -90,12 +90,12 @@ displayed_sidebar: docs
  FORM UNLOAD
 ```
 
-#### 参照 
+## 参照 
 
 [FORM LOAD](../commands/form-load.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

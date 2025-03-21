@@ -189,7 +189,7 @@ Uma seleção de entidade pode ser **compartilhável** (pode ser lida por vário
 Uma seleção de entidade **compartilhável** tem as seguintes características:
 
 * ele pode ser armazenado em um objeto compartilhado ou em uma coleção compartilhada e pode ser passado como parâmetro entre vários processos ou trabalhadores;
-* ele pode ser armazenado em vários objetos ou coleções compartilhados, ou em um objeto, ou coleção compartilhado que já pertença a um grupo;
+* it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
 * não permite a adição de novas entidades. A tentativa de adicionar uma entidade a uma seleção de entidade compartilhável acionará um erro (1637 - Esta seleção de entidade não pode ser alterada). Para adicionar uma entidade a uma seleção de entidade compartilhável, você deve primeiro transformá-la em uma seleção de entidade não compartilhável usando a função [`.copy()`](API/EntitySelectionClass.md#copy) , antes de chamar [`.add()`](API/EntitySelectionClass.md#add).
 
 > A maioria das funções de seleção de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) suporta seleções de entidades compartilháveis, pois não precisam alterar a seleção de entidades original (elas retornam uma nova).

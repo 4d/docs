@@ -27,15 +27,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 |                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4d-systemworker-new)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                        |
+| [<!-- INCLUDE #4D.SystemWorker.new().Syntax -->](#4dsystemworkernew)<br/><!-- INCLUDE #4D.SystemWorker.new().Summary -->                          |
 | [<!-- INCLUDE #SystemWorkerClass.closeInput().Syntax -->](#closeinput)<br/><!-- INCLUDE #SystemWorkerClass.closeInput().Summary -->               |
 | [<!-- INCLUDE #SystemWorkerClass.commandLine.Syntax -->](#commandline)<br/><!-- INCLUDE #SystemWorkerClass.commandLine.Summary -->                |
 | [<!-- INCLUDE #SystemWorkerClass.currentDirectory.Syntax -->](#currentdirectory)<br/><!-- INCLUDE #SystemWorkerClass.currentDirectory.Summary --> |
-| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#dataype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                          |
+| [<!-- INCLUDE #SystemWorkerClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #SystemWorkerClass.dataType.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #SystemWorkerClass.encoding.Summary -->                         |
 | [<!-- INCLUDE #SystemWorkerClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #SystemWorkerClass.errors.Summary -->                               |
 | [<!-- INCLUDE #SystemWorkerClass.exitCode.Syntax -->](#exitcode)<br/><!-- INCLUDE #SystemWorkerClass.exitCode.Summary -->                         |
-| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hideWindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
+| [<!-- INCLUDE #SystemWorkerClass.hideWindow.Syntax -->](#hidewindow)<br/><!-- INCLUDE #SystemWorkerClass.hideWindow.Summary -->                   |
 | [<!-- INCLUDE #SystemWorkerClass.pid.Syntax -->](#pid)<br/><!-- INCLUDE #SystemWorkerClass.pid.Summary -->                                        |
 | [<!-- INCLUDE #SystemWorkerClass.postMessage().Syntax -->](#postmessage)<br/><!-- INCLUDE #SystemWorkerClass.postMessage().Summary -->            |
 | [<!-- INCLUDE #SystemWorkerClass.response.Syntax -->](#response)<br/><!-- INCLUDE #SystemWorkerClass.response.Summary -->                         |
@@ -112,7 +112,7 @@ Voici la séquence des appels de callbacks :
 1. `onData` et `onDataError` sont exécutés une ou plusieurs fois
 2. s'il est appelé, `onError` est exécuté une fois (arrête le traitement du system worker)
 3. si aucune erreur ne s'est produite, `onResponse` est exécuté une fois
-4. `onTerminate` est toujours exécuté
+4. `onTerminate` is always executed
 
 :::info
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Description
 
-La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4d-systemworker-new)<!-- END REF -->.
+La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -328,9 +328,7 @@ Cette propriété est en **lecture seule**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -550,10 +548,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Paramètres | Type                            |                             | Description                                      |
-| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
-| timeout    | Real                            |              ->             | Temps d'attente (en secondes) |
-| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                               |
+| Paramètres | Type                            |                             | Description                                         |
+| ---------- | ------------------------------- | :-------------------------: | --------------------------------------------------- |
+| timeout    | Real                            |              ->             | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                                  |
 
 <!-- END REF -->
 
@@ -561,13 +559,15 @@ Cette propriété est en **lecture seule**.
 
 La fonction `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->attend la fin de l'exécution du `SystemWorker` ou le *timeout* spécifié<!-- END REF -->.
 
-Dans *timeout*, passez une valeur en secondes. Le script `SystemWorker` attendra le process externe pendant la durée définie dans le paramètre *timeout* . Si vous omettez le paramètre *timeout*, l'exécution du script attendra indéfiniment.
-
 En fait, `.wait()` attend la fin du traitement de la formule `onTerminate`, sauf si le *timeout* est atteint. Si le *timeout* est atteint, le `SystemWorker` n'est pas tué.
+
+Dans *timeout*, passez une valeur en secondes. Le script `SystemWorker` attendra le process externe pendant la durée définie dans le paramètre *timeout* .
+
+:::note
 
 Pendant une exécution `.wait()`, les fonctions de callback sont exécutées, en particulier les callbacks provenant d'autres événements ou d'autres instances de `SystemWorker`. Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
 
-Cette fonction renvoie l'objet SystemWorker.
+:::
 
 > Cette fonction n'est pas nécessaire si vous avez créé le `SystemWorker` à partir d'un process worker 4D.
 

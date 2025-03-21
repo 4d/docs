@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY.Summary-->El comando QUERY busca los registros que corresponden al criterio especificado en *criterioBusqueda* y devuelve una selección de registros de *tabla*.<!-- END REF--> QUERY modifica la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual.
 
@@ -29,7 +29,7 @@ Para mayor información sobre la utilización de este editor, consulte el Manual
 
 El usuario construye la búsqueda, luego hace clic en el botón Buscar o Buscar en la selección. Si la búsqueda se realiza sin interrupciones, la variable sistema OK toma el valor 1\. Si el usuario hace clic en Cancelar, el comando QUERY es interrumpido sin realizar la búsqueda y la variable OK toma el valor *0* (cero). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El ejemplo siguiente muestra el editor de búsquedas para la tabla \[Productos\]:
 
@@ -37,7 +37,7 @@ El ejemplo siguiente muestra el editor de búsquedas para la tabla \[Productos\]
  QUERY([Productos])
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La línea siguiente muestra el editor de búsquedas para la tabla por defecto (si se ha definido)
 
@@ -47,7 +47,7 @@ La línea siguiente muestra el editor de búsquedas para la tabla por defecto (s
 
 Si especifica el parámetro *criterioBusqueda*, el editor de búsquedas no se muestra y la búsqueda se define por programación. Para búsquedas simples (búsquedas en un solo campo) usted llama QUERY una vez con el parámetro *criterioBusqueda*. Para búsquedas complejas (búsquedas en múltiples campos o con múltiples condiciones), llame QUERY tantas veces como sea necesario con el parámetro *criterioBusqueda*, y el parámetro opcional \*, excepto para la última llama QUERY, la cual inicia la búsqueda.
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo busca las \[Personas\] cuyo nombre comienza por “a”:
 
@@ -55,7 +55,7 @@ El siguiente ejemplo busca las \[Personas\] cuyo nombre comienza por “a”:
  QUERY([Personas];[Personas]Nombre="a@")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo busca las \[Personas\] cuyo nombre comienza por “a” o “b”:  
   
@@ -67,7 +67,7 @@ El siguiente ejemplo busca las \[Personas\] cuyo nombre comienza por “a” o �
 
 **Nota:** el modo de interpretación del carácter @ en las búsquedas puede modificarse en una opción de las preferencias. Para mayor información, consulte la sección *Operadores de comparación*.
 
-#### Construcción de una línea de búsqueda 
+## Construcción de una línea de búsqueda 
 
 * El parámetro *criterioBusqueda* utiliza la siguiente sintaxis:
 
@@ -114,7 +114,7 @@ Sin importar de qué manera se ha definido una búsqueda:
 * Si la operación de búsqueda va a tomar algún tiempo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes pueden ser activados o desactivados utilizando los comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Si se muestra el termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si la búsqueda se completa, OK toma el valor 1\. De lo contrario, si la búsqueda es interrumpida, OK toma el valor 0 (cero).
 * Si los campos indexados son especificados, la búsqueda es optimizada cada vez que sea posible (se busca primero en los campo indexados) reduciendo al máximo la duración de la operación. El comando usa los índices compuestos para las búsquedas utilizando *AND* (&)
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Buscamos los registros para que correspondan a personas con el apellido López:
 
@@ -126,7 +126,7 @@ Buscamos los registros para que correspondan a personas con el apellido López:
 
 **Recordatorio:** esta búsqueda encontrará registros como “López”, “lópez”, “LÓPEZ”, etc. Si quiere que la búsqueda tenga en cuenta las mayúsculas y minúsculas, defina criterios suplementarios que utilicen los códigos ASCII. 
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 El siguiente ejemplo busca los registros de personas llamadas Carlos López. El campo Apellido está indexado. El campo Nombre no está indexado.  
   
@@ -137,7 +137,7 @@ El siguiente ejemplo busca los registros de personas llamadas Carlos López. El 
 
 Cuando se realiza la búsqueda, primero se efectúa una búsqueda rápida en el campo indexado Apellido, y se reduce la selección de registros a las personas de apellido López. La búsqueda luego busca secuencialmente en el campo Nombre en esta selección de registros.
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 El siguiente ejemplo aprovechará automáticamente un índice compuesto de los campos *\[People\]First Name*+*\[People\]Last Name* (si existe) para encontrar los registros de todas las personas llamadas John Smith.
 
@@ -148,7 +148,7 @@ El siguiente ejemplo aprovechará automáticamente un índice compuesto de los c
 
 Para más información, consulte *Índices compuestos*.
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 El siguiente ejemplo busca registros de personas de apellido López o Gómez. El campo Apellido está indexado.
 
@@ -159,7 +159,7 @@ El siguiente ejemplo busca registros de personas de apellido López o Gómez. El
 
 El comando QUERY utiliza el índice del campo Apellido para ambas búsquedas. Las dos búsquedas se efectúan, y sus resultados se colocan en conjuntos internos que son combinados eventualmente utilizando una operación de unión. 
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 El siguiente ejemplo busca los registros de personas que no trabajan en una empresa. La búsqueda se realiza probando si el nombre de la empresa es una cadena vacía. 
 
@@ -167,7 +167,7 @@ El siguiente ejemplo busca los registros de personas que no trabajan en una empr
  QUERY([Personas];[Personas]Empresa="") // Buscar las personas sin empresa
 ```
 
-#### Ejemplo 10 
+## Ejemplo 10 
 
 El siguiente ejemplo busca cada persona cuyo apellido es López, y trabaja para una empresa en Barcelona. La segunda búsqueda utiliza un campo de otra tabla. Esta búsqueda se puede efectuar porque la tabla \[Personas\] está relacionada a la tabla \[Empresa\] por una relación muchos a uno: 
 
@@ -176,7 +176,7 @@ El siguiente ejemplo busca cada persona cuyo apellido es López, y trabaja para 
  QUERY([Personas];&;[Empresa]Ciudad ="Barcelona") // ... que trabajan para una empresa en Barcelona
 ```
 
-#### Ejemplo 11 
+## Ejemplo 11 
 
 El siguiente ejemplo busca el registro de cada persona cuyo inicial del nombre esté entre la letra A (incluida) y M (incluida):
 
@@ -184,7 +184,7 @@ El siguiente ejemplo busca el registro de cada persona cuyo inicial del nombre e
  QUERY([Personas];[Personas]Nombre<"n") // Encontrar todas las personas entre A y M
 ```
 
-#### Ejemplo 12 
+## Ejemplo 12 
 
 El siguiente ejemplo busca los registros de las personas que viven en Madrid o Barcelona:
 
@@ -193,7 +193,7 @@ El siguiente ejemplo busca los registros de las personas que viven en Madrid o B
  QUERY([Personas];|;[Personas]ZIP CodigoPostal="08@") // ...o en Barcelona
 ```
 
-#### Ejemplo 13 
+## Ejemplo 13 
 
 Búsqueda por palabra clave: el siguiente ejemplo busca en toda la tabla \[Productos\] los registros cuyo campo Descripción contenga la palabra "fácil":
 
@@ -201,7 +201,7 @@ Búsqueda por palabra clave: el siguiente ejemplo busca en toda la tabla \[Produ
  QUERY([Productos];[Productos]Descripcion%"fácil") // Buscar productos cuya descripción contenga la palabra clave fácil
 ```
 
-#### Ejemplo 14 
+## Ejemplo 14 
 
 El siguiente ejemplo busca los registros que corresponden a la referencia de la factura introducida en una caja de diálogo:
 
@@ -212,7 +212,7 @@ El siguiente ejemplo busca los registros que corresponden a la referencia de la 
  End if
 ```
 
-#### Ejemplo 15 
+## Ejemplo 15 
 
 El siguiente ejemplo busca los registros de facturas introducidas en 1996\. Buscamos todos los registros introducidos entre el 31/12/95 y 1/1/97:
 
@@ -221,7 +221,7 @@ El siguiente ejemplo busca los registros de facturas introducidas en 1996\. Busc
  QUERY([Facturas];&;[Facturas]FechaFactura 
 ```
 
-#### Ejemplo 16 
+## Ejemplo 16 
 
 El siguiente ejemplo busca los empleados cuyo salario está entre $10 000 y $50 000\. La búsqueda incluye los empleados que ganan $10 000, pero excluye a los que ganan $50 000:
 
@@ -230,7 +230,7 @@ El siguiente ejemplo busca los empleados cuyo salario está entre $10 000 y $50 
  QUERY([Empleados];&;[Empleados]Salario <50000) // ...$10 000 y $50 000
 ```
 
-#### Ejemplo 17 
+## Ejemplo 17 
 
 El siguiente ejemplo busca los empleados del departamento de mercadeo con salarios superiores a $20 000\. Se busca primero en el campo Salario porque está indexado. Observe que la segunda búsqueda utiliza un campo de otra tabla. Esto es posible porque la tabla \[Dept\] está relacionada a la tabla \[Empleados\] por una relación automática de muchos a uno. Aunque el campo \[Dept\]Nombre está indexado, la búsqueda no es indexada porque la relación debe ser activada secuencialmente para cada registro en la tabla \[Empleados\]:
 
@@ -239,7 +239,7 @@ El siguiente ejemplo busca los empleados del departamento de mercadeo con salari
  QUERY([Empleados];&;[Dept]Nombre="mercadeo") // ...que trabajen en el departamento de mercadeo
 ```
 
-#### Ejemplo 18 
+## Ejemplo 18 
 
 Se tienen tres tablas relacionadas de muchos a uno: \[Ciudad\] -> \[Departamento\] -> \[Region\]. El siguiente ejemplo busca las regiones cuyas ciudades comienzan con "New".
 
@@ -247,7 +247,7 @@ Se tienen tres tablas relacionadas de muchos a uno: \[Ciudad\] -> \[Departamento
  QUERY([Region];[Ciudad]Nombre="New") // Buscar todas las regiosnes cuyas ciudades comienzan por "New"
 ```
 
-#### Ejemplo 19 
+## Ejemplo 19 
 
 El siguiente ejemplo busca la información igual al valor de la variable *miVar*.
 
@@ -260,7 +260,7 @@ La búsqueda puede tener muchos resultados diferentes, dependiendo del valor de 
 * Si *miVar* es igual a *"Copyright@"*, la selección contiene todas las leyes que contienen textos que comienzan por Copyright.
 * Si *miVar* es igual a *"@Copyright@"*, la selección contiene todas las leyes que contienen al menos una ocurrencia de Copyright.
 
-#### Ejemplo 20 
+## Ejemplo 20 
 
 El siguiente ejemplo añade o no líneas a una búsqueda compleja dependiendo del valor de las variables. De esta forma, sólo los criterios válidos son tenidos en cuenta para la búsqueda. 
 
@@ -277,7 +277,7 @@ El siguiente ejemplo añade o no líneas a una búsqueda compleja dependiendo de
  QUERY([Factura]) // Ejecución de la búsqueda sobre los criterios
 ```
 
-#### Ejemplo 21 
+## Ejemplo 21 
 
 Este ejemplo ilustra la utilización de un operador de comparación como expresión alfanumérica. El valor del operador de comparación está definido a través de un menú desplegable ubicado en una caja de diálogo de búsqueda personalizada: 
 
@@ -292,7 +292,7 @@ Este ejemplo ilustra la utilización de un operador de comparación como expresi
  End if
 ```
 
-#### Ejemplo 22 
+## Ejemplo 22 
 
 El uso de los índices de palabras claves puede acelerar de manera importante sus aplicaciones.
 
@@ -300,17 +300,17 @@ El uso de los índices de palabras claves puede acelerar de manera importante su
  QUERY([IMAGENES];[IMAGENES]Fotos%"gatos") // buscar fotos asociadas con la palabra clave "gatos"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la búsqueda se lleva a cabo correctamente, la variable sistema OK toma el valor 1.  
 La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja de diálogo de búsqueda,  
 \- en modo 'búsqueda y bloqueo' (ver el comando [SET QUERY AND LOCK](set-query-and-lock.md "SET QUERY AND LOCK")), la búsqueda encuentra al menos un registro bloqueado. En este caso igualmente, el conjunto sistema LockedSet se actualiza.
 
-#### Ver también 
+## Ver también 
 
 [QUERY SELECTION](query-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

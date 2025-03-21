@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->O comando TRANSFORM PICTURE permite aplicar uma transformação de tipo *operador* à imagem passada no parâmetro *imagem*.<!-- END REF-->este comando estende as funcionalidades oferecidas pelos operadores convencionais de transformação de imagens (+/, etc., ver a seção ). Estes operadores permanecem totalmente utilizáveis em 4D.  
   
@@ -47,7 +47,7 @@ Em *operador*, passe o número da operação a ser realizada e em *param*, os pa
 * Fade to grey scale: a imagem se converte a escala de cinzas (nenhum parâmetro é necessário). Esta transformação não pode ser desfeita.
 * Transparency: uma máscara de transparência se aplica a imagem baseada na cor passada em *param1*. Por exemplo, se passar 0x00FFFFFF (cor branca) em *param1*, todos os pixels brancos na imagem original serão transparentes na imagem transformada. Esta operação pode ser aplicada a imagens de mapa de bits ou de vetores. Por padrão, se o parâmetro *param1* se omite, a cor branca (0x00FFFFFF) se estabelece como cor objetivo. Esta função está especialmente desenhada para manipular a transparência em imagens convertidas desde o formato obsoleto PICT, mas pode ser usada com imagens de todo tipo. Esta transformação não pode ser desfeita.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser definir as partes brancas de uma imagem como transparentes. Para isso, pode utilizar o seguinte código:
 
@@ -59,7 +59,7 @@ Obtém o seguinte resultado:
 
 ![](../assets/en/commands/pict1359750.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com o formato “Truncado (não-centrado)”): 
 
@@ -69,11 +69,11 @@ Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com
 
 ![](../assets/en/commands/pict28288.en.png)
 
-#### Ver também 
+## Ver também 
 
 [COMBINE PICTURES](combine-pictures.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

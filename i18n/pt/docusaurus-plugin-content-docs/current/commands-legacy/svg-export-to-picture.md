@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->O comando SVG EXPORT TO PICTURE permite guardar na variável ou campo imagem indicado pelo parâmetro *varImag* uma imagem em formato SVG contida em uma árvore XML.<!-- END REF--> 
   
@@ -33,7 +33,7 @@ O parâmetro opcional *tipoExport* permite definir a maneira como a fonte de dad
 
 .
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo pode ser utilizado para mostrar “Hello World” em uma imagem 4D:
 
@@ -49,12 +49,12 @@ O exemplo abaixo pode ser utilizado para mostrar “Hello World” em uma imagem
 
 ![](../assets/en/commands/pict14520.en.png)
 
-#### Ver também 
+## Ver também 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

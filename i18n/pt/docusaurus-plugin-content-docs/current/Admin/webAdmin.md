@@ -26,7 +26,7 @@ Selecione a opção **Iniciar WebAdmin ao iniciar** na caixa de diálogo de par�
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Se usar uma aplicação 4D que tenha ou não interface, pode habilitar o modo de inicio automático utilizando o argumento abaixo _Interface de linha de comandos_:
+- Se usar uma aplicação 4D que tenha ou não interface, pode habilitar o modo de inicio automático utilizando o argumento abaixo *Interface de linha de comandos*:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -50,7 +50,7 @@ Configurar o componente `WebAdmin` é obrigatório em particular para definir a 
 
 Pode configurar o componente `WebAdmin` usando [Web Administration a caixa de diálogo de configurações](#settings-dialog-box) (ver abaixo).
 
-> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da _Interface de Linha de Comando_](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
+> Se você usar uma aplicação 4D headless, você pode usar os [argumentos da *Interface de Linha de Comando*](#webadmin-headless-configuration) para definir as configurações básicas. Se quiser personalizar o arquivo de configurações para definir os parâmetros avançados.
 
 ### Caixa de diálogos de configurações
 
@@ -64,7 +64,7 @@ A caixa de diálogo abaixo é mostrada:
 
 #### Iniciar o servidor WebAdmin na inicialização
 
-Marque esta opção para lançar o servidor web `WebAdmin` automaticamente quando iniciar a aplicação 4D ou 4D Server (ver ([acima](#launching-at-startup)). Como padrão essa opção não é marcada.
+Marque esta opção para lançar o servidor web `WebAdmin` automaticamente quando iniciar a aplicação 4D ou 4D Server (ver ([acima](#launch-at-startup)). Como padrão essa opção não é marcada.
 
 #### Conexões HTTP em localhost aceitas
 
@@ -93,7 +93,7 @@ Rota da pasta onde o certificado TLS está localizado. Como padrão, a rota da p
 
 #### Modo de registro de depuração
 
-O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog__nn_.txt, armazenada na pasta "Logs" da aplicação -- _nn_ é o número do arquivo). As opções abaixo estão disponíveis:
+O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog_*nn*.txt, armazenada na pasta "Logs" da aplicação -- *nn* é o número do arquivo). As opções abaixo estão disponíveis:
 
 - **Desactivado** (por defecto)
 - **Com todas as partes do corpo** - habilitado com partes do cuerpo das petições e respostas
@@ -110,7 +110,7 @@ A configuração de uma chave de acesso é obrigatória para desbloquear o acess
 Uma chave de acesso é parecida a uma senha, mas não está associada com um login.
 
 - Para definir uma nova chave de acesso: clique no botão **Definir**, introduza a string da chave de acesso na caixa de diálogo e clique em **OK**. La etiqueta del
-  botón se convierte en **Modificar**.
+    botón se convierte en **Modificar**.
 - Para modificar a chave de acesso: clique no botão **Modificar**, introduza a nova string da chave de acesso na caixa de diálogo e clique em **OK**.
 - Para eliminar a chave de acesso: clique no botão**Modificar**, deixe vazia a área daa chave de acesso e clique em **OK**.
 
@@ -152,3 +152,5 @@ Exemplo:
 - Quando uma página de gerenciamento é acessada diretamentee de um item menu 4D ou 4D Servidor (tal como **Records > Data Explorer** ou **Window > Data Explorer** (4D Server)), o acesso é garantido sem autenticação, e o usuário é autenticado automaticamente
 
 Quando o acesso é concedido, uma  [sessão web](WebServer/sessions.md) com o privilégio "WebAdmin" é criado na aplicação 4D. Enquanto a sessão atual tiver o privilégio "WebAdmin", o componente `WebAdmin` entrega páginas  solicitadas.
+
+

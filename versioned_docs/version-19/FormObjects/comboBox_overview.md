@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options.
+A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -13,7 +13,7 @@ Fundamentally, you treat a combo box as an enterable area that uses its object, 
 
 Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into the enterable area, as you would for any input form object.
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
+You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md): using an object, an array, or a choice list.
 
 ### Using an object
 
@@ -55,7 +55,7 @@ Combo box type objects accept two specific options:
 - [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
 - [Excluded List](properties_RangeOfValues.md#excluded-list) (list of excluded values): allows setting a list whose values cannot be entered in the combo box. If an excluded value is entered, it is not accepted and an error message is displayed.
 
->Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
+>Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md) object.
 
 ## Supported Properties
 

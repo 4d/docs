@@ -7,11 +7,11 @@ title: Área Web
 
 ## Acessar métodos 4D
 
-Você pode chamar métodos 4D a partir do código JavaScript executado em uma área Web e obter valores em retorno. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
+You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
 > Esta propriedade só está disponível se a área Web [usar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
@@ -90,7 +90,7 @@ The Blink engine has the following limitations:
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webArea_overview.md#4dcefparametersjson).
+Você pode personalizar os parâmetros da área CEF criando um arquivo de configuração local [4DCEFParameters.json](webArea_overview.md#4dcefparametersjson).
 
 :::
 

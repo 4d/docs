@@ -18,11 +18,11 @@ Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el p
 
 La barra de menús por defecto incluye tres menús:
 
-- **Archivo**: sólo incluye el comando **Salir**. La acción estándar _Salir_ está asociada al comando, que hace que la aplicación salga.
+- **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
 - **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
 
-> > Menu items appear _in italics_ because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
+> > Menu items appear *in italics* because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
 
 Puede modificar esta barra de menú como desee o crear otras adicionales.
 
@@ -31,18 +31,18 @@ Puede modificar esta barra de menú como desee o crear otras adicionales.
 ### Utilizando el editor de menús
 
 1. Seleccione el elemento que desea crear y haga clic en el botón Añadir ![](../assets/en/Menus/PlussNew.png) debajo del área de la barra de menús.
-   O
-   Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista.
-   Si ha creado una barra de menús, aparece una nueva barra en la lista que contiene los menús por defecto (Archivo y Edición).
+  O
+  Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista.
+  Si ha creado una barra de menús, aparece una nueva barra en la lista que contiene los menús por defecto (Archivo y Edición).
 2. (opcional) Haga doble clic en el nombre de la barra de menú/menú para pasar al modo de edición e introducir un nombre personalizado.
-   OR Enter the custom name in the "Title" area.
-   Los nombres de las barras de menú deben ser únicos. Pueden contener hasta 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
+  OR Enter the custom name in the "Title" area.
+  Los nombres de las barras de menú deben ser únicos. Pueden contener hasta 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
 
 ### Utilizando el lenguaje 4D
 
-Utilice el comando `Create menu` para crear una nueva barra de menú o referencia de menú (_MenuRef_) en la memoria.
+Utilice el comando `Create menu` para crear una nueva barra de menú o referencia de menú (*MenuRef*) en la memoria.
 
-Cuando los menús se manejan mediante referencias _MenuRef_, no hay diferencia per se entre un menú y una barra de menús. En ambos casos, consiste en una lista de elementos. Sólo difiere su uso. En el caso de una barra de menús, cada elemento corresponde a un menú que a su vez está compuesto por elementos.
+Cuando los menús se manejan mediante referencias *MenuRef*, no hay diferencia per se entre un menú y una barra de menús. En ambos casos, consiste en una lista de elementos. Sólo difiere su uso. En el caso de una barra de menús, cada elemento corresponde a un menú que a su vez está compuesto por elementos.
 
 `Create menu` puede crear menús vacíos (para llenar utilizando `APPEND MENU ITEM` o `INSERT MENU ITEM`) o por menús construidos sobre menús diseñados en el editor de menús.
 
@@ -55,12 +55,12 @@ Para cada uno de los menús, debe añadir los comandos que aparecen cuando el me
 Para añadir un elemento de menú:
 
 1. En la lista de menús fuente, seleccione el menú al que desea añadir un comando.
-   Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
+  Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
 2. Elija **Añadir un elemento al menú "NombreDelMenú"** en el menú de opciones del editor o desde el menú contextual (clic derecho en la lista central).
-   Añadir líneas
-   4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
+  Añadir líneas
+  4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
 3. Haga doble clic en el nombre del comando para pasar al modo edición e introducir un nombre personalizado.
-   OR Enter the custom name in the "Title" area. Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).
+  OR Enter the custom name in the "Title" area. Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).
 
 ### Utilizando el lenguaje 4D
 
@@ -113,4 +113,4 @@ Para desvincular un menú, haga clic con el botón derecho en el menú o submen�
 
 ### Utilizando el lenguaje 4D
 
-Como no hay diferencia entre los menús y las barras de menús en el lenguaje de 4D, adjuntar menús o submenús se hace de la misma manera: utilice el parámetro _submenú_ del comando `APPEND MENU ITEM` para adjuntar un menú a una barra de menús o a un menú.
+Como no hay diferencia entre los menús y las barras de menús en el lenguaje de 4D, adjuntar menús o submenús se hace de la misma manera: utilice el parámetro *submenú* del comando `APPEND MENU ITEM` para adjuntar un menú a una barra de menús o a un menú.

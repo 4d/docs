@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FILTER EVENT.Summary-->O comando **FILTER EVENT** deve ser chamado desde o interior do método de gestão de eventos instalado utilizando o comando [ON EVENT CALL](on-event-call.md).<!-- END REF-->
 
@@ -32,15 +32,15 @@ Para fazer isto, coloque as seguintes linhas no método do formulário de saída
  End if
 ```
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").
 
-#### Ver também 
+## Ver também 
 
 [ON EVENT CALL](on-event-call.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

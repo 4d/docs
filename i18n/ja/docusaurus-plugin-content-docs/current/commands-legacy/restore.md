@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESTORE.Summary-->RESTORE コマンドは4Dアーカイブに含まれるファイルを復元するために使用できます。<!-- END REF-->このコマンドはバックアップを管理するためのカスタマイズされたインターフェースで利用できます。
 
@@ -29,12 +29,12 @@ RESTORE コマンドは*OK*および*Document*変数を更新します。復元�
 
 **Note:** 4D Volume Desktopが統合されたコンパイル済みアプリケーションでは、RESTOREコマンドは標準のファイルオープンダイアログにデフォルトで"4BK"拡張子のファイ ルを表示します。
 
-#### 参照 
+## 参照 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

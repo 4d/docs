@@ -17,18 +17,16 @@ En mode maintenance, seule la fenêtre du CSM est affichée (le projet n’est p
 Vous pouvez ouvrir le CSM en mode maintenance depuis deux emplacements :
 
 - **À partir de la boîte de dialogue standard d'ouverture de projet**
-  La boîte de dialogue standard d'ouverture inclut l'option **Centre de sécurité de maintenance** dans le menu associé au bouton **Ouvrir** :
-  ![](../assets/en/MSC/MSC_standardOpen.png)
-- **Menu Aide/Centre de sécurité et de maintenance** ou bouton **CSM** de la barre d’outils (projet non ouvert)\
-  ![](../assets/en/MSC/mscicon.png)\
-  Lorsque vous appelez cette fonction, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de sélectionner le fichier *.4DProject* ou *.4dz* à examiner. Le projet ne sera pas ouvert par 4D.
+ La boîte de dialogue standard d'ouverture inclut l'option **Centre de sécurité de maintenance** dans le menu associé au bouton **Ouvrir** :
+ ![](../assets/en/MSC/MSC_standardOpen.png)
+- Accès au CSM en mode standard Le projet ne sera pas ouvert par 4D.
 
 ## Accès au CSM en mode standard
 
 En mode standard, un projet est ouvert. Dans ce mode, certaines fonctions de maintenance ne sont pas disponibles. Vous disposez de plusieurs possibilités pour accéder à la fenêtre du CSM :
 
 - Utiliser le menu **Aide/Centre de sécurité et de maintenance** ou le bouton **CSM** dans la barre d’outils 4D :\
-  ![](../assets/en/MSC/mscicon.png)
+ ![](../assets/en/MSC/mscicon.png)
 - Utiliser l'action standard “Csm” qu’il est possible d’associer à une commande de menu ou à un objet de formulaire.
 - Utiliser la commande `OPEN SECURITY CENTER`.
 

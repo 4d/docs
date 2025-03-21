@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->Cette commande provoque l'impression de l'enregistrement courant de *laTable*, sans modifier la sélection courante.<!-- END REF--> Le formulaire sortie courant est utilisé pour l'impression. S’il n’y a pas d’enregistrement courant dans *laTable*, **PRINT RECORD** ne fait rien.
 
@@ -35,7 +35,7 @@ Vous pouvez supprimer son affichage en utilisant soit le paramètre optionnel as
 
 **Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT RECORD**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](print-form.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant imprime l'enregistrement courant de la table *\[Factures\]*. Cette méthode est celle d'un bouton **Imprimer** placé dans le formulaire entrée. Lorsque l'utilisateur clique sur ce bouton, l'enregistrement est imprimé dans un formulaire spécialement créé dans ce but. 
 
@@ -45,7 +45,7 @@ L'exemple suivant imprime l'enregistrement courant de la table *\[Factures\]*. C
  FORM SET OUTPUT([Factures];"FormListe") //Restauration du formulaire sortie courant
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant imprime le même enregistrement courant dans deux formulaires différents. Cette méthode est celle d'un bouton **Imprimer** placé dans un formulaire entrée. Vous souhaitez définir des paramètres d’impression personnalisés et les utiliser pour les deux formulaires. 
 
@@ -62,11 +62,11 @@ L'exemple suivant imprime le même enregistrement courant dans deux formulaires 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Print form](print-form.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -38,7 +38,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | licença                 | Object                                                   | Nome comercial e descrição das licenças do produto                                                                                       |
 | isRosetta               | Parâmetros                                               | True se 4D for emulado através do Rosetta no macOS, False caso contrário (não emulado ou no Windows). |
 | uniqueID                | Text                                                     | ID único do 4D Server                                                                                                                    |
-| id                      | Texto (cadeia de caracteres com hash) | Identificação única associada à base de dados (_Polinômio Rolling hash do nome da base de dados_)                     |
+| id                      | Texto (cadeia de caracteres com hash) | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*)                     |
 | dataFileSize            | Number                                                   | Tamanho do arquivo de dados em bytes                                                                                                     |
 | indexesSize             | Number                                                   | Tamanho do índice em bytes                                                                                                               |
 | cacheSize               | Number                                                   | Tamanho da cache em bytes                                                                                                                |
@@ -135,7 +135,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ## Onde é armazenado e enviado?
 
-Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
+Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](../commands-legacy/get-4d-folder.md), ou seja:
 
 - en Windows:
   `Users\[userName]\AppData\Roaming\4D Server`

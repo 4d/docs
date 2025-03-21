@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->APPLY TO SELECTION aplica *formula* a cada registro da seleção atual de tabela.<!-- END REF--> A *fórmula* pode ser uma linha de instruções ou um método. Se *formula* modifica um registro de tabela, o registro modificado é salvado. Se fórmula não modifica um registro, o registro não é salvado. Se a seleção atual estiver vazia, APPLY TO SELECTION não tem efeito. Se a relação for automática, a fórmula pode conter um campo de uma tabela relacionada.  
   
@@ -26,7 +26,7 @@ APPLY TO SELECTION pode ser utilizado para reunir informação da seleção de r
   
 Um termômetro de progressão é mostrado enquanto é executado APPLY TO SELECTION. Para ocultá-lo, utilize [MESSAGES OFF](messages-off.md) antes de chamar a APPLY TO SELECTION. Se o termômetro de progresso é mostrado, o usuário pode cancelar a operação.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir muda maiúsculas todos os nomes na tabela \[Empregados\]: 
 
@@ -34,7 +34,7 @@ O exemplo a seguir muda maiúsculas todos os nomes na tabela \[Empregados\]:
  APPLY TO SELECTION([Empregados];[Empregados]Sobrenome:=Uppercase([Empregados]Sobrenome))
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se um registro estiver bloqueado durante a execução de APPLY TO SELECTION e esse registro é modificado, o registro não será guardado. Todos os registros bloqueados que são encontrados são colocados em um conjunto chamado LockedSet. Depois de executar APPLY TO SELECTION, é recomendável testar LockedSet para verificar se houver registros bloqueados. O seguinte loop é executado até que todos os registros tenham sido modificados: 
 
@@ -45,7 +45,7 @@ Se um registro estiver bloqueado durante a execução de APPLY TO SELECTION e es
 ```
   
   
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo utiliza um método: 
 
@@ -54,16 +54,16 @@ Este exemplo utiliza um método:
  APPLY TO SELECTION([Empregados];M_Cap)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o usuário clicar no botão Deter no termômetro de progressão, a variável sistema OK assume o valor 0\. Do contrário, assume o valor 1.
 
-#### Ver também 
+## Ver também 
 
 *Conjuntos*  
 [EDIT FORMULA](edit-formula.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

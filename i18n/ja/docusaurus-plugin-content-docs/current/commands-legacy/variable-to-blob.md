@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->**VARIABLE TO BLOB**コマンドは、*variable*を*blob*に格納します。<!-- END REF-->
 
@@ -46,15 +46,15 @@ displayed_sidebar: docs
 
 **VARIABLE TO BLOB** と [BLOB TO VARIABLE](blob-to-variable.md) は4Dの内部フォーマットを使用してBLOBに格納された変数を取り扱います。この利点として、これら二つのコマンドを使用する際、プラットフォーム間の バイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBを Mac OS で使用す る、あるいはその逆を行うことができます。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 変数が正しく格納されるとOK変数は1に設定されます。そうでなければ0に設定されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の2つのプロジェクトメソッドを使用すると、任意の変数（1～n個）をすばやく、BLOBへ格納／復元することができます: 
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
  RETRIEVE VARIABLES FROM BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の2つのプロジェクトメソッドを使用すると、ディスク上のドキュメントへすばやく配列を格納、またはドキュメントからすばやく配列を取得できます: 
 
@@ -127,13 +127,13 @@ displayed_sidebar: docs
  LOAD ARRAY($vsDocName;->asAnyArray)
 ```
 
-#### 参照 
+## 参照 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

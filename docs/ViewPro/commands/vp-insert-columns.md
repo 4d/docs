@@ -13,7 +13,7 @@ title: VP INSERT COLUMNS
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP INSERT COLUMNS` command <!-- REF #_method_.VP INSERT COLUMNS.Summary -->inserts columns into the *rangeObj*<!-- END REF -->.
 
@@ -21,7 +21,7 @@ In *rangeObj*, pass an object containing a range of the starting column (the col
 
 New columns are inserted on the left, directly before the starting column in the *rangeObj*.
 
-#### Example
+## Example
 
 To insert three columns before the second column:
 
@@ -33,7 +33,7 @@ The results is:
 
 ![](../../assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
-#### See also
+## See also
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>

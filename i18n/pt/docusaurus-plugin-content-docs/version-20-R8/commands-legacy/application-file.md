@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Application file.Summary-->O comando Application file retorna o nome longo do arquivo executável ou da aplicação 4D que está sendo utilizada.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Se você está utilizando por exemplo 4D localizado em \\PROGRAMS\\4D no disco E
 Em Macintosh  
 Se você está executando, por exemplo, 4D na pasta Programas do disco Macintosh HD, o comando retorna Macintosh HD:Programs:4D.app.
 
-#### Exemplo 
+## Exemplo 
 
 Ao iniciar seu banco de dados em Windows, você precisa verificar se uma biblioteca DLL se encontra localizada no mesmo nível do arquivo executável 4D. No método de banco de dados  de sua aplicação você pode escrever:
 
@@ -37,12 +37,12 @@ Ao iniciar seu banco de dados em Windows, você precisa verificar se uma bibliot
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

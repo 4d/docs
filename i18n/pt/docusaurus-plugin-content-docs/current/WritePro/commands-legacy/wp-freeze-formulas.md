@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP FREEZE FORMULAS.Summary-->O comando **WP FREEZE FORMULAS** "congela" os conteúdos das fórmulas em *alvoObj*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Como padrão, se *recompute* for omitido, expressões são recomputadas.
 
 Atenção: *Linhas Carry-over*, se houver, serão transformados como linhas normais quando o ojbTarget for congelado. Como resultado, se modificar o tamanho ou a orientação da página, ou se exportar o documento, é possível que se desloquem na disposição resultante.
 
-#### Exemplo 
+## Exemplo 
 
 Para congelas as fórmulas em um documento:
 
@@ -57,7 +57,7 @@ Para congelas todas as fórmulas na primeira seção de um documento:
 WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)  
 \[#/code4D\]
 
-#### Ver também 
+## Ver também 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

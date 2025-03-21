@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->El comando **ST FREEZE EXPRESSIONS** "congela" el contenido de las expresiones encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> Esta acción convierte expresiones dinámicas en texto estático o imágenes (áreas 4D Write Pro únicamente) y elimina las referencias asociadas al *objeto*. 
 
@@ -51,7 +51,7 @@ Por defecto, las expresiones no son recalculadas antes de ser congenladas. Si qu
 
 **Note:** **ST FREEZE EXPRESSIONS** no congela las expresiones 4D Write Pro que contienen *$wp\_pageNumber* o *$wp\_pageCount*. Para más información, consulte la sección *Gestión de fórmulas*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere insertar la hora actual al inicio del texto y luego congelarla antes de guardar el registro:  
   
@@ -62,12 +62,12 @@ Usted quiere insertar la hora actual al inicio del texto y luego congelarla ante
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

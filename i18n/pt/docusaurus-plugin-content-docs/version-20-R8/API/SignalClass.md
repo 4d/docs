@@ -63,17 +63,17 @@ Método ***OpenForm*** :
  var $form : Object
  $form:=New object("value";0)
 
-  // Open the form
+  // Abrir o formulário
  $win:=Open form window("Information";Movable form dialog box)
  DIALOG("Information";$form)
  CLOSE WINDOW($win)
 
-  // Add a new attribute to your $signal shared object to pass your result to the other process:
+  // Adicione um novo atributo ao seu objeto compartilhado $signal para passar seu resultado ao outro processo:
  Use($signal)
     $signal.result:=$form.value
  End use
 
-  // Trigger the signal to the waiting process
+  // Disparar o sinal para o processo de espera
  $signal.trigger()
 ```
 
@@ -102,7 +102,7 @@ Método ***OpenForm*** :
 
 #### Descrição
 
-The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
+A propriedade <!-- REF #SignalClass.description.Summary -->contém uma descrição personalizada para o objeto `Signal`<!-- END REF -->.
 
 `.description` pode ser definida ao criar o objeto signal ou a qualquer momento. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
@@ -126,7 +126,7 @@ Essa propriedade é **leitura-escrita**.
 
 #### Descrição
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. Torna-se **True** quando o `.trigger( )` é chamado no objeto.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado atual do objeto `Signal`<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. Torna-se **True** quando o `.trigger( )` é chamado no objeto.
 
 Essa propriedade é **somente leitura**.
 
@@ -156,7 +156,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+A função `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define a propriedade `signaled` do objeto de sinal como **true**<!-- END REF --> e desperta todos os workers ou processos esperando por este sinal.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signaled` já for **true**), a função não faz nada.
 
@@ -187,15 +187,15 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 #### Descrição
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+A função `.wait( )` <!-- REF #SignalClass.wait().Summary -->faz com que o processo atual espere até que a propriedade `.signaled` do objeto signal se torne **true** ou que o *timeout* opcional expire<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
+Para evitar o bloqueio de código, você pode passar um tempo máximo de espera em segundos no parâmetro *timeout* (são aceitos decimais).
 
-> **Aviso**: a chamada a `.wait( )` sem um *timeout* no processo principal de 4D não é recomendável porque poderia congelar toda a aplicação 4D.
+> **Aviso**: Não é recomendável chamar `.wait( )` sem um *timeout* no processo principal do 4D, pois isso pode congelar todo o aplicativo 4D.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `.signaled` já é **true**), a função devolve imediatamente, sem esperar.
 
-A função retorna o valor da propriedade `.signaled`. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
+A função retorna o valor da propriedade `.signaled`. A avaliação desse valor permite saber se a função retornou porque o `.trigger( )` foi chamado (`.signaled` é **true**) ou se o *timeout* expirou (`.signaled` é **false**).
 
 > O estado de um processo que espera um signal é `Waiting for internal flag`.
 

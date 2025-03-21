@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->**SET PRINT OPTION** コマンドを使用し、プログラムから印刷オプションの値を変更することができます。<!-- END REF-->プリントパラメーターを変更する他のコマンド ([PRINT SETTINGS](print-settings.md)、*\>* 引数を使用しない [PRINT SELECTION](print-selection.md)) が呼び出されない限り、このコマンドを使用して定義された各オプションは、[カレントの 4D 印刷設定](../settings/compatibility.md) に対して適用されます。印刷ジョブが(例えば[OPEN PRINTING JOB](open-printing-job.md) などによって)開かれている間は、ジョブが終わるまではこのオプションを変更することはできません(ただしOrientation option を除く、以下参照)。
 
-##### オプションおよび値 
+### オプションおよび値 
 
 *option* を使用することで、変更したいオプションを指定することができます。以下の一覧にある、“*Print Options*” テーマ内の定義済み定数のいずれか一つを渡すことができます。引数で指定したオプション用の新しい値を引数および(必要であれば)引数に渡してください。渡す値の数と種類は指定したオプションのタイプによって変わります。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 | Scale option                 | 3  | *value1* のみ: 拡大縮小の倍率の値(パーセント)。一部のプリンターでは倍率の変更を許可していないものもあるという点に注意して下さい。無効な値を渡した場合、プロパティは印刷時に100%へとリセットされます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Number of copies option      | 4  | *value1* のみ: 印刷する部数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Paper source option          | 5  | (Windows のみ) *value1* のみ: コマンドで返されるトレイの配列の中で、使用される予定の用紙トレイのインデックスに対応する番号。このオプションはWindowsでのみ使用可能です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Destination option           | 9  | *value1*: 印刷先のタイプを指定するコード: 1=プリンター、2=ファイル(MacではPS)、3=PDFファイル、5=スクリーン(OS X ドライバーオプション)。 *value1* が1あるいは5以外であった場合、*value2* には生成されたドキュメントへのパス名が含まれます。このパスは他のパスが指定されるまでは使用され続けます。保存先に同じ名前のファイルが既に存在していた場合には、それは置き換えられます。[GET PRINT OPTION](get-print-option.md)の場合、カレントの値が既定のリスト内にない場合、*value1* には-1が返され、OKシステム変数は1に設定されます。エラーが起きた場合、*value1* とOKシステム変数は0に設定されます。<br/>**注(Windows)**: Windows 上でPDF を印刷するためには、[SET CURRENT PRINTER](set-current-printer.md)(Generic PDF driver) を呼び出して印刷保存先を2 (File) または 3 (PDF File) に設定する必要があります。3 に設定することでマルチプラットフォーム対応のコードを書くことができます。 |
+| Destination option           | 9  | *value1*: 印刷先のタイプを指定するコード: 1=プリンター、2=ファイル(MacではPS)、3=PDFファイル、5=スクリーン(macOS ドライバーオプション)。 *value1* が1あるいは5以外であった場合、*value2* には生成されたドキュメントへのパス名が含まれます。このパスは他のパスが指定されるまでは使用され続けます。保存先に同じ名前のファイルが既に存在していた場合には、それは置き換えられます。[GET PRINT OPTION](get-print-option.md)の場合、カレントの値が既定のリスト内にない場合、*value1* には-1が返され、OKシステム変数は1に設定されます。エラーが起きた場合、*value1* とOKシステム変数は0に設定されます。<br/>**注(Windows)**: Windows 上でPDF を印刷するためには、[SET CURRENT PRINTER](set-current-printer.md)(Generic PDF driver) を呼び出して印刷保存先を2 (File) または 3 (PDF File) に設定する必要があります。3 に設定することでマルチプラットフォーム対応のコードを書くことができます。 |
 | Double sided option          | 11 | (Windows のみ) *value1*: 0=片側印刷あるいは標準、1=両面印刷。*value1*\=1のとき、*value2* にはページ綴じの設定が含まれます: 0=左綴じ(デフォルト値)、1=上綴じ                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Spooler document name option | 12 | *value1* のみ: スプーラドキュメントの一覧に表示される、カレントの印刷ドキュメント名。この宣言によって定義される名前は、新しい名前あるいは空の文字列が渡されない限りはセッションで印刷される全てのドキュメントに対して使用されます。標準のオペレーション(メソッドの場合にはメソッド名を、レコードの場合にはテーブル名を使用)を使用あるいは復元するためには、空の文字列を*value1* に渡して下さい。                                                                                                                                                                                                                                                                                                                                                                   |
 | Page range option            | 15 | 4D Write Pro 専用のオプション<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 * **SET PRINT OPTION** コマンドを用いて設定したプリントオプションがリセットされないように、[PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[PAGE BREAK](page-break.md)コマンドでは、任意の引数 *\>* を必ず使用してください。
 * **SET PRINT OPTION**コマンドは主にPostScript プリンターをサポートします。このコマンドは他のタイプのプリンター、例えばPCLやlinkなどにも使用できますが、その場合一部のオプションが使用できない可能性があります。
 
-#### 例題 
+## 例題 
 
 Orientation option の値は同一印刷ジョブ内で変更することができます (特例)。[PAGE BREAK](page-break.md) コマンドの呼び出しより先に、このオプションがあらかじめ設定されている必要があることに留意ください:
 
@@ -63,15 +63,15 @@ Orientation option の値は同一印刷ジョブ内で変更することがで�
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### エラー管理 
+## エラー管理 
 
 *option*に渡した値が無効であるか、そのプリンタで*option*が利用できない場合、コマンドはエラーを返し ([ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされたエラー管理メソッドを用いて、このエラーをとらえることができます) 、オプションの現在の値がそのまま保持されます。
 
-#### 参照 
+## 参照 
 
 [GET PRINT OPTION](get-print-option.md)  
 [Print form](print-form.md)  
@@ -79,7 +79,7 @@ Orientation option の値は同一印刷ジョブ内で変更することがで�
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

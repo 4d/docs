@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BACKUP INFO.Summary-->BACKUP INFO コマンドを使用して、データベースのデータに対して行われた前回のバックアップに関連する情報を取得できます。<!-- END REF-->と *info2* の型および内容は、*selector* の値によって決まります。“*Backup and Restore*”テーマの次の定数を使用できます:
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
 | Last backup status      | 倍長整数 | 2 | 前回のバックアップのステータス番号を *info1*に、そのテキストを *info2* に返します。                                                                                  |
 | Next backup date        | 倍長整数 | 4 | 次回のバックアップの日付を *info1* に、時間を *info2* に返します。                                                                                          |
 
-#### 参照 
+## 参照 
 
 [RESTORE](restore.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

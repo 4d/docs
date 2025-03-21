@@ -9,7 +9,7 @@ Los nombres de dataclass pueden utilizarse directamente en las peticiones REST p
 
 | Sintaxis                                                                                                                                 | Ejemplo                               | Descripción                                                                                               |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                                                                        | `/Employee`                           | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos |
+| [**\{dataClass\}**](#dataclass)                                                                                                        | `/Employee`                           | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                          | `/Employee[22]`                       | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos           |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                                | `/Employee:firstName(John)`           | Devuelve los datos de una entidad en la que está definido el valor del atributo                           |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)                                                         | `/City/getCity`                       | Ejecuta una función de clase de una dataclass                                                             |
@@ -20,7 +20,7 @@ Los nombres de dataclass pueden utilizarse directamente en las peticiones REST p
 
 ## \{dataClass\}
 
-Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (_por ejemplo_, `Company`)
+Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (*por ejemplo*, `Company`)
 
 ### Descripción
 
@@ -135,7 +135,7 @@ Devuelve todos los datos de una clase de datos específica.
 
 ## \{dataClass\}\[{key}]
 
-Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, _por ejemplo_, `Company[22]` o `Company[IT0911AB2200]`
+Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *por ejemplo*, `Company[22]` o `Company[IT0911AB2200]`
 
 ### Descripción
 
@@ -186,7 +186,7 @@ Devuelve los datos de una entidad en la que está definido el valor del atributo
 
 ### Descripción
 
-Pasando la _clase de datos_ y un _atributo_ junto con un valor, se puede recuperar toda la información pública de esa entidad. El valor es un valor único para el atributo, pero no es la llave primaria.
+Pasando la *clase de datos* y un *atributo* junto con un valor, se puede recuperar toda la información pública de esa entidad. El valor es un valor único para el atributo, pero no es la llave primaria.
 
 `GET  /rest/Company:companyCode(Acme001)`
 
@@ -203,3 +203,4 @@ Si desea utilizar un atributo relacional utilizando [$attributes.md">]($attribut
 La siguiente petición devuelve todos los datos públicos del empleado llamado "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+

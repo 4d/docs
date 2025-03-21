@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BLOB to longint.Summary-->O comando BLOB to longint retorna um valor de tipo Inteiro longo (4 bytes) lido do BLOB *blob*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Se você especificar o parâmetro opcional *offset* , o valor inteiro de 4-byte 
 
 Após a chamada, a variável é incrementada pelo número de bytes lidos. Portanto, você pode reutilizar a mesma variável com outro comando de leitura BLOB para ler outro valor.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir lê 20 valores Inteiro longo de um BLOB, iniciando no offset 0x200:
 
@@ -49,7 +49,7 @@ O exemplo a seguir lê 20 valores Inteiro longo de um BLOB, iniciando no offset 
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to real](blob-to-real.md)  
@@ -59,7 +59,7 @@ O exemplo a seguir lê 20 valores Inteiro longo de um BLOB, iniciando no offset 
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

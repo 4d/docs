@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->El comando PHP GET OPTION puede ser utilizado para conocer el valor actual de una opción relativa a la ejecución de scripts PHP.<!-- END REF--> 
 
@@ -30,12 +30,12 @@ Pase en el parámetro *opcion* una constante del tema "*PHP*" para designar la o
 | -------------- | ------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | PHP raw result | Entero largo | 2     | Definición del modo de procesamiento de los encabezados HTTP devueltos por PHP en el resultado de la ejecución cuando este resultado es de tipo Texto (cuando el resultado es de tipo BLOB, los encabezados se mantienen siempre).<br/>**Valor(es) posible(s)**: Booleano. False (valor por defecto = eliminar los encabezados HTTP del resultado. True = conservar los encabezados HTTP. |
 
-#### Ver también 
+## Ver también 
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

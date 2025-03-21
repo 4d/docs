@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->The **WEB GET STATISTICS** command lets you get information about the most consulted pages loaded in the Web server’s cache.<!-- END REF--> Consequently, these statistics only concern static pages, GIF pictures, JPEG pictures <100 KB and style sheets (.css). 
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 The command fills the pages Text array with the names of the most consulted pages. The *hits* Longint array receives the number of “hits” for each page. The *usage* parameter receives the percentage of the Web cache used by each page.
 
-#### Example 
+## Example 
 
 Let’s assume that you want to generate a semi-dynamic page that displays the statistics of the Web cache. For this, in a static HTML page named “stats.shtm” (pages suffixed .shtm are automatically parsed by the Web server), you place the tag *<!––#4DSCRIPT/STATS––>* as well as references to the *vPages* and *vUsage* variables, for example: 
 
@@ -62,7 +62,7 @@ In the project method STATS, you write the following code:
 You can send the "stats.shtm" page using a URL link or using the [WEB SEND FILE](web-send-file.md) command.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

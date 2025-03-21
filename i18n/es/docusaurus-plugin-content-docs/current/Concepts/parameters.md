@@ -7,7 +7,7 @@ A menudo encontrará que necesita pasar datos a sus métodos y funciones. Esto s
 
 ## Generalidades
 
-**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos _parámetros_ y _argumentos_ se utilizan indistintamente en este manual. Los parámetros también se pasan a los comandos integrados de 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
+**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos *parámetros* y *argumentos* se utilizan indistintamente en este manual. Los parámetros también se pasan a los comandos integrados de 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -35,7 +35,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //en el contexto de un subformulario
 ```
 
-Los datos también pueden ser **devueltos** desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada _MyLength_. Esta es la instrucción:
+Los datos también pueden ser **devueltos** desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada *MyLength*. Esta es la instrucción:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Tipos de datos soportados
 
-Con los parámetros con nombre, puede utilizar los mismos tipos de datos que son [soportados por la palabra clave `var`](variables.md#utilizando-la-palabra-clave-var), incluidos los objetos de clase. Por ejemplo:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -170,7 +170,7 @@ Function square($x : Integer) -> $result : Integer
 
 :::note
 
-Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario _undefined_.
+Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario *undefined*.
 
 :::
 
@@ -319,8 +319,8 @@ Este caso es tratado por 4D en función del contexto:
 
 - en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
 - en los proyectos interpretados:
-  - si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
-  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+ - si el parámetro se declaró utilizando la sintaxis nombrada (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
+ - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Utilización de las propiedades de objeto como parámetros con nombre
 
@@ -383,7 +383,7 @@ Con las variables con nombre, cualquier parámetro puede ser opcional. En el eje
 
 ## Parámetros opcionales
 
-En el manual _Lenguaje de 4D_, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro _okButtonTitle_ puede omitirse al llamar al comando. Se puede llamar de las siguientes maneras:
+En el manual *Lenguaje de 4D*, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro *okButtonTitle* puede omitirse al llamar al comando. Se puede llamar de las siguientes maneras:
 
 ```4d
 ALERT("Are you sure?";"Yes I am") //2 parámetros
@@ -442,7 +442,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 :::tip
 
-Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-objects-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variab
+Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-object-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número de parámetros variable.
 
 :::
 
@@ -493,13 +493,13 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Se describe en el párrafo [Valores devueltos](#returning-values).
+This second technique of returning a value by a subroutine is called "using a function". Se describe en el párrafo [Valores devueltos](#returned-value).
 
 ### Casos particulares: objetos y colecciones
 
-Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un _puntero_ interno).
+Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un *puntero* interno).
 
-Consequently, when using such data types as parameters, `$param, $return...` do not contain _values_ but _references_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$param, $return...` no necesitan ser desreferenciados en la subrutina.
+Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$param, $return...` no necesitan ser desreferenciados en la subrutina.
 
 Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
 

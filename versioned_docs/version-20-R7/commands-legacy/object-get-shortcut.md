@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->The **OBJECT GET SHORTCUT** command returns the keyboard shortcut associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -28,20 +28,20 @@ The *modifiers* parameter returns a value indicating the modifier key(s) associa
 
 | Constant         | Type    | Value | Comment                                                    |
 | ---------------- | ------- | ----- | ---------------------------------------------------------- |
-| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under OS X             |
-| Control key mask | Integer | 4096  | Ctrl key under OS X, or right click under Windows and OS X |
-| Option key mask  | Integer | 2048  | Alt key (also called Option under OS X)                    |
-| Shift key mask   | Integer | 512   | Windows and OS X                                           |
+| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
+| Control key mask | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
+| Option key mask  | Integer | 2048  | Alt key (also called Option under macOS)                    |
+| Shift key mask   | Integer | 512   | Windows and macOS                                           |
 
 If there are no modifier keys for the shortcut, *modifiers* returns 0\. 
 
 **Note:** If the *object* parameter designates several objects in the form that have different settings, the command returns "" in *key* and 0 in *modifiers*. 
 
-#### See also 
+## See also 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

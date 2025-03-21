@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get help tip.Summary-->The **OBJECT Get help tip** command returns the help message associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -23,7 +23,7 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 The command returns the current help message associated with the object, as it is defined in Design mode or for the process using the [OBJECT SET HELP TIP](object-set-help-tip.md) command. The string returned shows the message as it appears when the form is executed. If it contains variable items (xliff *resname* or 4D references), they are interpreted according to the context. 
 
-#### Example 
+## Example 
 
 The title of a picture button is stored as a help message. This title is stored in an xliff file and differs according to the current language of the application: 
 
@@ -33,11 +33,11 @@ The title of a picture button is stored as a help message. This title is stored 
   // $helpmessage contains for example "Découvrir" with a French 4D and "Discover" with an English 4D.
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

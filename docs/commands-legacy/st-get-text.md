@@ -17,16 +17,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get text.Summary-->The ST Get text command returns the styled text found in the text field or variable designated by the *object* parameter.<!-- END REF--> 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
 
-##### 
+### 
 
 The command returns the text with any style tags that are associated with it, which means, for example, that you can copy and paste text while keeping its style. 
 
@@ -48,19 +48,19 @@ The optional *startSel* and *endSel* parameters let you designate a selection of
 
 If the values of *startSel* and *endSel* are equal or if *startSel* is greater than *endSel*, an error is returned. 
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### See also 
+## See also 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

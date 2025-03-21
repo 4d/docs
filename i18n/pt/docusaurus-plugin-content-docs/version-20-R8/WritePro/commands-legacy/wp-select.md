@@ -20,7 +20,7 @@ displayed_sidebar: docs
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP SELECT.Summary-->O novo comando **WP SELECT** cria uma nova seleção de texto na área 4D Write Pro *wpArea*, baseado na *faixaObj* de um nova faixa definida por *faixaInicio* e *faixaFinal*.<!-- END REF-->
 
@@ -45,7 +45,7 @@ Um *faixaObj* pode ser:
    * onde *faixaInicio* e *faixaFinal* estão permitidas para as referências de elemento a seguir: corpo/cabeçalho/rodapé/seção/subseção.
 * Neste caso em *faixaInicio* e *faixaFinal* passe os valores correspondentes a posição dos primeiros e últimos caracteres a selecionar no documento. Pode passar wk start text em *faixaInicio* para definir o começo do documento e wk end text em *faixaFinal* para definir o final do documento. Lembre que um documento 4D Write Pro não só contém texto visível mas também las etiquetas de formato incluidas na range
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo:
 
@@ -60,6 +60,6 @@ O código abaixo:
  WP SELECT(*;"WParea";wk start text;12)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Text range](wp-text-range.md)  

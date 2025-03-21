@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB Copy.Summary-->**OB Copy**コマンドは、 *object*のプロパティ、オブジェクト内オブジェクト、値を内包した完全なコピー(ディープコピー)のオブジェクトを返します。<!-- END REF-->
 *object* で指定したオブジェクトがポインター型の値を格納している場合、複製先にもポインターが格納されます。あるいは、*resolvePtrs* 引数に **True** を渡すことで、複製時に値を解決させることもできます。この場合、*object* 内で値を指定しているポインターは解決され、解決済みの値が使用されます。
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 * 同じ原理が*object* の内側のプロパティに保存されているエンティティセレクションに対しても適用されます。しかしながら、このコマンドにck shared が渡されており、ネストされたエンティティセレクションが共有可能だった場合には最適化されます。その際には同じエンティティセレクションへの参照が返されるオブジェクト内に返されます。
 * データストア、データクラス、エンティティ、エンティティセッレクションオブジェクトは複製することはできません。もし**OB Copy** がこれらに対して呼び出された場合、Null 値が返されます。
 
-#### 例題 1 
+## 例題 1 
 
 単純な値を格納しているオブジェクトを複製する場合を考えます:
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ポインターを格納しているオブジェクトを複製する場合を考えます(第一シンタックス):
 
@@ -96,7 +96,7 @@ displayed_sidebar: docs
   // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
-#### 例題 3 
+## 例題 3 
 
 通常の(非共有の)*$person* オブジェクトを、*$sharedObject* 共有オブジェクトへとコピーしたい場合を考えます。これのためには、まず(*$sharedObject*) 共有オブジェクトを作成する必要があります。
 
@@ -115,7 +115,7 @@ displayed_sidebar: docs
  End use
 ```
 
-#### 例題 4 
+## 例題 4 
 
 *$obj* オブジェクトは("name" プロパティ内に)カレンレコードの"name" フィールドへのポインターを格納しているとします。
 
@@ -138,7 +138,7 @@ displayed_sidebar: docs
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 *$sharedObj* オブジェクトを*$sharedColl* コレクションへとコピーしたい場合を考えます。それぞれ異なる共有グループに所属しているため、直接コピーするとエラーを生成することになります。まず*$sharedObj* のコピーを作成し、そのコピーを*$sharedColl* の共有グループとして指定する必要があります。
 
@@ -160,12 +160,12 @@ displayed_sidebar: docs
  End use
 ```
 
-#### 参照 
+## 参照 
 
 [OB Get](ob-get.md)  
 *共有オブジェクトと共有コレクション*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

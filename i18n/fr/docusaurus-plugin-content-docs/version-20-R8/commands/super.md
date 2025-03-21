@@ -32,14 +32,14 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   
 //déclarée parmi les superclasses
 ```
 
-#### Exemple 1
+## Exemple 1
 
 Cet exemple illustre l'utilisation de `Super` dans un class constructor. La commande est appelée pour éviter de dupliquer les parties du constructeur qui sont communes aux classes `Rectangle` et `Square`.
 
@@ -78,7 +78,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Cet exemple illustre l'utilisation de `Super` dans une fonction de classe. Vous avez créé la classe `Rectangle` contenant une fonction :
 
@@ -109,13 +109,15 @@ $square:=cs.Square.new()
 $message:=$square.description() //I have 4 sides which are all equal
 ```
 
-#### Voir également
+## Voir également
 
 [**Concept page for Classes**](../Concepts/classes.md).
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1706                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1706                        |
+| Thread safe        | &check; |
+
+

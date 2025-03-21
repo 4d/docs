@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->La commande **VERIFY DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données 4D désigné par *cheminStructure* et *cheminDonnées*.<!-- END REF-->Pour plus d’informations sur le processus de vérification des données, reportez-vous au manuel Mode Développement.
 
@@ -104,7 +104,7 @@ Par défaut, la commande **VERIFY DATA FILE** crée un fichier d'historique au f
 Si vous avez passé l'option Timestamp log file name, le nom du fichier d'historique inclut la date et l'heure de sa création sous la forme "AAAA-MM-JJ HH-MM-SS", ce qui donne par exemple : “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. Ce principe permet d'éviter que chaque nouveau fichier d'historique écrase le précédent, mais pourra nécessiter ultérieurement une action manuelle afin de supprimer les fichiers superflus.   
 Quelle que soit l'option sélectionnée, dès lors qu'un fichier d'historique est généré, son chemin est retourné dans la variable système *Document* à l'issue de l'exécution de la commande.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vérification simple des données et des index :
 
@@ -112,7 +112,7 @@ Vérification simple des données et des index :
  VERIFY DATA FILE($NomStruct;$NomData;Verify indexes+Verify records;Ne pas créer d’historique;"")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vérification complète avec historique :
 
@@ -120,7 +120,7 @@ Vérification complète avec historique :
  VERIFY DATA FILE($NomStruct;$NomData;Verify all;0;"")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vérification des enregistrements uniquement :
 
@@ -128,7 +128,7 @@ Vérification des enregistrements uniquement :
  VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vérification des enregistrements des tables 3 et 7 uniquement :
 
@@ -139,7 +139,7 @@ Vérification des enregistrements des tables 3 et 7 uniquement :
  VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"FollowScan";$tnumTables)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Vérification d’index spécifiques (index du champ 1 de la table 4 et index des champs 2 et 3 de la table 5) :
 
@@ -154,7 +154,7 @@ Vérification d’index spécifiques (index du champ 1 de la table 4 et index de
  VERIFY DATA FILE($NomStruct;$NomData;Verify indexes;0;"FollowScan";$tnumTables;$tindex)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vérification du fichier de données, création et affichage du fichier d'historique :
 
@@ -163,15 +163,15 @@ Vérification du fichier de données, création et affichage du fichier d'histor
  SHOW ON DISK(File(Fichier log vérification).platformPath)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la méthode de rétro-appel passée n’existe pas, la vérification n’est pas effectuée, une erreur est générée et la variable OK prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

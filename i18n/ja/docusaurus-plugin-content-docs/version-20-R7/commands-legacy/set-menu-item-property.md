@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->**SET MENU ITEM PROPERTY**コマンドは、*menu* と *menuItem*引数で指定されたメニュー項目に、*property*の*value*を設定するために使用します。<!-- END REF-->
 
@@ -42,12 +42,12 @@ Associated Standard Action プロパティの場合、*value* 引数には標準
 **注意:** メニュー項目が階層サブメニューのタイトルと対応する場合、メニュー項目が選択された時に標準アクションは呼び出されません。
 * **カスタムプロパティ**: *property* 引数には、カスタムのテキストを渡し、テキスト、数値、ブール型の*value*引数に割り当てることができます。この*value* 引数は項目と一緒に保存され、[GET MENU ITEM PROPERTY](get-menu-item-property.md)コマンドを使用して取得することができます。*property*引数にはどのようなカスタムの文字列を使用することもできますが、4Dで既に使用されているタイトルは使用しないようにしてください(慣習として、4Dによって設定されているプロパティは"\_4D\_"で始まります)。
 
-#### 参照 
+## 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

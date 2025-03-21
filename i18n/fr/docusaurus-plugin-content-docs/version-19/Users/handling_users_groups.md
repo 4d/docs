@@ -28,7 +28,7 @@ L'Administrateur ne peut pas :
 - modifier l'utilisateur Super_Utilisateur
 - par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
-Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
+Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Icône du Super_Utilisateur : ![](../assets/en/Users/iconDesigner.png)
 - Icône de l'Administrateur : ![](../assets/en/Users/iconAdmin.png)
@@ -67,7 +67,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 
 5. Définissez le ou les groupe(s) d’appartenance de l’utilisateur à l’aide du tableau “Membre des groupes”. Vous pouvez ajouter l’utilisateur sélectionné à un groupe en cochant l’option correspondante dans la colonne Membre.
 
-L’appartenance des utilisateurs aux groupes peut également être définie par groupe dans la [page Groupes](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Supprimer un utilisateur
 

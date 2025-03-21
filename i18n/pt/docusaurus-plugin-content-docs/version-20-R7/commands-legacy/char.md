@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Char.Summary-->O comando **Char** devolve o caractere cujo código é *codigoCaractere*.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Passe um valor UTF-16 (entre 1 e 65535) em *codigoCaractere.*
 
 **Dica**: O comando **Char** geralmente se utiliza para inserir no editor de métodos os caracteres que no podem ser introduzidos desde o teclado ou que devem ser interpretados como um comando de edição no editor de métodos.  
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo utiliza Char para inserir um retorno de carro no texto de uma mensagem de alerta:
 
@@ -32,13 +32,13 @@ O seguinte exemplo utiliza Char para inserir um retorno de carro no texto de uma
   
   
 
-#### Ver também 
+## Ver também 
 
 [Character code](character-code.md)  
 *Códigos Unicode*  
 *Símbolos de referência de caracteres*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

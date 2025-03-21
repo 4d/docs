@@ -19,7 +19,7 @@ Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomiend
 
 :::
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Summary-->El comando **HTTP SET CERTIFICATES FOLDER** permite modificar la carpeta de certificados cliente activa para el conjunto de los procesos en la sesión actual.<!-- END REF-->
 
@@ -29,18 +29,18 @@ En 4D v14, ahora es posible utilizar varios certificados clientes.
   
 En *carpetaCertificados*, pase la ruta de acceso de la carpeta personalizada que contiene los certificados clientes. Puede pasar una ruta de acceso relativa al archivo de estructura de la aplicación, o una ruta de acceso absoluta. La ruta debe ser expresada con la sintaxis del sistema, por ejemplo:
 
-* (OS X): Disk:Applications:myserv:folder
+* (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
 Una vez ejecutado este comando, la nueva ruta se tiene en cuenta inmediatamente por comandos tales como [HTTP Request](http-request.md) que se ejecuten después (no es necesario reiniciar la aplicación). Se utiliza en todos los procesos de la base.
 
 Si la carpeta especificada no existe en la ubicación definida, o si la ruta de acceso pasada en *carpetaCertificados* no es válida, se genera un error. Puede interceptar este error utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
 
-#### Certificados SSL 
+## Certificados SSL 
 
 Como se describe en [esta página](../Admin/tls.md), los certificados SSL gestionados por 4D 4D deben estar en **PEM format**. Si su proveedor de certificados (por ejemplo, [startssl](https://www.startssl.com/)) le envía un certificado que está en un formato binario como .crt, .pfx o .p12 (el formato también depende de su navegador), tiene que convertirlo al formato PEM para utilizarlo. Hay sitios web como *sslshopper* donde puede hacer esta conversión en línea.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere cambiar temporalmente la carpeta de certificados:
 
@@ -52,12 +52,12 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restablecer la carpeta anterior
 ```
 
-#### Ver también 
+## Ver también 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

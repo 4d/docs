@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Execute on server.Summary-->The **Execute on server** command starts a new process on the Server machine (if it is called in Client/Server) or on the same machine (if it is called in single-user) and returns the process number for that process.<!-- END REF-->
 
@@ -28,11 +28,11 @@ If you call **Execute on server** on a Client machine, the command returns a neg
 
 If the process could not be created (for example, if there is not enough memory), **Execute on server** returns zero (0) and an error is generated. You can catch this error using an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-##### Process Method 
+### Process Method 
 
  In *procedure*, you pass the name of the process method for the new process. After 4D has set up the context for the new process, it starts executing this method, which therefore becomes the process method.
 
-##### Process Stack 
+### Process Stack 
 
 The *stack* parameter allows you indicate the amount of memory allocated for the stack of the process. It is the space in memory used to “pile up” method calls, local variables, parameters in subroutines, and stacked records.
 
@@ -41,7 +41,7 @@ The *stack* parameter allows you indicate the amount of memory allocated for the
 
 **Note:** The stack is NOT the total memory for the process. Processes share memory for records, interprocess variables, and so on. A process also uses extra memory for storing its process variables. The stack contains various items of 4D internal information; the amount of information kept on the stack depends on the number of nested method calls the process will employ, the number of forms that it will open before closing them and the number and size of local variables used in each nested method call.
 
-##### Process Name 
+### Process Name 
 
  You pass the name of the new process in *name*. In single-user, this name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. In Client/Server, this name will appear in blue in the Stored Procedure list of the 4D Server main window.
 
@@ -49,7 +49,7 @@ You can omit this parameter; if you do so, the name of the process will be the e
 
 **Warning:** Contrary to [New process](new-process.md), do not attempt to make a process local in scope by prefixing its name with the dollar sign (*$*) while using **Execute on server**. This will work in single-user, because **Execute on server** acts as [New process](new-process.md) in this environment. On the other hand, in Client/Server, this will generate an error.
 
-##### Parameter to Process Method 
+### Parameter to Process Method 
 
  You can pass parameters to the process method. You can pass parameters in the same way as you would pass them to a subroutine. However, there is a restriction—you cannot pass pointer expressions. Also, remember that arrays cannot be passed as parameters to a method. Upon starting execution in the context of the new process, the process method receives the parameters values in *$1*, *$2*, etc.
 
@@ -57,11 +57,11 @@ You can omit this parameter; if you do so, the name of the process will be the e
 
 If you pass an object or a collection as *param*, a copy is sent (and not a reference) and the JSON form is used in UTF-8 for the server. If the object or collection contains pointers, their dereferenced values are sent, and not the pointers themselves.
 
-##### Optional \* Parameter 
+### Optional \* Parameter 
 
 Specifying this last parameter tells 4D to first check whether or not a process with the name you passed in *name* is already running. If it is, 4D does not start a new process and returns the process number of the process with that name.
 
-#### Example 1 
+## Example 1 
 
 You want to log some information from the remote side in a text file on the server machine. 
 
@@ -78,7 +78,7 @@ The WriteLog method will be executed on the server. It contains, for example:
  TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example shows how importing data can be dramatically accelerated in Client/Server. The Regular Import method listed below allows you to test how long it takes to import records using the [IMPORT TEXT](import-text.md) command on the Client side:
 
@@ -181,16 +181,16 @@ Once these two project methods have been implemented in a database, you can perf
 
 With some benchmarks you will discover that using this method you can import records up to 60 times faster than the regular import.
 
-#### Example 3 
+## Example 3 
 
 Refer to the *SP-Based Services (Example)* section in the *4D Server Reference* manual.
 
-#### See also 
+## See also 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

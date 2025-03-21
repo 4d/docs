@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](../commands/print-form.md) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
 
@@ -26,22 +26,22 @@ The optional *dialType* parameter can be used to configure the display of the pr
 
 **Note:** The Print Job dialog box contains a **Preview on Screen** check box that allows the user to preview their print job. You can preset or reset this option by calling [SET PRINT PREVIEW](set-print-preview.md) before calling **PRINT SETTINGS**.
 
-#### Example 
+## Example 
 
 See example for the command [Print form](../commands/print-form.md).
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks OK in both dialog boxes, the OK system variable is set to 1\. Otherwise, the OK system variable is set to 0\. 
 
-#### See also 
+## See also 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

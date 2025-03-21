@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
 
@@ -28,14 +28,14 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. You can pass:
 
-* either a [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command,
+* either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
 * or an object containing two properties: 
 
 
 | **Property** | **Type** | **Description**|
 | ------------ | ------------ | ------------ |                                                                                                                                                                                                                                                                       
 | name | Text   | Name to display for the formula in the document|                                                                                                                                                                                                                                       
-| formula| Object| The [formula object](../../API/FunctionClass.md#formula-objects) created by the [**Formula**](../../API/FunctionClass.md#formula) or [**Formula from string**](../../API/FunctionClass.md#formula-from-string) command| 
+| formula| Object| The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command| 
 
 When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
 
@@ -63,7 +63,7 @@ Keep in mind that, when called, the formula object is evaluated within the conte
 
 :::
 
-#### Example 1 
+## Example 1 
 
 To replace all current date formulas with formatted strings:
 
@@ -89,7 +89,7 @@ To replace all current date formulas with formatted strings:
  End for each
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to use a formula name for the customer name:
 
@@ -113,7 +113,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### Example 3
+## Example 3
 
 You want to highlight a formula in yellow:
 
@@ -130,7 +130,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/WPpic1.png)
 
-#### See also 
+## See also 
 
 *Managing formulas*  
 [WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>

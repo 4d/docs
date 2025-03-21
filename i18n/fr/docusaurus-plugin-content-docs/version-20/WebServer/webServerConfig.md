@@ -23,7 +23,7 @@ Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la port
 | Peut être configuré via          | Nom                                                                              | Commentaires |
 | -------------------------------- | -------------------------------------------------------------------------------- | ------------ |
 | Boîte de dialogue des Propriétés | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |              |
-| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |              |
+| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |              |
 
 Active et configure le cache des pages web.
 
@@ -72,11 +72,11 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 
 ## Paramètres CORS
 
-| Peut être configuré via          | Nom                                                                                                                                   | Commentaires                                                                            |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                  | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                   | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| Boîte de dialogue des Propriétés | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-names-HTTP-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
+| Peut être configuré via          | Nom                                                                                                                                  | Commentaires                                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                 | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                  | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| Boîte de dialogue des Propriétés | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-nameshttp-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
 Liste des hôtes et méthodes autorisé(e)s pour le service CORS.
 
@@ -264,7 +264,7 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 Numéro de port IP (TCP) d'écoute pour HTTP. Par défaut, 4D publie une application Web sur le port HTTP normal (port TCP), qui est le port 80. Si ce port est déjà utilisé par un autre service Web, vous devez modifier le port HTTP utilisé par 4D pour ce projet.
 
-> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir [macOS HelperTool](#macos-helpertool)).
+> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir macOS HelperTool).
 
 À partir d'un navigateur Web, vous devez inclure le numéro de port HTTP par défaut dans l'adresse que vous saisissez pour vous connecter à l'application Web. L'adresse doit comporter un suffixe composé de deux points suivis du numéro de port. Par exemple, si vous utilisez le port HTTP numéro 8080, indiquez "123.4.567.89:8080".
 > **Avertissement** : Si vous utilisez des numéros de port TCP autres que ceux par défaut (80 pour HTTP standard et 443 pour HTTPS), veillez à ne pas utiliser des numéros de port utilisés par défaut pour d'autres services que vous pourriez vouloir utiliser simultanément. Par exemple, si vous prévoyez également d'utiliser le protocole FTP sur votre machine de serveur Web, n'utilisez pas les ports TCP 20 et 21, qui sont les ports par défaut pour ce protocole. Les numéros de ports inférieurs à 256 sont réservés à des services connus, et les numéros de ports de 256 à 1024 sont réservés à des services spécifiques issus des plateformes UNIX. Pour une sécurité maximale, spécifiez un numéro de port au-delà de ces intervalles (par exemple, dans les 2000 ou 3000).

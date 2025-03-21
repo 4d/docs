@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get first child XML element.Summary-->DOM Get first child XML element コマンドは*elementRef*に渡した要素の最初の子要素への参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict39972.ja.png)
 
-#### 例題 1 
+## 例題 1 
 
 ルートの最初の子要素の参照を取得します。XML構造 (C:\\\\import.xml) はまずBLOBにロードされます: 
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ルートの最初の子要素の参照、名前および値を取得します。XML構造 (C:\\\\import.xml) はまずBLOBにロードされます: 
 
@@ -51,15 +51,15 @@ displayed_sidebar: docs
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref;$childName;$childValue)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -12,15 +12,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LDAP LOGOUT.Summary-->O comando **LDAP LOGOUT** termina a conexão com um servidor LDAP no processo atual (se for aplicável).<!-- END REF--> Se não houver conexão, o error 1003 é retornado indicando que não está conectado.
 
-#### Ver também 
+## Ver também 
 
 [LDAP LOGIN](ldap-login.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -3,7 +3,7 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe todo o banco de dados como um conjunto de objetos de modelo de dados.
+A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 ## Mapeamento da estrutura
 
@@ -21,8 +21,8 @@ As seguintes regras são aplicadas a quaisquer conversões:
 
 - Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
 - Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
-  - Tabelas sem chave primária
-  - Tabelas com chaves primárias compostas.
+ - Tabelas sem chave primária
+ - Tabelas com chaves primárias compostas.
 - Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > O mapeamento ORDA não leva em consideração:
@@ -141,7 +141,7 @@ Todos los campos elegibles de una tabla están disponibles como atributos de su 
 
 #### Atributos de armazenamento e de relação
 
-Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Los atributos escalares (_es decir_, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
+Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Los atributos escalares (*es decir*, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
 
 - Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Os valores atribuídos a um atributo de armazenamento são armazenados como parte da entidade quando ela é salva. Quando um atributo de armazenamento é acessado, seu valor vem diretamente do datastore. Atributos de armazenamento são o bloco de construção mais básico de uma entidade sendo definidos pelo nome e tipo de dados.
 - Un **atributo relacional** ofrece acceso a otras entidades. Os atributos relação podem resultar em uma única entidade (ou nenhuma entidade) ou em uma seleção de entidades (de 0 a N). Os atributos relacional são criados com base em relações "clássicas" na estrutura relacional para fornecer acesso direto a entidades relacionadas ou a entidades relacionadas. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.
@@ -160,7 +160,7 @@ Além disso, os seguintes atributos de relação também estarão automaticament
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+> &#062; &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
@@ -224,7 +224,7 @@ No entanto, as propriedades de seleção de entidades são enumeráveis:
 
 #### Entity selections ordenadas ou não ordenadas
 
-Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. Nesta documentação, a menos que especificado, "seleção de entidade" geralmente se refere a uma "seleção de entidade não ordenada".
+Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. Nesta documentação, a menos que especificado, "entity selection" geralmente se refere a uma "entity selection não ordenada".
 
 As seleções das entidades ordenadas são criadas apenas quando necessárias ou quando solicitadas especificamente usando opções, ou seja, nos seguintes casos:
 

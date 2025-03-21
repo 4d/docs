@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get list item font.Summary-->The **Get list item font** command returns the current character font name of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -28,11 +28,11 @@ You can pass a reference number in *itemRef*. If this number does not correspond
 
 Lastly, you can pass \* in *itemRef*: in this case, the command will get the font of the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
-#### See also 
+## See also 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

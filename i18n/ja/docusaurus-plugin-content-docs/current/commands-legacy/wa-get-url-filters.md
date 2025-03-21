@@ -16,18 +16,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->WA GET URL FILTERS コマンドは*filtersArr* と *allowDenyArr*配列に、*\** と *object* 引数で指定したWebエリアで有効なフィルタを返します。<!-- END REF-->フィルタが有効でない場合、空の配列が返されます。 
 
 フィルタは[WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS") コマンドでインストールされます。セッション中に配列が最初期化されても、WA GET URL FILTERS コマンドを使用すれば現在の設定値を知ることができます。
 
-#### 参照 
+## 参照 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

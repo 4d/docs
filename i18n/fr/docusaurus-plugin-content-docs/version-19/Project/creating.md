@@ -64,7 +64,7 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
 
 ### Ouvrir un projet avec un fichier 4DLink
 
-Vous pouvez utiliser un fichier [`.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. Il existe deux façons de procéder :
+You can use a [`.4DLink` file](#about-4dlink-files) to launch the 4D application and open the target 4D project. Il existe deux façons de procéder :
 
 - double-cliquer ou glisser-déposer le fichier `.4DLink` sur l'application 4D
 - aller sur **Fichier** > **Ouvrir projets récents** et sélectionner un projet
@@ -83,7 +83,7 @@ Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que se
 4D génère automatiquement un fichier `.4DLink` lors de la première ouverture d'un projet local ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
 - Windows 7 et ultérieur : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 

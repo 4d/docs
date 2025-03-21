@@ -19,7 +19,7 @@ Ces erreurs de frappe provoquent généralement des erreurs de syntaxe (dans l'i
 
 ### Erreurs de syntaxe
 
-Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. La [fenêtre d'erreur de syntaxe](#syntax-error-window) apparaît lorsqu'une erreur se produit pendant l'exécution du code. Par exemple :
+Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Par exemple :
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -33,8 +33,8 @@ Il peut arriver que la mémoire soit insuffisante pour créer une BLOB. Ou, lors
 
 Ce sont généralement les types d'erreurs les plus difficiles à trouver. À l'exception des erreurs de frappe, tous les types d'erreurs énumérés ci-dessus sont, dans une certaine mesure, couverts par l'expression "erreur de conception ou de logique". Utilisez le [débogueur](debugger.md) pour les détecter. Par exemple :
 
-- Une _erreur de syntaxe_ peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
-- Une _erreur au niveau de l'Environnement_ peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
+- Une *erreur de syntaxe* peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
+- Une *erreur au niveau de l'Environnement* peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
 
 Les erreurs de conception ou de logique comprennent également des situations telles que :
 
@@ -78,8 +78,8 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
-  - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
+    - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
+    - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
 - **Copy**: Copies the debugging information into the clipboard. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 

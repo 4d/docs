@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Hilo seguro
 
-Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/webServerConfig.md#use-preemptive-processes) es ignorado por el Servidor REST).
 
 :::info
 
@@ -98,7 +98,7 @@ Se aplican las siguientes reglas:
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Los parámetros deben estar incluidos en una colección (formato JSON).
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -122,7 +122,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 ### Parámetro de entidad
 
-Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY). Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (_es decir,_ propiedad __KEY).
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (*es decir,* propiedad __KEY). Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (*es decir,* propiedad __KEY).
 También puede pasar valores para todos los atributos de la entidad. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
 > Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
@@ -134,11 +134,11 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si no se proporciona `__KEY`, se crea una nueva entidad en el servidor con los atributos dados.
+- Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### Parámetro de entidad asociado
 
@@ -158,8 +158,8 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | __DATASET  | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades           |
 | __ENTITIES | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
+Ver ejemplo para [obtener una lista construida sobre una selección de entidades](#using-an-entity-selection-to-get-a-list) con una petición GET.
 
 ## POST request examples
 
@@ -184,7 +184,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -211,7 +211,7 @@ A continuación, puede ejecutar esta petición:
 
 Petición: ["Aguada"]
 
-#### Result
+#### Resultado
 
 El resultado es una entidad:
 
@@ -256,7 +256,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -281,7 +281,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -313,7 +313,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -342,7 +342,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -392,7 +392,7 @@ Cuerpo de la petición:
 
 Como ninguna `__KEY` es dada, una nueva entidad Students está cargada en el servidor **con los atributos del cliente**. Como la función `pushData()` ejecuta una acción `save()`, la nueva entidad es creada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -430,7 +430,7 @@ Cuerpo de la petición:
 
 Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **con el valor lastname recibido por el cliente**. Como la función ejecuta una acción `save()`, la nueva entidad es actualizada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -467,7 +467,7 @@ Cuerpo de la petición:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -521,7 +521,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -533,7 +533,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### Recibir una selección de entidades como parámetro
 
-En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una selección de entidad recibida ($1). En realidad, actualiza el atributo _finalExam_ con el valor recibido ($2). Devuelve las llaves primarias de las entidades actualizadas.
+En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una selección de entidad recibida ($1). En realidad, actualiza el atributo *finalExam* con el valor recibido ($2). Devuelve las llaves primarias de las entidades actualizadas.
 
 ```
 // Students class
@@ -588,7 +588,7 @@ Cuerpo de la petición:
 
 ```
 
-#### Result
+#### Resultado
 
 Se han actualizado las entidades con llaves primarias 1 y 2.
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get name.Summary-->The **OBJECT Get name** command returns the name of a form object.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ The command can be used to designate two types of objects according to the value
 * Object current or *selector* omitted: If you pass this selector or omit the *selector* parameter, the command returns the name of the object from which it was called (object method or submethod called by the object method). In this case, the command must be called in the context of a form object, otherwise it returns an empty string.
 * Object with focus: If you pass this selector, the command returns the name of the object that has the focus in the form.
 
-#### Example 
+## Example 
 
 Object method for "bValidateForm" button:
 
@@ -33,13 +33,13 @@ Object method for "bValidateForm" button:
 
 After the execution of this object method, the *$btnName* variable contains the "bValidateForm" value.
 
-#### See also 
+## See also 
 
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objects (Forms)*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get external data path.Summary-->O comando **Get external data path** devolve a via de acesso completa do arquivo de armazenamento externo de dados do campo passado no parâmetro *oCampo*, para o registro atual.<!-- END REF--> Deve passar no parâmetro oCampo campos de tipo Texto, BLOB ou Imagem. O comando retorna o caminho de acesso do arquivo de armazenamento se o arquivo não existir mais ou não for acessível.   
   
@@ -28,11 +28,11 @@ Este comando devolve uma cadeia vazia nos seguintes casos:
 * O campo tem um valor Null, em cujo caso o arquivo externo não foi criado.
 * O comando se executa desde um 4D remoto.
 
-#### Ver também 
+## Ver também 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

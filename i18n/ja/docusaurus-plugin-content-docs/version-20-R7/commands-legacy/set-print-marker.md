@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->SET PRINT MARKER コマンドを使用し、印刷時にマーカ位置を指定することができます。<!-- END REF-->このコマンドを[Get print marker](get-print-marker.md "Get print marker")、[OBJECT MOVE](object-move.md "OBJECT MOVE")、[Print form](print-form.md "Print form")コマンドと組み合わせて使用することにより、印刷エリアのサイズを調節することができます。
 
@@ -68,7 +68,7 @@ SET PRINT MARKERは次の2つの状況において使用可能です:
 * このコマンドで変更できるのは、既存のマーカ位置だけです。マーカを追加することはできません。フォームに存在しないマーカを指定した場合、コマンドは何も行いません。
 * デザインモードにおける印刷用マーカの仕組みは変わりません。つまり、あるマーカは、それより上にあるマーカを飛び越えて移動したり、後続のマーカよりも下側に移動することはできません（引数 *\** を使用しない場合）。
 
-#### 例題 
+## 例題 
 
 この例は、3つのカラムがあるレポートを作成します。各行の高さは、フィールド内容に応じて実行中に計算されます。  
 印刷に使用する出力フォームは次の通りです:
@@ -172,7 +172,7 @@ Print\_List3のフォームメソッド:
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Get print marker](get-print-marker.md)  
 [OBJECT GET BEST SIZE](object-get-best-size.md)  
@@ -183,7 +183,7 @@ Print\_List3のフォームメソッド:
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

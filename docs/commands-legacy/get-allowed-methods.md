@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->The **GET ALLOWED METHODS** command returns, in *methodsArray*, the names of methods that can be used to write formulas.<!-- END REF--> These methods are listed at the end of the list of commands in the editor. 
 
@@ -23,7 +23,7 @@ By default, methods cannot be used in the Formula editor. Methods must be explic
 
 This command is useful for storing the settings of the current set of authorized methods before the execution of a formula in a specific context (for instance, a quick report). 
 
-#### Example 
+## Example 
 
 This example authorizes a set of specific methods to create a report: 
 
@@ -40,11 +40,11 @@ This example authorizes a set of specific methods to create a report:
  SET ALLOWED METHODS(methodsArray)
 ```
 
-#### See also 
+## See also 
 
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

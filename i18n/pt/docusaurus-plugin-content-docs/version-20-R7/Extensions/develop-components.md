@@ -11,13 +11,13 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 - **Projeto Matrix**: ´projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Projeto Host**: projeto aplicação onde um componente é instalado e usado.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
 
 ## Básicos
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
-- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md#basics).
+- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md).
 - Um projeto pode ser tanto uma matriz quanto um host, em outras palavras, um projeto de matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - Um componente pode chamar a maioria dos elementos 4D: classes, funções, métodos de projeto, formulários de projeto, barras de menu, listas de opções e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível usar o datastore, as tabelas padrão ou os arquivos de dados nos componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
@@ -194,7 +194,7 @@ Quando você usa ponteiros para permitir que os componentes e o projeto host se 
 - O comando `Get pointer` não retornará um ponteiro para uma variável do projeto host se for chamado a partir de um componente e vice-versa.
 
 - A arquitetura de componentes permite a coexistência, no mesmo projeto interpretado, de componentes interpretados e compilados (por outro lado, somente componentes compilados podem ser usados em um projeto compilado). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado.
-  Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo projeto host.
+ Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo projeto host.
 
 - Se o componente C definir a variável `myCvar`, o componente I poderá acessar o valor dessa variável usando o ponteiro `->myCvar`.
 

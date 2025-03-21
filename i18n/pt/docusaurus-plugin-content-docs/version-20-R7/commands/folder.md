@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parâmetro      | Tipo                       |                             | Descrição                                                         |
-| -------------- | -------------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path           | Text                       | &#8594; | Folder path                                                       |
-| folderConstant | Integer                    | &#8594; | Constante Pasta 4D                                                |
-| pathType       | Integer                    | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
-| \*             | operator                   | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | 4D. Folder | &#8592; | Novo Objeto Folder                                                |
+| Parâmetro      | Tipo                                               |                             | Descrição                                                         |
+| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Folder path                                                       |
+| folderConstant | Integer                                            | &#8594; | Constante Pasta 4D                                                |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
+| \*             | operator                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
+| Resultados     | [4D.Folder](../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
-Parâmetro O comando aceita duas sintaxes:
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -69,15 +69,18 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 > No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) for usada.
 
-#### Veja também
+## Veja também
 
+[`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### Propriedades
+## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1567                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1567                        |
+| Thread safe    | &check; |
+
+

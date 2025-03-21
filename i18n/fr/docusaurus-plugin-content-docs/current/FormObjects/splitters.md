@@ -16,7 +16,7 @@ Les caractéristiques générales des séparateurs sont les suivantes :
 - Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. Lorsque la propriété [Pousseur](properties_ResizingOptions.md#pusher) est associée à un séparateur, son déplacement vers la droite ou vers le bas ne rencontre pas de butée.
 - Les redimensionnements effectués dans les formulaires à l’aide des séparateurs ne sont conservés que durant l’affichage du formulaire. Une fois le formulaire refermé, les dimensions initiales sont restaurées.
 
-Une fois inséré, un séparateur se présente sous la forme d’un trait. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Une fois inséré, un séparateur se présente sous la forme d’un trait. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
 #### Exemple JSON :
 
@@ -39,13 +39,13 @@ Une fois inséré, un séparateur se présente sous la forme d’un trait. You c
 
 Dans un formulaire, les séparateurs interagissent sur les objets qui les entourent suivant les options de redimensionnement de ces objets :
 
-| Options de redimensionnement du ou des objet(s) | Objet(s) au-dessus du séparateur horizontal ou à gauche du séparateur vertical (1) | Objet(s) au-dessous du séparateur horizontal _non Pousseur_ ou à droite d'un séparateur vertical _non Pousseur_                                                                                                                                 | Objet(s) au-dessous du séparateur horizontal _Pousseur_ ou à droite d'un séparateur vertical _Pousseur_                                                                                     |
+| Options de redimensionnement du ou des objet(s) | Objet(s) au-dessus du séparateur horizontal ou à gauche du séparateur vertical (1) | Objet(s) au-dessous du séparateur horizontal *non Pousseur* ou à droite d'un séparateur vertical *non Pousseur*                                                                                                                                 | Objet(s) au-dessous du séparateur horizontal *Pousseur* ou à droite d'un séparateur vertical *Pousseur*                                                                                     |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Aucun                                                              | Restent tel que                                                                                                          | Sont déplacés avec le séparateur (conservent leur position relative) jusqu’à la butée suivante. La butée du déplacement vers le bas ou vers la droite est soit le bord de la fenêtre, soit un autre séparateur. | Sont déplacés sans limites avec le séparateur (conservent leur position relative). Aucune butée n’est appliquée (cf. paragraphe suivant) |
 | Redimensionnement                                                  | Gardent leur position d’origine mais sont redimensionnés en fonction de la nouvelle position du séparateur               |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                |
 | Déplacement                                                        | Se déplacent avec le séparateur                                                                                          |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                |
 
-_(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position._
+*(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 
 > Un objet entièrement contenu dans le rectangle définissant le séparateur est déplacé en même temps que le séparateur lui-même.
 
@@ -53,7 +53,7 @@ _(1) You cannot drag the splitter past the right (horizontal) or bottom (vertica
 
 Vous pouvez associer une méthode objet à un séparateur. Cette méthode sera appelée avec l’événement `On Clicked` durant tout le déplacement.
 
-Une [variable](properties_Object.md#variable-or-expression) de type _Entier long_ est associée à chaque objet séparateur. Cette variable peut être utilisée dans vos méthodes objet et/ou formulaire. Elle prend pour valeur le déplacement courant, en pixels, du séparateur.
+Une [variable](properties_Object.md#variable-or-expression) de type *Entier long* est associée à chaque objet séparateur. Cette variable peut être utilisée dans vos méthodes objet et/ou formulaire. Elle prend pour valeur le déplacement courant, en pixels, du séparateur.
 
 - Si elle est négative : le déplacement a été effectué vers le haut ou vers la gauche,
 - Si elle est positive : le déplacement a été effectué vers le bas ou vers la droite,

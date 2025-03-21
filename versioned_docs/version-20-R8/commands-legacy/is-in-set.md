@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is in set.Summary-->Is in set tests whether or not the current record for the table is in *set*.<!-- END REF--> The Is in set function returns TRUE if the current record of the table is in *set*, and returns FALSE if the current record of the table is not in *set*.
 
-#### Example 
+## Example 
 
 The following example is a button object method. It tests to see whether or not the currently displayed record is in the set of best customers:
 
@@ -30,12 +30,12 @@ The following example is a button object method. It tests to see whether or not 
  End if
 ```
 
-#### See also 
+## See also 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

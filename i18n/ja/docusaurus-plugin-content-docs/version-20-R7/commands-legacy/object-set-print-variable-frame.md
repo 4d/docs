@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->**OBJECT SET PRINT VARIABLE FRAME**コマンドは、引数 *object* と *\** で指定したオブジェクトの印刷時可変のプロパティを、変更します。<!-- END REF-->
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 | Print Frame fixed with multiple records | 倍長整数 | 2 | フレームは同じサイズを維持しますが、4Dは全てのレコードが載るまで複数回フォームを印刷します。                 |
 | Print Frame fixed with truncation       | 倍長整数 | 1 | 4Dはサブフォームのエリアに収まるレコードのみ印刷します。フォームは一度だけ印刷され、印刷されなかったレコードは無視されます。 |
 
-#### 参照 
+## 参照 
 
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

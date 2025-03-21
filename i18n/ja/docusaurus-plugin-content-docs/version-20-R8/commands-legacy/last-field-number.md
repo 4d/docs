@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Last field number.Summary-->Last field numberコマンドは、*tableNum*または*tablePtr*にテーブル番号またはポインタを渡したテーブルにあるフィールドの中で、最大のフィールド番号を返します。<!-- END REF-->
 
 フィールドは作成された順に番号が付けられています。フィールドがテーブルから何も削除されていない場合、コマンドはテーブルにあるフィールドの数を返します。テーブルのフィールド番号でループを繰り返す場合は、[Is field number valid](is-field-number-valid.md "Is field number valid")コマンドを使用して、フィールドが削除されているかを確認します。
 
-#### 例題 
+## 例題 
 
 次のプロジェクトメソッドでは、最初の引数として受け取られたポインタが指すテーブルのフィールド名から成る配列*asFields*を構築します。
 
@@ -36,14 +36,14 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

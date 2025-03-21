@@ -14,16 +14,22 @@ title: リリースノート
 
 #### ハイライト
 
-- 4D 20.6 LTS is certified on Windows Server 2025
+:::info Evaluation applications
 
-:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
 
-On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+:::
+
+- 4D 20.6 LTS はWindows Server 2025 対応です。
+
+:::警告 WINDOWS SERVER 2025 での既知の問題
+
+Windows Server 2025 では、新しいWindows 印刷ダイアログボックス内での一部のカスタムのオプションは利用不可となっており、現在調査中です。 A fix will be available in the next hotfix.
 
 :::
 
 - Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.6): 4D 20.6 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 
 
@@ -115,7 +121,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 :::
 
 - [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
-- 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
+- 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore-and-log-integration).
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。 [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。 [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
 - ユーザークラス定義で [`property`](../Concepts/classes.md#property) キーワードをサポート。
@@ -134,7 +140,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 - [データエクスプローラー](../Admin/dataExplorer.md#データエクスプローラーを開く) 用の新しいツールバーボタンと 4Dウィンドウでの表示。
 - ボタン、チェックボックス、ラジオボタンに新しいプロパティが追加されました: [タイトルと画像を隣接させる](../FormObjects/properties_TextAndPicture.md#タイトルと画像を隣接させる) と [横揃え](../FormObjects/properties_Text.md#横揃え)
 - [`file.setAppInfo()`](../API/FileClass.md#setappinfo) 関数で `WinIcon` をサポート。
-- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
+- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.com/fixes?version=20): 4D 20 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
@@ -143,10 +149,10 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 #### 動作の変更
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
-- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
+- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
 - TLS v1.0 および TLS v1.1 は廃止され、4D Server において `Min TLS version` としてサポートされなくなりました。 `_o_TLSv1_0` または `_o_TLSv1_1` 定数が [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) で設定されている場合には、バージョン 1.3 が自動的に使用されます。
 - 一貫性のため、ボタン・チェックボックス・ラジオボタンはすべて、実行時に "3D" タイプでレンダリングされるようになりました。 これらのオブジェクトに対し [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/ja/page1300.html) を呼び出した場合、返されるのはそれぞれ、`Object type 3D button`、`Object type 3D checkbox`、`Object type 3D radio button` の値です。
-- プロジェクトが [4D Mobile App Server コンポーネント](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server) の機能を使用している場合、こちらも同じ場所にインストールする必要があります。 4D 20 より、[4D for Mobile](https://developer.4d.com/go-mobile/) は 4D環境にデフォルトでインストールされなくなりました。 4D for Mobile の開発機能を 4D で利用するには、プロジェクトの ["Components"](../Project/architecture.md#components) フォルダーに [4D Mobile App コンポーネントをインストール](https://developer.4d.com/go-mobile/docs/getting-started/installation) する必要があります。
+- 4D for Mobile の開発機能を 4D で利用するには、プロジェクトの ["Components"](../Project/architecture.md#components) フォルダーに [4D Mobile App コンポーネントをインストール](https://developer.4d.com/go-mobile/docs/getting-started/installation) する必要があります。 プロジェクトが [4D Mobile App Server コンポーネント](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server) の機能を使用している場合、こちらも同じ場所にインストールする必要があります。 4D 20 より、[4D for Mobile](https://developer.4d.com/go-mobile/) は 4D環境にデフォルトでインストールされなくなりました。
 
 
 ### 4D 19 R8
@@ -187,7 +193,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 - 新しい [FileHandle](../API/FileHandleClass.md) クラスと、`File` クラスの新しい [`.open()`](../API/FileClass.md#open) 関数。
 - [EntitySelection クラス](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) 関数が *entitySelection* 引数を、[`.minus()`](../API/EntitySelectionClass.md#minus) 関数が *keepOrder* 引数をサポートするようになりました。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) において、*automaticRedirections* および *decodeData* オプションをサポート。
-- 新しい [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog) ログファイル。
+- 新しい [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlogtxt) ログファイル。
 - 4D View Pro に新しい表組みコマンドが追加されました: [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes)。
 - コンポーネント名前空間が [ エクスプローラーに表示](../Extensions/develop-components#コンポーネント名前空間の宣言) されるようになりました。
 - テキストエリアおよび入力フォームオブジェクトにおいて、[角の半径プロパティ](../FormObjects/properties_CoordinatesAndSizing#角の半径) をサポート。
@@ -201,7 +207,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 - 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
 - 4D 19 R7 から 4D の内部ビルド番号が変更されました:
     - 4D 19 R6 (含む) までのリリースは 282xxx の番号です。
-    - 4D 19 R7 以降のリリースは 100xxx という番号になります。    
+    - 4D 19 R7 以降のリリースは 100xxx という番号になります。     
       なお、特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
 - Wakanda/4D Mobile REST プロトコルを使用してプロジェクトメソッドを呼び出す機能が削除されました。 [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
 
@@ -221,7 +227,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 ### 4D 19 R5
 
-- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+- ビルド時に、プロジェクトの [directory.json ファイル](../Users/handling_users_groups.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
 - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building.md#モジュールの選択解除) できるようになりました。
 - *MeCab* ライブラリが、すべての macOS 4Dアプリケーションにデフォルトで含まれるようになりました。 日本語テキストの管理に特化したこのライブラリは、以前のリリースでは日本語版の macOS 4D でのみ利用可能でした。 最終的なアプリケーションでこのライブラリが必要ない場合は、[選択を解除](../Desktop/building.md#モジュールの選択解除) することができます。
 - [クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化): 新しいクラス関数により、ORDAキャッシュと最適化コンテキストの内容を操作することができます。 詳細は、[コンテキストの事前設定](../ORDA/remoteDatastores.md#コンテキストの事前設定) および [ORDAキャッシュ](../ORDA/remoteDatastores.md#ordaキャッシュ) を参照ください。
@@ -296,14 +302,14 @@ ALERT($param1+" "+$param2)
  $class.concate() // " " と表示
 ```
 詳細については、こちらの [ブログ記事](https://blog.4d.com/ja/stop-press-accessing-parameters-not-being-passed-is-possible) を参照ください。 この全体的な変更を利点を活かすため、呼び出し先メソッドと呼び出し元メソッドの両方を再コンパイルする必要があります。 そのため、コンポーネントの再コンパイルが必要になります。
-- Webサーバーセッションのデバッグが [4D Server 上で容易になりました](../WebServer/sessions.md#プリエンプティブモード)。
+- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 - ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 4D 19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。
 
 - XML コマンドにおける改行文字と BOM 管理: 以前のバージョンで作成されたプロジェクトまたはデータベースが 4D 19 R3 で開かれた場合、XMLドキュメントにおける改行文字と BOM 管理に関わる振る舞いが異なります: macOS において CR の代わりにラインフィード(LF) が使用されるほか、バイトオーダーマーク (BOM) が含まれなくなります。 これにより、VCS ツールとの互換性が改善されます。 必要であれば、`XML SET OPTIONS` コマンドを使用することで、v19 R2 以前の振る舞いに戻すことができます。 v19 R2 以前のバージョンから変換されたプロジェクトまたはデータベースにおいては、これらのオプションは 2つの互換性設定によって管理されます。
 - ビルドされたプロジェクトで、ランタイムエクスプローラーへのショートカットが削除: シングルユーザー版の組み込みプロジェクトアプリケーションにおいて、**Cmd/Ctrl+Shift+F9** ショートカットは、ランタイムエクスプローラーを表示しないようになりました。 このショートカットは、ユーザーアプリケーション用のショートカットとして使用できるようになりました。 ランタイムエクスプローラーウィンドウは、新しい `OPEN RUNTIME EXPLORER` コマンドを使用することで呼び出し可能です。
-- 4D Server のデバッグ機能の拡張: 4D Server はインタープリターモードにおいて、スケーラブルWeb セッションを含め、全種類のプロセスをデバッグできるようになりました。 これには、デバッガーをサーバーまたはリモートクライアントで有効化するだけです。    
+- 4D Server のデバッグ機能の拡張: 4D Server はインタープリターモードにおいて、スケーラブルWeb セッションを含め、全種類のプロセスをデバッグできるようになりました。 これには、デバッガーをサーバーまたはリモートクライアントで有効化するだけです。     
   *警告: インタープリターモードにおいて、サーバーでデバッガーが有効化された場合 (デフォルト) には、サーバーマシン上でのデバッグを可能にするため、すべてのサーバープロセスが自動でコオペラティブ実行されます。 これは、4D Server v19 R3 以降に変換されたアプリケーションにおいては、パフォーマンスに重大な影響を生ずる可能性があります。 サーバーをプリエンプティブ実行に戻すには、サーバーのデバッガーを無効化します (そして必要な場合にはリモートクライアント側でデバッガーを有効化します)。 *
 - Windows で、4D 19 R3 以降に作成された 4Dプロジェクトおよびデータベースは、フォームにおいて [DirectWrite API](https://learn.microsoft.com/ja-jp/windows/win32/DirectWrite/direct-write-portal) を使用します。 この API はテキストレンダリングを、特に高DPI 環境において改善させます。 スタティックテキスト、入力テキスト、チェックボックス、ボタン、ラジオボタンのテキストレンダリングに対して DirectWrite が使用されます。 リストボックスは、既に DirectWrite を使用しています。 以前の 4D のバージョンで作成されたプロジェクトやデータベースにおいても、互換性オプションを使用することで DirectWrite を有効化することができます。
 - Silicon (Apple ARM CPU) をターゲットに 4D 19.0 でコンパイルされたコンポーネントを使用しており、そのコンポーネント内で `Count parameters` コマンドを呼んでいる場合、4D 19 R3 以降のリリースとの互換性のために、4D 19 R3 でコンポーネントを再コンパイルすることが推奨されます。 コンポーネントが Silicon 向けにコンパイルされていない場合、再コンパイルの必要はありません。

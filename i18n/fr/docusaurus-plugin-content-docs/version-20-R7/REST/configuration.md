@@ -23,7 +23,7 @@ Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'aff
 
 Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est évidemment pas recommandé pour des raisons de sécurité et de contrôle de l'utilisation des licences clientes.
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session.
+As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#function-authentify) datastore class function to authenticate users and assign privileges to their web session.
 
 :::note Compatibilité
 
@@ -57,8 +57,8 @@ Pour supprimer l'exposition REST d'une table :
 1. Affichez l'Inspecteur de table dans l'Editeur de structure et sélectionnez la table à modifier.
 
 2. Uncheck the **Expose as REST resource** option:
-   ![alt-text](../assets/en/REST/table.png)
-   Do this for each table whose exposure needs to be modified.
+    ![alt-text](../assets/en/REST/table.png)
+    Do this for each table whose exposure needs to be modified.
 
 ### Exposer des champs
 
@@ -71,8 +71,8 @@ Pour supprimer l'exposition REST d'un champ :
 1. Affichez l'Inspecteur de champ dans l'Editeur de structure et sélectionnez le champ à modifier.
 
 2. Décochez la case **Exposer en tant que ressource REST** pour le champ.
-   ![alt-text](../assets/en/REST/field.png)
-   Repeat this for each field whose exposure needs to be modified.
+    ![alt-text](../assets/en/REST/field.png)
+    Repeat this for each field whose exposure needs to be modified.
 
 > Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
 
@@ -80,6 +80,6 @@ Pour supprimer l'exposition REST d'un champ :
 
 On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
 
 Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.

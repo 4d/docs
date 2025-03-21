@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->La commande **LISTBOX SET STATIC COLUMNS** permet de rendre statiques les *nbColonnes* premières colonnes gauches de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -23,12 +23,12 @@ Les colonnes statiques (ou colonnes fixes) ne peuvent pas être déplacées dans
 
 **Note :** Les colonnes statiques et les colonnes verrouillées sont deux fonctionnalités indépendantes. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

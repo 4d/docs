@@ -77,13 +77,13 @@ Pour plus d'informations sur ces actions, veuillez vous reporter à la section [
 
 Les cases à cocher utilisent [les styles de bouton](properties_TextAndPicture.md#button-style) pour contrôler l'apparence générale de la case à cocher ainsi que ses propriétés disponibles. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
 
-À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont _structurellement_ identiques. La différence réside dans le traitement de leurs variables associées.
+À l'exception des [propriétés disponibles](#supported-properties), de nombreux objets case à cocher sont *structurellement* identiques. La différence réside dans le traitement de leurs variables associées.
 
 4D propose des cases à cocher avec les styles de bouton prédéfinis suivants :
 
 ### Classique
 
-Le style Classique du bouton case à cocher correspond à un système de case à cocher standard (_i.e._, un rectangle avec un titre descriptif) :
+Le style Classique du bouton case à cocher correspond à un système de case à cocher standard (*i.e.*, un rectangle avec un titre descriptif) :
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
@@ -236,11 +236,11 @@ Le style de bouton OS X Textured est presque identique au style [Bevel](#bevel) 
 
 Par défaut, le style OS X Textured apparaît comme :
 
-- _Windows_ - un bouton système standard avec un fond bleu clair et un libellé au centre.
+- *Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
-- _macOS_ - un bouton système standard. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+- *macOS* - un bouton système standard. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -264,11 +264,11 @@ Le style de bouton Office XP combine l'apparence du style [Classique](#regular) 
 
 Les couleurs (surbrillance et arrière-plan) d'une case à cocher avec le style de bouton Office XP sont basées sur les couleurs du système. L'apparence de la case à cocher peut être différente lorsque le curseur la survole, selon le système d'exploitation :
 
-- _Sous Windows_ - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
+- *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- _Sous macOS_ - son arrière-plan est toujours affiché. Exemples avec les états cochés / non cochés :
+- *Sous macOS* - son arrière-plan est toujours affiché. Exemples avec les états cochés / non cochés :
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -293,11 +293,11 @@ Les couleurs (surbrillance et arrière-plan) d'une case à cocher avec le style 
 
 Ce style de case à cocher peut être utilisé pour ajouter une icône standard contracter/déployer. Ces icônes sont utilisées nativement dans les listes hiérarchiques.
 
-- _Sous Windows_ - le bouton est semblable à [+] ou à [-]
+- *Sous Windows* - le bouton est semblable à [+] ou à [-]
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-- _Sous macOS_ - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
+- *Sous macOS* - il ressemble à un triangle pointant sur vers la droite ou vers le bas.
 
 ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
@@ -325,13 +325,13 @@ Le style contracter/déployer est nommé "disclosure" dans la [grammaire JSON du
 
 Sous macOS et Windows, une case à cocher avec le style "Disclosure" apparaît comme un bouton disclosure standard, généralement utilisé pour afficher/masquer des informations supplémentaires. Lorsqu'il est utilisé comme bouton radio, le symbole du bouton pointe vers le bas avec la valeur 0 et vers le haut avec la valeur 1.
 
-- _Windows_
+- *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
-- _macOS_
+- *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -357,11 +357,11 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques :
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
+- [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#background-pathname)
 - [Décalage de l'icône](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée en conjonction avec une [image d'arrière-plan à 4 états](properties_TextAndPicture.md#background-pathname).
 
 #### Exemple JSON :
 
@@ -392,7 +392,7 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 > (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat).<br/>
 > (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
 
-Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Trois états](properties_Display.md#three-states)

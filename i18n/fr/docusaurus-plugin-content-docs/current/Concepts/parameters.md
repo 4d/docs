@@ -7,7 +7,7 @@ Vous aurez souvent besoin de fournir des valeurs à vos méthodes et fonctions. 
 
 ## Vue d’ensemble
 
-**Les paramètres** (ou **arguments**) sont des données dont une méthode ou une fonction de classe a besoin pour s’exécuter. Le terme _paramètres_ ou _arguments_ est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERT` :
+**Les paramètres** (ou **arguments**) sont des données dont une méthode ou une fonction de classe a besoin pour s’exécuter. Le terme *paramètres* ou *arguments* est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERT` :
 
 ```4d
 ALERT("Bonjour")
@@ -35,7 +35,7 @@ EXECUTER METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //dans le contexte d'un sous-formulaire
 ```
 
-Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée _MaLongueur_.
+Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur*.
 
 ```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Type de données pris en charge
 
-Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets de classe. Par exemple :
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Par exemple :
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -170,7 +170,7 @@ Function square($x : Integer) -> $result : Integer
 
 :::note
 
-Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est _indéfinie_.
+Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *indéfinie*.
 
 :::
 
@@ -214,7 +214,7 @@ Les paramètres de la méthode doivent être passés dans le bon ordre : le form
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Notez que même si vous avez déclaré 0, 1, ou plus paramètres, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles dans le code appelé via la syntaxe `${N}` et le type des paramètres supplémentaires est [Variant](dt_variant.md) par défaut (vous pouvez les déclarer en utilisant la notation variadique [](#declaring-variadic-parameter Il vous suffit de vous assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv20/help/command/fr/page259.html). Par exemple :
+Notez que même si vous avez déclaré 0, 1, ou plus paramètres, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles dans le code appelé via la syntaxe `${N}` et le type des paramètres supplémentaires est [Variant](dt_variant.md) par défaut (vous pouvez les déclarer en utilisant la notation variadique [](#declaring-variadic-parameter Il vous suffit de vous assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv20/help/command/fr/page259.html). Par exemple : Il vous suffit de vous assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv20/help/command/fr/page259.html). Par exemple :
 
 ```4d
 //foo method
@@ -319,8 +319,8 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-  - si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
-  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+ - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
+ - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Utilisation des propriétés d'objet comme paramètres nommés
 
@@ -383,7 +383,7 @@ Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dan
 
 ## Paramètres optionnels
 
-Dans le manuel _Langage de 4D_, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre _okButtonTitle_ doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
+Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
 ```4d
 ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
@@ -442,7 +442,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 
 :::tip
 
-Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-objects-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
+Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-object-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
 
 :::
 
@@ -493,13 +493,13 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Elle est décrite dans le paragraphe [Valeur retournée](#valeur-retournee).
+This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
 
 ### Cas particuliers : objets et collections
 
-Vous devez faire attention au fait que les types de données Objet et Collection ne peuvent être gérés que par une référence (c'est-à-dire un _pointeur interne_).
+Vous devez faire attention au fait que les types de données Objet et Collection ne peuvent être gérés que par une référence (c'est-à-dire un *pointeur interne*).
 
-Consequently, when using such data types as parameters, `$param, $return...` do not contain _values_ but _references_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
+Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
 
 Par exemple, considérons la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 

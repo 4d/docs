@@ -14,20 +14,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML COMMENT.Summary-->SAX GET XML COMMENT コマンドは、*document* 引数で参照されるXMLドキュメント中でXML Comment SAXイベントが生成された時、XMLコメントを*comment*に返します。<!-- END REF-->SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

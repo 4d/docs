@@ -19,7 +19,7 @@ Una constante literal de tipo fecha está rodeada de signos de exclamación (!..
 !2015-12-31!
 ```
 
-Una fecha null es especificada por _!00-00-00!_.
+Una fecha null es especificada por *!00-00-00!*.
 
 **Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha null, introduzca el signo de exclamación (!) y presione Intro.
 

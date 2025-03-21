@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->La commande **QR SET REPORT KIND** permet de définir le *type* de l'état rapide présent dans la *zone*.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Si vous définissez à l'aide de cette commande un nouveau *type* pour un état 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get report kind](qr-get-report-kind.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

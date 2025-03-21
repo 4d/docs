@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->La commande **OPEN FONT PICKER** affiche la boîte de dialogue de sélection de police du système.<!-- END REF-->
 
-**Note :** Cette boîte de dialogue est modale sous Windows mais pas sous OS X.
+**Note :** Cette boîte de dialogue est modale sous Windows mais pas sous macOS.
 
 Si l’utilisateur sélectionne une police et/ou un style et valide la boîte de dialogue, les modifications sont appliquées à la sélection courante de texte dans l’objet ayant le focus, si la propriété "Autoriser sélecteur couleur/police" est cochée pour cet objet (cf. manuel *Mode Développement*). Dans le cas contraire, la commande ne fait rien.
 

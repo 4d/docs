@@ -9,7 +9,7 @@ title: dataClass
 
 | シンタックス                                                                                                                            | 例題                                    | 説明                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                                                                 | `/Employee`                           | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
+| [**\{dataClass\}**](#dataclass)                                                                                                 | `/Employee`                           | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                   | `/Employee[22]`                       | データクラスのプライマリーキーによって特定されるエンティティのデータを返します                     |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                         | `/Employee:firstName(John)`           | 指定した属性値を持つ 1件のエンティティのデータを返します                               |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#関数の呼び出し)                                                         | `/City/getCity`                       | DataClassクラス関数を実行します                                        |
@@ -203,3 +203,4 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 次のリクエストは、名前が "Jones" である社員 (Employee) の公開データをすべて返します。
 
 `GET  /rest/Employee:lastname(Jones)`
+

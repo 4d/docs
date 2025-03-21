@@ -57,26 +57,26 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 Assim como em outros comandos de gerenciamento de propriedades de objetos, é possível usar o caractere "@" no parâmetro `ListName`. Regra geral, esta sintaxe é utilizada para designar um conjunto de objetos no formulário. No entanto, no contexto dos comandos de lista hierárquica, isso não se aplica em todos os casos. Essa sintaxe tem dois efeitos diferentes, dependendo do comando:
 
 - Para comandos que definem propriedades, essa sintaxe designa todos os objetos cujo nome corresponde (comportamento padrão). Por exemplo, o parâmetro "LH@" designa todos os objetos do tipo lista hierárquica cujo nome começa com "LH."
-  - `DELETE FROM LIST`
-  - `INSERT IN LIST`
-  - `SELECT LIST ITEMS BY POSITION`
-  - `SET LIST ITEM`
-  - `SET LIST ITEM FONT`
-  - `SET LIST ITEM ICON`
-  - `SET LIST ITEM PARAMETER`
-  - `SET LIST ITEM PROPERTIES`
+    - `DELETE FROM LIST`
+    - `INSERT IN LIST`
+    - `SELECT LIST ITEMS BY POSITION`
+    - `SET LIST ITEM`
+    - `SET LIST ITEM FONT`
+    - `SET LIST ITEM ICON`
+    - `SET LIST ITEM PARAMETER`
+    - `SET LIST ITEM PROPERTIES`
 
 - Para comandos que recuperam propriedades, essa sintaxe designa o primeiro objeto cujo nome corresponde:
-  - `Count list items`
-  - `Find in list`
-  - `GET LIST ITEM`
-  - `Get list item font`
-  - `GET LIST ITEM ICON`
-  - `GET LIST ITEM PARAMETER`
-  - `GET LIST ITEM PROPERTIES`
-  - `List item parent`
-  - `List item position`
-  - `Selected list items`
+    - `Count list items`
+    - `Find in list`
+    - `GET LIST ITEM`
+    - `Get list item font`
+    - `GET LIST ITEM ICON`
+    - `GET LIST ITEM PARAMETER`
+    - `GET LIST ITEM PROPERTIES`
+    - `List item parent`
+    - `List item position`
+    - `Selected list items`
 
 ## Comandos genéricos utilizáveis com listas hierárquicas
 
@@ -121,14 +121,14 @@ Seguem-se algumas sugestões para a utilização de números de referência:
 
 1. Não é necessário identificar cada item com um número exclusivo (nível iniciante).
 
-   - Primeiro exemplo: você cria um sistema de guias programando, por exemplo, um catálogo de endereços. Como o sistema retorna o número da guia selecionada, você provavelmente não precisará de mais informações do que isso. Nesse caso, não se preocupe com os números de referência do item: passe qualquer valor (exceto 0) no parâmetro *itemRef*. Observe que, para um sistema de catálogo de endereços, você pode predefinir uma lista A, B, ..., Z no modo Desenho. Também é possível criá-lo por programação, de modo a eliminar quaisquer letras para as quais não haja registros.
-   - Segundo exemplo: ao trabalhar com um banco de dados, você constrói progressivamente uma lista de palavras-chave. Você pode salvar essa lista no final de cada sessão usando os comandos `SAVE LIST` ou `LIST TO BLOB` e recarregá-la no início de cada nova sessão usando os comandos `Load list` ou `BLOB to list`. Você pode exibir essa lista em uma paleta flutuante; quando cada usuário clica em uma palavra-chave da lista, o item escolhido é inserido na área de entrada selecionada no processo em primeiro plano. O importante é que você processe apenas o item selecionado, pois o comando `Selected list items` retorna a posição do item que você deve processar. Ao usar esse valor de posição, você obtém o título do item por meio do comando `GET LIST ITEM`. Aqui, novamente, não é necessário identificar cada item individualmente; você pode passar qualquer valor (exceto 0) no parâmetro *itemRef*.
+    - Primeiro exemplo: você cria um sistema de guias programando, por exemplo, um catálogo de endereços. Como o sistema retorna o número da guia selecionada, você provavelmente não precisará de mais informações do que isso. Nesse caso, não se preocupe com os números de referência do item: passe qualquer valor (exceto 0) no parâmetro *itemRef*. Observe que, para um sistema de catálogo de endereços, você pode predefinir uma lista A, B, ..., Z no modo Desenho. Também é possível criá-lo por programação, de modo a eliminar quaisquer letras para as quais não haja registros.
+    - Segundo exemplo: ao trabalhar com um banco de dados, você constrói progressivamente uma lista de palavras-chave. Você pode salvar essa lista no final de cada sessão usando os comandos `SAVE LIST` ou `LIST TO BLOB` e recarregá-la no início de cada nova sessão usando os comandos `Load list` ou `BLOB to list`. Você pode exibir essa lista em uma paleta flutuante; quando cada usuário clica em uma palavra-chave da lista, o item escolhido é inserido na área de entrada selecionada no processo em primeiro plano. O importante é que você processe apenas o item selecionado, pois o comando `Selected list items` retorna a posição do item que você deve processar. Ao usar esse valor de posição, você obtém o título do item por meio do comando `GET LIST ITEM`. Aqui, novamente, não é necessário identificar cada item individualmente; você pode passar qualquer valor (exceto 0) no parâmetro *itemRef*.
 
 2. Você precisa identificar parcialmente os itens da lista (nível intermediário).\
-   O número de referência do item é usado para armazenar informações necessárias quando você precisar trabalhar com o item; esse ponto é detalhado no exemplo do comando `APPEND TO LIST`. Neste exemplo, usamos os números de referência do item para armazenar os números de registro. No entanto, devemos conseguir estabelecer uma distinção entre os itens que correspondem aos registros do [Departament] e aqueles que correspondem aos registros dos [Employees].
+    O número de referência do item é usado para armazenar informações necessárias quando você precisar trabalhar com o item; esse ponto é detalhado no exemplo do comando `APPEND TO LIST`. Neste exemplo, usamos os números de referência do item para armazenar os números de registro. No entanto, devemos conseguir estabelecer uma distinção entre os itens que correspondem aos registros do [Departament] e aqueles que correspondem aos registros dos [Employees].
 
 3. Você precisa identificar todos os itens da lista individualmente (nível atacante).\
-   Você programa um gerenciamento elaborado de listas hierárquicas em que é absolutamente necessário poder identificar cada item individualmente em cada nível da lista. Uma forma simples de o fazer é manter um contador pessoal. Suponha que você crie uma lista *hlList* usando o comando `APPEND TO LIST`. En esta etapa, se inicializa un contador *vhlCounter* en 1. Toda vez que você chamar `APPEND TO LIST` ou `INSERT IN LIST`, você incrementará esse contador `(vhlCounter:=vhlCounter+1)` e passará o número do contador como o número de referência do item. O truque consiste em nunca diminuir o contador quando você exclui itens - o contador só pode aumentar. Dessa forma, você garante a exclusividade dos números de referência do item. Como esses números são do tipo Longint, é possível adicionar ou inserir mais de dois bilhões de itens em uma lista que foi reinicializada... (no entanto, se estiver trabalhando com um número tão grande de itens, isso geralmente significa que você deve usar uma tabela em vez de uma lista).
+    Você programa um gerenciamento elaborado de listas hierárquicas em que é absolutamente necessário poder identificar cada item individualmente em cada nível da lista. Uma forma simples de o fazer é manter um contador pessoal. Suponha que você crie uma lista *hlList* usando o comando `APPEND TO LIST`. En esta etapa, se inicializa un contador *vhlCounter* en 1. Toda vez que você chamar `APPEND TO LIST` ou `INSERT IN LIST`, você incrementará esse contador `(vhlCounter:=vhlCounter+1)` e passará o número do contador como o número de referência do item. O truque consiste em nunca diminuir o contador quando você exclui itens - o contador só pode aumentar. Dessa forma, você garante a exclusividade dos números de referência do item. Como esses números são do tipo Longint, é possível adicionar ou inserir mais de dois bilhões de itens em uma lista que foi reinicializada... (no entanto, se estiver trabalhando com um número tão grande de itens, isso geralmente significa que você deve usar uma tabela em vez de uma lista).
 
 > Se você usar operadores bit a bit, também poderá usar números de referência de itens para armazenar informações que podem ser colocadas em um Longint, ou seja, 2 inteiros, valores de 4 bytes ou, mais uma vez, 32 boolianos.
 

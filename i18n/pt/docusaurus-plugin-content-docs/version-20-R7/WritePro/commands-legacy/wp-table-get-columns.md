@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Table get columns.Summary-->O comando **WP Table get columns** \[#/descv\].<!-- END REF--> devolve um novo objeto de faixa de celulas que contem a seleção de colunas *refTabela* (definida por *colIni* e *numCol)*. \[#/descv\]. 
 
@@ -38,7 +38,7 @@ Se *objTarget* não se cruzar com uma tabela ou range de texto onde se pode recu
     
 Se *colIni* mais *numCol* exceder o número de colunas em *refTabela*, ou se *colIni for* maior que o número de colunas em *refTabela*, a range devolvida contém o máximo possível de colunas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser modificar alguns atributos das duas últimas colunas de uma tabela:
 
@@ -60,7 +60,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict3307213.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Para obter uma faixa de colunas iniciando da décima até o final:
 
@@ -68,7 +68,7 @@ Para obter uma faixa de colunas iniciando da décima até o final:
  WP Table get columns(tableRef;10;MAXLONG)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser recuperar as colunas que um usuário for selecionado:
 
@@ -80,7 +80,7 @@ Se quiser recuperar as colunas que um usuário for selecionado:
  $columns:=WP Table get columns($userSelection)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get rows](wp-table-get-rows.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara a impressão de dados enviados a la impressora e provocar um salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente com [Print form](../commands/print-form.md) (no contexto do evento de formulário On Printing Detail) para forçar saltos de página e imprimir a última página criada em memória. Não utilize PAGE BREAK com o comando [PRINT SELECTION](print-selection.md). É melhor utilizar [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) com o parâmetro opcional para gerar saltos de página.
 
@@ -31,20 +31,20 @@ A segunda opção é particularmente útil quando se utiliza com um trabalho de 
 
 **Nota:** durante uma impressão de tela, se o usuário clicar em Cancelar na caixa de diálogo de pré-visualização, o comando PAGE BREAK define a variável sistema OK em 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Ver o exemplo do comando [Print form](../commands/print-form.md "Print form").
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER").
 
-#### Ver também 
+## Ver também 
 
 [CANCEL](cancel.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

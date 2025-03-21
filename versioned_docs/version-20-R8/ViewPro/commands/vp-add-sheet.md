@@ -14,7 +14,7 @@ title: VP ADD SHEET
 |sheet|Integer|-> |Index of the new sheet|
 |name|Text|->|Sheet name|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF -->
 
@@ -26,7 +26,7 @@ In *sheet*, you can pass an index for the new sheet. If the passed *index* is in
 
 In *name*, you can pass a name for the new sheet. The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
-#### Example
+## Example
 
 The document currently has 3 sheets:
 
@@ -40,7 +40,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 ![vp-add-sheet](../../assets/en/ViewPro/vp-add-sheet.png)
 
-#### See also
+## See also
 
 [VP REMOVE SHEET](vp-remove-sheet.md)
 

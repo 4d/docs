@@ -28,7 +28,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,7 +136,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 #### Valor do item selecionado ou Referência do item selecionado
 
-Quando você tiver associado uma lista suspensa a uma lista de opções e a um campo ou variável, poderá definir a propriedade [**Data Type**] (properties_DataSource.md#data-type) como **Selected item value** ou **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
@@ -157,9 +157,9 @@ Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] 
 - Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
-  - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
-  - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
-    Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
+ - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
+ - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
+  Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
 > Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 

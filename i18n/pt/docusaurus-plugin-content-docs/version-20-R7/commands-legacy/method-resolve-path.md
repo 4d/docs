@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->O comando **METHOD RESOLVE PATH** analisa a rota de acesso interna passada no parâmetro *rota* e devolve seus diferentes componentes nos parâmetros *tipoMetodo*, *ptrTabela*, *nomObjeto* e *nomObjetoForm*.<!-- END REF-->  
   
@@ -46,7 +46,7 @@ O parâmetro *nomObjetoForm* contém um nome de objeto de formulário se a rota 
   
 Se o comando se executa desde um componente, considera por padrão que a *via* designa um método do componente. Se passado o parâmetro *\**, se considera que a *via* designa um método da base local.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Resolução de uma rota de método base:
 
@@ -63,7 +63,7 @@ Resolução de uma rota de método base:
   // $formObjectName: ""
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Resolução de uma rota de método de formulário tabela:
 
@@ -80,11 +80,11 @@ Resolução de uma rota de método de formulário tabela:
   // $formObjectName: "Btn1"
 ```
 
-#### Ver também 
+## Ver também 
 
 [METHOD Get path](method-get-path.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->O comando **OBJECT SET MINIMUM VALUE** modifica o valor mínimo do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  
   
@@ -25,12 +25,12 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
   
 Em *valorMinimo*, passe o novo valor mínimo a atribuir ao objeto para o processo atual. Este valor deve coincidir com o tipo de objeto, caso contrário é mostrada a mensagem erro 18 "Os tipos de campo são incompatíveis".
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get breaks.Summary-->El comando **WP Get breaks** devuelve la colección de todas las roturas insertadas en *targetObj*.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Si *targetObj* es un rango o elemento, las rupturas se devuelven en el orden en 
 
 Se devuelve una colección vacía si *objRango* no contiene ninguna ruptura (o cualquier ruptura del *tipoRuptura* solicitado).
 
-#### Ejemplo 
+## Ejemplo 
 
 Quiere reemplazar todos los saltos de línea por saltos de párrafo en el documento:
 
@@ -75,7 +75,7 @@ Quiere reemplazar todos los saltos de línea por saltos de párrafo en el docume
  End for each
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get elements](wp-get-elements.md)  
 [WP INSERT BREAK](../commands/wp-insert-break.md)  

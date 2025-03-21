@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->O comando **DELETE FOLDER** apaga a pasta cujo nome ou rota completa for passada em *pasta*.<!-- END REF--> 
 
@@ -34,16 +34,16 @@ Como padrão, por razões de segurança, se omitir o parâmetro *deleteOption*, 
    * Se esta pasta, ou qualquer um dos arquivos que conter, não puder ser apagada, o processo é abortado assim o primeiro elemento inacessível for apagado e um erro(\*) for retornado. Isto significa que uma pasta pode ser parcialmente apagada. Quando o processo de eliminação for abortado, pode usar o comando [Last errors](last-errors.md)  para recuperar o nome e caminho do arquivo problemático.  
    * Se a pasta especificada não existir, o comando não faz nada e nenhum erro é retornado.  
    (\*) em Windows: -54 (Tentativa de abrir um arquivo bloqueado para escrita)  
-   em OS X: -45 (O arquivo está bloqueado ou o caminho não é correto)
+   em macOS: -45 (O arquivo está bloqueado ou o caminho não é correto)
 
 Pode interceptar estes erros usando o método isntalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

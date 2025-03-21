@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAX Get XML node.Summary-->El comando SAX Get XML node devuelve un entero largo indicando el tipo de evento SAX devuelto durante el análisis del documento XML referenciado por *documento*.<!-- END REF--> 
 
@@ -32,7 +32,7 @@ Los eventos que pueden devolverse están disponibles como constantes del tema �
 | XML Start Document         | Entero largo | 1     |
 | XML Start Element          | Entero largo | 4     |
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo procesa un evento: 
 
@@ -52,12 +52,12 @@ El siguiente ejemplo procesa un evento:
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error. 
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ title: VP SET CURRENT SHEET
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |                  |
 | sheet      | Integer | <- | 新しいカレントシートのインデックス       | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP SET CURRENT SHEET` コマンドは、<!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します<!-- END REF --> 。 カレントシートとは、ドキュメント内で選択されているシートのことです。
 
@@ -24,7 +24,7 @@ title: VP SET CURRENT SHEET
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 ドキュメントの最初のシートがカレントシートになっています:
 
@@ -38,6 +38,6 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### 参照
+## 参照
 
 [VP Get current sheet](vp-get-current-sheet.md)

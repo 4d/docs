@@ -77,7 +77,7 @@ Para obter informações detalhadas sobre essas ações, consulte a seção [Aç
 
 As caixas de seleção usam [estilos de botão](properties_TextAndPicture.md#button-style) para controlar a aparência geral de uma caixa de seleção, bem como suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de caixa de seleção são _estruturalmente_ idênticos. A diferença é no processamento das variáveis associadas.
+Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de caixa de seleção são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
 
 4D oferece caixas de seleção nos estilos predefinidos abaixo:
 
@@ -152,7 +152,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel
 
-O estilo de botão Bevel combina a aparência do estilo de botão [Clássico](#regular) (_ou seja,_ um retângulo com um título descritivo) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
+O estilo de botão Bevel combina a aparência do estilo de botão [Clássico](#regular) (*ou seja,* um retângulo com um título descritivo) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
 
 O estilo Bevel tem um fundo cinza claro com um título. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -236,11 +236,11 @@ O estilo de botão OS X Texturizado é semelhante ao estilo de botão [Bevel](#b
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- _Windows_ - um botão padrão com um fundo azul-claro com um título no centro.
+- *Windows* - um botão padrão com um fundo azul-claro com um título no centro.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
-- _macOS_ - um botão de sistema padrão. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - um botão de sistema padrão. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -264,11 +264,11 @@ O estilo do botão Office XP combina a aparência do estilo do botão [Clássico
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - seu fundo só aparece quando o mouse passa por cima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
+- *Windows* - seu fundo só aparece quando o mouse passa por cima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- _macOS_ - its background is always displayed. Exemplos com estados desmarcado/ marcado:
+- *macOS* - its background is always displayed. Exemplos com estados desmarcado/ marcado:
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -293,11 +293,11 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrão de contrair/expandir. Estes ícones são utilizados nativamente em listas hierárquicas.
 
-- _Windows_ - o ícone se parece com um [+] ou um [-]
+- *Windows* - o ícone se parece com um [+] ou um [-]
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-- _macOS_ - parece um triângulo apontando para a direita ou para baixo.
+- *macOS* - parece um triângulo apontando para a direita ou para baixo.
 
 ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
@@ -325,13 +325,13 @@ O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de est
 
 Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação" aparece como um botão de informação padrão, normalmente utilizado para mostrar/ocultar informação adicional. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
-- _Windows_
+- *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
-- _macOS_
+- *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -359,9 +359,9 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 
 - [Nome do caminho do plano de fundo](properties_TextAndPicture.md#background-pathname)
 - [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [Margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de 4 estados](properties_TextAndPicture.md#background-pathname).
 
 #### Exemplo JSON:
 
@@ -392,7 +392,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 > (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
 > (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
-Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#button-styles):
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Três estados](properties_Display.md#three-states)

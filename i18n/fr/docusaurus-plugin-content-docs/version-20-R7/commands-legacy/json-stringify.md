@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Stringify.Summary-->La commande **JSON Stringify** convertit le paramètre *valeur* en une chaîne JSON.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON Parse](json-parse.md).
 
@@ -37,7 +37,7 @@ Dans le cas d’un objet ou d'une collection, vous pouvez inclure tout type de v
 
 Vous pouvez passer le paramètre optionnel *\** afin d’inclure des caractères de formatage dans la chaîne résultante. Cette option permet d’améliorer la présentation des données JSON (*pretty formatting*). 
 
-#### Exemple 1 
+## Exemple 1 
 
 Conversions de valeurs scalaires :
 
@@ -54,7 +54,7 @@ Conversions de valeurs scalaires :
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Conversion d’une chaîne contenant des caractères spéciaux :
 
@@ -65,7 +65,7 @@ Conversion d’une chaîne contenant des caractères spéciaux :
      // $p={"name":"john"}
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Exemples de sérialisation d’un objet 4D avec et sans le paramètre *\** :
 
@@ -89,7 +89,7 @@ L’intérêt de ce formatage apparaît clairement lorsque le JSON est représen
 * Formatage amélioré :  
 ![](../assets/en/commands/pict1205011.fr.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 Exemple utilisant un pointeur vers une variable :
 
@@ -108,7 +108,7 @@ Exemple utilisant un pointeur vers une variable :
      //$jsonstring = "{"name" : "Smith"}"
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Sérialisation d’un objet 4D :
 
@@ -126,7 +126,7 @@ Sérialisation d’un objet 4D :
      // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Sérialisation d'un objet 4D contenant une valeur de date (Fuseau horaire de Paris). La chaîne résultante dépend du paramétrage courant de la base.
 
@@ -148,7 +148,7 @@ Sérialisation d'un objet 4D contenant une valeur de date (Fuseau horaire de Par
 
 **Note :** Pour plus d'informations sur cette option, reportez-vous à la *Page Compatibilité*.
 
-#### Exemple 7 
+## Exemple 7 
 
 Conversion d'une collection (fuseau horaire Paris). La chaîne résultante dépend du paramétrage courant de la base.
 
@@ -170,12 +170,12 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 **Note :** Pour plus d'informations sur cette option, reportez-vous à la *Page Compatibilité*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->The DOM Parse XML source command parses a document containing an XML structure and returns a reference for this document.<!-- END REF--> The command can validate (or not) the document via a DTD or an XML schema (XML Schema Definition (XSD) document).   
 The document can be located on the disk or on the Internet/Intranet. 
@@ -53,7 +53,7 @@ The command returns a 16-character string (ElementRef) making up the reference i
 
 **Important:** Once you no longer have any need for it, remember to call the [DOM CLOSE XML](dom-close-xml.md) command with this reference in order to free up the memory.
 
-#### Example 1 
+## Example 1 
 
 Opening an XML document located on disk, without validation:
 
@@ -61,7 +61,7 @@ Opening an XML document located on disk, without validation:
  $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml")
 ```
 
-#### Example 2 
+## Example 2 
 
 Opening an XML document located next to the database structure file, without validation:
 
@@ -69,7 +69,7 @@ Opening an XML document located next to the database structure file, without val
  $xml_Struct_Ref:=DOM Parse XML source("import.xml")
 ```
 
-#### Example 3 
+## Example 3 
 
 Opening an XML document located on disk and validation using a DTD on the disk:
 
@@ -77,7 +77,7 @@ Opening an XML document located on disk and validation using a DTD on the disk:
  $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml";True;"C:\\import_dtd.xml")
 ```
 
-#### Example 4 
+## Example 4 
 
 Opening an XML document located at a specific URL, without validation:
 
@@ -85,16 +85,16 @@ Opening an XML document located at a specific URL, without validation:
  $xml_Struct_Ref:=DOM Parse XML source("http://www.4D.com/xml/import.xml")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

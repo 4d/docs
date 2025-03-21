@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->The **GET FIELD RELATION** command lets you find out the automatic/manual status of the relation starting from *manyField* for the current process.<!-- END REF--> You can view any relation, including automatic relations set in the Structure window.
 
@@ -43,7 +43,7 @@ You can compare the values returned in the *one* and *many* parameters with the 
 
 * The optional *\** parameter lets you “force” the reading of the current status of the relation, even if it has not been modified by programming. In other words, when you pass the \* parameter, only the values 2 or 3 can be returned in the *one* and *many* parameters.
 
-#### Example 
+## Example 
 
 Given the following structure:
 
@@ -77,14 +77,14 @@ The following code illustrates the various possibilities offered by the **GET FI
  GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,3
 ```
 
-#### See also 
+## See also 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

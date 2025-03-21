@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->O comando **WEB GET BODY PART** chamado no contexto de um processo web, permite analisar a parte "body" de uma petição multi-part.<!-- END REF-->  
   
@@ -32,7 +32,7 @@ Os parâmetros *tipoMime* e *nomArquivo* recebem o tipo Mime e o nome do arquivo
   
 **Nota**: No contexto de uma petição multi-part, o primeiro de array do comando [WEB GET VARIABLES](web-get-variables.md) devolve todas as partes do formulário, na mesma ordem que o comando **WEB GET BODY PART**. Pode utilizar-lo para obter diretamente a posição de uma parte de um formulário. 
 
-#### Exemplo 
+## Exemplo 
 
 Neste exemplo, um formulário web permite descarregar no servidor HTTP varias imagens desde um navegador e mostrar-las na página. Este é o formulário web:
 
@@ -87,13 +87,13 @@ Este é o código do método GetFile:
  WEB SEND HTTP REDIRECT("/") // voltar a página
 ```
 
-#### Ver também 
+## Ver também 
 
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

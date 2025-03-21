@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md) コマンドなどに渡すことができます。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 *source* 引数を使用した場合、新しい4D Write Pro オブジェクトは*source* 引数の中身をコンテンツとして返されます。渡せる内容は以下の通りです:
 
-* *文字列* の引数: この場合、4D HTMLソースを渡します。つまり、 wk web page html 4D オプションを使用した[WP EXPORT VARIABLE](wp-export-variable.md) で書き出されたテキストです。このテキストは参照(4Dタグと式)と埋め込まれた画像を含むことができます。
+* *文字列* の引数: この場合、4D HTMLソースを渡します。つまり、 wk web page html 4D オプションを使用した[WP EXPORT VARIABLE](../commands/wp-export-variable.md) で書き出されたテキストです。このテキストは参照(4Dタグと式)と埋め込まれた画像を含むことができます。
 * *blob* 引数: この場合、いかのどちらかを渡す事ができます:  
    * BLOBに保存された4D Write Pro(.4wp)フォーマットドキュメント。  
    4D Write Proドキュメントフォーマットの詳細については、*.4wp ドキュメントフォーマット* を参照して下さい。  
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意**: *旧式の4D Write ドキュメント内で使用される文字スタイルシートは独自の機構が使用されており、これは4D Write Pro ではサポートされていないものです。インポートされたテキストを可能な限り再現するため、スタイルシート属性は"ハードコード"スタイル属性へと変換されています。旧式の文字スタイルシートは読み込まれず、今後ドキュメント内では参照されることはありません。*
 
-#### 例題 1 
+## 例題 1 
 
 空の4D Write Proオブジェクトを作成したい場合を考えます:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  myWPObject:=WP New
 ```
 
-#### 例題 2 
+## 例題 2 
 
 ディスク上に保存されている4D Write Pro ドキュメントから新しい4D Write Pro オブジェクトを作成します:
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
  myWPArea:=WP New($BlobDoc)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 簡単な4D式の参照を含んだ4D Write Proオブジェクトを作成したい場合を考えます:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  myWPA:=WP New(myText)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以前作成したテンプレートを使用して4D Write Proエリアを初期化したい場合を考えます:
 
@@ -90,7 +90,7 @@ displayed_sidebar: docs
  myNewWPA:=WP New(wpTemplate)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 カレントレコードのBLOB フィールドに保存されている旧4D Write ブラグインのドキュメントを、HTML 式を含めて新しい4D Write Proエリア内に読み込みたい場合を考えます:
 
@@ -99,7 +99,7 @@ displayed_sidebar: docs
  wpArea=WP New([Templates]Reference_;wk import html expressions as text)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 あらかじめフォーマットされ、それぞれがブックマークとして保存された複数のパーツで構成された、テンプレートドキュメントを定義しました。このテンプレートから任意のブックマークを新規ドキュメントとして抽出し、作成中のドキュメントに挿入することができます。
 
@@ -116,7 +116,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [WP Import document](../commands/wp-import-document.md)  
 [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

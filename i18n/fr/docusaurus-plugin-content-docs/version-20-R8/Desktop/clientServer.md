@@ -29,8 +29,8 @@ La première fois que vous vous connectez à un projet 4D Server via un 4D dista
 Pour vous connecter à distance à un projet 4D Server :
 
 1. Effectuez l'une des opérations suivantes :
-   - Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue
-   - Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
+  - Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue
+  - Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
 
 La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
 
@@ -87,7 +87,7 @@ Veillez cependant aux différences de comportement suivantes, comparées à [l'a
 
 ## Sessions utilisateur distant
 
-On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
+Sur le serveur, la commande [`Session`](../commands/session.md) renvoie un objet `session` décrivant la session utilisateur courante. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
 ### Utilisation
 
@@ -113,3 +113,4 @@ Toutes les procédures stockées sur le serveur partagent la même session utili
 ### Voir aussi (blog post)
 
 [Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+

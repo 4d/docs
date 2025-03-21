@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.COLLECTION TO ARRAY.Summary-->El comando **COLLECTION TO ARRAY** llena una o más *array*(s) con elementos o valores de *nombreProp* de la *coleccion* en *array*(s).<!-- END REF-->
 
@@ -26,7 +26,7 @@ Este comando puede funcionar con una *coleccion* que contiene valores o una *col
 
 En todos los casos, 4D convierte los elementos o valores de la colección de acuerdo al tipo de *array* (si es necesario). Las reglas de conversión se detallan en la página *Conversiones de tipo entre las colecciones y los arrays 4D*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea copiar una colección de cadenas en un array de texto:
 
@@ -40,7 +40,7 @@ Desea copiar una colección de cadenas en un array de texto:
   //...
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea copiar diferentes valores de propiedad de una colección de objetos en diferentes arrays:
 
@@ -61,12 +61,12 @@ Desea copiar diferentes valores de propiedad de una colección de objetos en dif
   //...
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY TO COLLECTION ](array-to-collection.md)  
 *Conversiones de tipo entre las colecciones y los arrays 4D*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

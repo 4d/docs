@@ -11,7 +11,7 @@ Os formulários constituem a interface através da qual a informação é introd
 Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
 - [os objectos sub-formulário](FormObjects/subform_overview.md)
-- [os formulários herdados](properties_FormProperties.md#inherited-forms)
+- [os formulários herdados](./properties_FormProperties.md#inherited-form-name)
 
 ## Criar formulários
 
@@ -19,7 +19,7 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 - **Interface do Desenvolvedor 4D:** Crie novos formulários no menu **Arquivo** ou na janela **Explorador**.
 - **Editor de Formulário**: Modifique seus formulários usando o **[Editor de Formulário](FormEditor/formEditor.md)**.
-- **Código JSON:** Crie e conceba os seus formulários utilizando JSON e guarde os arquivos de formulário na [localização adequada](Project/architecture.md#sources-folder). Exemplo:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). Exemplo:
 
 ```
 {

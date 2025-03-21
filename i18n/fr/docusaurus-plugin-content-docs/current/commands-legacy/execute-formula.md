@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** exécute *instruction* comme une ligne de code.<!-- END REF--> Cette commande est destinée à être utilisée lorsque vous devez évaluer des expressions qui peuvent être construites ou modifiées par l'utilisateur. 
 
@@ -36,7 +36,7 @@ La formule peut utiliser des variables process et interprocess. En revanche, *in
 
 Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](current-time.md), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 
-##### Cache de formules en mode compilé 
+### Cache de formules en mode compilé 
 
 A des fins d'optimisation, chaque formule exécutée via **EXECUTE FORMULA** en mode compilé peut être conservée en mémoire dans un cache dédié. La formule est stockée sous forme de références (*tokens*). Une fois placée dans le cache, une formule s'exécutera de manière beaucoup plus rapide par la suite car la phase de *tokenisation* sera évitée. 
 
@@ -49,7 +49,7 @@ La taille du cache est de zéro par défaut (pas de cache) ; vous devez le crée
 
 La commande **EXECUTE FORMULA** utilise le cache uniquement lorsqu'elle est appelée depuis une base ou un composant exécuté(e) en mode compilé. 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez exécuter une formule incluant des appels à des commandes et des tables 4D. Comme ces éléments peuvent potentiellement être renommés, vous voulez vous assurer de l'exécution correcte de l'instruction dans les versions futures de votre application en utilisant la syntaxe avec *tokens* :
 
@@ -57,13 +57,13 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
  EXECUTE FORMULA("Annee de:C25 ([Products:5]Creation_Date:2])+$add")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -37,15 +37,15 @@ Con barra de fórmula visible:
 
 Tanto la interfaz de la cinta de opciones como la de la barra de herramientas agrupan funciones relacionadas en pestañas:
 
-| Pestaña  | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
-| -------- | ------------------------------- |:--------------:|:------------------------------:|
-| File     | Gestión de archivos             |       X        |                                |
-| Inicio   | Apariencia del texto            |       X        |               X                |
-| Insertar | Añadir elementos                |       X        |               X                |
-| Fórmulas | Cálculos de fórmulas y librería |       X        |               X                |
-| Datos    | Gestión de los datos            |       X        |               X                |
-| Mostrar  | Presentación visual             |       X        |               X                |
-| Settings | Presentación de la hoja         |       X        |                                |
+| Pestaña     | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
+| ----------- | ------------------------------- |:--------------:|:------------------------------:|
+| File        | Gestión de archivos             |       X        |                                |
+| Inicio      | Apariencia del texto            |       X        |               X                |
+| Insertar    | Añadir elementos                |       X        |               X                |
+| Fórmulas    | Cálculos de fórmulas y librería |       X        |               X                |
+| Datos       | Gestión de los datos            |       X        |               X                |
+| Mostrar     | Presentación visual             |       X        |               X                |
+| Propiedades | Presentación de la hoja         |       X        |                                |
 
 ## Eventos formulario
 
@@ -145,8 +145,8 @@ Los formatos numéricos se aplican a todos los tipos de números (por ejemplo, p
 | " "       | Muestra el texto entre comillas sin interpretarlo.                                                                                                                                                                                                   | "8%" será mostrado como: 8%                                                                                                                             |
 | %         | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                       | 8% se mostrará como 0,08                                                                                                                                |
 | \#      | Marcador de posición de dígitos que no muestra ceros adicionales. Si un número tiene más dígitos a la derecha del decimal que marcadores de posición, el número se redondea.                                                                         | #.# mostrará 1.54 como 1.5                                                                                                                              |
-| ?         | Marcador de posición de dígitos que deja espacio para ceros adicionales, pero no los muestra. Normalmente se utiliza para alinear números por punto decimal.                                                                                         | $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                                        |
-| \        | Muestra el caracter que lo sigue.                                                                                                                                                                                                                    | #.00\? #.00\? will display 123 as 123.00?                                                                                                             |
+| ?         | Marcador de posición de dígitos que deja espacio para ceros adicionales, pero no los muestra. Normalmente se utiliza para alinear números por punto decimal.                                                                                         | $?? $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                                    |
+| \        | Muestra el caracter que lo sigue.                                                                                                                                                                                                                    | #.00\? #.00\? #.00\? will display 123 as 123.00?                                                                                                     |
 | /         | Cuando se utiliza con números, los muestra como fracciones. Cuando se utiliza con códigos de texto, fecha u hora, se muestra "tal cual".                                                                                                             | #/# mostrará .75 como 3/4                                                                                                                               |
 | \[ ]     | Crea formatos condicionales.                                                                                                                                                                                                                         | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                                                     |
 | E         | Formato notación científica.                                                                                                                                                                                                                         | #E+# - mostrará 2E+6 en lugar de 1,500,500                                                                                                              |
@@ -224,7 +224,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | ^           | Circunflejo                                                                                 | #\^#                |
 | '           | Apostrofe                                                                                   | '######              |
 | { }         | Paréntesis curvos                                                                           | {###,###,###}        |
-| `< >` | Signos menor que y mayor que                                                                | ## >##              |
+| `< >` | Signos menor que y mayor que                                                                | `## >##`          |
 | =           | Signo igual                                                                                 | #+#=##               |
 | /           | Barra inclinada hacia adelante. Cuando se utiliza con números, los muestra como fracciones. | mm/dd/yyyy           |
 | !           | Signo de exclamación                                                                        | $###.00!             |
@@ -284,7 +284,7 @@ Los atributos de encabezado y pie de página se utilizan para especificar texto 
 
 Los siguientes caracteres especiales permiten añadir o dar formato automáticamente a la información del encabezado y pie de página cuando se imprime el área de 4D View Pro.
 
-| Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
+| Caracter | Descripción                       | Ejemplo                                                                | Resultado                                            |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &        | Caracter de escape                | (ver ejemplos más abajo)                                               |                                                      |
 | P        | Página actual                     | printInfo.headerLeft:="Esta es la página &P."                          | Esta es la página 5.|                                |
@@ -292,7 +292,7 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 | D        | Fecha actual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                         | Es 2015/6/19.                                        |
 | T        | Hora actual                       | printInfo.headerLeft:="Es &T."                                         | Es 16:30:36.                                         |
 | G        | Imagen                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S        | Tachado                           | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
+| S        | Disposición                       | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
 | U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Subrayado)                           |
 | B        | Negrita                           | printInfo.headerLeft:="&BEsto es texto."                               | **Esto es texto.**                                   |
 | I        | Itálica                           | printInfo.headerLeft:="&IEsto es texto."                               | *Esto es texto.*                                     |
@@ -367,8 +367,8 @@ El atributo de escala se utiliza para la optimización y el ajuste de la impresi
 | -------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | bestFitColumns | boolean      | El ancho de la columna se ajusta para adaptarse al ancho del texto más grande para la impresión. Valor por defecto: "false" |
 | bestFitRows    | boolean      | La altura de la línea se ajusta a la altura del texto más alto para la impresión. Valor por defecto: "false"                |
-| fitPagesTall   | entero largo | El número de páginas verticales (orientación vertical) que hay que comprobar al optimizar la impresión. Por defecto = -1    |
-| fitPagesWide   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1    |
+| fitPagesTall   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1    |
+| fitPagesWide   | entero largo | El número de páginas verticales (orientación vertical) que hay que comprobar al optimizar la impresión. Por defecto = -1    |
 
 ### Mostrar / Ocultar
 
@@ -376,9 +376,9 @@ Los atributos Mostrar / Ocultar se utilizan para especificar la visibilidad (imp
 
 | Propiedad        | Tipo         | Descripción                                                                                                                                                                                                     |
 | ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean      | Prints the outline border. Default value = "true"                                                                                                                                                               |
+| showBorder       | boolean      | Imprime las líneas de la cuadrícula. Valor por defecto: "false"                                                                                                                                                 |
 | showColumnHeader | entero largo | Parámetros de impresión del encabezado de la columna. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean      | Imprime las líneas de la cuadrícula. Valor por defecto: "false"                                                                                                                                                 |
+| showGridLine     | boolean      | Prints the outline border. Valor por defecto: "false"                                                                                                                                                           |
 | showRowHeader    | entero largo | Parámetros de impresión de los encabezados de línea. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once`  |
 
 ### Marca de agua
@@ -503,7 +503,7 @@ Contiene las siguientes propiedades:
 | ViewPro.area           | Text          | Nombre del área 4D View Pro                                                                                                                                                                                                                                                                                                         |
 | ViewPro.callbacks      | Object        | Almacena la información temporal necesaria para los comandos que requieren retrollamadas, como la importación y la exportación.                                                                                                                                                                                                     |
 | ViewPro.commandBuffers | Collection    | Almacena secuencialmente los comandos llamados por el método y los ejecuta como un lote (en lugar de individualmente) al salir del método, o si un comando devuelve un valor o se llama a [VP FLUSH COMMANDS](method-list.md#vp-flush-commands). Este mecanismo aumenta el rendimiento al reducir el número de peticiones enviadas. |
-| ViewPro.events         | Object        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                         |
+| ViewPro.events         | Object        | Lista [Evento](#form-events).                                                                                                                                                                                                                                                                                                       |
 | ViewPro.formulaBar     | Boolean       | Indica si se muestra o no la barra de fórmulas. Disponible sólo para la interfaz de la "barra de herramientas".                                                                                                                                                                                                                     |
 | ViewPro.inited         | Boolean       | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                             |
 | ViewPro.interface      | Text          | Especifica el tipo de interfaz de usuario: "cinta", "barra de herramientas", "ninguna".                                                                                                                                                                                                                                             |

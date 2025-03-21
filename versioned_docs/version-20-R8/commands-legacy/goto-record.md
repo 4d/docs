@@ -14,22 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** selects the specified record of *aTable* as the current record.<!-- END REF--> The *record* parameter is the number returned by the [Record number](record-number.md) function. After executing this command, the record is the only record in the selection.
 
 If *record* is less than the smallest record number in the database or greater than the greatest record number in the database, 4D generates an error message stating that the record number is out of range. If *record* is equal to the record number of a deleted record, 4D returns the error -10503 and the selection becomes empty.
 
-#### Example 
+## Example 
 
 See the example for [Record number](record-number.md).
 
-#### See also 
+## See also 
 
 *About Record Numbers*  
 [Record number](record-number.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

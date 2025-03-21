@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->La commande **OBJECT GET SCROLLBAR** permet de connaître le statut affiché/masqué des barres de défilement horizontale et verticale de l'objet ou du groupe d'objets désigné par *objet*.<!-- END REF--> 
 
@@ -42,11 +42,11 @@ Cette commande est utilisable avec les objets de formulaire suivants :
 
 Pour plus d'informations, reportez-vous à la description de la commande [OBJECT SET SCROLLBAR](object-set-scrollbar.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

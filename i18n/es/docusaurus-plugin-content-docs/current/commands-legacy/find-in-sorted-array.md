@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Find in sorted array.Summary-->**Tema:** Arrays
 
@@ -39,7 +39,7 @@ En caso de que el comando devuelva **False**, el valor devuelto en *posPrim* se 
   
 El valor devuelto en *posUlt* se puede utilizar en conjunto con el valor devuelto en *posPrim* para iterar sobre cada elemento del array correspondiente al *valor* (vía un [ARRAY TO LIST](array-to-list.md)) o para encontrar el número total de ocurrencias (como lo encontraría [Count in array](count-in-array.md), pero más rápido).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea insertar un valor, si es necesario, manteniendo el array ordenado:
 
@@ -53,7 +53,7 @@ Usted desea insertar un valor, si es necesario, manteniendo el array ordenado:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
   
 Usted quiere encontrar el número de ocurrencias de las cadenas que comienzan por "test" y crear una cadena que concatena todos estos elementos:
@@ -69,13 +69,13 @@ Usted quiere encontrar el número de ocurrencias de las cadenas que comienzan po
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

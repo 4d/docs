@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE SET.Summary-->CREATE SET crea un nuevo conjunto, *conjunto*, para *tabla*, y coloca la selección actual en *conjunto*.<!-- END REF--> El puntero del registro actual de la tabla se guarda con *conjunto*. Si *conjunto* se utiliza con [USE SET](use-set.md "USE SET"), la selección actual y el registro actual se restauran. Como para todo conjunto, no hay criterio de ordenación; cuando *conjunto* se utiliza, se utiliza el orden por defecto. Si ya existe un conjunto con el mismo nombre, el conjunto existente se borra y reemplaza por el nuevo conjunto.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de manera que el conjunto pueda guardarse en el disco:
 
@@ -28,12 +28,12 @@ El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de man
  SAVE SET("ConjuntoBusqueda";"MiBusqueda") // El conjunto se guarda en el disco
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR SET](clear-set.md)  
 [CREATE EMPTY SET](create-empty-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

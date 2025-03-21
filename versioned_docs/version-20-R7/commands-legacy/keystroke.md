@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Keystroke.Summary-->**Keystroke** returns the character entered by the user into a field or an enterable area.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ You will use the command **Keystroke** for:
 * Filtering data entry in a way that you cannot produce using data entry filters
 * Implement dynamic lookup or autocomplete areas
 
-#### Example 1 
+## Example 1 
 
 See examples for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 
-#### Example 2 
+## Example 2 
 
 When you process an On Before Keystroke event, you are dealing with the editing of the current text area (the one where the cursor is), not with the “future value” of the data source (field or variable) for this area. The Handle keystroke project method allows to shadow any text area data entry into a second variable, which you can use to perform the actions while entering characters into the area. You pass a pointer to the area’s data source as the first parameter and a pointer to the shadow variable as second parameter. The method returns the new value of the text area in the shadow variable, and returns **True** if the value is different from it what was before the last entered character was inserted.
 
@@ -163,13 +163,13 @@ Here is the form being executed:
 
 Using the interprocess communication capabilities of 4D, you can similarily build user interfaces in which Lookup features are provided in floating windows that communicate with processes in which records are listed or edited.
 
-#### See also 
+## See also 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

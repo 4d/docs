@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo banco de dados On Startup.Summary-->O Método banco de dados On Startup é chamada uma vez que se abra um banco.<!-- END REF-->
 
@@ -35,11 +35,11 @@ O Método banco de dados On Startup é perfeito para:
 * Realizar outras ações que deseja executar automaticamente cada vez que abra um banco.
 No entanto, lhe recomendamos NÃO lançar trabalhos de impressão desde o **Método banco de dados On Startup**. 
 
-#### Exemplo 
+## Exemplo 
 
 Veja o exemplo na seção [Semaphore](semaphore.md).
 
-#### Ver também 
+## Ver também 
 
 [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
 *Métodos de banco de dados*  

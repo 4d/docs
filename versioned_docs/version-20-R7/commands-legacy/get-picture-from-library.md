@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->The **GET PICTURE FROM LIBRARY** command returns in the *picture* parameter the Picture Library graphic whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF-->
 
 If there is no picture with that reference number or name, **GET PICTURE FROM LIBRARY** leaves *picture* unchanged. 
 
-#### Example 1 
+## Example 1 
 
 The following example returns in *vgMyPicture* the picture whose reference number is stored in the local variable *$vlPicRef*:
 
@@ -28,7 +28,7 @@ The following example returns in *vgMyPicture* the picture whose reference numbe
  GET PICTURE FROM LIBRARY($vlPicRef;vgMyPicture)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example returns in *$DDcom\_Prot\_MyPicture* the picture with the name "DDcom\_Prot\_Button1" stored in the Picture Library:
 
@@ -36,25 +36,25 @@ The following example returns in *$DDcom\_Prot\_MyPicture* the picture with the 
  GET PICTURE FROM LIBRARY("DDcom_Prot_Button1";$DDcom_Prot_MyPicture)
 ```
 
-#### Example 3 
+## Example 3 
 
 See the third example for the [PICTURE LIBRARY LIST](picture-library-list.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the Picture Library exists, the OK variable is set to 1\. Otherwise, OK is set to zero.
 
-#### Error management 
+## Error management 
 
 If there is not enough memory to return the picture, an error -108 is generated. You can catch this error using an error-handling method.
 
-#### See also 
+## See also 
 
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

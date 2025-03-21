@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Create deployment license.Summary-->The **Create deployment license** command creates an embedded license file in the Licenses folder of the *mergedApp* built application.<!-- END REF--> If the Licenses folder does not exist the *mergedApp*, it is created by the command.
 
@@ -42,7 +42,7 @@ The command returns a *status* object containing the following properties:
 * The generated license must be used only with the application referenced by *mergedApp*.
 * It is necessary to regenerate the license each time the application is rebuilt.
 
-#### Example 
+## Example 
 
 ```4d
  var $status : Object
@@ -53,11 +53,11 @@ The command returns a *status* object containing the following properties:
  $status:=Create deployment license($application;$license)
 ```
 
-#### See also 
+## See also 
 
 [Blog post - Finalize an application with 4D commands](https://blog.4d.com/finalize-an-application-with-4d-commands)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

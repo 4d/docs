@@ -14,14 +14,14 @@ Você pode atribuir a variável associada ao objeto a uma área de entrada (camp
 Um stepper pode ser associado diretamente a uma variável número, hora ou data.
 
 - Para valores do tipo tempo, as propriedades Mínimo, Máximo e Etapa representam segundos. Por exemplo, para definir um passo de 8:00 a 18:00 com passos de 10 minutos:
-  - [mínimo](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
-  - [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
-  - [step](properties_Scale.md#step) = 600 (10\*60)
+    - [mínimo](properties_Scale.md#minimum) = 28 800 (8\*60\*60)
+    - [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
+    - [step](properties_Scale.md#step) = 600 (10\*60)
 - Para valores do tipo data, o valor inserido na propriedade [step](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.
 
 > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to [declare it explicitly](../Concepts/variables.md#declaring-variables) as `Time` or `Date`.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicators) in the "Progress Indicator" page.
+Para mais informações, consulte [Usando indicadores](progressIndicator.md#using-indicators) na página "Indicador de Progresso".
 
 ## Propriedades compatíveis
 
@@ -31,3 +31,9 @@ For more information, please refer to [Using indicators](progressIndicator.md#us
 
 - [progress indicators](progressIndicator.md)
 - [rulers](ruler.md)
+
+
+
+
+
+

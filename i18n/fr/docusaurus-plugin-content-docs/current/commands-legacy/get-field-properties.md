@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->La commande **GET FIELD PROPERTIES** retourne des informations sur le champ désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->
 
@@ -53,7 +53,7 @@ Après l'appel :
 * Le paramètre *unique* retourne Vrai si le champ dispose de l’attribut “Unique”, Faux sinon.
 * Le paramètre *invisible* retourne Vrai si le champ dispose de l’attribut “Invisible”, Faux sinon. L’attribut Invisible permet de masquer le champ dans les éditeurs standard de 4D (étiquettes, graphes...).
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans l'exemple suivant, les variables *vType*, *vLong*, *vIndex*, *vUnique* et *vInvisible* prennent pour valeur les propriétés du troisième champ de la première table :
 
@@ -61,7 +61,7 @@ Dans l'exemple suivant, les variables *vType*, *vLong*, *vIndex*, *vUnique* et *
  GET FIELD PROPERTIES(1;3;vType;vLong;vIndex;vUnique;vInvisible)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUnique* et *vInvisible* les propriétés du champ \[Table3\]Champ2 :
 
@@ -69,13 +69,13 @@ L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUn
  GET FIELD PROPERTIES(->[Table3]Champ2;vType;vLong;vIndex;vUnique;vInvisible)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

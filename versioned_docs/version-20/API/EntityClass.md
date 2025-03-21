@@ -624,7 +624,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>History</summary>
@@ -678,7 +678,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### See also
 
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -947,7 +947,7 @@ The object returned by `.lock( )` contains the following properties:
 ||task_name |text |Process name|
 ||client_version| text |Release of the client|
 ||||***Available only for a REST session lock:***|
-||host|text|URL that locked the entity (e.g. "www.myserver.com")|
+||host|text|URL that locked the entity (e.g. "`www.myserver.com`")|
 ||IPAddr |text|IP address of the locker (e.g. "127.0.0.1")|
 ||userAgent |text|userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")|
 ||||***Available only in case of serious error*** (primary key already exists, disk full...):|
@@ -1564,7 +1564,7 @@ Returns:
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>History</summary>
 
@@ -1607,7 +1607,7 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>History</summary>
 

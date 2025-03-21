@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->O comando **OBJECT GET SUBFORM CONTAINER SIZE** devolve a *largura* e a *altura* (em pixels) de um objeto sub-formulário "atual", mostrado no formulário pai.<!-- END REF-->  
   
@@ -28,12 +28,12 @@ O evento On Resize é gerado no método formulario de subformulário se o objeto
 * Se o comando se chama desde um formulário que não se está utilizando como um sub-formulário, devolve o tamanho atual de la janela do formulário.
 * Se o comando se chama fora do contexto da visualização da tela (por exemplo, durante a impressão do formulário), devolve 0 em *largura* e *altura*.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

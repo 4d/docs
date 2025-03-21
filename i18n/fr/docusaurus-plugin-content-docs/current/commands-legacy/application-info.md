@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 <!--REF #_command_.Application info.Summary-->La commande **Application info** retourne un objet qui fournit des informations détaillées sur l'activité de l'application courante et sa configuration réseau.<!-- END REF-->
 
@@ -45,7 +45,7 @@ L'objet retourné contient les propriétés suivantes :
 
 (\*) Sur Windows, vous devez vous assurer que ce compteur est préalablement initialisé, en appelant par exemple la commande **Application info** dans la [On Startup database method](on-startup-database-method.md).
 
-#### Exemple
+## Exemple
 
 Le code suivant retourne un objet contenant des informations sur l'application courante :
 
@@ -125,14 +125,14 @@ Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 }
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

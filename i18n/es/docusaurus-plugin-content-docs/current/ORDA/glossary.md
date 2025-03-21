@@ -138,7 +138,7 @@ En esta documentación, el tipo de datos "Mixto" se utiliza para designar los di
 - collection
 - imagen(\*)
 
-_(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como_ `entitySelection.max( )`.
+*(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como* `entitySelection.max( )`.
 
 ## Bloqueo optimista
 
@@ -150,13 +150,13 @@ Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acce
 
 ## Privilegio
 
-La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
+La capacidad de ejecutar una o varias [acciones](#action) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propiedad
 
 Ver [Atributo](#attribute).
 
-> \> <em x-id="3">Attributes</em> and <em x-id="3">properties</em> are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> &#062; Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 

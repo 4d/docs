@@ -12,7 +12,7 @@ title: Restaurar
 
 - La pérdida de archivo(s) de la aplicación. Este incidente puede producirse por sectores defectuosos en el disco que contiene la aplicación, un virus, un error de manipulación, etc. Hay que restaurar la última copia de seguridad y luego integrar el archivo de historial actual. Para saber si una aplicación ha sido dañada tras un incidente, basta con relanzarla con 4D. El programa realiza un auto diagnóstico y detalla las operaciones de reparación a realizar. En modo automático, estas operaciones se realizan directamente sin ninguna intervención por parte del usuario. Si se ha puesto en marcha una estrategia regular de copias de seguridad, las herramientas de restauración de 4D le permitirán (en la mayoría de los casos) recuperar la aplicación en el estado exacto en que se encontraba antes del incidente.
 
-> 4D puede lanzar procedimientos automáticamente de recuperación de las aplicaciones tras los incidentes. Estos mecanismos se gestionan mediante dos opciones disponibles en la página **Backup/Backup y Restauración** de las Propiedades. Para más información, consulte el párrafo [Restauración automática](settings.md#automatic-restore).  
+> 4D puede lanzar procedimientos automáticamente de recuperación de las aplicaciones tras los incidentes. Estos mecanismos se gestionan mediante dos opciones disponibles en la página **Backup/Backup y Restauración** de las Propiedades. Para más información, consulte el párrafo [Restauración automática](settings.md#automatic-restore-and-log-integration).  
 > Si la incidencia es el resultado de una operación inadecuada realizada sobre los datos (eliminación de un registro, por ejemplo), puede intentar reparar el archivo de datos utilizando la función "rollback" del archivo de historial. Esta función está disponible en la página [Retroceder](MSC/rollback.md) del CSM.
 
 
@@ -30,7 +30,7 @@ Para restaurar manualmente una aplicación a través de una caja de diálogo est
 ![](../assets/en/Backup/backup07.png)
 
 También puede hacer clic en el botón **[...]** para especificar una ubicación diferente.
-3. Haga clic en el botón **Restaurar**. 4D extrae todos los archivos de copia de seguridad de la ubicación especificada. Si el archivo de historial actual o un archivo de copia de seguridad del historial tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no están presentes en el archivo de datos, el programa le pregunta si desea integrar estas operaciones. La integración se realiza automáticamente si la opción **de integración automática del historial** está seleccionada (ver [Restauración automática](settings.md#automatic-restore)).
+3. Haga clic en el botón **Restaurar**. 4D extrae todos los archivos de copia de seguridad de la ubicación especificada. Si el archivo de historial actual o un archivo de copia de seguridad del historial tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no están presentes en el archivo de datos, el programa le pregunta si desea integrar estas operaciones. La integración se realiza automáticamente si la opción **de integración automática del historial** está seleccionada (ver [Restauración automática](settings.md#automatic-restore-and-log-integration)).
 
 4.(Opcional) Haga clic en **OK** para integrar el archivo de historial en la aplicación restaurada. Si la restauración y la integración se han realizado correctamente, 4D muestra una caja de diálogo que indica que la operación se ha realizado con éxito.
 5. Haga clic en **OK**.
@@ -47,7 +47,7 @@ Puede restaurar manualmente un archivo de la aplicación actual utilizando la p�
 
 ## Integración manual del historial
 
-Si no ha marcado la opción de integración automática del archivo de historial en la página Restaurar del CSM (ver [Integración sucesiva de varios archivos de historial](MSC/restore.md#successive-intergration-of-several-data-log-files)), aparece una caja de diálogo de advertencia durante la apertura de la aplicación cuando 4D advierte que el archivo de historial contiene más operaciones de las que se han realizado en el archivo de datos.
+Si no ha marcado la opción de integración automática del archivo de historial en la página Restaurar del CSM (ver [Integración sucesiva de varios archivos de historial](MSC/restore.md#successive-integration-of-several-data-log-files)), aparece una caja de diálogo de advertencia durante la apertura de la aplicación cuando 4D advierte que el archivo de historial contiene más operaciones de las que se han realizado en el archivo de datos.
 
 ![](../assets/en/Backup/backup08.png)
 

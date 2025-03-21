@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->O comando SET PRINT OPTION se utiliza para modificar por programação o valor de una opção de impressão.<!-- END REF-->. Cada opção definida utilizando este comando se aplica [ configurações de impressão 4D](../settings/compatibility.md) sempre que não se chame outro comando que modifique os parâmetros de impressão ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) sem o parâmetro > parâmetro, etc.). Se tiver aberto um trabalho de impressão, (por exemplo com [OPEN PRINTING JOB](open-printing-job.md)), a opção está configurada para o trabalho e não pode ser modificada enquanto o trabalho não tiver terminado (exceto para Orientation option, ver abaixo).
 
-##### Usar um número de opção (constante) 
+### Usar um número de opção (constante) 
 
 O parâmetro option permite indicar a opção para ser modificada. Pode passar uma das constantes pré-definidas do tema “*Opções de Impressão*”, ou um código de opção PDF (utilizável com o driver PDFCreator em Windos).  
   
@@ -32,7 +32,7 @@ Passe os novos valores da opção especificada nos parâmetros value1 e (opciona
 | Scale option                 | 3     | *valor1* apenas: valor escalar em porcentagem. Tome cuidado, algumas impressoras não permitem que essa escala seja modificada. Se passar um valor inválido, a propriedade é resetada para 100% ao começar a impressão.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Number of copies option      | 4     | *valor1* apenas: número de cópias a imprimir.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Paper source option          | 5     | (Windows apenas) *valor1* unicamente: número correspondente ao índice, no array de bandejas devolvido pelo comando [PRINT OPTION VALUES](print-option-values.md), da bandeja de papel a utilizar. Esta opção só se pode utilizar em Windows.<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Destination option           | 9     | *valo1*: código especificando o tipo de destino de impressão: 1=Printer, 2=(PC)/PS File (Mac), 3=PDF file, 5=Screen (opção OS X driver).<br/>Se *valor1* for diferente de 1 ou 5, *valor2* contém rota de caminho para o documento resultante. Esta rota será usada até que outra rota seja especificada. Se um arquivo com o mesmo nome já existir no local destino, será substituído. Com [GET PRINT OPTION](get-print-option.md), se o valor atual não estiver na lista pré-definida, *valor1* contém -1 e a variável de sistema OK é marcada como 1\. Se um erro ocorrer, *valor1* eda variável sistema OK é estabelecida como 0\. **<br/>Nota** **(Windows)**: Para imprimir PDF no Windows, você tem que chamar [SET CURRENT PRINTER](set-current-printer.md)(Generic PDF driver) e definir o destino de impressão para 2 (Arquivo) ou 3 (Arquivo PDF). A configuração 3 permite que você escreva código multiplataforma. |
+| Destination option           | 9     | *valo1*: código especificando o tipo de destino de impressão: 1=Printer, 2=(PC)/PS File (Mac), 3=PDF file, 5=Screen (opção macOS driver).<br/>Se *valor1* for diferente de 1 ou 5, *valor2* contém rota de caminho para o documento resultante. Esta rota será usada até que outra rota seja especificada. Se um arquivo com o mesmo nome já existir no local destino, será substituído. Com [GET PRINT OPTION](get-print-option.md), se o valor atual não estiver na lista pré-definida, *valor1* contém -1 e a variável de sistema OK é marcada como 1\. Se um erro ocorrer, *valor1* eda variável sistema OK é estabelecida como 0\. **<br/>Nota** **(Windows)**: Para imprimir PDF no Windows, você tem que chamar [SET CURRENT PRINTER](set-current-printer.md)(Generic PDF driver) e definir o destino de impressão para 2 (Arquivo) ou 3 (Arquivo PDF). A configuração 3 permite que você escreva código multiplataforma. |
 | Double sided option          | 11    | *value1*: 0=Single-sided or standard, 1=Double-sided. Se *value1*\=1, *value2* contém a binding: 0=Left binding (padrão), 1=Top binding.<br/>**Nota:** Esta opção pode somente ser usada em Windows.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Spooler document name option | 12    | *valor1* unicamente: nome do documento de impressão atual, que aparece na lista de documentos da fila de impressão. O nome definido para esta instrução será utilizada para todos os documentos de impressão da sessão até que um novo nome ou uma string vazia não seja passada. Para utilizar ou reestabelecer o funcionamento normal (usando o nome de método no caso de um método, o nome da tabela para um registro, etc.), passe uma string vazia em *valor1*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Page range option            | 15    | *valor1*\=primeira página a imprimir (valor padrão é 1) e (opcional) *valor2*\=número da última página a imprimir (valor padrão -1 = fim do documento).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -46,7 +46,7 @@ Quando tiver fixado utilizando este comando, uma opção de impressão será con
 * É indispensável utilizar o parâmetro opcional *\>* com os comandos [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md) e [PAGE BREAK](page-break.md) para evitar reinicializar as opções de impressão que foram definidas utilizando o comando SET PRINT OPTION.
 * O comando **SET PRINT OPTION** só opera com impressoras PostScript. Pode utilizar este comando com outros tipos de impressoras, tais como PCL ou tinta, mas neste caso, é possível que algumas opções não estejam disponíveis.
 
-#### Exemplo 
+## Exemplo 
 
 Nas versões 64-bits, o valor Opção de Orientação pode ser modificado dentro do mesmo trabalho de impressão (caso especial). Note que a opção deve ter sido estabelecida antes do comando [PAGE BREAK](page-break.md):
 
@@ -65,15 +65,15 @@ Nas versões 64-bits, o valor Opção de Orientação pode ser modificado dentro
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK toma o valor 1 se o comando for executado corretamente; do contrário, toma o valor 0
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se o valor passado por uma *opção* é incorreto ou se não estiver disponível na impressora, o comando devolve um erro (que pode interceptar utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL")) e o valor atual da opção permanece sem mudanças. 
 
-#### Ver também 
+## Ver também 
 
 [GET PRINT OPTION](get-print-option.md)  
 *Opções de Impressão*  
@@ -81,7 +81,7 @@ Se o valor passado por uma *opção* é incorreto ou se não estiver disponível
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

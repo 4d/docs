@@ -27,7 +27,7 @@ displayed_sidebar: docs
 :::
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HTTP Get.Summary-->**HTTP Get**コマンドは指定したURLにHTTP GETリクエストを送信し、HTTPサーバーからのレスポンスを処理します。<!-- END REF-->引数にはリクエストの送信先URLを渡します。シンタックスは以下の通りです:
 
@@ -64,7 +64,7 @@ BLOBを渡した場合、テキストやピクチャー、その他 (.wav, .zip,
 コマンドからは標準のHTTPステータスコードが返されます (200=OK等)。HTTPステータスコードについては*RFC 2616*を参照してください。   
 ネッ トワークに関連する理由 (DNS解決に失敗した、サーバーに接続できないなど...) により、サーバーに接続できない場合、コマンドは0を返し、エラーが生成されます。このエラーは[ON ERR CALL](on-err-call.md)コマンドを使用してインストールされたエラー処理メソッドで処理できます。
 
-#### 例題 1 
+## 例題 1 
 
 4D Webサイトから4Dロゴを取得する:
 
@@ -77,7 +77,7 @@ BLOBを渡した場合、テキストやピクチャー、その他 (.wav, .zip,
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 RFCを取得する:
 
@@ -90,7 +90,7 @@ RFCを取得する:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 動画を取得する:
 
@@ -100,11 +100,11 @@ RFCを取得する:
  BLOB TO DOCUMENT(vBlob;"video.flv")
 ```
 
-#### 参照 
+## 参照 
 
 [HTTP Request](http-request.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

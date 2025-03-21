@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->GET MENU ITEM ICON コマンドは*iconRef*変数に、*menu* と *menuItem*引数で指定されたメニュー項目に関連付けられたアイコンの参照を返します。<!-- END REF-->この参照はピクチャーのパス名または番号です。
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 メニュー項目にアイコンが割り当てられていない場合、コマンドは空値を返します。
 
-#### 参照 
+## 参照 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

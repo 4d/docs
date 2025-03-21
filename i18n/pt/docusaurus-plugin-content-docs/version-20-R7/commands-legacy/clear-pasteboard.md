@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->O comando CLEAR PASTEBOARD apaga o conteúdo da área de transferência.<!-- END REF--> Se a área de transferência contiver múltiplas instâncias dos mesmos dados, todas as instâncias são apagadas. Depois de chamar a CLEAR PASTEBOARD, a área de transferência fica vazio. 
 
@@ -22,7 +22,7 @@ Se chama a CLEAR PASTEBOARD uma vez e depois chama a [APPEND DATA TO PASTEBOARD]
 
 Pelo contrário, os comandos [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md "SET TEXT TO PASTEBOARD") e [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md "SET PICTURE TO PASTEBOARD") limpam automaticamente a área de transferência antes de pôr dados TEXT ou PICT nele.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O código a seguir apaga e depois adiciona dados a área de transferência: 
 
@@ -32,15 +32,15 @@ O código a seguir apaga e depois adiciona dados a área de transferência:
  APPEND DATA TO PASTEBOARD('SYLK';$vxSylkDados) // Adiciona dados de tipo SYLK
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver também 
+## Ver também 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

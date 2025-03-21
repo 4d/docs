@@ -18,11 +18,11 @@ displayed_sidebar: docs
 *Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
-#### Compatibilidad 
+## Compatibilidad 
 
 <!--REF #_command_.WP Selection range.Summary-->**WP Selection range** fue nombrado **WP Get selection** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado por claridad.
 
-#### Descripción 
+## Descripción 
 
 El comando **WP Selection range** devuelve un nuevo objeto de rango de texto o un objeto imagen basado en el texto seleccionado actualmente en el área *wpArea* de 4D Write Pro.
 
@@ -32,7 +32,7 @@ Si pasa el parámetro opcional *\**, indica que *wpArea* es un nombre de objeto 
 
 Si se selecciona una imagen anclada (imagen en una ubicación fija) en *wpArea*, **WP Selection range** devuelve un objeto de referencia de imagen y no un objeto rango (para más información, consulte la descripción del comando [WP Add picture](wp-add-picture.md). De lo contrario, **WP Selection range** devuelve un nuevo objeto de rango. Para mayor información sobre objetos de rango, consulte *Comandos de gestión de rangos*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea obtener el texto seleccionado de un área 4D Write Pro:
 
@@ -40,7 +40,7 @@ Usted desea obtener el texto seleccionado de un área 4D Write Pro:
  $range:=WP Selection range(*;"WParea")
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Picture range](wp-picture-range.md)  

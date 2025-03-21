@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open document.Summary-->La commande **Open document** ouvre le document dont vous avez passé le nom dans *nomFichier*.<!-- END REF-->
 
@@ -50,7 +50,7 @@ Une fois que vous avez ouvert un document, vous pouvez écrire ou lire des valeu
 
 N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](close-document.md) pour le document. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant ouvre un document existant qui s'appelle “Note”, écrit la chaîne “Au revoir” dans le document et le referme. Tout contenu éventuellement présent dans le document est remplacé :
 
@@ -63,7 +63,7 @@ L'exemple suivant ouvre un document existant qui s'appelle “Note”, écrit la
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous pouvez lire un document déjà ouvert en écriture :
 
@@ -72,7 +72,7 @@ Vous pouvez lire un document déjà ouvert en écriture :
  vRef:=Open document("PassFile";"TEXT";Read Mode) // Le fichier est lu
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le document est correctement ouvert, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Après l'appel, la variable système Document contient le nom complet du document.   
 Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de référence de document). Le document n’est pas ouvert mais les variables système Document et OK sont mises à jour :
@@ -82,12 +82,12 @@ Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de 
 
 **Note :** Si vous passez une chaîne vide dans *document*, une boîte de dialogue d’ouverture de fichiers apparaît. Si elle est validée, Document et OK sont mises à jour comme décrit ci-dessus. Si elle est annulée, OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

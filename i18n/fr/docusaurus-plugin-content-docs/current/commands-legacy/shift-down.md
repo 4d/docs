@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Shift down.Summary-->**Shift down** retourne Vrai si la touche **Majuscule** est enfoncée.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 La méthode objet du bouton *bUnBouton* effectue des actions différentes en fonction de la ou des touche(s) de modification enfoncée(s) au moment du clic :
 
@@ -43,7 +43,7 @@ La méthode objet du bouton *bUnBouton* effectue des actions différentes en fon
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -52,7 +52,7 @@ La méthode objet du bouton *bUnBouton* effectue des actions différentes en fon
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

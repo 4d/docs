@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY INTEGER.Summary-->El comando ARRAY INTEGER crea y/o redimensiona un array de elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") de 2 bytes en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
@@ -26,7 +26,7 @@ Cuando aplica ARRAY INTEGER a un array existente:
 * Si agranda el tamaño del array, los elementos existentes no son modificados, y los elementos nuevos se inicializan en 0.
 * Si reduce el tamaño del array, los últimos elementos son borrados del array y se pierden.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array proceso de 2 bytes de 100 elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)"):
 
@@ -34,7 +34,7 @@ Este ejemplo crea un array proceso de 2 bytes de 100 elementos de tipo [Entero](
  ARRAY INTEGER(aiValores;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 2 bytes de 100 filas de 50 elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)"):
 
@@ -42,7 +42,7 @@ Este ejemplo crea un array local de 2 bytes de 100 filas de 50 elementos de tipo
  ARRAY INTEGER($aiValores;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array interproceso de 2 bytes de 50 elementos de tipo [Entero](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)"), y asigna a cada elemento su número de elemento:
 
@@ -53,12 +53,12 @@ Este ejemplo crea un array interproceso de 2 bytes de 50 elementos de tipo [Ente
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

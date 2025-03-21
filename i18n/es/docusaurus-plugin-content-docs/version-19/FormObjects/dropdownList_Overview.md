@@ -28,7 +28,7 @@ Puede crear diferentes tipos de listas desplegables con distintas funcionalidade
 
 > Esta funcionalidad sólo está disponible en proyectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. El objeto debe contener las siguientes propiedades:
+Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection.md) puede utilizarse como fuente de datos de una lista desplegable. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                      |
 | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -135,7 +135,7 @@ Cuando se ejecuta el formulario, 4D gestiona automáticamente la lista desplegab
 
 #### Valor del elemento seleccionado o Referencia del elemento seleccionado
 
-Cuando haya asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type) en **valor del elemento seleccionado** o **referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
+Cuando ha asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type-list) como **Valor del elemento seleccionado** o **Referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Uso de una lista de selección jerárquica
 

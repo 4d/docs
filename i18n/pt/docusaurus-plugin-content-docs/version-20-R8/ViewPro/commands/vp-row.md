@@ -15,11 +15,11 @@ title: VP Row
 | row        | Integer | ->                          | Índice de linha                                             |                  |
 | rowCount   | Integer | ->                          | Número de linhas                                            |                  |
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Range object of row(s)                   | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto intervalo de linha(s)             | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
-The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->retorna um novo objeto de intervalo referenciando uma linha ou linhas<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -31,7 +31,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 
 - `vk current sheet`
 
-#### Exemplo
+## Exemplo
 
 Se quiser definir um objeto de intervalo para a linha exibida abaixo (na planilha atual):
 
@@ -43,7 +43,7 @@ Você pode escrever:
 $row:=VP Row("ViewProArea";9) // linha 10
 ```
 
-#### Veja também
+## Veja também
 
 [VP All](vp-all.md)<br/>
 [VP Cell](vp-cell.md)<br/>
@@ -51,3 +51,4 @@ $row:=VP Row("ViewProArea";9) // linha 10
 [VP Column](vp-column.md)<br/>
 [VP Combine ranges](vp-combine-ranges.md)<br/>
 [VP Name](vp-name.md)
+

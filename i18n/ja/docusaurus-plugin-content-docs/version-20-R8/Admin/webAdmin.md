@@ -63,7 +63,7 @@ Web管理の設定ダイアログボックスを開くには、**ファイル �
 
 #### WebAdmin サーバーをスタートアップ時に起動
 
-4D または 4D Server アプリケーションの起動時に `WebAdmin` Webサーバーを自動的に開始させるには、このオプションをチェックします ([前述参照](#自動スタートアップ)）。 デフォルトでは、このオプションはチェックされていません。
+Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). デフォルトでは、このオプションはチェックされていません。
 
 #### ローカルホストでHTTP接続を受け入れる
 
@@ -150,3 +150,5 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 - 4D または 4D Server のメニュー項目 (**レコード ＞ データエクスプローラー** または **ウィンドウ ＞ データエクスプローラー** (4D Server) など) から Web管理ページに直接アクセスした場合、アクセスは認証なしで許可され、ユーザーは自動的に認証されます。
 
 アクセスが許可されると、4Dアプリケーション上に "WebAdmin" 権限を持つ Web[セッション](WebServer/sessions.md) が作成されます。 カレントセッションが "WebAdmin" 権限を持っている限り、`WebAdmin` コンポーネントは要求されたページを提供します。
+
+

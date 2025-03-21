@@ -5,7 +5,7 @@ title: コンポーネント
 
 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを GitHubで見つけて ダウンロードすることもできます。
 
 4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
@@ -34,7 +34,7 @@ Components can be interpreted or [compiled](../Desktop/building.md). コンポ�
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
-- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-local-dependency).
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -56,8 +56,8 @@ Components can be interpreted or [compiled](../Desktop/building.md). コンポ�
 
 このファイルには次の内容を含めることができます:
 
-- デフォルトパス、または **environment4d.json** ファイルで定義されたパスに [ローカル保存されている](#ローカルコンポーネントの宣言) コンポーネントの名前
-- [GitHubリポジトリ](#github保存のコンポーネントの宣言) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
+- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
+- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -96,7 +96,7 @@ flowchart TB
 
 ### ローカルコンポーネント
 
-ローカルコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+ローカルコンポーネントは [**dependencies.json**ファイル](#dependenciesjson) にて次のように宣言します:
 
 ```json
 {
@@ -144,7 +144,7 @@ flowchart TB
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+**environment4d.json** ファイルで定義されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、*Not found* [ステータス](#依存関係のステータス) が表示されます。
 
 :::
 
@@ -180,7 +180,7 @@ GitHub に保存された 4Dコンポーネントを直接参照して使用す�
 
 #### パスの宣言
 
-GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependenciesjson) にて次のように宣言します:
 
 ```json
 {
@@ -211,7 +211,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 GitHub ではリリースを作成するときに、**タグ** と **バージョン** を指定します。
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
 
 ```json
 {
@@ -305,10 +305,10 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 依存関係パネルを表示するには:
 
 - 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
 
@@ -322,7 +322,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
+**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
 
 選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
 
@@ -333,11 +333,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 プロジェクトに依存関係を追加するには、**追加** をクリックします。
 
 - プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environment4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
-この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
+この段階で [**environment4d.json**](#environment4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
 
 :::
 

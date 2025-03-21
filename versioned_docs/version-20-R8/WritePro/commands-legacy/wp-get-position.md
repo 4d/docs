@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get position.Summary-->The **WP Get position** command returns an object describing the current position of *targetObj*.<!-- END REF-->
 
@@ -65,7 +65,7 @@ If *layout* is omitted, the 4D Write Pro layout is used by default.
 If *targetObj* is displayed in a 4D Write Pro form area, make sure that viewing settings of the area match the command viewing settings to get consistent information. Note also that if these settings are different in the area, 4D Write Pro will have to "clone" the document to calculate the layout at each call of the command, which can be time consuming. For performance reasons, it is recommended in this case to build the document offline and to copy it to the form object area only when the build is complete.
 * This command should not be called within events that are frequently generated (such as On After Edit) since *result.rangeHeight* for example could require time consuming rendering calculations that have to be done at each event call.
 
-#### Example 1 
+## Example 1 
 
 You want to know the page number of a range:
 
@@ -76,7 +76,7 @@ You want to know the page number of a range:
  ALERT("First page number in selection is "+String($rangePosition.page))
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to set to blue color the text in the first and last pages of the document:
 
@@ -98,7 +98,7 @@ You want to set to blue color the text in the first and last pages of the docume
  End for each
 ```
 
-#### Example 3 
+## Example 3 
 
 While building a document, you want to avoid paragraph splits:
 
@@ -132,7 +132,7 @@ While building a document, you want to avoid paragraph splits:
  End for each
 ```
 
-#### Example 4 
+## Example 4 
 
 The following examples illustrate the returned bounding rectangle coordinates, depending on the *targetObj*.
 
@@ -153,6 +153,6 @@ The following examples illustrate the returned bounding rectangle coordinates, d
 
 ![](../../assets/en/WritePro/commands/pict4096411.en.png)
 
-#### See also 
+## See also 
 
 [WP PRINT](wp-print.md)  

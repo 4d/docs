@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->The GET RELATION PROPERTIES command returns the properties of the relation (if any) which starts from the source field defined by *tableNum* and *fieldNum* or by *fieldPtr*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Once the command has been executed:
 
 **Note:** The *autoOne* and *autoMany* parameters will also return **True** if no relation starts from the source field (in this case they return non-significant values). The value of both the *oneTable* and *oneField* parameters allows you to make sure that a relation exists. 
 
-#### See also 
+## See also 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -44,7 +44,7 @@ Once the command has been executed:
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

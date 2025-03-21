@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-| Parâmetro | Tipo   |                             | Descrição                                                                                                   |
-| --------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| aTable    | Tabela | &#8594; | Tabela que contém o formulário ou Se omitido: tabela padrão ou uso do formulário do projeto |
-| form      | Text   | &#8594; | Nome do formulario                                                                                          |
-| object    | Text   | &#8594; | Nome do objeto do formulário ou nome do grupo                                                               |
+| Parâmetro | Tipo   |                             | Descrição                                                                                 |
+| --------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------- |
+| aTable    | Tabela | &#8594; | Table owning the form or If omitted: default table or use of project form |
+| form      | Text   | &#8594; | Nome do formulario                                                                        |
+| object    | Text   | &#8594; | Nome do objeto do formulário ou nome do grupo                                             |
 
 <!-- END REF-->
 
@@ -24,9 +24,9 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.O comando **FORM EDIT** abre o *formulário* associado a *aTable* no editor do formulário 4D, com opcionalmente *objeto* selecionado. Note que você deve ter acesso ao ambiente de Design, caso contrário o erro -9804 ("Impossível abrir formulário") será gerado.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.O comando **FORM EDIT** abre o *formulário* associado a *aTable* no editor do formulário 4D, com opcionalmente *objeto* selecionado. Note que você deve ter acesso ao ambiente de Design, caso contrário o erro -9804 ("Impossível abrir formulário") será gerado.
 
 O comando é assíncrono: ele retorna imediatamente ao método de chamada e não espera que a forma seja aberta.
 
@@ -40,7 +40,7 @@ Se *objeto* não for encontrado em *formulário*, o formulário é aberto e nenh
 
 Passa uma seqüência de caracteres vazia em *objeto* para desmarcar todos os objetos da *forma* aberta.
 
-#### Exemplos
+## Exemplos
 
 Para abrir o formulário *Contacts* da tabela *Address*:
 
@@ -60,13 +60,15 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
  FORM EDIT("ContactList"; "name-input")
 ```
 
-#### Veja também
+## Veja também
 
-*Design de Comandos de Acesso aos Objetos*
+[Design Object Access Commands](../commands/theme/Design_Object_Access.md)
 
-#### Propriedades
+## Propriedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1749                            |
-| Thread seguro     | &amp;cross; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1749                        |
+| Thread safe    | &cross; |
+
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->El comando **OBJECT Get data source** devuelve la fuente de datos actual de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -23,7 +23,7 @@ Puede definir la fuente de datos para un objeto en modo Diseño utilizando la Li
   
 Pasando el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado un objeto combo box definido en un formulario:
 
@@ -38,11 +38,11 @@ Ejecuta el siguiente código:
 
   
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

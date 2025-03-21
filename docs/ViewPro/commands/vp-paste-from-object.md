@@ -21,7 +21,7 @@ title: VP PASTE FROM OBJECT
 |dataObject|Object|->|Object containing the data to be pasted|
 |options|Integer|->|Specifies what is pasted|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
@@ -44,11 +44,11 @@ The paste options defined in the [workbook options](vp-set-workbook-options.md) 
 
 If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
-#### Example
+## Example
 
 See example the example from [VP Copy to object](vp-copy-to-object.md)
 
-#### See also
+## See also
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>

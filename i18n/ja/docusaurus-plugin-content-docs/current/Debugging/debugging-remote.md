@@ -20,7 +20,7 @@ title: リモートマシンからのデバッグ
 - ローカルの 4D Serverデバッガー (デフォルト) - サーバーがヘッドレス実行されていない場合
 - リモート4Dクライアントのデバッガー - リモートセッションがデザインモードにアクセス可能な場合
 - 4D Server 上の [Qodly デバッガー](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) - Qodly Studio へのアクセスがサーバーで許可されている場合。
-- the **VS Code** debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+- **VS Code** デバッガーは、[4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) 拡張機能をインストールしていた場合に提供されます。
 
 有効化済デバッガーは、4D Server が次のいずれかに遭遇した場合に呼び出されます:
 

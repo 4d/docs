@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->La commande **QR REPORT TO BLOB** place dans le BLOB *blob* (variable ou champ) l’état dont la référence a été passée dans le paramètre *zone*.<!-- END REF-->
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Exemple 
+## Exemple 
 
 L'instruction suivante affecte l'état rapide stocké dans la zone MaZone à un champ BLOB :
 
@@ -28,11 +28,11 @@ L'instruction suivante affecte l'état rapide stocké dans la zone MaZone à un 
  QR REPORT TO BLOB(MaZone;[Table 1]ChampBlob)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

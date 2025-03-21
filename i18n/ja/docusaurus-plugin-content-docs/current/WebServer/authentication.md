@@ -23,7 +23,7 @@ Webユーザーに特定のアクセス権を与えるには、ユーザーを�
 
 ### カスタムの認証 (デフォルト)
 
-このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4Dは、[認証を必要とする](#データベースメソッドの呼び出し) HTTPリクエストのみを評価します。
+このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 この認証モードは最も柔軟性が高く、以下のことが可能です:
 
@@ -51,8 +51,8 @@ ds.webUser.save()
 入力された値は次のように評価されます:
 
 - **4Dパスワードを含む** オプションがチェックされている場合、ユーザーの認証情報はまず、[内部の 4Dユーザーテーブル](Users/overview.md) に対して評価されます。
-  - ブラウザーから送信されたユーザー名が 4D のユーザーテーブルに存在し、パスワードが正しい場合、接続は受け入れられます。 パスワードが正しくなければ接続は拒否されます。
-  - ユーザー名が 4D のユーザーテーブルに存在しない場合、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
+ - ブラウザーから送信されたユーザー名が 4D のユーザーテーブルに存在し、パスワードが正しい場合、接続は受け入れられます。 パスワードが正しくなければ接続は拒否されます。
+ - ユーザー名が 4D のユーザーテーブルに存在しない場合、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
 - **4Dパスワードを含む** オプションがチェックされていない場合、ユーザーの認証情報は、その他の接続情報 (IPアドレス、ポート、URL など) とともに [`On Web Authentication`](#on-web-authentication) データベースメソッドに受け渡されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
 
 > 4Dクライアントの Webサーバーでは、すべての 4Dクライアントマシンが同じユーザーテーブルを共有することに留意が必要です。 ユーザー名/パスワードの検証は 4D Serverアプリケーションでおこなわれます。
@@ -83,12 +83,12 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
 
 - Webサーバーが有効な静的ページを要求する URL を受信したとき。
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### シンタックス
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
 | 引数        | 型       |                             | 説明                                              |
 | --------- | ------- | :-------------------------: | ----------------------------------------------- |
@@ -115,7 +115,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 :::note
 
-`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-mode)の設定により異なります。
+`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-modes)の設定により異なります。
 
 :::
 

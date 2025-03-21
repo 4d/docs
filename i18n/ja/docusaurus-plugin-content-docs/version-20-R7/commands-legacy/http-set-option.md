@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HTTP SET OPTION.Summary-->**HTTP SET OPTION**コマンドは ([HTTP Get](http-get.md)や[HTTP Request](http-request.md)コマンドで実行される次のリクエストでクライアントにより使用される) HTTPオプションの値を設定します。<!-- END REF-->設定するオプションの数だけこのコマンドを呼び出します。
 
@@ -40,12 +40,12 @@ displayed_sidebar: docs
 
 オプションはどのような順番で設定してもかまいません。おなじオプションを複数回設定した場合、最後に設定された値が使用されます。
 
-#### 参照 
+## 参照 
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

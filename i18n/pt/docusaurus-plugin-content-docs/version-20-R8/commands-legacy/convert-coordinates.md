@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CONVERT COORDINATES.Summary-->O comando **CONVERT COORDINATES**converte as coordenadas (x;y) de um ponto de um sistema de coordenadas para outro.<!-- END REF--> Os sistemas de coordenada de entrada e saída compatíveis são formulários e subformulários, janelas e a tela. Por exemplo, pode usar este comando para obter as coordenadas no formulário principal de um objeto que pertence a um subformulário. Isso faz com que seja fácil criar um menu contextual para qualquer posição personalizada. 
 
@@ -30,12 +30,12 @@ No parâmetro *de*, passe o sistema de coordenadas inicial que o ponto de input 
 | ----------------- | ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | XY Current form   | Inteiro longo | 1     | A origen é o canto superior esquerdo do formulário atual<br/>                                                                      |
 | XY Current window | Inteiro longo | 2     | A origem é a esquina superior esquerda na janela atual <br/>                                                                       |
-| XY Main window    | Inteiro longo | 4     | Em Windows: origem é a esquina superior esquerda da janela principal; em OS X: igual que XY Screen                                         |
+| XY Main window    | Inteiro longo | 4     | Em Windows: origem é a esquina superior esquerda da janela principal; em macOS: igual que XY Screen                                         |
 | XY Screen         | Inteiro longo | 3     | A origem é o canto superior esquerdo na tela principal (igual que para o comando [SCREEN COORDINATES](screen-coordinates.md))<br/> |
 
 Quando este comando for chamado a partir do método de um subformulário ou de um objeto de subformulário, e se um dos seletores for XY Current form, então as coordenadas são relativas ao próprio subformulário, e não ao seu formulário pai. 
 
-Quando convertendo de/para a posição de uma janela formulário (por exemplo quando convertendo dos resultados de [GET WINDOW RECT](get-window-rect.md), ou para valores passados a [Open form window](open-form-window.md)), XY Main window deve ser usado já que é o sistema de coordenadas usado pelos comandos de janela em Windows. Também pode ser usado para esse propósito em OS X, onde é equivalente a XY Screen.
+Quando convertendo de/para a posição de uma janela formulário (por exemplo quando convertendo dos resultados de [GET WINDOW RECT](get-window-rect.md), ou para valores passados a [Open form window](open-form-window.md)), XY Main window deve ser usado já que é o sistema de coordenadas usado pelos comandos de janela em Windows. Também pode ser usado para esse propósito em macOS, onde é equivalente a XY Screen.
 
 Quando *de* for XY Current form e o ponto estiver na seção corpo do formulário lista, o resultado depende do contexto de chamada do comando:
 
@@ -43,7 +43,7 @@ Quando *de* for XY Current form e o ponto estiver na seção corpo do formulári
 * Se o comando for chamado fora de um evento On Display Detail mas enquanto um registro estiver sendo editado, o ponto resultante estará localizado na exibição do registro sendo editado
 * De outra forma, o ponto resultate estará localizado na exibição do primeiro registro
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser abrir um menu pop-up no canto esquerdo inferior do objeto "MyObject".
 
@@ -64,7 +64,7 @@ Se quiser abrir um menu pop-up no canto esquerdo inferior do objeto "MyObject".
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser abrir uma janela pop-up na posição do cursor do mouse, em Windows, precisa converter as coordenadas desde [MOUSE POSITION](mouse-position.md) (com o parâmetro \*) retorna valores baseados na posição da janela MDI:
 
@@ -78,14 +78,14 @@ Se quiser abrir uma janela pop-up na posição do cursor do mouse, em Windows, p
  CLOSE WINDOW($window)
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

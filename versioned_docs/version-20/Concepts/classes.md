@@ -338,7 +338,7 @@ Class Constructor ($name : Text ; $age : Integer)
 // You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"HelloWorld";"age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 
@@ -554,7 +554,7 @@ Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
 
-2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. Inside a [class member function](#function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //calls "doSomething" function  

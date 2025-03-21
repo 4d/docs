@@ -179,7 +179,7 @@ Voici le résultat des différentes options de cette propriété :
 
 ## Image hugs title
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](properties_Text.md#horizontal-alignment) properties.
 
 Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre).
 

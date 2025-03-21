@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST CLICK.Summary-->La commande **POST CLICK** simule un clic souris.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur clique réellement avec le bouton de la souris.
 
@@ -24,12 +24,12 @@ Vous passez les coordonnées horizontale et verticale du clic dans *sourisX* et 
 
 Si vous passez le paramètre *process*, le clic est envoyé au process dont vous avez passé le numéro. Si vous passez *0* (zéro) ou si vous omettez ce paramètre, le clic est envoyé au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
 
-#### Voir aussi 
+## Voir aussi 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

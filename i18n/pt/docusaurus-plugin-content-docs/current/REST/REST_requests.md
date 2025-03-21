@@ -46,3 +46,4 @@ Com cada petição REST, se obtém o estado junto com a resposta. Abaixo estão 
 A resposta (em formato JSON) varia dependendo da petição.
 
 Se um erro surgir, será enviado junto com a resposta do servidor ou será a resposta do servidor.
+

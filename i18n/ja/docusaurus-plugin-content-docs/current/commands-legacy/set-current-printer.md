@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET CURRENT PRINTER.Summary-->**SET CURRENT PRINTER** コマンドは現行の4Dアプリケーションでの印刷に使用するプリンターを指定するために使用します。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 このコマンドは [PRINT SELECTION](print-selection.md)、[PRINT RECORD](print-record.md)、[Print form](../commands/print-form.md)、および [QR REPORT](qr-report.md) コマンドと一緒に使用することができ、デザインモードを含め、4Dにおけるすべての印刷に対して適用されます。  
 指定した設定が失われないようにするには、必要に応じて印刷コマンドは必ず引数 *\>* を用いて呼び出さなければなりません。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 プリンターの選択が正しく実行されると、システム変数OKに1が設定されます。そうでない場合 (例えば指定したプリンターが見つからない場合など) は、システム変数OKは0に設定され、カレントプリンターは変更されません。
 
-#### 例題 
+## 例題 
 
 Windows 環境下でのPDF ドキュメントの作成は、以下のようにします:
 
@@ -49,12 +49,12 @@ Windows 環境下でのPDF ドキュメントの作成は、以下のように�
  SET CURRENT PRINTER("")
 ```
 
-#### 参照 
+## 参照 
 
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

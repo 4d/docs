@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties enables you to change and update the properties of an existing group whose unique group ID number you pass in *groupID*, or to add a new group.<!-- END REF--> 
 
@@ -47,17 +47,17 @@ To remove all the members from a group, pass an empty *members* array.
 * Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a group affiliated with the Designer, pass -1 in groupID. To create a group affiliated with the Administrator, pass -2 in groupID.
 * The group owner is not automatically set as a member of the group that he or she owns. It is up to you to include the group owner in the group, using the *members* parameter.
 
-#### Error management 
+## Error management 
 
 If you do not have the proper access privileges for calling Set group properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-#### See also 
+## See also 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET ROW COLOR.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 他のリストボックスプロパティ(全体のプロパティ、列のカラー配列など)によって、このコマンドと異なる色が指定された場合、4D内の優先順位に応じて処理されます。この優先順位の詳細に関しては、 *Design Reference* を参照して下さい。a
 
-#### 例題 
+## 例題 
 
 配列型のリストボックス内において、行全体と、行内の単一のセルの色を指定したい場合:
 
@@ -58,14 +58,14 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
-#### 参照 
+## 参照 
 
 *List Box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

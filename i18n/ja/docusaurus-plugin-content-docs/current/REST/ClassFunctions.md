@@ -29,7 +29,7 @@ The following ORDA and singleton functions can be called in REST:
 
 :::note
 
-`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
+`/rest/{dataClass}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/{dataClass}` はデータクラスの全エンティティをエンティティセレクションに返します)。 EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 :::
 
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([_プリエンプティブプロセスを使用_ の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 :::info
 
@@ -134,11 +134,11 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
+- `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### リレートエンティティ引数
 
@@ -538,7 +538,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### エンティティセレクションを引数として受け取る
 
-`Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの _finalExam_ 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
+`Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
 // Students class

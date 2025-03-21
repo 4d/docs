@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 上級者向け 
+## 上級者向け 
 
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->このコマンドは特定の用途のために用意されています。<!-- END REF-->データベースのパフォーマンスに影響するため、注意して使用しなければなりません。
 
-#### 説明 
+## 説明 
 
 コマンドはカレントセッションにおいて、すべてのプロセスで、キャッシュ内にある*aTable* 引数で指定されたテーブルに関連するデータに対し*priority* 引数で指定された特定の優先度を設定します。このこのコマンドは、必ず**On Startup** あるいは **On Server Startup**データベースメソッド内で呼び出されなければなりません。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Cache priority high      |                    |
 | Cache priority very high |                    |
 
-#### 例題 
+## 例題 
 
 内において、\[Customer\]スカラーデータに対して高い優先度を設定したい場合を考えます:
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
  SET TABLE CACHE PRIORITY([Customer];Cache priority very high)
 ```
 
-#### 参照 
+## 参照 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

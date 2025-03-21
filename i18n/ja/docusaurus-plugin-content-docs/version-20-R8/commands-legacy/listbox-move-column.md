@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->**LISTBOX MOVE COLUMN**コマンドは、 *object* と *\** によって指定された列を、プログラムによって実行中のフォームにおいて移動させます。<!-- END REF-->(アプリケーションモード)デザインモードで生成されたオリジナルのフォームは変更されません。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 この機能は以前の4Dからアプリケーションモードには存在するものでした。ユーザーは「ドラッグしない列数」に含まれない列であればマウスで動かすことができました。しかしながら、ユーザーによって列が移動された場合と異なり、このコマンドは On Column Moved イベントを生成しません。
 
-#### 例題 
+## 例題 
 
 リストボックスの2列目と3列目を入れ替えたい場合:
 
@@ -37,11 +37,11 @@ displayed_sidebar: docs
  LISTBOX MOVE COLUMN(*;"column2";3)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

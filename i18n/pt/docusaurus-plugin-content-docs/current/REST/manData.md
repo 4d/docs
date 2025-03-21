@@ -27,7 +27,7 @@ Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$l
 
 ## Criar e gerenciar conjuntos de entidades
 
-Un conjunto de entidades (también conocido como _selección de entidades_) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
+Un conjunto de entidades (también conocido como *selección de entidades*) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
 Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua solicitação REST. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
@@ -41,11 +41,11 @@ Se quiser remover um conjunto de entidades do cache de 4D Server, você pode usa
 
 Se modificar qualquer dos atributos de entidade no conjunto de entidades, o valor será atualizado. Entretanto, se modificar um valor que era uma parte da pesquisa executada para criar o conjunto de entidades, não será removido do conjunto de entidades mesmo se não se enquadrar mais nos critérios de pesquisa.
 
-Qualquer entidade que apagar não será mais parte do conjunto de entidades. However, by default their reference will remain in the entity set with an _undefined_ value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without _undefined_ entity references.
+Qualquer entidade que apagar não será mais parte do conjunto de entidades. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without *undefined* entity references.
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), você pode combinar dois conjuntos de entidades criados anteriormente. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
+Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -73,7 +73,7 @@ con los datos en el cuerpo de la petición: `["Paris"]`
 
 ## Selecionar atributos a obter
 
-Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (_por ejemplo_, `Company(1)/name,revenues/`)
+Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (*por ejemplo*, `Company(1)/name,revenues/`)
 
 Pode aplicar essa técnica a:
 
@@ -85,7 +85,7 @@ Pode aplicar essa técnica a:
 |                       | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
 | Seleção de entidades  | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
-Los atributos deben estar delimitados por una coma, _i.e._, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
+Los atributos deben estar delimitados por una coma, *i.e.*, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
 
 ### Exemplos
 
@@ -226,6 +226,6 @@ Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
 ## Recuperar apenas uma entidade
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
+Pode usar a sintaxe [`\{dataClass\}:\{attribute\}(valor)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
 
 `GET  /rest/Company:companyCode("Acme001")`

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->The **OBJECT SET PLACEHOLDER** command associates placeholder text with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -31,7 +31,7 @@ In *placeholderText*, pass the help text or indication that must appear when the
 
 This command can only be used with form objects of the variable, field or combo box type. You can associate placeholder text with Alpha and Text type values. You can also associate it with Date or Time type data if the form object is given the "Blank if null" property.
 
-#### Example 
+## Example 
 
 You want to display "Search" as placeholder text in a combo box:
 
@@ -41,11 +41,11 @@ You want to display "Search" as placeholder text in a combo box:
 
 ![](../assets/en/commands/pict1208449.en.png)
 
-#### See also 
+## See also 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

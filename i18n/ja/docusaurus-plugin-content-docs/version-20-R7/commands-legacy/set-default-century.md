@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->SET DEFAULT CENTURY コマンドは、2桁の年で日付を入力した際に4Dが使用する、デフォルトの世紀と区切り年を指定するために使用します。<!-- END REF-->
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 このコマンドはデータ入力にのみ影響します。日付の格納や計算には影響しません。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

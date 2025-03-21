@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->The **CREATE FOLDER** command creates a folder according to the pathname you pass in *folderPath*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ In *folderPath*, you can also pass a folder hierarchy starting from the root of 
 If you omit the *\** parameter, an error is generated and no folder is created if any one of the intermediary folders does not exist.   
 If you pass the *\** parameter, **CREATE FOLDER** recreates the folder hierarchy if necessary and no error is generated. In this case, you can also pass a document pathname in *folderPath*. The document name is then ignored but the folder hierarchy specified in *folderPath* is created recursively 
 
-#### Example 1 
+## Example 1 
 
 The following example creates the “Archives” folder in the folder of the database:
 
@@ -32,7 +32,7 @@ The following example creates the “Archives” folder in the folder of the dat
  CREATE FOLDER("Archives")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example creates the Archives folder in the folder of the database, then it creates the “January” and “February” subfolders:
 
@@ -42,7 +42,7 @@ The following example creates the Archives folder in the folder of the database,
  CREATE FOLDER("Archives\\February")
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example creates the “Archives” folder at the root level of the C volume:
 
@@ -50,7 +50,7 @@ The following example creates the “Archives” folder at the root level of the
  CREATE FOLDER("C:\\Archives")
 ```
 
-#### Example 4 
+## Example 4 
 
 Creation of the "C:\\Archives\\2011\\January\\" folder hierarchy:
 
@@ -58,7 +58,7 @@ Creation of the "C:\\Archives\\2011\\January\\" folder hierarchy:
  CREATE FOLDER("C:\\Archives\\2011\\January\\";*)
 ```
 
-#### Example 5 
+## Example 5 
 
 Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder: 
 
@@ -67,12 +67,12 @@ Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder
   // the "Doc.txt" file is ignored
 ```
 
-#### See also 
+## See also 
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -27,7 +27,7 @@ The warning message "Caution, check the access privileges" is displayed when you
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage. 
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session. 
+As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#function-authentify) datastore class function to authenticate users and assign privileges to their web session. 
 
 :::note Compatibility
 
@@ -87,6 +87,6 @@ Repeat this for each field whose exposure needs to be modified.
 
 On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Web processes then switch to cooperative mode and the web server code can be debugged.
 
 With 4D single-user, interpreted code always runs in cooperative mode.

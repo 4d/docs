@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->**PRINT OPTION VALUES** コマンドは、*option* で定義した印刷オプションに対して利用可能な名前のリストを*namesArray* に返します。<!-- END REF-->またオプションとして、*info1Array* および *info2Array* 内にそれぞれの名前に対する追加の情報を取得することもできます。
 
@@ -49,12 +49,12 @@ displayed_sidebar: docs
 
 これらのコマンドから返される全ての情報は、オペレーションシステムから提供されています。特定のオプションについてのより詳細な情報については、システムのドキュメンテーションを参照してください。
 
-#### 参照 
+## 参照 
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

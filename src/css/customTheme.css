@@ -13,6 +13,8 @@
   --svg-background-color: #ffffff8b;
   --ifm-color-emphasis-200: var(--svg-background-color);
   --ifm-navbar-link-hover-color:#1e90ff;
+
+  --ifm-leading:1rem;
 }
 
 .menu__link{
@@ -113,4 +115,46 @@ footer {
   .tile {
     text-align: center;
   }
+}
+
+body {
+  font-size: 14px;
+
+}
+
+
+blockquote {
+  font-size: 14px;
+}
+code {
+  font-size: 95%;
+}
+pre code {
+  font-size: 95%;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 14px;
+}
+summary {
+  font-size: 14px;
+}
+
+.menu__link{
+	padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+.table-of-contents__link{
+  font-size: 12.2px;
 }

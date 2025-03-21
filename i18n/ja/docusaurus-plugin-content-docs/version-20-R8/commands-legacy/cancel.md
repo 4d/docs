@@ -12,16 +12,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.CANCEL.Summary-->**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
+**CANCEL** コマンドは以下の目的で、フォームあるいはオブジェクトメソッド (またはそこから呼ばれるサブルーチンで) 使用されます:
 
-* [ADD RECORD](add-record.md) 、[MODIFY RECORD](modify-record.md) を使用して開始されたレコードのデータ新規あるいは更新入力をキャンセルする。<!-- END REF-->
+* [ADD RECORD](add-record.md) 、[MODIFY RECORD](modify-record.md) を使用して開始されたレコードのデータ新規あるいは更新入力をキャンセルする。
 * [DIALOG](../commands/dialog.md) コマンドで表示されたフォームをキャンセルする。
 * [DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) でレコードセレクションを表示したフォームを閉じる。
 * [Print form](../commands/print-form.md) コマンドで印刷されようとしているフォームの印刷をキャンセルする (後述)。
 
-データ入力のコンテキストで、**CANCEL** はキャンセルキー (**Esc**) を押したのと同じ動作をします。
+<!--REF #_command_.CANCEL.Summary-->データ入力のコンテキストで、**CANCEL** はキャンセルキー (**Esc**) を押したのと同じ動作をします。<!-- END REF-->
 
 **CANCEL** は一般的にメニューコマンド選択結果として実行されます。また**CANCEL** は"アクションなし"ボタンのオブジェクトメソッドで使用されます。
 
@@ -33,25 +33,25 @@ displayed_sidebar: docs
 
 **Note:** この処理はすべての印刷待ちフォームをキャンセルする[PAGE BREAK](page-break.md)(\*) コマンドとは動作が異なります。
 
-##### ヘッドレスモード 
+### ヘッドレスモード 
 
 **CANCEL** コマンドは、*VP Run offscreen area* あるいは [WA Run offscreen area](wa-run-offscreen-area.md) で作成されたオフスクリーンエリアのコンテキストならば、ヘッドレスモードでも使用ができます。
 
-#### 例題 
+## 例題 
 
 [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER")の例題を参照 
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 CANCELコマンドが実行される (フォームや印刷がキャンセルされた) とシステム変数OKは0に設定されます。
 
-#### 参照 
+## 参照 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "開発中",
+    "message": "次へ",
     "description": "The label for version current"
   },
   "sidebar.docs.category.Getting Started": {
@@ -32,7 +32,7 @@
     "description": "The label for category Debugging in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
-    "message": "設定",
+    "message": "Settings",
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
@@ -116,7 +116,7 @@
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "フォーム",
+    "message": "Forms",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {

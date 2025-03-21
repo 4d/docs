@@ -46,7 +46,7 @@ La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suiv
     instruction(s)
  Until(Boolean_Expression)
 ```
-La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control.md#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
+A `Repeat...Until` loop is similar to a [While...End while](#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 

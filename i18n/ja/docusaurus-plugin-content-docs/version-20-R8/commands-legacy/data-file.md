@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Data file.Summary-->Data file コマンドは、現在使用しているデータベースのデータファイルのロング名を返します。<!-- END REF-->
 
@@ -28,12 +28,12 @@ Macintosh上
 
 **警告:** リモートモードの4Dからこのコマンドを呼び出した場合、ロング名ではなくデータファイル名のみが返されます。
 
-#### 参照 
+## 参照 
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

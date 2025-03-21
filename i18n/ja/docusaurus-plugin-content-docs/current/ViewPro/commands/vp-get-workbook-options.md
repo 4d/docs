@@ -16,7 +16,7 @@ title: VP Get workbook options
 | vpAreaName | Text   | ->                          | 4D View Pro フォームオブジェクト名 |                  |
 | 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get workbook options` コマンドは、<!-- REF #_method_.Get workbook options.Summary -->
 *vpAreaName* で指定したエリアのワークブックオプションをすべて格納したオブジェクトを返します<!-- END REF -->。
@@ -27,7 +27,7 @@ title: VP Get workbook options
 
 ワークブックオプションの一覧については [`VP SET WORKBOOK OPTIONS` の説明](vp-set-workbook-options.md) を参照ください。
 
-#### 例題
+## 例題
 
 ```4d
 var $workbookOptions : Object
@@ -35,6 +35,6 @@ var $workbookOptions : Object
 $workbookOptions:=VP Get workbook options("ViewProArea")
 ```
 
-#### 参照
+## 参照
 
 [VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)

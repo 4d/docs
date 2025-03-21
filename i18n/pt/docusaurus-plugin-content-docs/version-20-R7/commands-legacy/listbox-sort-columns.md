@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->O comando LISTBOX SORT COLUMNS \[descv\] ordena as filas do list box designado pelos parâmetros objeto e \* em função dos valores de uma ou várias colunas.<!-- END REF-->\[#/descv\]
 
@@ -35,7 +35,7 @@ Conforme com o princípio de funcionamento do list box, as colunas estão sincro
 Nota: O comando LISTBOX SORT COLUMNS não leva em consideração a propriedade de listbox *Ordenável* .
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

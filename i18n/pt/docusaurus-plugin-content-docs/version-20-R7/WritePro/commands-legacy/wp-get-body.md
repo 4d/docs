@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get body.Summary-->O comando **WP Get body** retorna o elemento corpo do documento *wpDoc* 4D Write Pro.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Este elemento pode ser passada a:
 * o comando [WP Text range](wp-text-range.md) para definir o corpo como uma faixa.
 * os comandos [WP SET ATTRIBUTES](wp-set-attributes.md) e [WP GET ATTRIBUTES](wp-get-attributes.md) para manejar os atributos de corpo.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser copiar a parte do corpo de um documento 4D Write Pro a outro documento 4D Write Pro:
 
@@ -41,6 +41,6 @@ Se quiser copiar a parte do corpo de um documento 4D Write Pro a outro documento
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Text range](wp-text-range.md)  

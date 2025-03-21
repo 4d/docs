@@ -13,9 +13,9 @@ title: VP Combine ranges
 | ------------- | ------ | --------------------------- | -------------------------------------- | ---------------- |
 | rangeObj      | Object | ->                          | Objeto rango                           |                  |
 | otherRangeObj | Object | ->                          | Objeto rango                           |                  |
-| Result        | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
+| Resultado     | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->devuelve un nuevo objeto de rango que incorpora dos o más objetos de rango existentes<!-- END REF -->. Todos los rangos deben ser de la misma área 4D View Pro.
 
@@ -25,7 +25,7 @@ En *otherRangeObj*, pase otro objeto(s) rango para combinar con *rangeObj*.
 
 > El comando incorpora *rangeObj* y *otherRangeObj* por referencia.
 
-#### Ejemplo
+## Ejemplo
 
 Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango distinto:
 
@@ -37,7 +37,7 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### Ver también
+## Ver también
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>
@@ -45,3 +45,4 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
 [VP Name](vp-name.md)<br/>
 [VP Row](vp-row.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)
+

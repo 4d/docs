@@ -15,7 +15,7 @@ title: VP SET SHEET OPTIONS
 | sheetOptions | Object  | -> | Opciones de la hoja a definir                                  |                  |
 | sheet        | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permite definir varias opciones de hoja del área *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica (la numer
 
 - `vk current sheet`
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Quiere proteger todas las celdas excepto el rango C5:D10:
 
@@ -43,7 +43,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Necesita proteger su documento mientras sus usuarios pueden redimensionar las líneas y columnas:
 
@@ -63,7 +63,7 @@ $options.protectionOptions.allowResizeColumns=True;
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Desea personalizar los colores de sus pestañas, líneas congeladas, líneas de cuadrícula, fondo de selección y borde de selección:
 
@@ -95,7 +95,7 @@ Resultado:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Quiere ocultar las líneas de la cuadrícula, así como los encabezados de las líneas y columnas.
 
@@ -116,7 +116,7 @@ Resultado:
 
 ![](../../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### Ver también
+## Ver también
 
 [4D View Pro sheet options](../configuring.md#sheet-options)<br/>
 [VP Get sheet options](vp-get-sheet-options.md)

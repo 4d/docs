@@ -3,7 +3,7 @@ id: distinct
 title: $distinct
 ---
 
-指定した属性について、重複しない値のコレクションを取得します (_例_: `Company/name?$filter="name=a*"&$distinct=true`)
+指定した属性について、重複しない値のコレクションを取得します (*例*: `Company/name?$filter="name=a*"&$distinct=true`)
 
 ## 説明
 
@@ -25,3 +25,4 @@ title: $distinct
     "Apple"
 ]
 ```
+

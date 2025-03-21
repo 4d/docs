@@ -79,7 +79,7 @@ The page contains several areas:
 ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - The central part contains the **Search area** and the **Data grid** (list of entities of the selected dataclass). Each column of the grid represents a datastore attribute.
-  - By default, all entities are displayed. You can filter the displayed entities using the search area. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced query with expression](#advanced-query-with-expression). You select the query mode by clicking on the corresponding button (the **X** button allows you to reset the query area and thus stop filtering):
+  - By default, all entities are displayed. You can filter the displayed entities using the search area. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced query with expression](#advanced-queries-with-expression). You select the query mode by clicking on the corresponding button (the **X** button allows you to reset the query area and thus stop filtering):
 ![alt-text](../assets/en/Admin/dataExplorer4b.png)
   - The name of the selected dataclass is added as a tab above the data grid. Using these tabs, you can switch between dataclasses that have been already selected. You can remove a referenced dataclass by clicking the "remove" icon at the right of the dataclass name.
   - You can reduce the number of columns by unchecking attributes in the left side. You can also switch the columns in the data grid using drag and drop. You can click on a column header to [sort entities](#ordering-entities) according to its values (when possible).
@@ -181,7 +181,7 @@ For example, with the Employee dataclass, you can write:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/DataClassClass.md#queryplan) and [`queryPath`](API/DataClassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
+You can click on the `v` icon to display both [`queryPlan`](API/EntitySelectionClass.md#queryplan) and [`queryPath`](API/EntitySelectionClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Activated.Summary-->O comando **Activated** retorna **True** em um método de formulário quando a janela que contém o formulário passa ao primeiro plano.<!-- END REF--> 
 
@@ -23,12 +23,12 @@ displayed_sidebar: docs
 
 **Nota:** para que se gere o ciclo de execução **Activated** , tenha certeza de que o evento On Activate tenha sido selecionado no ambiente Desenho. 
 
-#### Ver também 
+## Ver também 
 
 [Deactivated](deactivated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

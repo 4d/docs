@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility Note 
+## Compatibility Note 
 
 <!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
 
-#### Description 
+## Description 
 
 **Focus object** returns a pointer to the object having the focus in the current form. If no object has the focus, the command returns [Is nil pointer](is-nil-pointer.md). You can use **Focus object** to perform an action on a form area without having to know which object is currently selected. Be sure to test that the object is the correct data type, using [Type](type.md), before performing an action on it. 
 
@@ -27,7 +27,7 @@ This command cannot be used with fields in subforms.
 
 **Note:** This command is to be used only in a data entry context; otherwise it will return errors.
 
-#### Example 
+## Example 
 
 The following example is an object method for a button. The object method changes the data in the current object to uppercase. The object must be a text or string data type (type 0 or 24):
 
@@ -41,11 +41,11 @@ The following example is an object method for a button. The object method change
  End case
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

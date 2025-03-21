@@ -15,7 +15,7 @@ title: VP Get active cell
 | sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto intervalo de uma única célula                        | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP Get active cell` command <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
 
@@ -23,7 +23,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
-#### Exemplo
+## Exemplo
 
 ![](../../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
@@ -38,7 +38,7 @@ $activeCell:=VP Get active cell("myVPArea")
   //$activeCell.ranges[0].sheet=0
 ```
 
-#### Veja também
+## Veja também
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>

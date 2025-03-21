@@ -382,7 +382,7 @@ title: インデックス
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
 [`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
-[`Get last update log path`](../commands-legacy/get-last-update-log-path.md)<br/>
+[`Get last update log path`](../commands-legacy/last-update-log-path.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
 [`GET LIST ITEM ICON`](../commands-legacy/get-list-item-icon.md)<br/>
@@ -463,7 +463,7 @@ title: インデックス
 [`HTTP Get`](../commands-legacy/http-get.md)<br/>
 [`HTTP Get certificates folder`](../commands-legacy/http-get-certificates-folder.md)<br/>
 [`HTTP GET OPTION`](../commands-legacy/http-get-option.md)<br/>
-[`HTTP Parse message`](../commands-legacy/http-parse-message.md)<br/>
+[`HTTP Parse message`](http-parse-message.md)<br/>
 [`HTTP Request`](../commands-legacy/http-request.md)<br/>
 [`HTTP SET CERTIFICATES FOLDER`](../commands-legacy/http-set-certificates-folder.md)<br/>
 [`HTTP SET OPTION`](../commands-legacy/http-set-option.md)<br/>
@@ -685,7 +685,7 @@ title: インデックス
 [`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
-[`New log file`](../commands-legacy/new-log-file.md)<br/>
+[`New log file`](new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
 [`New shared collection`](new-shared-collection.md)<br/>
@@ -1045,7 +1045,7 @@ title: インデックス
 [`Select folder`](../commands-legacy/select-folder.md)<br/>
 [`SELECT LIST ITEMS BY POSITION`](../commands-legacy/select-list-items-by-position.md)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands-legacy/select-list-items-by-reference.md)<br/>
-[`SELECT LOG FILE`](../commands-legacy/select-log-file.md)<br/>
+[`SELECT LOG FILE`](select-log-file.md)<br/>
 [`Select RGB Color`](../commands-legacy/select-rgb-color.md)<br/>
 [`Selected list items`](../commands-legacy/selected-list-items.md)<br/>
 [`Selected record number`](../commands-legacy/selected-record-number.md)<br/>

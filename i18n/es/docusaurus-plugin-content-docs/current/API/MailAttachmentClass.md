@@ -44,7 +44,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | cid         | Text                              |              ->             | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
 | type        | Text                              |              ->             | Valor del encabezado content-type                                                                  |
 | disposition | Text                              |              ->             | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto                                                                                     |
+| Resultado   | 4D.MailAttachment | <- | Objeto adjunto                                                                                     |
 
 <!-- END REF -->
 
@@ -79,13 +79,13 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 | Parámetros | Tipo                    |                             | Descripción         |
 | ---------- | ----------------------- | :-------------------------: | ------------------- |
-| Result     | 4D.Blob | <- | Contenido del anexo |
+| Resultado  | 4D.Blob | <- | Contenido del anexo |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un objeto `4D.Blob`<!-- END REF -->. Puede utilizar este método con objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
+La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un objeto `4D.Blob`<!-- END REF -->. Puede utilizar este método con objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md).
 
 ## .name
 

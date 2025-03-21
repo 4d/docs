@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SORT LIST.Summary-->La commande **SORT LIST** effectue un tri sur la liste dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Pour effectuer un tri dans l'ordre croissant, passez *\>* comme deuxième param�
 
 **SORT LIST** ne modifie pas l'état courant déployé/contracté de la liste et de ses éventuelles sous-listes, ni l'élément courant. Cependant, comme l'élément courant peut être déplacé à la suite du tri, [Selected list items](selected-list-items.md) peut retourner une position différente avant et après le tri. 
 
-#### Exemple 
+## Exemple 
 
 Voici la liste nommée *hList*, affichée ici en mode Application :
 
@@ -52,11 +52,11 @@ Après l'exécution du code suivant :
 
 ![](../assets/en/commands/pict23039.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [Selected list items](selected-list-items.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

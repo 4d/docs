@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->SET PICTURE TO LIBRARY コマンドは、新規ピクチャを作成、またはピクチャライブラリにあるピクチャを置き換えます。<!-- END REF-->
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **Note:** *picture*に空のピクチャを渡すか、*picRef*に負数またはヌル値を渡すと、コマンドは何も行いません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、ピクチャライブラリの現在の内容に関わらず、最初にユニークなピクチャ参照番号を探すことによってピクチャライブラリに新規ピクチャを追加します:
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  SET PICTURE TO LIBRARY(vgPicture;$vlPicRef;"New Picture")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、[PICTURE LIBRARY LIST](picture-library-list.md "PICTURE LIBRARY LIST")の3番目の例題で作成した、ディスク上のドキュメントに格納されたピクチャをピクチャライブラリの中に読み込みます:
 
@@ -83,17 +83,17 @@ displayed_sidebar: docs
     End
 ```
 
-#### エラー管理 
+## エラー管理 
 
 ピクチャライブラリにピクチャを追加するための十分なメモリがない場合、エラーコード-108が生成されます。また、I/Oエラーが返される（例えば、ストラクチャファイルがロックされている等）点にも注意してください。エラー処理メソッドを使って、このエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

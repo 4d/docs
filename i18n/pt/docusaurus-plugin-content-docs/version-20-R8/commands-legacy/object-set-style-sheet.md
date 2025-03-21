@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->O comando **OBJECT SET STYLE SHEET** modifica, para o processo atual, a folha de estilo associada ao objeto(s) designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF--> Uma folha de estilo modifica a fonte, o tamanho de fonte e o estilo de fonte.
 
@@ -37,19 +37,19 @@ Se uma folha de estilo já tinha sido associada ao objeto em modo Desenho, a cha
 
 Se durante a sessão, utiliza os comandos [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md) ou [OBJECT SET FONT](object-set-font.md), [OBJECT SET FONT SIZE](object-set-font-size.md) no *objeto* com o propósito de modificar sua fonte ou o tamanho de fonte, a referência a folha de estilos se apaga automaticamente do objeto - inclusive se atribui os mesmos atributos que os da folha de estilos. No entanto, se modificar o estilo (negrito, cursiva, etc.), por exemplo com os comandos [ST SET ATTRIBUTES](st-set-attributes.md) ou [OBJECT SET FONT STYLE](object-set-font-style.md), se adicionam estas novas propriedades a folha de estilo pela duração da sessão.
 
-##### Nota de compatibilidade 
+### Nota de compatibilidade 
 
 Em **arquitetura de projeto**, só as três folhas de estilo automáticas são compatíveis com esse comando  
   
 
-#### Ver também 
+## Ver também 
 
 *Estilos de fonte*  
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

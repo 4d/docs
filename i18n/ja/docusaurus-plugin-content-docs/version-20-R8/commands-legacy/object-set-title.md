@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->**OBJECT SET TITLE**コマンドは、*object* 引数で指定されたボタンのタイトルを*title*で渡した値に変更します。<!-- END REF-->  
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **注:** "\\" をタイトルに使用したい際には "\\\\\\" を渡して下さい。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、[MODIFY SELECTION](modify-selection.md)を使用して表示された出力フォームのフッタエリアにある検索ボタンのオブジェクトメソッドです。このメソッドはテーブルを検索し、その検索結果に応じて*bDelete*ボタンを使用可または不可にして、そのボタンタイトルを変更します:
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 ```
 
   
-#### 例題 2 
+## 例題 2 
 
 タイトルを2行に渡って挿入したい場合:
 
@@ -68,11 +68,11 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1242273.en.png)
 
-#### 参照 
+## 参照 
 
 [OBJECT Get title](object-get-title.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

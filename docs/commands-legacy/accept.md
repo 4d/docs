@@ -12,15 +12,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.ACCEPT.Summary-->The **ACCEPT** command is used in form or object methods (or in subroutines) to:
+The **ACCEPT** command is used in form or object methods (or in subroutines) to:
 
-* accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
+* accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
 * accept a form displayed with the [DIALOG](../commands/dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
 
-**ACCEPT** performs the same action as if a user had pressed the Enter key. After the form is accepted, the OK system variable is set to 1.
+<!--REF #_command_.ACCEPT.Summary-->**ACCEPT** performs the same action as if a user had pressed the Enter key. After the form is accepted, the OK system variable is set to 1.<!-- END REF-->
 
 **ACCEPT** is commonly executed as a result of choosing a menu command. **ACCEPT** is also commonly used in the object method of a “no action” button.
 
@@ -28,15 +28,15 @@ It is also often used in the optional close box method for the [Open window](ope
 
 **ACCEPT** cannot be queued up. In response to an event, executing two **ACCEPT** commands in a row from within a method would have the same effect as executing one.
 
-##### Headless mode 
+### Headless mode 
 
 The **ACCEPT** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### See also 
+## See also 
 
 [CANCEL](cancel.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

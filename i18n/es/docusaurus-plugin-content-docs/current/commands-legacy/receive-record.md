@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RECEIVE RECORD.Summary-->RECEIVE RECORD recibe un registro en *tabla* del puerto serial o de un documento abierto por el comando [SET CHANNEL](set-channel.md "SET CHANNEL").<!-- END REF--> El registro debe haber sido envíado con [SEND RECORD](send-record.md "SEND RECORD"). Cuando ejecuta RECEIVE RECORD, se crea automáticamente un nuevo registro en *tabla*. Si el registro se recibe correctamente, entonces debe utilizar [SAVE RECORD](save-record.md "SAVE RECORD") para guardar el nuevo registro.
 
@@ -26,7 +26,7 @@ Se recibe el registro completo. Esto significa que también se reciben todos los
 1. Si recibe un registro de un documento utilizando este comando, el documento debe haber sido abierto utilizando el comando [SET CHANNEL](set-channel.md "SET CHANNEL"). No puede utilizar RECEIVE RECORD con un documento abierto con [Open document](open-document.md "Open document"), [Append document](append-document.md "Append document") o [Create document](create-document.md "Create document").
 2. Durante la ejecución de RECEIVE RECORD, el usuario puede interrumpir la recepción presionando Ctrl-Alt-Mayús (Windows) o Comando-Opción-Mayús (Macintosh). Esta interrupción genera un error -9994 que puede interceptar con el método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL"). Generalmente, sólo debe manejar la interrupción de una recepción durante una comunicación sobre puerto serial.
 
-#### Ejemplo 
+## Ejemplo 
 
 El uso combinado de [SEND VARIABLE](send-variable.md "SEND VARIABLE"), [SEND RECORD](send-record.md "SEND RECORD"), [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE") y RECEIVE RECORD es ideal para archivar datos o intercambiar datos entre bases monopuesto idénticas utilizada en diferentes lugares. Puede intercambiar datos entre bases 4D utilizando los comandos de importación/exportación como [EXPORT TEXT](export-text.md "EXPORT TEXT") y [IMPORT TEXT](import-text.md "IMPORT TEXT"). Sin embargo, si sus datos contienen imágenes o tablas relacionadas, utilizar [SEND RECORD](send-record.md "SEND RECORD") y RECEIVE RECORD es mucho más conveniente.
 
@@ -142,17 +142,17 @@ Este es el método de proyecto (simplificado) de importación de la documentaci�
 
 Note que no probamos la variable OK mientras recibimos los datos ni tratamos de interceptar los eventuales errores. Sin embargo, como almacenamos variables en el documento que describe el documento en sí mismo, si estas variables, una vez recibidas, tienen sentido, la probabilidad de error es muy baja. Si por ejemplo un usuario abre mal un documento, la primera prueba detiene la operación de inmediato.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si se recibe el registro. De lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

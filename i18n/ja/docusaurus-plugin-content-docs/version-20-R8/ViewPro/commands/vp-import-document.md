@@ -23,7 +23,7 @@ title: VP IMPORT DOCUMENT
 | filePath   | Text   | -> | ドキュメントのパス名              |                  |
 | paramObj   | Object | -> | 読み込みのオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP IMPORT DOCUMENT` コマンドは、<!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、*filePath* 引数のドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
 
@@ -44,7 +44,7 @@ title: VP IMPORT DOCUMENT
 
 | 引数           |                           | 型                           | 説明                                                                                                                                                                                                                                                                                                                     |
 | ------------ | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula      |                           | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [`Formula`](../../API/FunctionClass.md#formula) コマンドの戻り値フォーミュラを使用する必要があります。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                              |
+| formula      |                           | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [`Formula`](../../commands/formula.md) コマンドの戻り値フォーミュラを使用する必要があります。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                                       |
 | password     |                           | テキスト                        | Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。                                                                                                                                                                                                                                          |
 | csvOptions   |                           | object                      | CSV読み込みのオプション                                                                                                                                                                                                                                                                                                          |
 |              | range                     | object                      | 書き出されるデータの、最初のセルを格納しているセルレンジ。 指定されたレンジがセルレンジではない場合、レンジの最初のセルが使用されます。                                                                                                                                                                                                                                                   |
@@ -58,7 +58,7 @@ title: VP IMPORT DOCUMENT
 |              | includeStyles             | boolean                     | 読み込み時にスタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                                        |
 |              | includeUnusedStyles       | boolean                     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                             |
 |              | openMode                  | integer                     | <li>0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ファイルを開くと、特定の時点で UI と UIイベントが更新され、応答します。</li><li>1 (lazy): レイジー (遅延) オープンモード。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。</li><li>2 (incremental): インクリメンタル (増分) オープンモード。 ファイルを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。</li> |
-| excelOptions |                           | object                      | Excel only (optional) - Options for Excel export                                                                                                                                                                                                                                                    |
+| excelOptions |                           | object                      | Excel のみ (任意) - Excel 書き出しのオプション                                                                                                                                                                                                                                                                    |
 |              | includeStyles             | boolean                     | Whether to include the style when importing, default true.                                                                                                                                                                                                                                             |
 |              | includeFormulas           | boolean                     | Whether to include the formula when importing, default true.                                                                                                                                                                                                                                           |
 |              | frozenColumnsAsRowHeaders | boolean                     | Whether to treat the frozen columns as row headers when importing, default false.                                                                                                                                                                                                                      |
@@ -79,7 +79,7 @@ title: VP IMPORT DOCUMENT
 
 :::
 
-#### 例題 1
+## 例題 1
 
 フォームが開かれたときに、ディスク上に保存されているデフォルトの 4D View Pro ドキュメントを読み込みます:
 
@@ -91,7 +91,7 @@ If(Form event code=On VP Ready) //4D View Pro area loaded and ready
 End if
 ```
 
-#### 例題 2
+## 例題 2
 
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
@@ -116,7 +116,7 @@ Else
 End if
 ```
 
-#### 例題 3
+## 例題 3
 
 カンマ (",") を区切り文字として使用している `.txt` ファイルを読み込みます:
 
@@ -131,8 +131,9 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 このようになります:
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv-result.png)
 
-#### 参照
+## 参照
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>
 [VP NEW DOCUMENT](vp-new-document.md)<br/>
 [4D View Pro: Excel import/export update (blog post)](https://blog.4d.com/4d-view-pro-excel-import-export-update)
+

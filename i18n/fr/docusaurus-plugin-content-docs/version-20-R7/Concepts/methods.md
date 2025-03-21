@@ -38,7 +38,7 @@ Vous pouvez également exécuter les méthodes projet manuellement, à des fins 
 
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez alors appeler la méthode projet à partir d'une autre méthode (méthode projet, méthode objet...) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez procéder de la manière suivante : Vous pouvez procéder de la manière suivante : de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -219,7 +219,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
+Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`

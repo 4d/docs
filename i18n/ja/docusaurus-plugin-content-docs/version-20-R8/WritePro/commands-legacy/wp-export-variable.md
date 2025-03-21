@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->**WP EXPORT VARIABLE** コマンドは*wpDoc* 変数内の4D Write Proオブジェクトを*format* 引数で指定したフォーマットで*destination* 引数で指定した4D変数へと書き出します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 * このコマンドでSVG フォーマットへ書き出す場合、画像はbase64 フォーマットで埋め込まれます。
 * SVG フォーマットへの書き出しについての詳細な情報については、*SVGフォーマットへの書き出し* を参照して下さい。
 
-##### option 引数 
+### option 引数 
 
 *option* 引数には、書き出されるドキュメントのプロパティを定義する値を格納している[オブジェクト](# "ネイティブ4Dオブジェクトとして構築されたデータ") 型の引数を渡します。以下のプロパティが利用可能です:
 
@@ -90,7 +90,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** *option* 引数に*倍長整数* 型の値を渡すことは互換性の理由からサポートされていますが、[オブジェクト](# "ネイティブ4Dオブジェクトとして構築されたデータ") 型の引数を渡すことが推奨されています。
 
-#### 例題 1 
+## 例題 1 
 
 *myArea* 4D Write Pro オブジェクトのコンテンツをMIME 形式で書き出し、ホストドメインとして"gmail.com" を追加したい場合を考えます:
 
@@ -103,7 +103,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 例題 2 
+## 例題 2 
 
 スタイル付テキストと4D参照と画像を含んだEメールを送信したい場合を考えます。この場合、MIME HTMLフォーマットで書き出された4D Write Proエリアを、SMTP を使用して送信することができます:
 
@@ -135,7 +135,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 4D Wrie Pro の最初のページをSVG で、ヘッダーを隠してテキスト変数に書き出す場合を考えます:
 
@@ -149,7 +149,7 @@ displayed_sidebar: docs
  WP EXPORT VARIABLE(WPArea;$destination;wk svg;$options)
 ```
 
-#### 参照 
+## 参照 
 
   
   

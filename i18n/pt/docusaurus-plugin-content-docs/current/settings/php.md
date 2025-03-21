@@ -24,3 +24,5 @@ Observe que o endereço HTTP deve estar na mesma máquina que o 4D.
 Número da porta do interpretador PHP. Por padrão, 4D usa a porta 8002.
 
 You can change the address and/or port if they are already used by another service or if you have several interpreters on the same machine.
+
+

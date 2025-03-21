@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST INSERT URL.Summary-->La commande **ST INSERT URL** insère un lien URL dans le champ ou la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -47,9 +47,9 @@ Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une
 
 **Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-Une fois le lien inséré, il est actif : l’action **Ctrl+clic** (Windows) ou **Commande+clic** (OS X) sur le lien ouvre une page du navigateur par défaut à l’adresse définie dans le paramètre *adresseURL*.
+Une fois le lien inséré, il est actif : l’action **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur le lien ouvre une page du navigateur par défaut à l’adresse définie dans le paramètre *adresseURL*.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez insérer un lien vers le site Web de 4D à la place de la sélection de texte dans l’objet "myText" :
 
@@ -59,12 +59,12 @@ Vous souhaitez insérer un lien vers le site Web de 4D à la place de la sélect
  ST INSERT URL(*;"myText";vTitle;vURL;ST Start highlight;ST End highlight)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

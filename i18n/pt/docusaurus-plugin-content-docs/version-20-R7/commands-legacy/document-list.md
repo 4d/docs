@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->O comando **DOCUMENT LIST** preenche o array *documentos* de tipo texto ou alfa com os nomes dos documentos localizados na rota de acesso que se passa em *rotaAcesso*.<!-- END REF-->apenas aceita rotas de acesso absolutas.  
   
@@ -36,7 +36,7 @@ Por padrão, se você omitir o parâmetro *opções*, apenas os nomes dos docume
 
 Se não houver documentos na localização especificada, o comando retorna um array vazio. Se a rota de acesso que for passada em *rotaAcesso* for incorreta, **DOCUMENT LIST**  gera um erro de administrador de arquivos que pode interceptar utilizando o método [ON ERR CALL](on-err-call.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Lista de todos os documentos em uma pasta (sintaxe padrão):
 
@@ -48,7 +48,7 @@ Lista de todos os documentos em uma pasta (sintaxe padrão):
  Text1.txt  
  Text2.txt
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Lista de todos os documentos em uma pasta em modo absoluto:
 
@@ -60,7 +60,7 @@ Lista de todos os documentos em uma pasta em modo absoluto:
  C:\\Text1.txt  
  C:\\Text2.txt
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Lista de todos os documentos no modo recursivo (relativo):
 
@@ -77,7 +77,7 @@ Lista de todos os documentos no modo recursivo (relativo):
  \\Folder2\\Text5.txt  
  \\Folder2\\Folder3\\Picture1.png
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Lista de todos os documentos em modo absoluto recursivo:
 
@@ -93,7 +93,7 @@ Lista de todos os documentos em modo absoluto recursivo:
  C:\\MyFolder\\Folder2\\MyText5.txt  
  C:\\MyFolder\\Folder2\\Folder3\\MyPicture1.png
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Lista de todos os documentos em modo recursivo Posix (relativo):
 
@@ -109,12 +109,12 @@ Lista de todos os documentos em modo recursivo Posix (relativo):
  Folder2/MyText5.txt  
  Folder2/Folder3/MyPicture1.png
 
-#### Ver também 
+## Ver também 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

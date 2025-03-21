@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Semaphore.Summary-->Un sémaphore est un drapeau visible par chaque poste client ou chaque process sur un même poste.<!-- END REF--> Un sémaphore a simplement pour rôle d'exister ou de ne pas exister. Chaque méthode exécutée par un utilisateur peut tester la présence d'un sémaphore. Un sémaphore ne peut être effacé que par le poste client ou le process qui l'a créé. En créant et en testant des sémaphores, vous permettez aux méthodes de communiquer entre les postes clients et les process. Les sémaphores ne servent pas à protéger l'accès aux enregistrements — cette gestion est effectuée automatiquement par 4D et 4D Server. Les sémaphores ont pour but d'éviter que plusieurs utilisateurs ou process effectuent la même opération en même temps. 
 
@@ -38,7 +38,7 @@ Avec 4D, les sémaphores globaux et locaux ont la même portée car il n'y a qu'
 
 **Note :** Les sémaphores locaux sont recommandés lorsque l'usage d'un sémaphore est nécessaire pour gérer un aspect local à un client de l'application, comme par exemple l'interface ou un tableau de valeurs interprocess. L'utilisation d'un sémaphore global provoquerait dans ce cas non seulement des échanges réseau inutiles, mais en plus pourrait affecter inutilement d'autres postes clients. Le sémaphore local évitera ces effets indésirables.
 
-#### Exemple 1 
+## Exemple 1 
 
 Le code type d'utilisation d'un sémaphore est le suivant :
 
@@ -50,7 +50,7 @@ Le code type d'utilisation d'un sémaphore est le suivant :
  CLEAR SEMAPHORE("MonSemaphore")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Dans l'exemple suivant, vous souhaitez empêcher que deux utilisateurs effectuent simultanément une mise à jour globale des prix dans une table \[Produits\]. Pour cela, des sémaphores sont utilisés :
 
@@ -63,7 +63,7 @@ Dans l'exemple suivant, vous souhaitez empêcher que deux utilisateurs effectuen
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant illustre l'utilisation d'un sémaphore local. Dans une base comportant plusieurs process, vous souhaitez maintenir une liste de "Choses à faire". Vous envisagez de la maintenir à jour dans un tableau interprocess et non dans une table. Vous devez empêcher les accès simultanés à l'aide d'un sémaphore. Dans ce cas, il vous suffit d'utiliser un sémaphore local car la liste "Choses à faire" est pour votre utilisation personnelle.
 
@@ -91,7 +91,7 @@ Voici la méthode utilisée pour ajouter des éléments à la "liste des choses 
 
 Vous pouvez appeler cette méthode depuis n'importe quel process. 
 
-#### Exemple 4 
+## Exemple 4 
 
 Cette méthode permet de ne pas exécuter une méthode si le sémaphore est posé ; la méthode informe la méthode d'appel avec un code d'erreur et un texte en clair.
 
@@ -143,13 +143,13 @@ Syntaxe :
  $1->:=$T_Message  // la méthode d'appel reçoit un code d'erreur et une explication en clair
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 *Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

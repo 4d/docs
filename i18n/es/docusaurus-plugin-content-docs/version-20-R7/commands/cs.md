@@ -10,9 +10,11 @@ displayed_sidebar: docs
 
 La palabra clave **cs** se describe en la [**página Concepto para Clases**](../Concepts/classes.md#cs).
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1710                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1710                        |
+| Hilo seguro       | &check; |
+
+

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.USE NAMED SELECTION.Summary-->USE NAMED SELECTION utiliza el nombre de la selección temporal como selección actual para la tabla a la cual pertenece.<!-- END REF-->
 
@@ -24,13 +24,13 @@ Cuando crea una selección temporal, el registro actual es “recordado” por l
 
 Recuerde que una selección temporal es una representación de una selección de registros en el momento que se crea la selección temporal. Si los registros que la selección temporal representa son modificados, la selección temporal podría ser obsoleta. Por lo tanto, una selección temporal representa un grupo de registros que no cambian con frecuencia. Diferentes cosas pueden invalidar una selección temporal: la modificación o eliminación de un registro de la selección temporal, o la modificación de los criterios de creación de la selección temporal.
 
-#### Ver también 
+## Ver también 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

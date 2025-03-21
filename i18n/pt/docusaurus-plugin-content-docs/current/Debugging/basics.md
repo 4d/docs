@@ -33,8 +33,8 @@ Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quan
 
 Estes são geralmente o tipo de erro mais difícil de encontrar. Com exceção dos erros de digitação, todos os tipos de erros acima enumerados são, em certa medida, abrangidos pela expressão "erro de conceção ou de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por exemplo:
 
-- Puede ocurrir un _error de sintaxis_ cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un _error de entorno_ cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
+- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Os erros de concepção ou lógicos incluem também situações como:
 
@@ -78,8 +78,8 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
-  - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
+    - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
+    - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
 
 - **Copy**: Copies the debugging information into the clipboard. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 

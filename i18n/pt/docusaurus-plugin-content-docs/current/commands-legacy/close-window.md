@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CLOSE WINDOW.Summary-->CLOSE WINDOW fecha a janela ativa aberta pelo comando [Open window](open-window.md) ou [Open form window](open-form-window.md) no processo atual.<!-- END REF--> CLOSE WINDOW não faz nada se não houver uma janela personalizada aberta; não fecha as janelas sistema. CLOSE WINDOW tampoco tem efeito se for chamado enquanto um formulário estiver ativo na janela. Deve chamar CLOSE WINDOW quando tiver terminado de utilizar uma janela aberta por [Open window](open-window.md) ou [Open form window](open-form-window.md)..  
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
   
 Se passar um número de referência de janela externa no parâmetro *janela*, CLOSE WINDOW fecha a janela externa especificada. Para maior informação sobre janelas externas, consulte a função .
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo abre uma janela formulario e cria novos registros com o comando [ADD RECORD](add-record.md). Ao serem adicionados os registros, a janela se fecha com **CLOSE WINDOW**:
 
@@ -34,12 +34,12 @@ O seguinte exemplo abre uma janela formulario e cria novos registros com o coman
  CLOSE WINDOW //Fechamento da janela
 ```
 
-#### Ver também 
+## Ver também 
 
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

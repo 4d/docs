@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->The **OBJECT SET ENABLED** command can be used to enable or disable the object or group of objects specified by *object* in the current form.<!-- END REF--> An enabled object reacts to mouse clicks and to keyboard shortcuts.
 
@@ -33,11 +33,11 @@ This command can be applied to the following types of objects:
 
 **Note:** This command has no effect with an object to which a standard action has been assigned (4D looks after modifying the state of this object when necessary), except in the case of the **Validate** and **Cancel** actions.
 
-#### See also 
+## See also 
 
 [OBJECT Get enabled](object-get-enabled.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

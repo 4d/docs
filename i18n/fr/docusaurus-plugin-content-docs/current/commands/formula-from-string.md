@@ -26,9 +26,9 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Description
+## Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être aussi simple qu'une valeur unique ou complexe, comme une méthode projet avec des paramètres.
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
 
 Cette commande est similaire à [`Formula`](formula.md), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula`, sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 
@@ -41,7 +41,7 @@ Si la formule est créée dans un composant, vous pouvez envisager d'utiliser le
 | `sk execute in current database` | Integer | (par défaut) La formule sera exécutée dans le contexte où elle a été créée |
 | `sk execute in host database`    | Integer | La formule sera exécutée dans le contexte de la base de données de hôte                       |
 
-#### Exemple
+## Exemple
 
 Le code suivant permettra de créer un dialogue acceptant une formule dans un format texte :
 
@@ -61,14 +61,16 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 ![](../assets/en/API/formulaAlert.png)
 
-#### Voir également
+## Voir également
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1601                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1601                        |
+| Thread safe        | &check; |
+
+

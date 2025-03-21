@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| 引数            | 型       |                             | 説明         |
-| ------------- | ------- | :-------------------------: | ---------- |
-| processNumber | Integer | &#8594; | プロセス番号     |
-| 戻り値           | Object  | &#8592; | プロセスに関する情報 |
+| 引数            | 型       |                             | 説明             |
+| ------------- | ------- | :-------------------------: | -------------- |
+| processNumber | Integer | &#8594; | Process number |
+| 戻り値           | Object  | &#8592; | プロセスに関する情報     |
 
 <!-- END REF -->
 
@@ -23,9 +23,9 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
-`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。 正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
+`Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。  正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 | creationDateTime | Text (Date ISO 8601) | プロセス作成の日時                                                                    |
 | ID               | Integer                                 | プロセス固有のID                                                                    |
 | name             | Text                                    | プロセス名                                                                        |
-| number           | Integer                                 | プロセス番号                                                                       |
-| preemptive       | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                                           |
+| number           | Integer                                 | Process number                                                               |
+| プリエンプティブ         | Boolean                                 | プリエンプティブに実行可能ならTrue、それ以外の場合にはfalse                                           |
 | sessionID        | Text                                    | セッションUUID                                                                    |
 | state            | Integer                                 | 現在の状態。 取り得る値: 以下を参照のこと                                       |
 | systemID         | Text                                    | ユーザープロセス、4D プロセス、またはスペアプロセスのID                                               |
@@ -93,7 +93,7 @@ displayed_sidebar: docs
 | Method editor macro process   | -17 |
 | Monitor process               | -26 |
 | MSC process                   | -22 |
-| None                          | 0   |
+| なし                            | 0   |
 | On exit process               | -16 |
 | Other 4D process              | -10 |
 | Other internal process        | -40 |
@@ -118,7 +118,7 @@ displayed_sidebar: docs
 
 :::note
 
-4D の内部プロセスのtype は負の値を持ち、ユーザーによって生成されたプロセスのtype は正の値を持ちます。 ユーザーによってローンチされたワーカープロセスのtype は5 です。 ユーザーによってローンチされたワーカープロセスのtype は5 です。 ユーザーによってローンチされたワーカープロセスのtype は5 です。
+4D の内部プロセスの type は負の値を持ち、ユーザーによって生成されたプロセスの type は正の値を持ちます。 ユーザーによってローンチされたワーカープロセスのtype は5 です。
 
 :::
 
@@ -143,7 +143,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 例題
+## 例題
 
 プロセスがプリエンプティブかどうかを調べたい場合を考えます:
 
@@ -154,7 +154,7 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-#### 参照
+## 参照
 
 [Count tasks](../commands-legacy/count-tasks.md)\
 [Process activity](process-activity.md)\

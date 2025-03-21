@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->The GET TABLE PROPERTIES command returns the properties for the table passed in *tablePtr* or *tableNum*.<!-- END REF--> The table number or a pointer to the table can be passed as first parameter.
 
@@ -29,13 +29,13 @@ Once the command has been executed:
 * The *trigSaveRec* parameter returns True if the “On saving an existing record” trigger has been set for the table, else False.
 * The *trigDelRec* parameter returns True if the “On deleting a record” trigger has been set for this table, else false.
 
-#### See also 
+## See also 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

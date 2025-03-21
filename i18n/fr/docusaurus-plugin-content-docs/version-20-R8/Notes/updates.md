@@ -15,16 +15,18 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
 - [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
 - [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
+- You can now easily [build evaluation applications](../Desktop/building.md#build-an-evaluation-application) in the Build application dialog box.
 - Dependencies: Use the Dependency manager to [check for new versions](../Project/components.md#checking-for-new-versions) and [update](../Project/components.md#updating-dependencies) GitHub components.
+- New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Added [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) for detailed logging of TCP events.
 - New options in [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) and [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) to control styles, formulas, data integrity, and password protection.
 - 4D Write Pro :
-  - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
-  - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
-  - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
+    - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
+    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
+    - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
 - Langage 4D :
-  - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
-  - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+    - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
+    - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R8) : liste de tous les bugs qui ont été corrigés dans 4D 20 R8.
 
 #### Changements de comportement
 
@@ -38,7 +40,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 - Les colonnes et les en-têtes des list box de type heure prennent désormais en charge l'option ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nouvelles propriétés dans [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) et [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist).
-- Vous pouvez désormais [ajouter et supprimer des composants à l'aide de l'interface du Gestionnaire de composants](../Project/components.md#adding-and-removing-dependencies).
+- You can now [add and remove components using the Component manager interface](../Project/components.md#monitoring-project-dependencies).
 - Nouveau [**mode de typage direct**](../Project/compiler.md#enabling-direct-typing) dans lequel vous déclarez toutes les variables et paramètres dans votre code en utilisant les mots-clés `var` et `#DECLARE`/`Function` (seul mode supporté dans les nouveaux projets). La [fonctionnalité de vérification de syntaxe](../Project/compiler.md#check-syntax) a été adaptée en conséquence.
 - Prise en charge des [singletons de session](../Concepts/classes.md#singleton-classes) et nouvelle propriété de classe [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
 - Nouveau [mot-clé de fonction `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) pour définir des fonctions singleton ou ORDA qui peuvent être appelées par des [requêtes HTTP REST GET](../REST/ClassFunctions.md#function-calls).
@@ -47,12 +49,12 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
 - Langage 4D :
-  - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
-  - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
+    - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
+    - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
 - 4D Write Pro :
-  - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
-  - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
-  - [Liste des nouveautés](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.fe.html) dans le manuel 4D Write Pro Reference.
+    - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
+    - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
+    - [Liste des nouveautés](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.fe.html) dans le manuel 4D Write Pro Reference.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R7) : liste de tous les bugs qui ont été corrigés dans 4D 20 R7.
 
 #### Changements de comportement
@@ -69,7 +71,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 - Prise en charge des opérateurs de comparaison sur les [références d'objet](../Concepts/dt_object.md#operateurs-sur-les-objets) et les [références de collection](../Concepts/dt_collection.md#operateurs-sur-les-collections). [`collection.query()`](../API/CollectionClass.md#query) prend maintenant en charge les [références d'objet et de collection en tant que valeurs de requête](../API/CollectionClass.md#reference-dobject-ou-de-collection-comme-value).
 - Lorsqu'un composant a un [espace de noms déclaré](../Extensions/develop-components.md#declaring-the-component-namespace), ses classes sont maintenant automatiquement partagées entre tous les composants chargés dans le projet hôte via [`cs.<namespace>`](../Concepts/classes.md#cs).
-- Gestionnaire de composants : Prise en charge des [composants stockés sur GitHub](../Project/components.md#declaring-components-stored-on-github).
+- Component manager: Support of [components stored on GitHub](../Project/components.md#components-stored-on-github).
 - Nouvelle fonction [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) et API REST [`$clean`](../REST/$clean.md) pour obtenir une nouvelle entity selection basée sur l'entity selection originale mais sans ses entités supprimées.
 - Nouvelle fonction [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) et API REST [`$info/privileges`](../REST/$info.md) pour inspecter les privilèges de session plus facilement lors du débogage.
 - Nouveau fichier [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) pour personnaliser les zones Web embarquées dans 4D.
@@ -99,7 +101,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Prise en charge des structures de gestion d'erreur [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
 - La couche réseau QUIC prend désormais en charge le [*broadcasting*](../Desktop/clientServer.md#ouverture-d-un-projet-à-distance), [SSO](https://doc.4d.com/4Dv20R/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.fe.html) et [IPv6](https://doc.4d.com/4Dv20R/4D/20-R5/Paramètres-IP.300-6932707.fe.html).
 - Prise en charge des [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
-- Prise en charge des [classes partagées](../Concepts/classes.md#shared-classes) et des [classes singleton](../Concepts/classes.md#singleton-classes). Nouvelles propriétés de classe : [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
+- Prise en charge des [classes partagées](../Concepts/classes.md#shared-classes) et des [classes singleton](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#issingleton), [`me`](../API/ClassClass.md#me).
 - Prise en charge de l'[initialisation d'une propriété de classe dans sa ligne de déclaration](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - Nouveau paramètre REST [$format](../REST/$format.md).
@@ -123,10 +125,10 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v
 - Les connexions TLS client/serveur et serveur SQL sont désormais [configurées dynamiquement](../Admin/tls.md#enabling-tls-with-the-other-servers) (aucun fichier de certificat n'est requis).
 - Format HTML direct pour les [exports de définition de structure](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - Nouveau [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) qui améliore le contrôle du code pendant le typage, la vérification de la syntaxe et les étapes de compilation afin d'éviter les erreurs d'exécution.
-- Les paramètres de méthode déclarés dans les prototypes `#DECLARE` ne sont [plus nécessaires dans les méthodes "Compiler_"(../Concepts/parameters.md#compilation).
+- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md).
 - Prise en charge des [formats de date et d'heure personnalisés](../Project/date-time-formats.md)
 - Nouveau mot-clé [`Try(expression)`](../Concepts/error-handling.md#tryexpression) pour gérer les cas d'erreur simples.
-- Nouvelle commande [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
+- New [`HTTP Parse message`](../commands/http-parse-message.md) command.
 - Nouvelle option de compatibilité [Impression non bloquante](../settings/compatibility.md).
 - Nouveau [mode édition](../Admin/dataExplorer.md#editing-data) dans le Data Explorer.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) sur doc.4d.com.
@@ -138,7 +140,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v
 - L'utilisation d'une ancienne syntaxe pour la déclaration des paramètres (par exemple `C_TEXT($1)` ou `var $1 : Text`) est maintenant dépréciée et génère des warnings lors du typage du code, de la vérification syntaxique et de la compilation.
 - La cohérence des sélections est désormais préservée lorsque certains enregistrements sont supprimés puis d'autres créés (voir [ce billet de blog](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/)).
 - Dans la mise à jour de la [bibliothèque OpenSSL](#library-table), le niveau de sécurité SSL/TLS par défaut a été modifié de 1 à 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
-- Afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md) est maintenant envoyée en clair par défaut. Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Dans certains cas spécifiques, l'option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](../commands/open-datastore.md)).
+- Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md) est maintenant envoyée en clair par défaut. Dans certains cas spécifiques, l'option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](../commands/open-datastore.md)).
 
 ## 4D 20 R3
 
@@ -150,9 +152,9 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v
 - Prise en charge du paramètre *context* dans [`Formula from string`](../commands/formula-from-string.md).
 - Prise en charge de la propriété `headers` dans le paramètre *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Marqueur de modification global](../ORDA/global-stamp.md) pour faciliter la mise en œuvre de modules de synchronisation des données. Nouvelles fonctions : [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) et [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
-- L'assignation de références de fichiers à des attributs picture/blob est [prise en charge dans ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes).
 - Prise en charge de [l'initialisation de la valeur et du type de données de la variable dans la ligne de déclaration](../Concepts/variables/#initialisation des variables dans la ligne de déclaration).
-- Les paramètres du fichier journal sont désormais [sauvegardés avec le fichier de données courant](../Backup/settings.md#log-file-management)
+- Log file settings are now [saved with the current data file](../Backup/settings.md#log-management)
 - Nouvelle syntaxe pour [déclarer des paramètres variadiques](../Concepts/parameters.md#declaring-variadic-parameters)
 - 4D View Pro : Prise en charge de [l'importation](../ViewPro/commands/vp-import-from-blob) et de [l'exportation](../ViewPro/commands/vp-export-to-blob) des documents 4D View Pro au format Blob.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) sur doc.4d.com.

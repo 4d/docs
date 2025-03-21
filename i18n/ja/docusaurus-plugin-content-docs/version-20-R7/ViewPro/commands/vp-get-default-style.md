@@ -15,7 +15,7 @@ title: VP Get default style
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | デフォルトスタイル設定                                    | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get default style` コマンドは、<!-- REF #_method_.VP Get default style.Summary -->シートのデフォルトスタイルオブジェクトを返します<!-- END REF -->。 返されるオブジェクトには、ドキュメントの基本的なレンダリングプロパティに加え、[VP SET DEFAULT STYLE](vp-set-default-style.md) コマンドによって事前に設定されたデフォルトのスタイル設定 (あれば) が格納されます。 スタイルプロパティの詳細な情報については、[スタイルオブジェクトとスタイルシート](../configuring.md#スタイルオブジェクトとスタイルシート) を参照ください。
 
@@ -23,7 +23,7 @@ title: VP Get default style
 
 任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、どのシートのカラム数を取得するかを定義することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 このドキュメントのデフォルトスタイルを取得したい場合:
 
@@ -46,7 +46,7 @@ $defaultStyle:=VP Get default style("myDoc")
 }
 ```
 
-#### 参照
+## 参照
 
 [VP Get cell style](vp-get-cell-style.md)<br/>
 [VP SET DEFAULT STYLE](vp-set-default-style.md)

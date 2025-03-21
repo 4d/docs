@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->The **METHOD GET PATHS** command fills the *arrPaths* array with the internal pathnames and names of methods in the application that are of the type specified by the *methodType* parameter.<!-- END REF-->
 
@@ -46,7 +46,7 @@ If the command is executed from a component, it returns by default the paths of 
 
 If the command detects a duplicated method name, the error -9802 is generated ("Object path not unique"). In this case, it is advisable to use the MSC in order to verify the database structure.
 
-#### Example 1 
+## Example 1 
 
 Retrieval of project methods found in the "web" folder:
 
@@ -54,7 +54,7 @@ Retrieval of project methods found in the "web" folder:
  METHOD GET PATHS("web";Path project method;arrPaths)
 ```
 
-#### Example 2 
+## Example 2 
 
 Retrieval of database methods and triggers:
 
@@ -62,7 +62,7 @@ Retrieval of database methods and triggers:
  METHOD GET PATHS(Path trigger+Path database method;arrPaths)
 ```
 
-#### Example 3 
+## Example 3 
 
 Retrieval of project methods that were modified since the last backup:
 
@@ -76,16 +76,16 @@ Retrieval of project methods that were modified since the last backup:
  SAVE RECORD([Backups])
 ```
 
-#### Example 4 
+## Example 4 
 
 Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 
-#### See also 
+## See also 
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

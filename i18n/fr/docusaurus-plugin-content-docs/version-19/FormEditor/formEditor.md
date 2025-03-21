@@ -126,7 +126,7 @@ Vous pouvez utiliser les raccourcis suivants dans la liste des Propriétés:
 
 Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 
-- Par traçage d'un objet après sélection dans la barre d'objets (cf. paragraphe [Utiliser la barre d’objets](#using-the-object-bar))
+- Par traçage d'un objet après sélection dans la barre d'objets (cf. paragraphe [Utiliser la barre d’objets](#object-bar))
 - Par glisser-déposer depuis la barre d'objets
 - Par glisser-déposer ou copier-coller depuis la [bibliothèque d'objets](objectLibrary.md) préconfigurés
 - Par glisser-déposer depuis un autre formulaire,
@@ -241,7 +241,7 @@ Pour grouper les objets :
 Pour dégrouper un groupe d’objets :
 
 1. Sélectionnez le groupe que vous souhaitez dégrouper.
-2. Choisissez **Dégrouper** dans le menu **Objets**.<p>OU</p><p>Sélectionnez la commande **Dégrouper** (menu du bouton **Grouper**) dans la barre d’outils de l’éditeur de formulaires.</p><p>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple.</p>4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
+2. Choisissez **Dégrouper** dans le menu **Objets**.<p>OR</p><p>Sélectionnez la commande **Dégrouper** (menu du bouton **Grouper**) dans la barre d’outils de l’éditeur de formulaires.</p><p>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple.</p>4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
 
 ### Aligner des objets
 
@@ -304,7 +304,7 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1. Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2. Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OU<p>Sélectionnez une commande de distribution dans le sous-menu **Alignement** du menu **Objet** ou dans le menu contextuel de l'éditeur.</p>4D distribue les objets en conséquence. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
+2. Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>Sélectionnez une commande de distribution dans le sous-menu **Alignement** du menu **Objet** ou dans le menu contextuel de l'éditeur.</p>4D distribue les objets en conséquence. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
 
@@ -684,7 +684,7 @@ Sélectionnez simplement la vue de destination, faites un clic droit puis sélec
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-OU
+OR
 
 Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 

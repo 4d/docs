@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->El comando **ST INSERT EXPRESSION** inserta una referencia a la expresión en el campo o la variable de texto multiestilo designada por el parámetro *objeto*.<!-- END REF-->
 
@@ -72,7 +72,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
   
 **Nota**: si *inicioSel* es mayor que *finSel* (excepto cuando *finSel* es 0) , el comando no hace nada y la variable OK toma el valor 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea reemplazar el texto seleccionado con el resultado de un método proyecto:
 
@@ -80,14 +80,14 @@ Desea reemplazar el texto seleccionado con el resultado de un método proyecto:
  ST INSERT EXPRESSION(*;"miTexto";"miMetodo";ST Start highlight;ST End highlight)
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

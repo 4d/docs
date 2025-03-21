@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Compare strings.Summary-->**Compare strings** コマンドは、*aString* 引数の文字列が*bString* 引数の文字列比較して低い/等しい/高いと評価されるかによって負の値/ゼロ/正の値を返します。<!-- END REF-->引数にはtext 型の値を渡します。
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 | 1                   | *aString* は*bString* の後である(*aString* の方が高い) |
   
   
-#### 例題 1 
+## 例題 1 
 
 以下の文字列を比較したい場合を考えます: 
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
   // $result = 0
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例題は**データ言語が日本語のコンテキスト**におけるこのオプションの特定の振る舞いについて説明しています:
 
@@ -101,11 +101,11 @@ displayed_sidebar: docs
  $result:=Compare strings("ラーメン";"ﾗｱﾒﾝ") // オプションが有効化されている場合には異なるとみなされる
 ```
 
-#### 参照 
+## 参照 
 
 [Position](position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -47,7 +47,7 @@ Você também pode associar listas de escolha a objetos usando os comandos [OBJE
 
 #### Objectos suportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -83,7 +83,7 @@ Especifica uma variável ou expressão a que será atribuído o elemento/entidad
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -143,7 +143,7 @@ Estão disponíveis três opções:
 
 - **Referência de lista**: declara que a lista suspensa é hierárquica. Isso significa que a lista suspensa pode exibir até dois níveis hierárquicos e seu conteúdo pode ser gerenciado pelos comandos de linguagem 4D do tema **Listas hierárquicas**.
 - **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro _itemRef_ dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
+- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
 O uso da opção **Referência de item selecionado** exige a conformidade com os seguintes princípios:
 
@@ -167,9 +167,9 @@ O uso da opção **Referência de item selecionado** exige a conformidade com os
 
 ## Valores padrão (lista de)
 
-Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Esses valores estão automaticamente disponíveis na [variable array](properties_Object.md#variable-or-expression) associada a essa coluna quando o formulário é executado. Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
+Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Lista de valores usados como valores padrão para a coluna do list box (somente tipo array). Usando a linguagem, você pode gerenciar o objeto referir-se a esse array.
 
-> Não faça confusão entre esta propriedade e a propriedade "[valor padrão](properties_RangeOfValues.md#default-list-of-values)" que permite definir um valor de campo em novos registros.
+> Não faça confusão entre esta propriedade e a propriedade "[valor padrão](properties_RangeOfValues.md#default-value)" que permite definir um valor de campo em novos registros.
 
 É necessário introduzir uma lista de valores. No editor de formulários, uma caixa de diálogo específica permite que você insira valores separados por retornos de carro:
 
@@ -199,29 +199,30 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
 - Uma **variável simple** (nesse caso, ela deve ser declarada explicitamente para compilação). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - Um **campo** usando a sintaxe padrão [Tabela]Campo (solo [selection type list box](listbox_overview.md#selection-list-boxes)), por exemplo: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
-  - String
-  - Numeric
-  - Date
-  - Hora
-  - Imagem
-  - Booliano\
-    Você pode usar campos da tabela mestre ou de outras tabelas.
+ - String
+ - Numeric
+ - Date
+ - Hora
+ - Imagem
+ - Booliano\
+  Você pode usar campos da tabela mestre ou de outras tabelas.
 
-- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. O valor será avaliado nos eventos `On Display Detail` e `On Data Change`. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
-  São suportados os seguintes tipos de expressão:
-  - String
-  - Numeric
-  - Date
-  - Imagem
-  - Parâmetros
+- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. A expressão deve devolver um valor. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
+ São suportados os seguintes tipos de expressão:
+ - String
+ - Numeric
+ - Date
+ - Imagem
+ - Parâmetros
 
+Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
 Ao usar coleções ou seleções de entidades, você geralmente declara a propriedade do elemento ou o atributo da entidade associado a uma coluna em uma expressão contendo [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
 Se você usar uma coleção de valores escalares, o 4D criará um objeto para cada elemento da coleção com uma única propriedade (denominada "value"), preenchida com o valor do elemento. Nesse caso, você usará `This.value` como expressão.
 
 Si se utiliza una expresión no asignable [](Concepts/quick-tour.md#expressions) (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
 
-Si se utiliza un campo, una variable o una expresión asignable (_por ejemplo Person.lastName_), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
+Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Person.lastName*), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
 
 #### Gramática JSON
 
@@ -251,7 +252,7 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -265,7 +266,7 @@ Esta propriedade está disponível nas seguintes condições:
 Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
 - **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro _itemRef_ dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas.
+- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) ou [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), ou no editor de listas.
 
 Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
@@ -305,7 +306,7 @@ Especifica uma variável ou expressão à qual serão atribuídos os elementos o
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -315,7 +316,7 @@ Especifica uma variável ou expressão à qual serão atribuídos os elementos o
 
 Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de uma seleção temporária válida. Isso pode ser de uma seleção temporária processo ou interprocesso. O conteúdo do list box será baseado nesta seleção. A seleção temporária escolhida deve existir e ser válida no momento em que o list box for exibido; caso contrário, list box será exibido em branco.
 
-> As selecções temporárias são listas ordenadas de registos. Eles são usados para manter a ordem e o registro atual de uma seleção na memória. Para obter mais informações, consulte a seção **Seleções nomeadas** no _manual de Linguagem 4D_.
+> As selecções temporárias são listas ordenadas de registos. Eles são usados para manter a ordem e o registro atual de uma seleção na memória. Para obter mais informações, consulte a seção **Seleções nomeadas** no *manual de Linguagem 4D*.
 
 #### Gramática JSON
 
@@ -325,4 +326,4 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

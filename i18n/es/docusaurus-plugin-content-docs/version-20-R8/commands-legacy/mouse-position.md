@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MOUSE POSITION.Summary-->El comando MOUSE POSITION devuelve el estado actual del ratón.<!-- END REF-->
 
@@ -24,13 +24,13 @@ Las coordenadas horizontal y vertical se devuelven en *ratonX* y *ratonY*. Si pa
 
 El parámetro *botonRaton* devuelve el estado de los botones, como se describió anteriormente.
 
-**Nota:** los valores 2 y 3 pueden devolverse bajo Mac OS X a partir de la versión 10.2.5 únicamente.
+**Nota:** los valores 2 y 3 pueden devolverse bajo macOS a partir de la versión 10.2.5 únicamente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [Pop up menu](pop-up-menu.md "Pop up menu").
 
-#### Ver también 
+## Ver también 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -41,7 +41,7 @@ Ver el ejemplo del comando [Pop up menu](pop-up-menu.md "Pop up menu").
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

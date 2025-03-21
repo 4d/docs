@@ -76,7 +76,7 @@ Quando as macros são definidas no seu projeto 4D, você pode chamar uma macro u
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Esse menu é construído com base no `formMacros.json` [arquivo(s) de definição de macro] (#localização-de-macros). Os itens de macro estão ordenados por ordem alfabética.
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macro-file). Os itens de macro estão ordenados por ordem alfabética.
 
 Este menu pode ser chamado numa área vazia ou numa seleção no formulário. O objeto selecionado é passado para `$editor.currentSelection` ou `$editor.target` na função [`onInvoke`](#oninvoke) do macro.
 
@@ -140,7 +140,7 @@ As propriedades personalizadas, quando usadas, são passadas para a função [co
 
 Cada macro que você deseja instanciar em seu projeto ou componente deve ser declarada como uma [classe 4D] (Concepts/classes.md).
 
-O nome da classe deve corresponder ao nome definido usando o atributo [class](#creating-macros) do arquivo `formMacros.json`.
+O nome da classe deve corresponder ao nome definido usando o atributo [class](#declaring-macros) do arquivo `formMacros.json`.
 
 As macros são instanciadas no arranque da aplicação. Consequentemente, se você modificar a estrutura da classe de macro (adicionar uma função, modificar um parâmetro...) ou o [constructor](#class-constructor), você terá que reiniciar o aplicativo para aplicar as alterações.
 
@@ -200,7 +200,7 @@ Quando a função for chamada, ela recebe na propriedade `$editor.editor` uma c�
 
 Depois que as operações forem concluídas, se a macro resultar na modificação, adição ou remoção de objetos, você poderá passar as propriedades editadas resultantes em `$result`. O processador macro analisará as propriedades retornadas e aplicará as operações necessárias no formulário. Obviamente, quanto menos propriedades você retornar, menos tempo o processamento exigirá.
 
-Aqui estão as propriedades retornadas no parâmetro _$editor_:
+Aqui estão as propriedades retornadas no parâmetro *$editor*:
 
 | Propriedade                                                      | Tipo       | Descrição                                                                              |
 | ---------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- |

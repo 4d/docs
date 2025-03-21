@@ -19,13 +19,13 @@ Apenas um depurador pode depurar uma aplicação 4D Server num determinado momen
 
 - o depurador local do Servidor 4D (padrão) - se o servidor não estiver sendo executado sem interface.
 - o depurador de um cliente 4D remoto - se a sessão remota tiver acesso ao modo Desenho.
-- the [Qodly debugger](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) on 4D Server - if the server allows access to Qodly Studio.
+- o [depurador Qodly](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) no servidor 4D - se o servidor permitir acesso a Qodly Studio.
 - the **VS Code** debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
 
 O depurador anexado é chamado sempre que um 4D Server se encontra:
 
 - um ponto de ruptura
-- un comando `TRACE`
+- a `TRACE` command
 - um ponto de interrupção para fazer o pedido
 - um erro
 
@@ -76,7 +76,7 @@ Para ligar o depurador de novo ao servidor:
 
 - On a remote 4D client, this option is named **Attach Remote Debugger At Startup**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the remote debugger is automatically attached to the remote 4D client and the **Detach Remote Debugger option is displayed**.
 
-> Essa configuração é aplicada por projeto e é armazenada localmente no arquivo [`.4DPreferences`] (Project/architecture.md#userpreferencesusername).
+> This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
 ## Solicitações de anexos rejeitadas
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 | platforms           | collection of strings | ライセンスを使用しているプラットフォーム                                                                                                                        | \["macOS", "windows"\]      |
 | expirationDate      | object                | 有効期限(オプション)                                                                                                              | {"day":2, "month":6, "year":2018} |
 | renewalFailureCount | number                | 少なくとも一つの製品ライセンスに対して自動更新に失敗した回数(オプション)                                                                                    | 3                                                                                 |
-| products            | Object の Collection   | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表す) 以下参照。 以下参照。 以下参照。 以下参照。 以下参照。                                                          |                                                                                   |
+| products            | Object の Collection   | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表します)。  以下参照。                                                                              |                                                                                   |
 
 `products` コレクションの各オブジェクトは、以下のプロパティが格納されています:
 
@@ -83,7 +83,7 @@ displayed_sidebar: docs
 |              | \[ \].count          | number              | 許可された接続数                                      | 15 (32767 は無制限を意味します)                                                    |
 |              | \[ \].expirationDate | object              | 有効期限(オプション、上記のものと同じフォーマット) | {"day":1, "month":11, "year":2017}          |
 
-#### 例題
+## 例題
 
 現在の4D Server ライセンスについての情報を取得した場合を考えます:
 
@@ -129,15 +129,17 @@ displayed_sidebar: docs
 }
 ```
 
-#### 参照
+## 参照
 
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
 
-#### プロパティ
+## プロパティ
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| コマンド番号  | 1489                                                            |
-| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1489                        |
+| スレッドセーフ | &check; |
+
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->**XML SET OPTIONS** コマンドを使用して、 第一引数に渡されたXML構造のXMLオプションの値を変更できます。<!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 | XML DOM case sensitivity       | 倍長整数 | 8 | [DOM Get XML element](dom-get-xml-element.md) および [DOM Count XML elements](dom-count-xml-elements.md) コマンドにおける要素名の大文字と小文字の区別を指定します。<br/>取り得る値:<br/>XML case sensitive (デフォルト値): コマンドは大文字と小文字を区別します。XML case insensitive: コマンドは大文字と小文字を区別しません。                                                                                                                 |
 | XML external entity resolution | 倍長整数 | 7 | 外部エンティティがXMLドキュメント内で解決されるかどうかを管理します。デフォルトではセキュリティ上の理由から、DOMとSAXの4D XML解析は外部エンティティ解決を許可していません。このセレクターのスコープは呼び出しプロセス(プリエンプティブの場合)、あるいは全てのコオペラティブプロセス(コオペラティブプロセスから呼び出された場合)である点に注意して下さい。これは全てのXMLドキュメント全体的に適用されます(最初の引数は無視されますので、空の文字列を渡して下さい)。<br/>**取りうる値:**XML enabled: XMLドキュメント内での外部エンティティ解決を許可します。XML disabled (デフォルト値): 外部エンティティ解決を許可しない(外部エンティティ宣言は解析エラーを生成します) |
 
-#### 例題 
+## 例題 
 
 SVG ピクチャの挿入:
 
@@ -59,7 +59,7 @@ SVG ピクチャの挿入:
  DOM SET XML ATTRIBUTE($pictElemRef;"xlink:href";PictVar)
 ```
 
-#### 参照 
+## 参照 
 
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
@@ -67,7 +67,7 @@ SVG ピクチャの挿入:
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

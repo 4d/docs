@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLOSE DOCUMENT.Summary-->**CLOSE DOCUMENT** ferme le document spécifié par *docRef*.<!-- END REF-->
 
 Fermer un document est le seul moyen de s'assurer que les données écrites dans le fichier sont sauvegardées. Vous devez fermer tous les documents ouverts par les commandes [Open document](open-document.md), [Create document](create-document.md) et [Append document](append-document.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit la chaîne “Bonjour”, puis le referme :
 
@@ -32,13 +32,13 @@ L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

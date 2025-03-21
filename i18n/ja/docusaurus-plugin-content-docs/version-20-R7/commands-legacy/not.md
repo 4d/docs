@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Not.Summary-->Not は、*boolean*の否定を返します。<!-- END REF-->TrueをFalseに、FalseをTrueにします。
 
-#### 例題 
+## 例題 
 
 以下の例は、変数にTrueを代入し変数の値をFalseにした後、再びTrueにします。
 
@@ -28,12 +28,12 @@ displayed_sidebar: docs
  vResult:=Not(vResult) // vResult をTrueに設定
 ```
 
-#### 参照 
+## 参照 
 
 [False](false.md)  
 [True](true.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

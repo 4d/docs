@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->El comando XML SET OPTIONS se utiliza para modificar el valor de uno o más parámetros XML para estructura pasada en el primer parámetro.<!-- END REF--> 
 
@@ -52,7 +52,7 @@ Las siguientes opciones le permiten modificar algunas funcionalidades del analiz
 | XML external entity resolution | Entero largo | 7     | Controla si las entidades externas están definidas en documentos XML. Por razones de seguridad, por defecto, los analizadores XML DOM y SAX de 4D no permiten la resolución de entidades externas. Tenga en cuenta que el alcance de este selector es el proceso de llamada (si es apropiativo) o todos los procesos cooperativos (si se llama desde un proceso cooperativo). Se aplica globalmente a todos los documentos XML (el primer parámetro se ignora, puede pasar una cadena vacía).<br/>**<br/>Valores posibles:**XML enabled: permite la resolución de entidades externas en documentos XMLXML disabled (valor predeterminado): no permite la resolución de entidades externas (una declaración de entidad externa genera un error de análisis) |
 | XML line ending                | Entero largo | 10    | Caracteres de fin de línea en documentos XML escritos.<br/>**Valores posibles:** XML por defecto (por defecto): utiliza la configuración actual de la base. Por defecto es LF en macOS y CRLF en Windows. Sin embargo, en macOS, en las bases/proyectos creados con versiones de 4D hasta la v19.x, por defecto es CR para DOM y CRLF para SAX. Ver también parámetros de compatibilidad. XML LF: utiliza LF (salto de línea) XML CR: utiliza CR (carriage return) XML CRLF: utiliza CR+LF                                                                                                                                                                                                                                                                         |
 
-#### Ejemplo 
+## Ejemplo 
 
 Inserción de una imagen SVG:
 
@@ -62,7 +62,7 @@ Inserción de una imagen SVG:
  DOM SET XML ATTRIBUTE($pictElemRef;"xlink:href";PictVar)
 ```
 
-#### Ver también 
+## Ver también 
 
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
@@ -70,7 +70,7 @@ Inserción de una imagen SVG:
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [XML GET OPTIONS](xml-get-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

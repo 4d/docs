@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->The **WEB SET HOME PAGE** command allows you to modify the custom home page for the current Web process.<!-- END REF-->
 
@@ -28,7 +28,7 @@ To stop sending *homePage* as home page for the current Web process, execute **W
 **Note:** The default home page of the Web server is specified in the Database Settings dialog box. 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

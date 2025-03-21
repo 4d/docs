@@ -11,13 +11,13 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
-- **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md#basics) et dont le contenu est utilisé dans l'application hôte.
+- **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md) et dont le contenu est utilisé dans l'application hôte.
 
 ## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md#basics).
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -104,7 +104,7 @@ Pour permettre aux classes de votre composant d'être exposées dans les projets
 
 :::note
 
-Un _namespace_ garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilise différents composants dont les classes ou les fonctions ont des noms identiques. Un namespace doit être conforme aux [règles de dénomination des propriétés](../Concepts/identifiers.md#object-properties).
+Un *namespace* garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilise différents composants dont les classes ou les fonctions ont des noms identiques. Un namespace doit être conforme aux [règles de dénomination des propriétés](../Concepts/identifiers.md#object-properties).
 
 :::
 
@@ -194,7 +194,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et le projet 
 - La commande `Get pointer` ne retournera pas un pointeur vers une variable du projet hôte si elle est appelée depuis un composant et inversement.
 
 - L'architecture des composants permet la coexistence, au sein du même projet interprété, de composants à la fois interprétés et compilés (inversement, seuls des composants compilés peuvent être utilisés dans un projet compilé). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété.
-  Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
+ Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
 
 - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
 

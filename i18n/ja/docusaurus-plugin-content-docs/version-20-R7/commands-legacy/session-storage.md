@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 注 
+## 注 
 
 <!--REF #_command_.Session storage.Summary-->**Session storage** コマンドは*id* 引数に渡した固有のIDを持つセッションのStorage オブジェクトを返します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 返されるオブジェクトはセッションの[**.storage**](../API/SessionClass.md#storage) プロパティです。これはセッションの全てのプロセスから利用可能な情報を保存するための共有オブジェクトです。
 
-#### 例題 
+## 例題 
 
 以下のメソッドは、特定のセッションのstorage オブジェクトに保存された"settings" プロパティの値を書き換えます:
 
@@ -48,12 +48,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [Process activity](../commands/process-activity.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

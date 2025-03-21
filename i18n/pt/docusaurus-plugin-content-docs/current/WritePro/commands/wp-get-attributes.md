@@ -11,22 +11,22 @@ displayed_sidebar: docs
 | Parâmetro   | Tipo                                           |                             | Descrição                                 |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
 | Resultado   | Object                                         | &#8592; | Attribute names and values                |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary--> returns the value of any attribute in a 4D Write Pro range, header, body, footer, table, or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attributes: character, paragraph, document, table, or image.
 
 In *targetObj*, you can pass:
 
-- a range, or
+- um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- um documento 4D Write Pro
 
 In *attribName*, pass the name of the attribute you want to retrieve.
 
@@ -43,7 +43,7 @@ If there are different values for the same attribute in the element passed as a 
 
 **Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
 
-#### Exemplo 1
+## Exemplo 1
 
 You want to get the background color of the selected area:
 
@@ -52,7 +52,7 @@ You want to get the background color of the selected area:
  WP Get attributes($range;wk background color;$bcol)
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to get the font size, background color and border style of the selected area using a collection:
 
@@ -63,7 +63,7 @@ You want to get the font size, background color and border style of the selected
  
 ```
 
-#### Veja também
+## Veja também
 
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)

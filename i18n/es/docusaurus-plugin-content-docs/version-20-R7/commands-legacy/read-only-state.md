@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Read only state.Summary-->Esta función se utiliza para probar si *tabla* está en modo sólo lectura en el proceso en el que se llamó a la función.<!-- END REF--> Read only state devuelve TRUE si el estado de *tabla* es sólo lectura y FALSE si el estado de *tabla* es lectura/ escritura.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo prueba el estado de la tabla \[Facturas\]. Si el estado de la tabla \[Facturas\] es sólo lectura, se aplica el modo lectura/escritura y se carga nuevamente el registro actual. 
 
@@ -31,13 +31,13 @@ El siguiente ejemplo prueba el estado de la tabla \[Facturas\]. Si el estado de 
 
 **Nota:** el registro actual se carga nuevamente para permitirle al usuario modificarlo. Un registro cargado anteriormente en modo sólo lectura permanecerá bloqueado hasta que se recargue en modo lectura/escritura.
 
-#### Ver también 
+## Ver también 
 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 *Record Locking*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

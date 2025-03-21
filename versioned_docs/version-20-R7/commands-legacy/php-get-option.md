@@ -21,7 +21,7 @@ displayed_sidebar: docs
 :::
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->The PHP GET OPTION command can be used to find out the current value of an option relating to the execution of PHP scripts.<!-- END REF--> 
 
@@ -31,12 +31,12 @@ Pass a constant from the "*PHP*" theme in the *option* parameter to designate th
 | -------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | PHP raw result | Integer | 2     | Definition of processing mode for HTTP headers returned by PHP in the execution result when this result is of the Text type (when the result is of the BLOB type, headers are always kept).<br/>**Possible value(s)**: Boolean. False (default value = remove HTTP headers from result. True = keep HTTP headers. |
 
-#### See also 
+## See also 
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

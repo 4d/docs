@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN URL.Summary-->The **OPEN URL** command opens the file or URL passed in the *path* parameter with the application indicated in *appName* (if any).<!-- END REF--> 
 
-The *path* parameter can contain either a standard URL or a file pathname. The command accepts colons (':') under OS X, slashes ('\\') under Windows or a Posix URL beginning with file://. 
+The *path* parameter can contain either a standard URL or a file pathname. The command accepts colons (':') under macOS, slashes ('\\') under Windows or a Posix URL beginning with file://. 
 
 If the *appName* parameter is omitted, 4D first attempts to interpret the *path* parameter as a file pathname. If this is the case, 4D will request the system to open the file using the most suitable application (for example, a browser for .html files, Word for .doc files, etc.). The \* parameter is ignored in this case.  
 If the *path* parameter contains a standard URL (mailto:, news:, http:, etc. protocols), 4D starts the default Web browser and accesses the URL. If there is no browser on the volumes connected to the computer, this command has no effect. 
@@ -33,7 +33,7 @@ Under Windows, the mechanism for recognizing the application name is the same as
 
 **Note:** You will find the list of applications installed in the *registry* at the following key: HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths
 
-Under OS X, the mechanism uses the Finder which automatically indexes all the applications installed. It can recognize any .app application by means of its package name (with or without the .app suffix). For example, you could pass:
+Under macOS, the mechanism uses the Finder which automatically indexes all the applications installed. It can recognize any .app application by means of its package name (with or without the .app suffix). For example, you could pass:
 
 * "safari"
 * "FireFox"
@@ -45,7 +45,7 @@ When the *appName* application is not found, no error is returned; the command i
 
 **Note:** This command does not work when called from a Web process.
 
-#### Example 1 
+## Example 1 
 
 The following examples illustrate different types of strings that are accepted as URLs by the command:
 
@@ -56,7 +56,7 @@ The following examples illustrate different types of strings that are accepted a
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-#### Example 2 
+## Example 2 
 
 This example can be used to launch the most suitable application: 
 
@@ -67,7 +67,7 @@ This example can be used to launch the most suitable application:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The *appName* parameter lets you open the same text file using different applications:
 
@@ -77,11 +77,11 @@ The *appName* parameter lets you open the same text file using different applica
  OPEN URL("C:\\temp\\cookies.txt";"excel") //open the file with MS Excel (if installed)
 ```
 
-#### See also 
+## See also 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

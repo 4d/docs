@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->El comando FORM SET HORIZONTAL RESIZING permite cambiar por programación las propiedades de redimensionamiento horizontal del formulario actual.<!-- END REF--> Por defecto, estas propiedades son definidas en el editor de formularios en el entorno Diseño. Las nuevas propiedades son definidas para el proceso actual; no se almacenan con el formulario. 
 
@@ -27,17 +27,17 @@ Si pasa [False](false.md "False"), no se puede modificar el largo del formulario
 
 Si ha pasado [True](true.md "True") en el primer parámetro, puede pasar en los parámetros opcionales *anchoMin* y *ancho*Max los nuevos largos, mínimos y máximos, del formulario (en píxeles). Si omite estos parámetros se utilizan los valores definidos en el entorno Diseño (si los hay).
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE"). 
 
-#### Ver también 
+## Ver también 
 
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

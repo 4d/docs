@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.
 
@@ -102,7 +102,7 @@ Por defecto, el comando VERIFY DATA FILE crea un archivo de historial en formato
 Si ha pasado la opción Timestamp log file name, el nombre del archivo de historial incluye la fecha y la hora de su creación en la forma "AAAA-MM-DD HH-MM-SS", que nos da, por ejemplo: “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. Esto significa que cada nuevo archivo de historial no reemplaza al anterior, pero podría requerir acción manual posterior para eliminar archivos innecesarios.  
 Independientemente de la opción seleccionada, tan pronto como se genera un archivo de historial, su ruta se devuelve en la variable del sistema *Document* después de la ejecución del comando.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Verificación simple de los datos y de los índices:
 
@@ -110,7 +110,7 @@ Verificación simple de los datos y de los índices:
  VERIFY DATA FILE($NomEstructura;$NomData;Verify indexes+Verify records;Do not create log file;"")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Verificación completa con archivo de historial:
 
@@ -118,7 +118,7 @@ Verificación completa con archivo de historial:
  VERIFY DATA FILE($NomEstructura;$NomData;Verify All No Callback;0;"")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Verificación de los registros únicamente:
 
@@ -126,7 +126,7 @@ Verificación de los registros únicamente:
  VERIFY DATA FILE($NomEstructura;$NomData;Verify records;0;"")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Verificación de los registros de las tablas 3 y 7 únicamente:
 
@@ -137,7 +137,7 @@ Verificación de los registros de las tablas 3 y 7 únicamente:
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"FollowScan";$arrTableNums)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Verificación de índices específicos (índice del campo 1 de la tabla 4 e índice de los campos 2 y 3 de la tabla 5):
 
@@ -152,7 +152,7 @@ Verificación de índices específicos (índice del campo 1 de la tabla 4 e índ
  VERIFY DATA FILE($NomEstructura;$NomData;Verify indexes;0;"FollowScan";$arrTablaNums;$arrIndex)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Verifique el archivo de datos, cree y muestre el archivo de registro:
 
@@ -161,15 +161,15 @@ Verifique el archivo de datos, cree y muestre el archivo de registro:
  SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el método de retrollamada no existe, la verificación no se efectúa, se genera un error y la variable sistema OK toma el valor 0\. Si un archivo de historial se ha generado, su ruta completa se devuelve en la variable sistema Document.  
 
-#### Ver también 
+## Ver también 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

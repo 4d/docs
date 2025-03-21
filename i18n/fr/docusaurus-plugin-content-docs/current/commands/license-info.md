@@ -8,17 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-| Paramètres | Type   |                             | Description                          |
-| ---------- | ------ | --------------------------- | ------------------------------------ |
-| Résultat   | Object | &#8592; | Information about the active licence |
+| Paramètres | Type   |                             | Description                        |
+| ---------- | ------ | --------------------------- | ---------------------------------- |
+| Résultat   | Object | &#8592; | Informations sur la licence active |
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
-If the command is executed on a 4D application that does not use locally a license (e.g. 4D remote), the command returns a Null object.
+Si la commande est exécutée sur une application 4D qui n'utilise pas de licence localement (par exemple 4D remote), la commande renvoie un objet Null.
 
 L'objet retourné contient les propriétés suivantes :
 
@@ -56,43 +56,43 @@ L'objet retourné contient les propriétés suivantes :
 }
 ```
 
-| **Propriété**       | **Type**              | **Description**                                                                                                                                                                                                                                                             | **Example**                                                                       |
-| ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| name                | string                | Commercial name                                                                                                                                                                                                                                                             | "4D Developer Professional vXX"                                                   |
-| key                 | number                | ID of the installed product. A unique number is associated to a 4D application (such as 4D Server, 4D in local mode, 4D Desktop, etc.) installed on a machine. This number is encrypted. | 12356789                                                                          |
-| licenseNumber       | string                | License number                                                                                                                                                                                                                                                              | "4DDP16XXXXX1123456789"                                                           |
-| version             | string                | Product version number                                                                                                                                                                                                                                                      | "16", "16R2"                                                                      |
-| attributes          | collection of strings | License type(s) when applicable (optional)                                                                                                                                                                                            | \["application","OEM"\]     |
-| userName            | string                | Name of 4D store account                                                                                                                                                                                                                                                    | "John Smith"                                                                      |
-| userMail            | string                | Mail of 4D store account                                                                                                                                                                                                                                                    | "john.smith@gmail.com"               |
-| companyName         | string                | Company name of 4D store account                                                                                                                                                                                                                                            | "Alpha Cie"                                                                       |
-| platforms           | collection of strings | License platform(s)                                                                                                                                                                                                                                      | \["macOS", "windows"\]      |
-| expirationDate      | object                | Date of expiration (optional)                                                                                                                                                                                                                            | {"day":2, "month":6, "year":2018} |
-| renewalFailureCount | number                | Number of unsuccessful automatic renewal attempts for at least one of the product licenses (optional)                                                                                                                                                    | 3                                                                                 |
-| products            | collection of objects | Description of product license (one element per product license). See below.                                                                                                                                             |                                                                                   |
+| **Propriété**       | **Type**              | **Description**                                                                                                                                                                                                                                                          | **Example**                                                                                                                                       |
+| ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                | string                | Nom commercial                                                                                                                                                                                                                                                           | "4D Developer Professional vXX"                                                                                                                   |
+| key                 | number                | ID du produit installé. Un numéro unique est associé à une application 4D (telle que 4D Server, 4D en mode local, 4D Desktop, etc.) installée sur une machine. Ce numéro est chiffré. | 12356789                                                                                                                                          |
+| licenseNumber       | string                | Numéro de licence                                                                                                                                                                                                                                                        | "4DDP16XXXXX1123456789"                                                                                                                           |
+| version             | string                | Numéro de version du produit                                                                                                                                                                                                                                             | "16", "16R2"                                                                                                                                      |
+| attributes          | collection de chaînes | Type(s) de licence, le cas échéant (facultatif)                                                                                                                                                                                    | \["application","OEM"], ["evaluation"\] |
+| userName            | string                | Nom du compte sur 4D store                                                                                                                                                                                                                                               | "John Smith"                                                                                                                                      |
+| userMail            | string                | Mail du compte sur 4D store                                                                                                                                                                                                                                              | "john.smith@gmail.com"                                                                               |
+| companyName         | string                | Nom de l'entreprise sur 4D store                                                                                                                                                                                                                                         | "Alpha Cie"                                                                                                                                       |
+| platforms           | collection de chaînes | Plate-forme(s) de licence                                                                                                                                                                                                                             | \["macOS", "windows"\]                                                                      |
+| expirationDate      | object                | Date d'expiration (facultatif)                                                                                                                                                                                                                        | {"day":2, "month":6, "year":2026}                                                                 |
+| renewalFailureCount | number                | Nombre de tentatives de renouvellement automatique infructueuses pour au moins une des licences de produit (facultatif)                                                                                                                               | 3                                                                                                                                                 |
+| products            | collection d'objets   | Description de la licence produit (un élément par licence produit). Voir ci-dessous.                                                                                                                                  |                                                                                                                                                   |
 
-Each object of the `products` collection can have the following properties:
+Chaque objet de la collection `products` peut avoir les propriétés suivantes :
 
-| **Propriété** |                                                                                            | **Type**              | **Description**                                                             | **Example**                                                                                              |
-| ------------- | ------------------------------------------------------------------------------------------ | --------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| id            |                                                                                            | number                | License number                                                              | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
-| name          |                                                                                            | string                | License name                                                                | "4D Write - 4D Write Pro"                                                                                |
-| usedCount     |                                                                                            | number                | Number of consumed connections                                              | 8                                                                                                        |
-| allowedCount  |                                                                                            | number                | Total connections allowed for the product against the expiry dates          | 15                                                                                                       |
-| rights        |                                                                                            | collection of objects | Rights for the product (one element per expiration date) |                                                                                                          |
-|               | \[ \].count          | number                | Number of allowed connections                                               | 15 (32767 means unlimited)                                                            |
-|               | \[ \].expirationDate | object                | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                       |
+| **Propriété** |                                                                                            | **Type**            | **Description**                                                                  | **Example**                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------------------ | ------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| id            |                                                                                            | number              | Numéro de licence                                                                | Pour les valeurs disponibles, voir la commande [Is license available](../commands-legacy/is-license-available.md) |
+| name          |                                                                                            | string              | Nom de la licence                                                                | "4D Write - 4D Write Pro"                                                                                         |
+| usedCount     |                                                                                            | number              | Nombre de connexions consommées                                                  | 8                                                                                                                 |
+| allowedCount  |                                                                                            | number              | Connexions totales autorisées pour le produit par rapport aux dates d'expiration | 15                                                                                                                |
+| rights        |                                                                                            | collection d'objets | Droits pour le produit (un élément par date d'expiration)     |                                                                                                                   |
+|               | \[ \].count          | number              | Nombre de connexions autorisées                                                  | 15 (32767 signifie illimité)                                                                   |
+|               | \[ \].expirationDate | object              | Date d'expiration (facultatif, même format que ci-dessus)     | {"day":1, "month":11, "year":2017}                                |
 
-#### Exemple
+## Exemple
 
-You want to get information on your current 4D Server license:
+Vous souhaitez obtenir des informations sur votre licence 4D Server courante :
 
 ```4d
  var $obj : Object
  $obj:=License info
 ```
 
-*$obj* can contain, for example:
+*$obj* peut contenir, par exemple :
 
 ```json
 {
@@ -119,7 +119,7 @@ You want to get information on your current 4D Server license:
                     "expirationDate": {"day":1, "month":11, "year":2017}
                 }, {
                     "count": 10,
-                    "expirationDate": {"day":1, "month":11, "year":2015} //expired, not counted
+                    "expirationDate": {"day":1, "month":11, "year":2015} //expirée, non comptabilisée
                 }
             ],
             "usedCount": 12
@@ -129,15 +129,17 @@ You want to get information on your current 4D Server license:
 }
 ```
 
-#### Voir également
+## Voir également
 
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1489                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1489                        |
+| Thread safe        | &check; |
+
+

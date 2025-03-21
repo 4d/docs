@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.System folder.Summary-->O comando **System folder** devolve a rota de acesso a uma pasta particular do sistema operativo ou à pasta ativa do sistema Windows ou Mac OS.<!-- END REF-->
 
@@ -45,12 +45,12 @@ Passe um valor no parâmetro opcional *tipo* indicando o tipo de pasta do sistem
 
 Se omitido o parâmetro *tipo*, a função devolverá a rota à pasta sistema ativa (= constante System).
 
-#### Ver também 
+## Ver também 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -9,7 +9,7 @@ As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
 - gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
-- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- armazena e compartilha dados entre processos de um cliente web usando o [.storage](../API/SessionClass.md#storage) da sessão,
 - associate privileges to the user running the session.
 
 ## Usos
@@ -21,24 +21,24 @@ As sessões Web são usadas para:
 
 ## Activando sessões web
 
-The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
+A funcionalidade de gerenciamento de sessão pode ser ativado e desativado no seu servidor web 4D. Existem diferentes formas de ativar a gestão de sessões:
 
 - Usando a opção **Sessões escalonáveis** na página "Web/Opções (I)" das Propriedades (configuração permanente):
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+    ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se puede desactivar seleccionando la opción **Sin sesiones**, en cuyo caso las funcionalidades de la sesión web se desactivan (no hay ningún objeto `Session` disponible).
 
-- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). Neste caso, este parâmetro substitui a opção definida na caixa de diálogo Propriedades para o objeto Web Server (não é armazenado em disco).
 
 > El comando `WEB SET OPTION` también puede establecer el modo de sesión para el servidor web principal.
 
-In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
 > **Compatibilidad**: una opción **Sesiones legacy** está disponible en proyectos creados con una versión de 4D anterior a 4D v18 R6 (para más información, consulte el sitio web [doc.4d.com](https://doc.4d.com)).
 
 ## Session implementation
 
-Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID__AppName_", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
@@ -48,7 +48,7 @@ O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API
 
 1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
-2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
+2. Se o cookie tiver um valor, 4D procura pela sessão que criou este cookie entre as sessões existentes; Se esta sessão for encontrada, ela será reutilizada para a chamada.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
@@ -67,13 +67,13 @@ The `Session` object of the current session can then be accessed through the [`S
 
 :::info
 
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
+Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
 :::
 
 ## Armazenar e compartilhar informações de sessão
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
+Cada objeto `Session` fornece uma propriedade [`.storage`](API/SessionClass.md#storage) que é um [objeto compartilhado](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
 
 ## Duração da sessão
 
@@ -82,7 +82,7 @@ Uma sessão Web escalável é encerrada quando:
 - o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
-The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
+O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa que o servidor irá automaticamente fechar as sessões inativas após 60 minutos.
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
@@ -100,9 +100,9 @@ Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout
 
 ## Privilégios
 
-Os privilégios podem ser associados a sessões usuário Web. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões usuário Web. No servidor web, você pode fornecer acesso ou recursos específicos, dependendo dos privilégios da sessão.
 
-Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). Em seu código, você pode verificar os privilégios da sessão para permitir ou negar o acesso usando a função [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Exemplo:
 
@@ -122,11 +122,11 @@ Privileges are implemented at the heart of the ORDA architecture to provide deve
 
 ## Exemplo
 
-Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. A datastore contém pelo menos dois dataclasses ligados: Customers e SalesPersons (um vendedor tem vários clientes).
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
-We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
+Queremos que um vendedor autentique, abra uma sessão no servidor web e que os 3 primeiros clientes sejam carregados na sessão.
 
 1. Executamos este URL para abrir uma sessão:
 

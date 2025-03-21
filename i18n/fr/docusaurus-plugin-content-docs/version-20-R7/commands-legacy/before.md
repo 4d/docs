@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Before.Summary-->**Before** retourne Vrai pour le cycle d'exécution Avant.<!-- END REF-->
 
@@ -21,11 +21,11 @@ Si vous souhaitez que la phase **Before** du cycle d'exécution soit générée,
 
 **Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Load.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

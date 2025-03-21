@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ALL RECORDS.Summary-->La commande **ALL RECORDS** sélectionne tous les enregistrements de *laTable* pour le process courant.<!-- END REF-->fait du premier enregistrement de la sélection l'enregistrement courant et le charge en mémoire. **ALL RECORDS** retourne les enregistrements dans l'ordre par défaut, qui est l'ordre dans lequel ils ont été stockés sur le disque.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] :
 
@@ -26,7 +26,7 @@ L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] :
  DISPLAY SELECTION([Personnes]) //Affichage des enregistrements dans le formulaire sortie
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
@@ -35,7 +35,7 @@ L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] :
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

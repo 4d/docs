@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->The **OBJECT SET DATA SOURCE** command modifies the data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -35,7 +35,7 @@ In the case of list boxes, the following points must be considered:
 
 If this command is applied to a data source that is not modifiable, it does nothing. 
 
-#### Example 
+## Example 
 
 Modification of the data source for an entry area:
 
@@ -45,12 +45,12 @@ Modification of the data source for an entry area:
  OBJECT SET DATA SOURCE(*;"Input";$ptrField)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

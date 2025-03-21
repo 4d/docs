@@ -23,7 +23,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D só avalia solicitações HTTP [que requerem uma autenticação](#method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D só avalia solicitações HTTP [que requerem uma autenticação](#database-method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
@@ -119,7 +119,7 @@ Como alternativa, você pode usar a sintaxe de [parâmetros nomeados](Concepts/p
   -> $RequestAccepted : Boolean
 
 ```
-> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-mode) selecionado.)
+> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-modes) selecionado).
 
 #### $1 - URL
 
@@ -166,7 +166,7 @@ O método banco de dados `On Web Autenticação` retorna um booliano em $0:
 
 O método banco de dados `On Web Connection` só é executado se a conexão tiver sido aceite pelo `On Web Authentication`.
 > **AVISO**<br/>Se nenhum valor estiver definido como $0 ou se $0 não estiver definido no método banco de dados `On Web Authentication`, a conexão é considerada aceita e o método banco de dados `On Web Connection` é executado.
-> - Não chamar nenhum elemento de interface no método banco de dados `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, caso contrário, a sua execução será interrompida e a ligação recusada. O mesmo acontecerá se ocorrer um erro durante seu processamento.
+> - - Não chamar nenhum elemento de interface no método banco de dados `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, caso contrário, a sua execução será interrompida e a ligação recusada. O mesmo acontecerá se ocorrer um erro durante seu processamento.
 
 ### Exemplo
 
@@ -177,10 +177,10 @@ Exemplo de método de banco de dados `On Web Authentication` em [Modo DIGEST](#d
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
   $user : Text; $pw : Text) -> $valid : Boolean
 
- var $found : cs.WebUserSelection
+ var $found : cs. WebUserSelection
  $valid:=False
 
- $found:=ds.WebUser.query("User === :1";$user)
+ $found:=ds. WebUser.query("User === :1";$user)
  If($found.length=1) // User is found
   $valid:=WEB Validate digest($user;[WebUser]password)
  Else

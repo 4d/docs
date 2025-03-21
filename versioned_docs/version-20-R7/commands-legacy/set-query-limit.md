@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET QUERY LIMIT.Summary-->**SET QUERY LIMIT** allows you to tell 4D to stop any subsequent query for the current process as soon as at least the number of records you pass in *limit* has been found.<!-- END REF--> 
 
@@ -38,7 +38,7 @@ To restore queries with no limit, call **SET QUERY LIMIT** again with *limit* eq
 
 On the other hand, **SET QUERY LIMIT** does not affect the other commands that may change the current selection of a table, such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), and so on.
 
-#### Example 1 
+## Example 1 
 
 To perform a query corresponding to the request “...give me any ten customers whose gross sales are greater than $1 M...”, you would write:
 
@@ -48,11 +48,11 @@ To perform a query corresponding to the request “...give me any ten customers 
  SET QUERY LIMIT(0)
 ```
 
-#### Example 2 
+## Example 2 
 
 See the second example for the [SET QUERY DESTINATION](set-query-destination.md) command.
 
-#### See also 
+## See also 
 
 [Get query limit](get-query-limit.md)  
 [QUERY](query.md)  
@@ -64,7 +64,7 @@ See the second example for the [SET QUERY DESTINATION](set-query-destination.md)
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->O comando APPEND TO ARRAY adiciona um novo elemento ao fim do array e atribui valor ao elemento.<!-- END REF--> Em modo interpretado, se *array* não existe, o comando o cria com com respeito ao tipo de *valor*. 
 
@@ -24,7 +24,7 @@ O tipo de *valor* deve combinar com o tipo de array, caso contrário, será gera
 • um *array* alfanumérico (Texto ou Alfa) aceita qualquer valor de tipo alfanumérico ou texto.   
 • um *array de* numérico (Inteiro, Inteiro largo ou Real) aceita qualquer valor de tipo Inteiro, Inteiro Largo, Real ou Hora. 
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte código:
 
@@ -39,12 +39,12 @@ O seguinte código:
  APPEND TO ARRAY($meuarray;$meuvalor)
 ```
 
-#### Ver também 
+## Ver também 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

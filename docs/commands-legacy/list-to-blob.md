@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->The LIST TO BLOB command stores the hierarchical list *list* in the BLOB *blob*.<!-- END REF-->
 
@@ -31,22 +31,22 @@ After the call, if the list has been successfully stored, the OK variable is set
 
 **Note regarding Platform Independence:** LIST TO BLOB and [BLOB to list](blob-to-list.md) use a 4D internal format for handling lists stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms when using these two commands. In other words, a BLOB created on Windows using those commands can be reused on Macintosh, and vice-versa.
 
-##### Note 
+### Note 
 
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
-#### Example 
+## Example 
 
 See example for the command [BLOB to list](blob-to-list.md).
 
-#### See also 
+## See also 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

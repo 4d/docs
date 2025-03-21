@@ -23,12 +23,12 @@ Esta propriedade é usada para exibir ou ocultar [cabeçalhos de coluna listbox]
 
 Esta propriedade é usada para definir a altura da linha para um cabeçalho de list box em **píxeis** ou **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-- _Píxel_ - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+- *Píxel* - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-- _Linha_ - a altura é calculada considerando o tamanho da fonte da linha em questão.
-  - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
-  - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
-  - No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
+- *Linha* - a altura é calculada considerando o tamanho da fonte da linha em questão.
+ - Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
+ - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
+ - No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
 
 > Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html).
 

@@ -17,16 +17,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST SET TEXT.Summary-->O comando OBJECT SET STYLED TEXT insere o texto passado no parâmetro *novoTexto* no campo ou variável de texto com estilo designado pelo parâmetro *objeto*.<!-- END REF--> Este comando só é aplicado ao texto sem formato do parâmetro de *objeto*, sem modificar as etiquetas de estilo que contenha. Se pode utilizar para modificar por programação, texto com estilo na tela. 
 
-##### 
+### 
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (cadeia). Durante a execução, se o objeto tem o foco, o comando só se aplica ao objeto que está sendo editado e não a sua fonte de dados (campo ou variável). As mudanças só se transferem a fonte (e a qualquer outro objeto com esta mesma fonte) quando o objeto que se está editando se valida, seja por perder o foco ou com a tecla **Intro**. Quando o objeto não tem o foco, o comando se aplica diretamente a fonte de dados e as mudanças são imediatamente transferidos a outros objetos com a mesma fonte.  
 Se omitido o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou uma variável e se passa uma referencia de campo ou variável em vez de uma cadeia. O comando se aplica diretamente ao campo ou a variável e as mudanças são transferidas imediatamente a todos os objetos que utilizam esta fonte, incluindo o objeto com o foco.
 
-##### 
+### 
 
 Em *novoTexto*, passe o texto a inserir. O comando ST SET TEXT está desenhado para trabalhar com texto enriquecido (multi estilo) com etiquetas de tipo <span>. Em todos os demais casos (particularmente, quando trabalha com texto plano que contenha os caracteres <, > ou &), deve utilizar o comando [ST SET PLAIN TEXT](st-set-plain-text.md). Se passa texto plano com os caracteres <, > ou & ao comando ST SET TEXT, o comando no faz nada. Este princípio de funcionamento é necessário porque se inserir diretamente uma cadeia como "a<b" dentro de um texto enriquecido, não vai distorcionar a análise interna das etiquetas <span>. Neste caso, o caractere "<" deve ser previamente codificado como "&lt;", o qual pode ser feito utilizando o comando [ST SET PLAIN TEXT](st-set-plain-text.md) (ver também o exemplo deste comando).
 
@@ -50,13 +50,13 @@ Os parâmetros opcionais *inicioSel* e *fimSel* permitem designar uma seleção 
 
 Se *inicioSel* é superior a *fimSel*, o texto não se modifica e a variável OK toma o valor 0\. 
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de executar este comando, a variável OK toma o valor 1 se não é apresento nenhum erro; do contrário, toma o valor 0\. Este é o caso particularmente quando as etiquetas de estilo não são avaliados corretamente (etiquetas incorretas ou faltantes).   
 
 No caso de erro, não modifica a variável. Quando ocorre um erro em uma variável quando se está avaliando o texto, 4D transforma o texto em texto plano; como resultado, os caracteres <, > e & são convertidas em entidades HTML.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quer substituir o texto com estilo selecionado pelo usuário com o conteúdo de uma variável.
 
@@ -80,17 +80,17 @@ O campo e seu conteúdo são os seguintes:
 
 ![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Consulte o exemplo do comando [ST SET PLAIN TEXT](st-set-plain-text.md). 
 
-#### Ver também 
+## Ver também 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

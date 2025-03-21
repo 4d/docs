@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
-**WP DELETE SUBSECTION** コマンドは<!--REF #_command_.WP DELETE SUBSECTION.Summary-->引数で指定した4D Write Pro セクションから、引数で指定したサブセクション要素を削除します。または*subSection* 引数で指定したサブセクションを直接削除します。<!-- END REF--> サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。
+**WP DELETE SUBSECTION** コマンドは<!--REF #_command_.WP DELETE SUBSECTION.Summary-->引数で指定した4D Write Pro セクションから、引数で指定したサブセクション要素を削除します。または*subSection* 引数で指定したサブセクションを直接削除します。<!-- END REF--> サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。 サブセクション要素にはヘッダー、フッター、カラム、アンカーされた画像などが含まれます。 ドキュメントの本文はそのまま残されるという点に注意してください。
 
-*wpSection* 引数には、サブセクション要素を削除したいセクションを渡します。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。
+*wpSection* 引数には、サブセクション要素を削除したいセクションを渡します。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。 セクションは、[WP Get sections](../commands-legacy/wp-get-sections.md) または [WP Get section](../commands-legacy/wp-get-section.md) コマンドを使用することで取得できます。
 
 *subSectionType* 引数は削除するサブセクションを指定します。 以下の定数のいずれかを渡すことができます: 以下の定数のいずれかを渡すことができます: 以下の定数のいずれかを渡すことができます: 以下の定数のいずれかを渡すことができます: 以下の定数のいずれかを渡すことができます:
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 :::note
 
-左ページまたは右ページサブセクションを削除すると、反対側のサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。
+左ページまたは右ページサブセクションを削除すると、反対側のサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。 例えば、右ページサブセクションを削除した場合、左ページサブセクションも自動的に削除されます。
 
 :::
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 例題 1
+## 例題 1
 
 最初のセクションの最初のページのサブセクションを削除したい場合を考えます:
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
  WP DELETE SUBSECTION($section;wk first page)
 ```
 
-#### 例題 2
+## 例題 2
 
 セクション3 の右ページサブセクションを削除したい場合を考えます:
 
@@ -68,7 +68,7 @@ $subSection:=WP Get subsection(WP Get section($document;3);wk right page)
  
 ```
 
-#### 参照
+## 参照
 
 [WP Get subsection](../commands-legacy/wp-get-subsection.md)\
 [WP New subsection](../commands-legacy/wp-new-subsection.md)

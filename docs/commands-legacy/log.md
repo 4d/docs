@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Log.Summary-->Log returns the natural (Napierian) log of *number*.<!-- END REF--> Log is the inverse function of [Exp](exp.md).
 
 **Note:** 4D provides the predefined constant *e number* (2.71828...).
 
-#### Example 
+## Example 
 
 The following line displays 1:
 
@@ -28,11 +28,11 @@ The following line displays 1:
  ALERT(String(Log(Exp(1)))
 ```
 
-#### See also 
+## See also 
 
 [Exp](exp.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

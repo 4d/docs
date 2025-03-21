@@ -11,10 +11,10 @@ La propriété **Title** contient le libellé d'un menu ou d'une ligne de menu, 
 
 Dans l'éditeur de menus, vous pouvez saisir directement le libellé "en dur". Vous pouvez également saisir une référence pour une variable ou un élément XLIFF, ce qui facilitera la mise à jour et la traduction des applications. Vous pouvez utiliser types de références suivants :
 
-- Une référence à une ressource XLIFF, du type :xliff:MonLibellé. Pour plus d’informations sur les références XLIFF, reportez-vous à la section _Annexe B : Architecture XLIFF_ du _Mode Développement 4D_.
-- Un nom de variable interprocess suivi d’un chiffre, par exemple :`:<>vlang,3`. Il suffit de changer le contenu de cette variable pour modifier le libellé du menu lors de son affichage. Dans ce cas, le libellé fera appel à une ressource XLIFF. La valeur contenue dans la variable `<>vlang` correspond à l’attribut _id_ de l’élément _group_. La seconde valeur (3 dans cet exemple) désigne l’attribut _id_ de l’élément _trans-unit_.
+- Une référence à une ressource XLIFF, du type :xliff:MonLibellé. Pour plus d’informations sur les références XLIFF, reportez-vous à la section *Annexe B : Architecture XLIFF* du *Mode Développement 4D*.
+- Un nom de variable interprocess suivi d’un chiffre, par exemple :`:<>vlang,3`. Il suffit de changer le contenu de cette variable pour modifier le libellé du menu lors de son affichage. Dans ce cas, le libellé fera appel à une ressource XLIFF. La valeur contenue dans la variable `<>vlang` correspond à l’attribut *id* de l’élément *group*. La seconde valeur (3 dans cet exemple) désigne l’attribut *id* de l’élément *trans-unit*.
 
-En utilisant le langage 4D, vous définissez la propriété Title à l'aide du paramètre _itemText_ des commandes `APPEND MENU ITEM`, `INSERT MENU ITEM`, et `SET MENU ITEM`.
+En utilisant le langage 4D, vous définissez la propriété Title à l'aide du paramètre *itemText* des commandes `APPEND MENU ITEM`, `INSERT MENU ITEM`, et `SET MENU ITEM`.
 
 ### Caractères de contrôle
 
@@ -54,14 +54,14 @@ Vous choisissez d’associer une action standard ou une méthode projet à la co
 Pour associer une méthode projet et/ou une action standard à une commande de menu sélectionnée dans l'éditeur de menu :
 
 - **Nom de la méthode** : sélectionnez une méthode projet existante dans la combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] bouton. 4D affiche une boîte de dialogue de création de méthode de projet qui permet d'accéder à l'éditeur de code.
-- **Action standard associée** : Choisissez ou saisissez le nom de l’action que vous souhaitez associer dans la combo box "Action standard associée". Vous pouvez saisir toute action prise en charge et (optionnellement) tout paramètre dans la zone. Pour la liste complète des actions standard, veuillez vous reporter à la section **Actions standard** dans le _Mode Développement_.
-  **Note macOS :** Sous macOS, les commandes de menus créés associées à l'action _Quitter_ sont automatiquement placées dans le menu de l’application, conformément aux normes d’interface de cette plate-forme.
+- **Action standard associée** : Choisissez ou saisissez le nom de l’action que vous souhaitez associer dans la combo box "Action standard associée". Vous pouvez saisir toute action prise en charge et (optionnellement) tout paramètre dans la zone. Pour la liste complète des actions standard, veuillez vous reporter à la section **Actions standard** dans le *Mode Développement*.
+    **Note macOS :** Sous macOS, les commandes de menus créés associées à l'action *Quitter* sont automatiquement placées dans le menu de l’application, conformément aux normes d’interface de cette plate-forme.
 
 A l'aide du langage 4D, vous pouvez associer une méthode projet via la commande `SET MENU ITEM METHOD` et une action standard via la commande `SET MENU ITEM PROPERTY`.
 
 ### Démarrer un process
 
-L'option **Démarrer un nouveau process** est disponible pour les commandes de menu associées à des méthodes. Elle peut être définie via une case à cocher dans l'éditeur de menus, ou via le paramètre _property_ de la commande `SET MENU ITEM PROPERTY`.
+L'option **Démarrer un nouveau process** est disponible pour les commandes de menu associées à des méthodes. Elle peut être définie via une case à cocher dans l'éditeur de menus, ou via le paramètre *property* de la commande `SET MENU ITEM PROPERTY`.
 
 Lorsque l'option **Démarrer un nouveau process** est activée, un nouveau process est créé lorsque la commande de menu est choisie.
 Normalement, une méthode associée à une commande de menu est exécutée dans le process courant, à moins que vous n'appeliez explicitement un autre process dans votre code. La case à cocher **Démarrer un nouveau process** facilite le lancement d'un nouveau process. Si vous la sélectionnez, 4D créera un nouveau process lorsque la commande de menu sera sélectionnée.
@@ -90,7 +90,7 @@ Les groupes de commandes de menus peuvent être séparés par un filet. Cette fo
 
 Vous ajoutez un filet de séparation en créant une commande de menu.
 
-Dans l'éditeur de menus, au lieu de saisir le nom de la commande de menu, il suffit de cocher l’option **Ligne de séparation**. La ligne apparaît alors dans la zone de la commande courante. Lorsque cette option est cochée, les autres propriétés sont sans effet.
+Dans l'éditeur de menus, au lieu de saisir le nom de la commande de menu, il suffit de cocher l’option **Ligne de séparation**. La ligne apparaît alors dans la zone de la commande courante. La ligne apparaît alors dans la zone de la commande courante. Lorsque cette option est cochée, les autres propriétés sont sans effet.
 **Note :** Sous macOS, il est possible de procéder en faisant commencer le nom de la commande par un tiret “-”. Cette commande sera alors affichée comme une ligne de séparation.
 
 Dans le langage 4D, vous insérez une ligne de séparation en saisissant `-` ou `(-` comme itemText pour les commandes `APPEND MENU ITEM`, `INSERT MENU ITEM`, ou `SET MENU ITEM`.
@@ -102,16 +102,16 @@ Vous pouvez affecter des raccourcis clavier à toute commande de menu. Lorsqu’
 Vous pouvez également ajouter les touches **Majuscule** ainsi que **Alt** (Windows) ou **Option** (macOS) au raccourci clavier associé à une commande. Cette possibilité multiplie le nombre de raccourcis clavier utilisables dans les barres de menus. Les raccourcis clavier définis peuvent donc être de différents types :
 
 - Sous Windows :
-  - Ctrl+lettre
-  - Ctrl+Maj+lettre
-  - Ctrl+Alt+lettre
-  - Ctrl+Maj+Alt+lettre
+    - Ctrl+lettre
+    - Ctrl+Maj+lettre
+    - Ctrl+Alt+lettre
+    - Ctrl+Maj+Alt+lettre
 
 - Sous macOS :
-  - Commande+lettre
-  - Commande+Maj+lettre
-  - Commande+Option+lettre
-  - Commande+Maj+Option+lettre
+    - Commande+lettre
+    - Commande+Maj+lettre
+    - Commande+Option+lettre
+    - Commande+Maj+Option+lettre
 
 > Lorsque vous utilisez des actions standard, il est conseillé de conserver les raccourcis clavier qui leur sont associés par défaut.
 

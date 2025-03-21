@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Request.Summary-->El comando **Request** muestra una caja de diálogo compuesta de un mensaje, un área de entrada de texto, un botón **OK** y un botón **Cancelar**.<!-- END REF-->
 
@@ -33,7 +33,7 @@ El usuario puede introducir texto en el área de entrada de texto. Para especifi
 
 **Consejo:** si necesita obtener varias piezas de información del usuario, diseñe un formulario y preséntelo con [DIALOG](dialog.md), en lugar de presentar una sucesión de cajas de diálogo de tipo **Request**.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La línea:
 
@@ -45,7 +45,7 @@ Mostrará la siguiente caja de diálogo (en Windows):
 
 ![](../assets/en/commands/pict4225119.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La línea: 
 
@@ -62,7 +62,7 @@ Mostrará la siguiente caja de diálogo (en Windows):
 
 ![](../assets/en/commands/pict4225137.en.png)
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 La línea: 
 
@@ -74,12 +74,12 @@ Mostrará la siguiente caja de diálogo (en Windows):
 
 ![](../assets/en/commands/pict4225146.en.png)
 
-#### Ver también 
+## Ver también 
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE NAMED SELECTION.Summary-->**USE NAMED SELECTION** désigne la sélection temporaire *nom* comme sélection courante pour la table à laquelle elle appartient.<!-- END REF-->
 
@@ -25,13 +25,13 @@ Lorsque vous créez une sélection temporaire, l'enregistrement courant est auss
 N'oubliez pas qu'une sélection temporaire est la représentation d'une sélection courante à un instant donné. Si les enregistrements que la sélection temporaire représente sont modifiés, celle-ci devient obsolète. En conséquence, une sélection temporaire doit représenter une sélection d'enregistrements dont le contenu est relativement stable.   
 Différents événements peuvent rendre une sélection temporaire obsolète : la modification ou la suppression d'un enregistrement appartenant à la sélection temporaire ou la modification des critères de création de la sélection temporaire.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -24,7 +24,7 @@ title: VP Get table dirty rows
 |Result |Collection|<-|Collection of objects with all the items modified since the last reset|<!-- END REF -->
 
 
-#### Description
+## Description
 
 The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
 
@@ -48,7 +48,7 @@ Each *dirty row* object in the returned collection contains the following proper
 
 If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection. 
 
-#### Example
+## Example
 
 You want to count the number of edited rows:
 
@@ -58,7 +58,7 @@ $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
 
-#### See also
+## See also
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->O comando SET MENU ITEM MARK modifica a marca do elemento de menu cujo número ou referência de menu é passado em *menu* e cujo número de linha se passa em *menuItem* ao primeiro caractere da cadeia passada em *marcar*.<!-- END REF--> Pode passar -1 em *menuItem* para designar a última linha adicionada ao menu.
 
@@ -29,15 +29,15 @@ Se passa uma cadeia vazia, toda marca da linha de menu é eliminada. Do contrár
 * Em Macintosh, o primeiro caractere da cadeia é convertido na marca da linha de menu. Geralmente, passará Char (18), o qual é o caractere de marca para os menus Macintosh.
 * Em Windows, a marca automática de Window é associada ao menu
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo para o comando [Get menu item mark](get-menu-item-mark.md "Get menu item mark").
 
-#### Ver também 
+## Ver também 
 
 [Get menu item mark](get-menu-item-mark.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

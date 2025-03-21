@@ -80,7 +80,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 Esta propriedade é usada para especificar o conjunto a ser usado para gerenciar registros destacados na caixa de listas (quando a fonte de dados **Arrays** é selecionada, um array booleano com o mesmo nome que a caixa de lista é usada).
 
-O 4D cria um conjunto padrão chamado _ListBoxSetN_, em que _N_ começa em 0 e é incrementado de acordo com o número de caixas de listagem no formulário. Se necessário, pode alterar o conjunto predefinido. Pode ser um conjunto local, de processo ou entre processos (recomendamos o uso de um conjunto local, por exemplo, _$LBSet_, para limitar o tráfego de rede). É então mantido automaticamente por 4D. Se o usuário seleciona uma ou mais linhas no list box, o conjunto é atualizado imediatamente. Se você quiser selecionar uma ou mais linhas por programação, poderá aplicar os comandos do tema "Configurações" a este conjunto.
+O 4D cria um conjunto padrão chamado *ListBoxSetN*, em que *N* começa em 0 e é incrementado de acordo com o número de caixas de listagem no formulário. Se necessário, pode alterar o conjunto predefinido. Pode ser um conjunto local, de processo ou entre processos (recomendamos o uso de um conjunto local, por exemplo, *$LBSet*, para limitar o tráfego de rede). É então mantido automaticamente por 4D. Se o usuário seleciona uma ou mais linhas no list box, o conjunto é atualizado imediatamente. Se você quiser selecionar uma ou mais linhas por programação, poderá aplicar os comandos do tema "Configurações" a este conjunto.
 
 > - O estado destacado das linhas da lista e o estado destacado dos registros da tabela são completamente independentes.
 > - Se a propriedade "Destacar conjunto" não contiver um nome, não será possível fazer seleções no list box.
@@ -104,7 +104,7 @@ As colunas bloqueadas e as colunas estáticas são duas funcionalidades separada
 - As colunas bloqueadas sempre são exibidas à esquerda do list box; elas não rolam horizontalmente.
 - As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
 
-> É possível definir colunas estáticas e bloqueadas por meio de programação; consulte a seção "Caixa de listagem" no manual _4D Language Reference_.
+> É possível definir colunas estáticas e bloqueadas por meio de programação; consulte a seção "Caixa de listagem" no manual *4D Language Reference*.
 
 Estas propriedades interagem da seguinte forma:
 
@@ -176,7 +176,7 @@ Um array 4D que controla a apresentação das linhas do list box.
 
 Pode definir as propriedades de interface "oculto", "desativado" e "selecionável" para cada linha de um list box baseado num array utilizando este array. Ele também pode ser designado usando o comando `LISTBOX SET ARRAY`.
 
-O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento da _Row Control Array_ define o status da interface de sua linha correspondente na caixa de listagem. Três propriedades de interface estão disponíveis usando constantes no tema constante "List Box":
+O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento da *Row Control Array* define o status da interface de sua linha correspondente na caixa de listagem. Três propriedades de interface estão disponíveis usando constantes no tema constante "List Box":
 
 | Parâmetros               | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Designa a opção que permite aos utilizadores selecionar linhas:
 
 - **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Clicar na lista não terá efeito, a menos que a opção [Single-Click Edit] (properties_Entry.md#single-click-edit) esteja ativada. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
 - **Simples**: Uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
-  As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
+ As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
 - **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.
 
 #### Gramática JSON

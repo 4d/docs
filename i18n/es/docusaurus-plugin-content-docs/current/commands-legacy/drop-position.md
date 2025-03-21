@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Drop position.Summary-->El comando Drop position puede utilizarse para descubrir la ubicación, en un objeto de destino “complejo”, donde un objeto ha sido (arrastrado y) soltado.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Si llama Drop position cuando procesa un evento que no es del tipo arrastrar y s
 
 **Importante:** para que un objeto de formulario acepte los datos soltados, la propiedad **Soltable** debe estar seleccionada. Igualmente, su método de objeto debe ser activado por el evento On Drag Over y/o On Drop, para procesar estos eventos.
 
-#### Ejemplo 
+## Ejemplo 
 
 En el siguiente ejemplo, una lista de sumas debe ser desglosada por mes y por persona. La operación se efectúa arrastrando y soltando entre dos list boxes:
 
@@ -90,11 +90,11 @@ El método de objeto list box de la izquierda (destino) contiene el siguiente c�
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 *Arrastrar y soltar*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

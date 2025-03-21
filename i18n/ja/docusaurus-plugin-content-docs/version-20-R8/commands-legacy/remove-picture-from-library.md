@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->REMOVE PICTURE FROM LIBRARY コマンドは、*picRef*引数に渡した参照番号または*picName*引数の名前を持つピクチャをピクチャライブラリから消去します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **警告:** デザインオブジェクト (階層リスト項目、メニュー項目等) は、ピクチャライブラリのピクチャを参照することができます。プログラムによってピクチャライブラリのピクチャを修正する際は、注意する必要があります。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、ピクチャライブラリから参照番号4444のピクチャを削除します。
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
  REMOVE PICTURE FROM LIBRARY(4444)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、ドル記号 (*$*) で始まる名前を持つピクチャをピクチャライブラリから削除します:
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

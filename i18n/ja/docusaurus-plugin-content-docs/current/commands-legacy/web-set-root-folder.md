@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->**WEB SET ROOT FOLDER**コマンドを使用して、デフォルトのルートフォルダを変更します。<!-- END REF-->そのなかで4DはWebサーバがリクエストしたHTMLを探します。
 
@@ -33,12 +33,12 @@ HTMLシンタックス (URLタイプ) 、またはシステムシンタックス
 
 無効なパス名を指定すると、OS Fileマネージャエラーが生成されます。[ON ERR CALL](on-err-call.md)メソッドでこのエラーを検知できます。エラーメソッド内から警告またはメッセージを表示する場合、ブラウザ側で表示されます。
 
-#### 参照 
+## 参照 
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

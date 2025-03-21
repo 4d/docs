@@ -111,7 +111,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 `.attachments` プロパティは、<!-- REF #EmailObjectClass.attachments.Summary -->`4D.MailAttachment` オブジェクトのコレクション<!-- END REF -->を格納します。
 
-MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
+MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
 
 ## .bcc
 
@@ -131,17 +131,17 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ       | 型                   | 値                                                                                                                        |
-| ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| partID      | Text                | メールのパートを固有に識別する ID                                                                                                       |
-| type        | Text                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
-| charset     | Text                | Content-Type ヘッダーフィールドの Charset の値                                                                                       |
-| encoding    | Text                | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                         |
-| disposition | Text                | パートの Content-Disposition ヘッダーフィールドの値                                                                                     |
-| language    | Text の Collection   | パートの Content-Language ヘッダーフィールドの、[RFC3282](https://tools.ietf.org/html/rfc3282) で定義されている言語タグの一覧 (あれば) |
-| location    | Text                | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)    |
-| subParts    | Object の Collection | それぞれの子の本文パート (*EmailBodyPart* オブジェクトのコレクション)                                                          |
-| headers     | Object の Collection | パート内の全ヘッダーフィールドの、メッセージ内で出現する順の一覧 (*EmailHeader* オブジェクトのコレクション。[headers](#headers) プロパティ参照)            |
+| プロパティ       | 型                   | 値                                                                                                                                                                         |
+| ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| partID      | Text                | メールのパートを固有に識別する ID                                                                                                                                                        |
+| type        | Text                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                                                                     |
+| charset     | Text                | Content-Type ヘッダーフィールドの Charset の値                                                                                                                                        |
+| encoding    | Text                | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                                                                          |
+| disposition | Text                | パートの Content-Disposition ヘッダーフィールドの値                                                                                                                                      |
+| language    | Text の Collection   | パートの Content-Language ヘッダーフィールドの、[RFC3282](https://tools.ietf.org/html/rfc3282) で定義されている言語タグの一覧 (あれば)                                                  |
+| location    | Text                | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)                                                     |
+| subParts    | Object の Collection | それぞれの子の本文パート (*EmailBodyPart* オブジェクトのコレクション)                                                                                                           |
+| headers     | Object の Collection | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers) property) |
 
 ## .bodyValues
 
@@ -156,7 +156,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ                                      | 型       | 値                                                                                                         |
 | ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | 本文パートの値                                                                                                   |
+| *partID*.value             | テキスト    | 本文パートの値                                                                                                   |
 | *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
 
 ## .cc
@@ -208,8 +208,8 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ                                                                        | 型    | 値                                                                                                                                          |
 | ---------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [].name  | text | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
-| [].value | text | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                                        |
+| [].name  | テキスト | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
+| [].value | テキスト | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                                        |
 
 ## .htmlBody
 
@@ -362,3 +362,5 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 #### 説明
 
 `.to` プロパティは、<!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF --> を格納します。
+
+

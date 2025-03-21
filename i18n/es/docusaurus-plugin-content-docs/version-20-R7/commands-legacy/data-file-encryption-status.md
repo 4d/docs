@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Data file encryption status.Summary-->El comando **Data file encryption status** devuelve un objeto que suministra el estado de cifrado para el archivo de datos designado por los parámetros *rutaEstruct* y *rutaDatos*.<!-- END REF--> También se proporciona el estado de cada tabla.
 
@@ -46,7 +46,7 @@ El objeto devuelto contiene las siguientes propiedades:
    * después de abrir el archivo de datos, con el comando [Discover data key](discover-data-key.md)
 * utilizando el comando [Register data key](register-data-key.md)
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea conocer el estado de cifrado de un archivo de datos que corresponde al archivo de estructura actual:
 
@@ -64,12 +64,12 @@ Desea conocer el estado de cifrado de un archivo de datos que corresponde al arc
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [Encrypt data file](encrypt-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

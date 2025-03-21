@@ -37,20 +37,20 @@ O arquivo de historial atual se guarda automaticamente com o arquivo de dados at
 
 ## Criar o arquivo de histórico
 
-Como padrão, todo projeto de aplicativo criado com 4D utiliza um arquivo de histórico (opção definida na página **Geral** das Preferências). El archivo de historial se llama _data.journal_ y se coloca en la carpeta Data.
+Como padrão, todo projeto de aplicativo criado com 4D utiliza um arquivo de histórico (opção definida na página **Geral** das Preferências). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
 Você pode descobrir se o seu aplicativo utiliza um arquivo de log a qualquer momento: basta verificar se a opção **Use Log** está selecionada na página de **Backup/Configuração** das Configurações. Se desmarcar essa opção, ou se usar um banco de dados sem arquivo de histórico, e quiser estabelecer uma estratégia de backup com um arquivo de histórico, vai precisar criar um.
 
 Para criar um arquivo de histórico:
 
 1. Na página **Cópia de segurança/Configuração** das Propriedades do banco de dados, marque a opção **Utilizar o arquivo de histórico**.
-   O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado _data.journal_.
+  O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado *data.journal*.
 
 2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo.
-   Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
+  Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
 
 3. Clique em **Salvar**.
-   O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
+  O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
 4. Valide a caixa de diálogo das Propriedades.
 
@@ -67,9 +67,9 @@ Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Pre
 
 ## Configurações do arquivo de registro
 
-As [configurações do arquivo de log](settings.md#log-file-management) são baseadas em duas informações: um valor booleano e um caminho.
+As [configurações do arquivo de log](settings.md#log-management) são baseadas em duas informações: um valor booleano e um caminho.
 
-1. **Valor booleano**: indicando se o recurso "Usar arquivo de registro" está ativado ou desativado no aplicativo. Por padrão, o valor booleano é armazenado em _catalog.4DCatalog_. No entanto, quando as [configurações do usuário](../Desktop/user-settings.md) são ativadas, a configuração do arquivo _catalog.4DCatalog_ é substituída, e o valor booleano pode então ser definido no arquivo _Backup.4DSettings_ [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) ou no arquivo _Backup.4DSettings_ [na pasta do projeto](../Project/architecture.md#settings-user) (consulte também a documentação da chave de backup xml `JournalFileEnabled` em [doc.4d.com](https://doc.4d.com)).
+1. **Valor booleano**: indicando se o recurso "Usar arquivo de registro" está ativado ou desativado no aplicativo. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. No entanto, quando as [configurações do usuário](../Desktop/user-settings.md) são ativadas, a configuração do arquivo *catalog.4DCatalog* é substituída, e o valor booleano pode então ser definido no arquivo *Backup.4DSettings* [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) ou no arquivo *Backup.4DSettings* [na pasta do projeto](../Project/architecture.md#settings-user) (consulte também a documentação da chave de backup xml `JournalFileEnabled` em [doc.4d.com](https://doc.4d.com)).
 
 2. **Caminho**: uma string apontando para onde o arquivo de log está localizado. O caminho do arquivo de registro é sempre armazenado no arquivo de dados vinculados.
 

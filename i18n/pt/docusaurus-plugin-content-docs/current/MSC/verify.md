@@ -17,14 +17,14 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 - **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
 - **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
 
-> &#062; &#062; &#062; &#062; A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
+> &#062; &#062; &#062; &#062; &#062; A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
 
 ## Abrir arquivo de registo
 
-Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. Esse arquivo lista todas as verificações realizadas e indica os erros encontrados, quando aplicável ([OK] é exibido quando a verificação está correta). It is created in XML format and is named: _ApplicationName__Verify_Log__yyyy-mm-dd hh-mm-ss_.xml where:
+Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. Esse arquivo lista todas as verificações realizadas e indica os erros encontrados, quando aplicável ([OK] é exibido quando a verificação está correta). It is created in XML format and is named: *ApplicationName__Verify_Log__yyyy-mm-dd hh-mm-ss*.xml where:
 
-- _ApplicationName_ es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
-- _yyyy-mm-dd hh-mm-ss_ es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
+- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
 Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
 

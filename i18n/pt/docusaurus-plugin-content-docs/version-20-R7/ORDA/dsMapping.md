@@ -21,8 +21,8 @@ As seguintes regras são aplicadas a quaisquer conversões:
 
 - Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
 - Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
-  - Tabelas sem chave primária
-  - Tabelas com chaves primárias compostas.
+ - Tabelas sem chave primária
+ - Tabelas com chaves primárias compostas.
 - Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > O mapeamento ORDA não leva em consideração:
@@ -160,7 +160,7 @@ Além disso, os seguintes atributos de relação também estarão automaticament
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+> &#062; &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 

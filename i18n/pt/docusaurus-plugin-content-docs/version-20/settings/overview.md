@@ -3,11 +3,11 @@ id: overview
 title: Settings
 ---
 
-Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros podem diferir para cada projeto. They include the listening ports, backup configurations, security options, Web parameters, etc.
+Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros podem diferir para cada projeto. Eles incluem as portas de escuta, configurações de backup, opções de segurança, parâmetros Web, etc.
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. Para obter mais informações, consulte [Preferencies](../Preferencies/general.md).
+> 4D fornece outro conjunto de parâmetros, chamado **Preferências**, que se aplicam à aplicação 4D IDE. Para obter mais informações, consulte [Preferencies](../Preferencies/general.md).
 
 
 ## Aceder os parâmetros
@@ -16,39 +16,39 @@ Pode aceder à caixa de diálogo Parâmetros:
 
 -   usando a opção de menu **Desenho > Parâmetros...**
 -   clicando em **Parâmetros** na barra de ferramentas 4D
--   on 4D Server, using the **Edit > Settings...** menu option
+-   no 4D Server, usando a opção de menu **Editar > Parâmetros...**
 
-When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
+Quando o modo [**Parâmetros usuário** está ativado](../Desktop/user-settings.md), **Parâmetros...** é renomeado de **Parâmetros da estrutura...** e dois comandos do menu adicionais estão disponíveis em cada local:
 
--   **User Settings...** gives you access to settings that can be stored externally in a user file. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
--   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
+-   **Parâmetros usuário...** lhe dá acesso aos parâmetros que podem ser armazenadas externamente em um arquivo usuário. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
+-   **Parâmetros usuário para o arquivo de dados...** lhe dá acesso aos parâmetros que podem ser armazenadas externamente em um arquivo usuário anexado ao arquivo de dados atual. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
 
 ### Informações de bloqueio
 
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
 -   O arquivo *settings.4DSettings* é 'Somente leitura' (Projetos somente). A modificação de uma configuração exibirá um alerta para desbloqueá-la, se possível.
--   Dois ou mais usuários tentam modificar as mesmas configurações ao mesmo tempo. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
+-   Dois ou mais usuários tentam modificar as mesmas configurações ao mesmo tempo. Os parâmetros não podem ser usadas até que o primeiro usuário a libere fechando a janela. (Apenas cliente/servidor)
 
-In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
+Em ambos os casos, os parâmetros podem ser abertos em 'Somente leitura', mas não podem ser usados até que o bloqueio seja removido.
 
 
 
 ## Personalização de parâmetros
 
-In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
+Nas caixas de diálogo das Propriedades, os parâmetros cujos valores foram modificados aparecem **em negrito**:
 
 ![](../assets/en/settings/customize-settings.png)
 
-Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project.
+Os parâmetros indicados como personalizados podem ter sido modificados diretamente na caixa de diálogo, ou pode ter sido modificado anteriormente no caso de um projeto convertido.
 
 Um parâmetro continua a aparecer a negrito mesmo quando o seu valor é substituído manualmente pelos seus valores por defeito. Desta forma, é sempre possível identificar visualmente quaisquer parâmetros que tenham sido personalizados.
 
-A maioria dos parâmetros é aplicada imediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
+A maioria dos parâmetros é aplicada imediatamente. No entanto, alguns deles (como parâmetro de inicialização) só têm efeito quando o banco de dados é reiniciado. Neste caso, uma caixa de diálogo parece informar que a alteração terá efeito na próxima inicialização.
 
 
 ## Repor os parâmetros
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
+Para redefinir os parâmetros para seus valores padrão e remover o estilo negrito, indicando que foram personalizados, clique em **Redefinir os parâmetros de fábrica**.
 
 Este botão repõe todos os parâmetros da página atual. Fica ativo quando pelo menos um parâmetro tiver sido modificado na página atual.

@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
 Here is the response:
 
@@ -87,8 +87,8 @@ There are 2 url parts - Url parts are: start - example
 | [<!-- INCLUDE #IncomingMessageClass.getText().Syntax -->](#gettext)<br/><!-- INCLUDE #IncomingMessageClass.getText().Summary -->          |
 | [<!-- INCLUDE #IncomingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #IncomingMessageClass.headers.Summary -->              |
 | [<!-- INCLUDE #IncomingMessageClass.url.Syntax -->](#url)<br/><!-- INCLUDE #IncomingMessageClass.url.Summary -->                          |
-| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlPath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
-| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlQuery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
+| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlpath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
+| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlquery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
 | [<!-- INCLUDE #IncomingMessageClass.verb.Syntax -->](#verb)<br/><!-- INCLUDE #IncomingMessageClass.verb.Summary -->                       |
 
 :::note
@@ -113,7 +113,7 @@ Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/sha
 
 #### Descrição
 
-The `.getBlob()` function <!-- REF #IncomingMessageClass.getBlob().Summary -->returns the body of the request as a Blob<!-- END REF -->.
+A função `.getBlob()` <!-- REF #IncomingMessageClass.getBlob().Summary -->retorna o corpo da solicitação como um Blob<!-- END REF -->.
 
 If the body has not been given as a binary content, the function tries to convert the value but it can give unexpected results.
 
@@ -222,7 +222,7 @@ If the body is not received as a valid picture, the function returns null.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
+A função `.getText()` <!-- REF #IncomingMessageClass.getText().Summary -->retorna o corpo da solicitação como valor de texto<!-- END REF -->.
 
 If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
 
@@ -260,7 +260,7 @@ The `.url` property is read-only.
 
 :::note
 
-The "host" part of the request (*IP:port*) is provided by the [`host` header](#headers).
+A parte "host" do pedido (*IP:port*) é fornecida pelo [cabeçalho `host`](#headers).
 
 :::
 
@@ -340,10 +340,11 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 #### Descrição
 
-The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
+A propriedade `.verb` contém <!-- REF #IncomingMessageClass.verb.Summary -->o verbo usado pelo pedido<!-- END REF -->.
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
 The `.verb` property is read-only.
 
 <!-- END REF -->
+

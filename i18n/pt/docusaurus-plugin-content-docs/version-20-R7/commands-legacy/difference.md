@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DIFFERENCE.Summary-->DIFFERENCE compara *conjunto1* e *conjunto2* e exclui de *conjuntoResultado* todos os registros de *conjunto2*.<!-- END REF--> Em outras palavras, um registro é incluído em *conjuntoResultado* apenas se estiver em c*onjunto1*, mas não em *conjunto2*. A seguinte tabela mostra todos os resultados possíveis de uma operação de diferença de conjuntos.  
   
@@ -33,7 +33,7 @@ O *conjuntoResultado* é criado por DIFFERENCE O *conjuntoResultado* substitui q
   
 **4D Server**: em modo cliente/Servidor, conjuntos são "visíveis" dependendo do tipo (interprocesso, processo e local) e onde eles foram criados (servidor ou cliente). DIFFERENCE exige que todos os três conjuntos sejam visíveis na mesma máquina. Veja o parágrafo *4D Server, conjuntos e seleções temporais* no Manual de Referência 4D Server para mais informação.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo exclui os registros selecionados pelo usuário. Os registros se mostran na tela com la seguinte instrução:  
 
@@ -50,12 +50,12 @@ Ao final da lista de registros há um botão com um método de objeto. O método
  &NBSP;CLEAR SET("$Atual") // Apagar o conjunto
 ```
 
-#### Ver também 
+## Ver também 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

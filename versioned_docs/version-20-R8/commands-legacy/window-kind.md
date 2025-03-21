@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Window kind.Summary-->The **Window kind** command returns the 4D type of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, **Window kind** returns *0* (zero).
 
@@ -29,17 +29,17 @@ Otherwise, **Window kind** may return one of the following predefined constants 
 
 If you omit the *window* parameter, **Window kind** returns the type of the frontmost window for the current process.
 
-#### Example 
+## Example 
 
 See example for the [WINDOW LIST](window-list.md) command.
 
-#### See also 
+## See also 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD**は、*aTable*に対して新しい空のレコードを作成しますが、このレコードは表示されません。<!-- END REF-->データ入力のために新しいレコードを作成して表示するには[ADD RECORD](add-record.md)を使用します。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドでは、*aTable* に渡したテーブルが読み書き可能モードである必要はありません。テーブルが読み込みのみモードの場合でも使用する事ができます(*レコードのロック*を参照して下さい)。
 
-#### 例題 
+## 例題 
 
 以下の例は、30日以上経過したデータをアーカイブします。これはアーカイブ用のテーブルに新しいレコードを作成することで行っています。アーカイブが終了すると、対象のレコードを\[Accounts\]テーブルから削除します:
 
@@ -41,13 +41,13 @@ displayed_sidebar: docs
  DELETE SELECTION([Accounts]) // accountレコードを削除
 ```
 
-#### 参照 
+## 参照 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

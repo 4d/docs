@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get row color as number.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Passez la constante lk background color ou lk font color (thème "*List box*") d
 
 **Attention**, une couleur affectée à une ligne n’est pas forcément affichée dans toutes les cellules de ligne (cf. exemple). Si des valeurs de couleur contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-#### Exemple 
+## Exemple 
 
 Soit la list box suivante :
 
@@ -51,13 +51,13 @@ Soit la list box suivante :
      // vCoul3 contient 0x00FF0000 (rouge)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

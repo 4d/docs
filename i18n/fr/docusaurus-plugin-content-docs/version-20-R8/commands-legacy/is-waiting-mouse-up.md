@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->La commande **Is waiting mouse up** retourne **Vrai** si l'objet courant a été cliqué et que le bouton de la souris n'a pas été relâché, alors que la fenêtre contenant l'objet a le focus.<!-- END REF--> Sinon la commande retourne **Faux**, en particulier si la fenêtre contenant l'objet a perdu le focus avant que le bouton soit relâché. 
 
  Cette commande doit être appelée dans le contexte de l'objet courant. Elle est destinée à être utilisée conjointement avec l'événement formulaire On Mouse Up, disponible pour les champs et variables Image. Elle permet de gérer par programmation les cas où l'utilisateur clique et commence à effectuer un glisser dans une zone image (champ ou variable), et que cette action est interrompue par un événement extérieur, comme par exemple l'affichage d'une boîte de dialogue d'alerte. Dans ce cas, l'état interne de l'objet peut être suspendu indéfiniment car il attend l'événement On Mouse Up qui n'arrive jamais. Pour éviter ce problème, vous devez protéger votre code de déplacement de souris à l'aide de la commande **Is waiting mouse up** qui vous assure de son exécution dans un contexte valide.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant peut être utilisé pour gérer le suivi de la souris dans un objet image :
 
@@ -47,11 +47,11 @@ Le code suivant peut être utilisé pour gérer le suivi de la souris dans un ob
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

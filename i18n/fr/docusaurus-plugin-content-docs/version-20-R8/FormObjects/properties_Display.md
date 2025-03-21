@@ -100,7 +100,7 @@ Des formats de date personnalisés peuvent être construits en utilisant plusieu
 
 :::note blankIfNull
 
-- Par défaut, une date nulle est affichée avec des zéros, par exemple 00/00/00. Avec l'option "blankIfNull", une date nulle est affichée comme une zone vide. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée. Ex : "systemShort blankIfNull" ou "ee dd LL blankIfNull".
+- Par défaut, une date nulle est affichée avec des zéros, par exemple 00/00/00. Avec l'option "blankIfNull", une date nulle est affichée comme une zone vide. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée.
 - [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
 
 :::
@@ -132,7 +132,7 @@ Dans chacun des formats d'affichage numériques, le signe dièse (#), zéro (0),
 
 (1) Le caractère caret (^) génère un espace qui occupe la même largeur qu'un chiffre dans la plupart des polices de caractères.
 
-Par exemple, si vous souhaitez afficher des numéros à trois chiffres, vous pouvez utiliser le format ###. Si l'utilisateur saisit plus de chiffres que le format le permet, 4D affiche <<< dans le champ pour indiquer que plus de chiffres ont été saisis que le nombre de chiffres spécifié dans le format d'affichage.
+Par exemple, si vous souhaitez afficher des numéros à trois chiffres, vous pouvez utiliser le format ###. Si l'utilisateur saisit plus de caractères que ce que le format le permet, 4D affiche les derniers caractères.
 
 Si l'utilisateur saisit un nombre négatif, le caractère le plus à gauche est affiché sous forme de signe moins (sauf si un format d'affichage négatif a été spécifié). Si ##0 est le format, -26 est affiché comme –26 et -260 est affiché comme <<< car le signe moins occupe un espace réservé et il n'y a que trois espaces réservés.
 

@@ -17,7 +17,7 @@ Le nom d’une classe peut contenir jusqu’à 31 caractères.
 
 Un nom de classe doit être conforme aux [règles standard de nommage des propriétés](#propriétés-des-objets) au regard de la notation à points.
 
-> Donner le même nom à une classe et à une [table de la base](#tables) est déconseillé afin d'éviter tout conflit.
+> Donner le même nom à une classe et à une [table de la base](#tables-and-fields) est déconseillé afin d'éviter tout conflit.
 
 ## Fonctions
 

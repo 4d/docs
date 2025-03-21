@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->**DELETE DOCUMENT** supprime le document dont vous avez passé le nom dans *document*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Si le document est ouvert lorsque la commande est appelée, le résultat dépend
 
 **Attention :** **DELETE DOCUMENT** peut supprimer tout fichier disque, y compris des fichiers créés par d'autres applications ou les applications elles-mêmes. La commande **DELETE DOCUMENT** doit donc être utilisée avec précaution. La suppression d'un document est une opération définitive et irréversible.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant supprime le document appelé Note :
 
@@ -36,19 +36,19 @@ L'exemple suivant supprime le document appelé Note :
  DELETE DOCUMENT("Note") // Suppression du document
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La suppression d'un document met la variable système OK à 1\. Si **DELETE DOCUMENT** ne peut pas supprimer le document, la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Test path name](test-path-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

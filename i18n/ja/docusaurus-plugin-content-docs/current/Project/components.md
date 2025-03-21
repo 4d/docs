@@ -5,7 +5,7 @@ title: コンポーネント
 
 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。 4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを GitHubで見つけて ダウンロードすることもできます。
 
 4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
@@ -18,12 +18,12 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 ### Package folder
 
-The package folder of a component (_MyComponent.4dbase_ folder) can contain:
+The package folder of a component (*MyComponent.4dbase* folder) can contain:
 
 - for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
 - for **compiled components**:
-  - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
-  - or directly a .4DZ file with other folders such as _Resources_.
+ - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
+ - or directly a .4DZ file with other folders such as *Resources*.
 
 :::note
 
@@ -47,7 +47,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -69,8 +69,8 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 このファイルには次の内容を含めることができます:
 
-- デフォルトパス、または **environment4d.json** ファイルで定義されたパスに [ローカル保存されている](#ローカルコンポーネントの宣言) コンポーネントの名前
-- [GitHubリポジトリ](#github保存のコンポーネントの宣言) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
+- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
+- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -107,11 +107,11 @@ flowchart TB
     id3("3<br/>User 4D components")
 ```
 
-同じコンポーネントの別のインスタンス (A) がより高い優先度レベルにあるためにコンポーネント (B) を読み込めない場合、AとBのコンポーネントにはそれぞれ専用の [ステータス](#依存関係のステータス) が付与されます: 読み込まれなかったコンポーネント (B) には _Overloaded_ ステータス、読み込まれたコンポーネント (A) には _Overloading_ ステータスが与えられます。
+同じコンポーネントの別のインスタンス (A) がより高い優先度レベルにあるためにコンポーネント (B) を読み込めない場合、AとBのコンポーネントにはそれぞれ専用の [ステータス](#依存関係のステータス) が付与されます: 読み込まれなかったコンポーネント (B) には *Overloaded* ステータス、読み込まれたコンポーネント (A) には *Overloading* ステータスが与えられます。
 
 ### ローカルコンポーネント
 
-ローカルコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+ローカルコンポーネントは [**dependencies.json**ファイル](#dependenciesjson) にて次のように宣言します:
 
 ```json
 {
@@ -159,7 +159,7 @@ flowchart TB
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the _Not found_ [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+**environment4d.json** ファイルで定義されたコンポーネントのパスが、プロジェクトの開始時に見つからない場合、コンポーネントは読み込まれず、*Not found* [ステータス](#依存関係のステータス) が表示されます。
 
 :::
 
@@ -175,7 +175,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### GitHub に保存されたコンポーネント
 
-4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
+GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込んで更新することができます。
 
 :::note
 
@@ -195,7 +195,7 @@ GitHub に保存された 4Dコンポーネントを直接参照して使用す�
 
 #### パスの宣言
 
-GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
+GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependenciesjson) にて次のように宣言します:
 
 ```json
 {
@@ -226,7 +226,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependencyjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
 
 ```json
 {
@@ -239,7 +239,7 @@ When a release is created in GitHub, it is associated to a **tag** and a **versi
 }
 ```
 
-- リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 The versioning system used is based on the [_Semantic Versioning_](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
+- リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 リリースは **バージョン** によっても識別されます。 The versioning system used is based on the [*Semantic Versioning*](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例: 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
 
 ```json
 {
@@ -303,15 +303,15 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 ## プロジェクトの依存関係の監視
 
-In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
+開かれているプロジェクトでは、**依存関係** パネルで依存関係の追加・削除・更新ができるほか、現在の読み込み状態に関する情報を取得することができます。
 
 依存関係パネルを表示するには:
 
 - 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
 
@@ -319,17 +319,17 @@ In an opened project, you can add, remove, update, and get information about dep
 
 The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
 
-### Filtering dependencies
+### 依存関係のフィルタリング
 
 デフォルトでは、依存関係マネージャーによって識別されたすべての依存関係は、それらの [ステータス](#依存関係のステータス) に関係なくリストされます。 依存関係パネル上部のタブを選択することで、依存関係のステータスに応じてリストの表示をフィルタリングできます:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **アクティブ**: プロジェクトに読み込まれ、使用できる依存関係。 実際にロードされた _Overloading_ な依存関係が含まれます。 _Overloaded_ である方の依存関係は、その他の競合している依存関係とともに **コンフリクト** パネルに表示されます。
+- **アクティブ**: プロジェクトに読み込まれ、使用できる依存関係。 実際にロードされた *Overloading* な依存関係が含まれます。 *Overloaded* である方の依存関係は、その他の競合している依存関係とともに **コンフリクト** パネルに表示されます。
 - **非アクティブ**: プロジェクトに読み込まれておらず、利用できない依存関係。 このステータスには様々な理由が考えられます: ファイルの欠落、バージョンの非互換性など…
-- **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 _Overloaded_ な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
+- **コンフリクト**: プロジェクトに読み込まれてはいるものの、先に読み込まれた [優先度](#優先順位) の高い依存関係と競合している依存関係。 *Overloaded* な依存関係も表示されるため、競合の原因を確認し、適切に対処することができます。
 
-### Dependency status
+### 依存関係のステータス
 
 デベロッパーの注意を必要とする依存関係は、行の右側の **ステータスラベル** と背景色で示されます。
 
@@ -342,7 +342,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 - **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
 - **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
 - **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
-- **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Available after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が追加・更新されました。この依存関係は、アプリケーションの再起動後に読み込まれます。
 - **Unloaded after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が削除されました。この依存関係は、アプリケーションの再起動時にアンロードされます。
 - **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
 - **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
@@ -352,7 +352,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
 
-### Dependency origin
+### 依存関係のオリジン
 
 依存関係パネルには、各依存関係のオリジン (由来) にかかわらず、プロジェクトの依存関係すべてがリストされます。 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます: 依存関係のオリジンは、名前の下に表示されるタグによって判断することができます:
 
@@ -390,7 +390,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 [**.4DZ**](../Desktop/building.md#コンポーネントをビルド) または [**.4DProject**](architecture.md#applicationname4dproject-ファイル) ファイルを選択できます。
+**ローカル** タブが選択されていることを確認し、**...** ボタンをクリックします。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
 
 選択した項目が有効であれば、その名前と場所がダイアログボックスに表示されます。
 
@@ -401,11 +401,11 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 プロジェクトに依存関係を追加するには、**追加** をクリックします。
 
 - プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environment4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
-この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
+この段階で [**environment4d.json**](#environment4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
 
 :::
 
@@ -437,7 +437,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 #### Defining a GitHub dependency version range
 
-You can define the [tag or version](#tags-and-versions) option for a dependency:
+依存関係の [タグとバージョン](#タグとバージョン) オプションを定義することができます:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
@@ -465,7 +465,7 @@ The Dependency manager provides an integrated handling of updates on GitHub. The
 
 Manual operations can be done **per dependency** or **for all dependencies**.
 
-#### Checking for new versions
+#### 新バージョンをチェック
 
 Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
 
@@ -493,7 +493,7 @@ You can decide to [update the component](#updating-dependencies) or not.
 
 If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
 
-#### Updating dependencies
+#### 依存関係の更新
 
 **Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
 
@@ -559,3 +559,5 @@ The provided token is stored in a **github.json** file in the [active 4D folder]
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
 ダイアログボックスを確定すると、削除された依存関係の [ステータス](#依存関係のステータス) には "Unloaded after restart" (再起動時にアンロード) フラグが自動的に付きます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。
+
+

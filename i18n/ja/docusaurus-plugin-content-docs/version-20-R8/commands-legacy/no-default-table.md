@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->**NO DEFAULT TABLE** コマンドを使用して、[DEFAULT TABLE](default-table.md) コマンドの動作を無効にします。<!-- END REF-->このコマンドを実行した後、プロセスに対して定義されているデフォルトテーブルはありません。
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 しかし、同じ名前を持つプロジェクトフォームとテーブルフォームがデータベースにある場合、[DEFAULT TABLE](default-table.md) コマンドが実行されるとその原理は無効になります。実際この場合に、引数*aTable*が渡されていなくても、4Dはテーブルフォームをデフォルトで使用します。プロジェクトフォームを確実に使用するには、**NO DEFAULT TABLE** コマンドを用いなければなりません。
 
-#### 例題 
+## 例題 
 
 \[Table1\] テーブルに対して、"TheForm" という名前のプロジェクトフォームとそれと同じ名前のテーブルフォームを持つデータベースでは、次のようになります。
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
  DIALOG("TheForm") //4Dはプロジェクトフォームを使用
 ```
 
-#### 参照 
+## 参照 
 
 [DEFAULT TABLE](default-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

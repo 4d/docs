@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->La commande **LIST OF CHOICE LISTS** retourne dans les tableaux synchronisés *tabNums* et *tabNoms* les numéros et les noms des énumérations définies dans l’éditeur d’énumérations en mode Développement.<!-- END REF--> 
 
 Les numéros des énumérations correspondent à leur ordre de création. Dans l’éditeur d’énumérations, les énumérations sont affichées par ordre alphabétique. 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

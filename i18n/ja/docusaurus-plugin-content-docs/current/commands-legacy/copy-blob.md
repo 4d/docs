@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.COPY BLOB.Summary-->COPY BLOB コマンドは*len*で指定された数のバイトを、*srcBLOB*から*dstBLOB*にコピーします。<!-- END REF-->
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 
 **Note:** コピー先BLOBは必要に応じてリサイズされます。
 
-#### 参照 
+## 参照 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

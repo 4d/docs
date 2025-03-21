@@ -5,7 +5,7 @@ title: Action
 
 ## Méthode
 
-Référence d'une méthode associée au formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. Voir [Méthodes spécialisées](Concepts/methods.md#specialized-methods).
+Référence d'une méthode associée au formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. See [methods](../Concepts/methods.md).
 
 Vous n'appelez pas de méthode formulaire - 4D l'appelle automatiquement lorsqu'un événement implique le formulaire auquel la méthode est associée.
 
@@ -28,3 +28,4 @@ Plusieurs types de références de méthode sont pris en charge :
 | Nom    | Type de données | Valeurs possibles                                                                    |
 | ------ | --------------- | ------------------------------------------------------------------------------------ |
 | method | text            | Chemin standard ou personnalisé de la méthode formulaire ou nom de la méthode projet |
+

@@ -3,9 +3,9 @@ id: onAfterEdit
 title: On After Edit
 ---
 
-| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                                                       | 定義                          |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| 45  | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | フォーカスのある入力可能オブジェクトの内容が更新された |
+| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                              | 定義                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- |
+| 45  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [階層リスト](FormObjects/list_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox_overview.md#list-box-columns) | フォーカスのある入力可能オブジェクトの内容が更新された |
 
 ## 説明
 
@@ -29,10 +29,10 @@ title: On After Edit
 | プロパティ       | 型       | 説明                                                                                                  |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro エリア名                                                                                    |
-| sheetName   | text    | イベントが発生したシート名                                                                                       |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | テキスト    | "On After Edit"                                                                                     |
+| objectName  | テキスト    | 4D View Pro エリア名                                                                                    |
+| sheetName   | テキスト    | イベントが発生したシート名                                                                                       |
+| action      | テキスト    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 `action` プロパティの値に応じて、[イベントオブジェクト](overview.md#イベントオブジェクト) には追加のプロパティが含まれます。
 
@@ -72,7 +72,7 @@ title: On After Edit
 | プロパティ   | 型      | 説明          |
 | ------- | ------ | ----------- |
 | range   | object | セルのレンジ      |
-| formula | text   | 入力されたフォーミュラ |
+| formula | テキスト   | 入力されたフォーミュラ |
 
 #### action = clipboardPasted
 

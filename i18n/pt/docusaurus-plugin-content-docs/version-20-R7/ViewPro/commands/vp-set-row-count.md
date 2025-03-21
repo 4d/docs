@@ -15,9 +15,9 @@ title: VP SET ROW COUNT
 | rowCount   | Integer | -> | Número de linhas                                            |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
-The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->defines the total number of rows in *vpAreaName*<!-- END REF -->.
+O comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary --> define o número total de linhas em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -27,7 +27,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 - `vk current sheet`
 
-#### Exemplo
+## Exemplo
 
 O código seguinte define cinco linhas na área 4D View Pro:
 
@@ -37,8 +37,9 @@ VP SET ROW COUNT("ViewProArea";5)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowCount.PNG)
 
-#### Veja também
+## Veja também
 
 [VP Get column count](vp-get-column-count.md)<br/>
 [VP get row-count](vp-get-row-count.md)<br/>
 [VP SET COLUMN COUNT](vp-set-column-count.md)
+

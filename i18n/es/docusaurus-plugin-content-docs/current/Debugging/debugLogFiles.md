@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Archivo de historial
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los registros generalmente se inician o detienen utilizando los selectores de los comandos [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md) o [HTTP SET OPTION](../commands-legacy/http-set-option.md) y se almacenan en la [carpeta de registros](../Project/architecture.md#logs) del proyecto.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
@@ -17,6 +17,7 @@ La información histórica debe ser analizada para detectar y solucionar los pro
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Cuando un archivo de historial puede generarse tanto en 4D Server como en el cliente remoto, se añade la palabra "Server" al nombre del archivo de historial del lado del servidor, por ejemplo "4DRequestsLogServer.txt"
 
@@ -69,7 +70,7 @@ Para cada petición, se registran los siguientes campos:
 | request                                                                                                | [ID de petición C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) o cadena de mensaje para peticiones SQL o mensajes `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                      |
 | bytes_in                                                                          | Número de bytes recibidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | bytes_out                                                                         | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| server\_duration &#124; exec\_duration | Depende del lugar donde se genere el registro:<li>_server\_duration_ cuando se genera en el cliente --Time tomado en microsegundos para que el servidor procese la solicitud y devuelva una respuesta. B a F en la imagen de abajo, O</li><li>_exec\_duration_ cuando se genera en el servidor --Tiempo empleado en microsegundos para que el servidor procese la petición. B a E en la imagen de abajo.</li> |
+| server\_duration &#124; exec\_duration | Depende del lugar donde se genere el registro:<li>_server\*duration* cuando se genera en el cliente --Time tomado en microsegundos para que el servidor procese la solicitud y devuelva una respuesta. B a F en la imagen de abajo, O</li><li>_exec\*duration* cuando se genera en el servidor --Tiempo empleado en microsegundos para que el servidor procese la petición. B a E en la imagen de abajo.</li> |
 | write\_duration                                                                  | Tiempo tomado en microsegundos para enviar la:<li>Petición (cuando se ejecuta en el cliente). A a B en la imagen debajo.</li><li>Respuesta (cuando se ejecuta en el servidor). E a F en la imagen de abajo.</li>                                                                                                                                                                                    |
 | task_kind                                                                         | Apropiativo o cooperativo (respectivamente "p" o "c")                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | rtt                                                                                                    | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la acuse de recibo. A a D y E a H en la imagen de abajo.<li>Solo medido al utilizar la capa de red ServerNet, devuelve 0 cuando se usa con la capa de red antigua.</li><li>Para versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada retornará 0.</li>                                                                                    |
@@ -260,7 +261,7 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 ### Cómo activar el archivo
 
-El archivo _4DDiagnosticLog.txt_ puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
+El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
 Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
@@ -268,7 +269,7 @@ Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de r
 | ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `Log error` | Una parte de la aplicación no funciona                                                          | `Log error`                                                   |
 | `Log warn`  | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | `Log error`, `Log warn`                                       |
-| `Log info`  | _Nivel por defecto_ - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
+| `Log info`  | *Nivel por defecto* - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
 | `Log debug` | Detalle del flujo de aplicación (para los servicios técnicos 4D)             | `Log error`, `Log warn`, `Log info`, `Log debug`              |
 | `Log trace` | Otra información interna (para los servicios técnicos de 4D)                 | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
@@ -290,10 +291,10 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 Los archivos de historial pueden producirse en dos versiones:
 
 - una versión normal:
-  - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
-  - sin adjuntos
-  - utiliza un reciclaje automático de archivos circulares cada 10 MB
-  - destinado a la depuración habitual
+ - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
+ - sin adjuntos
+ - utiliza un reciclaje automático de archivos circulares cada 10 MB
+ - destinado a la depuración habitual
 
 Para iniciar este historial:
 
@@ -308,9 +309,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 - una versión extendida:
-  - attachment(s) included no automatic recycling
-  - nombre personalizado
-  - reservado con fines específicos
+ - attachment(s) included no automatic recycling
+ - nombre personalizado
+ - reservado con fines específicos
 
 Para iniciar este historial:
 
@@ -400,7 +401,7 @@ Este es un ejemplo de un registro de archivo de historial ORDA del lado del clie
 
 ### Del lado del servidor
 
-El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, _ordaRequests.jsonl_).
+El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, *ordaRequests.jsonl*).
 
 Como iniciar este historial:
 
@@ -455,6 +456,43 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Como iniciar este historial:
+
+- Use the `SET DATABASE PARAMETER` command:
+
+ ```4d
+ SET DATABASE PARAMETER(TCP log; 1)
+ ```
+
+- Cómo activar el archivo
+
+ ```json
+ {
+     "TCPLogs":{
+       "state" : 1
+          }
+ }
+ ```
+
+Los siguientes campos se registran para cada evento:
+
+| Nombre del campo | Tipo       | Descripción                                                                                |
+| ---------------- | ---------- | ------------------------------------------------------------------------------------------ |
+| time             | Fecha/Hora | Date and time of the event in ISO 8601 format                                              |
+| localPort        | Number     | Local port used for the connection                                                         |
+| peerAddress      | Text       | IP address of the remote peer                                                              |
+| peerPort         | Number     | Port of the remote peer                                                                    |
+| protocol         | Text       | Indicates whether the event is related to `TCP`                                            |
+| evento           | Text       | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size             | Number     | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt          | Number     | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt      | Text       | First 10 bytes of data in text format                                                      |
+| comment          | Text       | Additional information about the event, such as error details or encryption status         |
+
 ## Utilización de un archivo de configuración de log
 
 Puede utilizar un **archivo de configuración de log** para gestionar fácilmente el registro de los historiales en un entorno de producción. Este archivo está preconfigurado por el desarrollador. Normalmente, se puede enviar a los clientes para que sólo tengan que seleccionarlo o copiarlo en una carpeta local. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
@@ -464,16 +502,16 @@ Puede utilizar un **archivo de configuración de log** para gestionar fácilment
 Hay varias maneras de activar el archivo de configuración de registro, dependiendo de su configuración:
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
-- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
+- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-user) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows: `Users\[userName]\AppData\Roaming\[application]`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -632,7 +670,7 @@ El archivo de configuración del registro es un archivo `.json` que debe cumplir
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

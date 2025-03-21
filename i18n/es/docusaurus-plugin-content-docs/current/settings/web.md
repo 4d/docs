@@ -35,7 +35,7 @@ Permite modificar el número de puerto TCP/IP utilizado por el servidor web para
 
 #### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
-_Nota de compatibilidad:_ esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
+*Nota de compatibilidad:* esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
 
 ### Rutas
 
@@ -74,7 +74,7 @@ Esta área le permite configurar cómo el servidor web manejará las sesiones us
 
 #### Sesiones extensibles (sesiones multiproceso)
 
-Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. Ver la [página Sesiones usuario](../WebServer/sessions.md#enabling-sessions).
+Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. Ver la [página Sesiones usuario](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sin sesiones
 
@@ -84,11 +84,11 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 - [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
 - [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
-- [Usar procesos apropiativos](#use-preemptive-web-processes)
+- [Usar procesos apropiativos](#use-preemptive-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
-_Nota de compatibilidad:_ esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
+*Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
 Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
 
@@ -112,7 +112,7 @@ No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
 Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
 
-> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tiempo de espera del proceso inactivo
 
@@ -126,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación _Desarrollo Web_.
+Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación *Desarrollo Web*.
 
 ## Options (II)
 
@@ -158,7 +158,7 @@ Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros COR
 
 ### Formato del historial
 
-Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
+Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
 > La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -167,13 +167,13 @@ El menú de formato de registro ofrece las siguientes opciones:
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
 - **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
-  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
-  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
+    host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+    Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
-  - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
-  - rfc931: información no generada por 4D, siempre es - (un signo menos)
-  - usuario: nombre del usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).
-  - DD: día, MMM: una abreviatura de 3 letras para el nombre del mes (Jan, Feb,...), YYYY: año, HH: hora, MM: minutos, SS: segundos
+    - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
+    - rfc931: información no generada por 4D, siempre es - (un signo menos)
+    - usuario: nombre del usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por _ (un guión bajo).
+    - DD: día, MMM: una abreviatura de 3 letras para el nombre del mes (Jan, Feb,...), YYYY: año, HH: hora, MM: minutos, SS: segundos
 
 > La fecha y hora son locales al servidor.
 
@@ -195,8 +195,8 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
 
-  - Referer: contiene la URL de la página que apunta al documento solicitado.
-  - User-agent: contiene el nombre y la versión del navegador o del software cliente en el origen de la petición.
+    - Referer: contiene la URL de la página que apunta al documento solicitado.
+    - User-agent: contiene el nombre y la versión del navegador o del software cliente en el origen de la petición.
 
 > El formato DLF no se puede personalizar.
 
@@ -244,7 +244,7 @@ Configure los parámetros de copia de seguridad automática para el registro de 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
 
-  - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
 - **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Enter 1 if you want to perform a monthly backup.
@@ -262,7 +262,7 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo _Publicado en WSDL_. Cuando esta opción está marcada, 4D crea el archivo WSDL.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Cuando esta opción está marcada, 4D crea el archivo WSDL.
 - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
 - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
 

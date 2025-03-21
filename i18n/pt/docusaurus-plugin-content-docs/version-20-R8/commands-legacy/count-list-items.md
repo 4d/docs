@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Count list items.Summary-->O comando Count list items retorna o número atual de elementos visíveis ou o número total de elementos na lista cujo número de referência ou nome de objeto se passa em *lista*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Quando é omitido este parâmetro, o comando retorna o número de elementos vis�
 
 Aplique este comando a uma lista mostrada num formulário.
 
-#### Exemplos 
+## Exemplos 
 
 Aqui temos uma lista chamada *hList* mostrada no ambiente Aplicação:
 
@@ -56,12 +56,12 @@ Aqui temos uma lista chamada *hList* mostrada no ambiente Aplicação:
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems continua valendo 8
 ```
 
-#### Ver também 
+## Ver também 
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ title: VP SET DEFAULT STYLE
 |styleObj |Object|->|Style object|
 |sheet|Integer|->|Sheet index (default = current sheet)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET DEFAULT STYLE` command <!-- REF #_method_.VP SET DEFAULT STYLE.Summary -->defines the style in the *styleObj* as the default style for a *sheet*<!-- END REF -->.
 
@@ -26,7 +26,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 * `vk current sheet`
 
-#### Example
+## Example
 
 ```4d
 $style:=New object
@@ -39,7 +39,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 ![](../../assets/en/ViewPro/cmd_vpSetDefaultStyle.PNG)
 
-#### See also
+## See also
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Font to object](vp-font-to-object.md)<br/>

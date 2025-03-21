@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.throw.Summary-->The **throw** command creates an error that will be thrown either immediately or when the calling method returns to its caller (deferred mode).<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Errors thrown using the **throw** command are managed by the 4D runtime as any n
 
 The command supports three syntaxes:
 
-##### **throw(errorCode{; description})**
+### **throw(errorCode{; description})**
 
 It specifies the error code and an optional description text, the error is thrown immediately.   
 If no description is provided, it is filled with:
@@ -36,7 +36,7 @@ If no description is provided, it is filled with:
 * Error code errorCode: (host) in the host application
 * Error code errorCode: (C00x) in a component
 
-##### **throw(errorObj)**
+### **throw(errorObj)**
 
 *errorObj* object allows for more detailed error information and control over error handling. It can contain the following properties, as well as any custom property that you can refer to using placeholders within the **message** property. 
 
@@ -51,14 +51,14 @@ When you use this syntax, the *errorObj* object is returned in [Last errors](las
 
 **Note:** It is possible to call the command several times in the same project method to generate several errors. You can use the deferred option to send all errors at once.
 
-##### **throw** 
+### **throw** 
 
 It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](on-err-call.md) callback.
 
 * **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](on-err-call.md) method of the application is called at the end of the current method. The [Last errors](last-errors.md) function returns the stack of errors.
 * **As a consequence, in a component:** The stack of errors can be sent to the host application and the [ON ERR CALL](on-err-call.md) method of the host application is called.
 
-#### Example 1 
+## Example 1 
 
 ```4d
  var $code : Integer
@@ -68,43 +68,43 @@ It throws all current errors in **deferred mode**, meaning they will be added to
  throw($code ;$description) // Throws an error with message "This is a custom error" and errCode = 50042
 ```
 
-#### Example 2 
+## Example 2 
 
 ```4d
 throw({errCode: 1; message: "This an error"}) // Throws an error with errCode = 1 and message "This an error"
 ```
 
-#### Example 3 
+## Example 3 
 
 ```4d
 throw({errCode: 1}) // Throws an error with errCode = 1 and message "Error code: 1 (host)"
 ```
 
-#### Example 4 
+## Example 4 
 
 ```4d
 throw({message: "This an error"}) // Throws an error with errCode = -1 and message "This is my error"
 ```
 
-#### Example 5 
+## Example 5 
 
 ```4d
 throw({message: "This is my error"; deferred: True}) // Throw an error with message "This is my error" and errCode = -1 in deferred mode
 ```
 
-#### Example 6 
+## Example 6 
 
 ```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Throws an error with message "File myFileName not found (myFilePath)" in deferred mode
 ```
 
-#### See also 
+## See also 
 
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

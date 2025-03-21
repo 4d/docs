@@ -47,7 +47,7 @@ La función `SingletonClassFunction()` debe haber sido declarada con la palabra 
 
 :::
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/webServerConfig.md#use-preemptive-processes) es ignorado por el Servidor REST).
 
 :::info
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-La clase `mySingleton` y la función `sayHello` se listan cuando se llama al comando [`$catalog`]($catalog.md#singleton).
+La clase `mySingleton` y la función `sayHello` se listan cuando se llama al comando [`$catalog`]($catalog.md#singletons).
 
 :::
 

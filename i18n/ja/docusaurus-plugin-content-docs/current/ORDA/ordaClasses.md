@@ -40,10 +40,10 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 
 | Class                                       | 例                                    | 次によってインスタンス化されます                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | [`ds`](commands/ds.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs._DataClassName_          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
-| cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
+| cs.DataStore                | cs.DataStore         | [`ds`](commands/ds.md) コマンド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
+| cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
 > ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます [(後述参照)](#クラスファイル)。
 
@@ -97,7 +97,7 @@ $desc:=ds.getDesc() //"社員と会社を..."
 ORDA で公開されるテーブル毎に、DataClass クラスが `cs` クラスストアに公開されます。
 
 - **親クラス**: 4D.DataClass
-- **クラス名**: cs._DataClassName_ (_DataClassName_ はテーブル名です)
+- **クラス名**: cs.*DataClassName* (*DataClassName* はテーブル名です)
 - **例**: cs.Employee
 
 #### 例題
@@ -133,14 +133,14 @@ Function GetBestOnes()
 
 #### リモートデータストアの例
 
-次の _City_ カタログをリモートデータストアとして公開しています:
+次の *City* カタログをリモートデータストアとして公開しています:
 
 ![](../assets/en/ORDA/Orda_example.png)
 
 `City クラス` は API を提供しています:
 
 ```4d
-// cs.City class
+// cs.City クラス
 
 Class extends DataClass
 
@@ -177,18 +177,18 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` クラスストアに公開されます。
 
 - **親クラス**: 4D.EntitySelection
-- **クラス名**: _DataClassName_Selection (_DataClassName_ はテーブル名です)
+- **クラス名**: *DataClassName*Selection (*DataClassName* はテーブル名です)
 - **例**: cs.EmployeeSelection
 
 #### 例題
 
 ```4d
-// cs.EmployeeSelection class
+// cs.EmployeeSelection クラス
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+// このエンティティセレクションから平均値より高い月給をもらっている従業員を抽出します
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -212,17 +212,17 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラスストアに公開されます。
 
 - **親クラス**: 4D.Entity
-- **クラス名**: _DataClassName_Entity (_DataClassName_ はテーブル名です)
+- **クラス名**: *DataClassName*Entity (*DataClassName* はテーブル名です)
 - **例**: cs.CityEntity
 
 #### 計算属性
 
 Entity クラスでは、専用のキーワードを使用して **計算属性** を定義することができます:
 
-- `Function get` _attributeName_
-- `Function set` _attributeName_
-- `Function query` _attributeName_
-- `Function orderBy` _attributeName_
+- `Function get` *attributeName*
+- `Function set` *attributeName*
+- `Function query` *attributeName*
+- `Function orderBy` *attributeName*
 
 詳細については、[計算属性](#計算属性-1) を参照してください。
 
@@ -230,7 +230,7 @@ Entity クラスでは、専用のキーワードを使用して **計算属性*
 
 Entity クラスでは、`Alias` キーワードを使用して **エイリアス属性** を定義することができます (通常はリレート属性を対象に定義します):
 
-`Alias` _attributeName_ _targetPath_
+`Alias` *attributeName* *targetPath*
 
 詳細については、[エイリアス属性](#エイリアス属性-1) を参照してください。
 
@@ -270,10 +270,10 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
-  - 4D テーブルと [ユーザークラス名](Concepts/classes.md#クラス名) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
-  - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
+ - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+ - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
-- クラス定義の際、[`Class extends`](Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
+- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
 - データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
@@ -292,11 +292,11 @@ End if
 
 ### 概要
 
-計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 [標準的な 4Dクラス](Concepts/classes.md)は、`get` (_ゲッター_) および `set` (_セッター_) [アクセサー関数](Concepts/classes.md#function-get-と-function-set) を用いて、計算プロパティの概念を実装しています。 ORDA のデータクラス属性はこれを利用し、さらに `query` と `orderBy` の 2つの関数で機能を拡張しています。
+計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 [標準的な 4Dクラス](Concepts/classes.md)は、`get` (*ゲッター*) および `set` (*セッター*) [アクセサー関数](Concepts/classes.md#function-get-と-function-set) を用いて、計算プロパティの概念を実装しています。 ORDA のデータクラス属性はこれを利用し、さらに `query` と `orderBy` の 2つの関数で機能を拡張しています。
 
-計算属性には最低限、その値がどのように算出されるかを記述した `get` 関数が必要です。 属性に_ゲッター_関数が定義されている場合、4D は対応するストレージスペースをデータストアに作成せず、代わりに属性がアクセスされるたびに関数のコードを実行します。 属性がアクセスされなければ、コードも実行されません。
+計算属性には最低限、その値がどのように算出されるかを記述した `get` 関数が必要です。 属性に*ゲッター*関数が定義されている場合、4D は対応するストレージスペースをデータストアに作成せず、代わりに属性がアクセスされるたびに関数のコードを実行します。 属性がアクセスされなければ、コードも実行されません。
 
-計算属性は、その属性に値が割り当てられたときに実行される `set` 関数を実装することもできます。 _セッター_関数は、割り当てられた値をどのように処理するかを記述します。通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。
+計算属性は、その属性に値が割り当てられたときに実行される `set` 関数を実装することもできます。 *セッター*関数は、割り当てられた値をどのように処理するかを記述します。通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。
 
 ストレージ属性と同様に、計算属性も **クエリ** に含めることができます。 デフォルトでは、ORDA のクエリで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 場合によっては、これで十分です。 しかし、特にクライアント/サーバーにおいてはパフォーマンスを向上させるため、実際のデータクラス属性に基づいた `query` 関数を計算属性に実装することで、それらのインデックスの恩恵を受けることができます。
 
@@ -323,11 +323,11 @@ End if
 // コード
 ```
 
-_ゲッター_ 関数は、_attributeName_ 計算属性を宣言するために必須です。 _attributeName_ がアクセスされるたびに、4D は `Function get` のコードを評価し、_$result_ 値を返します。
+*ゲッター* 関数は、*attributeName* 計算属性を宣言するために必須です。 *attributeName* がアクセスされるたびに、4D は `Function get` のコードを評価し、*$result* 値を返します。
 
 > 計算属性は、他の計算属性の値を使用することができます。 再帰的な呼び出しはエラーになります。
 
-_ゲッター_ 関数は、_$result_ パラメーターに基づいて、計算属性のデータ型を定義します。 以下の結果の型が可能です:
+*ゲッター* 関数は、*$result* パラメーターに基づいて、計算属性のデータ型を定義します。 以下の結果の型が可能です:
 
 - スカラー (テキスト、ブール、日付、時間、数値)
 - Object
@@ -336,7 +336,7 @@ _ゲッター_ 関数は、_$result_ パラメーターに基づいて、計算�
 - エンティティ (例: cs.EmployeeEntity)
 - エンティティセレクション (例: cs.EmployeeSelection)
 
-_$event_ パラメーターは、以下のプロパティが含みます:
+*$event* パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | 型       | 説明                                                |
 | ------------- | ------- | ------------------------------------------------- |
@@ -347,14 +347,14 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 
 #### 例題
 
-- _fullName_ 計算属性:
+- *fullName* 計算属性:
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
   Case of 	
 	: (This.firstName=Null) & (This.lastName=Null)
-		$event.result:=Null //use result to return Null
+		$event.result:=Null //Null を返すのにresult を使用
 	: (This.firstName=Null)
 		$fullName:=This.lastName
 	: (This.lastName=Null)
@@ -394,11 +394,11 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ```
 
-_セッター_ 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
+*セッター* 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
 
-_$value_ パラメーターは、属性に割り当てられた値を受け取ります。
+*$value* パラメーターは、属性に割り当てられた値を受け取ります。
 
-_$event_ パラメーターは、以下のプロパティが含みます:
+*$event* パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | 型       | 説明               |
 | ------------- | ------- | ---------------- |
@@ -432,15 +432,15 @@ Function query <attributeName>($event : Object) -> $result : Object
 このメソッドは 3種類のシンタックスを受け入れます:
 
 - 最初のシンタックスでは、`$event.result` オブジェクトプロパティを通じてクエリ全体を処理します。
-- 2番目と 3番目のシンタックスでは、関数は _$result_ に値を返します:
+- 2番目と 3番目のシンタックスでは、関数は *$result* に値を返します:
 
-  - _$result_ がテキストの場合、それは有効なクエリ文字列でなければなりません。
-  - _$result_ がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
+ - *$result* がテキストの場合、それは有効なクエリ文字列でなければなりません。
+ - *$result* がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
 
-  | プロパティ                              | 型          | 説明                                                                                     |
-  | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-  | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
-  | $result.parameters | Collection | プレースホルダーに渡す値                                                                           |
+ | プロパティ                              | 型          | 説明                                                                                     |
+ | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+ | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
+ | $result.parameters | Collection | プレースホルダーに渡す値                                                                           |
 
 `query` 関数は、計算属性を使用するクエリが開始されるたびに実行されます。 インデックス付きの属性を利用することで、クエリをカスタマイズしたり最適化したりすることができます。 計算属性に対して `query` 関数が実装されていない場合、検索は常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
 
@@ -449,7 +449,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 > - エンティティ、またはエンティティセレクション型の計算属性に対する `query` 関数の呼び出し
 > - 結果のクエリ文字列における `order by` キーワードの使用
 
-_$event_ パラメーターは、以下のプロパティが含みます:
+*$event* パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -460,11 +460,11 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 | operator      | Text    | クエリ演算子 ([`query` クラス関数も参照ください](API/DataClassClass.md#query))。 とりうる値:<li>== (と等しい; @ はワイルドカード)</li><li>=== (と等しい; @ はワイルドカードでない)</li><li>!= (と等しくない; @ はワイルドカード)</li><li>!== (と等しくない; @ はワイルドカードでない)</li><li>&lt; (小さい)</li><li><= (less than or equal to)</li><li>&gt; (大きい)</li><li>&gt;= (以上)</li><li>IN (含まれる)</li><li>% (キーワードを含む)</li> |
 | 戻り値           | Variant | 計算属性によって処理されるべき値。 4D がデフォルトクエリ (計算属性では常にシーケンシャル) を実行するようにしたい場合は、このプロパティに `Null` を渡します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-> 関数が _$result_ に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
+> 関数が *$result* に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
 
 #### 例題
 
-- _fullName_ 計算属性のクエリ:
+- *fullName* 計算属性のクエリ:
 
 ```4d
 Function query fullName($event : Object)->$result : Object
@@ -481,10 +481,10 @@ Function query fullName($event : Object)->$result : Object
 	If ($p>0)
 		$firstname:=Substring($fullname; 1; $p-1)+"@"
 		$lastname:=Substring($fullname; $p+1)+"@"
-		$parameters:=New collection($firstname; $lastname) // two items collection
+		$parameters:=New collection($firstname; $lastname) // 二つの項目を格納したコレクション
 	Else
 		$fullname:=$fullname+"@"
-		$parameters:=New collection($fullname) // single item collection
+		$parameters:=New collection($fullname) // 単一の項目を格納したコレクション
 	End if
 
 	Case of
@@ -513,7 +513,7 @@ Function query fullName($event : Object)->$result : Object
 $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 ```
 
-- この関数は _age (年齢)_ 計算属性に対するクエリを処理し、パラメーターを含むオブジェクトを返します:
+- この関数は *age (年齢)* 計算属性に対するクエリを処理し、パラメーターを含むオブジェクトを返します:
 
 ```4d
 Function query age($event : Object)->$result : Object
@@ -524,7 +524,7 @@ Function query age($event : Object)->$result : Object
 
 	$operator:=$event.operator
 
-	$age:=Num($event.value)  // integer
+	$age:=Num($event.value)  // 整数
 	$d1:=Add to date(Current date; -$age-1; 0; 0)
 	$d2:=Add to date($d1; 1; 0; 0)
 	$parameters:=New collection($d1; $d2)
@@ -532,16 +532,16 @@ Function query age($event : Object)->$result : Object
 	Case of
 
 		: ($operator="==")
-			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+			$query:="birthday > :1 and birthday <= :2"  // d1 の後、d2より前か等しい
 
 		: ($operator="===")
 
-			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+			$query:="birthday = :2"  // d2 = 計算された2つ目の日付(= 誕生日の日付)
 
 		: ($operator=">=")
 			$query:="birthday <= :2"
 
-			//... other operators			
+			//... その他の演算子の場合
 
 
 	End case
@@ -558,11 +558,11 @@ Function query age($event : Object)->$result : Object
 呼び出しコードの例:
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// 20歳から21歳(の1日前)の間の年齢の人物を検索
+$twenty:=people.query("age = 20")  // "==" の場合を呼び出す
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
+// 今日ちょうど20歳の人物を検索
+$twentyToday:=people.query("age === 20") // people.query("age is 20") と同等
 
 ```
 
@@ -577,12 +577,12 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // コード
 ```
 
-`orderBy` 関数は、計算属性で並べ替えされるたびに実行されます。 これにより、計算属性で並べ替えることができます。 たとえば、_fullName_ を名字、名前の順にソートしたり、逆に名字、名前の順にソートすることができます。
+`orderBy` 関数は、計算属性で並べ替えされるたびに実行されます。 これにより、計算属性で並べ替えることができます。 たとえば、*fullName* を名字、名前の順にソートしたり、逆に名字、名前の順にソートすることができます。
 計算属性に対して `orderBy` 関数が実装されていない場合、並べ替えは常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
 
 > Entity クラス、または EntitySelection クラス型の計算属性に対する `orderBy` 関数の呼び出しは **サポートされていません**。
 
-_$event_ パラメーターは、以下のプロパティが含みます:
+*$event* パラメーターは、以下のプロパティが含みます:
 
 | プロパティ         | 型       | 説明                                                   |
 | ------------- | ------- | ---------------------------------------------------- |
@@ -596,7 +596,7 @@ _$event_ パラメーターは、以下のプロパティが含みます:
 
 > `operator` と `descending` プロパティのどちらを使っても構いません。 これは、基本的にプログラミングのスタイルの問題です (例題参照)。
 
-`orderBy` 文字列は、`$event.result` オブジェクトプロパティまたは関数の戻り値である _$result_ のどちらでにも返すことができます。 関数が _$result_ に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
+`orderBy` 文字列は、`$event.result` オブジェクトプロパティまたは関数の戻り値である *$result* のどちらでにも返すことができます。 関数が *$result* に値を返し、`$event.result` プロパティにも別の値が割り当てられている場合、`$event.result` が優先されます。
 
 #### 例題
 
@@ -653,9 +653,9 @@ Function orderBy age($event : Object)-> $result : Text
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-_attributeName_ は、[プロパティ名の命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
+*attributeName* は、[プロパティ名の命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
-_targetPath_ は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、_targetPath_ は属性名となります。
+*targetPath* は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、*targetPath* は属性名となります。
 
 エイリアスは、他のエイリアスのパスに使用することができます。
 
@@ -693,7 +693,7 @@ _targetPath_ は、"employee.company.name" のような、1つ以上のレベル
 エイリアス属性は、ターゲット属性の [`type`](../API/DataClassClass.md#attributename) プロパティを継承します。
 
 - ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
-- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("_classname_Entity" または "_classname_Selection") になります。
+- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
 
 リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassClass.md#attributename) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
 
@@ -730,7 +730,7 @@ Course データクラスには次を定義します:
 - 生徒の名前を返すエイリアス属性
 
 ```4d
-// cs.CourseEntity class
+// cs.CourseEntity クラス
 
 Class extends Entity
 
@@ -743,28 +743,28 @@ Exposed Alias studentName student.name //scalar value
 すると、以下のクエリを実行することができます:
 
 ```4d
-// Find course named "Archaeology"
+// "Archaeology" という名前のコースを検索
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Find courses given by the professor Smith
+// Smith という講師が担当するコースを検索
 ds.Course.query("teacherName = :1";"Smith")
 
-// Find courses where Student "Martin" assists
+// "Martin" という人が助手を務めるコースを検索
 ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher
+// M. Smith を教師として持つ学生を検索
 ds.Student.query("teachers.name = :1";"Smith")
 
-// Find teachers who have M. Martin as Student
+// M. Martin を学生として持つ教師を検索
 ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex
-// query including a double join, as you can see in the queryPlan:   
+// このクエリではシンプルなクエリ文字列で複雑なクエリを実行していることに注目して下さい。
+// queryPlan は以下の通りです:   
 // "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
 //  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
 //  subquery:[ Student.name === Martin]]"
 ```
 
-_courseName_ エイリアスの値は編集することができます:
+*courseName* エイリアスの値は編集することができます:
 
 ```4d
 // エイリアス属性を使って、授業の名称を変更します
@@ -835,59 +835,59 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## onHttpGet keyword
+## onHttpGet キーワード
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+`onHttpGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
-The `onHttpGet` keyword is available with:
+`onHttpGet` キーワードが使用できる関数は以下の通りです:
 
-- ORDA Data model class functions
-- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+- ORDA データモデルクラス関数
+- [シングルトンクラス関数](../Concepts/classes.md#シングルトンクラス)
 
 シンタックスは次の通りです:
 
 ```4d
-// declare an onHttpGet function
+// onHttpGet 関数を宣言する
 exposed onHttpGet Function <functionName>(params) : result
 ```
 
 :::info
 
-The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+`exposed` キーワードも忘れずに追加する必要があります。追加しなかった場合にはエラーが生成されます。
 
 :::
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+このタイプの呼び出しは簡単に提供されるアクションであるため、デベロッパーはこのような関数でセンシティブなアクションが行われないようにする必要があります。
 
 :::
 
 ### params
 
-A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
+`onHttpGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
 
-In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+HTTP GET リクエストにおいては、引数はURL 内に直接渡される必要があり、また`$params` キーワードを使用して宣言されている必要があります(引数はコレクション内に受け取られる必要があります)。
 
 ```
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
 ```
 
-See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+REST サーバードキュメントの[引数](../REST/classFunctions#引数) を参照して下さい。
 
 ### 戻り値
 
-A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+`onHttpGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラス型の値を返すことで、そのプロパティや関数を使用してヘッダー、本文、応答のステータスなどを設定することができます。
 
 :::
 
 ### 例題
 
-You have defined the following function:
+以下の関数を定義したとします:
 
 ```4d
 Class extends DataClass
@@ -905,7 +905,7 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 	return $response
 ```
 
-It can be called by the following HTTP GET request:
+以下のHTTP GET リクエストを使用してこの関数を呼び出すことができます:
 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
@@ -945,9 +945,9 @@ local Function getYoungest
 
 #### 年齢の計算
 
-_birthDate_ (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
+*birthDate* (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
 
-_StudentsEntity_ クラス:
+*StudentsEntity* クラス:
 
 ```4d
 Class extends Entity
@@ -965,7 +965,7 @@ End if
 
 クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
 
-_StudentsEntity_ クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
+*StudentsEntity* クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
 
 ```4d
 Class extends Entity
@@ -1000,7 +1000,7 @@ End if
 
 ### クラスファイル
 
-ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを [通常のクラスファイルと同じ場所](Concepts/classes.md#クラスファイル) (つまり、Project フォルダー内の `/Sources/Classes` フォルダー) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
+An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
 
 ### クラスの作成
 

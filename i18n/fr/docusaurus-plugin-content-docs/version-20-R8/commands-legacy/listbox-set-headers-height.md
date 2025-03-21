@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->La commande **LISTBOX SET HEADERS HEIGHT** permet de modifier par programmation la hauteur de la ligne d’en-tête de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -35,11 +35,11 @@ Les en-têtes doivent respecter une hauteur minimale, définie par le système d
 
 **Note :** Pour plus d’informations sur le calcul des hauteurs de lignes, reportez-vous au manuel *Mode Développement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get headers height](listbox-get-headers-height.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

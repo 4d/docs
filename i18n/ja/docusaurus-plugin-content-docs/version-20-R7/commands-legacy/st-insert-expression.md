@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->**ST INSERT EXPRESSION**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、4D 式への参照を挿入します。<!-- END REF-->
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 **注:** もし *startSel* 引数が *endSel* 引数より大きい場合、コマンドは何も行わず、OK変数は0に設定されます(ただし *endSel* が0である場合を除く)。
 
-#### 例題 
+## 例題 
 
 選択したテキストをプロジェクトメソッドの結果で置き換える場合を考えます:
 
@@ -81,14 +81,14 @@ displayed_sidebar: docs
  ST INSERT EXPRESSION(*;"myText";"MyMethod";ST Start highlight;ST End highlight)
 ```
 
-#### 参照 
+## 参照 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

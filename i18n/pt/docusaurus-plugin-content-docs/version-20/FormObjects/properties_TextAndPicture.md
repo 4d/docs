@@ -4,7 +4,7 @@ title: Texto e imagem
 ---
 
 
-## Rota de acesso ao Fundo
+## Rota de acesso ao fundo
 
 Define o caminho da imagem que será desenhada no fundo do objeto. Se o objeto utilizar um [ícone ](#picture-pathname) com [estados diferentes](#number-of-states), a imagem de fundo suportará automaticamente o mesmo número de estados.
 
@@ -181,7 +181,7 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 ## Image hugs title
 
-Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](#horizontal-alignment).
+Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](properties_Text.md#horizontal-alignment).
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
@@ -204,11 +204,11 @@ Por padrão, quando um botão contém um título e uma imagem, os elementos são
 
 ## Margem vertical
 
-Esta propriedade permite definir o tamanho (em pixels) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> Essa propriedade funciona em conjunto com a propriedade [Horizontal Margin (Margem horizontal](#horizontal-margin) ).
+> Essa propriedade funciona em conjunto com a propriedade [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -252,7 +252,7 @@ Consulte a [descrição do evento`On Alternative Click`](../Events/onAlternative
 
 ### Gerir o menu pop-up
 
-É importante observar que a propriedade "With Pop-up Menu" gerencia apenas o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por meio de `eventos de formulário` e da função [`Menu pop-up dinâmico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) e [`Menu pop-up`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) e menu pop-up.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por meio de `eventos de formulário` e da função [`Menu pop-up dinâmico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) e [`Menu pop-up`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) e menu pop-up.
 
 #### Gramática JSON
 

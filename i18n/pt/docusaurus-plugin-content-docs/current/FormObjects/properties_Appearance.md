@@ -91,7 +91,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -213,7 +213,7 @@ Exibe/oculta a régua horizontal quando a visualização do documento estiver no
 
 ---
 
-## Mostrar HTML WYSYWIG
+## Mostrar HTML WYSIWYG
 
 Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avançados do 4D Write Pro que não são compatíveis com todos os navegadores são removidos.
 
@@ -247,7 +247,7 @@ Exibe/oculta o quadro da página quando o [modo de exibição da página](#view-
 
 ## Mostrar referências
 
-Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como _referências_. Quando esta opção for desativada, expressões 4D são exibidas como _valores_. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
+Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como *referências*. Quando esta opção for desativada, expressões 4D são exibidas como *valores*. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
 
 Por exemplo, se você tiver inserido a data atual junto com um formato, a data será exibida:
 
@@ -349,7 +349,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 

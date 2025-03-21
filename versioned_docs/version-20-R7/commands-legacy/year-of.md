@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Year of.Summary-->The Year of command returns the year of *aDate*.<!-- END REF-->
 
-#### Example 1 
+## Example 1 
 
 The following example illustrates the use of **Year of**. The results are assigned to the variable *vResult*.
 
@@ -30,16 +30,16 @@ The following example illustrates the use of **Year of**. The results are assign
  vResult:=Year of(Current date) // vResult gets year of current date
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the command [Current date](current-date.md).
 
-#### See also 
+## See also 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->**GET PICTURE FORMATS**コマンドは、引数として渡された*picture*引数内に含まれている全てのコーデックIDの配列を返します。<!-- END REF--> 4D ピクチャー (フィールドまたは変数) は、PNG、BMP、GIF など、複数の異なるフォーマットでエンコードされた同一の画像を格納することができます。  
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ピクチャーコーデックIDについてのより詳細な情報については、*ピクチャ*の章を参照して下さい。
 
-#### 例題 
+## 例題 
 
 カレントレコードのフィールド内に保存されているピクチャーフォーマットを知りたいという場合を考えます:
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
  GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
-#### 参照 
+## 参照 
 
   
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

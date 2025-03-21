@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->LIST TO ARRAY コマンドは、*list* で指定したリストまたは選択リストの第一レベルの項目で、配列*array*を作成または上書きします。<!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 引き続き LIST TO ARRAY コマンドを使い、階層リストの第一レベル要素に基づく配列を構築できます。しかしこのコマンドは子項目を返しません。階層リストで作業する場合、階層リストコマンド、特に [Load list](load-list.md) の使用が推奨されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、リストRegionsの項目を配列*atRegions*にコピーします:
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
  LIST TO ARRAY("Regions";atRegions)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のように定義された階層リストについて考えます:
 
@@ -79,13 +79,13 @@ displayed_sidebar: docs
  ...
 ```
 
-#### 参照 
+## 参照 
 
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

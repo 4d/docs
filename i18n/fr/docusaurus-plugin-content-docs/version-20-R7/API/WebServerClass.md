@@ -7,7 +7,7 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Objet Web Server
 
-Les objets serveur Web sont instanciés avec la commande [`WEB Server`](#web-server).
+Les objets serveur Web sont instanciés avec la commande [`WEB Server`](../commands/web-server.md).
 
 Leurs propriétés et fonctions sont les suivantes :
 
@@ -128,16 +128,16 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et de méthodes autorisées pour le service CORS<!-- END REF --> (voir la propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
 - **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs syntaxes sont supportées :
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\\\\\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\\\\\\\\\\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si *methods* est vide, null ou non défini, toutes les méthodes sont activées.
 
@@ -568,7 +568,7 @@ La fonction `.start()` <!-- REF #WebServerClass.start().Summary -->démarre le s
 
 Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre *settings*, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
 
-Tous les paramètres des [objets Serveur Web](#objet-serveur-web) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
+All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
 Les paramètres de session personnalisés seront réinitialisés lorsque la fonction [`.stop()`](#stop) sera appelée.
 

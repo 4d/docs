@@ -85,10 +85,10 @@ Within the custom error method, you have access to several pieces of information
 
 - variáveis sistema (\*):
 
-  - `Erro` (inteiro longo): código de erro
-  - `Error line` (entero largo): número de línea del método que ha provocado el error
-  - `Linha de erro` (longin): número de linha no método que desencadeou o erro
-  - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
+ - `Erro` (inteiro longo): código de erro
+ - `Error line` (entero largo): número de línea del método que ha provocado el error
+ - `Linha de erro` (longin): número de linha no método que desencadeou o erro
+ - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
 
 :::info
 

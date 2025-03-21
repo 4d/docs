@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->The **ABORT PROCESS BY ID** command stops a specific process on the 4D Server.<!-- END REF-->
 
@@ -25,7 +25,7 @@ In the *uniqueID* parameter, pass the unique ID of the process running on the se
 * This command can only be used with the *ServerNet* network layer. See   *New ServerNet Network Layer (compatibility)*.
 * This command should only be used for searching errors or administration purposes, not as a regular procedure.
 
-#### Example 
+## Example 
 
 You want to stop the selected process of the processes collection displayed in a list box:
 
@@ -39,11 +39,11 @@ You want to stop the selected process of the processes collection displayed in a
  ABORT PROCESS BY ID($activity[curItemPosition].ID)
 ```
 
-#### See also 
+## See also 
 
 [PAUSE PROCESS](pause-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

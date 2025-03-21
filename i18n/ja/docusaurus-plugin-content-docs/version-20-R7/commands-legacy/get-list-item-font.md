@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get list item font.Summary-->Get list item font コマンドは、リスト参照またはオブジェクト名で指定した*list*リストの、*itemRef* 引数で指定した項目のフォント名を返します。<!-- END REF-->
 
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 *itemRef*には項目参照番号を渡すことができます。この番号に対応する項目がない場合、コマンドは何も行いません。*itemRef*に0を渡すと ([APPEND TO LIST](append-to-list.md "APPEND TO LIST")を使用して) リストに最後に追加された項目のフォントを返します。  
 *itemRef*に \* を渡した場合、コマンドはリスト中のカレントの項目のフォントを返します。複数の項目がユーザにより選択されている場合、最後に選択された項目がカレントの項目です。項目が選択されていない場合、コマンドは何も行いません。
 
-#### 参照 
+## 参照 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

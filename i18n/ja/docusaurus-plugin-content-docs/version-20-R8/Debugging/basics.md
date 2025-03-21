@@ -72,14 +72,14 @@ title: デバッガー
 
 :::tip
 
-To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
+ループ中などで何度も繰り返し発生するエラーの場合には、**続行**ボタンを**無視**ボタンに変更できます。 Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
 
 :::
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
-  - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
+    - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
+    - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
 
 - **Copy**: Copies the debugging information into the clipboard. この情報はエラーの内部環境 (番号や内部コンポーネント等) を説明します。 情報はタブ区切り形式で記述されます。
 
@@ -87,7 +87,7 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 ## デバッガー
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. これは止めてください。 You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. これは止めてください。 [**デバッガー**](debugger.md) を常に使用すれば、相当の時間と労力を節減することができます。
 
 デバッガーを使うと、メソッドをステップごとにゆっくりと実行することができます。 デバッガーは、エラーが発生した理由を知るために必要な情報を表示できます。 この情報があれば、エラーの修正方法はわかります。
 
@@ -95,6 +95,6 @@ A common beginner mistake in dealing with error detection is to click **Abort** 
 
 ## ブレーク
 
-デバッグ作業では、コードの一部のトレースを特定の行までスキップする必要がある場合があります。 Or, you may want to trace the code when a given expression has a certain value (e.g. `$myVar > 1000`), or every time a specific 4D command is called.
+デバッグ作業では、コードの一部のトレースを特定の行までスキップする必要がある場合があります。 また、ある式が特定の値になった時 (例: `$myVar > 1000`) や、特定の 4Dコマンドが呼び出されるたびにコードをトレースしたい場合もあります。
 
 These needs are covered by **breakpoints** and **command catching** features. これらの機能は、コードエディター、デバッガー、ランタイムエクスプローラーから設定できます。

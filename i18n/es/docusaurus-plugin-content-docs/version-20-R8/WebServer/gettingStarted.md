@@ -274,3 +274,4 @@ Las credenciales incorrectas serían rechazadas:
 ![](../assets/en/WebServer/login2.png)
 
 Una vez que un usuario se registra, puede manejar la sesión asociada utilizando el método `WEB Get Current Session ID`. Ver la página [Sesiones de usuario](sessions.md).
+

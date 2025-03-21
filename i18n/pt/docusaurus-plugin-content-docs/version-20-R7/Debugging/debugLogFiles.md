@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](../Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -281,15 +281,15 @@ Esses históricos registram cada troca entre a aplicação 4D e o servidor de ma
 
 - SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
 - POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
+- IMAP - [IMAP New transporter](../commands/imap-new-transporter.md)
 
 Os arquivos de histórico podem ser produzidos em duas versões:
 
 - uma versão comum:
-  - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  - sem anexos
-  - usa um arquivo circular automático que é reciclado a cada 10MB
-  - para depurações comuns
+ - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+ - sem anexos
+ - usa um arquivo circular automático que é reciclado a cada 10MB
+ - para depurações comuns
 
 Para começar esse histórico:
 
@@ -304,9 +304,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta rota do histórico é retornada pelo comando `Get 4D file`.
 
 - uma versão estendida:
-  - attachment(s) included no automatic recycling
-  - nome personalizado
-  - guardado para propósitos específicos
+ - attachment(s) included no automatic recycling
+ - nome personalizado
+ - guardado para propósitos específicos
 
 Para começar esse histórico:
 
@@ -460,16 +460,16 @@ Você pode usar um **arquivo de configuração de log** para gerenciar facilment
 Existem várias formas de ativar o arquivo de configuração do registo, dependendo da sua configuração:
 
 - **Servidor 4D com interface**: você pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file), depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
-- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-1) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
+- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-user) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
 - **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows: `Users\[userName]\AppData\Roaming\[application]`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos os projetos com um 4D autônomo ou remoto**: o arquivo deve chamar-se `logConfig.json` e ser copiado para a pasta seguinte:
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos os projetos com 4D Server**: o arquivo deve ser nomeado `logConfig.json` e copiado para a seguinte pasta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -628,7 +628,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

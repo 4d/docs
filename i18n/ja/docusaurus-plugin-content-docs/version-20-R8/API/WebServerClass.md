@@ -7,7 +7,7 @@ title: WebServer
 
 ### Webサーバーオブジェクト
 
-Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドによってインスタンス化されます。
+Webサーバーオブジェクトは [`WEB Server`](../commands/web-server.md) コマンドによってインスタンス化されます。
 
 これらは、次のプロパティや関数を持ちます:
 
@@ -128,16 +128,16 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ([`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。 **methods** プロパティは任意です。
 
 - **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
@@ -477,7 +477,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
-<!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
+<!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 <!-- END REF -->
 
@@ -499,7 +499,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
-<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
+<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
 
 <!-- END REF -->
 
@@ -568,7 +568,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-[Web Server オブジェクト](#web-server-オブジェクト) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
+All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
 カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 

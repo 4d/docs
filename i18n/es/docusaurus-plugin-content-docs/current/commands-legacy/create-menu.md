@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Create menu.Summary-->El comando **Create menu** permite crear un nuevo menú en memoria.<!-- END REF--> Este menú sólo existirá en memoria y no se añadirá al editor de menú en el entorno Diseño. Toda modificación efectuada a este menú durante la sesión repercutirá inmediatamente en todas las instancias de este menú y en todos los procesos de la base. 
 
@@ -31,17 +31,17 @@ Un menú creado por este comando puede ser utilizado como barra de menús utiliz
 
 Cuando ya no necesite el menú creado por [Create menu](create-menu.md), recuerde llamar al comando [RELEASE MENU](release-menu.md) para liberar la memoria que está siendo utilizada. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 
-#### Ver también 
+## Ver también 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

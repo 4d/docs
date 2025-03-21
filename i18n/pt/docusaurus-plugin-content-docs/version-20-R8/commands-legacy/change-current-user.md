@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->CHANGE CURRENT USER permite mudar a identidade do usuário atual no banco, sem ter que sair.<!-- END REF--> O usuário pode mudar sua identidade utilizando a caixa de diálogo de identificação do usuário do banco (quando o comando é chamado sem parâmetros) ou diretamente através deste comando. Quando um usuário muda sua identidade, o usuário abandona seus privilégios de acesso anteriores para os direitos do usuário escolhido.
 
@@ -38,7 +38,7 @@ O comando é atrasado para evitar flooding (ataques de força bruta), em outras 
 
 **Nota**: quando o grupo do usuário atual oferece acesso a uma funcionalidade "serializada" (por exemplo, um plug-in), se utiliza uma licença correspondente que permanecerá vinculada a conta de usuário 4D até o final da sessão, mesmo se chamar a CHANGE CURRENT USER e o grupo do novo usuário não oferecer acesso a funcionalidade.
 
-##### Oferecer uma caixa de diálogo de acesso personalizado 
+### Oferecer uma caixa de diálogo de acesso personalizado 
 
 O comando CHANGE CURRENT USER permite estabelecer caixas de diálogo personalizadas para introduzir o nome e senha (com regras de entrada e de vencimento) que tenham as mesmas vantagens do sistema de controle de acessos de 4D.  
 O principio é o seguinte:  
@@ -53,7 +53,7 @@ O principio é o seguinte:
 
 **3.** Quando se confirma a entrada, a informação requerida (nome de usuário e senha) são passadas ao comando CHANGE CURRENT USER para abrir o banco com os privilégios da conta do usuário.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo exibe a caixa de diálogo de conexão:
 
@@ -63,12 +63,12 @@ O exemplo abaixo exibe a caixa de diálogo de conexão:
 
 **Nota:** Este código não faz nada em um banco de dados projeto monousuário. 
 
-#### Ver também 
+## Ver também 
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

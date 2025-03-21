@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->**WEB GET HTTP BODY**コマンドは、 処理中のHTTPリクエストのボディを返します。<!-- END REF--> HTTPボディは、処理や解析されることなく、そのままの状態で返されます。 
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 例えばこのコマンドを使用して、リクエストのボディ内を検索することができます。また上級ユーザーは、4Dのデータベース内でWebDAVサーバーを設定することもできます。
 
-#### 例題 
+## 例題 
 
 4D Webサーバーに簡単なリクエストを送り、HTTPボディの内容をデバッガーで表示します。  
 以下は4D Webサーバーに送られたフォームと対応するHTMLコードです。
@@ -43,12 +43,12 @@ displayed_sidebar: docs
 
 フォームがWebサーバーに提出されると、変数$requestTextはHTTPリクエストボディのテキストを受け取ります。
 
-#### 参照 
+## 参照 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

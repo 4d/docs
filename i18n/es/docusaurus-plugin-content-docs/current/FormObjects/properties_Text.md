@@ -38,7 +38,7 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](h
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -49,7 +49,7 @@ Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > Esto es texto normal.<br/>
-> _Este es texto en cursiva._
+> *Este es texto en cursiva.*
 
 #### Gramática JSON
 
@@ -59,7 +59,7 @@ También puede definir esta propiedad por medio del comando [**OBJECT SET FONT S
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -75,7 +75,7 @@ Hace que el texto tenga una línea por debajo.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -112,14 +112,14 @@ Hay tres temas de fuentes disponibles:
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ### Familia de fuentes
 
 Hay dos tipos de nombres de familias de fuentes:
 
-- _family-name:_ El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
-- _generic-family:_ El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
+- *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
 Puede configurarlo utilizando el comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
@@ -133,7 +133,7 @@ Puede configurarlo utilizando el comando [**OBJECT SET FONT**](https://doc.4d.co
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -149,7 +149,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -157,7 +157,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 Designa el color de la fuente.
 
-> Esta propiedad también define el color de [borde](#border-line-style-dotted-line-type) (si lo hay) del objeto cuando se utiliza el estilo "plano" o "punteado".
+> Esta propiedad también define el color del borde del objeto (si existe) cuando se utiliza el estilo "plano" o "punteado".
 
 El color puede ser especificado por:
 
@@ -175,7 +175,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Indicadores de progreso](progressIndicator.md) - [Regla](ruler.md) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Indicadores de progreso](progressIndicator.md) - [Regla](ruler.md) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -191,7 +191,7 @@ También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERT
 
 > Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
-El siguiente ejemplo utiliza un nombre de variable: introduzca _CompanyColor_ para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
+El siguiente ejemplo utiliza un nombre de variable: introduzca *CompanyColor* para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -206,7 +206,7 @@ Foreground color;Dark shadow color)
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -259,7 +259,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Caja de grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Pie List Box](listbox_overview.md#list-box-footers) - [Botón de opción](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Combo Box](comboBox_overview.md) - [Lista desplegables](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Pie List Box](listbox_overview.md#list-box-footers) - [Botón de opción](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
 
 ---
 
@@ -307,14 +307,14 @@ La propiedad especial "cell" permite aplicar un conjunto de propiedades a una so
 | Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cell                |              |                | object | Propiedades aplicables a una o varias columnas                                                                                                                                                                                                                                                                      |
-|                     | _columnName_ |                | object | _columnName_ es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                     |
-|                     |              | _propertyName_ | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
+|                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                     |
+|                     |              | *propertyName* | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
 
-> Los ajustes de estilo hechos con esta propiedad son ignorados si otros ajustes de estilo ya están definidos a través de expresiones (\*por ejemplo, [Expresión de estilo](#style-expression), [Expresión de color de fuente](#font-color-expression), [Expresión de color de fondo](#background-color-expression)).
+> Los ajustes de estilo hechos con esta propiedad son ignorados si otros ajustes de estilo ya están definidos a través de expresiones (\*por ejemplo, [Expresión de estilo](#style-expression), [Expresión de color de fuente](#font-color-expression), [Expresión de color de fondo](./properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Ejemplos**
 
-En un método proyecto _Color_, escriba el siguiente código:
+En un método proyecto *Color*, escriba el siguiente código:
 
 ```4d
 //Método Color
@@ -343,7 +343,7 @@ End if
  End case
 ```
 
-Entonces, el método _Color_ contendría:
+Entonces, el método *Color* contendría:
 
 ```4d
   //Método Color
@@ -392,7 +392,7 @@ Por defecto, esta opción no está activa.
 
 Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
 
-| Valor de orientación               | Result                                         |
+| Valor de orientación               | Resultado                                      |
 | ---------------------------------- | ---------------------------------------------- |
 | 0 (por defecto) | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                                 | ![](../assets/en/FormObjects/orientation2.png) |
@@ -449,7 +449,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 

@@ -18,19 +18,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New process.Summary-->La commande **New process** lance un nouveau process (sur la même machine) et retourne le numéro de ce process.<!-- END REF-->
 
 Si le process n'a pas pu être créé, par exemple s'il n'y a pas assez de mémoire, **New process** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-##### Méthode du process 
+### Méthode du process 
 
 Vous passez le nom de la méthode de gestion du nouveau process dans *méthode*. Une fois que 4D a défini le contexte pour le nouveau process, il démarre l'exécution de cette méthode qui devient alors la méthode du process.
 
 Si le contexte d'exécution prend en charge le mode préemptif, et si *méthode* est déclarée "thread-safe", le nouveau process 4D sera exécuté dans un *thread* préemptif lorsque l'application sera exécutée en mode compilé. Pour plus d'informations, veuillez consulter la page *Process 4D préemptifs*. 
 
-##### Pile du process 
+### Pile du process 
 
 Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la pile du process. Cette valeur représente la place utilisée en mémoire pour "empiler" les appels de méthode, les variables locales, les paramètres des sous-routines et les enregistrements empilés.
 
@@ -39,13 +39,13 @@ Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la
 
 **Note :** La pile n'est pas la mémoire totale réservée au process. Les process se partagent la mémoire pour les enregistrements, les variables interprocess, etc. Un process utilise également de la mémoire supplémentaire pour stocker ses variables process. La pile contient diverses informations internes à 4D ; la taille de ces informations varie en fonction du nombre d'appels de méthodes imbriquées.
 
-##### Nom du process 
+### Nom du process 
 
 Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. Vous pouvez créer un process local en préfixant son nom d'un symbole dollar (*$*). 
 
 **Important :** Rappelez-vous que, en client/serveur, les process locaux ne doivent pas accéder aux données. Pour plus d'informations, veuillez consulter la section *Process globaux et locaux*.
 
-##### Paramètres de la méthode process 
+### Paramètres de la méthode process 
 
 Vous pouvez passer des paramètres à la méthode process via un ou plusieurs paramètre(s) *param*. Vous pouvez le faire de la même manière que pour les sous-routines (cf. paragraphe ). Une fois qu'elle a commencé à s'exécuter dans le contexte du nouveau process, la méthode process reçoit les valeurs des paramètres dans *$1*, *$2*, etc. N'oubliez pas que les tableaux ne peuvent pas être passés comme paramètres à une méthode. En outre, des considérations supplémentaires sont à prendre en compte dans le contexte de la commande **New process** :
 
@@ -55,11 +55,11 @@ Vous pouvez passer des paramètres à la méthode process via un ou plusieurs pa
 
 **Note :** Si vous passez des paramètres à la méthode process, vous devez passer le paramètre *nom*, il ne peut être omis dans ce cas. 
 
-##### Paramètre optionnel \* 
+### Paramètre optionnel \* 
 
 Si vous passez le dernier paramètre (optionnel) *\**, vous indiquez à 4D de vérifier en premier lieu si un process du même nom que celui que vous avez passé dans *nom* est déjà en cours d'exécution. Si c'est le cas, 4D ne démarre pas de nouveau process et retourne le numéro du process existant.
 
-#### Exemple 
+## Exemple 
 
 Examinons la méthode projet suivante : 
 
@@ -101,13 +101,13 @@ La méthode objet de *bAjoutClient* devient :
 
 Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode DEMARRER AJOUT CLIENTS. Désélectionnez l'option **Démarrer un process** pour la commande de menu.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
 *Introduction aux process*  
 *Process 4D préemptifs*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

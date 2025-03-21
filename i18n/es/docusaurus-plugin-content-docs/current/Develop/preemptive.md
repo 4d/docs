@@ -7,13 +7,13 @@ El código 4D compilado puede ejecutarse en **procesos apropiativos**. Gracias a
 
 ## ¿Qué es un proceso apropiativo?
 
-Cuando se ejecuta en modo _apropiativo_, un proceso se dedica a una CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
+Cuando se ejecuta en modo *apropiativo*, un proceso se dedica a una CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
 
-Cuando se ejecuta en modo _cooperativo_, todos los procesos son gestionados por el hilo padre de la aplicación y comparten la misma CPU, incluso en una máquina multinúcleo.
+Cuando se ejecuta en modo *cooperativo*, todos los procesos son gestionados por el hilo padre de la aplicación y comparten la misma CPU, incluso en una máquina multinúcleo.
 
 Como resultado, en modo apropiativo, se mejora el rendimiento general de la aplicación, especialmente en máquinas de múltiples núcleos, ya que varios procesos (hilos) pueden ejecutarse realmente de forma simultánea. Sin embargo, las ganancias reales dependen de las operaciones que se ejecuten. A cambio, dado que cada hilo es independiente de los demás en modo apropiativo y no es administrado directamente por la aplicación, existen restricciones específicas aplicadas al código que se desea que cumpla con el uso apropiativo. Además, la ejecución apropiativa sólo está disponible en determinados contextos específicos.
 
-## Disponibilidad del modo apropiativo
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 El uso del modo apropiativo está soportado en los siguientes contextos de ejecución:
 
@@ -60,17 +60,17 @@ Se ofrecen las siguientes opciones:
 
 - **Puede ser ejecutado en procesos apropiativos**: al marcar esta opción, usted declara que el método puede ser ejecutado en un proceso apropiativo y por lo tanto debe ser ejecutado en modo apropiativo siempre que sea posible. La propiedad "preemptive" del método toma el valor "capable".
 
-  Cuando esta opción está seleccionada, el compilador de 4D verificará que el método es realmente capaz y devolverá errores si este no es el caso, por ejemplo, si llama directa o indirectamente a comandos o métodos que no pueden ser ejecutados en modo apropiativo (la cadena de llamadas completa es analizada pero los errores sólo son reportados al primer nivel). A continuación, puede editar el método para que sea hilo seguro, o seleccionar otra opción.
+ Cuando esta opción está seleccionada, el compilador de 4D verificará que el método es realmente capaz y devolverá errores si este no es el caso, por ejemplo, si llama directa o indirectamente a comandos o métodos que no pueden ser ejecutados en modo apropiativo (la cadena de llamadas completa es analizada pero los errores sólo son reportados al primer nivel). A continuación, puede editar el método para que sea hilo seguro, o seleccionar otra opción.
 
-  Si la elegibilidad del método apropiativo es aprobada, éste se etiquetará internamente como "thread-safe" y se ejecutará en modo apropiativo siempre que se cumplan las condiciones requeridas. Esta propiedad define la elegibilidad del modo apropiativo, pero no garantiza que el método se ejecute realmente en modo apropiativo, ya que este modo de ejecución requiere un [contexto específico] (#cuando-se-inicia-un-proceso-de-forma apropiativa).
+ Si la elegibilidad del método apropiativo es aprobada, éste se etiquetará internamente como "thread-safe" y se ejecutará en modo apropiativo siempre que se cumplan las condiciones requeridas. Esta propiedad define la elegibilidad del modo apropiativo, pero no garantiza que el método se ejecute realmente en modo apropiativo, ya que este modo de ejecución requiere un [contexto específico] (#cuando-se-inicia-un-proceso-de-forma apropiativa).
 
 - **No puede ser ejecutado en procesos apropiativos**: marcando esta opción, declara que el método nunca debe ser ejecutado en modo apropiativo, y por lo tanto debe ser ejecutado siempre en modo cooperativo, como en versiones anteriores de 4D. La propiedad "preemptive" del método toma el valor "incapable".
 
-  Cuando esta opción está marcada, el compilador de 4D no verificará la capacidad del método para ejecutarse de forma apropiativa; se etiquetará automáticamente como "thread-unsafe" internamente (incluso si es teóricamente compatible). Cuando se llama en ejecución, este método "contaminará" todos los otros métodos en el mismo hilo, forzando así que este hilo se ejecute en modo cooperativo, incluso si los otros métodos son hilo-seguro.
+ Cuando esta opción está marcada, el compilador de 4D no verificará la capacidad del método para ejecutarse de forma apropiativa; se etiquetará automáticamente como "thread-unsafe" internamente (incluso si es teóricamente compatible). Cuando se llama en ejecución, este método "contaminará" todos los otros métodos en el mismo hilo, forzando así que este hilo se ejecute en modo cooperativo, incluso si los otros métodos son hilo-seguro.
 
 - **Indiferente**(por defecto): al marcar esta opción, se declara que no se quiere manejar la propiedad del modo apropiativo para el método. La propiedad "preemptive" del método se establece como "indifferent".
 
-  Cuando esta opción está seleccionada, el compilador de 4D evaluará la compatibilidad del método con el modo apropiativo y lo etiquetará internamente como "thread-safe" o "thread-unsafe". No se devuelve ningún error relacionado con la ejecución apropiativa. Si el método se evalúa como "thread-safe", en la ejecución no impedirá el uso del modo apropiativo si se llama en un contexto apropiativo. Por el contrario, si el método se evalúa como "thread-unsafe", en ejecución impedirá la ejecución del modo apropiativo cuando sea llamado.
+ Cuando esta opción está seleccionada, el compilador de 4D evaluará la compatibilidad del método con el modo apropiativo y lo etiquetará internamente como "thread-safe" o "thread-unsafe". No se devuelve ningún error relacionado con la ejecución apropiativa. Si el método se evalúa como "thread-safe", en la ejecución no impedirá el uso del modo apropiativo si se llama en un contexto apropiativo. Por el contrario, si el método se evalúa como "thread-unsafe", en ejecución impedirá la ejecución del modo apropiativo cuando sea llamado.
 
 Tenga en cuenta que con esta opción, sea cual sea la evaluación de su compatibilidad con el modo apropiativo, el método siempre se ejecutará en modo cooperativo cuando sea llamado directamente por 4D como primer método padre (por ejemplo a través del comando `New process`). Si se marca como "thread-safe" internamente, sólo se tiene en cuenta cuando se llama desde otros métodos dentro de una cadena de llamadas.
 
@@ -88,7 +88,7 @@ La ejecución en modo apropiativo solo está disponible en modo compilado.
 
 :::
 
-En modo compilado, cuando se inicia un proceso creado por los comandos `New process` o `CALL WORKER`, 4D lee la propiedad apropiativa del método del proceso (también llamado método _padre_) y ejecuta el proceso en modo apropiativo o cooperativo, dependiendo de esta propiedad:
+En modo compilado, cuando se inicia un proceso creado por los comandos `New process` o `CALL WORKER`, 4D lee la propiedad apropiativa del método del proceso (también llamado método *padre*) y ejecuta el proceso en modo apropiativo o cooperativo, dependiendo de esta propiedad:
 
 - Si el método del proceso es hilo seguro (validado durante la compilación), el proceso se ejecuta en un hilo apropiativo.
 - Si el método del proceso no es hilo seguro, el proceso se ejecuta en un hilo cooperativo.
@@ -164,8 +164,8 @@ Los [procesos Worker](processes.md#worker-processes) también permiten intercamb
 
 - En el caso de un método "Compartido por componentes y bases de datos locales", debe seleccionarse la propiedad "Puede ejecutarse en procesos apropiativos".
 - Todas las declaraciones SQL son hilo seguro. El código SQL insertado en los bloques `Begin SQL`/`End SQL` debe cumplir las siguientes condiciones:
-  - Debe aplicarse a 4D Server o a la base de datos local de 4D (ODBC o bases de datos remotas vía `SQL LOGIN` no son hilo seguro. Sin embargo, las bases de datos locales usadas con `USE DATABASE` son hilo seguro).
-  * Todo trigger llamado por sentencias SQL debe ser hilo seguro (ver [Triggers](#triggers) a continuación).
+ - Debe aplicarse a 4D Server o a la base de datos local de 4D (ODBC o bases de datos remotas vía `SQL LOGIN` no son hilo seguro. Sin embargo, las bases de datos locales usadas con `USE DATABASE` son hilo seguro).
+ * Todo trigger llamado por sentencias SQL debe ser hilo seguro (ver [Triggers](#triggers) a continuación).
 
 :::
 
@@ -179,7 +179,7 @@ Es posible [desactivar localmente la verificación de la seguridad de los hilos]
 
 :::
 
-The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+Si está activado, el [archivo de símbolos](../Project/compiler.md#complete-list-of-methods), también contiene el estado de seguridad de los hilos para cada método.
 
 ### Interfaz de usuario
 
@@ -265,7 +265,7 @@ El uso de parámetros de tipo DocRef (referencia de documento abierto, utilizada
 
 En algunos casos, puede que prefiera que la verificación "thread-safety" de los comandos no se aplique a algunas partes del código, como por ejemplo, cuando tiene comandos no hilo seguro que sabe que nunca se van a llamar.
 
-Para hacer esto, debe rodear el código a excluir del comando hilo seguro utilizando las directivas específicas `%T-` y `%T+ como comentarios. El comentario `//%T-`desactiva la verificación hilo seguro y el comentario`//%T+\\` la reactiva:
+Para hacer esto, debe rodear el código a excluir del comando hilo seguro utilizando las directivas específicas `%T-` y `%T+ como comentarios. El comentario `//%T-`desactiva la verificación hilo seguro y el comentario`//%T+\\\` la reactiva:
 
 ```4d
   // %T- para deshabilitar la verificación hilo seguro

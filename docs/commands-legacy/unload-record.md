@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.UNLOAD RECORD.Summary-->**UNLOAD RECORD** unloads the current record of *table*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ If a record has a large amount of data, picture fields, or external documents (s
 
 **Note:** When it is used in a transaction, the **UNLOAD RECORD** command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or cancelled).
 
-#### See also 
+## See also 
 
 [LOAD RECORD](load-record.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -45,7 +45,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.first().Summary -->|
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flat().Summary -->|
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flatMap().Summary -->|
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flatMap().Summary -->|
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.includes().Summary -->|
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
@@ -63,7 +63,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->|
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->|
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
@@ -171,10 +171,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | 型                                                     |    | 説明                                     |
-| ----- | ----------------------------------------------------- |:--:| -------------------------------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection | -> | 共有コレクションの値                             |
-| 戻り値   | Collection                                            | <- | 新規の共有コレクション|<!-- END REF -->
+| 引数    | 型                               |    | 説明                                     |
+| ----- | ------------------------------- |:--:| -------------------------------------- |
+| value | 数値、テキスト、日付、時間、ブール、オブジェクト、コレクション | -> | 共有コレクションの値                             |
+| 戻り値   | Collection                      | <- | 新規の共有コレクション|<!-- END REF -->
 
 
 |
@@ -206,8 +206,8 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 *   数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
 *   テキスト
-*   ブール
-*   日付
+*   boolean
+*   date
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
 *   共有オブジェクト

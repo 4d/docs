@@ -5,7 +5,7 @@ title: 背景色と境界線
 
 ## 交互に使用する背景色
 
-奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、_自動_ が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
+奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
 
 このプロパティは [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドでも設定できます。
 
@@ -25,7 +25,7 @@ title: 背景色と境界線
 
 オブジェクトの背景色を設定します。
 
-リストボックスの場合にはデフォルトで、_自動_ が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
+リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
 
 このプロパティは [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドでも設定できます。
 
@@ -49,7 +49,7 @@ title: 背景色と境界線
 
 `セレクションとコレクション型リストボックス`
 
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、_4Dランゲージリファレンス_ マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドの説明を参照ください。
+リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドの説明を参照ください。
 
 また、このプロパティは [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/ja/page1440.html) コマンドに `lk background color expression` 定数を指定して設定することもできます。
 
@@ -67,7 +67,7 @@ title: 背景色と境界線
 
 ---
 
-## Border Line Style {#border-line-style}
+## 境界線スタイル{#border-line-style}
 
 リストボックスの境界線のスタイルを設定します。
 
@@ -75,31 +75,15 @@ title: 背景色と境界線
 
 | 名称          | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[階層リスト](list_overview.md) -
-[入力](input_overview.md) -
-[リストボックス](listbox_overview.md) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[ルーラー](ruler.md) -
-[スピナー](spinner.md) -
-[ステッパー](stepper.md) -
-[サブフォーム](subform_overview.md) -
-[テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
-## Dotted Line Type {#dotted-line-type}
+## 点線タイプ {#dotted-line-type}
 
 点線のタイプを、点と白のパターンにより指定します。
 
@@ -133,7 +117,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 ---
 
@@ -222,18 +206,18 @@ title: 背景色と境界線
 
 ## 透過
 
-リストボックスの背景を透明にします。 When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+リストボックスの背景を透明にします。 このプロパティが有効になっていると、列に対して設定されている [交互に使用する背景色](#交互に使用する背景色) および [背景色](#背景色-塗りカラー) の設定は無視されます。
 
 #### JSON 文法
 
 | 名称   | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | text   | "transparent" |
+| fill | テキスト   | "transparent" |
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 #### 参照
 
-[Background Color / Fill Color](#background-color--fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)

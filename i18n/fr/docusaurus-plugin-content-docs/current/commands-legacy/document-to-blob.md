@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** charge le contenu de *document* dans *blob*.<!-- END REF--> Vous devez passer un nom de document valide, c'est-à-dire qui désigne un document existant qui n'est pas déjà ouvert, sinon une erreur sera générée. Si vous voulez que l'utilisateur choisisse le document, utilisez la routine [Open document](open-document.md) et la variable système Document (cf. l'exemple ci-dessous). 
 
-#### Exemple 
+## Exemple 
 
 Notre exemple est une base qui vous permet de stocker et chercher rapidement des documents. Dans un formulaire entrée, vous créez un bouton qui vous permet de charger un document de votre choix dans un champ de type BLOB. La méthode pour ce bouton peut être la suivante :
 
@@ -34,11 +34,11 @@ Notre exemple est une base qui vous permet de stocker et chercher rapidement des
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si le document est correctement lu. Sinon, elle prend la valeur 0 et une erreur est générée.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 * Si vous essayez de charger dans un BLOB un document qui n'existe pas ou qui est déjà ouvert par un(e) autre process ou application, une des Erreurs du gestionnaire de fichiers du système sera générée.
 * Une erreur d'Entrée/Sortie peut survenir si le document est verrouillé, s'il se trouve sur un volume verrouillé ou si un problème survient pendant la lecture du document.
@@ -46,12 +46,12 @@ La variable système OK prend la valeur 1 si le document est correctement lu. Si
 
 Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

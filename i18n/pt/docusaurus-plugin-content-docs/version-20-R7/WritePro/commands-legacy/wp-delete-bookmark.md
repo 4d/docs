@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP DELETE BOOKMARK.Summary-->O comando **WP DELETE BOOKMARK** elimina o marcador chamado *nombk de* *docWP*.<!-- END REF-->
 
 Se o marcador *nombk* não existir em *docWP*, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser renomear uma bookmark existente, precisa criar uma nova bookmark com a mesma faixa, e então apagar a antiga:
 
@@ -44,7 +44,7 @@ Se quiser renomear uma bookmark existente, precisa criar uma nova bookmark com a
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

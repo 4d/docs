@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->La commande **SET LIST ITEM FONT** modifie la police de caractères de l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s�
 
 Passez dans le paramètre *police* le nom ou le numéro de la police à utiliser. Pour réappliquer la police par défaut de la liste hiérarchique, passez une chaîne vide dans *police*.
 
-#### Exemple 
+## Exemple 
 
 Appliquer la police Times à l’élément courant de la liste :
 
@@ -35,14 +35,14 @@ Appliquer la police Times à l’élément courant de la liste :
  SET LIST ITEM FONT(*;"Maliste";*;"Times")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get list item font](get-list-item-font.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

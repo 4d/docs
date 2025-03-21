@@ -223,10 +223,10 @@ Si debe referirse al cuarto elemento del array utilizando el puntero, haga lo si
 Puede pasar un puntero como parámetro de un método. Dentro del método, puede modificar el objeto referenciado por el puntero. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Cambia el objeto referenciado por el primer parámetro a caracteres en mayúsculas, y el objeto referenciado por el segundo parámetro a caracteres en minúsculas. Este es el método del proyecto:
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
-  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
- #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  //método proyecto takeTwo
+  //$changeUp - Puntero a un campo cadena o variable. Cámbielo a mayúsculas.
+  //$changeLow - Puntero a un campo o variable cadena. Cámbielo a minúsculas.
+ #DECLARE($changeUp : Puntero ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```
@@ -258,15 +258,15 @@ Muestra un cuadro de alerta con la palabra "Goodbye".
 A continuación se explica cada línea del ejemplo:
 
 - $MyVar:="Hello"
-  \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
+ \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
 - $PointerOne:=-$MyVar
-  \--> $PointerOne ahora contiene un puntero a $MyVar.
+ \--> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
+ \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+ \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
 - ALERT (($PointerTwo->)->)
-  \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
+ \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 
@@ -281,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** la desreferenciación múltiple requiere paréntesis.
+
+

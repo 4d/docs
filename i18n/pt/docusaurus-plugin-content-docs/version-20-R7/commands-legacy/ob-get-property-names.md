@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB GET PROPERTY NAMES.Summary-->O comando **OB GET PROPERTY NAMES** devolve, em *arrProp*, os nomes das propriedades contidas no objeto de linguagem designados pelo parâmetro *objeto* .<!-- END REF-->deve ter sido definido utilizando o comando *C\_OBJECT* ou designar um campo objeto 4D.  
   
@@ -36,7 +36,7 @@ Opcionalmente, também pode passar um array inteiro longo em *arrTipos*. Para ca
   
 Nota: para os atributos array, o comando devolve Is collection.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Deseja provar que um objeto não está vazio:
 
@@ -53,7 +53,7 @@ Deseja provar que um objeto não está vazio:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Utilizando um elemento de array de objetos:
 
@@ -93,12 +93,12 @@ Utilizando um elemento de array de objetos:
   // $arrTypes{2}=255
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

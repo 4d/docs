@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Register data key.Summary-->**Register data key** コマンドは、引数として渡されたデータ暗号化キーを4D キーチェーンに追加します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * 暗号化キーが4D キーチェーンに正常に読み込まれた場合には**True**
 * 4D キーチェーンの中に同じ暗号化キーが既にあった場合には**False**
 
-#### 例題 
+## 例題 
 
 ```4d
  var $passphrase : Text
@@ -44,12 +44,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [New data key](new-data-key.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

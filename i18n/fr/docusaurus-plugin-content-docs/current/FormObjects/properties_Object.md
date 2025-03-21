@@ -130,11 +130,11 @@ Ce mécanisme présente deux avantages :
 
 ### List box tableau
 
-For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as _dataSource_ value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objets pris en charge
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -149,7 +149,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires.
-  Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
+ Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
 
 #### Grammaire JSON
 
@@ -159,7 +159,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 
 #### Objets pris en charge
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
 
 ---
 
@@ -175,7 +175,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 #### Objets pris en charge
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -311,7 +311,7 @@ Il existe plusieurs types de calculs. Le tableau suivant montre quels calculs pe
 
 Les calculs automatiques ne tiennent pas compte de l'état affiché/masqué des lignes de list box. Si vous souhaitez limiter un calcul aux seules lignes visibles, vous devez utiliser un calcul personnalisé.
 
-_Null_ values are not taken into account for any calculations.
+*Null* values are not taken into account for any calculations.
 
 Si la colonne contient différents types de valeurs (colonne basée sur une collection par exemple) :
 

@@ -31,7 +31,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
 
-Toute instruction de modification dans un objet partagé ou une collection partagée doit être protégée à l'intérieur d'un bloc \[`Use...End use`\](#use-end-use), sinon une erreur est générée.
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -52,8 +52,8 @@ Si vous avez besoin d'exécuter plusieurs modifications sur la même collection,
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-	$col[0]:="omega" //La modification d'un élément nécessite d'être effectuée dans Use/End use
-	$col.push("alpha") //.push() déclenche en interne Use/End use, mais nous voulons faire les deux modifications de façon atomique
+    $col[0]:="omega" //La modification d'un élément nécessite d'être effectuée dans Use/End use
+    $col.push("alpha") //.push() déclenche en interne Use/End use, mais nous voulons faire les deux modifications de façon atomique
 End use
 ```
 
@@ -110,7 +110,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 :::note
 
-N'oubliez pas que les [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées déclenchent automatiquement un **Use** interne pour cette collection partagée pendant l'exécution de la fonction.
+[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
 
 :::
 
@@ -138,7 +138,7 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
 ```4d
-    	//HowMany
+    //HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
  $count:=CountMethod($what) //méthode pour compter les produits

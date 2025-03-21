@@ -13,16 +13,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR New offscreen area.Summary-->El comando QR New offscreen area crea un área de informe rápido fuera de pantalla y devuelve su número de referencia.<!-- END REF-->
 
-#### Ver también 
+## Ver también 
 
 [QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
 [QR NEW AREA](qr-new-area.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

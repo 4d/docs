@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX ADD XML COMMENT.Summary-->La commande **SAX ADD XML COMMENT** ajoute un *commentaire* dans le document XML référencé par *document*.<!-- END REF--> 
 
 Un commentaire XML est un texte dont le contenu ne sera pas analysé par l’interpréteur XML. Les commentaires XML sont encadrés par les caractères <!-- et -->. 
 
-#### Exemple 
+## Exemple 
 
 L’instruction suivante :
 
@@ -35,19 +35,19 @@ L’instruction suivante :
  
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 En cas d’erreur, la commande retourne une erreur qui peut être interceptée via une méthode d’appel sur erreur.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX ADD XML DOCTYPE](sax-add-xml-doctype.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -23,7 +23,7 @@ La propriété [`lockKindText`](../API/EntityClass.md#lock) est "Locked by sessi
 
 ### Description
 
-Les verrouillages déclenchés par l'API REST sont placés au niveau de la [session](authUsers.md#opening-sessions).
+Les verrouillages déclenchés par l'API REST sont placés au niveau de la [session](authUsers.md#sessions).
 
 Une entité verrouillée est considérée comme *verrouillée* (c'est-à-dire que les actions de verrouillage / déverrouillage / mise à jour / suppression ne sont pas possibles) par :
 
@@ -65,7 +65,7 @@ L'objet "__STATUS" retourné possède les propriétés suivantes :
 |              | recordNumber                        | number  | Numéro de l'enregistrement verrouillé                                                                                                                                                                                                                                                                                                                                                       |
 |              | userAgent                           | text    | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
-Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *__STATUS* en cas d'erreur :
+Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet __*STATUS* en cas d'erreur :
 
 | status | statusText                      | Commentaire                                                                                                                                                                                      |
 | ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -114,3 +114,4 @@ Dans un second navigateur (autre session), nous envoyons la même requête.
 	}
 }
 ```
+

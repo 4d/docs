@@ -13,7 +13,7 @@ title: VP SUSPEND COMPUTING
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SUSPEND COMPUTING` command <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->stops the calculation of all formulas in *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
 
@@ -23,7 +23,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 >The 4D View Pro calculation service maintains a counter of suspend/resume actions. Therefore, each execution of `VP SUSPEND COMPUTING` command  must be balanced by a corresponding execution of the `VP RESUME COMPUTING` command. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.
 
-#### Example
+## Example
 
 You've added two buttons to the form so that the user can suspend/resume calculations:
 
@@ -48,7 +48,7 @@ If(FORM Event.code=On Clicked)
 End if
 ```
 
-#### See also
+## See also
 
 [VP RECOMPUTE FORMULAS](vp-recompute-formulas.md)<br/>
 [VP RESUME COMPUTING](vp-resume-computing.md)

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->La commande **WEB GET HTTP BODY** retourne le corps (body) de la requête HTTP en cours de traitement.<!-- END REF--> Le corps HTTP est retourné tel quel, sans traitement ni analyse. 
 
@@ -23,7 +23,7 @@ Vous pouvez passer dans le paramètre *corps* une variable ou un champ de type B
 
 Cette commande permet par exemple d’effectuer des recherches dans le corps des requêtes. Elle permet également aux utilisateurs avancés de mettre en place un serveur WebDAV au sein d’une base 4D.
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, une requête simple est envoyée au serveur Web de 4D et le contenu du champ HTTP corps est visualisé dans le débogueur. Voici le formulaire envoyé au serveur Web de 4D, ainsi que le code HTML correspondant :
 
@@ -44,12 +44,12 @@ Voici la méthode Test4D2004 :
 
 Lorsque le formulaire est soumis au serveur Web, la variable $texteRequete reçoit le texte du champ body de la requête HTTP, soit "*vnom=Dupont*".
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

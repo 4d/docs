@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current system user.Summary-->The **Current system user** command returns the owner name of your machine, as set in the current user account on the machine.<!-- END REF-->
 
-#### Example 
+## Example 
 
 See example for the [Current machine](current-machine.md) command.
 
-#### See also 
+## See also 
 
 [Current machine](current-machine.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PRINT LABEL.Summary-->PRINT LABEL permite imprimir etiquetas com los datos de la seleção de *tabela*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Se especifica o parâmetro *documento*, as etiquetas se imprimem com os parâmet
 * A sintaxe que faz com que o editor de etiquetas apareça não funciona com 4D Server; neste caso, a variável sistema OK toma o valor 0.
 * No caso de um problema relacionado de impressora (sem papel, impressora desconectada, etc.), não é gerado uma mensagem de erro.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir imprime as etiquetas utilizando o formulário de saída de uma tabela. O exemplo utiliza dois métodos. O primeiro é um método de projeto que designa o formulário de saída a utilizar e depois imprime as etiquetas: 
 
@@ -68,7 +68,7 @@ O segundo método é o método de formulário do formulário *"Imprimir Etiqueta
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas\], e depois imprime automaticamente as etiquetas “Minhas etiquetas”: 
 
@@ -79,7 +79,7 @@ O exemplo a seguir permite ao usuário realizar uma pesquisa na tabela \[Pessoas
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pessoas\], e depois lhe permite ao usuário escolher as etiquetas a imprimir: 
 
@@ -90,7 +90,7 @@ O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pess
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pessoas\] e depois mostra o Assistente de etiquetas de modo a que o usuário possa criar, salvar, carregar e imprimir todo tipo de etiquetas: 
 
@@ -101,12 +101,12 @@ O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pess
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -52,10 +52,10 @@ Al hacer clic en **Escanear y reparar...**, 4D realiza un análisis completo del
 A área "Registros encontrados no arquivo de dados" inclui duas tabelas que resumem as informações da varredura do arquivo de dados.
 
 - A primeira tabela lista as informações provenientes da verificação do ficheiro de dados. Cada linha mostra um grupo de registos recuperáveis no ficheiro de dados:
-  - La columna **Orden** indica el orden de recuperación del grupo de registros.
-  - La columna **Número** indica el número de los registros de la tabla.
-  - La columna **Tabla de destino** indica los nombres de las tablas que se asignaron automáticamente a los grupos de registros identificados. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Os grupos que não foram atribuídos, ou seja, as tabelas que não puderam ser associadas a nenhum registro, aparecem em vermelho.
-  - La columna **Recuperar** le permite indicar, para cada grupo, si quiere recuperar los registros. Por padrão, essa opção é marcada para todos os grupos com registros que podem ser associados a uma tabela.
+    - La columna **Orden** indica el orden de recuperación del grupo de registros.
+    - La columna **Número** indica el número de los registros de la tabla.
+    - La columna **Tabla de destino** indica los nombres de las tablas que se asignaron automáticamente a los grupos de registros identificados. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Os grupos que não foram atribuídos, ou seja, as tabelas que não puderam ser associadas a nenhum registro, aparecem em vermelho.
+    - La columna **Recuperar** le permite indicar, para cada grupo, si quiere recuperar los registros. Por padrão, essa opção é marcada para todos os grupos com registros que podem ser associados a uma tabela.
 
 - A segunda tabela lista as tabelas do ficheiro de projeto.
 

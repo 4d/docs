@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->O comando OBJECT SET VISIBLE mostra ou oculta os objetos especificados por *objeto*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
 
 Se passa *visível* igual a [TRUE](true.md "TRUE"), os objetos são mostrados. Se passa *visível* igual a [FALSE](false.md "FALSE"), os objetos são ocultados. 
 
-#### Exemplo 
+## Exemplo 
 
 Este é um formulário típico no ambiente Desenho:
 
@@ -54,12 +54,12 @@ ou:
 
 ![](../assets/en/commands/pict27190.en.png)
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

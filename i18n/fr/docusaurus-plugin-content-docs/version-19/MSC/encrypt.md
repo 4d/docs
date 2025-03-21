@@ -50,7 +50,7 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 - Si la clé de chiffrement des données n'est pas identifiée, vous devez la fournir. La boîte de dialogue suivante s'affiche : ![](../assets/en/MSC/MSC_encrypt7.png)
 
 À ce stade, deux options s'offrent à vous :
-- entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OU
+- entrer la phrase secrète actuelle(2) et cliquer sur **OK**. OR
 - connecter un appareil tel qu'une clé USB et cliquer sur le bouton **Scanner les disques**.
 
 (1) Le trousseau de 4D stocke toutes les clés de chiffrement de données valides saisies durant la session d'application session.   
@@ -96,7 +96,7 @@ Les clés de chiffrement successives peuvent être sauvegardées sur le même ap
 
 :::caution
 
-Le stockage du fichier de clé de cryptage des données au premier niveau du lecteur est obligatoire lorsque vous utilisez la fonction de [restauration automatique et d'intégration des journaux](../Backup/settings.md#automatic-restore-and-log-integration). Lorsque la séquence de restitution est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore). Lorsque la séquence de restitution est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
 
 :::
 

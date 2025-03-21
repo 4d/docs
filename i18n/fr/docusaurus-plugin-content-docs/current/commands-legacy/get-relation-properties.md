@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->La commande **GET RELATION PROPERTIES** retourne les propriétés du lien, s’il y en a un, qui part du champ source, désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->  
 Vous pouvez passer :
@@ -35,7 +35,7 @@ Après l’exécution de la commande :
 
 **Note :** Les deux derniers paramètres retournent également Vrai si aucun lien ne part du champ source (dans ce cas, leur valeur est non significative). La valeur des paramètres *tableDest* et *champDest* vous permet de vous assurer de l’existence d’un lien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -43,7 +43,7 @@ Après l’exécution de la commande :
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -28,9 +28,9 @@ Puede crear temas totalmente personalizables. Para crear un tema, seleccione un 
 
 ### Archivos de temas personalizados
 
-Cada tema personalizado se almacena en un único archivo JSON llamado _themeName.json_. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#stora
+Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json*. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#stora
 
-Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema _Default Light Theme_. Si un archivo de tema JSON es inválido, se carga el tema _Default Light Theme_ y se genera un error.
+Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema *Default Light Theme*. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
 
 > Cuando un archivo de tema es modificado por un editor externo, 4D debe ser reiniciado para tener en cuenta las modificaciones.
 
@@ -152,7 +152,7 @@ Las siguientes opciones están disponibles:
 
 - **Ninguno**: sin señales
 - **Rectángulo** (por defecto): llaves rodeadas por una línea negra\
-  ![](../assets/en/Preferences/optionsRectangle.png)
+    ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.
 
@@ -184,3 +184,4 @@ Esta área le permite configurar los mecanismos de autocompletar en el Editor de
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para:<ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos del objeto</li><li>Tablas</li><li>Prototipos (es decir, funciones de clase)</li></ul><p>Por ejemplo, cuando se selecciona la opción "Variables (locales o interproceso) y atributos del objeto", aparece una lista de sugerencias cuando se escribe el caracter $:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> Puede deshabilitar esta funcionalidad para ciertos elementos del lenguaje deseleccionando su opción correspondiente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Validación de una sugerencia      | Establece el contexto de entrada que permite al Editor de Código validar automáticamente la sugerencia actual mostrada en la ventana de autocompletado.<ul><li>**Tabuladores y delimitadores**<br/>Cuando esta opción está seleccionada, puede validar la selección actual con la tecla Tab o cualquier delimitador relevante para el contexto. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Esta es la lista de delimitadores que se tienen en cuenta:<br/> ( ; : = < [ {</li><li>**Sólo tabulador**<br/>Cuando se selecciona esta opción, sólo se puede utilizar el tabulador para insertar la sugerencia actual. Esto puede utilizarse más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de elementos, como ${1}.**Note**: También puede hacer doble clic en la ventana o presionar la tecla Retorno de carro para validar una sugerencia.</li></ul> |
+

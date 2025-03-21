@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get title.Summary-->OBJECT Get titleコマンドは *object*で指定されたフォームオブジェクトのタイトル (ラベル) を返します。<!-- END REF-->このコマンドはラベルを表示するすべてのタイプのシンプルオブジェクトに使用できます:
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
 * グループボックス
 オプションの*\** 引数を渡すと、*object*引数はオブジェクト名 (文字) です。この引数を渡さないと、*object*はフィールドまたは変数です。この場合、文字ではなくフィールドまたは変数への参照 (フィールドまたは変数オブジェクトのみ) を渡します。 
 
-#### 参照 
+## 参照 
 
 [OBJECT SET TITLE](object-set-title.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ Para acessar a um elemento de coleção, é necessário passar o número do elem
 collectionRef[expression]
 ```
 
-Você pode passar qualquer expressão 4D válida que retorne um inteiro positivo em _expressão_. Exemplos:
+Você pode passar qualquer expressão 4D válida que retorne um inteiro positivo em *expressão*. Exemplos:
 
 ```4d
  myCollection[5]  //access ao sexto elemento da coleção
@@ -57,7 +57,7 @@ Several 4D commands and functions return collections, for example [`Monitored ac
 
 ### Comando `New object`
 
-The [`New collection`](../commands/new-collection.md) command creates a new empty or prefilled collection and returns its reference.
+O comando [`Nova coleção`](../commands/new-collection.md) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
 
 Exemplos:
 
@@ -105,14 +105,14 @@ Se você criar um literal de coleção contendo um único elemento, certifique-s
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções regulares (não compartilhadas), usando o comando [`New collection`] (commands/new-collection.md) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - coleções compartilhadas, usando o comando [`New shared collection`](commands/new-shared-collection.md). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
 
 Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
 ## Funções de Collection
 
-As referências de coleções 4D se beneficiam de funções de classe especiais (às vezes denominadas _funções de membro_). As funções da coleção estão listadas na seção [Referência de API de classe](../API/CollectionClass.md)
+As referências de coleções 4D se beneficiam de funções de classe especiais (às vezes denominadas *funções de membro*). As funções da coleção estão listadas na seção [Referência de API de classe](../API/CollectionClass.md)
 
 Por exemplo:
 
@@ -130,12 +130,12 @@ Alguns métodos retornam a coleção original depois de moficiação, para que p
 
 ### parâmetro propertyPath
 
-Várias funções aceitam um _propriedadePath_ como parâmetro. Este parâmetro significa:
+Várias funções aceitam um *propriedadePath* como parâmetro. Este parâmetro significa:
 
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Aviso:** Ao usar funções e parâmetros _propertyPath_, você não pode usar ".", "[ ]" ou espaços nos nomes das propriedades, pois isso impedirá que 4D analise corretamente o caminho:
+**Aviso:** Ao usar funções e parâmetros *propertyPath*, você não pode usar ".", "[ ]" ou espaços nos nomes das propriedades, pois isso impedirá que 4D analise corretamente o caminho:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido

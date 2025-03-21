@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Abas
+title: Controles Abas
 ---
 
 Uma guia cria um objeto que permite que o usuário escolha entre várias telas virtuais exibidas nos limites da guia. O usuário acessa cada tela clicando na guia correspondente.

@@ -11,7 +11,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 
 |                                                                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<br/><!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#index)<br/><!-- INCLUDE EntitySelectionClass.index.Summary -->                                                             |
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<br/><!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<br/><!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
@@ -22,7 +22,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<br/><!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
-| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctPaths)<br/><!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->                               |
+| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctpaths)<br/><!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->                               |
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<br/><!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<br/><!-- INCLUDE #EntitySelectionClass.extract().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<br/><!-- INCLUDE #EntitySelectionClass.first().Summary -->                                                       |
@@ -53,7 +53,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
-## \[*index*]
+## &#91;*index*&#93;
 
 <details><summary>Historique</summary>
 
@@ -1056,8 +1056,6 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-
 ## .getRemoteContextAttributes()
 
 <details><summary>Historique</summary>
@@ -1084,7 +1082,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retourne des informations sur le contexte d'optimisation utilisé par l'entity selection<!-- END REF -->.
 
-S'il n'existe pas de [contexte d'optimisation](../ORDA/remoteDatastores.md#clientserver-optimization) pour l'entity selection, la fonction retourne un texte vide.
+S'il n'existe pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entity selection, la fonction retourne un texte vide.
 
 #### Exemple
 
@@ -1110,7 +1108,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 #### Voir également
 
-[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[Entity.getRemoteContextAttributes()](./EntityClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 
@@ -2019,10 +2017,10 @@ La fonction `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourn
 
 L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
 
-- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
+- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée < 0, *startFrom* est mis à 0.
 - Si *startFrom >= length*, la fonction retourne une entity selection vide.
 - Si *end* < 0, le paramètre est recalculé comme *end:=end+length*.
-- Si *end < startFrom* (valeurs passées ou recalculées), la fonction ne fait rien.
+- Si *end < startFrom* (valeurs passées ou calculées), la méthode ne fait rien.
 
 Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
 

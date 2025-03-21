@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** は、発生したフォームイベントに関する情報を格納しているオブジェクトを返します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** は、発生したフォームイベント に関する情報を格納しているオブジェクトを返します。 通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
 
 **返されるオブジェクト**
 
 返されるオブジェクトは、それぞれ以下のメインのプロパティを格納しています:
 
-| **プロパティ**   | **型**   | **Description**                                                                                                                                                                                                                                                                                                                                               |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName  | テキスト    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。                                                                                                                                                                                                                                                                                                           |
-| code        | integer | フォームイベントの数値。                                                                                                                                                                                                                                                                                                                                                  |
-| description | テキスト    | フォームイベント名(例: "On After Edit") 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 |
+| **プロパティ**   | **型**   | **Description**                                                                                                             |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| objectName  | テキスト    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。                                                                         |
+| code        | integer | フォームイベントの数値。                                                                                                                |
+| description | テキスト    | フォームイベント名 (例: "On After Edit")。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 |
 
 例えば、ボタンをクリックした場合、オブジェクトには以下のプロパティが格納されています:
 
@@ -35,14 +35,14 @@ displayed_sidebar: docs
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
-イベントオブジェクトには、イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: イベントオブジェクトには、イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: イベントオブジェクトには、イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です: これは以下のオブジェクトで生成された*eventObj* オブジェクトが対象です:
+イベントオブジェクトには、イベントが発生したオブジェクト によっては追加のプロパティが含まれていることがあります。  これは以下のオブジェクトで生成された *eventObj* オブジェクトが対象です:
 
-- リストボックスまたはカラムオブジェクト。詳細は*developer.4d.com でのリストボックスのドキュメント* を参照してください。
-- 4D View Pro エリア。詳細は*On VP Ready フォームイベント* を参照してください。
+- List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
+- 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 ***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。
 
-#### 例題 1
+## 例題 1
 
 ボタン上でOn Clicked イベントを管理したい場合を考えます:
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2
+## 例題 2
 
 カラムオブジェクト名に、実際のデータクラスの属性名を以下のように設定した場合:
 
@@ -70,7 +70,7 @@ On Header Click イベントを使用してカラムをソートすることが�
  End case
 ```
 
-#### 例題 3
+## 例題 3
 
 リストボックスオブジェクトのOn Display Details イベントが発生したときに、*メタ情報式 プロパティ*に設定したメソッドを実行したい場合を考えます:
 
@@ -96,14 +96,16 @@ On Header Click イベントを使用してカラムをソートすることが�
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-#### 参照
+## 参照
 
 [Form Events](../Events/overview.md)
 [Form event code](form-event-code.md)
 
-#### プロパティ
+## プロパティ
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| コマンド番号  | 1606                                                            |
-| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1606                        |
+| スレッドセーフ | &check; |
+
+

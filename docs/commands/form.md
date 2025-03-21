@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 * the current form is a subform,
 * a table form is currently displayed on screen.
 
-##### Commands (DIALOG...) 
+### Commands (DIALOG...) 
 
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 
@@ -35,7 +35,7 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 - or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
 - or, an empty object. 
 
-##### Subform 
+### Subform 
 
 If the current form is a subform, the returned object depends on the parent container variable:
 
@@ -48,7 +48,7 @@ In this case, the object returned by **Form** is the same as the one returned by
 
 For more information, please refer to the *Page subforms* section.
 
-##### Table form 
+### Table form 
 
 **Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: 
 
@@ -56,7 +56,7 @@ For more information, please refer to the *Page subforms* section.
 | ------------ | -------- | ----------------------------------------- |
 | parentForm   | object   | **Form** object of the parent output form |
 
-#### Example 
+## Example 
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
@@ -102,12 +102,12 @@ The form displays information for each child:
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
-#### See also 
+## See also 
 
 
 [DIALOG](dialog.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

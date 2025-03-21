@@ -12,14 +12,14 @@ displayed_sidebar: docs
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
 | targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
 | attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | New attribute value                                                     |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                 |
 | attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de todo atributo en un rango, elemento, documento.<!-- END REF--> Este comando le da acceso a todo de atributo interno 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
 In *targetObj*, you can pass :
 
@@ -35,7 +35,7 @@ You can specify attributes to set for *targetObj* in one of two ways:
 
 For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 In this 4D Write Pro area, you selected a word:
 
@@ -44,15 +44,15 @@ In this 4D Write Pro area, you selected a word:
 Si ejecuta el siguiente código:
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
+ $range:=WP Get selection(*;"WParea") //obtener el rango seleccionado
  
-  // set the shadow offset in pt for the selected text
+  // definir el shadow offset en pt para el texto seleccionado
  WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
+  //establecer el relleno del párrafo
  WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
+  //define un borde de 10 pt
  WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
+  //define los colores del borde
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
@@ -60,7 +60,7 @@ You get the following result:
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
-#### Ejemplo 2
+## Ejemplo 2
 
 This example illustrates the use of wk inside and wk outside constants:
 
@@ -75,7 +75,7 @@ Assuming all of the contents were selected, the result is:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
-#### Ejemplo 3
+## Ejemplo 3
 
 You want to set a background image for the document:
 
@@ -118,7 +118,7 @@ The paper box value is only applicable to documents and sections.
 
 :::
 
-#### Ejemplo 4
+## Ejemplo 4
 
 You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
 
@@ -146,7 +146,7 @@ The result is:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 
-#### Ver también
+## Ver también
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\

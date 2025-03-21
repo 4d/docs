@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->The **SET MENU ITEM PROPERTY** command sets the *value* of the *property* for the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
@@ -45,7 +45,7 @@ In the case of the Associated standard action property, you can pass in the *val
 * **Custom property**: In *property*, you can pass any custom text and associate a *value* of the text, number or Boolean type with it. This *value* will be stored with the item and can be retrieved using the [GET MENU ITEM PROPERTY](get-menu-item-property.md) command. You can use any custom string in the *property* parameter, simply make sure not to use a title used by 4D (by convention, properties set by 4D begin with “4D\_”).
 
 
-#### Example
+## Example
 
 ```4d
   // Standard action
@@ -57,12 +57,12 @@ In the case of the Associated standard action property, you can pass in the *val
   SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
 ```
 
-#### See also 
+## See also 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->O comando COMPRESS BLOB comprime o BLOB blob usando o algoritmo de compressão interno de 4D.<!-- END REF--> Este comando só comprime o BLOB cujo tamanho é superior a 255 bytes.
 
@@ -39,7 +39,7 @@ Para detectar se o BLOB foi compactado, use o comando [BLOB PROPERTIES](blob-pro
 
 Advertência: O BLOB comprimido ainda é um BLOB, então não há nada para impedi-lo de modificar o seu conteúdo. No entanto, se você fizer isso, o comando [EXPAND BLOB](expand-blob.md) não será capaz de descompactar o BLOB corretamente.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo testa se o BLOB *vxMeuBlob* é comprimido e, se não for, comprime-o:
 
@@ -53,7 +53,7 @@ Este exemplo testa se o BLOB *vxMeuBlob* é comprimido e, se não for, comprime-
 
 Note, no entanto, que se você aplicar COMPRESS BLOB para um BLOB já compactado, o comando detecta-o e não faz nada.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo permite que você selecione um documento e, em seguida, comprima-o:
 
@@ -71,7 +71,7 @@ Este exemplo permite que você selecione um documento e, em seguida, comprima-o:
  End if
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Envio de dados HTTP "brutos" comprimidos usando GZIP:
 
@@ -83,16 +83,16 @@ Envio de dados HTTP "brutos" comprimidos usando GZIP:
  WEB SEND RAW DATA($blob ;*)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável OK é definida como 1 se o BLOB foi compactado com sucesso, caso contrário, ela é definido como 0.
 
-#### Ver também 
+## Ver também 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

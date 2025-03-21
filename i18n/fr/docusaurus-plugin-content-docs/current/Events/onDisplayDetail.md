@@ -20,9 +20,9 @@ Un enregistrement est sur le point d'être affiché sous forme de liste affiché
 Dans ce contexte, la séquence d'appels de méthodes et d'événements de formulaire suivante est déclenchée :
 
 - Pour chaque enregistrement :
-  - Pour chaque objet de la zone détaillée :
-    - Méthode objet avec l'événement `On Display Detail`
-  - Méthode formulaire avec l'événement `On Display Detail`
+    - Pour chaque objet de la zone détaillée :
+        - Méthode objet avec l'événement `On Display Detail`
+    - Méthode formulaire avec l'événement `On Display Detail`
 
 > La zone d'en-tête est gérée à l'aide de l'événement [`On Header`](onHeader.md).
 

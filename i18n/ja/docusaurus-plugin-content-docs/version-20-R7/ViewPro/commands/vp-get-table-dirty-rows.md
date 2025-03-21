@@ -25,7 +25,7 @@ title: VP Get table dirty rows
 | sheet      | Integer    | ->                          | シートのインデックス (省略した場合はカレントシート)                        |                  |
 | 戻り値        | Collection | <- | 前回のリセット以降に変更された全項目を格納するオブジェクトのコレクション                                  | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get table dirty rows` コマンドは、<!-- REF #_method_.VP Get table dirty rows.Summary -->*tableName* が指定する表組みの前回のリセット以降に変更された項目を含む *dirty row* ("ダーティ" な行) のオブジェクトのコレクションを返します<!-- END REF -->。
 
@@ -49,7 +49,7 @@ title: VP Get table dirty rows
 
 *tableName* が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
 
-#### 例題
+## 例題
 
 変更された行の数を取得します:
 
@@ -59,7 +59,7 @@ $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

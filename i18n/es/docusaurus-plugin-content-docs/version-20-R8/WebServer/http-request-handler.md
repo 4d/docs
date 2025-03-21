@@ -7,7 +7,7 @@ By default, HTTP requests received by the 4D web server are handled through [bui
 
 In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code.
 
-When a custom HTTP request handler intercepts a request, it is processed directly and no other processing features (e.g. [On Web authentication](./authentication.md#on-web-authentication) or [On Web connection](./httpRequests.md#on-web-connection) database methods) are called.
+Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, se procesa directamente y no hay otras funcionalidades de procesamiento (por ejemplo, son llamados métodos base [On Web authentication](./authentication.md#on-web-authentication) o [On Web connection](./httpRequests.md#on-web-connection).
 
 Custom HTTP request handlers meet various needs, including:
 
@@ -19,12 +19,18 @@ Custom HTTP request handlers meet various needs, including:
 
 Custom HTTP Request handlers are supported:
 
-- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
+- cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+
+:::warning
+
+[Por defecto](../ORDA/privileges.md#default-file) por razones de seguridad, el acceso externo al datastore no está permitido en 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+
+:::
 
 ## HTTPHandlers.json File
 
-You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+Define sus manejadores de petición HTTP personalizados en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
 This file contains all listened URL patterns, the handled verbs, and the code to be called. Handlers are provided as a collection in JSON format.
 
@@ -66,13 +72,11 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
+   Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+   Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 
@@ -122,10 +126,10 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
-- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
+- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
 - "method": class function belonging to the class.
 
-[See below](#request-handler-code) for information about the request handler code.
+[Ver abajo](#request-handler-code) para obtener información sobre el código del gestor de peticiones.
 
 ### Verbs
 
@@ -145,7 +149,7 @@ By default, if the "verbs" property is not used for a handler, **all** HTTP verb
 
 :::note
 
-The HTTP verb can also be evaluated [using the `.verb` property within the request handler code](../API/IncomingMessageClass.md#verb) to be accepted or rejected.
+El verbo HTTP también puede ser evaluado [utilizando la propiedad `.verb` dentro del código del manejador de peticiones](../API/IncomingMessageClass.md#verb) para ser aceptado o rechazado.
 
 :::
 
@@ -235,11 +239,11 @@ The HTTP Request handler code must be implemented in a function of a [**Shared**
 
 If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. In this case, you need to declare its functions with the [`shared` keyword](../Concepts/classes.md#shared-functions).
+Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. En este caso, necesita declarar sus funciones con la [palabra clave 'shared'](../Concepts/classes.md#shared-functions).
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+**no es recomendado** exponer las funciones del gestor de solicitudes a llamadas REST externas usando las palabras claves [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) o [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
@@ -257,7 +261,7 @@ The request handler can return an object instance of the [4D.OutGoingMessage cla
 
 ### Ejemplo
 
-The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides functions to get the [headers](../API/IncomingMessageClass.md#headers) and the [body](../API/IncomingMessageClass.md#gettext) of the request.
+La [clase 4D.IncomingMessage](../API/IncomingMessageClass.md) ofrece funciones para obtener los [encabezados](../API/IncomingMessageClass.md#headers) y el [cuerpo](../API/IncomingMessageClass.md#gettext) de la solicitud.
 
 Here is a simple example to upload a file on the server.
 
@@ -276,7 +280,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. It is received in the [`urlQuery`](../API/IncomingMessageClass.md#urlquery) object in the request.
+The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 
 ```4d
     //UploadFile class
@@ -321,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## Ver también
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/perfect-mastery-of-your-back-end-business-logic-thanks-to-HTTP-requests-handlers) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)

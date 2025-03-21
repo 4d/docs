@@ -5,13 +5,13 @@ title: Componentes
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\\\\\\\\\\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que se pueden encontrar en GitHub.
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
 ## Componentes interpretados y compilados
 
-Los componentes pueden ser interpretados o [compilados](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
+Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
 - either a [Project folder](../Project/architecture.md) named with a **.4dbase** suffix (interpreted component)
 - o un archivo .4DZ (componente compilado)
@@ -34,7 +34,7 @@ Esta página describe cómo trabajar con componentes en los entornos **4D** y **
 Para cargar un componente en su proyecto 4D, usted puede:
 
 - copiar los archivos del componente en la [carpeta **Components** de su proyecto](architecture.md#components),
-- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-dependency).
+- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-local-dependency).
 
 Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
@@ -56,8 +56,8 @@ El archivo **dependencies.json** hace referencia a todos los componentes requeri
 
 Puede contener:
 
-- nombres de componentes [almacenados localmente](#declaring-local-components) (ruta por defecto o ruta definida en un archivo **environment4d.json**),
-- nombres de componentes [almacenados en repositorios de GitHub](#declaring-components-stored-on-github) (su ruta puede definirse en este archivo o en un archivo **environment4d.json**).
+- nombres de componentes [almacenados localmente](#local-components) (ruta por defecto o ruta definida en un archivo **environment4d.json**),
+- nombres de componentes [almacenados en repositorios de GitHub](#components-stored-on-github) (su ruta puede definirse en este archivo o en un archivo **environment4d.json**).
 
 #### environment4d.json
 
@@ -96,7 +96,7 @@ Cuando un componente no puede cargarse debido a otra instancia del mismo compone
 
 ### Componentes locales
 
-Declara un componente local en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
+Declara un componente local en el archivo [**dependencies.json**](#dependenciesjson) de la siguiente manera:
 
 ```json
 {
@@ -180,7 +180,7 @@ Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub
 
 #### Declarando rutas
 
-Declare un componente almacenado en GitHub en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
+Declare un componente almacenado en GitHub en el archivo [**dependencies.json**](#dependenciesjson) de la siguiente manera:
 
 ```json
 {
@@ -211,7 +211,7 @@ Declare un componente almacenado en GitHub en el archivo [**dependencies.json**]
 
 Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión**.
 
-- **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependencyjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
+- **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependenciesjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
 
 ```json
 {
@@ -305,16 +305,16 @@ En un proyecto abierto, puede añadir, eliminar y obtener información sobre las
 Para mostrar el panel Dependencias:
 
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
-  ![dependency-menu](../assets/en/Project/dependency-menu.png)
+ ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
-  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+ ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
 ![dependency](../assets/en/Project/dependency.png)
 
-La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
 
 ### Añadir una dependencia local
 
@@ -322,7 +322,7 @@ Para añadir una dependencia local, haga clic en el botón **+** en el área de 
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md##applicationname4dproject-file).
+Asegúrese de que la pestaña **Local** esté seleccionada y haga clic en el botón **...**. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 Si el elemento seleccionado es válido, su nombre y ubicación se muestran en la caja de diálogo.
 
@@ -333,11 +333,11 @@ Si el elemento seleccionado no es válido, se mostrará un mensaje de error.
 Haga clic en **Añadir** para añadir la dependencia al proyecto.
 
 - Si selecciona un componente situado junto a la carpeta del paquete del proyecto (ubicación predeterminada), se declara en el archivo [**dependencies.json**](#dependenciesjson).
-- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environmen4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
+- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environment4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
 
 :::note
 
-Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environmen4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
+Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environment4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
 
 :::
 

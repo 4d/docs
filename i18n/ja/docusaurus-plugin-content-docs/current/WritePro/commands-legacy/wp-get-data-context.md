@@ -17,13 +17,13 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get data context.Summary-->**WP Get data context** コマンドは、 wpDoc 引数で指定したドキュメントのデータコンテキストを返します。<!-- END REF-->データコンテキストは、[WP SET DATA CONTEXT](wp-set-data-context.md) コマンドを使用することで定義されます。
 
 *wpDoc* 引数には、データコンテキストを取得したい4D Write Pro ドキュメントを渡します。
 
-#### 例題 
+## 例題 
 
 あるドキュメントからデータコンテキストを取得し、それを同一プロセスの他のメソッドにおいて再使用することができます。
 
@@ -58,7 +58,7 @@ method2 の中身は、例えば以下のようになっています:
  ALERT(JSON Stringify($context)) // {"firstName":"John","lastName":"Doe"} と表示
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP SET DATA CONTEXT](wp-set-data-context.md)  

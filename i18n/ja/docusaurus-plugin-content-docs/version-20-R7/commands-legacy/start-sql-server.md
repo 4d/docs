@@ -12,21 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.START SQL SERVER.Summary-->START SQL SERVERコマンドを使用して、実行中の4Dのアプリケーションで、統合されたSQLサーバを起動させます。<!-- END REF-->起動すると、SQLサーバは外部SQLクエリに応答します。
 
 **Note:** このコマンドは4Dの内部SQLカーネルの機能には影響しません。内部クエリの際、SQLカーネルはいつでも利用できます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 SQLサーバが正しく起動されるとOKシステム変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [STOP SQL SERVER](stop-sql-server.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

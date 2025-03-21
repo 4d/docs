@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** spécifie le nombre de niveaux de rupture dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -26,7 +26,7 @@ Chaque niveau de rupture généré provoquera l'impression de zones de rupture e
 
 Le second paramètre (optionnel), *sautPage*, permet de provoquer un saut de page sur le niveau de rupture de votre choix.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection est triée sur quatre champs, mais la commande **BREAK LEVEL** ne spécifie que deux niveaux de rupture. Seul un champ est cumulé à l'aide de la commande [ACCUMULATE](accumulate.md) :
 
@@ -38,14 +38,14 @@ L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection e
  PRINT SELECTION([Emp]) // Imprimer l'état
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

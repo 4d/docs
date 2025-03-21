@@ -25,7 +25,7 @@ Cochez l'option **Lancer le serveur WebAdmin au démarrage** dans la boîte de d
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Que vous utilisiez une application 4D avec ou sans interface, vous pouvez activer le lancement automatique au démarrage en utilisant l'argument suivant dans _L'interface de ligne de commande_ :
+- Que vous utilisiez une application 4D avec ou sans interface, vous pouvez activer le lancement automatique au démarrage en utilisant l'argument suivant dans *L'interface de ligne de commande* :
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -49,7 +49,7 @@ La configuration du composant `WebAdmin` est obligatoire, en particulier pour d�
 
 Vous pouvez configurer le composant `WebAdmin` dans la [fenêtre de configuration](#settings-dialog-box)(voir ci-dessous).
 
-> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'_Interface de ligne de commande_](#webadmin-headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
+> Si vous utilisez une application 4D sans interface, vous pouvez utiliser les [arguments de l'*Interface de ligne de commande*](#webadmin-headless-configuration) pour définir les paramètres de base. La définition de paramètres avancés se fait via le fichier de paramètres.
 
 ### Boîte de dialogue des Propriétés
 
@@ -63,7 +63,7 @@ La fenêtre suivante s'affiche :
 
 #### Lancer le serveur WebAdmin au démarrage
 
-Cochez cette option pour lancer le serveur web `WebAdmin` automatiquement au démarrage de 4D ou 4D Server (voir [ci-dessus](#launching-at-startup)). Cette option n'est pas cochée par défaut.
+Cochez cette option pour lancer le serveur web `WebAdmin` automatiquement au démarrage de 4D ou 4D Server (voir [ci-dessus](#launch-at-startup)). Cette option n'est pas cochée par défaut.
 
 #### Connexions HTTP sur localhost acceptées
 
@@ -92,7 +92,7 @@ Chemin du dossier qui contient les fichiers de certificat TLS. Par défaut, le c
 
 #### Mode du debug log
 
-Statut ou format du fichier de logs des requêtes HTTP (HTTPDebugLog__nn_.txt, stocké dans le dossier "Logs" de l'application. --_nn_ représente le numéro du fichier). Les options suivantes sont disponibles :
+Statut ou format du fichier de logs des requêtes HTTP (HTTPDebugLog_*nn*.txt, stocké dans le dossier "Logs" de l'application. --*nn* représente le numéro du fichier). Les options suivantes sont disponibles :
 
 - **Désactivé** (valeur par défaut)
 - **Avec tous les body** - activé avec toutes les parts des body des requêtes et réponses
@@ -124,11 +124,11 @@ Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-st
 
 ## Configuration de WebAdmin sans interface
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Vous pouvez aussi définir un fichier `.4DSettings`. (format XML) et l'utiliser à la place du fichier par défaut. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
 
@@ -150,3 +150,5 @@ Voici un exemple :
 - Qand une page d'administration web est ouverte directement depuis un menu 4D ou 4D Server, tel que **Enregistrements> Data Explorer**ou**Fenêtre> Explorateur de données**(4D Server), l'accès est autorisé sans authentification.
 
 Une fois l'accès autorisé, une [session web](WebServer/sessions.md) est créée avec les privilèges "WebAdmin" sur l'application 4D. Tant que la session courante a le privilège "WebAdmin", le composant `WebAdmin` sert les pages demandées dans les requêtes.
+
+

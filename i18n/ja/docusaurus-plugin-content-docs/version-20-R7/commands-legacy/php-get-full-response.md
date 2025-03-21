@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->PHP GET FULL RESPONSE コマンドを使用して PHPインタープリターから返されるレスポンスに関する追加の情報を取得できます。<!-- END REF--> このコマンドは特にスクリプトの実行中にエラーが発生したときに有効です。
 
@@ -33,12 +33,12 @@ PHPスクリプトはstdoutバッファーにデータを書き込むことが�
 
 4DとPHP間の交換はFastCGI経由で実行されるため、PHPインタープリターは、それがHTTPサーバから呼び出されたかのように機能し、したがってHTTPヘッダを送信します。*httpHeaderFields*と*httpHeaderValues*配列を使用してこれらのヘッダを取得できます。
 
-#### 参照 
+## 参照 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

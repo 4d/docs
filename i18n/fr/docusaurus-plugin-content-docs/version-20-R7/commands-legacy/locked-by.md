@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOCKED BY.Summary-->**LOCKED BY** retourne des informations sur l'utilisateur et le process qui ont verrouillé l'enregistrement.<!-- END REF--> Le numéro du process(\*), le nom de l'utilisateur dans l'application 4D et dans le système ainsi que le nom du process sont retournés dans les variables *process*, *utilisateur4D*, *utilisateurSession* et *nomProcess*. Vous pouvez utiliser ces informations dans une boîte de dialogue pour avertir l'utilisateur lorsqu'un enregistrement est verrouillé.
 
@@ -36,12 +36,12 @@ Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 * *sessionUser* retourne ""
 * *processName* retourne l'adresse IP du cadenas, comme par exemple "127.0.0.1"
 
-#### Voir aussi 
+## Voir aussi 
 
 [Locked](locked.md)  
 *Verrouillage d'enregistrements*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

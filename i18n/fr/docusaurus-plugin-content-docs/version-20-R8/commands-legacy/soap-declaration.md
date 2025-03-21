@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->La commande **SOAP DECLARATION** permet de déclarer explicitement le type des paramètres utilisés dans une méthode 4D publiée comme Web Service.<!-- END REF-->
 
@@ -78,7 +78,7 @@ Passez dans *entrée\_sortie* une valeur indiquant si le paramètre traité est 
 | SOAP input  | Entier long | 1      |
 | SOAP output | Entier long | 2      |
 
-##### Utilisation de types XML 
+### Utilisation de types XML 
 
  Vous pouvez déclarer des variables de type "structure XML" et "référence DOM", aussi bien en entrée qu’en sortie, via les constantes Is XML et Is DOM reference. Lorsque des paramètres de ce type sont définis, aucun traitement ni encodage ne leur est appliqué, les données sont transmises telles quelles (cf. exemple 5). 
 
@@ -93,7 +93,7 @@ Passez dans *entrée\_sortie* une valeur indiquant si le paramètre traité est 
    * Is DOM reference indique que le paramètre doit recevoir la référence DOM d’une structure XML correspondant à l’argument XML envoyé par le client SOAP.
 * Modification de la WSDL : Les structures XML seront déclarées par 4D du type "anyType" (indéterminé) dans la WSDL. Si vous souhaitez typer précisément une structure XML, vous devez sauvegarder le fichier WSDL et ajouter manuellement le schéma de données souhaité dans la section <types> de la WSDL.
 
-##### Méthode COMPILER\_WEB 
+### Méthode COMPILER\_WEB 
 
  Les arguments SOAP entrants référencés à l’aide de variables 4D (et non via les arguments des méthodes 4D) doivent être préalablement déclarés dans la méthode projet COMPILER\_WEB. En effet, l’utilisation de variables process dans les méthodes Web Services nécessite leur déclaration avant l’appel de la méthode. La méthode projet COMPILER\_WEB est appelée, si elle existe, à chaque requête SOAP acceptée. Par défaut, la méthode COMPILER\_WEB n’existe pas. Vous devez la créer explicitement.   
 A noter que la méthode COMPILER\_WEB est également appelée par le serveur Web de 4D lors de la réception de requêtes Web “classiques” de type POST (cf. section *URLs et actions de formulaires*). 
@@ -106,7 +106,7 @@ Si le paramètre *alias* est omis, 4D utilisera par défaut le nom de la variabl
 
 **Note :** La commande **SOAP DECLARATION** doit être incluse dans la méthode publiée comme Web Service. Il n’est pas possible de l’appeler d’une autre méthode. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple spécifie un nom de paramètre :
 
@@ -119,7 +119,7 @@ Cet exemple spécifie un nom de paramètre :
   //Lors de la génération du fichier WSDL et des appels SOAP, le libellé zipcode sera utilisé au lieu de fourD_arg1
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple permet de récupérer un tableau de codes postaux sous forme d’entiers longs :
 
@@ -131,7 +131,7 @@ Cet exemple permet de récupérer un tableau de codes postaux sous forme d’ent
  SOAP DECLARATION(tab_codes;LongInt array;SOAP input;"in_tab_codes")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple permet de référencer deux valeurs de retour sans spécifier de nom d’argument : 
 
@@ -140,7 +140,7 @@ Cet exemple permet de référencer deux valeurs de retour sans spécifier de nom
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple permet au serveur SOAP de 4D de retourner un argument d'une taille supérieure à 32 Ko dans les bases de données en mode non Unicode : 
 
@@ -151,7 +151,7 @@ Cet exemple permet au serveur SOAP de 4D de retourner un argument d'une taille s
 
 Notez le type Is text (et non Is BLOB). Cette astuce permet un formatage correct de l’argument. 
 
-#### Exemple 5 
+## Exemple 5 
 
 Cet exemple illustre l'effet des différents types de déclarations : 
 
@@ -185,13 +185,13 @@ Cet exemple illustre l'effet des différents types de déclarations :
   //Le XML est passé en tant que référence
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

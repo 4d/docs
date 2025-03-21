@@ -56,21 +56,21 @@ title: ラジオボタン
 
 ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- _Windows_ - ボタンがハイライト表示されます。
+- *Windows* - ボタンがハイライト表示されます。
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
-- _macOS_ - ボタンはハイライト表示されません。
+- *macOS* - ボタンはハイライト表示されません。
 
 ### ベベル
 
 ベベルスタイルは [ツールバー](#ツールバー) スタイルと似た動作をしますが、薄いグレーの背景にグレーの枠が描画されます。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- _Windows_ - ボタンがハイライト表示されます。
+- *Windows* - ボタンがハイライト表示されます。
 
 ![](../assets/en/FormObjects/radio_bevel.png)
 
-- _macOS_ - ボタンはハイライト表示されません。
+- *macOS* - ボタンはハイライト表示されません。
 
 ### 角の丸いベベル
 
@@ -78,8 +78,8 @@ title: ラジオボタン
 
 - Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
-- _macOS_ - 角が丸くなっています。
-  ![](../assets/en/FormObjects/roundedBevel.png)
+- *macOS* - 角が丸くなっています。
+ ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS Xグラデーション
 
@@ -87,7 +87,7 @@ OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルと
 
 - Windows 上では、このスタイルは [ベベル](#ベベル) スタイルと同じです。
 
-- _macOS_ - 2トーンのシステムボタンです。
+- *macOS* - 2トーンのシステムボタンです。
 
 ### OS Xテクスチャー
 
@@ -95,9 +95,9 @@ OS Xテクスチャースタイルは [ツールバー](#ツールバー) スタ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- _Windows_ - ツールバースタイルのようなボタンに中央配置のラベルが付き、背景は常に表示されます。
+- *Windows* - ツールバースタイルのようなボタンに中央配置のラベルが付き、背景は常に表示されます。
 
-- _macOS_ - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
+- *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
 ![](../assets/en/FormObjects/OSXTextured.png)
 
@@ -107,11 +107,11 @@ Office XPスタイルは通常ボタン (標準のシステムボタン) よう�
 
 Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
-- _Windows_ - マウスオーバー時にのみ背景が表示されます。
+- *Windows* - マウスオーバー時にのみ背景が表示されます。
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- _macOS_ - 背景は常に表示されます。
+- *macOS* - 背景は常に表示されます。
 
 ### 折りたたみ/展開
 
@@ -139,7 +139,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ### カスタム
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+カスタムスタイルのラジオボタンは、カスタムされた背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます ([アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) や [マージン](properties_TextAndPicture.md#横方向マージン))。
 
 ## プロパティ一覧
 
@@ -152,4 +152,7 @@ The Custom radio button style accepts a personalized background picture and allo
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
+ [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
+ [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
+ [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)

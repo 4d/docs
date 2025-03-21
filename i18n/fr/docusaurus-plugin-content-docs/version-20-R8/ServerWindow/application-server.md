@@ -57,3 +57,4 @@ Cette zone indique la **mémoire cache totale** (paramètre défini dans les pr�
 
 - **Maximum** : indique le nombre maximum de connexions clientes simultanées autorisées pour le serveur d'application. Cette valeur dépend de la licence installée sur le poste serveur.
 - **Utilisées** : indique le nombre de connexions actuellement consommées.
+

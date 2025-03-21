@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Selected record number.Summary-->Selected record number devuelve la posición del registro actual en la selección actual de *tabla*.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Si la selección no está vacía y si el registro actual está en la selección,
 
 El número del registro en la selección es diferente del número devuelto por [Record number](record-number.md "Record number"), que devuelve el número del registro físico en la tabla. El número del registro en la selección depende de la selección y el registro actual.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo guarda el número del registro actual de la selección en una variable:
 
@@ -30,13 +30,13 @@ El siguiente ejemplo guarda el número del registro actual de la selección en u
  NumRegAc:=Selected record number([Personas]) // Obtener el número del registro en la selección
 ```
 
-#### Ver también 
+## Ver también 
 
 *Acerca de números de registros*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

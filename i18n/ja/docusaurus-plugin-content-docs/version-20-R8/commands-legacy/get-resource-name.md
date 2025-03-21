@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get resource name.Summary-->**Get resource name**コマンドは、*resType*のタイプで*resID*のIDを持つリソースの名前を返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 リソースが存在しない場合、**Get resource name**は空の文字列を返します。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

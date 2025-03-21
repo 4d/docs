@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->SVG EXPORT TO PICTURE コマンドはXMLツリーのSVGフォーマットのピクチャを、*pictVar* 引数で指定したピクチャフィードや変数に保存するために使用できます。<!-- END REF-->SVGフォーマットに関する詳細はの節を参照してください。
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 | Get XML data source  | 倍長整数 | 0 | 4DはXMLデータソースの読み込みのみを行います。XMLデータソースはピクチャと一緒には保持されません。これはコマンドの実行速度を大幅に向上させますが、DOMツリーが保持されないため、ピクチャを格納したり書きだしたりすることはできません。     |
 | Own XML data source  | 倍長整数 | 2 | 4DはDOMツリーをピクチャとともに書き出します。ピクチャを格納したり書きだしたりでき、かつコマンドの実行も速いです。しかし*elementRef* XML参照を他の4Dコマンドで使用することはできなくなります。                  |
 
-#### 例題 
+## 例題 
 
 以下の例題は4Dピクチャに“Hello World”を表示します:  
 
@@ -47,12 +47,12 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict14520.ja.png)
 
-#### 参照 
+## 参照 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

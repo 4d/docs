@@ -22,6 +22,12 @@ Custom HTTP Request handlers are supported:
 - when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
+:::warning
+
+[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+
+:::
+
 ## HTTPHandlers.json File
 
 You define your custom HTTP Request handlers in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
@@ -66,12 +72,11 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
+   Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-  Regular expressions patterns are handled directly.\
-  Ex: `"regexPattern" : "/docs/**/index.html"`
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+   Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 
@@ -320,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## Voir également
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/perfect-mastery-of-your-back-end-business-logic-thanks-to-HTTP-requests-handlers) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)

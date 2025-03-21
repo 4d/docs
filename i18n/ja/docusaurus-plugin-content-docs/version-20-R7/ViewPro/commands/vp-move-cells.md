@@ -23,7 +23,7 @@ title: VP MOVE CELLS
 | targetRange | Object | -> | 値・書式・フォーミュラの移動 (コピー) 先レンジ |                  |
 | options     | Object | -> | 追加のオプション                                     | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP MOVE CELLS` コマンドは、<!-- REF #_method_.VP MOVE CELLS.Summary -->*originRange* の値・書式・フォーミュラを *targetRange* に移動またはコピーします<!-- END REF -->。
 
@@ -42,7 +42,7 @@ title: VP MOVE CELLS
 
 [ワークブックオプション](vp-set-workbook-options.md) で定義されている貼り付けオプションが考慮されます。
 
-#### 例題
+## 例題
 
 内容・値・書式・フォーミュラをコピーします:
 
@@ -60,7 +60,7 @@ $options.pasteOptions:=vk clipboard options all
 VP MOVE CELLS($originRange; $targetRange; $options)
 ```
 
-#### 参照
+## 参照
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>

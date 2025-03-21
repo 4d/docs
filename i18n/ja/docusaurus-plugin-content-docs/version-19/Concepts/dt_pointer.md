@@ -15,12 +15,12 @@ title: Pointer
 
 | 型      | 参照時                     | 使用時                      | 代入時                      |
 | ------ | ----------------------- | ------------------------ | ------------------------ |
-| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | 変数     | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | 配列     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## ポインターの使用例
@@ -85,14 +85,14 @@ $MyVar:="Goodbye"
 |     |                   |         | vPtrA # vPtrB | false |
 
 
-:::warning Null Pointers
+:::警告 Null ポインター
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。 例: 例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例:
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // 初期化されていないポインター (Nil 値)
+$v:=$p-> // エラー
+$p->:=$v // エラー
 ```
 
 このようなエラーを防ぐためには、以下のような書き方をすることができます:
@@ -190,7 +190,10 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   //$1 – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
   //$2 – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
  これを小文字に変換します。
- $1->:=Uppercase($1->)
+ これを小文字に変換します。
+ これを小文字に変換します。
+ これを小文字に変換します。
+  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
 

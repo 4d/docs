@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get page count.Summary-->La commande **WP Get page count** retourne le nombre total de pages passées dans le paramètre *objCible*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Les mêmes paramètres d'affichage que la commande [WP PRINT](wp-print.md) sont 
 
 Si *objCible* est affiché dans une zone de formulaire 4D Write Pro, assurez-vous que les paramètres d'affichage de la zone correspondent à ceux de la commande afin d'obtenir des informations cohérentes. Notez également que si ces paramètres sont différents dans la zone, 4D Write Pro devra "cloner" le document afin de calculer son format à chaque appel de la commande, ce qui peut prendre du temps. Pour des raisons de performances, il est recommandé dans ce cas de construire le document hors-écran et de le copier dans la zone de formulaire une fois les calculs terminés.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaître le nombre total de pages des documents 4D Write Pro stockés dans le champ "Manual" de votre sélection courante. Vous pouvez écrire :
 

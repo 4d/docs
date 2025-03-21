@@ -52,7 +52,7 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
+| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
 | [<!-- INCLUDE #WebSocketClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketClass.handler.Summary -->           |
 | [<!-- INCLUDE #WebSocketClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketClass.id.Summary -->                          |
 | [<!-- INCLUDE #WebSocketClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketClass.send().Summary -->                |
@@ -77,8 +77,8 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 | Parámetros                                        | Tipo                         |                             | Descripción                                    |
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | ---------------------------------------------- |
 | url                                               | Text                         |              ->             | URL a la que conectarse                        |
-| [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objeto que declara las retrollamadas WebSocket |
-| Result                                            | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
+| [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | Objeto que declara las retrollamadas WebSocket |
+| Resultado                                         | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
 
 <!-- END REF -->
 
@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onOpen` se ejecuta una vez
 2. Cero o varios `onMessage` son ejecutados
 3. Cero o un `onError` es ejecutado (detiene el procesamiento)
-4. `onTerminate` se ejecuta siempre una vez
+4. `onTerminate` is always executed
 
 #### Ejemplo
 

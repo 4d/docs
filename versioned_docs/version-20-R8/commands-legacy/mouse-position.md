@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MOUSE POSITION.Summary-->The MOUSE POSITION command returns the current state of the mouse.<!-- END REF-->
 
@@ -24,13 +24,13 @@ The horizontal and vertical coordinates are returned in *mouseX* and *mouseY*. I
 
 The parameter *mouseButton* returns the state of the buttons, as listed previously.
 
-**Note:** The values 2 and 3 can be returned under Mac OS X starting with version 10.2.5 only.
+**Note:** The values 2 and 3 can be returned under macOS starting with version 10.2.5 only.
 
-#### Example 
+## Example 
 
 See the example for the [Pop up menu](pop-up-menu.md) command.
 
-#### See also 
+## See also 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -41,7 +41,7 @@ See the example for the [Pop up menu](pop-up-menu.md) command.
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
 | zIPFile    | 4D.File       | &#8594; | Archivos Zip                          |
 | contraseña | Text                          | &#8594; | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive | &#8592; | Objeto archivo                        |
+| Resultado  | 4D.ZipArchive | &#8592; | Objeto archivo                        |
 
 <!-- END REF -->
 
@@ -24,11 +24,11 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera el contenido de *zipFile* y lo devuelve como un objeto `4D.ZipArchive`<!-- END REF -->.
 
-> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. Para extraer el contenido de un archivo, es necesario utilizar métodos como [file.copyTo()](../API/Document.md#copyto) o [folder.copyTo()](../API/Directory.md#copyto).
 
 Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. El archivo de destino se abrirá hasta que el `ZIP Read archive` haya terminado de ejecutarse y todos los contenidos/referencias hayan sido extraídos/liberados, entonces se cerrará automáticamente.
 
@@ -38,7 +38,7 @@ Si el *zipFile* está protegido por contraseña, es necesario utilizar el parám
 
 El objeto `4D.ZipArchive` devuelto contiene una única propiedad [`root`](../API/ZipArchiveClass.md#root) cuyo valor es un objeto `4D.ZipFolder`. Esta carpeta describe todo el contenido del archivo ZIP.
 
-#### Ejemplo
+## Ejemplo
 
 Para recuperar y ver el contenido de un objeto ZIP file:
 
@@ -78,16 +78,18 @@ Para extraer desde la carpeta root:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-#### Ver también
+## Ver también
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1637                                                                |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1637                        |
+| Hilo seguro       | &check; |
+
+

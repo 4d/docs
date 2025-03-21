@@ -26,23 +26,25 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
-<!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` devuelve el número del proceso cuyo *name* o *id* pasa en el primer parámetro. Si no se encuentra ningún proceso, `Process number` devuelve 0.
+<!--REF #_command_.Process number.Summary-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` returns the number of the process whose *name* or *id* you pass in the first parameter`Process number` devuelve el número del proceso cuyo *name* o *id* pasa en el primer parámetro. Si no se encuentra ningún proceso, `Process number` devuelve 0.
 
 El parámetro opcional \* permite recuperar, de un 4D remoto, el número de un proceso que se ejecuta en el servidor. En este caso, el valor devuelto es negativo. Esta opción es especialmente útil cuando se utilizan los comandos [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) y [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
 
 Si el comando se ejecuta con el parámetro \* desde un proceso en la máquina servidor, el valor devuelto es positivo.
 
-#### Ver también
+## Ver también
 
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 372                                                                 |
-| Thread safe       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 372                         |
+| Hilo seguro       | &check; |
+
+

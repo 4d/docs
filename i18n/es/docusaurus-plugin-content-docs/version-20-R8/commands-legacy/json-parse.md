@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON Parse.Summary-->El comando **JSON Parse** analiza el contenido de una cadena con formato JSON y extrae los valores que puede almacenar en un campo o variable 4D.<!-- END REF--> Este comando deserializa los datos JSON, realiza la acción inversa del comando [JSON Stringify](json-stringify.md).  
   
@@ -59,7 +59,7 @@ __symbols:{//descripción del objeto
 
 **Nota:** el parámetro *\** se ignora si el valor devuelto no es del *tipo* objeto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ejemplos de conversiones simples:
 
@@ -84,7 +84,7 @@ Ejemplos de conversiones simples:
  $h:=JSON Parse("5120";Is time) //$h=01:25:20
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ejemplo de conversión de datos de tipo fecha: 
 
@@ -101,7 +101,7 @@ Ejemplo de conversión de datos de tipo fecha:
   //$date3=13/07/17
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Si la configuración de almacenamiento de fecha actual es "tipo fecha", puede escribir:
 
@@ -118,7 +118,7 @@ Si la configuración de almacenamiento de fecha actual es "tipo fecha", puede es
 
 **Nota:** para más información sobre esta configuración, consulte la opción "Utilizar tipo fecha en lugar de formato de fecha ISO en objetos" en la *Página Compatibilidad*. 
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este ejemplo muestra el uso combinado de los comandos [JSON Stringify](json-stringify.md) y **JSON Parse**:
 
@@ -134,7 +134,7 @@ Este ejemplo muestra el uso combinado de los comandos [JSON Stringify](json-stri
  $Contact2:=JSON Parse($JSONContact)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Usted desea crear una colección 4D desde un array JSON:
 
@@ -143,7 +143,7 @@ Usted desea crear una colección 4D desde un array JSON:
  $myCol:=JSON Parse("[\"Monday\",10,\"Tuesday\",11,\"Wednesday\",12,false]")
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Usted desea analizar la siguiente cadena y obtener la posición de la línea y el desplazamiento de cada propiedad:
 
@@ -184,14 +184,14 @@ beta[1].echo:{line:9,offset:12},
 beta[1].golf:{line:10,offset:12}}}
 ```
 
-#### Ver también 
+## Ver también 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 [JSON Validate](json-validate.md)  
 *Tipos de campos y variables*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->La commande **Encrypt data file** est utilisée pour chiffrer ou déchiffrer le fichier de données indiqué par le paramètre *cheminDonnées* associé au paramètre *cheminStructure*.<!-- END REF--> Elle peut également être utilisée pour enlever le chiffrement de la base. La commande ne modifie pas les fichiers originaux, elle retourne le nom du chemin d'accès complet au dossier qui a été créé pour la sauvegarde du fichier de données original.
 
@@ -66,7 +66,7 @@ Le paramètre *nomMéthode* est utilisé pour fixer une méthode de rétro-appel
 
 Chemin d'accès du dossier de destination des fichiers originaux.
 
-#### Exemple 1 
+## Exemple 1 
 
 Chiffrez un fichier de données pour la première fois :
 
@@ -79,7 +79,7 @@ Chiffrez un fichier de données pour la première fois :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Re-chiffrez un fichier de données chiffré (modifiez la phrase secrète) :
 
@@ -96,7 +96,7 @@ Re-chiffrez un fichier de données chiffré (modifiez la phrase secrète) :
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Retirez le chiffrement d'un fichier de données chiffré :
 
@@ -111,7 +111,7 @@ Retirez le chiffrement d'un fichier de données chiffré :
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Re-chiffrez un fichier de données chiffré avec la clé de chiffrement (par exemple, lorsque le statut chiffrable a été modifié pour certaines tables).
 
@@ -129,7 +129,7 @@ $folder:=Encrypt data file(Structure file;"myData.4DD")
 
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Data file encryption status](data-file-encryption-status.md)  
@@ -137,7 +137,7 @@ $folder:=Encrypt data file(Structure file;"myData.4DD")
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

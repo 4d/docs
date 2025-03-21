@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->La commande **RESUME INDEXES** réactive tous les index de *laTable* s’ils ont été préabalement suspendus via la commande [PAUSE INDEXES](pause-indexes.md).<!-- END REF--> Si les index de *laTable* n’étaient pas suspendus, la commande ne fait rien. 
 
@@ -23,12 +23,12 @@ Si vous passez le paramètre optionnel *\**, la reconstruction des index sera ef
 
 La commande **RESUME INDEXES** ne peut être appelée que depuis 4D Server ou un 4D local. Si cette commande est exécutée depuis un poste 4D distant, l’erreur -10513 est générée. Cette erreur peut être interceptée par une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

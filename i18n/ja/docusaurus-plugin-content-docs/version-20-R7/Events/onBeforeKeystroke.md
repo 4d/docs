@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| コード | 呼び出し元                                                                                                                                                                                                                                                                         | 定義                                                                                                                                               |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 17  | [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | フォーカスのあるオブジェクトに文字が入力されようとしている。 フォーカスのあるオブジェクトに文字が入力されようとしている。 フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
+| コード | 呼び出し元                                                                                                                                                                                                                                                     | 定義                                                                                                                                                                              |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox_overview.md#リストボックス列) | フォーカスのあるオブジェクトに文字が入力されようとしている。 フォーカスのあるオブジェクトに文字が入力されようとしている。 フォーカスのあるオブジェクトに文字が入力されようとしている。 フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
 
 <details><summary>履歴</summary>
 
@@ -17,7 +17,7 @@ title: On Before Keystroke
 
 ## 説明
 
-`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke event`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
+`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke event`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
 
 > これらのイベントは `POST KEY` のようなユーザーアクションをシミュレートするコマンドによっても生成されます。
 
@@ -32,7 +32,7 @@ title: On Before Keystroke
 
 ### キーストロークシーケンス
 
-入力に一連のキーストロークが必要な場合、`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントは、入力がユーザーによって完全に確定されたときにのみ生成されます。 `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します: `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します: `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します:
+入力に一連のキーストロークが必要な場合、`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントは、入力がユーザーによって完全に確定されたときにのみ生成されます。 `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します: `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します: `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します: `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します:
 
 - ^ や ~ のような特殊キーが使用された場合: その後に拡張された文字が入力された場合にのみ生成されます (例: "ê" や "ñ")。
 - IME (Input Method Editor) が、文字の組み合わせを入力するための中間的なダイアログボックスを表示している場合: IME のダイアログが確定されたときにのみイベントが発生します。

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Int.Summary-->Int returns the integer portion of *number*.<!-- END REF--> Int truncates a negative *number* away from zero.
 
-#### Example 
+## Example 
 
 The following example illustrates how Int works for both positive and negative numbers. Note that the decimal portion of the number is removed:
 
@@ -27,11 +27,11 @@ The following example illustrates how Int works for both positive and negative n
  vlResult:=Int(-123.4) // vlResult gets –124
 ```
 
-#### See also 
+## See also 
 
 [Dec](dec.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

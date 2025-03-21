@@ -40,11 +40,11 @@ title: フォームプロパティ
 
 ## フォームクラス
 
-フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[_componentNameSpace_](../settings/general.md#component-namespace-in-the-class-store).className" となります。
+フォームに割り当てる既存の[ユーザークラス](../Concepts/classes.md#class-definition) の名前。  ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className" となります。
 
 フォームにクラスを割り当てることで、以下のような利点があります:
 
-- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。 エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます: エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
+- [フォームエディター](../FormEditor/formEditor.md) を使用する際、割り当てられたクラスは[式](../Concepts/quick-tour.md#expressions) をサポートする[プロパティリスト](../FormEditor/formEditor.md#property-list) の全てのエリア(例: **変数または式**、**フォントカラー式**...)において、`Form.myProperty` のような式に対する正確なシンタックスチェックを行うのに使用されます。  エラーは赤、警告は黄色で、プロパティリストの左カラムに表示され、ホバーすることで説明を受けることができます:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
@@ -52,7 +52,7 @@ title: フォームプロパティ
 
 - またコードエディター内での[自動補完機能](../code-editor/write-class-method.md#autocomplete-functions) を利用することもできます。
 
-- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。 フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。 これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに_formData_ オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
+- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。  これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、あるいは [`FORM LOAD`](../commands/form-load.md) といったコマンドに*formData* オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
 
 :::note
 
@@ -64,7 +64,7 @@ title: フォームプロパティ
 
 | 名称        | データタイプ | とりうる値                                                                                                  |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------ |
-| formClass | string | 既存のユーザークラスの名前("_className_" または "_componentNameSpace_._className_") |
+| formClass | string | 既存のユーザークラスの名前("*className*" または "*componentNameSpace*.*className*") |
 
 ---
 
@@ -74,17 +74,17 @@ title: フォームプロパティ
 
 #### JSON 文法
 
-フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 詳しくは [プロジェクトのアーキテクチャー](Project/architecture.md#sources-フォルダー) を参照ください。
+フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 See [project architecture](Project/architecture#sources) for more information.
 
 ---
 
 ## フォームタイプ
 
-フォームのタイプ、_つまり_ その出力先によって、当該フォームで利用できる機能が定義されます。 フォームのタイプ、_つまり_ その出力先によって、当該フォームで利用できる機能が定義されます。 たとえば、[マーカー](properties_Markers.md) はリスト (出力) テーブルフォームでのみ設定できます。
+フォームのタイプ、*つまり* その出力先によって、当該フォームで利用できる機能が定義されます。 たとえば、[マーカー](properties_Markers.md) はリスト (出力) テーブルフォームでのみ設定できます。
 
 データベースの各テーブルは通常、少なくとも 2つのテーブルフォームを持ちます。 1つは画面上にレコードを一覧表示するためのもので、もう 1つはレコードを 1件ずつ表示するためのものです (データ入力や修正に使用):
 
-- 出力フォーム - _出力フォーム_ (または _リストフォーム_) は、レコードのリストを、1レコードにつき 1行で表示します。 クエリの結果は出力フォームに表示され、ユーザーが行をダブルクリックすると、そのレコード用に入力フォームが表示されます。
+- 出力フォーム - *出力フォーム* (または *リストフォーム*) は、レコードのリストを、1レコードにつき 1行で表示します。 クエリの結果は出力フォームに表示され、ユーザーが行をダブルクリックすると、そのレコード用に入力フォームが表示されます。
   ![](../assets/en/FormObjects/formOutput.png)
 
 - 入力フォーム - データ入力に使用されます。 1つの画面に 1件のレコードが表示され、一般的には、レコードの編集を保存・キャンセルするためのボタンや、レコード間を移動するためのボタン (先頭レコード、最終レコード、前レコード、次レコード等) を備えています。
@@ -98,7 +98,7 @@ title: フォームプロパティ
 | 印刷用詳細フォーム  | detailPrinter    | 1ページにつき 1レコードの印刷レポート (請求書など) | プロジェクトフォームとテーブルフォーム |
 | リストフォーム    | listScreen       | レコードを画面上に一覧表示するフォーム                             | テーブルフォーム            |
 | 印刷用リストフォーム | listPrinter      | レコード一覧の印刷レポート                                   | テーブルフォーム            |
-| なし         | _no destination_ | 特定の機能を持たないフォーム                                  | プロジェクトフォームとテーブルフォーム |
+| なし         | *no destination* | 特定の機能を持たないフォーム                                  | プロジェクトフォームとテーブルフォーム |
 
 #### JSON 文法
 
@@ -157,7 +157,7 @@ title: フォームプロパティ
 
 ## サブフォームとして公開
 
-コンポーネントフォームをホストアプリケーションの [サブフォーム](FormObjects/subform_overview.md) として選択するには、明示的に共有されている必要があります。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。
+コンポーネントフォームをホストアプリケーションの [サブフォーム](FormObjects/subform_overview.md) として選択するには、明示的に共有されている必要があります。  このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。
 
 公開されたサブフォームとして指定できるのは、プロジェクトフォームのみです。
 
@@ -194,7 +194,7 @@ title: フォームプロパティ
 
 ## ウィンドウタイトル
 
-ウィンドウタイトルは、アプリケーションモードで `Open window` や `Open form window` コマンドを用いてフォームを開く際に使用されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。
+ウィンドウタイトルは、アプリケーションモードで `Open window` や `Open form window` コマンドを用いてフォームを開く際に使用されます。  ウィンドウタイトルはウィンドウのタイトルバーに表示されます。
 
 動的参照を使用して、フォームのウィンドウタイトルを定義することもできます:
 
@@ -209,3 +209,5 @@ title: フォームプロパティ
 | 名称          | データタイプ | とりうる値               |
 | ----------- | ------ | ------------------- |
 | windowTitle | string | テキストまたは参照としてのウィンドウ名 |
+
+

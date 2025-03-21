@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is record loaded.Summary-->La commande **Is record loaded** retourne Vrai si l’enregistrement courant de *laTable* est chargé dans le process en cours.<!-- END REF-->: En principe, lorsque des tables sont liées par des liens automatiques, les enregistrements courants des tables liées sont automatiquement chargés (cf. *Présentation des liens*). Toutefois, pour des raisons d'optimisation, 4D Server ne charge ces enregistrements qu'au moment où c'est nécessaire, par exemple lors de la lecture ou de l'affectation d'un champ de l'enregistrement lié. Par conséquent, dans ce contexte la commande **Is record loaded** retournera Faux en mode distant (elle retourne Vrai en mode local). 
 
-#### Exemple 
+## Exemple 
 
 Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou “Enregistrement précédent”, vous voulez écrire dans les méthodes de boutons sans action des instructions spécifiant que le bouton “Suivant” affiche le début de la sélection si la fin de la sélection est atteinte et que le bouton “Précédent” affiche la fin de la sélection si le début est atteint.
 
@@ -42,7 +42,7 @@ Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou �
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

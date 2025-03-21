@@ -149,7 +149,7 @@ La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownLi
 
 **.backColor** : Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color de fondo](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.forecolor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 ### .font
 
@@ -165,7 +165,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+La propiedad `.font` es el nombre de la <!-- REF #TableStyle.font.Summary -->fuente (ver [**Fuentes y texto**](configuring.md#fonts-and-text)) de la tabla<!-- END REF -->.
 
 ### .textDecoration
 
@@ -173,7 +173,7 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 
 **.textDecoration** : Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
+La propiedad `.textDecoration` es la decoración de texto <!-- REF #TableStyle.textDecoration.Summary -->de la tabla (ver [**Fuentes y texto**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 ### .borderLeft
 
@@ -403,3 +403,7 @@ La propiedad `.secondRowStripStyle` es el estilo de la <!-- REF #TableThemeOptio
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 La propiedad `.wholeTableStyle` es el <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo predeterminado del área de datos<!-- END REF -->.
+
+
+
+

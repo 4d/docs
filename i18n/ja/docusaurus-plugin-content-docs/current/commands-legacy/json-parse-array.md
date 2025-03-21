@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->**JSON PARSE ARRAY**コマンドは、JSONフォーマットの文字列の中身を解析し、取り出したデータを *array* 引数の配列の中へと入れます。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。 [JSON Stringify array](json-stringify-array.md)コマンドと逆の挙動をします。
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 **注:** 4D v16 R4以降、**JSON PARSE ARRAY** は一般的に**コレクション**を返す[JSON Parse](json-parse.md) コマンドへの呼び出しで置き換えることができます。コレクションはJSON配列に基づいており、異なる型のデータを保存することができるため、配列より柔軟性に優れています。
 
-#### 例題 
+## 例題 
 
 この例では、テーブル内のレコードのフィールドからのデータが取り出され、オブジェクト配列に保存されます。
 
@@ -54,12 +54,12 @@ displayed_sidebar: docs
   //...
 ```
 
-#### 参照 
+## 参照 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

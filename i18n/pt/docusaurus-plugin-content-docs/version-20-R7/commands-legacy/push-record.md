@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PUSH RECORD.Summary-->PUSH RECORD empilha uma cópia do registro atual de *tabela* na pilha de registros da tabela.<!-- END REF--> PUSH RECORD pode ser executada antes de que seja guardado um registro.  
   
@@ -21,7 +21,7 @@ Se empilha um registro que foi desbloqueado, este registro permanece bloqueado p
   
 **Nota de compatibilidade**: a partir da versão 11 de 4D, este comando não é compatível com subtabelas.  
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo empilha o registro de um cliente: 
 
@@ -29,12 +29,12 @@ O seguinte exemplo empilha o registro de um cliente:
  PUSH RECORD([Cliente]) // Por o registro do cliente na pilha
 ```
 
-#### Ver também 
+## Ver também 
 
 [POP RECORD](pop-record.md)  
 *Usar a Pilha de Registros*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

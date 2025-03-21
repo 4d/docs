@@ -31,7 +31,7 @@ title: プリエンプティブWebプロセスの使用
 - Web サービスサーバー: SOAPリクエストを処理します
 - 旧式REST: 4D メソッドへの直りクエスト (`/rest/{table}/{methodName}`)
 - ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
-  - [**スケーラブルセッション**](sessions.md#セッションの有効化) が選択されている場合、Webプロセスにおいて [プリエンプティブモードが自動的に使用されます](sessions.md#プリエンプティブモード)。
+  - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
   - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
   - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
 

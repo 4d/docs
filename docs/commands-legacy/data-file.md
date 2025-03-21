@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Data file.Summary-->The Data file command returns the long name of the data file for the database with which you are currently working.<!-- END REF-->
 
@@ -28,12 +28,12 @@ If, for example, you are working with the database located in the folder Documen
 
 **WARNING:** If you call this command from 4D in remote mode, only the name of the data file is returned, not the long name.
 
-#### See also 
+## See also 
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

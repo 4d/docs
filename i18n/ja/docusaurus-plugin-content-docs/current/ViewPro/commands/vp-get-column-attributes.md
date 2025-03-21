@@ -14,7 +14,7 @@ title: VP Get column attributes
 | rangeObj | Object     | ->                          | レンジオブジェクト       |                  |
 | 戻り値      | Collection | <- | カラムプロパティのコレクション | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get column attributes` コマンドは、<!-- REF #_method_.VP Get column attributes.Summary -->*rangeObj* 引数で指定したレンジ内にあるカラムのプロパティのコレクションを返します<!-- END REF -->。
 
@@ -22,7 +22,7 @@ title: VP Get column attributes
 
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションにはカラムの属性がすべて返されます。
 
-#### 例題
+## 例題
 
 以下のコードは:
 
@@ -38,7 +38,7 @@ $attr:=VP Get column attributes($range)
 
 ![](../../assets/en/ViewPro/cmd_vpGetColumnAttributes.PNG)
 
-#### 参照
+## 参照
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)<br/>

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is macOS.Summary-->La commande **Is macOS** retourne Vrai si le système d'exploitation courant est macOS.<!-- END REF--> 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez déterminer si le système d'exploitation courant est macOS :
 
@@ -29,12 +29,12 @@ Vous voulez déterminer si le système d'exploitation courant est macOS :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

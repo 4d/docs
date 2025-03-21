@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Trunc.Summary-->Trunc retorna *numero* com sua parte decimal truncada a partir do número de decimais especificada por *decimais*.<!-- END REF--> Trunc sempre arredonda até o valor inferior.
 
 Se *decimais* é positivo, *numero* se trunca pela parte decimal. Se *decimais* é negativo, o truncamento é feito sobre a parte inteira do número.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir ilustra a maneira como **Trunc** funciona com diferentes argumentos. Cada linha atribui um número à variável *vlResult*. Os comentários descrevem os resultados:
 
@@ -32,11 +32,11 @@ O exemplo a seguir ilustra a maneira como **Trunc** funciona com diferentes argu
  vlResult:=Trunc(-216.897;-1) // vlResult vale –220
 ```
 
-#### Ver também 
+## Ver também 
 
 [Round](round.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

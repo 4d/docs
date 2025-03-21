@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->The CHANGE LICENSES command displays the 4D License Manager dialog box.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ CHANGE LICENSES is a convenient way to activate licenses and add expansion numbe
 
 For more information about this dialog box, refer to the *Installation and activation* section in the *4D Installation Guide*.
 
-#### Example 
+## Example 
 
 In a custom configuration or preferences dialog box, you include a button whose associated method is:
 
@@ -35,12 +35,12 @@ In a custom configuration or preferences dialog box, you include a button whose 
 
 This way a user can activate licenses without having to modify the database.
 
-#### See also 
+## See also 
 
 [License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

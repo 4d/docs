@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LIST TO BLOB.Summary-->LIST TO BLOB コマンドは、*blob*に階層リスト*list*を格納します。<!-- END REF-->
 
@@ -33,22 +33,22 @@ displayed_sidebar: docs
 
 LIST TO BLOBや[BLOB to list](blob-to-list.md "BLOB to list")は、 BLOBに格納されたリストを処理するために4Dの内部フォーマットを使用します。この利点として、これら二つのコマンドを使用する際、プラットフォーム 間のバイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBをMacintoshで使用 する、あるいはその逆を行うことができます。
 
-##### 注 
+### 注 
 
 **互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
-#### 例題 
+## 例題 
 
 [BLOB to list](blob-to-list.md "BLOB to list")の例題参照
 
-#### 参照 
+## 参照 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

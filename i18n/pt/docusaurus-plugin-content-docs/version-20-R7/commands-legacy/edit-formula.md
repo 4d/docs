@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->O comando **EDIT FORMULA** mostra o editor de fórmulas com o propósito de permitir ao usuário escrever ou modificar uma fórmula.<!-- END REF--> O editor contém ao abrir:
 
@@ -32,7 +32,7 @@ O usuário pode modificar e guardar a *formula* mostrada. Também é possível e
 
 Lembre que quando se valida a caixa de diálogo, o comando não executa a *formula*; só valida e atualiza o conteúdo da variável. Se quer executar a *formula*, deve utilizar o comando [EXECUTE FORMULA](execute-formula.md) . 
 
-#### Exemplo 
+## Exemplo 
 
 Visualização do editor de fórmulas com a tabela \[Empregados\] e sem uma fórmula introduzida previamente: 
 
@@ -44,17 +44,17 @@ Visualização do editor de fórmulas com a tabela \[Empregados\] e sem uma fór
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o usuário valida a caixa de diálogo, a variável de sistema OK toma o valor 1\. Se o usuário anula a caixa de diálogo, a variável sistema OK toma o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

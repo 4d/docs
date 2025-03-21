@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD RECORD.Summary-->**LOAD RECORD** loads the current record of *aTable*.<!-- END REF--> If there is no current record, **LOAD RECORD** has no effect.  
 You can then use the [Locked](locked.md) function to determine whether you can modify the record:
@@ -30,13 +30,13 @@ In multi-user and multi-process environments, when you need to modify an existin
 
 **Tip:** The **LOAD RECORD** command can be used to reload the current record in the context of an input form. All the data modified are then replaced by their previous values. In this case, the **LOAD RECORD** command carries out a sort of general cancellation of data entry. 
 
-#### See also 
+## See also 
 
 [Locked](locked.md)  
 *Record Locking*  
 [UNLOAD RECORD](unload-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

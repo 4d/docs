@@ -116,3 +116,4 @@ Para eliminar un punto de interrupción en el comando:
 La adición de condiciones le permite detener la ejecución cuando el comando es invocado sólo si la condición se cumple. Por ejemplo, si asocia la condición `Records in selection(\[Emp]>10)` con el punto de interrupción del comando `DELETE SELECTION`, el código no se detendrá durante la ejecución del comando `DELETE SELECTION` si la selección actual de la tabla \[Emp] sólo contiene 9 registros (o menos).
 
 La adición de condiciones a los puntos de interrupción de los comandos ralentiza la ejecución, porque la condición tiene que ser evaluada cada vez que se produce una excepción. Por otra parte, añadir condiciones acelera el proceso de depuración, ya que 4D omite automáticamente las ocurrencias que no coinciden con las condiciones.
+

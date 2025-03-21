@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get next sibling XML element.Summary-->The DOM Get next sibling XML element command returns a reference to the next “sibling” of the XML element passed as reference.<!-- END REF--> This reference can be used with other XML parsing commands.
 
@@ -26,7 +26,7 @@ This command is used to navigate among the “children” of the XML element.
 
 After the last “sibling,” the system variable OK is set to 0\. 
 
-#### Example 1 
+## Example 1 
 
 Retrieval of the reference of the next sibling XML element following the element passed as parameter:
 
@@ -37,7 +37,7 @@ Retrieval of the reference of the next sibling XML element following the element
 
 ![](../assets/en/commands/pict40038.en.png)
 
-#### Example 2 
+## Example 2 
 
 Retrieval in a reference loop of all the child XML elements following the parent element passed as parameter, beginning with the first child:
 
@@ -53,15 +53,15 @@ Retrieval in a reference loop of all the child XML elements following the parent
 
 ![](../assets/en/commands/pict40039.en.png)
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been correctly executed and if the parsed element is not the last “sibling” of the referenced element, the system variable OK is set to 1\. If an error occurs or if the parsed element is the last “sibling” of the referenced element, it is set to 0.
 
-#### See also 
+## See also 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

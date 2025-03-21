@@ -25,17 +25,15 @@ HTTPAgent オブジェクトは次のプロパティや関数を提供します:
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.options.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.options.Summary -->                            |
-| [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestsCount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
-| [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freeSocketsCount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
+| [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
+| [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
 :::tip
 
 HTTPAgent オブジェクトは共有可能なため、 シングルトンクラスに追加すれば、同じサーバーへのすべてのリクエストについて同じエージェントを使用できます。
 
 :::
-
-<!-- REF #4D.HTTPAgent.new().Desc -->
 
 ## 4D.HTTPAgent.new()
 
@@ -113,15 +111,15 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 :::
 
-<!-- REF #HTTPAgentClass.options.Desc -->
+<!-- REF #HTTPAgentClass.params.Desc -->
 
-## .options
+## .params
 
-<!-- REF #HTTPAgentClass.options.Syntax -->**options** : Object<!-- END REF -->
+<!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
 
 #### 説明
 
-`.options` プロパティオブジェクトは、<!-- REF #HTTPAgentClass.options.Summary -->HTTPAgent が現在使用しているオプション<!-- END REF -->を格納します。
+The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -148,3 +146,5 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 `.freeSocketsCount` プロパティは、<!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->HTTPAgent に関連付けられた `maxSockets` に対する空きソケット数<!-- END REF -->を格納します。
 
 <!-- END REF -->
+
+

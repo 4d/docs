@@ -350,7 +350,7 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-    + si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
+    + if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
     + si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 
@@ -473,7 +473,7 @@ APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans 
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 ```
 
-> Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-objects-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 
 
@@ -521,7 +521,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". This is described in the [Returning values](#returned-value) paragraph.
 
 
 ### Cas particuliers : objets et collections

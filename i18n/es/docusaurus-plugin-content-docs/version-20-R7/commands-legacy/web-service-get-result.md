@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->El comando **WEB SERVICE GET RESULT** permite recuperar un valor enviado por el servicio web como resultado del proceso realizado.<!-- END REF-->este comando debe utilizarse únicamente después del comando [WEB SERVICE CALL](web-service-call.md). 
 
@@ -27,7 +27,7 @@ El parámetro opcional *nombreDevuelto* se utiliza para especificar el nombre de
 
 El parámetro opcional *\*,* indica al programa que libere la memoria dedicada al procesamiento de la petición. Debe pasar este parámetro después de recuperar el último valor enviado por el servicio web.
 
-#### Ejemplo 
+## Ejemplo 
 
 Imagine un servicio web que devuelve la hora actual en cualquier ciudad del mundo. Los parámetros recibidos por el servicio web son el nombre de la ciudad y el código del país. El servicio web devuelve la correspondiente. El método proxy de llamada puede ser de la siguiente forma:
 
@@ -45,12 +45,12 @@ Imagine un servicio web que devuelve la hora actual en cualquier ciudad del mund
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

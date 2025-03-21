@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Compact data file.Summary-->The **Compact data file** command compacts the data file designated by the *dataPath* parameter associated with the *structurePath* structure file.<!-- END REF--> For more information about compacting, refer to the Design Reference manual.
 
@@ -49,7 +49,7 @@ By default, the **Compact data file** command creates a log file in XML format (
 If you have passed the Timestamp log file name option, the name of the log file includes the date and time of its creation in the form "YYYY-MM-DD HH-MM-SS", which gives us, for example: “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. This means that each new log file does not replace the previous one, but it might require subsequent manual action to remove unnecessary files.   
 Regardless of the option selected, as soon as a log file is generated, its path is returned in the *Document* system variable after execution of the command.
 
-#### Example 
+## Example 
 
 The following example (Windows) carries out the compacting of a data file:
 
@@ -60,16 +60,16 @@ The following example (Windows) carries out the compacting of a data file:
  $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the compacting operation is carried out correctly, the OK system variable is set to 1; otherwise, it is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
-#### See also 
+## See also 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

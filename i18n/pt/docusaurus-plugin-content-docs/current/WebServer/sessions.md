@@ -9,7 +9,7 @@ As sessões Web permitem:
 
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
 - gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
-- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- armazena e compartilha dados entre processos de um cliente web usando o [.storage](../API/SessionClass.md#storage) da sessão,
 - associate privileges to the user running the session.
 
 ## Usos
@@ -21,24 +21,24 @@ As sessões Web são usadas para:
 
 ## Activando sessões web
 
-The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
+A funcionalidade de gerenciamento de sessão pode ser ativado e desativado no seu servidor web 4D. Existem diferentes formas de ativar a gestão de sessões:
 
 - Using the **Scalable sessions** OTPion on the "Web/OTPions (I)" page of the Settings (permanent setting):
-  ![alt-text](../assets/en/WebServer/settingsSession.png)
+ ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 This OTPion is selected by default in new projects. It can however be disabled by selecting the **No sessions** OTPion, in which case the web session features are disabled (no `Session` object is available).
 
-- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the _settings_ parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The [`WEB SET OTPION`](../commands-legacy/web-set-OTPion.md) command can also set the session mode for the main Web server.
+> The [`WEB SET OTPION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
 
-In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
+Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
 > **Compatibility**: A **Legacy sessions** OTPion is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 
@@ -48,7 +48,7 @@ O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API
 
 1. En cada petición del cliente web, el servidor web comprueba la presencia y el valor de la cookie privada "4DSID__AppName_".
 
-2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
+2. Se o cookie tiver um valor, 4D procura pela sessão que criou este cookie entre as sessões existentes; Se esta sessão for encontrada, ela será reutilizada para a chamada.
 
 3. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
@@ -67,13 +67,13 @@ The `Session` object of the current session can then be accessed through the [`S
 
 :::info
 
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
+Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
 :::
 
 ## Armazenar e compartilhar informações de sessão
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
+Cada objeto `Session` fornece uma propriedade [`.storage`](API/SessionClass.md#storage) que é um [objeto compartilhado](Concepts/shared.md). Essa propriedade permite que você compartilhe informações entre todos os processos manipulados pela sessão.
 
 ## Duração da sessão
 
@@ -82,9 +82,9 @@ Uma sessão Web escalável é encerrada quando:
 - o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
-The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
+O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa que o servidor irá automaticamente fechar as sessões inativas após 60 minutos.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
 Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md) for chamado posteriormente:
 
@@ -100,9 +100,9 @@ Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout
 
 ## Privilégios
 
-Os privilégios podem ser associados a sessões usuário Web. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões usuário Web. No servidor web, você pode fornecer acesso ou recursos específicos, dependendo dos privilégios da sessão.
 
-Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). Em seu código, você pode verificar os privilégios da sessão para permitir ou negar o acesso usando a função [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Exemplo:
 
@@ -122,11 +122,11 @@ Privileges are implemented at the heart of the ORDA architecture to provide deve
 
 ## Exemplo
 
-Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. A datastore contém pelo menos dois dataclasses ligados: Customers e SalesPersons (um vendedor tem vários clientes).
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
-We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
+Queremos que um vendedor autentique, abra uma sessão no servidor web e que os 3 primeiros clientes sejam carregados na sessão.
 
 1. Executamos este URL para abrir uma sessão:
 
@@ -136,7 +136,7 @@ http://localhost:8044/authenticate.shtml
 
 > En un entorno de producción, es necesario utilizar una conexión [HTTPS](API/WebServerClass.md#httpsenabled) para evitar que cualquier información no cifrada circule por la red.
 
-2. La página `authenticate.shtml` es un formulario que contiene los campos de entrada _userId_ y _password_ y envía una acción 4DACTION POST:
+2. La página `authenticate.shtml` es un formulario que contiene los campos de entrada *userId* y *password* y envía una acción 4DACTION POST:
 
 ```html
 <!DOCTYPE html>
@@ -153,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. El método authenticate project busca la persona _userID_ y valida la contraseña contra el valor hash ya almacenado en la tabla _SalesPersons_:
+3. El método authenticate project busca la persona *userID* y valida la contraseña contra el valor hash ya almacenado en la tabla *SalesPersons*:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
@@ -212,7 +212,7 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 The basic sequence of an OTP session token use in a 4D web application is the following:
 
 1. The web user initiates an action that requires a secured third-party connection, for example a validation, from within a specific session.
-2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function.
+2. No seu código 4D, você cria um OTP para a sessão usando a função [`Session.createOTP()`](../API/SessionClass.md#createotp).
 3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API (see below).
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
 5. The request callback is processed in your application.
@@ -233,11 +233,11 @@ Using the `$4DSID` parameter is the most simple way to process a callback from t
 
 :::note
 
-A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
+Um url [`4DACTION`](./httpRequests.md#4daction) também pode ser usada no lado 4D.
 
 :::
 
-#### Using a custom parameter
+#### Usando um parâmetro personalizado
 
 The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
 
@@ -260,7 +260,7 @@ In this case, no web user session is restored and the current session (if any) i
 Verifying if the received OTP token is valid depends on how it was handled:
 
 - If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
-- If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored.
+- Se você usou a função [`Session.restore()`](../API/SessionClass.md#restore), ele retorna verdadeiro se a sessão foi restaurada corretamente.
 
 ### Scenario with $4DSID
 
@@ -378,7 +378,7 @@ shared singleton Class constructor()
 
 ### Example of email validation with $4DSID
 
-1. A user account is created in a _Users_ dataclass. A _$info_ object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
 
 ```4d
 //cs.Users class
@@ -421,7 +421,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 ]
 ```
 
-The _validateEmail()_ function of the RequestHandler singleton:
+The *validateEmail()* function of the RequestHandler singleton:
 
 ```4d
 //validateEmail class
@@ -461,13 +461,13 @@ A new user is created, and some information is stored in the session, especially
 ### Supported contexts
 
 - Both HTTP and HTTPS schemas are supported.
-- Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
+- Apenas [sessões escaláveis](#enabling-web-sessions) podem ser reutilizadas com tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
 - Tokens are not supported with client/server sessions or single-user sessions.
 
 ### Lifespan
 
-A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
+A session token has a lifespan, and the session itself has a lifespan. O tempo de vida útil do token de sessão pode ser definido [na criação do token](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
 

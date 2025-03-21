@@ -159,7 +159,7 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Privilège
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+The ability to run one or more [actions](#action) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
 ## Propriété
 

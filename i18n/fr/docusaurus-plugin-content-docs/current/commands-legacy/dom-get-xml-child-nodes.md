@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Summary-->La commande **DOM GET XML CHILD NODES** retourne les types et les références ou valeurs de tous les noeuds enfants de l’élément XML désigné par *refElément*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Pour plus d’informations, reportez-vous à la description de la commande [DOM 
 
 Le tableau *tabRefsNoeuds* reçoit les valeurs ou les références des éléments en fonction de leur nature (contenus ou instructions).
 
-#### Exemple 
+## Exemple 
 
 Soit la structure XML suivante :  
 
@@ -58,12 +58,12 @@ Après l’exécution de ces instructions :
 | $tabtype{4}=11 | $tabtext{4} = "AEF1237897734568" (référence de l’élément<Br/>)  |
 | $tabtype{5}=6  | $tabtext{5} = "FRANCE"                                          |
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

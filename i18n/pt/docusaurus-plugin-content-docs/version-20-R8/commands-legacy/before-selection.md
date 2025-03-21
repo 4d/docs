@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Before selection.Summary-->Before selection retorna TRUE quando o ponteiro do registro atual se encontra antes do primeiro registro da seleção atual de *tabela*.<!-- END REF--> Before selection geralmente é utilizado para verificar se o comando PREVIOUS RECORD tiver movido o ponteiro do registro atual antes do primeiro registro. Se a seleção atual estiver vazia, Before selection retorna TRUE.  
   
@@ -36,7 +36,7 @@ Before selection retorna TRUE no cabeçalho quando um relatório está sendo imp
  &NBSP;End case
 ```
 
-#### Exemplo 
+## Exemplo 
 
 Este formulário é utilizado durante a impressão de um relatório. Define uma variável *vTitulo*, que será imprimida na área do cabeçalho na primeira página:
 
@@ -54,7 +54,7 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
@@ -62,7 +62,7 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

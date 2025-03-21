@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Request.Summary-->**Request**コマンドは、メッセージ、テキスト入力エリア、OKボタン、キャンセルボタンで構成されるリクエストダイアログボックスを表示します。<!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 **Tip:** ユーザから複数の情報を得なければならない場合、**Request**ダイアログボックスを何度も表示するのではなく、そのためのフォームを作成して[DIALOG](dialog.md)でそれを表示します。
 
-#### 例題 1 
+## 例題 1 
 
 このコードを実行すると: 
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4225119.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードを実行すると:
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict4225137.en.png)
 
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードを実行すると:
 
@@ -76,12 +76,12 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict4225146.en.png)
 
 
-#### 参照 
+## 参照 
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

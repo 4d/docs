@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->O comando QR SET HTML TEMPLATE define o *modelo* HTML a utilizar para a área de relatório rápido referenciada por *area*.<!-- END REF--> Este modelo se utilizará durante a criação do relatório em formato HTML. 
 
@@ -22,7 +22,7 @@ O modelo utiliza um conjunto de etiquetas para processar os dados. Este funciona
 
 **Nota:** primeiro deve chamar [QR SET DESTINATION](qr-set-destination.md "QR SET DESTINATION") para definir o formato HTML como destino de saída.
 
-#### Etiquetas HTML 
+## Etiquetas HTML 
 
  *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
  Os títulos das colunas serão inseridos entre as etiquetas. Estas etiquetas geralmente são utilizadas para definir a linha do título do relatório.  
@@ -70,11 +70,11 @@ Estas etiquetas se substituirão respectivamente pelos dados do rodapé da esque
   
 Se passa um número de área inválido, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

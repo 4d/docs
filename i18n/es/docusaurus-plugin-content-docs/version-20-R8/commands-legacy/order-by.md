@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ORDER BY.Summary-->ORDER BY ordena (reordena) los registros de la selección actual de *tabla* para el proceso actual.<!-- END REF--> Una vez efectuada la ordenación, el primer registro de la nueva selección actual se convierte en el registro actual.
 
@@ -42,11 +42,11 @@ No importa cómo se haya definido una ordenación, si la operación de ordenaci�
 
 Si la ordenación se realiza correctamente, la variable OK toma el valor *1*. Si el usuario hace clic en Cancelar, ORDER BY termina sin efectuar la ordenación, y la variable OK toma el valor *0* (cero).
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra la caja de diálogo Ordenar para la tabla \[Productos\]:
 
@@ -54,7 +54,7 @@ El siguiente ejemplo muestra la caja de diálogo Ordenar para la tabla \[Product
  ORDER BY([Productos])
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo muestra la caja de diálogo Ordenar para la tabla por defecto (si ha sido definida): 
 
@@ -62,7 +62,7 @@ El siguiente ejemplo muestra la caja de diálogo Ordenar para la tabla por defec
  ORDER BY
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El ejemplo siguiente ordena la selección actual de \[Productos\] por nombre en orden ascendente:
 
@@ -70,7 +70,7 @@ El ejemplo siguiente ordena la selección actual de \[Productos\] por nombre en 
  ORDER BY([Productos];[Productos]Nombre;>)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo ordena la selección actual de \[Productos\] por nombre en orden descendente:
 
@@ -78,7 +78,7 @@ El siguiente ejemplo ordena la selección actual de \[Productos\] por nombre en 
  ORDER BY([Productos];[Productos]Nombre;<)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 La línea siguiente ordena la selección de \[Productos\] por tipo y precio en orden ascendente para ambos niveles:
 
@@ -86,7 +86,7 @@ La línea siguiente ordena la selección de \[Productos\] por tipo y precio en o
  ORDER BY([Productos];[Productos]Tipo;>;[Productos]Precio;>)
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 El siguiente ejemplo ordena la selección actual de \[Productos\] por tipo y precio en orden descendente para ambos niveles:
 
@@ -94,7 +94,7 @@ El siguiente ejemplo ordena la selección actual de \[Productos\] por tipo y pre
  ORDER BY([Productos];[Productos]Tipo;<;[Productos]Precio;<)
 ```
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 El siguiente ejemplo ordena la selección actual de \[Productos\] por tipo en orden ascendente y por precio en orden descendente:
 
@@ -102,7 +102,7 @@ El siguiente ejemplo ordena la selección actual de \[Productos\] por tipo en or
  ORDER BY([Productos];[Productos]Tipo;>;[Productos]Precio;<)
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 El siguiente ejemplo ordena la selección actual de \[Products\] por tipo en orden descendente y por precio en orden ascendente:
 
@@ -110,7 +110,7 @@ El siguiente ejemplo ordena la selección actual de \[Products\] por tipo en ord
  ORDER BY([Products];[Products]Type;<;[Products]Price;>)
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 El siguiente ejemplo efectúa una ordenación indexada si el campo \[Productos\]Nombre está indexado: 
 
@@ -118,7 +118,7 @@ El siguiente ejemplo efectúa una ordenación indexada si el campo \[Productos\]
  ORDER BY([Productos];[Productos]Nombre;>)
 ```
 
-#### Ejemplo 10 
+## Ejemplo 10 
 
 El siguiente ejemplo ordena la selección actual de \[Products\] por nombre en orden ascendente:  
 
@@ -126,7 +126,7 @@ El siguiente ejemplo ordena la selección actual de \[Products\] por nombre en o
  ORDER BY([Products];[Products]Name
 ```
 
-#### Ejemplo 11 
+## Ejemplo 11 
 
 El siguiente ejemplo efectúa una ordenación secuencial, sin importar si los campos están indexados: 
 
@@ -134,7 +134,7 @@ El siguiente ejemplo efectúa una ordenación secuencial, sin importar si los ca
  ORDER BY([Productos];[Productos]Tipo;>;[Productos]Precio;>)
 ```
 
-#### Ejemplo 12 
+## Ejemplo 12 
 
 La siguiente línea realiza una ordenación secuencial utilizando un campo relacionado:
 
@@ -144,7 +144,7 @@ La siguiente línea realiza una ordenación secuencial utilizando un campo relac
  SET FIELD RELATION([Employee]Company_ID;Structure configuration;Do not modify)
 ```
 
-#### Ejemplo 13 
+## Ejemplo 13 
 
 El siguiente ejemplo realiza una ordenación indexada en dos niveles si un índice compuesto \[Contacts\]LastName + \[Contacts\]FirstName cse ha especificado en la base:
 
@@ -152,7 +152,7 @@ El siguiente ejemplo realiza una ordenación indexada en dos niveles si un índi
  ORDER BY([Contacts];[Contacts]LastName;>;[Contacts]FirstName;>)
 ```
 
-#### Ejemplo 14 
+## Ejemplo 14 
 
 En un formulario de salida mostrado en modo Aplicación, usted le permite a los usuarios ordenar una columna en orden creciente simplemente haciendo clic en el encabezado de la columna. Si el usuario mantiene presionada la tecla **Mayús** mientras hace clic en otros encabezados de columnas, la ordenación se lleva a cabo en varios niveles: 
 
@@ -197,11 +197,11 @@ Cada botón llama al método de proyecto MULTINIVEL con un puntero al campo de l
 
   
 
-#### Ver también 
+## Ver también 
 
 [ORDER BY FORMULA](order-by-formula.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Load list.Summary-->**Load list** creates a new hierarchical list whose contents are copied from the list and whose name you pass in *listName*.<!-- END REF--> It then returns the list reference number to the newly created list. 
 
@@ -30,7 +30,7 @@ Remember to call [CLEAR LIST](clear-list.md) in order to delete the newly create
 
 **Tip:** If you associate a list with a form object (hierarchical list, tab control, or hierarchical pop-up menu) using the Choice List property in the Property List window, you do not need to call **Load list** or [CLEAR LIST](clear-list.md) from the method of the object. 4D loads and clears the list automatically for you.
 
-#### Example 
+## Example 
 
 You create a database for the international market and you need to switch to different languages while using the database. In a form, you present a hierarchical list, named *hlList*, that proposes a list of standard options. In the Design environment, you have prepared various lists, such as “Std Options US” for the English version, “Std Options FR” for the French version, “Std Options SP” for the Spanish version, and so on. In addition, you maintain an interprocess variable, named *◊gsCurrentLanguage*, where you store a 2-character language code, such as “US” for the English version, “FR” for the French version, “SP” for the Spanish version, and so on. To make sure that your list will always be loaded using the current selected language, you can write:
 
@@ -45,13 +45,13 @@ You create a database for the international market and you need to switch to dif
  End case
 ```
 
-#### See also 
+## See also 
 
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

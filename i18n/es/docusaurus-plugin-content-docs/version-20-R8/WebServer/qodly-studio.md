@@ -95,20 +95,20 @@ La página Qodly Studio está disponible cuando el [servidor web WebAdmin está 
 Hay dos formas de acceder a Qodly Studio:
 
 - by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
-  Si el servidor web WebAdmin ya está en funcionamiento, dependiendo de su configuración, su navegador por defecto se abre en `IPaddress:HTTPPort/studio` o `IPaddress:HTTPSPort/studio`. De lo contrario, se le preguntará si desea iniciar primero el servidor web WebAdmin.
+    Si el servidor web WebAdmin ya está en funcionamiento, dependiendo de su configuración, su navegador por defecto se abre en `IPaddress:HTTPPort/studio` o `IPaddress:HTTPSPort/studio`. De lo contrario, se le preguntará si desea iniciar primero el servidor web WebAdmin.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
-  `IPaddress:HTTPPort/studio`
+    `IPaddress:HTTPPort/studio`
 
-  o:
+    o:
 
-  `IPaddress:HTTPSPort/studio`
+    `IPaddress:HTTPSPort/studio`
 
-  Por ejemplo, después de iniciar un servidor web local en el puerto 7080, escriba esta dirección en su navegador:
+    Por ejemplo, después de iniciar un servidor web local en el puerto 7080, escriba esta dirección en su navegador:
 
-  `localhost:7080/studio`
+    `localhost:7080/studio`
 
-  A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
+    A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
 ## Developing with Qodly Studio
 
@@ -131,7 +131,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 |                                                                                  | Qodly Studio en 4D                                                                                                                                                                                                    | Qodly Studio in Qodly Cloud platform                                          |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                                                                                                                         | Qodly Studio Model Editor                                                     |
-| Páginas Qodly                                                                    | Editor de páginas Qodly Studio                                                                                                                                                                                        | Editor de páginas Qodly Studio                                                |
+| Páginas Qodly                                                                    | Qodly Studio Page Editor                                                                                                                                                                                              | Qodly Studio Page Editor                                                      |
 | Formularios de escritorio                                                        | 4D IDE                                                                                                                                                                                                                | *not supported*                                                               |
 | Lenguaje de programación                                                         | Lenguaje 4D con ORDA                                                                                                                                                                                                  | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) con ORDA |
 | IDE de código                                                                    | 4D IDE code editor *or* VS Code with [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server only*: Qodly Studio code editor (see (2)) | Editor de código Qodly Studio                                                 |
@@ -161,7 +161,7 @@ Recomendamos utilizar funciones clase en lugar de métodos proyecto. Sólo las f
 
 Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a Internet. En este caso, sin embargo, las siguientes funciones no están disponibles:
 
-- [Templates](https://developer.qodly.com/docs/studio/pageLoaders/templates): the Template library is empty
+- [Plantillas](https://developer.qodly.com/docs/studio/pageLoaders/templates): la librería de plantillas está vacía
 - Consejos de interfaz de usuario: no se muestran al hacer clic en los iconos ![alt-text](../assets/en/WebServer/tips.png).
 
 ## Despliegue
@@ -178,7 +178,7 @@ Mira [esta página](https://developer.qodly.com/docs/studio/rendering) para obte
 
 Para habilitar el renderizado de las páginas Qodly, se deben configurar las siguientes opciones.
 
-- La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#exposed-as-rest-server) del proyecto 4D debe estar activada.
+- La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#expose-as-rest-server) del proyecto 4D debe estar activada.
 - El [servidor web 4D](webServer.md) debe estar ejecutándose.
 
 :::note
@@ -189,7 +189,7 @@ Para habilitar el renderizado de las páginas Qodly, se deben configurar las sig
 
 ### Alcance de los formularios Qodly
 
-Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D] (../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
+Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D] (../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license-usage-for-rendering) sobre los esquemas de URL y el uso de licencias.
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza una página Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
@@ -236,7 +236,7 @@ El proyecto debe ejecutarse en modo interpretado para que el elemento de menú *
 :::
 
 2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
-   ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
 
@@ -245,7 +245,7 @@ If the debugger is already attached to a another machine or another Qodly Studio
 To detach the Qodly Studio debugger from your running 4D Server application:
 
 1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
-   Una caja de diálogo de advertencia le pedirá que confirme si desea desconectar el depurador.
+    Una caja de diálogo de advertencia le pedirá que confirme si desea desconectar el depurador.
 2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
 ## Forzar inicio de sesión
@@ -301,7 +301,7 @@ Esta llamada es aceptada y mientras la autenticación no tenga éxito, `Session.
 
 ### Cerrar sesión
 
-Cuando el modo ["forzar inicio de sesión" está activado](#setting-the-force-login-mode), Qodly Studio for 4D le permite implementar una función de cierre de sesión en su aplicación.
+Cuando el modo ["forzar inicio de sesión" está activado](#force-login), Qodly Studio for 4D le permite implementar una función de cierre de sesión en su aplicación.
 
 Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde la página Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
@@ -321,7 +321,7 @@ En modo predeterminado, cuando se renderiza cualquier página, o en el modo "for
 
 La configuración del esquema URL de Qodly Studio (HTTP y HTTPS) determina cuántas licencias se retienen al renderizar los formularios Qodly. Con la configuración adecuada, puede evitar retener licencias innecesarias.
 
-Como se explica en la sección [configuración](#configuration), el servidor web WebAdmin ofrece un acceso web seguro a Qodly Studio. Por otro lado, el [renderizador](#rendering-webforms) se comunica con el servidor web 4D de la base de datos mediante peticiones REST. Como tal, se comporta como un Cliente 4D convencional.
+Como se explica en la sección [configuración](#configuration), el servidor web WebAdmin ofrece un acceso web seguro a Qodly Studio. Por otro lado, el [renderizador](#enabling-rendering) se comunica con el servidor web 4D de la base de datos mediante peticiones REST. Como tal, se comporta como un Cliente 4D convencional.
 
 Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servidores web a través del mismo esquema de URL (HTTP o HTTPS), es posible que el conteo de licencias sea incorrecto.
 
@@ -366,3 +366,4 @@ Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de
 - Ejecute el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su página Qodly: `IP:port/$lib/renderer/?w=QodlyPageName`).
 - Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
 - Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
+

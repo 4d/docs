@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Archivo de historial
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los registros generalmente se inician o detienen utilizando los selectores de los comandos [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md) o [HTTP SET OPTION](../commands-legacy/http-set-option.md) y se almacenan en la [carpeta de registros](../Project/architecture.md#logs) del proyecto.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
@@ -17,6 +17,7 @@ La información histórica debe ser analizada para detectar y solucionar los pro
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Cuando un archivo de historial puede generarse tanto en 4D Server como en el cliente remoto, se añade la palabra "Server" al nombre del archivo de historial del lado del servidor, por ejemplo "4DRequestsLogServer.txt"
 
@@ -290,10 +291,10 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 Los archivos de historial pueden producirse en dos versiones:
 
 - una versión normal:
-  - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
-  - sin adjuntos
-  - utiliza un reciclaje automático de archivos circulares cada 10 MB
-  - destinado a la depuración habitual
+ - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
+ - sin adjuntos
+ - utiliza un reciclaje automático de archivos circulares cada 10 MB
+ - destinado a la depuración habitual
 
 Para iniciar este historial:
 
@@ -308,9 +309,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 - una versión extendida:
-  - attachment(s) included no automatic recycling
-  - nombre personalizado
-  - reservado con fines específicos
+ - attachment(s) included no automatic recycling
+ - nombre personalizado
+ - reservado con fines específicos
 
 Para iniciar este historial:
 
@@ -455,6 +456,43 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Como iniciar este historial:
+
+- Use the `SET DATABASE PARAMETER` command:
+
+ ```4d
+ SET DATABASE PARAMETER(TCP log; 1)
+ ```
+
+- Cómo activar el archivo
+
+ ```json
+ {
+     "TCPLogs":{
+       "state" : 1
+          }
+ }
+ ```
+
+Los siguientes campos se registran para cada evento:
+
+| Nombre del campo | Tipo       | Descripción                                                                                |
+| ---------------- | ---------- | ------------------------------------------------------------------------------------------ |
+| time             | Fecha/Hora | Date and time of the event in ISO 8601 format                                              |
+| localPort        | Number     | Local port used for the connection                                                         |
+| peerAddress      | Text       | IP address of the remote peer                                                              |
+| peerPort         | Number     | Port of the remote peer                                                                    |
+| protocol         | Text       | Indicates whether the event is related to `TCP`                                            |
+| evento           | Text       | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size             | Number     | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt          | Number     | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt      | Text       | First 10 bytes of data in text format                                                      |
+| comment          | Text       | Additional information about the event, such as error details or encryption status         |
+
 ## Utilización de un archivo de configuración de log
 
 Puede utilizar un **archivo de configuración de log** para gestionar fácilmente el registro de los historiales en un entorno de producción. Este archivo está preconfigurado por el desarrollador. Normalmente, se puede enviar a los clientes para que sólo tengan que seleccionarlo o copiarlo en una carpeta local. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
@@ -464,16 +502,16 @@ Puede utilizar un **archivo de configuración de log** para gestionar fácilment
 Hay varias maneras de activar el archivo de configuración de registro, dependiendo de su configuración:
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
-- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
+- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-user) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\[application]`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows: `Users\[userName]\AppData\Roaming\[application]`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -632,7 +670,7 @@ El archivo de configuración del registro es un archivo `.json` que debe cumplir
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

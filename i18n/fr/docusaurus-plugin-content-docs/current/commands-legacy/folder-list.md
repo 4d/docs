@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FOLDER LIST.Summary-->La commande **FOLDER LIST** remplit le tableau de type Texte ou Alpha *dossiers* avec les noms des dossiers (répertoires sous Windows) situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
 
 S'il n'y pas de dossier à cet endroit, la commande retourne un tableau vide. Si le chemin d'accès que vous avez passé dans *cheminAccès* est invalide, **FOLDER LIST** génère une erreur de gestionnaire de fichiers que vous pouvez intercepter à l'aide d'une méthode installée par [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

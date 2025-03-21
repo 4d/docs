@@ -77,7 +77,7 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macro items are sorted in alphabetical order.
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macro-file). Macro items are sorted in alphabetical order.
 
 This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
 
@@ -141,7 +141,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
+The class name must match the name defined using the [class](#declaring-macros) attribute of the `formMacros.json` file.
 
 Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 

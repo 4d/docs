@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo banco de dados On Exit.Summary-->O Método banco de dados On Exit é chamado quando se sai do banco.<!-- END REF-->
 
@@ -48,7 +48,7 @@ O Método banco de dados On Exit é perfeito para:
   
 Quando sair de 4D Server e se dá um tempo de corte (por exemplo, 10 minutos), cada cliente conectado mostra uma mensagem de advertência e se o usuário sair durante o período de tempo determinado, o Método banco de dados On Exit é executado normalmente. Entretanto, em outros casos (por exemplo, o usuário não responde a tempo, o servidor solicita sar imediatamente ou o administrador desconecta manualmente ao cliente), o Método banco de dados On Exit se executa ao mesmo tempo que a conexão ao servidor se fecha. Como resultado, o código em Método banco de dados On Exit não pode iniciar outro processo local ou de servidor e não pode esperar a que se cancelem outros processos (nem esses processos podem seguir acessando ao servidor). Se tentar fazer isso, um erro de rede é gerado (como 10001 ou 10002) já que a conexão ao servidor já está fechada.
 
-#### Nota 
+## Nota 
 
 O exemplo abaixo mostra um caso típico onde você lança um ou mais processos no fundo fazendo trabalhos regulares, rodando sem parar em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md) (ou em [On Server Startup database method](on-server-startup-database-method.md)). Uma flag no objeto da aplicação [Storage](storage.md) é usado para dizer para terminar - e marcar se terminaram.
 
@@ -94,7 +94,7 @@ O exemplo abaixo mostra um caso típico onde você lança um ou mais processos n
  End while
 ```
 
-#### Ver também 
+## Ver também 
 
 [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md)  
 [QUIT 4D](quit-4d.md)  

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.New object.Summary-->O comando **New object** cria um novo objeto vazio ou pré-recheado e devolve sua referência.<!-- END REF-->
 
@@ -47,7 +47,7 @@ datas são armazenadas como "yyyy-mm-dd" ou strings com o formato "YYYY-MM-DDTHH
 
 Se passar uma hora, é armazenada como o número de milissegundos (Real).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este comando pode criar objeto vazios ou cheios:
 
@@ -63,7 +63,7 @@ Este comando pode criar objeto vazios ou cheios:
   // $obj3 = {name:Smith,age:40}
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Cria um novo objeto com um objeto como valor de parâmetro:
 
@@ -82,7 +82,7 @@ Cria um novo objeto com um objeto como valor de parâmetro:
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este comando é útil para passar objetos como parâmetros:
 
@@ -91,7 +91,7 @@ Este comando é útil para passar objetos como parâmetros:
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Com este comando, pode fácilmente manejar objetos em loops:
 
@@ -104,12 +104,12 @@ Com este comando, pode fácilmente manejar objetos em loops:
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [New shared object](new-shared-object.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

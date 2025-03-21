@@ -23,7 +23,7 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#database-method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
@@ -51,8 +51,8 @@ Lorsqu'un utilisateur se connecte au serveur, une boîte de dialogue standard ap
 Les valeurs saisies sont ensuite évaluées :
 
 - Si l'option **Inclure les mots de passe 4D** est cochée, les informations d'identification des utilisateurs seront d'abord évaluées par rapport à la [table interne des utilisateurs 4D](Users/overview.md).
-  - Si le nom d'utilisateur envoyé par le navigateur existe dans la table des utilisateurs 4D et que le mot de passe est correct, la connexion est acceptée. Si le mot de passe est incorrect, la connexion est refusée.
-  - Si le nom d'utilisateur n'existe pas dans la table des utilisateurs 4D, la méthode base [`On Web Authentication`](#on-web-authentication) est appelée. Si la méthode base `On Web Authentication` n'existe pas, les connexions sont rejetées.
+ - Si le nom d'utilisateur envoyé par le navigateur existe dans la table des utilisateurs 4D et que le mot de passe est correct, la connexion est acceptée. Si le mot de passe est incorrect, la connexion est refusée.
+ - Si le nom d'utilisateur n'existe pas dans la table des utilisateurs 4D, la méthode base [`On Web Authentication`](#on-web-authentication) est appelée. Si la méthode base `On Web Authentication` n'existe pas, les connexions sont rejetées.
 - Si l'option **Inclure les mots de passe 4D** n'est pas cochée, les informations d'identification des utilisateurs sont envoyées à la méthode base [`On Web Authentication`](#on-web-authentication) avec les autres paramètres de connexion (adresse et port IP, URL...) afin que vous puissiez les traiter. Si la méthode base `On Web Authentication` n'existe pas, les connexions sont rejetées.
 
 > Avec le serveur Web du client 4D, gardez à l'esprit que tous les sites publiés par les machines 4D Client partageront la même table d'utilisateurs. La validation des utilisateurs/mots de passe est effectuée par l'application 4D Server.
@@ -83,12 +83,12 @@ La méthode base `On Web Authentication` est donc appelée :
 La méthode base `On Web Authentication` n'est PAS appelée :
 
 - lorsque le serveur web reçoit une URL demandant une page statique valide.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### Syntaxe
 
-**On Web Authentication**( _$url_ : Text ; _$content_ : Text ; _$IPClient_ : Text ; _$IPServer_ : Text ; _$user_ : Text ; _$password_ : Text ) -> $accept : Boolean
+**On Web Authentication**( *$url* : Text ; *$content* : Text ; *$IPClient* : Text ; *$IPServer* : Text ; *$user* : Text ; *$password* : Text ) -> $accept : Boolean
 
 | Paramètres | Type    |                             | Description                                                                 |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------------------- |
@@ -115,7 +115,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 :::note
 
-Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du [mode d'authentification](#mode-d-authentification) sélectionné.
+Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 :::
 

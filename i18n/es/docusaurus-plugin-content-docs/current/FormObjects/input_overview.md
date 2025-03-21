@@ -3,7 +3,7 @@ id: inputOverview
 title: Entrada
 ---
 
-Las entradas le permiten añadir expresiones editables o no editables como [campos](Concepts/identifiers.md#fields) y [variables](Concepts/variables.md) de base de datos a sus formularios. Las entradas pueden manejar datos basados en caracteres (texto, fechas, números...) o imágenes:
+Inputs allow you to add enterable or non-enterable expressions such as database fields and [variables](Concepts/variables.md) to your forms. Las entradas pueden manejar datos basados en caracteres (texto, fechas, números...) o imágenes:
 
 ![](../assets/en/FormObjects/input.png)
 

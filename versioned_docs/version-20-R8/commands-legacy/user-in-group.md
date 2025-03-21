@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.User in group.Summary-->User in group returns TRUE if *user* is in *group*.<!-- END REF-->
 
 **Note:** This command expects a user account name in the *user* parameter (it does not support user aliases). If you have defined user aliases in your applicaton, pass the 4D user account parameter to the [Current user](current-user.md) command to make sure it returns a user account (see example).
 
-#### Example 
+## Example 
 
 The following example searches for specific invoices. If the current user is in the Executive group, he or she is allowed access to forms that display confidential information. If the user is not in the Executive group, a different form is displayed:
 
@@ -39,11 +39,11 @@ The following example searches for specific invoices. If the current user is in 
  MODIFY SELECTION([Invoices];*)
 ```
 
-#### See also 
+## See also 
 
 [Current user](current-user.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

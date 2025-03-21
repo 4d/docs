@@ -30,7 +30,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 Para eliminar um método ou classe existente, pode:
 
-- en su disco, elimine el archivo _.4dm_ de la carpeta "Sources",
+- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 > Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
@@ -46,8 +46,8 @@ A função de importação/exportação é multiplataforma: um método exportado
 
 4D pode exportar e importar métodos em dois formatos:
 
-- Método 4D (extensión _.c4d_): en este formato, los métodos se exportan codificados. Os nomes dos objectos são tokenizados. Este formato é utilizado em particular para o intercâmbio de métodos entre aplicações 4D e plug-ins em diferentes línguas. Por outro lado, não é possível visualizá-los num editor de texto.
-- Texto (extensión _.txt_): en este formato, los métodos se exportan en forma de texto. Neste caso, os métodos podem ser lidos utilizando um editor de texto normal ou uma ferramenta de controlo da fonte.
+- Método 4D (extensión *.c4d*): en este formato, los métodos se exportan codificados. Os nomes dos objectos são tokenizados. Este formato é utilizado em particular para o intercâmbio de métodos entre aplicações 4D e plug-ins em diferentes línguas. Por outro lado, não é possível visualizá-los num editor de texto.
+- Texto (extensión *.txt*): en este formato, los métodos se exportan en forma de texto. Neste caso, os métodos podem ser lidos utilizando um editor de texto normal ou uma ferramenta de controlo da fonte.
 
 ## Propriedades do método projeto
 
@@ -70,7 +70,7 @@ El nuevo nombre debe cumplir con las reglas de denominación de 4D (ver [Identif
 
 :::caution
 
-Alterar o nome de um método já utilizado na base de dados pode invalidar quaisquer métodos ou fórmulas que utilizem o nome do método antigo e arrisca perturbar o funcionamento da aplicação. Puede cambiar el nombre del método manualmente, pero se recomienda utilizar la función de cambio de nombre de los métodos proyecto, descrita en [Renombrar](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Com esta função, é possível atualizar automaticamente o nome sempre que o método for chamado em todo o ambiente de Desenho.
+Alterar o nome de um método já utilizado na base de dados pode invalidar quaisquer métodos ou fórmulas que utilizem o nome do método antigo e arrisca perturbar o funcionamento da aplicação. Alterar o nome de um método já utilizado na base de dados pode invalidar quaisquer métodos ou fórmulas que utilizem o nome do método antigo e arrisca perturbar o funcionamento da aplicação. Com esta função, é possível atualizar automaticamente o nome sempre que o método for chamado em todo o ambiente de Desenho.
 
 Com 4D Server, o nome do método é alterado no servidor quando termina de o editar. Se mais do que um usuário estiver a modificar o nome do método em simultâneo, o nome final do método será o nome especificado pelo último usuário a terminar a edição. Pode ser necessário especificar um proprietário do método para que apenas determinados usuários possam alterar o nome do método
 
@@ -106,7 +106,7 @@ Para más información sobre esta opción, consulte [Atributo Ejecutar en el ser
 
 ### Modo Execução
 
-Esta opção permite-lhe declarar o método elegível para execução em modo preemptivo. Se describe en la [sección Procesos apropiativos](../Develop/processes.md#preemptive-processes).
+Esta opção permite-lhe declarar o método elegível para execução em modo preemptivo. Se describe en la [sección Procesos apropiativos](../Develop/preemptive.md).
 
 ### Disponível através de
 
@@ -149,7 +149,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Servidor REST
 
-_Esta opção está obsoleta. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md)._
+*Esta opção está obsoleta. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Definição de lotes para atributos de métodos
 
@@ -160,7 +160,7 @@ Para a definição em lote dos atributos do método:
 1. En la página [Métodos](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
 2. Na área "Nome do método correspondente:", introduza uma string que lhe permita designar os métodos que pretende modificar como um lote.
-   A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
+  A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
 
 Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 
@@ -179,3 +179,4 @@ Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 **Nota:** si el atributo "Publicado en WSDL" se establece como True, sólo se aplicará a los métodos proyecto que ya contengan el atributo "Ofrecido como servicio web".
 
 4. Haga clic en **Aplicar**. A modificação é aplicada instantaneamente a todos os métodos de projeto designados pela cadeia de caracteres introduzida.
+

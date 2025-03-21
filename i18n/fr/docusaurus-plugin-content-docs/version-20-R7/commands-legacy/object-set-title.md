@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->La commande **OBJECT SET TITLE** change le libellé du ou des objets(s) spécifié(s) dans le paramètre *objet* et le remplace par la valeur définie dans le paramètre *libellé* *.<!-- END REF-->*
 
@@ -38,7 +38,7 @@ Si vous souhaitez définir un libellé sur plusieurs lignes, utilisez le caract�
 
 **Note :** Passez "\\\\\\" si vous souhaitez utiliser le caractère "\\" dans le libellé.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la zone de pied de page d'un formulaire sortie affiché par la commande [MODIFY SELECTION](modify-selection.md). La méthode effectue une recherche dans une table et active ou inactive le bouton intitulé *bSuppr* et change son titre, en fonction des résultats de la recherche :
 
@@ -57,7 +57,7 @@ L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la 
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez insérer des libellés sur deux lignes :
 
@@ -68,11 +68,11 @@ Vous souhaitez insérer des libellés sur deux lignes :
 
 ![](../assets/en/commands/pict1242273.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get title](object-get-title.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

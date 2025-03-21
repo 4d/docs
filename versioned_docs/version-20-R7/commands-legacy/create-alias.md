@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->The CREATE ALIAS command creates an alias (named “shortcut” under Windows) for the target file or folder passed in *targetPath*.<!-- END REF--> The name and location are defined by the *targetPath* parameter.
 
@@ -26,7 +26,7 @@ This command does not assign a name by default, the name has to be passed in the
 
 If an empty string is passed in the *targetPath*, the command does nothing.
 
-#### Example 
+## Example 
 
 Your database generates text files called “Report Number” sorted in the database folder. The user would like to create shortcuts to these reports and to store them at a convenient location:
 
@@ -60,15 +60,15 @@ Your database generates text files called “Report Number” sorted in the data
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK system variable is set to 1 if the command execution was successful; otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [RESOLVE ALIAS](resolve-alias.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

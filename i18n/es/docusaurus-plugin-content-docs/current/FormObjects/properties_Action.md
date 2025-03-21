@@ -18,7 +18,7 @@ Hay dos modos de arrastrar disponibles:
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
   En este modo, NO se genera el evento del formulario `On Begin Drag`. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
 
-Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
 
 #### Gramática JSON
 
@@ -28,7 +28,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md)
 
 #### Ver también
 
@@ -46,7 +46,7 @@ Hay dos modos de soltar disponibles:
   En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
 - **Automático**: en este modo, 4D gestiona automáticamente, si es posible, la inserción de los datos arrastrados de tipo texto o imagen que se sueltan sobre el objeto (los datos se pegan en el objeto). Los eventos `On Drag Over` y `On Drop` NO se generan. Por otra parte, se generan los eventos `On After Edit` (durante el soltar) y `On Data Change` (cuando el objeto pierde el foco).
 
-Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual _Lenguaje 4D_.
+Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
 
 #### Gramática JSON
 
@@ -56,7 +56,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de Plug-in](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Entrada](input_overview.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md)
 
 #### Ver también
 
@@ -66,7 +66,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4
 
 ## Ejecutar método objeto
 
-Cuando esta opción está activada, el método objeto se ejecuta con el evento `On Data Change` _en el mismo momento_ en que el usuario cambia el valor del indicador. Cuando la opción está desactivada, el método se ejecuta _tras_ la modificación.
+Cuando esta opción está activada, el método objeto se ejecuta con el evento `On Data Change` *en el mismo momento* en que el usuario cambia el valor del indicador. Cuando la opción está desactivada, el método se ejecuta *tras* la modificación.
 
 #### Gramática JSON
 
@@ -88,7 +88,7 @@ Se soportan varios tipos de referencias de métodos:
 
 - una ruta de archivo de método objeto estándar, es decir, que utilice el siguiente patrón:\
   `ObjectMethods/objectName.4dm`\
-  ... donde `objectName` es el [nombre del objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
+  ... donde `objectName` es el [nombre del objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
@@ -106,7 +106,7 @@ Se soportan varios tipos de referencias de métodos:
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -124,7 +124,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -150,7 +150,7 @@ Permite ordenar los datos de las columnas haciendo clic en un encabezado [listbo
 
 En los list box basados en una selección de registros, sólo está disponible la función de ordenación estándar:
 
-- Cuando la fuente de datos es _Selección actual_,
+- Cuando la fuente de datos es *Selección actual*,
 - Con columnas asociadas a campos (de tipo Alfa, Número, Fecha, Hora o Booleano).
 
 En otros casos (list box basados en selecciones temporales, columnas asociadas a expresiones), la función de ordenación estándar no está disponible. Una ordenación estándar del list box cambia el orden de la selección actual en la base de datos. Sin embargo, los registros resaltados y el registro actual no se modifican. Una ordenación estándar sincroniza todas las columnas del list box, incluidas las columnas calculadas.
@@ -169,7 +169,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) de la _manual de Diseño_.
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) de la *manual de Diseño*.
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 

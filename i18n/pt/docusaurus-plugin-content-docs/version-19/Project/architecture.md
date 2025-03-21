@@ -38,7 +38,7 @@ A pasta Project contém normalmente a seguinte hierarquia:
 - DerivedData
 - Trash (se houver)
 
-### Arquivo  *nomApplication*.4DProject
+### Ficheiro *nomApplication*.4DProject
 
 Arquivo de desenvolvimento do projeto, utilizado para designar e lançar o projeto. Esse arquivo pode ser aberto por:
 
@@ -118,7 +118,7 @@ A pasta Trash contém métodos e formulários eliminados do projeto (se existire
 - Formulários
 - TableForms
 
-Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". A organização das pastas é idêntica à da pasta [Sources](#sources).
+Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". A organização das pastas é idêntica à da pasta [Sources](#sources-folder).
 
 ### Pasta DerivedData
 

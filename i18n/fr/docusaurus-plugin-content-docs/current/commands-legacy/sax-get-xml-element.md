@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML ELEMENT.Summary-->La commande **SAX GET XML ELEMENT** retourne diverses informations relatives à l’élément *nom* présent dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML start element ou XML end element. Dans le cas particulier d’un XML end element, les paramètres d’attributs ne sont pas gérés. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
@@ -29,7 +29,7 @@ La commande remplit le tableau *nomsAttributs* avec les noms des attributs de l�
 
 La commande remplit également le tableau *valeursAttributs* avec les valeurs des attributs de l’élément cible. Si nécessaire, la commande crée et dimensionne automatiquement le tableau. 
 
-#### Exemple 
+## Exemple 
 
 Considérons l’extrait de code XML suivant :
 
@@ -50,15 +50,15 @@ Une fois l’instruction suivante exécutée :
 *tAttrNoms{1}* contiendra “Att1”, *tAttrNoms{2}* contiendra “Att2”, *tAttrNoms{3}* contiendra “Att3”  
 *tAttrValeurs{1}* contiendra “111”, *tAttrValeurs{2}* contiendra “222”, *tAttrValeurs{3}* contiendra “333”
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

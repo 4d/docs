@@ -29,7 +29,7 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
-- _drop_ is the method being traced
+- *drop* is the method being traced
 - The debugger window appeared because of a break point.
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
@@ -118,7 +118,7 @@ The current state of the debugger window is automatically saved in the project. 
 - the size and position of the window,
 - the position of the division lines,
 - the [display mode](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Une fenêtre de débogage s'ouvre avec le compteur de programme défini à la ligne avec `a:=1`. À ce stade, le thème **Objets courants** affiche :
 
-   | $a | Undefined |
-   | -- | --------- |
+ | $a | Undefined |
+ | -- | --------- |
 
-   La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. À ce stade, le thème **Objets courants** affiche :
 
-   | $a | 1         |
-   | -- | --------- |
-   | $b | Undefined |
+ | $a | 1         |
+ | -- | --------- |
+ | $b | Undefined |
 
-   La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. Le compteur de programme est maintenant placé sur la ligne avec $c:=a+b. Le thème **Objets courants** affiche :
 
-   | $c | Undefined |
-   | -- | --------- |
-   | $a | 1         |
-   | $b | 2         |
+ | $c | Undefined |
+ | -- | --------- |
+ | $a | 1         |
+ | $b | 2         |
 
-   La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 #### Variables
 
@@ -280,9 +280,9 @@ Dans l'image ci-dessus :
 - `thirdMethod` n'a reçu aucun paramètre
 - `$0` est actuellement indéfini, car la méthode n'a pas attribué de valeur à `$0` (parce qu'elle n'a pas encore exécuté cette assignation ou parce que la méthode est une sous-routine et non une fonction)
 - `secondMethod` a reçu trois paramètres de `firstMethod` :
-  - $1 est un pointeur vers la table `[Employee]`
-  - $2 est un pointeur vers le champ `ID` dans la table `[Employee]`
-  - $3 est un paramètre alphanumérique dont la valeur est "Z"
+ - $1 est un pointeur vers la table `[Employee]`
+ - $2 est un pointeur vers le champ `ID` dans la table `[Employee]`
+ - $3 est un paramètre alphanumérique dont la valeur est "Z"
 
 Vous pouvez double-cliquer sur le nom de n'importe quelle méthode pour afficher son contenu dans le [Fenêtre d'évaluation des méthodes](#fenetre-devaluation-des-methodes).
 
@@ -306,7 +306,7 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire a
 - pointer
 - calcul
 - commande 4D
-- méthode
+- method
 - et tout ce qui renvoie une valeur
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Gestion des expressions
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
 
 Il y a plusieurs façons d'ajouter des expressions à la liste :
 
@@ -369,8 +369,8 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 - **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
 - **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
-  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+ ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+ For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
 * **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
 * **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
@@ -416,9 +416,9 @@ Vous pouvez copier n'importe quelle expression sélectionnée depuis la fenêtre
 
 1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
-   - Glissez et déposez le texte sélectionné dans la zone d'expression
-   - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
+ - Glissez et déposez le texte sélectionné dans la zone d'expression
+ - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+ - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
 
 ### Compteur de programme
 
@@ -455,8 +455,8 @@ Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieur
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Show documentation**: Opens the documentation for the target element. Cette commande est disponible avec les objets suivants :
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
+ - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+ - *4D commands, functions, class names:* Displays the online documentation.
 - **Chercher les références** (cette fonction est également accessible depuis l’Editeur de code) : rechercher tous le projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
 - **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
 - **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.
@@ -498,7 +498,7 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 #### Toutes les fenêtres
 
 - **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. La taille de la police modifiée s'applique également à l'Editeur de code et est stockée dans les Préférences.
-- **Ctrl+**_(Windows) ou **Commande+**_ (macOS) force la réactualisation de la Fenêtre d'expression.
+- **Ctrl+***(Windows) ou **Commande+*** (macOS) force la réactualisation de la Fenêtre d'expression.
 - Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 - Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.
 - Lorsque vous êtes en train d’éditer un élément, utilisez les touches directionnelles pour déplacer le curseur. Utilisez Ctrl+A/X/C/V (Windows) ou Commande+A/X/C/V (macOS) en raccourci des commandes du menu Edition : Tout Sélectionner/Couper/Copier/Coller.

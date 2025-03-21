@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu item style.Summary-->O comando Get menu item style devolve o estilo de fonte da linha de menu cujo número ou referência se passa em *menu* e cujo número de elemento é passado em *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*
 
@@ -33,7 +33,7 @@ Get menu item style devolve uma combinação (um ou uma soma) das seguintes cons
 | Italic    | Inteiro longo | 2     |
 | Underline | Inteiro longo | 4     |
 
-#### Exemplo 
+## Exemplo 
 
 Para provar se um elemento de menu é mostrado em negrito, escreve:
 
@@ -43,11 +43,11 @@ Para provar se um elemento de menu é mostrado em negrito, escreve:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

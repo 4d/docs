@@ -39,7 +39,7 @@ O administrador pode:
 - editar o usuário Designer
 - como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. In particular, the Administrator cannot access to the Design mode if it is restricted. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
-Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
+Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. No diálogo de gestão de usuários, os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 
 - Ícone Designer: ![](../assets/en/Users/iconDesigner.png)
 - Ícone de Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -68,7 +68,7 @@ Para adicionar um usuário da Barra de Ferramentas:
 
 A lista de usuários exibe todos os usuários, incluindo o[Designer and the Administrator](#designer-and-administrator).
 
-2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OU Clique com o botão direito do mouse na lista de usuários e escolha **Adicionar** ou **Duplicar** no menu de contexto.
 
 > O comando **Duplicate** pode ser usado para criar rapidamente vários usuários com as mesmas características.
 
@@ -82,7 +82,7 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 5. Estabeleça os grupos aos quais o usuário vai pertencer com a tabela "Membro de Grupos". Pode adicionar ou remover os usuários selecionados de ou para um grupo marcando a opção correspondente na coluna Membro.
 
-A adesão do usuário aos diferentes grupos também pode ser estabelecida por grupo na página [Grupos](#configuring-access-groups).
+A adesão do usuário aos diferentes grupos também pode ser estabelecida por grupo na [página Grupos](#configuring-groups).
 
 ### Apagar um usuário
 
@@ -174,7 +174,7 @@ Tal sistema hierárquico facilita lembrar para qual grupo um novo usuário deve 
 
 ## Atribuir grupos de acesso
 
-Groups are assigned access privileges to specific parts or features of the application:
+Os grupos recebem privilégios de acesso a partes ou recursos específicos da aplicação:
 
 - Acesso ao ambiente Desenho e ao Explorador de execução,
 - Servidor HTTP,
@@ -185,16 +185,16 @@ Estes acessos são definidos no diálogo Parâmetros. O exemplo abaixo mostra di
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
+Você também usa grupos para [distribuir licenças disponíveis](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
 
 ## Ficheiro Directory.json
 
 Os usuários, grupos, bem como seus direitos de acesso são armazenados em um arquivo específico do projeto chamado **directory.json**.
 
-This file can be stored at the following locations, depending on your needs:
+Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necessidades:
 
 - Se você quiser usar o mesmo diretório para todos os arquivos de dados (ou se você usar um arquivo de dados único), armazene o arquivo **directory.json** na pasta de configurações do usuário, ou seja, na pasta "Configurações" no [mesmo nível que a pasta "Projeto"](Project/architecture.md#project-folder) (local padrão).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. This custom/local Users and Groups configuration will left untouched by an application upgrade.
+- Se você quiser usar um arquivo de diretório específico por arquivo de dados, armazene o diretório **directory.json** na pasta dos parâmetros de dados, ou seja, na pasta ["Settings" da pasta "Data"](../Project/architecture.md#settings-user-data). Se um arquivo **directory.json** estiver presente neste local, ele terá prioridade sobre o arquivo na pasta Settings usuário. Essa configuração personalizada/local de usuários e grupos não será afetada por uma atualização da aplicação.
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> Para permitir alterações seguras de senhas e associações de grupos em um ambiente implantado, você pode incluir o arquivo **directory.json** na aplicação do servidor durante a compilação, usando a opção [correspondente da aplicação de compilação](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get title.Summary-->El comando OBJECT Get title devuelve el título (etiqueta) del objeto de formulario designado por *objeto* .<!-- END REF--> 
 
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable (campo o variable objeto únicamente) en lugar de una cadena. 
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET TITLE](object-set-title.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

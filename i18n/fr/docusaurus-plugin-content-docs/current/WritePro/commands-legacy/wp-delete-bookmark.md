@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE BOOKMARK.Summary-->la commande **WP DELETE BOOKMARK** supprime de *docWP* le signet nommé *nomSignet*.<!-- END REF-->
 
 Si le signet *nomSignet* n'existe pas dans *docWP*, la commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez renommer un signet existant. Pour cela, vous devez créer un nouveau signet basé sur la même plage puis supprimer l'ancien :
 
@@ -44,7 +44,7 @@ Vous souhaitez renommer un signet existant. Pour cela, vous devez créer un nouv
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Bookmark range](wp-bookmark-range.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

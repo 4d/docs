@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->The On Server Shutdown database method is called once on the server machine when the current database is closed on 4D Server.<!-- END REF--> The On Server Shutdown database method is NOT invoked by any 4D environment other than 4D Server.
 

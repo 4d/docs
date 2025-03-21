@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INTERSECTION.Summary-->**INTERSECTION** compares *set1* and *set2* and selects only the records that are in both.<!-- END REF--> The following table lists all possible results of a set Intersection operation.
 
@@ -34,7 +34,7 @@ The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any exi
 
 **4D Server:** In Client/Server mode, sets are "visible" depending on their type (interprocess, process and local) and where they were created (server or client). **INTERSECTION** requires all three sets to be visible on the same machine. See the *4D Server, Sets and Named Selections* section in the 4D Server Reference manual for more information.
 
-#### Example 
+## Example 
 
 The following example finds the customers who are served by two sales representatives, Joe and Abby. Each sales representative has a set that represents his or her customers. The customers that are in both sets are represented by both Joe and Abby:
 
@@ -45,12 +45,12 @@ The following example finds the customers who are served by two sales representa
  DISPLAY SELECTION([Customers]) // Display customers served by both
 ```
 
-#### See also 
+## See also 
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

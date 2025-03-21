@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current system user.Summary-->**Current system user**コマンドは、マシンのカレントユーザアカウントで設定されたマシンのオーナー名を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 コマンド[Current machine](current-machine.md "Current machine")の例を参照してください。
 
-#### 参照 
+## 参照 
 
 [Current machine](current-machine.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

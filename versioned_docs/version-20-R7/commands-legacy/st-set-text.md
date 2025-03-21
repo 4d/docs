@@ -17,16 +17,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET TEXT.Summary-->The ST SET TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the object parameter, without modifying any style tags that it contains. It can be used to modify, by programming, styled text displayed on screen. 
 
-##### 
+### 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, when the object has the focus, the command only applies to the object being edited and not to its data source (field or variable). The changes are only transferred to the source (and to any other objects using this same source) when the object being edited is validated either by losing the focus or with the **Enter** key. When the object does not have the focus, the command applies directly to the data source and the changes are immediately transferred to any other objects using the same source.   
 If you omit the *\** parameter, this indicates that the *object* parameter is a field or variable and you pass a field or variable reference instead of a string. The command applies directly to the field or variable and changes are immediately transferred to all the objects using this source, including the object with the focus. 
 
-##### 
+### 
 
 In *newText*, pass the text to be inserted. The ST SET TEXT command is intended for working with rich text (multistyle) containing <span> type tags. In all other cases (more particularly, when working with plain text that contains the <, > or & characters), you must use the [ST SET PLAIN TEXT](st-set-plain-text.md) command. If you pass plain text containing the <, > or & characters to the ST SET TEXT command, it does nothing. This is necessary behavior because if you insert a string such as "a<b" directly into rich text, it will distort the internal analysis of the <span> tags. In this case, "<" characters must be encoded beforehand as "&lt;", which can be done using the [ST SET PLAIN TEXT](st-set-plain-text.md) command (see also the example of this command).
 
@@ -50,13 +50,13 @@ The optional *startSel* and *endSel* parameters let you designate a selection of
 
 **Note:** If *startSel* is greater than *endSel* (except if *endSel* value is 0, see above), the text is not modified and the OK variable is set to 0\. 
 
-#### System variables and sets 
+## System variables and sets 
 
 After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
 
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
-#### Example 1 
+## Example 1 
 
 You want to replace the styled text selected by the user with the contents of a variable.
 
@@ -80,17 +80,17 @@ The field and its contents are as follows:
 
 ![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
 
-#### Example 2 
+## Example 2 
 
 Refer to the example of the [ST SET PLAIN TEXT](st-set-plain-text.md) command. 
 
-#### See also 
+## See also 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

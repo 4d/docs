@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->The **SAX OPEN XML ELEMENT ARRAYS** command is used to add a new element in the XML document whose reference is passed in *document* as well as, optionally, attributes and their values in the form of arrays.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Optionally, the **SAX OPEN XML ELEMENT ARRAYS** command can be used to pass pair
 
 The arrays must have been created previously and operate in attribute/attribute value pairs. You can pass as many pairs of arrays, and as many items in each pair, as you want. 
 
-#### Example 
+## Example 
 
 The following method:
 
@@ -49,13 +49,13 @@ The following method:
 <Book Font="Arial" Style="Bold">
 ```
 
-#### See also 
+## See also 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

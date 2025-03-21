@@ -3,7 +3,7 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Parameters given directly in the request with GET verb are handled by the [`.urlQuery`](#urlquery) property, while parameters passed in the body of the request are available through functions such as [`.getBlob()`](#getblob) or [`getText()`](#gettext).
+The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
 The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
 Here is the response:
 
@@ -87,8 +87,8 @@ There are 2 url parts - Url parts are: start - example
 | [<!-- INCLUDE #IncomingMessageClass.getText().Syntax -->](#gettext)<br/><!-- INCLUDE #IncomingMessageClass.getText().Summary -->          |
 | [<!-- INCLUDE #IncomingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #IncomingMessageClass.headers.Summary -->              |
 | [<!-- INCLUDE #IncomingMessageClass.url.Syntax -->](#url)<br/><!-- INCLUDE #IncomingMessageClass.url.Summary -->                          |
-| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlPath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
-| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlQuery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
+| [<!-- INCLUDE #IncomingMessageClass.urlPath.Syntax -->](#urlpath)<br/><!-- INCLUDE #IncomingMessageClass.urlPath.Summary -->              |
+| [<!-- INCLUDE #IncomingMessageClass.urlQuery.Syntax -->](#urlquery)<br/><!-- INCLUDE #IncomingMessageClass.urlQuery.Summary -->           |
 | [<!-- INCLUDE #IncomingMessageClass.verb.Syntax -->](#verb)<br/><!-- INCLUDE #IncomingMessageClass.verb.Summary -->                       |
 
 :::note
@@ -107,7 +107,7 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 | Parámetros | Tipo |                             | Descripción                   |
 | ---------- | ---- | --------------------------- | ----------------------------- |
-| Result     | Blob | <- | Body of the request as a Blob |
+| Resultado  | Blob | <- | Body of the request as a Blob |
 
 <!-- END REF -->
 
@@ -130,13 +130,13 @@ If the body has not been given as a binary content, the function tries to conver
 | Parámetros | Tipo |                             | Descripción                          |
 | ---------- | ---- | --------------------------- | ------------------------------------ |
 | key        | Text | ->                          | Header property to get               |
-| Result     | Text | <- | Valor de la propiedad del encabezado |
+| Resultado  | Text | <- | Valor de la propiedad del encabezado |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
+La función `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->devuelve el valor del encabezado *key* <!-- END REF -->.
 
 :::note
 
@@ -164,13 +164,13 @@ $value := $request.getHeader("content-type")
 
 | Parámetros | Tipo    |                             | Descripción                                |
 | ---------- | ------- | --------------------------- | ------------------------------------------ |
-| Result     | Variant | <- | JSON resolution of the body of the request |
+| Resultado  | Variant | <- | JSON resolution of the body of the request |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
+La función `.getJSON()` <!-- REF #IncomingMessageClass.getJSON().Summary -->devuelve el cuerpo de la solicitud como una resolución JSON<!-- END REF -->.
 
 If the body has not been given as JSON valid content, an error is raised.
 
@@ -186,13 +186,13 @@ If the body has not been given as JSON valid content, an error is raised.
 
 | Parámetros | Tipo    |                             | Descripción                    |
 | ---------- | ------- | --------------------------- | ------------------------------ |
-| Result     | Picture | <- | Body of the request as picture |
+| Resultado  | Picture | <- | Body of the request as picture |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.getPicture()` function <!-- REF #IncomingMessageClass.getPicture().Summary -->returns the body of the request as a picture (in case of a body sent as a picture)<!-- END REF -->.
+La función `.getPicture()` <!-- REF #IncomingMessageClass.getPicture().Summary -->devuelve el cuerpo de la petición como una imagen (en caso de que un cuerpo enviado como una imagen)<!-- END REF -->.
 
 The content-type must be given in the headers to indicate that the body is a picture.
 
@@ -216,13 +216,13 @@ If the body is not received as a valid picture, the function returns null.
 
 | Parámetros | Tipo |                             | Descripción                 |
 | ---------- | ---- | --------------------------- | --------------------------- |
-| Result     | Text | <- | Body of the request as text |
+| Resultado  | Text | <- | Body of the request as text |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.getText()` function <!-- REF #IncomingMessageClass.getText().Summary -->returns the body of the request as a text value<!-- END REF -->.
+La función `.getText()` <!-- REF #IncomingMessageClass.getText().Summary -->devuelve el cuerpo de la solicitud como un valor de texto<!-- END REF -->.
 
 If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
 
@@ -236,7 +236,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 #### Descripción
 
-The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
+La propiedad `.headers` contiene <!-- REF #IncomingMessageClass.headers.Summary -->los encabezados actuales del mensaje entrante como pares llave/valor (cadenas)<!-- END REF -->.
 
 La propiedad `.headers` es de sólo lectura.
 
@@ -252,7 +252,7 @@ Header names (keys) are lowercased. Note header names are case sensitive.
 
 #### Descripción
 
-The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
+La propiedad `.url` contiene <!-- REF #IncomingMessageClass.url.Summary -->la URL de la petición sin la parte *IP:port* y como cadena<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
@@ -260,7 +260,7 @@ The `.url` property is read-only.
 
 :::note
 
-The "host" part of the request (*IP:port*) is provided by the [`host` header](#headers).
+La parte "host" de la petición (*IP:port*) es suministrada por el [encabezado `host`](#headers).
 
 :::
 
@@ -274,7 +274,7 @@ The "host" part of the request (*IP:port*) is provided by the [`host` header](#h
 
 #### Descripción
 
-The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary -->the URL of the request without the *IP:port* part and as a collection of strings<!-- END REF -->.
+La propiedad `.urlPath` contiene <!-- REF #IncomingMessageClass.urlPath.Summary -->la URL de la solicitud sin la parte *IP:port* y como una colección de cadenas<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
 
@@ -290,7 +290,7 @@ The `.urlPath` property is read-only.
 
 #### Descripción
 
-The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
+La propiedad `.urlQuery` contiene <!-- REF #IncomingMessageClass.urlQuery.Summary -->los parámetros de la petición cuando se han dado en la URL como pares llave/valor<!-- END REF -->.
 
 The `.urlQuery` property is read-only.
 
@@ -326,7 +326,7 @@ $test:=Length($r.urlQuery.mdcode) //5
 
 :::note
 
-Parameters given in the body of the request using POST or PUT verbs are handled through dedicated functions: [`getText()`](#gettext), [`getPicture()`](#getpicture), [`getBlob()`](#getblob), [`getJSON()`](#getjson).
+Los parámetros dados en el cuerpo de la petición utilizando los verbos POST o PUT son manejados a través de funciones dedicadas: [`getText()`](#gettext), [`getPicture()`](#getpicture), [`getBlob()`](#getblob), [`getJSON()`](#getjson).
 
 :::
 
@@ -340,10 +340,11 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 #### Descripción
 
-The `.verb` property contains <!-- REF #IncomingMessageClass.verb.Summary -->the verb used by the request<!-- END REF -->.
+La propiedad `.verb` contiene <!-- REF #IncomingMessageClass.verb.Summary -->el verbo usado por la petición<!-- END REF -->.
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
 The `.verb` property is read-only.
 
 <!-- END REF -->
+

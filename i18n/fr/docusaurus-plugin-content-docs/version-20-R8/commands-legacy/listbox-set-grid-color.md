@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->La commande **LISTBOX SET GRID COLOR** permet de modifier la couleur de la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -30,13 +30,13 @@ Les paramètres *horizontal* et *vertical* vous permettent de spécifier les tra
 * si vous passez **Vrai** dans *horizontal*, la couleur sera appliquée aux traits horizontaux de la grille. Si vous passez **Faux**, leur couleur ne sera pas modifiée.
 * si vous passez **Vrai** dans *vertical*, la couleur sera appliquée aux traits verticaux de la grille. Si vous passez **Faux**, leur couleur ne sera pas modifiée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

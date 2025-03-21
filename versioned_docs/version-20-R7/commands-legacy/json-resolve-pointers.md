@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->The **JSON Resolve pointers** command resolves all the JSON pointers found in the *object*, with regards to *options* settings (if any).<!-- END REF-->
 
@@ -55,7 +55,7 @@ In any cases, the command returns an object containing the following properties:
 | errors\[\].referredPath | Text         | document fullpath                                                                                         |
 
   
-#### Defining JSON Pointers 
+## Defining JSON Pointers 
 
 JSON Pointer is a standard that defines a string syntax which can be used to access a particular field or key value in the entire JSON document. The standard has been described in the [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
@@ -69,7 +69,7 @@ A JSON pointer is, strictly speaking, a string composed of parts separated by '/
 
 **Note:** 4D does not support the "-" character as reference to nonexistent arrray elements. 
 
-##### Recursivity and path resolution 
+### Recursivity and path resolution 
 
 JSON pointers are resolved recursively, which means that if a resolved pointer also contains pointers, they are resolved recursively and so on, until all pointers are resolved. In this context, all file paths found in JSON pointer URIs can be relative or absolute. They must use '/' as path delimiter and are resolved the following way:
 
@@ -81,7 +81,7 @@ JSON pointers are resolved recursively, which means that if a resolved pointer a
 * The name resolution is case sensitive.
 * 4D does not resolve a path to a json file located over the network (starting with "http/https").
 
-#### Example 1 
+## Example 1 
 
 This basic example illustrates how a JSON pointer can be set and replaced in an object:
 
@@ -109,7 +109,7 @@ This basic example illustrates how a JSON pointer can be set and replaced in an 
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to reuse the "billingAddress" as the "shippingAddress" in the following JSON object (named $oMyConfig):
 
@@ -154,7 +154,7 @@ After executing this code:
 }
 ```
 
-#### Example 3 
+## Example 3 
 
 This example illustrates the effect of the "merge" option. You want to edit an user's rights based upon a default file.
 
@@ -228,11 +228,11 @@ If you execute:
 }
 ```
 
-#### See also 
+## See also 
 
   
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

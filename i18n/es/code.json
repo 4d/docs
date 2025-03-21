@@ -27,7 +27,7 @@
     "message": "Depuración"
   },
   "Settings": {
-    "message": "Settings"
+    "message": "Propiedades"
   },
   "Preferences": {
     "message": "Preferencias"
@@ -560,7 +560,7 @@
     "message": "https://developer.4d.com/go-mobile/"
   },
   "Class Functions": {
-    "message": "Class Functions"
+    "message": "Clases"
   },
   "Transformation Tags": {
     "message": "Etiquetas de transformación"
@@ -628,11 +628,11 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Autores",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View all authors",
+    "message": "Ver todos los autores",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
@@ -652,7 +652,7 @@
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "Esta página es un borrador. Solo será visible en desarrollo y se excluirá de la versión de producción.",
     "description": "The draft content banner message"
   }
 }

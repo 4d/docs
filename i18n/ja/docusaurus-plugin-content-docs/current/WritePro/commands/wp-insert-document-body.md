@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 **WP Insert document body** コマンドは、<!--REF #_command_.WP Insert document body.Summary-->*mode* 引数や*rangeUpdate* 引数で指定された形で、*wpDoc* 引数で指定したドキュメントの本文を*targetObj* 引数で指定したターゲット内に挿入し、挿入されたドキュメント本文へのレンジを返します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 - 要素(表組 / 行 / 段落 / 本文 / ヘッダー / フッター / インラインピクチャー / セクション / サブセクション / テキストボックス)
 - 4D Write Pro ドキュメント
 
-挿入する*wpDoc* 引数のドキュメントには、[WP New](../commands-legacy/wp-new.md) コマンドまたは [WP Import document](wp-import-document.md) コマンドを使用して作成した任意の4D Write Pro ドキュメントオブジェクトを指定可能です。 本文の子要素のみが挿入されます(つまり、ヘッダー、フッター、テキストボックスおよびアンカーされたピクチャーは挿入されません)。 指定されたレンジのセクションおよびブックマークは保存されます。 これに加え、要素はコピーされるので、*wpDoc* 引数の内容はその後再利用することが可能です。
+挿入する*wpDoc* 引数のドキュメントには、 [WP New](../commands-legacy/wp-new.md) コマンドまたは [WP Import document](wp-import-document.md) コマンドを使用して作成した任意の4D Write Pro ドキュメントオブジェクトを指定可能です。 本文の子要素のみが挿入されます(つまり、ヘッダー、フッター、テキストボックスおよびアンカーされたピクチャーは挿入されません)。 指定されたレンジのセクションおよびブックマークは保存されます。 これに加え、要素はコピーされるので、*wpDoc* 引数の内容はその後再利用することが可能です。
 
 *mode* 引数には、*4D Write Pro 定数* テーマ内の以下の定数のいずれか一つを渡すことで、ターゲットの*targetObj* のドキュメント内で使用される挿入モードを指定することができます:
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 - *targetObj* がレンジではない場合、*rangeUpdate* は無視されます。
 
-#### 例題 1
+## 例題 1
 
 ドキュメントのコンテンツを他のドキュメント内で選択されたテキストで置き換えたい場合を考えます:
 
@@ -66,9 +66,9 @@ displayed_sidebar: docs
  WP Insert document body(WPDoc;$doctoCopy;wk replace) //WPDoc の中身を新しいドキュメントの中身で置き換えます
 ```
 
-#### 例題 2
+## 例題 2
 
-テンプレートとして定義されたドキュメントがあり、その中には異なるフォーマットを持つ部分が、それぞれブックマークとして保存されているものとします。 最終ドキュメントをテンプレートから作成する場合、任意のブックマークを新規ドキュメントとして取得し、最終ドキュメントに挿入することができます。
+テンプレートとして定義されたドキュメントがあり、その中には異なるフォーマットを持つ部分が、それぞれブックマークとして保存されているものとします。  最終ドキュメントをテンプレートから作成する場合、任意のブックマークを新規ドキュメントとして取得し、最終ドキュメントに挿入することができます。
 
 ```4d
  ARRAY TEXT($_BookmarkNames;0)
@@ -83,7 +83,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3
+## 例題 3
 
 挿入されたドキュメント本文の、フォントスタイルとサイズを設定したい場合を考えます:
 
@@ -96,7 +96,7 @@ WP SET ATTRIBUTES($range1; wk font family; "Times New Roman")
 WP SET ATTRIBUTES($range1; wk font italic; wk true)
 ```
 
-#### 参照
+## 参照
 
 [WP INSERT BREAK](wp-insert-break.md)\
 [WP INSERT PICTURE](wp-insert-picture.md)\

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called in the following cases:
 
@@ -73,7 +73,7 @@ The second parameter (*$2*) is the header and the body of the HTTP request sent 
 With Safari running on Mac OS, you may receive a header similar to this:  
     
 ```  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
 With Microsoft Internet Explorer 8 running on Windows, you may receive a header similar to this:  
@@ -96,7 +96,7 @@ The *$5* and *$6* parameters receive the user name and password entered by the u
     
 **Note:** If the user name sent by the browser exists in 4D, the *$6* parameter (the user’s password) is not returned for security reasons.
 
-#### On Web Connection Database Method Calls 
+## On Web Connection Database Method Calls 
 
 The **On Web Connection database method** can be used as the entry point for the 4D Web server, either using the special *4DCGI* URL, or using customized command URLs.
 

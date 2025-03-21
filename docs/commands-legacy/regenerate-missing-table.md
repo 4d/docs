@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->The **REGENERATE MISSING TABLE** command rebuilds the missing table whose name is passed in the *tableName* parameter.<!-- END REF--> When a missing table is rebuilt, it becomes visible in the Structure editor and its data can once again be accessed.
 
@@ -21,7 +21,7 @@ Missing tables are tables whose data are present in the data file but that do no
 
 If the table designated by the *tableName* parameter is not a missing table of the database, the command does nothing. 
 
-#### Example 
+## Example 
 
 This method regenerates all the missing tables that may be present in the database:
 
@@ -56,11 +56,11 @@ This method regenerates all the missing tables that may be present in the databa
  End if
 ```
 
-#### See also 
+## See also 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

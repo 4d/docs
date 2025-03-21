@@ -40,7 +40,7 @@ Lorsqu'un événement formulaire se produit, 4D effectue les actions suivantes :
 
 Ne supposez pas que les méthodes objet, le cas échéant, seront appelées dans un ordre particulier. La règle d'or est que les méthodes objet sont toujours appelées avant la méthode formulaire. Si un objet est un sous-formulaire, les méthodes objet du formulaire liste du sous-formulaire sont appelées, suivie de la méthode formulaire du formulaire liste. 4D continue alors d'appeler les méthodes objet du formulaire parent. En d'autres termes, lorsqu'un objet est un sous-formulaire, 4D utilise la même règle pour les méthodes objet et formulaire au sein de l'objet sous-formulaire.
 
-À l'exception des événements [On Load](onLoad.md) et [On Unload](onUnload.md) (voir ci-dessous), si la propriété d'événement formulaire n'est pas sélectionnée pour un événement donné, cela n'empêche pas les appels vers les méthodes objet pour les objets d En d'autres termes, l'activation ou la désactivation d'un événement au niveau du formulaire n'a aucun effet sur les propriétés d'événement de l'objet.
+ATTENTION : Les événements [On Load](onLoad.md) et [On Unload](onUnload.md) sont générés pour les objets s'ils sont activés à la fois pour les objets et pour le formulaire auquel appartiennent les objets. En d'autres termes, l'activation ou la désactivation d'un événement au niveau du formulaire n'a aucun effet sur les propriétés d'événement de l'objet.
 
 Le nombre d'objets associés à un événement dépend de la nature de l'événement.
 
@@ -113,4 +113,5 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 
 Gardez toujours à l'esprit que, pour tout événement, la méthode d'un formulaire ou d'un objet est appelée si la propriété d'événement correspondante est sélectionnée pour le formulaire ou les objets. L'avantage de la désactivation des événements dans l'environnement de développement (à l'aide de la liste des propriétés de l'éditeur de formulaires) est la réduction du nombre d'appels vers des méthodes et par conséquent l'optimisation de la vitesse d'exécution de vos formulaires.
 
-> ATTENTION : Les événements [On Load](onLoad.md) et [On Unload](onUnload.md) sont générés pour les objets s'ils sont activés à la fois pour les objets et pour le formulaire auquel appartiennent les objets. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
+> À l'exception des événements [On Load](onLoad.md) et [On Unload](onUnload.md) (voir ci-dessous), si la propriété d'événement formulaire n'est pas sélectionnée pour un événement donné, cela n'empêche pas les appels vers les méthodes objet pour les objets d En d'autres termes, l'activation ou la désactivation d'un événement au niveau du formulaire n'a aucun effet sur les propriétés d'événement de l'objet. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
+

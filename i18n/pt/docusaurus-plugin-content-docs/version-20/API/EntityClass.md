@@ -94,7 +94,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 A função `.touched()` <!-- REF #EntityClass.clone().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
 
-Esta função permite que você atualize as entidades separadamente. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
@@ -630,7 +630,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
@@ -684,7 +684,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Veja também
 
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -964,7 +964,7 @@ O objeto retornado por `.lock( )` contém as seguintes propriedades:
 |                  | task_name                 | text                   | Nome de processo                                                                                                                                            |
 |                  | client_version            | text                   | Liberação do cliente                                                                                                                                        |
 |                  |                           |                        | ***Disponível só para um processo trava REST:***                                                                                                            |
-|                  | host                      | text                   | URL que trava a entidade (por exemplo "www.myserver.com")                                                                                                   |
+|                  | host                      | text                   | URL that locked the entity (e.g. "`www.myserver.com`")                                                                                                      |
 |                  | IPAddr                    | text                   | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |
 |                  | userAgent                 | text                   | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                           |                        | ***Disponível apenas em caso de erro grave*** (a chave primária já existir, o disco estar cheio...):                                                        |
@@ -1590,7 +1590,7 @@ Retorna:
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>Histórico</summary>
 
@@ -1635,7 +1635,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>Histórico</summary>
 

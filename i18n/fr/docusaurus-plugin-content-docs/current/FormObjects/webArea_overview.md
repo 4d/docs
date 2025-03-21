@@ -7,7 +7,7 @@ Les zones Web (Web Areas) peuvent afficher tout type de contenu Web à l’inté
 
 Il est possible de créer plusieurs zones web dans un même formulaire. Notez toutefois que l'utilisation des zones web doit respecter [plusieurs règles](#web-area-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
+Plusieurs [actions standard](#standard-actions), de nombreuses [commandes du langage](../category/web-area) ainsi que des [événements formulaire](#form-events) génériques et spécifiques permettent au développeur de contrôler le fonctionnement des zones web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 
 ## Propriétés spécifiques
 
@@ -37,17 +37,27 @@ Lorsque la propriété [Accès aux méthodes 4D](properties_WebArea.md#access-4d
 
 :::
 
-### Objet $4d
+## $4d Object
 
-Le [moteur de rendu web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) de 4D fournit à la zone un objet JavaScript nommé $4d que vous pouvez associer à n'importe quelle méthode de projet 4D à l'aide de la notation objet "."
+The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-Par exemple, pour appeler la méthode 4D `HelloWorld`, il suffit d'exécuter l'instruction suivante :
+For example, calling the `HelloWorld` method in 4D:
 
 ```js
 $4d.HelloWorld();
 ```
 
-> JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+
+### Controlling $4d Access
+
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+
+To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
+
+For more information, please refer to [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md).
+
+### Calling 4D Methods from JavaScript
 
 La syntaxe des appels aux méthodes 4D est la suivante :
 
@@ -56,7 +66,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN` : Vous pouvez passer autant de paramètres que nécessaire à la méthode 4D.
-  Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
+ Ces paramètres peuvent être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
 
 - `function(result)` : Fonction à passer comme dernier argument. Cette fonction "callback" est appelée de manière synchrone une fois que la méthode 4D a fini de s'exécuter. Elle reçoit le paramètre `result`.
 
@@ -72,8 +82,8 @@ Considérons une méthode projet 4D nommée `today` qui ne reçoit pas de param�
 Code 4D de la méthode `today` :
 
 ```4d
- #DECLARE : Text
- return String(Current date;System date long)
+#DECLARE -> $result : Text
+$result := String(Current date;System date long)
 ```
 
 Dans la zone web, la méthode 4D peut être appelée avec la syntaxe suivante :
@@ -105,19 +115,29 @@ $4d.today(function(result)
 
 #### Exemple 2
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+Instead of using a standalone method, we can also define a **class** to handle the calculation.
 
-Code 4D de la méthode `calcSum` :
+Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
 ```4d
- #DECLARE (... : Real) -> $sum : Real 
-  // receives n Real type parameters
-  // and returns a Real
- var $i; $n : Integer
- $n:=Count parameters
- For($i;1;$n)
-    $0:=$0+${$i}
- End for
+// SumCalculator user class
+
+Function calcSum(... : Real) -> $sum : Real
+   // receives n Real type parameters
+   // and returns a Real
+  var $i; $n : Integer
+  $n := Count parameters
+
+  For ($i; 1; $n)
+    $sum += ${$i}
+  End for
+```
+
+In another method, we create an instance and assign it to $4d
+
+```4d
+var $myCalculator := cs.SumCalculator.new()
+WA SET CONTEXT OBJECT(*; "myWebArea"; $myCalculator)
 ```
 
 Le code d'exécution JavaScript dans la zone web est le suivant :
@@ -131,7 +151,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## Actions standard
 
-Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. These actions are described in [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html).
+Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques.
 
 ## Evénements formulaire
 
@@ -161,7 +181,7 @@ Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’
 - **Commandes du menu Edition**: lorsque la zone web a le focus, les commandes du menu **Edition** peuvent être utilisées pour effectuer des actions telles que copier, coller, tout sélectionner, etc. selon la sélection.
 - **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Glisser-déposer** : L'utilisateur peut glisser et déposer du texte, des images et des documents dans la zone web ou entre une zone web et les objets du formulaire 4D, en fonction des propriétés des objets 4D.
-  Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+ Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt de l'utilisateur.
 
 > Les fonctions de glisser-déposer décrites ci-dessus ne sont pas prises en charge dans les zones web utilisant le [moteur de rendu du système macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -189,15 +209,15 @@ Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos f
 Pour afficher l'inspecteur Web, vous pouvez soit exécuter la commande `WA OPEN WEB INSPECTOR`, soit utiliser le menu contextuel de la zone Web.
 
 - **Exécuter la commande `WA OPEN WEB INSPECTOR`**<br/>
-  Cette commande peut être utilisée directement avec les zones web à l'écran (objet formulaire) et hors écran.
+ Cette commande peut être utilisée directement avec les zones web à l'écran (objet formulaire) et hors écran.
 
 - **Utiliser le menu contextuel de la zone web**<br/>
-  Cette fonction ne peut être utilisée qu'avec les zones web à l'écran et nécessite que les conditions suivantes soient remplies :
-  - le [menu contextuel](properties_Entry.md#context-menu) de la zone web est activé
-  - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
-  ```4d
-  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-  ```
+ Cette fonction ne peut être utilisée qu'avec les zones web à l'écran et nécessite que les conditions suivantes soient remplies :
+ - le [menu contextuel](properties_Entry.md#context-menu) de la zone web est activé
+ - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
+ ```4d
+ 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+ ```
 
 > Avec le [moteur de rendu système de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite la prise en compte d'une action de navigation dans la zone (par exemple, un rafraîchissement de la page).
 
@@ -315,3 +335,7 @@ Le fichier 4DCEFParameters.json par défaut contient les commutateurs suivants :
 ### Voir également
 
 [Spécifiez vos propres paramètres pour initialiser la zone web intégrée (article de blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+
+
+
+

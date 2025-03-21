@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SEND PACKET.Summary-->El comando SEND PACKET envía un paquete a un puerto serial o a un documento.<!-- END REF--> Si *docRef* se especifica, el paquete se escribe en el documento referenciado por *docRef*. Si *docRef* no se especifica, el paquete se escribe para el puerto serial o documento previamente abierto por el comando [SET CHANNEL](set-channel.md). 
 
@@ -30,7 +30,7 @@ Cuando escribe un documento, el primer SEND PACKET comienza a escribir al comien
 
 **Nota:** este comando es útil para un documento abierto con [SET CHANNEL](set-channel.md). Por otra parte, para un documento abierto con [Open document](open-document.md), [Create document](create-document.md) o [Append document](append-document.md), usted puede utilizar los comandos [Get document position](get-document-position.md) y [SET DOCUMENT POSITION](set-document-position.md) para obtener y cambiar la ubicación en el documento donde ocurrirá la próxima escritura (SEND PACKET) o lectura ([RECEIVE PACKET](receive-packet.md)).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo escribe datos de campos en un documento. Escribe los campos como campos de longitud fija. Si un campo es de longitud menor a la especificada, el campo se llena con espacios. (es decir, se añaden espacios para alcanzar la longitud especificada.) Aunque el uso de campos de longitud fija es un método ineficiente de almacenamiento de datos, algunos sistemas informáticos y ciertas aplicaciones todavía lo utilizan:
 
@@ -51,7 +51,7 @@ El siguiente ejemplo escribe datos de campos en un documento. Escribe los campos
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo ilustra el envío y recuperación de caracteres extendidos vía un BLOB en un documento:
 
@@ -77,13 +77,13 @@ Este ejemplo ilustra el envío y recuperación de caracteres extendidos vía un 
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

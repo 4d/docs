@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->The OBJECT GET COORDINATES command returns the coordinates *left*, *top*, *right* and *bottom* (in points) in variables or fields of the object(s) of the current form defined by the parameters *\** and *object*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ For example, consider the following graphic where the coordinates of the *Capita
 
 As you can see in the first picture, the column is larger than the list box, so its coordinates go beyond the lower limit of the list box, including the footer. In the second picture, the list box has scrolled, so the column has also been moved "under" the *Language* column and header area. In any case, in order to calculate the actual visible part (green area), you need to subtract the red areas.
 
-#### Example 1 
+## Example 1 
 
 Let’s assume that you want to obtain the coordinates of a rectangle formed by all the objects that begin with “button”:
 
@@ -51,7 +51,7 @@ Let’s assume that you want to obtain the coordinates of a rectangle formed by 
  OBJECT GET COORDINATES(*;"button@";vLeft;vTop;vRight;vBottom)
 ```
 
-#### Example 2 
+## Example 2 
 
 For interface needs, you want to surround the clicked area with a red rectangle:
 
@@ -78,14 +78,14 @@ The method returns theoretical coordinates. In cases where the list box has been
 
 ![](../assets/en/commands/pict1740929.en.png)
 
-#### See also 
+## See also 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

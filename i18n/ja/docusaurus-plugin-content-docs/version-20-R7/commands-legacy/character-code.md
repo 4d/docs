@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Character code.Summary-->**Character code** コマンドは、*character* のUnicode UTF-16 コード(1から65535の間)を返します。<!-- END REF-->
 
@@ -22,7 +22,7 @@ characterが1文字より多い場合、 **Character code** は最初の文字�
 
 **Character code** の逆の変換を実行する関数が [Char](char.md) コマンドです。UTF-16コードが示す文字を返します。
 
-#### 例題 1 
+## 例題 1 
 
 通常、大文字と小文字は同じものとして扱われますが、Character codeを使用すれば大文字と小文字を区別できます。以下の結果はTrueになります。  
   
@@ -36,7 +36,7 @@ characterが1文字より多い場合、 **Character code** は最初の文字�
  (Character code("A")=Character code("a"))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、文字列"ABC"の最初の文字Aのコードを返します。  
 
@@ -44,7 +44,7 @@ characterが1文字より多い場合、 **Character code** は最初の文字�
  GetCode:=Character code("ABC") //GetCodeには 65が返されます。これは“A”の文字コードです
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は、キャリッジリターンとタブを検査します。   
 
@@ -79,12 +79,12 @@ characterが1文字より多い場合、 **Character code** は最初の文字�
 
 2 番目の例題が高速に処理される理由は2つあります。ループでは1文字だけが参照され、キャリッジリターンやタブを検査する際に、文字列の比較ではなく倍長整数による比較が行われています。CRやTAB等の一般的なコードを使用して作業する場合には、この手法を利用してください。
 
-#### 参照 
+## 参照 
 
 [Char](char.md)  
 *文字参照記号*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

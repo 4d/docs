@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.throw.Summary-->O comando **throw** cria um erro que será lançado inmediatamente ou quando o método que o chamar o devolva a seu chamador (modo diferido).<!-- END REF-->
 
@@ -28,7 +28,7 @@ Os erros lançados utilizando o comando **throw** são gestionados pelo runtime 
 
 O comando admite três sintaxes:
 
-##### **throw(errorCode{; description})**
+### **throw(errorCode{; description})**
 
 Especifica o código de erro e um texto de descrição opcional, o erro se lança imediatamente.  
 Se não indicar nenhuma descrição, se preenche com:
@@ -36,7 +36,7 @@ Se não indicar nenhuma descrição, se preenche com:
 * Código de erro (errorCode): (host) na aplicação local
 * Código de erro (errorCode): (C00x) em um componente
 
-##### **throw(errorObj)**
+### **throw(errorObj)**
 
 O objeto *errorObj* permite obter informação de erro mais detalhada e controlar a gestão de erros. Pode conter as seguintes propriedades, assim como toda propriedade personalizada à que possa fazer referência à propriedade **message**.
 
@@ -53,14 +53,14 @@ Quando se utilizar esta sintaxe, o objeto *errorObj* se devolve em Últimos erro
 
 **Nota:** é possível chamar o comando várias vezes no mesmo projeto para gerar vários erros. Pode usar a opção diferida para enviar todos os erros de vez.
 
-##### **throw** 
+### **throw** 
 
 Lança todos os erros atuais em **modo diferido**, o que significa que se adicionarão a uma pilha e serão geridas quando voltar ao método que os chama. Isso se faz tipicamente desde dentro de uma retrochamada [ON ERR CALL](on-err-call.md).
 
 * **Em uma aplicação**: quando se produz um erro, se adiciona à pilha de erros e se chama ao método [ON ERR CALL](on-err-call.md) da aplicação ao final do método atual. A função [Last errors](last-errors.md) devolve a pilha de erros.
 * **Como consequência, em um componente:** a pilha de erros pode ser enviada à aplicação local e se chama ao método [ON ERR CALL](on-err-call.md) da aplicação local.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 ```4d
  var $code : Integer
@@ -70,43 +70,43 @@ Lança todos os erros atuais em **modo diferido**, o que significa que se adicio
  throw($code ;$description) //  Lança um erro com a mensagem "This is a custom error" e errCode = 50042
 ```
 
-#### Example 2 
+## Example 2 
 
 ```4d
 throw({errCode: 1; message: "This an error"}) // Lança um erro com a mensagem errCode = 1 e a mensagem "This an error"
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 ```4d
 throw({errCode: 1}) // Lança um erro com  errCode = 1 e a mensagem "Error code: 1 (host)"
 ```
 
-#### Example 4 
+## Example 4 
 
 ```4d
 throw({message: "This an error"}) // Lança um erro com errCode = -1 e a mensagem "This is my error"
 ```
 
-#### Example 5 
+## Example 5 
 
 ```4d
 throw({message: "This is my error"; deferred: True}) // Lança um erro com a mensagem "This is my error" e errCode = -1 em modo diferido
 ```
 
-#### Example 6 
+## Example 6 
 
 ```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lança um erro com a mensagem "File myFileName not found (myFilePath)" em modo diferido.
 ```
 
-#### Ver também 
+## Ver também 
 
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -3,7 +3,7 @@ id: webAreaOverview
 title: Área Web
 ---
 
-As áreas da Web podem exibir vários tipos de conteúdo da Web em seus formulários: Páginas HTML com conteúdo estático ou dinâmico, arquivos, imagens, JavaScript, etc. O mecanismo de renderização da área da Web depende da plataforma de execução do aplicativo e da [opção de mecanismo de renderização] selecionada (properties_WebArea.md#use-embedded-web-rendering-engine).
+As áreas da Web podem exibir vários conteúdo Web em seus formulários: páginas HTML com conteúdo estático ou dinâmico, arquivos, imagens, JavaScript, etc. As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de <a href="properties_WebArea.md#use-embedded-web-rendering-engine">a opção motor de renderizado</a> selecionada. O mecanismo de renderização da área da Web depende da plataforma de execução do aplicativo e da [opção de mecanismo de renderização] selecionada (properties_WebArea.md#use-embedded-web-rendering-engine).
 
 É possível criar várias áreas web no mesmo formulário. No entanto, observe que o uso de áreas web deve seguir [várias regras](#web-area-rules).
 
@@ -16,7 +16,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 Duas variáveis específicas podem ser associadas a cada área web:
 
 - [`URL`](properties_WebArea.md#url) -- para controlar a URL exibida pela área Web
-- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área da Web.
+- [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área Web.
 
 > A partir do 4D v19 R5, a variável Progression não é mais atualizada em Web Areas usando o [mecanismo de renderização do sistema Windows](./webArea_overview.md#web-rendering-engine).
 
@@ -28,12 +28,12 @@ A seleção do motor de renderização web aninhado permite chamar aos métodos 
 
 ### Acessar métodos 4D
 
-Quando a propriedade [Access 4D methods](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
+Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-methods) estiver selecionada, você pode chamar métodos 4D de uma área web.
 
 :::note Notas
 
 - Essa propriedade só estará disponível se a área da Web [usar o mecanismo de renderização da Web incorporado] (properties_WebArea.md#use-embedded-web-rendering-engine).
-- Por motivos de segurança, já que permite a execução de código 4D, essa opção só deve ser ativada para páginas confiáveis, como as páginas geradas pelo aplicativo.
+- Por motivos de segurança, já que permite a execução de código 4D, essa opção só deve ser ativada para páginas confiáveis, como as páginas geradas pela aplicação.
 
 :::
 
@@ -56,13 +56,13 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN`: Você pode passar tantos parâmetros quanto precisa para o método 4D.
-  Esses parâmetros podem ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, matriz, objeto).
+ Esses parâmetros podem ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, array, objeto).
 
 - `function(result)`: Função a ser passada como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Ele recebe o parâmetro `result`.
 
-- `result`: Execution result of the 4D method. Esse resultado pode ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, matriz, objeto).
+- `result`: Execution result of the 4D method. Este resultado pode ser de qualquer tipo suportado pelo JavaScript (cadeia de caracteres, número, array, objeto).
 
-> Por padrão, 4D trabalha em UTF-8. Quando você retornar texto contendo caracteres estendidos, por exemplo, caracteres com acentos, certifique-se de que a codificação da página exibida na área da Web seja declarada como UTF-8, caso contrário, os caracteres poderão ser renderizados incorretamente. Nesse caso, adicione a seguinte linha na página HTML para declarar a codificação:
+> Por padrão, 4D trabalha em UTF-8. Quando você retornar texto contendo caracteres estendidos, por exemplo, caracteres com acentos, certifique-se de que a codificação da página exibida na área Web seja declarada como UTF-8, caso contrário, os caracteres poderão ser renderizados incorretamente. Nesse caso, adicione a seguinte linha na página HTML para declarar a codificação:
 > `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemplo 1
@@ -159,9 +159,9 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
 - Comandos do menu **Editar**: Quando a área da Web está em foco, os comandos do menu **Edit** podem ser usados para executar ações como copiar, colar, selecionar tudo etc., de acordo com a seleção.
-- **Menu de contexto**: É possível usar o [contexto menu](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Arrastar e soltar**: O usuário pode arrastar e soltar texto, imagens e documentos dentro da área da Web ou entre uma área da Web e os objetos do formulário 4D, de acordo com as propriedades do objeto 4D.
-  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`] (Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+ Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`] (Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
 > Os recursos de arrastar e soltar descritos acima não são compatíveis com as áreas da Web que usam o [mecanismo de renderização do sistema macOS] (properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -189,15 +189,15 @@ Pode ver e usar um inspetor web dentro das áreas web de seus formulários. The 
 Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPECTOR` ou usar o menu de contexto da área da Web.
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
-  This command can be used directly with onscreen (form object) and offscreen web areas.
+ This command can be used directly with onscreen (form object) and offscreen web areas.
 
 - **Use the web area context menu**<br/>
-  This feature can only be used with onscreen web areas and requires that the following conditions are met:
-  - o [menu contextual](properties_Entry.md#context-menu) para a área web está ativado
-  - o uso do inspetor é expressamente permitido na área por meio da seguinte declaração:
-  ```4d
-  	WA SET PREFERENCE(*; "WA";WA enable Web inspector;True)  
-  ```
+ This feature can only be used with onscreen web areas and requires that the following conditions are met:
+ - o [menu contextual](properties_Entry.md#context-menu) para a área web está ativado
+ - o uso do inspetor é expressamente permitido na área por meio da seguinte declaração:
+ ```4d
+ 	WA SET PREFERENCE(*; "WA";WA enable Web inspector;True)  
+ ```
 
 > Com [engenharia de renderização de sistema Windows](properties_WebArea. d#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
 
@@ -215,7 +215,7 @@ Quando você fez as configurações conforme descrito acima, você tem novas op�
 
 O 4DCEFParameters.json é um arquivo de configuração que permite a personalização dos parâmetros CEF para gerenciar o comportamento das áreas da Web nos aplicativos 4D.
 
-[As opções padrão](#default-file) são fornecidas, mas você pode substituí-las usando um arquivo 4DCEFParameters.json personalizado.
+Os [Interruptores padrão](#default-file) são fornecidos, mas você pode substituí-los usando um arquivo 4DCEFParameters.json personalizado.
 
 Na fase de desenvolvimento (usando o aplicativo 4D), crie um arquivo 4DCEFParameters.json no seguinte local:
 
@@ -315,3 +315,7 @@ O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
 ### Veja também
 
 [Especifique seus próprios parâmetros para inicializar a área Web incorporada (postagem no blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+
+
+
+

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->O comando Dynamic pop up menu faz aparecer um menu suspenso hierárquico na localização atual do mouse ou na localização definida pelos parâmetros opcionais *Coordx* e *Coordy*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Se uma ação padrão for associada a um item menu, é levado em consideração 
 * Se o título da ação foi estabelecido ao item usando a constante ak standard action title, o nome localizado é exibido no menu.
 * Quando o item for selecionado, a ação padrão associada é chamada (execução é assíncrona).
 
-#### Exemplo 
+## Exemplo 
 
 Este código permite criar um menu emergente dinâmico hierárquico baseado em ações padrão:
 
@@ -84,7 +84,7 @@ Este código permite criar um menu emergente dinâmico hierárquico baseado em a
  paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
@@ -92,7 +92,7 @@ Este código permite criar um menu emergente dinâmico hierárquico baseado em a
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

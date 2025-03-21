@@ -41,7 +41,7 @@ Com esta sintaxe:
 - os nomes de caminho absolutos começam com um "/"
 - para subir uma pasta num caminho relativo, utilize "../" à frente do nome do caminho (por segurança, não pode subir no sistema de arquivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
+Na sintaxe POSIX, você geralmente usará nomes de caminho `filesystem` com os comandos [`File`](../commands/file.md) e [`Folder`](../commands/folder.md), por exemplo:
 
 ```4d
 var $pathFile : 4D.File
@@ -59,7 +59,7 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ":" e "\" como o segundo e terceiro caractere,
 - o texto começa por "\\".
 
 Exemplos com [`Folder`](../commands/folder.md):
@@ -69,7 +69,7 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Caminhos de acesso Windows e sequências de escape
 
 A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
+As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder) esperam nomes de caminho POSIX relativos. Por exemplo:
 
 ```4d
 var $userImages : 4D.Folder

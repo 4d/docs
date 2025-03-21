@@ -17,7 +17,7 @@ The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `su
 
 `Super` serves two different purposes:
 
-1. Inside a [constructor code]((../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Inside a [constructor code](../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
 
 - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
@@ -30,14 +30,14 @@ Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
 
-2. Inside a [class function](#class-function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //calls "doSomething" function  
 //declared in superclasses
 ```
 
-#### Example 1
+## Example 1
 
 This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
 
@@ -76,7 +76,7 @@ Function getArea() : Integer
  return This.height*This.width
 ```
 
-#### Example 2
+## Example 2
 
 This example illustrates the use of `Super` in a class function. You created the `Rectangle` class with a function:
 
@@ -108,11 +108,11 @@ $message:=$square.description() //I have 4 sides which are all equal
 ```
 
 
-#### See also
+## See also
 
 [**Concept page for Classes**](../Concepts/classes.md). 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

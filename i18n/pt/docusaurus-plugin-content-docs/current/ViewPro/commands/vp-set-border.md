@@ -15,7 +15,7 @@ title: VP SET BORDER
 | borderStyleObj | Object | -> | Objeto que contém o estilo da borda    |                  |
 | borderPosObj   | Object | -> | Objeto que contém a colocação da borda | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET BORDER` command <!-- REF #_method_.VP SET BORDER.Summary -->applies the border style(s) defined in *borderStyleObj* and *borderPosObj* to the range defined in the *rangeObj*<!-- END REF -->.
 
@@ -42,7 +42,7 @@ You can define the position of the *borderStyleObj* (i.e., where the line is app
 | innerHorizontal | boolean | Estilo de linha da borda aplicado apenas às bordas horizontais interiores. |
 | innerVertical   | boolean | Estilo da borda aplicado apenas a bordas verticais interiores.             |
 
-#### Exemplo 1
+## Exemplo 1
 
 Este código produz uma borda à volta de todo o intervalo:
 
@@ -54,7 +54,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER1.PNG)
 
-#### Exemplo 2
+## Exemplo 2
 
 Esse código demonstra a diferença entre `VP SET BORDER` e a definição de bordas com o comando [`VP SET CELL STYLE`](vp-set-cell-style.md):
 
@@ -73,6 +73,6 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ![](../../assets/en/ViewPro/cmd_vpSETBORDER2.PNG)
 
-#### Veja também
+## Veja também
 
 [VP SET CELL STYLE](vp-set-cell-style.md)

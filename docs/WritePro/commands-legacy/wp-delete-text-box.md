@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->The **WP DELETE TEXT BOX** command deletes the text box defined by the *textBox* parameter.<!-- END REF-->
 
 If *textBox* does not exist, the command does nothing.
 
-#### Example 
+## Example 
 
 You want to delete a text box using its ID:
 
@@ -36,6 +36,6 @@ You want to delete a text box using its ID:
  WP DELETE TEXT BOX($myTextBox)
 ```
 
-#### See also 
+## See also 
 
 [WP New text box](wp-new-text-box.md)  

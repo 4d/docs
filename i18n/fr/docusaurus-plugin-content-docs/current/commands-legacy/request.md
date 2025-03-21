@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Request.Summary-->La fonction **Request** affiche une boîte de dialogue de demande d'informations composée d'un message, d'une zone de saisie de texte, d'un bouton **OK** et d'un bouton **Annuler**.<!-- END REF--> 
 
@@ -33,7 +33,7 @@ L'utilisateur peut taper des caractères dans la zone de saisie de texte. Pour d
 
 **Conseil :** Si vous voulez récupérer plusieurs informations de l'utilisateur, construisez un formulaire approprié et appelez-le avec la commande [DIALOG](../commands/dialog.md), plutôt que d'afficher une succession de boîtes de dialogue du type **Request**.
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne de code :
 
@@ -45,7 +45,7 @@ La ligne de code :
 
 ![](../assets/en/commands/pict4225119.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Le code suivant :
 
@@ -62,7 +62,7 @@ Le code suivant :
 
 ![](../assets/en/commands/pict4225137.fr.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 La ligne de code :
 
@@ -74,12 +74,12 @@ La ligne de code :
 
 ![](../assets/en/commands/pict4225146.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

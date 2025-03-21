@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Int.Summary-->**Int** retourne la partie entière de *nombre* en l'arrondissant à l'entier inférieur.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre le fonctionnement de **Int** pour les nombres positifs et négatifs. Notez que la partie décimale du nombre est supprimée :
 
@@ -27,11 +27,11 @@ L'exemple suivant illustre le fonctionnement de **Int** pour les nombres positif
  y:=Int(-123,4) // y vaut –124
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Dec](dec.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

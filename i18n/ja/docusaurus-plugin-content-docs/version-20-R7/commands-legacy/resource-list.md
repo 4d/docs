@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->RESOURCE LIST コマンドは、*resType*に渡したタイプのリソースIDとリソース名から、*resIDs*と*resNames*の配列を作成します。<!-- END REF-->
 
@@ -28,7 +28,7 @@ RESOURCE LISTを呼び出す前に配列を事前定義する場合は、*resIDs
 
 このコマンドの実行後、[Size of array](size-of-array.md "Size of array")を*resIDs*または*resNames*の配列に対して適用し、見つかったリソースの数を調べることができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、配列*$alResID*と*$atResName*にデータベースのストラクチャファイル内に存在するストリングリストリソースのIDと名前を返します: 
 
@@ -43,7 +43,7 @@ RESOURCE LISTを呼び出す前に配列を事前定義する場合は、*resIDs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、現在開かれているリソースファイル内にあるピクチャリソースをデータベースのピクチャライブラリの中にコピーします: 
 
@@ -66,11 +66,11 @@ RESOURCE LISTを呼び出す前に配列を事前定義する場合は、*resIDs
  CLOSE WINDOW
 ```
 
-#### 参照 
+## 参照 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

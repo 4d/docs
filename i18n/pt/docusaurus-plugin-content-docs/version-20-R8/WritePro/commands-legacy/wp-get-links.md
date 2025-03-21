@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get links.Summary-->**WP Get links** devolve a coleção de todos os links definidos em *objRange*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ No parâmetro *objRange*, pode passar:
 | \[ \].bookmark  | Texto           | Nome de marcador para o link                                  | links de marcadores                |
 | \[ \].range     | Objeto          | Range da etiqueta de link. Ver *Comandos de seleção de faixa* | todos os links                     |
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar a cor de todas as etiquetas de link url em um documento 4D Write Pro:
 
@@ -53,7 +53,7 @@ Se quiser mudar a cor de todas as etiquetas de link url em um documento 4D Write
  End for each
 ```
 
-#### Ver também 
+## Ver também 
 
   
 [WP Get formulas](wp-get-formulas.md)  

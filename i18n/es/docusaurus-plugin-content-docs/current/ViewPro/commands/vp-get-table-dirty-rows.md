@@ -23,9 +23,9 @@ title: VP Get table dirty rows
 | tableName  | Text       | ->                          | Nombre de la tabla                                                                                                   |                  |
 | reset      | Boolean    | ->                          | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
 | sheet      | Integer    | ->                          | Índice de la hoja (hoja actual si se omite)                                                       |                  |
-| Result     | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->devuelve una colección de objetos *dirty row*, que contienen los elementos que fueron modificados desde el último reinicio en la tabla especificada *tableName*<!-- END REF -->.
 
@@ -49,7 +49,7 @@ Cada objeto *dirty row* de la colección devuelta contiene las siguientes propie
 
 Si no se encuentra *tableName* o si no contiene una columna modificada, el comando devuelve una colección vacía.
 
-#### Ejemplo
+## Ejemplo
 
 Desea contar el número de lineas editadas:
 
@@ -59,7 +59,7 @@ $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
 
-#### Ver también
+## Ver también
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>

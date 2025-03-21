@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Summary-->O comando SELECT LIST ITEMS BY REFERENCE seleciona os elementos cujo número de referência se passa em *refElem* e opcionalmente em *refArray*, na lista cujo número de referência se passa em *lista*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Neste caso, o elemento designado pelo parâmetro *refElem* determina o novo elem
 
 Se trabalha com os números de referência dos elementos, tenha certeza de construir uma lista na qual os elementos tenham números de referência únicos; do contrário não poderá diferenciá-los. Para maior informação, consulte a descrição do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 
-#### Exemplo 
+## Exemplo 
 
 *hList* é uma lista cujos elementos tem números de referência únicos. O método a seguir de objeto para um botão seleciona o item pai (se o houver) do elemento selecionado atualmente:
 
@@ -44,13 +44,13 @@ Se trabalha com os números de referência dos elementos, tenha certeza de const
     SELECT LIST ITEM BY REFERENCE(hList;List item parent(hList;$vlItemRef)) // Seleçao do elemento pai End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

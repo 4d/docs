@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilité 
+## Compatibilité 
 
 <!--REF #_command_.WP Table range.Summary-->La commande **WP Table range** était nommée **WP Create table range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté.
 
-#### Description 
+## Description 
 
 La commande **WP Table range** retourne un objet plage qui n'adresse que les tableaux qui intersectent l'*objCible* que vous avez passé en paramètre. Elle retournera une plage de wk type table, même si *objCible* passé en paramètre ne contient pas de tableau. L'objet plage tableaux retourné peut être utilisé par [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) pour gérer les attributs à appliquer aux tableaux et à leur contenu.
 
@@ -28,7 +28,7 @@ Dans le paramètre *objCible*, vous pouvez passer :
 * un élément (corps / en-tête / pied / paragraphe / section / sous-section), ou
 * un document 4D Write Pro
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez modifier l'apparence des tableaux contenus dans la plage tableau :
 
@@ -43,7 +43,7 @@ Vous souhaitez modifier l'apparence des tableaux contenus dans la plage tableau 
  WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get elements](wp-get-elements.md)  
 [WP Text range](wp-text-range.md)  

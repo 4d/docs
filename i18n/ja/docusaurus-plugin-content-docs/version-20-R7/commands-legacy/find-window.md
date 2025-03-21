@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Find window.Summary-->Find window コマンドは、*left* と *top*に渡した座標のポイントにある最初のウィンドウの参照を返します。<!-- END REF-->
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 *windowPart* 引数には、ウィンドウが存在した場合には3が、そうでない場合には0が返されます。  
 (**互換性に関する注意:** 4D v14以降、*Find Window* テーマの定数は廃止予定となります)
 
-#### 参照 
+## 参照 
 
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

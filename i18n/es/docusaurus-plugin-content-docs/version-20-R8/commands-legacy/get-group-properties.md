@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES devuelve las propiedades del grupo cuyo número de referencia se pasa en *refGrupo*.<!-- END REF--> Pase el número de referencia del grupo devuelto por el comando [GET GROUP LIST](get-group-list.md). 
 
@@ -30,17 +30,17 @@ Si pasa el parámetro opcional *miembros*, se devuelven los números de referenc
 
 **Nota para bases de datos binarias**: los valores de ID de grupo y usuario dependen de su creador (Diseñador, Administrador o propietario del grupo afiliado). Para más información, consulte el párrafo *Rangos de identificaciones de usuarios y grupos*.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si no tiene privilegios de acceso para llamar al comando GET GROUP PROPERTIES o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

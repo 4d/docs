@@ -18,7 +18,7 @@ title: HTTPリクエストの処理
 
 ### データベースメソッドの呼び出し
 
-データベースメソッドは、URL とともに呼び出されます。 `On Web Connection` データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。
+データベースメソッドは、URL とともに呼び出されます。 データベースメソッドは、URL とともに呼び出されます。
 
 たとえば、"*a/b/c*" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"*a/b/c.html*" はデータベースメソッドを呼び出しません。
 
@@ -90,7 +90,7 @@ title: HTTPリクエストの処理
 ### $3 - Webクライアントの IPアドレス
 
 $3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
-> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。 たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
+> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
 ### $4 - サーバー IPアドレス
 
@@ -164,7 +164,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 > この場合、Webサーバーがポストされたフォームを受信すると、`On Web Authentication` データベースメソッドが (あれば) 呼び出されます。
 
-サーバーに投稿された HTMLページに含まれるすべてのフィールドの [名前と値を取得](#httpリクエストから値を取得する) するには、このメソッド内で `WEB GET VARIABLES` コマンドを呼び出す必要があります。
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 フォームのアクションを定義する例:
 

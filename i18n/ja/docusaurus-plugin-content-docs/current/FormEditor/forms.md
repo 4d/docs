@@ -10,7 +10,7 @@ title: Forms
 また、以下の機能により、フォームは他のフォームを含むことができます:
 
 - [サブフォームオブジェクト](FormObjects/subform_overview.md)
-- [継承フォーム](forms.md#継承フォーム)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## フォームを作成する
 
@@ -18,7 +18,7 @@ title: Forms
 
 - **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
-- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources-フォルダー) に保存します。 例:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). 例:
 
 ```
 {
@@ -98,7 +98,7 @@ title: Forms
 
 ## 継承フォーム
 
-4D では "継承フォーム" を使用することができます。これはつまり、_フォームA_ の全オブジェクトが _フォームB_ で使用可能であるということです。 この場合、_フォームB_ は _フォームA_ からオブジェクトを "継承" します。
+4D では "継承フォーム" を使用することができます。これはつまり、*フォームA* の全オブジェクトが *フォームB* で使用可能であるということです。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。
 
 継承フォームへの参照は常にアクティブです。そのため、継承フォームの要素が変更されると (たとえば、ボタンスタイル)、この要素を使用する全フォームが自動的に変更されます。
 

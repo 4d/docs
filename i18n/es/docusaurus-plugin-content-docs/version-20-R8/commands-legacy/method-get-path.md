@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD Get path.Summary-->El comando **METHOD Get path** devuelve la ruta de acceso interna completa de un método.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Pase los valores en los parámetros *laTabla*, *nomObjeto* y *nomObjetoForm* en 
 
 Si el comando se ejecuta desde un componente, devuelve por defecto las rutas de los métodos del componente. Si pasa el parámetro *\**, el array contendrá las rutas de los métodos de la base local.
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
   //Recuperar la ruta de acceso del método base "On Startup":
@@ -59,13 +59,13 @@ Si el comando se ejecuta desde un componente, devuelve por defecto las rutas de 
  $path:=METHOD Get path(Path table form;[Empleados];"input";"OK")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -5,13 +5,13 @@ title: Datastores distants
 
 Un **datastore distant** est une référence, dans une application 4D locale (4D ou 4D Server), à un [datastore](dsMapping.md#datastore) stocké dans une autre application 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore.md) command.
+L'application 4D locale se connecte et référence le datastore distant à l'aide de la commande [`Open datastore`](../commands/open-datastore.md).
 
 Sur la machine distante, 4D ouvre une [session](../WebServer/sessions.md) pour gérer les requêtes de l'application qui a appelé `Open datastore`. Les requêtes utilisent en interne [l'API REST](../REST/gettingStarted.md), ce qui signifie qu'elles peuvent avoir besoin de [licences disponibles](../REST/authUsers.md).
 
 ## Utiliser des sessions web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../commands/open-datastore.md) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande [`Open datastore`](../commands/open-datastore.md), la connexion avec les process de requête est gérée via des [sessions web](../WebServer/sessions.md) sur la machine distante.
 
 La session web créée sur le datastore distant est identifiée à l'aide d'un ID de session interne, associé au `localID` du côté de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
@@ -50,8 +50,8 @@ Les fonctionnalités ORDA relatives au verrouillage d'entité et aux transaction
 - Si un process verrouille une entité à partir d'un datastore distant, l'entité est verrouillée pour tous les autres process, même lorsque ces process partagent la même session (voir [Verrouillage d'entités](entities.md#entity-locking)). Si plusieurs entités pointant vers le même enregistrement ont été verrouillées dans un process, elles doivent toutes être déverrouillées dans le process pour supprimer le verrou. Si un verrou a été mis sur une entité, il est supprimé lorsqu'il n'existe plus de référence à cette entité en mémoire.
 - Les transactions peuvent être lancées, validées ou annulées séparément sur chaque datastore distant à l'aide des méthodes `dataStore.startTransaction( )`, `dataStore.cancelTransaction( )`, et `dataStore.validateTransaction( )`. Elles n’ont pas d’incidences sur les autres datastore.
 - Classic 4D language commands ([`START TRANSACTION`](../commands-legacy/start-transaction.md), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md), [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md)) only apply to the main datastore (returned by `ds`).
-  Si une entité d'un datastore distant est verrouillée par une transaction dans un process, les autres process ne peuvent pas la mettre à jour, même si ces process partagent la même session.
+    Si une entité d'un datastore distant est verrouillée par une transaction dans un process, les autres process ne peuvent pas la mettre à jour, même si ces process partagent la même session.
 - Les verrous sur les entités sont supprimés et les transactions sont annulées :
-  - lorsque le process est tué.
-  - quand la session est fermée sur le serveur
-  - lorsque la session est arrêtée à partir de la fenêtre d’administration du serveur.
+    - lorsque le process est tué.
+    - quand la session est fermée sur le serveur
+    - lorsque la session est arrêtée à partir de la fenêtre d’administration du serveur.

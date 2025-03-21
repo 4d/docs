@@ -581,7 +581,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 ```
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
+
 ## .setAppInfo()
 
 <details><summary>Historique</summary>

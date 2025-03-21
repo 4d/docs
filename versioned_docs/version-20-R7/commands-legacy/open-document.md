@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open document.Summary-->The **Open document** command opens the document whose name or pathname you pass in *document*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ Once you have opened a document, you can read and write in the document using th
 
 Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the document.
 
-#### Example 1 
+## Example 1 
 
 The following example opens an existing document called Note, writes the string "Good-bye" into it, and closes the document. Any existing content in the document will be overwritten: 
 
@@ -63,7 +63,7 @@ The following example opens an existing document called Note, writes the string 
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 You can read a document even if it is already open in write mode:
 
@@ -73,7 +73,7 @@ You can read a document even if it is already open in write mode:
  vRef:=Open document("PassFile";"TEXT";Read Mode)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the document is correctly opened, the OK system variable is set to 1; otherwise, it is set to 0\. After the call, the Document system variable contains the full name of the document.   
 If you call **Open document** with a mode of 3, the function returns ?00:00:00? (no document reference). The document is not opened but the Document and OK system variables are updated:
@@ -83,12 +83,12 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 
 **Note:** If you pass an empty string in *document*, an open file dialog box appears. If the user chooses a document and clicks the OK button, *document* is set to the path of the document the user selected and OK is set to 1\. If the user clicked the Cancel button, OK is set to 0.
 
-#### See also 
+## See also 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

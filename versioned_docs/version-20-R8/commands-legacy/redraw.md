@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REDRAW.Summary-->When you use a method to change the value of a field displayed in a subform, you must execute REDRAW to ensure that the form is updated.<!-- END REF--> 
 
 In the context of list boxes in selection mode, when the REDRAW statement is applied to a list box type object it refreshes the data that is displayed in the object. This statement must be called typically after data modification has occurred in the records of the selection. 
 
-#### See also 
+## See also 
 
 [SET TIMER](set-timer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

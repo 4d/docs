@@ -8,61 +8,61 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| 引数          | 型                                               |                             | 説明                                                                      |
-| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                                          |
-| attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | New attribute value                                                     |
-| attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
+| 引数          | 型                                               |                             | 説明                                  |
+| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------- |
+| targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
+| attribName  | Text                                            | &#8594; | 設定する属性名                             |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | 新しい属性の値                             |
+| attribObj   | Object                                          | &#8594; | 設定したい属性の名前とそれに対応する設定したい値を格納したオブジェクト |
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
-The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+**WP SET ATTRIBUTES** コマンドを使うと<!--REF #_command_.WP SET ATTRIBUTES.Summary-->レンジ、要素、あるいはドキュメントのあらゆる属性の値を設定することができます。<!-- END REF-->このコマンドを使ってあらゆる4D Write Pro内部の属性(文字、段落、ドキュメント、表組、またはピクチャー)にアクセスすることができます。
 
-In *targetObj*, you can pass :
+*targetObj* 引数には、以下のいずれかを渡すことができます :
 
 - レンジ
-- an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- 要素(ヘッダー / フッター / 本文 / 表組 / 行 / 段落 / アンカーされた画像あるいはインライン画像 / セクション / サブセクション / スタイルシート)
 - 4D Write Pro ドキュメント
 
-You can specify attributes to set for *targetObj* in one of two ways:
+*targetObj* 引数で指定したターゲット内で設定したい属性は、2通りの方法で指定することができます:
 
-- Use the *attribName* and *attribValue* parameters. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
+- *attribName* および*attribValue* 引数を使用する。 *attribName* 引数にはターゲット内で設定したい属性の名前を渡し、*attribValue* 引数には設定したい新しい値を渡します。 一度の呼び出しで*attribName*/*attribValue* のペアを好きなだけ渡すことができます。
 
-- Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
+- *attribObj* 引数を使用して、属性の名前と対応する値をオブジェクトのプロパティとして格納した一つのオブジェクトを渡すことができます。
 
-For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
+渡すことのできる属性の包括的な一覧と、そのスコープおよび対応する値については、*4D Write Pro属性* の章を参照してください。
 
-#### 例題 1
+## 例題 1
 
-In this 4D Write Pro area, you selected a word:
+この4D Write Proエリアにて、以下のように単語を選択した場合を考えます:
 
 ![](../../assets/en/WritePro/commands/pict2643639.en.png)
 
 以下のコードを実行した場合:
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
+ $range:=WP Get selection(*;"WParea") // 選択されたレンジを取得
  
-  // set the shadow offset in pt for the selected text
+  // 選択されたテキストに対して影のオフセットをpt単位で設定
  WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
+  // 段落のパッディングを設定
  WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
+  // 10 ptの境界線を定義
  WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
+  // 境界線カラーを設定
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
-You get the following result:
+以下のような結果になります:
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
-#### 例題 2
+## 例題 2
 
-This example illustrates the use of wk inside and wk outside constants:
+以下の例では、wk inside とwk outside 定数の使用を説明します:
 
 ```4d
  $wpRange:=WP Get selection(writeProdoc)
@@ -71,13 +71,13 @@ This example illustrates the use of wk inside and wk outside constants:
  WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
-Assuming all of the contents were selected, the result is:
+ドキュメント全体が選択されていた場合、結果は以下のようになります:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
-#### 例題 3
+## 例題 3
 
-You want to set a background image for the document:
+ドキュメントに対して背景画像を設定したい場合を考えます:
 
 ```4d
  var WParea : Object
@@ -88,11 +88,11 @@ You want to set a background image for the document:
  WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
-The result is:
+結果は以下のようになります:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area. All attributes are passed using a single object:
+背景画像を、印刷可能エリア全体 に対して設定したい場合を考えます。 全ての属性は単一のオブジェクトを使用して渡されます:
 
 ```4d
  var WParea : Object
@@ -108,19 +108,19 @@ You want to set a background image that covers the whole printable area. All att
  WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
-The result is:
+結果は以下のようになります:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
 :::note
 
-The paper box value is only applicable to documents and sections.
+paper box の値はドキュメントあるいはセクションに対してのみ適用可能です。
 
 :::
 
-#### 例題 4
+## 例題 4
 
-You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
+異なる間隔のタブを設定し、最後のタブに対して先頭文字を指定したい場合を考えます:
 
 ```4d
  $tab1:=New object()
@@ -142,11 +142,11 @@ You want to set tabs at varying intervals and designate a character as the leadi
  WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
-The result is:
+結果は以下のようになります:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 
-#### 参照
+## 参照
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\

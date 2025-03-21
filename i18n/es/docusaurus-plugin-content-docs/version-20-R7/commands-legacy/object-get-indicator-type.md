@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->El comando **OBJECT Get indicator type** devuelve el tipo del indicador actual asignado al termómetro(s) designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -31,11 +31,11 @@ Puede comparar el valor devuelto por el comando con las siguientes constantes, q
 | Barber shop               | Entero largo | 2     | Barra que muestra una animación continua          |
 | Progress bar              | Entero largo | 1     | Barra de progreso estándar                        |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

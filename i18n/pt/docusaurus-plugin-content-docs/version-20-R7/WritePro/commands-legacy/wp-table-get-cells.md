@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Table get cells.Summary-->O comando **WP Table get cells** \[#descv\]devolve um novo objeto de faixa de células que contenha a seleção de células *refTabela* definida por *colIni*, *filaIni*, *numCol* e *numFilas*.<!-- END REF-->\[#descv\]
 
@@ -41,7 +41,7 @@ Se omitir *numFilas*, se devolve uma única fila. Se omitir *numCol* e *numFilas
 
 Se *colIni* mais *numCol* ou *filaIni* mais *numFilas* excederem o número de colunas/filas em *refTabela*, ou se *colIni* ou *filaIni for* maior que o número de colunas/filas em *refTabela*, a range devolvida contém o máximo possível de colunas/filas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser modificar os atributos de uma faixa de células:
 
@@ -67,7 +67,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict3307320.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Para obter uma faixa de células iniciando da célula "5x7" ao final da fila:
 
@@ -87,7 +87,7 @@ Para obter uma faixa de células iniciando da célula "5x7" até o final da tabe
  $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser recuperar as células que um usuário tiver sido selecionado:
 
@@ -99,7 +99,7 @@ Se quiser recuperar as células que um usuário tiver sido selecionado:
  $cells:=WP Table get cells($userSelection)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP Table get columns ](wp-table-get-columns.md)  
 [WP Table get rows](wp-table-get-rows.md)  

@@ -7,7 +7,7 @@ Une application exploitée de manière continue enregistre en permanence des mod
 
 En outre, 4D travaille en permanence avec un cache de données situé en mémoire. Toute modification apportée aux données de l'application est stockée temporairement dans le cache avant d'être écrite sur le disque dur. Ce principe permet d’accélérer le fonctionnement des applications ; en effet, les accès mémoire sont bien plus rapides que les accès disque. Si un incident survient sur l'application avant que les données stockées dans le cache aient pu être écrites sur le disque, vous devrez intégrer le fichier d’historique courant afin de récupérer entièrement l'application.
 
-Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Ces fonctions sont accessibles via le CSM : reportez-vous aux sections [Page Analyse d'activités](MSC/analysis.md) et [Page Retour arrière](MSC/rollback.md).
+Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Fonctionnement du fichier d'historique
 
 ## Fonctionnement du fichier d'historique
 
@@ -37,20 +37,20 @@ Le fichier d’historique courant est automatiquement sauvegardé avec le fichie
 
 ## Créer le fichier d’historique
 
-Par défaut, toute application créée avec 4D utilise un fichier d’historique (option définie dans la Page **Général** des Préférences de 4D). Le fichier d’historique est nommé par défaut _data.journal_ et est placé dans le dossier Data.
+Par défaut, toute application créée avec 4D utilise un fichier d’historique (option définie dans la Page **Général** des Préférences de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
 Vous pouvez à tout moment savoir si votre application utilise un fichier d’historique : l’option **Utiliser le fichier d’historique** est cochée dans la Page **Sauvegarde/Configuration** des Propriétés. Si vous avez désélectionné cette option ou si vous utilisez une application sans fichier d’historique et souhaitez mettre en place une stratégie de sauvegarde avec fichier d’historique, il vous appartient d’en créer un.
 
 Pour créer un fichier d’historique :
 
 1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** .
-   Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé _data.journal_.
+  Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
 
 2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier.
-   Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
+  Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
 
 3. Cliquez sur **Enregistrer**.
-   Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
+  Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
 4. Validez la boîte de dialogue des Propriétés.
 
@@ -67,9 +67,9 @@ Vous devrez créer un autre fichier d’historique si vous créez un nouveau fic
 
 ## Paramètres du fichier journal
 
-Les [paramètres du fichier journal](settings.md#log-file-management) sont basés sur deux informations : une valeur booléenne et un chemin d'accès.
+Les [paramètres du fichier journal](settings.md#log-management) sont basés sur deux informations : une valeur booléenne et un chemin d'accès.
 
-1. **Valeur booléenne** : indique si la fonction "Use Log File" est activée ou désactivée dans l'application. Par défaut, la valeur booléenne est stockée dans _catalog.4DCatalog_. Toutefois, lorsque les [paramètres utilisateur](../Desktop/user-settings.md) sont activés, la configuration du fichier _catalog.4DCatalog_ est remplacée, et la valeur booléenne peut alors être définie soit dans le fichier _Backup.4DSettings_ [à côté du fichier de données](../Project/architecture.md#settings-user-data) ou dans le fichier _Backup.4DSettings_ [dans le dossier du projet](../Project/architecture.md#settings-user) (voir également la documentation de la clé xml backup `JournalFileEnabled` sur [doc.4d.com](https://doc.4d.com)).
+1. **Valeur booléenne** : indique si la fonction "Use Log File" est activée ou désactivée dans l'application. Par défaut, la valeur booléenne est stockée dans *catalog.4DCatalog*. Toutefois, lorsque les [paramètres utilisateur](../Desktop/user-settings.md) sont activés, la configuration du fichier *catalog.4DCatalog* est remplacée, et la valeur booléenne peut alors être définie soit dans le fichier *Backup.4DSettings* [à côté du fichier de données](../Project/architecture.md#settings-user-data) ou dans le fichier *Backup.4DSettings* [dans le dossier du projet](../Project/architecture.md#settings-user) (voir également la documentation de la clé xml backup `JournalFileEnabled` sur [doc.4d.com](https://doc.4d.com)).
 
 2. **Chemin**: une chaîne pointant vers l'emplacement du fichier journal. Le chemin d'accès du fichier journal est toujours enregistré dans le fichier de données lié.
 

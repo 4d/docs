@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL Get current data source.Summary-->*Get current data source*コマンドはアプリケーションのカレントデータソースの名前を返します。<!-- END REF-->カレントデータソースは、[Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL")内で実行されるSQLクエリを受け取ります。  
 カレントデータソースがローカルな4Dのデータベースである時、コマンドはSQL\_INTERNAL定数("" テーマ) の値に該当する文字列";DB4D\_SQL\_LOCAL;" を返します。  
 SQLクエリを実行する前に、このコマンドでカレントデータソースをチェックすることができます。
 
-#### 参照 
+## 参照 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
@@ -27,7 +27,7 @@ SQLクエリを実行する前に、このコマンドでカレントデータ�
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

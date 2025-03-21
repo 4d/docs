@@ -22,7 +22,7 @@ title: VP SET BINDING PATH
 | rangeObj             | Object | -> | Objeto rango                                |                  |
 | dataContextAttribute | Text   | -> | Nombre del atributo a vincular a *rangeObj* | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->vincula un atributo del contexto de datos de una hoja a *rangeObj*<!-- END REF -->. Después de definir un contexto de datos utilizando el método [SET DATA CONTEXT](vp-set-data-context.md). Cuando se carga, si el contexto de datos contiene el atributo, el valor de *dataContextAttribute* se muestra automáticamente en las celdas en *rangeObj*.
 
@@ -35,7 +35,7 @@ En *dataContextAttribute*, pase el nombre del atributo a vincular a *rangeObj*. 
 
 > Los atributos de tipo colección no están soportados. Cuando se pasa el nombre de un atributo de la colección, el comando no hace nada.
 
-#### Ejemplo
+## Ejemplo
 
 Define un contexto de datos y vincula el atributo `firstName`y `lastName`a las celdas:
 
@@ -54,7 +54,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Ver también
+## Ver también
 
 [VP Get binding path](vp-get-binding-path.md)<br/>
 [VP Get data context](vp-get-data-context.md)<br/>

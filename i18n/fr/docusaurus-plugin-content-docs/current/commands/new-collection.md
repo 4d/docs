@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
-La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de l'[API classe Collection](../API/CollectionClass.md).
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
 Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
@@ -33,7 +33,7 @@ Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affect
  myCol[10]:="Mon nouvel élément"
 ```
 
-Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont reçoivent la valeur **null**.
+Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
 
 Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
@@ -43,7 +43,7 @@ Vous devez prêter attention aux problèmes de conversion suivants :
 - Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Vous pouvez modifier ce comportement en utilisant le sélecteur `Dates inside objects` de la commande `SET DATABASE PARAMETER`.
 - Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).
 
-#### Exemple 1
+## Exemple 1
 
 Vous souhaitez créer une nouvelle collection vide et l'assigner à une variable collection 4D :
 
@@ -53,7 +53,7 @@ Vous souhaitez créer une nouvelle collection vide et l'assigner à une variable
   //$myCol=[]
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Vous souhaitez créer une collection pré-remplie :
 
@@ -63,7 +63,7 @@ Vous souhaitez créer une collection pré-remplie :
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
@@ -76,14 +76,16 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-#### Voir également
+## Voir également
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1472                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1472                        |
+| Thread safe        | &check; |
+
+

@@ -17,7 +17,7 @@ title: VP SET ALLOWED METHODS
 
 > より高い柔軟性のため、4D View Pro エリアから呼び出せる 4Dフォーミュラを指定できる [`VP SET CUSTOM FUNCTIONS`](vp-set-custom-functions.md) コマンドの使用が推奨されます。 `VP SET CUSTOM FUNCTIONS` が呼び出された場合、`VP SET ALLOWED METHODS` の呼び出しは無視されます。 `VP SET CUSTOM FUNCTIONS` と `VP SET ALLOWED METHODS` のどちらも呼び出されていない場合、4D View Pro は 4D の汎用コマンド `SET ALLOWED METHODS` もサポートしますが、汎用コマンドの使用は推奨されません。
 
-#### 説明
+## 説明
 
 `VP SET ALLOWED METHODS` コマンドは、<!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->4D View Pro フォーミュラから呼び出し可能なプロジェクトメソッドを指定します<!-- END REF -->。 このコマンドは、呼び出し後のセッション中に初期化される 4D View Pro エリアすべてに対して適用されます。 同じセッション中において異なる設定で初期化をするために、複数回呼び出すこともできます。
 
@@ -36,7 +36,7 @@ title: VP SET ALLOWED METHODS
 |                  | minParams  |                                                                                | Number              | 引数の最小の数                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |                  | maxParams  |                                                                                | Number              | 引数の最大の数。 ここに parameters の length より大きな値を渡すことによって、デフォルトの型を持つ "任意の" 引数を宣言することができるようになります。                                                                                                                                                                                                                                                                                                                                                          |
 
-#### 例題
+## 例題
 
 4D View Pro エリアにおいて、2つのメソッドを許可します:
 
@@ -67,7 +67,7 @@ VP SET ALLOWED METHODS($allowed)
 
 > インデックスは 0 起点です。
 
-#### 参照
+## 参照
 
 [4D ファンクション](../formulas.md#4dファンクション)<br/>
 [VP SET CUSTOM FUNCTIONS](vp-set-custom-functions.md)

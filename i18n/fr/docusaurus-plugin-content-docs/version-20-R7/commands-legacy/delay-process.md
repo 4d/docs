@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->**DELAY PROCESS** permet d'endormir un *process* pour un certain nombre de ticks (1 tick = 1/60ème de seconde).<!-- END REF--> Pendant cette période, le process endormi n'utilise pas de temps machine. Il reste cependant toujours en mémoire.
 
@@ -26,20 +26,20 @@ Si le process n'existe pas, la commande ne fait rien.
 
 **Note :** Vous ne pouvez pas utiliser cette commande à partir d'un poste client pour affecter une procédure stockée sur le poste serveur (*process*<0).
 
-#### Exemple 1 
+## Exemple 1 
 
 Reportez-vous aux exemples de la section *Verrouillage d'enregistrements*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

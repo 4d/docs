@@ -4,15 +4,15 @@ title: Página de criptografia
 sidebar_label: Página de criptografia
 ---
 
-Puede utilizar esta página para cifrar o _descifrar_ (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
+Puede utilizar esta página para cifrar o *descifrar* (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
 
 :::info
 
-Para obtener información detallada sobre la encriptación de datos en 4D, consulte la sección [Encriptación de datos](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) del manual de _Diseño_. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+Para obtener información detallada sobre la encriptación de datos en 4D, consulte la sección [Encriptación de datos](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) del manual de *Diseño*. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 
 :::
 
-É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) _yyyy-mm-dd hh-mm-ss_> o "Replaced Files (Decrypting) _yyyy-mm-dd hh-mm-ss_".
+É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Se denomina "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> o "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 
 > A encriptação só está disponível no [modo de manutenção](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
@@ -27,20 +27,20 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
 
 1. En el editor de estructuras, marque el atributo **Encriptable** de cada tabla cuyos datos desee encriptar. Ver a secção "Propriedades das tabelas".
 2. Abra a página Encriptar do CSM.
-   If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
-   ![](../assets/en/MSC/MSC_encrypt1.png)
-   Otherwise, the following message is displayed:
-   ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-   This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-   \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
+  If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
+  ![](../assets/en/MSC/MSC_encrypt1.png)
+  Otherwise, the following message is displayed:
+  ![](../assets/en/MSC/MSC_encrypt2.png)<p>
+  This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
+  \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
 3. Click on the Encrypt picture button.\
-   ![](../assets/en/MSC/MSC_encrypt3.png)\
-   You will be prompted to enter a passphrase for your data file:
-   ![](../assets/en/MSC/MSC_encrypt4.png)
-   The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
-   The security level indicator can help you evaluate the strength of your passphrase:
-   ![](../assets/en/MSC/MSC_encrypt5.png)
-   (deep green is the highest level)
+  ![](../assets/en/MSC/MSC_encrypt3.png)\
+  You will be prompted to enter a passphrase for your data file:
+  ![](../assets/en/MSC/MSC_encrypt4.png)
+  The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
+  The security level indicator can help you evaluate the strength of your passphrase:
+  ![](../assets/en/MSC/MSC_encrypt5.png)
+  (deep green is the highest level)
 4. Introduza para confirmar a sua frase-passe protegida.
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
@@ -92,9 +92,9 @@ Esta operação é útil quando é necessário alterar a chave de encriptação 
 1. Haga clic en **Cambiar su frase de contraseña y volver a cifrar los datos**.
 2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice):
-   ![](../assets/en/MSC/MSC_encrypt9.png)
-   The data file is encrypted with the new key and the confirmation message is displayed.
-   ![](../assets/en/MSC/MSC_encrypt8.png)
+  ![](../assets/en/MSC/MSC_encrypt9.png)
+  The data file is encrypted with the new key and the confirmation message is displayed.
+  ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Desencriptar todos os dados
 
@@ -127,7 +127,7 @@ Almacenar el archivo de llave de cifrado de datos en el primer nivel del disposi
 
 ## Arquivo histórico
 
-Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. Se crea en formato XML y se llama "_ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml_" o "_ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml_".
+Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. Se crea en formato XML y se llama "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" o "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 É apresentado um botão Open log file na página MSC sempre que é gerado um novo arquivo de registo.
 

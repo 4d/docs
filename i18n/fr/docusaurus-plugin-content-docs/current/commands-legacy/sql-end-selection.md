@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL End selection.Summary-->La commande **SQL End selection** indique si les limites de l’ensemble résultat ont été atteintes.<!-- END REF--> 
 
-#### Exemple 
+## Exemple 
 
 Le code ci-dessous se connecte à une source de données externe (Oracle) à l’aide des paramètres suivants :
 
@@ -39,7 +39,7 @@ Le code ci-dessous se connecte à une source de données externe (Oracle) à l�
 Cet exemple retournera dans la variable 4D *vName* les noms (ename) stockés dans la table nommée emp.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

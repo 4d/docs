@@ -14,7 +14,7 @@ title: VP EXPORT TO BLOB
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
 | paramObj   | Object | -> | 書き出しのオプション              | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
 
@@ -36,15 +36,15 @@ title: VP EXPORT TO BLOB
 
 | 引数     |                               | 型                       | 説明                                |
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
-| param1 |                               | text                    | 4D View Pro オブジェクト名               |
+| param1 |                               | テキスト                    | 4D View Pro オブジェクト名               |
 | param2 |                               | 4D.blob | エクスポートされた Blob                    |
 | param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
 |        | .success      | boolean                 | 書き出しに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
-|        | .errorMessage | text                    | エラーメッセージ。                         |
+|        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
-#### 例題
+## 例題
 
 `VP EXPORT TO BLOB` コマンドは非同期です。 エクスポートの結果を取得するには、コールバックメソッド (この例では *VPBlobCallback* という名前) を作成する必要があります。
 
@@ -67,6 +67,7 @@ End if
 
 ```
 
-#### 参照
+## 参照
 
 [VP IMPORT FROM BLOB](vp-import-from-blob.md)
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->La commande **OBJECT GET EVENTS** vous permet de d’obtenir la configuration courante des événements formulaire du formulaire, de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ Passez dans le paramètre *tabEvénements* un tableau Entier long. A l’exécut
 
 Attention, le tableau *tabEvénements* est retourné vide si aucune méthode objet n’est associée à l’*objet* ou si aucune méthode formulaire n’est associée au formulaire. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez activer deux événements et obtenir la liste des événements pour un objet :
 
@@ -43,11 +43,11 @@ Vous souhaitez activer deux événements et obtenir la liste des événements po
  OBJECT GET EVENTS(*;"Col1";$TabCurEvents)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET EVENTS](object-set-events.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

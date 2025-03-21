@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SCAN INDEX.Summary-->**SCAN INDEX** returns a selection of *number* records from the table containing the *aField* field.<!-- END REF--> If you pass <, **SCAN INDEX** returns the *number* of records from the end of the index (high values). If you pass >, **SCAN INDEX** returns the *number* of records from the beginning of the index (low values). This command is very efficient because it uses the index to perform the operation.
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 If you specify more records than exist in the table, **SCAN INDEX** will return all the records.
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 
-#### Example 
+## Example 
 
 The following example mails letters to 50 of the worst customers and then to 50 of the best customers:
 
@@ -44,13 +44,13 @@ The following example mails letters to 50 of the worst customers and then to 50 
  PRINT SELECTION([Customers]) // Print the letters
 ```
 
-#### See also 
+## See also 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

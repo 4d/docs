@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note:** このコマンドで小計を作成することはできません。<!-- END REF-->
 
-##### リストモード 
+### リストモード 
 
 QR SET TOTALS DATA コマンドを使用し、ブレーク (総計または小計) に関する詳細を設定できます。 
 
@@ -58,7 +58,7 @@ QR SET TOTALS DATA コマンドを使用し、ブレーク (総計または小�
 \- ##D …標準偏差に置き換えられます。  
 \- ##xx …xxにはカラム番号を指定し、その番号のカラムのフォーマットを用いて、カラムの値で置き換えられます。このカラムが存在しない場合、置き換えは実行されません。
 
-##### クロステーブルモード 
+### クロステーブルモード 
 
 QR SET TOTALS DATA コマンドを使用し、特定のセルの詳細を設定することができます。 
 
@@ -76,7 +76,7 @@ QR SET TOTALS DATA コマンドを使用し、特定のセルの詳細を設定�
 
 ![](../assets/en/commands/pict31186.ja.png)
 
-##### Supported Types of Data 
+### Supported Types of Data 
 
 サポートされるデータのタイプ:
 
@@ -94,11 +94,11 @@ QR SET TOTALS DATA コマンドを使用し、特定のセルの詳細を設定�
 無効な*colNum*引数を渡した場合、エラー番号-9852が生成されます。  
 無効な*breakNum*引数を渡した場合、エラー番号-9853が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

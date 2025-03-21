@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite modificar os parâmetros dos gráficos mostrados em um formulário.<!-- END REF--> O gráfico deve ter sido definido com o comando [GRAPH](graph.md). GRAPH SETTINGS não tem efeito em um gráfico de tipo setores. Este comando deve ser chamado obrigatoriamente no mesmo processo que o formulário.
 
@@ -35,15 +35,15 @@ Os parâmetros *xgrid* e *ygrid* mostram ou ocultam as linhas de grade. Uma grad
 
 Os parâmetro(s) *titulo* especificam os títulos das legendas.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [GRAPH](graph.md "GRAPH").
 
-#### Ver também 
+## Ver também 
 
 [GRAPH](graph.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

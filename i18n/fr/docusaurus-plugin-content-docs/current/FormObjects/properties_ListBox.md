@@ -80,7 +80,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
-4D creates a default set named _ListBoxSetN_ where _N_ starts at 0 and is incremented according to the number of list boxes in the form. Si nécessaire, vous pouvez modifier la configuration par défaut. It can be a local, process or interprocess set (we recommend using a local set, for example _$LBSet_, in order to limit network traffic). Il est ensuite maintenu automatiquement par 4D. Si l'utilisateur sélectionne une ou plusieurs lignes dans la list box, l'ensemble est immédiatement mis à jour. Si vous souhaitez sélectionner une ou plusieurs lignes par programmation, vous pouvez appliquer les commandes du thème "Ensembles" à cet ensemble.
+4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. Si nécessaire, vous pouvez modifier la configuration par défaut. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). Il est ensuite maintenu automatiquement par 4D. Si l'utilisateur sélectionne une ou plusieurs lignes dans la list box, l'ensemble est immédiatement mis à jour. Si vous souhaitez sélectionner une ou plusieurs lignes par programmation, vous pouvez appliquer les commandes du thème "Ensembles" à cet ensemble.
 
 > - L'état de surbrillance des lignes de la list box et l'état de surbrillance des enregistrements de la table sont totalement indépendants.
 > - Si la propriété "Highlight Set" ne contient pas de nom, il ne sera pas possible d'effectuer des sélections dans la list box.
@@ -104,7 +104,7 @@ Les colonnes verrouillées et les colonnes statiques sont deux fonctionnalités 
 - Les colonnes verrouillées restent toujours affichées à gauche de la list box ; elles ne défilent pas horizontalement.
 - Les colonnes statiques ne peuvent pas être déplacées par glisser-déposer dans la list box.
 
-> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel _4D Language Reference_ .
+> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel *4D Language Reference* .
 
 Ces propriétés interagissent comme suit :
 
@@ -176,7 +176,7 @@ Un tableau 4D contrôlant l'affichage des lignes de la list box.
 
 Ce tableau permet de définir les propriétés d'interface "masquée", "désactivée" et "sélectionnable" pour chaque ligne d'une list box basée sur un tableau. It can also be designated using the `LISTBOX SET ARRAY` command.
 
-Le tableau de contrôle des lignes doit être de type Longint et comprendre le même nombre de lignes que la list box. Each element of the _Row Control Array_ defines the interface status of its corresponding row in the list box. Trois propriétés d'interface sont disponibles à l'aide de constantes dans le thème de constantes "List Box" :
+Le tableau de contrôle des lignes doit être de type Longint et comprendre le même nombre de lignes que la list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Trois propriétés d'interface sont disponibles à l'aide de constantes dans le thème de constantes "List Box" :
 
 | Constante                | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,10 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
-  The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
+ The Up and Down arrow keys select the previous/next row in the list.\
+ A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+ The Up and Down arrow keys select the previous/next row in the list.\
+ The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
 
 #### Grammaire JSON

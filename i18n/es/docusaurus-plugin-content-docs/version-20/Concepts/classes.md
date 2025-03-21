@@ -182,7 +182,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. There is no ending keyword for function code.
+No hay palabra clave final para el código de una función. There is no ending keyword for function code.
 
 :::
 
@@ -312,7 +312,7 @@ Class Constructor({$parameterName : type; ...})
 
 :::note
 
-There is no ending keyword for class constructor function code. There is no ending keyword for function code.
+No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
 
 :::
 
@@ -337,11 +337,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// En un método proyecto
-// Se puede instanciar un objeto
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"HelloWorld";"age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 
@@ -544,7 +544,7 @@ Class constructor ($side : Integer)
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | any    | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto|<!-- END REF -->
+| Resultado  | Object | <- | Padre del objeto|<!-- END REF -->
 
 |
 
@@ -565,7 +565,7 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
+2. Dentro de una [función de clase](#function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  
@@ -663,7 +663,7 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Params -->
 | Parámetros | Tipo   |    | Descripción                              |
 | ---------- | ------ | -- | ---------------------------------------- |
-| Result     | Object | <- | Objeto actual|<!-- END REF -->
+| Resultado  | Object | <- | Objeto actual|<!-- END REF -->
 
 |
 

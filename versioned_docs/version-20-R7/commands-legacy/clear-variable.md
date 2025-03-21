@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE resets *variable* to its default type value (*i.e.*, empty string for Text variables, *0* for numeric variables, no elements for arrays, etc.).<!-- END REF--> The variable still exists in memory. 
 
@@ -23,7 +23,7 @@ The variable you pass in *variable* can be a local, process or interprocess vari
 
 **Note:** You do not need to clear process variables when a process ends; 4D clears them automatically. Similarly, each local variable is automatically cleared when the method in which it was created completes execution.
 
-#### Example 
+## Example 
 
 In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is user interface. In other words, you use that array during data entry, but once you are done with the form, you will no longer use that array. Consequently, during the On Unload event, you just get rid of the array:
 
@@ -41,11 +41,11 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
  End case
 ```
 
-#### See also 
+## See also 
 
 [Undefined](undefined.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

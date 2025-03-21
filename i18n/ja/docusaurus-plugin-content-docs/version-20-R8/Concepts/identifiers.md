@@ -17,7 +17,7 @@ title: 識別子の命名規則
 
 クラス名は、ドット記法のための標準的な [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 
-> 競合防止のため、[データベーステーブル](#テーブルとフィールド) と同じ名前のクラスを作成するのは推奨されないこと
+> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
 
 ## 関数
 

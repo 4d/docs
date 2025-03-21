@@ -5,13 +5,13 @@ title: EntitySelection
 
 Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](../commands/create-entity-selection.md).
 
 ### Resumo
 
 |                                                                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<br/><!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#index)<br/><!-- INCLUDE EntitySelectionClass.index.Summary -->                                                             |
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<br/><!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<br/><!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<br/><!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
@@ -22,7 +22,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)<br/><!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<br/><!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<br/><!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
-| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctPaths)<br/><!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->                               |
+| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctpaths)<br/><!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->                               |
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<br/><!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<br/><!-- INCLUDE #EntitySelectionClass.extract().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<br/><!-- INCLUDE #EntitySelectionClass.first().Summary -->                                                       |
@@ -53,7 +53,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
-## &#91*index*&#93
+## &#91;*index*&#93;
 
 <details><summary>História</summary>
 
@@ -124,11 +124,11 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 Qualquer atributo de classe de dados pode ser usado como uma propriedade de uma seleção de entidade para retornar <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidade<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidade, dependendo do [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
 
 - Se o tipo de *attributeName* for `storage`:
-  `.attributeName` retorna uma coleção de valores do mesmo tipo que *attributeName*.
+ `.attributeName` retorna uma coleção de valores do mesmo tipo que *attributeName*.
 - Se o tipo de *attributeName* for `relatedEntity`:
-  `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+ `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 - Se o tipo de *attributeName* for `relatedEntities`:
-  `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+ `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. If the original entity selection and the <em x-id="3">entitySelection</em> parameter are empty, an empty entity selection is returned.
 
@@ -461,7 +461,7 @@ A função `.clean()` <!-- REF #EntitySelectionClass.clean().Summary -->retorna 
 
 Por padrão, quando uma entidade é [descartada](EntitySelectionClass.md#drop), sua(s) referência(s) na(s) seleção(ões) de entidade(s) existente(s) se torna(m) *indefinida(s)*, mas não é(são) removida(s) do(s) objeto(s) de seleção de entidade. As entidades excluídas ainda estão incluídas na propriedade [`.length`](#length) e são exibidas como linhas em branco se a seleção da entidade estiver vinculada a um objeto de interface, como uma lista. Nesse caso, chamar a função `.clean()` na seleção de entidades permite que você obtenha uma seleção de entidades nova e atualizada, que não contenha referências de entidades *undefined*.
 
-The resulting entity selection keeps the same [order criteria](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) and the same [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) property as the original entity selection.
+A seleção da entidade resultante mantém os [critérios de ordem](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) e a mesma propriedade [alterable/shareable](../ORDA/entities.md#shareable-or-alterable-entity-selections) como a seleção da entidade original.
 
 #### Exemplo
 
@@ -1056,8 +1056,6 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-
 ## .getRemoteContextAttributes()
 
 <details><summary>História</summary>
@@ -1084,7 +1082,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informações sobre o contexto de otimização usado pela seleção de entidades<!-- END REF -->.
 
-Se não houver [contexto de otimização] (../ORDA/remoteDatastores.md#clientserver-optimization) para a seleção da entidade, a função retornará um texto vazio.
+Se não houver [contexto de otimização] (../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -1108,7 +1106,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 #### Veja também
 
-[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[Entity.getRemoteContextAttributes()](./EntityClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 
@@ -1353,7 +1351,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 | Parâmetro     | Tipo |                             | Descrição                                        |
 | ------------- | ---- | :-------------------------: | ------------------------------------------------ |
 | attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo |
-| Resultados    | any  | <- | Menor valor do atributo                          |
+| Resultados    | any  | <- | Lowest value of attribute                        |
 
 <!-- END REF -->
 
@@ -1549,7 +1547,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | pathString  | Text                                |              ->             | Rota(s) de atributos e instruções de classificação para a entity selection |
 | pathObjects | Collection                          |              ->             | Coleção de objetos criterio                                                                   |
-| Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada                                                   |
+| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order                                                   |
 
 <!-- END REF -->
 
@@ -2119,7 +2117,7 @@ $sum:=$sel.sum("salary")
 | options      | Integer    |              ->             | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
 | begin        | Integer    |              ->             | Designa o índice inicial                                                                                                  |
 | howMany      | Integer    |              ->             | Número de entidades a extrair                                                                                             |
-| Resultados   | Collection | <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
+| Resultados   | Collection | <- | Collection of objects containing attributes and values of entity selection                                                |
 
 <!-- END REF -->
 
@@ -2157,7 +2155,7 @@ O parâmetro *begin* permite que você indique o índice inicial das entidades a
 
 O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. As entidades abandonadas não são devolvidas, mas são tidas em conta de acordo com *howMany*. Por exemplo, se *howMany*= 3 e houver 1 entidade abandonada, apenas 2 entidades são extraídas.
 
-Se *howMany* > comprimento da seleção da entidade, o método retorna (comprimento - *begin*) objetos.
+Se *howMany* > comprimento da seleção da entidade, o método retornará objetos (comprimento - *begin*).
 
 Uma colecção vazia é devolvida se:
 

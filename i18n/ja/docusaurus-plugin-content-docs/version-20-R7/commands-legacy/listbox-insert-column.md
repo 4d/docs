@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->**LISTBOX INSERT COLUMN**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF-->
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 **注:** オブジェクト名は、フォーム内で重複してはいけません。*colName*や*headerName*、*footerName*に渡される名前が既に使用されていないことを確認してください。重複した名前を指定すると、列は作成されず、エラーが生成されます。
 
-##### 動的に列を挿入 
+### 動的に列を挿入 
 
 フォーム実行中にこのコマンドを使用してカラムをリストボックス内へと動的に挿入することができます。その際、必要な変数(カラム、フッター、ヘッダー)の定義を4Dが自動的に行います。  
   
@@ -55,7 +55,7 @@ displayed_sidebar: docs
   
 ヘッ ダー変数とフッター変数は常に特定のタイプで作成されるという点に注意して下さい(ヘッダーは倍長整数、フッターはテキスト)。反対に、カラム変数は作成 時にタイプを指定することはできません。リストボックスはカラム変数に対して、異なるタイプの配列(テキスト配列、倍長整数配列、等々)を受け入れること ができるからです。これはつまり配列のタイプを手動で設定しなければならないという事です(例題3を参照して下さい)。こういったタイプの指定は、配列に 新しい要素を挿入するために [LISTBOX INSERT ROWS](listbox-insert-rows.md) などのコマンドを呼び出す前に実行しなければなりません。その他には、 [APPEND TO ARRAY](append-to-array.md) を使用して配列の型を指定し、要素を挿入することができます。
 
-#### 例題 1 
+## 例題 1 
 
 リストボックスの最後に列を追加します: 
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
  LISTBOX INSERT COLUMN(*;"ListBox1";$Last;"ColumnPicture";Picture;"HeaderPicture";HeaderVarName)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 リストボックスの右に列を追加し、\[Transport\]Fees フィールドの値を関連付けます: 
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
  LISTBOX INSERT COLUMN(*;"ListBox1";$last;"FieldCol";[Transport]Fees;"HeaderName";HeaderVar)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 カラムを配列型のリストボックス内へと動的に挿入し、そのヘッダーを定義します:
 
@@ -92,12 +92,12 @@ displayed_sidebar: docs
  OBJECT SET TITLE(headprt->;"Inserted header")
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

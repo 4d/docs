@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->The **LISTBOX Get property** command returns the value of the *property* of the list box or column specified using the *object* and *\** parameters.<!-- END REF-->
 
@@ -74,7 +74,7 @@ In addition, it is not possible to return values from more than one column at a 
 * When you use the constants \_o\_lk hor scrollbar position or \_o\_lk ver scrollbar position, the **LISTBOX Get property** command returns the position of the scrolling cursor in relation to its original position, i.e. the size of the hidden part of the window, expressed in pixels. By default, this position corresponds to 0\. Combined, for example, with information concerning the row height, this value lets you find out the contents displayed in the listbox. However, these constants are deprecated and can be favorably replaced with the [OBJECT GET SCROLL POSITION](object-get-scroll-position.md) command.
 * The statement **LISTBOX Get property**(vLB;\_o\_lk footer height) returns the same value as the [LISTBOX Get footers height](listbox-get-footers-height.md) command when footers are displayed. However, if footers are not displayed, **LISTBOX Get property** returns 0 while [LISTBOX Get footers height](listbox-get-footers-height.md) still returns the height, in this case theoretical, of the footers.
 
-#### Example 1 
+## Example 1 
 
 Given a listbox "MyListbox", if you execute the following statement:
 
@@ -84,7 +84,7 @@ Given a listbox "MyListbox", if you execute the following statement:
 
 In this case, the result returned indicates whether multiple rows can be selected.
 
-#### Example 2 
+## Example 2 
 
 Given a list box "MyListbox", if you execute the following statement:
 
@@ -94,13 +94,13 @@ Given a list box "MyListbox", if you execute the following statement:
 
 **LISTBOX Get property** returns -1 because the lk column resizable property applies to columns and a list box was passed as parameter.
 
-#### See also 
+## See also 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

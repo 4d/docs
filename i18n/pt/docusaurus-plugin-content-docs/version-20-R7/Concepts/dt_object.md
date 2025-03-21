@@ -8,15 +8,15 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
 - Um nome de uma propriedade é sempre um texto, por exemplo "nome". Ele deve seguir [regras específicas] (identifiers.md#object-properties).
 
 - Um valor de propriedade pode ser do seguinte tipo:
-  - number (Real, Integer, etc.)
-  - text
-  - null
-  - boolean
-  - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiado),
-  - data (tipo de data ou cadeia de formato de data ISO)
-  - objeto (os objetos podem estar aninhados em vários níveis)
-  - imagem(2)
-  - collection
+ - number (Real, Integer, etc.)
+ - text
+ - null
+ - boolean
+ - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiado),
+ - data (tipo de data ou cadeia de formato de data ISO)
+ - objeto (os objetos podem estar aninhados em vários níveis)
+ - imagem(2)
+ - collection
 
 (1) **Objetos não-transmissíveis** como objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [seleções de entidades](ORDA/dsMapping.md#entity-selection), etc.), [manipuladores de arquivo](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... não podem ser armazenado em **campos objeto**. Um erro é retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com **variáveis do objeto** na memória.
 
@@ -112,14 +112,14 @@ Pode criar dois tipos de objetos:
 
 - objetos regulares (não compartilhados), usando o comando [`New object`] (https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
 - objetos compartilhados, usando o comando [`New shared object`] (https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
-  Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
+ Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
 ## Propriedades
 
 Você acessa os valores de propriedade do objeto por meio de uma cadeia de tokens. As propriedades do objeto podem ser acessadas de duas maneiras:
 
 - usando um símbolo de "ponto":
-  > object.propertyName
+ > object.propertyName
 
 Exemplo:
 
@@ -128,7 +128,7 @@ Exemplo:
 ```
 
 - usando uma cadeia de caracteres entre colchetes:
-  > object["propertyName"]
+ > object["propertyName"]
 
 Exemplos:
 
@@ -149,7 +149,7 @@ Como o valor de uma propriedade de objeto pode ser um objeto ou uma coleção, �
 A notação de objetos está disponível em qualquer elemento da lenguagem que possa conter ou devolver um objeto, ou seja:
 
 - Os **Objetos** próprios (armazenados em variáveis, campos, propriedades de objetos, arrays de objetos ou elementos de coleções).
-  Exemplos:
+ Exemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variável
@@ -160,14 +160,14 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
 ```
 
 - **Comandos 4D** que devolvem objectos.
-  Exemplo:
+ Exemplo:
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - **Métodos projeto** ou **Funções** que retornam objetos.
-  Exemplo:
+ Exemplo:
 
 ```4d
       // MyMethod1
@@ -179,7 +179,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
 ```
 
 - **Coleções**
-  Exemplo:
+ Exemplo:
 
 ```4d
      myColl.length //tamanho da coleção

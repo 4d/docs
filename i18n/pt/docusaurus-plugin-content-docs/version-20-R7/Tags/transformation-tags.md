@@ -69,7 +69,7 @@ Para garantir a avaliação correta das expressões processadas por etiquetas, i
 
 A tag `<!--#4DBASE -->` designa o diretório de trabalho a ser usado pela tag `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Quando é chamada em uma página da Web, a tag `<!--#4DBASE -->` modifica todas as chamadas `<!--#4DINCLUDE-->` subsequentes nessa página, até a próxima `<!--#4DBASE -->`, se houver. Se a pasta `<!--#4DBASE -->` for modificada em um arquivo incluído, ela recuperará seu valor original do arquivo pai.
 
 O parâmetro *folderPath* deve conter um nome de caminho relativo à página atual e deve terminar com uma barra (`/`). A pasta designada deve estar localizada dentro da pasta Web.
 
@@ -190,7 +190,7 @@ A coleção deve conter apenas **elementos do mesmo tipo**, caso contrário, um 
 O número de loops é baseado no número de elementos da coleção. A cada iteração, a variável *item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável *item* for do tipo objeto ou do tipo coleção (ou seja, se *expressão* for uma coleção de objetos ou de coleções), a modificação dessa variável modificará automaticamente o elemento correspondente da coleção (porque objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
+- A variável *item* recebe o mesmo tipo que o primeiro elemento da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, será gerado um erro e o loop será interrompido.
 - Se a coleção contiver elementos com um valor Null, será gerado um erro se o tipo de variável *item* não for compatível com valores Null (como variáveis longint).
 
 #### Exemplo com uma coleção de valores escalares
@@ -237,7 +237,7 @@ Essa sintaxe itera em cada *entity* da *entitySelection*. A parte do código loc
 
 O parâmetro *entidade* é uma variável de objeto da classe de seleção da entidade.
 
-O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração, a variável de objeto *entidade* é automaticamente preenchida com a entidade correspondente à seleção da entidade.
+O número de loops é baseado no número de entidades na entity selection. Em cada iteração, a variável de objeto *entidade* é automaticamente preenchida com a entidade correspondente à seleção da entidade.
 
 #### Exemplo com uma tabela html
 
@@ -318,7 +318,7 @@ Por exemplo, é possível executar:
 
 No caso de um erro durante a interpretação, o texto inserido terá o formato: `<!--#4DEVAL expr-->: ## error # error code`.
 
-> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -330,14 +330,14 @@ Assim como a tag `4DTEXT`, esta tag permite avaliar uma variável 4D ou express�
 
 Por exemplo, aqui estão os resultados do processamento da variável de texto 4D myvar com as tags disponíveis:
 
-| Valor myvar    | Etiquetas              | Resultados                          |
-| -------------- | ---------------------- | ----------------------------------- |
-| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
-| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`                               |
+| Valor myvar    | Etiquetas              | Resultados          |
+| -------------- | ---------------------- | ------------------- |
+| `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
+| `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`               |
 
 No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar-->: ## error # error code`.
 
-> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF e 4DENDIF
 
@@ -646,7 +646,7 @@ O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela f
 
 Também é possível inserir expressões 4D. Você pode, por exemplo, inserir diretamente o conteúdo de um campo (`<!--#4DTEXT [tableName]fieldName-->`), um elemento de array (`<! -#4DTEXT tabarr{1}-->`) ou um método retornando um valor (`<!--#4DTEXT mymethod-->`). A conversão de expressões segue as mesmas regras das variáveis. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
 
-> Por motivos de segurança, recomenda-se usar essa tag ao processar dados introduzidos de fora do aplicativo, a fim de evitar a [inserção de código malicioso] (#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar essa tag ao processar dados introduzidos de fora do aplicativo, a fim de evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 No caso de um erro de avaliação, o texto inserido aparecerá como `<!--#4DTEXT myvar-->: ## error # error code`.
 
@@ -701,7 +701,7 @@ Utilizando a sintaxe $, o seguinte código é validado pelo analisador:
 
 Observe que `$4dtag` e `<--#4dtag -->` não são estritamente equivalentes: ao contrário de `<--#4dtag -->`, o processamento de `$4dtag` não interpreta tags 4D [recursivamente] (#recursive-processing). As tags `$` são sempre avaliadas uma vez e o resultado é considerado como texto simples.
 
-A razão para esta diferença é evitar a injeção de código malicioso. Conforme [explicado abaixo] (#prevention-of-malicious-code-insertion), é altamente recomendável usar as tags `4DTEXT` em vez das tags `4DHTML` ao manipular o texto do usuário para se proteger contra reinterpretações indesejadas das tags: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto, quaisquer tags 4D que usem a sintaxe `<!--#4dtag expression -->` perderão seu significado específico. No entanto, como o `4DTEXT` não escapa do símbolo `$`, decidimos interromper o suporte à recursão para evitar a injeção maliciosa usando a sintaxe `$4dtag (expression)`.
+A razão para esta diferença é evitar a injeção de código malicioso. Conforme [explicado abaixo] (../WebServer/templates.md#prevention-of-malicious-code-insertion), é altamente recomendável usar as tags `4DTEXT` em vez das tags `4DHTML` ao manipular o texto do usuário para se proteger contra reinterpretações indesejadas das tags: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto, quaisquer tags 4D que usem a sintaxe `<!--#4dtag expression -->` perderão seu significado específico. No entanto, como o `4DTEXT` não escapa do símbolo `$`, decidimos interromper o suporte à recursão para evitar a injeção maliciosa usando a sintaxe `$4dtag (expression)`.
 
 Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe e da tag usada:
 

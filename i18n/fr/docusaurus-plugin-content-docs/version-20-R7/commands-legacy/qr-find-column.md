@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Find column.Summary-->La commande **QR Find column** retourne le numéro de la première colonne de la *zone* dont le contenu correspond à l'*expression* passée en paramètre.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant permet de récupérer le numéro de la colonne contenant le champ \[G.ER Tests\]Quarter puis de supprimer la colonne :
 
@@ -48,7 +48,7 @@ suivi de :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

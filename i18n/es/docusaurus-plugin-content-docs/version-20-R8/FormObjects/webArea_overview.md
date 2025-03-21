@@ -7,7 +7,7 @@ Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formul
 
 Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-area-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
+Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](../category/web-area) así como [eventos de formulario](#form-events) genéricos y específicos permiten al desarrollador controlar el funcionamiento de las áreas web. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 
 ## Propiedades específicas
 
@@ -28,7 +28,7 @@ Seleccionar el motor de renderizado web anidado permite llamar a los métodos de
 
 ### Acceder a los métodos 4D
 
-Cuando la propiedad [Acceso a métodos 4D](properties_WebArea.md#access-4d-methods) está seleccionada, puede llamar a métodos 4D desde un área web.
+Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-methods) está seleccionada, puede llamar a métodos 4D desde un área web.
 
 :::note Notas
 
@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN`: puede pasar tantos parámetros como necesite al método 4D.
-  Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
+ Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
 
 - `function(result)`: función a pasar como último argumento. Esta función "callback" se llama de forma sincrónica una vez que el método 4D termina de ejecutarse. Recibe el parámetro `result`.
 
@@ -111,8 +111,8 @@ Código 4D del método `calcSum`:
 
 ```4d
  #DECLARE (... : Real) -> $sum : Real 
-  // receives n Real type parameters
-  // and returns a Real
+  // recibe n parámetros de tipo Real 
+  // y devuelve un Real
  var $i; $n : Integer
  $n:=Count parameters
  For($i;1;$n)
@@ -161,7 +161,7 @@ Cuando se ejecuta el formulario, las funciones estándar de la interfaz del nave
 - **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
 - **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D.
-  Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+ Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, puede llamar al comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o definir la [variable URL](properties_WebArea.md#url) en respuesta a un soltar del usuario.
 
 > Las funciones de arrastrar y soltar descritas anteriormente no son compatibles con las áreas web que utilizan el [motor de renderizado del sistema macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -189,15 +189,15 @@ Puede visualizar y utilizar un inspector web dentro de las áreas web de sus for
 Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
-  This command can be used directly with onscreen (form object) and offscreen web areas.
+ This command can be used directly with onscreen (form object) and offscreen web areas.
 
 - **Use the web area context menu**<br/>
-  This feature can only be used with onscreen web areas and requires that the following conditions are met:
-  - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
-  - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
-  ```4d
-  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-  ```
+ This feature can only be used with onscreen web areas and requires that the following conditions are met:
+ - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
+ - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
+ ```4d
+ 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+ ```
 
 > Con el [motor de renderizado del sistema de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), un cambio en esta preferencia requiere que se tenga en cuenta una acción de navegación en el área (por ejemplo, una actualización de la página).
 
@@ -215,7 +215,7 @@ Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces te
 
 El 4DCEFParameters.json es un archivo de configuración que permite la personalización de los parámetros CEF para gestionar el comportamiento de las áreas web dentro de las aplicaciones 4D.
 
-Se suministran [interruptores predeterminados](#default-file), pero puede reemplazarlos usando un archivo 4DCEFParameters.json personalizado.
+Se suministran [interruptores predeterminados](#default-file), pero puede reemplazarlos utilizando un archivo 4DCEFParameters.json personalizado.
 
 En la fase de desarrollo (utilizando la aplicación 4D), cree un archivo 4DCEFParameters.json en la siguiente ubicación:
 
@@ -315,3 +315,7 @@ El archivo 4DCEFParameters.json por defecto contiene los siguientes cambios:
 ### Ver también
 
 [Especifique sus propios parámetros para inicializar el área web integrada (entrada de blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+
+
+
+

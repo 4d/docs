@@ -6,7 +6,7 @@ title: Architecture d'un projet
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MyPackage (*dossier racine du projet*)
-  - Components
+  - Composants
   - Data
     - Logs
     - Propriétés
@@ -118,7 +118,7 @@ Le dossier Trash contient des méthodes et des formulaires qui ont été supprim
 - Formulaires
 - TableForms
 
-Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
+Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources-folder).
 
 ### Dossier DerivedData
 

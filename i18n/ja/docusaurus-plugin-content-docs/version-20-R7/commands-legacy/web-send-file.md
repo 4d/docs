@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SEND FILE.Summary-->**WEB SEND FILE**コマンドは*htmlFile*に渡すパス名を持つHTMLページやWebファイルをWebブラウザへ送ります。<!-- END REF--> 
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ドキュメントのタイプが対応する場合、送信前に*4DSCRIPT*等のタグが解析されます。
 
-#### 例題 
+## 例題 
 
 データベースのHTMLルートフォルダはストラクチャーと同階層の**WebFolder**に設定されていて、以下のディレクトリにファイルが置かれています。 
 
@@ -42,15 +42,15 @@ Webページ "MyPage.HTM"を送信するには以下のようにします。
  WEB SEND FILE("HTM/MyPage.HTM")
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 送られるファイルが存在する場合やタイムアウトでない場合、OKシステム変数に1が代入されます。その他の場合は0になります。
 
-#### 参照 
+## 参照 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

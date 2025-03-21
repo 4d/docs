@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE FILE NAME.Summary-->The **SET PICTURE FILE NAME** command sets or changes the default file name for the picture passed as parameter.<!-- END REF-->
 
@@ -22,12 +22,12 @@ This name may have been set automatically based on the original name of the pict
 
 The default name is used as the file name when the picture is exported in a disk file. If the contents of the field are copied into a varaible or into another field, the default name is also copied. For more information, refer to the *Design Reference* manual. 
 
-#### See also 
+## See also 
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

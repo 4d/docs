@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Pop up menu.Summary-->**Pop up menu** コマンドは、現在マウスが置かれている場所でポップアップメニューを表示します。<!-- END REF-->
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 **注意:** 適切な項目数のポップアップメニューを使用してください。50以上もの項目を表示したい場合は、ポップアップメニューではなく、フォーム内のスクロール可能エリアの使用を検討するほうが賢明です。
 
-#### 例題 
+## 例題 
 
 プロジェクトメソッドMY SPEED MENUは、ナビゲーションスピードメニューをプルダウンします。
 
@@ -95,12 +95,12 @@ Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニ
 
 ![](../assets/en/commands/pict36394.ja.png)
 
-#### 参照 
+## 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは、*mergedApp* 引数で指定したビルドされたアプリのライセンスフォルダ内に、埋め込みライセンスファイルを作成します。<!-- END REF--> *mergedApp* 引数で指定した組み込みアプリ内にライセンスフォルダが存在しない場合、フォルダはコマンドによって作成されます。
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 * 生成されたライセンスは、*mergedApp* 引数で参照されたアプリケーションでのみ使用してください。
 * アプリケーションを再ビルドする場合には、ライセンスをその度に生成する必要があります。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $status : Object
@@ -53,11 +53,11 @@ displayed_sidebar: docs
  $status:=Create deployment license($application;$license)
 ```
 
-#### 参照 
+## 参照 
 
   
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

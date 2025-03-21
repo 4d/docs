@@ -23,3 +23,4 @@ Esta opción varía el nivel de detalle gráfico en el editor de estructura. Por
 ### Cuando una carpeta está atenuada, su contenido es:
 
 Esta opción establece el aspecto de las tablas atenuadas en el editor de estructuras, cuando se realizan selecciones por carpetas (ver [Resaltar/atenuar tablas por carpeta](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)) Las opciones posibles son Atenuado (una sombra sustituye a la imagen de la tabla) e Invisible (la tabla desaparece por completo).
+

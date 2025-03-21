@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PLUGIN LIST.Summary-->PLUGIN LIST コマンドは*numbersArray*配列と*namesArray*配列に、4Dアプリケーションにロードされ、利用可能なプラグインの番号と名前を返します。<!-- END REF-->これら2つの配列は、コマンドによりサイズが調整され、同期されます。
 
@@ -22,14 +22,14 @@ displayed_sidebar: docs
 
 PLUGIN LISTは、4Dに統合されたプラグイン (例: 4D Chart) やサードパーティのプラグインも対象とします。
 
-#### 参照 
+## 参照 
 
 [COMPONENT LIST](component-list.md)  
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

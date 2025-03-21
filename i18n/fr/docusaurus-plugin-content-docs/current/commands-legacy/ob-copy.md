@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Copy.Summary-->La commande **OB Copy** retourne un objet contenant une copie complète des propriétés, sous-objets et valeurs de *objet*.<!-- END REF-->
 Si *objet* contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Vous pouvez cependant résoudre les pointeurs au moment de la copie : pour cela, passez **Vrai** dans le paramètre *résoudrePtrs*. Dans ce cas, chaque pointeur présent comme valeur dans *objet* sera évalué au moment de la copie et sa valeur dépointée sera utilisée.
@@ -41,7 +41,7 @@ Le paramètre *grouperAvec* vous permet de désigner une collection ou un objet 
 * Le même principe s'applique aux sélections d'entités stockées à l'intérieur des propriétés de *objet*. Cependant, la commande est optimisée lorsque ck shared est passé et qu'une sélection d'entité imbriquée est *partageable*: la même référence de sélection d'entité est retournée dans l'objet résultant.
 * Les objets datastore, dataclass et entity ne sont pas copiables. Si la commande **OB Copy** est appelée avec eux, une valeur Null est retournée.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez dupliquer un objet contenant des valeurs simples :
 
@@ -65,7 +65,7 @@ Vous souhaitez dupliquer un objet contenant des valeurs simples :
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous dupliquez un objet contenant des pointeurs (première syntaxe) :
 
@@ -96,7 +96,7 @@ Vous dupliquez un objet contenant des pointeurs (première syntaxe) :
      // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Nous souhaitons copier l'objet standard (non partagé) *$* *person* dans l'objet partagé *$sharedObject.* Pour ce faire, nous devons créer une copie partagée de l'objet (*$sharedObject).* 
 
@@ -115,7 +115,7 @@ Nous souhaitons copier l'objet standard (non partagé) *$* *person* dans l'objet
  End use
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 *$obj* contient un pointeur (propriété "name") sur le champ "name" de l'enregistrement courant.
 
@@ -138,7 +138,7 @@ Nous souhaitons copier l'objet standard (non partagé) *$* *person* dans l'objet
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appartiennent à différents groupes partagés, une copie directe pourrait générer une erreur. Nous devons effectuer une copie de *$sharedObj* et désigneR *$sharedColl* comme étant un groupe partagé de la copie.
 
@@ -160,12 +160,12 @@ Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appa
  End use
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Get](ob-get.md)  
 *Objets partagés et collections partagées*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->O comando SET PICTURE TO LIBRARY cria uma nova imagem ou substitui uma imagem existente na biblioteca de imagens.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Se não houver uma imagem na biblioteca de imagens com o número de referência 
 
 **Nota:** se passa uma imagem vazia em *imagem* ou um valor negativo ou nulo em *refImag*, o comando não faz nada.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Sem importar o conteúdo atual da biblioteca de imagens, o exemplo a seguir adiciona uma nova imagem à biblioteca buscando primeiro um número de referência de uma imagem única: 
 
@@ -47,7 +47,7 @@ Sem importar o conteúdo atual da biblioteca de imagens, o exemplo a seguir adic
  SET PICTURE TO LIBRARY(vgImagem;$vlRefImag;"Nova Imagem")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir importa na biblioteca de imagens as imagens (armazenadas em um documento em disco) criadas pelo terceiro exemplo do comando [PICTURE LIBRARY LIST](picture-library-list.md "PICTURE LIBRARY LIST"): 
 
@@ -83,17 +83,17 @@ O exemplo a seguir importa na biblioteca de imagens as imagens (armazenadas em u
  End if
 ```
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se não houver suficiente memória para adicionar a imagem à biblioteca de imagens, se gera um erro -108\. Note que os erros E/S também podem ser gerados (se por exemplo o arquivo de estrutura está bloqueado). Pode interceptar estes erros com um método de gestão de erros.
 
-#### Ver também 
+## Ver também 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

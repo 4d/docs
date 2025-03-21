@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Select folder.Summary-->El comando **Select folder** muestra una caja de diálogo que le permite seleccionar manualmente una carpeta y luego recuperar la ruta de acceso completa a esa carpeta.<!-- END REF--> El parámetro opcional *rutaDefecto* puede utilizarse para designar la ubicación de una carpeta que inicialmente será mostrada en la caja de diálogo de selección de la carpeta.
 
@@ -46,7 +46,7 @@ El parámetro *opciones* le permite beneficiarse de funciones adicionales bajo m
 | Constante        | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------- | ------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | Entero largo | 2     | (Mac OS únicamente): autoriza la apertura de paquetes como carpetas y por lo tanto la visualización/selección de sus contenidos. Por defecto, si no se utiliza esta constante, el comando no permitirá la apertura de paquetes.                                                                                                                                                                                        |
-| Use sheet window | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz Mac OS X con animación gráfica (para mayor información, consulte la sección [DISPLAY SELECTION](display-selection.md)). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar. |
+| Use sheet window | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz macOS con animación gráfica (para mayor información, consulte la sección [DISPLAY SELECTION](display-selection.md)). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar. |
 
 Puede pasar una constante o la combinación de dos. Estas opciones sólo son tenidas en cuenta bajo macOS. Bajo Windows, el parámetro *opciones* es ignorado si se pasa. 
 
@@ -67,7 +67,7 @@ Si el usuario valida la caja de diálogo, la variable sistema **OK** toma el val
 
 **Nota:** en Windows, si el usuario selecciona algunos elementos incorrectos, tales como “Puesto de trabajo”, “Papelera”, etc., la variable sistema **OK** toma el valor 0, incluso si el usuario valida la caja de diálogo.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenarán las imágenes de la librería de imágenes:  
   
@@ -82,13 +82,13 @@ El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenará
 
   
 
-#### Ver también 
+## Ver también 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

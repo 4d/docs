@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REDUCE SELECTION.Summary-->REDUCE SELECTIONは、*aTable*の新しいレコードセレクションを作成します。<!-- END REF-->このコマンドは*aTable*のカレントセレクションの先頭から*number*個のレコードセレクションを返します。REDUCE SELECTIONは、カレントプロセスの*aTable*のカレントセレクションに適用されます。これはカレントプロセスの*aTable*のカレントセレクションを変更し、新しいセレクションの先頭レコードをカレントレコードにします。
 
 **Note:** ステートメントREDUCE SELECTION(aTable;0)が実行されると、*aTable*のカレントセレクションおよびカレントレコードはなくなります。
 
-#### 例題 
+## 例題 
 
 以下の例では最初に、20を超える国の販売店を対象にしたコンテストの正確な統計を検索します。国ごとに$50,000以上の製品売上を記録した上位3店と、全世界で上位100店に含まれる販売店に対し、賞が送られます。ほんの数行のコードで、この複雑な処理がインデックス検索を利用して実行されます:
 
@@ -51,14 +51,14 @@ displayed_sidebar: docs
  PRINT SELECTION([Dealers]) // 手紙を印刷
 ```
 
-#### 参照 
+## 参照 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 *セット*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

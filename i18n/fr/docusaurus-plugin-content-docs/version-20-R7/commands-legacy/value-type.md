@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Value type.Summary-->La commande **Value type** retourne le type de la valeur résultant de l'évaluation de l'*expression* passée en paramètre.<!-- END REF--> 
 
@@ -77,7 +77,7 @@ D'autres différences relatives aux tableaux (l'évaluation d'un tableau retourn
 
 **Note de compatibilité :** A compter de 4D v16 R6, les dates sont stockées dans les propriétés d'objets soit avec le type date, soit en texte au format date ISO. Pour plus d'informations, reportez-vous à la description du sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez gérer les divers types possibles de valeurs d'une propriété d'objet :
 
@@ -93,7 +93,7 @@ Vous souhaitez gérer les divers types possibles de valeurs d'une propriété d'
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une collection :
 
@@ -109,12 +109,12 @@ Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une colle
  ALERT(String($sum)) //95
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

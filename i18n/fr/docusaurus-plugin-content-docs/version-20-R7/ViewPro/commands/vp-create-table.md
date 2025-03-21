@@ -26,9 +26,9 @@ title: VP CREATE TABLE
 | source     | Text                                                                                  | -> | Nom de la propriété du Data context à afficher dans la table |                  |
 | options    | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Options supplémentaires                                      | <!-- END REF --> |
 
-#### Description
+## Description
 
-La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Une table contient généralement des données connexes en lignes et en colonnes, et tire parti d'un [contexte de données](vp-set-data-context).
+La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes.
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
@@ -70,7 +70,7 @@ Ici, les titres des colonnes seraient `LastName` et `FirstName`.
 
 > This only works when generating columns automatically. Vous ne pouvez pas utiliser une collection de données scalaires avec l'option *tableColumns*.
 
-#### Exemple
+## Exemple
 
 Pour créer une table en utilisant un contexte de données :
 
@@ -103,7 +103,7 @@ Voici le résultat :
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### Voir également
+## Voir également
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
@@ -115,3 +115,4 @@ Voici le résultat :
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md)<br/>
 [VP SET TABLE THEME](vp-set-table-theme.md)
+

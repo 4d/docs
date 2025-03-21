@@ -14,7 +14,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 - **Ne rien faire** : seule la fenêtre de l’application apparaît, vide.
 - **Dialogue d’ouverture de base de données locale** : 4D affiche une boîte de dialogue standard d’ouverture de documents, permettant de désigner un projet local.
 - **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît.
-  > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+    > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 - **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 - **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
 
@@ -100,7 +100,7 @@ Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes av
 
 > Vous pouvez toujours obtenir le code avec les tokens en appelant la <a href="https://doc.4d.com/4dv19R/help/command/en/page1190.html"><code>METHOD GET CODE</code></a> avec 1 dans le paramètre <em x-id="3">option</em>.
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the _option_ parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
 
 #### Exclusion des tokens dans les projets existants
 
@@ -120,7 +120,7 @@ Vous pouvez définir cette préférence en cochant l'option **Créer le fichier 
 
 Lorsqu'un projet est créé dans 4D et que cette case est cochée, 4D crée un fichier `.gitignore` au même niveau que le dossier `Project` (voir [Architecture d'un projet](Project/architecture.md#gitignore-file-optional)).
 
-Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Le contenu de ce fichier sera utilisé pour générer les fichiers `.gitignore` dans vos nouveaux projets.
+Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Quitter le mode Développement lors du passage en mode Application
 
 La [documentation officielle de git](https://git-scm.com/docs/gitignore) est une excellente ressource pour comprendre le fonctionnement des fichiers `.gitignore`.
 

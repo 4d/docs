@@ -235,7 +235,7 @@ Essa sintaxe irá iterar por cada *propriedade* do *objeto*. A porção de códi
 
 O parâmetro *entity* é uma variável objeto da classe entity selection.
 
-O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração, a variável do objeto *entity* é automaticamente preenchida com a entidade correspondente da entity selection.
+O número de loops é baseado no número de entidades na entity selection. Em cada iteração, a variável do objeto *entity* é automaticamente preenchida com a entidade correspondente da entity selection.
 
 #### Exemplo com uma tabela html
 
@@ -315,7 +315,7 @@ Por exemplo, é possível executar:
 
 Em caso de erro durante a interpretação, o texto inserido será no formulário: `<! -#4DEVAL expr-->: ## erro # código de erro`.
 
-> Por motivos de segurança é recomendável usar a tag [`4DTEXT`](#4dtext) quando o processamento de dados introduzidos de fora do aplicativo, a fim de evitar a inserção [de código malicioso](#prevention-of-malicious-code-insertion).
+> Por motivos de segurança é recomendável usar a tag [`4DTEXT`](#4dtext) quando o processamento de dados introduzidos de fora do aplicativo, a fim de evitar a inserção [de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -323,7 +323,7 @@ Em caso de erro durante a interpretação, o texto inserido será no formulário
 
 #### Sintaxe alternativa: `$4DHTML(expressão)`
 
-Como a tag `4DTEXT` , esta tag permite avaliar uma variável 4D ou expressão que retorne um valor e inseri-la como uma expressão HTML. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+Como a tag `4DTEXT` , esta tag permite avaliar uma variável 4D ou expressão que retorne um valor e inseri-la como uma expressão HTML. Diferente da tag `4DTEXT` , esta tag não escapa de caracteres especiais do HTML (por exemplo, ">").
 
 Por exemplo, aqui estão os resultados do processamento da variável de texto 4D myvar com as tags disponíveis:
 
@@ -334,7 +334,7 @@ Por exemplo, aqui estão os resultados do processamento da variável de texto 4D
 
 Em caso de erro de interpretação, o texto inserido será `<!--#4DHTML myvar--> : ## erro # código de erro`.
 
-> Por motivos de segurança é recomendável usar a tag [`4DTEXT`](#4dtext) quando o processamento de dados introduzidos de fora do aplicativo, a fim de evitar a inserção [de código malicioso](#prevention-of-malicious-code-insertion).
+> Por motivos de segurança é recomendável usar a tag [`4DTEXT`](#4dtext) quando o processamento de dados introduzidos de fora do aplicativo, a fim de evitar a inserção [de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF e 4DENDIF
 
@@ -345,7 +345,7 @@ Usado com os comentários `<!--#4DELSEIF-->` (opcional), `<! -#4DELSE-->` (opcio
 O parâmetro *expression* pode conter qualquer expressão 4D válida que retorne um valor booleano. Deve ser indicado entre parênteses e estar em conformidade com as regras da sintaxe 4D.
 
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+Os blocos `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` podem ser aninhados em vários níveis. Como em 4D, cada `<!--#4DIF expression-->` deve corresponder com `<!--#4DENDIF-->`.
 
 Em caso de erro de interpretação, o texto "`<! -#4DIF expression-->`: uma expressão booliana foi esperada" é inserida em vez do conteúdo localizado entre `<! -#4DIF -->` e `<!--#4DENDIF-->`. Da mesma forma, se não houver tantos `<!--#4DENDIF-->` como `<! -#4DIF -->`, o texto "`<! -#4DIF expression-->`: 4DENDIF esperado" é inserido ao invés do conteúdo localizado entre `<! -#4DIF -->` e `<!--#4DENDIF-->`.
 
@@ -390,8 +390,10 @@ Este exemplo de código inserido em uma página HTML estática exibe um rótulo 
 ```html
 <BODY>
 ...
-<!--#4DIF (vname#"")--> Names starting with <!--#4DTEXT vname-->.
-<!--#4DELSE--> No name has been found.
+<!--#4DIF (vname#"")-->
+Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE-->
+No name has been found.
 <!--#4DENDIF-->
 ...
 </BODY>
@@ -609,7 +611,7 @@ Podem ser mostradas as seguintes mensagens:
 
 #### Sintaxe: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-A etiqueta `4DSCRIPT` permite que você execute métodos 4D ao processar o modelo. A presença da tag `<!--#4DSCRIPT/MyMethod/MyParam-->` como um comentário HTML inicia a execução do método `MyMethod` com o parâmetro `Param` como uma string em `$1`.
+A etiqueta `4DSCRIPT` permite que você execute métodos 4D ao processar o modelo. A presença da etiqueta `<!--#4DSCRIPT/MyMethod/MyParam-->` como um comentário HTML inicia a execução do método `MyMethod` com o parâmetro `Param` como uma string em `$1`.
 
 > Se a etiqueta for chamada no contexto de um processo Web, quando a página for carregada, 4D chamará o método de banco de dados `On Web Authentication` (se existir). Se retornar True, 4D executa o método.
 
@@ -635,16 +637,19 @@ Como 4D executa métodos em sua ordem de aparição, é absolutamente possível 
 
 #### Sintaxe alternativa: `$4DTEXT(expressão)`
 
-A etiqueta `<<!--#4DTEXT expression--></code> permite que você insira uma referência a uma variável 4D ou a uma expressão que retorna um valor. Por exemplo, se escrever (numa página HTML):</p>
+A etiqueta `< permite que você insira uma referência a uma variável 4D ou a uma expressão que retorna um valor. Por exemplo, se escrever (numa página HTML):
 
-<pre><code class="html"><P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
-`</pre>
+```html
+<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+```
 
-O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela for enviada. Esse valor é inserido como texto simples, e os caracteres HTML especiais, como ">" são automaticamente escapados.
+! `</pre>
+
+O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela for enviada. Esse valor é inserido como texto simples, e os caracteres HTML especiais, como ">" são automaticamente escapados.</p>
 
 Também é possível inserir expressões 4D. Você pode, por exemplo, inserir diretamente o conteúdo de um campo (`<! -#4DTEXT [tableName]fieldName-->`), um elemento de array (`<! -#4DTEXT tabarr{1}-->`) ou um método retornando um valor (`<!--#4DTEXT mymethod-->`). A conversão de expressões segue as mesmas regras das variáveis. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
 
-> Por motivos de segurança, recomenda-se usar essa etiqueta ao processar dados introduzidos de fora do aplicativo, de modo a evitar a [inserção de código malicioso](#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar essa etiqueta ao processar dados introduzidos de fora do aplicativo, de modo a evitar a [inserção de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 Em caso de erro de avaliação, o texto inserido aparecerá como `<!--#4DTEXT myvar--> : ## erro # código de erro`.
 
@@ -699,7 +704,7 @@ Utilizando a sintaxe $, o seguinte código é validado pelo analisador:
 
 Observe que `$4dtag` and `<--#4dtag -->` não são estritamente equivalentes: diferente de `<--#4dtag -->`, `$4dtag` processamento não interpreta tags 4D [recursivamente](#recursive-processing). `$` tags são sempre avaliadas uma vez e o resultado é considerado como texto simples.
 
-A razão para esta diferença é evitar a injeção de código malicioso. Como [explicado abaixo](#prevention-of-malicious-code-insertion), é altamente recomendável usar etiquetas `4DTEXT` em vez de `4DHTML` quando manipular texto do usuário para proteger contra reinterpretação indesejada de etiquetas: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto quaisquer tags 4D usando o `<! -#4dtag expressão -->` a sintaxe perderá seu significado específico. No entanto, uma vez que `4DTEXT` não escapa do símbolo `$` , decidimos quebrar o suporte para recursão a fim de evitar injeções maliciosas usando a sintaxe `$4dtag (expressão)`.
+A razão para esta diferença é evitar a injeção de código malicioso. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. No entanto, uma vez que `4DTEXT` não escapa do símbolo `$` , decidimos quebrar o suporte para recursão a fim de evitar injeções maliciosas usando a sintaxe `$4dtag (expressão)`.
 
 Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe e da tag usada:
 
@@ -708,7 +713,7 @@ Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe
  myName:="<!--#4DHTML QUIT 4D-->" // inserto malicioso
  input:="My name is: <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D vai sair!
+  //4D vai fechar!
 ```
 
 ```4d

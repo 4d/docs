@@ -48,3 +48,4 @@ La sélection de texte ou la position du curseur dans la zone est modifiée suit
 ### List box
 
 Cet événement est généré chaque fois que la sélection courante de lignes ou de colonnes de la list box est modifiée.
+

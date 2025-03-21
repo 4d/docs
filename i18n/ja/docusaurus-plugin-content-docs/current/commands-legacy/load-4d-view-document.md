@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Load 4D View document.Summary-->**Load 4D View document** コマンドを使用すると、4D View ドキュメントを4D オブジェクトへと変換することができます。<!-- END REF--> 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **注**: 4D View から4D View Pro へとドキュメントを変換したい場合、専用の コマンドの使用が推奨されます。こちらの方が直接的かつ透過な変換を行えます。
 
-#### 例題 
+## 例題 
 
 ディスク上に保存された4D View ドキュメントを読み込んで変換したい場合を考えます:
 
@@ -196,7 +196,7 @@ displayed_sidebar: docs
 **注:** 返されるobject についてのフォーマットについてのより詳細な情報については、4D テクニカルサービスにお問い合わせください。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

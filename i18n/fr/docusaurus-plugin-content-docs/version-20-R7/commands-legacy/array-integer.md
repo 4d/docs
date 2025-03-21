@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY INTEGER.Summary-->La commande **ARRAY INTEGER** crée et/ou redimensionne un tableau d'éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") (2 octets) en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
@@ -26,7 +26,7 @@ Lorsque vous appliquez la commande **ARRAY INTEGER** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à 0.
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") :
 
@@ -34,7 +34,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Entier](#
  ARRAY INTEGER(tabEntiers;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") : 
 
@@ -42,7 +42,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY INTEGER($tabEntiers;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") et affecte à chaque élément son numéro :
 
@@ -53,12 +53,12 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "N
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->El comando CLEAR PASTEBOARD borra el contenido del portapapeles.<!-- END REF--> Si el portapapeles contiene múltiples instancias de los mismos datos, todas las instancias se borran. Después de llamar a CLEAR PASTEBOARD, el portapapeles queda vacío.
 
@@ -22,7 +22,7 @@ Si llama a CLEAR PASTEBOARD una vez y luego llama a [APPEND DATA TO PASTEBOARD](
 
 Por el contrario, los comandos [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md "SET TEXT TO PASTEBOARD") y [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md "SET PICTURE TO PASTEBOARD") limpian automáticamente el portapapeles antes de poner datos TEXT o PICT en él.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente código borra y luego añade datos al portapapeles:
 
@@ -32,15 +32,15 @@ El siguiente código borra y luego añade datos al portapapeles:
  APPEND DATA TO PASTEBOARD('SYLK';$vxSylkDatos) // Añade datos de tipo SYLK
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver también 
+## Ver también 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->O comando **JSON Resolve pointers** resolve todos os ponteiros JSON encontrados no objeto, com respeito à configuração de opções (se existir).<!-- END REF-->
 
@@ -54,7 +54,7 @@ Em todos os casos, o comando devolve um objeto que contém as seguintes propried
 | errors\[\].pointerURI   | Text            | valor do ponteiro                                                                                              |
 | errors\[\].referredPath | Text            | rota completa de documento                                                                                     |
 
-#### Definir Ponteiros JSON 
+## Definir Ponteiros JSON 
 
 JSON Pointer é um padrão que define uma sintaxe de string que pode ser utilizada para acessar a um campo ou a um valor chave particular no documento JSON todo. O padrão foi descrito em [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
@@ -68,7 +68,7 @@ Um ponteiro JSON é, estritamente falando, uma string composta de partes separad
 
 **Nota**: 4D não é compatível com o caractere "-" como referência a elementos de array inexistentes.
 
-##### Recursividade e resolução de rota 
+### Recursividade e resolução de rota 
 
 Os ponteiros JSOn são resolvidos recursivamente, o que significa que se um ponteiro resolvido também contiver ponteiros, serão resolvidos recursivamente e assim por diante, até que sejam resolvidos todos os ponteiros. Nesse contexto, todas as rotas de arquivo encontradas nas URLs de ponteiro JSOn podem ser relativas ou absolutas. Devem usar '/' como delimitador de rota e são resolvidas da maneira abaixo:
 
@@ -80,7 +80,7 @@ Os ponteiros JSOn são resolvidos recursivamente, o que significa que se um pont
 * A resolução do nome distingue entre maiúsculas e minúsculas.
 * 4D não resolve uma rota a um arquivo json localizado na rede (que comece por "http/https").
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substituído em um objeto:
 
@@ -108,7 +108,7 @@ Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substitu�
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser reutilizar "billingAddress" como "shippingAddress" no objeto JSON abaixo (chamado $oMyConfig):
 
@@ -153,7 +153,7 @@ Depois de executar este código:
 }
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo ilustra o efeito da opção "fusionar". Se quiser editar os direitos de um usuário baseando-se em um arquivo pré-determinado.
 
@@ -227,11 +227,11 @@ Se executar:
 }
 ```
 
-#### Ver também 
+## Ver também 
 
   
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

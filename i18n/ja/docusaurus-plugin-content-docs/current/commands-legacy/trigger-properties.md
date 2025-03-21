@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.TRIGGER PROPERTIES.Summary-->**TRIGGER PROPERTIES**コマンドは、*triggerLevel*に渡すトリガーの実行レベルに関する情報を返します。<!-- END REF-->トリガー実行レベルのカスケードに基づいて異なる動作を実行するには、**TRIGGER PROPERTIES**と[Trigger level](trigger-level.md)を組み合わせて使用します。詳細については*トリガ*にあるトリガーのカスケードを参照してください。
 
@@ -33,14 +33,14 @@ displayed_sidebar: docs
   
 トリガー実行レベルのデータベースイベントに関係するレコードのテーブル番号とレコード番号が、引数 *tableNum* と *recordNum* に返されます。
 
-#### 参照 
+## 参照 
 
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
 *トリガ*  
 *レコード番号について*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -80,7 +80,7 @@ Para criar uma nova classe, pode:
 
 - selecione a categoria **Classes** e clique no botão ![](../assets/en/Users/PlussNew.png).
 - selecione **Nova Classe...** no menu de ação na parte inferior da janela do Explorer, ou no menu contextual do grupo Classes.
-  ![](../assets/en/Concepts/newClass.png)
+ ![](../assets/en/Concepts/newClass.png)
 - selecione **Novo > Classe...** a partir do menu contextual da página inicial do Explorador.
 
 #### Suporte de código de classe
@@ -88,10 +88,10 @@ Para criar uma nova classe, pode:
 Nas várias janelas 4D (editor de código, compilador, depurador, explorador de tempo de execução), o código de classe é basicamente tratado como um método de projecto com algumas especificidades:
 
 - No editor de código:
-  - uma aula não pode ser executada
-  - uma função de classe é um bloco de código
-  - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
-  - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
+ - uma aula não pode ser executada
+ - uma função de classe é um bloco de código
+ - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
+ - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
 - No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
 
 ## Lojas de classe
@@ -158,7 +158,7 @@ Quando uma classe é [definida](#class-definition) no projeto, ela é carregada 
 - [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
 - Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
 - Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
-- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir um [session singleton](#singleton-classes).
+- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir uma [session singleton](#singleton-classes).
 - Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
@@ -193,7 +193,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -211,7 +211,7 @@ Como propriedades e funções compartilham o mesmo espaço de nomes, usar o mesm
 
 :::tip
 
-<strong x-id="1">Dica:</strong> Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. Por exemplo, se você declarar `Function _myPrivateFunction` em `MyClass`, ela não será proposta no editor de código quando você digitar "cs.MyClass. "\\\\\\`.
+<strong x-id="1">Dica:</strong> Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. Por exemplo, se você declarar `Function _myPrivateFunction` em `MyClass`, ela não será proposta no editor de código quando você digitar "cs.MyClass. "\`.
 
 :::
 
@@ -238,8 +238,8 @@ No código da aplicação, as funções de classe são chamadas como métodos me
 
 - utilização do operador `()`. Por exemplo, `myObject.methodName("olá")`
 - use of a "4D. Function" class member method:
-  - [`apply()`](API/FunctionClass.md#apply)
-  - [`call()`](API/FunctionClass.md#call)
+ - [`apply()`](API/FunctionClass.md#apply)
+ - [`call()`](API/FunctionClass.md#call)
 
 :::warning Aviso de segurança de thread
 
@@ -276,7 +276,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&amp;gt;$result : Integer
+Function add($x : Variant; $y : Integer)-&gt;$result : Integer
 ```
 
 #### Exemplo 1
@@ -331,7 +331,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de função do construtor de classe. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -358,9 +358,9 @@ Using the `singleton` keyword creates a **singleton**, used to create a single i
 ```4d
 // In a project method
 // You can instantiate an object
-var $o : cs. MyClass
-$o:=cs. MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
+var $o : cs.MyClass
+$o:=cs.MyClass.new("John";42)  
+// $o = {"name":"John";"age":42}
 ```
 
 ### `propriedade`
@@ -507,7 +507,7 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 
 Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
-Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Se as funções forem declaradas em uma [classe compartilhada](#shared-classes), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 

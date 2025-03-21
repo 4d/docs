@@ -16,7 +16,7 @@ Algumas das características gerais do repartidor:
 - As paradas do divisor são calculadas de modo que os objetos movidos permaneçam totalmente visíveis no formulário ou não passem sob/próximo a outro divisor. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 - Se você redimensionar um formulário usando um divisor, as novas dimensões do formulário serão salvas somente enquanto o formulário estiver sendo exibido. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
-Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
 #### Exemplo JSON:
 
@@ -39,13 +39,13 @@ Uma vez inserido, o separador aparece como uma linha. You can modify its [border
 
 Num formulário, os separadores interagem com os objetos que estão à sua volta conforme as opções de redimensionamento desses objetos:
 
-| Opções de redimensionamento para os objetos | Objeto(s) acima de um separador horizontal ou à esquerda de um separador vertical (1)                                   | Objeto(s) debajo de un separador horizontal _no empujador_ o a la derecha de un separador vertical _no empujador_                                                                                                                         | Objeto(s) debajo de un separador horizontal _Empujador_ o a la derecha de un separador vertical _Empujador_                                                                             |
+| Opções de redimensionamento para os objetos | Objeto(s) acima de um separador horizontal ou à esquerda de um separador vertical (1)                                   | Objeto(s) debajo de un separador horizontal *no empujador* o a la derecha de un separador vertical *no empujador*                                                                                                                         | Objeto(s) debajo de un separador horizontal *Empujador* o a la derecha de un separador vertical *Empujador*                                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nenhum                                      | Manter-se como está                                                                                                                                           | São deslocados com o separador (a posição relativa ao separador não é modificada) até à paragem seguinte. A paragem quando se desloca para baixo ou para a direita é o limite da janela ou outro divisor. | São movidos com o divisor (a posição relativa ao divisor não é modificada) indefinidamente. Não é aplicada qualquer paragem (ver parágrafo seguinte) |
 | Redimensionar                               | Mantêm a(s) posição(ões) original(ais), mas são redimensionadas conforme a nova posição do separador |                                                                                                                                                                                                                                                              |                                                                                                                                                                                                            |
 | Mover                                       | Mover-se com o separador                                                                                                                                      |                                                                                                                                                                                                                                                              |                                                                                                                                                                                                            |
 
-_(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position._
+*(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 
 > Um objeto completamente contido no retângulo que define o divisor é movido enquanto o divisor.
 
@@ -53,7 +53,7 @@ _(1) You cannot drag the splitter past the right (horizontal) or bottom (vertica
 
 Puede asociar un método objeto a un separador y será llamado con el evento `On Clicked` durante todo el movimiento.
 
-A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo _Longint_. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Seu valor indica a posição atual do divisor, em píxeis, em relação à sua posição inicial.
+A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo *Longint*. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Seu valor indica a posição atual do divisor, em píxeis, em relação à sua posição inicial.
 
 - Se o valor for negativo: o divisor foi movido para cima ou para a esquerda,
 - Se o valor for positivo: o divisor foi movido para a parte inferior ou para a direita,

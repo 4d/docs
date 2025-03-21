@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->El comando **PROCESS 4D TAGS** provoca el procesamiento de las etiquetas de transformación 4D contenidas en el parámetro *plantillaEntrada* mientras opcionalmente inserta valores utilizando los valores vía los parámetros *param* y devuelve los datos resultantes en *datosSalida*.<!-- END REF-->Para una descripción completa de estas etiquetas, consulte la sección *Etiquetas de transformación 4D*.  
   
@@ -40,7 +40,7 @@ El parámetro *datosSalida* puede ser un campo o una variable de tipo Texto.
 
 **Nota**: este comando nunca llama al [Método base On Web Authentication](metodo-base-on-web-authentication.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo carga un documento de tipo "plantilla", procesa las etiquetas que contiene y luego lo almacena:
 
@@ -53,7 +53,7 @@ Este ejemplo carga un documento de tipo "plantilla", procesa las etiquetas que c
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo genera un texto utilizando los datos de los arrays:
 
@@ -69,11 +69,11 @@ Este ejemplo genera un texto utilizando los datos de los arrays:
   // $output = "elements = hello world"
 ```
 
-#### Ver también 
+## Ver también 
 
 *Etiquetas de transformación 4D*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

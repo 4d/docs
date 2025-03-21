@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Copy.Summary-->The **OB Copy** command returns an object containing a complete (deep) copy of the properties, sub-objects and values for the *object*.<!-- END REF-->
 If *object* contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing **True** in the *resolvePtrs* parameter. In this case, each pointer present as a value in *object* is evaluated when copying and its dereferenced value is used. 
@@ -41,7 +41,7 @@ The *groupWith* parameter allows you to designate a collection or an object with
 * The same principle applies to entity selections stored inside properties of *object*. However, the command is optimized when ck shared is passed and a nested entity selection is *shareable*: the same entity selection reference is returned in the resulting object.
 * Datastore, dataclass, and entity objects are not copiable. If **OB Copy** command is called with them, a Null value is returned
 
-#### Example 1 
+## Example 1 
 
 You want to duplicate an object containing simple values:
 
@@ -65,7 +65,7 @@ You want to duplicate an object containing simple values:
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
-#### Example 2 
+## Example 2 
 
 You duplicate an object containing pointers (first syntax):
 
@@ -96,7 +96,7 @@ You duplicate an object containing pointers (first syntax):
   // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
-#### Example 3 
+## Example 3 
 
 We want to copy the regular (non shared) *$person* object into the *$sharedObject* shared object. To do this, we must create a shared copy of the object (*$sharedObject*).
 
@@ -115,7 +115,7 @@ We want to copy the regular (non shared) *$person* object into the *$sharedObjec
  End use
 ```
 
-#### Example 4 
+## Example 4 
 
 *$obj* contains a pointer ("name" property) on the current record "name" field.
 
@@ -138,7 +138,7 @@ We want to copy the regular (non shared) *$person* object into the *$sharedObjec
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
-#### Example 5 
+## Example 5 
 
 We want to copy *$sharedObj* in *$sharedColl* but since they belong to different shared groups, a direct copy would result in an error. We must make a copy of *$sharedObj* and designate *$sharedColl* as shared group for the copy. 
 
@@ -160,12 +160,12 @@ We want to copy *$sharedObj* in *$sharedColl* but since they belong to different
  End use
 ```
 
-#### See also 
+## See also 
 
 [OB Get](ob-get.md)  
 *Shared objects and shared collections*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

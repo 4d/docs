@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Nota preliminar:** este comando sólo funciona con 4D Server.<!-- END REF--> Únicamente puede ejecutarse vía el comando [Execute on server](execute-on-server.md) o en un procedimiento almacenado.
 
@@ -63,7 +63,7 @@ Una vez finalizada la ejecución, el parámetro *obj* *Error* lista todos los re
 
 **Atención:** el modo de reparación auto debe ser utilizado en casos específicos, ya que pasa por alto las funcionalidades de comprobación de integridad de datos internas de 4D. Se puede utilizar, por ejemplo, cuando un archivo de registro intermedio se ha perdido o dañado y que desea recuperar tantas operaciones como sea posible. En cualquier caso, es necesario prestar atención a la integridad de los datos específicos al utilizar este modo.
 
-##### 
+### 
 
 La lista actual de propiedades disponibles depende del tipo de operación (por ejemplo: crear registros, eliminar registros, modificar registros, etc.). Estas son las principales propiedades:
 
@@ -84,7 +84,7 @@ En el caso de los valores Blob o imágenes, se ofrece información diferente en 
 * *sequenceNumber*: número de secuencia con auto incrementar.
 * *primaryKey*: valor de la llave primaria.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea integrar un archivo de historial en el servidor espejo en modo de reparación auto:
 
@@ -95,15 +95,15 @@ Usted desea integrar un archivo de historial en el servidor espejo en modo de re
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la integración se efectúa correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. 
 
-#### Ver también 
+## Ver también 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

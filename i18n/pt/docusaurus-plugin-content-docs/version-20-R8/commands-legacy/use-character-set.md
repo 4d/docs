@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->USE CHARACTER SET modifica o conjunto de caracteres usado por 4D durante a transferência de dados entre o banco de dados e um documento ou uma porta serial para o processo atual.<!-- END REF--> As operações de transferência incluem a importação e exportação de texto (ASCII), DIF, e os arquivos SYLK. Um mapa de caracteres também funciona com os dados enviados pelos comandos [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (para pacotes de tipo texto), e [RECEIVE BUFFER](receive-buffer.md). Não tem efeito em transferências de dados realizadas com [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (para pacotes tipo BLOB) e [RECEIVE VARIABLE](receive-variable.md).
 
@@ -27,7 +27,7 @@ Quando o parâmetro *\** é passado, o conjunto de caracteres padrão é restaur
 
 Em 4D v11, o conjunto de caracteres por padrão é UTF-8.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir (modo Unicode) usa o caracteres UTF-16 para exportar um texto, então o conjunto de caracteres padrão é restaurado:
 
@@ -37,11 +37,11 @@ O exemplo a seguir (modo Unicode) usa o caracteres UTF-16 para exportar um texto
  USE CHARACTER SET(*;0) // Restaure o conjunto de caracteres padrão
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável de sistema OK é definida como 1 se o mapa é carregado corretamente. Caso contrário, é definido como 0.
 
-#### Ver também 
+## Ver também 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
@@ -53,7 +53,7 @@ A variável de sistema OK é definida como 1 se o mapa é carregado corretamente
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

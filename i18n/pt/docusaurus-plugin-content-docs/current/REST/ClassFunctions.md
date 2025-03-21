@@ -49,7 +49,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+A função `getCity()` deve ter sido declarada com a palavra-chave `onHttpGet` (veja [Configuração da função](#function-configuration) abaixo).
 
 :::
 
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [_Use preemptive process_ setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 :::info
 
@@ -98,7 +98,7 @@ As regras abaixo são válidas:
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Os parâmetros devem ser incluídos numa coleção (formato JSON).
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
 - A entidade e a seleção de entidades podem ser passadas como parâmetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -122,7 +122,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 ### Parâmetro da entidade
 
-As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (_ou seja_, a propriedade __KEY). As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (_ou seja_, a propriedade __KEY).
+As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (*ou seja*, a propriedade __KEY). As entidades passadas nos parâmetros são referenciadas no servidor através da sua chave (*ou seja*, a propriedade __KEY).
 Também é possível transmitir valores para quaisquer atributos da entidade. Estes valores serão automaticamente utilizados para a entidade tratada no servidor.
 
 > Se o pedido enviar valores de atributos modificados para uma entidade existente no servidor, a função de modelo de dados ORDA chamada será automaticamente executada no servidor com valores modificados. Esta caraterística permite-lhe, por exemplo, verificar o resultado de uma operação numa entidade, depois de aplicar todas as regras de negócio, a partir da aplicação cliente. O usuário pode então decidir guardar ou não a entidade no servidor.
@@ -134,11 +134,11 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 | __ENTITY    | Parâmetros                                                    | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma entidade |
 | __KEY       | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                         |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Se `__KEY` não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
+- Se `__KEY` for fornecido, a entidade correspondente a `__KEY` é carregada no servidor com os atributos fornecidos
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### Parâmetro de entidade relacionada
 
@@ -158,8 +158,8 @@ A seleção da entidade deve ter sido definida previamente usando [$method=entit
 | __DATASET  | Text       | Obrigatório - entitySetID (UUID) da seleção de entidades                 |
 | __ENTITIES | Parâmetros | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma seleção de entidade |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+Ver exemplo para [receber uma seleção de entidade](#receiving-an-entity-selection-as-parameter) com uma solicitação POST.
+Ver exemplo para [obter uma lista construída após uma seleção de entidades](#using-an-entity-selection-to-get-a-list) com uma solicitação GET.
 
 ## POST request examples
 
@@ -535,7 +535,7 @@ Corpo da solicitação:
 
 ### Receber uma seleção de entidade como parâmetro
 
-Na classe de Dataclass `Students`, a função `setFinalExam()` atualiza uma seleção de entidade recebida ($1). En realidad, actualiza el atributo _finalExam_ con el valor recibido ($2). Devolve as chaves primárias das entidades atualizadas.
+Na classe de Dataclass `Students`, a função `setFinalExam()` atualiza uma seleção de entidade recebida ($1). En realidad, actualiza el atributo *finalExam* con el valor recibido ($2). Devolve as chaves primárias das entidades atualizadas.
 
 ```
 // Students class

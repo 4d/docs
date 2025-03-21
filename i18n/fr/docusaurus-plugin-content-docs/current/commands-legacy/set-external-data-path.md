@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->La commande **SET EXTERNAL DATA PATH** permet de définir ou de modifier, pour l’enregistrement courant, l’emplacement de stockage externe du champ *leChamp* passé en paramètre.<!-- END REF-->
 
@@ -26,7 +26,7 @@ Vous pouvez passer dans *chemin* soit un chemin d’accès personnalisé, soit u
 
 * **chemin d’accès personnalisé au fichier**  
 Dans ce cas, vous utilisez le stockage externe en "mode personnalisé". Dans ce mode, certaines fonctions de base de données de 4D ne sont pas disponibles automatiquement (cf. manuel *Mode Développement*). En particulier, vous devez gérer vous-même la création ou la modification des fichiers.  
-Vous pouvez passer un chemin relatif au fichier de données ou un chemin absolu, incluant obligatoirement le nom du fichier de stockage et son extension. Vous devez utiliser la syntaxe système. Pour définir un chemin relatif au fichier de données, passez "../" (Windows) ou "..:" (OS X) au début de la chaîne. Vous pouvez désigner tout dossier, y compris le dossier par défaut des fichiers externes de la base (*nomBase*.ExternalData) - dans ce cas, les fichiers seront inclus lors de la sauvegarde de la base.  
+Vous pouvez passer un chemin relatif au fichier de données ou un chemin absolu, incluant obligatoirement le nom du fichier de stockage et son extension. Vous devez utiliser la syntaxe système. Pour définir un chemin relatif au fichier de données, passez "../" (Windows) ou "..:" (macOS) au début de la chaîne. Vous pouvez désigner tout dossier, y compris le dossier par défaut des fichiers externes de la base (*nomBase*.ExternalData) - dans ce cas, les fichiers seront inclus lors de la sauvegarde de la base.  
 Le fichier désigné par le paramètre *chemin* doit exister et être accessible au moment de l'exécution de la commande. A noter que si le chemin est invalide (fichier ou dossier manquant), une erreur est retournée uniquement dans le cas où *chemin* a été défini en absolu. Dans le cas où *chemin* a été défini en relatif, vous devez vous assurer de sa validité, aucune erreur n'est générée si le fichier n'est pas trouvé.  
 Si vous stockez le fichier externe dans le même dossier que le fichier de données ou un de ses sous-dossiers, 4D considérera que le chemin défini est relatif au fichier de données et maintiendra le lien même si le dossier du fichier de données est déplacé ou renommé.  
 A noter que ce principe permet de "partager" un même fichier externe entre plusieurs enregistrements. Toute modification effectuée sur ce fichier externe est disponible dans tous les enregistrements. Attention dans ce cas, si plusieurs process peuvent écrire simultanément les mêmes champs, vous devez empêcher les accès concurrents via des sémaphores afin de ne pas risque d’endommager les fichiers externes.
@@ -42,7 +42,7 @@ Une fois la commande exécutée, 4D maintient automatiquement le lien entre le c
 
 **Note :** La commande **SET EXTERNAL DATA PATH** peut uniquement être exécutée sur 4D local ou 4D Server. Si elle est exécutée sur un 4D distant, elle ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l'extérieur des données, dans le dossier de la base :
 
@@ -54,12 +54,12 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
  SAVE RECORD([Photos])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

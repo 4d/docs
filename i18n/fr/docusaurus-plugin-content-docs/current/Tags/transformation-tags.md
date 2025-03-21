@@ -37,9 +37,9 @@ Il est possible de combiner plusieurs types de balises. Par exemple, la structur
 
 ### Parsing
 
-L'analyse ou le parsing du contenu d'une source de _template_ se fait dans deux contextes :
+L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux contextes :
 
-- En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un _template_ en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
+- En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
 
 - En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Pour analyser les pages HTML dans ce cas, vous devez ajouter le suffixe « .shtm » ou « .shtml » (par exemple, <http://www.server.com/dir/page.shtm>).
 
@@ -71,7 +71,7 @@ The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!
 
 When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
-The _folderPath_ parameter must contain a pathname relative to the current page and it must end with a slash (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
+The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
 Passez le mot-clé "WEBFOLDER" pour rétablir le chemin par défaut (relatif à la page).
 
@@ -169,7 +169,7 @@ Voici les caractéristiques de la balise 4DCODE :
 
 #### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
-The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the _expression_. The item is set to a _variable_ whose type depends on the _expression_ type.
+The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the *expression*. The item is set to a *variable* whose type depends on the *expression* type.
 
 The `<!--#4DEACH-->` comment can iterate through three expression types:
 
@@ -181,21 +181,21 @@ Le nombre d'itérations est évalué au démarrage et ne changera pas pendant le
 
 ### `<!--#4DEACH item in collection-->`
 
-This syntax iterates on each _item_ of the _collection_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
+This syntax iterates on each *item* of the *collection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
 
-The _item_ parameter is a variable of the same type as the collection elements.
+The *item* parameter is a variable of the same type as the collection elements.
 
-The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the _item_ variable is assigned the first mismatched value type.
+The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
 
-Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the _item_ variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
+Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
 
-- If the _item_ variable is of the object type or collection type (i.e. if _expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
-- The _item_ variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
-- If the collection contains elements with a Null value, an error is generated if the _item_ variable type does not support Null values (such as longint variables).
+- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
+- The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
 
 #### Exemple avec une collection de valeurs scalaires
 
-_getNames_ returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
 
 ```html
  <table class="table">    
@@ -212,7 +212,7 @@ _getNames_ returns a collection of strings. The method has been declared as "[av
 
 #### Exemple avec une collection d'objets
 
-_getSalesPersons_ returns a collection of objects.
+*getSalesPersons* returns a collection of objects.
 
 ```html
     <table class="table">    
@@ -233,11 +233,11 @@ _getSalesPersons_ returns a collection of objects.
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each _entity_ of the _entitySelection_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
 
-The _entity_ parameter is an object variable of the entity selection class.
+The *entity* parameter is an object variable of the entity selection class.
 
-Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. At each iteration, the _entity_ object variable is automatically filled with the matching entity of the entity selection.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
 
 #### Exemple avec un tableau html
 
@@ -272,15 +272,15 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ### `<!--#4DEACH property in object-->`
 
-This syntax iterates on each _property_ of the _object_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
+This syntax iterates on each *property* of the *object*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
 
-The _property_ parameter is a text variable automatically filled with the name of the currently processed property.
+The *property* parameter is a text variable automatically filled with the name of the currently processed property.
 
 Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
 #### Exemple avec les propriétés d'un objet
 
-_getGamers_ is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
+*getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
 
 ```html
     <table class="table">    
@@ -318,7 +318,7 @@ Par exemple, vous pouvez exécuter :
 
 In case of an error during interpretation, the text inserted will be in the form: `<!--#4DEVAL expr-->: ## error # error code`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -330,14 +330,14 @@ Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression
 
 Par exemple, voici les résultats du traitement de la variable texte 4D myvar avec les balises disponibles :
 
-| valeur de myvar | Balises                | Résultat                            |
-| --------------- | ---------------------- | ----------------------------------- |
-| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&amp;amp;lt;B&amp;amp;gt;` |
-| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`                               |
+| valeur de myvar | Balises                | Résultat            |
+| --------------- | ---------------------- | ------------------- |
+| `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
+| `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`               |
 
 In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF et 4DENDIF
 
@@ -345,7 +345,7 @@ In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar
 
 Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
 
-The _expression_ parameter can contain any valid 4D expression returning a Boolean value. Il doit être indiqué entre parenthèses et respecter les règles syntaxiques de 4D.
+The *expression* parameter can contain any valid 4D expression returning a Boolean value. Il doit être indiqué entre parenthèses et respecter les règles syntaxiques de 4D.
 
 The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
@@ -420,7 +420,7 @@ Cet exemple insère des pages différentes en fonction de l'utilisateur connect�
 
 #### Syntax: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the _path_ parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Cela permet d'éviter les conflits liés aux métabalises présentes dans les en-têtes.
+This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Cela permet d'éviter les conflits liés aux métabalises présentes dans les en-têtes.
 
 However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Il vous appartient de vérifier la cohérence des balises méta.
 
@@ -429,11 +429,11 @@ When including, regardless of the file name extension, 4D analyzes the called pa
 
 An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
 
-In _path_, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
 
 > You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
 
-The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the _mydoc2.html_ body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in _mydoc1.html_. En outre, 4D vérifie que les inclusions ne sont pas récursives.
+The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the `<!--#4DINCLUDE path-->` calls can be made only at one level. This means that, for example, you cannot insert `<!--#4DINCLUDE mydoc3.html-->` in the *mydoc2.html* body page, which is called by `<!--#4DINCLUDE mydoc2-->` inserted in *mydoc1.html*. En outre, 4D vérifie que les inclusions ne sont pas récursives.
 
 In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
 
@@ -552,7 +552,7 @@ The `my_method` method can be as follows:
 
 ### `<!--#4DLOOP expression-->`
 
-With this syntax, the `4DLOOP` tag makes a loop as long as the _expression_ returns `True`. L'expression peut être n'importe quelle expression booléenne valide et doit contenir une partie variable à évaluer dans chaque boucle afin d'éviter les boucles infinies.
+With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. L'expression peut être n'importe quelle expression booléenne valide et doit contenir une partie variable à évaluer dans chaque boucle afin d'éviter les boucles infinies.
 
 Par exemple, le code suivant :
 
@@ -646,7 +646,7 @@ The value of the 4D variable `vtSiteName` will be inserted in the HTML page when
 
 Vous pouvez également insérer des expressions 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
 
-> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
+> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
@@ -701,7 +701,7 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 
 Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
 
-Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
+Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 

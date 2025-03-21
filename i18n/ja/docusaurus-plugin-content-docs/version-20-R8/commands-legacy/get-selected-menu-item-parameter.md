@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get selected menu item parameter.Summary-->Get selected menu item parameter コマンドは、選択されたメニュー項目に割り当てられたカスタム文字列を返します。<!-- END REF-->このパラメタは事前に[SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER")コマンドを使用してあらかじめ設定されていなければなりません。  
 メニュー項目が選択されていない場合、コマンドは空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

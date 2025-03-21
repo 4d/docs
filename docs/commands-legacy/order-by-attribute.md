@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->The **ORDER BY ATTRIBUTE** command sorts (reorders) the records of the current selection of *aTable* for the current process based on the contents of the *objectField*'s *attributePath*.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record.
 
@@ -50,7 +50,7 @@ For multiple sorts (sorts on multiple fields), you can call **ORDER BY ATTRIBUTE
 
 No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These message can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click the **Stop** button to interrupt the sort. If the sort is completed, OK is set to 1\. Otherwise, if the sort is interrupted, OK is set to 0 (zero).
 
-#### Example 
+## Example 
 
 You want to sort the current selection by age (descending) and then by name (ascending). Default order is:
 
@@ -109,11 +109,11 @@ Records are in the following order:
 {"LastName":"Martin","client":true} //age is null (missing)
 ```
 
-#### See also 
+## See also 
 
   
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

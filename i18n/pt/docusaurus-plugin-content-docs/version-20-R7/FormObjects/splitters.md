@@ -16,7 +16,7 @@ Algumas das características gerais do repartidor:
 - As paradas do divisor são calculadas de modo que os objetos movidos permaneçam totalmente visíveis no formulário ou não passem sob/próximo a outro divisor. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
 - Se você redimensionar um formulário usando um divisor, as novas dimensões do formulário serão salvas somente enquanto o formulário estiver sendo exibido. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
-Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
+Uma vez inserido, o separador aparece como uma linha. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md#line-color).
 
 #### Exemplo JSON:
 

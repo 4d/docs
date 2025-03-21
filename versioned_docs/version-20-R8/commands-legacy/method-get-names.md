@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->The **METHOD GET NAMES** command fills the *arrNames* array with the names of project methods created in the application.<!-- END REF-->
 
@@ -25,7 +25,7 @@ If this command is executed from a component, it returns by default the names of
 
 **Note:** Methods placed in the trash are not listed. 
 
-#### Example 
+## Example 
 
 Here are a few typical examples of use:
 
@@ -41,7 +41,7 @@ Here are a few typical examples of use:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

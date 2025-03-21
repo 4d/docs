@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is table number valid.Summary-->O comando Is table number valid retorna True se a tabela cujo número for passado no parâmetro *numTabela* existe no banco, do contrário False.<!-- END REF--> Lembre que o comando retorna False se a tabela estiver na Lixeira do Explorador.  
   
 Este comando permite detectar as eventuais eliminações de tabelas, que criam quebras na sequência de números das tabelas.
 
-#### Ver também 
+## Ver também 
 
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

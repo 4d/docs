@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.End selection.Summary-->End selection retorna TRUE quando o ponteiro do registro atual está além do último registro da seleção atual de tabela.<!-- END REF--> End selection se utiliza geralmente para testar se a chamada ao comando [NEXT RECORD](next-record.md) ha movido ou não o ponteiro do registro atual detrás do último registro da seleção. Se a seleção atual está vazia, End selection retorna TRUE.  
   
@@ -36,7 +36,7 @@ End if
 End case
 ```
 
-#### Exemplo 
+## Exemplo 
 
 Este método de formulário é utilizado durante a impressão de um relatório. Ele define a variável *vPie* a imprimir na área de rodapé da última página: 
 
@@ -53,7 +53,7 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Before selection](before-selection.md)  
 [Form event code](../commands/form-event-code.md)  
@@ -61,7 +61,7 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

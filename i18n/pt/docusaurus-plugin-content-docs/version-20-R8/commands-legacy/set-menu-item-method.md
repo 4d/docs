@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->O comando SET MENU ITEM METHOD pode ser utilizada para modificar o método de projeto 4D associado à linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 
 
@@ -28,15 +28,15 @@ Em *nomeMetodo*, passe o nome do método 4D como cadeia de caracteres (expressã
 
 **Nota:** se a linha de menu corresponde ao título de um submenu hierárquico, o método não será chamado quando a linha de menu seja selecionada.
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo do comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 
-#### Ver também 
+## Ver também 
 
 [Get menu item method](get-menu-item-method.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

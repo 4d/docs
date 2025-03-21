@@ -22,7 +22,7 @@ title: VP IMPORT DOCUMENT
 |filePath   |Text|->|Pathname of the document|
 |paramObj   |Object|->|Import options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. The imported document replaces any data already inserted in the area.
 
@@ -43,7 +43,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 |Parameter||Type|Description|
 |---|---|---|---|
-|formula|| 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
+|formula|| 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../../commands/formula.md) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
 |password|| text| Microsoft Excel only (optional) - The password used to protect a MS Excel document. |
 |csvOptions||object|options for csv import |
 ||range|object|Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used. |
@@ -78,7 +78,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 :::
 
-#### Example 1
+## Example 1
 
 You want to import a default 4D View Pro document stored on the disk when the form is open:
 
@@ -90,7 +90,7 @@ If(Form event code=On VP Ready) //4D View Pro area loaded and ready
 End if
 ```
 
-#### Example 2
+## Example 2
 
 You want to import a password protected Microsoft Excel document into a 4D View Pro area:
 
@@ -116,7 +116,7 @@ End if
 ```
 
 
-#### Example 3
+## Example 3
 
 You want to import a `.txt` file that uses a comma (",") as delimiter:
 
@@ -131,7 +131,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 Here's the result:
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv-result.png)
 
-#### See also
+## See also
 
 
 [VP EXPORT DOCUMENT](vp-export-document.md)<br/>

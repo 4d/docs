@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get printed height.Summary-->The **Get printed height** command returns the overall height (in pixels) of the section printed using the [Print form](../commands/print-form.md) command.<!-- END REF-->
 
@@ -25,13 +25,13 @@ The right and left printable margins, unlike the top and bottom margins (which m
 
 **Note:** For more information regarding Printing management and terminology in 4D, refer to the [GET PRINTABLE MARGIN](get-printable-margin.md) command description. 
 
-#### See also 
+## See also 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -19,10 +19,10 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 ## Cache
 
-| Pode ser definido com              | Nome                                                                                                     | Comentários |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Página Opções (I)/Usar o cache 4D Web](../settings/web.md#use-the-4d-web-cache)      |             |
-| Caixa de diálogos de configurações | [Página opções (I) /Tamanho de cache das páginas](../settings/web.md#page-cache-size) |             |
+| Pode ser definido com              | Nome                                                                                                      | Comentários |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar o cache 4D Web](../settings/web.md#use-the-4d-web-cache)       |             |
+| Caixa de diálogos de configurações | [Página opções (I) /Tamanho de cache das páginas](../settings/web.md#pages-cache-size) |             |
 
 Ativa e configura a cache da página Web.
 
@@ -70,11 +70,11 @@ Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos al
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                                                                                                      | Comentários                                                                                                                                             |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                       | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
-| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-names-HTTP-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
+| Pode ser definido com              | Nome                                                                                                                                     | Comentários                                                                                                                                             |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                     | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| `WEB SET OPTION`                   | `Web CORS settings`                                                                                                                      | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)                                                         |
+| Caixa de diálogos de configurações | Página [Opções (II) /Nomes de domínio e métodos HTTP permitidos](../settings/web.md#domain-nameshttp-methods-allowed) | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -252,7 +252,7 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
+> No macOS, a modificação da porta HTTP permite iniciar o servidor web 4D sem ser o usuário raiz da máquina (consulte macOS HelperTool).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 
@@ -281,11 +281,11 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 
 ## Tempo limite do processo inativo
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                    |             |
-| `WEB SET OPTION`                   | `Web inactive process timeout`                                                                              |             |
-| Caixa de diálogos de configurações | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Slider      |
+| Pode ser definido com              | Nome                                                                                                          | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                      |             |
+| `WEB SET OPTION`                   | `Web inactive process timeout`                                                                                |             |
+| Caixa de diálogos de configurações | [Página Opções (I)/Tempo de processo inativo](../settings/web.md#inactive-process-timeout) | Slider      |
 
 Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
@@ -339,11 +339,11 @@ Para evitar essa confusão, recomendamos usar a notação [ ] sempre que você c
 
 ## Manter sessão
 
-| Pode ser definido com              | Nome                                                                                                                                                           | Comentários                      |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                             |                                  |
-| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                             |                                  |
-| Caixa de diálogos de configurações | [Options (I) page/Legacy sessions (single process sessions)](../settings/web.md#legacy-sessions-single-process-sessions) | somente nos projetos convertidos |
+| Pode ser definido com              | Nome                                                                                                                                                                | Comentários                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                                  |                                  |
+| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                                  |                                  |
+| Caixa de diálogos de configurações | [Página Opções (I) /Sessões herdadas (sessões de processo único)](../settings/web.md#legacy-sessions-single-process-sessions) | somente nos projetos convertidos |
 
 Estado do gerenciamento de sessão antigo para o servidor Web 4D (obsoleto).
 
@@ -452,9 +452,9 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 ## Reutilizar contextos temporários (em modo remoto)
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
+| Pode ser definido com              | Nome                                                                                                                 | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Reutilizar contextos temporários](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
@@ -530,11 +530,11 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 
 ## Sessões escaláveis
 
-| Pode ser definido com              | Nome                                                                                                                                                             | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                       |             |
-| `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                           |             |
-| Caixa de diálogos de configurações | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
+| Pode ser definido com              | Nome                                                                                                                                                                 | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                           |             |
+| `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                               |             |
+| Caixa de diálogos de configurações | [Página Opções (I)/sessões escalonáveis (sessões multi-processo)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
 Session management enabling status for the 4D web server. As sessões do servidor da Web são detalhadas na página [Sessões Web](sessions.md).
 
@@ -587,9 +587,9 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 
 ## Utilizar processos preemptivos
 
-| Pode ser definido com              | Nome                                                                                                        | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
+| Pode ser definido com              | Nome                                                                                                           | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Página Opções (I)/Usar processos preventivos](../settings/web.md#use-preemptive-processes) |             |
 
 Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
 
@@ -597,7 +597,7 @@ Esta opción activa el modo apropiativo para el código del servidor web de su a
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database access through 4DSYNC URLs
+#### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
 Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
 
@@ -624,7 +624,8 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
-  The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
+   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
-  If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+   If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+

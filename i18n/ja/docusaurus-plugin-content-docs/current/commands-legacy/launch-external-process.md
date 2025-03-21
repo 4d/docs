@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->4D v19 R4 以降、外部プロセスを実行して管理するためには*SystemWorker class* の使用が推奨されます。<!-- END REF-->しかしながら、このコマンドも引き続きサポートされます。
 
-#### 説明 
+## 説明 
 
 **LAUNCH EXTERNAL PROCESS**コマンドを使用して、macOSとWindowsで4Dから外部プロセスを起動させることができます。  
 macOSでは、コマンドを用いてターミナルから起動できる実行可能なアプリケーションへアクセスできます。
@@ -44,7 +44,7 @@ macOSではアプリケーション名を渡すこともできます。4Dは環�
 
 *pid*引数を渡した場合、*pid*引数(倍長整数型)は*\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*オプションの状態に関わらず、コマンドをローンチするのに作成したプロセスのシステムレベルのIDを返します。この情報により、作成した外部プロセスとその後やりとり(例えば中止等)するのが容易になります。プロセスのローンチに失敗した場合、*pid*引数は返されません。
 
-#### macOSでの例題 
+## macOSでの例題 
 
 Application/UtilitiesフォルダにあるmacOS ターミナルを使用します。
 
@@ -75,7 +75,7 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
  LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
 ```
 
-#### Windowsでの例題 
+## Windowsでの例題 
 
 5\. NotePadを開く 
 
@@ -132,16 +132,16 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
  LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //全ての情報を取得
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKは1に設定されます。そうでなければ (ファイルが見つからない、メモリが足りないなど) 0が設定されます。
 
-#### 参照 
+## 参照 
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

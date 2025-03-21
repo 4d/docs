@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->WA ZOOM OUT コマンドは、*\** と *object* 引数で指定したWebエリアに表示されているテキストのサイズを小さくします。<!-- END REF-->
 
@@ -22,11 +22,11 @@ macOS では、このコマンドのスコープは4D セッションとなり�
 
 Windows では、このコマンドのスコープはグローバルです。4D アプリケーション終了後も設定が引き継がれます。
 
-#### 参照 
+## 参照 
 
 [WA ZOOM IN](wa-zoom-in.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

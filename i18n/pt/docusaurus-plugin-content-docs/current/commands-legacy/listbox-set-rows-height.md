@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->O comando LISTBOX SET ROWS HEIGHT lhe permite modificar por programação a altura das filas do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 
 
@@ -31,13 +31,13 @@ Por padrão, se omitir o parâmetro unidade, a altura é expressada en pixels. P
 
 Nota: para mais informação sobre o cálculo das alturas das linhas, consulte o manual de Desenho.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

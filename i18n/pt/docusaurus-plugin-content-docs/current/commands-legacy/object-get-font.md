@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get font.Summary-->O comando OBJECT Get font devolve o nome da fonte utilizada pelo objeto de formulário designado por *objeto*.<!-- END REF-->
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome de objeto (string). Se não passa este parâmetro, indica que o parâmetro *objeto é* um campo ou uma variável. Neste caso, se passa uma referência de campo ou variável (campo ou variável objeto unicamente) ao invés de uma string.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

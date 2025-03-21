@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BACKUP.Summary-->The BACKUP command starts the backup of the database using the current backup settings.<!-- END REF--> No confirmation dialog is displayed; however, a progress bar appears on screen.
 
@@ -24,21 +24,21 @@ Because of this mechanism, the command should not be called from one of these da
 
 **4D Server:** When called from a client machine, BACKUP is considered as a stored procedure; it is still executed on the server.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the backup is performed correctly, the system variable OK is set to 1; otherwise, it is set to 0\. 
 
-#### Error management 
+## Error management 
 
 If an incident occurs during backup, information about the incident is written in the backup log and the top-level error is sent only to the [On Backup Shutdown database method](on-backup-shutdown-database-method.md). It is therefore particularly important to use this database method in order to be able to manage back-up related errors using programming.
 
-#### See also 
+## See also 
 
 [BACKUP INFO](backup-info.md)  
 *On Backup Startup Database Method*  
 [RESTORE](restore.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

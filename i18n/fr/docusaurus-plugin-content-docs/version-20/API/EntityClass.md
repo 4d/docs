@@ -234,7 +234,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (toutes les différences sont retournées) :
+vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournées)
 
 ```4d
 [
@@ -445,7 +445,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 La fonction `.first()` <!-- REF #EntityClass.first().Summary -->retourne une référence vers l'entité en première position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
+|
 
 #### Exemple
 
@@ -630,7 +630,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>Historique</summary>
@@ -686,7 +686,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Voir également
 
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getremotecontextattributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -889,7 +889,7 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 La fonction `.last()` <!-- REF #EntityClass.last().Summary -->retourne une référence vers l'entité en dernière position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
+|
 
 #### Exemple
 
@@ -965,7 +965,7 @@ L'objet retourné par `.lock( )` contient les propriétés suivantes :
 |                  | task_name           | text                  | Nom du process                                                                                                                                                             |
 |                  | client_version      | text                  | Version du client                                                                                                                                                          |
 |                  |                     |                       | ***Disponible uniquement pour un verrouillage par session REST :***                                                                                                        |
-|                  | host                | text                  | URL ayant verrouillé l'entité (ex : "www.myserver.com")                                                                                                                    |
+|                  | host                | text                  | URL that locked the entity (e.g. "`www.myserver.com`")                                                                                                                     |
 |                  | IPAddr              | text                  | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
 |                  | userAgent           | text                  | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                       | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :                                                                           |
@@ -1087,7 +1087,7 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-vrai si l'action de suppression a été effectuée avec succès, sinon Faux.
+|
 
 Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
@@ -1591,7 +1591,7 @@ Retourne :
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>Historique</summary>
 
@@ -1636,7 +1636,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>Historique</summary>
 

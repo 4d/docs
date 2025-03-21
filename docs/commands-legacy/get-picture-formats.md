@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->The **GET PICTURE FORMATS** command returns an array of all the codec IDs (picture formats) contained in the *picture* passed as parameter.<!-- END REF--> A 4D picture (field or variable) can contain the same picture encoded in different formats, such as PNG, BMP, GIF, etc.
 
@@ -33,7 +33,7 @@ The codec IDs returned are established by 4D in exactly the same way as for the 
 
 For more information about picture codec IDs, refer to the *Pictures* section.
 
-#### Example 
+## Example 
 
 You want to know the picture formats stored in a field for the current record:
 
@@ -43,11 +43,11 @@ You want to know the picture formats stored in a field for the current record:
  GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
-#### See also 
+## See also 
 
   
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

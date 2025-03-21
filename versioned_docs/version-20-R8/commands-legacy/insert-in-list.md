@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ You pass the item reference number of the new item in *itemRef*. Although we qua
 
 If you want for the item to include subitems, pass a valid list reference number in the *sublist* parameter. In this case, you must also pass the *expanded* parameter. Pass either **True** or **False** in this parameter so that this sublist is displayed either expanded or collapsed respectively. 
 
-#### Example 
+## Example 
 
 The following code inserts an item (with no attached sublist) just before the currently selected item in the *hList* list:
 
@@ -46,12 +46,12 @@ The following code inserts an item (with no attached sublist) just before the cu
  INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
-#### See also 
+## See also 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

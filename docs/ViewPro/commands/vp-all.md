@@ -14,7 +14,7 @@ title: VP All
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 |Result|Object|<-|Range object of all cells|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ALL` command <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
 
@@ -22,7 +22,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
-#### Example  
+## Example  
 
 You want to define a range object for all of the cells of the current spreadsheet:
 
@@ -30,7 +30,7 @@ You want to define a range object for all of the cells of the current spreadshee
 $all:=VP All("ViewProArea") // all cells of the current sheet
 ```
 
-#### See also
+## See also
 
 [VP Cell](vp-cell)<br/>
 [VP Cells](vp-cells)<br/>

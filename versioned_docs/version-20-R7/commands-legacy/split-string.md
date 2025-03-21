@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Split string.Summary-->The **Split string** command returns a collection of strings, created by splitting *stringToSplit* into substrings at the boundaries specified by the *separator* parameter.<!-- END REF--> The substrings in the returned collection do not include *separator* itself.
 
@@ -29,7 +29,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 | sk ignore empty strings | Integer | 1     | Remove empty strings from the resulting collection (they are ignored) |
 | sk trim spaces          | Integer | 2     | Trim space characters at the beginning and end of substrings          |
 
-#### Example 1 
+## Example 1 
 
 ```4d
  var $vt : Text
@@ -42,7 +42,7 @@ In the *options* parameter, you can pass one or a combination of the following c
  $col:=Split string($vt;";";sk ignore empty strings+sk trim spaces) //["John","Doe","120 jefferson st.","Riverside","NJ","08075"]
 ```
 
-#### Example 2 
+## Example 2 
 
 The *separator* parameter can be a multiple-character string: 
 
@@ -54,11 +54,11 @@ The *separator* parameter can be a multiple-character string:
   //$col=["Name","Smith","age","40"]
 ```
 
-#### See also 
+## See also 
 
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

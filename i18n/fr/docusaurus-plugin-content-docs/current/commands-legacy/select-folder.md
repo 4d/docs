@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Select folder.Summary-->La commande **Select folder** affiche une boîte de dialogue permettant de désigner manuellement un dossier, et de récupérer en retour de fonction le chemin d’accès complet au dossier sélectionné.<!-- END REF--> Le paramètre facultatif *répertoire* vous permet de désigner un emplacement de dossier qui sera affiché initialement dans la boîte de dialogue de sélection de dossier.
 
@@ -47,7 +47,7 @@ Le paramètre *options* vous permet de bénéficier de fonctions supplémentaire
 | Constante        | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | Entier long | 2      | (Mac OS uniquement) Autorise l’ouverture des progiciels (packages) en tant que dossiers et donc la visualisation/sélection de leur contenu. Par défaut, si cette constante n’est pas utilisée, la commande n’autorise pas l’ouverture des progiciels.                                                                                                                                                                                                                                   |
-| Use sheet window | Entier long | 16     | (Mac OS uniquement) Affiche la boîte de dialogue de sélection sous forme de fenêtre feuille (cette option est ignorée sous Windows). <br/>Les fenêtres feuilles sont des fenêtres spécifiques de l’interface Mac OS X, bénéficiant notamment d’une animation graphique (pour plus d’informations, reportez-vous à la section [DISPLAY SELECTION](display-selection.md)). Par défaut, si cette constante n’est pas utilisée, la commande affiche une boîte de dialogue standard. |
+| Use sheet window | Entier long | 16     | (Mac OS uniquement) Affiche la boîte de dialogue de sélection sous forme de fenêtre feuille (cette option est ignorée sous Windows). <br/>Les fenêtres feuilles sont des fenêtres spécifiques de l’interface macOS, bénéficiant notamment d’une animation graphique (pour plus d’informations, reportez-vous à la section [DISPLAY SELECTION](display-selection.md)). Par défaut, si cette constante n’est pas utilisée, la commande affiche une boîte de dialogue standard. |
 
 Vous pouvez passer une constante ou la combinaison des deux. Ces options sont prises en compte sous macOS uniquement. Sous Windows, le paramètre *options* est ignoré s’il est passé. 
 
@@ -65,7 +65,7 @@ Si l’utilisateur clique sur le bouton de sélection, la variable système OK p
 
 **Note :** Sous Windows, si l’utilisateur a sélectionné certains éléments incorrects tels que “Poste de travail”, “Corbeille”, etc., la variable système OK prend la valeur 0, même si la boîte de dialogue est validée.
 
-#### Exemple 
+## Exemple 
 
 L’exemple suivant permet de sélectionner le dossier dans lequel toutes les images de la bibliothèque d’images seront enregistrées :
 
@@ -78,13 +78,13 @@ L’exemple suivant permet de sélectionner le dossier dans lequel toutes les im
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

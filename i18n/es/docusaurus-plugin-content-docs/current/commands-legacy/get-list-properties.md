@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->El comando GET LIST PROPERTIES devuelve información sobe la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -34,11 +34,11 @@ Estas propiedades pueden definirse con la ayuda del comando [SET LIST PROPERTIES
 
 Para una completa descripción de la apariencia, iconos de nodos, altura de línea mínima y administración de una lista con doble clic, consulte el comando [SET LIST PROPERTIES](set-list-properties.md "SET LIST PROPERTIES").
 
-#### Ver también 
+## Ver también 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

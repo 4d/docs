@@ -23,10 +23,10 @@ La fenêtre présente les caractéristiques principales suivantes :
 
 - Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
 - You can filter the window contents by using the **Categories** menu:
-  ![](../assets/en/FormEditor/library3.png)
+    ![](../assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
-  - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-  - or drag and drop the object from the library The object is then added to the form.
+    - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
+    - or drag and drop the object from the library The object is then added to the form.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
@@ -98,3 +98,4 @@ Voici la liste des objets dépendants qui seront collés dans la bibliothèque e
 - Images
 - Messages d’aide (liés à un champ)
 - Méthodes objet
+

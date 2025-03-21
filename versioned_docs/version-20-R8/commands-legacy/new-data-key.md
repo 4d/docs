@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New data key.Summary-->The **New data key** command generates a binary data encryption key from the text passed in the *passPhrase* parameter.<!-- END REF-->
 
@@ -32,7 +32,7 @@ The returned object contains the following property:
 
 If an empty string was passed in *passPhrase*, the command returns *null*.
 
-#### Example 
+## Example 
 
 You want to save an encryption key in a .4DKeyChain file:
 
@@ -47,7 +47,7 @@ You want to save an encryption key in a .4DKeyChain file:
  End if
 ```
 
-#### See also 
+## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -56,7 +56,7 @@ You want to save an encryption key in a .4DKeyChain file:
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

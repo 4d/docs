@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->The OBJECT Get list name command returns the name of the choice list associated with the object or group of objects designated by *object*.<!-- END REF--> 4D lets you associate a choice list (created with the choice list editor in Design mode) with form objects using the form editor or the [OBJECT SET LIST BY NAME](object-set-list-by-name.md) command. 
 
@@ -32,12 +32,12 @@ You can use the optional *listType* parameter to designate the type of list that
 
 If there is no list of the type defined associated with the *object*, the command returns an empty string ("").
 
-#### See also 
+## See also 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

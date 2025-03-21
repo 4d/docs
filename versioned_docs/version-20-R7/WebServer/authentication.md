@@ -25,7 +25,7 @@ The operation of the 4D web server's access system is summarized in the followin
 
 ### Custom (default)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 This authentication mode is the most flexible because it allows you to:
 
@@ -89,7 +89,7 @@ The `On Web Authentication` database method is therefore called:
 The `On Web Authentication` database method is NOT called:
 
 - when the web server receives a URL requesting a valid static page.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 
 
 ### Syntax
@@ -121,7 +121,7 @@ You must declare these parameters as follows:
 
 :::note
 
-All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-mode)).
+All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 :::
 

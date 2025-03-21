@@ -33,8 +33,8 @@ Ocasionalmente, puede que no haya suficiente memoria para crear un BLOB. O, cuan
 
 Estos son generalmente los tipos de errores más difíciles de encontrar. A excepción de los errores de digitación, todos los tipos de errores listados arriba están cubiertos hasta cierto punto por la expresión "error de diseño o de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por ejemplo:
 
-- Puede ocurrir un _error de sintaxis_ cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un _error de entorno_ cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
+- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Los errores de diseño o de lógica también incluyen situaciones como:
 
@@ -78,8 +78,8 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
-  - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
+    - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
+    - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
 - **Copy**: Copies the debugging information into the clipboard. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 

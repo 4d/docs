@@ -19,25 +19,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
 
 In *targetObj*, you can pass:
 
-- A range
+- Un rango
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - A 4D Write Pro document
 
 For the second parameter, you can pass either:
 
 - In *picture*:
-  - A picture field or variable
-  - A string containing a path to a picture file stored on disk, in the system syntax.
-    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
+ - A picture field or variable
+ - A string containing a path to a picture file stored on disk, in the system syntax.
+  If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
 - In *pictureFileObj* : a `File` object representing a picture file.
 
-Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
 
@@ -58,7 +58,7 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted picture is
 
 - If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 In the following example, a user selects the picture they want to insert into the range object and will be warned if this picture could not be inserted:
 
@@ -89,7 +89,7 @@ In the following example, a user selects the picture they want to insert into th
  End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 You want to insert a picture in the body of the documment:
 
@@ -104,7 +104,7 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 
 ```
 
-#### Ver también
+## Ver también
 
 [WP Insert document body](wp-insert-document-body.md)</br>
 [WP Picture range](../commands-legacy/wp-picture-range.md)

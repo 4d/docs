@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Table fragmentation.Summary-->The Table fragmentation command returns the percentage of logical fragmentation for the records of the table designated by the *aTable* parameter.<!-- END REF--> 
 
 The rate of logical fragmentation of the records indicates whether the records are stored in an ordered manner in the data file. If the fragmentation becomes too high, this can considerably slow down sorts and sequential searches on the table. A fragmentation percentage of 0 corresponds to no fragmentation. Beyond a rate of 20%, it may be useful to compact the data file. 
 
-#### Example 
+## Example 
 
 This maintenance method lets you request the compacting of the data file in the case where there is considerable fragmentation in at least one table of the database:
 
@@ -38,11 +38,11 @@ This maintenance method lets you request the compacting of the data file in the 
  End if
 ```
 
-#### See also 
+## See also 
 
 [Compact data file](compact-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

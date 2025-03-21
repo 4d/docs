@@ -5,7 +5,7 @@ title: Fond et bordure
 
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, _Automatique_ est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
 
 You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
 
@@ -17,7 +17,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -25,7 +25,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 Définit la couleur de fond d'un objet.
 
-Dans le cas d'une list box, par défaut _Automatique_ est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
+Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
 You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
 
@@ -49,7 +49,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 `List box de type collection et de type sélection d'entité`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the _4D Language Reference manual_.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the *4D Language Reference manual*.
 
 You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
 
@@ -63,7 +63,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -79,7 +79,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 #### Objets pris en charge
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -117,7 +117,7 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -179,7 +179,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, vous définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple `<>_BgndColor_1`, `<>_BgndColor_2` et `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
@@ -206,7 +206,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 ## Transparent
 
-Définit l'arrière-plan de la list box sur "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color--fill-color) définie pour la colonne est ignorée.
 
 #### Grammaire JSON
 
@@ -216,7 +216,7 @@ Définit l'arrière-plan de la list box sur "Transparent". When set, any [altern
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Voir également
 

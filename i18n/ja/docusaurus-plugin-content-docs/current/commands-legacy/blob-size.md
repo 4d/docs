@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB size.Summary-->BLOB size は、*blob*のサイズをバイト単位で返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 以下の例は*myBlob* BLOBに100バイトを追加します:
 
@@ -26,11 +26,11 @@ displayed_sidebar: docs
  SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
 ```
 
-#### 参照 
+## 参照 
 
 [SET BLOB SIZE](set-blob-size.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

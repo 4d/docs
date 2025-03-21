@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Database measures.Summary-->La commande **Database measures** vous permet d'obtenir un ensemble d'informations détaillées sur les événements du moteur de base de données de 4D.<!-- END REF--> Les informations renvoyées concernent les accès en lecture/écriture aux données depuis ou vers le disque ou le cache ainsi que l'utilisation des index de la base, les recherches et les tris. 
 
 **Database measures** retourne un seul objet contenant toutes les mesures utiles. Le paramètre *options* vous permet de paramétrer les informations retournées. 
 
-##### Présentation de l'objet retourné 
+### Présentation de l'objet retourné 
 
 L'objet retourné par la commande contient une seule propriété, nommée "DB", dont la structure est la suivante :
 
@@ -32,7 +32,7 @@ Cet objet est composé de huit propriétés élémentaires qui contiennent les m
 
 **Note :** Une propriété est présente dans l'objet uniquement si elle contient des valeurs. Lorsqu'une propriété est vide, elle n'est pas incluse dans l'objet. Par exemple, si la base a été ouverte en mode lecture seulement et que les index n'ont pas été sollicités, l'objet retourné ne contiendra pas les propriétés "diskWriteBytes", "diskWriteCount", "indexSegment" et "indexes".
 
-##### Propriétés élémentaires 
+### Propriétés élémentaires 
 
 Les propriétés élémentaires peuvent être présentes à différents niveaux de l'objet DB. Elles retournent les mêmes informations mais sur des périmètres spécifiques. Voici la description de ces propriétés :
 
@@ -69,7 +69,7 @@ Ces huit propriétés élémentaires ont toutes la même structure d'objet, par 
    Cet exemple peut être représenté dans le schéma suivant :  
    ![](../assets/en/commands/pict1510781.en.png)
 
-##### dataSegment1 et indexSegment 
+### dataSegment1 et indexSegment 
 
 Les propriétés "dataSegment1" et "indexSegment" peuvent contenir jusqu'à quatre propriétés élémentaires (le cas échéant) : 
 
@@ -119,7 +119,7 @@ Les valeurs retournées correspondent aux formules suivantes :
 *diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
 *diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
 
-##### tables 
+### tables 
 
 La propriété "tables" contient autant de propriétés qu'il y a de tables ayant été utilisées en lecture ou en écriture depuis l'ouverture de la base. Le nom de chaque propriété est le nom de la table concernée. Par exemple : 
 
@@ -213,7 +213,7 @@ Chaque objet "table" contient jusqu' à 12 propriétés :
          
    **Note :** L'attribut "queries" est créé si au moins une recherche a été effectuée sur la table.
 
-##### indexes 
+### indexes 
 
 Il s'agit de l'objet ayant la structure la plus complexe. Toutes les tables auxquelles on a accédé via au moins l'un de leurs index sont stockées en tant que propriétés et, à l'intérieur de chaque propriété, les noms des index utilisés sont également stockés sous forme de propriétés. Les index de mots-clés apparaissent séparément, leur nom est suivi de "*(* *Keyword)*". Enfin, chaque objet nom d'index contient les huit propriétés élémentaires relatives à cet index ainsi que jusqu'à quatre sous-objets en fonction de l'utilisation des index de la base depuis son lancement (chaque sous-objet n'existe que si au moins une opération correspondante a été effectuée depuis le lancement de la base).
 
@@ -257,7 +257,7 @@ Exemple : Depuis le lancement de la base, divers index du champ \[Employees\]Emp
 }
 ```
 
-##### Paramètre options 
+### Paramètre options 
 
 Le paramètre *options* vous permet de personnaliser les informations retournées par la commande. Dans *options*, vous devez passer un objet pouvant contenir jusqu'à trois propriétés : "withHistory", "historyLength" et "path".
 
@@ -270,7 +270,7 @@ Le paramètre *options* vous permet de personnaliser les informations retournée
 (\*) Comme décrit précédemment, l'historique n'est pas stocké sous forme d'une séquence de secondes mais uniquement sous forme de valeurs remarquables. Si rien ne se produit durant deux secondes ou plus, rien n'est stocké et une rupture apparaît dans le tableau "history". Par exemple, "time" peut contenir -2, -4, -5, -10, -15, -30 avec des valeurs "value" 200, 300, 250, 400, 500,150\. Si la propriété "historyLength" est fixée à 600 (10 minutes), le tableau retourné contiendra 0, -1, -2, -3 … -599 pour "time", et seules les propriétés "value" des secondes -2, -4, -5, -10, -15, -30 seront remplies. Toutes les autres propriétés "value" auront pour valeur 0 (zéro). De plus, comme décrit également, la seule limite du tableau d'historique interne est sa taille (200 éléments), et non le temps. Cela signifie que s'il y a une activité réduite pour une propriété spécifique, le moment le plus ancien peut ête très éloigné (p.e. -3600 pour il y a une heure). Il peut également contenir moins de 200 valeurs si la base vient juste d'être lancée. Dans ces cas, si l'heure interne de l'historique est plus récent que celui demandé OU si toutes les valeurs remarquables ont déjà ajoutées au tableau retourné, la valeur retournée sera -1\.   
 Exemple : La base a été démarrée il y a 20 secondes et la taille demandée du tableau "history" est de 60 secondes. Les données retournées entre 0 et -20 seront bien constituées de valeurs et de 0, et les autres valeurs serront -1\. Lorsqu'une valeur "-1" est retournée, cela signifie soit que le temps demandé est top ancien, soit que la valeur n'est plus dans le tableau d'historique interne (c'est-à-dire que la limite des 200 éléments a été atteinte et que les valeurs plus anciennes ont été supprimées).
 
-##### Client/serveur et composants 
+### Client/serveur et composants 
 
 Cette commande retourne des informations relatives à l'utilisation de la base de données. Cela signifie qu'elle ne retourne un objet valide contenant des valeurs significatives uniquement lorsqu'elle est appelée :
 
@@ -280,7 +280,7 @@ Cette commande retourne des informations relatives à l'utilisation de la base d
 Si la commande est appelée depuis un 4D distant en mode client/serveur, l'objet est retourné vide.   
 Dans ce contexte, si vous souhaitez obtenir des informations sur le serveur, le plus simple est de créer une méthode et d'activer l'option "Exécuter sur serveur". Ce principe fonctionne aussi pour un composant : si le composant est utilisé dans un contexte local, la commande retourne des informations sur la base hôte ; dans un contexte de 4D distant, elle retourne des informations sur la base du serveur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
 
@@ -291,7 +291,7 @@ Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
  $measures:=Database measures($param)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez connaître uniquement le nombre global d'octets lus dans le cache ("cacheReadBytes") :
 
@@ -314,7 +314,7 @@ L'objet retourné contiendra, par exemple :
 }
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux dernières minutes :
 
@@ -328,7 +328,7 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

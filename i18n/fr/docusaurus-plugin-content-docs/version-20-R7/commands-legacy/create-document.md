@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Create document.Summary-->La commande **Create document** crée un document et retourne son numéro de référence de document.<!-- END REF-->
 
@@ -37,7 +37,7 @@ Une fois que vous avez créé et ouvert un document, vous pouvez écrire ou lire
 
 N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](close-document.md) pour le document. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant crée et ouvre un nouveau document qui s'appelle “Note”, écrit la chaîne “Bonjour” et le referme :
 
@@ -50,7 +50,7 @@ L'exemple suivant crée et ouvre un nouveau document qui s'appelle “Note”, �
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant crée sous Windows des documents avec des extensions non standard : 
 
@@ -60,16 +60,16 @@ L'exemple suivant crée sous Windows des documents avec des extensions non stand
  $vhMonDoc:=Create document("LeDoc.") //Pas d’extension (le point "." est obligatoire)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le document est correctement créé, la variable système OK prend la valeur 1 et la variable système Document contient le chemin d’accès et le nom du fichier *document*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

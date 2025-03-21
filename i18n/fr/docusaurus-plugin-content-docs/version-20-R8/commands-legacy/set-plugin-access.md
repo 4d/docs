@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->La commande **SET PLUGIN ACCESS** permet de spécifier par programmation le groupe d’utilisateurs autorisé à utiliser chaque plug-in “sérialisé” installé dans la base.<!-- END REF--> Cette définition permet de gérer la répartition des licences des plug-ins.
 
@@ -38,13 +38,13 @@ Passez dans le paramètre *groupe* le nom du groupe dont les utilisateurs seront
 * L'autorisation d'accès à un plug-in n'est accordée qu'à un seul groupe. Si un autre groupe disposait déjà de l'autorisation d'accès, il perd ce privilège à l'issue de l'exécution de la commande.
 * Les licences utilisées resteront associées aux comptes utilisateurs 4D dans *groupe* durant toute la session, même si elles changent de groupe ou si le *groupe* perd ses droits d'accès au plug-in.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

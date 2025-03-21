@@ -42,7 +42,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 > La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo* ](../WebServer/webServerConfig.md#use-preemptive-processes)es ignorado por el Servidor REST).
 
 
 ## Parámetros
@@ -58,7 +58,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#receiving-an-entity-selection-as-parameter).
 
 
 ### Parámetro de valor escalar
@@ -87,7 +87,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se proporciona __KEY, la entidad correspondiente a __KEY se carga en el servidor con los atributos dados
 
-Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
+Ver ejemplos para crear o actualizar entidades.
 
 #### Parámetro de entidad asociado
 
@@ -135,7 +135,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -165,7 +165,7 @@ A continuación, puede ejecutar esta petición:
 
 Petición: ["Aguada"]
 
-#### Result
+#### Resultado
 
 El resultado es una entidad:
 ```
@@ -209,7 +209,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -235,7 +235,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -267,7 +267,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -298,7 +298,7 @@ A continuación, puede ejecutar esta petición:
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -353,7 +353,7 @@ Cuerpo de la petición:
 Como ninguna `__KEY` es dada, una nueva entidad Students está cargada en el servidor **con los atributos del cliente**. Como la función `pushData()` ejecuta una acción `save()`, la nueva entidad es creada.
 
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -390,7 +390,7 @@ Cuerpo de la petición:
 
 Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **con el valor lastname recibido por el cliente**. Como la función ejecuta una acción `save()`, la nueva entidad es actualizada.
 
-#### Result
+#### Resultado
 
 ``` 
 {
@@ -426,7 +426,7 @@ Cuerpo de la petición:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -480,7 +480,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -547,7 +547,7 @@ Cuerpo de la petición:
 
 ```
 
-#### Result
+#### Resultado
 
 Se han actualizado las entidades con llaves primarias 1 y 2.
 

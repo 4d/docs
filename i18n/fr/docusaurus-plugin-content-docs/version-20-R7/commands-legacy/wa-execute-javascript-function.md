@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->La commande **WA EXECUTE JAVASCRIPT FUNCTION** exécute dans la zone Web désignée par les paramètres *\** et *objet* la fonction JavaScript *fonctionJS* et retourne facultativement son résultat dans le paramètre *résultat*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ La commande prend en charge plusieurs types de paramètres aussi bien en entrée
 
 **Attention :** L'utilisation de cette commande pour appeler directement une fonction JavaScript qui affiche un dialogue (**alert()**, **print().**..) n'est pas recommandée car l'utilisateur ne peut pas interagir avec la zone Web pendant l'exécution du code 4D. Si vous devez implémenter une telle interface, vous pouvez par exemple appeler **setTimeout(function(){alert();}, 50))** pour laisser l'exécution du code 4D se terminer et permettre l'interaction de l'utilisateur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Appel d’une fonction JavaScript avec 3 paramètres :
 
@@ -43,7 +43,7 @@ Appel d’une fonction JavaScript avec 3 paramètres :
  WA EXECUTE JAVASCRIPT FUNCTION(MaZoneW;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La fonction JavaScript "getCustomerInfos" reçoit un identifiant numérique en paramètre et retourne un objet :
 
@@ -54,11 +54,11 @@ La fonction JavaScript "getCustomerInfos" reçoit un identifiant numérique en p
  WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfos";$Result;$ID)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

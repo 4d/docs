@@ -117,7 +117,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
-> Windows の場合、統合されたクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用すると、ビルトインフォルダーの場所が変更されます。
+> Windows の場合、統合されたクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#build-application-settings) を使用すると、ビルトインフォルダーの場所が変更されます。
 
 ## 4D.Folder.new()
 

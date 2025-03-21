@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP Request.Summary-->The **SOAP Request** command returns **[True](true.md "True")** if the code being executed is part of a SOAP request.<!-- END REF--> 
 
 This command can be used for security reasons in the *On Web Authentication Database Method* in order to determine the nature of the received requests.
 
-#### See also 
+## See also 
 
 [SOAP DECLARATION](soap-declaration.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

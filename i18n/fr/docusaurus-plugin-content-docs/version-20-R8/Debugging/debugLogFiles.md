@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -17,6 +17,7 @@ Les informations stockées dans les journaux doivent être analysées pour déte
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [Fichier journal des requêtes ORDA](#orda-requests)
+- [4DTCPLog.txt](#4dtcplogtxt)
 
 > Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server" est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
@@ -69,7 +70,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | request                                                                                                | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                                                                                                                                                                                                                           |
 | bytes_in                                                                          | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | bytes_out                                                                         | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| server\_duration &#124; exec\_duration | Dépend de l'endroit où le journal est généré :<li>_server\*duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>_exec\*duration* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
+| server\_duration &#124; exec\_duration | Dépend de l'endroit où le journal est généré :<li>_server\*duration\* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>_exec\*duration\* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
 | write\_duration                                                                  | Temps pris en microsecondes pour l'envoi de la :<li>Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li>Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li>                                                                                                                                                                   |
 | task_kind                                                                         | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | rtt                                                                                                    | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. De A à D et de E à H dans l'image ci-dessous.<li>Seulement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lorsqu'il est utilisé avec l'ancienne couche réseau.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renverra 0.</li>                                           |
@@ -290,10 +291,10 @@ Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le 
 Les fichiers peuvent être générés en deux versions :
 
 - une version classique :
-  - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
-  - sans pièces jointes
-  - avec un recyclage automatique tous les 10 MB
-  - conçue pour des fonctions de débogage habituelles
+ - fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+ - sans pièces jointes
+ - avec un recyclage automatique tous les 10 MB
+ - conçue pour des fonctions de débogage habituelles
 
 Pour démarrer ce journal :
 
@@ -308,10 +309,10 @@ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 - une version étendue :
-  - pièce(s) jointe(s) inclue(s)
-    pas de recyclage automatique
-  - nom personnalisé
-  - réservée à des fins spécifiques
+ - pièce(s) jointe(s) inclue(s)
+  pas de recyclage automatique
+ - nom personnalisé
+ - réservée à des fins spécifiques
 
 Pour démarrer ce journal :
 
@@ -456,6 +457,43 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ```
 
+## 4DTCPLog.txt
+
+This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+
+Pour lancer ce journal :
+
+- Use the `SET DATABASE PARAMETER` command:
+
+ ```4d
+ SET DATABASE PARAMETER(TCP log; 1)
+ ```
+
+- Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+
+ ```json
+ {
+     "TCPLogs":{
+       "state" : 1
+          }
+ }
+ ```
+
+Les champs suivants sont enregistrés pour chaque évènement :
+
+| Noms des champs | Type      | Description                                                                                |
+| --------------- | --------- | ------------------------------------------------------------------------------------------ |
+| time            | Date/Time | Date and time of the event in ISO 8601 format                                              |
+| localPort       | Number    | Local port used for the connection                                                         |
+| peerAddress     | Text      | IP address of the remote peer                                                              |
+| peerPort        | Number    | Port of the remote peer                                                                    |
+| protocol        | Text      | Indicates whether the event is related to `TCP`                                            |
+| event           | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size            | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt         | Number    | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt     | Text      | First 10 bytes of data in text format                                                      |
+| comment         | Text      | Additional information about the event, such as error details or encryption status         |
+
 ## Utilisation d'un fichier de configuration de log
 
 Vous pouvez utiliser un **fichier de configuration de log** pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
@@ -465,16 +503,16 @@ Vous pouvez utiliser un **fichier de configuration de log** pour gérer facileme
 Il existe plusieurs façons d'activer le fichier de configuration du journal, en fonction de votre configuration :
 
 - **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
-- **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le [dossier Settings](../Project/architecture.md#settings-1) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
 - **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows : `Users\[userName]\AppData\Roaming\[application]`
-  - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
+ - Windows : `Users\[userName]\AppData\Roaming\[application]`
+ - macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+ - Windows: `Users\[userName]\AppData\Roaming\4D`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
-  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
-  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+ - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+ - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -484,7 +522,7 @@ Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settin
 
 ### Description du fichier JSON
 
-Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
+Voici un exemple de fichier de configuration de log :
 
 ```json
 {
@@ -633,7 +671,7 @@ Le fichier de configuration du journal est un fichier `.json` qui doit respecter
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 

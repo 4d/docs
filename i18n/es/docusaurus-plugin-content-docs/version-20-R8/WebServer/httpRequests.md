@@ -80,13 +80,13 @@ Si su aplicación utiliza esta información, deberá analizar el encabezado y el
 
 > For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
-### $BrowserIP - Web client IP address
+### $BrowserIP - Dirección IP del cliente web
 
 The $BrowserIP parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
-### $ServerIP - Server IP address
+### $ServerIP - Dirección IP del servidor
 
 The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
@@ -157,7 +157,7 @@ Un formulario puede ser enviado a través de dos métodos (ambos pueden ser util
 
 > Cuando el servidor web recibe un formulario publicado, llama al método base `On Web Authentication` (si existe).
 
-En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-the-requests) de todos los campos incluidos en una página HTML enviada al servidor.
+En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-http-requests) de todos los campos incluidos en una página HTML enviada al servidor.
 
 Ejemplo para definir la acción de un formulario:
 
@@ -276,7 +276,7 @@ Las principales características de esta página son:
 - Incluye tres botones **Submit**: `vsbLogOn`, `vsbRegister` y `vsbInformation`.
 - Cuando se hace clic en **Log On**, el envío del formulario se procesa primero por la función de JavaScript `LogOn`. Si no se introduce ningún nombre, el formulario ni siquiera se envía a 4D, y se muestra una alerta de JavaScript.
 - El formulario tiene un método POST 4D así como un script Submit (*GetBrowserInformation*) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por *vtNav_App*.
-  También incluye el objeto `vtUserName`.
+ También incluye el objeto `vtUserName`.
 
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 

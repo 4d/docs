@@ -15,11 +15,11 @@ title: VP Cell
 | column     | Integer | ->                          | Índice de la columna                                           |
 | row        | Integer | ->                          | Índice de la línea                                             |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
-| Result     | Object  | <- | Objeto rango de una sola celda                                 |
+| Resultado  | Object  | <- | Objeto rango de una sola celda                                 |
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->devuelve un nuevo objeto de rango que hace referencia a una celda específica<!-- END REF -->.
 
@@ -35,7 +35,7 @@ En el parámetro opcional *sheet*, puede designar el índice de la hoja en donde
 
 > la indexación comienza en 0.
 
-#### Ejemplo
+## Ejemplo
 
 Desea definir un objeto rango para la celda mostrada abajo (en la hoja actual):
 
@@ -47,7 +47,7 @@ El código es el siguiente:
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### Ver también
+## Ver también
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

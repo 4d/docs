@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Variance.Summary-->**Variance**は、*series*の分散を返します。<!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 考慮される値が標本でない場合、**Variance**から返される値を (n-1)/n でかけ合わせます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は変数*var*のオブジェクトメソッドです。オブジェクトメソッドは*var*に一連のデータの分散を代入します:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 **注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
-#### 例題 2 
+## 例題 2 
 
 この例題では配列に格納された値の分散を求めます:
 
@@ -62,14 +62,14 @@ displayed_sidebar: docs
  vVariance:=Variance($ArrGrades)
 ```
 
-#### 参照 
+## 参照 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

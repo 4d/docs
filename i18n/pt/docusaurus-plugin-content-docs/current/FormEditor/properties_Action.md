@@ -5,7 +5,7 @@ title: Ação
 
 ## Métodos
 
-Reference of a method attached to the object. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. Ver [Métodos especializados](Concepts/methods.md#specialized-methods).
+Reference of a method attached to the object. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. See [methods](../Concepts/methods.md).
 
 You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
@@ -13,7 +13,7 @@ São suportados vários tipos de referências de métodos:
 
 - um caminho de arquivo de método de projeto padrão, ou seja, que usa o seguinte padrão:\
   `método. dm`\
-  Este tipo de referência indica que o arquivo de método está localizado no local padrão ("sources/{TableForms/_numTable_} 「 {Forms}/_formName_/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+  Este tipo de referência indica que o arquivo de método está localizado no local padrão ("sources/{TableForms/*numTable*} 「 {Forms}/*formName*/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
 
 - um nome de método de projeto: nome de um método de projeto existente sem extensão de arquivo, ou seja:
   `myMethod`
@@ -30,3 +30,4 @@ São suportados vários tipos de referências de métodos:
 | Nome   | Tipo de dados | Valores possíveis                                                  |
 | ------ | ------------- | ------------------------------------------------------------------ |
 | method | text          | Object method standard or custom file path, or project method name |
+

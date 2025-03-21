@@ -164,7 +164,7 @@ Il existe deux méthodes pour soumettre un formulaire (toutes deux pouvant être
 
 > Lorsque le serveur Web reçoit un formulaire posté, il appelle la méthode base `On Web Authentication` (si elle existe).
 
-Dans la méthode appelée, vous devez utiliser la commande `WEB GET VARIABLES` afin de récupérer les noms et les valeurs de tous les champs inclus dans une page HTML envoyée au serveur.
+In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
 
 Exemple pour définir l'action d'un formulaire :
 

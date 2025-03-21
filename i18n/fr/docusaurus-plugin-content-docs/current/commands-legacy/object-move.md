@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->La commande **OBJECT MOVE** permet de déplacer le ou les objet(s) du formulaire courant, défini(s) par les paramètres *\** et *objet*, de *dépH* pixels horizontalement et de *dépV* pixels verticalement.<!-- END REF--> Il est également possible (optionnellement) de redimensionner le ou les objet(s) de *redimH* pixels horizontalement et de *redimV* pixels verticalement. 
 
@@ -40,7 +40,7 @@ Cette commande fonctionne uniquement dans les contextes suivants :
 * En-têtes et pieds de page des formulaires sortie affichés par les commandes [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
 * Formulaires en cours d'impression.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’instruction suivante déplace le bouton “Bouton\_1” de 10 pixels vers la droite et de 20 pixels vers le haut, et agrandit le bouton de 30 pixels en largeur et de 40 en hauteur : 
 
@@ -48,7 +48,7 @@ L’instruction suivante déplace le bouton “Bouton\_1” de 10 pixels vers la
  OBJECT MOVE(*;"Bouton_1";10;-20;30;40)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’instruction suivante place le bouton “Bouton\_1” aux coordonnées (10;20) (30;40) : 
 
@@ -56,13 +56,13 @@ L’instruction suivante place le bouton “Bouton\_1” aux coordonnées (10;20
  OBJECT MOVE(*;"Bouton_1";10;20;30;40;*)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

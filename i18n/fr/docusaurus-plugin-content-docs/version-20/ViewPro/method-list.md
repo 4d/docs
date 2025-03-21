@@ -5232,7 +5232,7 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 
 Le paramètre *formula* indique un nom de formule ou de méthode 4D à assigner à *rangeObj*.
 
-> Si la formule ** est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée à l'aide de la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
+> Si la formule ** est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
 
 Le paramètre optionnel *formatPattern* définit un [pattern](configuring.md#cell-format) (modèle) pour le paramètre *formula*.
 
@@ -5287,7 +5287,7 @@ Le paramètre *formulasCol* est une collection bidimensionnelle :
 * La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection définit une ligne.
 * Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs doivent être des éléments textuels contenant les formules à associer aux cellules.
 
-> Si la formule est une chaîne, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée à l'aide de la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
+> Si la formule est une chaîne, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
 
 Vous pouvez supprimer les formules dans *rangeObj* en les remplaçant par une chaîne vide ("").
 
@@ -6273,7 +6273,7 @@ $param:=New collection
 
 #### Voir également
 
-[VP Get formulas](configuring.md#vp-get-formulas)<br/>[VP Get value](#vp-get-value)<br/>[VP Get Values](#vp-get-values)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUE](#vp-set-value)
+[VP Get formulas](#vp-get-formulas)<br/>[VP Get value](#vp-get-value)<br/>[VP Get Values](#vp-get-values)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUE](#vp-set-value)
 
 ### VP SET WORKBOOK OPTIONS
 
@@ -6442,7 +6442,7 @@ Résultat:
 
 #### Voir également
 
-[VP ADD CELL](#vp-add-cell)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)
+[VP CELL](#vp-cell)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)
 
 ### VP SUSPEND COMPUTING
 

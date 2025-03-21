@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REDRAW.Summary-->メソッドを使用して、サブフォームで中に表示されるフィールドの値を変更する場合、フォームを確実に更新するために REDRAW コマンドを使用しなければなりません。<!-- END REF-->
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
   
 
-#### 参照 
+## 参照 
 
 [SET TIMER](set-timer.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

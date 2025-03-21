@@ -16,22 +16,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->El comando SAX GET XML DOCUMENT VALUES  extrae información básica del encabezado XML del documento XML referenciado por *documento*.<!-- END REF-->
 
 El comando devuelve respectivamente el tipo de codificación, la versión y la propiedad “autónoma” del documento en los parámetros *codificacion*, *version* y *autonomo*. Este comando debe utilizarse en el evento del contexto del evento SAX XML Start Document. Para mayor información sobre los eventos SAX, consulte la descripción del comando [SAX Get XML node](sax-get-xml-node.md "SAX Get XML node"). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario toma el valor 0 y se genera un error. 
 
-#### Ver también 
+## Ver también 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 [SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

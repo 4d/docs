@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->El comando **OBJECT SET SHORTCUT** permite definir o modificar dinámicamente el atajo de teclado asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
   
@@ -64,15 +64,15 @@ En el parámetro *modificadores*, pase una o más teclas de modificación a asoc
   
 | Constante        | Tipo         | Valor | Comentario                                             |
 | ---------------- | ------------ | ----- | ------------------------------------------------------ |
-| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en OS X           |
-| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo OS X, o clic derecho en Windows y OS X |
-| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en OS X)             |
-| Shift key mask   | Entero largo | 512   | Windows y OS X                                         |
+| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en macOS           |
+| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo macOS, o clic derecho en Windows y macOS |
+| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en macOS)             |
+| Shift key mask   | Entero largo | 512   | Windows y macOS                                         |
 
   
 **Nota**: si omite el parámetro *modificadores*, el objeto se activa tan pronto como se presiona la tecla definida. Por ejemplo, si se asocia la tecla "H" a un botón, este botón se activa cada vez que presione la tecla H. Este funcionamiento ser reserva para interfaces específicas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere asociar un atajo de teclado diferente en función del lenguaje actual de la aplicación. En el evento On Load form, puede escribir:
 
@@ -85,11 +85,11 @@ Usted quiere asociar un atajo de teclado diferente en función del lenguaje actu
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

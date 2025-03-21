@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->O comando CREATE ALIAS cria um alias (chamado “atalho” em Windows) do arquivo ou pasta objetivo passado em *rotaObjetivo*.<!-- END REF--> O nome e a localização são definidos pelo parâmetro *rotaAlias*.  
 
@@ -26,7 +26,7 @@ Este comando não atribui um nome por padrão, o nome tem que ser passado no par
   
 Se for passada uma string vazia em *rotaObjetivo*, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Seu banco gera arquivos de texto chamados “RelatórioNúmero” armazenados na pasta do banco. O usuário quer criar atalhos a estes relatórios e armazená-los em uma localização conveniente: 
 
@@ -60,15 +60,15 @@ Seu banco gera arquivos de texto chamados “RelatórioNúmero” armazenados na
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK assume o valor 1 se o comando for executado corretamente, se não assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [RESOLVE ALIAS](resolve-alias.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

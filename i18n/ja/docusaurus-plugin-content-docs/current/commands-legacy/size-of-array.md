@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Size of array.Summary-->Size of array コマンドは、配列*array*の要素数を返します。<!-- END REF-->
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は配列*anArray*のサイズを返します:
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
  vlSize:=Size of array(anArray) // vlSizeはanArrayのサイズを取得する
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は2次元配列の行数を返します:
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
  vlRows:=Size of array(a2DArray) // vlRowsはa2DArrayのサイズを取得する
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例は2次元配列の、指定された行の列数を返します:
 
@@ -42,12 +42,12 @@ displayed_sidebar: docs
  vlColumns:=Size of array(a2DArray{10}) // vlColumnsはa2DArray{10}のサイズを所得する
 ```
 
-#### 参照 
+## 参照 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

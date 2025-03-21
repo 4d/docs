@@ -14,32 +14,32 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 | 4D Server           | Interprété ([associé au débogueur](../Debugging/debugging-remote.md)) | Interprété (non associé au débogueur) | Compilé          |
 | ------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
 | Serveur REST        | coopératif                                                                               | préemptif                                                | préemptif        |
-| Serveur Web         | coopératif                                                                               | coopératif                                               | _paramètres web_ |
-| Server Web Services | coopératif                                                                               | coopératif                                               | _paramètres web_ |
+| Serveur Web         | coopératif                                                                               | coopératif                                               | *paramètres web* |
+| Server Web Services | coopératif                                                                               | coopératif                                               | *paramètres web* |
 
 | 4D distant/monoposte | Interprété | Compilé          |
 | -------------------- | ---------- | ---------------- |
 | Serveur REST         | coopératif | préemptif        |
-| Serveur Web          | coopératif | _paramètres web_ |
-| Server Web Services  | coopératif | _paramètres web_ |
+| Serveur Web          | coopératif | *paramètres web* |
+| Server Web Services  | coopératif | *paramètres web* |
 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- _**web setting**_ signifie que le mode préemptif dépend d'une valeur de réglage :
-  - lorsque l'option [**Scalable sessions**](sessions.md#enabling-sessions) est sélectionnée, le [mode préemptif est automatiquement utilisé](sessions.md#preemptive-mode) pour les process web.
-  - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
-  - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
+- ***web setting*** signifie que le mode préemptif dépend d'une valeur de réglage :
+    - when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
+    - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
+    - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
 ## Ecrire du code serveur Web thread-safe
 
 Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souhaitez que les process Web soient lancés en mode préemptif. Lorsque l'option [Utiliser des process préemptifs](#availability-of-preemptive-mode-for-web-processes) est cochée dans le dialogue des Propriétés, les parties de l'application listées ci-dessous sont automatiquement évaluées par 4D Compiler :
 
 - Toutes les méthodes base liées au web :
-  - [`On Web Authentication`](authentication.md#on-web-authentication)
-  - [`On Web Connection`](httpRequests.md#on-web-connection)
-  - [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+    - [`On Web Authentication`](authentication.md#on-web-authentication)
+    - [`On Web Connection`](httpRequests.md#on-web-connection)
+    - `On REST Authentication`
+    - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 
@@ -51,7 +51,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
-Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe _Ecrire une méthode thread-safe_ dans le chapitre _Process_ du manuel de [Langage 4D](https://doc.4d.com).
+Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe *Ecrire une méthode thread-safe* dans le chapitre *Process* du manuel de [Langage 4D](https://doc.4d.com).
 
 ## Code web 4D thread-safe
 
@@ -61,8 +61,8 @@ La plupart des commandes, fonctions, méthodes base et URLs 4D sont thread-safe 
 
 Toutes les commandes 4D relatives au Web sont thread-safe, à savoir :
 
-- toutes les commandes du thème _Web Server_
-- toutes les commandes du thème _Client HTTP_.
+- toutes les commandes du thème *Web Server*
+- toutes les commandes du thème *Client HTTP*.
 
 Les méthodes base ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif (voir ci-dessus) : `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
@@ -72,16 +72,16 @@ Bien sûr, le code exécuté par ces méthodes doit aussi être thread-safe.
 
 Les URLs Web Server ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif :
 
-- _4daction/_ (la méthode projet appelée doit également être à thread-safe)
-- _4dcgi/_ (les méthodes base appelées doivent également être thread-safe)
-- _4dwebtest/_
-- _4dblank/_
-- _4dstats/_
-- _4dhtmlstats/_
-- _4dcacheclear/_
-- _rest/_
-- _4dimgfield/_ (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
-- _4dimg/_ (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
+- *4daction/* (la méthode projet appelée doit également être à thread-safe)
+- *4dcgi/* (les méthodes base appelées doivent également être thread-safe)
+- *4dwebtest/*
+- *4dblank/*
+- *4dstats/*
+- *4dhtmlstats/*
+- *4dcacheclear/*
+- *rest/*
+- *4dimgfield/* (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
+- *4dimg/* (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
 
 ### Icône de process web préemptif
 

@@ -16,7 +16,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 |[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 |[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
@@ -264,7 +264,7 @@ The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction()
 
 The `.cancelTransaction()` function cancels any changes made to the data during the transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
+You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
 
 #### Example
 
@@ -272,7 +272,6 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -375,7 +374,6 @@ You want to know the number of encrypted tables in the current data file:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>History</summary>
@@ -454,7 +452,6 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -481,7 +478,7 @@ The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteCont
 
 > For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
+Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
 
 #### Example
 
@@ -596,7 +593,7 @@ On a remote datastore:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -714,7 +711,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>History</summary>
@@ -775,9 +772,9 @@ The function will also return `True` if the datastore was locked by another admi
 
 The `.makeSelectionsAlterable()` function <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). It is intended to be used once, for example in the `On Startup` database method.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
 
 > **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects.
 On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity.
@@ -899,7 +896,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -1242,7 +1239,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>History</summary>

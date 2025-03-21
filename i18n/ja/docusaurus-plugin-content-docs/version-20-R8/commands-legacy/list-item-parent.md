@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.List item parent.Summary-->List item parent コマンドは、親項目の項目参照番号を返します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については、[APPEND TO LIST](append-to-list.md "APPEND TO LIST")の説明を参照してください。
 
-#### 例題 
+## 例題 
 
 *hList*があるとき、アプリケーションモードで以下のように表示されます:
 
@@ -62,14 +62,14 @@ displayed_sidebar: docs
 * “a - 1”が選択されていると、“a”.の項目参照番号である100が*$vlParentItemRef* に返されます。
 * “a” または “b”が選択されていると、これらの項目には親項目がないため*$vlParentItemRef*には0が返されます。
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

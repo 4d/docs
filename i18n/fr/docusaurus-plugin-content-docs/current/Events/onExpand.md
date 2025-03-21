@@ -3,9 +3,9 @@ id: onExpand
 title: On Expand
 ---
 
-| Code | Peut être appelé par                                                                                      | Définition                                                                                                            |
-| ---- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 44   | [Liste hiérarchique](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md) | Un élément de la liste hiérarchique ou de la list box hiérarchique a été développé à l'aide d'un clic ou d'une touche |
+| Code | Peut être appelé par                                                                             | Définition                                                                                                            |
+| ---- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| 44   | [Liste hiérarchique](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | Un élément de la liste hiérarchique ou de la list box hiérarchique a été développé à l'aide d'un clic ou d'une touche |
 
 ## Description
 

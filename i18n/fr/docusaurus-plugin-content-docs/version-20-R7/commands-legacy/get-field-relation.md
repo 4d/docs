@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->La commande **GET FIELD RELATION** permet de connaître le statut automatique/manuel du lien partant du *champN* pour le process courant.<!-- END REF--> Tous les liens peuvent être consultés, y compris les liens déclarés automatiques dans la fenêtre de Structure.
 
@@ -43,7 +43,7 @@ Vous pouvez comparer les valeurs reçues dans les paramètres *aller* et *retour
 
 * Le paramètre facultatif *\** permet de “forcer” la lecture du statut courant du lien, même s’il n’a pas été modifié par programmation. Autrement dit, lorsque vous passez le paramètre *\**, seules les valeurs 2 ou 3 peuvent être retournées dans les paramètres *aller* et *retour*.
 
-#### Exemple 
+## Exemple 
 
 Soit la structure suivante :
 
@@ -78,14 +78,14 @@ Le code ci-dessous illustre les différentes possibilités offertes par les comm
  GET FIELD RELATION([Employés]Société;aller;retour;*) //retourne 3,3
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

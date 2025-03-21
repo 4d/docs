@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get 4D file.Summary-->O comando **Get 4D file** devolve a rota de acesso ao arquivo de ambiente 4D especificado pelo parâmetro *arquivo*.<!-- END REF--> A rota será devolvida utilizando a sintaxe de sistema.
 
@@ -56,7 +56,7 @@ Quando o comando for chamado desde um componente, passe o parâmetro opcional *\
 
 Já no caso de User settings file for data e User settings file, uma rota se devolve só se a opção de segurança **Ativar configuração de usuário no arquivo externo** for selecionada no diálogo "Propriedades do banco de dados" (ver ).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser obter a rota do último arquivo de backup:
 
@@ -66,11 +66,11 @@ Se quiser obter a rota do último arquivo de backup:
   // $path = "C:\Backups\Countries\Countries[0025].4BK" for example
 ```
 
-#### Ver também 
+## Ver também 
 
 [File](../commands/file.md)    
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

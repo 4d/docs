@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.System folder.Summary-->**System folder**コマンドは、アクティブなWindows またはmacOS システムフォルダにあるシステムフォルダへのパス名、あるいはアクティブなWindows またはmacOS システムフォルダ自体へのパス名を返します。<!-- END REF-->
 
@@ -46,12 +46,12 @@ displayed_sidebar: docs
 
 *type* 引数を省略すると、コマンドはアクティブなシステムフォルダ (定数= System )のパス名を返します。
 
-#### 参照 
+## 参照 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

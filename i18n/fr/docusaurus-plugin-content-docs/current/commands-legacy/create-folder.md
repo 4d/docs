@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->La commande **CREATE FOLDER** crée un dossier en fonction du chemin d'accès que vous passez dans le paramètre *cheminAccès*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Vous pouvez également passer dans *cheminAccès* une hiérarchie de dossiers à
 Si vous omettez le paramètre \*, une erreur est générée et aucun dossier n'est créé si au moins un dossier intermédiaire n'existe pas.   
 Si vous passez le paramètre \*, **CREATE FOLDER** recrée la hiérarchie de dossiers si nécessaire et aucune erreur n'est générée. Dans ce cas, vous pouvez également passer un chemin d’accès de document dans *cheminAccès*. Le nom du document est alors ignoré mais la hiérarchie de dossiers définie dans *cheminAccès* est créée récursivement. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant crée le dossier “Archives” dans le dossier de la base :
 
@@ -32,7 +32,7 @@ L'exemple suivant crée le dossier “Archives” dans le dossier de la base :
  CREATE FOLDER("Archives")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant crée le dossier “Archives” dans le dossier de la base, puis crée les sous-dossiers “Janvier” et “Février”:
 
@@ -42,7 +42,7 @@ L'exemple suivant crée le dossier “Archives” dans le dossier de la base, pu
  CREATE FOLDER("Archives\\Février")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant crée le dossier “Archives” à la racine du volume C :
 
@@ -50,7 +50,7 @@ L'exemple suivant crée le dossier “Archives” à la racine du volume C :
  CREATE FOLDER("C:\\Archives")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Création de la hiérarchie de dossiers "C:\\Archives\\2011\\January\\" : 
 
@@ -58,7 +58,7 @@ Création de la hiérarchie de dossiers "C:\\Archives\\2011\\January\\" :
  CREATE FOLDER("C:\\Archives\\2011\\January\\";*)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\\" : 
 
@@ -67,12 +67,12 @@ Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\
   // le fichier "Doc.txt" est ignoré
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

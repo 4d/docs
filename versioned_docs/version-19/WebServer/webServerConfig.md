@@ -253,7 +253,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 
 Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
-> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see [macOS HelperTool](#macos-helpertool)).
+> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
 
 From a web browser, you need to include the non-default HTTP port number into the address you enter for connecting to the web application. The address must have a suffix consisting of a colon followed by the port number. For example, if you are using the HTTP port number 8080, you will specify "123.4.567.89:8080".
 

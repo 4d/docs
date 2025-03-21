@@ -141,7 +141,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Supported data types
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects. For example:
+With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. For example:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -340,7 +340,7 @@ This case is handled by 4D depending on the context:
 
 - in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
 - in interpreted projects:
-	+ if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
+	+ if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
 	+ if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 
@@ -467,7 +467,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpA
 
 :::tip
 
-When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
+When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.  
 
 :::
 
@@ -519,7 +519,7 @@ Here the parameter is not the field, but a pointer to it. Therefore, within the 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returning-values) paragraph.
+This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
 
 
 ### Particular cases: objects and collections

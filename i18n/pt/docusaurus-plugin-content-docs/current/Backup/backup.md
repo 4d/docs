@@ -15,9 +15,9 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 ## Cópia de segurança manual
 
 1. Selecione o comando **Backup...** no menu 4D **File**.
-   A janela de backup é exibida:
-   ![](../assets/en/Backup/backup01.png)
-   Você pode ver o local da pasta de backup usando o menu pop-up ao lado da área "Backup destination". Essa localização é definida na página de **Backup/Configuração** das Configurações do Banco de Dados.
+ A janela de backup é exibida:
+ ![](../assets/en/Backup/backup01.png)
+ Você pode ver o local da pasta de backup usando o menu pop-up ao lado da área "Backup destination". Essa localização é definida na página de **Backup/Configuração** das Configurações do Banco de Dados.
 
 - Você também pode abrir o [Maintenance and Security Center] (MSC/overview.md) do 4D e exibir a [Backup page] (MSC/backup.md).
 
@@ -33,7 +33,7 @@ As cópias de segurança são feitas automaticamente na hora definida nessa pág
 
 ## Comando BACKUP
 
-Quando o comando de linguagem 4D `BACKUP` é executado a partir de qualquer método, o backup começa a usar os parâmetros atuais conforme definido nas Configurações. Você pode usar os métodos de banco de dados `On Backup Startup` e `On Backup Shutdown` para lidar com o processo de backup (consulte o manual _4D Language Reference_).
+Quando o comando de linguagem 4D `BACKUP` é executado a partir de qualquer método, o backup começa a usar os parâmetros atuais conforme definido nas Configurações. Você pode usar os métodos de banco de dados `On Backup Startup` e `On Backup Shutdown` para lidar com o processo de backup (consulte o manual *4D Language Reference*).
 
 ## Gerenciar o processo de  backup
 
@@ -67,8 +67,8 @@ Em todos os casos tenha em mente que o status do último backup (bem sucedido ou
 - \*\*Interrupção de Usuário: The Botão Parar na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 - **Arquivo anexado não encontrado**: Quando um arquivo anexado não pode ser encontrado, 4D realiza um backup parcial (backup de arquivos de aplicação e arquivos anexados acessíveis) e retorna um erro.
 - **Backup impossível** (o disco está cheio ou protegido contra gravação, falta de disco, falha de disco, transação incompleta, aplicativo não iniciado no momento do backup automático programado, etc.):
-  Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.
-  Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
+ Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.
+ Se a segunda tentativa falhar, um diálogo de alerta de sistema é exibido e um erro é gerado. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 
 ## Página de Backup
 
@@ -81,7 +81,7 @@ O histórico de cópia de segurança é chamado "Backup Journal[001].txt" e fica
 Em determinadas estratégias de copia de segurança (por exemplo, no caso de que se realizem copias de segurança de numerosos arquivos anexos), o histórico de cópias de segurança pode alcançar rapidamente um grande tamanho. Dois mecanismos podem ser usados para controlar este tamanho:
 
 - **Backup automático**: Antes de cada backup, o aplicativo examina o tamanho do arquivo de diário de backup atual. Se for superior a 10 MB, se arquiva o arquivo atual e é criado um arquivo com o número [xxx] incrementado, por exemplo "Backup Journal[002].txt”. Quando o arquivo número 999 for alcançado, a numeração volta para 1 e os arquivos existentes começam a ser substituídos.
-- **Possibilidade de reduzir a quantidade de informações registradas**: Para fazer isso, basta modificar o valor da chave `VerboseMode` no arquivo _Backup.4DSettings_ do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas à configuração de backup são descritas no manual _Backup das chaves XML 4D_.
+- **Possibilidade de reduzir a quantidade de informações registradas**: Para fazer isso, basta modificar o valor da chave `VerboseMode` no arquivo *Backup.4DSettings* do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas à configuração de backup são descritas no manual *Backup das chaves XML 4D*.
 
 ## backupHistory.json
 

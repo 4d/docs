@@ -78,7 +78,7 @@ En *entrada\_salida*, pase un valor indicando si el parámetro procesado es “e
 | SOAP input  | Entero largo | 1     |
 | SOAP output | Entero largo | 2     |
 
-##### Utilización de tipos XML 
+### Utilización de tipos XML 
 
 Puede declarar las variables de tipo "estructura XML" y "DOM reference", de entrada y salida, vía las constantes Is XML y Is DOM reference. Cuando los parámetros de este tipo son definidos, no se aplica ningún proceso ni codificación y los datos se trasmiten "tal cual" (ver ejemplo 5).
 
@@ -97,7 +97,7 @@ equivalente a ejecutar el comando [DOM EXPORT TO VAR](dom-export-to-var.md "DOM 
     
 Las estructuras XML serán declaradas por 4D como "anyType" (tipo indeterminado) en el WSDL. Si quiere dar un tipo preciso a una estructura XML, debe guardar el archivo WSDL y añadir manualmente el esquema de datos que quiere en la sección <types> del WSDL.
 
-##### Método COMPILER\_WEB 
+### Método COMPILER\_WEB 
 
  Los argumentos SOAP entrantes referenciados con la ayuda de variables 4D (y no por los argumentos de métodos 4D) deben ser declarados primero en el método de proyecto COMPILER\_WEB. De hecho, el uso de variables de proceso en los métodos Web Services necesitan ser declaradas antes de la llamada al método. Se llama el método de proyecto COMPILER\_WEB, si existe, para cada petición SOAP aceptada. Por defecto, el método COMPILER\_WEB no existe. Usted debe crearlo específicamente.   
   

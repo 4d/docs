@@ -28,7 +28,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ Para inicializar o array associado à lista pendente, pode:
 
 Nesse caso, o nome da [variável] (properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
 
-- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Por exemplo:
+- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. Por exemplo:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
@@ -102,13 +102,13 @@ Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declara
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) //new record
+          aCities:=3 //display a default value
+       Else //existing record, display stored value
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) //user modified selection
+       City:=aCities{aCities} //field gets new value
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -136,7 +136,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 #### Valor do item selecionado ou Referência do item selecionado
 
-Quando você tiver associado uma lista suspensa a uma lista de opções e a um campo ou variável, poderá definir a propriedade [**Data Type**] (properties_DataSource.md#data-type) como **Selected item value** ou **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
@@ -157,12 +157,12 @@ Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] 
 - Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
-  - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
-  - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
-    Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
+ - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
+ - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
+  Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
 > Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 
 ## Propriedades compatíveis
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
