@@ -153,19 +153,21 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## Editing components from the host
 
-To facilitate component tuning in the context of a host project, you can directly modify and save the code of a loaded component from the host project. The code is editable from the host project when the following conditions are met:
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
-- the package folder of the component [contains the interpreted code](../Project/components.md#interpreted-and-compiled-components),
-- the component is not loaded from the [local cache](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
 
-In this case, [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be opened and edited in the code editor. 
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account. 
 
-- In the Explorer, a specific icon indicates that the component code is editable:<br/>
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
-- In the Code editor, a specific icon indicates that the class or method belongs to a component:<br/>
-![](../assets/en/Develop/editable-component-2.png)
+:::warning
 
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
 
 
 
