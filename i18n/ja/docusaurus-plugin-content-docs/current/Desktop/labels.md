@@ -131,50 +131,50 @@ title: ラベル
 
 ![](../assets/en/Desktop/label-layout.png)
 
-- **Labels Order**: Specifies whether labels should be printed in the direction of the rows or the columns.
-- **Rows** and **Columns**: Set the number of labels to be printed by "row" and by "column" on each sheet. These settings determine the label size when the "Automatic resizing" option is enabled.
-- **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
-- **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
- **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
-- **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
-- **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
-- **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
-- **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
-- **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
-- **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
- To be eligible for label processing, a project method must comply with the following settings:
- - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
- - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
-  See also [this example](#printing-labels-using-forms-and-methods-example) below.
+- **ラベル順**: ラベルが行ごとに印刷されるべきかあるいは列ごとに印刷されるべきかを指定します。
+- **ラベル列数** と**ラベル行数** : ラベル用紙に印刷されるラベル"列数"と"行数"を指定します。 "自動サイズ調整"オプションが有効化されている場合、この設定を使用してラベルのサイズが決定されます。
+- **ラベル数／レコード**: レコード毎に印刷するラベルの枚数を指定することができます(指定された数だけ連続して印刷されます)。
+- **印刷設定...**: ラベルが印刷される用紙のページ設定を設定します。 このボタンをクリックすると、システムで選択されているプリンターの設定ダイアログボックスが表示されます。 デフォルトでは、ラベルの用紙はA4 サイズの縦向きモードをベースに生成されています。
+ **注意:** エディターを使用して作成された用紙はプリンターの理論上のページサイズに基づいています。つまり物理的なページサイズ(例: A4など)と比べて、使用不可なマージンの分だけサイズが(両面とも)小さくなります。 ページの物理的なマージンは、プレビューエリア内にて青い線で表示されます。
+- **単位**: ラベルとラベルページのサイズ指定に使用する単位を変更することができます。 ピクセル、ミリメートル、センチメートル、またはインチを使用することができます。
+- **自動サイズ調整**: このオプションを設定すると、他のパラメーターを変更する度にラベルのサイズ(幅および高さパラメーター)の値が4D によって自動的に計算されます。 このオプションがチェックされていると、ページのパラメーターを変更するたびにラベルのサイズが調整されます。 幅と高さのパラメーターは手動で設定することはできなくなります。
+- **幅** および **高さ**: それぞれのラベルの高さと幅を手動で設定します。 これらは、**自動サイズ調整** オプションがチェックされている場合には変更することはできません。
+- **マージン** (上、右、左、下): 用紙のマージンを設定します。 これらのマージンはプレビューエリア内にて青い線で表示されています。 **プリンターのマージンを使用** をクリックすると、選択されたプリンターから提供されたマージン情報がプレビューエリアに再現されます(これらの値は変更可能です)。
+- **間隔**: ラベルの行と列の間の垂直方向/水平方向の間隔の量を設定します。
+- **メソッド**: 印刷時に実行されるメソッドを選択することができます。 例えば、各ラベルが印刷された日付と時間をポストするメソッドを実行することができます。 この機能は専用のテーブルフォームを使用してラベルを印刷するときにも有用です。この場合にはメソッドからの変数を使用することもできます。
+ ラベル処理に適用するためにはプロジェクトメソッドは以下の設定に適合している必要があります:
+ - メソッドはデータベース内において"許可されている"必要があります(許可されているメソッドは[プロジェクト設定](../settings/security.md#オプション) および [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) コマンドによります)。許可されていない場合には**メソッド**メニュー内には表示されません。
+ - [コンポーネントとホストデータベース間で共有](../Project/code-overview.md#コンポーネントとホストプロジェクト間で共有) オプションがチェックされている必要があります。
+  以下の [こちらの例題](#フォームとメソッドを使用したラベルの印刷-例題) も参照して下さい。
 
 :::note
 
-For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods).
-The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
+高度な使用法として、 [特定のjson ファイル](#利用可能なフォームとメソッドを管理する) を使用して利用可能なメソッドの一覧を制限することができます。
+**実行頻度: レコードあるいはラベル** オプションを使用すると、メソッドの実行をラベル毎またはレコード毎のいずれに行うかを指定します。 この項目は、各ラベルを複数印刷し、かつ印刷時にメソッドを実行する場合にのみ意味があります。
 
 :::
 
-- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. You can also use this area to designate the first label on the page to be printed (this option only affects the first sheet in the case of multi-page printing). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
+- **レイアウトプレビューエリア**: このエリアには、ラベルエディターで入力したサイズに基づき、ラベルページ全体の状態が縮小表示されます。 また、ページのプレビューでは、用紙設定ダイア ログボックスで選択した用紙サイズが反映されます。 ページ上で最初に印刷されるラベルを選択することも可能です(このオプションは複数ページの印刷の場合には最初のページにのみ影響します)。 これは、例えば一部が使用済みのラベルシールに印刷したいような場合に有用です。 またラベルをクリックすることでページ上で印刷される最初のラベルを選択することもできます:
 
 ![](../assets/en/Desktop/label-start.png)
 
-## Printing labels using forms and methods (example)
+## フォームとメソッドを使用したラベルの印刷(例題)
 
-You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
+専用のテーブルフォームとプロジェクトメソッドを使用することで、計算された変数を含むラベルを印刷することができます。 この単純な例題では、異なる要素の設定の仕方を紹介していきます。
 
-1. In a dedicated table form, add your label field(s) and variable(s).
- Here, in a table form named "label", we added the *myVar* variable:
+1. 専用のテーブルフォームの中に、自分のラベルフィールドや変数を追加していきます。
+ ここでは、"label" という名前のテーブルフォームに、 *myVar* という名前の変数を追加します:
  ![](../assets/en/Desktop/label-example1.png)
 
-2. Create a `setMyVar` project method with the following code:
+2. 以下のコードを持つ `setMyVar` という名前のプロジェクトメソッドを作成します:
 
 ```4d
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. プロジェクトメソッドに対して["コンポーネントとホストデータベース間で共有"](../Project/code-overview.md#コンポーネントとホストデータベース間で共有) オプションを設定します。
 
-4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
+4. ラベルエディターを表示する前に、以下のコードを実行してプロジェクトメソッドが確実に許可されているようにします:
 
 ```4d
  ARRAY TEXT($methods;1)
@@ -182,26 +182,26 @@ You can use dedicated table forms and project methods to print labels with calcu
  SET ALLOWED METHODS($methods)
 ```
 
-5. Open the Label editor and use your form:
+5. ラベルエディターを開き、使用したいフォームを使用します:
  ![](../assets/en/Desktop/label-example2.png)
 
-6. In the Layout page, select the method:
+6. レイアウトページにて、実行するメソッドを選択します:
  ![](../assets/en/Desktop/label-example3.png)
 
-Then you can print your labels:
+そしてラベルを印刷します:
 ![](../assets/en/Desktop/label-example4.png)
 
-## Controlling available forms and methods
+## 利用可能なフォームとメソッドを管理する
 
-The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
+ラベルエディターでは、ダイアログボックスで選択可能なフォームとメソッドを("許可されたメソッド"の中から)制限する高度な機能が含まれます:
 
-- in the **Form to use** menu on the "Label" page and/or
-- in the **Apply (method)** menu on the "Layout" page.
+- "ラベル" ページの **使用するフォーム** メニュー、または
+- "レイアウト" ページの **適用(メソッド)** メニュー
 
-1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
-2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
+1. **labels.json** という名前の JSON ファイルを作成し、プロジェクトの [Resources フォルダー](../Project/architecture.md#resources) 内におきます。
+2. このファイル内に、ラベルエディターのメニュー内にて選択可能にしたいフォームまたはメソッド名を追加します。
 
-The contents of the **labels.json** file should be similar to:
+**labels.json** ファイルの中身は、以下のようにしてください:
 
 ```json
 [ 
@@ -210,38 +210,38 @@ The contents of the **labels.json** file should be similar to:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+**labels.json** ファイルを設定しない場合には、メニューの選択項目は制限されません。
 
-## Managing label files
+## ラベルファイルの管理
 
-4D allows you to save each label design in a file that you can open subsequently from within the wizard. By saving your label designs, you can build a label library adapted to your specific needs. Each label design stores the settings defined on the Label and Layout pages.
+4D のラベルデザインはそれぞれファイルとして保存することができ、保存したデザインはウィザード内で呼び出すことができます。 ラベルデザインを保存すれば、必要に応じたラベルライブラリを作ることができます。 各ラベルデザインにはラベルおよびレイアウトページで定義された設定が格納されます。
 
-You can drag and drop label files from your desktop onto the label design area.
+なお、ラベルファイルはデスクトップ上からラベルデザインエリアにドラッグ & ドロップすることもできます。
 
-Label designs are managed using the **Load** and **Save** buttons of the tool bar.
+ラベルデザインは、ツールバーの **読み込み** および **保存** ボタンを使って管理します:
 
-- To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
-- To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
+- ラベルデザインを呼び出すには、 **読み込み** ボタンをクリックし、ファイル選択ダイアログを使って任意のラベルファイルを指定します(ウィザード内で別のラベルデザインが開かれている場合、そのデザインは読み込まれたデザインで置き換えられます)。
+- ラベルデザインを保存するには、 **保存** ボタンをクリックし、ファイル名と保存先を指定します。
 
-### File format
+### ファイル形式
 
-The file extension of 4D labels saved by the wizard is ".4lbp". Note that this format is open since it is written internally in XML.
+ウィザードが保存する 4D ラベルファイルの拡張子は ".4lbp" です。 このファイルは内部的には XML で書かれているため、編集することができます。
 
-### Preloading label files
+### ラベルファイルのプリロード
 
-The Label Wizard allows you to store label files within your application, so that label designs can be selected and opened by the user directly using the **Load** button.
+ラベルウィザードではラベルファイルをアプリケーション内に保存することができるため、ユーザーは **読み込み** ボタンを使って直接ラベルデザインを選択し開くことができます。
 
-To do this, you just need to create a folder named `Labels` within the [Resources folder](../Project/architecture.md#resources) of the project and then copy your label files into it:
+このためには、プロジェクトの [Resources フォルダー](../Project/architecture.md#resources) 内に `Labels` フォルダーを作成し、そこにラベルファイルをコピーするだけです:
 
 ![](../assets/en/Desktop/label-resources.png)
 
 :::note
 
-Both standard ".4lbp" files and files generated by the former wizard (".4lb") files are supported.
+標準の ".4lbp" ファイルと旧式のウィザードから生成されたファイル(".4lb") の両方がサポートされます。
 
 :::
 
-When the Label Wizard starts, if this folder is detected and contains valid label files, a pop-up icon is added to the **Load** button. Label designs can then be selected through a menu line:
+ラベルウィザードが起動するとこのフォルダーが検知され、中に有効なラベルファイルがあった場合には、**読み込み** ボタンにポップアップアイコンが追加されます。 このポップアップメニューの行からラベルデザインを選択することが可能になります:
 
 ![](../assets/en/Desktop/label-resources2.png)
 
