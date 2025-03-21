@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression *formulaExp*<!-- END REF -->. . .
+La commande `Formula` <!-- REF #_command_.Formula.Summary -->crée un objet `4D Function` basé sur l'expression *formulaExp*<!-- END REF -->. *formulaExp* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
 
 Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que paramètre (champ calculé) à des commandes ou à des méthodes ou de l'exécuter à partir de divers composants sans avoir à les déclarer comme "partagés par les composants et la base de données hôte". Lorsqu'il est appelé, l'objet formula est évalué dans le contexte de la base de données ou du composant qui l'a créé.
 
@@ -41,7 +41,7 @@ La formule retournée peut être appelée avec :
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
 
-  //three different ways to call the formula
+  //trois façons différentes d'appeler la formule
  $f.call($o) //retourne 3
  $f.apply($o) //retourne 3
  $o.myFormula() //retourne 3
