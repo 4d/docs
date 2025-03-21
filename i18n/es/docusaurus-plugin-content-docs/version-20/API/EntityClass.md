@@ -94,7 +94,7 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
 
-Esta función permite actualizar las entidades por separado. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+Esta función permite actualizar las entidades por separado. Sin embargo, tenga en cuenta que, por razones de rendimiento, la nueva entidad comparte la misma referencia de atributos de objeto que la entidad clonada.
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado solo cuando se ejecute la función [`.save()`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
@@ -966,9 +966,9 @@ El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 |                  | task_name           | text                  | Nombre del proceso                                                                                                                                                   |
 |                  | client_version      | text                  | Liberación del cliente                                                                                                                                               |
 |                  |                     |                       | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                               |
-|                  | host                | text                  | URL that locked the entity (e.g. "`www.myserver.com`")                                                                                                               |
+|                  | host                | text                  | URL que bloqueó la entidad (por ejemplo, `www.myserver.com`)                                                                                                         |
 |                  | IPAddr              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                  |
-|                  | userAgent           | text                  | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|                  | userAgent           | text                  | userAgent del origen del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                                                                  |
 | errors           |                     | collection of objects |                                                                                                                                                                      |
 |                  | message             | text                  | Mensaje de error                                                                                                                                                     |
