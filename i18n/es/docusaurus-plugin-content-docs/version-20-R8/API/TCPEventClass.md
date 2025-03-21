@@ -32,7 +32,7 @@ Las siguientes propiedades están disponibles:
 
 #### Descripción
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+La propiedad `.data` contiene <!-- REF #TCPEvent.data.Summary -->los datos asociados al evento<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 

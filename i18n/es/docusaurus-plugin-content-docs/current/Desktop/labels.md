@@ -56,7 +56,7 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 ### Label preview
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
 - You can drag fields onto the label.
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
@@ -70,7 +70,7 @@ You use this area to design your label zone by placing and positioning all the i
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
 
 :::
 
@@ -145,11 +145,11 @@ The Layout page contains controls for printing labels based on the requirements 
  To be eligible for label processing, a project method must comply with the following settings:
  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
  - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
-  See also [this example](#printing-labels-using-forms-and-methods-example) below.
+  Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 
 :::note
 
-For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods).
+Para necesidades avanzadas, puede restringir la lista de métodos disponibles utilizando un [archivo json específico](#controlling-available-forms-and-methods).
 The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
 
 :::
@@ -172,7 +172,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina el método proyecto como ["Compartido por los componentes y la base de datos local"](../Project/code-overview.md#shared-by-components-and-host-database).
 
 4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
 

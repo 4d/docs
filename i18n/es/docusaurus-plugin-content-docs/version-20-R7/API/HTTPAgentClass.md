@@ -119,7 +119,7 @@ Cuando no hay ningún agente asociado a una HTTPRequest, se utiliza un agente gl
 
 #### Descripción
 
-The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
+El objeto de propiedad `.params` contiene <!-- REF #HTTPAgentClass.params.Summary -->las opciones utilizadas actualmente del HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 

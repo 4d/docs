@@ -29,7 +29,7 @@ Cette commande est généralement appelée avec la commande [Open form window](.
 
 La commande **DIALOG** peut également être utilisée à la place de [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) ou [Request](../commands-legacy/request.md) lorsque les informations à afficher ou à recueillir sont plus complexes que celles que peuvent gérer ces trois commandes.
 
-Dans le paramètre *form*, vous pouvez passer soit:
+Dans le paramètre *form*, vous pouvez passer soit :
 
 - le nom du formulaire (formulaire projet ou formulaire table) à utiliser.
 - le chemin (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser,

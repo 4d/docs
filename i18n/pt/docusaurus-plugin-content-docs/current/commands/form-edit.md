@@ -62,7 +62,7 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 
 ## Veja também
 
-*Design de Comandos de Acesso aos Objetos*
+[Design Object Access Commands](../commands/theme/Design_Object_Access.md)
 
 ## Propriedades
 

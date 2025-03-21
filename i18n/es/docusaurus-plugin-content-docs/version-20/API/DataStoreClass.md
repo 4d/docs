@@ -494,7 +494,7 @@ La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Ejemplo
 

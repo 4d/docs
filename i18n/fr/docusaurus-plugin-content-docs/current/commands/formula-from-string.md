@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être aussi simple qu'une valeur unique ou complexe, comme une méthode projet avec des paramètres.
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
 
 Cette commande est similaire à [`Formula`](formula.md), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula`, sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 

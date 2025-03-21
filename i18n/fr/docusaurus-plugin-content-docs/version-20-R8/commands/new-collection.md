@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de l'[API classe Collection](../API/CollectionClass.md).
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
 Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
@@ -33,7 +33,7 @@ Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affect
  myCol[10]:="Mon nouvel élément"
 ```
 
-Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont reçoivent la valeur **null**.
+Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
 
 Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 

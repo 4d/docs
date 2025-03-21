@@ -178,7 +178,7 @@ Mira [esta página](https://developer.qodly.com/docs/studio/rendering) para obte
 
 Para habilitar el renderizado de las páginas Qodly, se deben configurar las siguientes opciones.
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#expose-as-rest-server) option must be activated.
+- La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#expose-as-rest-server) del proyecto 4D debe estar activada.
 - El [servidor web 4D](webServer.md) debe estar ejecutándose.
 
 :::note

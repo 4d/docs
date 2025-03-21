@@ -44,7 +44,7 @@ El objeto devuelto contiene las siguientes propiedades:
 
 :::note
 
-This command returns the [`.info`](../API/SessionClass.md#info) property of the *sessionID* session. To get information about the current session, you can directly call `Session.info`.
+Este comando devuelve la propiedad [`.info`](../API/SessionClass.md#info) de la sesión *sessionID*. To get information about the current session, you can directly call `Session.info`.
 
 :::
 

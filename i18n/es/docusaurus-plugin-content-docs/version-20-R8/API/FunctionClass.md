@@ -47,7 +47,7 @@ También puede ejecutar una función utilizando las funciones [`apply()`](#apply
 
 #### Paso de parámetros
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Por ejemplo, puede escribir:
+Puede pasar parámetros a sus fórmulas utilizando una sintaxis secuencial de parámetros basada en $1, $2...$n. Por ejemplo, puede escribir:
 
 ```4d
  var $f : Object
