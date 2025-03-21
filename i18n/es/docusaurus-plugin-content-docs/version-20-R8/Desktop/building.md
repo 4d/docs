@@ -283,7 +283,7 @@ Esta opción permite elegir el modo de enlace entre la aplicación fusionada y e
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
-### Construir la aplicación cliente
+### Build client application
 
 Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 
