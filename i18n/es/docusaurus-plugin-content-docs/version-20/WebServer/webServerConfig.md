@@ -20,10 +20,10 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 ## Caché
 
-| Puede ajustarse con           | Nombre                                                                           | Comentarios |
-| ----------------------------- | -------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
-| Caja de diálogo de parámetros | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |             |
+| Puede ajustarse con           | Nombre                                                                                       | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I) /usar la caché de 4D Web](../settings/web.md#use-the-4d-web-cache)      |             |
+| Caja de diálogo de parámetros | [Página Opciones (I) - Tamaño de la caché de la página](../settings/web.md#pages-cache-size) |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -72,11 +72,11 @@ Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de l
 
 ## Parámetros CORS
 
-| Puede ajustarse con           | Nombre                                                                                                                   | Comentarios                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                     | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| `WEB SET OPTION`              | `Web CORS settings`                                                                                                      | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| Caja de diálogo de parámetros | [Página Options (II)/Nombres de dominio y Métodos HTTP autorizados](../settings/web.md#domain-nameshttp-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
+| Puede ajustarse con           | Nombre                                                                                                                    | Comentarios                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                      | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| `WEB SET OPTION`              | `Web CORS settings`                                                                                                       | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| Caja de diálogo de parámetros | [Página Opciones (II)/Nombres de dominio y Métodos HTTP autorizados](../settings/web.md#domain-nameshttp-methods-allowed) | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
 
 Lista de hosts y métodos permitidos para el servicio CORS.
 
@@ -126,13 +126,13 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 
 Estado del archivo de registro de peticiones HTTP del servidor web ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
-| Valor | Constante                      | Descripción                                                                                                   |
-| ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                      |
-| 1     | wdl enable without body        | Los debug logs Web HTTP son activados sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
-| 3     | wdl enable with response body  | Los debug logs Web HTTP son activados con la partes del cuerpo únicamente                                     |
-| 5     | wdl enable with request body   | Los debug logs Web HTTP son activados con la partes del cuerpo en la petición únicamente                      |
-| 7     | wdl enable with all body parts | Los debug logs Web HTTP son activados con las partes del cuerpo en respuesta y petición                       |
+| Valor | Constante                      | Descripción                                                                                         |
+| ----- | ------------------------------ | --------------------------------------------------------------------------------------------------- |
+| 0     | wdl disable                    | Web HTTP debug log desactivado                                                                      |
+| 1     | wdl enable without body        | Web HTTP debug log activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
+| 3     | wdl enable with response body  | Web HTTP debug log activado con la partes del cuerpo únicamente                                     |
+| 5     | wdl enable with request body   | Web HTTP debug log activado con la partes del cuerpo en la petición únicamente                      |
+| 7     | wdl enable with all body parts | Web HTTP debug log activado con las partes del cuerpo en respuesta y petición                       |
 
 
 ## Página de inicio por defecto
@@ -479,9 +479,9 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 ## Reutilizar los contextos temporales (en modo remoto)
 
-| Puede ajustarse con           | Nombre                                                                                   | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
+| Puede ajustarse con           | Nombre                                                                                             | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Reutilizar contextos temporales](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
