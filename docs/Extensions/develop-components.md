@@ -160,10 +160,10 @@ To facilitate component tuning in the context of a host project, you can directl
 
 In this case, when the [component namespace is declared](#declaring-the-component-namespace), [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be opened and edited in the code editor. Specific Explorer and Code editor icons indicate this status:
 
-- In the Explorer, a component code is editable:
+- In the Explorer, a component code is editable:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
-- In the Code editor, the current edited code is from a component:
+- In the Code editor, the current edited code is from a component:<br/>
 ![](../assets/en/Develop/editable-component-2.png)
 
 
