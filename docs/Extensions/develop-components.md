@@ -151,6 +151,25 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
 
 
+## Editing components from the host
+
+To facilitate component tuning in the context of a host project, you can directly modify and save the code of a loaded component from the host project. The code is editable from the host project when the following conditions are met:
+
+- the package folder of the component [contains the interpreted code](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, when the [component namespace is declared](#declaring-the-component-namespace), [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be opened and edited in the code editor. Specific Explorer and Code editor icons indicate this status:
+
+- In the Explorer, a component code is editable:
+![](../assets/en/Develop/editable-component.png)
+
+- In the Code editor, the current edited code is from a component:
+![](../assets/en/Develop/editable-component-2.png)
+
+
+
+
+
 ## Code completion for compiled components
 
 To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
