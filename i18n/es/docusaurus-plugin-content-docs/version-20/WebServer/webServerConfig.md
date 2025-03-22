@@ -622,9 +622,9 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 
 ## Utilizar procesos apropiativos
 
-| Puede ajustarse con           | Nombre                                                                                   | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
+| Puede ajustarse con           | Nombre                                                                                        | Comentarios |
+| ----------------------------- | --------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Usar procesos apropiativos](../settings/web.md#use-preemptive-processes) |             |
 
 Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibilidad.
 
