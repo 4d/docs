@@ -157,7 +157,7 @@ Permet de définir en points la taille de police de l'objet.
 
 Désigne la couleur de la police.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> Cette propriété définit également la couleur de bordure (le cas échéant) de l'objet lorsque le style "plain" ou "dotted" est utilisé.
 
 La couleur peut être spécifiée par :
 
