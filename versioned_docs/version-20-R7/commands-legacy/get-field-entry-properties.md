@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( fieldPtr|tableNum {; *fieldNum*}; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr|* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* ; *fieldNum* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

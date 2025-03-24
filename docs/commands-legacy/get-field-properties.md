@@ -5,7 +5,8 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( fieldPtr | tableNum {; *fieldNum*}; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( 
+ fieldPtr* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* ; *fieldNum* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

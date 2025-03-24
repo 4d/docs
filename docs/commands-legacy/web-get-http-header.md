@@ -5,7 +5,7 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( header|fieldArray {; *valueArray*} )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* )<br/>**WEB GET HTTP HEADER** ( *fieldArray* ; *valueArray* )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

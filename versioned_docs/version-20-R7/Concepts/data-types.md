@@ -31,6 +31,14 @@ Although they are usually equivalent, some data types available at the database 
 
 (2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type. 
 
+## Commands
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
+
+
 ## Default values
 
 When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned. 
