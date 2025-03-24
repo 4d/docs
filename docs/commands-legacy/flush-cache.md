@@ -5,7 +5,7 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( size | * )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( size )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

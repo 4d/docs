@@ -5,7 +5,7 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphPicture* ; graphNumber | graphSettings ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphPicture* ; *graphNumber* ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<br/>**GRAPH** ( *graphPicture* ; *graphSettings* ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,8 +28,8 @@ In the *graphPicture* parameter, pass the name of the picture variable that disp
 
 The second parameter specifies the type of graph that will be drawn. You have two options:
 
-* pass a *graphNumber* parameter of the [Longint](# "Number between -2^31..(2^31)-1 (4-byte Integer)") type (all versions of 4D): In this case, you must pass a number from 1 to 8\. The graph types are described in Example 1\. After a graph has been drawn, you can change the type by changing *graphNumber* and executing the **GRAPH** command again. You can then modify certain graph characteristics by calling the [GRAPH SETTINGS](graph-settings.md) command. See Example 1.
-* pass a *graphSettings* parameter of the [Object](# "Data structured as a native 4D object") type (not supported on 4D Server on Windows): In this case, you must pass an object that contains the various graph properties to define. To do this, you can use the constants found in the "*Graph Parameters*" theme (see below). This syntax allows you to define the graph type along with its specific settings (legend, xmin, etc.) in a single call. This allows users to save the generated graphs as regular SVG pictures and makes it possible to display them using a standard browser like FireFox, Chrome, IE, or Safari (the graphs generated have better compliance with the SVG standard implemented in browsers). Furthermore, this syntax gives you access to various extra settings, which allow you to customize, for example, spacing between bars, margins, bar colors, etc. See Examples 2, 3 and 4\. **Warning**: If you use this syntax, the [GRAPH SETTINGS](graph-settings.md) command must NOT be called.
+* pass a *graphNumber* parameter of the Integer type (all versions of 4D): In this case, you must pass a number from 1 to 8\. The graph types are described in Example 1\. After a graph has been drawn, you can change the type by changing *graphNumber* and executing the **GRAPH** command again. You can then modify certain graph characteristics by calling the [GRAPH SETTINGS](graph-settings.md) command. See Example 1.
+* pass a *graphSettings* parameter of the Object type: In this case, you must pass an object that contains the various graph properties to define. To do this, you can use the constants found in the "*Graph Parameters*" theme (see below). This syntax allows you to define the graph type along with its specific settings (legend, xmin, etc.) in a single call. This allows users to save the generated graphs as regular SVG pictures and makes it possible to display them using a standard browser like FireFox, Chrome, IE, or Safari (the graphs generated have better compliance with the SVG standard implemented in browsers). Furthermore, this syntax gives you access to various extra settings, which allow you to customize, for example, spacing between bars, margins, bar colors, etc. See Examples 2, 3 and 4\. **Warning**: If you use this syntax, the [GRAPH SETTINGS](graph-settings.md) command must NOT be called.
 
 The *xLabels* parameter defines the labels that will be used to label the x-axis (the bottom of the graph). This data can be of string, date, time, or numeric type. There should be the same number of array elements in *xLabels* as there are subrecords or array elements in each of the *yElements*.
 

@@ -5,7 +5,7 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( oneTable | Field )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* )<br/>**RELATE MANY** ( *Field* )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

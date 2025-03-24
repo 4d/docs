@@ -5,7 +5,7 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *BLOB* {; offset | *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *blob* {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

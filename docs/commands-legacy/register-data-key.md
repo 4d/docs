@@ -5,7 +5,7 @@ slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Register data key.Syntax-->**Register data key** ( curPassPhrase | curDataKey ) : Boolean<!-- END REF-->
+<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* ) : Boolean<br/>**Register data key** ( *curDataKey* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

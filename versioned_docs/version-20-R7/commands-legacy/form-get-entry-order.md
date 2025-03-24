@@ -5,7 +5,7 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; pageNumber | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; *pageNumber* } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
