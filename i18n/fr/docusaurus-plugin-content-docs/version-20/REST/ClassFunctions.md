@@ -42,7 +42,7 @@ Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 > The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+> Tout le code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser des process préemptifs*](../WebServer/webServerConfig.md#use-preemptive-processes) est ignorée par le serveur REST).
 
 
 ## Paramètres
@@ -58,7 +58,7 @@ Les règles suivantes s'appliquent :
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour affecter des données aux objets ORDA correspondants : __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#receiving-an-entity-selection-as-parameter).
+Voir [cet exemple](#receiving-an-entity-selection-as-parameter).
 
 
 ### Paramètre de valeur scalaire
@@ -87,7 +87,7 @@ Les entités passées en paramètres sont référencées sur le serveur via leur
 - Si __KEY n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
 - Si __KEY est fourni, l'entité correspondant à _KEY est chargée sur le serveur avec les attributs donnés
 
-See examples for creating or updating entities.
+Voir les exemples de création ou de mise à jour d'entités.
 
 #### Paramètre d'entité associé
 
