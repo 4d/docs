@@ -1,6 +1,6 @@
 ---
 id: Boolean_theme
-title: Boolean
+title: Booléens
 slug: /commands/theme/Boolean
 ---
 

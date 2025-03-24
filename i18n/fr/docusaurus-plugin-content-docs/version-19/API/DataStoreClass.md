@@ -513,7 +513,7 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](../ORDA/entities.md#shareable-or-alterable-entity-selections).
+Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuvent être partageables, selon la nature de leur "parent" ou de [la manière dont elles sont créées](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
