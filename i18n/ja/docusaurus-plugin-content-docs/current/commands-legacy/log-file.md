@@ -1,12 +1,12 @@
 ---
 id: log-file
-title: Log File
+title: Log file
 slug: /commands/log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log File.Syntax-->**Log File**  : Text<!-- END REF-->
-<!--REF #_command_.Log File.Params-->
+<!--REF #_command_.Log file.Syntax-->**Log file**  : Text<!-- END REF-->
+<!--REF #_command_.Log file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | データベースログファイルのロング名 |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Log File.Summary-->**Log File**コマンドは、開いているデータベースのカレントログファイルのロング名（ファイル名を含むファイルの完全パス名）を返します。<!-- END REF-->
+<!--REF #_command_.Log file.Summary-->**Log file**コマンドは、開いているデータベースのカレントログファイルのロング名（ファイル名を含むファイルの完全パス名）を返します。<!-- END REF-->
 
 データベースがログファイルを使用していない場合、コマンドは空の文字列を返し、システム変数OKには0が代入されます。
 
