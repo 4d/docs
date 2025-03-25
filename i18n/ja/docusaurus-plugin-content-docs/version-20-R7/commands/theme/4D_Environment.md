@@ -25,7 +25,7 @@ slug: /commands/theme/4D-Environment
 | [<!-- INCLUDE #_command_.Get database localization.Syntax -->](../../commands-legacy/get-database-localization.md)<br/>                       |
 | [<!-- INCLUDE #_command_.Get database parameter.Syntax -->](../../commands-legacy/get-database-parameter.md)<br/>                             |
 | [<!-- INCLUDE #_command_.Last update log path.Syntax -->](../../commands-legacy/get-last-update-log-path.md)<br/>                             |
-| [<!-- INCLUDE #_command_.Is compiled mode.Syntax -->](../../commands-legacy/is-compiled-mode.md)<br/>                                         |
+| [<!-- INCLUDE #_command_.Last update log path.Syntax -->](../../commands-legacy/last-update-log-path.md)<br/>                                 |
 | [<!-- INCLUDE #_command_.Is data file locked.Syntax -->](../../commands-legacy/is-data-file-locked.md)<br/>                                   |
 | [<!-- INCLUDE #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Syntax -->](../../commands-legacy/notify-resources-folder-modification.md)<br/> |
 | [<!-- INCLUDE #_command_.OPEN ADMINISTRATION WINDOW.Syntax -->](../../commands-legacy/open-administration-window.md)<br/>                     |

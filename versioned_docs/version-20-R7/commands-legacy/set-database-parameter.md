@@ -57,7 +57,7 @@ The 4D Remote mode timeout selector is only taken into account if you are using 
 
 **Kept between two sessions**: No
 
-**Description**: Command SET DATABASE TCP port ID used by the 4D Web server with 4D in local mode and 4D Server. The default value, which can be set on the "Web/Configuration" page of the Preferences dialog box, is 80\. You can use the constants of the *TCP Port Numbers* theme for the *value* parameter.
+**Description**: TCP port ID used by the 4D Web server with 4D in local mode and 4D Server. The default value, which can be set on the "Web/Configuration" page of the Preferences dialog box, is 80\. You can use the constants of the *TCP Port Numbers* theme for the *value* parameter.
 
 The Port ID selector is useful for 4D Web Servers compiled and merged with 4D Desktop (in which there is no access to the Design mode). For more information about the TCP port ID, refer to the *Web Server Settings* section.
 
@@ -123,7 +123,7 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 **Scope**: 4D local, 4D Server
 
- Kept between two **sessions**: Yes
+**Kept between two sessions**: Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
 
@@ -151,7 +151,7 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
  **Possible values**: 0 = Do not record (default), 1 = Record in CLF format, 2 = Record in DLF format, 3 = Record in ELF format, 4 = Record in WLF format.
 
-**Description**: Command SET DATABASE PARAMETEStarts or stops the recording of Web requests received by the Web servers of all the client machines. By default, the value is 0 (requests not recorded).
+**Description**: Starts or stops the recording of Web requests received by the Web servers of all the client machines. By default, the value is 0 (requests not recorded).
 
 The operation of this selector is identical to that of selector 29; however, it applies to all the 4D remote machines used as Web servers. The "logweb.txt" file is, in this case, automatically placed in the Logs subfolder of the remote 4D database folder (cache folder). If you only want to set values for certain client machines, use the Preferences dialog box of 4D in remote mode.
 
@@ -165,7 +165,7 @@ The operation of this selector is identical to that of selector 29; however, it 
 
  **Possible values**: Any longint value.
 
-**Description**: Command SET DATABASE PARAMETERThis selector is used to modify or get the current unique number for records of the table passed as parameter. "Current number" means "last number used": if you modify this value using [SET DATABASE PARAMETER](set-database-parameter.md), the next record will be created with a number that consists of the value passed + 1\. This new number is the one returned by the [Sequence number](sequence-number.md) command as well in any field of the table to which the "Autoincrement" property has been assigned in the Structure editor or via SQL.
+**Description**: This selector is used to modify or get the current unique number for records of the table passed as parameter. "Current number" means "last number used": if you modify this value using [SET DATABASE PARAMETER](set-database-parameter.md), the next record will be created with a number that consists of the value passed + 1\. This new number is the one returned by the [Sequence number](sequence-number.md) command as well in any field of the table to which the "Autoincrement" property has been assigned in the Structure editor or via SQL.
 
 By default, this unique number is set by 4D and corresponds to the order of record creation. For additional information, refer to the documentation of the [Sequence number](sequence-number.md) command.
 
@@ -535,7 +535,7 @@ Direct2D Software (3) (Default mode): Beginning with Windows 7, use Direct2D gra
 
 For example, if you execute:
 
- SET DATABASE PARAMETER(Direct2D status;Direct2D Hardware)  $mode:=Get database parameter(Direct2D get active status)
+ SET DATABASE PARAMETER(Direct2D status;Direct2D Hardware)  $mode:=Get database parameter(Direct2D get active status)
 
 - On Windows 7 and higher, *$mode* is set to 1 when the system detects hardware compatible with Direct2D; otherwise, *$mode* is set to 3 (software context).
 
@@ -573,7 +573,7 @@ Possible values: String containing a list of 4D command numbers to record (separ
 
 This selector restricts the quantity of information saved in the debugging file by limiting the 4D commands whose execution you want to record or exclude from recording. For example, you can write:
 
- SET DATABASE PARAMETER(Log command list;"277;341") //Record only the QUERY and QUERY SELECTION commands    OR    SET DATABASE PARAMETER(Log command list;"-1666;-323") //Exclude the SET USER ALIAS and DELAY PROCESS commands from being recorded
+ SET DATABASE PARAMETER(Log command list;"277;341") //Record only the QUERY and QUERY SELECTION commands    OR    SET DATABASE PARAMETER(Log command list;"-1666;-323") //Exclude the SET USER ALIAS and DELAY PROCESS commands from being recorded
 
 
 
@@ -919,16 +919,28 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 **Possible values**: 0 (resume logs), 1 (pause logs)
 
-This selector allows to suspend/resume all logging operations started on the application (except ORDA logs). This feature can be useful to temporarily lighten the 4D application tasks or schedule logging operations.
+**Description:** This selector allows to suspend/resume all logging operations started on the application (except ORDA logs). This feature can be useful to temporarily lighten the 4D application tasks or schedule logging operations.
 
 
 
+### TCP log (131)
+
+**Scope:** 4D application.
+
+**Kept between two sessions:** No.
+
+**Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
+
+**Description:** Enables or disables the `4DTCPLog.txt` file for logging TCP  events.
 
 
-**Notes:** 
+
+:::note 
 
 * The *table* parameter is only used by selectors 31, 46 and 47\. In all other cases, it is ignored if it is passed.
 * If a setting is not kept between sessions, but you want to ensure that it's always applied, you can execute it in the [On Startup database method](on-startup-database-method.md) or [On Server Startup database method](on-server-startup-database-method.md).
+
+:::
 
 ## Thread-safe selectors 
 
@@ -950,12 +962,12 @@ The **SET DATABASE PARAMETER** command can be used in preemptive processes when 
 The following statement will avoid any unexpected timeout:
 
 ```4d
-  //Increasing the timeout to 3 hours for the current process
- SET DATABASE PARAMETER(4D Server Timeout;-60*3)
-  //Executing a time-consuming operation with no control from 4D
- ...
- WR PRINT MERGE(Area;3;0)
- ...
+  //Increasing the timeout to 3 hours for the current process
+ SET DATABASE PARAMETER(4D Server Timeout;-60*3)
+  //Executing a time-consuming operation with no control from 4D
+ ...
+ WR PRINT MERGE(Area;3;0)
+ ...
 ```
 
 ## Example 2 
@@ -963,10 +975,10 @@ The following statement will avoid any unexpected timeout:
 This example temporarily forces the execution of a query by formula command on the client machine:
 
 ```4d
- curVal:=Get database parameter([table1];Query By Formula On Server) //Store the current setting
- SET DATABASE PARAMETER([table1];Query By Formula On Server;1) //Force execution on the client machine
- QUERY BY FORMULA([table1];myformula)
- SET DATABASE PARAMETER([table1];Query By Formula On Server;curVal) //Re-establish current setting
+ curVal:=Get database parameter([table1];Query By Formula On Server) //Store the current setting
+ SET DATABASE PARAMETER([table1];Query By Formula On Server;1) //Force execution on the client machine
+ QUERY BY FORMULA([table1];myformula)
+ SET DATABASE PARAMETER([table1];Query By Formula On Server;curVal) //Re-establish current setting
 ```
 
 ## Example 3 
@@ -974,11 +986,11 @@ This example temporarily forces the execution of a query by formula command on t
 You want to export data in JSON that contains a converted 4D date. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
 
 ```4d
- var $o : Object
- SET DATABASE PARAMETER(Dates inside objects;0)
- OB SET($o ;"myDate";Current date) // JSON conversion
- $json:=JSON Stringify($o)
- SET DATABASE PARAMETER(Dates inside objects;1)
+ var $o : Object
+ SET DATABASE PARAMETER(Dates inside objects;0)
+ OB SET($o ;"myDate";Current date) // JSON conversion
+ $json:=JSON Stringify($o)
+ SET DATABASE PARAMETER(Dates inside objects;1)
 ```
 
 ## See also 

@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( picRef | picName ; *picture* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef * ; *picture* )<br/>**GET PICTURE FROM LIBRARY** ( *picName* ; *picture* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

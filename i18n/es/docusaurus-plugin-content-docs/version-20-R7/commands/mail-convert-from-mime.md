@@ -88,9 +88,6 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
-\| mime | BLOB, Texto | →  | Email en MIME |
-\| Resultado de función | Objeto | ← | Objeto Email |
-
 ## Propiedades
 
 |                   |                             |
