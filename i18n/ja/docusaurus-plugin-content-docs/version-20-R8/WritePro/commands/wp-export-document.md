@@ -176,7 +176,6 @@ Factur-X / ZUGFeRD 書き出し実装についての詳細な例題について�
 
 ```4d
  var $path : Text
- var $docRef : Integer
 
  Case of
     :(Form event code=On Clicked)

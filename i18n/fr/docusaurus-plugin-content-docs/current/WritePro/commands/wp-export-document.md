@@ -178,7 +178,6 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
 
 ```4d
  var $path : Text
- var $docRef : Integer
 
  Case of
     :(Form event code=On Clicked)
