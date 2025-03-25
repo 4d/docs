@@ -5,7 +5,7 @@ slug: /commands/log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log file.Syntax-->**Log file**  : Text<!-- END REF-->
+<!--REF #_command_.Log file.Syntax-->**Log file** : Text<!-- END REF-->
 <!--REF #_command_.Log file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
