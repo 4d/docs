@@ -160,9 +160,9 @@ GET リクエストとエンティティを使用してコンテンツをダウ�
 | __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
 POST リクエストを使用して [エンティティセレクションを受け取る](#エンティティセレクションを引数として受け取る) 例題を参照して下さい。
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+GET リクエストを使用して [エンティティセレクションに基づいてビルドされたリストを取得する](#エンティティセレクションを使用してリストを取得する) 例題を参照して下さい。
 
-## POST request examples
+## POST リクエストの例題
 
 このデータベースは、localhost (ポート8111) 上でリモートデータストアーとして公開されています。
 
@@ -542,7 +542,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students class
+// Students クラス
 
 Class extends DataClass
 
@@ -554,14 +554,14 @@ exposed Function setFinalExam()
 
     var $keys, $0 : Collection
 
-      //Entity selection
+      // エンティティセレクション
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      // エンティティセレクション内をループ
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -630,14 +630,14 @@ $ageAverage:=$students.getAgeAverage()
 
 ```
 
-## GET request examples
+## GET リクエストの例題
 
-### Returning a document
+### ドキュメントを返す
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+選択した製品に対して、複数のフォーマットが利用可能なユーザーマニュアルをダウンロードするリンクを提示したい場合を考えます。 この場合、Products データクラスに対して `getUserManual()` 関数を書きます。 この関数は [`OutgoingMessage` クラス](../API/OutgoingMessageClass.md) 型のオブジェクトを返します。
 
 ```4d
-// Product dataclass
+// Product データクラス
 exposed onHTTPGet Function getUserManual($productId : Integer; $type : Text) : 4D.OutgoingMessage
 	
 var $file : 4D.File
@@ -647,12 +647,12 @@ var $doc:="/RESOURCES/User manuals/product_"+String($productId)
 Case of 
 	: ($type="pdf")
 		$file:=File($doc+".pdf")
-                $response.setBody($file.getContent()) // This is binary content 
+                $response.setBody($file.getContent()) // これはバイナリーのコンテンツ
 		$response.setHeader("Content-Type"; "application/pdf")
 			
 	: ($type="jpeg")
 		$file:=File($doc+".jpeg")
-                $response.setBody($file.getContent()) // This is binary content 
+                $response.setBody($file.getContent()) // これはバイナリーのコンテンツ
 		$response.setHeader("Content-Type"; "image/jpeg")
 End case 
 	
@@ -660,16 +660,16 @@ return $response
 
 ```
 
-You can call the function using a request like:
+この関数は以下のようなリクエストを使用して呼び出すことができます:
 
 **GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
 
-### Using an entity to download a PDF document
+### エンティティを使用してPDF ドキュメントをダウンロードする
 
-Same example as above but you want to pass an entity as parameter to the datastore function.
+上記と同じ例ですが、ここではデータストア関数にエンティティを引数として渡したい場合を考えます。
 
 ```4d
-// Product dataclass
+// Product データクラス
 exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.OutgoingMessage
 	
 	var $file : 4D.File
@@ -682,13 +682,13 @@ exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.Outgo
 	return $response
 ```
 
-You can call the function using this request:
+この関数は、以下のリクエストを使用して呼び出すことができます:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
-### Using an entity selection to get a list
+### エンティティセレクションを使用してリストを取得する
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+REST GET リクエストを使用してシングルトン関数にエンティティセレクションを引数として渡し、 [`OutgoingMessage` クラス](../API/OutgoingMessageClass.md) 型のオブジェクトを使用してリストを返したいような場合を考えます。
 
 ```4d
 shared singleton Class constructor()
@@ -712,6 +712,6 @@ exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 
 	return $response
 ```
 
-You can call the function using this request:
+この関数は、以下のリクエストを使用して呼び出すことができます:
 
 **GET** `http://127.0.0.1:8044/rest/$singleton/Shopping/buildShoppingList?$params='[{"__DATASET":"8DB0556854HDK52FR5974F","__ENTITIES":true}]'`

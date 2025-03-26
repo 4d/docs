@@ -5,7 +5,7 @@ title: $singleton
 
 [共有シングルトンの公開関数](../Concepts/classes.md#シングルトンクラス) は、REST で直接呼び出すことができます。
 
-Singleton functions are called in POST or GET requests with the `$singleton` command and without `()`. たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
+シングルトン関数は、`$singleton` コマンド (`()`は不要です) を使用して POSTリクエストまたはGET リクエストで呼び出されます。 たとえば、`VehicleFactory` 共有シングルトンクラスに `buildVehicle()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
@@ -27,7 +27,7 @@ RESTリクエストから直接呼び出すことができるのは、[`exposed`
 
 ## 関数の呼び出し
 
-Singleton functions can be called using REST **POST** or **GET** requests.
+シングルトン関数はREST **POST** またはREST **GET** リクエストを使用して呼び出すことができます。
 
 シンタックスは次の通りです:
 
@@ -35,7 +35,7 @@ Singleton functions can be called using REST **POST** or **GET** requests.
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
-with data in the body of the POST request: `["myparam"]`
+POST リクエストのボディに関数に渡す引数を含めます: `["myparam"]`
 
 #### GET リクエスト
 
@@ -43,7 +43,7 @@ with data in the body of the POST request: `["myparam"]`
 
 :::note
 
-The `SingletonClassFunction()` function must have been declared with the `onHttpGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
+`SingletonClassFunction()` 関数を `GET` で呼び出し可能にするためには、この関数は `onHttpGet` キーワードで宣言されている必要があります([関数の設定](ClassFunctions#関数の設定) を参照して下さい)。
 
 :::
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
+[`$catalog`]($catalog.md#シングルトン) コマンドを呼び出すと、`mySingleton` クラスと `sayHello` 関数がリストされます。
 
 :::
 
