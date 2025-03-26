@@ -669,7 +669,7 @@ return $response
 上記と同じ例ですが、ここではデータストア関数にエンティティを引数として渡したい場合を考えます。
 
 ```4d
-// Product dataclass
+// Product データクラス
 exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.OutgoingMessage
 	
 	var $file : 4D.File
@@ -682,13 +682,13 @@ exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.Outgo
 	return $response
 ```
 
-You can call the function using this request:
+この関数は、以下のリクエストを使用して呼び出すことができます:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
 ### エンティティセレクションを使用してリストを取得する
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+REST GET リクエストを使用してシングルトン関数にエンティティセレクションを引数として渡し、 [`OutgoingMessage` クラス](../API/OutgoingMessageClass.md) 型のオブジェクトを使用してリストを返したいような場合を考えます。
 
 ```4d
 shared singleton Class constructor()
@@ -712,6 +712,6 @@ exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 
 	return $response
 ```
 
-You can call the function using this request:
+この関数は、以下のリクエストを使用して呼び出すことができます:
 
 **GET** `http://127.0.0.1:8044/rest/$singleton/Shopping/buildShoppingList?$params='[{"__DATASET":"8DB0556854HDK52FR5974F","__ENTITIES":true}]'`
