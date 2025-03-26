@@ -93,13 +93,13 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ## 引数
 
-You can send parameters to functions defined in ORDA user classes or singletons. サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
+ORDA ユーザークラスやシングルトン内で定義されている関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
 
 次のルールが適用されます:
 
-- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
-- In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- POST リクエストを通して呼び出された関数内では、引数は **POST リクエストの本文内** に渡さなければなりません。
+- GET リクエストを通して呼び出された関数内では、引数は **URL 内に"?$params=" シンタックスで** 渡さなければなりません。
+- 引数はコレクション (JSON形式) の中に格納する必要があります。
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
 - エンティティやエンティティセレクションも引数として受け渡せます。 The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
