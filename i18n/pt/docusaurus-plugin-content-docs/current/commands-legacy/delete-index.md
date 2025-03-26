@@ -5,7 +5,7 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( pontCampo|nomeIndice {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *pontCampo* {; *} )<br/>**DELETE INDEX** ( *nomeIndice* {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
