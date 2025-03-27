@@ -47,7 +47,7 @@ Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la si
 $4d.HelloWorld();
 ```
 
-> JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> JavaScript es sensible a las mayúsculas y minúsculas, por lo que es importante tener en cuenta que el objeto se llama **$4d** (con "d" minúscula).
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
@@ -60,7 +60,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)`: función a pasar como último argumento. Esta función "callback" se llama de forma sincrónica una vez que el método 4D termina de ejecutarse. Recibe el parámetro `result`.
 
-- `result`: Execution result of the 4D method. Este resultado puede ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
+- `result`: resultado de la ejecución del método 4D. Este resultado puede ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
 
 > Por defecto, 4D trabaja en UTF-8. Cuando devuelva un texto que contenga caracteres extendidos, por ejemplo, caracteres con acentos, asegúrese de que la codificación de la página mostrada en el área web esté declarada como UTF-8, ya que de lo contrario los caracteres podrían representarse incorrectamente. En este caso, añada la siguiente línea en la página HTML para declarar la codificación:
 > `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
@@ -82,7 +82,7 @@ En el área web, el método 4D puede ser llamado con la siguiente sintaxis:
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the result to the callback function called by 4D after the execution of the method. Queremos mostrar la fecha en la página HTML que es cargada por el área web.
+El método 4D no recibe ningún parámetro pero devuelve el resultado a la función de retrollamada por 4D después de la ejecución del método. Queremos mostrar la fecha en la página HTML que es cargada por el área web.
 
 Aquí está el código de la página HTML:
 
@@ -105,7 +105,7 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+El método proyecto 4D `calcSum` recibe parámetros y devuelve su suma en:
 
 Código 4D del método `calcSum`:
 
@@ -125,8 +125,8 @@ El código JavaScript que se ejecuta en el área web es el siguiente:
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
     {
-        var result = theSum // result is 262.5
-    });
+        var result = theSum // el resultado es 262.5
+});
 ```
 
 ## Acciones estándar
@@ -159,7 +159,7 @@ Además, las áreas web soportan los siguientes eventos de formulario genéricos
 Cuando se ejecuta el formulario, las funciones estándar de la interfaz del navegador están disponibles para el usuario en el área web, lo que permite la interacción con otras áreas del formulario:
 
 - **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
-- **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. La visualización del menú contextual puede controlarse mediante el comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D.
  Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, puede llamar al comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o definir la [variable URL](properties_WebArea.md#url) en respuesta a un soltar del usuario.
 
@@ -201,7 +201,7 @@ Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR`
 
 > Con el [motor de renderizado del sistema de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), un cambio en esta preferencia requiere que se tenga en cuenta una acción de navegación en el área (por ejemplo, una actualización de la página).
 
-For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Para más información, consulte la descripción del comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces tendrá nuevas opciones como **Inspeccionar el elemento** en el menú contextual del área. Al seleccionar esta opción, se muestra la ventana del inspector web.
 
