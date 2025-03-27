@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->O comando OPEN PRINTING JOB abre uma tarefa de impressão e empilha todas as ordens de impressão executadas até que se chame o comando [CLOSE PRINTING JOB](close-printing-job.md).<!-- END REF--> Este comando lhe permite controlar os trabalhos de impressão e, mais particularmente, ter certeza que nenhuma tarefa de impressão "parasita" possa ser inserida em uma sequência de impressão.
 
-O comando OPEN PRINTING JOB pode ser utilizado com todos os comandos de impressão 4D, os comandos do editor de relatórios rápidos, e os comandos de impressão dos plug-ins 4D Write e 4D View.
+O comando OPEN PRINTING JOB pode ser utilizado com todos os comandos de impressão 4D, os comandos do editor de relatórios rápidos, e os comandos de impressão dos plug-ins 4D Write.
 
 Quando um trabalho de impressão for local ao processo, cada processo tem suas proprias configurações de impressão (opções de impressão, impressora atual, etc). Várias impressões podem ser abertas ao mesmo tempo em 4D..
 
