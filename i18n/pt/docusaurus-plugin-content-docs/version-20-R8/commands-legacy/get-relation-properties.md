@@ -5,7 +5,7 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( pontCampo|numTabela {; *numCampo*}; *Tabela* ; *Campo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *pontCampo* ; *tabelaUm* ; *numCampo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<br/>**GET RELATION PROPERTIES** ( *numTabela* ; *numCampo* ; *tabelaUm* ; *campoUmo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
