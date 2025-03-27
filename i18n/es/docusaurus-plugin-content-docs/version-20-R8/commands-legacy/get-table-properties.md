@@ -5,7 +5,7 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( PtrTabla|numTabla ; *invisible* {; *trigGuardarNuevo* {; *trigGuardaReg* {; *trigBorrarReg* {; *trigCargReg*}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *PtrTabla* ; *invisible* {; *trigGuardarNuevo* {; *trigGuardaReg* {; *trigBorrarReg* {; *trigCargReg*}}}} )<br/>**GET TABLE PROPERTIES** ( *numTabla* ; *invisible* {; *trigGuardarNuevo* {; *trigGuardaReg* {; *trigBorrarReg* {; *trigCargReg*}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
