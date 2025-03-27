@@ -9,7 +9,7 @@ As configurações de backup são definidas através de três páginas na [caixa
 - os arquivos a incluir em cada backup
 - as funcionalidades avançadas que permitem executar tarefas automáticas
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
+> As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na [pasta Settings](Project/architecture.md#settings-user).
 
 ## Backups periódicos
 
@@ -48,10 +48,10 @@ A página Cópia de segurança| Configuração das propriedades do banco de dado
 
 Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copiados durante o backup.
 
-- **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
+- **Dados**: arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
     - o arquivo de histórico atual da aplicação (se houver),
-    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
-- **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](../Project/architecture.md#settings-user), i.e. the *user settings*, is automatically backed up.
+    - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#settings-user-data) (se existir), ou seja, os *parâmetros usuário para os dados*.
+- **Estrutura**: pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada [no mesmo nível que a pasta Project](../Project/architecture.md#settings-user), ou seja, *os parâmetros usuário*, é backup automaticamente.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
     - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
@@ -88,7 +88,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
@@ -125,11 +125,11 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 #### Restaurar o último backup se o banco de dados estiver danificado
 
-When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
+Quando essa opção estiver marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido da aplicação, se for detectada uma anomalia (arquivo corrompido, por exemplo) durante a inicialização da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-#### Integrate the latest logs if the database is incomplete
+#### Integrar os últimos logs se o banco de dados estiver incompleto
 
-When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
+Quando essa opção estiver marcada, o programa integra automaticamente o arquivo de registro atual se ele contiver operações que não estejam presentes no arquivo de dados. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
 
 :::note
 
