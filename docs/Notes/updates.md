@@ -12,6 +12,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 - Support of [session tokens](../WebServer/sessions.md#session-token-otp) handled with [`Session.createOTP()`](../API/SessionClass.md#createotp) and [`Session.restore()`](../API/SessionClass.md#restore) new functions.  
 - The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).  
+- Deprecated commands and constants now generate specific warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). You can know if a command is deprecated using the [`Command name`](../commands/command-name.md) command. 
 
 
 ## 4D 20 R8

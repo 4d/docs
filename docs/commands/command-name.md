@@ -35,7 +35,7 @@ Two optional parameters are available:
 
 - *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful: 
     - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md). 
-    - Second bit (bit 1): set to 1 if the commande is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). 
+    - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). 
  
 *theme*: name of the 4D language theme for the command.
 
