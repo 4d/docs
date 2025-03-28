@@ -299,8 +299,9 @@ The Dependency manager checks periodically if component updates are available on
 
 If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions. 
 
-- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. For example, "20.4" will be used by the Dependency manager for 4D versions 20.4 and next (if no higher tag version is created). The Dependency manager will resolve the tag to "the latest 20.x" if available, and notify the user if such a version does not exist.
-- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. For example, "20R9" will be used by the Dependency manager for 4D versions 20R9 and next (if no higher tag version is created). The Dependency manager will resolve the tag to "the latest version below 20R10" if available, and notify the user if such a version does not exist.
+- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20". 
+
+- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
 
 
 
