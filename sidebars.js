@@ -2374,7 +2374,7 @@ module.exports =
         },
         {
           type: "doc",
-          label: "Managing 4D Licenses",
+          label: "Licenses",
           id: "Admin/licenses"
         },
         {
