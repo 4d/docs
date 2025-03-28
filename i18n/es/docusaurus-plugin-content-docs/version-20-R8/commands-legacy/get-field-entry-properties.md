@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( ptrCamp|numTabla {; *numCamp*}; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrCamp* ; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabla* ; *numCamp* ; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -43,7 +43,7 @@ L'Administrateur ne peut pas :
 - modifier l'utilisateur Super_Utilisateur
 - par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
-Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
+Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la boîte de dialogue de gestion des utilisateurs, les icônes du Super_Utilisateur et de l’Administrateur sont respectivement rouge et verte :
 
 - Icône Super_Utilisateur : ![](../assets/en/Users/iconDesigner.png)
 - Icône Administrateur : ![](../assets/en/Users/iconAdmin.png)

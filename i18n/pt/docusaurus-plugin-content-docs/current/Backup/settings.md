@@ -88,7 +88,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 

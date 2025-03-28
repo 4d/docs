@@ -5,7 +5,7 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( pontCampo|numTabela {; *numCampo*}; *tipoCampo* {; *tamanhoCampo* {; *indexado* {; *unico* {; *invisivel*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *pontCampo* ; *tipoCampo* {; *tamanhoCampo* {; *indexado* {; *unico* {; *invisivel*}}}} )<br/>**GET FIELD PROPERTIES** ( *numTabela* ; *numCampo* ; *tipoCampo* {; *tamanhoCampo* {; *indexado* {; *unico* {; *invisivel*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

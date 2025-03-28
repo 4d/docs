@@ -11,9 +11,9 @@ Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de form
 
 ## Componentes interpretados y compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
+Los componentes pueden ser interpretados o [compilados](../Desktop/building.md). La carpeta del paquete de un componente puede contener:
 
-- either a [Project folder](../Project/architecture.md) named with a **.4dbase** suffix (interpreted component)
+- bien una [Carpeta proyecto](../Project/architecture.md) denominada con un sufijo **.4dbase** (componente interpretado)
 - o un archivo .4DZ (componente compilado)
 
 Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
@@ -31,7 +31,7 @@ Esta página describe cómo trabajar con componentes en los entornos **4D** y **
 
 ### Generalidades
 
-Para cargar un componente en su proyecto 4D, usted puede:
+Para cargar un componente en su proyecto 4D, puede:
 
 - copiar los archivos del componente en la [carpeta **Components** de su proyecto](architecture.md#components),
 - o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-local-dependency).
@@ -314,7 +314,7 @@ A continuación, se muestra el panel Dependencias. Las dependencias se ordenan p
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
 
 ### Añadir una dependencia local
 

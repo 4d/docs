@@ -59,7 +59,7 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 
 ## See also 
 
-[Command name](command-name.md)  
+[Command name](../commands/command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

@@ -434,10 +434,10 @@ Cette propriété est en **lecture seule**.
 <!-- REF #directory.copyTo().Params -->
 
 | Paramètres         | Type                      |                             | Description                                        |
-| ------------------ | ------------------------- | :-------------------------: | -------------------------------------------------- |
-| dossierDestination | 4D.Folder |              ->             | Dossier de destination                             |
-| nouveauNom         | Text                      |              ->             | Nom de la copie                                    |
-| overwrite          | Integer                   |              ->             | `fk overwrite` pour écraser les éléments existants |
+| ------------------ | ------------------------- | --------------------------- | -------------------------------------------------- |
+| dossierDestination | 4D.Folder | ->                          | Dossier de destination                             |
+| nouveauNom         | Text                      | ->                          | Nom de la copie                                    |
+| overwrite          | Integer                   | ->                          | `fk overwrite` pour écraser les éléments existants |
 | Résultat           | 4D.Folder | <- | Dossier copié                                      |
 
 <!-- END REF -->

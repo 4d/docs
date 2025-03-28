@@ -47,7 +47,7 @@ Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la si
 $4d.HelloWorld();
 ```
 
-> JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> JavaScript es sensible a las mayúsculas y minúsculas, por lo que es importante tener en cuenta que el objeto se llama **$4d** (con "d" minúscula).
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
@@ -105,7 +105,7 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+El método proyecto 4D `calcSum` recibe parámetros y devuelve su suma en:
 
 Código 4D del método `calcSum`:
 

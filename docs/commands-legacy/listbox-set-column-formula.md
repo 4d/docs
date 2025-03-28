@@ -33,7 +33,7 @@ The *formula* parameter can contain any valid expression, i.e.:
 
 When the command is called, the formula is parsed and then executed.
 
-**Note:** Use the [Command name](command-name.md) command to specify formulas independent from the application language (when they call 4D commands).
+**Note:** Use the [Command name](../commands/command-name.md) command to specify formulas independent from the application language (when they call 4D commands).
 
 The *dataType* parameter designates the type of data resulting from the execution of the formula. In this parameter, you pass one of the constants from the *Field and Variable Types* theme. If the formula result does not match the expected data type, an error is generated.
 

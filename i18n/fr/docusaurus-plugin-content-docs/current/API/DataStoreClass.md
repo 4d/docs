@@ -1159,10 +1159,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 <details><summary>Historique</summary>
 
-| Release | Modifications       |
-| ------- | ------------------- |
-| 20      | Server side support |
-| 17 R6   | Ajout               |
+| Release | Modifications                |
+| ------- | ---------------------------- |
+| 20      | Prise en charge côté serveur |
+| 17 R6   | Ajout                        |
 
 </details>
 

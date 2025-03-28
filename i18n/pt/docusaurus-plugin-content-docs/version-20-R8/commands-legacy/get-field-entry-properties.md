@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( pontCampo|numTabela {; *numCampo*}; *lista* ; *obrigatório* ; *nãoEditável* ; *nãoModificável* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *pontCampo* ; *lista* ; *obrigatório* ; *nãoEditável* ; *nãoModificável* )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabela* ; *numCampo* ; *lista* ; *obrigatório* ; *nãoEditável* ; *nãoModificável* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

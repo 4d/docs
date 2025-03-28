@@ -835,7 +835,7 @@ module.exports =
                 "commands/4d",
                 "commands-legacy/action-info",
                 "commands-legacy/call-chain",
-                "commands-legacy/command-name",
+                "commands/command-name",
                 "commands-legacy/copy-parameters",
                 "commands-legacy/count-parameters",
                 "commands/cs",
@@ -2374,7 +2374,7 @@ module.exports =
         },
         {
           type: "doc",
-          label: "Managing 4D Licenses",
+          label: "Licenses",
           id: "Admin/licenses"
         },
         {

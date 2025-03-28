@@ -82,7 +82,7 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Guardar...**: guarda el contenido de la ventana de error de sintaxis y la cadena de llamadas en un archivo `.txt`.
 
-## Debugger
+## Depurador
 
 Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. ¡No lo haga! Ahorrará mucho tiempo y energía utilizando siempre el **Depurador**.
 

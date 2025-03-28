@@ -33,7 +33,7 @@ Le paramètre *formule* peut contenir toute expression valide, soit :
 
 Au moment de l’appel de la commande, la formule est analysée puis exécutée.
 
-**Note :** Utilisez la commande [Command name](command-name.md) afin de définir des formules indépendantes de la langue de l’application (lorsqu’elles font appel à des commandes 4D).
+**Note :** Utilisez la commande [Command name](../commands/command-name.md) afin de définir des formules indépendantes de la langue de l’application (lorsqu’elles font appel à des commandes 4D).
 
 Le paramètre *typeDonnées* permet de désigner le type des données issues de l’exécution de la formule. Vous devez passer dans ce paramètre une des constantes du thème *Types champs et variables*. Si le résultat de la formule ne correspond pas au type de données attendu, une erreur est générée.
 

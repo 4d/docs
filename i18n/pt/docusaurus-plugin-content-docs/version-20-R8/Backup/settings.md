@@ -9,7 +9,7 @@ As configurações de backup são definidas através de três páginas na [caixa
 - os arquivos a incluir em cada backup
 - as funcionalidades avançadas que permitem executar tarefas automáticas
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
+> As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na [pasta Settings](Project/architecture.md#settings-user).
 
 ## Backups periódicos
 
@@ -50,7 +50,7 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
     - o arquivo de histórico atual da aplicação (se houver),
-    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
+    - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#settings-user-data) (se existir), ou seja, os *parâmetros usuário para os dados*.
 - **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-user-1), i.e. the *user settings*, is automatically backed up.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
@@ -88,7 +88,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 

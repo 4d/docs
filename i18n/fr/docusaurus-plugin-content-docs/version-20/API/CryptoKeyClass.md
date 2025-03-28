@@ -321,7 +321,7 @@ La valeur retournée est la clé publique.
 | Résultat   | Text         | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 <!-- END REF -->
 
-La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
+La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 d'une chaîne ou d'un Blob *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
 `CryptoKey` doit contenir une clé **privée** valide.
 
@@ -336,7 +336,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repres
 
 #### *Résultat*
 
-The utf8 representation of the *message*.
+La représentation utf8 de *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -389,7 +389,7 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 | 18 R4   | Ajout                                       |
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>**.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->

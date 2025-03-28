@@ -434,10 +434,10 @@ Essa propriedade é **somente leitura**.
 <!-- REF #directory.copyTo().Params -->
 
 | Parâmetro         | Tipo                       |                             | Descrição                                              |
-| ----------------- | -------------------------- | :-------------------------: | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder |              ->             | Pasta de destino                                       |
-| newName           | Text                       |              ->             | Nome para a copia                                      |
-| overwrite         | Integer                    |              ->             | `fk overwrite` para substituir os elementos existentes |
+| ----------------- | -------------------------- | --------------------------- | ------------------------------------------------------ |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino                                       |
+| newName           | Text                       | ->                          | Nome para a copia                                      |
+| overwrite         | Integer                    | ->                          | `fk overwrite` para substituir os elementos existentes |
 | Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado                               |
 
 <!-- END REF -->
