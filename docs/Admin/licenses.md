@@ -14,14 +14,8 @@ To use 4D products and features, you need to install appropriate licenses on you
 
 ### Development licenses
 
-Development licenses are required to access the 4D Design environment.  
+Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box. 
 
-The following development licenses are available:
-
-|Development license|Description|
-|---|----|
-|*4D Developer Pro*|Allows to develop with 4D in single-user mode|
-|*4D Team Developer Pro*|Allows to develop with 4D Server in multi-user mode|
 
 ### Deployment licenses
 
@@ -29,23 +23,19 @@ Deployment licenses can be embedded at build step by the developer or entered at
 
 |Deployment license|Description|Where to enter it|
 |---|----|---|
-|*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
-|*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page](#licenses) of the Build application dialog|
-|*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
-|*4D Server OEM*|Embedded custom license, contact 4D Sales for information|[Licenses page](#licenses) of the Build application dialog|
-|*4D XML Keys Activation*|Used to activate 4D Server OEM licenses|[Licenses page](#licenses) of the Build application dialog|
-|*4D Server*|Per-user license, allowing them to use 4D Server and clients|[First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine|
+|*4D OEM Desktop*|Embedded custom license, contact 4D Sales for information|[Licenses page](../Desktop/building.md#licenses) of the Build application dialog|
+|*4D Unlimited Desktop*|**Discontinued** - Embedded custom license |[Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog|
+|*4D Desktop*|Per-user license, allowing them to use stand-alone 4D applications|[First activation](#first-activation) dialog box on the user's machine|
+|*4D Server OEM*|Embedded custom license, contact 4D Sales for information|[Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog|
+|*4D XML Keys Activation*|Used to activate 4D Server OEM licenses|[Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog|
+|*4D Server*|Per-user license, allowing them to use 4D Server and clients|[First activation](#first-activation) dialog box on the user's machine|
 
 
-:::note
 
-You can also build an [evaluation application](#build-an-evaluation-application), in which case a limited term deployment license is automatically provided to the user at startup.  
-
-:::
 
 ### Expiration
 
-Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [if you are logged](GettingStarted/Installation.md) in the Welcome Wizard. 
+Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard. 
 
 In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box. 
 
@@ -124,7 +114,12 @@ This mode can be used for a special temporary activation of 4D (5 days maximum) 
 
 ## Refresh  
 
-You can add new licenses, for example to extend the capacities of your application, at any time.
+Licenses are usually automatically updated at startup of your 4D application. 
+
+You can use the **Refresh** button in the following contexts:
+
+- When you have purchased an additional expansion and want to activate it,
+- When you need to update an expired number (Partners or evolutions).
 
 Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
 
@@ -135,10 +130,6 @@ This button connects you to our customer database and automatically activates an
 - If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
 - At the first activation of a 4D Server, you just need to enter the server number and all the purchased expansions are automatically assigned.
 
-You can use the **Refresh** button in the following contexts:
-
-- When you have purchased an additional expansion and want to activate it,
-- When you need to update an expired number (Partners or evolutions).
 
 
 
