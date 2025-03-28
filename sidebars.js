@@ -835,7 +835,7 @@ module.exports =
                 "commands/4d",
                 "commands-legacy/action-info",
                 "commands-legacy/call-chain",
-                "commands-legacy/command-name",
+                "commands/command-name",
                 "commands-legacy/copy-parameters",
                 "commands-legacy/count-parameters",
                 "commands/cs",
