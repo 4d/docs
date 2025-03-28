@@ -33,7 +33,7 @@ Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 Todos los servidores Web disponibles son devueltos por el comando `WEB Server list`, se estén ejecutando o no.
 
-> El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
+> El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. Por otro lado, cada componente servidor web que se quiera utilizar debe ser instanciado utilizando el comando [`WEB Server`](web-server.md).
 
 Puede utilizar la propiedad [.name](../API/WebServerClass.md#name) del objeto servidor Web para identificar el proyecto o el componente al que está adjunto cada objeto servidor Web de la lista.
 
@@ -57,9 +57,9 @@ Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1716                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1716                        |
+| Hilo seguro       | &check; |
 
 

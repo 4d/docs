@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SCAN INDEX.Summary-->SCAN INDEXは、*aField* フィールドを含むテーブルから*number*個のレコードのセレクションを作成します。<!-- END REF-->*<*を渡した場合、SCAN INDEXはインデックスの最後から*number*個のセレクション作成します。*\>*を渡した場合、SCAN INDEXはインデックスの先頭から*number*個のセレクションを作成します。このコマンドは、インデックスを用いるため非常に効率が良くなります。
 
@@ -29,7 +29,7 @@ SCAN INDEXは、インデックスフィールドにのみ使用できます。�
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 例題 
+## 例題 
 
 以下の例は、ワースト50の顧客とベスト50の顧客に手紙を出します:
 
@@ -44,13 +44,13 @@ SCAN INDEXは、インデックスフィールドにのみ使用できます。�
  PRINT SELECTION([Customers]) // 手紙を印刷
 ```
 
-#### 参照 
+## 参照 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->El comando **GET WINDOW RECT** devuelve las coordenadas globales de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, las variables de los parámetros no cambian. 
 
@@ -27,16 +27,16 @@ Las coordenadas devueltas se expresan con relación a la esquina superior izquie
 
 **Nota:** bajo Windows, si pasa -1 en *ventana*, **GET WINDOW RECT** devuelve las coordenadas de la ventana de aplicación (ventana MDI). Estas coordenadas corresponden al área de contenido de la ventana (excluyendo barras de menús y bordes). En este caso en modo SDI, **GET WINDOW RECT** devuelve (0;0;0;0) como coordenadas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 
-#### Ver también 
+## Ver también 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

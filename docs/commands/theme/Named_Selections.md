@@ -1,7 +1,10 @@
 ---
-id: Named_Selections
+id: Named_Selections_theme
 title: Named Selections
+slug: /commands/theme/Named-Selections
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLEAR NAMED SELECTION.Syntax -->](../../commands-legacy/clear-named-selection.md)<br/>|

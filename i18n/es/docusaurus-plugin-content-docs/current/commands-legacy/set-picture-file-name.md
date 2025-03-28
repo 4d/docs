@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PICTURE FILE NAME.Summary-->El comando **SET PICTURE FILE NAME** define o modifica el nombre del archivo por defecto de la imagen pasada como parámetro.<!-- END REF-->  
   
@@ -22,12 +22,12 @@ Este nombre se puede definir automáticamente a partir del nombre de origen del 
   
 El nombre por defecto se utiliza como nombre de archivo cuando la imagen se exporta en un archivo disco. Si el contenido del campo se copia en una variable o en otro campo, el nombre por defecto también se copia. Para mayor información, consulte el Manual de *Diseño*.
 
-#### Ver también 
+## Ver también 
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

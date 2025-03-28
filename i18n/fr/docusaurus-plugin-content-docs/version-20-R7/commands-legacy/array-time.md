@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TIME.Summary-->La commande **ARRAY TIME** crée et/ou redimensionne un tableau d’éléments de type Heure en mémoire.<!-- END REF-->Dans 4D, les heures peuvent être traitées en tant que valeurs numériques. Dans les versions de 4D antérieures à la v14, il était nécessaire de combiner un tableau d’entiers longs et un format d’affichage pour gérer un tableau d’heures. 
 
@@ -32,7 +32,7 @@ Lorsque vous appliquez la commande **ARRAY TIME** à un tableau existant :
 
 A noter que les commandes [SELECTION TO ARRAY](selection-to-array.md) et [SELECTION RANGE TO ARRAY](selection-range-to-array.md) appliquées à un champ de type Heure créent un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type, par exemple en entier long. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type Heure :
 
@@ -40,7 +40,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type Heure :
  ARRAY TIME(tabHeures;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type Heure :
 
@@ -48,7 +48,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY TIME($tabHeures;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant est valide :
 
@@ -59,12 +59,12 @@ Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant
  $Found:=Find in array($tHValeurs;$CrtHeure)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Créer des tableaux*  
 [Time](time.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

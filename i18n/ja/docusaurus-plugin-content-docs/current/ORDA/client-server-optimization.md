@@ -12,8 +12,8 @@ title: クライアント/サーバーの最適化
 
 最適化をサポートしている ORDAクライアント/サーバーアーキテクチャーは次のとおりです:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
+- 4Dリモートデスクトップアプリケーションによって [**`ds`**](../commands/ds.md) を介してアクセスされるサーバーデータストア
+- [**`Open datastore`**](../commands/open-datastore.md) を介してアクセスされる [リモートデータストア](remoteDatastores.md) (クライアントRESTリクエスト)
 
 ## 最適化コンテキスト
 
@@ -43,7 +43,7 @@ title: クライアント/サーバーの最適化
 
 :::note 互換性に関する注意
 
-Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
+[`Open datastore`](../commands/open-datastore.md) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
 
 :::
 

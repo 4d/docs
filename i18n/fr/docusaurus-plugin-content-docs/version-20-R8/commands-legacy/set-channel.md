@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CHANNEL.Summary-->La commande **SET CHANNEL** permet d'ouvrir un port série ou un document.<!-- END REF--> Vous ne pouvez ouvrir qu'un port série ou un document à la fois avec cette commande.
 
@@ -30,7 +30,7 @@ La description de la commande **SET CHANNEL** se compose de deux sections :
 * Travailler avec les ports série
 * Travailler avec des documents
 
-#### Travailler avec les ports série : REGLER SERIE(port;param) 
+## Travailler avec les ports série : REGLER SERIE(port;param) 
 
 La première syntaxe de **SET CHANNEL** ouvre un port série et définit le protocole de communication ainsi que des informations supplémentaires. Les données peuvent être envoyées par les commandes [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) ou [SEND VARIABLE](send-variable.md), et reçues par les commandes [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) ou [RECEIVE RECORD](receive-record.md).
 
@@ -131,7 +131,7 @@ Lorsque vous n'avez plus besoin d'un port série, vous devez le refermer. Pour c
  SET CHANNEL(11) //Referme un port série préalablement ouvert
 ```
 
-#### Travailler avec des documents : REGLER SERIE(opération;document) 
+## Travailler avec des documents : REGLER SERIE(opération;document) 
 
 La seconde syntaxe de la commande **SET CHANNEL** vous permet de créer, ouvrir ou fermer un document. A la différence des commandes du thème *Documents système*, **SET CHANNEL** ne permet d'ouvrir qu'un document à la fois. Le document peut être "lu à partir de" ou "écrit dans". Reportez-vous à la section *Présentation des documents système* pour plus d'informations sur ce point. 
 
@@ -156,7 +156,7 @@ Toutes les opérations décrites dans ce tableau modifient la variable système 
 
 Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) et [RECEIVE RECORD](receive-record.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Append document](append-document.md)  
 *Communications*  
@@ -172,7 +172,7 @@ Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [S
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

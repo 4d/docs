@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->La commande **WEB SEND RAW DATA** permet au serveur Web 4D d’envoyer des données HTTP “brutes”, pouvant être morcelées.<!-- END REF-->
 
@@ -59,7 +59,7 @@ Combinée à la commande [WEB GET HTTP BODY](web-get-http-body.md) et aux autres
 
 ![](../assets/en/commands/pict856016.fr.png)
 
-#### Exemple 
+## Exemple 
 
 Cet exemple illustre l’emploi de l’option chunked avec la commande **WEB SEND RAW DATA**. Les données (une suite de chiffres) sont envoyées en 100 morceaux générés à la volée dans une boucle. A noter que l’en-tête de la réponse n’est pas explicitement défini : la commande **WEB SEND RAW DATA** l’enverra automatiquement et y insérera le champ *transfer-encoding: chunked* car le paramètre *\** est utilisé.
 
@@ -75,12 +75,12 @@ Cet exemple illustre l’emploi de l’option chunked avec la commande **WEB SEN
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

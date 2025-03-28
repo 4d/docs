@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->La commande **SET PRINT OPTION** permet de modifier par programmation la valeur d’une option d’impression.<!-- END REF--> Chaque option définie à l’aide de cette commande est appliquée aux [paramètres courants de l'impression 4D](../settings/compatibility.md) tant qu’aucune autre commande modifiant les paramètres d’impression ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) sans le paramètre *\>*, etc.) n’est appelée. Si une tâche d'impression a été ouverte (ex : avec [OPEN PRINTING JOB](open-printing-job.md)), l'option est définie pour la tâche et n'est pas modifiable tant que la tâche n'est pas terminée (à l'exception de Orientation option, voir ci-dessous) .
 
@@ -44,7 +44,7 @@ Une fois fixée à l’aide de cette commande, une option d’impression sera co
 * Il est impératif d’utiliser le paramètre optionnel *\>* avec les commandes [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md) et [PAGE BREAK](page-break.md) afin de ne pas réinitialiser les options d’impression définies à l’aide de la commande **SET PRINT OPTION**.
 * La commande **SET PRINT OPTION** prend principalement en charge les imprimantes PostScript. Elle peut être utilisée avec d'autres types d'imprimantes, telles que PCL ou Ink, mais dans ce cas il est possible que certaines options ne soient pas disponibles.
 
-#### Exemple 
+## Exemple 
 
 La valeur de l'option Orientation option peut être modifiée à l'intérieur d'une même tâche d'impression. A noter que l'option doit être définie avant la commande [PAGE BREAK](page-break.md) :
 
@@ -63,15 +63,15 @@ La valeur de l'option Orientation option peut être modifiée à l'intérieur d'
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si la commande a été exécutée correctement, sinon elle prend la valeur 0.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si la valeur passée pour une *option* est invalide ou si elle n'est pas disponible sur l'imprimante, la commande retourne une erreur (que vous pouvez intercepter à l’aide d’une méthode de gestion d’erreur installée par la commande [ON ERR CALL](on-err-call.md)) et la valeur courante de l’option est inchangée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PRINT OPTION](get-print-option.md)  
 *Options d'impression*  
@@ -79,7 +79,7 @@ Si la valeur passée pour une *option* est invalide ou si elle n'est pas disponi
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Database measures.Summary-->La commande **Database measures** vous permet d'obtenir un ensemble d'informations détaillées sur les événements du moteur de base de données de 4D.<!-- END REF--> Les informations renvoyées concernent les accès en lecture/écriture aux données depuis ou vers le disque ou le cache ainsi que l'utilisation des index de la base, les recherches et les tris. 
 
@@ -280,7 +280,7 @@ Cette commande retourne des informations relatives à l'utilisation de la base d
 Si la commande est appelée depuis un 4D distant en mode client/serveur, l'objet est retourné vide.   
 Dans ce contexte, si vous souhaitez obtenir des informations sur le serveur, le plus simple est de créer une méthode et d'activer l'option "Exécuter sur serveur". Ce principe fonctionne aussi pour un composant : si le composant est utilisé dans un contexte local, la commande retourne des informations sur la base hôte ; dans un contexte de 4D distant, elle retourne des informations sur la base du serveur. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
 
@@ -291,7 +291,7 @@ Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
  $measures:=Database measures($param)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez connaître uniquement le nombre global d'octets lus dans le cache ("cacheReadBytes") :
 
@@ -314,7 +314,7 @@ L'objet retourné contiendra, par exemple :
 }
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux dernières minutes :
 
@@ -328,7 +328,7 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

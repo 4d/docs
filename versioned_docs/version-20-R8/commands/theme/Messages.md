@@ -1,7 +1,10 @@
 ---
-id: Messages
+id: Messages_theme
 title: Messages
+slug: /commands/theme/Messages
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ALERT.Syntax -->](../../commands-legacy/alert.md)<br/>|

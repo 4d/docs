@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current process.Summary-->**Current process** retourne le numéro du process à partir duquel la fonction a été appelée.<!-- END REF-->
 
-#### Exemples 
+## Exemples 
 
 Référez-vous aux exemples de [DELAY PROCESS](delay-process.md) et [Process info](../commands/process-info.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -1,7 +1,10 @@
 ---
-id: Boolean
+id: Boolean_theme
 title: Boolean
+slug: /commands/theme/Boolean
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Bool.Syntax -->](../../commands-legacy/bool.md)<br/>|

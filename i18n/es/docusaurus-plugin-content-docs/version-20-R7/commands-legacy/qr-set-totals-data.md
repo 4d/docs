@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Nota:** este comando no puede crear un subtotal.<!-- END REF--> 
 
@@ -92,11 +92,11 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 Si el parámetro *numColumna* es incorrecto, se genera el error -9852\.   
 Si el parámetro *numRuptura* es incorrecto, se genera el error -9853.
 
-#### Ver también 
+## Ver también 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

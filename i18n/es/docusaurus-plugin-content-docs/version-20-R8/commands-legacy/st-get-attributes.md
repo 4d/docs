@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->El comando ST GET ATTRIBUTES se utiliza para recuperar el valor actual de un atributo de estilo en una selección de texto del objeto de formulario designado por *objeto*.<!-- END REF-->
 
@@ -74,7 +74,7 @@ Si el valor del atributo *nomAtrib* es el mismo para toda la selección, se devu
 | Attribute text size           | \-1                                                                        |
 | Attribute underline style     | 2                                                                          |
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado un campo \[Table\_1\]StyledText mostrado en un formulario. El objeto tiene la propiedad Multiestilo y se llama "StyledText\_t". Usted quiere obtener el texto resaltado así como también el estado de atributo de estilo Negrita. Puede proceder de dos formas diferentes dependiendo de si utiliza el nombre del objeto o la referencia del campo. 
 
@@ -93,17 +93,17 @@ Dado un campo \[Table\_1\]StyledText mostrado en un formulario. El objeto tiene 
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Después de ejecutar este comando, la variable OK toma el valor 1 si no se presenta ningún error; de lo contrario, toma el valor 0\. Este es el caso particularmente cuando las etiquetas de estilo no se evalúan correctamente (etiquetas incorrectas o faltantes).   
 
 En caso de error, no cambia la variable. Cuando ocurre un error en una variable cuando se está evaluando el texto, 4D transforma el texto en texto plano; como resultado, los caracteres <, > y & se convierten en entidades HTML.
 
-#### Ver también 
+## Ver también 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

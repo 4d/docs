@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get menu bar reference.Summary-->El comando **Get menu bar reference** devuelve la identificación única de la barra de menús actual o de la barra de menús de un proceso específico.<!-- END REF-->
 
@@ -32,15 +32,15 @@ Si la barra de menús fue creada por el comando [Create menu](create-menu.md), e
 
 El parámetro *proceso* puede utilizarse para designar el proceso del que quiere obtener la identificación de la barra de menús actual. Si omite este parámetro, el comando devuelve la identificación de la barra de menús del proceso actual.
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITEMS").
 
-#### Ver también 
+## Ver también 
 
 [SET MENU BAR](set-menu-bar.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

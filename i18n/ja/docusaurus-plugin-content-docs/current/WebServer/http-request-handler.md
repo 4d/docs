@@ -233,7 +233,7 @@ HTTP 動詞はまた、[リクエストハンドラーコード内で`.verb` プ
 
 ## リクエストハンドラーコード
 
-### Function configuration
+### 関数の設定
 
 HTTP リクエストハンドラーコードは、[**共有された**](../Concepts/classes.md#共有シングルトン) 、 [**シングルトンクラス**](../Concepts/classes.md#シングルトンクラス) の関数内に実装されている必要があります。
 
@@ -325,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## 参照
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/perfect-mastery-of-your-back-end-business-logic-thanks-to-HTTP-requests-handlers) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)

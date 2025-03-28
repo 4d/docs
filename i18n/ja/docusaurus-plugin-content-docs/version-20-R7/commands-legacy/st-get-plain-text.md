@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST Get plain text.Summary-->**ST Get plain text** コマンドは*\**と*object*引数で指定したテキスト変数やフィールドからスタイルタグを取り除き、プレーンテキストを返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ****Note:** 標準テキストに関しては、 *refMode* 引数にどの値を渡しても(どのモードで扱っても)変化はありません。言い換えると、 *refMode* を使って違いが現れるのはテキストに参照が含まれていた場合のみです。
 
-#### 例題 1 
+## 例題 1 
 
 マルチスタイル付きのテキストフィールドからテキスト"very nice"を探します。値は以下のような形式で保存されています: "The weather is very nice **today**".
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
  QUERY([Comments];[Comments]Weather="@very nice@")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "MyArea" というマルチスタイルエリア内に以下の様なテキストが入っている場合:
 
@@ -92,20 +92,20 @@ It is now   Go to the 4D site or Open a window
   //$txt = "It is now    or openW"
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 このコマンド実行後、エラーがなければOKシステム変数に1が設定されます。そうでなければ0が設定されます。これは特にスタイルタグが正しく評価できなかった場合に発生します (正しくない、あるいは失われたタグ)。  
 
 エラーの場合、変数は変更されません。テキストが評価される際に変数にエラーが発生すると、4Dはテキストをプレーンテキストに変換します。結果、"<"、">"、"&"文字はHTML実体参照に変換されます。
 
-#### 参照 
+## 参照 
 
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

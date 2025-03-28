@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE MANY.Summary-->**RELATE MANY** a deux syntaxes.<!-- END REF-->
 
@@ -30,7 +30,7 @@ La seconde syntaxe, **RELATE MANY**(champ1), active le lien 1 vers N pour *champ
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, trois tables sont liées avec des liens automatiques. Les deux tables \[People\] et \[Parts\] ont un lien N vers 1 vers la table \[Companies\].
 
@@ -56,12 +56,12 @@ Par exemple, la méthode suivante effectue une boucle sur chaque enregistrement 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

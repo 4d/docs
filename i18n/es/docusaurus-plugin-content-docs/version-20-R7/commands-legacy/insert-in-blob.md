@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->El comando INSERT IN BLOB inserta el número de bytes especificado por *numero* en el BLOB *blob* en la posición especificada por *offset*.<!-- END REF--> El BLOB se vuelve *numero* bytes más grande.
 
@@ -28,11 +28,11 @@ Antes de llamar el comando, pase en la variable del parámetro *offset* la posic
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Ver también 
+## Ver también 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

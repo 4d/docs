@@ -1,7 +1,10 @@
 ---
-id: Graphs
+id: Graphs_theme
 title: Graphs
+slug: /commands/theme/Graphs
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GRAPH.Syntax -->](../../commands-legacy/graph.md)<br/>|

@@ -57,9 +57,9 @@ Queremos saber quantos servidores rodando estão disponíveis:
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1716                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1716                        |
+| Thread safe    | &check; |
 
 

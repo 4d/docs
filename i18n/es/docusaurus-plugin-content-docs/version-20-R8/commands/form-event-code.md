@@ -351,9 +351,9 @@ As a result, the red rectangle follows the scrolling of the list box:
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 388                                                                 |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 388                         |
+| Hilo seguro       | &cross; |
 
 

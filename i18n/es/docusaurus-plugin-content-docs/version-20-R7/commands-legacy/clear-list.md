@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLEAR LIST.Summary-->El comando CLEAR LIST borra de la memoria la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Para borrar un sublista asociada a un elemento (en cualquier nivel) de otra list
 3\. Llame CLEAR LIST para borrar la sublista cuyo número de referencia obtuvo con [GET LIST ITEM](get-list-item.md "GET LIST ITEM").  
 4\. Llame *REDRAW LIST* para la lista mostrada en el formulario, para recalcular sus elementos y sublistas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Dentro de una rutina de limpieza que borra todos los objetos y datos que ya no necesita (por ejemplo, cuando se cierra una ventana o un formulario), usted podría terminar borrando una lista jerárquica que ya haya sido borrada, dependiendo de las acciones del usuario en el formulario. Utilice [Is a list](is-a-list.md "Is a list") para borrar la lista sólo si es necesario:
 
@@ -40,21 +40,21 @@ Dentro de una rutina de limpieza que borra todos los objetos y datos que ya no n
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver el ejemplo del comando [Load list](load-list.md "Load list").
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Ver el ejemplo del comando [BLOB to list](blob-to-list.md "BLOB to list").
 
-#### Ver también 
+## Ver también 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

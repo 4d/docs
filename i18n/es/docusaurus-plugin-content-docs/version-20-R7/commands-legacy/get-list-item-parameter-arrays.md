@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->El comando **GET LIST ITEM PARAMETER ARRAYS** permite recuperar en una sola llamada el conjunto de los parámetros (así como también, opcionalmente, sus valores) asociados al elemento *refElemento* de la lista jerárquica cuya referencia o nombre de objeto se pasó en el parámetro *lista*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si pasa el primer parámetro opcional *\**, indica que el parámetro *lista* es 
 
 *arrValores* debe ser un array de tipo texto. Si tiene valores asociados que no son textuales (tipo numérico o Booleano), convertidos en cadenas (True="1", False="0").
 
-#### Ejemplo 
+## Ejemplo 
 
 Dada la siguiente lista jerárquica: 
 
@@ -72,11 +72,11 @@ Si también quiere obtener los valores de los parámetros, escriba:
   // arrParamValues{5} contiene "Dallas"
 ```
 
-#### Ver también 
+## Ver también 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

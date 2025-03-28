@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->El comando DECRYPT BLOB descifra el contenido del BLOB aDescrifrar utilizando la llave pública del emisor *enviarLlavePub* y opcionalmente la llave privada del receptor *recepLlavePriv*.<!-- END REF-->
 
@@ -26,16 +26,16 @@ El BLOB que contiene la llave privada del receptor puede pasarse en el parámetr
 
 El comando DECRYPT BLOB ofrece una funcionalidad de verificación de integridad (checksum) con el fin de evitar toda modificación del contenido del BLOB (deliberada o no). Si el BLOB cifrado está dañado o modificado, el comando no hará nada y devolverá un error. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte los ejemplos dados por el comando [ENCRYPT BLOB](encrypt-blob.md "ENCRYPT BLOB").
 
-#### Ver también 
+## Ver también 
 
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

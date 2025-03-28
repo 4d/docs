@@ -173,7 +173,7 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 
 **.textDecoration** : Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
+`.textDecoration` プロパティは、 <!-- REF #TableStyle.textDecoration.Summary -->表のテキスト装飾 ( [**フォントとテキスト**](configuring.md#fonts-and-text)を参照) を指定します<!-- END REF -->。
 
 ### .borderLeft
 

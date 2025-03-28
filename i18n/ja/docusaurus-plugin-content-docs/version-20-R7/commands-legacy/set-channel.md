@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET CHANNEL.Summary-->SET CHANNEL コマンドはシリアルポートまたはドキュメントを開きます。<!-- END REF-->このコマンドでは、同時に1つのポートまたは1つのドキュメントファイルしか開くことができません。開いたシリアルポートを閉じるにはSET CHANNEL(11)を用います。
 
@@ -30,7 +30,7 @@ SET CHANNELの説明は、２つの部分からなります:
 * シリアルポートに使用
 * ドキュメントに使用
 
-#### シリアルポートに使用 - SET CHANNEL (port;settings) 
+## シリアルポートに使用 - SET CHANNEL (port;settings) 
 
 SET CHANNEL コマンドの第一の形式はシリアルポートを開き、プロトコルや他のポート情報を設定します。データの送信は、[SEND PACKET](send-packet.md "SEND PACKET"), [SEND RECORD](send-record.md "SEND RECORD") または [SEND VARIABLE](send-variable.md "SEND VARIABLE")で行えます。データの受信は、[RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [RECEIVE PACKET](receive-packet.md "RECEIVE PACKET"), [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") または [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")で行います。
 
@@ -132,7 +132,7 @@ SET CHANNEL コマンドの第一の形式はシリアルポートを開き、�
 
 **Tip:** *port* と *settings* に計算され渡されるさまざまな数値は、COM1...COM99の値を除き、テーマの定義済み変数で提供されています。COM1...COM99はリテラル数値を使用してください。
 
-#### ディスク上のドキュメントを操作 - SET CHANNEL(operation;document) 
+## ディスク上のドキュメントを操作 - SET CHANNEL(operation;document) 
 
 SET CHANNELコマンドの第2の形式は、ドキュメントファイルの作成やオープンおよび、クローズを行います。コマンドと異なり、同時に1つのドキュメントファイルしか開くことができません。ドキュメントファイルは、読み込みと書き込みの両方が可能です。 
 
@@ -158,7 +158,7 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 
 [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [SET TIMEOUT](set-timeout.md "SET TIMEOUT") そして [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")の例題を参照。
 
-#### 参照 
+## 参照 
 
 [Append document](append-document.md)  
 *Communications*  
@@ -174,7 +174,7 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

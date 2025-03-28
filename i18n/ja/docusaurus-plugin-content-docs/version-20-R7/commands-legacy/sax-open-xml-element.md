@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->SAX OPEN XML ELEMENT コマンドを使用して、*document* で参照されるXMLドキュメント中に新しい要素およびオプションで属性とその値を追加できます。<!-- END REF--> 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 オプションで*attribName*と*attribValue*引数を使用し、(変数、フィールド、またはリテラル値で) コマンドに1つ以上の属性名/値のペアを渡すことができます。
 
-#### 例題 
+## 例題 
 
 以下のコードは:
 
@@ -44,16 +44,16 @@ displayed_sidebar: docs
 <Book
 ```
 
-#### エラー管理 
+## エラー管理 
 
 *tag*に無効な文字が渡されるとエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

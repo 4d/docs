@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Milliseconds.Summary-->Milliseconds  devuelve el número de milisegundos ( 1milisegundo = 1 milésima de un segundo) pasados desde que se inició el equipo.<!-- END REF-->
 
@@ -21,7 +21,7 @@ El valor devuelto es un entero largo firmado, hasta 2^31 (alrededor de 2 mil mil
 
 El propósito del comando es medir cortos períodos de tiempo con una alta precisión. Un rango de 24 días es más que suficiente para las comparaciones, pero debe tener cuidado. Al comparar valores, siempre trabaje con la diferencia entre dos valores. Nunca compare los valores directamente, ya que uno podría ser negativo y el otro positivo.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código espera hasta 5 segundos para que un registro bloqueado se desbloquee o finalice:
 
@@ -42,13 +42,13 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
  (Milliseconds>($starttime+5000)) //nunca lo haga así, ya que uno podría ser positivo, uno negativo
 ```
 
-#### Ver también 
+## Ver también 
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

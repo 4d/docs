@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->### リストモード 
 
@@ -81,7 +81,7 @@ QR GET INFO COLUMN コマンドを使用して、同様のパラメータを取�
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*colNum*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 例題 
+## 例題 
 
 以下のレポートをデザインした場合を考えます:
 
@@ -102,13 +102,13 @@ QR GET INFO COLUMN コマンドを使用して、同様のパラメータを取�
   //$vResultVar = "C1"
 ```
 
-#### 参照 
+## 参照 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

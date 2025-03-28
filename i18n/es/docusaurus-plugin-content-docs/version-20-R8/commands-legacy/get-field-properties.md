@@ -5,7 +5,7 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( campPtr | tablaNum {; *numCamp*}; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *campPtr* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tablaNum* ; *numCamp* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->El comando **GET FIELD PROPERTIES** devuelve información sobre el campo designado por *campPtr* o por *tablaNum* y *campNum*.<!-- END REF--> 
 
@@ -53,7 +53,7 @@ Después de la llamada:
 * El parámetro *unico* devuelve True si el campo está definido como “único”, de lo contrario False.
 * El parámetro *invisible* devuelve True si el campo está definido como “Invisible”, de lo contrario False. El atributo invisible puede ser utilizado para ocultar un campo en el editor estándar de 4D (etiquetas, gráficos...).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En este ejemplo, las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *vInvisible* toman por valor las propiedades del tercer campo de la primera tabla:
 
@@ -61,7 +61,7 @@ En este ejemplo, las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *vInvisibl
  GET FIELD PROPERTIES(1;3;vTipo;vLong;vIndex;vUnico;vInvisible)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo recupera en las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *vInvisible* las propiedades del campo \[Tabla3\]Campo2:
 
@@ -69,13 +69,13 @@ Este ejemplo recupera en las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *v
  GET FIELD PROPERTIES(->[Tabla3]Campo2;vTipo;vLong;vIndex;vUnico;vInvisible)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

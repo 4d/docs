@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESUME PROCESS.Summary-->**RESUME PROCESS** réactive un process suspendu ou endormi.<!-- END REF--> Si *process* n'est pas endormi ou suspendu, **RESUME PROCESS** ne fait rien.
 
@@ -21,12 +21,12 @@ Si *process* a été suspendu, référez-vous aux commandes [PAUSE PROCESS](paus
 
 **Note :** Vous ne pouvez pas utiliser cette commande à partir d'un poste client pour affecter une procédure stockée sur le poste serveur (*process*<0).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

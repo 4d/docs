@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP Request.Summary-->La commande **SOAP Request** retourne Vrai si le code en cours d’exécution fait partie d’une requête SOAP.<!-- END REF--> 
 
 Cette commande peut être utilisée pour des raisons de sécurité dans la *Méthode base Sur authentification Web* afin de déterminer la nature des requêtes reçues.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SOAP DECLARATION](soap-declaration.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

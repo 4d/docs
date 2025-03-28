@@ -25,7 +25,7 @@ Les objets HTTPAgent fournissent les propriétés et fonctions suivantes :
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.options.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.options.Summary -->                            |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
 | [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
 | [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
@@ -34,8 +34,6 @@ Les objets HTTPAgent fournissent les propriétés et fonctions suivantes :
 Comme HTTPAgent est un objet partageable, vous pouvez en ajouter un à une classe singleton afin d'utiliser le même agent pour toutes les requêtes adressées au même serveur.
 
 :::
-
-<!-- REF #4D.HTTPAgent.new().Desc -->
 
 ## 4D.HTTPAgent.new()
 
@@ -113,15 +111,15 @@ Si aucun agent n'est associé à une requête HTTP, un agent global avec des val
 
 :::
 
-<!-- REF #HTTPAgentClass.options.Desc -->
+<!-- REF #HTTPAgentClass.params.Desc -->
 
-## .options
+## .params
 
-<!-- REF #HTTPAgentClass.options.Syntax -->**options** : Object<!-- END REF -->
+<!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
 
 #### Description
 
-L'objet propriété `.options` contient <!-- REF #HTTPAgentClass.options.Summary -->les options actuellement utilisées par le HTTPAgent<!-- END REF -->.
+La propriété `.params` contient <!-- REF #HTTPAgentClass.params.Summary -->les options actuellement utilisées par le HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 

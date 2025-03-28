@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->El comando LISTBOX COLLAPSE se utiliza para contraer líneas de ruptura del objeto list box designado por los parámetros *objeto* y *\** parámetros.<!-- END REF-->
 
@@ -39,7 +39,7 @@ El parámetro opcional *selector* se utiliza para especificar el alcance de la o
 
 Si la selección o el list box no contienen una línea de ruptura o si todas las líneas de ruptura ya están contraídas, el comando no hace nada.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo colapsa el primer nivel de líneas de ruptura de la selección en el list box:
 
@@ -47,11 +47,11 @@ Este ejemplo colapsa el primer nivel de líneas de ruptura de la selección en e
  LISTBOX COLLAPSE(*;"MiListbox";False;lk selection)
 ```
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX EXPAND](listbox-expand.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

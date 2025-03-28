@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE FILE NAME.Summary-->La commande **SET PICTURE FILE NAME** vous permet de définir ou de modifier le nom de fichier par défaut de l’image passée en paramètre.<!-- END REF-->
 
@@ -22,12 +22,12 @@ Ce nom peut avoir été défini automatiquement à partir du nom d’origine du 
 
 Le nom par défaut est utilisé comme nom de fichier en cas d’exportation de l’image dans un fichier disque. Si le contenu du champ est copié dans une variable ou dans un autre champ, le nom par défaut est également copié. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

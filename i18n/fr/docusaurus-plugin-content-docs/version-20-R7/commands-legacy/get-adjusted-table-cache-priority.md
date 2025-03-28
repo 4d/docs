@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get adjusted table cache priority.Summary-->La commande **Get adjusted table cache priority** retourrne la valeur ajustée de priorité de cache appliquée par le gestionnaire de cache aux données scalaires de laTable.<!-- END REF--> Cette commande est destinée uniquement à la phase de débogage et de mise au point de l'application. 
 
@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 Les types de données scalaires incluent les types date/heure, numériques et alpha.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 *Gestion des priorités dans le cache de la base*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

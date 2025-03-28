@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Execute on server.Summary-->La commande **Execute on server** lance un nouveau process sur la machine serveur (lorsqu'elle est appelée en environnement client/serveur) et retourne le numéro de ce process.<!-- END REF-->
 
@@ -61,7 +61,7 @@ Si vous passez un objet 4D (*C\_OBJECT*) ou une collection (*C\_COLLECTION*) com
 
 Si vous passez le dernier paramètre (optionnel) *\**, vous indiquez à 4D de vérifier en premier lieu si un process du même nom que celui que vous avez passé dans *nom* est déjà en cours d'exécution. Si c'est le cas, 4D ne démarre pas de nouveau process et retourne le numéro du process existant.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez enregistrer certaines informations relatives à la machine distante dans un fichier texte sur la machine serveur.
 
@@ -78,7 +78,7 @@ La méthode WriteLog sera exécutée sur le serveur. Elle contient, par exemple 
  TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant démontre comment l'import de données peut être accéléré de manière spectaculaire en environnement client/serveur. La méthode Import classique listée ci-dessous vous permet de mesurer combien de temps prend un import d'enregistrements basé sur la commande [IMPORT TEXT](import-text.md) :
 
@@ -180,16 +180,16 @@ Une fois que ces deux méthodes projet ont été implémentées dans votre base,
 
 Si vous réalisez quelques tests comparatifs, vous pourrez constater qu'avec ce type de méthode, l'import des enregistrements est jusqu'à 60 fois plus rapide qu'un import "classique".
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à la section *Services basés sur les procédures stockées (exemple)* dans le *Guide de référence* de 4D Server.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

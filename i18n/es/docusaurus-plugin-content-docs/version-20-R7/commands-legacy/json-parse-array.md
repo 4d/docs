@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->El comando **JSON PARSE ARRAY** analiza el contenido de una cadena con formato JSON y ubica los datos extraídos en el parámetro *array*.<!-- END REF--> Este comando deserializa los datos JSON, realiza la acción inversa del comando [JSON Stringify array](json-stringify-array.md).  
 
@@ -24,7 +24,7 @@ En *array*, pase un array que debe recibir los resultados del análisis.
 
 **Nota:** a partir de 4D v16 R4, **JSON PARSE ARRAY** por lo general puede ser sustituida por una llamada a [JSON Parse](json-parse.md) que devuelve una **colección**. Las colecciones se basan en arrays JSON y permiten almacenar datos de tipos mixtos, lo que ofrece más flexibilidad que los arrays.
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, los datos de los campos de los registros de una tabla se extraen y ubican en los arrays de objetos:
 
@@ -54,12 +54,12 @@ En este ejemplo, los datos de los campos de los registros de una tabla se extrae
   //...
 ```
 
-#### Ver también 
+## Ver también 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

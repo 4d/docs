@@ -15,18 +15,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Forward URL available.Summary-->La commande **WA Forward URL available** permet de savoir s’il existe un URL suivant disponible dans la séquence d’URLs ouverts dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
 La commande retourne Vrai si un URL existe et Faux sinon. Cette commande permet notamment, dans la cadre d’une interface personnalisée, d’activer ou d’inactiver des boutons de navigation.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA Back URL available](wa-back-url-available.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

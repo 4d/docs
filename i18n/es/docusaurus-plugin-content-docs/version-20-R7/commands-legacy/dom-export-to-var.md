@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM EXPORT TO VAR.Summary-->El comando DOM EXPORT TO VAR  permite guardar un árbol XML en una variable texto o BLOB.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Puede controlar el final de línea XML y la gestión BOM utilizando el comando [
 
 **Nota de compatibilidad:** en bases/proyectos creados con versiones de 4D hasta la v19.x, por defecto 4D utiliza CR como caracteres de fin de línea en macOS y un BOM. Para activar la nueva configuración por defecto, compruebe los ajustes de compatibilidad (ver *Página Compatibilidad*) o utilice el comando [XML SET OPTIONS](xml-set-options.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo guarda el árbol vRefElem en una variable texto: 
 
@@ -47,16 +47,16 @@ Este ejemplo guarda el árbol vRefElem en una variable texto:
  DOM EXPORT TO VAR(vRefElem;vtMiTexto)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error (por ejemplo, si la referencia del elemento no es válida).
 
-#### Ver también 
+## Ver también 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

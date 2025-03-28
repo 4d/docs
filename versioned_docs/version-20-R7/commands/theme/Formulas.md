@@ -1,7 +1,10 @@
 ---
-id: Formulas
+id: Formulas_theme
 title: Formulas
+slug: /commands/theme/Formulas
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.EDIT FORMULA.Syntax -->](../../commands-legacy/edit-formula.md)<br/>|

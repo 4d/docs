@@ -23,6 +23,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 | [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->                   |
 | [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary --> |
 | [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->    |
+| [<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem.Summary -->                                   |
 | [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary -->                            |
 | [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary -->                                |
 | [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary -->                                |
@@ -310,9 +311,9 @@ El valor devuelto es la llave pública.
 
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
-<!-- REF #CryptoKey.pem.Summary -->
+<!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
-Definición PEM de una llave de cifrado a cargar. Si la llave es una llave privada, se deducirá de ella la llave pública RSA o ECDSA. <!-- END REF -->
+<!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 
@@ -320,25 +321,26 @@ Definición PEM de una llave de cifrado a cargar. Si la llave es una llave priva
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18 R4       | Añadidos       |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R8       | Support of message as Blob |
+| 18 R4       | Añadidos                   |
 
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parámetros | Tipo   |                             | Descripción                                                           |
-| ---------- | ------ | --------------------------- | --------------------------------------------------------------------- |
-| message    | Text   | ->                          | Cadena mensaje a firmar                                               |
-| options    | Object | ->                          | Opciones de firma                                                     |
-| Resultado  | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+| Parámetros | Tipo         |                             | Descripción                                                           |
+| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------- |
+| message    | Texto O Blob | ->                          | Message to sign                                                       |
+| options    | Object       | ->                          | Opciones de firma                                                     |
+| Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
 <!-- END REF -->
 
-La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena de *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que le haya pasado.
+La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *message* o Blob<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que le haya pasado.
 
 La `CryptoKey` debe contener una llave **privada** válida.
 
@@ -353,7 +355,7 @@ La `CryptoKey` debe contener una llave **privada** válida.
 
 #### *Resultado*
 
-La representación utf8 de la cadena *message*.
+La representación utf8 de *message*.
 
 <!-- END REF -->
 
@@ -403,22 +405,23 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18 R4       | Añadidos       |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R8       | Support of message as Blob |
+| 18 R4       | Añadidos                   |
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parámetros | Tipo   |                             | Descripción                                                                                   |
-| ---------- | ------ | --------------------------- | --------------------------------------------------------------------------------------------- |
-| message    | Text   | ->                          | Cadena mensaje utilizada para generar la firma                                                |
-| signature  | Text   | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
-| options    | Object | ->                          | Opciones de firma                                                                             |
-| Resultado  | Object | <- | Estado de la verificación                                                                     |
+| Parámetros | Tipo         |                             | Descripción                                                                                   |
+| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
+| message    | Texto O Blob | ->                          | Message that was used to produce the signature                                                |
+| signature  | Text         | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
+| options    | Object       | ->                          | Opciones de firma                                                                             |
+| Resultado  | Object       | <- | Estado de la verificación                                                                     |
 
 <!-- END REF -->
 

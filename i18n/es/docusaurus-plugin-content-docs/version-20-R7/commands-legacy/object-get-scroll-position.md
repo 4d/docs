@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->OBJECT GET SCROLL POSITION devuelve, en los parámetros *posicionLinea* y *posicionH*, información relacionada con la posición de las barras de desplazamiento del objeto de formulario designado por los parámetros *\** y *objeto*.<!-- END REF-->
 
@@ -28,11 +28,11 @@ Si *objeto* designa un objeto de tipo lista (subformulario, lista jerárquica, �
 
 Si *objeto* designa una imagen (variable o campo), *posicionLinea* devuelve el desplazamiento vertical y *posicionH* el desplazamiento horizontal de la imagen. Estos valores se expresan en píxeles con respecto al origen de la imagen en el sistema de coordenadas locales.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

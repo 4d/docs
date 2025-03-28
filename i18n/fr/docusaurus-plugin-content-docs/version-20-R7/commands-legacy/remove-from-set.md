@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->**REMOVE FROM SET** supprime l'enregistrement courant de *laTable* de l'ensemble *ensemble*.<!-- END REF--> L'ensemble doit déjà exister ; s'il n'existe pas, une erreur est générée. S'il n'y a pas d'enregistrement courant dans *laTable*, **REMOVE FROM SET** ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ADD TO SET](add-to-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

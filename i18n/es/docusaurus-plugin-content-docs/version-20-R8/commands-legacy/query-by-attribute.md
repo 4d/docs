@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** busca los registros que coincidan con la cadena de consulta definida utilizando los parámetros *campoObjeto*, *rutaAtributo*, *opBusq* y *valor*, y devuelve una selección de registros para *tabla*.<!-- END REF-->cambia la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual. Si se omite el parámetro *tabla*, el comando se aplica a la tabla por defecto. Si no se ha definido ninguna tabla por defecto, se produce un error.
 
@@ -198,7 +198,7 @@ Con los registros anteriores, si escribe:
 
 **Nota:** utilizar la sintaxis relacionada en una sola línea de búsqueda dará los mismos resultados que una búsqueda estándar, excepto cuando se utiliza el operador "#": en este caso, se pueden devolver resultados no válidos. Por lo tanto, esta sintaxis específica no es soportada.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En este ejemplo, el atributo "age" es una cadena o un entero y queremos encontrar personas cuyas edades estén entre 20 y 29\. Las primeras dos líneas buscan el atributo como un entero (>=20 y <30) y las últimas consultan el campo como una cadena (comienza por "2" pero es diferente de "2".)
 
@@ -209,7 +209,7 @@ En este ejemplo, el atributo "age" es una cadena o un entero y queremos encontra
  QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //sin * para lanzar la ejecución
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El comando **QUERY BY ATTRIBUTE** se puede utilizar para encontrar registros en los que algunos atributos se definen (o no). Para ello, debe utilizar un objeto vacío.
 
@@ -225,7 +225,7 @@ El comando **QUERY BY ATTRIBUTE** se puede utilizar para encontrar registros en 
  QUERY BY ATTRIBUTE([Persons];[Persons]Info;"zip code";=;$undefined)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted quiere buscar un campo que contiene los atributos array. Con los dos registros siguientes:
 
@@ -264,7 +264,7 @@ Usted quiere buscar un campo que contiene los atributos array. Con los dos regis
   //Selecciona "smith"
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este ejemplo ilustra el uso de la propiedad "longitud" virtual. Su base tiene un campo objeto \[Customer\]full\_Data con los siguientes datos:
 
@@ -276,7 +276,7 @@ Usted quiere obtener los registros de los clientes que tienen dos o más hijos. 
  QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Estos ejemplos ilustran las diversas combinaciones disponibles de argumentos de consulta vinculados en arrays. Asumiendo que tiene los siguientes registros:
 
@@ -393,19 +393,19 @@ Para buscar personas que tienen un hijo de 15 años llamado "Harry" con un jugue
   //devuelve "Sam" y "Louis"
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la búsqueda se lleva a cabo correctamente, la variable sistema OK toma el valor 1.  
 La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja de diálogo de búsqueda,  
 \- en modo 'búsqueda y bloqueo' (ver el comando [SET QUERY AND LOCK](set-query-and-lock.md "SET QUERY AND LOCK")), la búsqueda encuentra al menos un registro bloqueado. En este caso igualmente, el conjunto sistema LockedSet se actualiza.
 
-#### Ver también 
+## Ver también 
 
   
 *Estructura de los objetos de lenguaje 4D*  
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

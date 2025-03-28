@@ -1,7 +1,10 @@
 ---
-id: On_a_Series
+id: On_a_Series_theme
 title: On a Series
+slug: /commands/theme/On-a-Series
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Average.Syntax -->](../../commands-legacy/average.md)<br/>|

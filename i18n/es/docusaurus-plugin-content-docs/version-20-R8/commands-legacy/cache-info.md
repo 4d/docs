@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Cache info.Summary-->El comando **Cache info** devuelve un objeto que contiene la información detallada sobre el contenido actual de la caché (memoria utilizada, tablas e índices cargados, etc.)<!-- END REF-->.
 
@@ -33,7 +33,7 @@ El comando **Cache info** devuelve un único objeto que contiene toda la informa
 
 Los elementos del array *objetos* son objetos raíz (tablas, índices, Blobs, etc.) que estén cargados en la memoria caché. Cada elemento contiene atributos específicos que describen su estado actual. Para más información acerca de la interpretación avanzada de estos datos, contacte a su departamento de servicio técnico.
 
-#### Ejemplo 
+## Ejemplo 
 
 Quiere obtener la información de la caché para la base de datos actual:
 
@@ -50,11 +50,11 @@ Usted quiere obtener información de la caché de la base de datos y todos los c
  $cache:=Cache info($dbFilter)
 ```
 
-#### Ver también 
+## Ver también 
 
 [MEMORY STATISTICS](memory-statistics.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

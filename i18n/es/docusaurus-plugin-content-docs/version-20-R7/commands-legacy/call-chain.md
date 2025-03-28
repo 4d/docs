@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Call chain.Summary-->El comando **Call chain** devuelve una colección de objetos que describen cada paso de la cadena de llamadas al método dentro del proceso actual.<!-- END REF--> Ofrece la misma información que la ventana del Depurador. Tiene la ventaja adicional de poder ejecutarse desde cualquier entorno 4D, incluido el modo compilado.
 
@@ -24,11 +24,11 @@ El comando facilita la depuración al permitir la identificación del método ll
 | database      | texto        | Nombre de la base que llama al método (para distinguir métodos locales y métodos componentes)                                                                                                                                                                                                                                                                                                                     | "database":"contactInfo" |
 | line          | entero largo | Número de línea de la llamada al método                                                                                                                                                                                                                                                                                                                                                                           | "line":6                 |
 | name          | texto        | Nombre del método llamado                                                                                                                                                                                                                                                                                                                                                                                         | "name":"On Load"         |
-| type          | texto        | Tipo de método: <br/>"projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (cuando se llama a un método proyecto con *Atributo Ejecutar en servidor*.), "executeFormula" (cuando se ejecuta una fórmula a través de [PROCESS 4D TAGS](process-4d-tags.md) o la evaluación de una fórmula en un documento 4D Write Pro.)</li<"formmethod",<> | "type":"formMethod"      |
+| type          | texto        | Tipo de método: <li>"projectMethod"</li><li>"formObjectMethod",</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (cuando se llama a un método proyecto con *Atributo Ejecutar en servidor*.)</li><li>"executeFormula" (cuando se ejecuta una fórmula a través de [PROCESS 4D TAGS](process-4d-tags.md) o la evaluación de una fórmula en un documento 4D Write Pro.)</li><li>"formMethod"</li>| "type":"formMethod"      |
 
 **Nota:** para que este comando pueda operar en modo compilado, la verificación de Rango no debe estar deshabilitada. Ver *Control de ejecución*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código devuelve una colección de objetos que contienen información sobre la cadena de llamadas al método:
 
@@ -50,7 +50,7 @@ Si se ejecuta un método de objeto de formulario, la cadena de llamadas podría 
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

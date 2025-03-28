@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.TRACE.Summary-->La commande **TRACE** est utilisée, lors du développement des bases, pour tracer des méthodes, c'est-à-dire contrôler leur exécution pas à pas.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Dans les bases compilées, cette commande est ignorée.
 **Conseil :** N'appelez pas **TRACE** lorsque vous utilisez un formulaire pour lequel les événements On Activate et On Deactivate ont été sélectionnés. En effet, chaque fois que la fenêtre du débogueur apparaîtra, les événements formulaire seront activés et cela créera une boucle sans fin entre les événements et le débogueur. De même, si vous appelez la commande **TRACE** depuis une méthode formulaire ou objet exécutée pendant la mise à jour du formulaire à l'écran, vous devrez également faire face à un problème de répétition sans fin de la séquence mises à jour du formulaire/apparitions de la fenêtre du débogueur.   
 Si vous vous retrouvez dans une telle situation, pour en sortir, utilisez la combinaison **Maj+clic** sur le bouton **Reprendre exécution** du débogueur. Tous les appels ultérieurs à **TRACE** dans le process seront ignorés. 
 
-#### Exemple 
+## Exemple 
 
 Dans le code suivant, la variable process *CREER\_LANG* doit être égale à “US” ou “FR”. Si ce n'est pas le cas, la méthode projet DEBUG est appelée :
 
@@ -62,7 +62,7 @@ La méthode projet DEBUG est listée ci-dessous :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

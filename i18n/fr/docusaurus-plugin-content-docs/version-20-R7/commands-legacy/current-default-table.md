@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current default table.Summary-->**Current default table** retourne un pointeur vers la table qui a été passée au dernier appel de la commande [DEFAULT TABLE](default-table.md) pour le process courant.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 La ligne de code suivante inscrit le nom de la table courante par défaut dans le titre de la fenêtre :
 
@@ -25,13 +25,13 @@ La ligne de code suivante inscrit le nom de la table courante par défaut dans l
  SET WINDOW TITLE(Table name(Current default table))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -145,16 +145,16 @@ La méthode proxy sera appelée de la manière suivante : *$BlobXMLresult:=$prox
 
 Le paramètre *\** permet d'optimiser les appels. Lorsqu'il est passé, la commande ne referme pas la connexion utilisée par le process à l’issue de son exécution. Dans ce cas, l’appel suivant à [WEB SERVICE CALL](web-service-call.md) réutilise cette même connexion si le paramètre \* est passé, et ainsi de suite. Pour refermer la connexion, il suffit d’exécuter la commande [WEB SERVICE CALL](web-service-call.md) sans le paramètre \*. Ce mécanisme permet d’accélérer sensiblement les traitements en cas d’appels successifs de plusieurs Web Services sur le même serveur, notamment en configuration WAN (via Internet par exemple). A noter que ce mécanisme s’appuie sur le paramétrage “keep-alive” du serveur Web. Ce paramétrage définit généralement un nombre maximal de requêtes via une même connexion, et peut même les interdire. Si les requêtes [WEB SERVICE CALL](web-service-call.md) enchaînées dans la même connexion atteignent ce nombre maximal ou si les connexions keep-alive ne sont pas autorisées, 4D créera une nouvelle connexion pour chaque requête.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la requête est correctement acheminée et que le Web Service l’a acceptée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est retournée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,21 +15,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Append XML element.Summary-->La commande **DOM Append XML element** permet d’ajouter un nouvel élément XML aux enfants de l’élément XML dont la référence est passée dans le paramètre *refElémentCible*.<!-- END REF--> 
 
 Passez dans *refElémentSource* l’élément à ajouter. Cet élément doit être passé en tant que référence d’un élément XML existant dans un arbre DOM. Il est ajouté après le dernier élément enfant existant de *refElémentCible*. 
 
-#### Exemple 
+## Exemple 
 
 Voir l’exemple de la commande [DOM Insert XML element](dom-insert-xml-element.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Insert XML element](dom-insert-xml-element.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

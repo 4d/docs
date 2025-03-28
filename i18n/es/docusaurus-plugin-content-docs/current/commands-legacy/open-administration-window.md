@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->El comando OPEN ADMINISTRATION WINDOW muestra la ventana de administración del servidor en el equipo que lo ejecuta.<!-- END REF--> La ventana de administración de 4D Server permite visualizar los parámetros actuales y efectuar varias operaciones de mantenimiento (ver la Guía de referencia de 4D). A partir de la versión 11 de 4D Server, esta ventana puede mostrarse desde un equipo cliente: 
 
@@ -23,7 +23,7 @@ Este comando debe llamarse en el contexto de una aplicación 4D conectada o de u
 * se llama en una aplicación 4D en modo local,
 * es ejecutado por un usuario diferente al Diseñador o al Administrador (en este caso, se genera el error -9991, ver la sección *Errores de la base de datos*).
 
-#### Ejemplo 
+## Ejemplo 
 
 Este es el código de un botón de administración:  
   
@@ -42,15 +42,15 @@ Este es el código de un botón de administración:
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el valor 1\. En caso contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

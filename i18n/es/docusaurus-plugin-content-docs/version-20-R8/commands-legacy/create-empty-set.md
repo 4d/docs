@@ -14,22 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE EMPTY SET.Summary-->CREATE EMPTY SET crea un conjunto vacío, *conjunto*, para *tabla*.<!-- END REF--> Puede añadir registros a este conjunto con el comando [ADD TO SET](add-to-set.md "ADD TO SET"). Si ya existe un conjunto con el mismo nombre, el conjunto existente se borra y reemplaza con el nuevo conjunto.
 
 **Nota:** no tiene que utilizar CREATE EMPTY SET antes de utilizar [CREATE SET](create-set.md "CREATE SET").
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo de la sección *Conjuntos*.
 
-#### Ver también 
+## Ver también 
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Last query path.Summary-->El comando Last query path devuelve la descripción interna detallada de la ruta real de la última búsqueda efectuada en los datos.<!-- END REF--> Para mayor información sobre las descripciones de búsquedas, consulte la documentación del comando [DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION"). 
 
@@ -29,12 +29,12 @@ Este comando devuelve un valor significativo si el comando [DESCRIBE QUERY EXECU
 
 La descripción de la ruta de la última búsqueda puede compararse con la descripción del plan de búsqueda de la última búsqueda (obtenido utilizando el comando [Last query plan](last-query-plan.md "Last query plan")) con propósitos de optimización.
 
-#### Ver también 
+## Ver también 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

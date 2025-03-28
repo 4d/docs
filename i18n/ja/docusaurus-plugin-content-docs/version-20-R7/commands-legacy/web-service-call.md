@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->**WEB SERVICE CALL**コマンドは、HTTPリクエストを送ることでWebサービスを呼び出すために使用します。<!-- END REF-->このリクエストには、事前に[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用して作成したSOAPメッセージが含まれています。
 
@@ -152,16 +152,16 @@ DOCモード (または複合タイプのRPCモード) で公開されたWebサ�
 
 オプションの *\** 引数を使用して呼び出しを最適化できます。この引数を指定すると、コマンドはその実行後に、処理により使用される接続を閉じません。この場合、次の**WEB SERVICE CALL**は \* 引数が渡されていれば同じ接続を再利用します。接続を閉じるには、**WEB SERVICE CALL**コマンドを \* 引数なしで呼び出します。このメカニズムにより、同じサーバ上の複数の異なるWebサービスを連続して呼び出すような処理が高速化されます。特にWAN環 境 (例えばインターネット経由) の場合に顕著です。この設定はWebサーバの“keep-alive”設定に基づきます。この設定では通常接続ごとの最大リクエスト数を設定し、リクエス トを拒否することもあります。一連の**WEB SERVICE CALL**リクエストがこの最大数の制限に達した場合、またはkeep-alive接続が許可されていない場合、4Dは新しい接続を作成します。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リクエストが正しくルーティングされ、Webサービスがそれを受け入れると、システム変数OKは1に設定されます。そうでなければ0に設定され、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

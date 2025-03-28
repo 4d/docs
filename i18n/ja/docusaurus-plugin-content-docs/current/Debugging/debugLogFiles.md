@@ -3,7 +3,7 @@ id: debugLogFiles
 title: ログファイル
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常、 [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)、 [WEB SET OPTION](../commands-legacy/web-set-option.md)、 あるいは [HTTP SET OPTION](../commands-legacy/http-set-option.md) コマンドのセレクターを使用して開始/停止し、プロジェクトの[Logs フォルダー](../Project/architecture.md#logs) 内に保存されています。
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
@@ -458,17 +458,17 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 ## 4DTCPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+このログファイルは TCP 接続に関連したイベントを記録します。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。 このログは、開発者は自身のアプリケーション内でのネットワークアクティビティをモニターしてデバッグするのを助けます。
 
 このログの開始方法:
 
-- Use the `SET DATABASE PARAMETER` command:
+- `SET DATABASE PARAMETER` コマンドを使用する:
 
  ```4d
  SET DATABASE PARAMETER(TCP log; 1)
  ```
 
-- Configure the log through a [JSON configuration file](#using-a-log-configuration-file):
+- [JSON 設定ファイル](#using-a-log-configuration-file) を使用してログを設定する:
 
  ```json
  {
@@ -480,18 +480,18 @@ This log file records events related to TCP connections. Events include data tra
 
 それぞれのイベントに対して、以下のフィールドが記録されます:
 
-| フィールド名      | 型         | 説明                                                                                         |
-| ----------- | --------- | ------------------------------------------------------------------------------------------ |
-| time        | Date/Time | Date and time of the event in ISO 8601 format                                              |
-| localPort   | Number    | Local port used for the connection                                                         |
-| peerAddress | Text      | IP address of the remote peer                                                              |
-| peerPort    | Number    | Port of the remote peer                                                                    |
-| protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
-| event       | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
-| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| 抜粋          | Number    | 最初の10 バイトのデータは16進数形式です。                                                                    |
-| textExcerpt | Text      | 最初の10 バイトのデータはテキスト形式です。                                                                    |
-| comment     | Text      | Additional information about the event, such as error details or encryption status         |
+| フィールド名      | 型      | 説明                                                                                  |
+| ----------- | ------ | ----------------------------------------------------------------------------------- |
+| time        | 日付/時間  | ISO 8601 フォーマットでのイベントの日付と時間                                                         |
+| localPort   | Number | 接続に使用されるローカルポート                                                                     |
+| peerAddress | Text   | リモートピアのIPアドレス                                                                       |
+| peerPort    | Number | リモートピアのポート                                                                          |
+| protocol    | Text   | イベントが `TCP` に関連しているかどうかを示します                                                        |
+| event       | Text   | イベントのタイプ: `open`、 `close`、 `error`、 `send`、 `receive`、あるいは `listen` |
+| size        | Number | 送信または受信したデータの量(バイト単位)、該当しない場合には 0                                |
+| 抜粋          | Number | 最初の10 バイトのデータは16進数形式です。                                                             |
+| textExcerpt | Text   | 最初の10 バイトのデータはテキスト形式です。                                                             |
+| comment     | Text   | エラーの詳細や暗号化ステータスなどのイベントの追加の情報                                                        |
 
 ## ログ設定ファイルを使用する
 
@@ -502,7 +502,7 @@ This log file records events related to TCP connections. Events include data tra
 環境に応じて、ログ設定ファイルを有効化する方法はいくつかあります:
 
 - **インターフェース付きの 4D Server**: メンテナンスページを開き、[ログ設定ファイルを読み込む](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。  この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
+- **インタープリタまたはコンパイル済みプロジェクト**: ファイルの名前は `logConfig.json` でプロジェクトの [Settings フォルダ](../Project/architecture.md#settings-user) 内にコピーする必要があります(このフォルダは [`Project` フォルダ](../Project/architecture.md#project-folder) と同階層に位置しています)。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
 - **ビルドしたアプリケーション**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
  - Windows: `Users\[userName]\AppData\Roaming\[application]`
  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`

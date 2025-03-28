@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->El comando **SET UPDATE FOLDER** especifica la carpeta que contiene la actualización de la aplicación 4D fusionada actual.<!-- END REF--> Esta información se almacena en la sesión 4D hasta que se llama el método [RESTART 4D](restart-4d.md). Si se sale de la aplicación manualmente, esta información no se conserva.  
   
@@ -37,7 +37,7 @@ Excepción: si la herramienta "updater" no puede crear el archivo de historial, 
   
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0\. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](on-err-call.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva versión de la aplicación "MyApp". Usted no desea mostrar los errores. Para preparar la actualización, escribe:
 
@@ -49,12 +49,12 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

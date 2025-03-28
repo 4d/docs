@@ -1,7 +1,10 @@
 ---
-id: Web_Area
+id: Web_Area_theme
 title: Web Area
+slug: /commands/theme/Web-Area
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WA Back URL available.Syntax -->](../../commands-legacy/wa-back-url-available.md)<br/>|
@@ -9,6 +12,7 @@ title: Web Area
 |[<!-- INCLUDE #_command_.WA Evaluate JavaScript.Syntax -->](../../commands-legacy/wa-evaluate-javascript.md)<br/>|
 |[<!-- INCLUDE #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax -->](../../commands-legacy/wa-execute-javascript-function.md)<br/>|
 |[<!-- INCLUDE #_command_.WA Forward URL available.Syntax -->](../../commands-legacy/wa-forward-url-available.md)<br/>|
+|[<!-- INCLUDE #_command_.WA Get context.Syntax -->](../../commands/wa-get-context.md)<br/>|
 |[<!-- INCLUDE #_command_.WA Get current URL.Syntax -->](../../commands-legacy/wa-get-current-url.md)<br/>|
 |[<!-- INCLUDE #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax -->](../../commands-legacy/wa-get-external-links-filters.md)<br/>|
 |[<!-- INCLUDE #_command_.WA Get last filtered URL.Syntax -->](../../commands-legacy/wa-get-last-filtered-url.md)<br/>|
@@ -24,6 +28,7 @@ title: Web Area
 |[<!-- INCLUDE #_command_.WA OPEN WEB INSPECTOR.Syntax -->](../../commands-legacy/wa-open-web-inspector.md)<br/>|
 |[<!-- INCLUDE #_command_.WA REFRESH CURRENT URL.Syntax -->](../../commands-legacy/wa-refresh-current-url.md)<br/>|
 |[<!-- INCLUDE #_command_.WA Run offscreen area.Syntax -->](../../commands-legacy/wa-run-offscreen-area.md)<br/>|
+|[<!-- INCLUDE #_command_.WA SET CONTEXT.Syntax -->](../../commands/wa-set-context.md)<br/>|
 |[<!-- INCLUDE #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax -->](../../commands-legacy/wa-set-external-links-filters.md)<br/>|
 |[<!-- INCLUDE #_command_.WA SET PAGE CONTENT.Syntax -->](../../commands-legacy/wa-set-page-content.md)<br/>|
 |[<!-- INCLUDE #_command_.WA SET PREFERENCE.Syntax -->](../../commands-legacy/wa-set-preference.md)<br/>|

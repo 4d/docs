@@ -5,7 +5,7 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; operator | value )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* )<br/>**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *value* )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

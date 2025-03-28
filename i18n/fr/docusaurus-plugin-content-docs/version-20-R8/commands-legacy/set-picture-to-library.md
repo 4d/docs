@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->La commande **SET PICTURE TO LIBRARY** crée une nouvelle image ou remplace une image existante dans la bibliothèque d’images.<!-- END REF-->
 
@@ -35,7 +35,7 @@ Si aucune image ne possède le numéro de référence que vous avez passé dans 
 
 **Note :** Si vous passez une image vide dans *image*, ou une valeur négative ou nulle dans *refImage*, la commande ne fait rien. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Quel que soit le contenu courant de la bibliothèque d’images, l’exemple suivant ajoute une nouvelle image dans la bibliothèque en cherchant d’abord un numéro de référence d’image unique :
 
@@ -47,7 +47,7 @@ Quel que soit le contenu courant de la bibliothèque d’images, l’exemple sui
  SET PICTURE TO LIBRARY(vgImage;$vlRefImage;"Nouvelle Image")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant importe dans la bibliothèque des images stockées dans un document sur disque, créé par le troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md) :
 
@@ -83,17 +83,17 @@ L’exemple suivant importe dans la bibliothèque des images stockées dans un d
  End if
 ```
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est générée. Notez que des erreurs d’E/S peuvent également être générées (si par exemple le fichier de structure est verrouillé). Vous pouvez intercepter ces erreurs avec une méthode de gestion d'erreurs.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** fonctionne de la même manière que [RELATE ONE](relate-one.md), à la différence près que **OLD RELATED ONE** utilise la valeur précédente de *leChamp* pour établir la relation.<!-- END REF--> 
 
@@ -21,18 +21,18 @@ displayed_sidebar: docs
 
 **OLD RELATED ONE** charge l'enregistrement précédemment lié à l'enregistrement courant. Les champs de cet enregistrement sont alors saisissables. Si vous voulez modifier cet ancien enregistrement lié et le sauvegarder, vous devez appeler la commande [SAVE RELATED ONE](save-related-one.md). Notez que pour un enregistrement venant d'être créé, il n'y pas d'ancien enregistrement lié. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée et si les enregistrements liés ont bien été chargés, la variable système OK prend la valeur 1\. Si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue de choix d'enregistrement (qui apparaît si l'enregistrement lié avait été modifié), la variable OK prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Old](old.md)  
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

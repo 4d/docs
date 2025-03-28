@@ -13,7 +13,7 @@ Quando for executado em modo *cooperativo*, todos os processos serão gestionado
 
 Como resultado, no modo apropriativo, o rendimento global da aplicação é incrementado, especialmente em máquinas multi-núcleo, já que múltiplos processos (threads ou fios) podem ser executados simultaneamente. Entretanto, os ganhos reais dependem das operações executadas. Por outro lado, já que no modo apropriativo cada fio é independente dos demais e não é gestionado diretamente pela aplicação, limitações específicas se aplicam aos métodos que queira que sejam compatíveis com o modo apropriativo. Além disso, a execução apropriativa está disponível só em alguns contextos específicos.
 
-## Disponibilidade de modo preemptivo
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 O uso do modo preemptivo está disponível nos seguintes contextos de execução:
 

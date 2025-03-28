@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros<!-- END REF-->: 
 
@@ -55,7 +55,7 @@ Los formularios se muestran al interior de una ventana abierta. El texto pasado 
 
 **Open window** devuelve una referencia de ventana de tipo [WinRef](# "Unique ID (Longint) of each open window"), utilizable por los comandos de gestión de ventanas (ver la sección "*WinRef*"). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método de proyecto abre una ventana centrada en la ventana en la ventana principal (Windows) o en la pantalla principal (Macintosh). Note que puede aceptar dos, tres, o cuatro parámetros:
 
@@ -90,7 +90,7 @@ Una vez escrito el método de proyecto, puede utilizarlo de esta forma:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo abre una ventana flotante que tiene un casilla de menú Control (Windows) o una casilla de cerrar (Macintosh). La ventana se abre en la esquina superior derecha de la ventana de la aplicación.  
   
@@ -106,7 +106,7 @@ El método CloseColorPalette llama al comando [CANCEL](cancel.md):
 ```
 
   
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las propiedades del formulario mostrado en la ventana:   
   
@@ -121,7 +121,7 @@ El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las pr
   
 **Recuerde**: para que la función **Open window** utilice automáticamente las propiedades del formulario, debe llamar a [FORM SET INPUT](form-set-input.md) con el parámetro opcional *\** y las propiedades del formulario deben haber sido definidas en función de esta utilización en el entorno Diseño.
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macOS:
 
@@ -132,13 +132,13 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macO
   //El evento On Load se genera luego se muestra la ventana; "desciende" de debajo de la barra de título
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLOSE WINDOW](close-window.md)  
 *Crear ventana*  
 [Open form window](open-form-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM LOAD.Summary-->El comando **FORM LOAD** se utiliza para cargar el *formulario* en memoria en el proceso actual junto con *dataForm* (opcional) con el fin de imprimir sus datos o analizar sus contenidos.<!-- END REF--> Sólo puede haber un formulario actual por proceso.
 
@@ -65,7 +65,7 @@ Tenga en cuenta que en todos los casos, el formulario en la pantalla permanece c
   
 **Recordatorio:** en el contexto fuera de pantalla, no olvide llamar [FORM UNLOAD](form-unload.md) para evitar todo riesgo de saturación de la memoria.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Llamar un formulario proyecto en un trabajo de impresión:
 
@@ -75,7 +75,7 @@ Llamar un formulario proyecto en un trabajo de impresión:
   // ejecución de eventos y métodos objeto
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Llamar un formulario tabla en un trabajo de impresión:
 
@@ -85,7 +85,7 @@ Llamar un formulario tabla en un trabajo de impresión:
   // ejecución de eventos y métodos de objeto
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Análisis del contenido de un formulario para efectuar un procesamiento en las áreas de entrada de texto:
 
@@ -101,7 +101,7 @@ Análisis del contenido de un formulario para efectuar un procesamiento en las �
  FORM UNLOAD //no olvidar descargar el formulario
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo devuelve el número de objetos de un formulario JSON:
 
@@ -120,7 +120,7 @@ el resultado mostrado es:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Desea imprimir un formulario que contiene un list box. Durante el evento *on load*, desea modificar el contenido del list box a modificar.  
   
@@ -164,7 +164,7 @@ var $over Boolean
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
@@ -172,7 +172,7 @@ var $over Boolean
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.REAL TO BLOB.Summary-->El comando REAL TO BLOB escribe el valor de tipo Real (o numérico) *real* en el BLOB *blob*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Después de llamar el comando, se devuelve la variable del parámetro, increment
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Después de la ejecución de este código:
 
@@ -56,7 +56,7 @@ Después de la ejecución de este código:
 
 * En todas las plataformas, el tamaño de *vxBlob* is 10 bytes
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Después de la ejecución de este código:
 
@@ -68,7 +68,7 @@ Después de la ejecución de este código:
 
 * En todas las plataformas, el tamaño de *vxBlob* es 8 bytes
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Después de la ejecución de este código:
 
@@ -81,7 +81,7 @@ Después de la ejecución de este código:
 
 * En todas las plataformas, el tamaño de *vxBlob* es 8 bytes
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Después de la ejecución de este código:
 
@@ -98,7 +98,7 @@ Después de la ejecución de este código:
 * Los otros bytes del BLOB se dejan sin cambiar
 * La variable *vlOffset* se ha incrementado en 8 (y ahora es igual a 58)
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Después de la ejecución de este código:
 
@@ -110,7 +110,7 @@ Después de la ejecución de este código:
 
 * En todas las plataformas, el tamaño de *vxBlob* es 8 bytes
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Después de la ejecución de este código:
 
@@ -123,7 +123,7 @@ Después de la ejecución de este código:
 * En todas las plataformas, el valor real se almacena en los bytes #100 a #109
 * Los otros bytes del BLOB no son modificados
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -133,7 +133,7 @@ Después de la ejecución de este código:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->El comando **SET FIELD VALUE NULL** asigna el valor NULL al campo designado por el parámetro *unCampo*.<!-- END REF-->
 
@@ -24,12 +24,12 @@ El valor NULL es utilizado por el motor SQL de 4D. Para mayor información, cons
 * Es posible no permitir el valor Null para los campos 4D al nivel del editor de Estructura (ver el manual de Diseño).
 * **SET FIELD VALUE NULL** borra el contenido de los campos objeto.
 
-#### Ver también 
+## Ver también 
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

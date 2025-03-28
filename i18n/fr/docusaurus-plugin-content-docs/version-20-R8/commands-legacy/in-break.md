@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.In break.Summary-->**In break** retourne Vrai pour le cycle d'exécution En rupture.<!-- END REF--> 
 
@@ -21,12 +21,12 @@ Si vous souhaitez que le cycle d'exécution **In break** soit généré, assurez
 
 **Note :** Cette commande équivaut à utiliser la commande [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Printing Break.
 
-#### Voir aussi 
+## Voir aussi 
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

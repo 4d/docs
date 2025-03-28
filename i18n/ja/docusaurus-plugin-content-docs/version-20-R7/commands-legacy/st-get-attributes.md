@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->**ST GET ATTRIBUTES** コマンドは、*object*で指定したフォームオブジェクト中で選択されたテキストのスタイル属性を取得するために使用します。<!-- END REF--> 
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 | Attribute text size           | \-1                                     |
 | Attribute underline style     | 2                                       |
 
-#### 例題 
+## 例題 
 
 フォームに\[Table\_1\]というStyledTextフィールドが表示されています。このオブジェクトはマルチスタイルで"StyledText\_t"という名前がついているとします。選択されたテキストと、太字スタイル属性についてのステータスを取得したいという場合、オブジェクト名かフィールド参照のどちらかを使用して処理することができます。
 
@@ -90,17 +90,17 @@ displayed_sidebar: docs
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 このコマンド実行後、エラーがなければOKシステム変数に1が設定されます。そうでなければ0が設定されます。これは特にスタイルタグが正しく評価できなかった場合に発生します (正しくない、あるいは失われたタグ)。  
 
 エラーの場合、変数は変更されません。テキストが評価される際に変数にエラーが発生すると、4Dはテキストをプレーンテキストに変換します。結果、"<"、">"、"&"文字はHTML実体参照に変換されます。
 
-#### 参照 
+## 参照 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

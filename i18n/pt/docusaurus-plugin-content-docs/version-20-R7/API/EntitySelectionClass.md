@@ -1056,8 +1056,6 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-
 ## .getRemoteContextAttributes()
 
 <details><summary>História</summary>
@@ -1084,7 +1082,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informações sobre o contexto de otimização usado pela seleção de entidades<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+Se não houver [contexto de otimização] (../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -1353,7 +1351,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 | Parâmetro     | Tipo |                             | Descrição                                        |
 | ------------- | ---- | :-------------------------: | ------------------------------------------------ |
 | attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo |
-| Resultados    | any  | <- | Menor valor do atributo                          |
+| Resultados    | any  | <- | Lowest value of attribute                        |
 
 <!-- END REF -->
 
@@ -1549,7 +1547,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | pathString  | Text                                |              ->             | Rota(s) de atributos e instruções de classificação para a entity selection |
 | pathObjects | Collection                          |              ->             | Coleção de objetos criterio                                                                   |
-| Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada                                                   |
+| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order                                                   |
 
 <!-- END REF -->
 
@@ -2016,10 +2014,10 @@ A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna 
 
 A seleção de entidade retornada contém as entidades especificadas por *startFrom* e todas as entidades subsequentes até, mas não incluindo, a entidade especificada por *end*. Se apenas o parâmetro *startFrom* for especificado, a seleção de entidades retornada contém todas as entidades desde *startFrom* até a última entidade da seleção de entidades original.
 
-- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). If the calculated value < 0, *startFrom* is set to 0.
+- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). Se o valor calculado < 0, *startFrom* é definido como 0.
 - Se *startFrom >= length*, a função retorna uma seleção vazia de entidade.
 - Se *end* < 0, ele será recalculado como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Se *end < startFrom* (valores passados ou calculados), o método não fará nada.
 
 Se a seleção de entidade contém entidades que foram abandonadas, também serão retornadas.
 
@@ -2119,7 +2117,7 @@ $sum:=$sel.sum("salary")
 | options      | Integer    |              ->             | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
 | begin        | Integer    |              ->             | Designa o índice inicial                                                                                                  |
 | howMany      | Integer    |              ->             | Número de entidades a extrair                                                                                             |
-| Resultados   | Collection | <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
+| Resultados   | Collection | <- | Collection of objects containing attributes and values of entity selection                                                |
 
 <!-- END REF -->
 
@@ -2157,7 +2155,7 @@ O parâmetro *begin* permite que você indique o índice inicial das entidades a
 
 O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. As entidades abandonadas não são devolvidas, mas são tidas em conta de acordo com *howMany*. Por exemplo, se *howMany*= 3 e houver 1 entidade abandonada, apenas 2 entidades são extraídas.
 
-Se *howMany* > comprimento da seleção da entidade, o método retorna (comprimento - *begin*) objetos.
+Se *howMany* > comprimento da seleção da entidade, o método retornará objetos (comprimento - *begin*).
 
 Uma colecção vazia é devolvida se:
 

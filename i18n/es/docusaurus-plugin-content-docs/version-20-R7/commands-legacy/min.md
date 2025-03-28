@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Min.Summary-->**Min** devuelve el valor mínimo en *series*.<!-- END REF--> Si *series* es un campo indexado, el índice se utiliza para encontrar el valor mínimo. 
 
@@ -28,7 +28,7 @@ Sólo los valores numéricos de los atributos se utilizan para el calculo. Si ha
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. Si se interrumpe (por ejemplo si el usuario hace clic en el botón **Detener** del termómetro de progreso), la variable OK toma el valor 0.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo es un método de objeto para la variable *vMin* ubicada en el área de ruptura 0 del formulario. La variable se imprime al final del informe. El método de objeto asigna el valor mínimo del campo a la variable, el cual se imprime en la última ruptura del informe: 
 
@@ -51,7 +51,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
 
 **Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte el capítulo *Impresión*.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo busca la venta más baja de un empleado y muestra el resultado en una caja de diálogo de alerta. Las cantidades vendidas son guardadas en el subcampo \[Empleados\]VentasDolares:
 
@@ -59,7 +59,7 @@ El siguiente ejemplo busca la venta más baja de un empleado y muestra el result
  ALERT("Ventaminima = "+String(Min([Empleados]VentasDolares)))
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo obtiene el valor mínimo en el array:
 
@@ -70,15 +70,15 @@ Este ejemplo obtiene el valor mínimo en el array:
  vMin:=Min($ArrGrades)
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 3 del comando [Average](average.md).
 
-#### Ver también 
+## Ver también 
 
 [Max](max.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

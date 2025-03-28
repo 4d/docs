@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Round.Summary-->Round は、指定された*places*位置で数値を四捨五入します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 *places*で指定した桁位置に続く数字が5から9の場合、Roundが正のときは切り上げを、負の場合負の大きな値に丸めます。  
 *places*で指定した桁位置に続く数字が0から4の場合、Roundは0に丸めます。
 
-#### 例題 
+## 例題 
 
 下記は、さまざまな引数を使用してRoundの機能を示します。結果を*vlResult*に代入します。コメントは、変数*vlResult*に代入される値についての説明です:
 
@@ -35,11 +35,11 @@ displayed_sidebar: docs
  vlResult:=Round(-1.5;0) // vlResult gets -2
 ```
 
-#### 参照 
+## 参照 
 
 [Trunc](trunc.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

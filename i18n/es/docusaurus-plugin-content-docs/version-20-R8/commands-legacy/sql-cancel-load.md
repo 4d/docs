@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->El comando SQL CANCEL LOAD finaliza la solicitud SELECT actual e inicializa los parámetros.<!-- END REF--> 
 
 Este comando se utiliza para ejecutar varias peticiones SELECT dentro de la misma conexión (es decir el mismo cursor) iniciada por el comando [SQL LOGIN](sql-login.md "SQL LOGIN"). 
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, se ejecutan dos peticiones en la misma conexión: 
 
@@ -43,16 +43,16 @@ En este ejemplo, se ejecutan dos peticiones en la misma conexión:
  End while
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente, la variable sistema OK devuelve 1\. De lo contrario, devuelve 0.
 
-#### Ver también 
+## Ver también 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

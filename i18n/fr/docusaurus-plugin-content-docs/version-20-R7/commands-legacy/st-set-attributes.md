@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->La commande **ST SET ATTRIBUTES** permet de modifier un ou plusieurs attribut(s) de style dans le ou les objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
 
@@ -82,7 +82,7 @@ Si vous passez la constante Attribute text color ou Attribute background color d
 | White                   | #FFFFFF                 |
 | Yellow                  | #FFFF00                 |
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, nous modifions la taille, la couleur de texte ainsi que les attributs gras et souligné des caractères 2 à 4 du champ :
 
@@ -90,18 +90,18 @@ Dans cet exemple, nous modifions la taille, la couleur de texte ainsi que les at
  ST SET ATTRIBUTES([MaTable]MonChamp;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
 A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-#### Voir aussi 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

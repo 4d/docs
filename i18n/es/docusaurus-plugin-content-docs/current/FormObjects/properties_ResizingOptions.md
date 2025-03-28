@@ -27,7 +27,7 @@ La apariencia de la columna falsa coincide con la de las columnas existentes; te
 
 Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \\\`On Header Cl
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) command returns "X+1" for its column number (where X is the number of existing columns).
+Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
 #### Gramática JSON
 

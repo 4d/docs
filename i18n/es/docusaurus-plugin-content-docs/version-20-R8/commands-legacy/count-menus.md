@@ -14,17 +14,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Count menus.Summary-->El comando Count menus devuelve el número de menús presentes en la barra de menús.<!-- END REF-->
 
 Si omite el parámetro *proceso*, Count menus se aplica a la barra de menús del proceso actual. De lo contrario, Count menus se aplica a la barra de menús del proceso cuyo número de referencia se pasa en *proceso*. 
 
-#### Ver también 
+## Ver también 
 
 [Count menu items](count-menu-items.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

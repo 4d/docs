@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->La commande **OPEN SETTINGS WINDOW** provoque l’ouverture de la boîte de dialogue des Préférences 4D ou des Propriétés de la base courante et l’affichage des paramètres ou de la page correspondant à la clé passée dans le paramètre *sélecteur*.<!-- END REF--> 
 
@@ -102,7 +102,7 @@ Clés supplémentaires en mode "Propriétés utilisateur pour fichier de donnée
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### Exemple 1 
+## Exemple 1 
 
 Ouverture de la page “Méthodes” des Préférences 4D :   
   
@@ -110,7 +110,7 @@ Ouverture de la page “Méthodes” des Préférences 4D :
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Accès aux paramétrages des raccourcis clavier dans les Propriétés de la base avec verrouillage des autres propriétés :   
 
@@ -118,7 +118,7 @@ Accès aux paramétrages des raccourcis clavier dans les Propriétés de la base
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Ouverture des Propriétés de la base sur la première page des Propriétés de la base :  
 
@@ -126,7 +126,7 @@ Ouverture des Propriétés de la base sur la première page des Propriétés de 
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Accès à la page Interface des Propriétés de la base en mode "Propriétés utilisateur" :
 
@@ -134,12 +134,12 @@ Accès à la page Interface des Propriétés de la base en mode "Propriétés ut
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la boîte de dialogue des préférences/propriétés est validée, la variable système OK retourne 1 ; si elle est annulée, OK retourne 0.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

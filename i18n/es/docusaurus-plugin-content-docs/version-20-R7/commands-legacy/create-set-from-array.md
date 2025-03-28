@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon*<!-- END REF--> a partir de: 
 
@@ -30,16 +30,16 @@ Cuando utilice este comando y pase un array booleano en *arrayReg*, el elemento 
 
 Si no pasa el parámetro *nomCon* o si pasa una cadena vacía, el comando se aplica al conjunto sistema Userset.
 
-#### Gestión de errores 
+## Gestión de errores 
 
 En un array de enteros largos, si un número de registro no es válido (registro no creado), se genera el error -10503.
 
-#### Ver también 
+## Ver también 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

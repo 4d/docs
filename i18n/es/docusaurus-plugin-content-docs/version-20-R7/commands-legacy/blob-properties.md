@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB PROPERTIES.Summary-->El comando **BLOB PROPERTIES** devuelve información sobre el BLOB *blob*.<!-- END REF-->
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
  Cualquiera que sea el estado de compresión del BLOB, el parámetro *descompTam* devuelve el tamaño del BLOB cuando no está comprimido.  
 El parámetro *tamañoActual* devuelve el tamaño actual del BLOB. Si el BLOB está comprimido, *tamañoActual* será menor que *descompTam*. Si el BLOB no está comprimido, *tamañoActual* será igual a *descompTam*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Vea los ejemplos de los comandos [COMPRESS BLOB](compress-blob.md "COMPRESS BLOB") y [EXPAND BLOB](expand-blob.md "EXPAND BLOB").
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Después de que un BLOB ha sido comprimido, el siguiente método de proyecto obtiene el porcentaje de espacio ahorrado por la compresión:
 
@@ -73,12 +73,12 @@ Después de añadir este método a su aplicación, lo puede utilizar de esta man
  " de espacio.")
 ```
 
-#### Ver también 
+## Ver también 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

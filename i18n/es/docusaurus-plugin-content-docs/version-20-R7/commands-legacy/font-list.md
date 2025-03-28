@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FONT LIST.Summary-->El comando FONT LIST llena el array Texto *fuentes* con los nombres de las fuentes vectoriales disponibles en su sistema.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Bajo Windows, este principio se aplica comenzando con 4D v15 R4\. Con el fin de 
 * Las fuentes de mapa de bits se pueden seguir utilizando en sus formularios 4D (excepto en las áreas 4D Write Pro). Simplemente se eliminan de la lista devuelta por este comando. Sin embargo, para asegurar la compatibilidad con futuras versiones de 4D y Windows, se recomienda utilizar sólo las familias de fuentes DirectWrite.
 * Dado que las fuentes de mapa de bits se filtran desde el parámetro *fuentes* en Windows, la lista resultante es diferente en aplicaciones 4D v15 R4 y superiores, en comparación con versiones anteriores. Por favor asegúrese de adaptar su código si utiliza este comando para seleccionar un tipo de letra no vectorial.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En un formulario, usted quiere obtener una lista desplegable que muestre las fuentes disponibles en el sistema. El método de la lista desplegable es el siguiente: 
 
@@ -60,7 +60,7 @@ En un formulario, usted quiere obtener una lista desplegable que muestre las fue
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere obtener una lista de fuentes recientes:
 
@@ -68,7 +68,7 @@ Usted quiere obtener una lista de fuentes recientes:
  FONT LIST($arrFonts;Recent fonts)
 ```
 
-#### Ver también 
+## Ver también 
 
 [FONT STYLE LIST](font-style-list.md)  
 [OBJECT SET FONT](object-set-font.md)  
@@ -76,7 +76,7 @@ Usted quiere obtener una lista de fuentes recientes:
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 *Tipo de lista de las fuentes*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

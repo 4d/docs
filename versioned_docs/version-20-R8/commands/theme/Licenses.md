@@ -1,7 +1,10 @@
 ---
-id: Licenses
+id: Licenses_theme
 title: Licenses
+slug: /commands/theme/Licenses
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CHANGE LICENSES.Syntax -->](../../commands-legacy/change-licenses.md)<br/>|

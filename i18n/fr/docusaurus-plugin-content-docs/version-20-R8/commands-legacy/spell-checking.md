@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL CHECKING.Summary-->La commande **SPELL CHECKING** déclenche la vérification de l’orthographe du champ ou de la variable ayant le focus dans le formulaire affiché à l’écran.<!-- END REF--> L’objet vérifié doit être de type Alpha ou Texte.
 
@@ -29,12 +29,12 @@ La vérification débute par le premier mot du champ ou de la variable. Si un mo
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

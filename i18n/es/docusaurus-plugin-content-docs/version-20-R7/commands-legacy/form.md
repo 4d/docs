@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado con el formulario actual, si lo hay.<!-- END REF--> 4D asocia automáticamente un objeto al formulario actual en los siguientes casos:
 
@@ -46,7 +46,7 @@ Para más información, consulte la sección *Subformularios en página*.
 | ------------- | -------- | ---------------------------------------------- |
 | parentForm    | objeto   | **Form** objeto del formulario de salida padre |
 
-#### Ejemplo 
+## Ejemplo 
 
 En un formulario, usted asignó algunas propiedades de objeto [Form](form.md) a variables:
 
@@ -67,11 +67,11 @@ El formulario muestra los valores que ha pasado:
 
 **Nota:** este ejemplo requiere que la notación de objeto esté habilitada en la base de datos (ver *Página Compatibilidad*).
 
-#### Ver también 
+## Ver también 
 
 [DIALOG](dialog.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

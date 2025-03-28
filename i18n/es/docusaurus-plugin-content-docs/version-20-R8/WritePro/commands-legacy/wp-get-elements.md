@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get elements.Summary-->El comando **WP Get elements** devuelve una colección de objetos que contienen párrafos, imágenes, tablas y/o líneas.<!-- END REF-->
 
@@ -58,7 +58,7 @@ Los elementos en la colección devuelta se ordenan de forma diferente en funció
 
 Si quiere, por ejemplo, alternar el color de fondo para los párrafos en la parte del cuerpo de un documento, debe pasar el elemento del cuerpo en *objRango* y no el documento, para asegurarse de que el orden del elemento en la colección corresponde al orden del párrafo del documento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea devolver una colección de todos los párrafos en un documento:
 
@@ -68,7 +68,7 @@ Desea devolver una colección de todos los párrafos en un documento:
   //devuelve una colección que contiene solo elementos de párrafo
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea alternar la alineación y el color de los párrafos en un documento: 
 
@@ -103,7 +103,7 @@ Usted desea alternar la alineación y el color de los párrafos en un documento:
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

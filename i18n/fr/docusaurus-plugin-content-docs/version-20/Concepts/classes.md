@@ -334,11 +334,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name" : "HelloWorld" ; "age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 
@@ -556,7 +556,7 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. Inside a [class member function](#function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. A l'intérieur d'une [fonction de classe](#function), `Super` désigne le prototype de la superclasse et permet d'appeler une fonction de la hiérarchie de superclasses.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   

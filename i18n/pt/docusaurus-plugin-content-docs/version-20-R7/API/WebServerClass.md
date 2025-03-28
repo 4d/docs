@@ -7,7 +7,7 @@ The `WebServer` class API allows you to start and monitor a web server for the m
 
 ### Objeto Web Server
 
-Web server objects are instantiated with the [`WEB Server`](../commands/web-server.md) command.
+Os objetos servidor Web são instanciados com o comando [`WEB Server`](../commands/web-server.md).
 
 Eles oferecem as propriedades abaixo e funções:
 

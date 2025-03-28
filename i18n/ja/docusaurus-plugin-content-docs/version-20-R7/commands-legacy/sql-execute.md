@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->**SQL EXECUTE**コマンドを使用してSQLコマンドを実行し、結果を4Dのオブジェクト(配列、変数またはフィールド) にバインドできます。<!-- END REF-->
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **注:** SQLクエリで4D式を参照することについての詳細は、*SQLコマンドの概要*を参照してください。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例で、データソースにあるempテーブルのenameカラムを取得します。その結果は、4Dのフィールドの\[Employee\]Nameに保存されます。4Dのレコードは自動的に作成されます。
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
  SQL LOAD RECORD(SQL all records)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 レコードの作成を確認するには、トランザクションにコードを投入します。そしてオペレーションが十分であると判明した場合のみ、それを認証します。
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  VALIDATE TRANSACTION //トランザクションの検証
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下の例では、データソースにあるempテーブルのenameカラムを取得します。その結果は、*aName* 配列に保存されます。１度に10個のレコードを取って来ます。
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  End while
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例では、データソースの特定のID(WHERE節) のためのempテーブルのenameとジョブを取得します。その結果は、4Dの変数、*vName*と*vJob*に保存されます。最初のレコードだけを取って来ます。
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
  SQL LOAD RECORD
 ```
 
-#### 例題 5 
+## 例題 5 
 
 以下の例では、データソースにあるTestテーブルのBlob\_Fieldカラムを取得します。その結果は、BLOB変数に保存されます。そして、レコードがロードされる度に、そのBLOB変数の値を更新します。
 
@@ -102,7 +102,7 @@ displayed_sidebar: docs
  End while
 ```
 
-#### 例題 6 
+## 例題 6 
 
 リモートの4D Serverデータベースからデータをローカルに取得します:
 
@@ -150,15 +150,15 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されると、OKシステム変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN ARRAY.Summary-->**INSERT IN ARRAY** insère un ou plusieurs éléments ou "lignes" dans le tableau *tableau*.<!-- END REF--> Les nouveaux éléments sont insérés avant l'élément spécifié par *positionDépart*, et initialisés à la valeur vide du type du tableau. Tous les éléments situés au-delà de *positionDépart* sont décalés vers le bas d'un offset ou de la valeur spécifiée par *combien*.
 
@@ -23,7 +23,7 @@ Si *positionDépart* est supérieur à la taille du tableau, les éléments sont
 
 Le paramètre *combien* représente le nombre de lignes à insérer. Si *combien* n'est pas spécifié, un seul élément est inséré. La taille du tableau est augmentée de *combien*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant insère cinq nouveaux éléments à partir de l'élément 10 :
 
@@ -31,7 +31,7 @@ L'exemple suivant insère cinq nouveaux éléments à partir de l'élément 10 :
  INSERT IN ARRAY(unTableau;10;5)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant ajoute un élément à un tableau :
 
@@ -41,12 +41,12 @@ L'exemple suivant ajoute un élément à un tableau :
  unTableau{$vlElem}:=...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -62,13 +62,13 @@ displayed_sidebar: docs
 
 ## 参照
 
-*デザインオブジェクトアクセスコマンド*
+[Design Object Access Commands](../commands/theme/Design_Object_Access.md)
 
 ## プロパティ
 
-|         |                                                                 |
-| ------- | --------------------------------------------------------------- |
-| コマンド番号  | 1749                                                            |
-| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1749                        |
+| スレッドセーフ | &cross; |
 
 

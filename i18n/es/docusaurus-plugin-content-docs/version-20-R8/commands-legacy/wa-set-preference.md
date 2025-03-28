@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->El comando WA SET PREFERENCE permite fijar diferentes preferencias para el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Pase en el parámetro *selector* la preferencia a modificar y en *valor* el valo
 
 Para cada preferencia, pase **True** en *valor* para activarla y **False** para desactivarla.
 
-#### Ejemplo 
+## Ejemplo 
 
 Para activar la URL suéltela en el área web 'myarea':
 
@@ -46,11 +46,11 @@ Para activar la URL suéltela en el área web 'myarea':
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

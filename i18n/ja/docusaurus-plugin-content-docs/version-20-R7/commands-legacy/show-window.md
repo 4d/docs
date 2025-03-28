@@ -13,21 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->SHOW WINDOW コマンドは*window*に渡した参照番号のウィンドウを表示します。<!-- END REF-->この引数が省略されていると、カレントプロセスの最前面ウィンドウが表示されます。
 
 SHOW WINDOWコマンドを使用するには、ウィンドウが[HIDE WINDOW](hide-window.md "HIDE WINDOW") コマンドを使用して隠されていなければなりません。ウィンドウがすでに表示されていればコマンドはなにも行いません。
 
-#### 例題 
+## 例題 
 
 [HIDE WINDOW](hide-window.md "HIDE WINDOW") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [HIDE WINDOW](hide-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

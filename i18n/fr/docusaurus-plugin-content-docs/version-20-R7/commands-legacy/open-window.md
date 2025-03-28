@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** ouvre une nouvelle fenêtre dont les dimensions sont définies par les quatre premiers paramètres<!-- END REF--> :
 
@@ -52,7 +52,7 @@ Si plusieurs fenêtres sont ouvertes dans le même process, la dernière fenêtr
 
 Les formulaires sont affichés à l'intérieur de fenêtres ouvertes à l'écran. Le texte passé à la commande [MESSAGE](message.md) est également affiché dans une fenêtre. 
 
-#### Exemple 1 
+## Exemple 1 
 
 La méthode projet suivante ouvre une fenêtre centrée dans la fenêtre principale (sous Windows) ou dans l'écran principal (sous Mac OS). Notez qu'elle accepte deux, trois ou quatre paramètres :
 
@@ -87,7 +87,7 @@ Une fois que cette méthode projet est écrite, vous pouvez l'utiliser de la man
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant crée une fenêtre flottante comportant une case de menu système (sous Windows) ou une case de fermeture (sous Mac OS). La fenêtre est créée dans le coin supérieur droit de la fenêtre de l'application.
 
@@ -102,7 +102,7 @@ La méthode *caseFermeture* appelle la commande [CANCEL](cancel.md) :
  CANCEL
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des propriétés du formulaire affiché dans la fenêtre : 
 
@@ -118,7 +118,7 @@ L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des 
 
  Pour que la fonction **Open window** utilise automatiquement les propriétés du formulaire, vous devez avoir appelé [FORM SET INPUT](form-set-input.md) avec le paramètre optionnel *\** et les propriétés du formulaire doivent avoir été définies en fonction de cette utilisation.
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous macOS :
 
@@ -130,13 +130,13 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
   //du dessous de la barre de titre
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLOSE WINDOW](close-window.md)  
 *Creer fenetre*  
 [Open form window](open-form-window.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

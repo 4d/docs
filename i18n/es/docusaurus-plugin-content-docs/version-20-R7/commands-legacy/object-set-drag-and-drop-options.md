@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Summary-->El comando **OBJECT SET DRAG AND DROP OPTIONS** define o modifica dinámicamente las opciones de arrastrar y soltar para el objeto o los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->
 
@@ -31,7 +31,7 @@ En cada parámetro, pase un booleano indicando si la opción correspondiente est
 * *soltable* \= True: objeto acepta soltar en modo programado.
 * *soltableAuto* \= True (utilizable únicamente con los campos y variables imagen, texto, combo boxes y list boxes): objeto acepta soltar en modo automático.
 
-#### Ejemplo 
+## Ejemplo 
 
 Definición de un área de texto en arrastrar y soltar auto: 
 
@@ -39,11 +39,11 @@ Definición de un área de texto en arrastrar y soltar auto:
  OBJECT SET DRAG AND DROP OPTIONS(*;"Comments";False;True;False;True)
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

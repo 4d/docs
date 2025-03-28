@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCEPT.Summary-->La commande **ACCEPT** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour :
 
@@ -32,11 +32,11 @@ Il n'est pas possible d'enchaîner plusieurs **ACCEPT**. En d'autres termes, l'e
 
 La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [CANCEL](cancel.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

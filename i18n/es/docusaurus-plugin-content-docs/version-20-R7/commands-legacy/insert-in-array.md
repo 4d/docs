@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INSERT IN ARRAY.Summary-->El comando INSERT IN ARRAY inserta uno o más elementos en el *array*.<!-- END REF--> Los nuevos elementos se insertan antes del elemento especificado por *donde*, y se inicializan en el valor vacío del tipo de array. Todos los elementos más allá de *donde* se mueven consecuentemente en el array por un valor de uno o por el valor especificado en *cuantos*.
 
@@ -23,7 +23,7 @@ Si *donde* es mayor que el tamaño del array, los elementos se añaden al final 
 
 El parámetro *cuantos* es el número de elementos a insertar. Si no se especifica *cuantos*, entonces se inserta sólo un elemento. El tamaño del array aumenta en *cuantos*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo inserta cinco nuevos elementos, comenzando en el elemento 10:
 
@@ -31,7 +31,7 @@ El siguiente ejemplo inserta cinco nuevos elementos, comenzando en el elemento 1
  INSERT IN ARRAY(anArray;10;5)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo añade un elemento a un array:
 
@@ -41,12 +41,12 @@ El siguiente ejemplo añade un elemento a un array:
  anArray{$vlElem}:=...
 ```
 
-#### Ver también 
+## Ver también 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

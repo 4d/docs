@@ -1,7 +1,10 @@
 ---
-id: Arrays
+id: Arrays_theme
 title: Arrays
+slug: /commands/theme/Arrays
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND TO ARRAY.Syntax -->](../../commands-legacy/append-to-array.md)<br/>|

@@ -1,7 +1,10 @@
 ---
-id: Relations
+id: Relations_theme
 title: Relations
+slug: /commands/theme/Relations
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE RELATED ONE.Syntax -->](../../commands-legacy/create-related-one.md)<br/>|

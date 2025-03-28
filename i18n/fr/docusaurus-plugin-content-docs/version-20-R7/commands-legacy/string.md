@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.String.Summary-->La commande **String** retourne sous forme de chaîne alphanumérique l'expression de type numérique, Date, Heure, chaîne ou Booléen que vous avez passée dans le paramètre *expression*.<!-- END REF-->
 
@@ -152,7 +152,7 @@ Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 Si *expression* est de type Booléen, la commande retourne la chaîne “Vrai” ou “Faux” dans la langue de l’application (“True” ou “False” dans une version anglaise de 4D).  
 Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Bool](bool.md)  
 [Date](date.md)  
@@ -160,7 +160,7 @@ Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

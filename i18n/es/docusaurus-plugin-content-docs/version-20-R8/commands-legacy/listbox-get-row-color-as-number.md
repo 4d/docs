@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get row color as number.Summary-->**Nota:** este comando sólo funciona con los list box de tipo array.<!-- END REF-->
 
@@ -38,7 +38,7 @@ En el parámetro *tipoColor*, puede pasar o la constante lk background color o l
   
 **Advertencia:** un color asignado a una fila no se muestra necesariamente en cada celda de la fila (ver el ejemplo). Si los valores de color en conflicto se definen vía las propiedades del list box o de la columna list box, se aplica un orden de prioridad. Para obtener más información, consulte el manual de *Diseño*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado el siguiente list box:
 
@@ -53,13 +53,13 @@ Dado el siguiente list box:
   // vColor3 contiene 0x00FF0000 (rojo)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Listbox*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

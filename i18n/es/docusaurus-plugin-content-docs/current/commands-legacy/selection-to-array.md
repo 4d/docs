@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->El comando **SELECTION TO ARRAY** crea uno o más arrays y copia los valores en los campos o los números de registro de la selección actual en los arrays.<!-- END REF-->
 
@@ -47,7 +47,7 @@ Como para el comando [QUERY](query.md), este principio permite romper una instru
 
 **Nota:** después de un llamado a **SELECTION TO ARRAY**, la selección y el registro actual no se modifican, pero el registro actual no se carga. Si necesita utilizar los valores de los campos del registro actual, utilice el comando [LOAD RECORD](load-record.md) después del comando **SELECTION TO ARRAY**.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En el siguiente ejemplo, la tabla *\[Personas\]* tiene una relación automática con la tabla \[Empresas\]. Los dos arrays *asApellido* y *asEmpresaDir* son dimensionados de acuerdo al número de registros seleccionados en la tabla *\[Personas\]* y contienen la información de ambas tablas:
 
@@ -55,7 +55,7 @@ En el siguiente ejemplo, la tabla *\[Personas\]* tiene una relación automática
  SELECTION TO ARRAY([Personas]Apellido;asApellido;[Empresa]Direccion;asEmpresaDir)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo devuelve el número de registros de la tabla *\[Clientes\]* en el array *alNumerosRegistros* y los valores del campo *\[Clientes\]Nombres* en el array *asNombres*:
 
@@ -71,7 +71,7 @@ El mismo ejemplo puede escribirse:
  SELECTION TO ARRAY
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
@@ -80,7 +80,7 @@ El mismo ejemplo puede escribirse:
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

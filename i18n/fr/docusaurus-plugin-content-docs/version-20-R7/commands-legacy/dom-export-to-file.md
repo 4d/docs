@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM EXPORT TO FILE.Summary-->La commande **DOM EXPORT TO FILE** permet de sauvegarder un arbre XML dans un fichier sur disque.<!-- END REF--> 
 
@@ -37,7 +37,7 @@ Vous pouvez contrôler le traitement des fins de ligne XML et du BOM à l'aide d
 
 **Note de compatibilité** : Dans les bases /projets créés avec des versions de 4D allant jusqu'à la v19.x, 4D utilise par défaut CR comme caractère de fin de ligne sur macOS et ainsi qu'un BOM. Pour activer les nouveaux paramètres par défaut, vérifiez les paramètres de compatibilité (voir la page Compatibilité) ou utilisez la commande [XML SET OPTIONS](xml-set-options.md). 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple sauvegarde l’arbre *vRefElem* dans le fichier MonDoc.xml :
 
@@ -45,11 +45,11 @@ Cet exemple sauvegarde l’arbre *vRefElem* dans le fichier MonDoc.xml :
  DOM EXPORT TO FILE(vRefElem;"C:\\dossier\MonDoc.xml")
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Une erreur est générée lorsque :
 
@@ -57,12 +57,12 @@ Une erreur est générée lorsque :
 * le chemin d’accès spécifié n’est pas valide,
 * le volume de stockage retourne une erreur (disque plein, etc.).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->**Tema:** Acceso objetos diseño
 
@@ -41,7 +41,7 @@ Los atributos soportados son:
 
 **Nota:** los atributos "published4DMobile" son obsoletos para 4D v18.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea modificar un solo atributo:
 
@@ -51,12 +51,12 @@ Usted desea modificar un solo atributo:
  METHOD SET ATTRIBUTES("aMethod";$attributes) //solo el atributo "executedOnServer" se modifica
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

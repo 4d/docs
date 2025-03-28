@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Lowercase.Summary-->Lowercase devuelve una cadena de caracteres igual a *laCadena* con todos los caracteres alfabéticos convertidos en minúsculas.<!-- END REF-->
 
 El parámetro opcional *\**, si se pasa, indica que los eventuales caracteres acentuados presentes en *laCadena* deben devolverse como caracteres en minúsculas con acentos. Por defecto, cuando se omite este parámetro, los caracteres acentuados “pierden” sus acentos después de que se lleva a cabo la conversión.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método de proyecto convierte a mayúsculas el primer carácter de la cadena o del texto recibido como parámetro. Por ejemplo, Nom:= Mayus ("juan") devuelve "Juan".
 
@@ -36,7 +36,7 @@ El siguiente método de proyecto convierte a mayúsculas el primer carácter de 
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo compara los resultados obtenidos de acuerdo a si se pasa o no el parámetro *\**:
 
@@ -45,11 +45,11 @@ Este ejemplo compara los resultados obtenidos de acuerdo a si se pasa o no el pa
  $lacadena:=Lowercase("DÉJÀ VU";*) // $lacadena es "déjà vu"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Uppercase](uppercase.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

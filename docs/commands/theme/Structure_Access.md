@@ -1,7 +1,10 @@
 ---
-id: Structure_Access
+id: Structure_Access_theme
 title: Structure Access
+slug: /commands/theme/Structure-Access
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE INDEX.Syntax -->](../../commands-legacy/create-index.md)<br/>|

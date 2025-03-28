@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 `Super` は次の 2つの目的のために使います:
 
-1. Inside a [constructor code](../Concepts/classes.md#class-constructor), `Super` is a command that allows to call the constructor of the superclass. コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また [`This`](this.md) キーワードよりも先に使用される必要があります。
+1. [コンストラクターコード]../Concepts/classes.md#class-constructor) において、 `Super` コマンドを使用すると、そのスーパークラスのコンストラクターを呼び出すことができます。 コンストラクター内でで使用する際には、`Super` コマンドは単独で使用され、また [`This`](this.md) キーワードよりも先に使用される必要があります。
 
 - 継承ツリーにおいて、すべてのクラスコンストラクターが正しく呼び出されていない場合には、エラー -10748 が生成されます。 呼び出しが有効であることを確認するのは、開発者の役目となります。
 - スーパークラスがコンストラクトされるより先に、`This` コマンドを使った場合には、エラー -10743 が生成されます。
@@ -32,7 +32,7 @@ Super($text1) // テキスト型引数をスーパークラスコンストラク
 This.param:=$text2 // 2番目の引数を使用します
 ```
 
-2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. [クラス関数](../Concepts/classes.md#function) 内において、`Super` は[`スーパークラス`](../API/ClassClass.md#superclass) のプロトタイプを指し、スーパークラス階層の関数の呼び出しを可能にします。
 
 ```4d
 Super.doSomething(42) // スーパークラスにて宣言されている

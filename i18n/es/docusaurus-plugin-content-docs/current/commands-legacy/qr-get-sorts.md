@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR GET SORTS.Summary-->El comando QR GET SORTS llenas dos arrays<!-- END REF-->:
 
@@ -32,11 +32,11 @@ En el caso de este tipo de informes, los arrays resultantes no pueden tener más
 
 Si pasa un número de area inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

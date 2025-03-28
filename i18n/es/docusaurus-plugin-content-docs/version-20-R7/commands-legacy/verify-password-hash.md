@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Verify password hash.Summary-->La función **Verify password hash** verifica que el hash dado coincida con la *contrasena* dada.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Se pueden devolver los errores siguientes. Puede revisar un error con los comand
 
 **Recordatorio**: solo se soporta el algoritmo bcrypt. Si su hash no se generó utilizando bcrypt, se devuelve un error.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo verifica un hash de contraseña creado previamente por [Generate password hash](generate-password-hash.md) y almacenado en una tabla \[Users\] con una contraseña introducida recientemente:
 
@@ -49,12 +49,12 @@ Este ejemplo verifica un hash de contraseña creado previamente por [Generate pa
 
 **Nota:** la contraseña nunca se almacena en el disco, sólo el hash. Utilizando una aplicación 4D remota, el hash podría ser producido del lado del cliente. Si en cambio, utiliza un front end basado en JavaScript (o similar), la mejor práctica para la seguridad es crear el hash del lado del servidor. Por supuesto, debe utilizar una conexión de red cifrada TLS para la seguridad, ya que esto requiere la transferencia de la contraseña a través de la red.
 
-#### Ver también 
+## Ver también 
 
   
 [Generate password hash](generate-password-hash.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

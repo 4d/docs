@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->**SET DATABASE LOCALIZATION**コマンドを使用して、カレントセッションのデータベースカレント言語を変更できます。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **4D Server:** 4D Serverでは、コマンドを呼び出したリモートマシン上に存在する言語を利用できます。そのため、**Resources**フォルダが 同期されているか確かめなければなりません。
 
-#### 例題 1 
+## 例題 1 
 
 日本語をインタフェース言語として設定する場合:
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
  SET DATABASE LOCALIZATION("ja")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 アプリケーションで文字列参照":xliff:shopping"が使用されていて、XLIFFファイルには以下のような情報が含まれています:
 
@@ -66,11 +66,11 @@ displayed_sidebar: docs
   // 文字列":xliff:shopping"は"ショッピング"を表示する
 ```
 
-#### 参照 
+## 参照 
 
 [Get database localization](get-database-localization.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

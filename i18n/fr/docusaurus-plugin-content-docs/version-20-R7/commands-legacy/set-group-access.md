@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET GROUP ACCESS.Summary-->La commande **SET GROUP ACCESS** modifie l'adhésion du compte utilisateur pour la session courante.<!-- END REF--> Elle redéfinit les groupes précédents et définit les nouvelles adhésions dans les *groupes* listés. 
 
@@ -28,7 +28,7 @@ Si vous omettez le paramètre *groupes*, les adhésions du compte utilisateur 4D
 
 **Note:** Lorsqu'une adhésion à un groupe fournit un accès à une fonctionnalité "sérialisé" (ex : un plug-in), une licence correspondante est utilisée et demeurera associée au compte utilisateur 4D jusqu'à la fin de la session, même si la commande **SET GROUP ACCESS** est appelée et si l'adhésion au groupe est annulée.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez ajouter l'utilisateur courant aux groupes "admin" et "plugins" dans la session :
 
@@ -37,14 +37,14 @@ Vous souhaitez ajouter l'utilisateur courant aux groupes "admin" et "plugins" da
  SET GROUP ACCESS($groups)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

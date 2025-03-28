@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Passez dans *logFile* le nom ou le chemin d'accès complet du fichier d'historique à créer. Si vous passez uniquement un nom, le fichier sera créé dans le dossier "Logs" de la base, à côte du fichier de structure de la base.
 
-Si vous passez une chaîne vide, **SELECT LOG FILE** présente une boîte de dialogue standard d'enregistrement de fichier, permettant à l'utilisateur de choisir le nom et l'emplacement du fichier d'historique à créer. Si le fichier est correctement créé, la variable OK prend la valeur 1. Autrement, si l'utilisateur clique sur le bouton Annuler ou si le fichier d'historique ne peut pas être créé, OK prend la valeur 0.
+Si vous passez une chaîne vide, **SELECT LOG FILE** présente une boîte de dialogue standard d'enregistrement de fichier, permettant à l'utilisateur de choisir le nom et l'emplacement du fichier d'historique à créer. If the file is created correctly, the OK variable is set to 1. Autrement, si l'utilisateur clique sur le bouton Annuler ou si le fichier d'historique ne peut pas être créé, OK prend la valeur 0.
 
 **Note :** Le nouveau fichier journal n'est pas généré immédiatement après l'exécution de la commande, mais après la sauvegarde suivante (le paramétrage est conservé dans le fichier de données et sera pris en compte même si la base de données est fermée entre-temps) ou un appel à la commande [`New log file`](new-log-file.md). Vous pouvez appeler la commande [BACKUP](../commands-legacy/backup.md) pour déclencher la création du fichier journal.
 

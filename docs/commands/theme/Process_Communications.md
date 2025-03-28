@@ -1,7 +1,10 @@
 ---
-id: Process_Communications
+id: Process_Communications_theme
 title: Process (Communications)
+slug: /commands/theme/Process-Communications
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CALL WORKER.Syntax -->](../../commands-legacy/call-worker.md)<br/>|

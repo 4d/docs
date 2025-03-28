@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Time.Summary-->El comando Time devuelve una expresión de tipo Hora equivalente a la hora especificada en el parámetro *valHora*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ El parámetro *valHora* debe contener:
 
 **Nota:** si la expresión *valHora* se evalúa como indefinida, **Time** devuelve una hora vacía (00:00:00). Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea una hora, incluso si puede ser indefinida.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra una caja de alerta con el mensaje “1:00 P.M. = 13 horas 0 minutos”:
 
@@ -33,7 +33,7 @@ El siguiente ejemplo muestra una caja de alerta con el mensaje “1:00 P.M. = 13
  ALERT("1:00 P.M. = "+String(Time("13:00:00");Hour Min))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Puede expresar todo valor numérico como una hora:
 
@@ -44,7 +44,7 @@ Puede expresar todo valor numérico como una hora:
   //vTime2 is 02:46:40
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
@@ -52,7 +52,7 @@ Puede expresar todo valor numérico como una hora:
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

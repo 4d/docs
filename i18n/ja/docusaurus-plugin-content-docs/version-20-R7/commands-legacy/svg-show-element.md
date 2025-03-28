@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG SHOW ELEMENT.Summary-->SVG SHOW ELEMENT コマンドは、*id*引数で指定した"id"属性を持つ要素を表示するように、*pictureObject* SVGドキュメントを移動します。<!-- END REF-->. 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 フォームのコンテキストでコマンドが実行されていないか、無効な *pictureObject* が渡された場合、*OK* 変数に0が設定されます。コマンドが正しく実行されると1が設定されます。 
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

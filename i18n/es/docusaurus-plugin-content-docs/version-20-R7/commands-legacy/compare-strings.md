@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Compare strings.Summary-->El comando **Compare strings** devuelve un valor negativo, cero o positivo dependiendo de si *cadenaA* se evalúa como inferior, igual o superior a *cadenaB*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ El comando devuelve los siguientes valores longint:
 | 1                      | *cadenaA* está después de *cadenaB* |
   
   
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Quiere comparar las siguientes cadenas:
 
@@ -67,7 +67,7 @@ Quiere comparar las siguientes cadenas:
   // $result = 0
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Los siguientes ejemplos ilustran el impacto específico de las opciones en el **contexto del lenguaje de datos japonés**:
 
@@ -103,11 +103,11 @@ Los siguientes ejemplos ilustran el impacto específico de las opciones en el **
  $result:=Compare strings("ラーメン";"ﾗｱﾒﾝ") // no es igual si la opción está desactivada
 ```
 
-#### Ver también 
+## Ver también 
 
 [Position](position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

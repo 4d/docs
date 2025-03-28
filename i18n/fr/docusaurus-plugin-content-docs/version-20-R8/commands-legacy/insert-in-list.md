@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->La commande **INSERT IN LIST** insère l'élément désigné par le paramètre *réfElément* dans la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
 
@@ -37,7 +37,7 @@ Vous passez le numéro de référence du nouvel élément dans le paramètre *r�
 
 Si vous souhaitez que l'élément comporte des sous-éléments, passez un numéro de référence de liste valide dans le paramètre *sous\_Liste*. Dans ce cas, vous devez également passer le paramètre *déployée*. Passez Vrai ou Faux dans ce paramètre pour que cette sous-liste s'affiche respectivement déployée ou contractée. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant insère un élément (associé à aucune sous-liste) juste devant l'élément actuellement sélectionné dans la liste *hList*:
 
@@ -46,12 +46,12 @@ L'exemple suivant insère un élément (associé à aucune sous-liste) juste dev
  INSERT IN LIST(hList;*;"Nouvel élément";vlUniqueRef)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

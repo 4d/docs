@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->La commande **DRAG WINDOW** permet de faire glisser la fenêtre dans laquelle l'utilisateur a cliqué puis de la déplacer en fonction des mouvements de la souris.<!-- END REF--> Généralement, cette commande est appelée depuis la méthode d'un objet capable de répondre instantanément aux clics souris (par exemple un bouton invisible).
 
-#### Exemple 
+## Exemple 
 
 Le formulaire suivant, présenté ici dans l'éditeur de formulaires, contient un fond coloré au-dessus duquel quatre boutons invisibles ont été placés (un par côté) :
 
@@ -42,12 +42,12 @@ Après l'exécution de la méthode projet suivante :
 
 Vous pouvez la déplacer en cliquant sur les bordures.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

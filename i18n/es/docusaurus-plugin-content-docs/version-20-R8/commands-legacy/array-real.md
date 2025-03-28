@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY REAL.Summary-->El comando ARRAY REAL crea y/o redimensiona un array de elementos de tipo Real en memoria.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Cuando aplica ARRAY REAL a un array existente:
 * Si agranda el tamaño del array, los elementos existentes no son modificados y los nuevos elementos se inicializan en 0.
 * Si reduce el tamaño del array, los últimos elementos son borrados del array y se pierden.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array de proceso de 100 elementos de tipo Real:
 
@@ -36,7 +36,7 @@ Este ejemplo crea un array de proceso de 100 elementos de tipo Real:
  ARRAY REAL(arValores;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas de 50 elementos de tipo Real:
 
@@ -44,7 +44,7 @@ Este ejemplo crea un array local de 100 filas de 50 elementos de tipo Real:
  ARRAY REAL($arValores;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array interproceso de 50 elementos de tipo Real y asigna a cada elemento su número:
 
@@ -55,12 +55,12 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Real y asigna a 
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

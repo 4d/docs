@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](next-record.md) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
 
@@ -37,7 +37,7 @@ Pour replacer le pointeur d'enregistrement courant dans la sélection, utilisez 
  End case
 ```
 
-#### Exemple 
+## Exemple 
 
 La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d'un état. Elle crée la variable VPied, à imprimer dans le pied de page de la dernière page :
 
@@ -54,7 +54,7 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [Form event code](../commands/form-event-code.md)  
@@ -62,7 +62,7 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

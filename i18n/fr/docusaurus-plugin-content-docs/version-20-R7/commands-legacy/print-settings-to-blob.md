@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->La commande **Print settings to BLOB** sauvegarde les paramètres d'impression courants de 4D dans le BLOB *paramImpression*.<!-- END REF--> Le paramètre *paramImpression* stocke tous les paramètres utilisés pour l'impression :
 
@@ -33,7 +33,7 @@ Le BLOB *paramImpression* peut être sauvegardé et lu sur les deux plateformes.
   
 Lorsque vous utilisez un environnement hétérogène, pour restaurer le maximum de paramètres d'impression disponibles pour chaque plateforme (et pas seulement la partie commune), il est recommandé de gérer deux BLOBs *paramImpression*, un pour chaque plateforme.
 
-#### Exemple 
+## Exemple 
 
 Vous voulez sauvegarder les paramètres d'impression courants sur disque :
 
@@ -50,12 +50,12 @@ Vous voulez sauvegarder les paramètres d'impression courants sur disque :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->El comando IMPORT SYLK lee los datos de *documento*, un documento SYLK Windows o Macintosh, y los escribe en *tabla* creando nuevos registros.<!-- END REF-->
 
@@ -32,7 +32,7 @@ El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documento e
 
 Durante la utilización de IMPORT SYLK, el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13). Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* *FldDelimit* y *RecDelimit*. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Como los campos Texto pueden contener retornos de carro, sea cuidadoso si utiliza el retorno de carro como delimitador entre los campos a exportar.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo importa datos de un documento SYLK. El método comienza por definir el formulario de entrada de manera que los datos sean importados por el formulario correcto, luego realiza la importación:
 
@@ -41,18 +41,18 @@ El siguiente ejemplo importa datos de un documento SYLK. El método comienza por
  IMPORT SYLK([Personas];"Nuevas_Personas.slk") // Importar del documento “Nuevas_Personas.slk”
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

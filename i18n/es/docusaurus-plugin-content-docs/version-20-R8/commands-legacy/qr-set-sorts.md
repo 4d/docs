@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET SORTS.Summary-->El comando QR SET SORTS permite definir el sentido de ordenación de cada columna del informe rápido cuya referencia se pasa en *area*.<!-- END REF-->
 
@@ -42,11 +42,11 @@ Este es el código para ordenar sólo las líneas en caso de un informe de tabla
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

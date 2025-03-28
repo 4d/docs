@@ -210,7 +210,7 @@ module.exports =
               label: "4D Environment",
               link: {
                 type: "doc",
-                id: "commands/theme/4D_Environment"
+                id: "commands/theme/4D_Environment_theme"
               },
               items: [
                 "commands-legacy/application-file",
@@ -264,7 +264,7 @@ module.exports =
               label: "Arrays",
               link: {
                 type: "doc",
-                id: "commands/theme/Arrays"
+                id: "commands/theme/Arrays_theme"
               },
               items: [
                 "commands-legacy/append-to-array",
@@ -306,7 +306,7 @@ module.exports =
               label: "Backup",
               link: {
                 type: "doc",
-                id: "commands/theme/Backup"
+                id: "commands/theme/Backup_theme"
               },
               items: [
                 "commands-legacy/backup",
@@ -326,7 +326,7 @@ module.exports =
               label: "BLOB",
               link: {
                 type: "doc",
-                id: "commands/theme/BLOB"
+                id: "commands/theme/BLOB_theme"
               },
               items: [
                 "commands-legacy/blob-properties",
@@ -360,7 +360,7 @@ module.exports =
               label: "Boolean",
               link: {
                 type: "doc",
-                id: "commands/theme/Boolean"
+                id: "commands/theme/Boolean_theme"
               },
               items: [
                 "commands-legacy/bool",
@@ -374,7 +374,7 @@ module.exports =
               label: "Cache Management",
               link: {
                 type: "doc",
-                id: "commands/theme/Cache_Management"
+                id: "commands/theme/Cache_Management_theme"
               },
               items: [
                 "commands-legacy/adjust-blobs-cache-priority",
@@ -398,7 +398,7 @@ module.exports =
               label: "Collections",
               link: {
                 type: "doc",
-                id: "commands/theme/Collections"
+                id: "commands/theme/Collections_theme"
               },
               items: [
                 "commands-legacy/array-to-collection",
@@ -412,7 +412,7 @@ module.exports =
               label: "Communications",
               link: {
                 type: "doc",
-                id: "commands/theme/Communications"
+                id: "commands/theme/Communications_theme"
               },
               items: [
                 "commands-legacy/get-serial-port-mapping",
@@ -433,7 +433,7 @@ module.exports =
               label: "Compiler",
               link: {
                 type: "doc",
-                id: "commands/theme/Compiler"
+                id: "commands/theme/Compiler_theme"
               },
               items: [
                 "commands/compile-project",
@@ -445,7 +445,7 @@ module.exports =
               label: "Data Entry",
               link: {
                 type: "doc",
-                id: "commands/theme/Data_Entry"
+                id: "commands/theme/Data_Entry_theme"
               },
               items: [
                 "commands-legacy/accept",
@@ -463,7 +463,7 @@ module.exports =
               label: "Data Security",
               link: {
                 type: "doc",
-                id: "commands/theme/Data_Security"
+                id: "commands/theme/Data_Security_theme"
               },
               items: [
                 "commands-legacy/data-file-encryption-status",
@@ -480,7 +480,7 @@ module.exports =
               label: "Database Methods",
               link: {
                 type: "doc",
-                id: "commands/theme/Database_Methods"
+                id: "commands/theme/Database_Methods_theme"
               },
               items: [
                 "commands-legacy/on-backup-shutdown-database-method",
@@ -508,7 +508,7 @@ module.exports =
               label: "Date and Time",
               link: {
                 type: "doc",
-                id: "commands/theme/Date_and_Time"
+                id: "commands/theme/Date_and_Time_theme"
               },
               items: [
                 "commands-legacy/add-to-date",
@@ -532,7 +532,7 @@ module.exports =
               label: "Design Object Access",
               link: {
                 type: "doc",
-                id: "commands/theme/Design_Object_Access"
+                id: "commands/theme/Design_Object_Access_theme"
               },
               items: [
                 "commands-legacy/current-method-path",
@@ -562,7 +562,7 @@ module.exports =
               label: "Drag and Drop",
               link: {
                 type: "doc",
-                id: "commands/theme/Drag_and_Drop"
+                id: "commands/theme/Drag_and_Drop_theme"
               },
               items: [
                 "commands-legacy/drop-position",
@@ -574,7 +574,7 @@ module.exports =
               label: "Entry Control",
               link: {
                 type: "doc",
-                id: "commands/theme/Entry_Control"
+                id: "commands/theme/Entry_Control_theme"
               },
               items: [
                 "commands-legacy/edit-item",
@@ -592,7 +592,7 @@ module.exports =
               label: "File and Folder",
               link: {
                 type: "doc",
-                id: "commands/theme/File_and_Folder"
+                id: "commands/theme/File_and_Folder_theme"
               },
               items: [
                 "commands/file",
@@ -606,7 +606,7 @@ module.exports =
               label: "Form Events",
               link: {
                 type: "doc",
-                id: "commands/theme/Form_Events"
+                id: "commands/theme/Form_Events_theme"
               },
               items: [
                 "commands-legacy/activated",
@@ -635,7 +635,7 @@ module.exports =
               label: "Forms",
               link: {
                 type: "doc",
-                id: "commands/theme/Forms"
+                id: "commands/theme/Forms_theme"
               },
               items: [
                 "commands-legacy/current-form-name",
@@ -669,7 +669,7 @@ module.exports =
               label: "Formulas",
               link: {
                 type: "doc",
-                id: "commands/theme/Formulas"
+                id: "commands/theme/Formulas_theme"
               },
               items: [
                 "commands-legacy/edit-formula",
@@ -686,7 +686,7 @@ module.exports =
               label: "Graphs",
               link: {
                 type: "doc",
-                id: "commands/theme/Graphs"
+                id: "commands/theme/Graphs_theme"
               },
               items: [
                 "commands-legacy/graph",
@@ -698,7 +698,7 @@ module.exports =
               label: "HTTP",
               link: {
                 type: "doc",
-                id: "commands/theme/HTTP"
+                id: "commands/theme/HTTP_theme"
               },
               items: [
                 "commands-legacy/http-authenticate",
@@ -716,7 +716,7 @@ module.exports =
               label: "Hierarchical Lists",
               link: {
                 type: "doc",
-                id: "commands/theme/Hierarchical_Lists"
+                id: "commands/theme/Hierarchical_Lists_theme"
               },
               items: [
                 "commands-legacy/append-to-list",
@@ -757,7 +757,7 @@ module.exports =
               label: "Import and Export",
               link: {
                 type: "doc",
-                id: "commands/theme/Import_and_Export"
+                id: "commands/theme/Import_and_Export_theme"
               },
               items: [
                 "commands-legacy/export-data",
@@ -775,7 +775,7 @@ module.exports =
               label: "Interruptions",
               link: {
                 type: "doc",
-                id: "commands/theme/Interruptions"
+                id: "commands/theme/Interruptions_theme"
               },
               items: [
                 "commands-legacy/abort",
@@ -797,7 +797,7 @@ module.exports =
               label: "JSON",
               link: {
                 type: "doc",
-                id: "commands/theme/JSON"
+                id: "commands/theme/JSON_theme"
               },
               items: [
                 "commands-legacy/json-parse",
@@ -815,7 +815,7 @@ module.exports =
               label: "LDAP",
               link: {
                 type: "doc",
-                id: "commands/theme/LDAP"
+                id: "commands/theme/LDAP_theme"
               },
               items: [
                 "commands-legacy/ldap-login",
@@ -829,7 +829,7 @@ module.exports =
               label: "Language",
               link: {
                 type: "doc",
-                id: "commands/theme/Language"
+                id: "commands/theme/Language_theme"
               },
               items: [
                 "commands/4d",
@@ -861,7 +861,7 @@ module.exports =
               label: "Licenses",
               link: {
                 type: "doc",
-                id: "commands/theme/Licenses"
+                id: "commands/theme/Licenses_theme"
               },
               items: [
                 "commands-legacy/change-licenses",
@@ -877,7 +877,7 @@ module.exports =
               label: "List Box",
               link: {
                 type: "doc",
-                id: "commands/theme/List_Box"
+                id: "commands/theme/List_Box_theme"
               },
               items: [
                 "commands-legacy/listbox-collapse",
@@ -946,7 +946,7 @@ module.exports =
               label: "Mail",
               link: {
                 type: "doc",
-                id: "commands/theme/Mail"
+                id: "commands/theme/Mail_theme"
               },
               items: [
                 "commands/imap-new-transporter",
@@ -962,7 +962,7 @@ module.exports =
               label: "Math",
               link: {
                 type: "doc",
-                id: "commands/theme/Math"
+                id: "commands/theme/Math_theme"
               },
               items: [
                 "commands-legacy/abs",
@@ -988,7 +988,7 @@ module.exports =
               label: "Menus",
               link: {
                 type: "doc",
-                id: "commands/theme/Menus"
+                id: "commands/theme/Menus_theme"
               },
               items: [
                 "commands-legacy/append-menu-item",
@@ -1032,7 +1032,7 @@ module.exports =
               label: "Messages",
               link: {
                 type: "doc",
-                id: "commands/theme/Messages"
+                id: "commands/theme/Messages_theme"
               },
               items: [
                 "commands-legacy/alert",
@@ -1050,7 +1050,7 @@ module.exports =
               label: "Named Selections",
               link: {
                 type: "doc",
-                id: "commands/theme/Named_Selections"
+                id: "commands/theme/Named_Selections_theme"
               },
               items: [
                 "commands-legacy/clear-named-selection",
@@ -1064,7 +1064,7 @@ module.exports =
               label: "Objects (Forms)",
               link: {
                 type: "doc",
-                id: "commands/theme/Objects_Forms"
+                id: "commands/theme/Objects_Forms_theme"
               },
               items: [
                 "commands-legacy/get-style-sheet-info",
@@ -1168,7 +1168,7 @@ module.exports =
               label: "Objects (Language)",
               link: {
                 type: "doc",
-                id: "commands/theme/Objects_Language"
+                id: "commands/theme/Objects_Language_theme"
               },
               items: [
                 "commands-legacy/new-object",
@@ -1198,7 +1198,7 @@ module.exports =
               label: "On a Series",
               link: {
                 type: "doc",
-                id: "commands/theme/On_a_Series"
+                id: "commands/theme/On_a_Series_theme"
               },
               items: [
                 "commands-legacy/average",
@@ -1215,7 +1215,7 @@ module.exports =
               label: "PHP",
               link: {
                 type: "doc",
-                id: "commands/theme/PHP"
+                id: "commands/theme/PHP_theme"
               },
               items: [
                 "commands-legacy/php-execute",
@@ -1229,7 +1229,7 @@ module.exports =
               label: "Pasteboard",
               link: {
                 type: "doc",
-                id: "commands/theme/Pasteboard"
+                id: "commands/theme/Pasteboard_theme"
               },
               items: [
                 "commands-legacy/append-data-to-pasteboard",
@@ -1250,7 +1250,7 @@ module.exports =
               label: "Pictures",
               link: {
                 type: "doc",
-                id: "commands/theme/Pictures"
+                id: "commands/theme/Pictures_theme"
               },
               items: [
                 "commands-legacy/blob-to-picture",
@@ -1283,7 +1283,7 @@ module.exports =
               label: "Printing",
               link: {
                 type: "doc",
-                id: "commands/theme/Printing"
+                id: "commands/theme/Printing_theme"
               },
               items: [
                 "commands-legacy/accumulate",
@@ -1324,7 +1324,7 @@ module.exports =
               label: "Process (Communications)",
               link: {
                 type: "doc",
-                id: "commands/theme/Process_Communications"
+                id: "commands/theme/Process_Communications_theme"
               },
               items: [
                 "commands-legacy/call-worker",
@@ -1343,7 +1343,7 @@ module.exports =
               label: "Process (User Interface)",
               link: {
                 type: "doc",
-                id: "commands/theme/Process_User_Interface"
+                id: "commands/theme/Process_User_Interface_theme"
               },
               items: [
                 "commands-legacy/bring-to-front",
@@ -1357,7 +1357,7 @@ module.exports =
               label: "Processes",
               link: {
                 type: "doc",
-                id: "commands/theme/Processes"
+                id: "commands/theme/Processes_theme"
               },
               items: [
                 "commands-legacy/abort-process-by-id",
@@ -1390,7 +1390,7 @@ module.exports =
               label: "Queries",
               link: {
                 type: "doc",
-                id: "commands/theme/Queries"
+                id: "commands/theme/Queries_theme"
               },
               items: [
                 "commands-legacy/describe-query-execution",
@@ -1421,7 +1421,7 @@ module.exports =
               label: "Quick Report",
               link: {
                 type: "doc",
-                id: "commands/theme/Quick_Report"
+                id: "commands/theme/Quick_Report_theme"
               },
               items: [
                 "commands-legacy/qr-blob-to-report",
@@ -1477,7 +1477,7 @@ module.exports =
               label: "Record Locking",
               link: {
                 type: "doc",
-                id: "commands/theme/Record_Locking"
+                id: "commands/theme/Record_Locking_theme"
               },
               items: [
                 "commands-legacy/load-record",
@@ -1495,7 +1495,7 @@ module.exports =
               label: "Records",
               link: {
                 type: "doc",
-                id: "commands/theme/Records"
+                id: "commands/theme/Records_theme"
               },
               items: [
                 "commands-legacy/create-record",
@@ -1519,7 +1519,7 @@ module.exports =
               label: "Relations",
               link: {
                 type: "doc",
-                id: "commands/theme/Relations"
+                id: "commands/theme/Relations_theme"
               },
               items: [
                 "commands-legacy/create-related-one",
@@ -1541,7 +1541,7 @@ module.exports =
               label: "Resources",
               link: {
                 type: "doc",
-                id: "commands/theme/Resources"
+                id: "commands/theme/Resources_theme"
               },
               items: [
                 "commands-legacy/close-resource-file",
@@ -1563,7 +1563,7 @@ module.exports =
               label: "SQL",
               link: {
                 type: "doc",
-                id: "commands/theme/SQL"
+                id: "commands/theme/SQL_theme"
               },
               items: [
                 "commands-legacy/begin-sql",
@@ -1595,7 +1595,7 @@ module.exports =
               label: "SVG",
               link: {
                 type: "doc",
-                id: "commands/theme/SVG"
+                id: "commands/theme/SVG_theme"
               },
               items: [
                 "commands-legacy/svg-export-to-picture",
@@ -1611,7 +1611,7 @@ module.exports =
               label: "Secured Protocol",
               link: {
                 type: "doc",
-                id: "commands/theme/Secured_Protocol"
+                id: "commands/theme/Secured_Protocol_theme"
               },
               items: [
                 "commands-legacy/generate-certificate-request",
@@ -1623,7 +1623,7 @@ module.exports =
               label: "Selection",
               link: {
                 type: "doc",
-                id: "commands/theme/Selection"
+                id: "commands/theme/Selection_theme"
               },
               items: [
                 "commands-legacy/all-records",
@@ -1655,7 +1655,7 @@ module.exports =
               label: "Sets",
               link: {
                 type: "doc",
-                id: "commands/theme/Sets"
+                id: "commands/theme/Sets_theme"
               },
               items: [
                 "commands-legacy/add-to-set",
@@ -1680,7 +1680,7 @@ module.exports =
               label: "Spell Checker",
               link: {
                 type: "doc",
-                id: "commands/theme/Spell_Checker"
+                id: "commands/theme/Spell_Checker_theme"
               },
               items: [
                 "commands-legacy/spell-add-to-user-dictionary",
@@ -1696,7 +1696,7 @@ module.exports =
               label: "String",
               link: {
                 type: "doc",
-                id: "commands/theme/String"
+                id: "commands/theme/String_theme"
               },
               items: [
                 "commands-legacy/change-string",
@@ -1726,7 +1726,7 @@ module.exports =
               label: "Structure Access",
               link: {
                 type: "doc",
-                id: "commands/theme/Structure_Access"
+                id: "commands/theme/Structure_Access_theme"
               },
               items: [
                 "commands-legacy/create-index",
@@ -1760,7 +1760,7 @@ module.exports =
               label: "Styled Text",
               link: {
                 type: "doc",
-                id: "commands/theme/Styled_Text"
+                id: "commands/theme/Styled_Text_theme"
               },
               items: [
                 "commands-legacy/st-compute-expressions",
@@ -1785,7 +1785,7 @@ module.exports =
               label: "Subrecords",
               link: {
                 type: "doc",
-                id: "commands/theme/Subrecords"
+                id: "commands/theme/Subrecords_theme"
               },
               items: [
                 "commands-legacy/get-subrecord-key"
@@ -1796,7 +1796,7 @@ module.exports =
               label: "System Documents",
               link: {
                 type: "doc",
-                id: "commands/theme/System_Documents"
+                id: "commands/theme/System_Documents_theme"
               },
               items: [
                 "commands-legacy/append-document",
@@ -1839,7 +1839,7 @@ module.exports =
               label: "System Environment",
               link: {
                 type: "doc",
-                id: "commands/theme/System_Environment"
+                id: "commands/theme/System_Environment_theme"
               },
               items: [
                 "commands-legacy/count-screens",
@@ -1873,7 +1873,7 @@ module.exports =
               label: "Table",
               link: {
                 type: "doc",
-                id: "commands/theme/Table"
+                id: "commands/theme/Table_theme"
               },
               items: [
                 "commands-legacy/current-default-table",
@@ -1887,7 +1887,7 @@ module.exports =
               label: "Tools",
               link: {
                 type: "doc",
-                id: "commands/theme/Tools"
+                id: "commands/theme/Tools_theme"
               },
               items: [
                 "commands-legacy/activity-snapshot",
@@ -1916,7 +1916,7 @@ module.exports =
               label: "Transactions",
               link: {
                 type: "doc",
-                id: "commands/theme/Transactions"
+                id: "commands/theme/Transactions_theme"
               },
               items: [
                 "commands-legacy/active-transaction",
@@ -1934,7 +1934,7 @@ module.exports =
               label: "Triggers",
               link: {
                 type: "doc",
-                id: "commands/theme/Triggers"
+                id: "commands/theme/Triggers_theme"
               },
               items: [
                 "commands-legacy/trigger-event",
@@ -1947,7 +1947,7 @@ module.exports =
               label: "User Interface",
               link: {
                 type: "doc",
-                id: "commands/theme/User_Interface"
+                id: "commands/theme/User_Interface_theme"
               },
               items: [
                 "commands-legacy/beep",
@@ -1983,7 +1983,7 @@ module.exports =
               label: "Users and Groups",
               link: {
                 type: "doc",
-                id: "commands/theme/Users_and_Groups"
+                id: "commands/theme/Users_and_Groups_theme"
               },
               items: [
                 "commands-legacy/blob-to-users",
@@ -2015,7 +2015,7 @@ module.exports =
               label: "Variables",
               link: {
                 type: "doc",
-                id: "commands/theme/Variables"
+                id: "commands/theme/Variables_theme"
               },
               items: [
                 "commands-legacy/clear-variable",
@@ -2028,7 +2028,7 @@ module.exports =
               label: "Web Area",
               link: {
                 type: "doc",
-                id: "commands/theme/Web_Area"
+                id: "commands/theme/Web_Area_theme"
               },
               items: [
                 "commands-legacy/wa-back-url-available",
@@ -2036,6 +2036,7 @@ module.exports =
                 "commands-legacy/wa-evaluate-javascript",
                 "commands-legacy/wa-execute-javascript-function",
                 "commands-legacy/wa-forward-url-available",
+                "commands/wa-get-context",
                 "commands-legacy/wa-get-current-url",
                 "commands-legacy/wa-get-external-links-filters",
                 "commands-legacy/wa-get-last-filtered-url",
@@ -2051,6 +2052,7 @@ module.exports =
                 "commands-legacy/wa-open-web-inspector",
                 "commands-legacy/wa-refresh-current-url",
                 "commands-legacy/wa-run-offscreen-area",
+                "commands/wa-set-context",
                 "commands-legacy/wa-set-external-links-filters",
                 "commands-legacy/wa-set-page-content",
                 "commands-legacy/wa-set-preference",
@@ -2065,7 +2067,7 @@ module.exports =
               label: "Web Server",
               link: {
                 type: "doc",
-                id: "commands/theme/Web_Server"
+                id: "commands/theme/Web_Server_theme"
               },
               items: [
                 "commands-legacy/web-get-body-part",
@@ -2102,7 +2104,7 @@ module.exports =
               label: "Web Services (Client)",
               link: {
                 type: "doc",
-                id: "commands/theme/Web_Services_Client"
+                id: "commands/theme/Web_Services_Client_theme"
               },
               items: [
                 "commands-legacy/web-service-authenticate",
@@ -2118,7 +2120,7 @@ module.exports =
               label: "Web Services (Server)",
               link: {
                 type: "doc",
-                id: "commands/theme/Web_Services_Server"
+                id: "commands/theme/Web_Services_Server_theme"
               },
               items: [
                 "commands-legacy/soap-declaration",
@@ -2133,7 +2135,7 @@ module.exports =
               label: "Windows",
               link: {
                 type: "doc",
-                id: "commands/theme/Windows"
+                id: "commands/theme/Windows_theme"
               },
               items: [
                 "commands-legacy/close-window",
@@ -2173,7 +2175,7 @@ module.exports =
               label: "XML DOM",
               link: {
                 type: "doc",
-                id: "commands/theme/XML_DOM"
+                id: "commands/theme/XML_DOM_theme"
               },
               items: [
                 "commands-legacy/dom-append-xml-child-node",
@@ -2218,7 +2220,7 @@ module.exports =
               label: "XML SAX",
               link: {
                 type: "doc",
-                id: "commands/theme/XML_SAX"
+                id: "commands/theme/XML_SAX_theme"
               },
               items: [
                 "commands-legacy/sax-add-processing-instruction",
@@ -2245,7 +2247,7 @@ module.exports =
               label: "XML",
               link: {
                 type: "doc",
-                id: "commands/theme/XML"
+                id: "commands/theme/XML_theme"
               },
               items: [
                 "commands-legacy/xml-decode",

@@ -1,7 +1,10 @@
 ---
-id: Triggers
+id: Triggers_theme
 title: Triggers
+slug: /commands/theme/Triggers
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Trigger event.Syntax -->](../../commands-legacy/trigger-event.md)<br/>|

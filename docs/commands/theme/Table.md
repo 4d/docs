@@ -1,7 +1,10 @@
 ---
-id: Table
+id: Table_theme
 title: Table
+slug: /commands/theme/Table
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current default table.Syntax -->](../../commands-legacy/current-default-table.md)<br/>|

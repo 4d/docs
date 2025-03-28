@@ -165,7 +165,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome da fonte (consulte [**Fontes e texto**](configuring.md#fonts-and-text)) da tabela<!-- END REF -->.
 
 ### .textDecoration
 

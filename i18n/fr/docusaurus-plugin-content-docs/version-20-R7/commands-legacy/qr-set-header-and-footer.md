@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->La commande **QR SET HEADER AND FOOTER** vous permet de définir le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
 
@@ -43,7 +43,7 @@ Le paramètre *alignementImage* définit la propriété d'alignement de l'image 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *sélecteur* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 L'instruction suivante place le libellé “Titre du centre” dans l'en-tête de l'état rapide dans MaZone et définit sa hauteur à 200 points :
 
@@ -51,11 +51,11 @@ L'instruction suivante place le libellé “Titre du centre” dans l'en-tête d
  QR SET HEADER AND FOOTER(MaZone;1;"";"Titre du centre";"";200)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

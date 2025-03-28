@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Execute on server.Summary-->El comando Execute on server inicia un nuevo proceso en el equipo servidor (cuando se llama en Cliente/Servidor) o en el mismo equipo (si se llama en monousuario) y devuelve el número de este proceso.<!-- END REF-->
 
@@ -61,7 +61,7 @@ Si pasa un objeto (*C\_OBJECT*) o una colección (*C\_COLLECTION*) como *param*,
 
 Si pasa este último parámetro le pide a 4D verificar primero si se está ejecutando un proceso con el mismo nombre que pasó en *nombre*. Si es así, 4D no inicia un nuevo proceso y devuelve el número del proceso con ese nombre.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea registrar cierta información desde el lado remoto en un archivo de texto en la máquina del servidor.
 
@@ -78,7 +78,7 @@ El método WriteLog se ejecutará en el servidor. Contiene, por ejemplo:
  TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo muestra cómo la importación de datos puede acelerarse de manera dramática en entorno Cliente/Servidor. El método Importacion Clasica listado a continuación le permite medir cuánto tiempo toma una importación de registros utilizando el comando [IMPORT TEXT](import-text.md "IMPORT TEXT"):
 
@@ -180,16 +180,16 @@ Una vez estos dos métodos de proyecto hayan sido implementados en su base de da
 
 Con algunas pruebas comparativas, puede comprobar que con este tipo de método, la importación de los registros puede ser 60 veces más rápida que una importación clásica. 
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Consulte la sección *Servicios basados en los procedimientos almacenados (ejemplo)* en el manual de *Referencia de 4D Server*.
 
-#### Ver también 
+## Ver también 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

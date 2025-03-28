@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->La commande **GET MENU ITEM PROPERTY** retourne dans le paramètre *valeur* la valeur courante de la propriété de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
 Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
@@ -28,11 +28,11 @@ Passez dans le paramètre *propriété* la propriété dont vous souhaitez obten
 
 **Note de compatibilité :** Par défaut, si la variable *valeur* n'est pas typée explicitement ou est déclarée de type texte, la commande retournera un nom d'*Action standard*. Si vous souhaitez obtenir une valeur numérique comme défini dans le thème de constantes (obsolète) *Valeurs pour Actions standard associée*, vous devez déclarer la variable *valeur* de type entier long.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

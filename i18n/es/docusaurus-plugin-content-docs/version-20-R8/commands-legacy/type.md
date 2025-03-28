@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Type.Summary-->El comando Type devuelve un valor numérico que indica el tipo de campo o variable que pasa en el parámetro *campoVar*.<!-- END REF-->  
 4D ofrece las siguientes constantes predefinidas que se encuentran en el tema *Tipos de campos y variables*:
@@ -61,7 +61,7 @@ Puede aplicar la función Type a los campos, variables interproceso, variables p
 * Puede aplicar la función **Type** a las expresiones escalares como propiedades de objeto (*emp.name*) o los elementos de colecciones (*myColl\[5\]*). Para ello, debe utilizar el comando [Value type](value-type.md).
 * En modo compilado, llamar **Type** en un parámetro método ($0, $1...) declarado como *C\_VARIANT* no devuelve Is variant sino el tipo de datos real (igual que llamar a [Value type](value-type.md)).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método de proyecto borra una parte o la totalidad de los campos del registro actual de la tabla a la cual apunta el puntero pasado como parámetro. Hace esto sin borrar o cambiar el registro actual:
 
@@ -117,7 +117,7 @@ Después de implementar este método de proyecto en su base de datos, puede escr
  BORRAR REGISTRO(->[Cosas por hacer];-1?-Is alpha field)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En algunos casos, por ejemplo cuando se escribe código genérico, puede necesitar saber si un array es un array estándar independiente o una "fila" de un array 2D. En este caso, puede utilizar el siguiente código:  
 
@@ -131,17 +131,17 @@ En algunos casos, por ejemplo cuando se escribe código genérico, puede necesit
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Ver ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver también 
+## Ver también 
 
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

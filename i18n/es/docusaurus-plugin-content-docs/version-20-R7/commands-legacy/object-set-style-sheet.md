@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->El comando **OBJECT SET STYLE SHEET** modifica, para el proceso actual, la hoja de estilo asociada al objeto(s) designado(s) por los parámetros *objeto* y *\** .<!-- END REF--> Una hoja de estilo modifica la fuente, el tamaño de fuente y (excepto para las hojas de estilo automáticas) el estilo de fuente.
 
@@ -42,14 +42,14 @@ Si durante la sesión, utiliza los comandos [ST SET ATTRIBUTES](st-set-attribute
 En la **arquitectura proyecto**, este comando sólo soporta las tres hojas de estilo automáticas.   
   
 
-#### Ver también 
+## Ver también 
 
 *Estilos de fuente*  
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

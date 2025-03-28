@@ -5,7 +5,8 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( campPtr | tablaNum {; *numCamp*}; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *campPtr* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tablaNum* ; *numCamp* ; *campTipo* {; *campLong* {; *indexado* {; *unico* {; *invisible*}}}} )<!-- END REF-->
+
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

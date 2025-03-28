@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->El comando **OBJECT SET MULTILINE** modifica la propiedad "Multilínea" del objeto(s) designada por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -31,7 +31,7 @@ En el parámetro *multilinea*, pase el nuevo valor de la opción que desea ajust
 | Multiline No   | Entero largo | 2     | Nunca hay vuelta de la línea: el texto se muestra siempre en una sola línea. Si el campo o la variable alfa o texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina tan pronto como se modifica el área.                                                                                                        |
 | Multiline Yes  | Entero largo | 1     | En las áreas de una sola línea, el texto se muestra hasta el primer retorno de carro o hasta la última palabra que se puede mostrar por completo. 4D inserta retornos de línea, es posible desplazarse por el contenido del área con la tecla de flecha hacia abajo.<br/>En las áreas de varias líneas, 4D efectúa los saltos de línea automáticos. |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere prohibir varias líneas en un área de entrada:
 
@@ -39,11 +39,11 @@ Usted quiere prohibir varias líneas en un área de entrada:
  OBJECT SET MULTILINE(*;"vEntry";Multiline No)
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get multiline](object-get-multiline.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

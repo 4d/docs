@@ -1,7 +1,10 @@
 ---
-id: Form_Events
+id: Form_Events_theme
 title: Form Events
+slug: /commands/theme/Form-Events
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Activated.Syntax -->](../../commands-legacy/activated.md)<br/>|

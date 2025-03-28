@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->La commande **GET PICTURE FROM LIBRARY** retourne dans *image* l'image de la bibliothèque dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->
 
 S'il n'existe pas d'image de ce numéro ou de ce nom dans la bibliothèque d'images, **GET PICTURE FROM LIBRARY** ne modifie pas le paramètre *image*. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant retourne dans la variable *vgMonImage* l’image dont la référence est stockée dans la variable locale *$vlRefImage* :
 
@@ -28,7 +28,7 @@ L’exemple suivant retourne dans la variable *vgMonImage* l’image dont la ré
  GET PICTURE FROM LIBRARY($vlRefImage;vgMonImage)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant retourne dans la variable *$DDcom\_Prot\_MonImage* l’image nommée "DDcom\_Prot\_Bouton1" stockée dans la Bibliothèque d’images :
 
@@ -36,25 +36,25 @@ L’exemple suivant retourne dans la variable *$DDcom\_Prot\_MonImage* l’image
  GET PICTURE FROM LIBRARY("DDcom_Prot_Bouton1";$DDcom_Prot_MonImage)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous au troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si l’image existe dans la bibliothèque d’images. Sinon, elle prend la valeur zéro.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs.
 
-#### Voir aussi 
+## Voir aussi 
 
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

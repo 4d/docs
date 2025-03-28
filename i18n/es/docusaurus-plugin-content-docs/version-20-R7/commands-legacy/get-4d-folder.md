@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get 4D folder.Summary-->El comando **Get 4D folder** devuelve la ruta de acceso a la carpeta 4D activa de la aplicación actual o de la carpeta del entorno 4D especificada por los parámetros *opciones* y *carpeta*, si se pasa.<!-- END REF--> Este comando le permite obtener la ruta de acceso actual a las carpetas utilizadas por la aplicación 4D. Utilizando este comando, asegura que su código funcionará correctamente en todas las plataformas que se ejecuten en un sistema localizado.
 
@@ -162,7 +162,7 @@ La carpeta de la base de datos (Database folder y Database folder UNIX syntax) d
    * En el caso de un alias o un acceso directo, el comando devuelve el nombre de la ruta de la carpeta que contiene la base de datos matriz original. El resultado difiere según el formato de esta base de datos (carpeta/paquete .4dbase o archivo .4db/.4dc), como se ha descrito anteriormente.  
  Cuando se llama al comando desde la base de datos local, siempre devuelve el nombre de la ruta de la carpeta de la base de datos del host, independientemente de que se pase o no el parámetro *\**.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Durante el inicio de una base monousuario, usted quiere cargar (o crear) sus propios parámetros en un archivo ubicado en la carpeta 4D. Para hacer esto, en el [Método base On Startup](metodo-base-on-startup.md), puede escribir código similar a este:
 
@@ -182,7 +182,7 @@ Durante el inicio de una base monousuario, usted quiere cargar (o crear) sus pro
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo ilustra el uso de la constante Database Folder Unix Syntax bajo Mac OS para listar el contenido de la carpeta de la base:
 
@@ -197,11 +197,11 @@ Este ejemplo ilustra el uso de la constante Database Folder Unix Syntax bajo Mac
 
 **Nota:** bajo Mac OS, es necesario colocar las rutas de acceso entre comillas cuando contienen los nombres de archivos o de carpetas con espacios. La secuencia de escape "\\" permite insertar el carácter comillas en la cadena. También puede utilizar la instrucción Char(Double quote). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está vacía, la varible sistema OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -209,7 +209,7 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

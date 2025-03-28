@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->El comando **LIST OF STYLE SHEETS** devuelve la lista de hojas de estilo de la aplicación en el array *arrHojasEstilo*.<!-- END REF-->  
   
@@ -27,7 +27,7 @@ Después de ejecutar el comando, cada elemento del array contiene el nombre de u
 
 Este comando sólo puede utilizarse en **bases de datos binarias**. En la arquitectura de proyectos, el array no se llena. 
 
-#### Ejemplo 
+## Ejemplo 
 
 En su aplicación, se definen las siguientes hojas de estilo:
 
@@ -45,12 +45,12 @@ Si ejecuta el siguiente código:
   // $arrStyles{6} contiene "Variables"
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

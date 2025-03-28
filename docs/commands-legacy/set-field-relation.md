@@ -5,7 +5,7 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( manyTable | Field ; *one* ; *many* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* ; *one* ; *many* )<br/>**SET FIELD RELATION** ( *field* ; *one* ; *many* )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

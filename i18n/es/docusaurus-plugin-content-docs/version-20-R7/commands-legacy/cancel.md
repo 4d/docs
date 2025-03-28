@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CANCEL.Summary-->El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
 
@@ -37,21 +37,21 @@ Finalmente, este comando puede ser utilizado en el evento de formulario On Print
 
 El comando **CANCEL** se permite en modo sin interfaz, en el contexto de las áreas fuera de pantalla creadas por *VP Run offscreen area* o [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER"). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Cuando el comando CANCEL se ejecuta (anulación de formulario o de impresión), la variable sistema OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

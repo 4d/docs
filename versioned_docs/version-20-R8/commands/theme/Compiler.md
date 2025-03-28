@@ -1,7 +1,10 @@
 ---
-id: Compiler
+id: Compiler_theme
 title: Compiler
+slug: /commands/theme/Compiler
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Compile project.Syntax -->](../../commands/compile-project.md)<br/>|

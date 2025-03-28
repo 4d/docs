@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Trigger event.Summary-->La commande **Trigger event** est appelée dans un trigger et renvoie une valeur numérique qui indique le type de l'événement de la base, ou la raison pour laquelle le trigger a été appelé.<!-- END REF--> 4D fournit les constantes prédéfinies suivantes, placées dans le thème *Evénements trigger* :
 
@@ -27,7 +27,7 @@ Si, dans un trigger, vous effectuez des opérations de base de données sur plus
 
 Dans 4D, il n'y a pas de limite, à part la mémoire disponible, aux appels de triggers en cascade. Pour optimiser l'exécution d'un trigger, vous pouvez écrire le code de vos triggers non seulement en fonction de l'événement de la base mais aussi du niveau de l'appel lorsque les triggers sont appelés en cascade. Par exemple, pendant l'événement trigger **Sur suppression enregistrement** pour la table *\[Factures\]*, vous pouvez ne pas effectuer la mise à jour du champ *\[Clients\]Ventes* si la suppression de l'enregistrement de la table *\[Factures\]* fait partie de la suppression en cascade des factures liées à l'enregistrement dans la table *\[Clients\]* que vous êtes en train de supprimer. Pour cela, utilisez les routines [Trigger level](trigger-level.md) et [TRIGGER PROPERTIES](trigger-properties.md).
 
-#### Exemple 
+## Exemple 
 
 Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-dessous :
 
@@ -45,14 +45,14 @@ Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-des
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 *Présentation des triggers*  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

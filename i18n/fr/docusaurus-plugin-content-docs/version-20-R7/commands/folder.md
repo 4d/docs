@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -55,7 +55,7 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 | fk database folder         | 4      | Filesystem associé : "/PACKAGE"                                                                                             |
 | fk desktop folder          | 115    |                                                                                                                                             |
 | fk documents folder        | 117    | Dossier Documents de l'utilisateur                                                                                                          |
-| fk home folder             | 118    | Dossier personnel actuel de l'utilisateur (généralement `/Users/<username>/`)                                            |
+| fk home folder             | 118    | Dossier personnel courant de l'utilisateur (généralement `/Users/<username>/`)                                           |
 | fk licenses folder         | 1      | Dossier contenant les fichiers de licence 4D de la machine                                                                                  |
 | fk logs folder             | 7      | Filesystem associé : "/LOGS"                                                                                                |
 | fk mobileApps folder       | 10     |                                                                                                                                             |
@@ -71,7 +71,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Voir également
 
-[`4D.Folder` class](../API/FolderClass.md)
+[classe `4D.Folder`](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)

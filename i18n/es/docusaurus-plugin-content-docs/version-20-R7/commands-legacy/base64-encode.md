@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BASE64 ENCODE.Summary-->El comando **BASE64 ENCODE** encodes the text or blob value passed in the *toEncode* parameter in Base64 or Base64URL format.<!-- END REF--> 
 
@@ -32,14 +32,14 @@ Si omite el parámetro *codificado*, el comando modifica directamente el paráme
 
 Por defecto, si se omite el parámetro *\**, el comando utiliza una codificación Base64\. Si pasa el parámetro *\**, el comando utiliza una codificación Base64URL.
 
-#### Ver también 
+## Ver también 
 
 [BASE64 DECODE](base64-decode.md)  
 [Generate digest](generate-digest.md)  
 *Presentación de los comandos XML DOM*  
 [XML DECODE](xml-decode.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

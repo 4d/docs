@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->La commande **SET PROCESS VARIABLE** écrit la ou les valeur(s) de *exprSource* (*exprSource2*, etc.) dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont le numéro est passé dans *process*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Cette possibilité s'avère particulièrement utile dans le cas d'une procédure
 
 Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, la commande ne fait rien.
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne de code suivante affecte une chaîne vide à la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* :
 
@@ -51,7 +51,7 @@ La ligne de code suivante affecte une chaîne vide à la variable Texte *vtCurSt
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La ligne de code suivante affecte la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* à la valeur de la variable *$vtInfo* depuis la méthode en cours d'exécution du process courant : 
 
@@ -59,7 +59,7 @@ La ligne de code suivante affecte la variable Texte *vtCurStatus* du process don
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 La ligne de code suivante affecte la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* à la valeur de la même variable dans le process courant : 
 
@@ -69,7 +69,7 @@ La ligne de code suivante affecte la variable Texte *vtCurStatus* du process don
 
 **Note :** La première *vtCurStatus* désigne l'instance de la variable dans le process de destination, la seconde *vtCurStatus* désigne l'instance de la variable dans le process courant.
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant place séquentiellement en majuscules les éléments d'un tableau process depuis le process désigné par *$vlProcess*:
 
@@ -83,7 +83,7 @@ L'exemple suivant place séquentiellement en majuscules les éléments d'un tabl
 
 **Note :** Dans cet exemple, la variable process *vl\_IPCom\_Array* doit être gérée par les process source/destination et contient la taille du tableau *at\_IPCom\_Array*.
 
-#### Exemple 5 
+## Exemple 5 
 
 L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le process de destination à partir de l'instance de ces mêmes variables dans le process courant :
 
@@ -91,14 +91,14 @@ L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le proce
  SET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 *Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

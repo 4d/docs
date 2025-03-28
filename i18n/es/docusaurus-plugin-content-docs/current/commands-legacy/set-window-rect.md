@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->El comando **SET WINDOW RECT** cambia las coordenadas globales de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, el comando no hace nada. 
 
@@ -34,11 +34,11 @@ Por defecto, la ejecución de este comando pasa al primer plano la ventana desig
 
 Este comando no afecta los objetos de formulario. Si la ventana contiene un formulario, los objetos del formulario no se mueven o redimensionan por el comando (sin importar sus propiedades). Sólo se modifica la ventana. Para modificar una ventana de formulario teniendo en cuenta sus propiedades de redimensionamiento y los objetos que contiene, debe utilizar el comando [RESIZE FORM WINDOW](resize-form-window.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Dada la siguiente ventana:
 
@@ -55,14 +55,14 @@ La ventana aparece de esta forma:
 
 ![](../assets/en/commands/pict39569.es.png)
 
-#### Ver también 
+## Ver también 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

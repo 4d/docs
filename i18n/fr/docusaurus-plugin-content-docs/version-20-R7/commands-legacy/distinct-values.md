@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->**DISTINCT VALUES** crée et remplit le tableau *tableau* avec toutes les valeurs distinctes provenant du champ *leChamp* pour la sélection courante de la table du champ et, optionnellement, retourne dans *tabNbVal* le nombre d'occurrences de chaque valeur.<!-- END REF-->
 
@@ -42,7 +42,7 @@ La commande accepte en paramètre optionnel un tableau *tabNbVal*. Lorsqu'il est
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant crée une liste de villes à partir de la sélection courante et indique à l'utilisateur le nombre de villes dans lesquelles la société dispose de magasins : 
 
@@ -52,7 +52,7 @@ L'exemple suivant crée une liste de villes à partir de la sélection courante 
  ALERT("Cette société dispose de magasins dans "+String(Taille tableau(taVilles))+" villes.")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir la liste complète des mots-clés contenus dans l’index des mots-clés du champ "Photos" : 
 
@@ -62,7 +62,7 @@ Vous souhaitez obtenir la liste complète des mots-clés contenus dans l’index
  DISTINCT VALUES([IMAGES]Photos;<>_MesMotsCles)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour calculer des statistiques, vous voulez trier le nombre de valeurs distinctes d'un champ par ordre décroissant :
 
@@ -73,7 +73,7 @@ Pour calculer des statistiques, vous voulez trier le nombre de valeurs distincte
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -81,7 +81,7 @@ Pour calculer des statistiques, vous voulez trier le nombre de valeurs distincte
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

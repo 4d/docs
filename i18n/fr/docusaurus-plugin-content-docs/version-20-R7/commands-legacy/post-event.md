@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST EVENT.Summary-->La commande **POST EVENT** simule un événement (clavier ou souris).<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur agit réellement par l'intermédiaire du clavier ou de la souris.
 
@@ -68,12 +68,12 @@ Par exemple, pour simuler la touche Majuscule, passez la valeur Shift key bit.
 
 Si vous passez le paramètre *process*, l'événement est envoyé au process dont vous avez passé le numéro. Si vous passez *0* (zéro) ou si vous omettez ce paramètre, l'événement est envoyé au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
 
-#### Voir aussi 
+## Voir aussi 
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

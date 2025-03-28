@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB to list.Summary-->El comando BLOB to list crea una nueva lista jerárquica con los datos almacenados en el BLOB *blob* en el offset de bytes (a partir de cero) especificado por *offset* y devuelve un número de referencia de lista jerárquica para esa nueva lista.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Después del llamado, si la lista jerárquica ha sido creada correctamente, la v
 
 **Nota sobre la independencia de plataforma:** BLOB to list y [LIST TO BLOB](list-to-blob.md "LIST TO BLOB") utilizan un formato interno 4D para administrar listas almacenadas en BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas cuando utilice estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando estos dos comandos puede ser reutilizados en Macintosh y viceversa.
 
-#### Ejemplo 
+## Ejemplo 
 
 En este ejemplo, el método de un formulario de entrada extrae una lista de un campo BLOB antes de que el formulario aparezca en la pantalla, y lo almacena nuevamente en el campo BLOB si la entrada de datos se valida:
 
@@ -52,15 +52,15 @@ En este ejemplo, el método de un formulario de entrada extrae una lista de un c
  End case
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable OK toma el valor 1 si la lista se crea correctamente, de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

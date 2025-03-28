@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB Get server info.Summary-->El comando **WEB Get server info** devuelve un objeto que contiene información del tiempo de ejecución detallada en la sesión actual del servidor web 4D.<!-- END REF--> La información devuelta incluye el servidor SOAP.
 
@@ -71,7 +71,7 @@ Si pasa **true** en el parámetro *conCache*, el comando devuelve la propiedad o
 | nbCachedObjects            | Número            | Número de objetos en la caché                                                                                                                     |
 | cachedObjects              | Colección         | Colección de objetos en la caché. Cada objeto en caché es definido por diferentes propiedades (url, mimeType, expirationType, lastModified, etc.) |
 
-#### Ejemplo 
+## Ejemplo 
 
 Después de ejecutar el siguiente código:
 
@@ -123,13 +123,13 @@ Después de ejecutar el siguiente código:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
 [License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

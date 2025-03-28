@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Data file encryption status.Summary-->La commande **Data file encryption status** retourne un objet qui fournit le statut de chiffrement du fichier de données indiqué par les paramètres *cheminStructure* et *cheminDonnées*.<!-- END REF--> Le statut de chiffrement de chaque table est également fourni.
 
@@ -46,7 +46,7 @@ L'objet retourné contient les propriétés suivantes :
    * après l'ouverture du fichier de données, via la commande [Discover data key](discover-data-key.md)
 * via la commande [Register data key](register-data-key.md)
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaitre le statut de chiffrement d'un fichier de données correspondant au fichier de structure courant :
 
@@ -64,12 +64,12 @@ Vous souhaitez connaitre le statut de chiffrement d'un fichier de données corre
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Encrypt data file](encrypt-data-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

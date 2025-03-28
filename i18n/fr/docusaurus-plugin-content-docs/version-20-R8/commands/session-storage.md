@@ -65,9 +65,9 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 1839                            |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1839                        |
+| Thread safe        | &cross; |
 
 

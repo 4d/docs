@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->**SVG GET ATTRIBUTE**コマンドを使用して、オブジェクトまたはSVGピクチャの*attribName*属性の現在値を取得できます。<!-- END REF--> 
 
@@ -37,11 +37,11 @@ SVG属性に関する詳細は、[SVG SET ATTRIBUTE](svg-set-attribute.md)コマ
 | 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | 読み込み     | ノードの継承クラス属性がすべてのクラス名を含む場合に'true'を返します。そうでなければ'false'を返します。例えば"4D-isOfClass-land"に対してノードの継承されたクラスが"land department01" の場合、trueを返します。                                                                                                                                                                 |
 | 4D-enableD2D                                  | 読み/書き    | 'false'の場合、SVG描画エンジンのDirect2Dを無効にします。実際SVGフィルターはDirect2Dでは描画されず、GDI/GDIPlusを使用します。このオプションを使用すればデータベースがDirect2DモードであってもSVGフィルターを利用できるようになります。このオプションはピクチャーが*pictureObject*にロード済みである場合のみ効果がある点に留意してください。このオプションはエンジンにグローバルに設定されるため、セッション毎に一回設定すれば十分です (例えばデータベース開始時にテキスト変数からメモリにロードされた小さなSVGのようなケース)。 |
 
-#### 参照 
+## 参照 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -219,7 +219,7 @@ Haga clic en el botón **[...]** y utilice la caja de diálogo *Navegar carpeta*
 
 #### Versión actual
 
-Se utiliza para indicar el número de versión actual de la aplicación generada. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings).
+Se utiliza para indicar el número de versión actual de la aplicación generada. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. El intervalo de compatibilidad de las aplicaciones cliente y servidor se define utilizando las [llaves XML](#build-application-settings) específicas.
 
 #### Modo de enlace de datos
 
@@ -231,7 +231,7 @@ Esta opción permite elegir el modo de enlace entre la aplicación fusionada y e
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
-### Construir la aplicación cliente
+### Build client application
 
 Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.Metodo base On Startup.Summary-->El Método base On Startup se ejecuta una sola vez, al momento de la apertura de la base.<!-- END REF-->
 
@@ -36,11 +36,11 @@ El Método base On Startup es perfecto para:
 
 Sin embargo, le recomendamos NO lanzar trabajos de impresión desde el **Método base On Startup**. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Vea el ejemplo en la sección [Método base On Exit](metodo-base-on-exit.md).
 
-#### Ver también 
+## Ver también 
 
 [Método base On Exit](metodo-base-on-exit.md)  
 *Métodos de base de datos*  

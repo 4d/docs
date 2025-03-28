@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Process state.Summary-->El comando Process state devuelve el estado del proceso cuyo número se pasó en *proceso*.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ El resultado de la función puede ser uno de los valores de las siguientes const
 
 Si el proceso no existe (lo cual significa que no pasó un número en el rango de 1 a [Count tasks](count-tasks.md "Count tasks")), Process state devuelve Does not exist (-100).
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo coloca el nombre y número de referencia para cada proceso en los arrays *asProcName* y *aiProcNum*. El método prueba si el proceso ha sido abortado. En este caso, el nombre y el número del proceso no son añadidos a los arrays:
 
@@ -55,12 +55,12 @@ El siguiente ejemplo coloca el nombre y número de referencia para cada proceso 
  ARRAY INTEGER(aiProcNum;$vlActualCont)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

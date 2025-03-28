@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->El comando **LISTBOX INSERT COLUMN FORMULA** inserta una columna en el listbox designado por los parámetros *objeto* y *\**.<!-- END REF-->  
 El comando **LISTBOX INSERT COLUMN FORMULA** es similar al comando [LISTBOX INSERT COLUMN](listbox-insert-column.md) excepto que puede utilizarse para introducir una fórmula como contenido de una columna.
@@ -75,7 +75,7 @@ Para ello, LISTBOX INSERT COLUMN FORMULA acepta un puntero **Nil (->\[\])** como
   
 Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Queremos añadir una nueva columna a la derecha del listbox que contendrá una fórmula que calcula la edad de un empleado:  
 
@@ -85,7 +85,7 @@ Queremos añadir una nueva columna a la derecha del listbox que contendrá una f
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$ultima;"ColFormula";vEdad;Is real;"Edad";varEncabezado)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere añadir una columna a un list box de tipo colección:
 
@@ -114,11 +114,11 @@ La columna se añade al list box:
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->El comando **OBJECT SET PRINT VARIABLE FRAME** modifica la propiedad de marco de impresión variable del objeto o de los objetos designados por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -38,11 +38,11 @@ El parámetro opcional *subformFijo* le permite configurar una opción adicional
 | Print Frame fixed with multiple records | Entero largo | 2     | El tamaño inicial del marco permanece del mismo tamaño, 4D imprime el formulario varias veces para incluir todos los registros.                               |
 | Print Frame fixed with truncation       | Entero largo | 1     | 4D imprime sólo los registros que aparecen en el área del subformulario. El formulario se imprime sólo una vez y los registros que no se imprimen se ignoran. |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

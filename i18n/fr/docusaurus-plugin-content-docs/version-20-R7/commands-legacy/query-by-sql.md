@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->La commande **QUERY BY SQL** permet de tirer directement parti du moteur SQL intégré de 4D.<!-- END REF--> Elle exécute une requête SELECT simple qui peut être écrite ainsi :
 
@@ -73,7 +73,7 @@ Avec **QUERY BY SQL**, vous devez écrire l’instruction suivante, que le lien 
 
 **Note :** Les liens 1 vers N et N vers N sont également traités par **QUERY BY SQL** d’une manière différente de [QUERY BY FORMULA](query-by-formula.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple recherche les bureaux dont les ventes sont supérieures à 100\. La requête SQL est : 
 
@@ -89,7 +89,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Bureaux];$formuleRequete)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple recherche les commandes comprises entre 3000 et 4000\. La requête SQL est :   
 
@@ -105,7 +105,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Ventes];$formuleRequete)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple montre comment trier le résultat de la requête sur un critère spécifique. La requête SQL est : 
 
@@ -121,7 +121,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Personnes];$formuleRequete)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple montre une requête utilisant des tables liées dans 4D. Via le SQL vous devez utiliser un JOIN pour recréer cette relation. Considérons les deux tables suivantes : 
 
@@ -150,15 +150,15 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Lignes_Factures];$formuleRequete)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le format de la condition de recherche est correct, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0, le résultat de la commande est une sélection vide et une erreur est retournée. Cette erreur peut être interceptée par une méthode installée à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

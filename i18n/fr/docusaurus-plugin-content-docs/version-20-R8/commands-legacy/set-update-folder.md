@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si l’application est quittée manuellement, cette information n'est pas conservée.
 
@@ -39,7 +39,7 @@ Exception : s'il n'est pas possible de créer un fichier journal, une boîte de 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
 
-#### Exemple 
+## Exemple 
 
 Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous avez placé une nouvelle version de l’application "MonAppli". Vous ne souhaitez pas afficher les erreurs. Pour préparer la mise à jour, vous écrivez :
 
@@ -51,12 +51,12 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
  SET UPDATE FOLDER("MacHD:MesMisesAJour"+Folder separator+"MonAppli.app"+Folder separator;True)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

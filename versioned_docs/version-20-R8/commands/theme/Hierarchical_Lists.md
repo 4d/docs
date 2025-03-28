@@ -1,7 +1,10 @@
 ---
-id: Hierarchical_Lists
+id: Hierarchical_Lists_theme
 title: Hierarchical Lists
+slug: /commands/theme/Hierarchical-Lists
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND TO LIST.Syntax -->](../../commands-legacy/append-to-list.md)<br/>|

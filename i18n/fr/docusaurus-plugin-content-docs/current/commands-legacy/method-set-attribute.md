@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->La commande **METHOD SET ATTRIBUTE** permet de définir la valeur d'un ou plusieurs attribut(s) *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 
 
@@ -46,7 +46,7 @@ Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous 
 
 Cette commande ne peut pas être exécutée en mode compilé. Dans ce mode, son appel génère l'erreur -9762\. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Sélection de la propriété "Partagée entre composants et base hôte" pour la méthode projet "Choix dialogue" :
 
@@ -54,7 +54,7 @@ Sélection de la propriété "Partagée entre composants et base hôte" pour la 
  METHOD SET ATTRIBUTE("Choix dialogue";Attribute shared;True)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Définition de plusieurs paires attribut/valeur :
 
@@ -62,13 +62,13 @@ Définition de plusieurs paires attribut/valeur :
  METHOD SET ATTRIBUTE(vChemin;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vDossier;*)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Accès objets développement*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

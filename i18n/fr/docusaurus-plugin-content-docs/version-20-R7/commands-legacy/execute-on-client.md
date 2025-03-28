@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->La commande **EXECUTE ON CLIENT** provoque l’exécution de la méthode *nomMéthode*, avec, éventuellement, le(s) paramètre(s) *param1.<!-- END REF-->.. paramN*, sur le ou les 4D Client inscrit(s) sous le nom *nomClient*. Le nom d’inscription du ou des 4D Client est défini par la commande [REGISTER CLIENT](register-client.md). 
 
@@ -30,7 +30,7 @@ Si cette commande est appelée plusieurs fois de suite pour un même 4D Client, 
 
 Il est possible d’exécuter simultanément la même méthode sur plusieurs ou sur la totalité des 4D Clients inscrits : pour cela, passez le caractère joker (@) dans le paramètre *nomClient*.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez exécuter sur le poste client “Client1” la méthode “GénéreNums”, comportant trois paramètres :
 
@@ -38,7 +38,7 @@ Vous souhaitez exécuter sur le poste client “Client1” la méthode “Géné
  EXECUTE ON CLIENT("Client1";"GénéreNums";12;$a;"Text")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez que tous les clients inscrits exécutent la méthode “VideTemp” :
 
@@ -46,22 +46,22 @@ Vous souhaitez que tous les clients inscrits exécutent la méthode “VideTemp�
  EXECUTE ON CLIENT("@";"VideTemp")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md).
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si 4D Server a correctement reçu la requête d’exécution d’une méthode — cela ne garantit pas toutefois la bonne exécution de la méthode sur le 4D Client.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

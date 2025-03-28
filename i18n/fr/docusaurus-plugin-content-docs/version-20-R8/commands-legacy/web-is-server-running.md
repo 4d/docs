@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Is server running.Summary-->La commande **WEB Is server running** retourne **Vrai** si le serveur Web intégré de 4D est démarré, et **Faux** si le serveur Web est stoppé.<!-- END REF-->
 
@@ -27,7 +27,7 @@ La commande retourne le statut du serveur Web de la machine sur laquelle elle es
 | 4D mode distant (procédure stockée sur 4D Server)            | Serveur Web 4D Server     |
 | 4D mode distant (procédure stockée sur une autre 4D distant) | Serveur Web 4D distant    |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez tester si le serveur Web de 4D est lancé :
 
@@ -38,7 +38,7 @@ Vous souhaitez tester si le serveur Web de 4D est lancé :
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

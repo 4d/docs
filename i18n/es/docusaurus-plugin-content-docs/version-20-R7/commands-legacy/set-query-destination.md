@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->El comando **SET QUERY DESTINATION** permite indicar a 4D donde ubicar el resultado de todas las búsquedas posteriores a la llamada a este comando en el proceso actual.<!-- END REF-->
 
@@ -100,7 +100,7 @@ El número de registros encontrado por la búsqueda se ubicará en la variable *
 * [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
 Por otra parte, **SET QUERY DESTINATION** no afecta otros comandos que modifican la selección actual de la tabla como [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Se crea un formulario que muestra los registros de la tabla *\[Libreta telefonica\]*. Se crea un objeto de tipo pestaña llamado *asRolodex* (con una pestaña para cada letra del alfabeto) y un subformulario que muestra los registros de la tabla *\[Libreta telefonica\]*. Al elegir una pestaña, muestra los registros que corresponden a la letra. 
 
@@ -157,7 +157,7 @@ Para hacer esto, puede redireccionar sus búsquedas en las selecciones temporale
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El método de proyecto ValoresUnicos en este ejemplo le permite verificar si los valores son únicos para los campos en una tabla. El registro actual puede ser un registro existente o un registro nuevo. 
 
@@ -240,7 +240,7 @@ Después de implementar este método de proyecto en su aplicación, puede escrib
   // ...
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
@@ -252,7 +252,7 @@ Después de implementar este método de proyecto en su aplicación, puede escrib
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

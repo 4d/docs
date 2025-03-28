@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->La commande **METHOD GET FOLDERS** retourne dans le tableau *tabNoms* les noms des dossiers créés dans la page Démarrage de l’Explorateur de 4D <!-- END REF-->:
 
@@ -27,11 +27,11 @@ Vous pouvez restreindre la liste des dossiers en passant une chaîne de comparai
 
 Si la commande est exécutée depuis un composant, elle retourne par défaut les chemins des méthodes du composant. Si vous passez le paramètre *\**, le tableau contiendra les chemins des méthodes de la base hôte.
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

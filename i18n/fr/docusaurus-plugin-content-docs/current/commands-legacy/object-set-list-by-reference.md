@@ -67,7 +67,7 @@ Associer la liste "vColor" en tant qu’énumération simple au pop up/Liste dé
  OBJECT SET LIST BY REFERENCE(*;"CoulPorte";Choice list;vColor)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez maintenant associer la liste "vColor" à une combo box "CoulMur". Comme la combo box est saisissable, vous souhaitez que certaines couleurs telles que "noir", "violet"... ne puissent pas être utilisées. Ces couleurs sont placées dans la liste "vRejet" :
 
@@ -80,7 +80,7 @@ Vous souhaitez maintenant associer la liste "vColor" à une combo box "CoulMur".
  OBJECT SET LIST BY REFERENCE(*;"CoulMur";Excluded list;vRejet)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous souhaitez supprimer des associations de listes :
 
@@ -90,7 +90,7 @@ Vous souhaitez supprimer des associations de listes :
  OBJECT SET LIST BY REFERENCE(*;"CoulMur";Excluded list;0)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Cet exemple illustre la différence de fonctionnement de la commande selon qu’elle est appliquée à un pop up menu associé à un tableau texte ou à une variable texte. Dans un formulaire se trouvent deux pop up menus :
 
@@ -123,12 +123,12 @@ Seul le menu associé au champ texte est mis à jour (via la référence dynamiq
 
 Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il est nécessaire de rappeler la commande **OBJECT SET LIST BY REFERENCE** afin de recopier le contenu de la liste. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SCAN INDEX.Summary-->SCAN INDEX devuelve una selección de *numero* de registros de la *tabla*.<!-- END REF--> Si pasa <, SCAN INDEX devuelve el *número* de registros a partir del final del índice (valores superiores). Si pasa >, SCAN INDEX devuelve *numero* de registros a partir del inicio del índice (valores inferiores). Este comando es muy eficiente porque utiliza el índice para realizar la operación. 
 
@@ -29,7 +29,7 @@ Si especifica un número de registros superior al número de registros presentes
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo envía cartas a los 50 peores clientes y 50 a los mejores clientes: 
 
@@ -44,13 +44,13 @@ El siguiente ejemplo envía cartas a los 50 peores clientes y 50 a los mejores c
  PRINT SELECTION([Clientes]) // Imprimir las cartas
 ```
 
-#### Ver también 
+## Ver también 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

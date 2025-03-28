@@ -473,7 +473,7 @@ APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans 
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Lorsque des paramètres facultatifs sont nécessaires dans vos méthodes, vous pouvez également envisager d'utiliser des [propriétés d'objet en tant que paramètres nommés](#using-object-properties-as-named-parameters), ce qui constitue un moyen souple de gérer un nombre variable de paramètres.
 
 
 
@@ -521,7 +521,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". This is described in the [Returning values](#returned-value) paragraph.
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returned-value).
 
 
 ### Cas particuliers : objets et collections

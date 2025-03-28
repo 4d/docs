@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->El comando **INVOKE ACTION** activa la acción estándar definida por el parámetro accion, opcionalmente en el contexto objetivo.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Dependiendo del *objetivo*, la ejecución del comando **INVOKE ACTION** es sínc
 
 El comando **INVOKE ACTION** no genera un error, por ejemplo, si la acción solicitada no está disponible en el contexto actual. Debe validar la acción esperada utilizando el comando [Action info](action-info.md). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea ejecutar la acción estándar **Copiar** en el formulario actual:
 
@@ -52,7 +52,7 @@ Desea ejecutar la acción estándar **Copiar** en el formulario actual:
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea ejecutar una acción estándar **Goto page** (página 3) en el formulario principal:
 
@@ -60,11 +60,11 @@ Usted desea ejecutar una acción estándar **Goto page** (página 3) en el formu
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Action info](action-info.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

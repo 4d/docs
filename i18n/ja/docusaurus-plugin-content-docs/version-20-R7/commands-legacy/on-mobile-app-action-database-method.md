@@ -14,12 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.On Mobile App Action database method.Summary-->**ドキュメンテーションは移動しました**<!-- END REF-->
 
 このデータベースメソッドについてのドキュメンテーションはアップデートされ、 [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) へと移されました。
 
-#### 参照 
+## 参照 
 
 [On Mobile App Authentication データベースメソッド](on-mobile-app-authentication-database-method.md)  

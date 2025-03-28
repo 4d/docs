@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->El comando **FORM SET OUTPUT** define el formulario de salida actual de *formulario* o *formUsuario*.<!-- END REF--> El formulario debe pertenecer a *tabla*.
 
@@ -39,7 +39,7 @@ Para mayor información sobre formularios usuario, consulte la sección *Present
 
 Los formularios de salida son utilizados por tres grupos de comandos. Un grupo muestra una lista de registros en pantalla, otro grupo genera informes, y el tercer grupo exporta datos. Los comandos [DISPLAY SELECTION](display-selection.md) y [MODIFY SELECTION](modify-selection.md)  muestran una lista de registros utilizando un formulario de salida. Utilice el formulario de salida durante la creación de informes con los comandos [PRINT LABEL](print-label.md) y [PRINT SELECTION](print-selection.md) . Cada uno de los comandos de exportación ([EXPORT DIF](export-dif.md), [EXPORT SYLK](export-sylk.md) y [EXPORT TEXT](export-text.md)) utiliza también el formulario de salida.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra un uso típico de **FORM SET OUTPUT**. Note que aunque el comando **FORM SET OUTPUT** aparece inmediatamente antes de que el formulario sea utilizado, no es obligatorio. De hecho, el comando podría ejecutarse en un método completamente diferente, siempre y cuando se ejecute antes de este método:
 
@@ -49,7 +49,7 @@ El siguiente ejemplo muestra un uso típico de **FORM SET OUTPUT**. Note que aun
  MODIFY SELECTION([Parts]) //Este comando utiliza ambos formularios
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los registros en una lista de empleados:
 
@@ -59,7 +59,7 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
  PRINT SELECTION([Personnel])
 ```
 
-#### Ver también 
+## Ver también 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -70,7 +70,7 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

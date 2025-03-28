@@ -1,7 +1,10 @@
 ---
-id: Import_and_Export
+id: Import_and_Export_theme
 title: Import and Export
+slug: /commands/theme/Import-and-Export
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.EXPORT DATA.Syntax -->](../../commands-legacy/export-data.md)<br/>|

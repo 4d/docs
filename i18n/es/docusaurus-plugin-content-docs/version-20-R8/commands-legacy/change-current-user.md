@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->CHANGE CURRENT USER permite cambiar la identidad del usuario actual en la base, sin tener que salir.<!-- END REF--> El usuario puede cambiar su identidad utilizando la caja de diálogo de identificación del usuario de la base (cuando el comando se llama sin parámetros) o directamente vía el comando. Cuando un usuario cambia su identidad, el usuario abandona sus privilegios de acceso anteriores para beneficiarse de los del usuario elegido.
 
@@ -57,7 +57,7 @@ El principio es el siguiente:
 
 **3.** Cuando se valida la entrada, la información requerida (nombre de usuario y contraseña) se pasan al comando CHANGE CURRENT USER para abrir la base con los privilegios de la cuenta del usuario.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra la caja de diálogo de conexión:
 
@@ -67,12 +67,12 @@ El siguiente ejemplo muestra la caja de diálogo de conexión:
 
 **Nota:** este código no hace nada en una base proyecto monousuario.
 
-#### Ver también 
+## Ver también 
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

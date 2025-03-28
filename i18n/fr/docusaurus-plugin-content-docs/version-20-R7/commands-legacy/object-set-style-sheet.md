@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->La commande **OBJECT SET STYLE SHEET** vous permet de modifier, pour le process courant, la feuille de style associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Une feuille de style modifie la police, la taille de police et (hormis pour les feuilles de style automatique) le style de police.
 
@@ -41,14 +41,14 @@ Si vous utilisez au cours de la session les commandes [ST SET ATTRIBUTES](st-set
 
 Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
 *Styles de caractères*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

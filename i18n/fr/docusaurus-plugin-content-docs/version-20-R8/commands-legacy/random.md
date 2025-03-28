@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Random.Summary-->**Random** retourne une valeur entière aléatoire comprise entre 0 et 32 767 (inclus).<!-- END REF-->
 
@@ -25,7 +25,7 @@ Pour que la valeur aléatoire soit située dans un intervalle donné, utilisez l
 
 La valeur *début* est le premier nombre de l'intervalle, *fin* est le dernier. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant assigne une valeur entière aléatoire entre 10 et 30 à la variable *vRésultat* :
 
@@ -34,7 +34,7 @@ L'exemple suivant assigne une valeur entière aléatoire entre 10 et 30 à la va
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

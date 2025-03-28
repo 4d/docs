@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->La commande **SQL EXPORT DATABASE** exporte au format SQL tous les enregistrements de toutes les tables de la base.<!-- END REF--> En SQL, cette opération d’exportation globale est appelée "Dump". 
 
@@ -52,11 +52,11 @@ Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

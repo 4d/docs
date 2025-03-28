@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->El comando **WEB SEND HTTP REDIRECT** permite transformar una URL en otra.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Este comando también permite redirigir una petición a otro servidor web.
 
 Note que el estado de la petición enviada por este comando es **302: Moved Temporarily**. Si necesita una redirección permanente (status 301), puede fijar el campo HTTP *X-STATUS: 301* en el encabezado de la respuesta.
 
-#### Ejemplo 
+## Ejemplo 
 
 Puede utilizar este comando para efectuar, con la ayuda de páginas estáticas, búsquedas personalizadas en 4D. Imagine que coloca los siguientes elementos en una página HTML estática: 
 
@@ -57,7 +57,7 @@ En el [QR SET DESTINATION](qr-set-destination.md), inserte el siguiente código:
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

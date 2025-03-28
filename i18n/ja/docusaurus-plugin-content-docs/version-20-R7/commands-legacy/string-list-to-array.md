@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.STRING LIST TO ARRAY.Summary-->**STRING LIST TO ARRAY**コマンドは以下の要素から構築される*strings*<!-- END REF-->配列を生成します:
 
@@ -32,21 +32,21 @@ displayed_sidebar: docs
 
 **Tip:** ストリングリストの総サイズを32Kに、また1リソースあたり数百文字列に制限しなければなりません。
 
-#### XLIFFアーキテクチャとの互換性 
+## XLIFFアーキテクチャとの互換性 
 
 4D v11より、**STRING LIST TO ARRAY**コマンドはXLIFFアーキテクチャと互換があります。コマンドはまず*resID*と*strID*に対応するリソースをすべての開かれたXLIFFファイル内で探します (*resFile* 引数が省略されていれば)。この場合、*resID*は**group**要素の**id**属性を表し、*strID*は**trans-unit**要素の**id**属性を表します。値が見つからない場合、コマンドは引き続き開かれたリソースファイルを検索します。4DにおけるXLIFFアーキテクチャに関する詳細は4D Design Referenceマニュアルを参照してください。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リソースが見つかるとOK変数に1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

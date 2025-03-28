@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->El comando OBJECT SET LIST BY NAME define, reemplaza o disocia la lista asociada al objeto o al grupo de objetos designado por *objeto.<!-- END REF-->* La lista cuyo nombre se pasa en el parámetro *lista* debe haber sido creada en el editor de listas en el entorno Diseño*.*
 
@@ -44,7 +44,7 @@ La lista de valores existente se sustituye en función de cómo se asocie la lis
 * utilizando un array: la lista se copia en elementos de array.
 * utilizando un objeto (*no soportado en bases de datos binarias*): la lista se copia como elementos de la colección en la propiedad *values* del objeto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo define una lista asociada a un campo Envío. Si el envío debe realizarse en la noche, entonces la lista muestra las empresas que realizan envíos en la noche. De lo contrario, se asignan las empresas de envíos estándar:
 
@@ -59,7 +59,7 @@ OBJECT SET LIST BY NAME([Envios]Empresa;"Envios de noche")
 
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Asocia la lista "color\_choice" como una lista desplegable simple llamada "DoorColor":
 
@@ -68,7 +68,7 @@ Asocia la lista "color\_choice" como una lista desplegable simple llamada "DoorC
   // en este caso, el tercer parámetro (constante) puede omitirse
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted desea asociar la lista "color\_choice" al combo box "WallColor". Como este combo box es editable, usted desea que no sea posible usar ciertos colores como el "negro", "morado", etc. Estos colores se colocan en la lista "excl\_colors":
 
@@ -77,7 +77,7 @@ Usted desea asociar la lista "color\_choice" al combo box "WallColor". Como este
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Usted quiere eliminar la lista de asociaciones:
 
@@ -88,12 +88,12 @@ Usted quiere eliminar la lista de asociaciones:
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

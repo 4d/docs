@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INTEGER TO BLOB.Summary-->El comando INTEGER TO BLOB escribe el valor entero (2 bytes) *entero* en el BLOB *blob*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Después de llamar el comando, se devuelve la variable del parámetro *offset*, 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Después de la ejecución de este código:
 
@@ -58,7 +58,7 @@ Después de la ejecución de este código:
 * Los otros bytes del BLOB no cambian
 * La variable *vlOffset* se ha incrementado en 2 (y ahora es igual a 52)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Después de la ejecución de este código:
 
@@ -69,7 +69,7 @@ Después de la ejecución de este código:
 * El tamaño de *vxBlob* is 2 bytes
 * En todas las plataformas *vxBLOB{0}* \= *$06* and *vxBLOB{1}* \= *$02*
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Después de la ejecución de este código:
 
@@ -82,7 +82,7 @@ Después de la ejecución de este código:
 * En todas las plataformas *vxBLOB{100}* \= *$06* and *vxBLOB{101}* \= *$02*
 * Los otros bytes del BLOB no cambian
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Después de la ejecución de este código:
 
@@ -94,7 +94,7 @@ Después de la ejecución de este código:
 * En Macintosh *vxBLOB{0}* \= *$02* y *vxBLOB{1}* \= *$06*
 * En PC *vxBLOB{0}* \= *$06* y *vxBLOB{1}* \= *$02*
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Después de la ejecución de este código:
 
@@ -105,7 +105,7 @@ Después de la ejecución de este código:
 * El tamaño de *vxBlob* es 2 bytes
 * En todas las plataformas *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -115,7 +115,7 @@ Después de la ejecución de este código:
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -1,7 +1,10 @@
 ---
-id: Record_Locking
+id: Record_Locking_theme
 title: Record Locking
+slug: /commands/theme/Record-Locking
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.LOAD RECORD.Syntax -->](../../commands-legacy/load-record.md)<br/>|

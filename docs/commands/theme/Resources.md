@@ -1,7 +1,10 @@
 ---
-id: Resources
+id: Resources_theme
 title: Resources
+slug: /commands/theme/Resources
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLOSE RESOURCE FILE.Syntax -->](../../commands-legacy/close-resource-file.md)<br/>|

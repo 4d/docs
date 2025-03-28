@@ -630,7 +630,7 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- END REF -->
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
@@ -966,7 +966,7 @@ $info:=$address.getRemoteContextAttributes()
 |                  | task_name           | テキスト                | プロセス名                                                                                                                                             |
 |                  | client_version      | テキスト                | クライアントのリリース                                                                                                                                       |
 |                  |                     |                     | ***RESTセッションによるロックの場合:***                                                                                                                         |
-|                  | host                | テキスト                | エンティティをロックした URL (例: "www.myserver.com")                                                                                                          |
+|                  | host                | テキスト                | URL that locked the entity (e.g. "`www.myserver.com`")                                                                                            |
 |                  | IPAddr              | テキスト                | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
 |                  | userAgent           | テキスト                | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):                                                                          |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->El comando **SET MENU ITEM SHORTCUT** asigna un nuevo acceso directo a un elemento del menú.<!-- END REF--> 
 
@@ -46,7 +46,7 @@ Por razones de compatibilidad, el comando también acepta un código carácter e
   
 Si se pasa 0 (cero) en *itemKey*, se elimina cualquier acceso directo del elemento de menú.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la línea "Subrayado": 
 
@@ -55,7 +55,7 @@ Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la l�
  SET MENU ITEM SHORTCUT(MenuRef;1;"U";Shift key mask)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Definición del atajo Ctrl+R (Windows) y Cmd+R (Mac OS) para el elemento de menú "Reiniciar":
 
@@ -64,7 +64,7 @@ Definición del atajo Ctrl+R (Windows) y Cmd+R (Mac OS) para el elemento de men�
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Definición del atajo de teclado F4 para la opción de menú "Cerrar":
 
@@ -73,12 +73,12 @@ Definición del atajo de teclado F4 para la opción de menú "Cerrar":
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

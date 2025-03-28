@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](previous-record.md) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
 
@@ -37,7 +37,7 @@ Pour replacer le pointeur d'enregistrement courant dans la sélection courante, 
  End case
 ```
 
-#### Exemple 
+## Exemple 
 
 La méthode formulaire suivante est utilisée pendant l'impression d'un état. Elle définit une variable *vTitre* à imprimer dans la zone d'en-tête sur la première page :
 
@@ -56,7 +56,7 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
@@ -64,7 +64,7 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

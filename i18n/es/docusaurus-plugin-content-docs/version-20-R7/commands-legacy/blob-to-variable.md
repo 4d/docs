@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB TO VARIABLE.Summary-->El comando BLOB TO VARIABLE reescribe la variable *variable* con los datos almacenados en el BLOB *blob* en el offset de bytes (a partir de cero) especificado por *offset*.<!-- END REF-->
 
@@ -30,19 +30,19 @@ Después de llamar el comando, si la variable ha sido reescrita con éxito, la v
 
 **Nota sobre la independencia de plataforma:** BLOB TO VARIABLE y [VARIABLE TO BLOB](variable-to-blob.md) utilizan un formato interno de 4D para administrar las variables almacenadas en los BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas mientras utiliza estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando cualquiera de estos dos comandos puede ser reutilizado en Macintosh y viceversa.
 
-#### Ejemplo 
+## Ejemplo 
 
 Vea los ejemplos para el comando [VARIABLE TO BLOB](variable-to-blob.md "VARIABLE TO BLOB").
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable OK toma el valor 1 si la variable ha sido reescrita correctamente, de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

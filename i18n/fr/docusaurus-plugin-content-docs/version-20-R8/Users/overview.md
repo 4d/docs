@@ -8,7 +8,7 @@ Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans
 La stratégie de contrôle d'accès 4D dépend de la configuration de votre déploiement :
 
 - dans les applications multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
+- dans les applications monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands-legacy/current-system-user.md).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
@@ -40,7 +40,7 @@ If(Current system user = $user) //vous pouvez stocker des utilisateurs dans une 
 End if
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command, for example:
+Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Designer" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](../commands-legacy/set-user-alias.md), par exemple:
 
 ```4d
 SET USER ALIAS(Current system user)

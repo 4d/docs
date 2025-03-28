@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->El comando COMBINE PICTURES permite combinar las imágenes *imag1* e *imag2* en modo *operador* para producir una tercera, *imagenResult*.<!-- END REF--> La imagen resultante es de tipo compuesto y conserva todas las características de las imágenes fuente. 
 
@@ -34,7 +34,7 @@ Si se utilizan los parámetros opcionales *despHor* y *despVert*, una traducció
 
 **Nota:** la superposición efectuada por el comando COMBINE PICTURES difiere de la superposición propuesta por los operadores clásicos & y |(superposición exclusiva y superposición inclusiva). Mientras que el comando COMBINE PICTURES conserva las características de cada imagen fuente en la imagen resultantes, los operadores & y | procesan cada píxel y generan una imagen bitmap en todos los casos. Estos operadores, concebidos originalmente para las imágenes monocromáticas, ahora son obsoletos.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dadas las siguientes imágenes: 
 
@@ -48,11 +48,11 @@ Resultado:
 
 ![](../assets/en/commands/pict27794.es.png)
 
-#### Ver también 
+## Ver también 
 
 [TRANSFORM PICTURE](transform-picture.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

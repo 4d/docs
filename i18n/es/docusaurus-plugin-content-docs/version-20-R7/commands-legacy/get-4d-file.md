@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get 4D file.Summary-->El comando **Get 4D file** devuelve la ruta de acceso al archivo del entorno 4D especificado por el parámetro *archivo*.<!-- END REF--> La ruta se devuelve utilizando la sintaxis sistema.
 
@@ -56,7 +56,7 @@ Cuando el comando se llama desde un componente, pase el parámetro opcional *\**
 
 En cuanto a User settings file for data y User settings file, una ruta se devuelve sólo si la opción de seguridad **Autorizar las propiedades usuario en un archivo externo** se ha seleccionado en la caja de diálogo Propiedades de la base (ver ). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere obtener la ruta del último archivo de backup:
 
@@ -66,11 +66,11 @@ Usted quiere obtener la ruta del último archivo de backup:
   // $path = "C:\Backups\Countries\Countries[0025].4BK" por ejemplo
 ```
 
-#### Ver también 
+## Ver también 
 
 [File](../commands/file.md)    
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

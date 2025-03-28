@@ -1,7 +1,10 @@
 ---
-id: Forms
+id: Forms_theme
 title: Forms
+slug: /commands/theme/Forms
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current form name.Syntax -->](../../commands-legacy/current-form-name.md)<br/>|

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SORT ARRAY.Summary-->La commande **SORT ARRAY** trie un ou plusieurs tableau(x) par ordre croissant ou décroissant.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Le second paramètre spécifie l'ordre du tri : croissant ou décroissant. Si ce
 
 Si plus d'un tableau est spécifié, les tableaux sont triés en fonction de l'ordre défini pour le premier tableau (les tris multi-niveaux ne sont pas possibles dans ce cas). Utilisez plutôt la commande [MULTI SORT ARRAY](multi-sort-array.md) si vous souhaitez effectuer des tris de tableaux synchronisés.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant crée deux tableaux et les trie en fonction du nom de la société :
 
@@ -43,7 +43,7 @@ Cependant, comme **SORT ARRAY** n'effectue pas de tris multi-niveaux, les noms d
  SELECTION TO ARRAY([Personnes]Noms;tabNoms;[Personnes]Sociétés;tabSociétés)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous affichez les noms d'une table \[Personnes\] dans une fenêtre flottante. Cette liste de noms peut être triée de A vers Z ou de Z vers A en fonction du bouton sur lequel vous cliquez, dans la fenêtre. Comme il se peut que certaines personnes portent le même nom, vous avez également créé un champ *\[Personnes\]Numéro ID* qui est un champ indexé unique. Lorsque vous cliquez sur un nom dans la liste, vous voulez récupérer l'enregistrement correspondant. En utilisant un tableau synchronisé et caché des numéros d'ID, vous êtes certain d'accéder à l'enregistrement correspondant au nom sélectionné :
 
@@ -74,14 +74,14 @@ Vous affichez les noms d'une table \[Personnes\] dans une fenêtre flottante. Ce
  SORT ARRAY(tabNoms;tabIDs;<)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

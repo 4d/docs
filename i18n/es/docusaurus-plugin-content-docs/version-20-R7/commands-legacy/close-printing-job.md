@@ -12,18 +12,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->El comando **CLOSE PRINTING JOB** permite cerrar el trabajo de impresión previamente abierto por el comando [OPEN PRINTING JOB](open-printing-job.md) y enviar a la impresora actual el documento de impresión creado.<!-- END REF-->
 
   
 **Nota de compatibilidad**: a partir de 4D v20 R4, los trabajos de impresión no se bloquean en los nuevos proyectos. Para obtener más información, consulte la documentación de la [opción de impresión sin bloqueo](../settings/compatibility.md) en los parámetros de compatibilidad.
 
-#### Ver también 
+## Ver también 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

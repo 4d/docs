@@ -5,7 +5,7 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * | > )}<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

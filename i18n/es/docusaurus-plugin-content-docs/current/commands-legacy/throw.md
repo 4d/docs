@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.throw.Summary-->El comando **throw** crea un error que será lanzado inmediatamente o cuando el método que lo llama devuelva a su llamador (modo diferido).<!-- END REF-->
 
@@ -60,7 +60,7 @@ Lanza todos los errores actuales en **modo diferido**, lo que significa que se a
 * **En una aplicación**: cuando se produce un error, se añade a la pila de errores y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación al final del método actual. La función [Last errors](last-errors.md) devuelve la pila de errores.
 * **Como consecuencia, en un componente:** la pila de errores se puede enviar a la aplicación local y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación local.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 ```4d
  var $code : Integer
@@ -70,43 +70,43 @@ Lanza todos los errores actuales en **modo diferido**, lo que significa que se a
  throw($code ;$description) //  Lanza un error con el mensaje "This is a custom error" y errCode = 50042
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 ```4d
 throw({errCode: 1; message: "This an error"}) // Lanza un error con el mensaje errCode = 1 y mensaje "This an error"
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 ```4d
 throw({errCode: 1}) // Lanza un error con errCode = 1 y el mensaje "Error code: 1 (host)"
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 ```4d
 throw({message: "This an error"}) // Lanza un error con errCode = -1 y el mensaje "This is my error"
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 ```4d
 throw({message: "This is my error"; deferred: True}) // Lanza un error con el mensaje "This is my error" y errCode = -1 en modo diferido
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 ```4d
 throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lanza un error con el mensaje "File myFileName not found (myFilePath)" en modo diferido.
 ```
 
-#### Ver también 
+## Ver también 
 
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

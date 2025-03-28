@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->**START MONITORING ACTIVITY** コマンドは*duration* 引数で指定した時間を超えるオペレーションをメモリ内に記録します。<!-- END REF-->4D リモート、4D Server、スタンドアロン版4D から呼び出しまたは実行が可能です(ただしスタンドアロン版は*source* 引数のソースがネットワークアクティビティでない場合)。記録されたアクティビティは[Monitored activity](monitored-activity.md) コマンドを使用することで取得可能です。アクティビティの記録を停止したい場合には[STOP MONITORING ACTIVITY](stop-monitoring-activity.md) を呼び出してください。
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **注**: デバッグログが4D Server の[Administration window](../ServerWindow/overview.md)にて停止された場合、**START MONITORING ACTIVITY** とActivity network 定数を使用するとログが再開されます。
 
-#### 例題 
+## 例題 
 
 1ミリ秒を超える4D データとデバッグアクティビティのモニタリングを開始/終了したいような場合を考えます:
 
@@ -88,12 +88,12 @@ displayed_sidebar: docs
  }  
 \]
 
-#### 参照 
+## 参照 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

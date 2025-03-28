@@ -222,7 +222,7 @@ Exibe/oculta a régua horizontal quando a visualização do documento está no m
 
 ---
 
-## Show HTML WYSIWYG
+## Mostrar HTML WYSIWYG
 
 Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avançados do 4D Write Pro que não são compatíveis com todos os navegadores são removidos.
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->La commande **METHOD SET COMMENTS** remplace la documentation de la ou des méthode(s) désignée(s) par le paramètre *chemin* par ceux définis dans le paramètre *commentaires*.<!-- END REF-->
 
@@ -48,7 +48,7 @@ Si un chemin d’accès passé est invalide, une erreur est générée.
 
 Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-#### Exemple 
+## Exemple 
 
 Ajout d’une date de modification à une documentation de trigger existante :
 
@@ -58,11 +58,11 @@ Ajout d’une date de modification à une documentation de trigger existante :
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

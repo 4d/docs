@@ -1,7 +1,10 @@
 ---
-id: Data_Security
+id: Data_Security_theme
 title: Data Security
+slug: /commands/theme/Data-Security
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Data file encryption status.Syntax -->](../../commands-legacy/data-file-encryption-status.md)<br/>|

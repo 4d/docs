@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current form table.Summary-->El comando Current form table devuelve el puntero hacia la tabla del formulario en pantalla o impreso en el proceso actual.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si el formulario mostrado actualmente es el formulario detallado de un área de 
 * El puntero hacia la tabla mostrada en el área del subformulario, si el subformulario muestra una tabla.
 * Un puntero no significativo, si el área de subformulario muestra una subtabla.
 
-#### Ejemplo 
+## Ejemplo 
 
 En su aplicación, utiliza la siguiente convención cuando visualiza un registro:  
 Si la variable *vsCurrentRecord* está presente en un formulario, muestra “Nuevo registro” si está trabajando con un nuevo registro. Si está trabajando con el registro 56 de una selección compuesta por 5200 registros, muestra “56 de 5200”.
@@ -57,14 +57,14 @@ Para esto, utilice el método de objeto para crear la variable *vsCurrentRecord*
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [DIALOG](dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

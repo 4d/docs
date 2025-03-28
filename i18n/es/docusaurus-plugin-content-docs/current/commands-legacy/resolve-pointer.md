@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->El comando RESOLVE POINTER recupera la información del objeto referenciado por la expresión de puntero *puntero* y la devuelve en los parámetros *nomVar*, *numTabla,* y *numCamp*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Dependiendo de la naturaleza del objeto referenciado, RESOLVE POINTER devuelve l
 • Si el valor que pasa en *puntero* no es una expresión de tipo puntero, se generará un error de sintaxis.  
 • El comando RESOLVE POINTER no funciona con punteros a variables locales. De hecho, por definición muchas variables locales con el mismo nombre podrían existir en diferentes lugares, de manera que no es posible para el comando encontrar la variable correcta.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En un formulario, usted crea un grupo de 100 variables editables llamadas v1, v2... v100\. Para hacer esto, usted realiza los siguientes pasos:
 
@@ -64,7 +64,7 @@ e. En el método HacerAlgo, si necesita conocer el índice de la variable para l
 
 Note que construyendo su formulario de esta manera, usted escribe los métodos para las 100 variables sólo una vez; no necesita escribir HacerAlgo (1), HacerAlgo (2)...,HacerAlgo (100).
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Por propósitos de depuración, necesita verificar que el segundo parámetro ($2) de un método es un puntero a una tabla. Al comienzo de este método, escribe: 
 
@@ -80,11 +80,11 @@ Por propósitos de depuración, necesita verificar que el segundo parámetro ($2
   // ...
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Ver el ejemplo del comando DRAG AND DROP PROPERTIES.
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Este es un ejemplo de puntero a un array 2D:
 
@@ -102,7 +102,7 @@ Este es un ejemplo de puntero a un array 2D:
   //$colNum="5"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -110,7 +110,7 @@ Este es un ejemplo de puntero a un array 2D:
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

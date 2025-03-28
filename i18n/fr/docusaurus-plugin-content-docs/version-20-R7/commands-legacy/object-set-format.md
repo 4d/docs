@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** remplace le format d'affichage du ou des objet(s) spécifié(s) par *objet* avec le format que vous avez passé dans *formatAffich*.<!-- END REF--> Le nouveau format est utilisé uniquement pour l'affichage courant, il n'est pas stocké avec le formulaire.
 
@@ -270,7 +270,7 @@ Pour formater l'icône d'un en-tête de list box, passez dans le paramètre *for
 
 Cette fonctionnalité est utile par exemple lorsque vous voulez travailler avec une icône de tri personnalisée. 
 
-#### Exemple 1 
+## Exemple 1 
 
 La ligne de code suivante formate le champ *\[Employés\]Date embauche* au cinquième format de date. 
 
@@ -278,7 +278,7 @@ La ligne de code suivante formate le champ *\[Employés\]Date embauche* au cinqu
  OBJECT SET FORMAT([Employés]Date embauche;Char(Internal date long))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple formate une variable de date et une variable d'heure en utilisant des [formats personnalisés](../Project/date-time-formats.md) :
 
@@ -287,19 +287,19 @@ Cet exemple formate une variable de date et une variable d'heure en utilisant de
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant change le format d'un champ *\[Sociétés\]Code postal* selon la longueur du code postal : 
 
 ```4d
  If(Length([Sociétés]Code postal)=9)
-    OBJECT SET FORMAT([Sociétés]Code postal;"###–####")
+    OBJECT SET FORMAT([Sociétés]Code postal;"###–##")
  Else
     OBJECT SET FORMAT([Sociétés]Code postal;"###")
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant formate la valeur d'un champ numérique selon qu'elle est positive, négative ou nulle :
 
@@ -307,7 +307,7 @@ L'exemple suivant formate la valeur d'un champ numérique selon qu'elle est posi
  OBJECT SET FORMAT([Stats]Résultat;"### ##0.00;(### ##0.00);")
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 L'exemple suivant définit le format d'un champ booléen pour afficher soit "Marié" soit "Célibataire" au lieu des valeurs par défaut "Oui" et "Non" : 
 
@@ -315,7 +315,7 @@ L'exemple suivant définit le format d'un champ booléen pour afficher soit "Mar
  OBJECT SET FORMAT([Employés]Situation;"Marié;Célibataire")
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 En supposant que vous avez stocké un fichier image nommé "envelope\_open.png" dans le dossier Resources de la base, vous pouvez écrire :
 
@@ -327,7 +327,7 @@ En supposant que vous avez stocké un fichier image nommé "envelope\_open.png" 
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### Exemple 7 
+## Exemple 7 
 
 L'exemple suivant définit le format d'un champ booléen pour afficher une case à cocher libellée "Classé" : 
 
@@ -335,7 +335,7 @@ L'exemple suivant définit le format d'un champ booléen pour afficher une case 
  OBJECT SET FORMAT([Dossier]Classement;"Classé")
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 Vous disposez d’un tableau d’imagettes contenant 1 ligne et 4 colonnes, destiné à afficher un bouton image (“actif par défaut”, “bouton cliqué”, “survol du curseur” et “inactivé”). Vous souhaitez lui associer les options Bascule sur passage du curseur, Retour sur relâchement du clic et Dernière imagette si désactivé : 
 
@@ -343,7 +343,7 @@ Vous disposez d’un tableau d’imagettes contenant 1 ligne et 4 colonnes, dest
  OBJECT SET FORMAT(*;"BoutonImage";"4;1;?15000;176")
 ```
 
-#### Exemple 9 
+## Exemple 9 
 
 Passage d'un thermomètre en mode "Barber shop" : 
 
@@ -352,14 +352,14 @@ Passage d'un thermomètre en mode "Barber shop" :
  $Monthermo:=1 //Déclencher l'animation
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

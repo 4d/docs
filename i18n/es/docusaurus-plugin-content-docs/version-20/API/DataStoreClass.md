@@ -277,7 +277,6 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -386,7 +385,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Histórico</summary>
@@ -468,7 +466,6 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -497,7 +494,7 @@ La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Ejemplo
 
@@ -614,7 +611,7 @@ En un almacén de datos remoto:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -738,7 +735,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Histórico</summary>
@@ -930,7 +927,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -1279,7 +1276,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Histórico</summary>

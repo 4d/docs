@@ -5,7 +5,7 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( {*aTable* }{;}{ *document* {; * | >}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *aTable* {; *document* {; * }} )<br/>**PRINT LABEL** ( *aTable* {; *document* {; >}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

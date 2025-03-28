@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->El comando **Print settings to BLOB** guarda los ajustes de impresión 4D actuales en el BLOB *confImp*.<!-- END REF--> El parámetro *confImp* almacena todos los valores utilizados para la impresión:
 
@@ -32,7 +32,7 @@ El comando devuelve 1 si el BLOB se ha generado correctamente y 0 si no se selec
 El BLOB *confImp* se puede guardar y leer en ambas plataformas. Sin embargo, incluso si algunos ajustes de impresión son comunes, algunos otros son específicos de la plataforma y dependen de los controladores y las versiones de sistema. Si el mismo BLOB *confImp* se comparte entre ambas plataformas, es posible que pierda partes de información.  
 Cuando se utiliza en un entorno heterogéneos, con el fin de restaurar la máxima configuración disponible para cada plataforma (y no sólo la parte común), se recomienda que maneje dos BLOBs *confImp*, uno para cada plataforma.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea almacenar la configuración de impresión actual en el disco:
 
@@ -49,12 +49,12 @@ Usted desea almacenar la configuración de impresión actual en el disco:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->La commande **SET PICTURE METADATA** permet d’écrire ou de modifier le contenu de métadonnées (ou méta-balises) présentes dans *image* (champ ou une variable image 4D), lorsqu'elles sont modifiables.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Sous Windows, si une erreur se produit durant l’exécution de la commande, la 
 * Seuls certains formats d'images (notamment JPEG et TIFF) prennent en charge les métadonnées. A l'inverse, des formats tels que GIF ou BMP n'acceptent pas les métadonnées. En cas de conversion d'une image avec métadonnées dans un format ne les prenant pas en charge, les informations sont perdues.
 * Sous macOS version 10.7 (Lion), un bogue du framework natif utilisé pour l'encodage et le décodage des métadonnées d'images peut entraîner des erreurs de précision dans les coordonnées GPS. Dans ce cas, une mise à jour vers macOS 10.8 (Mountain Lion) ou 10.9 (Maverick) est fortement recommandée.
 
-#### Exemple 1 
+## Exemple 1 
 
 Ecriture de plusieurs valeurs de la métadonnée "Keywords" via des tableaux :
 
@@ -54,7 +54,7 @@ Ecriture de plusieurs valeurs de la métadonnée "Keywords" via des tableaux :
  SET PICTURE METADATA(vImage;IPTC keywords;$tTkeywords)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ecriture du bloc GPS via une référence DOM :
 
@@ -70,18 +70,18 @@ Ecriture du bloc GPS via une référence DOM :
  DOM CLOSE XML($domMetas)
 ```
 
-#### Note 
+## Note 
 
 Lorsque toutes les métadonnées sont manipulées via une référence d’éléments DOM, les balises sont stockées comme attributs attachés à un élément (enfant de l’élément référencé) dont le nom est le nom du bloc (TIFF, IPTC, etc.). Lorsqu’un bloc de métadonnées spécifique est manipulé, les balises du bloc sont stockées comme attributs directement attachés à l’élement référencé par la commande. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 *Noms des métadonnées images*  
 *Valeurs des métadonnées images*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

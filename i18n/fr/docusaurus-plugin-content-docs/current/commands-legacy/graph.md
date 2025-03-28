@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GRAPH.Summary-->La commande **GRAPH** crée un graphe dans une variable image à partir de valeurs provenant de tableaux.<!-- END REF-->
 
@@ -107,7 +107,7 @@ Lorsque vous utilisez le paramètre *graphParams*, vous devez passer un objet qu
 | Graph yMax                        | Chaîne | yMax                       | **Valeurs possibles** : Nombres<br/>Si ce paramètre est manquant, 4D calcule automatiquement la valeur yMax.<br/>Tous types sauf 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Graph yMin                        | Chaîne | yMin                       | **Valeurs possibles** : Nombres<br/>Si ce paramètre est manquant, 4D calcule automatiquement la valeur yMin.<br/>Tous types sauf 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-#### Exemple 1 
+## Exemple 1 
 
 Syntaxe avec *graphNum* : l'exemple suivant illustre les différents types de graphes que vous pouvez obtenir. Ce code doit être placé dans la méthode formulaire (ou une méthode objet) du formulaire contenant la variable image. A noter que, dans notre exemple, les données représentées sont constantes, ce qui n'est généralement pas le cas :
 
@@ -145,7 +145,7 @@ Les images suivantes représentent les graphes résultants :
 * Lorsque *vType* est égal à 8, vous obtenez un graphe en **Images :**  
 ![](../assets/en/commands/pict847124.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Syntaxe avec *graphParams* : Avec l'exemple suivant, vous dessinez un simple graphe en lignes basé sur des valeurs de temps :
 
@@ -180,7 +180,7 @@ Syntaxe avec *graphParams* : Avec l'exemple suivant, vous dessinez un simple gra
 
 ![](../assets/en/commands/pict2603210.en.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 Avec les mêmes valeurs, on ajoute des paramètres personnalisés pour obtenir une vue différente :
 
@@ -221,7 +221,7 @@ Avec les mêmes valeurs, on ajoute des paramètres personnalisés pour obtenir u
 
 ![](../assets/en/commands/pict2603212.en.png)
 
-#### Exemple 4 
+## Exemple 4 
 
 Dans cet exemple, on personnalise divers paramètres :
 
@@ -270,14 +270,14 @@ Dans cet exemple, on personnalise divers paramètres :
 
 ![](../assets/en/commands/pict2648517.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [GRAPH SETTINGS](graph-settings.md)  
 *Paramètre des graphes*  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

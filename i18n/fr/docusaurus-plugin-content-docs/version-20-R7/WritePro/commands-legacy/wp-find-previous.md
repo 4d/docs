@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Find previous.Summary-->La commande **WP Find previous** recherche le paramètre *objCible,* avant la plage rechercherAvant, pour le paramètre rechercherValeur fondé sur conditionRecherche.<!-- END REF--> Un paramètre optionnel peut être utilisé pour remplacer les résultats trouvés.
 
@@ -77,7 +77,7 @@ Si objCible est une plage ou un élément, les valeurs trouvées sont retournée
 
 Une plage vide est retournée si aucun résultat est trouvé. 
 
-#### Exemple 
+## Exemple 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$previousRanges: object
@@ -96,7 +96,7 @@ Une plage vide est retournée si aucun résultat est trouvé.
  $previousRanges:=WP Find previous($target;"alpha";$options)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Find all](wp-find-all.md)  
 [WP Find next](wp-find-next.md)  

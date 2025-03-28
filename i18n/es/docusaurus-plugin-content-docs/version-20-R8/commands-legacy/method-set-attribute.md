@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->El comando **METHOD SET ATTRIBUTE** permite definir el valor del atributo *tipoAtrib* para el método proyecto designado por el parámetro *ruta*.<!-- END REF--> Este comando sólo funciona con métodos proyecto. Si pasa una *ruta* invalida, se genera un error. 
 
@@ -46,7 +46,7 @@ Puede ejecutar este comando desde un componente, pero en este caso debe pasar el
 
 Este comando no puede ejecutarse en modo compilado. Cuando se llama en este modo, generará el error -9762\. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Selección de la propiedad "Compartido entre componentes y la base local" para el método proyecto "Selección diálogo":
 
@@ -54,7 +54,7 @@ Selección de la propiedad "Compartido entre componentes y la base local" para e
  METHOD SET ATTRIBUTE("Selección diálogo";Attribute shared;True)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Definición de varios pares de atributos/valores:
 
@@ -62,13 +62,13 @@ Definición de varios pares de atributos/valores:
  METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Acceso objetos diseño*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

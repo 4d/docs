@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** define los objetos formulario especificados por *objeto* para mostrarse utilizando el tamaño de fuente que se pasa en *tamaño*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ El área para el objeto, como se definió en el formulario, debe ser lo suficien
 
 **Nota:** si utiliza este comando en un *objeto* que estaba utilizando una hoja de estilo, la referencia a la hoja de estilo se elimina automáticamente del objeto - incluso si asigna los mismos atributos que los de la hoja de estilo.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo define el tamaño de fuente para una variable llamada *vtInfo*: 
 
@@ -35,7 +35,7 @@ El siguiente ejemplo define el tamaño de fuente para una variable llamada *vtIn
  OBJECT SET FONT SIZE(vtInfo;14)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo define el tamaño de fuente para todos los objetos de formulario cuyo nombre comienza por "hl": 
 
@@ -43,14 +43,14 @@ El siguiente ejemplo define el tamaño de fuente para todos los objetos de formu
  OBJECT SET FONT SIZE(*;"hl@";14)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Interacción de comandos genéricos con textos multiestilos*  
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

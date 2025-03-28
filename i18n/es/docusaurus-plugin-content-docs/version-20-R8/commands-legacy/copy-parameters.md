@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Copy parameters.Summary-->El comando Copy parameters devuelve una nueva colección que contiene todos los parámetros realmente pasados a un método o una función.<!-- END REF--> Este comando es útil cuando se necesita reenviar un número variado de parámetros de un método o función a otro método o función.
 
@@ -27,7 +27,7 @@ Cuando se llama dentro de una fórmula, **Copy parameters** devuelve los paráme
 * no se llama en un método o función que haya sido llamado por otro método o función,
 * no se ha pasado ningún parámetro al método padre o función.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Llamando a una función diferente dependiendo del primer parámetro y pasando otros parámetros a esta función:
 
@@ -48,7 +48,7 @@ O, llamando a otra función en otro objeto con **apply()** y pasar los parámetr
  This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Como el comando devuelve una colección, se puede utilizar con **.join()** para crear, por ejemplo, una lista html:
 
@@ -77,11 +77,11 @@ Como el comando devuelve una colección, se puede utilizar con **.join()** para 
 
 ```
 
-#### Ver también 
+## Ver también 
 
 [Count parameters](count-parameters.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

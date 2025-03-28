@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** ejecuta *instruccion* como una línea de código.<!-- END REF--> Este comando está diseñado para ser utilizado cuando necesita evaluar expresiones que el usuario puede construir o modificar. 
 
@@ -53,7 +53,7 @@ El tamaño de la caché es cero por defecto (sin caché); debe ser creada o ajus
 
 El comando **EXECUTE FORMULA** utiliza la caché sólo cuando se llama desde una base o componente compilado.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea ejecutar una fórmula incluida las llamadas a los comandos y tablas 4D. Dado que estos elementos potencialmente podrían ser renombrados, quiere asegurarse de la correcta ejecución de la instrucción en las versiones futuras de su aplicación utilizando la sintaxis *tokens*:
 
@@ -61,13 +61,13 @@ Usted desea ejecutar una fórmula incluida las llamadas a los comandos y tablas 
  EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

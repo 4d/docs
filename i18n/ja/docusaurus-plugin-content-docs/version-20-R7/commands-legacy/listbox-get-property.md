@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->**LISTBOX Get property**コマンドは、引数*object*および *\** で指定されたリストボックスまたはカラムについて、*property* の値を返します。<!-- END REF-->
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 * 定数 \_o\_lk hor scrollbar positionおよび \_o\_lk ver scrollbar position を使用すると、**LISTBOX Get property**コマンドは、スクロールカーソルの起点からの相対位置を (つまり、ウィンドウの隠された部分のサイズを) ピクセル単位で返します。デフォルトの位置では、0となります。例えば、行の高さの情報と組み合わせることで、リストボックスに表示されたコンテンツを見つけることができます。ただし、これらの定数は廃止されており、より便利な [OBJECT GET SCROLL POSITION](object-get-scroll-position.md) コマンドに置き換えることができます。
 * フッターが表示されている場合、ステートメント **LISTBOX Get property**(vLB;\_o\_lk footer height) は [LISTBOX Get footers height](listbox-get-footers-height.md) コマンドと同じ値を返します。しかし、フッターが表示されていない場合には、**LISTBOX Get property** は0を返し、[LISTBOX Get footers height](listbox-get-footers-height.md) はフッターの高さの理論値を返します。
 
-#### 例題 1 
+## 例題 1 
 
 "MyListbox"というリストボックスがあったとき、以下のステートメントを実行すると:
 
@@ -86,7 +86,7 @@ displayed_sidebar: docs
 
 この場合、返される値は複数行が選択可能かどうかを表します。
 
-#### 例題 2 
+## 例題 2 
 
 "MyListbox"というリストボックスがある場合、以下のステートメントを実行すると:
 
@@ -96,13 +96,13 @@ displayed_sidebar: docs
 
 **LISTBOX Get property** は-1を返します。なぜならlk column resizable プロパティはカラムに適用される一方で、引数として渡されたのはリストボックスだからです。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

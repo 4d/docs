@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Date.Summary-->La fonction **Date** extrait et retourne la date de la chaîne *expression*.<!-- END REF-->
 
@@ -43,7 +43,7 @@ Les caractères de séparation de date autorisés sont les suivants : barre obli
 **Expression de type date** 
 Si expression est de type date, **Date** retourne la date passée dans le paramètre, telle quelle. Ce principe est utile en programmation générique, lors de l'utilisation de pointeurs ou d'attributs d'objets.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant demande à l'utilisateur de saisir une date. La chaîne saisie est convertie en date et stockée dans la variable DemDate :
 
@@ -54,7 +54,7 @@ L'exemple suivant demande à l'utilisateur de saisir une date. La chaîne saisie
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Les exemples suivants illustrent divers cas de conversion :
 
@@ -68,7 +68,7 @@ Les exemples suivants illustrent divers cas de conversion :
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Evaluation d'une date à partir d'une date au format ISO :
 
@@ -78,7 +78,7 @@ Evaluation d'une date à partir d'une date au format ISO :
      //$vDate représente le 5 juin 2013 quelle que soit la langue du système
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'option courante de stockage d'attribut de date :
 
@@ -90,12 +90,12 @@ Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'optio
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Bool](bool.md)  
 [String](string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->La commande **SET MENU ITEM** remplace le libellé de la ligne de menu, dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*, par le libellé que vous avez passé dans *texteLigne*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
@@ -27,13 +27,13 @@ Si vous omettez le paramètre *process*, **SET MENU ITEM** s'applique à la barr
 
 **Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

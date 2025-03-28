@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUIT 4D.Summary-->El comando QUIT 4D sale de la aplicación 4D y regresa al escritorio.<!-- END REF-->
 
@@ -50,7 +50,7 @@ Si hay un *Método base On Server Shutdown*, se ejecuta después del tiempo defi
 
 La acción del comando QUIT 4D utilizada en un procedimiento almacenado es la misma del comando Salir del menú Archivo de 4D Server: provoca la aparición de una caja de diálogo en cada equipo cliente indicando que el servidor está a punto de cerrar.
 
-#### Ejemplo 
+## Ejemplo 
 
 El método de proyecto siguiente está asociado al elemento de menú Salir en el menú Archivo.
 
@@ -63,11 +63,11 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Método base On Exit](metodo-base-on-exit.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

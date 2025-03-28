@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Verify password hash.Summary-->La fonction **Verify password hash** vérifie que l'empreinte cryptographique *hash* correspond bien au *motDePasse*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et anal
 
 **Rappel :** Seul l'algorithme bcrypt est pris en charge. Si votre hash n'as pas été généré à l'aide du bcrypt, une erreur est retournée.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple compare un hash de mot de passe créé par la commande [Generate password hash](generate-password-hash.md) et stocké dans la table \[Users\] avec un mot de passe qui vient d'être saisi :
 
@@ -49,12 +49,12 @@ Cet exemple compare un hash de mot de passe créé par la commande [Generate pas
 
 **Note :** Le mot de passe n'est jamais stocké sur disque, seule son empreinte cryptographique est conservée. Lors de l'utilisation d'une application 4D distante, il est possible de générer le hash côté client. Si vous utilisez une application cliente JavaScript (ou similaire), les bonnes pratiques en matière de sécurité recommandent que le hash soit créé côté serveur. Bien entendu, dans ce cas par sécurité vous devez utiliser une connexion réseau cryptée avec TLS car le mot de passe est alors transféré par le réseau. 
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Generate password hash](generate-password-hash.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

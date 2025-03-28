@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST Get text.Summary-->**ST Get text** コマンドは *object* 引数で指定されたフィールドや変数中のスタイル付きテキストを返します。<!-- END REF-->
 
@@ -48,19 +48,19 @@ displayed_sidebar: docs
 
 *startSel* と *endSel* の値が等しい場合、または*startSel* が *endSel*よりも大きい場合、エラーが返されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 このコマンド実行後、エラーがなければOKシステム変数に1が設定されます。そうでなければ0が設定されます。これは特にスタイルタグが正しく評価できなかった場合に発生します (正しくない、あるいは失われたタグ)。  
 
 エラーの場合、変数は変更されません。テキストが評価される際に変数にエラーが発生すると、4Dはテキストをプレーンテキストに変換します。結果、"<"、">"、"&"文字はHTML実体参照に変換されます。
 
-#### 参照 
+## 参照 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

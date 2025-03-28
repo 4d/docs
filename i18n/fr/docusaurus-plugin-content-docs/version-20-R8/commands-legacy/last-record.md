@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD** désigne le dernier enregistrement de la sélection de *laTable* comme enregistrement courant et le charge en mémoire.<!-- END REF--> Si la sélection est vide ou si l'enregistrement courant est déjà le dernier de la sélection, **LAST RECORD** ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] comme enregistrement courant :
 
@@ -25,7 +25,7 @@ L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] co
  LAST RECORD([Contacts])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -33,7 +33,7 @@ L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] co
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->La commande **WEB SET OPTION** permet de modifier la valeur courante de diverses options de fonctionnement du serveur Web de 4D.<!-- END REF-->
 
@@ -62,7 +62,7 @@ Lorsque vous utilisez le *sélecteur* Web debug log, vous pouvez passer une des 
 | wdl enable with response body  | Entier long | 3      | Le fichier de debug de requêtes HTTP Web est activé avec le body de la réponse uniquement                      |
 | wdl enable without body        | Entier long | 1      | Le fichier de debug de requêtes HTTP Web est activé sans les body (la taille des body est fournie dans ce cas) |
 
-#### Exemple 
+## Exemple 
 
 Activation du fichier d'historique de debug des requêtes HTTP, sans les parties body : 
 
@@ -76,12 +76,12 @@ Voici un exemple d'entrée enregistrée dans le fichier d'historique :
 # REQUEST# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089388#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber: 5GET /4DWEBTEST HTTP/1.1Connection: CloseHost: 127.0.0.1User-Agent: 4D_HTTP_Client/0.0.0.0# RESPONSE# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089389 (elapsed time: 1 ms)#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber: 6HTTP/1.1 200 OKAccept-Ranges: bytesConnection: keep-aliveContent-Encoding: gzipContent-Length: 3555Content-Type: text/plain; charset=UTF-8Date: Thu, 20 Apr 2017 10:51:29 GMTExpires: Thu, 20 Apr 2017 10:51:29 GMTServer: 4D/16.0[Body Size: 3555]
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB GET OPTION](web-get-option.md)  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

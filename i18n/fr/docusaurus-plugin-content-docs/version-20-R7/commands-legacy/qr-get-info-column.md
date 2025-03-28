@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->### Etats en liste 
 
@@ -77,7 +77,7 @@ Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 Vous avez construit l'état suivant :
 
@@ -99,13 +99,13 @@ Vous pouvez écrire :
   //$vResultVar = "C1"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

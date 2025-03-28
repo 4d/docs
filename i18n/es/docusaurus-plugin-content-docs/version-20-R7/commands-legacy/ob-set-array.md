@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->El comando **OB SET ARRAY** define el *array* a asociarse a la *propiedad* en el objeto definido por el parámetro *objeto*.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.  
   
@@ -29,7 +29,7 @@ En el parámetro *array*, pase el array que se debe pasar como valor de la propi
 * Las variables simples son soportadas en el parámetro *array*, en cuyo caso se crea un array de valor único y se asocia a la *propiedad*.
 * No es posible utilizar arrays de dos dimensiones.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Utilizando un array texto:
 
@@ -44,7 +44,7 @@ Utilizando un array texto:
   // Valor de $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Adición de un elemento de un array:
 
@@ -61,7 +61,7 @@ Adición de un elemento de un array:
   // $Employees = {"Employees":["Smith","White","Brown"]}
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Utilizando una array texto con selección de un elemento:
 
@@ -71,7 +71,7 @@ Utilizando una array texto con selección de un elemento:
   // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Uso de un array objeto:
 
@@ -100,7 +100,7 @@ Así es como el objeto aparece en el depurador:
 
 ![](../assets/en/commands/pict1211436.es.png)
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 ```4d
  ARRAY TEXT($arrGirls;3)
@@ -112,7 +112,7 @@ Así es como el objeto aparece en el depurador:
 
 ![](../assets/en/commands/pict1899097.en.png)
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Utilizando un array imagen:
 
@@ -125,13 +125,13 @@ Utilizando un array imagen:
  OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Conversiones de tipo entre las colecciones y los arrays 4D*  
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

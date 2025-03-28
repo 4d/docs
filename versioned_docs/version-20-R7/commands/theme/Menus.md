@@ -1,7 +1,10 @@
 ---
-id: Menus
+id: Menus_theme
 title: Menus
+slug: /commands/theme/Menus
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND MENU ITEM.Syntax -->](../../commands-legacy/append-menu-item.md)<br/>|

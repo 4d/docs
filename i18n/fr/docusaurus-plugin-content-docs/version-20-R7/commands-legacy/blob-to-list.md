@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to list.Summary-->**BLOB to list** crée une nouvelle liste hiérarchique avec les données stockées dans le BLOB *blob* à l'offset d'octet (à partir de zéro) spécifié par *offset* et retourne un numéro de référence de liste hiérarchique pour cette nouvelle liste.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Après l'appel, la variable OK prend la valeur 1 si la liste hiérarchique a ét
 
 **Note pour l'indépendance de plate-forme :** **BLOB to list** et [LIST TO BLOB](list-to-blob.md) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, la méthode d'un formulaire entrée extrait une liste d'un champ BLOB avant que le formulaire ne s'affiche puis le stocke dans le champ BLOB lorsque la saisie est validée :
 
@@ -52,15 +52,15 @@ Dans l'exemple suivant, la méthode d'un formulaire entrée extrait une liste d'
  End case
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable OK prend la valeur 1 si la liste a été correctement créée, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

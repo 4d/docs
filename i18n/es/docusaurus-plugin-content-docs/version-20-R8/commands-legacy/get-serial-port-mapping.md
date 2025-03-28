@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->El comando GET SERIAL PORT MAPPING devuelve dos arrays, *arrNumeros* y *arrNombres*, que contienen los números y nombres de puertos seriales del equipo actual.<!-- END REF-->
 
@@ -22,7 +22,7 @@ Este comando es útil en macOS, donde el sistema operativo asigna dinámicamente
 
 **Nota:** este comando no devuelve valores significativos con puertos estándar. Si quiere direccionar un puerto estándar, debe pasar su valor (0 o 1) directamente utilizando el comando [SET CHANNEL](set-channel.md "SET CHANNEL") (modo antiguo de funcionamiento de 4D). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método de proyecto puede utilizarse para direccionar el mismo puerto serial (sin protocolo), sin importar el número que se le haya asignado: 
 
@@ -46,11 +46,11 @@ Este método de proyecto puede utilizarse para direccionar el mismo puerto seria
  SET CHANNEL(11) //Cierre del puerto
 ```
 
-#### Ver también 
+## Ver también 
 
 [SET CHANNEL](set-channel.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

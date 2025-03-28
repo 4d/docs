@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->**GET GROUP PROPERTIES** retourne les propriétés du groupe dont le numéro de référence est passé dans *réfGroupe*.<!-- END REF--> Vous passez le numéro de référence du groupe retourné par la commande [GET GROUP LIST](get-group-list.md). 
 
@@ -30,17 +30,17 @@ Si vous passez le paramètre optionnel *membres*, ce tableau contiendra les num�
 
 **Note pour les bases binaires :** Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

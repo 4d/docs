@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->La commande **ST GET ATTRIBUTES** permet de récupérer la valeur courante d’un attribut de style dans une sélection de texte du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
 
@@ -70,7 +70,7 @@ Si la valeur de l’attribut *nomAttribut* est identique dans la totalité de la
 | Attribute text size           | \-1                                                                                |
 | Attribute underline style     | 2                                                                                  |
 
-#### Exemple 
+## Exemple 
 
 Soit un champ \[Table\_1\]StyledText affiché dans un formulaire. L’objet comporte la propriété Multistyle et est nommé "StyledText\_t". Vous souhaitez récupérer le texte sélectionné ainsi que le statut de l’attribut Gras. Vous pouvez procéder de deux manières différentes, selon que vous utilisez le nom d’objet ou la référence de champ. 
 
@@ -89,17 +89,17 @@ Soit un champ \[Table\_1\]StyledText affiché dans un formulaire. L’objet comp
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
 A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -1,7 +1,10 @@
 ---
-id: 4D_Environment
+id: 4D_Environment_theme
 title: 4D Environment
+slug: /commands/theme/4D-Environment
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Application file.Syntax -->](../../commands-legacy/application-file.md)<br/>|

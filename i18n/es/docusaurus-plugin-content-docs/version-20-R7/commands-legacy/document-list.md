@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOCUMENT LIST.Summary-->El comando **DOCUMENT LIST** llena el array de tipo Texto *documentos* con los nombres del los documentos ubicados en la ubicación pasada en *rutaAcceso*.<!-- END REF-->el parámetro *rutaAcceso* sólo acepta rutas de acceso absolutas. 
 
@@ -36,7 +36,7 @@ Por defecto, si omite el parámetro *opciones*, sólo los nombres de los documen
 
 Si no hay documentos en la ubicación especificada, el comando devuelve un array vacío. Si la ruta de acceso pasada en *rutaAcceso* es invalida, **DOCUMENT LIST** genera un error de gestión de archivo que se puede interceptar utilizando un método [ON ERR CALL](on-err-call.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Lista de todos los documentos en una carpeta (sintaxis por defecto):
 
@@ -48,7 +48,7 @@ Lista de todos los documentos en una carpeta (sintaxis por defecto):
  Text1.txt  
  Text2.txt
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Lista de todos los documentos en una carpeta en modo absoluto:
 
@@ -60,7 +60,7 @@ Lista de todos los documentos en una carpeta en modo absoluto:
  C:\\Text1.txt  
  C:\\Text2.txt
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Lista de todos los documentos en modo recursivo (relativo):
 
@@ -77,7 +77,7 @@ Lista de todos los documentos en modo recursivo (relativo):
  \\Folder2\\Text5.txt  
  \\Folder2\\Folder3\\Picture1.png
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Lista de todos los documentos en modo recursivo absoluto:
 
@@ -93,7 +93,7 @@ Lista de todos los documentos en modo recursivo absoluto:
  C:\\MyFolder\\Folder2\\MyText5.txt  
  C:\\MyFolder\\Folder2\\Folder3\\MyPicture1.png
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Lista de todos los documentos en modo recursivo Posix (relativo):
 
@@ -107,12 +107,12 @@ Lista de todos los documentos en modo recursivo Posix (relativo):
  Folder2/MyText5.txt  
  Folder2/Folder3/MyPicture1.png
 
-#### Ver también 
+## Ver también 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |
