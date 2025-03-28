@@ -5,12 +5,14 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( numTabla | unPtr ) : any<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *numTabla* ) : Pointer<br/>**Table** ( *ptrTabla* ) : Integer<br/>**Table** ( *ptrCampo* ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; unPtr | Entero largo, Puntero | &#8594;  | Número de tabla o Puntero de tabla, o Puntero de campo |
-| Resultado | Integer, Pointer | &#8592; | Puntero de tabla, si se pasa un número de tabla Número de tabla, si se pasa un puntero de tabla Número de tabla, si se pasa un puntero de campo |
+| numTabla | Integer | &#8594;  | Número de tabla |
+| ptrTabla | Pointer | &#8594;  | Puntero de tabla |
+| ptrCampo | Pointer | &#8594;  | Puntero de campo |
+| Resultado | todos | &#8592; | Puntero de tabla, si se pasa un número de tabla<br/>Número de tabla, si se pasa un puntero de tabla Número de tabla o si se pasa un puntero de campo | 
 
 <!-- END REF-->
 
