@@ -27,13 +27,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsqu'elles sont appelées depuis un composant, elles sont exécutées dans le contexte du composant, à l'exception de la commande [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/fr/page1007.html) et de la commande [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/fr/page63.html) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-Les commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fe/page7836.html) et [`Get database parameter`](https://doc.4d.com/4dv20/help/command/fe/page7837.html) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-La commande [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/fr/page1001.html) permet de connaître la liste des composants chargés par le projet hôte.
+The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
 
 ### Commandes non utilisables
 
@@ -76,7 +76,7 @@ A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) ou la commande [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Par exemple :
+Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou la commande [`EXECUTE METHOD`](../commands-legacy/execute-method.md). Par exemple :
 
 ```4d
 // Méthode hôte
@@ -140,6 +140,24 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Les fonctions non cachées à l'intérieur d'une classe cachée apparaissent comme des suggestions lorsque vous utilisez la complétion de code avec une classe qui en [hérite](../Concepts/classes.md#inheritance). Par exemple, si un composant possède une classe `Teacher` qui hérite d'une classe `_Person`, la complétion de code pour `Teacher` suggère des fonctions non cachées de `_Person`.
+
+## Editing components from the host
+
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
+![](../assets/en/Develop/editable-component.png)
+
+:::warning
+
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
 
 ## Complétion de code pour les composants compilés
 
