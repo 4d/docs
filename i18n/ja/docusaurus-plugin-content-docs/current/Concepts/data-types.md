@@ -31,6 +31,13 @@ title: データタイプの概要
 
 (2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
 
+## コマンド
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
+
 ## デフォルト値
 
 [明示的な宣言](variables.md#変数の宣言) によって [変数](variables.md) または [引数](parameters.md) の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッション中はその値を保ち続けます。
