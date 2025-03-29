@@ -636,7 +636,7 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Este autor aún no ha escrito ninguna publicación.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -648,7 +648,7 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "Página Borrador",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
