@@ -25,9 +25,9 @@ Chaque fenêtre de l'éditeur de code dispose d'une barre d'outils qui permet un
 | **Chercher dans la méthode**            | ![search-icon](../assets/en/code-editor/search.png)                               | Affiche la zone [*Chercher*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                                  |
 | **Liste des macros**                    | ![macros-button](../assets/en/code-editor/macros.png)                             | Insère une macro dans la sélection. Cliquez sur la flèche déroulante pour afficher la liste des macros disponibles. Pour plus d'informations sur la création et l'instanciation des macros, voir [Macros](creating-using-macros.md).                                                                                                                                                              |
 | **Contracter tout / Déployer tout**     | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Ces boutons permettent de déployer ou de contracter toutes les structures de flux de contrôle du code.                                                                                                                                                                                                                                                                                            |
-| **Propriétés de la méthode**            | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](./overview.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                                                      |
+| **Propriétés de la méthode**            | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Affiche la boîte de dialogue [Propriétés de la méthode](./overview.md#project-method-properties) (méthodes projet uniquement).                                                                                                                                                                                                                                                                    |
 | **Dernières valeurs du Presse-papiers** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Affiche les dernières valeurs stockées dans le presse-papiers.                                                                                                                                                                                                                                                                                                                                    |
-| **Presse-papiers**                      | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Neuf presse-papiers sont disponibles dans l'éditeur de code. You can [use these clipboards](#clipboards) by clicking on them directly or by using keyboard shortcuts. Vous pouvez utiliser l'[option Préférences](Preferences/methods.md#options-1) pour les masquer.                                                                                                                             |
+| **Presse-papiers**                      | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Neuf presse-papiers sont disponibles dans l'éditeur de code. Vous pouvez [utiliser ces presse-papiers](#clipboards) en cliquant directement dessus ou en utilisant les raccourcis clavier. Vous pouvez utiliser l'[option Préférences](Preferences/methods.md#options-1) pour les masquer.                                                                                                        |
 | **Menu déroulant de navigation**        | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Vous permet de naviguer à l'intérieur des méthodes et des classes avec du contenu étiqueté automatiquement ou des marqueurs déclarés manuellement. Voir ci-dessous                                                                                                                                                                                                                                |
 
 
@@ -89,7 +89,7 @@ Vous pouvez afficher les listes d'éléments suivantes dans la zone des listes d
 - **Méthodes**: noms des méthodes projet de la base de données.
 - **Tous les dossiers**: Noms des dossiers et sous-dossiers d'objets définis dans la base de données, affichés sous la forme d'une liste hiérarchique. Les dossiers peuvent être utilisés pour organiser les objets de manière personnalisée. Ils sont gérés à partir de la page Démarrage de l'Explorateur.
 - **Dossiers** (sous-menu) : Contenu du dossier sélectionné à l'aide d'un sous-menu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](./creating-using-macros.md)).
+- **Macros**: Noms des macros définies pour la base de données (voir [Créer et utiliser des macros](./creating-using-macros.md)).
 - **Commandes**: Commandes du langage 4D par ordre alphabétique.
 - **Commandes par thèmes**: Commandes du langage 4D classées par thème sous forme de liste hiérarchique.
 - **Barres de menu**: Noms et numéros des barres de menu [créées avec l'éditeur de barres de menu 4D](../Menus/creating.md).
@@ -273,7 +273,7 @@ La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dial
 
 4D utilise des techniques d'édition de texte standard pour la saisie et la modification dans l'Éditeur de code.
 
-L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. You can [customize these conventions](#editing-area). Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
+L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Vous pouvez [personnaliser ces conventions](#editing-area). Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
 
 Vous pouvez utiliser les touches fléchées pour vous déplacer rapidement d'une ligne à l'autre. Utiliser les touches fléchées pour se déplacer sur plusieurs lignes est plus rapide que de cliquer car l'éditeur retarde l'évaluation de la ligne pour les erreurs.
 
@@ -291,7 +291,7 @@ Le caractère backslash (`\`) bénéficie d'un support spécifique dans le langa
 
 :::caution
 
-Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemin Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple `\` par une barre oblique inverse double `\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété incorrectement comme `\N` (une \[séquence d'échappement\](../Concepts/quick-tour.md#s%C3%A9quences-d%C3%A9chappement) existante). Vous devez donc saisir un double backslash `\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
+Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemin Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple `\` par une barre oblique inverse double `\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété à tort comme</code>\N`(une [séquence d'échappement](../Concepts/quick-tour.md#escape-sequences) existante). Vous devez donc saisir un double backslash <code>\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 
 :::
 
@@ -485,27 +485,27 @@ La commande **Edition > Tout marquer** est activée lorsqu'une recherche a déj�
 
 
 
-## Syntax errors
+## Erreurs de syntaxe
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). Lorsque vous passez la souris sur le symbole, une infobulle affiche la cause de l'erreur :
+4D vérifie automatiquement la syntaxe de la méthode pour s'assurer qu'elle est correcte. Si vous saisissez un texte ou sélectionnez un composant dont la syntaxe n'est pas correcte, 4D affiche un symbole pour désigner l'expression incorrecte ![](../assets/en/code-editor/incorrect-expression-icon.png). Lorsque vous passez la souris sur le symbole, une infobulle affiche la cause de l'erreur :
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. You can also force validation by pressing the **Enter** key.
+Lors de la saisie du code, il est possible de vérifier immédiatement la syntaxe de la ligne en cours (sans passer à la ligne suivante) en appuyant sur la touche **Entrée** du clavier numérique. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. Vous pouvez également forcer la validation en appuyant sur la touche **Entrée.**.
 
-When the method, class or function is validated, 4D checks for:
+Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les éléments suivants :
 
-- basic syntax errors
+- les erreurs de syntaxe basiques
 - la structure des instructions (`If`, `End if` et similaires)
-- matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
+- la correspondance des caractères d'encadrement du code tels que les parenthèses ou les crochets. Lorsque vous tapez un caractère englobant, 4D indique la correspondance en entourant les caractères de début et de fin par des rectangles gris :
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la façon dont 4D indique la correspondance des caractères englobants ou désactiver cette fonction dans **Préférences** > **Méthodes** > **Options** > **Correspondance [](){}**.
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
+L'éditeur de code ne peut vérifier que les erreurs de syntaxe évidentes (fautes d'orthographe, etc.). Il ne vérifie pas les erreurs qui ne se produisent que pendant l'exécution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+4D dispose d'un débogueur intégré (voir [Débogage](../Debugging/debugger.md)) pour traiter et corriger ces erreurs. Le compilateur fournit également une aide indispensable à la détection des erreurs. Pour plus d'informations sur le compilateur, voir le chapitre [Compilation](../Project/compiler.md).
 
 ## Infobulles
 
@@ -531,7 +531,7 @@ La [barre d'état](#status-bar) fournit également des informations contextuelle
 - Vous pouvez également créer un **fichier de documentation dédié** nommé `<MethodName>MethodName<MethodName>.md` dans le dossier `<package>package<package>/documentation`. Voir [Afficher la documentation dans l'éditeur de code](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
 
-## Commenter / Décommenter
+## Commenter / Ne pas commenter
 
 Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. La longueur des commentaires est limitée à la taille maximale de 32 000 caractères par ligne.
 
@@ -561,11 +561,11 @@ Une portion de code repliée peut être sélectionnée, copiée, collée ou supp
 Il y a plusieurs façons de déployer et de contracter le code :
 
 - Cliquer sur les icônes de déploiement/réduction ([+] et [-] sous Windows) ou sur le bouton d'ouverture [...]
-- Use the commands of the **Method > Collapse/Expand** submenu:
+- Utiliser les commandes du sous-menu **Méthode > Plier/Déplier** :
 
-  - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
-  - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
-  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. Ces commandes sont également disponibles dans la barre d'outils de l'éditeur.
+  - **Plier la sélection** / **Déplier la sélection** : réduit ou développe toutes les structures de code trouvées dans la sélection de texte.
+  - **Plier le niveau courant** / **Déplier le niveau courant**: réduit ou développe la structure du code là où se trouve le curseur. Ces commandes sont également disponibles dans le **menu contextuel** de l'éditeur.
+  - **Plier tout** / **Déplier tout**: réduit ou développe toutes les boucles et conditions d'une méthode. Ces commandes sont également disponibles dans la barre d'outils de l'éditeur.
 
 
 ## Blocs
@@ -579,26 +579,26 @@ Les blocs peuvent être définis par :
 
 ### Sélectionner bloc
 
-The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
+La fonction **Sélectionner bloc ** permet de sélectionner le "bloc englobant" du code contenant le point d'insertion.
 
 Si un bloc de texte est déjà sélectionné, la fonction sélectionne le bloc englobant du niveau supérieur suivant, et ainsi de suite, jusqu'à ce que la méthode entière soit sélectionnée.
 
-Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
+Appuyez sur **Ctrl+Shift+B** (Windows) ou **Command+Maj+B** (macOS) pour annuler cette opération et désélectionner le dernier bloc sélectionné.
 
-**Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
+**Note :** Si le point d'insertion est placé dans une structure de type `If` ou `Else`, le bloc englobant sera celui contenant respectivement l'instruction `If` ou `Else`.
 
 
 ### Début de bloc ou Fin de bloc
 
-Two commands make it easier to move around within code structures (e.g. `If...Else...End if`):
+Deux commandes facilitent la navigation au sein des structures de code (par exemple `If...Else...End if`) :
 
-- **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
-- **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
+- **Début de bloc** : place le curseur au début de la structure courante, juste avant le mot-clé initial.
+- **Fin de bloc** : place le curseur à la fin de la structure actuelle, juste après le mot-clé final.
 
-These commands are found in the **Method** menu as well as the context menu of the editor. Vous pouvez également utiliser les raccourcis suivants :
+Ces commandes se trouvent dans le menu **Méthode** ainsi que dans le menu contextuel de l'éditeur. Vous pouvez également utiliser les raccourcis suivants :
 
-- Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
-- macOS: **Command** + **up arrow** or **Command** +**down arrow**.
+- Windows : **Ctrl + flèche vers le haut** ou **Ctrl** + **flèche vers le bas**
+- macOS : **Commande** + **flèche vers le haut** ou **Commande** +**flèche vers le bas**.
 
 ## Signets
 
@@ -608,68 +608,68 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 Un signet se déplace avec sa ligne d'origine si des lignes supplémentaires sont insérées dans la méthode. Les signets sont enregistrés avec les méthodes.
 
-Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
+Les signets sont gérés en utilisant le sous-menu **Signets** du menu **Méthode** :
 
-- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. This function is also available using the **Toggle Bookmark** command of the editor's context menu or using the **Ctrl+F3** (Windows) or **Command+F3** (macOS) keyboard shortcut.
-- **Remove All**: Removes all bookmarks from the foreground window.
-- **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. La sélection d'une de ces commandes place le curseur sur le premier caractère de la ligne associée au signet concerné. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
+- **Permuter** : Associe un signet à la ligne courante (où se trouve le curseur) si elle n'en a pas déjà un, ou supprime le signet existant si elle en a un. Cette fonction est également disponible en utilisant la commande **Permuter** du menu contextuel de l'éditeur ou en utilisant le raccourci clavier **Ctrl+F3** (Windows) ou **Command+F3** (macOS).
+- **Tout supprimer** : Supprime tous les signets de la fenêtre en cours.
+- **Aller au suivant** / **Aller au précédent** : Permet de naviguer entre les signets dans la fenêtre. La sélection d'une de ces commandes place le curseur sur le premier caractère de la ligne associée au signet concerné. Vous pouvez également utiliser les raccourcis clavier **F3** (aller au suivant) ou **Maj+F3** (passer au précédent).
 
 :::info
 
-You can use bookmarks as markers for lines that contain an [item found by a search](#find). Dans ce cas, 4D ajoute automatiquement les signets. For more information, refer to [Bookmark all](#bookmark-all).
+Vous pouvez utiliser les signets comme marqueurs pour les lignes qui contiennent un [élément trouvé par une recherche](#find). Dans ce cas, 4D ajoute automatiquement les signets. Pour plus d'informations, reportez-vous à la section [Tout marquer](#bookmark-all).
 
 :::
 
 ## Afficher dans l'Explorateur
 
-The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
+La commande **Afficher dans l'Explorateur...** ouvre une fenêtre de l'Explorateur avec l'élément cible sélectionné. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le, puis choisissez **Méthode** > **Afficher dans l'Explorateur...**
 
 
 ## Chercher les appelants
 
-The **Search Callers** command in the **Method** menu is only enabled for project methods. Elle recherche tous les objets (autres méthodes ou menus) qui font référence à la méthode projet.
+La commande **Chercher les appelants** dans le menu **Méthode** est uniquement activée pour les méthodes projet. Elle recherche tous les objets (autres méthodes ou menus) qui font référence à la méthode projet.
 
-**Note:** The **Search Callers...** command is also available in **Explorer** > **Methods**
+**Note :** La commande **Chercher les appelants...** est également disponible dans l'**Explorateur** > **Méthodes**
 
 Cette commande affiche ses résultats dans une nouvelle fenêtre.
 
 
 ## Aller à définition
 
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
+La commande **Aller à définition** ouvre la définition d'un élément référencé dans l'éditeur de code. Pour ce faire, placez le curseur à l'intérieur du nom de l'objet ou sélectionnez-le, et choisissez **Méthode** > **Aller à définition...** ou utilisez le menu contextuel de l'éditeur.
 
 :::tip
 
-This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) / **Command+K** (macOS) or  **Alt+double-click**.
+Cette fonctionnalité est également disponible via le raccourci clavier **Ctrl+K** (Windows) / **Command+K** (macOS) ou **Alt+double-clic**.
 
 :::
 
-The effect of the **Goto Definition...** command varies depending on the target element:
+L'effet de la commande **Aller à définition...** varie en fonction de l'élément cible :
 
 - avec une méthode projet, elle affiche le contenu de la méthode dans une nouvelle fenêtre de l'Editeur de code
 - avec un nom de classe ou une fonction de classe, elle ouvre la classe dans l'Éditeur de code
-- with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
+- avec une commande ou une fonction intégrée de 4D, elle a le même effet que la commande [**Montrer la documentation**](#show-documentation).
 
 ## Montrer la documentation
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. L'effet varie en fonction de l'élément cible. Par exemple :
+La commande **Montrer la documentation...** permet d'ouvrir la documentation de l'élément cible. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le et choisissez **Méthode** > **Montrer la documentation...** ou utilisez le menu contextuel de l'éditeur. L'effet varie en fonction de l'élément cible. Par exemple :
 
-- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
-- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
+- Sélectionner une méthode projet ou une classe utilisateur et choisir **Montrer la documentation...** sélectionne la méthode dans l'Explorateur et bascule vers l'onglet de documentation
+- Sélectionner le nom d'une commande, fonction ou classe 4D et choisir **Montrer la documentation...** affiche la documentation en ligne.
+- Si aucun élément n'est sélectionné, la commande ouvre la documentation de la méthode actuellement ouverte dans l'éditeur de code, [le cas échéant](../Project/documentation.md).
 
 :::tip
 
-To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. La documentation de la commande est affichée dans une nouvelle fenêtre de votre navigateur par défaut. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+Pour afficher la documentation d'une commande de langage "classique" 4D, sélectionnez le nom de la commande ou placez simplement le curseur dans le nom et appuyez sur **F1**. La documentation de la commande est affichée dans une nouvelle fenêtre de votre navigateur par défaut. 4D recherche la documentation en fonction des paramètres définis dans les Préférences (voir [Emplacement de la documentation](../Preferences/general.md#documentation-location)).
 
 :::
 
 
 ## Chercher les références
 
-The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
+La commande **Chercher les références...** présente dans le menu **Méthode** ou dans le menu contextuel de l'Éditeur de code recherche tous les objets (méthodes et formulaires) du projet où l'élément courant de la méthode est référencé (utilisé).
 
-L'élément courant est soit celui sélectionné, soit celui où se trouve le curseur. Il peut s’agir d’un nom de champ, de nom de variable, de commande, d’une chaîne, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+L'élément courant est soit celui sélectionné, soit celui où se trouve le curseur. Il peut s’agir d’un nom de champ, de nom de variable, de commande, d’une chaîne, etc. Par exemple, l'action suivante recherche toutes les occurrences de la variable *vlNbCmd* dans le projet :
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 
