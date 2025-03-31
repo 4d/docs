@@ -25,9 +25,9 @@ La sécurité des données est présente à tous les stades d'implémentation du
 * **Authentification**: [fonctions d'authentification](authentication.md) souples et personnalisables basées sur des paramètres intégrés ainsi que sur des méthodes base "fallback" ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 * **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
-  * [Fonctions ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées par le biais de requêtes REST
-  * [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
+  * les [méthodes projet](templates.md#accessing-4d-methods-via-the-web) exposées à travers des requêtes HTTP
+  * les [fonctions ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées par le biais de requêtes REST
+  * les [tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST.
 
 * **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
@@ -46,7 +46,7 @@ Les requêtes REST sont détaillées dans la section [serveur REST](REST/getting
 
 ## Extension des paramètres
 
-Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
+La configuration du serveur web 4D est définie par un ensemble complet de paramètres au niveau de l'application qui peuvent également être personnalisés pour la session à l'aide des propriétés de l'objet `webServer` ou de la commande `WEB SET OPTION`.
 
 ## Templates et URLs
 

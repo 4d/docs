@@ -105,10 +105,10 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 20.3    | New *passwordAlgorithm* property |
-| 18      | Ajout                            |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20.3    | Nouvelle propriété *passwordAlgorithm* |
+| 18      | Ajout                                  |
 
 </details>
 
@@ -154,10 +154,10 @@ Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vou
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
 | user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password          | Text    | Mot de passe de l'utilisateur. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                 |
+| password          | Text    | Mot de passe de l'utilisateur. Par défaut, le mot de passe est envoyé en clair, il est donc **fortement recommandé** d'utiliser des communications chiffrées en passant `true` dans la propriété `tls`.                                                                                                                                          |
 | idleTimeout       | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
 | tls               | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                             |
+| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe à l'aide de la fonction [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) avec le paramètre *digest* à `true`.                                                                                                                                           |
 | type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
@@ -491,7 +491,7 @@ La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Chaque objet de la collection retournée contient les propriétés listées dans la section [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Exemple
 
@@ -798,7 +798,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuvent être partageables, selon la nature de leur "parent" ou de [la manière dont elles sont créées](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
@@ -1242,10 +1242,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 <details><summary>Historique</summary>
 
-| Release | Modifications       |
-| ------- | ------------------- |
-| 20      | Server side support |
-| 17 R6   | Ajout               |
+| Release | Modifications                |
+| ------- | ---------------------------- |
+| 20      | Prise en charge côté serveur |
+| 17 R6   | Ajout                        |
 
 </details>
 
@@ -1261,7 +1261,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 #### Description
 
-La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
+La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stoppe toute journalisation des requêtes ORDA sur la machine d'appel (client ou serveur)<!-- END REF -->.
 
 Cela ferme en fait le document ouvert sur le disque. Côté client, si le journal a été démarré en mémoire, il est arrêté.
 

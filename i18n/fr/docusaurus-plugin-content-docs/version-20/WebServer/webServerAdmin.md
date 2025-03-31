@@ -63,7 +63,7 @@ Pour ce faire, vous pouvez :
 -   4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
 
 Le cache est alors immédiatement effacé.
-> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
+> Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#4dcacheclear).
 
 
 
@@ -112,7 +112,7 @@ L'URL */4DHTMLSTATS* retourne les mêmes informations que l'URL */4DSTATS*, éga
 | Cache Max Size         | Taille maximale du cache (en octets)                                             |
 | Cached Object Max Size | Taille maximale de chaque objet dans le cache (en octets)                        |
 | Cache Use              | Pourcentage de cache utilisé                                                     |
-| Cached Objects         | Nombre d'objects trouvés dans le cache, **sans les images**                      |
+| Cached Objects         | Nombre d'objets trouvés dans le cache, **sans les images**                       |
 | Filtered Objects       | Nombre d'objets dans le cache non pris en compte par l'URL, notamment les images |
 
 
@@ -242,9 +242,9 @@ Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère 
 *   **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
     *   **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 
-*   **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+*   **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez effectuer une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 
-*   **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
+*   **Toutes les N semaines, jour à N**: Cette option permet de programmer des sauvegardes sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 
 *   **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 

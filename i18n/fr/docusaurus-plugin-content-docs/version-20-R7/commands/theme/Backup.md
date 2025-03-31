@@ -10,7 +10,7 @@ slug: /commands/theme/Backup
 | [<!-- INCLUDE #_command_.BACKUP INFO.Syntax -->](../../commands-legacy/backup-info.md)<br/>                             |
 | [<!-- INCLUDE #_command_.CHECK LOG FILE.Syntax -->](../../commands-legacy/check-log-file.md)<br/>                       |
 | [<!-- INCLUDE #_command_.INTEGRATE MIRROR LOG FILE.Syntax -->](../../commands-legacy/integrate-mirror-log-file.md)<br/> |
-| [<!-- INCLUDE #_command_.Log File.Syntax -->](../../commands-legacy/log-file.md)<br/>                                   |
+| [<!-- INCLUDE #_command_.Log file.Syntax -->](../../commands-legacy/log-file.md)<br/>                                   |
 | [<!-- INCLUDE #_command_.LOG FILE TO JSON.Syntax -->](../../commands-legacy/log-file-to-json.md)<br/>                   |
 | [<!-- INCLUDE #_command_.New log file.Syntax -->](../../commands-legacy/new-log-file.md)<br/>                           |
 | [<!-- INCLUDE #_command_.RESTORE.Syntax -->](../../commands-legacy/restore.md)<br/>                                     |

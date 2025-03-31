@@ -93,23 +93,23 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ## 引数
 
-You can send parameters to functions defined in ORDA user classes or singletons. サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
+ORDA ユーザークラスやシングルトン内で定義されている関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の [宣言されたパラメーター](../Concepts/parameters.md#パラメーターの宣言) に受け渡されます。
 
 次のルールが適用されます:
 
-- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
-- In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- POST リクエストを通して呼び出された関数内では、引数は **POST リクエストの本文内** に渡さなければなりません。
+- GET リクエストを通して呼び出された関数内では、引数は **URL 内に"?$params=" シンタックスで** 渡さなければなりません。
+- 引数はコレクション (JSON形式) の中に格納する必要があります。
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
-- エンティティやエンティティセレクションも引数として受け渡せます。 The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+- エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDA オブジェクトにデータを割り当てるために REST サーバーが使用する専用の属性 (`__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`) を 引数のリストに含めなくてはなりません。
 
 [エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
 
 ### スカラー値の引数
 
-Scalar value parameter(s) must simply be enclosed in a collection. 引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
+スカラー値の引数はコレクション内に単純に格納されていなければなりません。 引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
 
-For example, with a  dataclass function `getCities()` receiving text parameters:
+たとえば、dataclass クラス関数 `getCities()` がテキスト引数を受け取る場合:
 
 #### POST リクエスト
 
@@ -123,7 +123,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 ### エンティティ引数
 
-引数として渡されたエンティティは、キー (__KEY プロパティ) によってサーバー上で参照されます。 If the key parameter is omitted in a request, a new entity is loaded in memory on the server.
+引数として渡されたエンティティは、キー (__KEY プロパティ) によってサーバー上で参照されます。 リクエストにおいてキーが省略されていれば、サーバー上のメモリに新規エンティティが読み込まれます。
 エンティティが持つ属性について、値を受け渡すことも可能です。 サーバー上でこれらの値は自動的に当該エンティティ用に使用されます。
 
 > サーバー上の既存エンティティについて変更された属性値をリクエストが送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後の値で実行されます。 この機能によって、たとえばエンティティに対する処理の、すべてのビジネスルールを適用した後の結果をクライアントアプリケーションから確認することが可能です。 その結果をもとにエンティティをサーバー上で保存するかどうかを判断できます。
@@ -138,8 +138,8 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 - `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
 - `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-See examples below for creating or updating entities with POST requests.
-See an example of contents downloading using an entity with a GET request.
+POST リクエストでエンティティを作成または更新する方法については以下の例題を参照して下さい。
+GET リクエストとエンティティを使用してコンテンツをダウンロードする方法については以下の例題を参照して下さい。
 
 #### リレートエンティティ引数
 
@@ -159,7 +159,7 @@ See an example of contents downloading using an entity with a GET request.
 | __DATASET  | Text    | 必須 - エンティティセレクションのエンティティセットID (UUID) |
 | __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します              |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
+POST リクエストを使用して [エンティティセレクションを受け取る](#エンティティセレクションを引数として受け取る) 例題を参照して下さい。
 See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
 
 ## POST request examples
