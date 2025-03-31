@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->The FORM SET HORIZONTAL RESIZING command allows you to change the horizontal resizing properties of the current form through programming.<!-- END REF--> By default, these properties are set in the Design environment Form editor. New properties are set for the current process; they are not stored with the form. 
 
@@ -30,12 +27,21 @@ If you pass **False**, the current form width cannot be changed; in this case, t
 
 If you passed **True** in the first parameter, you can pass new minimum and maximum widths (in pixels) in the optional *minWidth* and *maxWidth* parameters. If you leave these parameters out, the values set in the Design environment (if any) are used.
 
-#### Example 
+## Example 
 
 Refer to the example of the [FORM SET SIZE](form-set-size.md) command. 
 
-#### See also 
+## See also 
 
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 892 |
+| Thread safe | &cross; |
+
+

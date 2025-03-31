@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->**OPEN ADMINISTRATION WINDOW**コマンドは、コマンドを実行したマシン上でサーバ管理ウィンドウを開きます。<!-- END REF-->4D Serverの管理ウィンドウで現在のパラメタを表示させたり、さまざまなメンテナンス操作を行ったりできます (4D Server Reference Guide参照)。4D Server のバージョン11から、このウィンドウをクライアントマシン上で表示できるようになりました: 
 
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 * ローカルモードの4Dアプリケーションから呼び出された場合。
 * Designer でもAdministrator でもないユーザが実行した場合 (この場合エラー-9991 が生成されます。 *データベースエンジンエラー (-10602 -> 4004)*参照)。
 
-#### 例題 
+## 例題 
 
 この例を管理ボタンに割り当てることができます: 
 
@@ -45,10 +42,20 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとOKシステム変数に1が設定されます。そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1047 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK、error |
+
+

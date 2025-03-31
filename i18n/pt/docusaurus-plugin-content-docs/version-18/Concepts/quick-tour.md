@@ -10,7 +10,7 @@ Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela 
 ALERT("Hello, World!")
 ```
 
-Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Method editor:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
 
 ![alt-text](../assets/en/Concepts/helloworld.png)
 
@@ -40,13 +40,13 @@ A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Cria-se uma va
 C_DATE(MyDate) //Tipo de data para a variável MyDate
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Mesmo se não é geralmente recomendado, você pode criar variáveis simplesmente usando-as; não é necessariamente necessário defini-los formalmente, como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. Uma variável digitada com `C_XXX` não pode alterar o tipo. In compiled mode, the type can never be changed, regardless of how the variable was created.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. Uma variável digitada com `C_XXX` não pode alterar o tipo. In compiled mode, the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 
@@ -115,15 +115,13 @@ For($vlChar;1;Length(vtSomeText))
  End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode retornar um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro. Um método pode retornar um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
+$f:=New object
+$f.message:=New formula(ALERT("Hello world!"))
 $myText:="hello"
-$myText:=Do_Something($myText) //Chamar o método Do_Something
-ALERT($myText) //"HELLO"
-
-  //Aqui o código do método Do_Something
-$0:=Uppercase($1)
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 ## Tipos de dados
@@ -171,6 +169,14 @@ $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 Para aceder a um elemento da collection, é necessário passar o número do elemento entre parênteses rectos:
@@ -178,7 +184,7 @@ Para aceder a um elemento da collection, é necessário passar o número do elem
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //access ao quarto elemento da coleção
 ```
 
 ## Operadores
@@ -199,7 +205,7 @@ Os mesmos símbolos são frequentemente utilizados para operações diferentes, 
 | Tipo de dados | Operação       | Exemplo                                                                                                        |
 | ------------- | -------------- | -------------------------------------------------------------------------------------------------------------- |
 | Number        | Adição         | 1 + 2 adiciona os números e resultados em 3                                                                    |
-| String        | Concatenação   | "Hello " + "there" concatena (junta) as cadeias de caracteres e resulta em "Hello there"                       |
+| Text          | Concatenação   | "Hello " + "there" concatena (junta) as cadeias de caracteres e resulta em "Hello there"                       |
 | Data e Número | Adição de data | !1989-01-01! + 20 acrescenta 20 dias à data de 1 de janeiro de 1989 e resulta na data de 21 de janeiro de 1989 |
 
 ## Expressões
@@ -222,10 +228,10 @@ Refere-se a uma expressão pelo tipo de dados que devolve. Existem vários tipos
 
 | Expression               | Tipo                 | Descrição                                                                                                                                                         |
 | ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String               | A palavra Hello é uma constante cadeia de caracteres, indicada pelas aspas duplas.                                                                                |
-| “Hello ” + “there”       | String               | Duas cadeias, "Hello " e "there", são adicionadas (concatenadas) com o operador de concatenação de cadeias (+). É devolvida a cadeia de caracteres "Hello there". |
-| “Sr. ” + [People]Name    | String               | São concatenadas duas cadeias: a cadeia "Mr. " e o valor atual do campo Name na tabela People. Se o campo contiver "Smith", a expressão devolve "Mr. Smith".      |
-| Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                        |
+| “Hello”                  | Text                 | A palavra Hello é uma constante cadeia de caracteres, indicada pelas aspas duplas.                                                                                |
+| “Hello ” + “there”       | Text                 | Duas cadeias, "Hello " e "there", são adicionadas (concatenadas) com o operador de concatenação de cadeias (+). É devolvida a cadeia de caracteres "Hello there". |
+| “Sr. ” + [People]Name    | Text                 | São concatenadas duas cadeias: a cadeia "Mr. " e o valor atual do campo Name na tabela People. Se o campo contiver "Smith", a expressão devolve "Mr. Smith".      |
+| Uppercase("smith")       | Text                 | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                        |
 | 4                        | Number               | Esta é uma constante numérica, 4.                                                                                                                                 |
 | 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                      |
 | myButton                 | Number               | Esta é uma variável associada a um botão. Devolve o valor atual do botão: 1 se foi clicado, 0 se não foi.                                                         |
@@ -284,8 +290,7 @@ Ambos os estilos de comentários podem ser utilizados em simultâneo.
 Inserir `//` no início de uma linha ou depois de uma declaração para adicionar um comentário de linha única. Exemplo:
 
 ```4d
-/Este é um comentário
-For($vCounter;1;100) //Starting loop
+/Este é um comentário For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment

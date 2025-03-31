@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE USER.Summary-->The **DELETE USER** command deletes the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command. 
 
@@ -26,13 +23,23 @@ Only the Designer and Administrator can delete users. It is not possible for the
 
 Deleted user names no longer appear in the Users editor displayed when you call [EDIT ACCESS](edit-access.md), nor in the Design mode. Note that the numbers for deleted users can be reassigned when new user accounts are created.
 
-#### Error management 
+## Error management 
 
 If you do not have the proper access privileges for calling DELETE USER or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
-#### See also 
+## See also 
 
 [GET USER LIST](get-user-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 615 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

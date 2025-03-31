@@ -16,7 +16,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -59,7 +59,7 @@ Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET P
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -75,7 +75,7 @@ Permite definir um estilo padrão para o contorno do objeto.
 
 #### Objectos suportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -85,9 +85,9 @@ Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e branc
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados               | Valores possíveis                                                                |
-| --------------- | --------------------------- | -------------------------------------------------------------------------------- |
-| strokeDashArray | arrays numéricos ou strings | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nome            | Tipo de dados               | Valores possíveis                                                                    |
+| --------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| strokeDashArray | arrays numéricos ou strings | Ex. Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objectos suportados
 
@@ -113,7 +113,7 @@ Pode remover estas linhas vazias selecionando esta opção. A parte inferior do 
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -135,9 +135,9 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 > Essa propriedade também está disponível para objetos baseados em texto e, nesse caso, ela designa a cor da fonte e as linhas do objeto; consulte [Cor da fonte](properties_Text.md#font-color).
 
-#### Objetos compatíveis
+#### Objectos suportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
 ---
 
@@ -151,7 +151,7 @@ Designa a espessura de uma linha.
 | ----------- | ------------- | ------------------------------------------------------------------------------------- |
 | strokeWidth | number        | 0 para a largura mais pequena num formulário impresso, ou qualquer valor inteiro < 20 |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
@@ -163,7 +163,7 @@ Designa a espessura de uma linha.
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
-Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente.
+Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Se você quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento de array correspondente. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html).
 
 Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada de cinza/cinza claro, definida nas propriedades da caixa de listagem. Um array de cor de fundo também foi definida para a caixa de listagem, a fim de mudar a cor das linhas em que pelo menos um valor é negativo para laranja claro:
 
@@ -193,7 +193,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 | ------------- | ------------- | --------------------------- |
 | rowFillSource | string        | O nome de um array longint. |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
 [Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
@@ -201,7 +201,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 
 ## Transparente
 
-Define o fundo do list box como "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+Define o fundo do list box como "Transparent". Quando definido, qualquer [cor de fundo alternativa](#alternate-background-color) ou [cor de fundo](#background-color--fill-color) definida para a coluna é ignorada.
 
 #### Gramática JSON
 
@@ -209,9 +209,9 @@ Define o fundo do list box como "Transparent". When set, any [alternate backgrou
 | ---- | ------------- | ----------------- |
 | fill | text          | "transparent"     |
 
-#### Objetos compatíveis
+#### Objectos suportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 #### Veja também
 

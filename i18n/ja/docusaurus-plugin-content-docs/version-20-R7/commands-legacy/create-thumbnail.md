@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->**CREATE THUMBNAIL**コマンドは、指定した元のピクチャのサムネールを返します。<!-- END REF-->通常、サムネールはマルチメディアソフトウェアやWebサイトにおいてピクチャプレビューのために使用されます。
 
@@ -53,3 +53,13 @@ displayed_sidebar: docs
 **注:** Scaled to fit proportional および Scaled to fit prop centeredを使用すると、空いたスペースが白く表示されます。しかし、これらのモードが4Dフォームのピクチャフィールドまたはピクチャ変数に適用されると、この空きスペースは透明になります。
 
 *depth* 引数は無視され、省略されなければなりません。コマンドは常に現在のスクリーン深度 (色数) を使用します。
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 679 |
+| スレッドセーフである | &check; |
+
+

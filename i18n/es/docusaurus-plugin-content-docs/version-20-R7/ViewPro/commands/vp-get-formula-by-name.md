@@ -5,18 +5,18 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Parámetros | Tipo   |                             | Descripción                                                   |                  |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro                  |                  |
-| name       | Text   | ->                          | Nombre del rango nombrado                                     |                  |
-| scope      | Number | ->                          | Alcance objetivo (por defecto=hoja actual) |                  |
-| Result     | Object | <- | Definición de la fórmula o rango con nombre                   | <!-- END REF --> |
+| Parámetros | Tipo    |                             | Descripción                                                   |                  |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                  |                  |
+| name       | Text    | ->                          | Nombre del rango nombrado                                     |                  |
+| scope      | Integer | ->                          | Alcance objetivo (por defecto=hoja actual) |                  |
+| Resultado  | Object  | <- | Definición de la fórmula o rango con nombre                   | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> devuelve la fórmula y el comentario correspondientes al rango con nombre o a la fórmula con nombre pasada en el parámetro *name*, o **null** si no existe en el ámbito definido<!-- END REF -->.
 
@@ -29,7 +29,7 @@ Puede definir dónde obtener la fórmula en *scope* utilizando el índice de la 
 - `vk current sheet`
 - `vk workbook`
 
-##### Objeto devuelto
+### Objeto devuelto
 
 El objeto devuelto contiene las siguientes propiedades:
 
@@ -38,7 +38,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | formula   | Text | Texto de la fórmula correspondiente a la fórmula nombrada o al rango nombrado. Para los rangos nombrados, la fórmula es una secuencia de coordenadas absolutas. |
 | comment   | Text | Comentario correspondiente a la fórmula nombrada o al rango nombrado                                                                                                                            |
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
@@ -51,7 +51,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
   //$formula=null (if not existing)
 ```
 
-#### Ver también
+## Ver también
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP Get names](vp-get-names.md)

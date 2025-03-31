@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->The **OBJECT SET INDICATOR TYPE** command modifies the type of progress indicator for the thermometer(s) designated by the *object* and *\** parameters in the current process.<!-- END REF--> 
 
@@ -34,6 +31,15 @@ In the *indicator* parameter, pass the type of indicator you want to display. Yo
 | Barber shop               | Integer | 2     | Bar displaying continuous animation                |
 | Progress bar              | Integer | 1     | Standard progress bar                              |
 
-#### See also 
+## See also 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1246 |
+| Thread safe | &cross; |
+
+

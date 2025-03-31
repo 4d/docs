@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->**Get text from pasteboard** returns the text present in the pasteboard.<!-- END REF--> 
 
@@ -26,12 +23,22 @@ If the pasteboard contains enriched text (for example in RTF format), the text w
 
 Note that 4D text fields and variables can contain up to 2 GB of text.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the text is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 
-#### See also 
+## See also 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 524 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

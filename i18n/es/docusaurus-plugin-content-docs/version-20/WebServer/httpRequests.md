@@ -18,7 +18,7 @@ El método base `On Web Connection` puede utilizarse como punto de entrada al se
 
 ### Llamadas a métodos base
 
-El método base `On Web Connection` se llama automáticamente cuando el servidor recibe cualquier URL que no sea una ruta a una página existente en el servidor. Se llama al método de la base de datos con la URL.
+Se llama al método de la base de datos con la URL. El método base `On Web Connection` se llama automáticamente cuando el servidor recibe cualquier URL que no sea una ruta a una página existente en el servidor.
 
 Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
@@ -48,7 +48,7 @@ Debe declarar estos parámetros de la siguiente manera:
 //Código para el métodod
 ```
 
-Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
+También puede utilizar la sintaxis de [parámetros temporales](../Concepts/parameters.md):
 
 ```4d
 // Método base On Web Connection
@@ -163,7 +163,7 @@ Un formulario puede ser enviado a través de dos métodos (ambos pueden ser util
 
 > Cuando el servidor web recibe un formulario publicado, llama al método base `On Web Authentication` (si existe).
 
-En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-the-requests) de todos los campos incluidos en una página HTML enviada al servidor.
+En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-http-requests) de todos los campos incluidos en una página HTML enviada al servidor.
 
 Ejemplo para definir la acción de un formulario:
 
@@ -185,7 +185,7 @@ Aquí está el código HTML que corresponde a esta página:
 </FORM>
 ```
 
-Durante la entrada de datos, escriba "ABCD" en el área de entrada de datos, marque la opción "Whole word" y valídela haciendo clic en el botón **Search**. En la solicitud enviada al servidor web:
+Durante la entrada de datos, escriba "ABCD" en el área de entrada de datos, marque la opción "Whole word" y valídela haciendo clic en el botón **Buscar**. En la solicitud enviada al servidor web:
 
 ```
 vName="ABCD"
@@ -270,6 +270,150 @@ return false
 <p> 
 <input name="vtNav_appName" value="" type="hidden"> 
 <input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>

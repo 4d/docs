@@ -31,14 +31,14 @@ monBooléen:=(monBouton=1)
 
 4D supporte deux opérateurs logiques : l'opérateur d'intersection (AND) et l'opérateur de réunion inclusive (OR). Le AND logique retourne TRUE si les deux expressions sont VRAIES. Le OR logique retourne TRUE si au moins une des expressions est VRAIE. Le tableau suivant décrit les opérateurs logiques :
 
-| Opération | Syntaxe                                   | Retourne | Expression                                                                       | Valeur |
-| --------- | ----------------------------------------- | -------- | -------------------------------------------------------------------------------- | ------ |
-| AND       | Booléen & Booléen     | Boolean  | ("A" = "A") & (15 # 3) | True   |
-|           |                                           |          | ("A" = "B") & (15 # 3) | False  |
-|           |                                           |          | ("A" = "B") & (15 = 3) | False  |
-| OU        | Booléen &amp; Booléen | Boolean  | ("A" = "A") \| (15 # 3)                    | True   |
-|           |                                           |          | ("A" = "B") \|  (15 # 3)                   | True   |
-|           |                                           |          | ("A" = "B") \|  (15 = 3)                   | False  |
+| Opération | Syntaxe                                   | Retourne | Expression                                                                             | Valeur |
+| --------- | ----------------------------------------- | -------- | -------------------------------------------------------------------------------------- | ------ |
+| AND       | Booléen & Booléen     | Boolean  | ("A" = "A") & (15 # 3)       | True   |
+|           |                                           |          | ("A" = "B") & (15 # 3)       | False  |
+|           |                                           |          | ("A" = "B") & (15 = 3)       | False  |
+| OR        | Booléen &amp; Booléen | Boolean  | ("A" = "A") &#124; (15 # 3)  | True   |
+|           |                                           |          | ("A" = "B") &#124;  (15 # 3) | True   |
+|           |                                           |          | ("A" = "B") &#124;  (15 = 3) | False  |
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
@@ -51,12 +51,12 @@ Voici la "table de vérité" pour l'opérateur logique "AND" :
 
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 
-| Expr1 | Expr2 | Expr1 \| Expr2 |
-| ----- | ----- | -------------- |
-| True  | True  | True           |
-| True  | False | True           |
-| False | True  | True           |
-| False | False | False          |
+| Expr1 | Expr2 | Expr1 &#124; Expr2 |
+| ----- | ----- | -------------------------------------- |
+| True  | True  | True                                   |
+| True  | False | True                                   |
+| False | True  | True                                   |
+| False | False | False                                  |
 
 **Astuce :** Si vous devez calculer une réunion exclusive (le "Ou" exclusif) entre Expr1 et Expr2, écrivez :
 

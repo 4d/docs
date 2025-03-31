@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->**LISTBOX Get footer calculation**コマンドは*object*と*\** 引数で指定したリストボックスのフッターエリアに割り当てられた自動計算のタイプを返します。<!-- END REF-->
 
@@ -31,6 +28,15 @@ displayed_sidebar: docs
 
 返される値を*Listbox Footer Calculation*テーマの定数と比較することができます ([LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)コマンド参照)。 
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1150 |
+| スレッドセーフである | &cross; |
+
+

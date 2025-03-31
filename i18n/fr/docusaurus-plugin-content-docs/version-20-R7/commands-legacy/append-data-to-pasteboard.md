@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->**APPEND DATA TO PASTEBOARD** ajoute dans le conteneur les données du type spécifié dans *typeDonnées* présentes dans le BLOB *données*.<!-- END REF-->
 
@@ -37,7 +34,7 @@ Si vous voulez effacer le conteneur et y ajouter :
 
 Notez cependant que si un BLOB contient du texte ou une image, vous pouvez utiliser la commande **APPEND DATA TO PASTEBOARD** pour y ajouter du texte ou une image.
 
-#### Exemple 
+## Exemple 
 
 A l'aide des commandes du thème Conteneur de données et des BLOBs, vous pouvez écrire des méthodes de Couper/Copier/Coller pour gérer des données structurées au lieu d'une seule information. Dans l'exemple suivant, les deux méthodes projet écrire enregistrement dans Presse papiers et lire enregistrement dans Presse papiers vous permettent de traiter un enregistrement comme une information à copier dans le Presse-papiers.
 
@@ -203,12 +200,22 @@ Vous pouvez coller cette image de l'enregistrement dans un autre enregistrement,
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si les données dans le BLOB sont correctement ajoutées au conteneur, la variable système OK prend la valeur 1\. Sinon, OK est mise à 0 et une erreur peut être générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 403 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMPONENT LIST.Summary-->The COMPONENT LIST command sizes and fills the *componentsArray* array with the names of the components loaded by the 4D application for the current host database.<!-- END REF-->
 
@@ -30,6 +30,15 @@ The names of the components are the names of the structure files of the matrix d
 
 For more information about 4D components, please refer to the Design Reference manual.
 
-#### See also 
+## See also 
 
 [PLUGIN LIST](plugin-list.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1001 |
+| Thread safe | &check; |
+
+

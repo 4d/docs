@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->La commande **OBJECT SET SUBFORM** vous permet de modifier dynamiquement le formulaire détaillé ainsi que, optionnellement, le formulaire liste écran associé à l’objet sous-formulaire désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -42,7 +39,16 @@ Dans les paramètres *sousFormDetail* et *sousFormListe*, vous pouvez passer :
 
 Lorsque vous modifiez un sous-formulaire en page, la commande peut être exécutée à tout moment, les éventuelles sélections courantes ne sont pas modifiées. En revanche, si vous modifiez un sous-formulaire en liste, il ne peut être modifié que lorsqu’il affiche la liste. Si la commande est exécutée alors que le formulaire détaillé est affiché à la suite d’un double-clic dans la liste, une erreur est générée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1138 |
+| Thread safe | &cross; |
+
+

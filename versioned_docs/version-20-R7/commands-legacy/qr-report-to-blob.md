@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->The QR REPORT TO BLOB command places the report whose reference was passed in *area* in a BLOB (variable or field).<!-- END REF-->
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### Example 
+## Example 
 
 The following statement assigns the Quick Report stored in MyArea into a BLOB Field.
 
@@ -31,6 +28,16 @@ The following statement assigns the Quick Report stored in MyArea into a BLOB Fi
  QR REPORT TO BLOB(MyArea;[Table 1]Field4)
 ```
 
-#### See also 
+## See also 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 770 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

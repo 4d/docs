@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Add to date.Summary-->El comando Add to date añade *años*, *meses,* y *días* a la fecha pasada en *fecha*, luego devuelve la fecha resultante.<!-- END REF-->
 
 Aunque usted puede utilizar los *Operadores de fechas* para añadir días a una fecha, Add to date le permite rápidamente añadir meses y años sin tener que lidiar con el número de días al mes o años bisiestos (como lo haría cuando utiliza el operador + en fechas).
 
-#### Ejemplo 
+## Ejemplo 
 
 ```4d
   // Esta línea calcula la fecha dentro de un año, el mismo día
@@ -35,3 +35,13 @@ Aunque usted puede utilizar los *Operadores de fechas* para añadir días a una 
   // Esta línea hace lo mismo que $vdMañana:=Current date+1
  $vdMañana:=Add to date(Current date;0;0;1)
 ```
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 393 |
+| Hilo seguro | &check; |
+
+

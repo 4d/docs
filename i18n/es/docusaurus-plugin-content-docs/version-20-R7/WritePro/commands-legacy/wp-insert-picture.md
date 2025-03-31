@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP INSERT PICTURE.Summary-->El comando **WP INSERT PICTURE** inserta una nueva ruptura de tipo *tipoRuptura* en el rango de selección *objRango* según el modo de inserción *modo* y el parámetro *ActRango*.<!-- END REF-->
 
@@ -52,7 +52,7 @@ En el parámetro *modo*, pase una constante para indicar el modo de inserción q
 Si no pasa el parámetro *ActRango*, por defecto los contenidos insertados están incluidos en el rango resultante.
 * Si *objRango* no es un rango, *ActRango* se ignora.
 
-#### Ejemplo 
+## Ejemplo 
 
 En el ejemplo siguiente, un usuario selecciona la imagen que desea insertar en el objeto de rango y se le avisará si esta imagen no puede insertarse:
 
@@ -83,7 +83,7 @@ En el ejemplo siguiente, un usuario selecciona la imagen que desea insertar en e
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [WP INSERT DOCUMENT](wp-insert-document.md)  

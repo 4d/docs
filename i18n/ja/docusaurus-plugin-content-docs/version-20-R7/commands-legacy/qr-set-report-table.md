@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->QR SET REPORT TABLE コマンドは、*area*に渡した参照のレポートエリアに、*table*に渡した番号のテーブルをカレントテーブルとして設定します。<!-- END REF-->
 
@@ -26,6 +23,16 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*table*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR Get report table](qr-get-report-table.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 757 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

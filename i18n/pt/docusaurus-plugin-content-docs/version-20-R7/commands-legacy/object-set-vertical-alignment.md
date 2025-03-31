@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->O comando **OBJECT SET VERTICAL ALIGNMENT** modifica por programação o tipo de alinhamento vertical aplicada ao objeto designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -39,8 +36,17 @@ A alienação vertical pode aplicar-se aos seguintes tipos de objetos de formul�
 * colunas de list box,
 * cabeçalhos e rodapés de list box.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1187 |
+| Thread-seguro | &cross; |
+
+

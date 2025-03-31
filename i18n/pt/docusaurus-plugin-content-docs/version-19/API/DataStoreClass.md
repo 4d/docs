@@ -58,9 +58,9 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. São aplicadas as seguintes regras:
+Para utilizar `ds` deve o banco de dados de destino seja compatível com ORDA, conforme especificado na seção dos **pré-requisitos ORDA**. São aplicadas as seguintes regras:
 
-* Uma datastore só referencia as tabelas com uma única chave primária. Tables without a primary key or with composite primary keys are not referenced.
+* Uma datastore só referencia as tabelas com uma única chave primária. Tabelas sem uma chave primária ou com chaves primárias compostas não são referenciadas.
 * Os atributos de tipo BLOB não são gerenciados no datastore.
 
 #### Exemplo 1
@@ -148,7 +148,7 @@ Passe em *connectionInfo* um objeto que desceva o armazém de dados remoto ao qu
 | hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                     |
 | user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                      |
 | senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                     |
-| idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
+| idleTimeout | Integer    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
 | tls         | Parâmetros | Utilize uma conexão segura(*). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                            |
 | type        | Text       | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                 |
 
@@ -261,7 +261,7 @@ A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().S
 
 A função `.cancelTransaction()` cancela qualquer mudança realizado nos dados durante a transação.
 
-Pode aninhar várias transações (subtransações). Se a transação principal for cancelada, todas suas subtransações também são canceladas, mesmo se validadas individualmente usando a função [`.validateTransaction()`](#validatetransactions).
+Pode aninhar várias transações (subtransações). Se a transação principal for cancelada, todas suas sub transações também são canceladas, mesmo se validadas individualmente usando a função [`.validateTransaction()`](#validatetransaction).
 
 #### Exemplo
 
@@ -325,7 +325,7 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
  $status:=dataStore.encryptionStatus()
 
- If($status.isEncrypted) //the database is encrypted
+ If($status. sEncrypted) //o banco de dados está criptografado
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
@@ -515,9 +515,9 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->estabelece todas as seleções de entidade como editável como padrão nas datastore de aplicação atuais.<!-- END REF --> (incluindo [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
 
-quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+Quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta função não modifica as seleções de entidades criadas por [`.copy()`](#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
+> Esta função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
 
 > **Compatibilidade**: esta função só deve ser utilizada em projetos convertidos desde versões de 4D anteriores a 4D v18 R5 e que contenham chamadas [.add()](EntitySelectionClass.md#add). Nste contexto, o uso de `.makeSelectionsAlterable()` pode poupar tempo ao restaurar instantaneamente o comportamento anterior de 4D nos projetos existentes. Por outro lado, utilizar este método em projetos novos criados em 4D v18 R5 e superiores **não é recomendável**, já que impede compartir as seleções de entidades, o que oferece maior rendimento e escalabilidade.
 
@@ -682,7 +682,7 @@ Para uma descrição do formato do registro de petições de ORDA, consulte a se
 
 #### Exemplo 1
 
-Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequencia do registro:
+Se quiser registras as petições dos clientes ORDA em um arquivo e usar o número de sequência do registro:
 
 ```4d
  var $file : 4D. File

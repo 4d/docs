@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->**OBJECT DUPLICATE**コマンドを使用して、*object*引数で指定したオブジェクトのコピーを作成できます。<!-- END REF-->コピーはアプリケーションモードで実行されているフォームのコンテキストで生成されます。デザインモードのソースフォームは変更されません。
 
@@ -84,7 +81,7 @@ displayed_sidebar: docs
 
 コマンドが正しく実行されると*OK*システム変数に1が、そうでなければ0が設定されます。
 
-#### 例題 1 
+## 例題 1 
 
 既存の"OKButton" オブジェクトの上に新しいボタン"CancelButton" を作成し、vCancel 変数を割り当てます:  
 
@@ -92,7 +89,7 @@ displayed_sidebar: docs
  OBJECT DUPLICATE(*;"OKButton";"CancelButton";vCancel)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 既存のラジオボタン"bRadio5" を基に新しいラジオボタン"bRadio6" を作成します。このボタンには変数<>r6 が割り当てられ、"bRadio5" ボタンのと同じグループに入ります。位置は20 ピクセル下に作成されます。:  
 
@@ -100,8 +97,18 @@ displayed_sidebar: docs
  OBJECT DUPLICATE(*;"bRadio5";"bRadio6";<>r6;"bRadio5";0;20)
 ```
 
-#### 参照 
+## 参照 
 
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1111 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

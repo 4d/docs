@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT FORMULA.Summary-->The **WP INSERT FORMULA** command inserts a *formula* in *targetObj* according to the specified insertion *mode*.<!-- END REF-->
 
@@ -28,13 +28,13 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. You can pass:
 
-* either a [formula object](https://developer.4d.com/docs/API/FunctionClass#formula-objects) created by the [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) or [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) command,
+* either a [formula object](../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula-from-string.md) command,
 * or an object containing two properties:  
 
 | **Property** | **Type** | **Description**                                                                                                                                                                                                                                                                       |  
 | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | name         | Text   | Name to display for the formula in the document                                                                                                                                                                                                                                       |  
-| formula      | Object   | The [formula object](https://developer.4d.com/docs/API/FunctionClass#formula-objects) created by the [**Formula**](https://developer.4d.com/docs/API/FunctionClass#formula) or [**Formula from string**](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) command |  
+| formula      | Object   | The [formula object](../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula-from-string.md) command |  
     
 When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the *Managing formulas* page.
 
@@ -58,7 +58,7 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* 
 
 **Note:** Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
 
-#### Example 1 
+## Example 1 
 
 To replace all current date formulas with formatted strings:
 
@@ -84,7 +84,7 @@ To replace all current date formulas with formatted strings:
  End for each
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to use a formula name for the customer name:
 
@@ -108,7 +108,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### See also 
+## See also 
 
 *Managing formulas*  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

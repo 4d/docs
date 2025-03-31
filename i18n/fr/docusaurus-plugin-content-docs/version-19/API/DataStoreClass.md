@@ -148,7 +148,7 @@ Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vou
 | hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
 | user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
 | password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                    |
-| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
+| idleTimeout | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
 | tls         | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
 | type        | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
@@ -261,7 +261,7 @@ La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 
-Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransactions).
+Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransaction).
 
 #### Exemple
 
@@ -513,9 +513,9 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités peuvent être partageables, selon la nature de leur "parent" ou la façon dont elles sont créées (voir la section [Entity selections partageables et non partageables](ORDA/entities.md#entity-selections-partageables-et-non-partageables)).
+Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuvent être partageables, selon la nature de leur "parent" ou de [la manière dont elles sont créées](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
+> Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
 > **Compatibilité** : Cette fonction doit être utilisée uniquement dans des projets convertis à partir de versions de 4D antérieures à 4D v18 R5 et contenant des appels [.add()](EntitySelectionClass.md#add). Dans ce contexte, l'utilisation de `.makeSelectionsAlterable()` peut faire gagner du temps en restaurant instantanément le précédent comportement 4D dans les projets existants. En revanche, l'utilisation de cette méthode dans les nouveaux projets créés dans 4D v18 R5 et les versions plus récentes **n'est pas recommandée**, car elle empêche le partage des entity selections, ce qui offre de meilleures performances et une plus grande évolutivité.
 

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATE especifica os campos ou variáveis a acumular em um relatório realizado utilizando [PRINT SELECTION](print-selection.md).<!-- END REF-->.
 
@@ -28,13 +25,22 @@ Execute ACCUMULATE antes de imprimir um relatório com [PRINT SELECTION](print-s
 
 Utilize a função [Subtotal](subtotal.md "Subtotal") no método de formulário ou em um método de objeto para devolver o sub-total de um dos objetos especificados em *dados*.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [BREAK LEVEL](break-level.md) .
 
-#### Ver também 
+## Ver também 
 
 [BREAK LEVEL](break-level.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 303 |
+| Thread-seguro | &cross; |
+
+

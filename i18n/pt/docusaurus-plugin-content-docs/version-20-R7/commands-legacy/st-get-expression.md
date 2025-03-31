@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST Get expression.Summary-->O comando **ST Get expression** devolve a primeira expressão que se encontra na seleção atual do campo ou da variável de texto com estilo designada pelo parâmetro *objeto*.<!-- END REF--> 
 
@@ -52,7 +49,7 @@ Os parâmetros opcionais *inicioSel* e *fimSel* designam uma seleção de texto 
 
 Se não se encontra uma expressão na seleção, o comando devolve uma cadeia vazia.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Quando há um evento clique duplo, você comprova que existe uma expressão, e assim é mostrado um diálogo no qual recuperaram seus valores para que o usuário possa modificar eles:
 
@@ -72,7 +69,7 @@ Quando há um evento clique duplo, você comprova que existe uma expressão, e a
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você quer executar um método 4D quando é feito clique em um link de um usuário:
 
@@ -92,6 +89,16 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1287 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

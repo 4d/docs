@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Modified.Summary-->**Modified** retorna [True](true.md "True") se um valor tiver sido atribuído por programação a *campo* ou se tiver sido modificado durante a entrada de dados.<!-- END REF--> O comando **Modified**deve ser utilizado unicamente em um método de formulário (ou uma subrotina chamada por um método de formulário).
 
@@ -33,11 +30,11 @@ Em todos os casos, utilize o comando [Old](old.md) para detectar se o valor do c
 
 **Nota:** apesar de que **Modified** pode ser aplicado a todo tipo de campo, ele é utilizado com o comando \[#cmd id="35"/\], deve levar em conta as restrições que aplicam ao comando \[#cmd id="35"/\], Para mais detalhes, ver a descrição do comando \[#cmd id="35"/\],
 
-Durante a entrada de dados, geralmente é mais fácil realizar operações em métodos de objeto com a ajuda do comando [Form event code](form-event-code.md) que utilizar **Modified** nos métodos de formulário. Como um método de objeto recebe o evento On Data Change quando se modifica um campo, o uso de um método de objeto é equivalente a utilizar **Modified** em um método de formulário.
+Durante a entrada de dados, geralmente é mais fácil realizar operações em métodos de objeto com a ajuda do comando [Form event code](../commands/form-event-code.md) que utilizar **Modified** nos métodos de formulário. Como um método de objeto recebe o evento On Data Change quando se modifica um campo, o uso de um método de objeto é equivalente a utilizar **Modified** em um método de formulário.
 
 **Nota:** para funcionar corretamente, o comando **Modified** deve ser utilizado unicamente em um método de formulário ou em um método chamado por um método de formulário.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo prova se o campo *\[Ordens\]Quantidade* ou o campo *\[Ordens\]Preço* for modificado. Se alguns dos dois foi modificado, então o campo *\[Ordens\]Total* foi calculado novamente. 
 
@@ -49,7 +46,7 @@ O seguinte exemplo prova se o campo *\[Ordens\]Quantidade* ou o campo *\[Ordens\
 
 Note que o mesmo resultado pode ser obtido utilizando a segunda linha como uma subrotina chamada pelos métodos de objeto dos campos *\[Ordens\]Quantidade* e *\[Ordens\]Preço* no evento de formulário On Data Change.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas subrotinas que podem ser modificadas o campo *\[umaTabela\]CampoImportante,* mas não salva o registro. Ao final do método principal, pode utilizar o comando Modified para determinar se o registro deve ser guardado: 
 
@@ -66,7 +63,16 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 32 |
+| Thread-seguro | &cross; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** sets the form objects specified by *object* to be displayed using the font size you pass in *size*.<!-- END REF-->
 
@@ -30,7 +27,7 @@ The area for the object, as defined in the form, must be large enough to display
 
 **Note:** If you use this command on an *object* that was using a style sheet, the reference to the style sheet is automatically deleted from the object -- even if you assign the same attributes as those of the style sheet.
 
-#### Example 1 
+## Example 1 
 
 The following example sets the font size for a variable named *vtInfo*: 
 
@@ -38,7 +35,7 @@ The following example sets the font size for a variable named *vtInfo*:
  OBJECT SET FONT SIZE(vtInfo;14)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example sets the font size for all the form objects whose name starts with "hl": 
 
@@ -46,9 +43,18 @@ The following example sets the font size for all the form objects whose name sta
  OBJECT SET FONT SIZE(*;"hl@";14)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
 *Programming Notes*  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 165 |
+| Thread safe | &cross; |
+
+

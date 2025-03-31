@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->**Tema:** Imagens
 
@@ -35,7 +35,7 @@ Os identificadores codec devolvidos são definidos por 4D exatamente da mesma ma
 
 Para saber mais sobre os IDs codec imagen, consulte *Imagens* 
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser saber os formatos de imagem armazenados em um campo para o registro atual:
 
@@ -45,6 +45,15 @@ Se quiser saber os formatos de imagem armazenados em um campo para o registro at
  GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
-#### Ver também 
+## Ver também 
 
   
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1406 |
+| Thread-seguro | &check; |
+
+

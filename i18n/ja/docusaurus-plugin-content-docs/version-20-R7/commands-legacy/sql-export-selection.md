@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->SQL EXPORT SELECTION コマンドは、aTable引数で指定した4DテーブルのカレントセレクションをSQLフォーマットで書き出します。<!-- END REF-->
 
@@ -32,10 +29,20 @@ displayed_sidebar: docs
 
 書き出しが正しく実行されるとOK 変数に1 が、そうでなければ0 が設定されます。 
 
-##### 
+### 
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 参照 
+## 参照 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1064 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

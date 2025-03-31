@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->La commande **QR GET DESTINATION** retourne le *type* de destination de l'état rapide contenu dans la *zone*.<!-- END REF--> 
 
@@ -34,6 +31,16 @@ Vous pouvez comparer la valeur obtenue dans le paramètre *type* avec les consta
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET DESTINATION](qr-set-destination.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 756 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

@@ -241,7 +241,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 
 - [データクラス](API/DataClassClass.md#query) または [既存のエンティティセレクション](API/EntitySelectionClass.md#query) のエンティティに対してクエリを実行する;
 - [`.all()`](API/DataClassClass.md#all) DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- [`Create entity selection`](../commands/create-entity-selection.md) コマンドあるいは [`.newSelection()`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
 - [`.copy()`](API/EntitySelectionClass.md#copy) EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;
 - [EntitySelectionクラス](API/EntitySelectionClass.md) の様々な関数の中から、[`.or()`](API/EntitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 - "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
@@ -314,9 +314,9 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 - 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 。
 - リレーションに基づいて生成された場合:
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (例: "company.employees") の *attributeName* が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の *attributeName* がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。
-  - [entitySelection.extract()](API/EntitySelectionClass.md#extract) から返されるコレクションがエンティティセレクションを含む場合 (エンティティセレクションと同じ特性になります)。
+ - [entity.*attributeName*](API/EntityClass.md#attributename) (例: "company.employees") の *attributeName* が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
+ - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の *attributeName* がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。
+ - [entitySelection.extract()](API/EntitySelectionClass.md#extract) から返されるコレクションがエンティティセレクションを含む場合 (エンティティセレクションと同じ特性になります)。
 
 例:
 
@@ -451,7 +451,7 @@ ORDAでは、あらゆるデータクラスにおいて、エンティティへ�
 
 ### 制限フィルターの定義
 
-データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass-class) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
+データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
 
 ### `Function event restrict`
 
@@ -561,9 +561,9 @@ ORDA では、以下の二つのロックモードを提供しています:
 - すべてのエンティティは必ず読み書き可能な状態でロードされます。エンティティの *事前* ロックというのはありません。
 - 各エンティティには保存されるたびにインクリメントされる内部的なロックスタンプを持っています。
 - プロセスあるいはユーザーが `entity.save()` メソッドでエンティティを保存しようとした場合、4D は保存しようとしているエンティティのスタンプの値とデータ内にあるエンティティのスタンプの値を比較します (データ編集の場合):
-  - 値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。
+ - 値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。
 
-  - 値が合致しない場合、読み込みから保存までの間に他のユーザーがエンティティを編集したことになります。 保存は実行されず、エラーが返されます。
+ - 値が合致しない場合、読み込みから保存までの間に他のユーザーがエンティティを編集したことになります。 保存は実行されず、エラーが返されます。
 
 オプティミスティック・ロックの動作は以下ように図解することができます:
 

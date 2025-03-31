@@ -16,14 +16,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Parâmetro     | Tipo    |     | Descrição                     |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Resultados    | Object  |  ←  | Information about the process |
+| Parâmetro     | Tipo    |                             | Descrição                     |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Resultados    | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
 
@@ -34,14 +34,14 @@ O objeto retornado contém as propriedades abaixo:
 | cpuTime          | Real                                    | Running time (seconds)                                        |
 | cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
 | creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Longint                                 | Process unique ID                                                                |
+| ID               | Integer                                 | Process unique ID                                                                |
 | name             | Text                                    | Nome de processo                                                                 |
-| number           | Longint                                 | Process number                                                                   |
+| number           | Integer                                 | Process number                                                                   |
 | preemptive       | Parâmetros                              | True if run preemptive, false otherwise                                          |
 | sessionID        | Text                                    | Session UUID                                                                     |
-| state            | Longint                                 | Current status. Possible values: see below       |
+| state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Longint                                 | Running process type. Possible values: see below |
+| type             | Integer                                 | Running process type. Possible values: see below |
 | visible          | Parâmetros                              | True if visible, false otherwise                                                 |
 
 - Valores possíveis para "state":
@@ -57,7 +57,7 @@ O objeto retornado contém as propriedades abaixo:
 | Waiting for internal flag | 4     |
 | Paused                    | 5     |
 
-- Possible values for "type":
+- Valores possíveis para "type":
 
 | Parâmetros                    | Valor |
 | ----------------------------- | ----- |
@@ -143,7 +143,7 @@ Here is an example of output object:
 
 ```
 
-#### Exemplo
+## Exemplo
 
 You want to know if the process is preemptive:
 
@@ -155,7 +155,7 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-#### Veja também
+## Veja também
 
 [Count tasks](../commands-legacy/count-tasks.md)\
 [Process activity](process-activity.md)\

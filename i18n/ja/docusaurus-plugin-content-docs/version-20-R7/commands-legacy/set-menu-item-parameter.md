@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->SET MENU ITEM PARAMETERコマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に、カスタム文字列を設定するために使用します。<!-- END REF-->
 
 このパラメタは主に[Dynamic pop up menu](dynamic-pop-up-menu.md "Dynamic pop up menu")コマンドで使用されます。
 
-#### 例題 
+## 例題 
 
 以下のコードでは開かれたウィンドウの名前で構成されるメニューを作成し、選択されたウィンドウの番号を取得できるようにします:
 
@@ -39,8 +36,17 @@ displayed_sidebar: docs
  RELEASE MENU($tMenuRef)
 ```
 
-#### 参照 
+## 参照 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1004 |
+| スレッドセーフである | &cross; |
+
+

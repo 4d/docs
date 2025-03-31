@@ -16,9 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT ROWS.Summary-->La commande **LISTBOX INSERT ROWS** insère une ou plusieurs nouvelle(s) ligne(s) dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
@@ -36,3 +33,13 @@ Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux
 #### Voir aussi 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 913 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

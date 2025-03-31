@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** passe les fenêtres du process de numéro *process* au premier plan.<!-- END REF--> Toutes les fenêtres appartenant à *process* passent au premier plan. Si le process est déjà au premier plan, la commande ne fait rien. Si le process est caché, il faut utiliser la commande [SHOW PROCESS](show-process.md) pour faire d'abord apparaître le process, sinon **BRING TO FRONT** ne fait rien.
 
@@ -24,7 +21,7 @@ Le Process principal et le Process de structure peuvent être passés au premier
 
 **Note :** Si le process contient plusieurs fenêtres et que vous souhaitez passer au premier plan une fenêtre spécifique, il est préférable d'utiliser par exemple la commande [SET WINDOW RECT](set-window-rect.md). 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est une méthode qui peut être exécutée à partir d'une commande de menu. Elle vérifie si le process au premier plan est le process <>Clients. Sinon, ce process passe au premier plan :
 
@@ -34,8 +31,17 @@ L'exemple suivant est une méthode qui peut être exécutée à partir d'une com
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 326 |
+| Thread safe | &cross; |
+
+

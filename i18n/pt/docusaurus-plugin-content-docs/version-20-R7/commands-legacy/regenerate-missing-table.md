@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->O comando REGENERATE MISSING TABLE reconstrui a tabela não encontrada cujo nome é passado no parâmetro *nomTabela*.<!-- END REF--> Quando se reconstrui uma tabela não encontrada, ela se torna visível no editor de estrutura e seus dados são acessíveis novamente.  
   
@@ -24,7 +21,7 @@ As tabelas não encontradas são tabelas cujos dados estão presentes no arquivo
   
 Se a tabela designada pelo parâmetro *nomTabela* não for uma tabela faltante do banco, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Este método regenera todas as tabelas não encontradas eventualmente presentes no banco:
 
@@ -59,6 +56,15 @@ Este método regenera todas as tabelas não encontradas eventualmente presentes 
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1126 |
+| Thread-seguro | &cross; |
+
+

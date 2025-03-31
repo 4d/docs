@@ -5,7 +5,7 @@ title: On After Keystroke
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|28|[4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character.|
+|28|[4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character.|
 
 <details><summary>History</summary>
 

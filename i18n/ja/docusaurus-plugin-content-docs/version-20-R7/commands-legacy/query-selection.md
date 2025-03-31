@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** は、*aTable*のレコードを検索します。<!-- END REF-->**QUERY SELECTION** はカレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。 
+<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** は、*aTable*のレコードを検索します。<!-- END REF-->はカレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。 
 
 **QUERY SELECTION** は、[QUERY](query.md)と同じような動作を実行します。相違点は検索する範囲が異なるだけです:
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **QUERY SELECTION** コマンドは、クエリが *\** 引数で結合された[QUERY](query.md)呼び出しのシークエンスを使用して定義する事が出来ない場合に有用です。通常、直前のクエリではなく、[USE SET](use-set.md) のようなコマンドでのクエリによるカレントセレクションを検索したい場合などに有効です。
 
-#### 例題 
+## 例題 
 
 リストフォームにおいてユーザーが選択したレコードを対象にクエリします:
 
@@ -40,6 +40,18 @@ displayed_sidebar: docs
 
 上のコードは、最初にユーザーが選択したレコードのセレクションから、ニューヨークシティで株式取引を行っている企業を検索します。
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 341 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

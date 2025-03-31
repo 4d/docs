@@ -1,6 +1,6 @@
 ---
 id: forms
-title: フォーム
+title: Forms
 ---
 
 フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 フォームを使用することで、ユーザーはデータベースのデータをやり取りし、レポートを印刷します。 フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
@@ -10,7 +10,7 @@ title: フォーム
 また、以下の機能により、フォームは他のフォームを含むことができます:
 
 - [サブフォームオブジェクト](FormObjects/subform_overview.md)
-- [継承フォーム](forms.md#継承フォーム)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## フォームを作成する
 
@@ -18,7 +18,7 @@ title: フォーム
 
 - **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
-- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources-フォルダー) に保存します。 例:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). 例:
 
 ```
 {
@@ -87,7 +87,7 @@ title: フォーム
 
 - もっとも重要な情報を最初のページに配置し、他の情報を後ろのページに配置する。
 - トピックごとに、専用ページにまとめる。
-- [入力順](../FormEditor/formEditor.html#データの入力順)を設定して、データ入力中のスクロール動作を少なくしたり、または不要にする。
+- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
 - フォーム要素の周りの空間を広げ、洗練された画面をデザインする。
 
 複数ページは入力フォームとして使用する場合にのみ役立ちます。 印刷出力には向きません。 マルチページフォームを印刷すると、最初のページしか印刷されません。
@@ -111,7 +111,7 @@ title: フォーム
 3. 開かれたフォームの 0ページ
 4. 開かれたフォームのカレントページ
 
-この順序により、フォームにおけるオブジェクトの [入力順](../FormEditor/formEditor.html#データの入力順) が決まります。
+This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
 
 > 継承フォームの 0ページと 1ページだけが他のフォームに表示可能です。
 

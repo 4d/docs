@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->O comando**LISTBOX SET LOCKED COLUMNS** bloqueia as primeiras *numColunas* colunas esquerdas do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -30,7 +27,16 @@ Em *numColunas*, pode passar qualquer valor entre 1 e o número total de colunas
 
 Para eliminar o bloqueio de colunas, passe 0 em *numColunas*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get locked columns](listbox-get-locked-columns.md)  
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1151 |
+| Thread-seguro | &cross; |
+
+

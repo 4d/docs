@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get adjusted table cache priority.Summary-->O comando **Get adjusted table cache priority** devolve o valor de prioridade da cache ajustada aplicado em cache para os datos escalares *tabela*.<!-- END REF-->. Este comando só é necessário para propósitos de depuração.
 
@@ -22,8 +22,17 @@ displayed_sidebar: docs
 
 Os tipos de campos de dados escalares incluem campos de tipo data/hora, numéricos ou string.
 
-#### Ver também 
+## Ver também 
 
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 *Gerenciar prioridades em cache de banco de dados*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1426 |
+| Thread-seguro | &check; |
+
+

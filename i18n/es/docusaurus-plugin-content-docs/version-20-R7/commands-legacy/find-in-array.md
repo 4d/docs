@@ -16,19 +16,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Find in array.Summary-->El comando Find in array devuelve el número del primer elemento del *array* que corresponde a *valor*.<!-- END REF-->
 
 Find in array puede utilizarse con arrays de tipo Texto, Alfa, Numérico, Fecha, Puntero, y Booleano. Los parámetros *array* y *valor* deben ser del mismo tipo.
 
-*valor* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad, ver [Operadores básicos](https://developer.4d.com/docs/Concepts/operators#basic-operators)). Si no se encuentra ningún elemento, **Find in array** devuelve –1.
+*valor* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad, ver [Operadores básicos](../Concepts/operators.md#basic-operators)). Si no se encuentra ningún elemento, **Find in array** devuelve –1.
 
 **Nota:** con arrays objeto, sólo se pueden utilizar referencias a objetos en el parámetro *valor*.
 
 Si se especifica *inicio*, el comando comienza la búsqueda en el número de elemento especificado por *inicio*. Si no se especifica *inicio*, el comando comienza la búsqueda en el elemento 1.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método de proyecto borra todos los elementos vacíos del array alfa o texto cuyo puntero se pasa como parámetro:
 
@@ -57,7 +57,7 @@ Después de implementar este método de proyecto en una base, puede escribir:
  LIMPIAR ARRAY(->atValores)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente método de proyecto selecciona el primer elemento de un array cuyo puntero pasado como primer parámetro corresponde al valor de la variable o del campo cuyo puntero se pasa como parámetro:
 
@@ -85,7 +85,7 @@ Después de implementar este método proyecto en la base, puede escribir:
 
 **Nota**: este ejemplo utiliza el **elemento seleccionado** del array. Tenga en cuenta que el elemento seleccionado no es significativo si el array contiene más de 32.767 elementos (ver *Arrays y objetos de formulario*). En este caso, es necesario utilizar una variable de tipo entero largo para almacenar el resultado de **Find in array**.
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea encontrar una referencia a un objeto:
 
@@ -102,10 +102,19 @@ Desea encontrar una referencia a un objeto:
  $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
-#### Ver también 
+## Ver también 
 
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 230 |
+| Hilo seguro | &check; |
+
+

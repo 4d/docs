@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->The **QR MOVE COLUMN** command moves the column currently found at the *column* position to the *newPos* position.<!-- END REF-->
 
@@ -26,7 +23,7 @@ Both the *column* and *newPos* parameters must be valid column numbers (between 
 
 **Note:** This command can be used with list reports only.
 
-#### Example 
+## Example 
 
 You have designed the following report:
 
@@ -41,3 +38,13 @@ If you execute:
 The result is:
 
 ![](../assets/en/commands/pict2569472.en.png)
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1325 |
+| Thread safe | &cross; |
+
+

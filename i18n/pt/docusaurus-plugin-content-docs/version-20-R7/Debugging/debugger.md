@@ -52,23 +52,23 @@ A barra de ferramentas do depurador inclui vários botões, associados a atalhos
 
 Interrompe o modo de rastreamento e retoma o curso normal da execução do método.
 
-> **Shift** + **F5** o **Shift** + clic en el botón **No Trace** retoma la ejecución. Também desativa todas as chamadas TRACE subsequentes para o processo atual.
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. Também desativa todas as chamadas TRACE subsequentes para o processo atual.
 
 #### Executar passo a passo
 
 Executa a linha de método atual, indicada pelo contador de programa (a seta amarela). O depurador passa para a linha seguinte.
 
-O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Se você quiser rastrear também as chamadas de subrotinas e funções, use o botão **Step Into**.
+O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. Se o método pai for executado no lado remoto, o botão **Step Over** terá o mesmo efeito que o botão **No Trace**.
+Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### Passo a passo detalhado
 
 Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-O novo método torna-se o atual (topo) método no [Chame Chain Pane](#call-chain-pane) da janela do Depurador.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-Ao executar uma linha que não chama outro método, esse botão tem o mesmo efeito que o botão **Step Over**.
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
 #### Step Out
 
@@ -89,9 +89,9 @@ Interrompe a execução do método e regressa ao estado anterior ao início da e
 
 #### Abortar e editar
 
-O método que está sendo executado quando você clica no botão **Abortar e editar** é aberto no Editor de código.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Sugestão**: Utilize este botão quando você sabe quais alterações são necessárias no seu código e quando essas alterações são necessárias para prosseguir com o teste dos seus métodos. Quando terminar as alterações, volte a executar o método.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Quando terminar as alterações, volte a executar o método.
 
 #### Editar
 
@@ -99,7 +99,7 @@ O método executado no momento em que se clica no botão Editar abre-se no Edito
 
 Se utilizar este botão para modificar um método, as modificações só entram em vigor na próxima vez que este for executado.
 
-> **Dica:** Use este botão quando você souber quais alterações são necessárias no seu código e quando eles não interferem com o resto do código a ser executado ou rastreado.
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
 #### Botão Salvar parâmetros
 
@@ -146,27 +146,27 @@ $c:=a+b
 
 1. Uma janela do depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesse momento, o tema **Line Objects** é exibido:
 
-   | $a | Indefinido |
-   | -- | ---------- |
+ | $a | Indefinido |
+ | -- | ---------- |
 
-   A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 2. Você clica no botão **Step Over**. O contador do programa está agora definido para a linha `b:=a+1`. Neste ponto, o tema **Objetos linha** é exibido:
 
-   | $a | 1          |
-   | -- | ---------- |
-   | $b | Indefinido |
+ | $a | 1          |
+ | -- | ---------- |
+ | $b | Indefinido |
 
-   O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. O tema **Objetos atuais** exibe:
 
-   | $c | Indefinido |
-   | -- | ---------- |
-   | $a | 1          |
-   | $b | 2          |
+ | $c | Indefinido |
+ | -- | ---------- |
+ | $a | 1          |
+ | $b | 2          |
 
-   O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+ O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
@@ -268,9 +268,9 @@ Na imagem acima:
 - O `thirdMethod` não recebeu nenhum parâmetro
 - \`$0 está atualmente indefinido, porque o método não atribuiu nenhum valor a $0 (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
 - O `secondMethod` recebeu três parâmetros do `firstMethod`:
-  - $1 é um ponteiro para a tabela `[Employee]`
-  - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
-  - $3 é um parâmetro alfanumérico cujo valor é "Z"
+ - $1 é um ponteiro para a tabela `[Employee]`
+ - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
+ - $3 é um parâmetro alfanumérico cujo valor é "Z"
 
 Você pode dar duplo clique no nome de qualquer método para exibir seu conteúdo no [Source Code Pane](#source-code-pane).
 
@@ -332,7 +332,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 - **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
 - **Expressões Padrão**: Copia a lista de expressões do Watch.
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> Essa opção não está disponível no [modo de depuração remota](debugging-remote.md).
 
 - **Recolher tudo/Expandir tudo**: Recolhe ou expande todas as listas hierárquicas.
 - **Mostrar tipos**: Exibe o tipo de cada item da lista (quando apropriado).
@@ -366,9 +366,9 @@ Você pode copiar qualquer expressão selecionada do painel Código-fonte para o
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
-   - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
-   - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-   - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
+ - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
+ - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+ - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 
@@ -405,11 +405,11 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Goto Definition**: Vai para o local onde o objeto selecionado está definido. Este comando está disponível para:
-  - *Métodos do projeto:* exibe o conteúdo do método em uma nova janela do Editor de Código
-  - *Campos:* Exibe as propriedades do campo no inspetor da janela de estrutura
-  - *Tabelas:* Exibe as propriedades da tabela no inspetor da janela Estrutura
-  - *Formulários:* Apresenta o formulário no editor de formulários
-  - *Variáveis* (parâmetro local, de processo, entre processos ou $n ): exibe a linha no método atual ou entre os métodos do compilador em que a variável é declarada
+ - *Métodos do projeto:* exibe o conteúdo do método em uma nova janela do Editor de Código
+ - *Campos:* Exibe as propriedades do campo no inspetor da janela de estrutura
+ - *Tabelas:* Exibe as propriedades da tabela no inspetor da janela Estrutura
+ - *Formulários:* Apresenta o formulário no editor de formulários
+ - *Variáveis* (parâmetro local, de processo, entre processos ou $n ): exibe a linha no método atual ou entre os métodos do compilador em que a variável é declarada
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

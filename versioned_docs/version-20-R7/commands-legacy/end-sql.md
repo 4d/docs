@@ -12,12 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.End SQL.Summary-->**End SQL** is a keyword indicating the end of a sequence of SQL commands in the Method editor.<!-- END REF--> 
 
 A sequence of SQL statements must be enclosed with the [Begin SQL](begin-sql.md) and **End SQL** keywords. For more information, refer to the description of the [Begin SQL](begin-sql.md) keyword.
 
-#### See also 
+## See also 
 
 [Begin SQL](begin-sql.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 949 |
+| Thread safe | &check; |
+
+

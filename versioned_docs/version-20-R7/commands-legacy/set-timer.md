@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 
 
-**Note:** For more information about this form event, please refer to the description of the command [Form event code](form-event-code.md).
+**Note:** For more information about this form event, please refer to the description of the command [Form event code](../commands/form-event-code.md).
 
 If this command is called in a context in which it is not displaying a form, it will have no effect. 
 
@@ -30,7 +27,7 @@ If you pass -1 in the *tickCount* parameter, the command will activate the On Ti
 
 To procedurally disable the triggering of the On Timer form event, call **SET TIMER** again and pass 0 in *tickCount*.
 
-#### Example 
+## Example 
 
 Let’s imagine that you want, when a form is displayed on screen, the computer to beep every three seconds. To do so, write the following form method: 
 
@@ -44,7 +41,16 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
  End if
 ```
 
-#### See also 
+## See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 645 |
+| Thread safe | &cross; |
+
+

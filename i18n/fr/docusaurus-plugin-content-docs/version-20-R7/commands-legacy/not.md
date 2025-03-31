@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Not.Summary-->La fonction **Not** retourne la valeur inverse de *booléen*, changeant un [True](true.md) en [False](false.md) ou un [False](false.md) en [True](true.md).<!-- END REF--> 
 
-#### Exemple 
+## Exemple 
 
 Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable. Cette valeur est alors modifiée en [False](false.md) puis de nouveau en [True](true.md) : 
 
@@ -28,7 +28,16 @@ Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable.
  Résultat:=Not(Résultat) // Résultat prend la valeur VRAI
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [False](false.md)  
 [True](true.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 34 |
+| Thread safe | &check; |
+
+

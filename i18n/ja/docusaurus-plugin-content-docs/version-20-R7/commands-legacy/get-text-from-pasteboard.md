@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get text from pasteboard.Summary-->Get text from pasteboard は、ペーストボードに存在するテキストを返します。<!-- END REF-->
 
@@ -26,12 +23,22 @@ displayed_sidebar: docs
 
 4Dのテキスト変数やフィールドは、2GBまでを含めることができます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 テキストが正しく取り出されるとOKに1が、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 524 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

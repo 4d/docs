@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Tipos de datos compatíveis
 
-Com parâmetros nomeados, você pode usar os mesmos tipos de dados que são [suportados pela palavra-chave `var`] (variables.md#using-the-var-keyword), incluindo objetos de classe. Por exemplo:
+Com parâmetros nomeados, você pode usar os mesmos tipos de dados que são [suportados pela palavra-chave `var`] (variables.md), incluindo objetos de classe. Por exemplo:
 
 ```4d
 Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
@@ -295,7 +295,7 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecat
 
 :::
 
-## Triggers and On Drag Over
+## Triggers e On Drag Over
 
 Alguns contextos não suportam a declaração em um método "Compiler_", portanto, são tratados especificamente:
 
@@ -319,8 +319,8 @@ Este caso es tratado por 4D dependendo do contexto:
 
 - em [projetos compilados](interpreted.md), um erro é gerado na etapa de compilação sempre que possível. Senão, um erro é gerado quando o método for chamado.
 - em projetos interpretados:
-  - Se o parâmetro tiver sido declarado usando a [named syntax](#named-parameters) (`#DECLARE` ou `Function`), será gerado um erro quando o método for chamado.
-  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+ - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
+ - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Usando propriedades objeto como parâmetros nomeados
 
@@ -431,7 +431,7 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
  End if
 ```
 
-Depois de adicionar este método projeto a sua aplicação, pode escrever:
+Após adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
@@ -439,7 +439,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 
 :::tip
 
-Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar o uso de [propriedades do objeto como parâmetros com nome](#using-objects-properties-as-named-parameters), que fornecem uma maneira flexível de lidar com um número variável de parâmetros.
+Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar o uso de [propriedades do objeto como parâmetros com nome](#using-object-properties-as-named-parameters), que fornecem uma maneira flexível de lidar com um número variável de parâmetros.
 
 :::
 
@@ -490,7 +490,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Therefore, 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Isso é descrito no parágrafo [Returning values](#returning-values).
+This second technique of returning a value by a subroutine is called "using a function". Isso é descrito no parágrafo [Returning values](#returned-value).
 
 ### Casos particulares: objetos e coleções
 

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Summary-->O comando **OBJECT SET FOCUS RECTANGLE INVISIBLE** permite definir ou modificar dinamicamente a opção invisibilidade do retângulo de foco do objeto designado para os parâmetros *objeto* e *\** para o processo atual.<!-- END REF--> Esta configuração corresponde à opção **Ocultar retângulo de foco** disponível para os objetos editados na Lista de propriedades em modo Desenho.   
   
@@ -29,6 +26,15 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 
 Passe **True** no parâmetro *invisível* para ocultar o retângulo de foco e **False** para deixar-lo visível.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1177 |
+| Thread-seguro | &cross; |
+
+

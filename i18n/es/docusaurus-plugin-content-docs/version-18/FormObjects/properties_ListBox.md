@@ -15,7 +15,7 @@ Colección de columnas del list box.
 | ------- | ---------------------------- | ---------------------------------------------------- |
 | columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
-Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview#column-specific-properties).
+Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview.md#column-specific-properties).
 
 #### Objetos soportados
 

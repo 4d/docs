@@ -13,15 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SHOW PROCESS.Summary-->SHOW PROCESS mostra todas as janelas que pertencem a *processo*.<!-- END REF--> Este comando não traz as janelas de *processo* ao primeiro plano. Para fazer isto, utilize o comando [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").  
 Se o processo já estiver sendo visualizado, o comando não tem efeito.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir mostra um processo chamado Clientes, que foi ocultado previamente. O número de processo são armazenados na variável interprocesso *<>Clientes*:
 
@@ -29,8 +26,17 @@ O exemplo a seguir mostra um processo chamado Clientes, que foi ocultado previam
  SHOW PROCESS(◊Clientes)
 ```
 
-#### Ver também 
+## Ver também 
 
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 325 |
+| Thread-seguro | &cross; |
+
+

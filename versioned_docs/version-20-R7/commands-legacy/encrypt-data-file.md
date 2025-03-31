@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; newPassPhrase | newDataKey {; *archiveFolder* {; curPassPhrase | curDataKey {; *methodName*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->The **Encrypt data file** command is used to encrypt or re-encrypt the data file designated by the *dataPath* parameter associated to the *structurePath* parameter.<!-- END REF--> It can also be used to remove encryption from the database. The command does not modify the original files, it returns the full path name of the folder created to backup the original data file.
 
@@ -68,7 +65,7 @@ The *method* parameter is used to set a callback method that will be called regu
 
 Actual path of the destination folder of the original files.
 
-#### Example 1 
+## Example 1 
 
 Encrypt a data file for the first time:
 
@@ -81,7 +78,7 @@ Encrypt a data file for the first time:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Re-encrypt an encrypted data file (change the passphrase):
 
@@ -98,7 +95,7 @@ Re-encrypt an encrypted data file (change the passphrase):
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 Remove encryption from an encrypted data file:
 
@@ -113,7 +110,7 @@ Remove encryption from an encrypted data file:
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 Re-encrypt an encrypted data file with the current key (for example, when the encryptable status has been changed for some tables).
 
@@ -128,10 +125,19 @@ Re-encrypt an encrypted data file with the current key (for example, when the en
  End if
 ```
 
-#### See also 
+## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Data file encryption status](data-file-encryption-status.md)  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1610 |
+| Thread safe | &cross; |
+
+

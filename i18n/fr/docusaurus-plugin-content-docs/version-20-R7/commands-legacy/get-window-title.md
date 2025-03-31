@@ -14,19 +14,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get window title.Summary-->La commande **Get window title** retourne le titre de la fenêtre dont le numéro de référence est passé dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, une chaîne vide est retournée. 
 
 Si vous omettez le paramètre *fenêtre*, **Get window title** retourne le titre de la fenêtre de premier plan du process courant.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [SET WINDOW TITLE](set-window-title.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET WINDOW TITLE](set-window-title.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 450 |
+| Thread safe | &cross; |
+
+

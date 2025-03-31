@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CLEAR LIST.Summary-->O comando CLEAR LIST apaga da memória a lista hierárquica cujo número de referência é passado em *lista*.<!-- END REF-->
 
@@ -32,7 +29,7 @@ Para apagar uma sub-lista associada a um elemento (em qualquer nível) de outra 
 3\. Chame CLEAR LIST para apagar a sub-lista cujo número de referência obteve com [GET LIST ITEM](get-list-item.md "GET LIST ITEM").  
 4\. Chame *REDRAW LIST* para a lista mostrada no formulário, para recalcular seus elementos e sub-listas.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Dentro de uma rotina de limpeza que apaga todos os objetos e dados que já não necessita (por exemplo, quando se fecha uma janela ou um formulário), poderia terminar apagando uma lista hierárquica que já tenha sido apagada, dependendo das ações do usuário no formulário. Utilize [Is a list](is-a-list.md "Is a list") para apagar a lista só se for necessário: 
 
@@ -43,16 +40,25 @@ Dentro de uma rotina de limpeza que apaga todos os objetos e dados que já não 
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver o exemplo do comando [Load list](load-list.md "Load list").
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Ver o exemplo do comando [BLOB to list](blob-to-list.md "BLOB to list").
 
-#### Ver também 
+## Ver também 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 377 |
+| Thread-seguro | &cross; |
+
+

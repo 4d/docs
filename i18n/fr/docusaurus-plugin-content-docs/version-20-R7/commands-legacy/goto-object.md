@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->La commande **GOTO OBJECT** permet de sélectionner l'objet saisissable *objet* (variable ou champ) en tant que zone active du formulaire.<!-- END REF--> C'est l'équivalent d'un clic de l'utilisateur dans la zone ou de l'utilisation de la touche **Tabulation** pour sélectionner le champ ou la variable.
 
@@ -27,7 +24,7 @@ Pour supprimer tout focus dans le formulaire courant, appelez la commande en pas
 
 La commande **GOTO OBJECT** peut être utilisée dans le contexte d’un sous-formulaire. Lorsqu’elle est appelée depuis un sous-formulaire, elle recherche en premier lieu objet dans le sous-formulaire puis, si la recherche n’aboutit pas, elle étend la recherche aux objets du formulaire parent.
 
-#### Exemple 1 
+## Exemple 1 
 
 Voici les deux modes d'utilisation de la commande **GOTO OBJECT** : 
 
@@ -36,7 +33,7 @@ Voici les deux modes d'utilisation de la commande **GOTO OBJECT** :
  GOTO OBJECT(*;"ZonePrénoms") //Nom d'objet
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez que plus aucun objet du formulaire n'ait le focus : 
 
@@ -44,11 +41,20 @@ Vous souhaitez que plus aucun objet du formulaire n'ait le focus :
  GOTO OBJECT(*;"")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Reportez-vous à l'exemple de la commande [REJECT](reject.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 206 |
+| Thread safe | &cross; |
+
+

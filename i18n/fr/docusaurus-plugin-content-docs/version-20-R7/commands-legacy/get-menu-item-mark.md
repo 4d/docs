@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item mark.Summary-->La commande **Get menu item mark** retourne la marque (ou "coche") de la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
@@ -31,7 +28,7 @@ Si la ligne de menu n'a pas de marque ou si le paramètre *ligneMenu* désigne u
 
 **Note :** Pour plus d'informations sur les marques des lignes de menus sous Mac OS et Windows, reportez-vous à la description de la commande [SET MENU ITEM MARK](set-menu-item-mark.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant inverse l'état marqué d'une ligne de menu :
 
@@ -39,6 +36,16 @@ L'exemple suivant inverse l'état marqué d'une ligne de menu :
  SET MENU ITEM MARK($vlMenu;$vlItem;Char(18)*Num(Character code(Get menu item mark($vlMenu;$vlItem))#18))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU ITEM MARK](set-menu-item-mark.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 428 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

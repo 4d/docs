@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get printed height.Summary-->El comando Get printed height devuelve la altura global (en píxeles) de la sección impresa por el comando [Print form](print-form.md "Print form").<!-- END REF-->
 
@@ -28,8 +25,17 @@ Los márgenes de impresión derecha e izquierda no influyen en el valor devuelto
 
 **Nota:** para mayor información sobre gestión de impresión y terminología en 4D, consulte la descripción del comando [GET PRINTABLE MARGIN](get-printable-margin.md "GET PRINTABLE MARGIN"). 
 
-#### Ver también 
+## Ver también 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 702 |
+| Hilo seguro | &cross; |
+
+

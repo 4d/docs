@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### 
+## 
 
 <!--REF #_command_.On Web Connection database method.Summary-->O On Web Connection database method pode ser chamado nos seguintes casos:  
 
@@ -78,7 +75,7 @@ Note que você é livre para usar este parâmetro quando quiser. 4D simplesmente
     
 Com Safari rodando em Mac OS, pode receber um cabeçalho similar a este:  
 ```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
 Com Microsoft Internet Explorer 8 rodando em Windows, pode receber um cabeçalho similar a este:  
 ```RAW  
@@ -95,7 +92,7 @@ Os parâmetros *$5* e *$6* recebem o nome de usuário e senha inseridos pelo usu
 
 **Nota:** se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro *$6* (a senha do usuário) não é retornado por razões de segurança.
 
-#### On Web Connection Database Method Calls 
+## On Web Connection Database Method Calls 
 
 O On Web Connection database method pode ser utilizado como ponto de entrada para o servidor web 4D, seja para usar a URL especial *4DCGI*, ou utilizando as URLs de comando personalizados.
 

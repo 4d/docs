@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->El comando **WP IMPORT STYLE SHEETS** importa todas las hojas de estilo de *docSource* en *docTarget*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ En el parámetro *docSource*, pase el documento 4D Write Pro que contiene las ho
 
 **Nota**: si una hoja de estilo de *docSource* tiene el mismo nombre que una hoja de estilo en *docTarget*, la hoja de estilo importada sobrescribirá (reemplazará) la hoja de estilo en *docTarget*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea importar una hoja de estilo de plantilla y recibir una notificación con el número de cada tipo de hoja de estilo importada:
 
@@ -39,7 +39,7 @@ Desea importar una hoja de estilo de plantilla y recibir una notificación con e
  ALERT(String($nb1)+" hoja(s) de estilo de párrafo "+string($nb2)+" hojas de estilo de caracter(es) importados))
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

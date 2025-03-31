@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Print object.Summary-->**Print object** コマンドを使用して *object*と*\** 引数で指定したフォームオブジェクトを、*posX*と*posY*の位置に、任意のサイズで印刷できます。<!-- END REF-->
 
@@ -47,7 +44,7 @@ displayed_sidebar: docs
 
 ****注:** 階層リスト、サブフォーム、およびWebエリアを印刷することはできません。
 
-#### 例題 1 
+## 例題 1 
 
 フォーム上の10個のオブジェクトを印刷する例:
 
@@ -74,7 +71,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 リストボックス全体を印刷したい場合を考えます:
 
@@ -96,6 +93,15 @@ displayed_sidebar: docs
  ON ERR CALL("")
 ```
 
-#### 参照 
+## 参照 
 
 [FORM LOAD](form-load.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1095 |
+| スレッドセーフである | &cross; |
+
+

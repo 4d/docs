@@ -22,7 +22,7 @@ Certains styles de boutons peuvent être [liés à un menu contextuel](FormObjec
 
 ### List box
 
-Cet événement est généré dans des colonnes de [list box de type tableau objets](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), lorsque l'utilisateur clique sur un bouton de sélection de widget (attribut "AlternateButton").
+Cet événement est généré dans des colonnes de [list box de type tableau objets](../FormObjects/listbox_overview.md#object-arrays-in-columns), lorsque l'utilisateur clique sur un bouton de sélection de widget (attribut "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

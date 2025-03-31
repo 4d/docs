@@ -21,7 +21,7 @@ In the 4D Language, there are several categories of methods. The category depend
 |**Database method**|Automatic, when a working session event occurs|Yes (predefined)|There are 16 database methods in 4D. See Database methods section|
 
 
-> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function). 
+> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#function). 
 
 
 ## Calling Project Methods

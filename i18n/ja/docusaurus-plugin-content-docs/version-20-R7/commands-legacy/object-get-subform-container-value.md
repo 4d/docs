@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->**OBJECT Get subform container value** コマンドは親フォームに表示されたサブフォームコンテナにバインドされたデータソースのカレントの値を返します。<!-- END REF-->
 
@@ -27,7 +24,7 @@ displayed_sidebar: docs
 
 バインド変数とフォーム/サブフォームの相互作用についての詳細な情報については、developer.4d.com の*バインドされた変数あるいは式の管理* を参照してください。
 
-#### 例題 
+## 例題 
 
 以下のようなメインフォームとサブフォームの両方に入力フォームオブエクトがある場合: 
 
@@ -53,8 +50,17 @@ displayed_sidebar: docs
 
 結果として、メインフォームの入力オブジェクトの値を変更すると、サブフォームの入力オブジェクトの値も更新され、その逆も同じように更新されます。
 
-#### 参照 
+## 参照 
 
 [Form](form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1785 |
+| スレッドセーフである | &cross; |
+
+

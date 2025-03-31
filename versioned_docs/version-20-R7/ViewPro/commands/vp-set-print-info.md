@@ -14,7 +14,7 @@ title: VP SET PRINT INFO
 |printInfo |Object|->|Object containing printing attributes|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
 
@@ -26,7 +26,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 
 * `vk current sheet`
 
-#### Example
+## Example
 
 The following code will print a 4D View Pro area to a PDF document:
 
@@ -70,7 +70,7 @@ The PDF:
 
 ![](../../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### See also
+## See also
 
 [4D View Pro print attributes](../configuring.md#print-attributes)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>

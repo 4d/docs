@@ -3,7 +3,7 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). As a result, ORDA exposes the whole database as a set of data model objects.
+A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 ## Mapeamento da estrutura
 
@@ -11,7 +11,7 @@ Quando você chama um datastore usando os comandos [`ds`](commands/ds.md) ou [`O
 
 - As tabelas correspondem às dataclasses.
 - Os campos são mapeados para atributos de armazenamento.
-- Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+- As relações são mapeadas para atributos de relações - os nomes de relações, definidos no editor de estrutura, são usados como nomes de atributos de relações.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
@@ -21,8 +21,8 @@ As seguintes regras são aplicadas a quaisquer conversões:
 
 - Os nomes de tabelas, campos e relações são mapeados para nomes de propriedade de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
 - Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
-  - Tabelas sem chave primária
-  - Tabelas com chaves primárias compostas.
+ - Tabelas sem chave primária
+ - Tabelas com chaves primárias compostas.
 - Os campos BLOB estão automaticamente disponíveis como atributos do tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > O mapeamento ORDA não leva em consideração:
@@ -35,23 +35,23 @@ As seguintes regras são aplicadas a quaisquer conversões:
 
 Cuando se accede a un datastore remoto a través del comando `Abrir datastore` o [peticiones REST](REST/gettingStarted.md), sólo las tablas y los campos con la propiedad **Exponer como recurso REST** están disponibles de forma remota.
 
-This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
+Essa opção deve ser selecionada no nível da estrutura 4D para cada tabela e cada campo que você deseja expor como classe de dados e atributo no armazenamento de dados:
 
 ![](../assets/en/ORDA/ExposeDataclass.png)
 
 ### Actualização do modelo de dados
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificações incluem:
+Quaisquer modificações aplicadas no nível da estrutura da base de dados invalidam a camada atual de data ORDA. Estas modificações incluem:
 
 - adicionar ou remover uma tabela, um campo ou uma relação
 - renomeação de uma tabela, um campo ou uma relação
-- changing a core property of a field (type, unique, index, autoincrement, null value support)
+- alterar uma propriedade principal de um campo (tipo, exclusivo, índice, autoincremento, suporte a valor null)
 
-Cuando la capa actual del modelo ORDA ha sido invalidada, es automáticamente recargada y actualizada en llamadas posteriores del datastore local `ds` en 4D y 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+Cuando la capa actual del modelo ORDA ha sido invalidada, es automáticamente recargada y actualizada en llamadas posteriores del datastore local `ds` en 4D y 4D Server. Observe que as referências existentes a objetos ORDA, como entidades ou seleções de entidades, continuarão a usar o modelo a partir do qual foram criadas, até que sejam geradas novamente.
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+No entanto, a camada atualizada do modelo ORDA não está automaticamente disponível nos seguintes contextos:
 
-- a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
+- uma aplicação remota 4D conectada a 4D Server -- a aplicação remota deve reconectar ao servidor.
 - un datastore remoto abierto mediante `Open datastore` o a través de [llamadas REST](REST/gettingStarted.md) -- debe abrirse una nueva sesión.
 
 ## Definição de objetos
@@ -60,8 +60,8 @@ However, the updated ORDA model layer is not automatically available in the foll
 
 O datastore é o objeto de interface para um banco de dados. Constrói uma representação de todo o banco de dados como objeto. Un datastore está formado por un **modelo** y **datos**:
 
-- The model contains and describes all the dataclasses that make up the datastore. É independente do próprio banco de dados subjacente.
-- Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
+- O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
+- Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
 Cuando se maneja a través del código, el datastore es un objeto cuyas propiedades son todas las [dataclasses](#dataclass) que se han expuesto específicamente.
 
@@ -90,7 +90,7 @@ El datastore principal (por defecto) siempre está disponible a través del coma
 
 ### Dataclass
 
-Uma dataclass é o equivalente a uma tabela. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Os atributos relacionais podem ser utilizados em consultas como qualquer outro atributo.
+Uma dataclass é o equivalente a uma tabela. É usado como um modelo de objeto e referir-se a todos os campos como atributos, incluindo atributos relativo (atributos construídos sobre as relações entre os dataclasses). Os atributos relacionais podem ser utilizados em consultas como qualquer outro atributo.
 
 Todas las dataclasses de un proyecto 4D están disponibles como propiedad del datastore `ds`. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
@@ -110,7 +110,7 @@ Um objeto de classe de dados pode conter:
 - attributes
 - atributos relacionais
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. A dataclass é a única forma de consultar o datastore. Uma consulta é feita a partir de uma única dataclass. As consultas são construídas em torno de atributos e nomes de atributos de relação das dataclasses. Assim, os atributos de relação são o meio de envolver várias tabelas ligadas numa consulta.
+A classe de dados oferece uma abstração do banco de dados físico e permite a manipulação de um modelo de dados conceitual. A dataclass é a única forma de consultar o datastore. Uma consulta é feita a partir de uma única dataclass. As consultas são construídas em torno de atributos e nomes de atributos de relação das dataclasses. Assim, os atributos de relação são o meio de envolver várias tabelas ligadas numa consulta.
 
 O próprio objeto dataclass não pode ser copiado como um objeto:
 
@@ -128,7 +128,7 @@ OB GET PROPERTY NAMES(ds. Employee;$prop)
 
 ### Atributo
 
-Dataclass properties are attribute objects describing the underlying fields or relations. Por exemplo:
+As propriedades de dataclass são objetos de atributo que descrevem os campos ou relações subjacentes. Por exemplo:
 
 ```4d
  $nameAttribute:=ds. Company.name //reference to class attribute
@@ -143,10 +143,10 @@ Todos los campos elegibles de una tabla están disponibles como atributos de su 
 
 Atributos da Dataclass vêm em vários tipos: armazenamento, relatedEntity e relatedEntities. Los atributos escalares (*es decir*, ofrecen un único valor) soportan todos los tipos de datos estándar 4D (entero, texto, objeto, etc.).
 
-- Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
-- Un **atributo relacional** ofrece acceso a otras entidades. Os atributos relação podem resultar em uma única entidade (ou nenhuma entidade) ou em uma seleção de entidades (de 0 a N). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.
+- Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Os valores atribuídos a um atributo de armazenamento são armazenados como parte da entidade quando ela é salva. Quando um atributo de armazenamento é acessado, seu valor vem diretamente do datastore. Atributos de armazenamento são o bloco de construção mais básico de uma entidade sendo definidos pelo nome e tipo de dados.
+- Un **atributo relacional** ofrece acceso a otras entidades. Os atributos relação podem resultar em uma única entidade (ou nenhuma entidade) ou em uma seleção de entidades (de 0 a N). Os atributos relacional são criados com base em relações "clássicas" na estrutura relacional para fornecer acesso direto a entidades relacionadas ou a entidades relacionadas. Os atributos de relação estão diretamente disponíveis no ORDA usando seus nomes.
 
-For example, consider the following partial database structure and the relation properties:
+Por exemplo, considere a seguinte estrutura de banco de dados parcial e as propriedades de relação:
 
 ![](../assets/en/ORDA/relationProperties.png)
 
@@ -155,28 +155,28 @@ Todos os atributos de armazenamento estarão automaticamente disponíveis:
 - na dataclass Project: "ID", "name" e "companyID"
 - na dataclass Company: "ID", "name" e "discount"
 
-In addition, the following relation attributes will also be automatically available:
+Além disso, os seguintes atributos de relação também estarão automaticamente disponíveis:
 
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> \> > The Manual or Automatic property of a database relation has no effect in ORDA.
+> &#062; &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
 ![](../assets/en/ORDA/dataclassProperties.png)
 
-Keep in mind that these objects describe attributes, but do not give access to data. La lectura o escritura de los datos se realiza a través de los [objetos entidad](entities.md#using-entity-attributes).
+Tenha em mente que esses objetos descrevem os atributos, mas não dão acesso aos dados. La lectura o escritura de los datos se realiza a través de los [objetos entidad](entities.md#using-entity-attributes).
 
 #### Atributos computados e alias
 
-Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaClasses.md#alias-attributes) son atributos "virtuales". O seu valor não é armazenado, mas avaliado sempre que são acedidos. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaClasses.md#alias-attributes) son atributos "virtuales". O seu valor não é armazenado, mas avaliado sempre que são acedidos. Eles não pertencem à estrutura de banco de dados subjacente, mas são construídos sobre ela e podem ser usados como qualquer atributo do modelo de dados.
 
 ### Entity
 
-Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir-se a um registo no banco de dados. Puede verse como una instancia de una [dataclass](#dataclass), como un registro de la tabla correspondiente a la dataclass. However, an entity also contains data correlated to the database related to the datastore.
+Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir-se a um registo no banco de dados. Puede verse como una instancia de una [dataclass](#dataclass), como un registro de la tabla correspondiente a la dataclass. No entanto, uma entidade também contém dados correlacionados ao banco de dados relacionado ao datastore.
 
-O objetivo da entidade é gerir dados (criar, atualizar, apagar). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
+O objetivo da entidade é gerir dados (criar, atualizar, apagar). Quando uma referência de entidade é obtida por uma seleção de entidade, ela também retém informações sobre a seleção de entidade, o que permite a iteração por meio da seleção.
 
 O objeto entidade em si não pode ser copiado como um objeto:
 
@@ -224,9 +224,9 @@ No entanto, as propriedades de seleção de entidades são enumeráveis:
 
 #### Entity selections ordenadas ou não ordenadas
 
-Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
+Por razones de optimización, por defecto, 4D ORDA normalmente crea selecciones de entidades no ordenadas, excepto cuando utiliza el método `orderBy( )` o utiliza opciones específicas. Nesta documentação, a menos que especificado, "entity selection" geralmente se refere a uma "entity selection não ordenada".
 
-Ordered entity selections are created only when necessary or when specifically requested using options, i.e. in the following cases:
+As seleções das entidades ordenadas são criadas apenas quando necessárias ou quando solicitadas especificamente usando opções, ou seja, nos seguintes casos:
 
 - resultado de un `orderBy()` sobre una selección (de cualquier tipo) o de un `orderBy()` sobre una dataclass
 - resultado del método `newSelection()` con la opción `dk keep ordered`
@@ -239,8 +239,7 @@ As selecções de entidades não ordenadas são criadas nos seguintes casos:
 
 > Las siguientes selecciones de entidades son siempre **ordenadas**:
 >
-> - \>
->   \> \* > > \* entity selections returned by 4D Server to a remote client > \* entity selections built upon remote datastores.
+> - seleções de entidades retornadas pelo 4D Server para um cliente remoto
 > - selecções de entidades construídas em datastores remotos.
 
-Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+Observe que quando uma seleção de entidade ordenada se torna uma seleção de entidade não ordenada, quaisquer referências repetidas são removidas.

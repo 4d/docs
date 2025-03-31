@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** specifies the fields or variables to be accumulated during a form report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -28,13 +25,22 @@ Execute **ACCUMULATE** before printing the report with [PRINT SELECTION](print-s
 
 Use the [Subtotal](subtotal.md) function in the form method or an object method to return the subtotal of one of the *data* arguments.
 
-#### Example 
+## Example 
 
 See the example for the [BREAK LEVEL](break-level.md) command.
 
-#### See also 
+## See also 
 
 [BREAK LEVEL](break-level.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 303 |
+| Thread safe | &cross; |
+
+

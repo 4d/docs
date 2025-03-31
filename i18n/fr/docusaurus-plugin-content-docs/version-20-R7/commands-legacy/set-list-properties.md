@@ -19,9 +19,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->La commande **SET LIST PROPERTIES** définit la hauteur de ligne et le fonctionnement de la liste hiérarchique dont la référence est passée dans le paramètre *liste*.<!-- END REF-->
@@ -62,3 +59,12 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 387 |
+| Thread safe | &cross; |
+
+

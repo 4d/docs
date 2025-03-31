@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->**OBJECT SET INDICATOR TYPE**コマンドは、引数 *object* と *\** で指定したサーモメーターの進捗インジケーターのタイプを、カレントプロセスにおいて変更します。<!-- END REF-->
 
@@ -34,6 +31,15 @@ displayed_sidebar: docs
 | Barber shop               | 倍長整数 | 2 | 連続したアニメーションを表示するバー           |
 | Progress bar              | 倍長整数 | 1 | 標準の進捗バー                      |
 
-#### 参照 
+## 参照 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1246 |
+| スレッドセーフである | &cross; |
+
+

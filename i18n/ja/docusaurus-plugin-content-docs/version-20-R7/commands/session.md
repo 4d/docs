@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| 引数  | 型                          |   | 説明             |
-| --- | -------------------------- | - | -------------- |
-| 戻り値 | 4D.Session | ← | Session オブジェクト |
+| 引数  | 型                          |                             | 説明             |
+| --- | -------------------------- | --------------------------- | -------------- |
+| 戻り値 | 4D.Session | &#8592; | Session オブジェクト |
 
 <!-- END REF-->
 
@@ -23,13 +23,13 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `Session` コマンドは、<!-- REF #_command_.Session.Summary -->カレントのユーザーセッションに対応する `Session` オブジェクトを返します<!-- END REF -->。
 
 コマンドを呼び出したプロセスによって、カレントユーザーセッションは次のいずれかです:
 
-- Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
+- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
 - リモートクライアントセッション
 - ストアドプロシージャーセッション
 
@@ -37,7 +37,7 @@ For more information, see the [Session types](../command/session.md-types) parag
 
 サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
 
-#### Webセッション
+## Webセッション
 
 Webセッションの `Session` オブジェクトは、どの Webプロセスからも利用できます:
 
@@ -47,9 +47,9 @@ Webセッションの `Session` オブジェクトは、どの Webプロセス�
 - モバイルリクエスト用の [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) データベースメソッド
 - [RESTリクエストで呼び出された](../REST/ClassFunctions.md) ORDA関数。
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+Web ユーザーセッションに関する詳細な情報については、[Web Server Sessions](../WebServer/sessions.md) の章を参照してください。
 
-#### リモートクライアントセッション
+## リモートクライアントセッション
 
 リモートクライアントの `Session` オブジェクトは、次のいずれかから利用できます:
 
@@ -59,18 +59,18 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 
 リモートユーザーセッションの詳細については、[**リモートクライアントユーザーセッション**](../Desktop/clientServer.md#リモートユーザーセッション) の段落を参照ください。
 
-#### ストアドプロシージャーセッション
+## ストアドプロシージャーセッション
 
-すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
+すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
-ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) のページを参照ください。
+ストアドプロシージャーの仮想ユーザーセッションに関する情報については、[4D Serverと4Dランゲージ](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.ja.html) のページを参照ください。
 
-#### 例題
+## 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" を有効にした `action_Session` メソッドを定義しました。 ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session
@@ -95,3 +95,12 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+## プロパティ
+
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1714                        |
+| スレッドセーフ | &check; |
+
+

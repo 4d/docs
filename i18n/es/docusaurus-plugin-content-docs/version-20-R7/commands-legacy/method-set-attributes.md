@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->**Tema:** Acceso objetos diseño
 
@@ -34,7 +31,7 @@ Si el comando se ejecuta desde un componente, por defecto se aplica a los métod
 
 **Nota:** el comando existente [METHOD SET ATTRIBUTE](method-set-attribute.md) aún se soporta pero ya que sólo puede manejar valores booleanos, no se puede utilizar para atributos extendidos tales como propiedades 4D Mobile.
 
-##### 
+### 
 
 Los atributos soportados son:
 
@@ -44,7 +41,7 @@ Los atributos soportados son:
 
 **Nota:** los atributos "published4DMobile" son obsoletos para 4D v18.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea modificar un solo atributo:
 
@@ -54,7 +51,16 @@ Usted desea modificar un solo atributo:
  METHOD SET ATTRIBUTES("aMethod";$attributes) //solo el atributo "executedOnServer" se modifica
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1335 |
+| Hilo seguro | &cross; |
+
+

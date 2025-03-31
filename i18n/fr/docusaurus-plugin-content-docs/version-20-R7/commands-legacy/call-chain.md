@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Call chain.Summary-->La commande **Call chain** retourne une collection d'objets décrivant chaque étape de la chaîne d'appel d'une méthode, dans le process courant.<!-- END REF--> Elle fournit les mêmes informations que celles qui sont affichées dans le débogeur. Elle a l'avantage de pouvoir être exécutée à partir de n'importe quel environnement 4D, y compris en mode compilé.
 
@@ -24,11 +24,11 @@ La commande facilite le débogage en permettant l'identification de la méthode 
 | database      | texte       | Nom de la base de données appelant la méthode (pour distinguer les méthodes hôtes des méthodes composant)                                                                                                                                                                                                                                                                                                 | "database":"contactInfo" |
 | line          | entier long | Numéro de ligne de l'appel à la méthode                                                                                                                                                                                                                                                                                                                                                                   | "line":6                 |
 | name          | texte       | Nom de la méthode appelée                                                                                                                                                                                                                                                                                                                                                                                 | "name":"On Load"         |
-| type          | texte       | Type de méthode : <br/>"projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (si vous appelez une méthode projet à l'aide de *Attribut Exécuter sur serveur*.), "executeFormula" (si vous exécutez une formule via [PROCESS 4D TAGS](process-4d-tags.md) ou évaluez une formule dans un document 4D Write Pro.)</li<"formmethod",<> | "type":"formMethod"      |
+| type          | texte       | Type de méthode : <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (si vous appelez une méthode projet à l'aide de *Attribut Exécuter sur serveur*.)</li><li>"executeFormula" (si vous exécutez une formule via [PROCESS 4D TAGS](process-4d-tags.md) ou évaluez une formule dans un document 4D Write Pro.)</li><li>"formMethod"</li>| "type":"formMethod"      |
 
 **Note :** Afin que cette commande soit opérationnelle en mode compilé, le contrôle d'exécution ne doit pas être désactivé. Veuillez vous reporter au paragraphe *Contrôle d’exécution*.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant retourne une collection d'objets contenant des informations sur la chaîne d'appel d'une méthode :
 
@@ -48,3 +48,13 @@ Si une méthode formulaire est exécutée, la chaîne d'appel peut contenir (par
 ```json
 [   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1662 |
+| Thread safe | &check; |
+
+

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->El comando GET DOCUMENT PROPERTIES devuelve información sobre el documento cuyo nombre o ruta se pasa en *documento*.<!-- END REF--> 
 
@@ -30,7 +30,7 @@ Después de la llamada:
 * *creado el* y *creado a las* devuelven la fecha y hora de creación del documento.
 * *modificado el* y *modificado a las* devuelven la fecha y hora de la última modificación del documento.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted ha creado una base de documentación y quiere exportar todos los registros creados en la base a un documento en disco. Como la base se actualiza regularmente, usted quiere escribir un algoritmo de exportación que cree o recree cada documento en el disco si el documento no existe o si el registro correspondiente ha sido modificado después de que el documento fue grabado por última vez. Por lo tanto, usted debe comparar la fecha y la hora de la modificación del documento (si la hay) con su registro correspondiente. Para ilustrar este ejemplo, utilizamos la siguiente tabla:
 
@@ -205,8 +205,16 @@ Una vez implementado en la base, tenemos todo lo que necesitamos para escribir e
  +String($vlNbDocs)+Char(13)+"Número de documentos borrados: "+String(Size of array($asDocumento)))
 ```
 
-#### Ver también 
+## Ver también 
 
-*\_o\_Document creator*  
-*\_o\_Document type*  
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 477 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

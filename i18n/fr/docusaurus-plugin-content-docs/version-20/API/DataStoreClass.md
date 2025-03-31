@@ -16,7 +16,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
@@ -105,10 +105,10 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 20.3    | New *passwordAlgorithm* property |
-| 18      | Ajout                            |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20.3    | Nouvelle propriété *passwordAlgorithm* |
+| 18      | Ajout                                  |
 
 </details>
 
@@ -154,10 +154,10 @@ Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vou
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
 | user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password          | Text    | Mot de passe de l'utilisateur. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                 |
-| idleTimeout       | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
+| password          | Text    | Mot de passe de l'utilisateur. Par défaut, le mot de passe est envoyé en clair, il est donc **fortement recommandé** d'utiliser des communications chiffrées en passant `true` dans la propriété `tls`.                                                                                                                                          |
+| idleTimeout       | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
 | tls               | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                             |
+| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe à l'aide de la fonction [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) avec le paramètre *digest* à `true`.                                                                                                                                           |
 | type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
@@ -269,7 +269,7 @@ La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 
-Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransactions).
+Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes ses sous-transactions sont également annulées, même si elles ont été validées individuellement à l'aide de la fonction [`.validateTransaction()`](#validatetransaction).
 
 #### Exemple
 
@@ -277,7 +277,6 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Historique</summary>
@@ -383,7 +382,6 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Historique</summary>
@@ -465,7 +463,6 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Historique</summary>
@@ -494,7 +491,7 @@ La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur).
 
-Chaque objet de la collection retournée contient les propriétés listées dans la section [`.getRemoteContextInfo()`](#objet-retourné).
+Chaque objet de la collection retournée contient les propriétés listées dans la section [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Exemple
 
@@ -611,7 +608,7 @@ Sur un datastore distant :
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -735,7 +732,7 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Historique</summary>
@@ -801,9 +798,9 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités peuvent être partageables, selon la nature de leur "parent" ou la façon dont elles sont créées (voir la section [Entity selections partageables et non partageables](ORDA/entities.md#entity-selections-partageables-et-non-partageables)).
+Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuvent être partageables, selon la nature de leur "parent" ou de [la manière dont elles sont créées](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
+> Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
 > **Compatibilité** : Cette fonction doit être utilisée uniquement dans des projets convertis à partir de versions de 4D antérieures à 4D v18 R5 et contenant des appels [.add()](EntitySelectionClass.md#add). Dans ce contexte, l'utilisation de `.makeSelectionsAlterable()` peut faire gagner du temps en restaurant instantanément le précédent comportement 4D dans les projets existants. En revanche, l'utilisation de cette méthode dans les nouveaux projets créés dans 4D v18 R5 et les versions plus récentes **n'est pas recommandée**, car elle empêche le partage des entity selections, ce qui offre de meilleures performances et une plus grande évolutivité.
 
@@ -927,7 +924,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -1245,10 +1242,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 <details><summary>Historique</summary>
 
-| Release | Modifications       |
-| ------- | ------------------- |
-| 20      | Server side support |
-| 17 R6   | Ajout               |
+| Release | Modifications                |
+| ------- | ---------------------------- |
+| 20      | Prise en charge côté serveur |
+| 17 R6   | Ajout                        |
 
 </details>
 
@@ -1264,7 +1261,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 #### Description
 
-La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
+La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stoppe toute journalisation des requêtes ORDA sur la machine d'appel (client ou serveur)<!-- END REF -->.
 
 Cela ferme en fait le document ouvert sur le disque. Côté client, si le journal a été démarré en mémoire, il est arrêté.
 
@@ -1277,7 +1274,7 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Historique</summary>

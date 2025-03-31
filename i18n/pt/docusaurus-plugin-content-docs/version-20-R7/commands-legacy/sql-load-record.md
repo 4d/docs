@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->O comando SQL LOAD RECORD recupera a 4D um ou mais registros da fonte de dados aberta na conexão atual.<!-- END REF-->  
   
@@ -27,11 +24,21 @@ O parâmetro opcional *numReg* é utilizado para definir o número de registros 
 * Se passa a constante SQL All Records (valor -1), o comando recuperará todos os registros da tabela.
 **Nota**: estes dois últimos parâmetros apenas tem sentido se os dados recuperados estão associados com arrays ou campos 4D.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável Sistema OK retorna 1\. Do contrário, retorna 0.
 
-#### Ver também 
+## Ver também 
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 822 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

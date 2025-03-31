@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get font style.Summary-->El comando OBJECT Get font style devuelve el estilo actual de la fuente utilizada por el objeto de formulario designado por *objeto*.<!-- END REF--> 
 
@@ -33,6 +30,15 @@ Puede comparar el valor devuelto por el comando con el valor de uno o más de la
 | Italic    | Entero largo | 2     |
 | Underline | Entero largo | 4     |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1071 |
+| Hilo seguro | &cross; |
+
+

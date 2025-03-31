@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->O comando QR SET INFO ROW mostra/oculta a fila cuja referência se passa em *linha*.<!-- END REF-->  
 
@@ -39,7 +36,7 @@ Pode utilizar as constantes do tema *QR Filas para propriedades* para designar o
 Se passa um número de área inválido, se gera o erro -9850.  
 Se o parâmetro linha for incorreto, se gera o erro -9852.
 
-#### Exemplo 
+## Exemplo 
 
 A instrução a seguir oculta o conteúdo da linha detalhe: 
 
@@ -47,8 +44,18 @@ A instrução a seguir oculta o conteúdo da linha detalhe:
  QR SET INFO ROW(area;qr detail;1)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 763 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

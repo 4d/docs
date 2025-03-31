@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->The **OBJECT SET ACTION** command modifies the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -30,7 +27,7 @@ For detailed information on action names, please refer to the *Standard actions*
 
 **Compatibility Note:** Legacy constants (prefixed by \_o\_ in the "*Standard Action*" theme) are deprecated starting with 4D v16 R3\. However, they are still supported for compatibility. 
 
-#### Example 
+## Example 
 
 You want to associate the **Validate** standard action with a button:
 
@@ -38,7 +35,15 @@ You want to associate the **Validate** standard action with a button:
  OBJECT SET ACTION(*;"bValidate";ak accept)
 ```
 
-#### See also 
+## See also 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1259 |
+| Thread safe | &cross; |
+
+

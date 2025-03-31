@@ -49,7 +49,7 @@ e noutra parte do projecto, escreve-se:
 MyInt:=3.1416
 ```
 
-En este ejemplo, `MyInt` se asigna el mismo valor (3) tanto en el modo interpretado como en el compilado, siempre que la directiva del compilador se interprete _antes_ de la declaración de asignación.
+En este ejemplo, `MyInt` se asigna el mismo valor (3) tanto en el modo interpretado como en el compilado, siempre que la directiva del compilador se interprete *antes* de la declaración de asignación.
 
 O interpretador 4D usa as diretivas do compilador para digitar variáveis. Quando o intérprete encontra uma diretiva do compilador, digita a variável de acordo com a diretiva. Se uma expressão subsequente tentar atribuir um valor incorreto (por exemplo, atribuir um valor alfanumérico a uma variável numérica), a atribuição não será efectuada e gerará um erro.
 

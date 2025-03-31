@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->O comando **OBJECT Get context menu** devolve o estado atual da opção "Menú contextual" do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -28,6 +25,15 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
   
 O comando devolve **True** se o menu contextual está ativo para o objeto e **False** em caso contrário.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1252 |
+| Thread-seguro | &cross; |
+
+

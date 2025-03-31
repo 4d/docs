@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -52,7 +49,7 @@ If conflicting style properties are set for the column or the list box, an order
 
 **Note:** Since style arrays for columns take priority over the ones for list boxes, when this command is applied to a list box, it will only have an effect if no style array has been assigned to the columns.
 
-#### Example 
+## Example 
 
 Given an array type list box with the following characteristics:
 
@@ -76,7 +73,16 @@ Given an array type list box with the following characteristics:
 
 After the second statement, all the cells of the third row change to underlined italic, except for the one in the 5th column which stays in bold only (column style arrays take priority over list box arrays). 
 
-#### See also 
+## See also 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1268 |
+| Thread safe | &cross; |
+
+

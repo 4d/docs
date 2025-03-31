@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->O comando **FORM SCREENSHOT** retorna um formulário em forma de imagem.<!-- END REF--> Este comando aceita duas sintaxes diferentes: em função da sintaxe utilizada, você obtém ou uma imagem do formulário em execução ou uma imagem do formulário no editor de formulários.
 
@@ -36,6 +33,15 @@ Automaticamente, o comando retorna uma captura de tela da página 1 do formulár
 * Àreas Web não são geradas na screenshot retornada.
 * Já que os primeiros dois parâmetros do comando são opcionais, não é possível passar uma função retornando um ponteiro, tal como [Current form table](current-form-table.md)\-> ou [Table](table.md)\->, diretamente como argumento. Apesar dessa sintaxe funcionar em modo interpretado, seria rejeitada durante a compilação, então use uma variável ponteiro intermediária nesse caso. Para saber mais, veja "*Direct use of commands returning pointers*".
 
-#### Ver também 
+## Ver também 
 
 [FORM LOAD](form-load.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 940 |
+| Thread-seguro | &cross; |
+
+

@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->El comando **SET MENU ITEM SHORTCUT** asigna un nuevo acceso directo a un elemento del menú.<!-- END REF--> 
 
@@ -42,14 +39,14 @@ Si omite el parámetro *proceso*, **SET MENU ITEM SHORTCUT** se aplica a la barr
 
 **Nota:** si se pasa un [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") en *menu*, el parámetro *proceso* no sirve para nada y se ignora.
 
-##### Compatibility 
+### Compatibility 
 
 Por razones de compatibilidad, el comando también acepta un código carácter en el parámetro *itemKey* (sintaxis anterior). En este caso, el atajo incluye automáticamente la tecla **Ctrl** (Windows) o **Cmd** (macOS) y no se tiene en cuenta el parámetro modificadores. 
 
   
 Si se pasa 0 (cero) en *itemKey*, se elimina cualquier acceso directo del elemento de menú.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la línea "Subrayado": 
 
@@ -58,7 +55,7 @@ Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la l�
  SET MENU ITEM SHORTCUT(MenuRef;1;"U";Shift key mask)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Definición del atajo Ctrl+R (Windows) y Cmd+R (Mac OS) para el elemento de menú "Reiniciar":
 
@@ -67,7 +64,7 @@ Definición del atajo Ctrl+R (Windows) y Cmd+R (Mac OS) para el elemento de men�
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Definición del atajo de teclado F4 para la opción de menú "Cerrar":
 
@@ -76,7 +73,17 @@ Definición del atajo de teclado F4 para la opción de menú "Cerrar":
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 423 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->O comando COMBINE PICTURES permite combinar as imagens *imagem1* e *imagem2* em modo *operador* para produzir uma terceira, *imagemResult*.<!-- END REF--> A imagem resultante é de tipo composto e conserva todas as características das imagens fonte. 
 
-**Nota:** este comando estende as funcionalidades oferecidas pelos operadores clássicos de transformação de imagens (+/, etc., ver a seção [C\_BOOLEAN](c-boolean.md)). Estes operadores permanecem totalmente utilizáveis em 4D v11.
+**Nota:** este comando estende as funcionalidades oferecidas pelos operadores clássicos de transformação de imagens (+/, etc., ver a seção [Picture](../Concepts/dt_picture.md)). Estes operadores permanecem totalmente utilizáveis em 4D v11.
 
 Em *operador*, passe o tipo de combinação a aplicar. Se propõe três tipos de combinações, acessíveis através das constantes do tema “*Transformação de imagens*”:
 
@@ -34,7 +34,7 @@ Se forem utilizados os parâmetros opcionais *desloHor* e *desloVert*, uma tradu
 
 **Nota:** a superposição efetuada pelo comando COMBINE PICTURES difere da superposição proposta pelos operadores clássicos & e |(superposição exclusiva e superposição inclusive). Enquanto que o comando COMBINE PICTURES conserva as características de cada imagem fonte na imagem resultante, os operadores & e | processam cada píxel e geram uma imagem bitmap em todos os casos. Estes operadores, concebidos originalmente para as imagens monocromáticas, agora são obsoletos.
 
-#### Exemplo 
+## Exemplo 
 
 Dadas as seguintes imagens: 
 
@@ -48,6 +48,15 @@ Resultado:
 
 ![](../assets/en/commands/pict27794.pt.png)
 
-#### Ver também 
+## Ver também 
 
 [TRANSFORM PICTURE](transform-picture.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 987 |
+| Thread-seguro | &check; |
+
+

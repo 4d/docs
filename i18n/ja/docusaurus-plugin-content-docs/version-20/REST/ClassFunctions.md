@@ -26,15 +26,15 @@ $city:=ds.City.getCity("Aguada")
 
 サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| クラス関数                                                            | シンタックス                                                                          |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                         |
-| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
-| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
-|                                                                  | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                  | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
-|                                                                  | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
-| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
+| クラス関数                                                            | シンタックス                                                                      |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                           |
 
 
 
@@ -42,7 +42,7 @@ $city:=ds.City.getCity("Aguada")
 > EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 
-> プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([*プリエンプティブプロセスを使用* の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
+> プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([*プリエンプティブプロセスを使用* の設定値](../WebServer/webServerConfig.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
 
 
 ## 引数
@@ -58,7 +58,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
 - エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-[エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
+こちらの [例題](#receiving-an-entity-selection-as-parameter) を参照ください。
 
 
 ### スカラー値の引数
@@ -80,14 +80,14 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 | プロパティ       | 型                 | 説明                                   |
 | ----------- | ----------------- | ------------------------------------ |
 | エンティティの属性   | mixed             | 任意 - 変更する値                           |
-| __DATACLASS | String            | 必須 - エンティティのデータクラスを指定します             |
+| __DATACLASS | Text              | 必須 - エンティティのデータクラスを指定します             |
 | __ENTITY    | Boolean           | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
 - __KEY が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
 - __KEY が提供された場合、__KEY が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-エンティティを [作成](#エンティティを作成する) または [更新](#エンティティを更新する) する例題を参照ください。
+エンティティを作成または更新する例を参照してください。
 
 #### リレートエンティティ引数
 
@@ -106,7 +106,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 | プロパティ      | 型       | 説明                                         |
 | ---------- | ------- | ------------------------------------------ |
 | エンティティの属性  | mixed   | 任意 - 変更する値                                 |
-| __DATASET  | String  | 必須 - エンティティセレクションのエンティティセットID (UUID)       |
+| __DATASET  | Text    | 必須 - エンティティセレクションのエンティティセットID (UUID)       |
 | __ENTITIES | Boolean | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します |
 
 [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。

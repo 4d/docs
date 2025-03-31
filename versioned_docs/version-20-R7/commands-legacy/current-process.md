@@ -13,16 +13,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current process.Summary-->**Current process** returns the process reference number of the process within which this command is called.<!-- END REF-->
 
-#### Example 
+## Example 
 
 See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../commands/process-info.md).
 
-#### See also 
+## See also 
 
 [Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 322 |
+| Thread safe | &check; |
+
+

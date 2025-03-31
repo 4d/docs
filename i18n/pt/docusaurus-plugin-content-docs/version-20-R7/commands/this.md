@@ -8,15 +8,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                 |
-| --------- | ------ | - | ------------------------- |
-| Resultado | Object | ← | Current element or object |
+| Parâmetro | Tipo   |                             | Descrição                 |
+| --------- | ------ | --------------------------- | ------------------------- |
+| Resultado | Object | &#8592; | Current element or object |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+O comando `This` <!--REF #_command_.This.Summary-->retorna uma referência ao objeto processado atualmente.<!-- END REF-->
 
 Na maioria dos casos, o valor de `Isso` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
@@ -24,9 +24,9 @@ This command can be used in different contexts, described below. Within these co
 
 Em qualquer outro contexto, o comando retorna **Null**.
 
-#### Função de classe
+## Função de classe
 
-Quando uma função [construtor de classe](#class-constructor) é usada (com a [`new()`](API/ClassClass.md#new)), sua `This` estará ligada ao novo objeto que está sendo construído.
+Quando uma função [construtor de classe](../Concepts/classes.md#class-constructor) é usada (com a [`new()`](API/ClassClass.md#new)), sua `This` estará ligada ao novo objeto que está sendo construído.
 
 ```4d
 //Class: ob
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave Super , esteja atento que This não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](super.md#exemplo-1).
+> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Veja [este exemplo](super.md#exemplo-1).
 
 Em qualquer caso, `This` refere-se ao objeto em que o método foi chamado, como se o método estivesse no objeto.
 
@@ -68,7 +68,7 @@ $val:=$o.f() //8
 
 Neste exemplo, o objeto atribuído à variável $o não tem sua própria propriedade *f*, herda-o de sua classe. Uma vez que *f* é chamado como um método de $o, o seu `This` refere-se a $o.
 
-#### Objecto fórmula
+## Objecto fórmula
 
 In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
 
@@ -90,7 +90,7 @@ With the *Greeting* project method:
  return $greeting+" "+This.firstName+" "+This.lastName
 ```
 
-#### List box
+## List box
 
 In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
 
@@ -100,7 +100,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 
 :::
 
-#### Exemplo 1
+## Exemplo 1
 
 A collection of objects, each with this structure:
 
@@ -147,7 +147,7 @@ Once the form is executed, you can see the result:
 
 ![](../assets/en/commands/pict3783169.en.png)
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to display entities from the following structure in a list box:
 
@@ -174,7 +174,16 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 ![](../assets/en/commands/pict3872875.en.png)
 
-#### Veja também
+## Veja também
 
 [Self](../commands-legacy/self.md)\
 [Super](super.md)
+
+## Propriedades
+
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1470                        |
+| Thread safe    | &check; |
+
+

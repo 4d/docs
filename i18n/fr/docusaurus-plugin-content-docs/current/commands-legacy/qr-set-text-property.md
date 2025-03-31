@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->La commande **QR SET TEXT PROPERTY** permet de définir les propriétés de texte de la cellule désignée par les paramètres *numColonne* et *numLigne*.<!-- END REF--> 
 
@@ -65,7 +62,7 @@ Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 Si le paramètre *numLigne* est incorrect, l’erreur -9853 est générée.  
 Si le paramètre *propriété* est incorrect, l’erreur -9854 est générée.
 
-#### Exemple 
+## Exemple 
 
 Cette méthode définit plusieurs attributs pour l'intitulé de la première colonne :
 
@@ -84,6 +81,16 @@ Cette méthode définit plusieurs attributs pour l'intitulé de la première col
  QR SET TEXT PROPERTY(qr_zone;1;-1;qr text color;0x0000FF00)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get text property](qr-get-text-property.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 759 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET ENABLED.Summary-->El comando OBJECT SET ENABLED utilizado para activar o desactivar el objeto o grupo de objetos especificado por *objeto* en el formulario actual.<!-- END REF-->   
   
@@ -38,6 +35,15 @@ Este comando se puede aplicar a los siguientes tipos de objetos:
   
 **Nota**: este comando no tiene efecto con un objeto al que se le ha asignado una acción estándar (4D se encarga de modificar el estado de este objeto cuando sea necesario), excepto en el caso de las acciones Validar y Cancelar.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get enabled](object-get-enabled.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1123 |
+| Hilo seguro | &cross; |
+
+

@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.ARRAY INTEGER.Summary-->La commande **ARRAY INTEGER** crée et/ou redimensionne un tableau d'éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") (2 octets) en mémoire.<!-- END REF-->
-
-* Le paramètre *nomTableau* est le nom du tableau.
+<!--REF #_command_.ARRAY INTEGER.Summary-->La commande **ARRAY INTEGER** crée et/ou redimensionne un tableau d'éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") (2 octets) en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
 * Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
@@ -28,7 +26,7 @@ Lorsque vous appliquez la commande **ARRAY INTEGER** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à 0.
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") :
 
@@ -36,7 +34,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Entier](#
  ARRAY INTEGER(tabEntiers;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") : 
 
@@ -44,7 +42,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY INTEGER($tabEntiers;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "Nombre entre -32 768 et +32 767 (2^15 et (2^15)-1) (Entier sur deux octets)") et affecte à chaque élément son numéro :
 
@@ -55,7 +53,16 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "N
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 220 |
+| Thread safe | &check; |
+
+

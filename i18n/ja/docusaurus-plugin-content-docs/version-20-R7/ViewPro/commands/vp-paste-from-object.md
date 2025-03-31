@@ -21,9 +21,9 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | -------------------- | ---------------- |
 | rangeObj   | Object  | -> | セルレンジオブジェクト          |                  |
 | dataObject | Object  | -> | ペーストするデータを格納したオブジェクト |                  |
-| options    | Longint | -> | ペーストする内容を指定します       | <!-- END REF --> |
+| options    | Integer | -> | ペーストする内容を指定します       | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP PASTE FROM OBJECT` コマンドは、<!-- REF #_method_.PASTE FROM OBJECT.Summary -->*dataObject* のコンテンツ・スタイル・フォーミュラを *rangeObj* セルレンジオブジェクトにペーストします<!-- END REF -->。
 
@@ -46,11 +46,11 @@ title: VP PASTE FROM OBJECT
 
 dataObject に存在しない要素を *options* で指定した場合 (例: フォーミュラ) コマンドはなにもしません。
 
-#### 例題
+## 例題
 
 [VP Copy to object](vp-copy-to-object.md) の例題を参照ください。
 
-#### 参照
+## 参照
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>

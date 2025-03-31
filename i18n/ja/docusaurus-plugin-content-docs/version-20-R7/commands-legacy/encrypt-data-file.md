@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; newPassPhrase | newDataKey {; *archiveFolder* {; curPassPhrase | curDataKey {; *methodName*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Encrypt data file.Summary-->**Encrypt data file** コマンドはを使用数と、*structurePath* 引数で指定されたストラクチャーに割り当てられている、*dataPath* 引数で指定されたデータファイルを暗号化または再暗号化することができます。<!-- END REF-->またこれを使用してデータベースから暗号化を取り除くこともできます。このコマンドは元のファイルに対する編集は行わず、元のデータファイルのバックアップを取るために作成された完全なパス名を返します。
 
@@ -68,7 +65,7 @@ displayed_sidebar: docs
 
 元のファイルの移行先フォルダの実際のパスが返されます。
 
-#### 例題 1 
+## 例題 1 
 
 データファイルを初めて暗号化する場合を考えます:
 
@@ -81,7 +78,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 データファイルの再暗号化をする(パスフレーズを変更する)場合を考えます:
 
@@ -98,7 +95,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 3 
+## 例題 3 
 
 暗号化されたデータファイルから暗号化を取り除く場合を考えます:
 
@@ -113,7 +110,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 カレントキーを使用して暗号化されたデータファイルを再暗号化する場合を考えます(例えば、一部のテーブルで暗号化ステータスが変更されたなどの場合です):
 
@@ -128,10 +125,19 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [Data file encryption status](data-file-encryption-status.md)  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1610 |
+| スレッドセーフである | &cross; |
+
+

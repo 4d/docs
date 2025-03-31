@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->O comandoGET MENU ITEM PROPERTY devolve, no parâmetro *valor*, o valor atual da linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> 
 
@@ -32,6 +29,15 @@ No parâmetro *propriedade*, passe a propriedade para a qual quer obter o valor.
 
 Nota de compatibilidade: Como padrão, se o valor da variável não for digitado explicitamente, o comando não retorna um nome *Ação estandarte*. Se quiser obter um valor numérico definido no tema de constante (obsoleto) *Valores para ação padrão associada* precisa declarar a variável de valor como longint.  
 
-#### Ver também 
+## Ver também 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 972 |
+| Thread-seguro | &cross; |
+
+

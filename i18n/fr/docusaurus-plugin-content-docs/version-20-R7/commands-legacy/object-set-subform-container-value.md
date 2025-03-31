@@ -13,16 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 
 
-#### Exemple 
+## Exemple 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form](form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1784 |
+| Thread safe | &cross; |
+
+

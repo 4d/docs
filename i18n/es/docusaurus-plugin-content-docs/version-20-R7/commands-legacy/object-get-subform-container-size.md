@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->El comando **OBJECT GET SUBFORM CONTAINER SIZE** devuelve el *ancho* y el *alto* (en píxeles) de un objeto subformulario "actual", mostrado en el formulario padre.<!-- END REF-->  
   
@@ -30,7 +27,16 @@ El evento On Resize se genera en el método formulario del subformulario si el o
 * Si el comando se llama desde un formulario que no se está utilizando como un subformulario, devuelve el tamaño actual de la ventana del formulario.
 * Si el comando se llama fuera del contexto de la visualización de la pantalla (por ejemplo, durante la impresión del formulario), devuelve 0 en *ancho* y *alto*.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1148 |
+| Hilo seguro | &cross; |
+
+

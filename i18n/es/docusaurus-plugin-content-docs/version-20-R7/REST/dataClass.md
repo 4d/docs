@@ -9,7 +9,7 @@ Los nombres de dataclass pueden utilizarse directamente en las peticiones REST p
 
 | Sintaxis                                                                                                                                 | Ejemplo                               | Descripción                                                                                               |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                                                                        | `/Employee`                           | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos |
+| [**\{dataClass\}**](#dataclass)                                                                                                        | `/Employee`                           | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                          | `/Employee[22]`                       | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos           |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                                | `/Employee:firstName(John)`           | Devuelve los datos de una entidad en la que está definido el valor del atributo                           |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)                                                         | `/City/getCity`                       | Ejecuta una función de clase de una dataclass                                                             |
@@ -30,7 +30,7 @@ A continuación se describen los datos devueltos:
 
 | Propiedad                                               | Tipo       | Descripción                                                                                                                                                                                                                             |
 | ------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Nombre de la dataclass.                                                                                                                                                                                                 |
+| __entityModel | Text       | Nombre de la dataclass.                                                                                                                                                                                                 |
 | __COUNT       | Number     | Número de entidades en la clase de datos.                                                                                                                                                                               |
 | __SENT        | Number     | Número de entidades enviadas por la petición REST. Este número puede ser el número total de entidades si es menor que el valor definido por `$top/$limit`.                                              |
 | __FIRST       | Number     | Número de entidad en la que comienza la selección. O bien 0 por defecto o el valor definido por `$skip`.                                                                                                |
@@ -40,7 +40,7 @@ Cada entidad contiene las siguientes propiedades:
 
 | Propiedad                                             | Tipo   | Descripción                                                                                                                        |
 | ----------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Valor de la llave primaria definida para la clase de datos.                                                        |
+| __KEY       | Text   | Valor de la llave primaria definida para la clase de datos.                                                        |
 | __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                                            |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
@@ -203,3 +203,4 @@ Si desea utilizar un atributo relacional utilizando [$attributes.md">]($attribut
 La siguiente petición devuelve todos los datos públicos del empleado llamado "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+

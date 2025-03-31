@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->La commande **OBJECT SET SCROLL POSITION** permet de faire défiler le contenu de plusieurs types d'objets : lignes d’un sous-formulaire, d’un formulaire liste affiché via la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md), ou d'une liste hiérarchique, lignes et colonnes d'une List box ou encore pixels d'une image.<!-- END REF--> 
 
@@ -50,7 +47,7 @@ Si vous passez le second paramètre optionnel *\** :
 
 **Note :** La commande [HIGHLIGHT RECORDS](highlight-records.md) comporte un paramètre *\** facultatif permettant de déléguer la gestion du défilement dans les formulaires à la commande **OBJECT SET SCROLL POSITION**.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple illustre la différence de fonctionnement de la commande avec une list box affichée en mode standard et hiérarchique :
 
@@ -70,7 +67,7 @@ En revanche, si la même instruction est appliquée à la list box affichée en 
 
 ![](../assets/en/commands/pict197493.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez faire défiler une image incluse dans une variable de formulaire. Ce montage fait apparaître la partie visible de l'image ainsi que le point à afficher (166 pixels verticalement et 200 pixels horizontalement) :
 
@@ -88,8 +85,17 @@ Vous obtenez le résultat suivant :
 
 Attention dans ce cas, si vous omettez le second paramètre \*, l'image ne défilera pas car le point défini est déjà visible. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 906 |
+| Thread safe | &cross; |
+
+

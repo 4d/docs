@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get action.Summary-->La commande **OBJECT Get action** retourne le nom et (s'il existe), le paramètre de l'action standard associée à l'objet désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -28,7 +25,7 @@ Vous pouvez fixer une action standard sur un objet dans l'éditeur de formulaire
 
 Pour une liste complète des actions standard, référez-vous à la section *Actions standard* dans le manuel *Mode Développement*. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui n'ont aucune action associée :
 
@@ -43,6 +40,15 @@ Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET ACTION](object-set-action.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1457 |
+| Thread safe | &cross; |
+
+

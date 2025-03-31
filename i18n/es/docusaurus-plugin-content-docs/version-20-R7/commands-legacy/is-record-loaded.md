@@ -14,13 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.Is record loaded.Summary-->El comando Is record loaded devuelve True si si el registro actual de *tabla* se carga en el proceso actual.<!-- END REF-->
+<!--REF #_command_.Is record loaded.Summary-->El comando Is record loaded devuelve True si si el registro actual de *tabla* se carga en el proceso actual.<!-- END REF-->devolverá False en modo remoto (devuelve True en modo local).
 
-**4D Server**: en principio, cuando las tablas están relacionadas por relaciones automáticas, los registros actuales de las tablas relacionadas se cargan automáticamente (ver *Relaciones*). Sin embargo, por razones de optimización, 4D Server sólo carga estos registros cuando es necesario, por ejemplo al leer o asignar un campo del registro relacionado. Como resultado, en este contexto, el comando **Is record loaded** devolverá False en modo remoto (devuelve True en modo local).
-
-#### Ejemplo 
+## Ejemplo 
 
 En lugar de utilizar las acciones automáticas “Siguiente registro” o “Registro anterior”, puede escribir los métodos de objeto para estos botones para mejorar su operación. El botón “Siguiente” muestra el comienzo de la selección si el usuario está al principio de la selección y el botón “Anterior” muestra el final de la selección cuando el usuario está al comienzo de la selección. 
 
@@ -43,3 +41,13 @@ En lugar de utilizar las acciones automáticas “Siguiente registro” o “Reg
     End if
  End if
 ```
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 669 |
+| Hilo seguro | &check; |
+
+

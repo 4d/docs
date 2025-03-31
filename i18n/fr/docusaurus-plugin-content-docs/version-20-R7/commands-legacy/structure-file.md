@@ -14,12 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Structure file.Summary-->La fonction **Structure file** retourne le chemin d'accès du fichier de structure de la base en cours d'utilisation.<!-- END REF--> 
-
-* Avec les bases binaires, la commande retourne le chemin d'accès du fichier **.4db.**
-* Avec les bases projets, la commande retourne le chemin d'accès du fichier **.4dproject.**
+<!--REF #_command_.Structure file.Summary-->La fonction **Structure file** retourne le chemin d'accès du fichier de structure de la base en cours d'utilisation.<!-- END REF-->* Avec les bases projets, la commande retourne le chemin d'accès du fichier **.4dproject.**
 
 **Note :** Dans le cas particulier d'une base compilée et fusionnée avec 4D Volume Desktop, cette commande retourne le chemin d'accès du fichier de l'application (fichier exécutable) sous Windows et macOS. Sous macOS, ce fichier est situé à l’intérieur du progiciel, dans le dossier \[Contents:MacOS\]. Ce fonctionnement provient d’un ancien mécanisme, conservé pour des raisons de compatibilité. Si vous souhaitez obtenir le nom long du progiciel lui-même, il est préférable d’utiliser la commande [Application file](application-file.md). L’astuce consiste à tester l’application à l’aide de la commande [Application type](application-type.md) puis à exécuter **Structure file** ou [Application file](application-file.md) en fonction du contexte.
 
@@ -35,7 +32,7 @@ Le paramètre facultatif *\** est utile dans le cadre d'une architecture utilisa
          * dans le cas d’un composant installé sous forme de dossier/package .4dbase, la commande retourne le chemin d’accès du fichier à l’intérieur de ce dossier/package.
 * Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours le chemin d'accès du fichier de structure/projet de la base hôte, que le paramètre *\** soit passé ou non.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple affiche le nom et l'emplacement du fichier de structure que vous utilisez :
 
@@ -52,7 +49,7 @@ Cet exemple affiche le nom et l'emplacement du fichier de structure que vous uti
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant permet de savoir si la méthode est appelée depuis un composant :
 
@@ -62,9 +59,17 @@ L’exemple suivant permet de savoir si la méthode est appelée depuis un compo
   // $0=Vrai si la méthode est appelée depuis un composant
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 489 |
+| Thread safe | &check; |
+
+

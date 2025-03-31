@@ -9,15 +9,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| Parâmetro      | Tipo    |   | Descrição                                                                          |
-| -------------- | ------- | - | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | → | 4D Write Pro section                                                               |
-| subSectionType | Longint | → | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | → | 4D Write Pro subsection                                                            |
+| Parâmetro      | Tipo    |                             | Descrição                                                                          |
+| -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
+| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
+| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
+| subSection     | Object  | &#8594; | Subseção 4D Write Pro                                                              |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Summary-->removes the *subSectionType* subsection elements from the *wpSection* 4D Write Pro section, or it directly removes the passed *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
 
@@ -27,9 +27,9 @@ The *subSectionType* parameter specifes the subsection to delete. You can pass o
 
 | Parâmetros    | Tipo    | Valor |
 | ------------- | ------- | ----- |
-| wk first page | Longint | 1     |
-| wk left page  | Longint | 2     |
-| wk right page | Longint | 3     |
+| wk first page | Integer | 1     |
+| wk left page  | Integer | 2     |
+| wk right page | Integer | 3     |
 
 :::note
 
@@ -45,7 +45,7 @@ When a subsection is deleted, the header and footer are removed, as well as anch
 
 :::
 
-#### Exemplo 1
+## Exemplo 1
 
 You want to delete the first page subsection of the first section:
 
@@ -57,7 +57,7 @@ You want to delete the first page subsection of the first section:
  WP DELETE SUBSECTION($section;wk first page)
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 You want to delete the right page subsection of section 3:
 
@@ -68,7 +68,7 @@ $subSection:=WP Get subsection(WP Get section($document;3);wk right page)
  
 ```
 
-#### Veja também
+## Veja também
 
 [WP Get subsection](../commands-legacy/wp-get-subsection.md)\
 [WP New subsection](../commands-legacy/wp-new-subsection.md)

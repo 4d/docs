@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->MODIFY SELECTION es casi idéntico al comando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION").<!-- END REF--> Consulte la descripción del comando [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") para una descripción detallada. Las diferencias entre los dos comandos son: 
 
@@ -28,8 +25,18 @@ displayed_sidebar: docs
 
 2\. [DISPLAY SELECTION](display-selection.md "DISPLAY SELECTION") carga los registros en modo sólo lectura en el proceso actual, lo cual significa que no están bloqueados para escritura en los otros procesos. MODIFY SELECTION coloca todos los registros de la selección en modo lectura-escritura, lo que significa que son bloqueados automáticamente para escritura en otros procesos. MODIFY SELECTION libera los registros cuando termina su ejecución.
 
-#### Ver también 
+## Ver también 
 
 *Conjuntos*  
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 204 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

@@ -170,7 +170,14 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
+:::note
+
+No hay palabra clave final para el código de una función. There is no ending keyword for function code.
+
+:::
+
+
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](../API/FunctionClass.md#about-function-objects).
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
@@ -195,7 +202,7 @@ Function getFullname()->$fullname : Text
 
 Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myMethod".
 
-En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#class-function-parameters) si los hay. Se soportan las siguientes sintaxis:
+En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#parameters) si los hay. Se soportan las siguientes sintaxis:
 
 - utilización del operador `()`. Por ejemplo, `myObject.methodName("hello")`
 - utilización de un método miembro de la clase "4D.Function":
@@ -272,7 +279,18 @@ $area:=$rect.getArea() //5000
 Class Constructor({$parameterName : type; ...})
 // code
 // code
+// Class:
+// Class:
+// Class:
+// Class:
 ```
+
+:::note
+
+No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
+
+:::
+
 
 Una función class constructor, que puede aceptar los [parámetros](#parameters), puede ser utilizada para definir una clase usuario.
 
@@ -356,7 +374,7 @@ Super {( param{;...;paramN} )} {-> Object}
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | object | <- | Padre del objeto                                      |
+| Resultado  | object | <- | Padre del objeto                                      |
 
 La palabra clave `Super` permite llamadas a la `superclass`, es decir, a la clase padre.
 
@@ -375,7 +393,7 @@ Super($text1) //llamada del constructor de la superclase con un parámetro texto
 Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
+2. Dentro de una [función de clase](#function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
 
 ```4d
 Super.doSomething(42) //llama a la función "doSomething"  
@@ -387,23 +405,24 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
+//Class: Square
 
+Class extends Rectangle
 
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
+Class constructor ($side : Integer)
 
-// Function definition
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
+
+ame:="Square"
+
 Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-
-// Class:
+ C_LONGINT($0)
+ $0:=This.height*This.width
 ```
 
 ```4d
@@ -468,7 +487,7 @@ This -> Object
 
 | Parámetros | Tipo   |    | Descripción   |
 | ---------- | ------ | -- | ------------- |
-| Result     | object | <- | Objeto actual |
+| Resultado  | object | <- | Objeto actual |
 
 La palabra clave `This` devuelve una referencia al objeto procesado actualmente. En 4D, se puede utilizar en [contextos diferentes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 

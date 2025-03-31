@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item style.Summary-->The **Get menu item style** command returns the font style of the menu item whose number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
 
@@ -37,7 +34,7 @@ If you omit the *process* parameter, **Get menu item style** applies to the menu
 | Underline | Integer | 4     |
 
   
-#### Example 
+## Example 
 
 To test if a menu item is displayed in bold, you write:
 
@@ -47,6 +44,16 @@ To test if a menu item is displayed in bold, you write:
  End if
 ```
 
-#### See also 
+## See also 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 426 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

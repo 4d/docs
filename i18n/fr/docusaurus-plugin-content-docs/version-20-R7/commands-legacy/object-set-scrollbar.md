@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->La commande **OBJECT SET SCROLLBAR** permet d’afficher ou de masquer les barres de défilement horizontale et/ou verticale dans l’objet désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -41,9 +38,18 @@ Le tableau suivant indique les valeurs que vous pouvez passer dans les paramètr
 
 **Note :** Pour plus d'informations sur le mode automatique, reportez-vous à la section *Barres de défilement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 843 |
+| Thread safe | &cross; |
+
+

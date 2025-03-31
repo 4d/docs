@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->La commande **PRINT SELECTION** imprime la sélection courante de *laTable*.<!-- END REF--> Les enregistrements sont imprimés dans le formulaire sortie courant de la table du process en cours. **PRINT SELECTION** a le même effet que la commande **Imprimer...** du mode Développement. Si la sélection courante est vide, **PRINT SELECTION** ne fait rien.  
   
@@ -35,7 +32,7 @@ Pendant l'impression, la méthode du formulaire sortie et les méthodes objet du
 * Un événement On Printing Footer est généré juste avant que la zone de pied de page soit imprimée.
 
 Vous pouvez savoir si **PRINT SELECTION** est sur le point d'imprimer le premier en-tête en testant [Before selection](before-selection.md) pendant un événement On Header. Vous pouvez également savoir si **PRINT SELECTION** est sur le point d'imprimer le dernier pied de page, en testant [End selection](end-selection.md) pendant un événement On Printing Footer.  
-Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](form-event-code.md) et [Level](level.md).
+Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](../commands/form-event-code.md) et [Level](level.md).
 
 Si **PRINT SELECTION** est appelée au même moment par deux process différents, l'impression déclenchée par le second process attendra que le premier ait terminé.
 
@@ -50,7 +47,7 @@ Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'im
 * Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\** ou *\>*.
 * En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant sélectionne la totalité des enregistrements de la table \[Personnes\]. La commande [DISPLAY SELECTION](display-selection.md) est alors appelée pour afficher les enregistrements et permettre à l'utilisateur de sélectionner ceux qu'il souhaite imprimer. Enfin, les enregistrements choisis sont récupérés à l'aide de la commande [USE SET](use-set.md) et imprimés par **PRINT SELECTION** :
 
@@ -61,10 +58,19 @@ L'exemple suivant sélectionne la totalité des enregistrements de la table \[Pe
  PRINT SELECTION([Personnes]) // Imprimer les enregistrements sélectionnés
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 60 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

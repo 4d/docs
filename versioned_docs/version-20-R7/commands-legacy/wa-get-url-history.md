@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->The WA GET URL HISTORY command returns one or two arrays containing the URLs visited during the session in the Web area designated by the *\** and *object* parameters.<!-- END REF--> It can be used to build a custom navigation interface.
 
@@ -43,6 +40,15 @@ If it is passed, the *titlesArr* parameter contains the list of window names ass
 
 **Compatibility Note:* As of 4D v19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the Windows system rendering engine.* 
 
-#### See also 
+## See also 
 
 [WA Create URL history menu](wa-create-url-history-menu.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1048 |
+| Thread safe | &cross; |
+
+

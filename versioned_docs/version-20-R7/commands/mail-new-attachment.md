@@ -17,8 +17,6 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
 |file|4D.File|&#8594; |Attachment file|
 |zipFile|4D.ZipFile|&#8594; |Attachment Zipfile|
 |blob|4D.Blob|&#8594; |BLOB containing the attachment|
@@ -31,7 +29,7 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 
-#### Description
+## Description
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -84,7 +82,7 @@ By default, if the *disposition* parameter is omitted:
 *	if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 *	if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
-#### Example 1
+## Example 1
 
 You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
 
@@ -122,7 +120,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Example 2
+## Example 2
 
 You want to send an email with a 4D Write Pro area as an attachment:
 
@@ -147,3 +145,13 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 
 $transporter.send($email)
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1644 |
+| Thread safe | &check; |
+
+

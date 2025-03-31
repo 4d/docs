@@ -26,7 +26,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP Get.Summary-->O comando **HTTP Get** envia diretamente um pedido HTTP GET a um URL específico e processa a resposta do servidor HTTP.<!-- END REF-->
 
@@ -51,11 +51,11 @@ Pode passar variáveis de diferentes tipos em *resposta*:
 * Texto: quando o resultado se espera em forma de texto (ver nota abaixo)
 * BLOB: quando o resultado se espera em forma binária.
 * Imagem: quando o resultado se espera em forma de imagem.
-* Objeto: quando o resultado se espera em forma de objeto [C\_OBJECT](c-object.md).
+* Objeto: quando o resultado se espera em forma de objeto *C\_OBJECT*.
 
 **Nota:** quando se passar uma variável de texto em *resposta*, 4D tentará decodificar os dados devolvidos desde o servidor. 4D primeiro tenta recuperar o conjunto de caracteres do cabeçalho de *tipo de conteúdo*, depois do conteúdo utilizando um BOM e, finalmente, busca qualquer atributo *http-equiv charset* (em conteúdo html) ou *codificação* (para xml). Se não puder detectar nenhum charset, 4D tentará decodificar a resposta em ANSI. Se a conversão falhar, o texto resultante ficará vazio. Se não tiver certeza se o servidor devolve uma informação charset ou BOM, mas conhece a codificação, é mais preciso passar *resposta* em BLOB e chamar ao [Convert to text](convert-to-text.md).
 
-Se passado um BLOB, conterá o texto, a imagem ou todo tipo de conteúdo (.wav, .zip, etc.) devolvido pelo servidor. A continuação, deve gerenciar a recuperação destes conteúdos (os cabeçalhos não estão incluídos no BLOB). Se passar um objeto de tipo [C\_OBJECT](c-object.md), se a petição devolve um resultado com o conteúdo tipo "aplicação/json" (ou "*algo*/json"), 4D tenta analisar o conteúdo JSON para gerar o objeto.   
+Se passado um BLOB, conterá o texto, a imagem ou todo tipo de conteúdo (.wav, .zip, etc.) devolvido pelo servidor. A continuação, deve gerenciar a recuperação destes conteúdos (os cabeçalhos não estão incluídos no BLOB). Se passar um objeto de tipo *C\_OBJECT*, se a petição devolve um resultado com o conteúdo tipo "aplicação/json" (ou "*algo*/json"), 4D tenta analisar o conteúdo JSON para gerar o objeto.   
   
 Em *nomesCab* e *valoresCab* passe os arrays que contém os nomes e os valores dos cabeçalhos da solicitação.  
 Depois da execução do método, estes arrays contém os nomes e os valores dos cabeçalhos devolvidos pelo servidor HTTP. Especificamente, este principio lhe permite administrar seus cookies.
@@ -65,7 +65,7 @@ O parâmetro *\** permite ativar o mecanismo keep-alive para a conexão ao servi
 O comando devolve o código do estado HTTP padrão (200=OK...) tal qual foi devolvido pelo servidor. A lista de códigos de estado HTTP está no *RFC 2616*.  
 Caso a conexão ao servidor não seja possível por uma razão relacionada com a rede (DNS Failed, Server not reachable...), o comando devolve 0 e é gerado um erro. Você pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Recuperação do logo 4D no sitio web de 4D:
 
@@ -78,7 +78,7 @@ Recuperação do logo 4D no sitio web de 4D:
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Recuperação de um RFC:
 
@@ -91,7 +91,7 @@ Recuperação de um RFC:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Recuperação de um vídeo:
 
@@ -101,6 +101,16 @@ Recuperação de um vídeo:
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-#### Ver também 
+## Ver também 
 
 [HTTP Request](http-request.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1157 |
+| Thread-seguro | &check; |
+| Modificar variáveis | error |
+
+

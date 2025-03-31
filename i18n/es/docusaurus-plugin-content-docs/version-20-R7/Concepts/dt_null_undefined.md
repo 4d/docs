@@ -36,14 +36,14 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
 ```
 
 - La asignación de un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor, dependiendo de su tipo:
-  - Objeto, colección, puntero: Null
-  - Imagen: imagen vacía
-  - Booleano: False
-  - Cadena: ""
-  - Número: 0
-  - Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
-  - Hora: 0 (número de ms)
-  - Indefinido, Null: sin cambios
+ - Objeto, colección, puntero: Null
+ - Imagen: imagen vacía
+ - Booleano: False
+ - Cadena: ""
+ - Número: 0
+ - Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+ - Hora: 0 (número de ms)
+ - Indefinido, Null: sin cambios
 
 ```4d
      var $o : Object
@@ -183,3 +183,4 @@ $result:=($vObj.undefined>$vObj.null)  //Error
 $result:=($vVar < 42) //False
 
 ```
+

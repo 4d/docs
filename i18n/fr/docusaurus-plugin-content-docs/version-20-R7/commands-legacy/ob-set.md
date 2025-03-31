@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.OB SET.Summary-->La commande **OB SET** permet de créer ou de modifier une ou plusieurs paires propriété/valeur dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> 
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D. 
+<!--REF #_command_.OB SET.Summary-->La commande **OB SET** permet de créer ou de modifier une ou plusieurs paires propriété/valeur dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D. 
 
 **Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP SET ATTRIBUTES* (cf. exemple 11). Toutefois, à la différence de *WP SET ATTRIBUTES*, **OB SET** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
@@ -33,7 +31,7 @@ Passez dans le paramètre *valeur* la valeur de la propriété à définir. Plus
 * si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (réel) dans *objet*.
 * si vous passez un objet de langage, la commande utilise la référence de l’objet et non une copie.
 
-#### Exemple 1 
+## Exemple 1 
 
 Création d’un objet et ajout d’une propriété de type texte :
 
@@ -43,7 +41,7 @@ Création d’un objet et ajout d’une propriété de type texte :
      //$Object = {"prénom":"John","nom":"Smith"}
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un objet et ajout d’une propriété de type booléen :
 
@@ -53,7 +51,7 @@ Création d’un objet et ajout d’une propriété de type booléen :
      //$Object = {"nom":"smith","age":42,"client":true}
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Modification d’une propriété :
 
@@ -63,7 +61,7 @@ Modification d’une propriété :
      //$Object = {"prénom":"Paul","nom":"Smith"}
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Ajout d’une propriété :
 
@@ -73,7 +71,7 @@ Ajout d’une propriété :
      //$Object = {"prénom":"Paul","nom":"Smith","service":"Comptabilité"}
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Renommage d’une propriété :
 
@@ -87,7 +85,7 @@ Renommage d’une propriété :
      //$Object = {"prénom":""James","age":35}
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Utilisation d’un pointeur :
 
@@ -103,7 +101,7 @@ Utilisation d’un pointeur :
      //$JsonString="{"prénom":"Paul","nom":"Wesson"}
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 Utilisation d’un objet :
 
@@ -126,7 +124,7 @@ Vous pouvez également changer une valeur à la volée :
      // $string = "{"employee":{"nom":"Smyth"}}"
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 Si vous avez défini le champ \[Rect\]Desc en tant que champ objet, vous pouvez écrire :
 
@@ -137,7 +135,7 @@ Si vous avez défini le champ \[Rect\]Desc en tant que champ objet, vous pouvez 
  SAVE RECORD([Rect])
 ```
 
-#### Exemple 9 
+## Exemple 9 
 
 Vous souhaitez exporter des données en JSON contenant une date 4D que vous souhaitez convertir en chaîne sans fuseau horaire. A noter que la conversion a lieu au moment du stockage de la date dans l’objet, il faut donc appeler la commande [SET DATABASE PARAMETER](set-database-parameter.md) avant [OB SET](ob-set.md) : 
 
@@ -150,7 +148,7 @@ Vous souhaitez exporter des données en JSON contenant une date 4D que vous souh
  SET DATABASE PARAMETER(Dates dans objets;$vDateParam)
 ```
 
-#### Exemple 10 
+## Exemple 10 
 
 Dans la méthode d'un formulaire contenant une zone 4D Write Pro, vous pouvez écrire :
 
@@ -167,7 +165,7 @@ Vous pouvez également lire les attributs personnalisés des documents :
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Exemple 11 
+## Exemple 11 
 
 Vous souhaitez assigner une collection en tant que valeur d'une propriété. Vous pouvez écrire :
 
@@ -180,7 +178,7 @@ Vous souhaitez assigner une collection en tant que valeur d'une propriété. Vou
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
-#### Exemple 12 
+## Exemple 12 
 
 Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
 
@@ -192,9 +190,18 @@ Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1220 |
+| Thread safe | &check; |
+
+

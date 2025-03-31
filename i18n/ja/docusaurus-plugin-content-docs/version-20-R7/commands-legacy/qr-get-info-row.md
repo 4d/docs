@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get info row.Summary-->QR Get info row コマンドは、*row*に渡した行に関する表示の有無を取得します。<!-- END REF-->
 
@@ -37,8 +34,18 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*row*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 769 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

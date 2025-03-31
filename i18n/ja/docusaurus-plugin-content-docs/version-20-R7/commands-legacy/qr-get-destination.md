@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR GET DESTINATION.Summary-->QR GET DESTINATION コマンドは、*area*に渡したエリア参照のレポート出力先を取得します。<!-- END REF-->
 
@@ -36,6 +33,16 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET DESTINATION](qr-set-destination.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 756 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

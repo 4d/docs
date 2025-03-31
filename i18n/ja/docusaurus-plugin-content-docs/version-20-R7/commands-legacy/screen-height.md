@@ -14,16 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Screen height.Summary-->Windowsでは、Screen heightは、4Dアプリケーションウィンドウ(MDIウィンドウ) の高さを返します。<!-- END REF-->任意の引数*\** を指定した場合、Screen heightは画面の高さを返します。
 
 Macintoshでは、Screen height はメイン画面の高さを返します。メイン画面とは、メニューバーがある画面のことです。
 
-#### 参照 
+## 参照 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen width](screen-width.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 188 |
+| スレッドセーフである | &cross; |
+
+

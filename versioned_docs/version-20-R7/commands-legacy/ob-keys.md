@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Keys.Summary-->The **OB Keys** command returns a collection of strings containing all of the enumerable property names of the *object*.<!-- END REF--> 
 
 Only first-level property names are returned (property names of sub-objects are not returned). The order of names within the returned collection follows the definition order of the properties.
 
-#### Example 
+## Example 
 
 You want a collection with all first-level property names of an object:
 
@@ -43,7 +40,16 @@ You want a collection with all first-level property names of an object:
   //$col[2]="children"
 ```
 
-#### See also 
+## See also 
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1719 |
+| Thread safe | &cross; |
+
+

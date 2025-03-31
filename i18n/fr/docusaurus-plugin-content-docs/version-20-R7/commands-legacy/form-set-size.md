@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->La commande **FORM SET SIZE** permet de modifier par programmation la taille du formulaire courant.<!-- END REF--> La nouvelle taille est définie pour le process courant, elle n’est pas stockée avec le formulaire.  
   
@@ -64,7 +61,7 @@ La commande **FORM SET SIZE** modifie la taille du formulaire mais tient compte 
 
 A noter également que cette commande ne modifie pas la taille de la fenêtre du formulaire (il est possible de redimensionner un formulaire sans que la taille de la fenêtre soit modifiée, et inversement). Pour modifier la taille de la fenêtre d’un formulaire, reportez-vous à la description de la commande [RESIZE FORM WINDOW](resize-form-window.md). 
 
-#### Exemple 
+## Exemple 
 
 Voici un exemple de mise en place d’une fenêtre de type Explorateur. Le formulaire suivant est défini en mode Développement :
 
@@ -123,7 +120,16 @@ La méthode objet associée à ce bouton est la suivante :
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 891 |
+| Thread safe | &cross; |
+
+

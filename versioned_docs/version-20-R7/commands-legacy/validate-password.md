@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Validate password.Summary-->Validate password returns True if the string passed in *password* is the password for the user account whose ID number or name is passed in *userID*.<!-- END REF-->
 
@@ -32,7 +29,7 @@ This parameter is particularly helpful when using authentication database method
 
 The command execution is now delayed to prevent flooding (brute force attack), in other words, attempts of multiple user name/password combinations. As a result, after the 4th call to this command, it is run only after a period of 10 seconds. This delay is throughout the entire work station. 
 
-#### Example 1 
+## Example 1 
 
 This example checks whether the password of the user “Hardy” is “Laurel”:
 
@@ -50,7 +47,7 @@ This example checks whether the password of the user “Hardy” is “Laurel”
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 In the [On REST Authentication database method](on-rest-authentication-database-method.md), you want to test a connection request (using the 4D users of the database). You can just write:
 
@@ -58,8 +55,17 @@ In the [On REST Authentication database method](on-rest-authentication-database-
  $0:=Validate password($1;$2;$3)
 ```
 
-#### See also 
+## See also 
 
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 638 |
+| Thread safe | &cross; |
+
+

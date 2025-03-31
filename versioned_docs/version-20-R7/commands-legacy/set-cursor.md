@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CURSOR.Summary-->The SET CURSOR command changes the mouse cursor to the system cursor whose ID number you pass in *cursor*.<!-- END REF-->
 
-This command must be called in the context of the On Mouse Move [Form event code](form-event-code.md). 
+This command must be called in the context of the On Mouse Move [Form event code](../commands/form-event-code.md). 
 
 To restore the standard mouse cursor, call the command without any parameter.
 
@@ -53,7 +50,7 @@ Here are the cursors that can be passed in the *cursor* parameter:
 
 **Note:** Cursor availability and appearance may vary depending on the operating system.
 
-#### Example 
+## Example 
 
 You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.en.png) when the mouse moves over a variable area in the form. In the object method of the variable, you can write:
 
@@ -62,3 +59,13 @@ You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.e
     SET CURSOR(9019)
  End if
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 469 |
+| Thread safe | &cross; |
+
+

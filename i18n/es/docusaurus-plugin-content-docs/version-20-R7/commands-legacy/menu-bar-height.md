@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Menu bar height.Summary-->Menu bar height devuelve la altura de la barra de menús, expresada en píxeles.<!-- END REF-->
 
@@ -27,8 +24,17 @@ El comando devuelve 0:
 
 **Nota:** cuando la aplicación se ejecuta en modo SDI en Windows, **Menu bar height** devuelve la altura de una sola línea de barra de menú, incluso si la ventana se estrecha y la barra de menús se ha ajustado en dos o más líneas.
 
-#### Ver también 
+## Ver también 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 440 |
+| Hilo seguro | &cross; |
+
+

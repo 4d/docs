@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get row font style.Summary-->**注:** このコマンドは配列型のリストボックスに対してのみ有効です。<!-- END REF-->
 
@@ -36,7 +33,7 @@ displayed_sidebar: docs
 
 **Warning:** 行に割り当てられたスタイルであっても、それが全てのセルに適用されるとは限りません(以下の例を参照のこと)。リストボックスまたはリストボックス列に対して矛盾する値がプロパティを使用して設定された場合、4D内部の優先順位が適用されます。詳細な情報に関しては *Design Reference* マニュアルを参照して下さい。
 
-#### 例題 
+## 例題 
 
 以下に与えられたリストボックスについて考えます。 
 
@@ -49,6 +46,15 @@ displayed_sidebar: docs
   // vStyle2 contains 6 (Italic + Underline)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1269 |
+| スレッドセーフである | &cross; |
+
+

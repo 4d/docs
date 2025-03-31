@@ -7,7 +7,7 @@ title: Generador de aplicaciones
 
 El generador de aplicaciones le permite:
 
-* Generar una estructura compilada, sin código interpretado,
+* Crear una estructura o componente compilado, sin código interpretado,
 * Generar una aplicación autónoma ejecutable, *es decir*, fusionada con 4D Volume Desktop, el motor de base de datos 4D,
 * Generar diferentes aplicaciones a partir de la misma estructura compilada mediante un proyecto XML,
 * Generar aplicaciones cliente-servidor homogéneas,
@@ -20,8 +20,8 @@ El generador de aplicaciones le permite:
 
 Generar un paquete de proyecto puede realizarse utilizando:
 
-* el comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
-* o el [diálogo Generador de aplicaciones](#application-builder).
+* ya sea el comando [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html),
+* o el [diálogo Crear aplicación](#build-application-dialog).
 
 :::tip
 
@@ -44,11 +44,11 @@ La generación sólo puede efectuarse una vez compilado el proyecto. Si seleccio
 
 ### buildApp.4DSettings
 
-Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo proyecto de la aplicación llamada `"buildApp.4DSettings"`, ubicado en la carpeta [`Settings` del proyecto](../Project/architecture.md#settings-1).
+Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo proyecto de la aplicación llamada `"buildApp.4DSettings"`, ubicado en la carpeta [`Settings` del proyecto](../Project/architecture.md#settings-user).
 
 Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
-Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html).
+Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html).
 
 ### Archivo de historial
 
@@ -88,7 +88,7 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<pro
 
 Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
 
-> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. Si no desea utilizar este formato estándar, añada la llave XML `UseStandardZipFormat` con el valor `False` en su archivo [`buildApp. 4DSettings`](#build-application-settings) (para más información, consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
+> Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. Si no desea utilizar este formato estándar, añada la llave XML `UseStandardZipFormat` con el valor `False` en su archivo [`buildApp.4DSettings`](#buildapp4dsettings) (para más información, consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
 #### Incluir las carpetas asociadas
 
@@ -118,20 +118,18 @@ Esta pestaña le permite crear una versión autónoma y monopuesto de su aplicac
 
 ### Crear una aplicación autónoma
 
-Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Generar** se creará una aplicación autónoma (con doble clic) directamente desde su proyecto de aplicación.
+Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Generar** se creará una aplicación autónoma (con doble clic) directamente desde su proyecto de aplicación. En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarga de la creación de paquetes de software.
 
-Los siguientes elementos son necesarios para la creación:
+El principio consiste en combinar un archivo de estructura compilado con **4D Volume Desktop** (el motor de la base de datos 4D). Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito.
 
-* 4D Volume Desktop (el motor de la base de datos 4D),
-* una [licencia apropiada](#licenses)
+- Puede definir un archivo de datos por defecto o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
+- Puede incorporar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [**Acerca de las licencias**](#about-licenses)).
 
-En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarga de la creación de paquetes de software.
+:::note
 
-El principio consiste en fusionar un archivo de estructura compilado con 4D Volume Desktop. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito.
+Es posible [automatizar la actualización de aplicaciones fusionadas de un solo usuario](#automatic-updating-of-server-or-single-user-applications) mediante una secuencia de comandos de lenguaje.
 
-Puede definir un archivo de datos por defecto o permitir a los usuarios crear y utilizar su propio archivo de datos (ver la sección [Gestión de archivos de datos en las aplicaciones finales](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
-
-Es posible automatizar la actualización de las aplicaciones monopuesto fusionadas mediante una secuencia de comandos de lenguaje (ver [Actualización automática de aplicaciones servidor o monopuesto](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
+:::
 
 #### Ubicación de 4D Volume Desktop
 
@@ -165,15 +163,15 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
 * *Windows*
   * MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
   * Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
-  * Una carpeta Database  - Incluye una carpeta Resources y un archivo MyProject.4DZ. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources. **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#data-file-management-in-final-applicatons).
-  * (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins-and-components).
-  * Carpeta Licenses - Un archivo XML de números de licencia integrados en la aplicación. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses-and-certificate).
+  * Una carpeta Database  - Incluye una carpeta Resources y un archivo MyProject.4DZ. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources. **Nota**: esta carpeta también contiene la carpeta *Datos predeterminados*, si se ha definido (ver [Gestión de archivos de datos en aplicaciones finales](#management-of-data-files).
+  * (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins--components-page).
+  * (Opcional) Carpeta Licencias - Un archivo XML con los números de licencia integrados en la aplicación, si los hubiera. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
   * Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
  Todos estos elementos deben estar en la misma carpeta para que el ejecutable funcione.
 
 * *macOS*
-  * Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins-and-components). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses-and-certificate). **Nota**: en macOS, el comando [Archivo aplicación](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) del lenguaje 4D devuelve la ruta del archivo NombreApplication (situado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:
+  * Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses--certificate-page). **Nota**: en macOS, el comando [Archivo aplicación](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) del lenguaje 4D devuelve la ruta del archivo NombreApplication (situado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:
 
 #### Personalizar la carpeta 4D Volume Desktop
 
@@ -196,6 +194,21 @@ Los elementos deben ser instalados:
 * **En Windows**: en la subcarpeta *Final Application\MyProject\Database*.
 * **En macOS**: junto al paquete de software *MyProject.app*.
 
+
+#### Sobre las licencias
+
+Una aplicación autónoma requiere una licencia de despliegue. Puede ser anidada en el paso de creación por el desarrollador o introducido en el primer lanzamiento por el usuario final, como se describe en la siguiente tabla:
+
+| Licencia de despliegue | Descripción                                                                                  | Dónde introducirla                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | Licencia personalizada incorporada, contacte al equipo de ventas 4D para obtener información | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Unlimited Desktop* | **Descontinuado** - Licencia personalizada integrada                                         | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Desktop*           | Licencia por usuario, que permite utilizar aplicaciones 4D independientes                    | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
+
+
+
+
+
 ## Página Cliente/Servidor
 
 En esta pestaña, usted puede construir aplicaciones cliente y servidor personalizadas que son homogénicas, multiplataforma y con una opción de actualización automática.
@@ -217,9 +230,9 @@ Una vez generada, una aplicación cliente/servidor se compone de dos partes pers
 Además, se personaliza la aplicación cliente/servidor y se simplifica su manejo:
 
 * Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación servidor. No es necesario seleccionar el archivo proyecto.
-* Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir un servidor en una caja de diálogo de conexión. Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, \[se pueden implementar mecanismos alternativos específicos\](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
-* Una aplicación cliente/servidor puede configurarse para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-in-the-server-application). Sólo es necesario crear y distribuir una versión inicial de la aplicación cliente, las actualizaciones posteriores se gestionan mediante el mecanismo de actualización automática.
-* También es posible automatizar la actualización de la parte del servidor mediante el uso de una secuencia de comandos del lenguaje ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) y [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html).
+* Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir un servidor en una caja de diálogo de conexión. Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, [se pueden implementar mecanismos alternativos específicos](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
+* Una aplicación cliente/servidor puede configurarse para qué la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-inside-the-server-application). Sólo es necesario crear y distribuir una versión inicial de la aplicación cliente, las actualizaciones posteriores se gestionan mediante el mecanismo de actualización automática.
+* También es posible automatizar la actualización de la parte del servidor mediante el uso de una secuencia de comandos de lenguaje[(SET UPDATE FOLDER](https://doc.4d.com/4dv20/help/command/en/page1291.html) y [RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html).
 
 ### Construir aplicación servidor
 
@@ -237,11 +250,11 @@ Se utiliza para indicar el número de versión actual de la aplicación generada
 
 **Nota preliminar:** en esta sección se utilizan los siguientes términos:
 
-| Nombre                                 | Definición                                                                                                                                                                    |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Archivo de directorio del proyecto     | archivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) ubicado en la [carpeta Settings](../Project/architecture.md#settings-1) del proyecto           |
-| Archivo de directorio de la aplicación | archivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) ubicado en la [carpeta Settings](../Project/architecture.md#settings-1) del servidor 4D creado |
-| Archivo de directorio de datos         | archivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) en la carpeta [Data > Settings](../Project/architecture.md#settings)                           |
+| Nombre                                 | Definición                                                                                                                                                                                      |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Archivo de directorio del proyecto     | [directory.json](../Users/handling_users_groups.md#directoryjson-file) ubicado en la [carpeta Settings](../Project/architecture.md#settings-user) del proyecto                                  |
+| Archivo de directorio de la aplicación | El archivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) se encuentra en [la carpeta Settings](../Project/architecture.md#settings-user) del servidor 4D Server creado |
+| Archivo de directorio de datos         | [directory.json](../Users/handling_users_groups.md#directoryjson-file) en [la carpeta Data > Settings](../Project/architecture.md#settings-user-data)                                           |
 
 Cuando se marca esta opción, el archivo del directorio del proyecto se copia en el archivo del directorio de la aplicación en el momento de la generación.
 
@@ -278,7 +291,7 @@ Esta opción permite elegir el modo de enlace entre la aplicación fusionada y e
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
-### Construir la aplicación cliente
+### Crear la aplicación cliente
 
 Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 
@@ -345,11 +358,11 @@ En algunos casos, es posible que desee evitar que las aplicaciones cliente pueda
 
 Para forzar la actualización, basta con excluir el número de versión actual de las aplicaciones cliente (X-1 y anteriores) en el rango de número de versión compatible con la aplicación servidor. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten.
 
-El [número de versión actual](#current_version) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de los números autorizados se definen en el proyecto de la aplicación vía las [llaves XML](#buildapp4dsettings) específicas.
+El [número de versión actual](#current-version) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de los números autorizados se definen en el proyecto de la aplicación vía las [llaves XML](#buildapp4dsettings) específicas.
 
 #### En caso de error
 
-Si 4D no puede llevar a cabo la actualización de la aplicación cliente, la máquina cliente muestra el siguiente mensaje de error: "La actualización de la aplicación cliente falló. La aplicación va a cerrar ahora."
+Si 4D no puede llevar a cabo la actualización de la aplicación cliente, la máquina cliente muestra el siguiente mensaje de error: La aplicación va a cerrar ahora."
 
 Hay muchas causas posibles para este error. Cuando reciba este mensaje, es aconsejable que compruebe primero los siguientes parámetros:
 
@@ -482,26 +495,34 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 > Si deselecciona MeCab para una aplicación en idioma japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarla tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
 
-* **PHP**: Necesario para utilizar las funcionalidades y comandos PHP en 4D (ver este [párrafo de propiedades](../settings/php.md)).
-* **SpellChecker**: Se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
+* **PHP**: necesario para utilizar las funcionalidades y comandos PHP en 4D (ver este [párrafo de propiedades](../settings/php.md)).
+* **SpellChecker**: se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 * **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 
 ## Página licencias y certificados
 
 La página de Licencias y certificados puede utilizarse para:
 
-* designe el número o los números de licencia que desea integrar en su aplicación ejecutable monopuesto
+* designe el número o los números de licencia que desea integrar en su [aplicación ejecutable monopuesto](#application-page),
 * firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licencias
 
-Esta pestaña muestra la lista de licencias de despliegue disponibles que puede integrar en su aplicación. Por defecto, la lista está vacía. Debe añadir explícitamente su licencia *4D Developer Professional*, así como cada licencia *4D Desktop Volume* que se vaya a utilizar en la aplicación generada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas que no sea el que se está utilizando actualmente.
+Esta pestaña muestra la lista de [licencias de despliegue que puede integrar](#about-licenses) en su aplicación. Por defecto, la lista está vacía.
+
+:::info
+
+Si mantiene la lista vacía, creará una aplicación autónoma sin licencia de despliegue integrada. En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* por usuario. Si integra una licencia de despliegue, el usuario no tendrá que introducir o utilizar su propio número de licencia al iniciar la aplicación. Para obtener más información, consulte el párrafo [**Acerca de las licencias**](#about-licenses).
+
+:::
+
+Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana.
 
-Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
+Al hacer clic en el botón \[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licenses* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html).
 
 Debe designar los archivos que contienen su licencia Developer, así como los que contienen sus licencias de despliegue. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias *4D Desktop Volume*.
 
@@ -519,11 +540,11 @@ Puede designar tantos archivos válidos como desee. Al generar una aplicación e
 
 Una vez generada la aplicación, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
 
-### Certificación de las aplicaciones en OS X
+### certificado de firma macOS
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, componentes, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 
-* Marque la opción **Firmar la aplicación** para incluir la certificación en los procesos de generación de aplicaciones para OS X. 4D comprobará la disponibilidad de los elementos necesarios para la certificación cuando se produzca la generación:
+* Marque la opción **Firmar aplicación** para incluir la certificación en el procedimiento de creación de aplicaciones para macOS. 4D comprobará la disponibilidad de los elementos necesarios para la certificación cuando se produzca la construcción:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -542,9 +563,9 @@ Para obtener un certificado de desarrollador de Apple, Inc., puede utilizar los 
 
 #### Sobre Gatekeeper
 
-Gatekeeper es una función de seguridad de OS X que controla la ejecución de las aplicaciones descargadas de Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
+Gatekeeper es una función de seguridad macOS que controla la ejecución de las aplicaciones descargadas de Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
 
-> En las máquinas Apple Silicon, los [componentes](#components)4D deben ser firmados. Un componente sin firmar generará un error al iniciar la aplicación ("lib4d-arm64.dylib no se puede abrir...").
+> En las máquinas Apple Silicon, los componentes 4D deben ser firmados. Un componente sin firmar generará un error al iniciar la aplicación ("lib4d-arm64.dylib no se puede abrir...").
 
 La opción **Firmar la aplicación** del Generador de aplicaciones de 4D le permite generar aplicaciones y componentes compatibles con esta opción por defecto.
 
@@ -552,7 +573,7 @@ La opción **Firmar la aplicación** del Generador de aplicaciones de 4D le perm
 
 La notarización de las aplicaciones es muy recomendada por Apple a partir de macOS 10.14.5 (Mojave) y 10.15 (Catalina), ya que las aplicaciones no notarizadas que se despliegan a través de internet se bloquean por defecto.
 
-Las [funciones de firma integradas](#os-x-signing-certificate) de 4D se han adaptado para cumplir con todos los requisitos de Apple para permitir el uso del servicio de notario de Apple. La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode). La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode).
+Las [funciones de firma integradas](#macos-signing-certificate) de 4D se han adaptado para cumplir con todos los requisitos de Apple para permitir el uso del servicio de notario de Apple. La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode). La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode).
 
 Para más información sobre el concepto de notarización, consulte [esta página en el sitio web para desarrolladores de Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -627,7 +648,7 @@ Este modo le permite duplicar sus aplicaciones fusionadas sin romper el vínculo
 
 Puede seleccionar el modo de vinculación de datos durante el proceso de generación de la aplicación. Puede:
 
-* Utilice la [Página Aplicación](#application) o la [Página Cliente/Servidor](#client-server) de la caja de diálogo del Generador de aplicaciones.
+* Utilice la [Página Aplicación](#application-page) o la [Página Cliente/Servidor](#clientserver-page) de la caja de diálogo del Generador de aplicaciones.
 * Utilice la llave XML **LastDataPathLookup** (aplicación monopuesto o aplicación servidor).
 
 ### Definir una carpeta de datos por defecto

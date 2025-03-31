@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.RELEASE MENU.Summary-->La commande **RELEASE MENU** efface de la mémoire le menu dont vous avez passé l’identifiant dans *menu*.<!-- END REF--> Ce menu doit avoir été créé par la commande [Create menu](create-menu.md). La règle est la suivante : à chaque [Create menu](create-menu.md) doit correspondre un [RELEASE MENU](release-menu.md). 
 
@@ -26,7 +23,7 @@ Cette commande peut être appliquée aux menus utilisés comme barres de menus.
 
 Les sous-menus éventuellement utilisés par *menu* ne sont pas effacés s'ils ont été créés directement via la commande [Create menu](create-menu.md). Vous devez dans ce cas les effacer individuellement (cf. règle énoncée ci-dessus). En revanche, s'ils sont issus de la duplication d'un menu existant, n'appelez pas [RELEASE MENU](release-menu.md) avec leurs instances car 4D les efface automatiquement.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple illustre les cas d'utilisation de cette commande :
 
@@ -54,6 +51,15 @@ Cet exemple illustre les cas d'utilisation de cette commande :
   //La règle est respectée : à chaque Creer menu correspond un EFFACER MENU
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Create menu](create-menu.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 978 |
+| Thread safe | &cross; |
+
+

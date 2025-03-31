@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Print object.Summary-->La commande **Print object** vous permet d’imprimer le ou les objet(s) de formulaire désigné(s) par les paramètres *objet* et *\**, à l’emplacement défini par les paramètres *posX* et *posY*.<!-- END REF-->
 
@@ -47,7 +44,7 @@ La commande **Print object** peut être utilisée uniquement dans le contexte d�
 
 **Note :** Les listes hiérarchiques, les sous-formulaires et les zones Web ne sont pas imprimables.
 
-#### Exemple 1 
+## Exemple 1 
 
 Exemple d’impression de dix objets dans un formulaire :
 
@@ -74,7 +71,7 @@ Exemple d’impression de dix objets dans un formulaire :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple d’impression d’une list box complète :
 
@@ -96,6 +93,15 @@ Exemple d’impression d’une list box complète :
  ON ERR CALL("")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM LOAD](form-load.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1095 |
+| Thread safe | &cross; |
+
+

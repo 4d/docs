@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->The **ST INSERT EXPRESSION** command inserts a reference to the *expression* in the styled text field or variable designated by the *object* parameter.<!-- END REF-->
 
@@ -76,7 +73,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 **Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
 
-#### Example 
+## Example 
 
 You want to replace the highlighted text with a field value:
 
@@ -84,9 +81,19 @@ You want to replace the highlighted text with a field value:
  ST INSERT EXPRESSION(*;"myText";"[Customer]LastName";ST Start highlight;ST End highlight)
 ```
 
-#### See also 
+## See also 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1281 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

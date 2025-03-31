@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM EDIT.Summary-->El comando **FORM EDIT** abre el *form* asociado a *tabla* en el editor de formularios 4D.<!-- END REF--> Tenga en cuenta que debe tener acceso al entorno Diseño; de lo contrario, se genera el error -9804 ("No se puede abrir el formulario").
 
@@ -27,7 +24,7 @@ Si pasa el parámetro opcional *tabla*, indica la tabla asociada con el *form*. 
 
 En el parámetro *form*, pase el nombre del formulario para abrir en el editor de formularios 4D. Si pasa un nombre que no existe, se genera el error 81 ("Formulario no encontrado").
 
-#### Ejemplo 
+## Ejemplo 
 
 Para abrir el formulario *Contacts* table *Address*:
 
@@ -41,6 +38,15 @@ Para abrir el formulario proyecto *ContactList*:
  FORM EDIT("ContactList")
 ```
 
-#### Ver también 
+## Ver también 
 
 *Comandos del tema Acceso objetos diseño*  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1749 |
+| Hilo seguro | &cross; |
+
+

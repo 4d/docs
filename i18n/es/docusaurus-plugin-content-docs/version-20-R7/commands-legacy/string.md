@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.String.Summary-->El comando String devuelve en forma de cadena alfanumérica la expresión de tipo numérico, Fecha, Hora, cadena o Booleana que se pasa en *expresion*.<!-- END REF-->
 
@@ -82,7 +82,7 @@ Ejemplos:
  $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" en zona horaria de Francia  
 ```
-* o un [formato personalizado basado en un modelo](https://developer.4d.com/docs/es/Project/date-time-formats) (valor string)  
+* o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor string)  
 Ejemplos:  
     
 ```4d  
@@ -156,7 +156,7 @@ Ejemplos:
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
-* o un [formato personalizado basado en un modelo](https://developer.4d.com/docs/es/Project/date-time-formats) (valor string)  
+* o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor string)  
 Ejemplos:  
     
 ```4d  
@@ -179,10 +179,19 @@ Si *expresion* se evalúa como indefinida, el comando devuelve una cadena vacía
 
 Si *expresion* se evalúa como Null, el comando devuelve la cadena "null". Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea una cadena, incluso si puede ser null.
 
-#### Ver también 
+## Ver también 
 
 [Bool](bool.md)  
 [Date](date.md)  
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 10 |
+| Hilo seguro | &check; |
+
+

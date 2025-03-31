@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item method.Summary-->The Get menu item method command returns the name of the 4D project method associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
@@ -29,6 +26,15 @@ In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character a
 
 The command returns the name of the 4D method as a character string (expression). If no method is associated with a menu item, the command returns an empty string.
 
-#### See also 
+## See also 
 
 [SET MENU ITEM METHOD](set-menu-item-method.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 981 |
+| Thread safe | &cross; |
+
+

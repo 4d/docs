@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Generate UUID retorna um novo identificador UUID de 32 caracteres em forma não canônica.  
 
@@ -21,7 +21,7 @@ Um UUID é um número de 16 bytes (128 bits). Contém 32 caracteres hexadecimais
   
 Em 4D, os números UUID podem ser guardados em campos. Para maior informação, por favor consulte o manual de Desenho.  
 
-#### Exemplo 
+## Exemplo 
 
 Geração de um UUID em uma variável: 
 
@@ -29,3 +29,13 @@ Geração de um UUID em uma variável:
  var MyUUID : Text
  MyUUID:=Generate UUID
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1066 |
+| Thread-seguro | &check; |
+
+

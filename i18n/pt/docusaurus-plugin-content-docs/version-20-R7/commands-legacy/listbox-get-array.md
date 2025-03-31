@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Nota:** Este comando só funciona com os list box de tipo array.<!-- END REF-->
 
@@ -45,7 +42,7 @@ O comando devolve um dos seguintes valores:
 * Um ponteiro ao array da propriedade solicitada, definido pelo usuário.
 * Um ponteiro ao array da propriedade solicitada, definido dinamicamente quando se chama ao comando [LISTBOX SET ROW COLOR](listbox-set-row-color.md) ou [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)
 
-#### Exemplo 
+## Exemplo 
 
 Exemplos típicos de uso:
 
@@ -59,7 +56,16 @@ Exemplos típicos de uso:
   // Associado a coluna de list box "Col4"
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1278 |
+| Thread-seguro | &cross; |
+
+

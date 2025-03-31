@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** creates a new record for *aTable* that is a duplicate of the current record.<!-- END REF--> The new record becomes the current record. If there is no current record, then **DUPLICATE RECORD** does nothing. You must use [SAVE RECORD](save-record.md) to save the new record.
 
@@ -21,6 +21,16 @@ displayed_sidebar: docs
 
 **Compatibility note:** Beginning with version 11 of 4D, this command no longer supports subtables.
 
-#### See also 
+## See also 
 
 [SAVE RECORD](save-record.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 225 |
+| Thread safe | &check; |
+| Changes current record ||
+
+

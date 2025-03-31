@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->La commande **FORM GET PROPERTIES** retourne des propriétés du formulaire *nomForm*.<!-- END REF--> 
 
@@ -39,8 +36,17 @@ Les paramètres *largeurFixe* et *hauteurFixe* indiquent si la largeur et la hau
 
 Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il a été défini dans la Liste des propriétés en mode Développement. Si aucun nom n’a été défini, le paramètre *titre* contient une chaîne vide. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 674 |
+| Thread safe | &cross; |
+
+

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOG EVENT.Summary-->The **LOG EVENT** command sets up a customized system for recording internal events that occur during the use of your application.<!-- END REF-->
 
@@ -34,8 +34,7 @@ The optional *outputType* parameter specifies the output channel taken by the *m
 
 If you do not pass the *outputType* parameter, the value 0 (Into Windows log events) is used by default.
 
-If you have defined the *outputType* parameter as Into Windows log events, you can attribute a level of importance to *message*, via the optional *importance* parameter which helps you to read and understand the log events. There are three levels of importance: Information, Warning, and Error.  
-4D provides you with the following predefined constants, placed in the “*Log Events*” category:
+You can attribute a level of importance to *message*, via the optional *importance* parameter which helps you to read and understand the log events. There are three levels of importance: Information, Warning, and Error.  4D provides you with the following predefined constants:
 
 | Constant            | Type    | Value |
 | ------------------- | ------- | ----- |
@@ -45,7 +44,13 @@ If you have defined the *outputType* parameter as Into Windows log events, you c
 
 If you don’t pass anything in *importance* or pass an incorrect value, the default value (0) is used.
 
-#### Example 
+:::note
+
+The *importance* parameter is only used with *outputType* `Into Windows log events`, `Into 4D diagnostic log`, and `Into system standard outputs`.
+
+:::
+
+## Example 
 
 If you want to have keep track of when your database is opened under Windows, you could write the following line of code in the [On Startup database method](on-startup-database-method.md):
 
@@ -55,6 +60,15 @@ If you want to have keep track of when your database is opened under Windows, yo
 
 Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.
 
-#### See also 
+## See also 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 667 |
+| Thread safe | &check; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->The **ON EVENT CALL** command installs the method, whose name you pass in *eventMethod*, as the method for catching (trapping) events.<!-- END REF--> This method is called the **event-handling method** or **event-catching method**. 
 
@@ -60,17 +57,17 @@ You can use one of the following constants, depending on the modifier key to be 
 | ----------------------------------- | -------------------------------------- |  
 | Shift                               | Shift key bit / Shift key mask         |  
 | Caps Lock                           | Caps lock key bit / Caps lock key mask |  
-| Alt (also called Option under OS X) | Option key bit / Option key mask       |  
+| Alt (also called Option under macOS) | Option key bit / Option key mask       |  
 | Ctrl under Windows                  | Command key bit / Command key mask     |  
-| Ctrl under OS X                     | Control key bit / Control key mask     |  
-| Command under OS X                  | Command key bit / Command key mask     |  
+| Ctrl under macOS                     | Control key bit / Control key mask     |  
+| Command under macOS                  | Command key bit / Command key mask     |  
 | Right click                         | Control key bit / Control key mask     |
 * The system variables MouseX and MouseY contain the horizontal and vertical positions of the mouse click, expressed in the local coordinate system of the window where the click occurred. The upper left corner of the window is position 0,0\. These are meaningful only when there is a mouse click.
 * The MouseProc system variable contains the process reference number of the process in which the event occurred (mouse click).
 
 **Important:** The system variables MouseDown, KeyCode, Modifiers, MouseX, MouseY, and MouseProc contain significant values only within an event-handling method installed with **ON EVENT CALL**.
 
-#### Example 
+## Example 
 
 This example will cancel printing if the user presses **Ctrl+period**. First, the event-handling method is installed. Then a message is displayed, announcing that the user can cancel printing. If the interprocess variable *◊vbWeStop* is set to True in the event-handling method, the user is alerted to the number of records that have already been printed. Then the event-handling method is deinstalled:
 
@@ -112,9 +109,19 @@ Note that this example uses **ON EVENT CALL** because it performs a special prin
 
 If you print a report using [PRINT SELECTION](print-selection.md), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
 
-#### See also 
+## See also 
 
 [FILTER EVENT](filter-event.md)  
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 190 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

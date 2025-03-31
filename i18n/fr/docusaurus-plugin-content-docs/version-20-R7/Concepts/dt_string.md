@@ -24,13 +24,13 @@ Une chaîne vide est spécifiée par la succession de deux guillemets ("").
 
 Les séquences d’échappement suivantes peuvent être utilisées dans les chaînes :
 
-| Séquence d’échappement                                | Caractère remplacé                     |
-| ----------------------------------------------------- | -------------------------------------- |
-| \n                                                    | LF (Retour ligne)   |
-| \t                                                    | HT (Tabulation)     |
-| \r                                                    | CR (Retour chariot) |
-| \\\\|\ (Barre oblique inversée) |                                        |
-| \\"                                                 | " (Guillemets)      |
+| Séquence d’échappement | Caractère remplacé                     |
+| ---------------------- | -------------------------------------- |
+| \n                     | LF (Retour ligne)   |
+| \t                     | HT (Tabulation)     |
+| \r                     | CR (Retour chariot) |
+| \\\\               |                                        |
+| \\"                  | " (Guillemets)      |
 
 **Note :** Le caractère \ (backslash) est utilisé comme séparateur dans les chemins d'accès sous Windows. Vous devez donc saisir un double \\ lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans une des séquences d’échappement reconnues par 4D (ex : “C:\\MesDocuments\\Nouveaux.txt”).
 
@@ -38,8 +38,8 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 | Opération           | Syntaxe                                   | Retourne | Expression                              | Valeur   |
 | ------------------- | ----------------------------------------- | -------- | --------------------------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne                           | String   | "abc" + "def"                           | "abcdef" |
-| Répétition          | Chaîne \* Nombre                          | String   | "ab" \* 3                               | "ababab" |
+| Concaténation       | Chaîne + Chaîne                           | Text     | "abc" + "def"                           | "abcdef" |
+| Répétition          | Chaîne \* Nombre                          | Text     | "ab" \* 3                               | "ababab" |
 | Egalité             | Chaîne = Chaîne                           | Boolean  | "abc" = "abc"                           | True     |
 |                     |                                           |          | "abc" = "abd"                           | False    |
 | Inégalité           | Chaîne # Chaîne                           | Boolean  | "abc" # "abd"                           | True     |

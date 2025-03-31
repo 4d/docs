@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->The STOP SQL SERVER command stops the integrated SQL server in the 4D application where it has been executed.<!-- END REF-->
 
@@ -23,6 +20,15 @@ If the SQL server was launched, all the SQL connections are interrupted and the 
 
 **Note:** This command does not affect the internal functioning of the 4D SQL kernel. The SQL kernel is always available for internal queries.
 
-#### See also 
+## See also 
 
 [START SQL SERVER](start-sql-server.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 963 |
+| Thread safe | &cross; |
+
+

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidad 
+## Compatibilidad 
 
 <!--REF #_command_.WP Paragraph range.Summary-->**WP Paragraph range** recibió el nombre de **WP Get paragraphs** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado por claridad.
 
-#### Descripción 
+## Descripción 
 
 El nuevo comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro. El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](wp-get-attributes.md) y [WP SET ATTRIBUTES](wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
 
@@ -27,7 +27,7 @@ En *rangoObj*, puede pasar:
 * un rango, o
 * un elemento (tabla / línea / párrafo / encabezado / pie de página / cuerpo / sección / subsección)
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere definir el margen interior para los párrafos únicamente:
 
@@ -36,7 +36,7 @@ Usted quiere definir el margen interior para los párrafos únicamente:
  WP SET ATTRIBUTES($oParagraphs;wk padding;20)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Picture range](wp-picture-range.md)  
 [WP Selection range](wp-selection-range.md)  

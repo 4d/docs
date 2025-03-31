@@ -11,7 +11,7 @@ Buttons can fulfill a variety of roles, depending on their style and the action 
 
 ## Manipulação de botões
 
-The actions assigned to buttons can originate from predefined [standard actions](properties_Action.md#standard-action) or from custom object methods. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
+As ações atribuídas aos botões podem se originar de [ações padrão](properties_Action.md#standard-action) predefinidas ou de métodos objeto personalizados. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
 
 Buttons with standard actions are dimmed when appropriate during form execution. For example, if the first record of a table is displayed, a button with the `firstRecord` standard action would appear dimmed.
 
@@ -31,7 +31,7 @@ Com excepção do [propriedades disponíveis](#supported-properties), muitos obj
 
 ### Clássico
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+O estilo de botão Clássico é um botão padrão do sistema (*ou seja*, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -41,23 +41,23 @@ By default, the Regular style has a light gray background with a label in the ce
 
 ```4d
  "myButton": {
-  "type": "button", //define the type of object
-  "style":"regular", //define the style of the button
-  "defaultButton":"true" //define button as the default choice
-  "text": "OK", //text to appear on the button
-  "action": "Cancel", //action to be be performed
-  "left": 60,  //left position on the form  
-  "top": 160, //top position on the form
-    "width": 100,  //width of the button
-  "height": 20 //height of the button
-  }
+  "type": "button", //define o tipo de objeto
+  "style": "regular", //define o estilo do botão
+  "defaultButton": "true" //define o botão como a opção predefinida
+  "text": "OK", //texto a aparecer no botão
+  "action": "Cancel", //ação a executar
+  "left": 60, //posição esquerda no formulário  
+  "top": 160, //posição superior no formulário
+    "width": 100, //largura do botão
+  "height": 20 //altura do botão
+}
 ```
 
 Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
 
 ### Plano
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+O estilo de botão Plano é um botão padrão do sistema (*ou seja*, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_flat.png)
 
@@ -84,7 +84,7 @@ Only the Regular and Flat styles offer the [Default Button](properties_Appearanc
 
 ### Barra de ferramentas
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+The Toolbar button style is primarily intended for integration in a toolbar. Inclui a opção de adicionar um menu pop-up (indicado por um triângulo invertido), sendo geralmente usado para exibir opções adicionais para o usuário selecionar.
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
@@ -279,7 +279,7 @@ O estilo de botão Círculo aparece como um botão sistema redondo. Este estilo 
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+No Windows, ele é idêntico ao estilo "Nenhum" (o círculo no plano de fundo não é considerado).
 
 #### JSON Exemplo
 
@@ -323,12 +323,12 @@ The Custom button style accepts a personalized background picture and allows man
 
 Todos os botões partilham o mesmo conjunto de propriedades básicas:
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrito](properties_Text.md#bold) - [Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo do botão](properties_TextAndPicture.md#button-style) - [Classe](properties_Object.md#css-class) - [Descartável](properties_Action.md#droppable) - [Focalizável](properties_Entry.md#focusable) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Não renderizado](properties_Display.md#not-rendered) - [Número de estados](properties_TextAndPicture.md#number-of-states)(1) - [Nome do objeto](properties_Object.md#object-name) - [Nome do caminho da imagem](properties_TextAndPicture.md#picture-pathname)(1) - [Direita](properties_CoordinatesAndSizing.md#right) - [Atalho](properties_Entry.md#shortcut) - [Ação padrão](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Posição do título/imagem](properties_TextAndPicture.md#titlepicture-position)(1) - [Parte superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 > (1) Não suportado pelo estilo [Ajuda](#help).
 
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
-- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
+- [Botão padrão](properties_Appearance.md#default-button) (plano, regular)
 - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) - [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)

@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Is in print preview.Summary-->The **Is in print preview** command returns True if the **Preview on Screen** option is checked in the printing dialog box and False otherwise.<!-- END REF--> This setting is local to the process. 
 
 Unlike the [Get print preview](get-print-preview.md) command, **Is in print preview** returns the final value of the option, after the dialog box is validated by the user. So this command lets you determine with certainty whether printing actually takes place in "preview" mode. 
 
-#### Example 
+## Example 
 
 This example takes all types of printing into account:
 
@@ -43,7 +40,16 @@ This example takes all types of printing into account:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1198 |
+| Thread safe | &cross; |
+
+

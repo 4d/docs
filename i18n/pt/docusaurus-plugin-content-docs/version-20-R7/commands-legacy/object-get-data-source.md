@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->O comando **OBJECT Get data source** devolve a fonte de dados atual dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -26,7 +23,7 @@ Pode definir a fonte de dados para um objeto em modo Desenho utilizando a Lista 
   
 Passando o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável em lugar de uma cadeia (campo ou variável objeto unicamente).
 
-#### Exemplo 
+## Exemplo 
 
 Dado um objeto combo box definido em um formulário:
 
@@ -41,6 +38,15 @@ Executa o seguinte código:
 
   
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1265 |
+| Thread-seguro | &cross; |
+
+

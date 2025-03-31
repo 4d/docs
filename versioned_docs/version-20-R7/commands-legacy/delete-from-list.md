@@ -5,21 +5,18 @@ slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *list* ; itemRef | * {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *list* ; *itemRef* {; *} )<br/>**DELETE FROM LIST** ( * ; *list* ; * {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
 | * | Operator |  &#8594;  | If specified, erases sublists (if any) from memory If omitted, sublists (if any) are not erased |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->The **DELETE FROM LIST** command deletes the item designated by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -33,7 +30,7 @@ If you work with item reference numbers, build a list in which the items have un
 
 No matter which item you delete, you should specify the optional *\** parameter to let 4D automatically delete the sublist attached to the item, if any. If you do not specify the *\** parameter, it is a good idea to have previously obtained the list reference number of the sublist (if any) attached to the item, so that you can delete it, if necessary, using the [CLEAR LIST](clear-list.md) command.
 
-#### Example 
+## Example 
 
 The following code deletes the currently selected item of the list *hList*. If the item has an attached sublist, the sublist (as well as any sub-sublist) is deleted:
 
@@ -41,7 +38,16 @@ The following code deletes the currently selected item of the list *hList*. If t
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### See also 
+## See also 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 624 |
+| Thread safe | &cross; |
+
+

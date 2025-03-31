@@ -5,7 +5,7 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( manyTable | Field {; *choiceField*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* {; *choiceField*} )<br/>**RELATE ONE** ( *field* {; *choiceField*} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** には2つの形式があります。<!-- END REF--> 
 
@@ -45,11 +42,11 @@ displayed_sidebar: docs
 
 *choiceField*を指定することは、テーブルのリレートを設定する時点でワイルドカード選択を指定するのと同じことです。ワイルドカード選択に関する詳細は、4D Design Referenceマニュアルを参照してください。
 
-##### 
+### 
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 例題 
+## 例題 
 
 ここに *\[Invoice\]* テーブルと*\[Customers\]* テーブルが２つのマニュアルリレートにより関連づけられています。ひとつは *\[Invoice\]Bill to* から*\[Customers\]Number* へ、もうひとつは*\[Invoice\]Ship to* から*\[Customers\]Number* にリレートされています。 
 
@@ -83,11 +80,23 @@ displayed_sidebar: docs
  vZIP2:=[Customers]ZIP
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されリレーとされたレコードがロードされると、OKシステム変数は1に設定されます。ユーザが(リレートされたレコードが更新されたときに表示される) レコード選択ダイアログボックスで**キャンセル**をクリックすると、OK変数は0に設定されます。
 
-#### 参照 
+## 参照 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 42 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

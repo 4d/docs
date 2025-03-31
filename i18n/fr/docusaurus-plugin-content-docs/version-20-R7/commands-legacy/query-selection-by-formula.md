@@ -14,9 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->La commande **QUERY SELECTION BY FORMULA** vous permet de rechercher des enregistrements dans *laTable*.<!-- END REF--> **QUERY SELECTION BY FORMULA** modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->La commande **QUERY SELECTION BY FORMULA** vous permet de rechercher des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
 **QUERY SELECTION BY FORMULA** fonctionne de la même manière que [QUERY BY FORMULA](query-by-formula.md). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
 
@@ -25,8 +25,19 @@ displayed_sidebar: docs
 
 Pour plus d'informations, reportez-vous à la description de la commande [QUERY BY FORMULA](query-by-formula.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 207 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

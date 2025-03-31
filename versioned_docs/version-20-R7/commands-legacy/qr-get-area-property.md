@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get area property.Summary-->The **QR Get area property** command returns 0 if the interface element passed in *property* is not displayed; otherwise, it returns 1.<!-- END REF-->
 
@@ -34,6 +31,16 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 
 If you pass an invalid *property* parameter, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET AREA PROPERTY](qr-set-area-property.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 795 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

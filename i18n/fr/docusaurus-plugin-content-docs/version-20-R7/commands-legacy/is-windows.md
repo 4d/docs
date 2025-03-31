@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is Windows.Summary-->La commande **Is Windows** retourne Vrai si le système d'exploitation courant est Windows.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 Vous voulez savoir si le système d'exploitation courant est Windows :
 
@@ -29,7 +29,16 @@ Vous voulez savoir si le système d'exploitation courant est Windows :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1573 |
+| Thread safe | &check; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->The **HIGHLIGHT RECORDS** command highlights records in a list form.<!-- END REF--> This operation is identical to manually selecting records in list mode by using the mouse or the **Shift+Click** or **Ctrl+Click** (Windows) or **Command+Click** (Mac OS) key combinations. The current selection is not modified. 
 
@@ -33,7 +30,7 @@ The *\** parameter, when passed, disables the automatic scroll function of the l
 
 **Note:** Regarding included subforms, the **HIGHLIGHT RECORDS** command does nothing if the Selection Mode property **Multiple** is not selected for the subform. In this case, to highlight a line, you must use the [GOTO SELECTED RECORD](goto-selected-record.md) command. 
 
-#### Example 
+## Example 
 
 In an output form displayed by the [MODIFY SELECTION](modify-selection.md) command, you want the user to be able to perform searches without the current selection being modified. To do this, place a **Search** button in the form and associate it with the following method: 
 
@@ -46,7 +43,16 @@ In an output form displayed by the [MODIFY SELECTION](modify-selection.md) comma
 
 When the user clicks the button, the standard query dialog box appears. Once the search has been validated, the records found will be highlighted without the current selection being modified.
 
-#### See also 
+## See also 
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 656 |
+| Thread safe | &cross; |
+
+

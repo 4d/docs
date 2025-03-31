@@ -23,7 +23,7 @@ El mensaje de advertencia "Atención, verifique los privilegios de acceso" apare
 
 Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obviamente no es recomendable por razones de seguridad, y también para controlar el uso de las licencias de los clientes.
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session.
+A partir de 4D 20 R6, los accesos REST se configuran activando el modo [**force login**](authUsers.md#force-login-mode) y creando una función de clase datastore [`authentify()`](authUsers.md#function-authentify) para autenticar usuarios y asignar privilegios a su sesión web.
 
 :::note Compatibilidad
 
@@ -57,8 +57,8 @@ Para eliminar la exposición REST de una tabla:
 1. Visualice el inspector de tablas en el editor de estructuras y seleccione la tabla que desea modificar.
 
 2. Desmarque la opción **Exponer como recurso REST**:
-   ![alt-text](../assets/en/REST/table.png)
-   Haga esto para cada tabla cuya exposición deba modificarse.
+    ![alt-text](../assets/en/REST/table.png)
+    Haga esto para cada tabla cuya exposición deba modificarse.
 
 ### Exponer los campos
 
@@ -71,8 +71,8 @@ Para eliminar la exposición REST de un campo:
 1. Visualice el inspector de campo en el editor de estructuras y seleccione el campo a modificar.
 
 2. Desmarque la opción **Exponer como recurso REST** para el campo.
-   ![alt-text](../assets/en/REST/field.png)
-   Repeat this for each field whose exposure needs to be modified.
+    ![alt-text](../assets/en/REST/field.png)
+    Repeat this for each field whose exposure needs to be modified.
 
 > Para que un campo sea accesible a través de REST, la tabla padre también debe serlo. Si la tabla padre no está expuesta, ninguno de sus campos lo estará, independientemente de su estado.
 
@@ -80,6 +80,6 @@ Para eliminar la exposición REST de un campo:
 
 En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4 Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.

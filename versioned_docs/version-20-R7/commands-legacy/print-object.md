@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Print object.Summary-->The **Print object** command lets you print the form object(s) designated by the *object* and *\** parameters, at the location set by the *posX* and *posY* parameters.<!-- END REF-->
 
@@ -47,7 +44,7 @@ The **Print object** command can only be used in the context of a print job open
 
 **Note:** Hierarchical lists, subforms and Web areas cannot be printed.
 
-#### Example 1 
+## Example 1 
 
 Example for printing ten objects in a form:
 
@@ -74,7 +71,7 @@ Example for printing ten objects in a form:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Example of printing a complete list box:
 
@@ -96,6 +93,15 @@ Example of printing a complete list box:
  ON ERR CALL("")
 ```
 
-#### See also 
+## See also 
 
 [FORM LOAD](form-load.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1095 |
+| Thread safe | &cross; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->O comando APPEND DATA TO PASTEBOARD adiciona na área de transferência os dados do tipo especificado em *tipoDados* no BLOB *dados*.<!-- END REF-->
 
@@ -39,7 +36,7 @@ Se quer limpar e adiciona:
 
 Entretanto, note que se um BLOB contiver texto ou uma imagem, você pode utilizar o comando APPEND DATA TO PASTEBOARD para adicionar um texto ou uma imagem para a área de transferências.
 
-#### Exemplo 
+## Exemplo 
 
 Utilizando os comandos do tema área de transferências e dos BLOBs, pode construir esquemas sofisticados de Cortar/Copiar/Colar para administrar dados estruturados ao invés de uma só peça de informação. No exemplo a seguir, os dois métodos de projeto SET RECORD TO CLIPBOARD e GET RECORD FROM CLIPBOARD lhe permitem tratar um registro de uma informação a copiar desde a área de transferência.
 
@@ -210,12 +207,22 @@ Pode colar esta imagem do registro em outro registro, utilizando o método GET R
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se os dados no BLOB são adicionados corretamente á área de transferência, a variável sistema OK toma o valor 1; do contrário OK toma o valor 0 e se poderia gerar um erro.
 
-#### Ver também 
+## Ver também 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 403 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

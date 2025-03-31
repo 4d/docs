@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->O comando GET LIST ITEM ICON retorna, em *ícone*, o ícone associado ao elemento cujo número de referencia se passa em *refElem* da lista cujo número de referencia o nome de objeto passa em *lista*.<!-- END REF-->  
   
@@ -37,7 +34,16 @@ Se nenhum ícone está associado ao elemento, a variável ícone seja retornada 
 
 **Nota:** quando o ícone associado a um elemento for definido através de uma referência estática (referências de recursos ou imagens da biblioteca de imagens), é possível conhecer seu número utilizando o comando [GET LIST ITEM PROPERTIES](get-list-item-properties.md "GET LIST ITEM PROPERTIES").
 
-#### Ver também 
+## Ver também 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 951 |
+| Thread-seguro | &cross; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->The **LISTBOX GET GRID** command returns the shown/hidden status of the horizontal and/or vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -27,6 +24,15 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 In *horizontal* and *vertical*, the command returns the value **True** or **False** depending on whether the corresponding lines are shown (True) or hidden (False). By default, the grid is shown. 
 
-#### See also 
+## See also 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1199 |
+| Thread safe | &cross; |
+
+

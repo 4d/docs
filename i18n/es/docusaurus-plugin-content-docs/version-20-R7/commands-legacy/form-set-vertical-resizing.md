@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Summary-->El comando FORM SET VERTICAL RESIZING le permite modificar por programación las propiedades de redimensionamiento vertical del formulario actual.<!-- END REF--> Por defecto, estas propiedades son definidas en el editor de formularios en el entorno Diseño. Las nuevas propiedades son definidas para el proceso actual; no son almacenadas con el formulario.
 
@@ -30,12 +27,21 @@ Si pasa [False](false.md "False"), no se puede modificar el largo del formulario
 
 Si ha pasado [True](true.md "True") en el primer parámetro, puede pasar en los parámetros opcionales *alturaMin* y *altura*Max las nuevas alturas, mínimas y máximas, del formulario (en píxeles). Si omite estos parámetros se utilizan los valores definidos en el entorno Diseño (si los hay).
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE"). 
 
-#### Ver también 
+## Ver también 
 
 [FORM GET VERTICAL RESIZING](form-get-vertical-resizing.md)  
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 893 |
+| Hilo seguro | &cross; |
+
+

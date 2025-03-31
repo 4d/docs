@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->O comando LISTBOX Get column width devolve a largura (em pixels) da coluna designada pelos parâmetros *objeto* e *\*.<!-- END REF-->* Pode passar indiferentemente uma coluna ou um título de coluna de list box no parâmetro *objeto*. 
 
@@ -29,6 +26,15 @@ Se passa o parâmetro opcional \*, indica que o parâmetro *objeto* é um nome d
 LISTBOX Get column width pode devolver nos parâmetros *larguraMin e* *larguraMax* os limites de redimensionamento da coluna. Estes limites podem ser definidos utilizando o comando [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md "LISTBOX SET COLUMN WIDTH").   
 Se não tiver definido nenhum valor de largura mínima ou máxima para a coluna, o parâmetro correspondente devolve 0\. 
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 834 |
+| Thread-seguro | &cross; |
+
+

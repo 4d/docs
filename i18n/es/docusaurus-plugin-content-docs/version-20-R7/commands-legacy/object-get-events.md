@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->El comando **OBJECT GET EVENTS** permite obtener la configuración actual de los eventos formulario del formulario, del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF--> 
 
@@ -33,7 +30,7 @@ Pase un array entero largo en el parámetro *arrEvents*. Cuando se ejecuta el co
   
 Tenga en cuenta que el array *arrEvents* se devuelve vacío si ningún método objeto está asociado al objeto o si ningún método formulario se asocia al formulario.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere activar dos eventos y obtener la lista de eventos para un objeto:
 
@@ -46,6 +43,15 @@ Usted quiere activar dos eventos y obtener la lista de eventos para un objeto:
  OBJECT GET EVENTS(*;"Col1";$ArrCurrentEvents)
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET EVENTS](object-set-events.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1238 |
+| Hilo seguro | &cross; |
+
+

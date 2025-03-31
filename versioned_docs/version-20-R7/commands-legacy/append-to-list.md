@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->The **APPEND TO LIST** command appends a new item to the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->
 
@@ -37,7 +34,7 @@ The list reference you pass in *sublist* must refer to an existing list. The exi
 * To insert a new item in a list, use [INSERT IN LIST](insert-in-list.md). To change the text of an existing item or modify its child list as well as its expanded state, use [SET LIST ITEM](set-list-item.md).
 * To change the appearance of the new appended item use [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### Example 
+## Example 
 
 Here is a partial view of a database structure:
 
@@ -153,9 +150,18 @@ When the form is executed, the list will look like this:
 
 **Note:** This example is useful for user interface purposes if you deal with a reasonably small number of records. Remember that lists are held in memory—do not build user interfaces with hierarchical lists containing millions of items.
 
-#### See also 
+## See also 
 
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 376 |
+| Thread safe | &cross; |
+
+

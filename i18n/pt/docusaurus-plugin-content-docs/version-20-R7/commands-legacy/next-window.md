@@ -14,15 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 
 
 O comando Next window devolve o número de referência da janela localizada “atrás” da janela que é passada em *janela* (em função da ordem das janelas)
 
-#### Ver também 
+## Ver também 
 
 [Frontmost window](frontmost-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 448 |
+| Thread-seguro | &cross; |
+
+

@@ -17,12 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+## Descrição 
 
-
-#### Descrição 
-
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### List Mode 
 
 O comando QR GET TOTALS DATA permite recuperar o conteúdo de uma linha de quebra específica.<!-- END REF-->  
   
@@ -49,7 +46,7 @@ Se *operador* devolve 0, a célula não contém nenhum operador.
   
 **Nota**: *operador* e *texto* são mutuamente exclusivos, de maneira que só um dos dois parâmetros devolve um valor.
 
-##### Relatório de tabela cruzada 
+### Relatório de tabela cruzada 
 
 O comando QR GET TOTALS DATA permite recuperar o conteúdo de una célula específica.  
   
@@ -71,6 +68,16 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 Se o parâmetro *numColuna* é incorreto, se gera o erro -9852.  
 Se o parâmetro *numQuebra* é incorreto, se gera o erro -9853.
 
-#### Ver também 
+## Ver também 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 768 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

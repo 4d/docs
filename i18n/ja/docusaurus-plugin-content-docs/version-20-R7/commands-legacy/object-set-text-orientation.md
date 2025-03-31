@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->**OBJECT SET TEXT ORIENTATION**コマンドは、引数 *object* と *\** で指定したオブジェクトの方向を、カレントプロセスにおいて変更します。<!-- END REF-->
 
@@ -38,7 +35,7 @@ displayed_sidebar: docs
 
 **注:** 上記の値に対応する方向のみサポートされています。これ以外の値を渡した場合、その値は無視されます。
 
-#### 例題 
+## 例題 
 
 フォームの内の変数に、 270° の回転をさせたい場合: 
 
@@ -48,6 +45,15 @@ displayed_sidebar: docs
  OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1284 |
+| スレッドセーフである | &cross; |
+
+

@@ -6,13 +6,13 @@ title: EntitySelection
 
 Uma seleção de entidades é um objeto que contém uma ou mais referencias a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Também pode criar seleções de entidades em branco utilizando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
+As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe [`DataClass` class](DataClassClass.md) tais como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou da classe `EntityClass` mesma, tal como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções em branco das entidades usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](#create-entity-selection).
 
 ### Resumo
 
 |                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#index)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
@@ -67,9 +67,9 @@ Se a tabela *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), 
 
 No parâmetro opcional*settings* pode passar um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                         |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para  [contexto de optimização](ORDA/entities.md#clientserver-optimization) aplicado a entity selection. |
+| Propriedade | Tipo | Descrição                                                                                                           |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Rótulo do contexto de otimização [](../ORDA/entities.md#clientserver-optimization) aplicado à seleção de entidades. |
 
 #### Exemplo
 
@@ -107,7 +107,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 * Se *index* está fora do intervalo, se devolve um erro.
 * If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
-> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
+> **Atenção**: `EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode utilizar-se como referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) o [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds. Employee.all() //criação da entity selection
@@ -227,10 +227,10 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 #### Descrição
 
-A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
+A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->adiciona a *entidade* especificada à seleção de entidade e retorna a seleção de entidade modificada<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
-**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
+**Atenção:** a entity selection deve ser *alteravel*, ou seja, foi criado por ejemplo, por [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, do contrário `.add()` devolverá um erro. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 * Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se uma referência a mesma entidade já pertencer a seleção de entidades, se duplica e se adiciona uma nova referência.
 * returns a new, ordered entity selection contendo todas as entidades da seleção de entidade na ordem definida através de *formulaString* ou *formulaObj* e, opcionalmente, os parâmetros*sortOrder* e*settings*.
@@ -362,7 +362,7 @@ Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 Só são levados em consideração os valores numéricos para o cálculo. Lembre entretanto que se o *attributePath* da seleção de entidades conter tipos de valores mistos, `.average()` considera todos os elementos escalares para calcular o valor médio.
 > Os valores de tipo Date são convertidos em valores numéricos (segundos) e são usados para calcular a média.
 
-`.average()` returns **undefined**se a entity selection estiver vazia ou *attributePath* não conter valores numéricos.
+`.average()` retorna **undefined** se a seleção da entidade está vazia ou *attributePath* não contém valores numéricos.
 
 Um erro é retornado se:
 
@@ -555,10 +555,10 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Parâmetro     | Tipo       |    | Descrição                                                        |
-| ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Rota do atributo cujos valores quer obter                        |
-| option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
+| Parâmetro     | Tipo       |    | Descrição                                                       |
+| ------------- | ---------- |:--:| --------------------------------------------------------------- |
+| attributePath | Text       | -> | Rota do atributo cujos valores quer obter                       |
+| option        | Integer    | -> | `dk diacritical`: avaliação diacríticos ("A" # "a" por exemplo) |
 | Resultados    | Collection | <- | Coleção apenas com valores distintos|<!-- END REF -->
 
 |
@@ -578,7 +578,7 @@ No parámetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Pode utilizar a notação `[]` para designar uma coleção quando *attributePath* for uma rota dentro de um objeto (ver exemplos).
 
-Como padrão, uma avaliação não-diacrítica é realizada. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie maiúsculas de minúsculas e caracteres acentuados, passe a constante `dk diacritical` no parâmetro *option*.
 
 Um erro é retornado se:
 
@@ -1679,7 +1679,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>Histórico</summary>
 
@@ -1728,7 +1728,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>Histórico</summary>
 

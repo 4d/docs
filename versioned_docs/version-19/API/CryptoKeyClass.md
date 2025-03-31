@@ -24,6 +24,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 |[<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
+|[<!-- INCLUDE #CryptoKey.pem.Syntax -->](#pem)<br/><!-- INCLUDE #CryptoKey.pem.Summary -->|
 |[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary --> |
 |[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary --> |
 |[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary --> |
@@ -45,7 +46,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
-|result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
 <!-- END REF -->
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -281,7 +282,7 @@ The returned value is the public key.
 <!-- END REF -->
 
 ---
-<!-- REF CryptoKey.pem.Desc -->
+
 ## .pem
 
 <details><summary>History</summary>
@@ -294,8 +295,7 @@ The returned value is the public key.
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #CryptoKey.pem.Summary -->
-PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
@@ -385,7 +385,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 |18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
 
 
 <!-- REF #CryptoKey.verify().Params -->

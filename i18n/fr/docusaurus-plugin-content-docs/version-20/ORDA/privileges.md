@@ -24,14 +24,14 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 ## Resources
 
-You can assign specific permission actions to the following resources in your project:
+Vous pouvez assigner des actions de permission spécifiques aux ressources suivantes dans votre projet :
 
 - le datastore
 - une dataclass
 - un attribut (y compris calculé et alias)
 - une fonction de classe du modèle de données
 
-Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
+Chaque fois qu'on accède à une ressource dans une session (quelle que soit la manière dont on y accède), 4D vérifie que la session dispose des autorisations appropriées et rejette l'accès s'il n'est pas autorisé.
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 
@@ -124,15 +124,15 @@ La syntaxe du fichier `roles.json` est la suivante:
 | Nom de propriété |                 |               | Type                             | Obligatoire | Description                                                                         |
 | ---------------- | --------------- | ------------- | -------------------------------- | ----------- | ----------------------------------------------------------------------------------- |
 | privileges       |                 |               | Collection d'objets `privilege`  | X           | Liste de privilèges définis                                                         |
-|                  | \[].privilege  |               | String                           |             | Nom de privilège                                                                    |
+|                  | \[].privilege  |               | Text                             |             | Nom de privilège                                                                    |
 |                  | \[].includes   |               | Collection de chaînes            |             | Liste de noms de privilèges inclus                                                  |
 | roles            |                 |               | Collection d'objets `role`       |             | Liste de rôles définis                                                              |
-|                  | \[].role       |               | String                           |             | Nom de rôle                                                                         |
+|                  | \[].role       |               | Text                             |             | Nom de rôle                                                                         |
 |                  | \[].privileges |               | Collection de chaînes            |             | Liste de noms de privilèges inclus                                                  |
 | permissions      |                 |               | Object                           | X           | Liste d'actions autorisées                                                          |
 |                  | allowed         |               | Collection d'objets `permission` |             | Liste de permissions autorisées                                                     |
-|                  |                 | \[].applyTo  | String                           | X           | Nom de [ressource](#resources) cible                                                |
-|                  |                 | \[].type     | String                           | X           | Type de \[ressource\](#resources) : "datastore", "dataclass", "attribute", "method" |
+|                  |                 | \[].applyTo  | Text                             | X           | Nom de [ressource](#resources) cible                                                |
+|                  |                 | \[].type     | Text                             | X           | Type de \[ressource\](#resources) : "datastore", "dataclass", "attribute", "method" |
 |                  |                 | \[].read     | Collection de chaînes            |             | Liste de privilèges                                                                 |
 |                  |                 | \[].create   | Collection de chaînes            |             | Liste de privilèges                                                                 |
 |                  |                 | \[].update   | Collection de chaînes            |             | Liste de privilèges                                                                 |

@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->La commande **SQL EXPORT SELECTION** exporte au format SQL les enregistrements de la sélection courante de la table 4D désignée par le paramètre *laTable*.<!-- END REF--> 
 
@@ -32,10 +29,20 @@ Si la sélection courante est vide, la commande ne fait rien. A noter que dans c
 
 Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0\. 
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1064 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

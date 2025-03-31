@@ -14,14 +14,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Frontmost window.Summary-->O comando Frontmost window devolve o número de referência da janela localizada no primeiro plano.<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 447 |
+| Thread-seguro | &cross; |
+
+

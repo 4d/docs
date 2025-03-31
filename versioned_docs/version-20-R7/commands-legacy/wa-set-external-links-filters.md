@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->The **WA SET EXTERNAL LINKS FILTERS** command sets up one or more external link filters for the Web area designated by the *\** and *object* parameters.<!-- END REF--> External link filters determine whether a URL associated with the current page via a link must be opened in the Web area or in the default Web browser of the machine.
 
@@ -36,7 +33,7 @@ To disable URL filtering, call the command and pass empty arrays or pass, respec
 
 **Important:** The filtering established by the [WA SET URL FILTERS](wa-set-url-filters.md) command is taken into account before that of the **WA SET EXTERNAL LINKS FILTERS** command. This means that if a URL is denied because of a [WA SET URL FILTERS](wa-set-url-filters.md) command filter, it cannot be opened in the browser even if it is explicitly specified by the **WA SET EXTERNAL LINKS FILTERS** command (see example 2).
 
-#### Example 1 
+## Example 1 
 
 This example causes sites to be opened in external browsers:
 
@@ -53,7 +50,7 @@ This example causes sites to be opened in external browsers:
  WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example combines the filtering of both sites and external links:
 
@@ -73,7 +70,16 @@ This example combines the filtering of both sites and external links:
  WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### See also 
+## See also 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1032 |
+| Thread safe | &cross; |
+
+

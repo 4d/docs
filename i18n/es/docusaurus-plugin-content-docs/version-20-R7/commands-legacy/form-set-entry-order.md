@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->El comando **FORM SET ENTRY ORDER** permite definir dinámicamente el orden de entrada del formulario actual para el proceso actual basado en el array *nomObjetos*.<!-- END REF--> 
 
@@ -40,7 +37,7 @@ Opcionalmente, puede pasar el *numPag* para el cual definir el orden de entrada.
 **Acerca del orden de entrada de los datos**  
 El orden de entrada de los datos es el orden en que se seleccionan los campos, subformularios y todos los demás objetos activos cuando el usuario toca la teclae **Tab** o **Retorno de carro** en un formulario. El orden inverso de entrada de datos también está disponible presionando las teclas **Mayús +Tab** o **Mayús +** **Retorno de carro**. El orden de entrada puede definirse por defecto o modificarse en el editor de formularios. Para más información, consulte la sección *Modificar el orden de entrada de los datos* del manual de *Diseño*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea definir el orden de entrada de los objetos en el formulario basado en sus nombres:
 
@@ -53,6 +50,15 @@ Usted desea definir el orden de entrada de los objetos en el formulario basado e
   //se ignoran los objetos no enfocables
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1468 |
+| Hilo seguro | &cross; |
+
+

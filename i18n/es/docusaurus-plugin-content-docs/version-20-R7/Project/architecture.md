@@ -6,20 +6,20 @@ title: Arquitectura de un proyecto
 Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una carpeta raíz del proyecto (carpeta paquete). Por ejemplo:
 
 - MyPackage (*carpeta raíz del proyecto*)
-  - `Componentes`
-  - `Data`
-    - `Logs`
+    - `Componentes`
+    - `Data`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.jSmith`
-  - `WebFolder`
+    - `userPreferences.jSmith`
+    - `WebFolder`
 
 > Si su proyecto se ha convertido desde una base binaria, puede haber carpetas adicionales. Ver "Conversión de bases en proyectos" en [doc.4d.com](https://doc.4d.com).
 
@@ -29,12 +29,12 @@ La carpeta Project suele contener la siguiente jerarquía:
 
 - archivo `<applicationName>.4DProject`
 - `Sources`
-  - `Clases`
-  - `DatabaseMethods`
-  - `Métodos`
-  - `Formularios`
-  - `TableForms`
-  - `Triggers`
+    - `Clases`
+    - `DatabaseMethods`
+    - `Métodos`
+    - `Formularios`
+    - `TableForms`
+    - `Triggers`
 - `DerivedData`
 - `Trash` (si hay)
 
@@ -57,7 +57,7 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 | catalog_editor.json     | Posiciones y colores personalizados de tablas, campos y enlaces en el editor de estructura. Depende de un [parámetro de compatibilidad](../settings/compatibility.md) en los proyectos convertidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | JSON    |
 | folders.json                                 | Definiciones de carpetas del Explorador                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
 | menus.json                                   | Definiciones de los menús                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | JSON    |
-| roles.json                                   | [Privilegios, permisos](../ORDA/privileges.md#rolesjson-files) y otros ajustes de seguridad del proyecto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | JSON    |
+| roles.json                                   | [Privilegios, permisos](../ORDA/privileges.md#rolesjson-file) y otros ajustes de seguridad del proyecto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
 | settings.4DSettings                          | Propiedades de la base *Structure*. No se tienen en cuenta si se definen *[parámetros de usuario](#settings-user)* o *[parámetros de usuario para datos](#settings-user-data)* (ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings). **Atención**: en las aplicaciones compiladas, la configuración de la estructura se almacena en el archivo .4dz (de sólo lectura). Para las necesidades de despliegue, es necesario [habilitar](../Desktop/user-settings.md#enabling-user-settings) y utilizar *parámetros usuario* o *parámetros usuario para datos* para definir parámetros personalizados. | XML     |
 | tips.json                                    | Mensajes de ayuda definidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | JSON    |
 | lists.json                                   | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | JSON    |
@@ -109,9 +109,9 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 
 #### `Triggers`
 
-| Contenido                                          | Descripción                                                                                                                               | Formato |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| table_*n*.4dm | Métodos trigger definidos en el proyecto. Un archivo de activación por tabla (n es el número de tabla) | text    |
+| Contenido                                                                                    | Descripción                                                                                                                               | Formato |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| table__n_.4dm | Métodos trigger definidos en el proyecto. Un archivo de activación por tabla (n es el número de tabla) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. Es compatible con las herramientas de control de versión.
 
@@ -237,4 +237,4 @@ Define la carpeta raíz por defecto del servidor web 4D para las páginas, las i
 
 ## Archivo `.gitignore` (opcional)
 
-Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. Para configurar el contenido de ese archivo, consulte [Crear archivo `.gitignore`](Preferences/general.md#create-gitignore-file).
+Archivo que especifica los archivos que serán ignorados por git. Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias.

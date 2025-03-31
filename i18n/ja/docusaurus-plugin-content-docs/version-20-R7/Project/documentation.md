@@ -3,16 +3,16 @@ id: documentation
 title: ドキュメンテーション
 ---
 
-アプリケーションプロジェクトにおいては、メソッドやクラス、フォーム、テーブル、フィールドに関するドキュメンテーションを作成することができます。 複数のプログラマーによってプロジェクトを開発している場合などに、ドキュメンテーションの作成はとくに適しています。また、一般的に良いプログラミングの作法としても推奨されます。 ドキュメンテーションには、要素の説明だけでなく、アプリケーションにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
+アプリケーションプロジェクトにおいては、メソッドやクラス、フォーム、テーブル、フィールドに関するドキュメンテーションを作成することができます。 複数のプログラマーによってプロジェクトを開発している場合などに、ドキュメンテーションの作成はとくに適しています。 ドキュメンテーションには、要素の説明だけでなく、アプリケーションにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
 
 ドキュメントすることができるプロジェクト要素は次のとおりです:
 
 - メソッド (データベースメソッド、コンポーネントメソッド、プロジェクトメソッド、フォームメソッド、4D Mobile メソッド、トリガー)
 - クラス
-- フォーム
+- Forms
 - テーブルとフィールド
 
-ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
+ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。 これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
 
 ドキュメントされた内容は、エクスプローラーの右側にあるプレビューエリアに表示されます:
 
@@ -35,25 +35,25 @@ title: ドキュメンテーション
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - `Documentation`
-  - `Classes`
-    - myClass.md
-  - `DatabaseMethods`
-    - onStartup.md
-    - ...
-  - `Forms`
-    - loginDial.md
-    - ...
-  - `Methods`
-    - myMethod.md
-    - ...
-  - `TableForms`
-    - **1**
-      - input.md
-      - ...
-    - ...
-  - `Triggers`
-    - table1.md
-    - ...
+    - `Classes`
+        - myClass.md
+    - `DatabaseMethods`
+        - onStartup.md
+        - ...
+    - `Forms`
+        - loginDial.md
+        - ...
+    - `Methods`
+        - myMethod.md
+        - ...
+    - `TableForms`
+        - **1**
+            - input.md
+            - ...
+        - ...
+    - `Triggers`
+        - table1.md
+        - ...
 
 - プロジェクトフォームとそのプロジェクトフォームメソッドは、同じドキュメンテーションファイルをフォームとメソッドの両方について共有します。
 
@@ -103,11 +103,11 @@ title: ドキュメンテーション
 - Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (`<!-- コマンドの説明 -->`)
 
 - HTML のコメントタグが使用されていなければ、Markdown ファイルの `## Description` タグ後の最初の文章。\
-  この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
+    この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
 
 :::note
 
-それ以外の場合には、[メソッドコードの先頭のコメントブロック](../code-editor/write-class-method.md#ヘルプtipを使用する) がコードエディターに表示されます。
+Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
 
 :::
 
@@ -125,7 +125,7 @@ title: ドキュメンテーション
 | ----------------------------------- | --------------------------------------------------------------------------------------- |
 | `<!-- ここに概要を入力します -->`              | HTML コメントタグ。 メソッドの説明として優先的に [コードエディターTip](#コードエディターでドキュメンテーションを表示する) に表示されます。           |
 | ## Description                      | Markdown のレベル2 見出しタグ。 HTML コメントタグが使用されていない場合、このタグ後の最初の文章がメソッドの説明としてコードエディターTip に表示されます。 |
-| ## Example                          | レベル2 見出しタグ。サンプルコードの記述に使用できます。                                                           |
+| ## Example                          | レベル2 見出しタグ。 サンプルコードの記述に使用できます。                                                          |
 | ` ```4d Type here your example``` ` | 4D サンプルコードのフォーマットに使います (highlight.js ライブラリを使用)。      |
 
 ### サポートされている Markdown
@@ -159,10 +159,10 @@ _イタリック_
 - テーブルタグ:
 
 ```md
-| 引数 | 型   | 説明  |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | 文字列 |Write pro エリア|
-| toolbar   | 文字列 |ツールバー名  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - リンクタグ:
@@ -195,32 +195,34 @@ The [documentation](https://doc.4d.com) of the command ....
 
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
-```md
-<!-- size 引数に応じて、異なるロゴを返します -->
+````md
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
 
 
-| 引数 | 型   | in/out | 説明 |
+| Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | 倍長整数 | in | ロゴスタイルセレクター (1 から 5)  |
-| logo      | ピクチャー | out | 選択されたロゴ |
+| size      | Integer | in | Logo style selector (1 to 5)  |
+| logo      | Picture | out | Selected logo |
 
 
 ## Description
 
-このメソッドは、*size* 引数の値に応じて、特定サイズのロゴを返します。
-1 = 最小値, 5 = 最大値
+This method returns a logo of a specific size, depending on the value of the *size* parameter.
+1 = smallest size, 5 = largest size.
 
 ## Example
 
+```4d
 C_PICTURE($logo)
 C_LONGINT($size)
 
-// 最大ロゴを取得します
+//Get the largest logo
 $logo:=GetLogo(5)
 ```
+````
 
 - エクスプローラーの表示:
 

@@ -21,9 +21,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->La commande **LISTBOX INSERT COLUMN** insère une colonne dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -50,7 +47,7 @@ Vous pouvez également passer dans les paramètres *nomPied* et *variablePied* l
 
 **Note :** Les noms d’objets doivent être uniques dans un formulaire. Vous devez veiller à ce que les noms passés dans les paramètres *nomCol*, *nomEntête* et *nomPied* ne soient pas déjà utilisés. Sinon, la colonne n’est pas créée et une erreur est générée.
 
-##### Insertion dynamique 
+### Insertion dynamique 
 
 Vous pouvez utiliser cette commande pour insérer dynamiquement des colonnes dans les list box à l'exécution du formulaire, 4D prenant automatiquement en charge les définitions de variables nécessaires (colonne, pied et en-tête).
 
@@ -99,3 +96,12 @@ Vous souhaitez insérer dynamiquement une colonne dans une list box de type tabl
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 829 |
+| Thread safe | &cross; |
+
+

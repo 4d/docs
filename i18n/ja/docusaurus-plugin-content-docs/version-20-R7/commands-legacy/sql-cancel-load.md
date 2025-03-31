@@ -12,16 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->SQL CANCEL LOAD コマンドコマンドは、現在のSELECTリクエストを終了してパラメタを初期化します。<!-- END REF-->
 
 このコマンドを使用して、[SQL LOGIN](sql-login.md "SQL LOGIN")コマンドにより開始された同一接続内（つまり同一カーソル内）において、複数のSELECTリクエストを実行できます。 
 
-#### 例題 
+## 例題 
 
 この例題では、同一接続内で2つのリクエストが実行されます: 
 
@@ -46,11 +43,21 @@ displayed_sidebar: docs
  End while
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されると、システム変数OKは1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 824 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

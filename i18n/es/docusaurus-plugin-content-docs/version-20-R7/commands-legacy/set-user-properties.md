@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties permite modificar y actualizar las propiedades de una cuenta activa de usuario existente cuyo número de referencia se pasa en el parámetro *refUsuario* o para añadir un nuevo usuario.<!-- END REF-->
 
@@ -53,11 +50,11 @@ Si pasa el parámetro opcional *membrecias*, cambia todas las membrecías para e
 
 **Nota para bases binarias:** los valores de ID de grupo y usuario dependen de su creador (Diseñador, Administrador o propietario del grupo afiliado). Para más información, consulte el párrafo *Rangos de identificaciones de usuarios y grupos*. Para crear un usuario afiliado al Diseñador, pase -1 en refUsuario. Para crear un usuario afiliado con el Administrador, pase -2 en refUsuario.  
   
-#### Gestión de errores 
+## Gestión de errores 
 
 Si no tiene privilegios de acceso para llamar al comando Set user properties o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -65,3 +62,12 @@ Si no tiene privilegios de acceso para llamar al comando Set user properties o s
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 612 |
+| Hilo seguro | &cross; |
+
+

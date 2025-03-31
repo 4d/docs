@@ -3,7 +3,7 @@ id: settings
 title: Backups periódicos
 ---
 
-Backup settings are defined through three pages in the Settings dialog box. Pode estabelecer:
+As configurações de backup são definidas através de três páginas na caixa de diálogo das Propriedades. Pode estabelecer:
 
 - a periodicidade das cópias de segurança automáticas
 - os arquivos a incluir em cada backup
@@ -85,7 +85,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 - **Conservar unicamente os últimos X arquivos de cópia de segurança**: este parâmetro ativa e configura o mecanismo utilizado para eliminar os arquivos de cópia de segurança mais antigos, o que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço). Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança. Para desativar o mecanismo, simplesmente desmarque a opção.
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: quando marcar esta opção, 4D inicia as cópias de segurança programadas só dados tiverem sido adicionados, modificados ou eliminados desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Otherwise, the scheduled backup is cancelled and put off until the next scheduled backup. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: quando marcar esta opção, 4D inicia as cópias de segurança programadas só dados tiverem sido adicionados, modificados ou eliminados desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
@@ -118,13 +118,13 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Restaura a última cópia de segurança se o banco de dados for danificado**: Quando essa opção for marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido do banco, se uma anomalia for detectada (arquivo corrupto por exemplo) durante a o lançamento do banco de dados. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-- **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the application.
-  - When opening an application, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.
-  - When restoring an application, if the current log file or a log backup file having the same number as the backup file is stored in the same folder, 4D examines its contents. If it contains operations not found in the data file, the program automatically integrates it.
+- **Integrar o último arquivo de log se o banco de dados estiver incompleto**: quando esta opção estiver marcada, o programa integra automaticamente o arquivo de log ao abrir ou restaurar a aplicação.
+  - Ao abrir uma aplicação, o arquivo de registro atual é automaticamente integrado se 4D detectar haver operações armazenadas no arquivo de registro que não estão presentes nos dados. Essa situação ocorre, por exemplo, se houver uma queda de energia quando houver operações no cache de dados que ainda não tenham sido gravadas no disco.
+  - Ao restaurar uma aplicação, se o arquivo de registro atual ou um arquivo de backup de registro com o mesmo número que o arquivo de backup estiver armazenado na mesma pasta, 4D examina seu conteúdo. Se ele contiver operações não encontradas no arquivo de dados, o programa o integrará automaticamente.
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 
-> In the case of an automatic restore, only the following elements are restored:
+> No caso de uma restauração automática, somente os seguintes elementos são restaurados:
 > 
 > - ficheiro .4DD
 > - ficheiro .4DIndx

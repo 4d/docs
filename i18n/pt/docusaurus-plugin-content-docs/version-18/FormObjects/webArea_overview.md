@@ -39,14 +39,14 @@ O [motor de renderização web embebido de 4D](properties_WebArea.md#use-embedde
 
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
-```codeJS
+```js
 $4d. HelloWorld();
 ```
 > JavaScript é sensível a maiúsculas e minúsculas, portanto é importante notar que o objeto tem o nome $4d (com uma letra minúscula "d").
 
 A sintaxe das chamadas aos métodos 4D é a seguinte:
 
-```codeJS
+```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
 

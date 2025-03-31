@@ -13,16 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen devuelve el número de la pantalla donde está ubicada la barra de menús.<!-- END REF-->
 
 **Nota** **Windows** **:** en Windows, Menu bar screen generalmente devuelve 1.
 
-#### Ver también 
+## Ver también 
 
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 441 |
+| Hilo seguro | &cross; |
+
+

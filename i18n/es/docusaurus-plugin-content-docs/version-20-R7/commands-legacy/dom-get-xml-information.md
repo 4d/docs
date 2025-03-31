@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM Get XML information.Summary-->El comando DOM Get XML information permite recuperar diversa información sobre el elemento XML designado por *refElement*.<!-- END REF--> 
 
@@ -39,6 +39,15 @@ Estas constantes indican la siguiente información:
 * Version: versión de XML aceptada.
 * Document URI: URI de la DTD.
 
-#### Ver también 
+## Ver también 
 
 [XML GET ERROR](xml-get-error.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 721 |
+| Hilo seguro | &check; |
+
+

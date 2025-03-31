@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->La commande **LISTBOX Get footer calculation** retourne le type de calcul associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -31,6 +28,15 @@ Le paramètre *objet* peut désigner :
 
 Vous pouvez comparer la valeur retournée aux constantes du thème *List box pied calcul* (cf. commande [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1150 |
+| Thread safe | &cross; |
+
+

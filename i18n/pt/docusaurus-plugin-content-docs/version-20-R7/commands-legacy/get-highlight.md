@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->O comando GET HIGHLIGHT permite determinar o texto selecionado atualmente em *objeto*.<!-- END REF-->  
 
@@ -36,20 +33,22 @@ Se os valores retornados de *inicioSel* e *finalSel* são iguais, o usuário nã
 
 Se o objeto designado pelo parâmetro *objeto* não é encontrado no formulário, o comando devolve -1 em *inicioSel* e -2 em *finalSel*. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo obtém o texto selecionado no campo \[Produtos\]Comentarios:
 
 ```4d
- GET HIGHLIGHT([Produtos]Comentarios;vFirst;vLast)
- If(vFirst<vlast)     alert("o="" texto="" selecionado="" é:="" "+substring([produtos]comentarios;vprimerot;vultimo-vprimeiro))=""  end="" if<="" pre=""></vlast)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Ver exemplo para o comando [FILTER KEYSTROKE](filter-keystroke.md).
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Modificação do estilo do texto ressaltado:
 
@@ -58,8 +57,17 @@ Modificação do estilo do texto ressaltado:
  ST SET ATTRIBUTES(*;"meuTexto";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 209 |
+| Thread-seguro | &cross; |
+
+

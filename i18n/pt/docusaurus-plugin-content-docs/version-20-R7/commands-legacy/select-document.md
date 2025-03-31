@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Select document.Summary-->O comando Select document mostra uma caixa de diálogo padrão de abertura de documentos, permitindo ao usuário definir um ou mais arquivos e devolver o nome e/ou rota de acesso completa dos arquivos selecionados.<!-- END REF-->  
   
@@ -52,7 +52,7 @@ O parâmetro opções permite especificar funções avançadas autorizadas na ca
 | Multiple files    | Inteiro longo | 1     | Autoriza a seleção simultânea de vários arquivos utilizando as combinações Shift+clique (seleção adjacente) e Ctrl+clique (Windows) ou Comando+clique (Mac OS). Neste caso, o parâmetro selecionado, se for passado, contém a lista de todos os arquivos selecionados. por padrão, se esta constante não for utilizada, o comando não permitirá a seleção de múltiplos arquivos.                                                                                                       |
 | Package open      | Inteiro longo | 2     | (Somente Mac OS): autoriza a apertura de pacotes como pastas e assim a visualização/seleção dos seus conteúdos. Por padrãom e não for utilizada esta constante, o comando não permitirá a abertura de pacotes.                                                                                                                                                                                                                                                                         |
 | Package selection | Inteiro longo | 4     | (Somente Mac OS): autoriza a seleção de pacotes como entidades (como padrão é omitido). Utilize Package open se quiser permitir que os usuários visualizem/selecionem conteúdos do pacote.                                                                                                                                                                                                                                                                                             |
-| Use sheet window  | Inteiro longo | 16    | (Somente Mac OS): mostra a caixa de diálogo de seleção na forma de uma janela folha (esta opção é ignorada no Windows).As janelas folha são especificas para o Mac OS X com animação gráfica (para mais informação consulte a seção *Tipos de Janelas*). Por padrão, se esta constante não é utilizada, o comando mostrará uma caixa de diálogo padrão.                                                                                                                                |
+| Use sheet window  | Inteiro longo | 16    | (Somente Mac OS): mostra a caixa de diálogo de seleção na forma de uma janela folha (esta opção é ignorada no Windows).As janelas folha são especificas para o macOS com animação gráfica (para mais informação consulte a seção *Tipos de Janelas*). Por padrão, se esta constante não é utilizada, o comando mostrará uma caixa de diálogo padrão.                                                                                                                                |
 
 Se não quer utilizar uma opção, passe 0 no parâmetro opções. O parâmetro opcional selecionados lhe permite obter a rota de acesso completa (rota de acesso + nome) de cada arquivo selecionado pelo usuário. O comando cria, dimensiona e preenche o array de acordo com a seleção do usuário. Este parâmetro é útil quando a opção Multiple files for utilizada ou quando deseja conhecer a rota de acesso do arquivo selecionado (simplesmente tome o nome do arquivo devolvido pelo comando do valor do array). Se nenhum arquivo estiver selecionado, o array se retorna vazio.  
 
@@ -60,7 +60,7 @@ Nota: em Mac OS, um pacote selecionado se considera como sendo uma pasta. A rota
 
 O comando retorna o nome (nome + extensão em Windows) do arquivo selecionado. Se forem selecionados vários arquivos, o comando retorna o nome do primeiro arquivo da lista de arquivos selecionados. A lista de arquivos pode ser recuperada no parâmetro selecionados. Se nenhum arquivo for selecionado, o comando retorna uma string vazia.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo é utilizado para especificar um arquivo de dados 4D: 
 
@@ -76,7 +76,7 @@ Este exemplo é utilizado para especificar um arquivo de dados 4D:
  $Doc:=Select document("";$DocTipo;"Selecionar o arquivo de dados";$Opções)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de um documento personalizado pelo usuário:
 
@@ -87,13 +87,23 @@ Criação de um documento personalizado pelo usuário:
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente e for selecionado um documento válido, a variável sistema OK toma o valor 1 e a variável sistema Document conterá a rota de acesso completa do arquivo selecionado.  
   
 Se não for selecionado nenhum arquivo (por exemplo, se o usuário clicar no botão **Cancelar** na caixa de diálogo de abertura de arquivos), a variável sistema OK toma o valor 0 e a variável Document estará vazia.
 
-#### Ver também 
+## Ver também 
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 905 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK, Document, error |
+
+

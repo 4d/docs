@@ -3,9 +3,9 @@ id: dataExplorer
 title: Explorador de dados Web
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **Pré-visualizar**: o Explorador de dados Web é fornecido como um recurso de pré-visualização. Não é recomendado usar este recurso em propósito de produção; a implementação final pode ser um pouco diferente.
 
-O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. It helps you to control data and quickly identify issues at any steps of the development process.
+O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. Ajuda a controlar dados e rapidamente identificar problemas em qualquer etapa do processo de desenvolvimento.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -20,11 +20,11 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 ## Abrindo o Data Explorer
 
-The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
+A página do Gerenciador de Dados está disponível automaticamente quando o servidor Web [ `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
 
 Para ligar à página Web do Explorador de dados:
 
-- if you use a 4D application with interface, select **Data Explorer...** command from:
+- se você usar uma aplicação 4D com interface, selecione **Gerenciador de Dados...** comando de:
   - o menu **Registros** (em 4D monousuário)
   - o menu **Window** (no 4D Server)
 
@@ -68,7 +68,7 @@ A página contém várias áreas:
 - Do lado esquerdo encontra-se a área **Dataclasses** e **Attributes area**, permitindo-lhe seleccionar os dataclasses e atributos a exibir. Os atributos são ordenados de acordo com a ordem de criação da estrutura subjacente. A chave primária e os atributos indexados têm um ícone específico. É possível filtrar a lista de nomes de dataclass propostos e nomes de atributos utilizando as respectivas áreas de pesquisa. ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
 - A parte central contém a área de pesquisa **** e a grade de dados **** (lista de entidades da classe de dados seleccionada). Cada coluna da grade representa um atributo de datastore.
-  - Como padrão, todas as entidades são exibidas. É possível filtrar as entidades apresentadas utilizando a área de pesquisa. Estão disponíveis dois modos de consulta: [Consulta sobre atributos](#query-on-attributes) (seleccionado por defeito), e a consulta avançada [com expressão](#advanced-query-with-expression). Selecciona o modo de consulta clicando no botão correspondente (o botão **X** permite reiniciar a área de consulta e assim parar a filtragem): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+  - Como padrão, todas as entidades são exibidas. É possível filtrar as entidades apresentadas utilizando a área de pesquisa. Dois modos de consulta estão disponíveis: [Consulta nos atributos](#query-on-attributes) (selecionado por padrão) e as [consultas avançadas com expressão](#advanced-queries-with-expression). Selecciona o modo de consulta clicando no botão correspondente (o botão **X** permite reiniciar a área de consulta e assim parar a filtragem): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
 
   - O nome da classe de dados seleccionada é adicionado como um separador por cima da grelha de dados. Utilizando estas abas, é possível alternar entre os valores já selecionados. Pode remover um dataclass referenciado clicando no ícone "remover" à direita do nome do dataclass.
   - É possível reduzir o número de colunas desmarcando os atributos do lado esquerdo. Também pode mudar as colunas da grade de dados utilizando arrastar e soltar. Pode clicar no cabeçalho de uma coluna  para [ordenar entidades](#ordering-entities) de acordo com seus valores (quando for possível).
@@ -76,7 +76,7 @@ A página contém várias áreas:
 
 ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
-- On the right side is the **Details area**: it displays the attribute values of the currently selected entity. All attribute types are displayed, including pictures and objects (expressed in json). Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
+- No lado direito está a área **Detalhes**: ela exibe os valores de atributo da entidade selecionada atualmente. Todos os tipos de atributo são exibidos, incluindo imagens e objetos (expressos em json). Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
 
 ### Atualização de conteúdos
 
@@ -169,7 +169,7 @@ Por exemplo, com o Dataclass Employee, pode escrever:
 firstname = "Marie Sophie" E manager.lastname = "@th"
 ```
 
-Pode clicar no ícone `v` para visualizar tanto [`queryPlan`](API/DataClassClass.md#queryplan) como [`queryPath`](API/DataClassClass.md#querypath). Na área, pode pairar sobre os blocos de subconsulta para ter informações detalhadas por subconsulta:
+You can click on the `v` icon to display both [`queryPlan`](../API/EntitySelectionClass.md#queryplan) and [`queryPath`](../API/EntitySelectionClass.md#querypath). Na área, pode pairar sobre os blocos de subconsulta para ter informações detalhadas por subconsulta:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 

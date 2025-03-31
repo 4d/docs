@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SERVICE CALL.Summary-->El comando **WEB SERVICE CALL** se utiliza para llamar un servicio web enviando una petición HTTP.<!-- END REF--> Esta petición contiene el mensaje SOAP creado previamente utilizando el comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -71,7 +71,7 @@ Las cinco configuraciones descritas a continuación pueden implementarse. En tod
 
 **Nota:** a pesar del hecho de que los tipos XML compuestos, los arrays de datos son tratados por 4D como tipos simples. 
 
-##### Modo RPC, entrada y salida simples 
+### Modo RPC, entrada y salida simples 
 
 Esta configuración es la más fácil de utilizar. En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Dynamic o se omite.
 
@@ -79,7 +79,7 @@ Los parámetros enviados y las respuestas recibidas pueden ser manipulados direc
 
 Consulte el ejemplo del comando [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-##### Modo RPC, entrada compuesta y salida simple 
+### Modo RPC, entrada compuesta y salida simple 
 
 En este caso, el parámetro *tipoComplejo* contiene la constante Web Service Manual In. Con esta configuración, debe pasar “manualmente” al servicio Web cada elemento XML fuente bajo la forma de un BLOB, con la ayuda del comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
@@ -97,7 +97,7 @@ Depende de usted formatear el BLOB inicial como un elemento XML válido. Este BL
 ```
 
   
-##### Modo RPC, entrada simple y salida compuestas 
+### Modo RPC, entrada simple y salida compuestas 
 
 En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Manual Out. Cada parámetro de salida será devuelto por el servicio Web bajo la forma del elemento XML almacenado en un BLOB. Recupera este parámetro utilizando el comando [WEB SERVICE GET RESULT](web-service-get-result.md). Luego puede analizar el contenido del BLOB recibido utilizando los comandos XML de 4D.   
   
@@ -112,7 +112,7 @@ En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Ma
  WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
 ```
 
-##### Modo RPC, entrada y salida compuestas 
+### Modo RPC, entrada y salida compuestas 
 
 En este caso, el parámetro *tipoCompuesto* contiene la constantes Web Service Manual. Cada parámetro de entrada y de salida debe ser almacenado en la forma de los elementos XML en los BLOBs, como se describió en las dos configuraciones anteriores.  
   
@@ -127,7 +127,7 @@ En este caso, el parámetro *tipoCompuesto* contiene la constantes Web Service M
  WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
 ```
 
-##### Modo DOC 
+### Modo DOC 
 
 Un método proxy de llamada de un servicio web DOC es similar a un método proxy de llamada de un servicio web RPC utilizando los parámetros de entrada y de salida compuestos. 
 
@@ -158,11 +158,21 @@ El método proxy se llamará de esta forma: *$XMLresultadoBlob:=$DOCproxy\_Metod
 
 El parámetro *\** puede utilizarse para optimizar llamadas. Cuando se pasa, el comando no cierra la conexión utilizada por el proceso al final de su ejecución. En este caso, la próxima llamada a **WEB SERVICE CALL** reutilizará la misma conexión si se pasa el parámetro *\**, etc. Para cerrar la conexión, simplemente ejecute el comando **WEB SERVICE CALL** sin el parámetro *\**. Este mecanismo puede utilizarse para acelerar sensiblemente los procesos en caso de llamadas sucesivas a varios servicios web en el mismo servidor, en particular en una configuración WAN (vía Internet, por ejemplo). Note que este mecanismo depende del parámetro “keep-alive” del servidor web. Este parámetro por lo general define un número máximo de peticiones vía la misma conexión, e incluso puede negar peticiones. Si las peticiones **WEB SERVICE CALL** encadenadas en la misma conexión alcanzan este número máximo, o si las conexiones keep-alive no son permitidas, 4D creará una nueva conexión para cada petición.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si la petición se enruta correctamente y el servicio web la acepta, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se devuelve un error.
 
-#### Ver también 
+## Ver también 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 778 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

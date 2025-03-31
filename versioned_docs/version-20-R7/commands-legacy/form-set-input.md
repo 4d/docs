@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->The **FORM SET INPUT** command sets the current input form for *aTable* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
 
@@ -58,7 +55,7 @@ The optional *\** parameter is used in conjunction with the form properties you 
 
 **Note:** Whether or not you pass the optional *\** parameter, **FORM SET INPUT** changes the input form for the table.
 
-#### Example 1 
+## Example 1 
 
 The following example shows a typical use of FORM SET INPUT: 
 
@@ -67,7 +64,7 @@ The following example shows a typical use of FORM SET INPUT:
  ADD RECORD([Companies]) // Add a new company
 ```
 
-#### Example 2 
+## Example 2 
 
 In an invoicing database managing several companies, the creation of an invoice must be carried out using the corresponding user form: 
 
@@ -83,7 +80,7 @@ In an invoicing database managing several companies, the creation of an invoice 
  ADD RECORD([Factures])
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example uses a .json file describing a form to enter the records in an employee list: 
 
@@ -96,9 +93,8 @@ which displays:
 
 ![](../assets/en/commands/pict3687432.en.png)
 
-#### See also 
+## See also 
 
-*\_o\_CREATE USER FORM*  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
 [DISPLAY SELECTION](display-selection.md)  
@@ -110,3 +106,12 @@ which displays:
 [MODIFY SELECTION](modify-selection.md)  
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 55 |
+| Thread safe | &cross; |
+
+

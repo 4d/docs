@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Add to date.Summary-->**Add to date** ajoute *années*, *mois* et *jours* à la date que vous avez passée dans *laDate*, et retourne la date résultante.<!-- END REF-->
 
 Alors que les [Self](self.md) vous permettent d'ajouter des jours à une date, **Add to date** vous permet d'ajouter rapidement des mois et des années sans vous soucier du nombre de jours par mois ou des années bissextiles (comme vous devriez le faire avec l'opérateur "+" sur les dates).
 
-#### Exemple 
+## Exemple 
 
 ```4d
   //Cette ligne calcule la date dans un an, le même jour
@@ -35,3 +35,13 @@ Alors que les [Self](self.md) vous permettent d'ajouter des jours à une date, *
   //Cette ligne fait la même chose que '$vdDemain:=Date du jour+1'
  $vdDemain:=Add to date(Current date;0;0;1)
 ```
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 393 |
+| Thread safe | &check; |
+
+

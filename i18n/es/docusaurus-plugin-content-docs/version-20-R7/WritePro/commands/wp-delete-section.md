@@ -9,18 +9,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| Parámetros  | Tipo    |   | Descripción                        |
-| ----------- | ------- | - | ---------------------------------- |
-| section     | Object  | → | 4D Write Pro section               |
-| wpDoc       | Object  | → | Documento 4D Write Pro             |
-| indexNumber | Integer | → | Index of the section to be deleted |
-| count       | Integer | → | Número de secciones a eliminar     |
+| Parámetros  | Tipo    |                             | Descripción                        |
+| ----------- | ------- | --------------------------- | ---------------------------------- |
+| sección     | Object  | &#8594; | 4D Write Pro section               |
+| wpDoc       | Object  | &#8594; | Documento 4D Write Pro             |
+| indexNumber | Integer | &#8594; | Index of the section to be deleted |
+| count       | Integer | &#8594; | Número de secciones a eliminar     |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
+El comando **WP DELETE SECTION** <!--REF #_command_.WP DELETE SECTION.Summary-->elimina el objeto *section* pasado, o elimina una o más secciones comenzando por *indexNumber* y dependiendo del *count* pasado<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
 
 An error is raised if the **WP DELETE SECTION** command requests to delete all sections or if the document contains only one section.
 
@@ -32,7 +32,7 @@ If an image or textbox is anchored to a page (e.g., page 20) and this page no lo
 
 :::
 
-#### Ejemplos
+## Ejemplos
 
 To remove the first section of the document:
 
@@ -85,7 +85,7 @@ WP DELETE SECTION($section)
 
 ```
 
-#### Ver también
+## Ver también
 
 [WP Get section](../commands-legacy/wp-get-section.md)\
 [WP RESET ATTRIBUTES](wp-reset-attributes.md)

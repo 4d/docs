@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB to longint.Summary-->The BLOB to longint command returns a 4-byte Long Integer value read from the BLOB *blob*.<!-- END REF-->
 
@@ -37,7 +37,7 @@ If you specify the optional *offset* variable parameter, the 4-byte Long Integer
 
 After the call, the variable is incremented by the number of bytes read. Therefore, you can reuse that same variable with another BLOB reading command to read another value.
 
-#### Example 
+## Example 
 
 The following example reads 20 Long Integer values from a BLOB, starting at the offset 0x200:
 
@@ -49,7 +49,7 @@ The following example reads 20 Long Integer values from a BLOB, starting at the 
  End for
 ```
 
-#### See also 
+## See also 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to real](blob-to-real.md)  
@@ -58,3 +58,12 @@ The following example reads 20 Long Integer values from a BLOB, starting at the 
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 551 |
+| Thread safe | &check; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT** prints a report for *aTable*, created with the Quick Report editor.<!-- END REF--> This editor allows users to create their own reports. For more information about creating reports with the Quick Report editor, refer to the *Quick reports* section of the 4D *Design Reference* manual.
 
@@ -60,7 +57,7 @@ If the Quick Report editor is not involved, the OK variable is set to 1 if a rep
 * The syntax which makes the Quick Report editor appear does not work with 4D Server; in this case, the system variable OK is set to 0.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 1 
+## Example 1 
 
 The following example lets the user query the \[People\] table, and then automatically prints the report “Detailed Listing”:
 
@@ -71,7 +68,7 @@ The following example lets the user query the \[People\] table, and then automat
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example lets the user query the \[People\] table, and then lets the user choose which report to print:
 
@@ -82,7 +79,7 @@ The following example lets the user query the \[People\] table, and then lets th
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example lets the user query the \[People\] table, and then displays the Quick Report editor so the user can design, save, load and print any reports:
 
@@ -93,11 +90,11 @@ The following example lets the user query the \[People\] table, and then display
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 Refer to the example of the [SET FIELD RELATION](set-field-relation.md) command. 
 
-#### Example 5 
+## Example 5 
 
 You want to convert the character set used in a quick report called using **QR REPORT** into Mac Roman:
 
@@ -129,8 +126,18 @@ The myCallbackMeth method converts the report when it is generated:
  End if
 ```
 
-#### See also 
+## See also 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 197 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

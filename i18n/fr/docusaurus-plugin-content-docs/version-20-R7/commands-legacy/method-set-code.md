@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->La commande **METHOD SET CODE** modifie le code de la ou des méthode(s) désignée(s) par le paramètre *chemin* avec le contenu passé dans le paramètre *code*.<!-- END REF--> 
 
@@ -65,7 +62,7 @@ Concernant la propriété "folder" des métadonnées :
 
 Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet d’exporter et d’importer la totalité des méthodes projet d’une application :
 
@@ -97,6 +94,15 @@ Cet exemple permet d’exporter et d’importer la totalité des méthodes proje
  SHOW ON DISK($root_t)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD GET CODE](method-get-code.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1194 |
+| Thread safe | &cross; |
+
+

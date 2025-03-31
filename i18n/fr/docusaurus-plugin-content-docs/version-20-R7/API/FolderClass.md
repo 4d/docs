@@ -230,10 +230,10 @@ Lorsque la constante `Delete only if empty` est passée ou si vous omettez le pa
 Lorsque la constante `Delete with contents` est passée :
 
 - Le dossier, ainsi que tout son contenu, est supprimé.
-  **Attention** : Même si ce dossier et/ou son contenu sont verrouillés ou définis comme étant en lecture seule, si l'utilisateur dispose des droits d'accès appropriés, le dossier (et son contenu) est supprimé malgré tout.
+ **Attention** : Même si ce dossier et/ou son contenu sont verrouillés ou définis comme étant en lecture seule, si l'utilisateur dispose des droits d'accès appropriés, le dossier (et son contenu) est supprimé malgré tout.
 - Si ce dossier, ou l'un des fichiers qu'il contient, ne peut être supprimé, la suppression est interrompue dès que le premier élément inaccessible est détecté, et une erreur(\*) est retournée. Dans ce cas, le dossier ne peut être que partiellement supprimé. Lorsque la suppression est interrompue, vous pouvez utiliser la commande `Last errors` pour récupérer le nom et le chemin du fichier incriminé.
 - Si le dossier n'existe pas, la commande ne fait rien et aucune erreur n'est retournée.
-  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+ (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ La fonction `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->déplace ou d
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 

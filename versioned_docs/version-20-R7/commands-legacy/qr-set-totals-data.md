@@ -5,25 +5,22 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; operator | value )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* )<br/>**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *value* )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | breakNum | Integer | &#8594;  | Break number |
-| operator &#124; value | Longint, String | &#8594;  | Operator value for the cell or Cell content |
+| operator &#124; value | Integer, Text | &#8594;  | Operator value for the cell or Cell content |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note:** This command cannot create a subtotal.<!-- END REF-->
 
-##### List Mode 
+### List Mode 
 
 The **QR SET TOTALS DATA** command sets the details of a specific break (total or subtotal). 
 
@@ -60,7 +57,7 @@ You can pass the following values:
 \- ##D will be replaced by the Standard deviation.  
 \- ##xx, where xx is a column number. This will be replaced by that column’s value, using its formatting. If this column does not exist, then it will not be replaced. 
 
-##### Cross-table Mode 
+### Cross-table Mode 
 
 The **QR SET TOTALS DATA** command sets the details of a specific cell. 
 
@@ -78,7 +75,7 @@ Here is a depiction of how the parameters column and break have to be combined i
 
 ![](../assets/en/commands/pict31186.en.png)
 
-##### Supported Types of Data 
+### Supported Types of Data 
 
 The types of data that you can pass are of two basic kinds:
 
@@ -95,6 +92,16 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *colNum* number, the error -9852 will be generated.  
 If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 767 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

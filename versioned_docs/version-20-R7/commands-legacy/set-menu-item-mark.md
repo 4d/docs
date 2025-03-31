@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->The **SET MENU ITEM MARK** command changes the check mark of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem* to the first character of the string passed in *mark*.<!-- END REF--> You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.
 
@@ -32,10 +29,20 @@ If you pass an empty string, any mark is removed from the menu item. Otherwise:
 * On Macintosh, the first character of the string becomes the mark of the menu item. Usually, you will pass [Char](char.md)**(18)**, which is the check mark character for Macintosh menus.
 * On Windows, the menu item is assigned the standard check mark.
 
-#### Example 
+## Example 
 
 See example for the [Get menu item mark](get-menu-item-mark.md) command.
 
-#### See also 
+## See also 
 
 [Get menu item mark](get-menu-item-mark.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 208 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

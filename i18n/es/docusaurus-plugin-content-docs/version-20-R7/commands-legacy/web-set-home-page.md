@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->El comando **WEB SET HOME PAGE** permite modificar la página de inicio personalizada para el proceso web actual.<!-- END REF--> 
 
@@ -26,3 +26,13 @@ Pase en el parámetro *pagInicio* el nombre de la página HTML o de la ruta de a
 Para no enviar *pagInicio* como página de inicio para el proceso web actual, ejecute de nuevo el comando WEB SET HOME PAGE con una cadena vacía ("") pasada en *pagInicio*.
 
 **Nota:** la página de bienvenida por defecto del servidor web se define en las Propiedades de la base. 
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 639 |
+| Hilo seguro | &check; |
+
+

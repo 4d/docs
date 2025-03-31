@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Shift down.Summary-->Shift down returns TRUE if the Shift key is pressed.<!-- END REF-->
 
-#### Example 
+## Example 
 
 The following object method for the button *bAnyButton* performs different actions, depending on which modifier keys are pressed when the button is clicked:
 
@@ -43,7 +43,7 @@ The following object method for the button *bAnyButton* performs different actio
  End case
 ```
 
-#### See also 
+## See also 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -51,3 +51,12 @@ The following object method for the button *bAnyButton* performs different actio
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 543 |
+| Thread safe | &check; |
+
+

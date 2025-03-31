@@ -21,7 +21,7 @@ title: VP Get tables
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Collection|<-|Text collection with all table names|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
 
@@ -33,7 +33,7 @@ In *sheet*, pass the index of the target sheet. If no index is specified, the co
 
 
 
-#### Example
+## Example
 
 The following code will return a collection of all the table names in the current sheet:
 
@@ -44,6 +44,6 @@ $tables:=VP Get tables("ViewProArea")
 
 ```
 
-#### See also
+## See also
 
 [VP CREATE TABLE](vp-create-table.md)

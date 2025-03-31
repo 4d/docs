@@ -15,15 +15,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get visible.Summary-->O comando OBJECT Get visible devolve True se o objeto ou grupo de objetos designado por *objeto* tem o atributo visível e do contrário False.<!-- END REF-->  
   
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto é* um nome de objeto (string). Se não passa este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passa uma referência de campo ou variável (campo ou variável objeto únicamente) ao invés de uma string. 
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1075 |
+| Thread-seguro | &cross; |
+
+

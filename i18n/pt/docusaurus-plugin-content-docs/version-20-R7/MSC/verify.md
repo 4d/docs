@@ -11,17 +11,17 @@ Esta página apenas verifica a integridade dos dados. Si se encuentran errores y
 
 A página contém botões de ação que fornecem acesso direto às funções de verificação.
 
-> When the database is encrypted, verification includes validation of encrypted data consistency. If no valid data key has already been provided, a dialog requesting the passphrase or the data key is displayed.
+> Quando o banco de dados é criptografado, a verificação inclui a validação da consistência dos dados criptografados. Se ainda não tiver sido fornecida uma chave de dados válida, é apresentada um diálogo que pede a frase-chave ou a chave de dados.
 
 - **Verificar los registros y los índices:** inicia el procedimiento de verificación total de los datos.
 - **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
 - **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
 
-> \> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> &#062; &#062; &#062; &#062; &#062; A verificação de registros e índices também pode ser realizada no modo detalhado, tabela por tabela (consulte a seção Detalhes abaixo).
 
 ## Abrir arquivo de registo
 
-Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *ApplicationName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
+Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la aplicación. Esse arquivo lista todas as verificações realizadas e indica os erros encontrados, quando aplicável ([OK] é exibido quando a verificação está correta). It is created in XML format and is named: *ApplicationName__Verify_Log__yyyy-mm-dd hh-mm-ss*.xml where:
 
 - *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
 - *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
@@ -34,13 +34,13 @@ El botón **Lista de tablas** muestra una página detallada que puede utilizarse
 
 ![](../assets/en/MSC/MSC_Verify.png)
 
-Specifying the items to be verified lets you save time during the verification procedure.
+A especificação dos itens a serem verificados permite que você economize tempo durante o procedimento de verificação.
 
-A lista principal apresenta todas as tabelas da base de dados. Para cada tabela, é possível limitar a verificação aos registros e/ou a cada índice. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. Por padrão, tudo está selecionado. También puede utilizar los botones de acceso directo **Seleccionar todo**, **Deseleccionar todo**, **Todos los registros** y **Todos los índices**.
+A lista principal apresenta todas as tabelas da base de dados. Para cada tabela, é possível limitar a verificação aos registros e/ou a cada índice. Expanda o conteúdo de uma tabela ou os campos indexados e marque/desmarque as caixas de seleção conforme desejado. Por padrão, tudo está selecionado. También puede utilizar los botones de acceso directo **Seleccionar todo**, **Deseleccionar todo**, **Todos los registros** y **Todos los índices**.
 
-Para cada linha da tabela, a coluna "Ação" indica as operações a realizar. When the table is expanded, the "Records" and "Indexed fields" rows indicate the number of items concerned.
+Para cada linha da tabela, a coluna "Ação" indica as operações a realizar. Quando a tabela é expandida, as linhas "Registros" e "Campos indexados" indicam o número de itens em questão.
 
-The "Status" column displays the verification status of each item using symbols:
+A coluna "Estado" exibe o estado de verificação de cada item usando símbolos:
 
 | ![](../assets/en/MSC/MSC_OK.png)  | A verificação foi efetuada sem problema      |
 | --------------------------------- | -------------------------------------------- |
@@ -52,4 +52,4 @@ Haga clic en **Verificar** para comenzar la verificación o en **Estándar** par
 
 El botón **Abrir archivo de historial** puede utilizarse para mostrar el archivo de historialen el navegador predeterminado de la máquina (ver [Abrir archivo de historial](#abrir-archivo-de-registro) arriba).
 
-> The standard page will not take any modifications made on the detailed page into account: when you click on a verification button on the standard page, all the items are verified. On the other hand, the settings made on the detailed page are kept from one session to another.
+> A página padrão não considerará as modificações feitas na página detalhada: quando você clica em um botão de verificação na página padrão, todos os itens são verificados. Por outro lado, as configurações feitas na página detalhada são mantidas de uma sessão para outra.

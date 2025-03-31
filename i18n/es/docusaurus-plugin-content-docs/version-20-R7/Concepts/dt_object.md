@@ -8,19 +8,19 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
 - El nombre de una propiedad es siempre un texto, por ejemplo "Name". Debe seguir [reglas específicas](identifiers.md#object-properties).
 
 - Un valor de propiedad puede ser del tipo siguiente:
-  - número (Real, Entero, etc.)
-  - text
-  - null
-  - boolean
-  - puntero (almacenado como tal, evaluado utilizando el comando `JSON Stringify` o al copiar),
-  - fecha (tipo fecha o cadena en formato fecha ISO)
-  - objeto(1) (los objetos pueden ser anidados en varios niveles)
-  - imagen(2)
-  - collection
+ - número (Real, Entero, etc.)
+ - text
+ - null
+ - boolean
+ - puntero (almacenado como tal, evaluado utilizando el comando `JSON Stringify` o al copiar),
+ - fecha (tipo fecha o cadena en formato fecha ISO)
+ - objeto(1) (los objetos pueden ser anidados en varios niveles)
+ - imagen(2)
+ - collection
 
 (1) **Objetos no transmisibles en tiempo real** como objetos ORDA ([entidades}(ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [manejadores de archivos](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... no pueden almacenarse en **campos objeto**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
 
-(2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[objeto Imagen]".
+(2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[object Picture]".
 
 :::caution
 
@@ -47,7 +47,7 @@ La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
+Varias funciones y comandos 4D devuelven objetos, por ejemplo [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-tilizes.301-5945423.en.html) o [`File`](../commands/file.md). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
 
 :::
 
@@ -65,7 +65,7 @@ Ejemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
-### operador \`{}
+### operador \\\`{}
 
 El operador `{}` permite crear un **literal de objeto**. Un literal de objeto es una lista separada por semicolumnas de cero o más pares de nombres de propiedades y valores asociados de un objeto, encerrados entre llaves (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
@@ -111,15 +111,15 @@ $col:=$o.col[5] //6
 Puede crear dos tipos de objetos:
 
 - objetos regulares (no compartidos), utilizando el comando [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) o la sintaxis literal de objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- objetos compartidos, utilizando el comando [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras Use...End use.
-  Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
+- objetos compartidos, utilizando el comando [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
+ Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Propiedades
 
 Se accede a los valores de las propiedades de los objetos a través de una cadena de tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 
 - utilizando un símbolo de "punto":
-  > object.propertyName
+ > object.propertyName
 
 Ejemplo:
 
@@ -128,7 +128,7 @@ Ejemplo:
 ```
 
 - utilizando una cadena entre corchetes:
-  > object["propertyName"]
+ > object["propertyName"]
 
 Ejemplos:
 
@@ -149,7 +149,7 @@ Dado que un valor de propiedad de un objeto puede ser un objeto o una colección
 La notación de objetos está disponible en cualquier elemento del lenguaje que pueda contener o devolver un objeto, es decir:
 
 - **Objetos** propiamente dichos (almacenados en variables, campos, propiedades de objetos, arrays de objetos o elementos de colecciones).
-  Ejemplos:
+ Ejemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variable
@@ -160,14 +160,14 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 ```
 
 - **Comandos 4D** que devuelven objetos.
-  Ejemplo:
+ Ejemplo:
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - **Métodos proyecto** o **Funciones** que devuelven objetos.
-  Ejemplo:
+ Ejemplo:
 
 ```4d
       // MyMethod1
@@ -179,7 +179,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 ```
 
 - **Colecciones**
-  Ejemplo:
+ Ejemplo:
 
 ```4d
      myColl.length //tamaño de la colección

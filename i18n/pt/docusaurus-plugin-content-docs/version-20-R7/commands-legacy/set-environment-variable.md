@@ -21,9 +21,9 @@ Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md
 
 :::
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->O comando **SET ENVIRONMENT VARIABLE** permite fixar o valor de uma variável de ambiente em Mac OS X e Windows.<!-- END REF--> Está projetado para ser utilizado com o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md).. Também funciona com o comando [PHP Execute](php-execute.md).  
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->O comando **SET ENVIRONMENT VARIABLE** permite fixar o valor de uma variável de ambiente em macOS e Windows.<!-- END REF--> Está projetado para ser utilizado com o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md).. Também funciona com o comando [PHP Execute](php-execute.md).  
   
 Passe o nome da variável a definir em *nomVar* e seu valor em *valorVar*.
 
@@ -36,10 +36,19 @@ Passe o nome da variável a definir em *nomVar* e seu valor em *valorVar*.
   
 Para informação sobre estas variáveis, consulte a documentação do comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md).
 
-#### Exemplo 
+## Exemplo 
 
 Consulte os exemplos do comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md "LAUNCH EXTERNAL PROCESS").
 
-#### Ver também 
+## Ver também 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 812 |
+| Thread-seguro | &check; |
+
+

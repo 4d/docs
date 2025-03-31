@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.Cache info.Summary-->O comando **Cache info** devolve um objeto que contenha a informação detalhada sobre o conteúdo atual da caché (memória utilizada, tabelas e índices carregados, etc.)
+<!--REF #_command_.Cache info.Summary-->O comando **Cache info** devolve um objeto que contenha a informação detalhada sobre o conteúdo atual da caché (memória utilizada, tabelas e índices carregados, etc.)<!-- END REF-->.
 
-**Nota:** este comando só funciona em modo local (4D Server e 4D); não deve ser utilizado com 4D em modo remoto.<!-- END REF-->
+**Nota:** este comando só funciona em modo local (4D Server e 4D); não deve ser utilizado com 4D em modo remoto.
 
 Como padrão, a informação devolvida se refere somente ao banco sendo executado. O parâmetro objeto opcional *dbFilter* lhe permite especificar o alcance do comando:
 
@@ -33,7 +33,7 @@ O comando **Cache info** devolve um único objeto que contém toda a informaçã
 
 Os elementos de array *objetos* são objetos raiz (tabelas, índices, Blobs, etc.) que estejam carregados na memória caché. Cada elemento contém atributos específicos que descrevem seu estado atual. Para mais informação sobre a interpretação avançada destes dados, contacte a seu departamento de serviço técnico.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser obter a informação da cache para o banco de dados atual:
 
@@ -50,6 +50,15 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
  $cache:=Cache info($dbFilter)
 ```
 
-#### Ver também 
+## Ver também 
 
 [MEMORY STATISTICS](memory-statistics.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1402 |
+| Thread-seguro | &check; |
+
+

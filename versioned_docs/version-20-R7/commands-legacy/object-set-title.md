@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET TITLE.Summary-->The OBJECT SET TITLE command changes the title of the object(s) specified by *object* to the value you pass in *title*.<!-- END REF-->
 
@@ -41,7 +38,7 @@ If you want to set a title on more than one line, use the "\\" character ("\\\\"
 
 **Note:** Pass "\\\\\\" when you want to use the "\\" character in the title.
 
-#### Example 1 
+## Example 1 
 
 The following example is the object method of a search button located in the footer area of an output form displayed using [MODIFY SELECTION](modify-selection.md). The method searches a table; depending on the search results, it enables or disables a button labeled *bDelete* and changes its title:
 
@@ -60,7 +57,7 @@ The following example is the object method of a search button located in the foo
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to insert titles on two lines:
 
@@ -71,6 +68,15 @@ You want to insert titles on two lines:
 
 ![](../assets/en/commands/pict1242273.en.png)
 
-#### See also 
+## See also 
 
 [OBJECT Get title](object-get-title.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 194 |
+| Thread safe | &cross; |
+
+

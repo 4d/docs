@@ -43,7 +43,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | Parámetros | Tipo         |    | Descripción                                               |
 | ---------- | ------------ | -- | --------------------------------------------------------- |
 | localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
-| Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
+| Resultado  | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
 
 |
 
@@ -115,7 +115,7 @@ Utilizando el almacén de datos principal de la base 4D:
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Result         | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
+| Resultado      | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
 
 |
 
@@ -148,7 +148,7 @@ Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al q
 | hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
 | contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                           |
-| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
+| idleTimeout | Integer | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
 | tls         | Boolean | Utilice una conexión segura(*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                           |
 | type        | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                             |
 
@@ -261,7 +261,7 @@ La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
-Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransactions).
+Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransaction).
 
 #### Ejemplo
 
@@ -286,7 +286,7 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                         |
 | ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
+| Resultado  | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
 
 |
 
@@ -361,7 +361,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parámetros | Tipo   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
+| Resultado  | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
 |
 
@@ -430,7 +430,7 @@ En un almacén de datos remoto:
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Parámetros | Tipo       |    | Descripción                                                                              |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
+| Resultado  | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
 |
 
@@ -469,7 +469,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                                                |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
+| Resultado  | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
 
 |
 
@@ -510,9 +510,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas las selecciones de entidades como alterables por defecto en los almacenes de datos de la aplicación actual<!-- END REF --> (incluyendo [datastores remotas](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
 
-Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](../ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](./EntitySelectionClass.md#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 > **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes. Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
 
@@ -537,7 +537,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
 | curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
-| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
+| Resultado     | Object | <- | Resultado de la coincidencia de la llave de encriptación|<!-- END REF -->
 
 |
 
@@ -556,7 +556,7 @@ Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de
 * todas las modificaciones de datos en las tablas encriptadas se cifran en el disco (.4DD, .journal. 4Dindx)
 * todos los datos cargados desde tablas encriptadas se descifran en memoria
 
-**Result**
+**Resultado**
 
 El resultado de la orden se describe en el objeto devuelto:
 

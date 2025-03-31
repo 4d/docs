@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->O comando RELATE MANY SELECTION cria uma seleção de registros na tabela Muitos, baseada na seleção atual da tabela Um.<!-- END REF-->  
 
 **Nota**: RELATE MANY SELECTION muda o registro atual da tabela Um.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo seleciona todas as faturas de clientes com crédito superior ou igual a $1.000\. O campo *\[Faturas\]IDCliente* está relacionado com o campo *\[Clientes\]NumID*. 
 
@@ -30,8 +30,19 @@ Este exemplo seleciona todas as faturas de clientes com crédito superior ou igu
  RELATE MANY SELECTION([Faturas]IDCliente)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 340 |
+| Thread-seguro | &check; |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+
+

@@ -21,8 +21,8 @@ Se aplican las siguientes reglas para todas las conversiones:
 
 - Los nombres de tabla, campo y relación se mapean a los nombres de propiedad de objeto. Asegúrese de que dichos nombres cumplen con las reglas generales de denominación de objetos, como se explica en la sección [Convenciones de denominación de objetos](Concepts/identifiers.md).
 - Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las siguientes tablas no están referenciadas:
-  - Tablas sin llave primaria
-  - Tablas con llaves primarias compuestas.
+ - Tablas sin llave primaria
+ - Tablas con llaves primarias compuestas.
 - Los campos BLOB están disponibles automáticamente como atributos del tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > El mapeo ORDA no tiene en cuenta:

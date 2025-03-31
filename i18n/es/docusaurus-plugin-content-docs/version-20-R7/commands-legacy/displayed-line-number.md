@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Displayed line number.Summary-->El comando Displayed line number funciona únicamente en el contexto del evento de formulario On Display Detail.<!-- END REF-->  Devuelve el número de la línea que está siendo procesada mientras una lista de registros es mostrada en pantalla. Si Displayed line number se llama cuando no se muestra una lista, devuelve 0.
 
@@ -24,7 +21,7 @@ Si la línea mostrada no está vacía (cuando está asociada a un registro), el 
 
 Como [Selected record number](selected-record-number.md "Selected record number"), Displayed line number comienza en 1\. Este comando es útil cuando quiere aplicar un proceso a cada línea de un formulario listado o de un list-box mostrado en pantalla, incluyendo las líneas vacías. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo le permite aplicar un color alterno en un formulario listado mostrado en pantalla, incluso para las líneas sin registros:
 
@@ -43,7 +40,16 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
 
 ![](../assets/en/commands/pict32598.es.png)
 
-#### Ver también 
+## Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 897 |
+| Hilo seguro | &cross; |
+
+

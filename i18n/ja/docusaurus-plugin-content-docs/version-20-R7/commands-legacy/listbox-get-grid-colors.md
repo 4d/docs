@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->**LISTBOX GET GRID COLORS**コマンドは*object*と*\** 引数で指定したリストボックスの縦横グリッドカラーをそれぞれ返します。<!-- END REF-->
 
@@ -30,6 +27,15 @@ displayed_sidebar: docs
 * テキスト型を渡していた場合、カラーはCSS テキスト("#rrggbb"フォーマット)で返されます。
 * 倍長整数型を渡していた場合、カラーは4バイトの倍長整数(0x00rrggbbフォーマット)で返されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1200 |
+| スレッドセーフである | &cross; |
+
+

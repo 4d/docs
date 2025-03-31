@@ -14,13 +14,13 @@ title: VP Get sheet count
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名 |                  |
 | 戻り値        | Integer | <- | シートの数                   | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get sheet count` コマンドは、 <!-- REF #_method_.VP Get sheet count.Summary -->*vpAreaName* で指定したエリアにロードされているドキュメント内にあるシート数を返します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-#### 例題
+## 例題
 
 以下のドキュメントにおいて:
 
@@ -36,7 +36,7 @@ title: VP Get sheet count
 
 ![](../../assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### 参照
+## 参照
 
 [VP Get sheet index](vp-get-sheet-index.md)<br/>
 [VP SET SHEET COUNT](vp-set-sheet-count.md)

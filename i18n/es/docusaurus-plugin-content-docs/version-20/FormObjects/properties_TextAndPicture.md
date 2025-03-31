@@ -181,7 +181,7 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 
 ## Posición título imagen
 
-Esta propiedad permite definir si el título y la imagen del botón deben estar visualmente contiguos o separados, según las propiedades [Posición del título/imagen](#titlepicture-position) y [Alineación horizontal](#horizontal-alignment).
+Esta propiedad permite definir si el título y la imagen del botón deben estar visualmente contiguos o separados, según las propiedades [Posición del título/imagen](#titlepicture-position) y [Alineación horizontal](properties_Text.md#horizontal-alignment).
 
 Esta propiedad no tiene efecto cuando el botón sólo contiene un título (sin imagen asociada) o una imagen (sin título).
 
@@ -262,4 +262,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Botón de la barra de herramientas](button_overview.md#toolbar) - [Botón Bisel](button_overview.md#bevel) - [Botón Bisel redondeado](button_overview.md#rounded-bevel) - [Botón Gradiente OS X](button_overview.md#os-x-gradient) - [Botón Texturizado OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón Círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)

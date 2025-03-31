@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->La commande **OBJECT GET BEST SIZE** retourne dans les paramètres *largeurOpti* et *hauteurOpti* la largeur et la hauteur “optimales” de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF--> Ces valeurs sont exprimées en pixels. Cette commande est particulièrement utile dans le cadre de l’affichage ou de l’impression d’états complexes, associée à la commande [OBJECT MOVE](object-move.md). 
 
@@ -43,11 +40,20 @@ Les objets pris en charge par cette commande sont les suivants :
 
 Pour tous les autres types d’objets de formulaires (zones de groupes, onglets, rectangles, droites, cercles/ellipses, zones externes, etc.), la commande **OBJECT GET BEST SIZE** retourne la taille courante de l’objet (définie dans l’éditeur de formulaires et éventuellement à l’aide de la commande [OBJECT MOVE](object-move.md)).
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l’exemple de la routine [SET PRINT MARKER](set-print-marker.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 717 |
+| Thread safe | &cross; |
+
+

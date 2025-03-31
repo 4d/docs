@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->The LISTBOX EXPAND command is used to expand the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -44,7 +41,7 @@ The command does not select break rows.
 
 If the selection or list box does not contain a break row or if all the break rows are already expanded, the command does nothing.
 
-#### Example 
+## Example 
 
 This example illustrates different ways of using the command. Given the following arrays shown in a list box:
 
@@ -79,6 +76,15 @@ This example illustrates different ways of using the command. Given the followin
 
 ![](../assets/en/commands/pict175855.en.png)
 
-#### See also 
+## See also 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1100 |
+| Thread safe | &cross; |
+
+

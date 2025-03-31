@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->The **GET MENU ITEMS** command returns, in the *menuTitlesArray* and *menuRefsArray* arrays, the titles and IDs of all the items of the menu or menu bar designated by the *menu* parameter.<!-- END REF-->
 
@@ -26,7 +23,7 @@ In the *menu* parameter, you can pass a menu reference ([MenuRef](# "Unique ID (
 
 If no menu reference is associated with an item, an empty string is returned in the corresponding array element.
 
-#### Example 
+## Example 
 
 You want to find out the contents of the menu bar of the current process: 
 
@@ -36,3 +33,13 @@ You want to find out the contents of the menu bar of the current process:
  MenuBarRef:=Get menu bar reference(Frontmost process)
  GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 977 |
+| Thread safe | &cross; |
+
+

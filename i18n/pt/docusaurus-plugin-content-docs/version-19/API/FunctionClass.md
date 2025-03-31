@@ -5,7 +5,7 @@ title: Function
 
 ### Acerca dos objectos Function
 
-A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D propõe três tipos de objetos `Function`:
+Um objeto `4D.Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
 
 - **funções nativas**, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
 - **funções usuário**, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
@@ -15,7 +15,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 ### Objetos Formula
 
-Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
+Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem que você crie objetos `4D.Function` para executar qualquer expressão 4D ou código expresso como texto.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
@@ -139,7 +139,7 @@ Ter uma fórmula como se fosse um objeto permite que seja passada como um parâm
 A fórmula retornada pode ser chamada com:
 
 *   métodos[`.call()`](#call) ou [`.apply()`](#apply), ou
-*   sintaxe notação objeto (ver [formula object](#formula-object)).
+*   sintaxe de notação de objeto (consulte [objeto fórmula](#formula-objects)).
 
 ```4d
  var $f : 4D. Function

@@ -15,7 +15,7 @@ Na coleção de etapas, existe um objeto com as seguintes propriedades que defin
 
 | Propriedade   | Tipo       | Descrição                                                                       |
 | ------------- | ---------- | ------------------------------------------------------------------------------- |
-| description   | String     | Consulta executada ou "AND" quando existem várias etapas                        |
+| description   | Text       | Consulta executada ou "AND" quando existem várias etapas                        |
 | time          | Number     | Número de milissegundos necessários para executar a consulta                    |
 | recordsfounds | Number     | Número de registos encontrados                                                  |
 | steps         | Collection | Uma coleção com um objeto que define a etapa subsequente do caminho da consulta |

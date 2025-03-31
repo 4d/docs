@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get headers height.Summary-->O comando **LISTBOX Get headers height** devolve a altura da linha horizontais de cabeçalho do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -34,6 +31,15 @@ Por defeito, se omitido o parâmetro *unidade*, a altura de linha devolvida se e
 
 **Nota**: para maior informação sobre o cálculo da altura de linhas, consulte o manual de *Desenho*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1144 |
+| Thread-seguro | &cross; |
+
+

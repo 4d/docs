@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Summary-->La commande **WP EXPORT DOCUMENT** exporte l'objet 4D Write Pro *docWP* dans un document sur disque défini par le paramètre *cheminFichier* ainsi que des paramètres optionnels.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Vous pouvez également passer une constante du thème *Constantes 4D Write Pro* 
 * Pour consulter la liste des différences ou des incompatibilités connues liées à l'utilisation du format .docx, veuillez lire *Exporter au format .docx*.
 * Pour plus d'informations sur l'exportation au format SVG, voir *Exporter au format SVG*.
 
-##### Paramètre option 
+### Paramètre option 
 
 Passez un [objet](# "Données structurées sous forme d'objet natif 4D") dans *option* contenant les valeurs définissant les propriétés du document exporté. Les propriétés suivantes sont disponibles : 
 
@@ -88,7 +88,7 @@ Le tableau suivant indique l'*option* disponible par *format* d'export :
 
 **Note de compatibilité :** Passer une valeur *entier long* dans *option* est pris en charge pour des raisons de compatibilité, mais il est recommandé d'utiliser un paramètre [objet](# "Données structurées sous forme d'objet natif 4D"). 
 
-##### collection wk files 
+### collection wk files 
 
 La propriété wk files permet d'[exporter un PDF avec des pièces jointes](https://blog.4d.com/fr/4d-write-pro-export-to-pdf-with-enclosures). Cette propriété doit contenir une collection d'objets décrivant les fichiers à inclure dans le document final. Chaque objet de la collection peut contenir les propriétés suivantes :
 
@@ -105,7 +105,7 @@ Si le paramètre *option* contient également une propriété wk factur x, le pr
 
 **Note :** Les pièces jointes en format PDF ne sont prises en charge que par la version "PDF/A-3". Lorsque vous transmettez la propriété wk files, la version "PDF/A-3" est automatiquement utilisée.
 
-##### objet wk factur x 
+### objet wk factur x 
 
 La propriété wk factur x est un objet qui peut contenir jusqu'à deux propriétés :
 
@@ -126,7 +126,7 @@ Pour déclencher une exportation PDF "Factur-X", passez les propriétés wk fact
 
 **Note :** Pour un exemple détaillé de la mise en œuvre de l'exportation Factur-X / ZUGFeRD, vous pouvez télécharger [ce projet HDI 4D](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vou souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* aux formats HTML et PDF :
 
@@ -156,7 +156,7 @@ Vou souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* aux formats H
  WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* dans le format .4wp :
 
@@ -178,7 +178,7 @@ Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* dans le form
  End case
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Pour exporter la deuxième page du document en SVG et exporter les images depuis le document :
 
@@ -192,7 +192,7 @@ Pour exporter la deuxième page du document en SVG et exporter les images depuis
  WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Exportation d'un document PDF conforme à la norme PDF/A-2 :
 
@@ -203,7 +203,7 @@ Exportation d'un document PDF conforme à la norme PDF/A-2 :
  WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Exemples d'exportations PDF de Factur-X :
 
@@ -239,7 +239,7 @@ WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
   

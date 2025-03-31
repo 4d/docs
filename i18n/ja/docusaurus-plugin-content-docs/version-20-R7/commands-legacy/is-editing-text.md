@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Is editing text.Summary-->**Is editing text** は、ユーザーが入力フォームオブジェクトに値を入力中であれば**True** を、それ以外の場合には**False** を返します。<!-- END REF-->
 
@@ -30,7 +27,7 @@ displayed_sidebar: docs
 
 これ以外のオブジェクトについては、コマンドは常に**False** を返します。具体的には、このコマンドは4D Write Pro エリアと4D View Pro エリアで使用することはできません。
 
-#### 例題 
+## 例題 
 
 入力可能なリストボックス内において、ユーザーが入力した文字で始まる行を選択できるようにしたい場合を考えます:
 
@@ -56,8 +53,17 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1744 |
+| スレッドセーフである | &cross; |
+
+

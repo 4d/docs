@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->**OBJECT GET EVENTS**コマンドは、引数 *object* と *\** で指定したオブジェクトの、フォームイベントのカレントの設定を取得します。<!-- END REF-->
 
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 
 オブジェクトまたはフォームに対してメソッドが何も関連付けられていない場合は、 *arrEvents* は空で返される点に注意して下さい。
 
-#### 例題 
+## 例題 
 
 イベントを2つ有効化して、オブジェクトのイベントのリストを取得したい場合:
 
@@ -46,6 +43,15 @@ displayed_sidebar: docs
  OBJECT GET EVENTS(*;"Col1";$ArrCurrentEvents)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET EVENTS](object-set-events.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1238 |
+| スレッドセーフである | &cross; |
+
+

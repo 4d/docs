@@ -26,19 +26,19 @@ Las funciones deben llamarse siempre utilizando peticiones **POST** (una petici�
 
 Las funciones son llamadas en el objeto correspondiente en el almacén de datos del servidor.
 
-| Función de clase                                                   | Sintaxis                                                                        |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                         |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
+| Función de clase                                                   | Sintaxis                                                                    |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                           |
 
 > `/rest/\{dataClass\}/Función` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/\{dataClass\}` devuelve todas las entidades de la DataClass como una selección de entidades). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
-> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo* ](../WebServer/webServerConfig.md#use-preemptive-processes)es ignorado por el Servidor REST).
 
 ## Parámetros
 
@@ -51,7 +51,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
-Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#receiving-an-entity-selection-as-parameter).
 
 ### Parámetro de valor escalar
 
@@ -70,14 +70,14 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 | Propiedades             | Tipo                                     | Descripción                                                                 |
 | ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------- |
 | Atributos de la entidad | mixto                                    | Opcional - Valores a modificar                                              |
-| __DATACLASS             | String                                   | Obligatorio - Indica la Dataclass de la entidad                             |
+| __DATACLASS             | Text                                     | Obligatorio - Indica la Dataclass de la entidad                             |
 | __ENTITY                | Boolean                                  | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY                   | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
 - Si se suministra __KEY, la entidad correspondiente a__KEY se carga en el servidor con los atributos dados
 
-Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
+Ver ejemplos para crear o actualizar entidades.
 
 #### Parámetro de entidad asociado
 
@@ -94,7 +94,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 | Propiedades             | Tipo    | Descripción                                                                                |
 | ----------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | Atributos de la entidad | mixto   | Opcional - Valores a modificar                                                             |
-| __DATASET               | String  | Obligatorio - entitySetID (UUID) de la selección de entidades                              |
+| __DATASET               | Text    | Obligatorio - entitySetID (UUID) de la selección de entidades                              |
 | __ENTITIES              | Boolean | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
 Ver ejemplo para [recibir una selección de entidades](#receiving-an-entity-selection-as-parameter).
@@ -122,7 +122,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -152,7 +152,7 @@ A continuación, puede ejecutar esta petición:
 
 Petición: ["Aguada"]
 
-#### Result
+#### Resultado
 
 El resultado es una entidad:
 
@@ -197,7 +197,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -222,7 +222,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -254,7 +254,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -284,7 +284,7 @@ A continuación, puede ejecutar esta petición:
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -336,7 +336,7 @@ Cuerpo de la petición:
 
 Como ninguna `__KEY` es dada, una nueva entidad Students está cargada en el servidor **con los atributos del cliente**. Como la función `pushData()` ejecuta una acción `save()`, la nueva entidad es creada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -374,7 +374,7 @@ Cuerpo de la petición:
 
 Como `__KEY` es dada, la entidad Students está cargada con llave primaria 55 **con el valor lastname recibido por el cliente**. Como la función ejecuta una acción `save()`, la nueva entidad es actualizada.
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -411,7 +411,7 @@ Cuerpo de la petición:
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -465,7 +465,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultado
 
 ```
 {
@@ -531,7 +531,7 @@ Cuerpo de la petición:
 
 ```
 
-#### Result
+#### Resultado
 
 Se han actualizado las entidades con llaves primarias 1 y 2.
 

@@ -16,15 +16,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+## Description 
 
+La commande **Get indexed string** retourne :
 
-#### Description 
-
-<!--REF #_command_.Get indexed string.Summary-->La commande **Get indexed string** retourne :
-
-* soit une des chaînes stockées dans la ressource liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*,
-* soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").<!-- END REF-->
+* soit <!--REF #_command_.Get indexed string.Summary-->une des chaînes stockées dans la ressource liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*<!-- END REF-->,
+* soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").
 
 Vous passez le numéro de la chaîne dans *strNum*. Les chaînes d'une ressource liste de chaînes sont numérotées de 1 à N. Pour récupérer toutes les chaînes (et donc leur nombre) d'une ressource liste de chaînes, utilisez la commande [STRING LIST TO ARRAY](string-list-to-array.md).
 
@@ -34,16 +31,26 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 **Note :** Chaque chaîne d'une ressource liste de chaînes peut contenir jusqu'à 255 caractères.
 
-##### Compatibilité avec l'architecture XLIFF 
+### Compatibilité avec l'architecture XLIFF 
 
 La commande **Get indexed string** est compatible avec l’architecture XLIFF de 4D à compter de la v11 : la commande recherche dans un premier temps les valeurs correspondant à *resNum* et *strNum* dans tous les fichiers XLIFF ouverts (si le paramètre *resFichier* est omis). Dans ce cas, *resNum* désigne l’attribut **id** de l’élément **group** et *strNum* désigne l’attribut **id** de l’élément **trans-unit**. Si la valeur n’est pas trouvée, la commande poursuit la recherche dans les fichiers de ressources ouverts. Pour plus d'informations sur l'architecture XLIFF dans 4D, reportez-vous au manuel Mode Développement.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 510 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -4,9 +4,9 @@ title: Modo SDI em Windows
 ---
 
 
-On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
+No Windows, os desenvolvedores 4D podem configurar suas aplicações 4D fundidas para trabalhar como aplicações SDI (Single-Document Interface). Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
 
-> O conceito SDI/MDI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
+> The concept of sdi.mdI does not exist on macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 ## Disponibilidade do modo SDI
 
@@ -17,12 +17,12 @@ O modo SDI está disponível somente no seguinte ambiente de execução:
 
 ## Activação do modo SDI
 
-Enabling and using the SDI mode in your application require the following steps:
+Para habilitar e usar o modo SDI em sua aplicação, são necessárias as seguintes etapas:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
+1. Marque a opção **Usar o modo SDI no Windows** na página "Interface" da caixa de diálogo das Propriedades.
 2. Construa uma aplicação mesclada (monoposto /ou aplicação cliente).
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+Então, quando executado em um contexto compatível (veja acima), o aplicativo mesclado funcionará automaticamente no modo SDI.
 
 ## Gerir aplicações no modo SDI
 
@@ -40,7 +40,7 @@ Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necess�
 
 #### Acerca do ecrã inicial
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Se selecionar a opção de interface **Tela de abertura** nas Propriedades, a janela inicial conterá todos os menus que teriam sido apresentados na janela MDI. Note também que fechar a janela tela de abertura resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Saída automática
@@ -60,13 +60,13 @@ Para lidar com este caso, as aplicações 4D executadas no modo SDI incluem um m
 
 Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas variações na gestão da interface da aplicação. As especificidades da língua 4D são enumeradas a seguir.
 
-| Comando/funcionalidade            | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                                   |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Opções de compatibilidade com janelas flutuantes em SDI (`Janela do formulário do controlador`) e para remover a barra de menus (`O formulário não tem barra de menus`)                                                                                                                                                 |
-| `Menu bar height`                 | Devolve a altura em píxeis de uma única linha da barra de menus, mesmo que a barra de menus tenha sido envolvida em duas ou mais linhas. Devolve 0 quando o comando é chamado a partir de um processo sem uma janela de formulário                                                                                      |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Aplicado apenas à janela do formulário atual (a partir de onde o código é executado)                                                                                                                                                                                                                                    |
-| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                            |
-| `CONVERT COORDINATES`             | ` XY Screen` é o sistema de coordenadas global onde a tela principal está posicionada em (0,0). Telas situadas à sua esquerda ou por cima podem ter coordenadas negativas e as telas situadas à sua direita ou por baixo podem ter coordenadas superiores aos valores devolvidos por `Screen height` ou `Screen width`. |
-| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                            |
-| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                 |
-| `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                          |
+| Comando/funcionalidade            | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                                  |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Open form window`                | Opções de compatibilidade com janelas flutuantes em SDI (`Janela do formulário do controlador`) e para remover a barra de menus (`O formulário não tem barra de menus`)                                                                                                                                                |
+| `Menu bar height`                 | Devolve a altura em píxeis de uma única linha da barra de menus, mesmo que a barra de menus tenha sido envolvida em duas ou mais linhas. Devolve 0 quando o comando é chamado a partir de um processo sem uma janela de formulário                                                                                     |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | Aplicado apenas à janela do formulário atual (a partir de onde o código é executado)                                                                                                                                                                                                                                   |
+| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                           |
+| `CONVERT COORDINATES`             | `XY Screen` é o sistema de coordenadas global onde a tela principal está posicionada em (0,0). Telas situadas à sua esquerda ou por cima podem ter coordenadas negativas e as telas situadas à sua direita ou por baixo podem ter coordenadas superiores aos valores devolvidos por `Screen height` ou `Screen width`. |
+| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                           |
+| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                |
+| `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                         |

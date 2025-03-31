@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->The **OBJECT Get context menu** command returns the current state of the "Context Menu" option for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -28,6 +25,15 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The command returns **True** if the context menu is enabled for the object and **False** otherwise. 
 
-#### See also 
+## See also 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1252 |
+| Thread safe | &cross; |
+
+

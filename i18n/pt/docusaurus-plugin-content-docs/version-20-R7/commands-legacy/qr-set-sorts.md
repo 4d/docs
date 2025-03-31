@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET SORTS.Summary-->O comando QR SET SORTS permite definir o sentido de ordenação de cada coluna do relatório rápido cuja referência é passada em *area*.<!-- END REF-->  
   
@@ -29,7 +26,7 @@ displayed_sidebar: docs
  \* Se *aOrdem{$i}* é igual a 1, o sentido da ordenação é ascendente.  
  \* Se *aOrdem{$i}* é igual a - 1, o sentido da ordenação é descendente.
 
-##### Tabela cruzada 
+### Tabela cruzada 
 
 No caso deste tipo de relatórios, o array não pode ter mais de dois elementos. Unicamente pode ordenar as colunas (1) e as filas (2). Os dados (situados na intersecção das colunas e das linhas) não podem ser ordenados com este comando.  
 
@@ -47,6 +44,16 @@ Este é o código para ordenar só as linhas em caso de um relatório de tabelas
   
 Se passa um número de área *inválido*, se gera o erro -9850.  
 
-#### Ver também 
+## Ver também 
 
 [QR GET SORTS](qr-get-sorts.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 752 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

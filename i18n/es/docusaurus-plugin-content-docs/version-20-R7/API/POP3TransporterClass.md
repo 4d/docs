@@ -7,7 +7,7 @@ La clase `POP3Transporter` permite recuperar mensajes de un servidor de correo P
 
 ### Objeto POP3 Transporter
 
-POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos POP3 Transporter son instanciados con el comando [`POP3 New transporter`](../commands/pop3-new-transporter.md). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,13 +36,13 @@ POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../c
 | Parámetros | Tipo                               |                             | Descripción                                         |
 | ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
 | server     | Object                             |              ->             | Información del servidor de correo                  |
-| Result     | 4D.POP3Transporter | <- | [Objeto POP3 transporter](#pop3-transporter-object) |
+| Resultado  | 4D.POP3Transporter | <- | [Objeto POP3 transporter](#pop3-transporter-object) |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.POP3Transporter`<!-- END REF -->. It is identical to the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command (shortcut).
+La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.POP3Transporter`<!-- END REF -->. Es idéntico al comando [`POP3 New transporter`](../commands/pop3-new-transporter.md) (atajo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -140,7 +140,7 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 | Parámetros | Tipo   |                             | Descripción    |
 | ---------- | ------ | :-------------------------: | -------------- |
-| Result     | Object | <- | objeto boxInfo |
+| Resultado  | Object | <- | objeto boxInfo |
 
 <!-- END REF -->
 
@@ -192,7 +192,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------- |
 | msgNumber  | Integer |              ->             | Número del mensaje en la lista                                                                          |
 | headerOnly | Boolean |              ->             | True para descargar sólo los encabezados del correo electrónico (por defecto, False) |
-| Result     | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email)                                                          |
+| Resultado  | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email)                                                          |
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ Quiere saber el remitente del primer correo del buzón:
 | Parámetros | Tipo    |                             | Descripción                    |
 | ---------- | ------- | :-------------------------: | ------------------------------ |
 | msgNumber  | Integer |              ->             | Número del mensaje en la lista |
-| Result     | Object  | <- | objeto mailInfo                |
+| Resultado  | Object  | <- | objeto mailInfo                |
 
 <!-- END REF -->
 
@@ -317,7 +317,7 @@ El método devuelve **Null** si:
 
 | Parámetros | Tipo       |                             | Descripción                     |
 | ---------- | ---------- | :-------------------------: | ------------------------------- |
-| Result     | Collection | <- | Colección de objetos `mailInfo` |
+| Resultado  | Collection | <- | Colección de objetos `mailInfo` |
 
 <!-- END REF -->
 
@@ -383,7 +383,7 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 | Parámetros | Tipo    |                             | Descripción                                               |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------- |
 | msgNumber  | Integer |              ->             | Número del mensaje en la lista                            |
-| Result     | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo |
+| Resultado  | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo |
 
 <!-- END REF -->
 

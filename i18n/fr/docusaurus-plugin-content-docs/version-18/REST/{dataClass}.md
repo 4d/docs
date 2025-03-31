@@ -29,7 +29,7 @@ Voici une description des données retournées :
 
 | Propriété     | Type       | Description                                                                                                                                                                                                             |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Nom de la dataclass.                                                                                                                                                                                                    |
+| __entityModel | Text       | Nom de la dataclass.                                                                                                                                                                                                    |
 | __COUNT       | Number     | Nombre d'entités dans la dataclass.                                                                                                                                                                                     |
 | __SENT        | Number     | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
 | __FIRST       | Number     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
@@ -39,7 +39,7 @@ Chaque entité contient les propriétés suivantes :
 
 | Propriété   | Type   | Description                                                                                                                  |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Valeur de la clé primaire définie pour la dataclass.                                                                         |
+| __KEY       | Text   | Valeur de la clé primaire définie pour la dataclass.                                                                         |
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Number | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 

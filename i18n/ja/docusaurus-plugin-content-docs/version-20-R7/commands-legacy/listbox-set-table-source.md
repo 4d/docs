@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->**LISTBOX SET TABLE SOURCE**コマンドは、*\** と *object* 引数で指定されるリストボックスに表示されるデータのソースを変更するために使用します。<!-- END REF-->
 
@@ -37,6 +34,15 @@ displayed_sidebar: docs
 
 **注:** 最適化のため、このコマンドは非同期で処理されます。言い換えればリストボックスのソースはコマンドが呼び出されたメソッドの実行が完全に終了したときに変更されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1013 |
+| スレッドセーフである | &cross; |
+
+

@@ -35,3 +35,14 @@ El siguiente ejemplo utiliza [LOAD SET](load-set.md "LOAD SET") para cargar un c
 
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 118 |
+| Hilo seguro | &check; |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

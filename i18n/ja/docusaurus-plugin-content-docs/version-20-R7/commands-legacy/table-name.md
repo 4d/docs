@@ -5,7 +5,7 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( tableNum | tablePtr ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* ) : Text<br/>**Table name** ( *tablePtr* ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Table name.Summary-->Table nameコマンドは、*tableNum*または*tablePtr*で指定したテーブルの名前を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 以下の例は、あるテーブルのレコードを表示します。テーブルへの参照は、テーブルに対するポインタとして渡されます。Table nameコマンドは、ウインドウのタイトルバーにテーブルの名前を表示するために使用されます。
 
@@ -31,10 +31,19 @@ displayed_sidebar: docs
  DISPLAY SELECTION($1->) // セレクション表示
 ```
 
-#### 参照 
+## 参照 
 
 [Field name](field-name.md)  
 [Last table number](last-table-number.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 [Table](table.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 256 |
+| スレッドセーフである | &check; |
+
+

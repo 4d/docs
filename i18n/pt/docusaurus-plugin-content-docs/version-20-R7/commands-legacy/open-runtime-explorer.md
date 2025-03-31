@@ -12,6 +12,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OPEN RUNTIME EXPLORER.Summary-->O comando OPEN RUNTIME EXPLORER exibe o Runtime Explorer em uma janela flutuante.<!-- END REF-->
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1781 |
+| Thread-seguro | &check; |
+
+

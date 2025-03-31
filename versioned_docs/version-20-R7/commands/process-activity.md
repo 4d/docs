@@ -23,7 +23,7 @@ displayed_sidebar: docs
 </details>
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
 
@@ -72,7 +72,7 @@ On the server, the `Process activity` command returns an additional "session" pr
 |---------------------	|--------	|-------------------------------------------------------------------------------------------------------------------------	|---	|
 | session             	| Object 	| The [`.info`](../API/SessionClass.md#info) property of the session in which the process is running. Undefined if the `Processes only` parameter is passed. 	|   	|
 
-#### Example 1
+## Example 1
 
 You want to get the collection of all user sessions:
 
@@ -92,7 +92,7 @@ You want to get the collection of all user sessions:
  End for
 ```
 
-#### Example 2
+## Example 2
 
 You want to get all processes related to the current session:
 
@@ -106,7 +106,7 @@ You want to get all processes related to the current session:
 
 ```
 
-#### See also 
+## See also 
 
 [Session storage](../commands-legacy/session-storage.md)  
 [WEB Get server info](../commands-legacy/web-get-server-info.md)  

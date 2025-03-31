@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Compile project.Summary-->**Compile project** permite compilar el proyecto local actual o el proyecto especificado en el parámetro *archivoProyecto*.<!-- END REF--> Para más información sobre la compilación, consulte la *página de compilación en developer.4d.com*.
 
@@ -41,7 +38,7 @@ Los errores de compilación, si los hay, se devuelven como objetos en la colecci
 
 **Nota:** no puede llamar a este comando cuando se está ejecutando otra compilación (por ejemplo, una compilación lanzada desde la ventana Compilación).
 
-##### Parámetro opciones 
+### Parámetro opciones 
 
 El parámetro *opciones* es un objeto. Estas son las opciones de compilación disponibles:
 
@@ -56,7 +53,7 @@ El parámetro *opciones* es un objeto. Estas son las opciones de compilación di
 | generateSymbols        | Booleano             | True para generar información de símbolos en el objeto devuelto .symbols                                                                                                                                                                                                             |
 | generateSyntaxFile     | Booleano             | True para generar un *archivo de sintaxis para completar código* en la carpeta \\Resources\\en.lproj del proyecto                                                                                                                                                                    |
 | generateTypingMethods  | Cadena               | "reset" o "append" para generar métodos de digitación. Si el valor es "append", las declaraciones de variables existentes no se modificarán (comportamiento de la ventana del compilador). Si el valor es "reset" las declaraciones de variables existentes se eliminan de antemano. |
-| plugins                | objeto 4D.Folder     | Carpeta plug-ins a utilizar en lugar de la [carpeta Plugins del proyecto actual](https://developer.4d.com/docs/Project/architecture#plugins). Esta propiedad sólo está disponible con la sintaxis *projectFile*.                                                                     |
+| plugins                | objeto 4D.Folder     | Carpeta plug-ins a utilizar en lugar de la [carpeta Plugins del proyecto actual](../Project/architecture.md#plugins). Esta propiedad sólo está disponible con la sintaxis *projectFile*.                                                                     |
 | targets                | Colección de cadenas | Valores posibles: "x86\_64\_generic", "arm64\_macOS\_lib". Pase una colección vacía para ejecutar sólo la comprobación de sintaxis                                                                                                                                                   |
 | typeInference          | Cadena               | "all": digita todas las variables, "locals": se digitan las variables de proceso e interproceso, "none": se digitan todas las variables                                                                                                                                              |
 | warnings               | Colección de objetos | Define el estado de las warnings                                                                                                                                                                                                                                                     |
@@ -64,7 +61,7 @@ El parámetro *opciones* es un objeto. Estas son las opciones de compilación di
 | \[\].minor             | Número               | Segundo número del warning, después del punto                                                                                                                                                                                                                                        |
 | \[\].enabled           | Booleano             | Estado de activación del aviso                                                                                                                                                                                                                                                       |
 
-##### Resultado de la función 
+### Resultado de la función 
 
 El objeto devuelto por **Compile project**  tiene hasta tres propiedades:
 
@@ -97,7 +94,7 @@ El objeto devuelto por **Compile project**  tiene hasta tres propiedades:
 
 Para más información, consulte *Herramientas de compilación*.
 
-###### Objetos variable 
+## Objetos variable 
 
 interprocessVariables.variables y processVariables.variables contienen objetos con la siguiente estructura:
 
@@ -108,7 +105,7 @@ interprocessVariables.variables y processVariables.variables contienen objetos c
 | arrayDimension | número   | Sólo para arrays: 1 para arrays de una dimensión, 2 para arrays de dos dimensiones                 |
 | code           | Objeto   | Para las variables proceso e interproceso: descriptor de la ubicación de definición de la variable |
 
-###### Objeto code 
+## Objeto code 
 
 La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto con las siguientes propiedades:
 
@@ -126,7 +123,7 @@ La propiedad *code* en **methods\[ \].code** y **errors\[ \].code** es un objeto
 | functionName                                                | Cadena   | Nombre de función de clase                                                                                                                                                                                                                                                                                                                                                                                           |
 | databaseMethod                                              | Número   | Índice del método base                                                                                                                                                                                                                                                                                                                                                                                               |
 
-#### Advertencia 
+## Advertencia 
 
 Para realizar una comprobación de sintaxis solamente, pase una colección vacía al parámetro targets:  
   
@@ -184,6 +181,15 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-#### Ver también 
+## Ver también 
 
 [BUILD APPLICATION](build-application.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1760 |
+| Hilo seguro | &cross; |
+
+

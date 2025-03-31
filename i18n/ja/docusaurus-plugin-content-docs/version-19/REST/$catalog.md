@@ -17,7 +17,7 @@ title: '$catalog'
 
 
 ## $catalog
-プロジェクト内のデータクラスのリストを、2つの URI とともに返します。1つはデータクラスのストラクチャー情報にアクセスするためのもので、もう1つはデータクラスのデータを取得するためのものです。
+プロジェクト内のデータクラスのリストを、2つの URI とともに返します。 1つはデータクラスのストラクチャー情報にアクセスするためのもので、もう1つはデータクラスのデータを取得するためのものです。
 
 
 ### 説明
@@ -29,11 +29,11 @@ title: '$catalog'
 データクラス毎に返されるプロパティの説明です:
 
 
-| プロパティ   | 型      | 説明                                |
-| ------- | ------ | --------------------------------- |
-| name    | String | データクラスの名称。                        |
-| uri     | String | データクラスとその属性に関する情報を取得するための URI です。 |
-| dataURI | String | データクラスのデータを取得するための URI です。        |
+| プロパティ   | 型    | 説明                                |
+| ------- | ---- | --------------------------------- |
+| name    | Text | データクラスの名称。                        |
+| uri     | Text | データクラスとその属性に関する情報を取得するための URI です。 |
+| dataURI | Text | データクラスのデータを取得するための URI です。        |
 
 
 ### 例題
@@ -68,7 +68,7 @@ title: '$catalog'
 
 `$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataClass) を参照ください。
+各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataclass) を参照ください。
 
 
 ### 例題
@@ -187,7 +187,7 @@ title: '$catalog'
 
 ### 説明
 
-`$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
+プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。 `$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。
 
 返される情報は次の通りです:
 
@@ -196,18 +196,18 @@ title: '$catalog'
 *   メソッド (あれば)
 *   プライマリーキー
 
-### データクラス
+### DataClass
 
 公開されているデータクラスについて、次のプロパティが返されます:
 
 
 | プロパティ          | 型      | 説明                                                  |
 | -------------- | ------ | --------------------------------------------------- |
-| name           | String | データクラスの名称                                           |
-| collectionName | String | データクラスにおいて作成されるエンティティセレクションの名称                      |
+| name           | Text   | データクラスの名称                                           |
+| collectionName | Text   | データクラスにおいて作成されるエンティティセレクションの名称                      |
 | tableNumber    | Number | 4Dデータベース内のテーブル番号                                    |
-| scope          | String | データクラスのスコープ (**公開 (public)** に設定されているデータクラスのみ返されます) |
-| dataURI        | String | データクラスのデータを取得するための URI                              |
+| scope          | Text   | データクラスのスコープ (**公開 (public)** に設定されているデータクラスのみ返されます) |
+| dataURI        | Text   | データクラスのデータを取得するための URI                              |
 
 
 ### 属性
@@ -216,16 +216,16 @@ title: '$catalog'
 
 | プロパティ       | 型       | 説明                                                                                                                            |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | 属性の名称                                                                                                                         |
-| kind        | String  | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                         |
+| name        | Text    | 属性の名称                                                                                                                         |
+| kind        | Text    | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                         |
 | fieldPos    | Number  | データベーステーブルのフィールド番号                                                                                                            |
-| scope       | String  | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                       |
-| indexed     | String  | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
-| type        | String  | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
+| scope       | Text    | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                       |
+| indexed     | Text    | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
+| type        | Text    | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
 | identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
-| path        | String  | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                     |
-| foreignKey  | String  | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
-| inverseName | String  | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
+| path        | Text    | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                     |
+| foreignKey  | Text    | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
+| inverseName | Text    | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
 
 
 ### プライマリーキー

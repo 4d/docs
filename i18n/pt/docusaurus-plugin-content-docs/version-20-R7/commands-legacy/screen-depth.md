@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->O comando SCREEN DEPTH devolve nos parâmetros *profundidade* e *cor* a informação sobre o monitor.<!-- END REF--> 
 
@@ -47,7 +44,7 @@ Se o monitor está configurado para mostrar cores, se devolve *1* em *cor*. Se o
   
 * O parâmetro opcional *tela* especifica o monitor para o qual queira obter a informação. Se omitido o parâmetro *tela*, o comando devolve a profundidade da tela principal.
 
-#### Exemplo 
+## Exemplo 
 
 Sua aplicação mostra vários gráficos a cor. Pode escrever em alguma parte em sua base:
 
@@ -58,6 +55,16 @@ Sua aplicação mostra vários gráficos a cor. Pode escrever em alguma parte em
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Count screens](count-screens.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 439 |
+| Thread-seguro | &cross; |
+
+

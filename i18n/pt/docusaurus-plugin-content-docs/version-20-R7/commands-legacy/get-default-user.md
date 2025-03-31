@@ -13,14 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+## Descrição 
 
-
-#### Descrição 
-
-<!--REF #_command_.Get default user.Summary-->O comando Get default user retorna o número de referência único do usuário designado como “Usuário por padrão” na caixa de diálogo de Preferências do banco:
+<!--REF #_command_.Get default user.Summary-->O comando Get default user retorna o número de referência único do usuário designado como “Usuário por padrão” na caixa de diálogo de Preferências do banco<!-- END REF-->:
 
 ![](../assets/en/commands/pict36789.en.png)  
   
   
-Se nenhum usuário por padrão estiver definido, o comando retorna 0.<!-- END REF-->
+Se nenhum usuário por padrão estiver definido, o comando retorna 0.
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 826 |
+| Thread-seguro | &cross; |
+
+

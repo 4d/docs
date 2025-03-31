@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
-| Paramètres | Type                                               |   | Description              |
-| ---------- | -------------------------------------------------- | - | ------------------------ |
-| winRef     | Integer                                            | → | Window reference number  |
-| image      | Picture                                            | → | Custom icon              |
-| file       | 4D.File, 4D.Folder | → | File path or folder path |
+| Paramètres | Type                                               |                             | Description                             |
+| ---------- | -------------------------------------------------- | --------------------------- | --------------------------------------- |
+| winRef     | Integer                                            | &#8594; | Numéro de référence de la fenêtre       |
+| image      | Picture                                            | &#8594; | Icône personnalisée                     |
+| file       | 4D.File, 4D.Folder | &#8594; | Chemin d'accès du fichier ou du dossier |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 The `SET WINDOW DOCUMENT ICON` command <!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->allows you to define an icon for windows in multi-window applications using either an *image* and/or *file* with the window reference *winRef*<!-- END REF-->. The icon will be visible within the window itself and on the windows taskbar to help users identify and navigate different windows.
 
@@ -35,14 +35,14 @@ In the case of an MDI application on Windows, you can pass `-1` in *winRef* to s
 - If both *file* and *image* are passed, the file’s path is displayed in the window’s menu and the passed image is used for the window icon.
 - If only *winRef* is passed or *image* is empty, the icon is removed on macOS and the default icon is displayed on Windows (application icon).
 
-#### Exemple
+## Exemple
 
-In this example, we want to create four windows:
+Dans cet exemple, nous voulons créer quatre fenêtres :
 
-1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
-2. Use a "user" icon.
-3. Associate a document with the window (this uses its file type icon).
-4. Customize the icon associated with the document.
+1. Utilisez l'icône de l'application sous Windows et aucune icône sur macOS (état par défaut quand aucune *image* ou *file* n'est utilisée).
+2. Utilisez une icône "user".
+3. Associer un document à la fenêtre ( cela utilise l'icône du type de fichier correspondant).
+4. Personnaliser l'icône associée au document.
 
 ```4d
  var $winRef : Integer
@@ -75,6 +75,6 @@ In this example, we want to create four windows:
 
 ```
 
-#### Voir également
+## Voir également
 
 [Create entity selection](create-entity-selection.md)

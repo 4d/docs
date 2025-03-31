@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->O comando FORM GET PROPERTIES retorna as propriedades do formulário *nomForm*.<!-- END REF-->
 
@@ -39,8 +36,17 @@ Os parâmetros *larguraFixo* e *alturaFixo* indicam se a largura e a altura do f
 
 O parâmetro *título* retorna o título da janela do formulário, tal como foi definido na Lista de propriedades do editor de formulários.. Se não foi definido nenhum nome, o parâmetro *título* retorna uma string vazia.
 
-#### Ver também 
+## Ver também 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 674 |
+| Thread-seguro | &cross; |
+
+

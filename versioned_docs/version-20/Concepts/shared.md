@@ -31,7 +31,7 @@ Modifications can be applied to shared objects and shared collections:
 - adding or removing object properties,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated. 
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated. 
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -110,7 +110,7 @@ Shared objects and shared collections are designed to allow communication betwee
 
 :::note
 
-Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed. 
+[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
 
 :::
 

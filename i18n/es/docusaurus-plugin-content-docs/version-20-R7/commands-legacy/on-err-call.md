@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ON ERR CALL.Summary-->El comando **ON ERR CALL** instala el método proyecto, cuyo nombre se pasa en *metodoError*, como método de intercepción de errores para el contexto de ejecución definido en el proyecto actual.<!-- END REF--> Este método se denomina **método de gestión de errores** o **método de detección de errores.**
 
@@ -39,7 +39,7 @@ Tenga en cuenta también que un método global de gestión de errores es útil e
 
 Para desinstalar un método de gestión de errores, llame a **ON ERR CALL** de nuevo con el parámetro *alcance* deseado (si lo hay) y pase la cadena vacía en *metodoError*.
 
-Puede identificar errores leyendo la variable sistema Error, la cual contiene el número de código del error. Los códigos de errores se listan en el tema *Códigos de error*. Por ejemplo, puede ver la sección *Errores de sintaxis*. El valor de la variable Error es significativo sólo en el método de gestión de errores; si necesita el código del error en el método que provocó el error, copie la variable Error en su propia variable proceso. También puede acceder a las variables sistema Error method, Error line y Error formula las cuales contienen respectivamente, el nombre del método, el número de línea y el texto de la fórmula donde ocurrió el error (ver [Gestión de errores dentro del método](https://developer.4d.com/docs/Concepts/error-handling#handling-errors-within-the-method)).
+Puede identificar errores leyendo la variable sistema Error, la cual contiene el número de código del error. Los códigos de errores se listan en el tema *Códigos de error*. Por ejemplo, puede ver la sección *Errores de sintaxis*. El valor de la variable Error es significativo sólo en el método de gestión de errores; si necesita el código del error en el método que provocó el error, copie la variable Error en su propia variable proceso. También puede acceder a las variables sistema Error method, Error line y Error formula las cuales contienen respectivamente, el nombre del método, el número de línea y el texto de la fórmula donde ocurrió el error (ver [Gestión de errores dentro del método](../Concepts/error-handling.md#handling-errors-within-the-method)).
 
 Puede utilizar el comando [Last errors](last-errors.md) o [Last errors](last-errors.md)  para obtener la secuencia de errores (la "pila" de errores) en el origen de la interrupción.
 
@@ -53,7 +53,7 @@ El comando [ABORT](abort.md) puede utilizarse para terminar el proceso. Si no ll
 
 Si ocurre un error en el método de gestión de errores, 4D retoma el control de la gestión de errores. Por lo tanto, debe asegurarse de que el método de gestión de errores no pueda generar un error. Igualmente, no puede utilizar ON ERR CALL dentro del método de gestión de errores.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea definir un gestor de errores global, por ejemplo en el método base On Open:
 
@@ -61,7 +61,7 @@ Desea definir un gestor de errores global, por ejemplo en el método base On Ope
  ON ERR CALL("myGlobalErrorHandler";ek global)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente método de proyecto trata de crear un documento cuyo nombre se recibe como parámetro. Si no se puede crear el documento, el método de proyecto devuelve 0 (cero) o el código de error: 
 
@@ -101,7 +101,7 @@ Note la utilización de la variable proceso gError para obtener el código del e
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Mientras implementa un conjunto de operaciones complejas, puede terminar con varias subrutinas que necesiten diferentes métodos de gestión de errores. Sólo puede tener un método de gestión de errores por proceso, de manera que tiene dos opciones:  
  \- Mantener contacto con el actual cada vez que llama a ON ERR CALL, o   
@@ -163,7 +163,7 @@ Luego, puede llamarlo de esta manera:
   // ...
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente método de gestión de errores ignora las interrupciones del usuario y muestra el texto del error:  
   
@@ -176,7 +176,7 @@ El siguiente método de gestión de errores ignora las interrupciones del usuari
 
   
 
-#### Ver también 
+## Ver también 
 
 [ABORT](abort.md)  
 *Gestión de errores*  
@@ -184,3 +184,12 @@ El siguiente método de gestión de errores ignora las interrupciones del usuari
 [Last errors](last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variables sistema*  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 155 |
+| Hilo seguro | &check; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->El comando **OBJECT SET ACTION** modifica, para el proceso actual, la acción estándar asociada al objeto o a los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -33,7 +30,7 @@ En el parámetro *acción*, pase un cadena con el nombre de la acción estándar
 
 **Nota de compatibilidad**: las constantes heredadas (prefijadas por \_o\_ en el tema) están obsoletas a partir de 4D v16 R3\. Sin embargo, todavía son soportadas por compatibilidad.  
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea asociar la acción estándar **Validate** con un botón:
 
@@ -41,7 +38,15 @@ Usted desea asociar la acción estándar **Validate** con un botón:
  OBJECT SET ACTION(*;"bValidate";ak accept)
 ```
 
-#### Ver también 
+## Ver también 
 
-*\_o\_OBJECT Get action*  
 [OBJECT Get action](object-get-action.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1259 |
+| Hilo seguro | &cross; |
+
+

@@ -13,12 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+## Descripción 
 
-
-#### Descripción 
-
-<!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](form-event-code.md).
+<!--REF #_command_.Get edited text.Summary-->El comando **Get edited text** se utiliza principalmente con el evento formulario On After Edit para recuperar el texto a medida que es introducido.<!-- END REF--> También puede utilizarse con los eventos formulario On Before Keystroke y On After Keystroke. Para mayor información sobre estos eventos formulario, por favor consulte la descripción del comando [Form event code](../commands/form-event-code.md).
 
 La combinación de este comando con los eventos formulario On Before Keystroke y On After Keystroke funciona de la siguiente manera:
 
@@ -31,7 +28,7 @@ Estos dos eventos sólo se generan en los métodos objeto en cuestión.
 
 Cuando se utiliza en un contexto diferente a la entrada de datos en un objeto de formulario, esta función devuelve una cadena vacía.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método convierte automáticamente los caracteres introducidos en mayúsculas:
 
@@ -41,7 +38,7 @@ El siguiente método convierte automáticamente los caracteres introducidos en m
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos en un campo tipo texto. La idea consiste en ubicar en otro campo texto (llamado “Words”) todas las palabras de la frase que están siendo escritas. Para hacerlo, escriba el siguiente código en el método objeto del campo:
 
@@ -64,7 +61,16 @@ Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos 
 
 **Nota**: este ejemplo no es exhaustivo porque hemos asumido que las palabras se separan únicamente por espacios (Char (32)). Para una solución completa necesitará añadir otros filtros para extraer todas las palabras (comas, punto y comas, apóstrofes, etc.).
 
-#### Ver también 
+## Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 655 |
+| Hilo seguro | &cross; |
+
+

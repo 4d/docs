@@ -9,10 +9,10 @@ Independentemente da simplicidade ou da complexidade de um método, sempre utili
 - **Branching**: Uma estrutura de bifurcação permite que os métodos testem uma condição e sigam caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional é a estrutura [`Se...Senão...Fim se`](#ifelseend-if), que direciona o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura ramificada é a [`Caso do...Senão...Caso final`](#case-ofelseend-case), que direciona o fluxo do programa para um dos muitos caminhos.
 - **Loop**: ao escrever métodos, é muito comum descobrir que você precisa de uma sequência de afirmações para repetir várias vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
-  - [`While...End while`](#whileend-while)
-  - [`Repeat...Until`](#repeatuntil)
-  - [`For...End for`](#forend-for)
-  - [`For each...End for each`](#for-eachend-for-each)
+ - [`While...End while`](#whileend-while)
+ - [`Repeat...Until`](#repeatuntil)
+ - [`For...End for`](#forend-for)
+ - [`For each...End for each`](#for-eachend-for-each)
 
 Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de repetição pode ser usada de qualquer maneira, mas laços `While` e laços `repeat` são mais apropriados para repetir até que uma condição seja atendida, e laços `For` são mais apropriados para repetir um número específico de vezes. \`For each... End for each permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
@@ -309,7 +309,7 @@ Compare o exemplo a seguir com o exemplo para o laço `While...End while`. Lembr
  Until(OK=0)
 ```
 
-## For...End for
+## For... End for
 
 A sintaxe formal da estrutura de fluxo de controle `For...End for` é:
 
@@ -317,8 +317,7 @@ A sintaxe formal da estrutura de fluxo de controle `For...End for` é:
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
    statement(s)
     {break}  
-    {continue}
-End for
+    {continue} End for
 ```
 
 O loop `For...End for` é um ciclo controlado por uma variável de contador:
@@ -442,7 +441,7 @@ Se precisar, pode usar uma Increment_Expression (positiva ou negativa) cujo valo
  End for
 ```
 
-#### Optimizing the execution of the For... End for loops
+#### Otimizando a execução do comando For... End para loops
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
@@ -491,7 +490,7 @@ O ciclo `For...End for` geralmente é mais rápido que o `While...End while` e `
 
 :::
 
-### Nested For... End for looping structures
+### Estruturas For... End for aninhadas
 
 Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui aninhar loops `for...End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
@@ -563,8 +562,8 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 - Por padrão, as  instruções anexas são executadas para cada valor de Expressão\*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (While) ou ao final do loop (Until).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleções e seleções de entidades para definir os limites do loop.
 - O laço `Para cada... Fim para cada` pode ser usado em uma **coleção compartilhada** ou um **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave `Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use`:
-  - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
-  - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
+ - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
+ - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
 As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
@@ -734,7 +733,7 @@ Todas as estruturas de looping acima suportam as instruções `break` e `continu
 
 ### break
 
-A instrução `break` termina o ciclo que a contém. Control of the program flows to the statement immediately after the body of the loop.
+A instrução `break` termina o ciclo que a contém. O controle do programa flui para a instrução imediatamente após o corpo do loop.
 
 Se a declaração `break` estiver dentro de um [loop aninhado](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `break` terminará o loop mais interno.
 
@@ -808,3 +807,4 @@ logConsole($message)
 // 5A
 
 ```
+

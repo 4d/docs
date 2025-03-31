@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.ARRAY TIME.Summary-->El comando **ARRAY TIME** crea o redimensiona una array de tipo tiempo en memoria.<!-- END REF-->
-
-**Recordatorio:** en 4D, las horas pueden ser procesados ​​como valores numéricos . En las versiones de 4D anteriores a v14, había que combinar un array entero largo con un formato de visualización para gestionar una array de horas.  
+<!--REF #_command_.ARRAY TIME.Summary-->El comando **ARRAY TIME** crea o redimensiona una array de tipo tiempo en memoria.<!-- END REF-->en 4D, las horas pueden ser procesados ​​como valores numéricos . En las versiones de 4D anteriores a v14, había que combinar un array entero largo con un formato de visualización para gestionar una array de horas.  
   
 El parámetro *nomArray* es el nombre del array.  
   
@@ -34,7 +32,7 @@ Cuando aplica el comando **ARRAY TIME** a un array existente :
 
 Cuando aplica [SELECTION TO ARRAY](selection-to-array.md) o [SELECTION RANGE TO ARRAY](selection-range-to-array.md) a un campo de tipo Hora, tenga en cuenta que sólo crean un array de tipo Hora si el array no se ha definido como otro tipo, tal como Entero largo, por ejemplo.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array proceso que contiene 100 elementos de tipo Hora:
 
@@ -42,7 +40,7 @@ Este ejemplo crea un array proceso que contiene 100 elementos de tipo Hora:
  ARRAY TIME(arrTimes;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos de tipo Hora:
 
@@ -50,7 +48,7 @@ Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos
  ARRAY TIME($arrTimes;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Como los arrays de horas aceptan valores numéricos, el siguiente código es válido:
 
@@ -61,7 +59,16 @@ Como los arrays de horas aceptan valores numéricos, el siguiente código es vá
  $Found:=Find in array($arrTimeValues;$CurTime)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Creación de arrays*  
 [Time](time.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1223 |
+| Hilo seguro | &check; |
+
+

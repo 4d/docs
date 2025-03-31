@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->QR SET INFO ROW コマンドは、*row*に渡した行を表示/非表示に設定します。<!-- END REF-->
 
@@ -40,7 +37,7 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*row*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 例題 
+## 例題 
 
 次のコードは、詳細行を隠します:
 
@@ -48,8 +45,18 @@ displayed_sidebar: docs
  QR SET INFO ROW(area;qr detail;1)
 ```
 
-#### 参照 
+## 参照 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 763 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

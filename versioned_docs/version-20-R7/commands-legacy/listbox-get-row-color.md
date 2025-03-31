@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get row color.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -41,7 +38,7 @@ In the *colorType* parameter, you can pass either the lk background color or lk 
 
 **Warning:** A color assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
 
-#### Example 
+## Example 
 
 Given the following list box:
 
@@ -57,6 +54,15 @@ Given the following list box:
   // $vtColor3 contains "#FF0000" (red)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1658 |
+| Thread safe | &cross; |
+
+

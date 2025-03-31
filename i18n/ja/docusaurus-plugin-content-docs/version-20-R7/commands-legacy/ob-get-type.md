@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.OB Get type.Summary-->**OB Get type**コマンドは、*object* で指定したランゲージオブジェクトの *property* に関連付けられた値の型を返します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB Get type.Summary-->**OB Get type**コマンドは、*object* で指定したランゲージオブジェクトの *property* に関連付けられた値の型を返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、値の型を取得したいプロパティのラベルを渡します。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
@@ -39,7 +37,7 @@ displayed_sidebar: docs
 
 **注:** 値がピクチャー型の場合、コマンドは Is object を返します。
 
-#### 例題 
+## 例題 
 
 よくある値の型を取得する場合:
 
@@ -50,7 +48,16 @@ displayed_sidebar: docs
  $type2:=OB Get type($ref;"age") //$type2 returns 1
 ```
 
-#### 参照 
+## 参照 
 
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1230 |
+| スレッドセーフである | &check; |
+
+

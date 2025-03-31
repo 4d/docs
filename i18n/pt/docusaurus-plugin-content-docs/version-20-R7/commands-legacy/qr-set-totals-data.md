@@ -16,14 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET TOTALS DATA.Summary-->**Nota:** este comando não pode criar um subtotal.<!-- END REF-->
 
-##### List Mode 
+### List Mode 
 
 O comando QR SET TOTALS DATA permite definir o conteúdo de una linha de quebra específica (total ou subtotal).  
   
@@ -61,7 +58,7 @@ Pode passar os seguintes valores:
 \- ##D será substituído pelo desvio padrão.  
 \- ##xx, onde xx é um número de coluna. Este código será substituído pelo valor da coluna, utilizando seu próprio formato. Se esta coluna não existir, então não será substituído.
 
-##### Modo tabela cruzada 
+### Modo tabela cruzada 
 
 O comando QR SET TOTALS DATA permite definir o conteúdo de una célula específica.  
   
@@ -79,7 +76,7 @@ A seguinte imagem mostra como os parâmetros *numColuna* e *numQuebra* são comb
   
 ![](../assets/en/commands/pict31186.en.png)
 
-##### Tipos de Dados Compatíveis 
+### Tipos de Dados Compatíveis 
 
 Pode passar dois tipos de dados:  
   
@@ -98,6 +95,16 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 Se o parâmetro *numColuna* for incorreto, se gera o erro -9852.  
 Se o parâmetro *numQuebra* for incorreto, se gera o erro -9853.
 
-#### Ver também 
+## Ver também 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 767 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

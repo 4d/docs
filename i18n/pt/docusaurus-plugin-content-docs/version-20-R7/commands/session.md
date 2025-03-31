@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-| Parâmetro | Tipo                        |   | Descrição       |
-| --------- | --------------------------- | - | --------------- |
-| Resultado | 4D. Session | ← | Objecto Session |
+| Parâmetro | Tipo                        |                             | Descrição       |
+| --------- | --------------------------- | --------------------------- | --------------- |
+| Resultado | 4D. Session | &#8592; | Objecto Session |
 
 <!-- END REF-->
 
@@ -23,13 +23,13 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
 
 Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
-- uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-sessions)),
+- uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-web-sessions)),
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados.
 
@@ -37,7 +37,7 @@ For more information, see the [Session types](../command/session.md-types) parag
 
 If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
-#### Sessões web
+## Sessões web
 
 The `Session` object of web sessions is available from any web process:
 
@@ -49,7 +49,7 @@ The `Session` object of web sessions is available from any web process:
 
 For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
 
-#### Sessões cliente remoto
+## Sessões cliente remoto
 
 The `Session` object of remote client sessions is available from:
 
@@ -59,16 +59,16 @@ The `Session` object of remote client sessions is available from:
 
 Para mais informações em sessões usuários remotos, consulte o parágrafo [**Sessões usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
 
-#### a sessão de procedimentos armazenados
+## a sessão de procedimentos armazenados
 
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
-- methods called with the [`Execute on server`](../commands-legacy/execute-on-server.md) command,
+- métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page.
+For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
 
-#### Exemplo
+## Exemplo
 
 You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". Pode chamar ao método introduzindo a URL abaixo no navegador:
 
@@ -95,3 +95,12 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+## Propriedades
+
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1714                        |
+| Thread safe    | &check; |
+
+

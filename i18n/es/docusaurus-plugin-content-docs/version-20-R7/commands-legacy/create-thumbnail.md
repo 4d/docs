@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->El comando CREATE THUMBNAILdevuelve una miniatura a partir de una imagen fuente.<!-- END REF--> Las miniaturas se utilizan generalmente para la previsualización de imágenes en software multimedia o sitios web.
 
@@ -57,3 +57,13 @@ El parámetro *profundidad* se ignora y por lo tanto debe omitirse. El comando s
 El parámetro opcional *profundidad* define el número de colores bajo Mac OS (es decir, la profundidad de pantalla) a conservar en la miniatura resultante. El parámetro es un entero igual al número de bits por píxel: 1, 2, 4, 8, 16 ó 32\. Introduzca 0 para utilizar la profundidad de pantalla actual (valor por defecto).
 
 **Nota:** bajo Windows, se ignora el parámetro *profundidad*; el comando siempre utiliza la profundidad de pantalla actual.
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 679 |
+| Hilo seguro | &check; |
+
+

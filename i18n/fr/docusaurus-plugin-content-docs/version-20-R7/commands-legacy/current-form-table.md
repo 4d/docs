@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Current form table.Summary-->La fonction **Current form table** retourne un pointeur vers la table à laquelle appartient le formulaire affiché à l'écran ou imprimé dans le process courant.<!-- END REF--> 
 
@@ -32,7 +29,7 @@ Si le formulaire affiché est le formulaire détaillé d'une zone de sous-formul
 * un pointeur vers la table de la zone de sous-formulaire, si cette dernière affiche une table.
 * un pointeur non significatif si la zone de sous-formulaire affiche une sous-table.
 
-#### Exemple 
+## Exemple 
 
 Dans votre application, vous utilisez la convention suivante : au moment de l'affichage d'un enregistrement, la variable *vsEnrCourant*, si elle est présente dans un formulaire, affiche "Nouvel enregistrement" si vous créez un nouvel enregistrement, ou par exemple "56 parmi 5200" si vous ouvrez le 56e enregistrement d'une sélection en comportant 5200\. Pour cela, vous pouvez créer une fois la variable *vsEnrCourant* et lui associer la méthode objet décrite ci-dessous, puis la copier et la coller dans tous les formulaires que vous voulez :
 
@@ -56,9 +53,18 @@ Dans votre application, vous utilisez la convention suivante : au moment de l'af
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DIALOG](dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 627 |
+| Thread safe | &cross; |
+
+

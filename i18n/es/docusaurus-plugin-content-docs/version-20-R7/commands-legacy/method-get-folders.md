@@ -15,20 +15,26 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+## Descripción 
 
-
-#### Descripción 
-
-<!--REF #_command_.METHOD GET FOLDERS.Summary-->El comando **METHOD GET FOLDERS** devuelve en el array *arrNoms*, los nombres de las carpetas creadas en la página Inicio del Explorador de 4D:  
+<!--REF #_command_.METHOD GET FOLDERS.Summary-->El comando **METHOD GET FOLDERS** devuelve en el array *arrNoms*, los nombres de las carpetas creadas en la página Inicio del Explorador de 4D<!-- END REF-->:  
 ![](../assets/en/commands/pict837666.es.png)  
   
-Como los nombres de las carpetas deben ser únicos, la jerarquía no se devuelve en este array.<!-- END REF-->   
+Como los nombres de las carpetas deben ser únicos, la jerarquía no se devuelve en este array.   
   
 Puede limitar la lista de carpetas pasando una cadena de comparación en el parámetro *filtro*, en este caso, sólo se devuelven las carpetas cuyos nombres coincidan con el filtro. Puede utilizar el carácter @ para definir los filtros de tipo "comienza por", "termina en" o "contiene". Si pasa una cadena vacía, el parámetro *filtro* se ignora.   
   
 Si se ejecuta este comando desde un componente, devuelve por defecto las rutas de los métodos del componente. Si pasa el parámetro *\**, el array contendrá las rutas de los métodos de la base local.
 
-#### Ver también 
+## Ver también 
 
 [METHOD GET PATHS](method-get-paths.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1206 |
+| Hilo seguro | &cross; |
+
+

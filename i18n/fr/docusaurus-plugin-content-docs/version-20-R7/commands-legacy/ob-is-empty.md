@@ -14,13 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.OB Is empty.Summary-->La commande **OB Is empty** retourne **Vrai** si *objet* est indéfini ou vide, et **Faux** si *objet* est défini (initialisé) et contient au moins une propriété.<!-- END REF-->
+<!--REF #_command_.OB Is empty.Summary-->La commande **OB Is empty** retourne **Vrai** si *objet* est indéfini ou vide, et **Faux** si *objet* est défini (initialisé) et contient au moins une propriété.<!-- END REF-->doit avoir été créé via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-*objet* doit avoir été créé via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
-
-#### Exemple 
+## Exemple 
 
 Voici les différents résultats de la commande ainsi que de la commande [OB Is defined](ob-is-defined.md), en fonction du contexte :
 
@@ -40,6 +38,15 @@ Voici les différents résultats de la commande ainsi que de la commande [OB Is 
  $def:=OB Is defined($ref) //Vrai
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Is defined](ob-is-defined.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1297 |
+| Thread safe | &check; |
+
+

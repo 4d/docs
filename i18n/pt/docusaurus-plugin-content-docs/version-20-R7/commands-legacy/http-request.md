@@ -28,7 +28,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 
 :::
 
-#### 
+## 
 
 <!--REF #_command_.HTTP Request.Summary-->O comando **HTTP Request** permite enviar todo tipo de petição HTTP a um URL específico e processar a resposta do servidor HTTP.<!-- END REF-->
 
@@ -66,14 +66,14 @@ Pode enviar dados de tipo texto, BLOB, imagem ou objeto. Quando o content-type n
 * para os textos: texto/plano - UTF8
 * para os BLOBs: aplicação/byte-stream
 * para as imagens: tipo MIME conhecido (best for Web).
-* para os objetos [C\_OBJECT](c-object.md): aplicação/json
+* para os objetos *C\_OBJECT*: aplicação/json
 
 Depois da execução do comando, o parâmetro *resposta* recupera o resultado do pedido devolvido pelo servidor. Este resultado corresponde ao corpo (body) da resposta, sem os cabeçalhos (headers). Pode passar variáveis de diferentes tipos em *resposta*:
 
 * Texto: quando o resultado se espera em forma de texto codificado em UTF16 ou em forma de referencia árvore XML.
 * BLOB: quando o resultado se espera em forma binária.
 * Imagem: quando o resultado se espera em forma de imagem.
-* Objeto [C\_OBJECT](c-object.md): quando o resultado esperado é um objeto.
+* Objeto *C\_OBJECT*: quando o resultado esperado é um objeto.
 
 **Nota:** quando se passa uma variável de texto em *resposta*, 4D tentará decodificar os dados devolvidos desde o servidor. 4D primeiro tenta recuperar o conjunto de caracteres do cabeçalho de *tipo de conteúdo*, depois do conteúdo utilizando um BOM e, finalmente, busca qualquer atributo *http-equiv charset* (em conteúdo html) ou *codificação* (para xml). Se não puder detectar nenhum charset, 4D tentará decodificar a resposta em ANSI. Se a conversão falhar, o texto resultante ficará vazio. Se não tiver certeza se o servidor devolve uma informação charset ou BOM, mas conhece a codificação, é preciso passar *resposta* em BLOB e chamar ao [Convert to text](convert-to-text.md).
 
@@ -90,7 +90,7 @@ O parâmetro *\** permite ativar o mecanismo keep-alive para a conexão ao servi
 O comando devolve o código do estado HTTP padrão (200=OK...) tal qual foi devolvido pelo servidor. A lista de códigos de estado HTTP está no *RFC 2616*.  
 Caso a conexão ao servido não seja possível por uma razão relacionada com a rede (DNS Failed, Server not reachable...), o comando devolve 0 e é gerado um erro.Você pode interceptá-lo usando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Eliminação de um registro em uma base remota:
 
@@ -102,7 +102,7 @@ Eliminação de um registro em uma base remota:
 
 **Nota:** Você deve processar a solicitação da maneira apropriada no servidor remoto, **HTTP Request** somente se encarrega da petição e do resultado devolvido.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Adicionar um registro a uma base remota:
 
@@ -114,7 +114,7 @@ Adicionar um registro a uma base remota:
 
 **Nota:** Você deve processar a solicitação da maneira apropriada no servidor remoto, **HTTP Request** somente se encarrega da petição e do resultado devolvido.
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Petição para adicionar um registro em JSON a um banco de dados remoto:
 
@@ -124,6 +124,15 @@ Petição para adicionar um registro em JSON a um banco de dados remoto:
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-#### Ver também 
+## Ver também 
 
 [HTTP Get](http-get.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1158 |
+| Thread-seguro | &check; |
+
+

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->The **On Web Authentication database method** is in charge of managing Web server engine access.<!-- END REF--> It is called by 4D or 4D Server when a Web browser request requires the execution of a 4D method on the server (method called using a *4DACTION* URL, a *4DSCRIPT* tag, etc.). 
 
@@ -93,7 +93,7 @@ The [On Web Connection database method](on-web-connection-database-method.md) is
 * Do not call any interface elements in the **On Web Authentication database method** ([ALERT](alert.md), [DIALOG](dialog.md), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 * It is possible to prevent execution by *4DACTION* or *4DSCRIPT* for each project method via the “Available through 4D HTML tags and URLs (4DACTION...)” option in the Method properties dialog box. For more information about this point, please refer to the *Connection Security* section.
 
-#### On Web Authentication Database Method calls 
+## On Web Authentication Database Method calls 
 
 The On Web Authentication database method is automatically called, regardless of the mode, when a request or processing requires the execution of a 4D method. It is also called when the Web server receives an invalid static URL (for example, if the static page requested does not exist). 
 
@@ -111,7 +111,7 @@ The On Web Authentication database method is therefore called in the following c
 
 Note that the On Web Authentication database method is NOT called when the server receives a URL requesting a valid static page. 
 
-#### Example 1 
+## Example 1 
 
 Example of the On Web Authentication database method in BASIC mode:
 
@@ -161,7 +161,7 @@ Example of the On Web Authentication database method in BASIC mode:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Example of the On Web Authentication database method in DIGEST mode:
 

@@ -12,28 +12,28 @@ title: クライアント/サーバーの最適化
 
 最適化をサポートしている ORDAクライアント/サーバーアーキテクチャーは次のとおりです:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
+- 4Dリモートデスクトップアプリケーションによって [**`ds`**](../commands/ds.md) を介してアクセスされるサーバーデータストア
+- [**`Open datastore`**](../commands/open-datastore.md) を介してアクセスされる [リモートデータストア](remoteDatastores.md) (クライアントRESTリクエスト)
 
 ## 最適化コンテキスト
 
 最適化コンテキストは、以下の実装に基づいています:
 
 - クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。 以下のメソッドや関数が学習のトリガーとなります:
-  - [`Create entity selection`](../commands/create-entity-selection.md)
-  - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
-  - [`dataClass.all()`](../API/DataClassClass.md#all)
-  - [`dataClass.get()`](../API/DataClassClass.md#get)
-  - [`dataClass.query()`](../API/DataClassClass.md#query)
-  - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
+ - [`Create entity selection`](../commands/create-entity-selection.md)
+ - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
+ - [`dataClass.all()`](../API/DataClassClass.md#all)
+ - [`dataClass.get()`](../API/DataClassClass.md#get)
+ - [`dataClass.query()`](../API/DataClassClass.md#query)
+ - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
 - サーバー上の同じエンティティセレクションに対してその後に送られたリクエストは、最適化コンテキストを再利用して、サーバーから必要な属性のみを取得していくことで、処理を速くします。 たとえば、[エンティティセレクション型のリストボックス](#エンティティセレクション型リストボックス) では、先頭行の表示中に学習がおこなわれます。 次の行からは、表示が最適化されます。 以下の関数は、ソースのエンティティセレクションの最適化コンテキストを、戻り値のエンティティセレクションに自動的に付与します:
-  - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
-  - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
-  - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
-  - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
-  - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
-  - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
+ - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
+ - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
+ - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
+ - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)
+ - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
+ - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
 - 既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
 
@@ -43,7 +43,7 @@ title: クライアント/サーバーの最適化
 
 :::note 互換性に関する注意
 
-Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
+[`Open datastore`](../commands/open-datastore.md) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
 
 :::
 

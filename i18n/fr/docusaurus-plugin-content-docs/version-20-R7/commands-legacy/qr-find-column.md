@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Find column.Summary-->La commande **QR Find column** retourne le numéro de la première colonne de la *zone* dont le contenu correspond à l'*expression* passée en paramètre.<!-- END REF--> 
 
@@ -28,7 +25,7 @@ displayed_sidebar: docs
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Exemple 
+## Exemple 
 
 Le code suivant permet de récupérer le numéro de la colonne contenant le champ \[G.ER Tests\]Quarter puis de supprimer la colonne :
 
@@ -49,3 +46,14 @@ suivi de :
     QR DELETE COLUMN(MaZone;$NumColonne)
  End if
 ```
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 776 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

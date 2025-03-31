@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->The BLOB TO USERS command replaces the user accounts and groups found in the BLOB *users* in the current database.<!-- END REF--> The BLOB *users* is encrypted and must have been created using the [USERS TO BLOB](users-to-blob.md) command.
 
@@ -42,10 +39,20 @@ This command causes the replacement of any existing accounts and groups created 
  BLOB TO USERS(blob)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [USERS TO BLOB](users-to-blob.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 850 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -547,9 +547,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 |Constant | Value| Comment|
 |---|---|---|
 |`Document unchanged`|0|No processing|
-|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under OS X, CRLF (carriage return + line feed) under Windows|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows|
 |`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
+|`Document with CR`|3|Line breaks are converted to macOS format: CR (carriage return)|
 |`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).

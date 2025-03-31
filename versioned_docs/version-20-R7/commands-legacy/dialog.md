@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
@@ -63,7 +60,7 @@ This form then reacts “normally” to user actions and is closed using a stand
 * You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
 * When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](cancel.md) or [ACCEPT](accept.md) command. You do not have to manage the closing of the window itself.
 
-#### Example 1 
+## Example 1 
 
 The following example can be used to create a tool palette:
 
@@ -76,7 +73,7 @@ The following example can be used to create a tool palette:
  DIALOG("doc")
 ```
 
-#### Example 2 
+## Example 2 
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
@@ -124,7 +121,7 @@ The form displays information for each child:
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
-#### Example 3 
+## Example 3 
 
 The following example uses the path to a .json form to display the records in an employee list: 
 
@@ -138,7 +135,7 @@ which displays:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Example 4 
+## Example 4 
 
 The following example uses a .json file as an object and modifies a few properties: 
 
@@ -156,11 +153,11 @@ The altered form is displayed with the title, logo and border modified:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-#### System variables and sets 
+## System variables and sets 
 
 After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
 
-#### See also 
+## See also 
 
 [ACCEPT](accept.md)  
 [ADD RECORD](add-record.md)  
@@ -168,3 +165,13 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [CANCEL](cancel.md)  
 [Form](form.md)  
 [Open window](open-window.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 40 |
+| Thread safe | &cross; |
+| Modifies variables | OK, error |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->O comando **ST GET OPTIONS** obtém o valor atual de uma ou várias opções de funcionamento do campo ou da variável de texto com estilo designada pelo parâmetro *objeto*.<!-- END REF-->
 
@@ -34,6 +31,15 @@ Passe o código da opção a ler no parâmetro *opcao*. O comando devolve em *va
 | ST References               | Inteiro longo | 1     | Mostra as cadeias fonte das expressões                     |
 | ST Values                   | Inteiro longo | 0     | Mostra os valores calculados das expressões                |
 
-#### Ver também 
+## Ver também 
 
 [ST SET OPTIONS](st-set-options.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1290 |
+| Thread-seguro | &cross; |
+
+

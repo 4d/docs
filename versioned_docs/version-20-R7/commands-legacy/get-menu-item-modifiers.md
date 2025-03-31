@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->The **Get menu item modifiers** command returns any additional modifier(s) associated with the standard shortcut of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
@@ -45,11 +42,20 @@ If you pass a menu reference, the *process* parameter serves no purpose and will
 
 If you pass a menu number, the command will take the corresponding menu in the main menu bar of the current process into account. If you want to designate another process, pass its number in the optional *process* parameter.
 
-#### Example 
+## Example 
 
 Refer to the example of the [Get menu item key](get-menu-item-key.md) command. 
 
-#### See also 
+## See also 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 980 |
+| Thread safe | &cross; |
+
+

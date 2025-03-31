@@ -9,7 +9,7 @@ title: $entityset
 
 | シンタックス                                                                                                                                                                                       | 例題                                                                           | 説明                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
 
 ## $entityset/\{entitySetID\}
@@ -34,10 +34,10 @@ title: $entityset
 
 複数の既存エンティティセットに基づいて新たなエンティティセットを作成します。
 
-| 引数               | 型      | 説明                        |
-| ---------------- | ------ | ------------------------- |
-| $logicOperator   | String | 既存のエンティティセットに対して使用する論理演算子 |
-| $otherCollection | String | エンティティセットID               |
+| 引数               | 型    | 説明                        |
+| ---------------- | ---- | ------------------------- |
+| $logicOperator   | Text | 既存のエンティティセットに対して使用する論理演算子 |
+| $otherCollection | Text | エンティティセットID               |
 
 ### 説明
 

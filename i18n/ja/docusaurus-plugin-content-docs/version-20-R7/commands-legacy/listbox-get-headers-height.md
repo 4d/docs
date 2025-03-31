@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX Get headers height.Summary-->**LISTBOX Get headers height**コマンドは*object*と*\** 引数で指定したリストボックスのヘッダー行の高さを返します。<!-- END REF-->
 
@@ -34,6 +31,15 @@ displayed_sidebar: docs
 
 **注:** 行の高さの計算に関する詳細はデザインリファレンスを参照してください。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1144 |
+| スレッドセーフである | &cross; |
+
+

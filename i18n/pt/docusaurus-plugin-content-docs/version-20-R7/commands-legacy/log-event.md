@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LOG EVENT.Summary-->O comando **LOG EVENT** permite configurar um sistema personalizado de registro de eventos internos que ocorrem durante o uso de sua aplicação.<!-- END REF-->
 
@@ -34,7 +34,7 @@ O parâmetro opcional *tipoSaida* permite precisar o canal de saida tomado pela 
 
 Se omitir o parâmetro *tipoSaida,* o valor 0 se utiliza como padrão (Into Windows Log Events).
 
-Se tiver definido *tipoSaida* de tipo Into Windows Log Events, pode atribuir à mensagem um nível de importância vía o parâmetro opcional *importancia* com o fim de facilitar a leitura de histórico de eventos. Há três níveis de importância: Informação, Advertência e Erro. 4D oferece as constantes abaixo predefinidas, localizadas no tema *Historial de eventos*:
+Você pode atribuir um nível de importância à *mensagem* por meio do parâmetro opcional *importancia*, que o ajuda a ler e entender os eventos de registro. Há três níveis de importância: Informação, Aviso e Erro.  4D lhe fornece as seguintes constantes predefinidas:
 
 | Constante           | Tipo          | Valor |
 | ------------------- | ------------- | ----- |
@@ -44,7 +44,13 @@ Se tiver definido *tipoSaida* de tipo Into Windows Log Events, pode atribuir à 
 
 Se não passar nada no parâmetro *importancia* ou se passar um valor inválido, se utiliza o valor como padrão (0).
 
-#### Exemplo 
+:::nota
+
+O parâmetro *importancia* só é usado com *tipoSaida* `Into Windows log events`, `Into 4D diagnostic log` e `Into system standard outputs`.
+
+:::
+
+## Exemplo 
 
 Caso queiras realizar um seguimento das aberturas de sua base baixo Windows, pode escrever a seguinte linha de código no [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md):
 
@@ -54,6 +60,16 @@ Caso queiras realizar um seguimento das aberturas de sua base baixo Windows, pod
 
 Cada vez que se abre o banco de dados, esta informação será escrita no visor de eventos de Windows e seu nível de importância será 0.
 
-#### Ver também 
+## Ver também 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 667 |
+| Thread-seguro | &check; |
+
+

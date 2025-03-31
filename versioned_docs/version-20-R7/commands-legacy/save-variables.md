@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAVE VARIABLES.Summary-->The **SAVE VARIABLES** command saves one or more variables in the document whose name you pass in *document*.<!-- END REF-->
 
@@ -28,7 +28,7 @@ If the variables are properly saved, the OK variable is set to 1\. If not, OK is
 
 **WARNING:** This command does not support array variables. Use the new BLOB commands instead.
 
-#### Example 
+## Example 
 
 The following example saves three variables to a document named UserPrefs:
 
@@ -36,11 +36,11 @@ The following example saves three variables to a document named UserPrefs:
  SAVE VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the variables are saved properly, the **OK** system variable is set to 1; otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -48,3 +48,13 @@ If the variables are saved properly, the **OK** system variable is set to 1; oth
 [LOAD VARIABLES](load-variables.md)  
 *System Variables*  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 75 |
+| Thread safe | &check; |
+| Modifies variables | OK, Document |
+
+

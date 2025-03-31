@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is in print preview.Summary-->O comando **Is in print preview** devolve True se a opção **Vista previa de impressão** está selecionada na caixa de diálogo de impressão e False caso contrário.<!-- END REF--> Esta configuração é local ao processo. 
 
 A diferença do comando [Get print preview](get-print-preview.md), **Is in print preview** devolve o valor final da opção, depois da validação da caixa de diálogo por parte do usuário. Este comando permite determinar com certeza se a impressão toma lugar em modo "vista previa". 
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo permite ter em conta todos os tipos de impressões:
 
@@ -43,7 +40,16 @@ Este exemplo permite ter em conta todos os tipos de impressões:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1198 |
+| Thread-seguro | &cross; |
+
+

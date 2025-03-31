@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get action.Summary-->The **OBJECT Get action** command returns the name and (if any) parameter of the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -28,7 +25,7 @@ You can set a standard action for an object in the Form editor using the Propert
 
 For a comprehensive list of standard actions, please refer to the *Standard actions* section in the *Design Reference* manual. 
 
-#### Example 
+## Example 
 
 You want to associate the "Cancel" action with all the objects in the form that do not already have any associated action:
 
@@ -43,6 +40,15 @@ You want to associate the "Cancel" action with all the objects in the form that 
  End for
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET ACTION](object-set-action.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1457 |
+| Thread safe | &cross; |
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Summary-->**WP EXPORT DOCUMENT** コマンドは*wpDoc* 引数に渡したディスク上の4D Write Proオブジェクトを、*filePath* 引数で指定した場所に、他の任意の引数に基づいて書き出します。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 * .docx フォーマットを使用する際の、既に知られている差異や変換されない設定の一覧については、*.docxフォーマットの読み込み/書き出し* を参照して下さい。
 * SVG フォーマットへの書き出しついてのより詳細な情報については、*SVGフォーマットへの書き出し* を参照して下さい。
 
-##### option 引数 
+### option 引数 
 
 *option* 引数には、書き出されるドキュメントのプロパティを定義する値を格納している[オブジェクト](# "ネイティブ4Dオブジェクトとして構築されたデータ") 型の引数を渡します。以下のプロパティが利用可能です:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** *option* 引数に*倍長整数* 型の値を渡すことは互換性の理由からサポートされていますが、[オブジェクト](# "ネイティブ4Dオブジェクトとして構築されたデータ") 型の引数を渡すことが推奨されています。
 
-##### wk files コレクション 
+### wk files コレクション 
 
 wk files プロパティを使用すると、[PDF に添付つきで書き出す](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)ことができます。このプロパティには、最終ドキュメントに埋め込まれるファイルを記述するオブジェクトのコレクションを格納する必要があります。コレクション内のそれぞれのオブジェクトは以下のプロパティを格納することができます:
 
@@ -106,7 +106,7 @@ wk files プロパティを使用すると、[PDF に添付つきで書き出す
 
 **注意:** PDF 添付はPDF/A-3 バージョンでのみサポートされています。 wk files プロパティを渡す場合、"PDF/A-3" バージョンが自動的に使用されます。
 
-##### wk factur x オブジェクト 
+### wk factur x オブジェクト 
 
 wk factur x プロパティは、2つまでのプロパティを格納することのできるオブジェクトです:
 
@@ -127,7 +127,7 @@ wk factur x プロパティは、2つまでのプロパティを格納するこ�
 
 **注意:** Factur-X / ZUGFeRD 書き出し実装についての詳細な例題については、[こちらのHDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX) をダウンロードしてください。
 
-#### 例題 1 
+## 例題 1 
 
 *myArea* 4D Write Pro オブジェクトのコンテンツをHTML 形式とPDF フォーマットの両方に書き出したい場合を考えます:
 
@@ -157,7 +157,7 @@ wk factur x プロパティは、2つまでのプロパティを格納するこ�
  WP EXPORT DOCUMENT(myArea;$path;wk pdf;$option)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 *myArea* 4D Write Proオブジェクト内のコンテンツを、.4wpフォーマットで書き出したい場合を考えます:
 
@@ -177,7 +177,7 @@ wk factur x プロパティは、2つまでのプロパティを格納するこ�
  End case
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ドキュメントの2ページ目をSVG として書き出し、ドキュメントからピクチャーを書き出したい場合を考えます:   
   
@@ -191,7 +191,7 @@ wk factur x プロパティは、2つまでのプロパティを格納するこ�
  WP EXPORT DOCUMENT(WPArea;"my exported document";wk svg;$options)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 PDF/A-2 準拠のPDF ドキュメントを書き出したい場合を考えます:
 
@@ -202,7 +202,7 @@ PDF/A-2 準拠のPDF ドキュメントを書き出したい場合を考えま�
  WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 Factur-X PDF 書き出しをしたい場合を考えます:
 
@@ -236,7 +236,7 @@ Factur-X PDF 書き出しをしたい場合を考えます:
  WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 ```
 
-#### 参照 
+## 参照 
 
   
   

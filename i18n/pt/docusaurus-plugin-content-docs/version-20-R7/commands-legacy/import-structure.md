@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->O comando **IMPORT STRUCTURE** importa, na base atual, a definição XML da estrutura da base 4D passada no parâmetro *estruturaXML*.<!-- END REF--> 
 
@@ -34,11 +31,11 @@ Se genera un error si la estructura está en modo compilado y/o de sólo lectura
 
 Este comando no se puede llamar desde una aplicación 4D que funciona en modo remoto.
 
-#### Nota para lançamento 
+## Nota para lançamento 
 
 Dado que este comando modifica a estrutura do banco de dados, não pode ser utilizado no contexto de uma aplicação empacotada de apenas leitura (arquivo .4dc instalado na pasta *Arquivos de programa* ou arquivo .4dz).
 
-#### Exemplo 
+## Exemplo 
 
 Você deseja importar uma definição de estrutura guardada na base de dados atual:
 
@@ -47,6 +44,15 @@ Você deseja importar uma definição de estrutura guardada na base de dados atu
  IMPORT STRUCTURE($struc)
 ```
 
-#### Ver também 
+## Ver também 
 
 [EXPORT STRUCTURE](export-structure.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1310 |
+| Thread-seguro | &cross; |
+
+

@@ -12,10 +12,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MESSAGES ON.Summary-->Ver a descrição do comando [MESSAGES OFF](messages-off.md "MESSAGES OFF").<!-- END REF-->
 
-#### Ver também 
+## Ver também 
 
 [MESSAGES OFF](messages-off.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 181 |
+| Thread-seguro | &check; |
+
+

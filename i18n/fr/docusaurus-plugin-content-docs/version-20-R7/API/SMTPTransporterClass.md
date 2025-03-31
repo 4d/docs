@@ -33,7 +33,7 @@ Les objets SMTP Transporter sont instanciés avec la commande [`SMTP New transpo
 
 | Paramètres | Type                               |                             | Description                                       |
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
-| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
+| server     | Object                             |              ->             | Informations sur le serveur de messagerie         |
 | Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
@@ -135,7 +135,7 @@ La fonction `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envoie l'
 
 > L'objet `transporter` doit avoir déjà été créé à l'aide de la commande `SMTP New transporter`.
 
-La fonction établit la connexion SMTP si cette dernière n'est pas déjà active. Si la propriété `.keepAlive` de l'objet `transporter` est à **false**, la connexion SMTP est automatiquement fermée après l'exécution de la commande `.send()`. Pour plus d'informations, veuillez vous référer à la description de la commande [`SMTP New transporter`](#smtp-new-transporter).
+La fonction établit la connexion SMTP si cette dernière n'est pas déjà active. Si la propriété `.keepAlive` de l'objet `transporter` est à **false**, la connexion SMTP est automatiquement fermée après l'exécution de la commande `.send()`. Pour plus d'informations, veuillez vous référer à la description de la commande [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 
 Dans *mail*, passez un [`objet Email`](EmailObjectClass.md#objet-email) valide à envoyer. Les propriétés origine (la provenance de l'Email) et destination (un ou plusieurs destinataires) de l'Email doivent être incluses, les autres propriétés sont optionnelles.
 

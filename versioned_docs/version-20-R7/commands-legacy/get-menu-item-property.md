@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->The **GET MENU ITEM PROPERTY** command returns, in the *value* parameter, the current value of the property of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
@@ -32,6 +29,15 @@ In the *property* parameter, pass the property for which you want to get the val
 
 **Compatibility Note:** By default, if the *value* variable is not explicitely typed or is declared as text, the command will return a *Standard Action* name. If you want to get a numeric value as defined in the (deprecated) *Value for Associated Standard Action* constant theme, you need to declare the *value* variable as longint. 
 
-#### See also 
+## See also 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 972 |
+| Thread safe | &cross; |
+
+

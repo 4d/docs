@@ -13,20 +13,26 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Activated.Summary-->The **Activated** command (obsolete) returns **True** in a form method when the window containing the form becomes the frontmost window of the frontmost process.<!-- END REF--> 
 
-**Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Activate event.
+**Note:** This command is equivalent to using [Form event code](../commands/form-event-code.md) and testing whether it returns the On Activate event.
 
 **WARNING:** Do not place a command such as [TRACE](trace.md) or [ALERT](alert.md)in the **Activated** phase of the form, as this will cause an endless loop.
 
 **Note:** In order for the **Activated** execution cycle to be generated, make sure that the On Activate event property of the form has been selected in the Design environment.
 
-#### See also 
+## See also 
 
 [Deactivated](deactivated.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 346 |
+| Thread safe | &cross; |
+
+

@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->O comando **METHOD GET PATHS FORM** enche o array *arrRotas* com as rotas de acesso internas e os nomes dos métodos de todos os objetos dos formulários assim como também dos métodos formulário.<!-- END REF--> Os métodos formulário se etiquetam {formMethod}.
 
@@ -41,7 +38,7 @@ Se você executar esse comando em um componente, retorna por defeito as rotas do
   
 Se o comando detecta um nome de método duplicado, é gerado o erro -9802 ("Object path not unique"). Neste caso, é aconselhável utilizar o CSM com o propósito de verificar a estrutura da base de dados.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Lista de todos os objetos do formulário "input" da tabela \[Empregados\]. Note que os métodos formulário tabela (e os métodos formulário projeto) se processam como objetos que pertencem ao formulário:
 
@@ -53,7 +50,7 @@ Lista de todos os objetos do formulário "input" da tabela \[Empregados\]. Note 
   // [tableForm]/input/bCancel -> Método objeto
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Lista dos objetos do formulário projeto "dial":
 
@@ -61,7 +58,7 @@ Lista dos objetos do formulário projeto "dial":
  METHOD GET PATHS FORM(arrPaths;"dial")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Lista de todos os objetos dos formulários "input" da tabela \[Empregados\] a partir de um componente:
 
@@ -69,6 +66,15 @@ Lista de todos os objetos dos formulários "input" da tabela \[Empregados\] a pa
  METHOD GET PATHS FORM(([Empregados];arrPaths;"input@";*)
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM GET NAMES](form-get-names.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1168 |
+| Thread-seguro | &cross; |
+
+

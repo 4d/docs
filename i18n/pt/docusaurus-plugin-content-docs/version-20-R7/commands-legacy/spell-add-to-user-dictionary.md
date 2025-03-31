@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->O comando **SPELL ADD TO USER DICTIONARY** agrega uma ou mais palavras ao dicionário usuário atual.<!-- END REF-->  
   
@@ -24,7 +21,7 @@ O dicionário usuário é um dicionário que contém palavras agregadas pelo usu
   
 Pode passar em *palavras* uma cadeia texto ou um array texto com as palavras a adicionar ao dicionário usuário. Se uma das palavras já está no dicionário, será ignorada pelo comando.
 
-#### Exemplo 
+## Exemplo 
 
 Adição de nomes próprios ao dicionário de usuário:
 
@@ -36,6 +33,15 @@ Adição de nomes próprios ao dicionário de usuário:
  SPELL ADD TO USER DICTIONARY($arrTwords)
 ```
 
-#### Ver também 
+## Ver também 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1214 |
+| Thread-seguro | &cross; |
+
+

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get sections.Summary-->**WP Get sections** コマンドは*targetObj* 引数内に定義されている全てのセクションのコレクションを返します。<!-- END REF-->*targetObj* 引数には、以下のいづれかを渡すことができます:
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 セクションオブジェクトについての詳細な情報については、*ヘッダー、フッター、セクションの管理* の章を参照してください。
 
-#### 例題 
+## 例題 
 
 4D Write Pro エリアの最後のセクションの属性を変えたい場合を考えます:
 
@@ -42,6 +42,6 @@ displayed_sidebar: docs
  WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get section](wp-get-section.md)  

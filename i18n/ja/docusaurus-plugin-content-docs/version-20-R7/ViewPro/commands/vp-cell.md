@@ -12,14 +12,14 @@ title: VP Cell
 | 引数         | 型       |                             | 説明                                             |
 | ---------- | ------- | --------------------------- | ---------------------------------------------- |
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |
-| column     | Longint | ->                          | カラムのインデックス                                     |
-| row        | Longint | ->                          | 行のインデックス                                       |
+| column     | Integer | ->                          | カラムのインデックス                                     |
+| row        | Integer | ->                          | 行のインデックス                                       |
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |
 | 戻り値        | Object  | <- | 単一セルのレンジオブジェクト                                 |
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
 `VP Cell` コマンドは、<!-- REF #_method_.VP Cell.Summary -->特定のセルを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -35,7 +35,7 @@ title: VP Cell
 
 > インデックスは 0 起点です。
 
-#### 例題
+## 例題
 
 以下に表示されている (カレントスプレッドシートの) セルに対するレンジオブジェクトを定義します:
 
@@ -47,7 +47,7 @@ title: VP Cell
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### 参照
+## 参照
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

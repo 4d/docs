@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->The **OBJECT SET ENTERABLE** command makes the form objects specified by *object* either enterable or non-enterable and can set the *focusable* attribute.<!-- END REF-->
 
@@ -49,7 +46,7 @@ Making an object non-enterable does not prevent you from changing its value prog
 
 **Note:** To make a list box cell non-enterable, you pass the value -1 to $0 in the On Before Data Entry event, see *Managing entry*.
 
-#### Example 1 
+## Example 1 
 
 The following example sets a shipping field, depending on the weight of the shipment. If the shipment is 1 ounce or less, then the shipper is set to US Mail and the field is set to be non-enterable. Otherwise, the field is set to be enterable. 
 
@@ -62,7 +59,7 @@ The following example sets a shipping field, depending on the weight of the ship
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Here is the object method of a checkbox located in the header of a list in order to control the Enter in List mode: 
 
@@ -71,7 +68,16 @@ Here is the object method of a checkbox located in the header of a list in order
  OBJECT SET ENTERABLE([Table1];bEnterable)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 238 |
+| Thread safe | &cross; |
+
+

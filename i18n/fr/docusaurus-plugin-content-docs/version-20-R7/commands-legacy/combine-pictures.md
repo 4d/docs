@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 
-**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [C\_BOOLEAN](c-boolean.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
+**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
 
 Passez dans *opérateur* le type de combinaison à appliquer. Trois types de combinaisons sont proposés, accessibles via des constantes placées dans le thème “*Transformation des images*” :
 
@@ -33,7 +33,7 @@ Si les paramètres facultatifs *décalHoriz* et *décalVert* sont utilisés, une
 
 **Note :** La superposition effectuée par la commande **COMBINE PICTURES** diffère de la superposition proposée par les opérateurs “classiques” & et | (superposition exclusive et superposition inclusive). Tandis que la commande **COMBINE PICTURES** conserve les caractéristiques de chaque image source dans l’image résultante, les opérateurs & et | traitent chaque pixel et génèrent une image bitmap dans tous les cas. Ces opérateurs, conçus à l’origine pour les images monochromes, sont désormais obsolètes.
 
-#### Exemple 
+## Exemple 
 
 Soient les images suivantes : 
 
@@ -47,6 +47,15 @@ Résultat :
 
 ![](../assets/en/commands/pict27794.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [TRANSFORM PICTURE](transform-picture.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 987 |
+| Thread safe | &check; |
+
+

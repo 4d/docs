@@ -14,11 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.COPY ARRAY.Summary-->El comando COPY ARRAY crea o remplaza el array *destino* con el mismo contenido, tamaño y tipo del array *fuente*.<!-- END REF-->
-
-**Nota:** en el caso de los arrays numéricos de diferentes tipos, se mantiene el tipo del array *destino*.
+<!--REF #_command_.COPY ARRAY.Summary-->El comando COPY ARRAY crea o remplaza el array *destino* con el mismo contenido, tamaño y tipo del array *fuente*.<!-- END REF-->en el caso de los arrays numéricos de diferentes tipos, se mantiene el tipo del array *destino*.
 
 Los arrays *fuente* y *destino* pueden ser locales, proceso o interproceso. El alcance del array no tiene importancia en el momento de copiar arrays.
 
@@ -27,7 +25,7 @@ Los arrays *fuente* y *destino* pueden ser locales, proceso o interproceso. El a
 * En modo compilado, el array *destino* debe ser del mismo tipo que el array *fuente*. Thus, it is recommended to always use arrays of the same type to have similar behavior in interpreted and compiled modes.
 * Al copiar arrays de objetos, sólo se duplican las referencias de los objetos que las contienen y no los objetos. Esto significa que cualquier modificación realizada en un objeto de un array se aplicará a todas las instancias existentes del objeto en los arrays copiados. Si necesita duplicar objetos, debe utilizar el comando [OB Copy](ob-copy.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo llena el array C. Luego crea un nuevo array, llamado D, del mismo tamaño de C y con el mismo contenido:
 
@@ -36,3 +34,13 @@ El siguiente ejemplo llena el array C. Luego crea un nuevo array, llamado D, del
  SELECTION TO ARRAY([Personas]Empresa;C) // Mover los datos del campo empresa al array C
  COPY ARRAY(C;D) // Copiar el array C al array D
 ```
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 226 |
+| Hilo seguro | &check; |
+
+

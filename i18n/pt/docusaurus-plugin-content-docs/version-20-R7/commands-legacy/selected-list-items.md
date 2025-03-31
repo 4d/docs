@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Selected list items.Summary-->O comando Selected list items retorna a posição ou referência do elemento selecionado na lista cujo número de referência ou nome de objeto é passada em *lista*.<!-- END REF-->
 
@@ -44,7 +41,7 @@ Se a lista têm sub-listas, aplique o comando à lista principal (a que está de
 
 Em todos os casos, se nenhum elemento estiver selecionado, a função retorna 0.
 
-#### Exemplo 
+## Exemplo 
 
 Esta é uma lista chamada *hList,* mostrada no ambiente Aplicação:
 
@@ -83,7 +80,16 @@ Esta é uma lista chamada *hList,* mostrada no ambiente Aplicação:
   // $arrRefs{1} vale 101, $arrRefs{2} vale 203 (por exemplo)
 ```
 
-#### Ver também 
+## Ver também 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 379 |
+| Thread-seguro | &cross; |
+
+

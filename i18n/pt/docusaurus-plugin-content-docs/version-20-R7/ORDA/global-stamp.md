@@ -7,12 +7,12 @@ title: Usando o selo global
 
 4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales
 
-The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
+The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Observe, porém que o selo pode ser modificado usando a função [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
 
 Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
 1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity.
-   En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
+    En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
 2. The global modification stamp value is incremented.
 
@@ -26,7 +26,7 @@ No confunda el **sello de modificación global** con el **sello de entidad** int
 
 ## Configurando rastreamento de alterações de dados
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
+Por padrão, o carimbo de modificação global não é criado (a função [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retorna 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
 ### Requisitos de estrutura
 

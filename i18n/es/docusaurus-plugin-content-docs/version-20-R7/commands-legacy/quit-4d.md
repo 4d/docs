@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUIT 4D.Summary-->El comando QUIT 4D sale de la aplicación 4D y regresa al escritorio.<!-- END REF-->
 
 El proceso del comando es diferente si se ejecuta en 4D (modo local o remoto) o en 4D Server. 
 
-##### Con 4D modo local y 4D modo remoto 
+### Con 4D modo local y 4D modo remoto 
 
 Después de llamar QUIT 4D, se detiene la ejecución del proceso actual, luego 4D efectúa las siguientes operaciones:
 
@@ -36,7 +36,7 @@ También es posible una tercera estrategia. Antes de llamar QUIT 4D, pruebe si u
 
 **Nota:** el parámetro *tiempo* no puede utilizarse con 4D en modo local o remoto.
 
-##### Con 4D Server (procedimiento almacenado) 
+### Con 4D Server (procedimiento almacenado) 
 
 El comando QUIT 4D puede ejecutarse en el equipo servidor, en un proceso almacenado. En este caso, acepta el parámetro opcional *tiempo*.  
   
@@ -50,7 +50,7 @@ Si hay un *Método base On Server Shutdown*, se ejecuta después del tiempo defi
 
 La acción del comando QUIT 4D utilizada en un procedimiento almacenado es la misma del comando Salir del menú Archivo de 4D Server: provoca la aparición de una caja de diálogo en cada equipo cliente indicando que el servidor está a punto de cerrar.
 
-#### Ejemplo 
+## Ejemplo 
 
 El método de proyecto siguiente está asociado al elemento de menú Salir en el menú Archivo.
 
@@ -63,6 +63,15 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Método base On Exit](metodo-base-on-exit.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 291 |
+| Hilo seguro | &check; |
+
+

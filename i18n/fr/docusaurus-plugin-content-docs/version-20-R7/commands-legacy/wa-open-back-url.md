@@ -14,16 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->La commande **WA OPEN BACK URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL précédent dans la séquence d’URLs ouverts.<!-- END REF--> 
 
 S’il n’y a pas d’URL précédent, la commande ne fait rien. Vous pouvez tester la disponibilité d’un URL précédent à l’aide de la commande [WA Back URL available](wa-back-url-available.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1021 |
+| Thread safe | &cross; |
+
+

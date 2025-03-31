@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->**OBJECT SET AUTO SPELLCHECK**コマンドは*object*と*\**引数で指定されたオブジェクトの自動スペルチェックオプションをカレントプロセス内で動的に設定します。<!-- END REF-->このオプションを使用して、オブジェクト (テキスト型オブジェクトのみ) にデータが入力される際の自動スペルチェックを有効/無効にできます。
 
@@ -26,6 +23,15 @@ displayed_sidebar: docs
 
 この機能を有効にするには*autoSpellcheck*に**True**を、無効にするには**False**を渡します。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1173 |
+| スレッドセーフである | &cross; |
+
+

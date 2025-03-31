@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get text resource.Summary-->La commande **Get text resource** retourne le texte stocké dans la ressource texte ("TEXT") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
 
@@ -28,7 +25,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 **Note :** Une ressource texte peut contenir jusqu'à 32 000 caractères.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche le contenu de la ressource texte d'ID=20800 qui doit se trouver dans au moins un des fichiers de ressources ouverts :
 
@@ -36,12 +33,22 @@ L'exemple suivant affiche le contenu de la ressource texte d'ID=20800 qui doit s
  ALERT(Get text resource(20800))
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 504 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

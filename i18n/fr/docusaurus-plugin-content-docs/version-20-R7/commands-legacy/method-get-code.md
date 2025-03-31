@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->La commande **METHOD GET CODE** retourne dans le paramètre *code* le contenu de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF--> La commande peut retourner le code de tous les types de méthodes : méthodes base, définitions de classes, triggers, méthodes projet, méthodes formulaire et méthodes objet.
 
@@ -68,11 +65,11 @@ Le code exporté avec ses tokens est indépendant de tout renommage ultérieur d
 
 Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
-#### Exemple 1 
+## Exemple 1 
 
 Reportez-vous à l'exemple de la commande [METHOD SET CODE](method-set-code.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple illustre les effets du paramètre *option*.
 
@@ -117,7 +114,16 @@ Le document résultant contient alors :
   //%attributes = {"lang":"fr"} commentaire réservé, ajouté par 4DAu cas ou    : (Evenement formulaire code:C388=Sur chargement:K2:1)        TOUT SELECTIONNER:C47([Customer:1])Fin de cas
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD SET CODE](method-set-code.md)  
 *Utiliser des tokens dans les formules*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1190 |
+| Thread safe | &cross; |
+
+

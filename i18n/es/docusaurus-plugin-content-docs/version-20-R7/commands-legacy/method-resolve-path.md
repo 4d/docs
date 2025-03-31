@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->El comando **METHOD RESOLVE PATH** analiza la ruta de acceso interna pasada en el parámetro *ruta* y devuelve sus diferentes componentes en los parámetros *tipoMetodo*, *ptrTabla*, *nomObjeto* y *nomObjetoForm*.<!-- END REF-->  
   
@@ -48,7 +45,7 @@ El parámetro *nomObjetoForm* contiene un nombre de objeto de formulario si la r
   
 Si el comando se ejecuta desde un componente, considera por defecto que *ruta* designa un método del componente. Si pasa el parámetro *\**, considera que *ruta* designa un método de la base local.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Resolución de una ruta de método base:
 
@@ -65,7 +62,7 @@ Resolución de una ruta de método base:
   // $formObjectName: ""
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Resolución de una ruta de objeto de método formulario tabla:
 
@@ -82,6 +79,15 @@ Resolución de una ruta de objeto de método formulario tabla:
   // $formObjectName: "Btn1"
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD Get path](method-get-path.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1165 |
+| Hilo seguro | &cross; |
+
+

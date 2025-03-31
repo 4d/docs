@@ -22,21 +22,21 @@ title: VP RESIZE TABLE
 | rangeObj   | Object | -> | Nuevo rango para la tabla |                  |
 | tableName  | Text   | -> | Nombre de la tabla        | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->cambia el tamaño de *tableName* con respecto al *rangeObj*<!-- END REF -->.
 
 Se aplican las siguientes reglas:
 
 - Los encabezados deben permanecer en la misma línea y el rango de la tabla resultante debe superponerse al rango de la tabla original.
-- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
+- Si el conteo de líneas de la tabla redimensionada es inferior al conteo de líneas inicial, los valores dentro de las líneas o columnas recortadas se mantienen si no estaban vinculados a un [contexto de datos](vp-set-data-context.md), de lo contrario se eliminan.
 - Si la tabla se expande en las celdas que contienen datos:
-  - si se añaden líneas, se eliminan datos,
-  - si se añaden columnas, los datos se mantienen y se muestran en nuevas columnas.
+    - si se añaden líneas, se eliminan datos,
+    - si se añaden columnas, los datos se mantienen y se muestran en nuevas columnas.
 
 Si *tableName* no existe, no pasa nada.
 
-#### Ejemplo
+## Ejemplo
 
 Usted crea una tabla con un contexto de datos:
 
@@ -64,7 +64,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 ![](../../assets/en/ViewPro/table-resize.png)
 
-#### Ver también
+## Ver también
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table range](vp-get-table-range.md)

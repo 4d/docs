@@ -18,19 +18,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->El comando ST GET ATTRIBUTES se utiliza para recuperar el valor actual de un atributo de estilo en una selección de texto del objeto de formulario designado por *objeto*.<!-- END REF-->
 
-##### 
+### 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Durante la ejecución, si el objeto tiene el foco, el comando devuelve información sobre el objeto que está siendo editado, sin embargo, cuando el objeto no tiene el foco, el comando devuelve información sobre la fuente de datos (campo o variable) del objeto.  
 Si omite el parámetro *\**, indica que el parámetro *objeto* es un campo o una variable. En este caso, pase una referencia campo o variable en lugar de una cadena y durante la ejecución, el comando devuelve información sobre este campo o variable.
 
-##### 
+### 
 
 Los parámetros *inicioSel* y *finSel* se utilizan para designar la selección de texto de la cual leer el atributo de estilo. Pase la posición del primer carácter de la selección en *inicioSel* y la posición más uno del último carácter de la selección en *finSel*. Puede pasar 0 en *finSel* para designar automáticamente el último carácter del texto (pase 1 en *inicioSel* para designar el primer carácter del texto).  
 Si los valores de *inicioSel* y *finSel* son iguales o si *inicioSel* es mayor que *finSel*, se devuelve un error (excepto si *finSel* vale 0).  
@@ -105,3 +102,13 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 #### Ver también 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1094 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

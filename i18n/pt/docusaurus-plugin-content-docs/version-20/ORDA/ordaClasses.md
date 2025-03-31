@@ -5,7 +5,7 @@ title: Classes de modelo de dados
 
 
 
-O ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, pode criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para devolver os empregados com um salário superior ao selecionado. Seria tão simples como chamar:
 
@@ -16,8 +16,7 @@ $nextHigh:=ds. Employee.get(1).getNextWithHigherSalary()
 Os desenvolvedores podem não só utilizar estas funções em datastores locais, mas também em arquiteturas cliente/servidor e remotas:
 
 ```4d
- //$cityManager é a referência de um datastore remoto
-Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
+ //$cityManager é a referência de um datastore remoto Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 ```
 
 Graças a esta caraterística, toda a lógica comercial da sua aplicação 4D pode ser armazenada como uma camada independente para que possa ser facilmente mantida e reutilizada com um alto nível de segurança:
@@ -36,7 +35,7 @@ Além disso, 4D [pré-criou automaticamente](#creating-classes) as classes para 
 
 ## Arquitetura
 
-A ORDA fornece **classes genéricas** expostas através da loja de classes **`4D`** [](Concepts/classes.md#class-stores), bem como **classes de utilizador** (que estendem as classes genéricas) expostas na loja de classes **`cs`** [](Concepts/classes.md#class-stores):
+ORDA fornece **classes genéricas** expostas através da [class store](Concepts/classes.md#class-stores) **`4D`**, bem como **user classes** (que estendem as classes genéricas) expostas na [class store](Concepts/classes.md#class-stores) **`cs`**:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -177,20 +176,15 @@ Cada tabela exposta com ORDA oferece uma classe EntitySelection no repositório 
 
 - **Extends**: 4D. EntitySelection
 - **Nome da classe**: *DataClassName*Seleção (em que *DataClassName* é o nome da tabela)
-- **Exemplo de nome**: cs.EmployeeSelection
+- **Exemplo de nome**: cs. EmployeeSelection
 
 
 #### Exemplo
 
 ```4d
-// Class cs.EmployeeSelection 
+// Class cs. EmployeeSelection Class extends EntitySelection
 
-
-Class extends EntitySelection
-
-//Extrair os empregados com um salário superior à média desta seleção de entidades 
-
-Function withSalaryGreaterThanAverage
+//Extrair os empregados com um salário superior à média desta seleção de entidades Function withSalaryGreaterThanAverage
     C_OBJECT($0)
     $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
@@ -255,10 +249,10 @@ End if
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
 - Já que são utilizadas para definir nomes de classes DataClass automáticas no armazenamento de classes **cs** [](Concepts/classes.md#class-stores), as tabelas 4D devem ser nomeadas de modo a evitar qualquer conflito no namespace **cs** . Em particular:
-    - Não dê o mesmo nome a uma tabela 4D e a um nome de classe de utilizador [](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
+    - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
     - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
-- Ao definir uma classe, certifique-se de que a instrução [`Class extends`](Concepts/classes.md#class-extends-classnameclass) corresponde exatamente ao nome da classe-mãe (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, `Class extends EntitySelection` para uma classe de seleção de entidades.
+- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). Por exemplo, `Class extends EntitySelection` para uma classe de seleção de entidades.
 
 - Não é possível instanciar um objeto de classe de modelo de dados com a palavra-chave `new()` (é devolvido um erro). É necessário utilizar um método normal, tal como indicado na coluna [`Instantiated by` da tabela de classes ORDA](#architecture).
 
@@ -316,7 +310,7 @@ A função *getter* é obrigatória para declarar o atributo computado *attribut
 
 > Um atributo calculado pode utilizar o valor de outro(s) atributo(s) calculado(s). As chamadas recursivas geram erros.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. São permitidos os seguintes tipos de resultados:
+A função *getter* define o tipo de dados do atributo calculado graças ao parâmetro *$result*. São permitidos os seguintes tipos de resultados:
 
 - Scalar (text, boolean, date, time, number)
 - Object
@@ -437,14 +431,14 @@ A função `query` é executada sempre que é lançada uma consulta que utiliza 
 
 O parâmetro *$event* contém as seguintes propriedades:
 
-| Propriedade   | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Text         | Nome do atributo computado                                                                                                                                                                                                                                                                                                                                                     |
-| dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                              |
-| kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                                        |
-| value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                                         |
+| Propriedade   | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Text         | Nome do atributo computado                                                                                                                                                                                                                                                                                                                                                       |
+| dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                                |
+| kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                                          |
+| value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                                           |
 | operator      | Text         | Operador de consulta (ver também a consulta [`` função de classe](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (não é igual a, @ é um wildcard)</li><li>!== (não é igual a, @ não é wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (maior ou igual a)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
-| resultado     | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` nesta propriedade se quiser deixar 4D executar a consulta padrão (sempre seqüencial para atributos computados).                                                                                                                                                                                                           |
+| resultado     | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` nesta propriedade se quiser deixar 4D executar a consulta padrão (sempre seqüencial para atributos computados).                                                                                                                                                                                                             |
 
 > Se a função devolver um valor em *$result* e for atribuído outro valor à propriedade `$event.result` , a prioridade é dada a `$event.result`.
 
@@ -678,14 +672,14 @@ Os atributos de alias são apenas de leitura (exceto quando baseados num atribut
 
 ### Propriedades alias
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+Atributo de alias [`kind`](../API/DataClassClass.md#attributename) é "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+Um atributo alias herda seu tipo de dados [`type`](../API/DataClassClass.md#attributename) do atributo destino:
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- se o atributo de destino [`kind`](../API/DataClassClass.md#attributename) for "storage", o tipo de dados do alias será do mesmo tipo,
+- se o atributo de destino [`kind`](../API/DataClassClass.md#attributename) for "relatedEntity" ou "relatedEntities", o tipo de dados do alias é do tipo `4D. Entity` ou `4D. EntitySelection` ("*classname*Entity" ou "*classname*Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ).
+Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ). Os atributos alias baseados em relações têm uma propriedade [`path`](../API/DataClassClass.md#attributename) específica, que contém o caminho dos seus atributos de destino.
 
 
 ### Exemplos
@@ -776,8 +770,7 @@ Uma função que não esteja exposta não está disponível em aplicações remo
 Para permitir que uma função de classe de modelo de dados seja chamada por um pedido remoto, é necessário declará-la explicitamente utilizando a palavra-chave `exposed` . A sintaxe formal é:
 
 ```4d  
-// declarar uma função exposta
-Função exposta <functionName>   
+// declarar uma função exposta Função exposta <functionName>   
 ```
 
 > A palavra-chave `exposed` só pode ser utilizada com funções de classe de modelo de dados. Se for utilizada com uma função [da classe de usuário regular](Concepts/classes.md) , é ignorada e o compilador devolve um erro.
@@ -865,6 +858,26 @@ local Function age() -> $age: Variant
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
     $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
+    If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null End if
 ```
 
 #### Verificação de atributos
@@ -908,7 +921,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-Uma classe de usuário do modelo de dados ORDA é definida adicionando, na [mesma localização que os arquivos classe normais](Concepts/classes.md#class-files) (*ou seja.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para a classe de dados `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm` .
+An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Por exemplo, uma classe de entidade para a classe de dados `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm` .
 
 
 ### Criação de classes

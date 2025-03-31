@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->The **PICTURE LIBRARY LIST** command returns the reference numbers and names of the pictures currently stored in the Picture Library of the database.<!-- END REF-->
 
@@ -31,7 +28,7 @@ If there are no pictures in the Picture Library, both arrays are returned empty.
 
 To obtain the number of pictures currently stored in the Picture Library, use the [Size of array](size-of-array.md) command to get the size of one of the two arrays.
 
-#### Example 1 
+## Example 1 
 
 The following code returns the catalog of the Picture Library in the arrays *alPicRef* and *asPicName*:
 
@@ -39,7 +36,7 @@ The following code returns the catalog of the Picture Library in the arrays *alP
  PICTURE LIBRARY LIST(alPicRef;asPicName)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example tests whether or not the Picture Library is empty:
 
@@ -52,7 +49,7 @@ The following example tests whether or not the Picture Library is empty:
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example exports the Picture Library to a document on disk:
 
@@ -90,8 +87,17 @@ The following example exports the Picture Library to a document on disk:
  End if
 ```
 
-#### See also 
+## See also 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 564 |
+| Thread safe | &cross; |
+
+

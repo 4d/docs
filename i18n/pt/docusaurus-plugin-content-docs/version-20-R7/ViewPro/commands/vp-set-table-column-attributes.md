@@ -25,7 +25,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | attributes | Object  | -> | Atributo(s) a aplicar à *column*         |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
 
@@ -33,14 +33,14 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In the *attributes* parameter, pass an object that contains the properties to set:
 
-| Propriedade         | Tipo    | Descrição                                                                                                                                                                                                   |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                               |
-| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used. |
-| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)     |
-| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                                  |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
+| Propriedade         | Tipo    | Descrição                                                                                                                                                                                                    |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                                |
+| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. Se esse nome já for usado por outra coluna, ele não é aplicado e um nome padrão é usado automaticamente. |
+| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)      |
+| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                                   |
+| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                 |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                 |
 
 Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
@@ -48,7 +48,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
 
-#### Exemplo
+## Exemplo
 
 Você cria uma tabela com um contexto de dados:
 
@@ -73,7 +73,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $opti
 
 ![](../../assets/en/ViewPro/table-inserta.png)
 
-Then you want to insert a column with data from the data context and hide some filter buttons:
+Em seguida, você deseja inserir uma coluna com dados do contexto de dados e ocultar alguns botões de filtro:
 
 ```4d
 	//insert a column
@@ -98,9 +98,18 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 ![](../../assets/en/ViewPro/table-insertb.png)
 
-#### Veja também
+## Veja também
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
 [VP RESIZE TABLE](vp-resize-table.md)
+
+
+
+
+
+
+
+
+

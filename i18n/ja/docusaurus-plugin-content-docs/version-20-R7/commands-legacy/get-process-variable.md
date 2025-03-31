@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->GET PROCESS VARIABLE コマンドは、*process*引数に渡した番号のソースプロセスから*srcVar* (*srvVar2*等) プロセス変数を読み込み、その現在の値をカレントプロセスの*dstVar* (*dstVar2*等) 変数に返します。<!-- END REF-->
 
@@ -33,7 +30,7 @@ GET PROCESS VARIABLE、[SET PROCESS VARIABLE](set-process-variable.md "SET PROCE
 
 **Tip:** サーバのプロセス番号がわからない場合でも、サーバのインタープロセス変数を使用することができます。このためには、*process*に任意の負の値を指定します。つまり、プロセス番号がわからなくてもGET PROCESS VARIABLEコマンドを使用してサーバのインタープロセス変数値を得ることができるということです。このことは、*On Server Startupデータベースメソッド*を使用して、ストアドプロシージャが起動されている場合に便利です。クライアントマシンではそのプロセスの番号が自動的にわからないため、*process*引数に任意の負の値を渡すことができます。
 
-##### 制限事項 
+### 制限事項 
 
 GET PROCESS VARIABLEは、ソース変数としてローカル変数を受け付けません。
 
@@ -49,7 +46,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
 
 **Note:** インタープリタモードでは、ソース変数が存在しない場合には未定義値が返されます。これは[Type](type.md "Type")を使って対応するソース変数をテストし、検出することができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のコードは、プロセス番号が*$vlProcess*であるプロセスのテキスト変数*vtCurStatus*の値を読み込み、その値をカレントプロセスのプロセス変数*vtInfo*に返します:
 
@@ -57,7 +54,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtInfo)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードは上記の例と同じことをしますが、カレントプロセスで実行しているメソッドのローカル変数*$vtInfo*に値を返します:
 
@@ -65,7 +62,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 以下のコードは上記の例と同じことをしますが、カレントプロセスの*vtCurStatus*変数に値を返します:
 
@@ -75,7 +72,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
 
 **Note:** 最初の*vtCurStatus*はソースプロセスにある変数のインスタンスを示しています。2番目の*vtCurStatus*はカレントプロセスにある変数のインスタンスを示しています。
 
-#### 例題 4 
+## 例題 4 
 
 以下の例は、*$vlProcess*で示されるプロセスからプロセス配列の要素を順次読み込みます:
 
@@ -89,7 +86,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
 
 **Note:** この例では、プロセス変数*vl\_IPCom\_Array*には配列*at\_IPCom\_Array*のサイズが格納され、送信元プロセスによって管理されている必要があります。
 
-#### 例題 5 
+## 例題 5 
 
 以下の例は上記の例と同じことをしますが、配列の要素を順番に読み込む代わりに配列を全体として読み込みます:
 
@@ -100,7 +97,7 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
  End for
 ```
 
-#### 例題 6 
+## 例題 6 
 
 以下の例は、変数*v1*,*v2*,*v3*のソースプロセスインスタンスを読み込み、それらの値をカレントプロセスの同じ変数のインスタンスに返します:
 
@@ -108,15 +105,23 @@ GET PROCESS VARIABLEは、任意のタイプのソースプロセス変数また
  GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-#### 例題 7 
+## 例題 7 
 
 DRAG AND DROP PROPERTIESコマンドの例題参照
 
-#### 参照 
+## 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 *ドラッグ＆ドロップ*  
 *プロセス*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 371 |
+| スレッドセーフである | &cross; |
+
+

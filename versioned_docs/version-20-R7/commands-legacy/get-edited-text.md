@@ -13,12 +13,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+## Description 
 
-
-#### Description 
-
-<!--REF #_command_.Get edited text.Summary-->The **Get edited text** command is mainly to be used with the On After Edit form event to retrieve the text as it is being entered.<!-- END REF--> It can also be used with the On Before Keystroke and On After Keystroke form events. For more information about those form events, please refer to the description of the command [Form event code](form-event-code.md).
+<!--REF #_command_.Get edited text.Summary-->The **Get edited text** command is mainly to be used with the On After Edit form event to retrieve the text as it is being entered.<!-- END REF--> It can also be used with the On Before Keystroke and On After Keystroke form events. For more information about those form events, please refer to the description of the command [Form event code](../commands/form-event-code.md).
 
 The combination of this command with On Before Keystroke and On After Keystroke form events works as follows:
 
@@ -31,7 +28,7 @@ These events are only generated in the object methods concerned.
 
 When used in a context other than text entry in a form object, this function returns an empty string.
 
-#### Example 1 
+## Example 1 
 
 The following method automatically puts the characters being entered in capitals:
 
@@ -41,7 +38,7 @@ The following method automatically puts the characters being entered in capitals
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Here is an example of how to process on the fly characters entered in a text field. The idea consists of placing in another text field (called “Words”) all the words of the sentence being entered. To do so, write the following code in the object method of the field: 
 
@@ -64,7 +61,16 @@ Here is an example of how to process on the fly characters entered in a text fie
 
 **Note:** This example is not comprehensive because we have assumed that words are separated uniquely by spaces (Char (32)). For a complete solution you will need to add other filters to extract all the words (delimited by commas, semi-colons, apostrophes, etc.).
 
-#### See also 
+## See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 655 |
+| Thread safe | &cross; |
+
+

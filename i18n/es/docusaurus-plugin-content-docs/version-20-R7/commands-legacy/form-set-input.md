@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->El comando FORM SET INPUT define el formulario de entrada actual de *tabla* para *form* o *formUsuario*.<!-- END REF--> El formulario debe pertenecer a *tabla*.
 
@@ -58,7 +55,7 @@ El parámetro opcional *\** se utiliza en conjunto con las propiedades del formu
 
 **Nota:** bien sea que pase el parámetro opcional *\** o no, FORM SET INPUT cambia el formulario de entrada para la tabla.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo muestra un uso típico de FORM SET INPUT: 
 
@@ -67,7 +64,7 @@ El siguiente ejemplo muestra un uso típico de FORM SET INPUT:
  ADD RECORD([Empresas]) // Añadir una nueva empresa
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En una base de facturación que administra varias empresas, la creación de una factura debe efectuarse utilizando el formulario usuario correspondiente: 
 
@@ -83,7 +80,7 @@ En una base de facturación que administra varias empresas, la creación de una 
  ADD RECORD([Facturas])
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Los siguientes ejemplos usan la ruta a un formulario .json para ingresar los registros en una lista de empleados:
 
@@ -96,9 +93,8 @@ que devuelve:
 
 ![](../assets/en/commands/pict3687432.en.png)
 
-#### Ver también 
+## Ver también 
 
-*\_o\_CREATE USER FORM*  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
 [DISPLAY SELECTION](display-selection.md)  
@@ -110,3 +106,12 @@ que devuelve:
 [MODIFY SELECTION](modify-selection.md)  
 [Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 55 |
+| Hilo seguro | &cross; |
+
+

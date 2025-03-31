@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->The SQL LOAD RECORD command retrieves one or more record(s) in 4D coming from the data source open in the current connection.<!-- END REF-->
 
@@ -28,11 +25,21 @@ The optional *numRecords* parameter sets the number of records to retrieve:
 
 **Note:** These last two settings are only useful when the retrieved data is associated with 4D arrays or fields. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
 
-#### See also 
+## See also 
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 822 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

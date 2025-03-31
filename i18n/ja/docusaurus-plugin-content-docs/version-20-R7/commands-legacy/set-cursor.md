@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET CURSOR.Summary-->SET CURSOR コマンド はマウスカーソルを、*cursor* 引数に渡したID番号のシステムカーソルへと変更します。<!-- END REF-->
 
-このコマンドはOn Mouse Move [Form event code](form-event-code.md)のコンテキスト内で呼び出されなければなりません。
+このコマンドはOn Mouse Move [Form event code](../commands/form-event-code.md)のコンテキスト内で呼び出されなければなりません。
 
 マウスカーソルは標準の矢印に戻すためには、引数を渡さずにコマンドを呼び出します。
 
@@ -53,7 +50,7 @@ displayed_sidebar: docs
 
 **注:** カーソルが使用可能状況とその見た目はOSによって変化する場合があります。
 
-#### 例題 
+## 例題 
 
 マウスがフォーム内の変数エリア上に来た際に、カーソルを![](../assets/en/commands/pict2478692.en.png) に表示させたい場合を考えます。この場合、変数のオブジェクトメソッド内に、以下の様に記述します:
 
@@ -62,3 +59,13 @@ displayed_sidebar: docs
     SET CURSOR(9019)
  End if
 ```
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 469 |
+| スレッドセーフである | &cross; |
+
+

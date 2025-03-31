@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Current form name.Summary-->The **Current form name** command returns the name of the current form defined for the process.<!-- END REF--> The current form can be a project form or a table form. 
 
@@ -29,7 +26,7 @@ The command returns:
 * the "name" attribute if the current form is created by an object, or
 * an empty string if there is no current form defined for the process.
 
-#### Example 1 
+## Example 1 
 
 In an input form, place the following code in a button:
 
@@ -45,7 +42,7 @@ In an input form, place the following code in a button:
   //...
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to get the current form if it is a project form:
 
@@ -57,6 +54,15 @@ You want to get the current form if it is a project form:
  End if
 ```
 
-#### See also 
+## See also 
 
 [FORM LOAD](form-load.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1298 |
+| Thread safe | &cross; |
+
+

@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->The **OBJECT SET COORDINATES** command modifies the location and, optionally, the size of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -42,7 +39,7 @@ This command only functions in the following contexts:
 * Headers and footers of output forms displayed by the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) command,
 * Forms being printed.
 
-#### Example 
+## Example 
 
 The following statement places the "button\_1" object at the (10,20) (30,40) coordinates:
 
@@ -52,8 +49,17 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-#### See also 
+## See also 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1248 |
+| Thread safe | &cross; |
+
+

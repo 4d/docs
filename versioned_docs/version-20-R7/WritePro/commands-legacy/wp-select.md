@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
-| wpArea | String, Object | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| wpArea | Text, Object | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | startRange | Integer | &#8594;  | Starting offset of text range |
 | endRange | Integer | &#8594;  | Ending offset of text range |
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SELECT.Summary-->The **WP SELECT** command creates a new selection in the 4D Write Pro *wpArea* area, based upon the *targetObj* or a new range defined by *startRange* and *endRange*.<!-- END REF-->
 
@@ -47,7 +47,7 @@ where *startRange* and *endRange* are allowed only for the following elements: b
 
 In *startRange* and *endRange*, pass values corresponding to the position of the first and last characters to select in the area. You can pass wk start text in *startRange* to define the beginning of the area, and wk end text in *endRange* to define the end of the area. Keep in mind that a 4D Write Pro document not only contains visible text but also formatting tags that are included in the range.
 
-#### Example 
+## Example 
 
 The following code:
 
@@ -62,6 +62,6 @@ The following code:
  WP SELECT(*;"WParea";wk start text;12)
 ```
 
-#### See also 
+## See also 
 
 [WP Text range](wp-text-range.md)  

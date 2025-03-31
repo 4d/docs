@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->**LISTBOX GET TABLE SOURCE**コマンドを使用して、*object*と *\** 引数で指定したリストボックスに表示されるデータの現在のソースを知ることができます。<!-- END REF-->
 
@@ -31,6 +28,15 @@ displayed_sidebar: docs
 
 リストボックスが配列に関連付けられている場合、*tableNum* には -1が、*name*が渡されていれば空の文字列が返されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1014 |
+| スレッドセーフである | &cross; |
+
+

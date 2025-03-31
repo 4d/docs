@@ -10,7 +10,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 | Sintaxis                                                                                                       | Ejemplo                                                                            | Descripción                                                                                         |
 | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera un conjunto de entidades existente                                                         |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera un conjunto de entidades existente                                                         |
 | [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Crea un nuevo conjunto de entidades a partir de la comparación de conjuntos de entidades existentes |
 
 
@@ -40,10 +40,10 @@ Después de crear un conjunto de entidades, el ID del conjunto de entidades se d
 
 Cree otro conjunto de entidades basado en conjuntos de entidades creados anteriormente
 
-| Parámetros       | Tipo   | Descripción                                                                 |
-| ---------------- | ------ | --------------------------------------------------------------------------- |
-| $operator        | String | Uno de los operadores lógicos para probar con el otro conjunto de entidades |
-| $otherCollection | String | ID del conjunto de entidades                                                |
+| Parámetros       | Tipo | Descripción                                                                 |
+| ---------------- | ---- | --------------------------------------------------------------------------- |
+| $operator        | Text | Uno de los operadores lógicos para probar con el otro conjunto de entidades |
+| $otherCollection | Text | ID del conjunto de entidades                                                |
 
 
 

@@ -14,15 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Window process.Summary-->The Window process command returns the process number that runs the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, 0 (zero) is returned.
 
 If you omit the *window* parameter, Window process returns the process of the current frontmost window.
 
-#### See also 
+## See also 
 
 [Current process](current-process.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 446 |
+| Thread safe | &cross; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT DATA.Summary-->The **EXPORT DATA** command exports data in the *fileName* file.<!-- END REF-->4D can export data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 
 
@@ -38,7 +35,7 @@ The optional parameter *\**, if it is specified, forces the display of the expor
 
 If the export was successful, the **OK** system variable is set to 1.
 
-#### Example 1 
+## Example 1 
 
 This example illustrates the use of the EXPORT DATA command to export data in binary format.
 
@@ -81,7 +78,7 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
  DOM CLOSE XML($ref)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates an empty project and stores the parameters set by the user in the export dialog box there: 
 
@@ -90,13 +87,23 @@ This example creates an empty project and stores the parameters set by the user 
  EXPORT DATA("DocExport.txt";$exportParams;*) //Display of the export dialog box
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks **Cancel** in the standard open file dialog box or in the export dialog box, the OK system variable is equal to 0\. If the export was successful, the OK system variable is equal to 1.
 
-#### See also 
+## See also 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 666 |
+| Thread safe | &cross; |
+| Modifies variables | OK, Document |
+
+

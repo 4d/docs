@@ -14,18 +14,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+## Description 
 
-
-#### Description 
-
-<!--REF #_command_.QR Get drop column.Summary-->The QR Get drop column command returns a value depending on where the drop was performed:
+<!--REF #_command_.QR Get drop column.Summary-->The QR Get drop column command returns a value depending on where the drop was performed<!-- END REF-->:
 
 * if the value is negative, it indicates a column number (i.e., -3 if the the drop was performed on column number 3)
-* if the value is positive, it indicates that the drop was performed on a separator preceding the column (i.e., 3 if the drop was performed after column 2).<!-- END REF--> Keep in mind that the drop does not have to take place before an existing column.
+* if the value is positive, it indicates that the drop was performed on a separator preceding the column (i.e., 3 if the drop was performed after column 2). Keep in mind that the drop does not have to take place before an existing column.
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 747 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

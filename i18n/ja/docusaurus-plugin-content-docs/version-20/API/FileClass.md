@@ -88,7 +88,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 **File ( path { ; pathType } { ; \* })**
 
-*path* には、ファイルパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA/myfile.txt") を渡すことができます。
+*path* には、ファイルパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#filesystem-pathnames) (例: "/DATA/myfile.txt") を渡すことができます。
 
 > `File` コマンドでは絶対パス名のみがサポートされます。
 
@@ -581,7 +581,7 @@ $fhandle:=$f.open("read")
 ```
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
+
 ## .setAppInfo()
 
 <details><summary>履歴</summary>
@@ -723,7 +723,7 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setText().Params -->
 | 引数          | 型       |    | 説明                                  |
 | ----------- | ------- | -- | ----------------------------------- |
-| text        | Text    | -> | ファイルに保存するテキスト                       |
+| テキスト        | Text    | -> | ファイルに保存するテキスト                       |
 | charSetName | Text    | -> | 文字セットの名前                            |
 | charSetNum  | Integer | -> | 文字セットの番号                            |
 | breakMode   | Integer | -> | 改行の処理モード|<!-- END REF -->

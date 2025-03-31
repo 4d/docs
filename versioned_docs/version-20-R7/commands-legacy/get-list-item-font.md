@@ -5,21 +5,18 @@ slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* ; itemRef | * ) : Text<!-- END REF-->
+<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* ; *itemRef* ) : Text<br/>**Get list item font** ( * ; *list* ; * ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | Function result | Text | &#8592; | Font name |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get list item font.Summary-->The **Get list item font** command returns the current character font name of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -31,6 +28,15 @@ You can pass a reference number in *itemRef*. If this number does not correspond
 
 Lastly, you can pass \* in *itemRef*: in this case, the command will get the font of the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
-#### See also 
+## See also 
 
 [SET LIST ITEM FONT](set-list-item-font.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 954 |
+| Thread safe | &cross; |
+
+

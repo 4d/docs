@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA ZOOM IN.Summary-->O comando WA ZOOM IN aumenta o tamanho do texto mostrado na área web designada pelos parâmetros \* e *objeto*.<!-- END REF--> 
 
@@ -25,6 +22,15 @@ Em Mac OS, o alcance deste comando é a sessão 4D: a configuração realizada p
   
 Em Windows, o alcance deste comando é global: a configuração se conserva depois do fechamento da aplicação 4D.
 
-#### Ver também 
+## Ver também 
 
 [WA ZOOM OUT](wa-zoom-out.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1039 |
+| Thread-seguro | &cross; |
+
+

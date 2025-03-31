@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Summary-->The **OBJECT SET KEYBOARD LAYOUT** command sets or dynamically modifies the keyboard layout associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
@@ -26,6 +23,15 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 In *languageCode*, you pass a string indicating the code of the language to use, based on RFC3066, ISO639 and ISO3166\. For more information, refer to the description of the [SET DATABASE LOCALIZATION](set-database-localization.md) command. 
 
-#### See also 
+## See also 
 
 [OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1179 |
+| Thread safe | &cross; |
+
+

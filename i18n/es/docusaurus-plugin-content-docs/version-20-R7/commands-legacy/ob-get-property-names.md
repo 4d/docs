@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->El comando **OB GET PROPERTY NAMES** devuelve, en *arrProp*, los nombres de las propiedades contenidas en el objeto de lenguaje designados por el parámetro *objeto* .<!-- END REF-->  
-  
-*objeto* debe haber sido definido utilizando el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.  
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->El comando **OB GET PROPERTY NAMES** devuelve, en *arrProp*, los nombres de las propiedades contenidas en el objeto de lenguaje designados por el parámetro *objeto* .<!-- END REF-->debe haber sido definido utilizando el comando *C\_OBJECT* o designar un campo objeto 4D.  
   
 Pase un array texto en el parámetro *arrProp*. Si el array no existe, el comando lo crea y lo redimensiona de forma automática.  
   
@@ -37,7 +35,7 @@ Opcionalmente, también puede pasar un array entero largo en *arrTipos*. Para ca
 
 **Nota:** para los atributos array, el comando devuelve Is collection. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea probar que un objeto no está vacío:
 
@@ -54,7 +52,7 @@ Desea probar que un objeto no está vacío:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Utilizando un elemento de array de objetos:
 
@@ -94,7 +92,16 @@ Utilizando un elemento de array de objetos:
   // $arrTypes{2}=255
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1232 |
+| Hilo seguro | &check; |
+
+

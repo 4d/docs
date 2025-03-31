@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Lowercase.Summary-->**Lowercase** retourne une chaîne de caractères égale à *laChaîne* dont tous les caractères alphabétiques ont été convertis en minuscules.<!-- END REF-->
 
 Le paramètre facultatif *\**, s'il est passé, indique que les éventuels caractères accentués présents dans *laChaîne* doivent être retournés sous forme de minuscules accentuées. Par défaut, lorsque ce paramètre est omis, les caractères accentués “perdent” leur accent une fois la conversion effectuée. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est une méthode projet qui met en majuscule (capitale) le premier caractère de la chaîne ou du texte qui lui est passé(e). Par exemple, Nom := Capitale ("jean") donnerait à Nom la valeur "Jean" :
 
@@ -36,7 +36,7 @@ L'exemple suivant est une méthode projet qui met en majuscule (capitale) le pre
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple compare les résultats obtenus suivant que le paramètre *\** a été passé ou non :
 
@@ -45,6 +45,15 @@ Cet exemple compare les résultats obtenus suivant que le paramètre *\** a ét�
  $lachaine:=Lowercase("DÉJÀ VU";*) // $lachaine vaut « déjà vu »
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Uppercase](uppercase.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 14 |
+| Thread safe | &check; |
+
+

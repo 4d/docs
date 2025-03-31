@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->The **QR SET REPORT KIND** command sets the report *type* for the area whose reference was passed in *area*.<!-- END REF-->
 
@@ -37,6 +34,16 @@ If you set a new type for an existing current report, it removes the previous se
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *type* value, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR Get report kind](qr-get-report-kind.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 738 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

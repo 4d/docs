@@ -3,7 +3,7 @@ id: overview
 title: Funções de classe e comandos
 ---
 
-This section describes the built-in 4D class API as well as the associated constructor commands. Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados.
+Esta seção descreve a API das classes 4D incorporada bem como os comandos de construtor associados. As funções e propriedades das classes 4D estão disponíveis através de objetos de instância de classe.
 
 - devem ser chamadas em instâncias com o operador `()`. Por exemplo, `collection.sort()`.
 - as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
@@ -19,12 +19,12 @@ As seguintes convenções são utilizadas na sintaxe da função:
 
 ### Veja também
 
-[Classes in the 4D Language](../Concepts/classes.md).
+[Classes na linguagem 4D](../Concepts/classes.md).
 
 
 ## Comandos clássicos
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. Estes comandos são descritos no manual *Linguagem 4D* em [doc.4d.com](https://doc.4d.com). A título de referência, são enumerados a seguir:
+Além das funções da classe integradas, a linguagem 4D contém centenas de comandos "clássicos". Estes comandos são descritos no manual *Linguagem 4D* em [doc.4d.com](https://doc.4d.com). A título de referência, são enumerados a seguir:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 

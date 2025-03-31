@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP INSERT DOCUMENT.Summary-->The **WP INSERT DOCUMENT** command inserts the *wpDoc* document in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters.<!-- END REF-->
 
@@ -53,7 +53,7 @@ You can combine one of the previous constants with the following insertion optio
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-#### Example 1 
+## Example 1 
 
 You want to replace the contents of a document by the text selected in another one:  
 
@@ -63,7 +63,7 @@ You want to replace the contents of a document by the text selected in another o
  WP INSERT DOCUMENT(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
 ```
 
-#### Example 2 
+## Example 2 
 
 You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.   
 
@@ -80,7 +80,7 @@ You have defined a template document with different preformatted parts, each of 
  End if
 ```
 
-#### See also 
+## See also 
 
   
 [WP INSERT BREAK](wp-insert-break.md)  

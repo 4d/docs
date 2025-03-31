@@ -25,7 +25,7 @@ Webアプリケーションの公開は、いつでも開始または停止す�
 * **認証**: ビルトインの設定および、フォールバックデータベースメソッド (Webサーバー用の [`On Web Authentication`](authentication.md#on-web-authentication)、RESTサーバー用の [`On REST Authentication`](../REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)) に基づく柔軟でカスタマイズ可能な [認証機能](authentication.md)
 
 * **公開するコンテンツの管理**: 明示的に公開した要素のみが、Web や RESTリクエストで直接利用できます。 次のものについて、宣言する必要があります:
-  * HTTPリクエストで公開する [プロジェクトメソッド](allowProject.md)
+  * [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
   * RESTリクエストで公開する [ORDAのデータモデルクラス関数](../ORDA/ordaClasses.md#公開vs非公開関数)
   * RESTリクエストに公開しない [テーブルやフィールド](REST/configuration.md#テーブルやフィールドの公開) テーブルやフィールド
 

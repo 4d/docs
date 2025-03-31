@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->O comando LISTBOX GET CELL COORDINATES devolve nas variáveis ou campos *esq*, *sup*, *dir* e *inf* as coordenadas (em pontos) da célula designada pelos parâmetros *coluna* e *linha*, no list box definido por *\** e *objeto*.<!-- END REF-->
 
@@ -36,7 +33,7 @@ Por coerência com o comando *OBJECT GET COORDINATES*, a origem é a esquina sup
 
 Para mais informação, consulte a descrição do comando *OBJECT GET COORDINATES*.
 
-#### Exemplo 
+## Exemplo 
 
 Você quer desenhar um retângulo vermelho arredor da célula selecionada de um listbox:
 
@@ -51,7 +48,16 @@ Você quer desenhar um retângulo vermelho arredor da célula selecionada de um 
 
 ![](../assets/en/commands/pict1741070.en.png)
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1330 |
+| Thread-seguro | &cross; |
+
+

@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.On Mobile App Authentication database method.Summary-->**Documentação movida**
 
 A documentação desse método foi atualizada e movida para [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication).
 
-#### Ver também 
+## Ver também 
 
   
 [MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  

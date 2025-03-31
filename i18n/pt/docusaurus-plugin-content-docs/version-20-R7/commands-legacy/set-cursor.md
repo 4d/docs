@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET CURSOR.Summary-->O comando SET CURSOR muda o cursor do mouse para o cursos do sistema cujo número de ID você passar em *cursor*.<!-- END REF-->
 
-O comando deve ser chamado no contexto de On Mouse Move [Form event code](form-event-code.md). 
+O comando deve ser chamado no contexto de On Mouse Move [Form event code](../commands/form-event-code.md). 
 
 Para restaurar o cursor padrão do mouse, chame o comando sem parâmetros.
 
@@ -29,7 +26,7 @@ Aqui estão os cursores que podem ser passados no parameter 1 *cursor* ![](../as
 3![](../assets/en/commands/pict14681.en.png)  
 4![](../assets/en/commands/pict14682.en.png)
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser que o cursor seja exibido ![](../assets/en/commands/pict2478692.en.png) quando o mouse mover sobre uma área de variável no formulário. Pode escrever no método de objeto da variável:
 
@@ -38,3 +35,13 @@ Se quiser que o cursor seja exibido ![](../assets/en/commands/pict2478692.en.png
     SET CURSOR(9019)
  End if
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 469 |
+| Thread-seguro | &cross; |
+
+

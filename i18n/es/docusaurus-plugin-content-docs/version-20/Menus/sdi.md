@@ -8,7 +8,7 @@ En Windows, los desarrolladores 4D pueden probar y configurar sus aplicaciones f
 
 :::info
 
-El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las aplicaciones de Windows y las opciones relacionadas se ignoran en macOS.
+The concept of sdi.mdI does not exist on macOS. Esta funcionalidad sólo afecta a las aplicaciones de Windows y las opciones relacionadas se ignoran en macOS.
 
 :::
 
@@ -55,7 +55,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 - Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en los [Parámetros](../settings/interface.md#display-windows), la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Tenga en cuenta también que al cerrar la ventana de la pantalla de inicio se saldrá de la aplicación, al igual que en el modo MDI.
 - Si no se ha seleccionado la opción de pantalla de bienvenida, los menús se mostrarán sólo en las ventanas abiertas, según las elecciones del desarrollador.
 
-### Debugger
+### Depurador
 
 Cuando se muestra en modo SDI, la [ventana del depurador](../Debugging/debugger.md) no contiene [botones de edición](../Debugging/debugger.md#tool-bar-buttons), ya que para cambiar al entorno de desarrollo es necesario abortar la ejecución y reiniciar la aplicación en modo MDI.
 

@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->**FORM GET NAMES**コマンドはアプリケーション中のフォーム名を*arrNames*配列に返します。<!-- END REF--> 
 
@@ -37,7 +34,7 @@ displayed_sidebar: docs
 
 **注:** ゴミ箱内のフォームは返されません。 
 
-#### 例題 
+## 例題 
 
 典型的な使用例:
 
@@ -60,7 +57,16 @@ displayed_sidebar: docs
  FORM GET NAMES(tablePtr->;arr_Names;*)
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
 *フォーム*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1167 |
+| スレッドセーフである | &cross; |
+
+

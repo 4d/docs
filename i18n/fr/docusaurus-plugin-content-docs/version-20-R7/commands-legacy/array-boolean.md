@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.ARRAY BOOLEAN.Summary-->La commande **ARRAY BOOLEAN** crée et/ou redimensionne un tableau d'éléments de type [Booléen](# "Peut être VRAI ou FAUX") en mémoire.<!-- END REF-->
-
-* Le paramètre *nomTableau* est le nom du tableau.
+<!--REF #_command_.ARRAY BOOLEAN.Summary-->La commande **ARRAY BOOLEAN** crée et/ou redimensionne un tableau d'éléments de type [Booléen](# "Peut être VRAI ou FAUX") en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
 * Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
@@ -30,7 +28,7 @@ Lorsque vous appliquez la commande **ARRAY BOOLEAN** à un tableau existant :
 
 **Astuce :** Dans certaines circonstances, l'utilisation d'un tableau d'Entiers dans lequel chaque élément différent de zéro signifie "vrai" et chaque élément égal à zéro signifie "faux" est une alternative à l'utilisation d'un tableau de Booléens.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Booléen](# "Peut être VRAI ou FAUX") :
 
@@ -38,7 +36,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Booléen]
  ARRAY BOOLEAN(tabBooléens;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type Booléen : 
 
@@ -46,7 +44,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY BOOLEAN($tabBooléens;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess de 50 éléments de type Booléen et affecte à chaque élément pair la valeur Faux :
 
@@ -57,6 +55,15 @@ Cet exemple crée un tableau interprocess de 50 éléments de type Booléen et a
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY INTEGER](array-integer.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 223 |
+| Thread safe | &check; |
+
+

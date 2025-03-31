@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->SET DOCUMENT PROPERTIESコマンドは、引数*document* に渡した名前またはパス名を持つドキュメントについての情報を変更します。<!-- END REF-->
 
@@ -32,8 +32,16 @@ displayed_sidebar: docs
 
 作成および最新の更新の日付および時間は、ドキュメントを作成、またはこれにアクセスするたびに、システムのファイルマネージャによって管理されます。このコマンドを使用すると、特別な用途のためにこれらのプロパティを変更することができます。 [GET DOCUMENT PROPERTIES](get-document-properties.md "GET DOCUMENT PROPERTIES")コマンドの例を参照してください。
 
-#### 参照 
+## 参照 
 
-*\_o\_SET DOCUMENT CREATOR*  
-*\_o\_SET DOCUMENT TYPE*  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 478 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

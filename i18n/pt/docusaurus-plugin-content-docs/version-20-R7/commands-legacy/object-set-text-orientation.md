@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->O comando **OBJECT SET TEXT ORIENTATION** modifica a orientação do conteúdo do objeto ou dos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->
 
@@ -39,7 +36,7 @@ No parâmetro *orientacao*, passe a orientação absoluta que deseja atribuir ao
   
 **Nota**: só são admitidos os ângulos correspondentes a estes valores. Se passar qualquer outro valor, será ignorado.
 
-#### Exemplo 
+## Exemplo 
 
 Deseja aplicar uma orientação de 270° a uma variável em seu formulário:
 
@@ -49,6 +46,15 @@ Deseja aplicar uma orientação de 270° a uma variável em seu formulário:
  OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1284 |
+| Thread-seguro | &cross; |
+
+

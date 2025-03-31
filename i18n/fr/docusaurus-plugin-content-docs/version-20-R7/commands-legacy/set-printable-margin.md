@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->La commande **SET PRINTABLE MARGIN** permet de fixer les valeurs des différentes marges d’impression lors de l’utilisation des commandes [Print form](print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->
 
@@ -35,7 +32,7 @@ Par défaut, 4D base ses impressions sur les marges imprimante. Une fois la comm
 
 **Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant permet d’obtenir la taille de la marge morte :
 
@@ -45,7 +42,7 @@ L’exemple suivant permet d’obtenir la taille de la marge morte :
   //$g, $h, $d et $b correspondent aux marges mortes de la feuille
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant permet d’obtenir la taille du papier :
 
@@ -55,8 +52,17 @@ L’exemple suivant permet d’obtenir la taille du papier :
   //Pour du A4 : $hauteur=842 ; $largeur=595 pixels
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](print-form.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 710 |
+| Thread safe | &cross; |
+
+

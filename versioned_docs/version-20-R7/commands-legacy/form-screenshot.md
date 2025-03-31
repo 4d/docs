@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->The FORM SCREENSHOT command returns a form as a picture.<!-- END REF--> This command accepts two different syntaxes: depending on the syntax used, you get either a picture of an executed form, or a picture of the form in the Form editor.
 
@@ -36,6 +33,15 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 * Web areas are not rendered in the returned screenshot.
 * Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](current-form-table.md)\-> or [Table](table.md)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "*Direct use of commands returning pointers*".
 
-#### See also 
+## See also 
 
 [FORM LOAD](form-load.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 940 |
+| Thread safe | &cross; |
+
+

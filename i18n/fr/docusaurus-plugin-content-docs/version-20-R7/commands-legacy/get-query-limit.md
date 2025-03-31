@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get query limit.Summary-->La commande **Get query limit** retourne la limite du nombre d’enregistrements qu’une recherche pourra trouver dans le process courant.<!-- END REF--> 
 
@@ -21,6 +21,15 @@ Vous fixez cette limite à l’aide de la commande [SET QUERY LIMIT](set-query-l
 
 Par défaut, si aucune limite n’a été définie, la commande retourne 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET QUERY LIMIT](set-query-limit.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1156 |
+| Thread safe | &check; |
+
+

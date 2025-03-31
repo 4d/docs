@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.User in group.Summary-->La fonction **User in group** retourne Vrai si *nomUtilisateur* appartient au *groupe*.<!-- END REF-->
 
 **Note :** Cette commande attend comme paramètre *nomUtilisateur* un nom de compte utilisateur (elle ne prend pas en charge les alias d'utilisateurs). Si vous avez défini des alias d'utilisateurs dans votre application, passez le paramètre 4D user account à la commande [Current user](current-user.md) pour vous assurer qu'elle retourne un nom de compte utilisateur (voir exemple).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant recherche des factures. Si l'utilisateur courant est dans le groupe Administration, il pourra accéder aux formulaires qui affichent des informations confidentielles. Sinon, des formulaires standard sont affichés :
 
@@ -42,6 +39,15 @@ L'exemple suivant recherche des factures. Si l'utilisateur courant est dans le g
  MODIFY SELECTION([Factures];*)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current user](current-user.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 338 |
+| Thread safe | &cross; |
+
+

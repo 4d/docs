@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu bar reference.Summary-->The **Get menu bar reference** command returns the ID of the current menu bar or the menu bar of a specific process.<!-- END REF-->
 
@@ -35,10 +32,19 @@ If the menu bar was created by the [Create menu](create-menu.md) command, this I
 
 The *process* parameter can be used to designate the process where you want to get the current menu bar ID. If you omit this parameter, the command returns the menu bar ID of the current process.
 
-#### Example 
+## Example 
 
 Refer to the example of the [GET MENU ITEMS](get-menu-items.md) command.
 
-#### See also 
+## See also 
 
 [SET MENU BAR](set-menu-bar.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 979 |
+| Thread safe | &cross; |
+
+

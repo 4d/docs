@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->La commande **GET LIST ITEM PARAMETER** permet de connaître la *valeur* courante du paramètre *sélecteur* pour l’élément *réfElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF--> 
 
@@ -33,7 +30,16 @@ Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s�
 
 Vous pouvez passer dans *sélecteur* la constante Additional text ou Associated standard action (placées dans le thème “*Listes hiérarchiques*”) ou toute valeur personnalisée. Pour plus d’informations sur les paramètres *sélecteur* et *valeur*, reportez-vous à la description de la commande [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 *Listes hiérarchiques*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 985 |
+| Thread safe | &cross; |
+
+

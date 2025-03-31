@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->El comando LISTBOX SET GRID permite mostrar u ocultar las líneas horizontales y/o verticales que componen la matriz del objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -27,8 +24,17 @@ Si pasa el parámetro opcional \*, indica que el parámetro *objeto* es un nombr
 
 Pase en los parámetros *horizontal* y *vertical* los valores booleanos que indican si la líneas de la matriz deben mostrarse ([True](true.md "True")) u ocultarse ([False](false.md "False")). La matriz se muestra por defecto. 
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 841 |
+| Hilo seguro | &cross; |
+
+

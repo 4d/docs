@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->The **FORM GET NAMES** command fills the *arrNames* array with the names of forms in the application.<!-- END REF--> 
 
@@ -36,7 +33,7 @@ If the command is executed from a component, it returns by default the names of 
 
 **Note:** Forms placed in the trash are not listed. 
 
-#### Example 
+## Example 
 
 Examples of typical use:
 
@@ -62,7 +59,16 @@ Examples of typical use:
  FORM GET NAMES(tablePtr->;arr_Names;*)
 ```
 
-#### See also 
+## See also 
 
 *Forms*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1167 |
+| Thread safe | &cross; |
+
+

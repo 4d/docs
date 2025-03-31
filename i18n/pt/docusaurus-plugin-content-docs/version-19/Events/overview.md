@@ -116,5 +116,5 @@ A tabela seguinte resume a forma como os métodos objeto e formulário são cham
 
 Lembre-se sempre de que, para qualquer evento, o método de um formulário ou de um objeto é chamado se a propriedade de evento correspondente estiver selecionada para o formulário ou para os objetos. A vantagem de desativar os eventos no ambiente Design (usando a Lista de propriedades do editor de formulários) é que você pode reduzir o número de chamadas para métodos e, portanto, otimizar significativamente a velocidade de execução dos formulários.
 
-> AVISO: Os eventos [On Load](onLoad.md) e [On Unload](onUnload.md) são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. If the events are enabled for objects only, they will not occur; these two events must also be enabled at the form level.
+> AVISO: Os eventos [On Load](onLoad.md) e [On Unload](onUnload.md) são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
 

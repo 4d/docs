@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.DOM Create XML Ref.Summary-->DOM Create XML Ref コマンドは空のXMLツリーをメモリに作成し、その参照を返します。<!-- END REF-->  
-  
-*root* 引数にはXMLツリーのルート要素名を渡します。
+<!--REF #_command_.DOM Create XML Ref.Summary-->DOM Create XML Ref コマンドは空のXMLツリーをメモリに作成し、その参照を返します。<!-- END REF-->引数にはXMLツリーのルート要素名を渡します。
 
 オプションの*nameSpace* 引数にはツリーの名前空間値の定義を渡します (例えば“http://www.4d.com”)。   
 *root*引数に名前空間名とコロン、そしてルート要素名を結合した文字列を渡せることができます (例えば“MyNameSpace:MyRoot”)。この場合、名前空間を指定する*nameSpace*引数は必須となります。
@@ -32,7 +30,7 @@ displayed_sidebar: docs
 
 **重要**: XMLツリーへの作業が終了したら、メモリを解放するために、[DOM CLOSE XML](dom-close-xml.md "DOM CLOSE XML") コマンドを呼び出してください。
 
-#### 例題 1 
+## 例題 1 
 
 ひとつのXMLツリーを作成します:   
 
@@ -48,7 +46,7 @@ displayed_sidebar: docs
 <MyRoot/>
 ```
 
-#### 例題 2 
+## 例題 2 
 
  １つの名前空間をもつXMLツリーを作成します:   
   
@@ -65,7 +63,7 @@ displayed_sidebar: docs
 <MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/namespace"/>
 ```
 
-#### 例題 3 
+## 例題 3 
 
 複数の名前空間を持つXMLツリーを作成します:   
   
@@ -89,11 +87,21 @@ NSName1="http://www.4D.com/Prod/namespace"
 NSName2="http://www.4D.com/Mkt/namespace"/>
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 861 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK、error |
+
+

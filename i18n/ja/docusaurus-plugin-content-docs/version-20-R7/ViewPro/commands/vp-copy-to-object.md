@@ -23,7 +23,7 @@ title: VP Copy to object
 | options  | Object | ->                          | 追加のオプション                       |                  |
 | 戻り値      | Object | <- | 返されるオブジェクト。 コピーされたデータが格納されています | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Copy to object` コマンドは、<!-- REF #_method_.VP Copy to object.Summary -->*rangeObj* のコンテンツ、スタイル、フォーミュラをオブジェクトにコピーします<!-- END REF -->。
 
@@ -34,13 +34,13 @@ title: VP Copy to object
 | プロパティ       | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | copy        | Boolean | コマンド実行後もコピーされた値、書式、数式が保持するには *true* (デフォルト)。 削除するには *false*。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| copyOptions | Longint | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p> |
+| copyOptions | Integer | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p> |
 
 [ワークブックオプション](vp-set-workbook-options.md) で定義されている貼り付けオプションが考慮されます。
 
 このコマンドは、コピーされたデータを含むオブジェクトを返します。
 
-#### 例題
+## 例題
 
 あるレンジのコンテンツ、値、フォーマット、フォーミュラをオブジェクトに格納し、それを別のレンジに貼り付けます:
 
@@ -59,9 +59,10 @@ $targetRange:=VP Cell("ViewProArea"; 4; 0)
 VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```
 
-#### 参照
+## 参照
 
 [VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>
 [VP Get workbook options](vp-get-workbook-options.md)<br/>
 [VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)
+

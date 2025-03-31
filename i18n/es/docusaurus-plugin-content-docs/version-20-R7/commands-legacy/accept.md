@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ACCEPT.Summary-->El comando **ACCEPT** se utiliza en métodos de objeto o de formulario (o en subrutinas) para:
 
@@ -31,10 +28,20 @@ También se usa a menudo en el método de caja cierre opcional para el comando [
 
 **ACCEPT** no puede encadenarse. En respuesta a un evento, la ejecución de dos comandos **ACCEPT** en una fila desde dentro de un método tendría el mismo efecto que la ejecución de uno.
 
-##### Modo sin interfaz 
+### Modo sin interfaz 
 
 El comando **ACCEPT** se permite en modo sin interfaz, en el contexto de las áreas fuera de pantalla creadas por *VP Run offscreen area* o [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Ver también 
+## Ver también 
 
 [CANCEL](cancel.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 269 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get row height.Summary-->La commande **LISTBOX Get row height** retourne la hauteur de la *ligne* spécifiée dans l'objet List box désigné en utilisant les paramètres *objet* et éventuellement *\**.<!-- END REF--> La hauteur des lignes peut être définie globalement via la Liste des propriétés ou la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md), ou individuellement à l'aide de la commande [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md).
 
@@ -32,8 +29,17 @@ La hauteur de ligne retournée est exprimée:
 * dans l'unité courante définie globalement pour la List box, soit dans la Liste des propriétés, soit par un appel antérieur à la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) lorsque la hauteur des lignes est fixe,
 * en pixels lorsque la hauteur des lignes est variable, i.e. définie en automatique (voir *Hauteur de ligne automatique*) ou gérée via un tableau.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1408 |
+| Thread safe | &cross; |
+
+

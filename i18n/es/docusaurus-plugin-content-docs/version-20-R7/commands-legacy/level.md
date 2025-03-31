@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Level.Summary-->Level se utiliza para determinar el nivel de ruptura o del encabezado actual.<!-- END REF--> Devuelve el nivel de ruptura durante los eventos On Header y On Printing Break.
 
 El nivel 0 es el último nivel a imprimir y es apropiado para la impresión de un total general. Level devuelve 1 cuando 4D imprime una ruptura en el primer campo de ordenación, 2 cuando 4D imprime una ruptura en el segundo campo ordenado, y así sucesivamente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo es una plantilla para un método de formulario. Muestra cada evento posible mientras un informe utiliza un formulario como formulario de salida. Level se llama cuando un encabezado o una ruptura se están imprimiendo:
 
@@ -63,9 +60,18 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 101 |
+| Hilo seguro | &cross; |
+
+

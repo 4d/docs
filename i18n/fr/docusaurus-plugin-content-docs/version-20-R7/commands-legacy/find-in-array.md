@@ -16,19 +16,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->
+<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
 
-**Find in array** peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
-
-*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](https://developer.4d.com/docs/fr/Concepts/operators/#op%C3%A9rateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
+*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](../Concepts/operators.md#opérateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
 
 **Note :** Avec les tableaux d'objets, vous ne pouvez utiliser que des références d'objets dans le paramètre valeur. 
 
 Si *départ* est spécifié, **Find in array** commence la recherche à l'élément spécifié par *départ*. Si *départ* n'est pas spécifié, **Find in array** commence la recherche à l'élément 1.
 
-#### Exemple 1 
+## Exemple 1 
 
 La méthode projet suivante efface tous les éléments vides du tableau alpha ou texte passé en paramètre : 
 
@@ -57,7 +55,7 @@ Une fois que cette méthode projet est implémentée dans votre base, vous pouve
  NETTOYER TABLEAU(->TabValeurs)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La méthode projet suivante sélectionne le premier élément d'un tableau dont le pointeur passé comme premier paramètre correspond à la valeur de la variable ou du champ dont le pointeur est passé en second paramètre :
 
@@ -84,7 +82,7 @@ Une fois que cette méthode projet est implémentée dans la base, vous pouvez �
 
 **Note :** Cet exemple utilise l'**élément sélectionné** du tableau. Gardez à l'esprit que l'élément sélectionné ne sera pas significatif si le tableau comporte plus de 32767 éléments (cf. section *Tableaux et objets de formulaire*). Il est dans ce cas nécessaire d'utiliser une variable entier long pour stocker le résultat de **Find in array**.
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous voulez trouver une référence d'objet :
 
@@ -101,10 +99,19 @@ Vous voulez trouver une référence d'objet :
  $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 230 |
+| Thread safe | &check; |
+
+

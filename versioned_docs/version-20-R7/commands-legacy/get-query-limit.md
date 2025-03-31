@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get query limit.Summary-->The **Get query limit** command returns the limit for the number of records that a query may find in the current process.<!-- END REF-->
 
@@ -21,6 +21,15 @@ You set this limit using the [SET QUERY LIMIT](set-query-limit.md) command.
 
 By default, if no limit is set, the command returns 0.
 
-#### See also 
+## See also 
 
 [SET QUERY LIMIT](set-query-limit.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1156 |
+| Thread safe | &check; |
+
+

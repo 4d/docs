@@ -8,22 +8,22 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Paramètres | Type                                                                |   | Description                                            |
-| ---------- | ------------------------------------------------------------------- | - | ------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | → | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                                          | ← | New shared collection                                  |
+| Paramètres | Type                                                  |                             | Description                                            |
+| ---------- | ----------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                            | &#8592; | New shared collection                                  |
 
 <!-- END REF-->
 
-#### Description
+## Description
 
-La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou préremplie<!-- END REF --> et retourne sa référence. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou préremplie<!-- END REF --> et retourne sa référence. Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](../Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](../API/CollectionClass.md#push) or [`map()`](../API/CollectionClass.md#map) because they automatically trigger an internal *Use...End use*). La lecture d'un élément sans structure *Use...End use* est cependant possible.
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](../Concepts/shared.md#useend-use), sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](../API/CollectionClass.md#push) ou [`map()`](../API/CollectionClass.md#map) car elles utilisent automatiquement une structure interne *Use...End use*). La lecture d'un élément sans structure *Use...End use* est cependant possible.
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](../Concepts/shared.md) page.
+Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](../Concepts/shared.md).
 
 :::
 
@@ -31,7 +31,7 @@ Si vous ne passez aucun paramètre, `New shared collection` crée une collection
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
 Optionnellement, vous pouvez préremplir la nouvelle collection partagée en passant une ou plusieurs *value*(s) comme paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
@@ -54,7 +54,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 :::
 
-#### Exemple
+## Exemple
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -63,8 +63,17 @@ Contrairement aux collections standard (non partagées), les collections partag�
  End use
 ```
 
-#### Voir également
+## Voir également
 
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1527                        |
+| Thread safe        | &check; |
+
+

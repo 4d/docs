@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Is in print preview.Summary-->La commande **Is in print preview** retourne Vrai si l’option **Aperçu avant impression** est cochée dans la boîte de dialogue d’impression, et Faux sinon.<!-- END REF--> Ce paramétrage est local au process. 
 
 A la différence de la commande [Get print preview](get-print-preview.md), **Is in print preview** retourne la valeur finale de l’option, après validation de la boîte de dialogue par l’utilisateur. Cette commande vous permet donc de déterminer avec certitude si l’impression a effectivement lieu en mode "aperçu". 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple permet de prendre en compte tous les types d’impressions : 
 
@@ -43,7 +40,16 @@ Cet exemple permet de prendre en compte tous les types d’impressions :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1198 |
+| Thread safe | &cross; |
+
+

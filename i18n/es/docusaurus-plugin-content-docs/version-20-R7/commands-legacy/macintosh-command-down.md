@@ -13,17 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.Macintosh command down.Summary-->Macintosh command down devuelve TRUE si la tecla Comando Macintosh está presionada.<!-- END REF--> 
+<!--REF #_command_.Macintosh command down.Summary-->Macintosh command down devuelve TRUE si la tecla Comando Macintosh está presionada.<!-- END REF-->cuando se llama bajo Windows, Macintosh command down devuelve TRUE si la tecla Ctrl Windows está presionada.
 
-**Nota:** cuando se llama bajo Windows, Macintosh command down devuelve TRUE si la tecla Ctrl Windows está presionada.
-
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 
-#### Ver también 
+## Ver también 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -31,3 +29,12 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 [Shift down](shift-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 546 |
+| Hilo seguro | &check; |
+
+

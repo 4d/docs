@@ -20,14 +20,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+## Descrição 
 
+<!--REF #_command_.Open window.Summary-->Open window abre uma nova janela cujas dimensões são definidas pelos quatro primeiros parâmetros<!-- END REF-->:  
 
-#### Descrição 
-
-<!--REF #_command_.Open window.Summary-->Open window abre uma nova janela cujas dimensões são definidas pelos quatro primeiros parâmetros:  
-
-* *esquerda* é a distância em pixels desde o lado esquerdo da janela da aplicação e o lado interior esquerdo da janela.<!-- END REF-->
+* *esquerda* é a distância em pixels desde o lado esquerdo da janela da aplicação e o lado interior esquerdo da janela.
 * *superior* é a distância em píxels entre a altura da janela da aplicação e a borda superior do interior da janela.
 * *direita* é a distância em píxels entre o lado esquerdo da janela da aplicação e o lado interior direito da janela.
 * *inferior* é a distância em píxels desde a parte superior da janela da aplicação e borda interior inferior da janela.
@@ -44,7 +41,7 @@ Se passar uma string vazia ("") em *titulo*, lhe indica a 4D que utilize os valo
 **Importante**: o título como padrão do formulário se aplicará à janela apenas se chama previamente ao comando [FORM SET INPUT](form-set-input.md) para o formulário a mostrar e lhe passa o parâmetro opcional \* a [FORM SET INPUT](form-set-input.md).  
 * O parâmetro *caixaFechar* é opcional e designa o método para fechar a janela. Se for especificado este parâmetro, a caixa do menu Control (Windows) ou a caixa Fechar (Macintosh) se adiciona à janela. Quando o usuário der um clique duplo na caixa de menu Control (Windows) ou clique na Caixa fechar (Macintosh), se chama ao método passado em *caixaFechar*.
 
-**Nota**: também pode administrar o fechamento da janela desde o método do formulário mostrado na janela quando ocorrer um evento On Close Box. Para maior informação, consulte o comando [Form event code](form-event-code.md)  
+**Nota**: também pode administrar o fechamento da janela desde o método do formulário mostrado na janela quando ocorrer um evento On Close Box. Para maior informação, consulte o comando [Form event code](../commands/form-event-code.md)  
   
  Se for aberta mais de uma janela para um processo, a última janela aberta é a janela ativa (do primeiro plano) para ese processo. Apenas pode ser modificada a informação dentro da janela ativa. Todas as demais janelas podem ser visualizadas. Quando o usuário digitar, a janela ativa sempre passará ao primeiro plano, se já não estiver lá.
 
@@ -53,7 +50,7 @@ Os formulários são mostrados ao interior de uma janela aberta. O texto passado
   
 Open window devolve uma referência de janela de tipo WinRef, utilizável pelos comandos de gestão de janelas (ver seção "*WinRef*"). 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O método de projeto abaixo abre uma janela centrada na janela principal (Windows) ou na tela principal (Macintosh). Note que pode aceitar dois, três, ou quatro parâmetros: 
 
@@ -88,7 +85,7 @@ Quando tiver escrito o método de projeto, pode utilizá-lo desta forma:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo abre uma janela flutuante que tenha uma caixa de menu Control (Windows) ou uma caixa de fechar (Macintosh). A janela é aberta na esquina superior direita da janela da aplicação. 
 
@@ -103,7 +100,7 @@ O método CloseColorPalette chama ao comando [CANCEL](cancel.md):
  CANCEL
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo abre uma janela cujo tamanho e título provém das propriedades do formulário mostrado na janela:   
   
@@ -123,9 +120,9 @@ O exemplo abaixo abre uma janela cujo tamanho e título provém das propriedades
 
 //``
 
-#### Exemplo 4 
+## Exemplo 4 
 
-Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em Mac OS X: 
+Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em macOS: 
 
 ```4d
  $minhaJanela:=Open window(10;10;400;400;Sheet window)
@@ -134,8 +131,17 @@ Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em Mac OS X:
   //O evento On Load é gerado e depois a janela é exibida; "descende" de debaixo da barra de título
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLOSE WINDOW](close-window.md)  
 *Criar janela*  
 [Open form window](open-form-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 153 |
+| Thread-seguro | &cross; |
+
+

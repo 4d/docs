@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->O novo comando **METHOD SET ATTRIBUTES** permite que você defina os valores dos *atributos* para os métodos especificados no parâmetro *caminho*.<!-- END REF-->
 
@@ -31,7 +28,7 @@ Os atributos de métodos devem ser definidos com os comandos [OB SET](ob-set.md)
 Se o comando for executado a partir de um componente, o padrão é aplicado aos métodos do componente. Se você passar o parâmetro *\**, ele acessa aos métodos do banco de dados local.  
   
   
-##### 
+### 
 
 Os atributos com suporte são:
 
@@ -49,7 +46,7 @@ Os atributos com suporte são:
 
 **Nota:** os atributos "published4DMobile" são obsoletos para 4D v18.
 
-#### Exemplo 
+## Exemplo 
 
 Se você desejar modificar apenas um atributo:
 
@@ -59,7 +56,16 @@ Se você desejar modificar apenas um atributo:
  METHOD SET ATTRIBUTES("aMethod";$attributes) //apenas o atributo "executedOnServer" é modificado
 ```
 
-#### Ver também 
+## Ver também 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1335 |
+| Thread-seguro | &cross; |
+
+

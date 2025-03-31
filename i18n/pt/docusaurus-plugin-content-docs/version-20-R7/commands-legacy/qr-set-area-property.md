@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->O comando **QR SET AREA PROPERTY** permite mostrar ou ocultar o elemento de interface (barra de ferramentas ou barra de menus) cuja referência se passa em *propriedade*.<!-- END REF-->
 
@@ -41,6 +38,16 @@ Se passar um número de *area* inválido, se gera o erro -9850.
 
 Se o parâmetro *propriedade* for incorreto, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR Get area property](qr-get-area-property.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 796 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

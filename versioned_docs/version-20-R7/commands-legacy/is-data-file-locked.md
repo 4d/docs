@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Is data file locked.Summary-->The Is data file locked command returns True if the data file of the open database or at least one of its segments is locked — i.<!-- END REF-->e. write protected. 
 
 Placed, for instance, in the , this command enables the prevention of any risk of accidental opening of a locked data file. 
 
-#### Example 
+## Example 
 
 This method will prevent the opening of the database if the data file is locked: 
 
@@ -29,3 +29,13 @@ This method will prevent the opening of the database if the data file is locked:
     QUIT 4D
  End if
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 716 |
+| Thread safe | &check; |
+
+

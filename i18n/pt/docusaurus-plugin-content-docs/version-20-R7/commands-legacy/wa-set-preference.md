@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->O comando WA SET PREFERENCE permite fixar diferentes preferências para o área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
   
@@ -33,7 +30,7 @@ Passe no parâmetro *seletor* a preferência a modificar e em *valor* o valor a 
 
 Para cada preferência, passe **True** em valor para ativá-la e **False** para desativá-la.
 
-#### Exemplo 
+## Exemplo 
 
 Para ativar o URL solte-a na área web 'myarea':
 
@@ -52,6 +49,15 @@ WA SET PREFERENCE( *;"myarea"; WA enable URL drop ; True)
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1041 |
+| Thread-seguro | &cross; |
+
+

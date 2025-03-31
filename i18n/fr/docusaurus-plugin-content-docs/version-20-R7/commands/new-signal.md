@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Paramètres  | Type                      |   | Description                  |
-| ----------- | ------------------------- | - | ---------------------------- |
-| Description | Text                      | → | Description du signal        |
-| Résultat    | 4D.Signal | ← | Object encapsulant le signal |
+| Paramètres  | Type                      |                             | Description                  |
+| ----------- | ------------------------- | --------------------------- | ---------------------------- |
+| Description | Text                      | &#8594; | Description du signal        |
+| Résultat    | 4D.Signal | &#8592; | Object encapsulant le signal |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `New signal` <!-- REF #_command_.New signal.Summary -->crée un objet `4D.Signal`<!-- END REF -->.
 
@@ -38,9 +38,9 @@ Comme l'objet signal est un objet partagé, il peut aussi être utilisé pour ma
 
 **Valeur retournée**
 
-Un nouvel objet [`4D.Signal`](#signal-object).
+Un nouvel objet [`4D.Signal`](../API/SignalClass.md#signal-object).
 
-#### Exemple
+## Exemple
 
 Voici un exemple type de worker qui définit un signal :
 
@@ -69,3 +69,12 @@ La méthode ***doSomething*** est par exemple :
  End use
  $signal.trigger() // Le travail est terminé
 ```
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1641                        |
+| Thread safe        | &check; |
+
+

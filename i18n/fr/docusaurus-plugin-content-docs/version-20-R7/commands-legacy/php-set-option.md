@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 :::info Compatibilité
 
 **PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->La commande **PHP SET OPTION** permet de définir des options spécifiques avant un appel à la commande [PHP Execute](php-execute.md).<!-- END REF--> La portée de cette commande est le process courant. 
 
@@ -36,7 +33,16 @@ Passez dans le paramètre *option* une constante du thème *PHP* désignant l’
 
 Par défaut, **PHP SET OPTION** définit l’option pour tous les appels à [PHP Execute](php-execute.md) ultérieurs du process. Si vous souhaitez la définir pour le prochain appel uniquement, passez le paramètre étoile (*\**).
 
-#### Voir aussi 
+## Voir aussi 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1059 |
+| Thread safe | &cross; |
+
+

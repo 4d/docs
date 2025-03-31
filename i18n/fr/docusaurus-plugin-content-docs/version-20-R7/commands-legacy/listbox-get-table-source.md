@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->La commande **LISTBOX GET TABLE SOURCE** permet de connaître la source courante des données affichées dans la list box désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -31,6 +28,15 @@ Si les lignes de la list box sont liées à la sélection courante de la table, 
 
 Si la list box est associée à des tableaux, *numTable* retourne -1 et *nom*, s’il est passé, retourne une chaîne vide.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1014 |
+| Thread safe | &cross; |
+
+

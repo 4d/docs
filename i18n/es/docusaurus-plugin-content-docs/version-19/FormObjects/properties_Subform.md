@@ -46,7 +46,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 Acción a realizar en caso de doble clic en una línea vacía de un subformulario listado. Las siguientes opciones están disponibles:
 - **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
-- Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista] está activada. En caso contrario, se creará en modo página, en el [formulario detallado](detail-form) asociado al subformulario.
+- Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista] está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
 
 
 #### Gramática JSON
@@ -149,7 +149,7 @@ Especifica la tabla a la que pertenece el subformulario Lista (si la hay).
 ## Modo de selección
 
 Designa la opción para permitir a los usuarios seleccionar líneas:
-- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
+- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](#enterable-in-list) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
 - **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una línea cambia su estado (entre seleccionada o no).  
   Las teclas de flecha arriba y abajo seleccionan la línea anterior/siguiente de la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
 - **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.

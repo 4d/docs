@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA Get current URL.Summary-->El comando WA Get current URL devuelve la dirección URL de la página mostrada en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> 
 
@@ -26,7 +23,7 @@ Si el URL actual no está disponible, el comando devuelve una cadena vacía.
 
 Si la página web está cargada completamente, el valor devuelto por la función es idéntico al de la variable "URL" asociada con el área web. Si la página está en el proceso de ser cargada, los dos valores serán diferentes: la función devuelve el URL completamente cargado y la variable contiene el URL en proceso de ser cargado.
 
-#### Ejemplo 
+## Ejemplo 
 
 La página mostrada es el URL "www.apple.com" y la página "www.4dhispano.com" está en proceso de ser cargada:
 
@@ -35,6 +32,15 @@ La página mostrada es el URL "www.apple.com" y la página "www.4dhispano.com" e
   //La variable URL asociada contiene "http://www.4dhispano.com"
 ```
 
-#### Ver también 
+## Ver también 
 
 [WA OPEN URL](wa-open-url.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1025 |
+| Hilo seguro | &cross; |
+
+

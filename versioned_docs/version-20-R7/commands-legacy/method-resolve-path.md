@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->The **METHOD RESOLVE PATH** command parses the internal path name passed in the *path* parameter and returns its different components in the *methodType*, *ptrTable*, *objectName*, and *formObjectName* parameters.<!-- END REF-->
 
@@ -48,7 +45,7 @@ The *formObjectName* parameter contains a form object name when the path referen
 
 If the command is executed from a component, it considers by default that *path* designates a component method. If you pass the *\** parameter, then it considers that *path* designates a host database method.
 
-#### Example 1 
+## Example 1 
 
 Resolution of a database method path:
 
@@ -65,7 +62,7 @@ Resolution of a database method path:
   // $formObjectName: ""
 ```
 
-#### Example 2 
+## Example 2 
 
 Resolution of a path for an object of a table form method:
 
@@ -82,6 +79,15 @@ Resolution of a path for an object of a table form method:
   // $formObjectName: "Btn1"
 ```
 
-#### See also 
+## See also 
 
 [METHOD Get path](method-get-path.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1165 |
+| Thread safe | &cross; |
+
+

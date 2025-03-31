@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET MENU ITEM.Summary-->La commande **SET MENU ITEM** remplace le libellé de la ligne de menu, dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*, par le libellé que vous avez passé dans *texteLigne*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
@@ -35,3 +32,13 @@ Si vous omettez le paramètre *process*, **SET MENU ITEM** s'applique à la barr
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 348 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

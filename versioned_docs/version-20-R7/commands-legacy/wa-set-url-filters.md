@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->The WA SET URL FILTERS command sets up one or more filters for the Web area designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -40,7 +37,7 @@ Once the command has been executed, the filters become a property of the Web are
 
 **Important:** The URL filtering performed by this command applies to any request to change the primary URL of the page, whether from the user, javascript code or 4D code, except for the [WA OPEN URL](wa-open-url.md) command and URLs starting with "javascript:".
 
-#### Example 1 
+## Example 1 
 
 You want to deny access for all the .org, .net and .fr Web sites:
 
@@ -57,7 +54,7 @@ You want to deny access for all the .org, .net and .fr Web sites:
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to deny access for all Web sites except Russian ones (.ru):
 
@@ -72,7 +69,7 @@ You want to deny access for all Web sites except Russian ones (.ru):
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to allow access only to 4D Web sites (.com, .fr, .es, etc.):
 
@@ -87,7 +84,7 @@ You want to allow access only to 4D Web sites (.com, .fr, .es, etc.):
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to allow local access to the documentation only (found in the folder C://doc):
 
@@ -103,7 +100,7 @@ You want to allow local access to the documentation only (found in the folder C:
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 5 
+## Example 5 
 
 You want to allow access for all sites except one, for example the Elcaro site:
 
@@ -118,7 +115,7 @@ You want to allow access for all sites except one, for example the Elcaro site:
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### Example 6 
+## Example 6 
 
 You want to deny access to specific IP addresses:
 
@@ -136,7 +133,16 @@ You want to deny access to specific IP addresses:
   //(Note that the IP address of a domain may vary).
 ```
 
-#### See also 
+## See also 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1030 |
+| Thread safe | &cross; |
+
+

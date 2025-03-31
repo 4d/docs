@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Log.Summary-->**Log** retourne le logarithme népérien de *nombre*.<!-- END REF--> **Log** est la fonction inverse de [Exp](exp.md). 
+<!--REF #_command_.Log.Summary-->**Log** retourne le logarithme népérien de *nombre*.<!-- END REF-->est la fonction inverse de [Exp](exp.md). 
 
 **Note :** 4D fournit la constante prédéfinie e number (2,71828...).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche 1 :
 
@@ -28,6 +28,15 @@ L'exemple suivant affiche 1 :
  ALERT(String(Log(Exp(1)))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Exp](exp.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 22 |
+| Thread safe | &check; |
+
+

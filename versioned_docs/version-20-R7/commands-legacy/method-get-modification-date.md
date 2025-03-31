@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->The **METHOD GET MODIFICATION DATE** command returns, in the *modDate* and *modTime* parameters, the dates and times of the last modification of the method(s) designated by the *path* parameter.<!-- END REF-->
 
@@ -43,7 +40,7 @@ You cannot mix the two syntaxes.
 
 If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
-#### Example 1 
+## Example 1 
 
 You want to find out modification dates and times for several methods:
 
@@ -57,7 +54,7 @@ You want to find out modification dates and times for several methods:
  METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to get modification dates for methods in a module that are prefixed with "Web\_". You cannot use the "@" symbol in a path; however, you can write:
 
@@ -70,3 +67,13 @@ You want to get modification dates for methods in a module that are prefixed wit
 ```
 
   
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1170 |
+| Thread safe | &cross; |
+
+

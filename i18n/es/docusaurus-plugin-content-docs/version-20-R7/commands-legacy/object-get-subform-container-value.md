@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->The **OBJECT Get subform container value** command returns the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->
 
@@ -27,7 +24,7 @@ This command can only be used in the context of a form used as a subform. In any
 
 For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
 
-#### Ejemplo 
+## Ejemplo 
 
 Given a main form and a subform that both have an Input form object: 
 
@@ -53,8 +50,17 @@ And inside the subform, the Input text's object method contains the following co
 
 As a result, at runtime, updating the value of the main form's Input object also updates the value of the subform's Input object, and vice versa.
 
-#### Ver también 
+## Ver también 
 
 [Form](form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1785 |
+| Hilo seguro | &cross; |
+
+

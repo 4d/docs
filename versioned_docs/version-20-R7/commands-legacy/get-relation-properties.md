@@ -5,11 +5,11 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( fieldPtr|tableNum {; *fieldNum*}; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* ; *fieldNum* ; *oneTable* ; *oneField* {; *choiceField* {; *autoOne* {; *autoMany*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | Pointer, Longint | &#8594;  | Field pointer or table number |
+| fieldPtr&#124;tableNum | Pointer, Integer | &#8594;  | Field pointer or table number |
 | fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
 | oneTable | Integer | &#8592; | One table number or 0 if no relation is defined from the field |
 | oneField | Integer | &#8592; | One field number or 0 if no relation is defined from the field |
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->The GET RELATION PROPERTIES command returns the properties of the relation (if any) which starts from the source field defined by *tableNum* and *fieldNum* or by *fieldPtr*.<!-- END REF-->
 
@@ -36,10 +36,19 @@ Once the command has been executed:
 
 **Note:** The *autoOne* and *autoMany* parameters will also return **True** if no relation starts from the source field (in this case they return non-significant values). The value of both the *oneTable* and *oneField* parameters allows you to make sure that a relation exists. 
 
-#### See also 
+## See also 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 686 |
+| Thread safe | &check; |
+
+

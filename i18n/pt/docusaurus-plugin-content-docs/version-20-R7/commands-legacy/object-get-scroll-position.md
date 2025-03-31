@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->OBJECT GET SCROLL POSITION devolve, nos parâmetros *vPosição* e *hPosição*, informação relacionada com a posição das barras de rolagem do objeto de formulário designado pelos parâmetros *\** e *objeto*.<!-- END REF-->
 
@@ -31,6 +28,15 @@ Se *objeto* designa um objeto de tipo lista (subformulário, formulário lista, 
 
 Se *objeto* designa uma imagem (variável ou campo), *vPosição* retorna o movimento vertical e *hPosition* o movimento horizontal da imagem. Esses valores são expressos em pixels com respeito a origem da imagem no sistema de coordenadas local.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1114 |
+| Thread-seguro | &cross; |
+
+

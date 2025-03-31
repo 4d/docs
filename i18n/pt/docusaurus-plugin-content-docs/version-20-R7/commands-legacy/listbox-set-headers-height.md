@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->O comando **LISTBOX SET HEADERS HEIGHT** modifica por programação a altura da linha de cabeçalho do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -39,6 +36,15 @@ Cabeçalhos devem respeitar a altura mínima estabelecida pelo sistema. Esta alt
   
 **Nota**: para obter mais informação sobre o cálculo das alturas de linhas, consulte o manual de *Desenho*.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get headers height](listbox-get-headers-height.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1143 |
+| Thread-seguro | &cross; |
+
+

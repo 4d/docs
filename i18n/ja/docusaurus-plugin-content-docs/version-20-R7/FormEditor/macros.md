@@ -76,7 +76,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目は ABC順に表示されます。
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macro-file). マクロメニュー項目は ABC順に表示されます。
 
 このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態や、フォームオブジェクトの上でマクロを呼び出した場合は、それらのオブジェクト名がマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 
@@ -140,7 +140,7 @@ JSONファイルの説明です:
 
 プロジェクトおよびコンポーネントにおいてインスタンス化するマクロは、それぞれ [4Dクラス](Concepts/classes.md) として宣言する必要があります。
 
-クラスの名称は、`formMacros.json` ファイルで [class](#マクロの宣言) 属性に定義した名前と同一でなくてはなりません。
+The class name must match the name defined using the [class](#declaring-macros) attribute of the `formMacros.json` file.
 
 マクロは、アプリケーションの起動時にインスタンス化されます。 そのため、関数の追加やパラメーターの編集など、マクロクラスの構造や その [コンストラクター](#class-constructor) になんらかの変更を加えた場合には、それらを反映するにはアプリケーションを再起動する必要があります。
 
@@ -206,7 +206,7 @@ Class constructor($macro : Object)
 | ---------------------------------------------------------------- | ---------- | ------------------------------------------------ |
 | $editor.editor.form              | Object     | フォーム全体                                           |
 | $editor.editor.file              | File       | フォームファイルの Fileオブジェクト                             |
-| $editor.editor.name              | String     | フォームの名称                                          |
+| $editor.editor.name              | Text       | フォームの名称                                          |
 | $editor.editor.table             | number     | フォームのテーブル番号。プロジェクトフォームの場合は 0。                    |
 | $editor.editor.currentPageNumber | number     | 現在のページの番号                                        |
 | $editor.editor.currentPage       | Object     | 現在のページ (フォームオブジェクトおよび入力順序を格納) |
@@ -223,7 +223,7 @@ Class constructor($macro : Object)
 | formProperties                    | Object     | マクロによって変更された formProperties       |
 | editor.groups     | Object     | マクロによって変更されたグループ情報                |
 | editor.views      | Object     | マクロによって変更されたビュー情報                 |
-| editor.activeView | String     | 有効なビュー名                           |
+| editor.activeView | Text       | 有効なビュー名                           |
 
 たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
@@ -241,9 +241,9 @@ Class constructor($macro : Object)
 
 - 次の構造を持つオブジェクトの使用:
 
-| プロパティ  | 型      | 説明      |
-| ------ | ------ | ------- |
-| source | String | メソッドコード |
+| プロパティ  | 型    | 説明      |
+| ------ | ---- | ------- |
+| source | Text | メソッドコード |
 
 後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 

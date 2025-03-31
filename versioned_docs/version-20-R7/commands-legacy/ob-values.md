@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Values.Summary-->The **OB Values** command returns a collection of variants containing all of the enumerable property values of the *object*.<!-- END REF--> 
 
 The order of values within the returned collection follows the definition order of the properties.
 
-#### Example 
+## Example 
 
 You want a collection with all property values of an object:
 
@@ -43,7 +40,16 @@ You want a collection with all property values of an object:
   //$col[2]={"Mary":12,"Mark":8}
 ```
 
-#### See also 
+## See also 
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1718 |
+| Thread safe | &cross; |
+
+

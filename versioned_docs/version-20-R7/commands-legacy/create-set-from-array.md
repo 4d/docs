@@ -15,12 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->The **CREATE SET FROM ARRAY** command creates *setName* from:
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->The **CREATE SET FROM ARRAY** command creates *setName*<!-- END REF-->  from:
 
 * Either an array of absolute record numbers *recordsArray* from *aTable*,
-* Or an array of booleans *recordsArray*.<!-- END REF--> In this case, the values of the array indicate if each record in the table belongs (**True**) or not (**False**) to *setName*.
+* Or an array of booleans *recordsArray*.In this case, the values of the array indicate if each record in the table belongs (**True**) or not (**False**) to *setName*.
 
 When you use this command and pass a Longint array in *recordsArray*, all the numbers in the array represent the list of record numbers that are in *setName*. If a number is invalid (for example, if a record has not been created), the error -10503 is generated.
 
@@ -30,11 +30,21 @@ When you use this command and pass a Boolean array in *recordsArray*, the Nth el
 
 If you do not pass the *setName* parameter or if you pass an empty string, the command will be applied to the Userset system set.
 
-#### Error management 
+## Error management 
 
 In a Longint array, if a record number is invalid (record not created), the error -10503 is generated.
 
-#### See also 
+## See also 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 641 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

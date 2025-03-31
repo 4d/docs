@@ -14,9 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->La commande **SET PLUGIN ACCESS** permet de spécifier par programmation le groupe d’utilisateurs autorisé à utiliser chaque plug-in “sérialisé” installé dans la base.<!-- END REF--> Cette définition permet de gérer la répartition des licences des plug-ins.
@@ -46,3 +43,12 @@ Passez dans le paramètre *groupe* le nom du groupe dont les utilisateurs seront
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 845 |
+| Thread safe | &cross; |
+
+

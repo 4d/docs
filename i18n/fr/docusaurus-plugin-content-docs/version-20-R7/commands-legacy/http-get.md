@@ -26,7 +26,7 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Get.Summary-->La commande **HTTP Get** permet d’envoyer directement une requête HTTP GET vers un URL spécifique et de traiter la réponse du serveur HTTP.<!-- END REF-->
 
@@ -50,12 +50,12 @@ Après exécution de la commande, le paramètre *réponse* récupère le résult
 * Texte : lorsque le résultat est attendu sous forme de texte (cf. note)
 * BLOB : lorsque le résultat est attendu sous forme binaire
 * Image : lorsque le résultat est attendu sous forme d’image
-* Objet : lorsque le résultat est attendu sous forme d'objet [C\_OBJECT](c-object.md)
+* Objet : lorsque le résultat est attendu sous forme d'objet *C\_OBJECT*
 
 **Note :** Lorsqu'une variable texte est passée dans *réponse*, 4D tente de décoder les données retournées par le serveur. Le programme essaie d'abord de récupérer le charset depuis l'en-tête *content-type*, ou à défaut via la BOM de la page ; en dernier lieu 4D recherche tout attribut *http-equiv charset* (dans le contenu html) ou *encoding* (pour le xml). Si aucun charset ne peut être détecté, 4D décode la réponse en ANSI. Si la conversion échoue, le texte résultant est vide. Si vous n'êtes pas sûr que le serveur retourne une information de charset ou une BOM, mais si vous connaissez l'encodage, il est préférable de passer un BLOB dans *réponse* et d'utiliser la commande [Convert to text](convert-to-text.md).
 
 Si vous passez un BLOB, il contiendra le texte, l’image ou tout type de contenu (.wav, .zip...) retourné par le serveur. Vous devrez alors gérer la récupération de ce contenu (les en-têtes ne sont pas inclus dans le BLOB).   
-Si vous passez un objet de type [C\_OBJECT](c-object.md) et si la requête retourne un résultat ayant le content-type text, 4D tentera d’analyser le contenu en tant que JSON et retournera le résultat analysé sous forme d'objet, sinon un objet *4D.Blob* sera retourné.
+Si vous passez un objet de type *C\_OBJECT* et si la requête retourne un résultat ayant le content-type text, 4D tentera d’analyser le contenu en tant que JSON et retournera le résultat analysé sous forme d'objet, sinon un objet *4D.Blob* sera retourné.
 
 Vous pouvez passer dans les paramètres *nomsEnTêtes* et *valeursEnTêtes* des tableaux contenant respectivement les noms et les valeurs des en-têtes de la requête.
 
@@ -65,7 +65,7 @@ Le paramètre *\** permet d’activer le mécanisme de *keep-alive* pour la conn
 
 La commande retourne le code de statut HTTP standard (200=OK...) tel que renvoyé par le serveur. La liste des codes de statut HTTP est fournie dans la *RFC 2616*. Si la connexion au serveur est impossible pour une raison liée au réseau (*DNS Failed*, *Server not reachable*...) la commande retourne 0 et une erreur est générée. Vous pouvez intercepter les erreurs à l’aide d’une méthode d’appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Récupération du logo 4D sur le site Web de 4D :
 
@@ -78,7 +78,7 @@ Récupération du logo 4D sur le site Web de 4D :
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Récupération d’une RFC :
 
@@ -91,7 +91,7 @@ Récupération d’une RFC :
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Récupération d’une vidéo :
 
@@ -101,6 +101,16 @@ Récupération d’une vidéo :
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [HTTP Request](http-request.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1157 |
+| Thread safe | &check; |
+| Modifie les variables | error |
+
+

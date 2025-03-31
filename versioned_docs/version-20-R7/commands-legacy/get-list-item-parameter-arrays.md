@@ -5,22 +5,19 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; itemRef | * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; *itemRef* ; *arrSelection* {; *arrValues*} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* ; * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string)If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) orName of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | arrSelection | Text array | &#8592; | Array of parameter names |
 | arrValues | Text array | &#8592; | Array of parameter values |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->The **GET LIST ITEM PARAMETER ARRAYS** command lets you retrieve all the parameters in a single call (as well as, optionally, their values) that are associated with the *itemRef* item in the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
 
@@ -32,7 +29,7 @@ If you pass the first optional *\** parameter, this indicates that *list* is an 
 
 *arrValues* must be a text type array. If you have associated values that are not Text (number or Boolean), they are converted to strings (True="1", False="0").
 
-#### Example 
+## Example 
 
 Given the following hierarchical list: 
 
@@ -74,6 +71,15 @@ If you want to get the parameter values as well, you write:
   // arrParamValues{5} contains "Dallas"
 ```
 
-#### See also 
+## See also 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1195 |
+| Thread safe | &cross; |
+
+

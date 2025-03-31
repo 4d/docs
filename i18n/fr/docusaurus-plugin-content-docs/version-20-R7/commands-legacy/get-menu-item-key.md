@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item key.Summary-->La commande **Get menu item key** retourne le code de la touche **Ctrl** (sous Windows) ou **Commande** (Mac OS) utilisée comme raccourci clavier pour la commande de menu dont le numéro ou la référence de menu et le numéro de ligne ont été passés dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
@@ -29,7 +26,7 @@ Si vous ne passez pas le paramètre *process*, **Get menu item key** est appliqu
 
 Si la ligne de menu n'a pas de touche de raccourci associée ou si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, **Get menu item key** retourne *0* (zéro).
 
-#### Exemple 
+## Exemple 
 
 Pour obtenir le raccourci clavier associé à une ligne de menu, il est utile de mettre en place une structure de programmation du type suivant :
 
@@ -47,7 +44,17 @@ Pour obtenir le raccourci clavier associé à une ligne de menu, il est utile de
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 424 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

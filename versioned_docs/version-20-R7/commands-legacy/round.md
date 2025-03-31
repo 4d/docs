@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Round.Summary-->**Round** returns *number* rounded to the number of decimal places specified by *places*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ If *places* is positive, *number* is rounded to *places* decimal places. If *pla
 
 If the digit following *places* is 5 though 9, **Round** rounds toward positive infinity for a positive number, and toward negative infinity for a negative number. If the digit following *places* is 0 through 4, **Round** rounds toward zero.
 
-#### Example 
+## Example 
 
 The following example illustrates how Round works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
@@ -34,6 +34,15 @@ The following example illustrates how Round works with different arguments. Each
  vlResult:=Round(-1.5;0) // vlResult gets –2
 ```
 
-#### See also 
+## See also 
 
 [Trunc](trunc.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 94 |
+| Thread safe | &check; |
+
+

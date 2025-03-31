@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Debugger
+title: Depurador
 ---
 
 El depurador es útil cuando se necesita detectar errores o controlar la ejecución de métodos. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
@@ -36,7 +36,7 @@ La ventana del depurador suele aparecer en la máquina donde se ejecuta el códi
 :::note Notas
 
 - Si el servidor se ejecuta en modo sin interfaz, no se puede mostrar ninguna ventana de depuración en el servidor, es necesario utilizar el depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- También puede [adjuntar el depurador de Qodly Studio a una aplicación 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) si necesita depurar páginas Qodly en un entorno desplegado.
 
 :::
 
@@ -52,7 +52,7 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
-> **Shift** + **F5** o **Shift** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
+> **Mayús** + **F5** o **Mayús** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
 
 #### Pasar por encima
 
@@ -66,7 +66,7 @@ En la depuración remota, si el método se ejecuta en el servidor, se llama al m
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
+El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
 
 Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
 
@@ -80,7 +80,7 @@ En la depuración remota, al ejecutarse la última línea del método, si el mé
 
 Al ejecutar una línea que crea un nuevo proceso (es decir, al llamar al comando New process), este botón abre una nueva ventana del depurador que permite rastrear el método de gestión del proceso recién creado. En la ejecución de una línea que no crea un nuevo proceso, este botón actúa de la misma manera que el botón Ejecutar paso a paso.
 
-#### Abortar
+#### Detener ejecución
 
 Detiene la ejecución del método y vuelve al estado anterior al inicio de la ejecución del método:
 
@@ -146,27 +146,27 @@ $c:=a+b
 
 1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
 
-   | $a | Indefinido |
-   | -- | ---------- |
+ | $a | Indefinido |
+ | -- | ---------- |
 
-   La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+ La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, aparece el tema **Objetos Línea**:
 
-   | $a | 1          |
-   | -- | ---------- |
-   | $b | Indefinido |
+ | $a | 1          |
+ | -- | ---------- |
+ | $b | Indefinido |
 
-   El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+ El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con $c:=a+b. aparece el tema **Objetos en línea**:
 
-   | $c | Indefinido |
-   | -- | ---------- |
-   | $a | 1          |
-   | $b | 2          |
+ | $c | Indefinido |
+ | -- | ---------- |
+ | $a | 1          |
+ | $b | 2          |
 
-   El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+ El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 #### Variables
 
@@ -268,9 +268,9 @@ En la imagen de arriba:
 - `thirdMethod` no ha recibido ningún parámetro
 - `$0` actualmente está indefinido, ya que el método no ha asignado ningún valor a `$0` (porque aún no ha ejecutado esta asignación o porque el método es una subrutina y no una función)
 - `secondMethod` ha recibido tres parámetros de `firstMethod`:
-  - $1 es un puntero a la tabla `[Employee]`
-  - $2 es un puntero al campo `ID` en la tabla  `[Employee]`
-  - $3 es un parámetro alfanumérico cuyo valor es "Z"
+ - $1 es un puntero a la tabla `[Employee]`
+ - $2 es un puntero al campo `ID` en la tabla  `[Employee]`
+ - $3 es un parámetro alfanumérico cuyo valor es "Z"
 
 Puede hacer doble clic en el nombre de cualquier método para mostrar su contenido en la [Ventana de código fuente](#source-code-pane).
 
@@ -282,7 +282,7 @@ Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el me
 
 Después de desplegar la lista de parámetros, puede arrastrar y soltar los parámetros y los resultados de las funciones en el [Custom Watch Pane](#custom-watch-pane).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+También puede utilizar el comando [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar la cadena de llamadas por programación.
 
 ## Panel de vigilancia personalizado
 
@@ -366,9 +366,9 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
-   - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
-   - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
-   - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
+ - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
+ - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
+ - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
 ### Contador del programa
 
@@ -405,11 +405,11 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponible para:
-  - *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
-  - *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
-  - *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
-  - *Formularios:* muestra el formulario en el editor de formularios
-  - *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
+ - *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
+ - *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
+ - *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
+ - *Formularios:* muestra el formulario en el editor de formularios
+ - *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.

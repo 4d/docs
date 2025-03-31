@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get info row.Summary-->El comando QR Get info row indica si *linea* se muestra o se oculta en *area*.<!-- END REF-->
 
@@ -36,8 +33,18 @@ El resultado de la función especifica si la línea está visible u oculta. Si e
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *linea* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 769 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

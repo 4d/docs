@@ -15,14 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
+## Descrição 
 
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->O comando STRING LIST TO ARRAY preenche o array *cadeias*<!-- END REF--> com:   
 
-#### Descrição 
-
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->O comando STRING LIST TO ARRAY preenche o array *cadeias* com:   
-
-* As cadeias armazenadas no recurso de tipo lista de cadeias ("STR#") cujo número se passa em *resNum*.<!-- END REF-->
+* As cadeias armazenadas no recurso de tipo lista de cadeias ("STR#") cujo número se passa em *resNum*.
 * Ou com una cadeia armazenada em um arquivo XLIFF aberto cujo atributo "id" do elemento "group" se passa em *resNum* (ver a continuação "Compatibilidade com arquitetura XLIFF").
 Se o recurso não for encontrado, o array *cadeias* não muda e a variável OK assume o valor 0 (zero).  
   
@@ -32,17 +29,27 @@ Se passa um número de referência de arquivo de recursos válido em *resArquivo
 
 **Dica:** Quando utilize os recursos listas de cadeias, limite-se a recursos de 32K, e a um máximo de umas centenas de cadeias por recurso.
 
-#### Compatibilidade com arquitetura XLIFF 
+## Compatibilidade com arquitetura XLIFF 
 
 O comando STRING LIST TO ARRAY é compatível com a arquitetura XLIFF de 4D a partir da versão 11: o comando busca primeiro pelos valores correspondentes a *resNum* e *cadeiaNum* em todos os arquivos XLIFF abertos (se o parâmetro *resArquivo* for omitido) e preenche o array *cadeias* com os valores correspondentes. Neste caso, *resNum* específica o atributo **id** do elemento **group** e o array *cadeias* contém todas as cadeias do elemento. Se não for encontrado o valor, o comando continua a pesquisa nos arquivos de recursos abertos. Para maior informação sobre a arquitetura XLIFF em 4D, consulte o Manual de Desenho.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o recurso for encontrado, a variável sistema OK assume o valor 1, do contrário assume o valor 0 (zero).  
   
 
-#### Ver também 
+## Ver também 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 511 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

@@ -44,7 +44,7 @@ La [page Restitution](MSC/restore.md) du Centre de sécurité et de maintenance 
 
 ## Intégration manuelle de l’historique
 
-Si vous n’avez pas coché l’option d’intégration automatique du fichier d’historique dans la page Restitution du CSM (cf. [Intégration successive de plusieurs fichiers d’historiques](MSC/restore.md#successive-intergration-of-several-data-log-files)), une boîte de dialogue d’alerte apparaît à l’ouverture de l'application lorsque 4D constate que le fichier d’historique contient plus d’opérations qu’il n’en a été effectué dans le fichier de données.
+Si vous n’avez pas coché l’option d’intégration automatique du fichier d’historique dans la page Restitution du CSM (cf. [Intégration successive de plusieurs fichiers d’historiques](../MSC/restore.md#successive-integration-of-several-data-log-files)), une boîte de dialogue d’alerte apparaît à l’ouverture de l'application lorsque 4D constate que le fichier d’historique contient plus d’opérations qu’il n’en a été effectué dans le fichier de données.
 
 ![](../assets/en/Backup/backup08.png)
 

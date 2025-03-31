@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF--> **PUSH RECORD** may be executed before a record is saved.
+<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF-->may be executed before a record is saved.
 
 If you push a record that was unlocked, this record stays locked for all the other processes and users until you pop and unload it.
 
 **Compatibility note:** Beginning with version 11 of 4D, this command no longer supports subtables. 
 
-#### Example 
+## Example 
 
 The following example pushes the record for the customer onto the record stack:
 
@@ -29,7 +29,16 @@ The following example pushes the record for the customer onto the record stack:
  PUSH RECORD([Customer]) // Push customer’s record onto stack
 ```
 
-#### See also 
+## See also 
 
 [POP RECORD](pop-record.md)  
 *Using the Record Stack*  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 176 |
+| Thread safe | &check; |
+
+

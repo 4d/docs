@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get headers height.Summary-->The **LISTBOX Get headers height** command returns the height of the header row in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -34,6 +31,15 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 
 **Note:** For more information about calculating the height of rows, refer to the *Design Reference* manual.
 
-#### See also 
+## See also 
 
 [LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1144 |
+| Thread safe | &cross; |
+
+

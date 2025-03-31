@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->The LISTBOX GET HIERARCHY command lets you find out the hierarchical properties of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -34,6 +31,15 @@ If the list box is in hierarchical mode, the command fills the *hierarchy* array
 
 **Note:** If the list box is in non-hierarchical mode, the command returns, in the first element of the *hierarchy* array, a pointer to the array of the first column of the list box.
 
-#### See also 
+## See also 
 
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1099 |
+| Thread safe | &cross; |
+
+

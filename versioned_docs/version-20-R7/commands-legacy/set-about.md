@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET ABOUT.Summary-->The **SET ABOUT** command changes the **About 4D** menu command in the **Help** menu (Windows) or in the **Application** menu (macOS) menu to *itemText*.<!-- END REF--> 
 
@@ -27,7 +24,7 @@ This command is used with 4D (all modes), 4D Desktop and 4D Server. A new proces
 
 **Note:** On Windows, this command modifies the "About 4D" line in the **Help** menu created by the [SET HELP MENU](set-help-menu.md) command. 
 
-#### Example 1 
+## Example 1 
 
 The following example replaces the **About** menu command with the **About Scheduler** menu command. The ABOUT method displays a custom About box:
 
@@ -35,7 +32,7 @@ The following example replaces the **About** menu command with the **About Sched
  SET ABOUT("About Scheduler…";"ABOUT")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example resets the About 4D menu command:
 
@@ -43,6 +40,15 @@ The following example resets the About 4D menu command:
  SET ABOUT("About 4D";"")
 ```
 
-#### See also 
+## See also 
 
 [SET HELP MENU](set-help-menu.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 316 |
+| Thread safe | &cross; |
+
+

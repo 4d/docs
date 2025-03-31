@@ -8,14 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Paramètres | Type                         |   | Description                                                                          |
-| ---------- | ---------------------------- | - | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | → | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Résultat   | 4D.WebServer | ← | Objet Serveur Web                                                                    |
+| Paramètres | Type                         |                             | Description                                                                          |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>Historique</summary>
 
@@ -26,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre *option*<!-- END REF -->.
 
@@ -38,9 +36,9 @@ Par défaut, si le paramètre *option* est omis, la commande renvoie une référ
 | `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
 | `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
-#### Exemple
+## Exemple
 
 L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
 
@@ -53,7 +51,16 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
  End if
 ```
 
-#### Voir également
+## Voir également
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1674                        |
+| Thread safe        | &cross; |
+
+

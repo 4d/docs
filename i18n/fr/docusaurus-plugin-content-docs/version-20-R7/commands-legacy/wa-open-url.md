@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN URL.Summary-->La commande **WA OPEN URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL passé dans le paramètre *url*.<!-- END REF--> 
 
@@ -45,8 +42,17 @@ Cette commande a le même effet que la modification de la valeur de la variable 
  WA OPEN URL(MaZoneW;"http://www.4d.com/")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1020 |
+| Thread safe | &cross; |
+
+

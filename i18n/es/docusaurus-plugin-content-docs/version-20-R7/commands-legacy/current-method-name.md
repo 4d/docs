@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current method name.Summary-->El comando Current method name devuelve el nombre del método en el cual se llama.<!-- END REF--> Este comando es útil para depuración de métodos genéricos.
 
@@ -37,3 +37,13 @@ En función del tipo de método llamado, la cadena devuelta puede ser:
 Este comando no puede llamarse desde una fórmula 4D.
 
 **Nota:** para que este comando funcione en modo compilado, la opción **Control de ejecución** no debe ser desactivada.
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 684 |
+| Hilo seguro | &check; |
+
+

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->REGENERATE MISSING TABLE コマンドは tableName引数に渡された名前の失われたテーブルを再構築します。<!-- END REF-->失われたテーブルが再構築されると、ストラクチャエディタにそれらが現れ、データに再びアクセスできるようになります。
 
@@ -24,7 +21,7 @@ displayed_sidebar: docs
 
 *tableName*で指定されたテーブルがデータベースの失われたテーブルでない場合、コマンドはなにも行いません。 
 
-#### 例題 
+## 例題 
 
 以下のメソッドはデータベース中に存在するかもしれないすべての失われたテーブルを再生成します:
 
@@ -59,6 +56,15 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1126 |
+| スレッドセーフである | &cross; |
+
+

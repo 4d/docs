@@ -50,7 +50,7 @@ When you select this command, the home page of the website published by the 4D a
 ![](../assets/en/WebServer/defaultHomePage.png)
 
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 
 
@@ -65,7 +65,7 @@ To do so, you can:
 
 The cache is then immediately cleared.
 
->You can also use the [/4DCACHECLEAR](#cacheclear) URL. 
+>You can also use the [/4DCACHECLEAR](#4dcacheclear) URL. 
 
 
 

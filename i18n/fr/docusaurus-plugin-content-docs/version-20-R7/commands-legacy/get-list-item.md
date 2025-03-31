@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->La commande **GET LIST ITEM** retourne des informations sur l'élément désigné par le paramètre *positionElém* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
@@ -43,7 +40,7 @@ Si vous passez les paramètres optionnels *sous\_Liste* et *déployée* :
 * *sous\_Liste* contient le numéro de référence de la sous-liste rattachée à l'élément. Si l'élément n'a pas de sous-liste associée, *sous\_Liste* retourne zéro.
 * Si l'élément comporte une sous-liste, *déployée* retourne Vrai si la sous-liste est déployée, et Faux sinon.
 
-#### Exemple 1 
+## Exemple 1 
 
 En partant de l'hypothèse que *hList* est une liste dont les éléments ont des numéros de référence uniques, le code suivant inverse automatiquement l'état déployé/contracté de la sous-liste, si elle existe, rattachée à l'élément sélectionné : 
 
@@ -62,11 +59,11 @@ En partant de l'hypothèse que *hList* est une liste dont les éléments ont des
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
@@ -74,3 +71,12 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 378 |
+| Thread safe | &cross; |
+
+

@@ -18,15 +18,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Parámetros     | Tipo                         |   | Descripción                                                                                         |
-| -------------- | ---------------------------- | - | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | → | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
-| localID        | Text                         | → | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | cs.DataStore | ← | Objeto del almacén de datos                                                                         |
+| Parámetros     | Tipo                         |                             | Descripción                                                                                         |
+| -------------- | ---------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                       | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| localID        | Text                         | &#8594; | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Resultado      | cs.DataStore | &#8592; | Objeto del almacén de datos                                                                         |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos remota identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
 
@@ -34,12 +34,12 @@ El comando admite los siguientes almacenes de datos remotos:
 
 | Tipo de almacén de datos                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aplicación 4D remota                                                  | Una aplicación 4D disponible como datastore remoto, es decir<li>: su servidor web se ejecuta con http y/o https activados,</li><li>su datastore está expuesto a REST (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) activada).</li>Puede exigirse una licencia (ver nota) |
+| Aplicación 4D remota                                                  | Una aplicación 4D disponible como datastore remoto, es decir:<li> su servidor web se ejecuta con http y/o https activados,</li><li>su datastore está expuesto a REST (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) activada).</li>Puede exigirse una licencia (ver nota) |
 | [Aplicación Qodly](https://developer.qodly.com/docs/cloud/getStarted) | Una aplicación Qodly Server que le proporcionó un **api endpoint** y una **api key** válida asociada a un rol definido. Debe pasar la llave api en la propiedad `api-key` del objeto *connectionInfo*. A continuación, podrá trabajar con el objeto datastore devuelto, con todos los privilegios concedidos al rol asociado.             |
 
 :::note
 
-Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la sección [User login mode](../REST/authUsers.md#user-login-modes) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión actual seleccionado.
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la [sección de inicio de sesión de usuario](../REST/authUsers.md#force-login-mode) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión de usuario seleccionado.
 
 :::
 
@@ -50,7 +50,7 @@ Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al q
 | hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                                                                  | API Endpoint de la instancia Qodly cloud                                          |
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | - (ignorado)                                                   |
 | contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - (ignorado)                                                   |
-| idleTimeout | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. | - (ignorado)                                                   |
+| idleTimeout | Integer | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. | - (ignorado)                                                   |
 | tls         | Boolean | True para utilizar una conexión segura(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                                                               | True para usar conexión segura. Si se omite, es false por defecto |
 | type        | Text    | debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                               | - (ignorado)                                                   |
 | api-key     | Text    | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                                                                    | API key de la instancia Qodly cloud                                               |
@@ -75,7 +75,7 @@ Los objetos disponibles en el `cs.Datastore` son mapeados en función de las [re
 
 Si no se encuentra ningún datastore coincidente, `Open datastore` devuelve **Null**.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Conexión a un almacén de datos remoto sin usuario/contraseña:
 
@@ -87,7 +87,7 @@ Conexión a un almacén de datos remoto sin usuario/contraseña:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
 
@@ -100,7 +100,7 @@ Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Trabajar con varios almacenes de datos remotos:
 
@@ -115,7 +115,7 @@ Trabajar con varios almacenes de datos remotos:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Conexión a una aplicación Qodly:
 
@@ -136,10 +136,20 @@ ALERT(String($data.length)+" items have been read")
 
 ```
 
-#### Gestión de errores
+## Gestión de errores
 
 En caso de error, el comando devuelve **Null**. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". Puede interceptar este error con un método instalado por `ON ERR CALL`.
 
-#### Ver también
+## Ver también
 
 [ds](ds.md)
+
+## Propiedades
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Número de comando  | 1452                        |
+| Hilo seguro        | &check; |
+| Modifies variables | error                       |
+
+

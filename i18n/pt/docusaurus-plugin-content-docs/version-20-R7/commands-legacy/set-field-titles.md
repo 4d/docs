@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->SET FIELD TITLES permite ocultar, renomear e reorganizar os campos de uma tabela ou de uma subtabela passada em *tabela* ou *subtabela* quando aparecem nos editores padrão de 4D, tal como o editor de pesquisas, em modo Aplicação (mais especificamente, quando os editores são chamados através dos comandos do linguagem de 4D).<!-- END REF-->
 
@@ -52,14 +49,23 @@ Utilize o comando SET FIELD TITLES para:
 * Os plug-ins sempre acessam a estrutura "virtual" como está especificado por este comando.
 * Se o comando [SET TABLE TITLES](set-table-titles.md) for chamado sem nenhum parâmetro, o ambiente de linguagem é resetado e a estrutura "virtual" (incluindo nomes de tabela e campos personalizados) é completamente removida
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [SET TABLE TITLES](set-table-titles.md).
 
-#### Ver também 
+## Ver também 
 
 [Field name](field-name.md)  
 [GET FIELD TITLES](get-field-titles.md)  
 [Last field number](last-field-number.md)  
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 602 |
+| Thread-seguro | &cross; |
+
+

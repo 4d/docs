@@ -9,10 +9,10 @@ Devuelve la petición tal y como se pasó a 4D Server (*por ejemplo, *, `$queryp
 ## Descripción
 $queryplan devuelve el plan de la petición tal y como se pasó a 4D Server.
 
-| Propiedad | Tipo   | Descripción                                                                                           |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| item      | String | Petición ejecutada                                                                                    |
-| subquery  | Array  | Si hay una subconsulta, un objeto adicional que contiene una propiedad de elemento (como la anterior) |
+| Propiedad | Tipo  | Descripción                                                                                           |
+| --------- | ----- | ----------------------------------------------------------------------------------------------------- |
+| item      | Text  | Petición ejecutada                                                                                    |
+| subquery  | Array | Si hay una subconsulta, un objeto adicional que contiene una propiedad de elemento (como la anterior) |
 
 Para más información sobre los planes de petición, consulte [queryPlan y queryPath](genInfo.md#querypath-and-queryplan).
 

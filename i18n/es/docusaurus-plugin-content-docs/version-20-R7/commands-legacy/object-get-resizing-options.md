@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->El comando **OBJECT GET RESIZING OPTIONS** devuelve las opciones de redimensionamiento actuales del o de los objetos designados por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -43,6 +40,15 @@ El parámetro *vertical* devuelve un valor indicando la opción de redimensionam
 | Resize vertical move | Entero largo | 2     | Si la ventana se agranda 100 píxeles de alto, el objeto se mueve 100 píxeles hacia abajo |
 | Resize vertical none | Entero largo | 0     | Si la ventana se agranda de alto, ni el ancho ni la posición del objeto varían           |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1176 |
+| Hilo seguro | &cross; |
+
+

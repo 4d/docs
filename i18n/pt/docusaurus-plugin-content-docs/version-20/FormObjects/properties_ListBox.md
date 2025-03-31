@@ -24,7 +24,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 ## Nome formulário detalhe
 `List box do tipo selecção`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Especifica o formulário a ser usado para modificar ou exibir registros individuais do list box.
 
 O formulário especificado é apresentado:
 
@@ -50,16 +50,16 @@ O formulário especificado é apresentado:
 ## Duplo clique em linha
 `List box do tipo selecção`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. As opções disponíveis são:
+Define a ação a ser executada quando um usuário clica duas vezes em uma linha no list box. As opções disponíveis são:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> > > Double-clicking an empty row is ignored in list boxes.
+*   **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
+*   **Editar registro**: clicar duas vezes em uma linha exibe o registro correspondente no formulário de detalhes definido [para o list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
+*   **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
+> Clicar duas vezes em uma linha vazia é ignorado nos list boxes.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Para as duas últimas ações, o evento do formulário `On Open Detail` também é gerado. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
 
 #### Gramática JSON
 
@@ -79,11 +79,11 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 `List box do tipo selecção`
 
-This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
+Esta propriedade é usada para especificar o conjunto a ser usado para gerenciar registros destacados na caixa de listas (quando a fonte de dados **Arrays** é selecionada, um array booleano com o mesmo nome que a caixa de lista é usada).
 
-4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. Se necessário, pode alterar o conjunto predefinido. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). É então mantido automaticamente por 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
-> * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
-> * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
+O 4D cria um conjunto padrão chamado *ListBoxSetN*, em que *N* começa em 0 sendo incrementado conforme o número de list box no formulário. Se necessário, pode alterar o conjunto predefinido. Pode ser um conjunto local, de processo ou entre processos (recomendamos o uso de um conjunto local, por exemplo, *$LBSet*, para limitar o tráfego de rede). É então mantido automaticamente por 4D. Se o usuário seleciona uma ou mais linhas no list box, o conjunto é atualizado imediatamente. Se você quiser selecionar uma ou mais linhas por programação, poderá aplicar os comandos do tema "Configurações" a este conjunto.
+> * O estado destacado das linhas da lista e o estado destacado dos registros da tabela são completamente independentes.
+> * Se a propriedade "Destacar conjunto" não contiver um nome, não será possível fazer seleções no list box.
 
 #### Gramática JSON
 
@@ -100,11 +100,11 @@ This property is used to specify the set to be used to manage highlighted record
 ---
 ## Colunas bloqueadas e colunas estáticas
 
-Locked columns and static columns are two separate and independent functionalities in list boxes:
+As colunas bloqueadas e as colunas estáticas são duas funcionalidades separadas e independentes nos list boxes:
 
-*   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
+*   As colunas bloqueadas sempre são exibidas à esquerda do list box; elas não rolam horizontalmente.
 *   As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
-> You can set static and locked columns by programming, refer to "List Box" section in the *4D Language Reference* manual.
+> É possível definir colunas estáticas e bloqueadas por programação; consulte a seção "List Box" no manual da *linguagem 4D*.
 
 Estas propriedades interagem da seguinte forma:
 
@@ -114,15 +114,15 @@ Estas propriedades interagem da seguinte forma:
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
-*   If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
+*   Se você definir todas as colunas da área bloqueada como estáticas, não poderá movê-las na área bloqueada.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-*   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+*   Você pode definir uma combinação de colunas bloqueadas e estáticas de acordo com suas necessidades. Por exemplo, se você definir três colunas bloqueadas e uma coluna estática, o usuário poderá trocar as duas colunas mais à direita na área bloqueada (já que somente a primeira coluna é estática).
 
 ### Número de colunas estáticas
 
-Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
+Número de colunas que devem permanecer permanentemente exibidas na parte esquerda do list box, mesmo quando o usuário rolar as colunas horizontalmente.
 
 #### Gramática JSON
 
@@ -158,7 +158,7 @@ Número de colunas que não podem ser movidas durante a execução.
 ## Número de colunas trancadas
 
 Define o número de colunas do list box.
-> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
+> Você pode adicionar ou remover colunas dinamicamente por programação, usando comandos como [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) ou [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### Gramática JSON
 
@@ -182,15 +182,15 @@ Um array 4D que controla a apresentação das linhas do list box.
 
 Pode definir as propriedades de interface "oculto", "desativado" e "selecionável" para cada linha de um list box baseado num array utilizando este array. Também pode ser designado através do comando `LISTBOX SET ARRAY`.
 
-O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento do *array de controlo de linha* define o estado da interface da linha correspondente no list box. Three interface properties are available using constants in the "List Box" constant theme:
+O array de controlo de linhas deve ser do tipo Longint e incluir o mesmo número de linhas que o list box. Cada elemento do *array de controlo de linha* define o estado da interface da linha correspondente no list box. Três propriedades de interface estão disponíveis usando constantes no tema constante "List Box":
 
-| Parâmetros               | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk row is disabled       | 2     | A linha correspondente é desactivada. O texto e os controlos, como as caixas de verificação, estão esbatidos ou a cinzento. As áreas de entrada de texto inserível já não são inseríveis. Valor padrão: Activado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| lk row is hidden         | 1     | A linha correspondente é ocultada. A ocultação de linhas apenas afeta a visualização do list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Somente as linhas visíveis podem ser selecionadas (por exemplo, usando o comando Selecionar tudo). Valor padrão: Visível |
-| lk row is not selectable | 4     | A linha correspondente não é selecionável (não é possível realçar). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. No entanto, os controlos como as caixas de verificação e as listas continuam a funcionar. Esta definição é ignorada se o modo de seleção do list box é "Nenhum". Valor por defeito: Selecionável                                                                                                                                                                                                                                                                                           |
+| Parâmetros               | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk row is disabled       | 2     | A linha correspondente é desactivada. O texto e os controlos, como as caixas de verificação, estão esbatidos ou a cinzento. As áreas de entrada de texto inserível já não são inseríveis. Valor padrão: Activado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| lk row is hidden         | 1     | A linha correspondente é ocultada. A ocultação de linhas apenas afeta a visualização do list box. As linhas ocultas ainda estão presentes nos arrays e podem ser gerenciadas pela programação. Os comandos de linguagem, mais especificamente `LISTBOX Get number of rows` ou `LISTBOX GET CELL POSITION`, não consideram o estado exibido/oculto das linhas. Por exemplo, em um list box com 10 linhas em que as primeiras 9 linhas estão ocultas, `LISTBOX Get number of rows` retorna 10. Do ponto de vista do usuário, a presença de linhas ocultas em um list box não é visivelmente visível. Somente as linhas visíveis podem ser selecionadas (por exemplo, usando o comando Selecionar tudo). Valor padrão: Visível |
+| lk row is not selectable | 4     | A linha correspondente não é selecionável (não é possível realçar). As áreas de entrada de texto digitável não são mais digitáveis, a menos que a opção [Single-Click Edit](properties_Entry.md#single-click-edit) esteja ativada. No entanto, os controlos como as caixas de verificação e as listas continuam a funcionar. Esta definição é ignorada se o modo de seleção do list box é "Nenhum". Valor por defeito: Selecionável                                                                                                                                                                                                                                                                                         |
 
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. Por exemplo, se não quiser que a linha #10 seja selecionável, você pode digitar:
+Para alterar o estado de uma linha, você só precisa definir a(s) constante(s) apropriada(s) para o elemento de array correspondente. Por exemplo, se não quiser que a linha #10 seja selecionável, você pode digitar:
 
 ```4d
  aLControlArr{10}:=lk row is not selectable
@@ -206,7 +206,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 ![](../assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). Por exemplo:
+Observe que a definição das propriedades de um elemento substitui quaisquer outros valores desse elemento (se não forem redefinidos). Por exemplo:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable
@@ -232,10 +232,10 @@ Note that setting properties for an element overrides any other values for this 
 ## Modo seleção
 
 Designa a opção que permite aos utilizadores selecionar linhas:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+- **Nenhum**: as linhas não podem ser selecionadas se esse modo for escolhido. Clicar na lista não terá efeito, a menos que a opção [Single-Click Edit](properties_Entry.md#single-click-edit) esteja ativada. As teclas de navegação só fazem a lista rolar, o evento formulário `On Selection Change` não é gerado.
+- **Simples**: uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+  The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. O evento formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
+- **Múltiplo**: várias linhas podem ser selecionadas simultaneamente neste modo.
 
 
 #### Gramática JSON

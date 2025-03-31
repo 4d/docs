@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->La commande **OPEN SETTINGS WINDOW** provoque l’ouverture de la boîte de dialogue des Préférences 4D ou des Propriétés de la base courante et l’affichage des paramètres ou de la page correspondant à la clé passée dans le paramètre *sélecteur*.<!-- END REF--> 
 
@@ -36,7 +33,7 @@ Le paramètre *typePropriétés* est pris en compte dans les bases configurées 
 
 Si vous passez une clé invalide, la première page de la boîte de dialogue des Propriétés de la base est affichée. 
 
-##### Clés de chemins (mode standard) 
+### Clés de chemins (mode standard) 
 
 Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode standard, c'est-à-dire avec les "propriétés structure" : 
 
@@ -79,7 +76,7 @@ Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode sta
 
 **Note de compatibilité :** La commande continue de fonctionner avec les clés définies pour les versions 11.x et précédentes de 4D, la correspondance est établie automatiquement par le programme 4D. Il est toutefois conseillé de remplacer les anciens appels par les clés décrites ci-dessus.
 
-##### Clés de chemins (mode Propriétés utilisateur) 
+### Clés de chemins (mode Propriétés utilisateur) 
 
 Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode "propriétés utilisateur" :
 
@@ -105,7 +102,7 @@ Clés supplémentaires en mode "Propriétés utilisateur pour fichier de donnée
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### Exemple 1 
+## Exemple 1 
 
 Ouverture de la page “Méthodes” des Préférences 4D :   
   
@@ -113,7 +110,7 @@ Ouverture de la page “Méthodes” des Préférences 4D :
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Accès aux paramétrages des raccourcis clavier dans les Propriétés de la base avec verrouillage des autres propriétés :   
 
@@ -121,7 +118,7 @@ Accès aux paramétrages des raccourcis clavier dans les Propriétés de la base
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Ouverture des Propriétés de la base sur la première page des Propriétés de la base :  
 
@@ -129,7 +126,7 @@ Ouverture des Propriétés de la base sur la première page des Propriétés de 
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Accès à la page Interface des Propriétés de la base en mode "Propriétés utilisateur" :
 
@@ -137,6 +134,17 @@ Accès à la page Interface des Propriétés de la base en mode "Propriétés ut
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la boîte de dialogue des préférences/propriétés est validée, la variable système OK retourne 1 ; si elle est annulée, OK retourne 0.
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 903 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

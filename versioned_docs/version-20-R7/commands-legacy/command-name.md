@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Command name.Summary-->The **Command name** command returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->
-
-**Note:** The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
+<!--REF #_command_.Command name.Summary-->The **Command name** command returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
 
 **Compatibility note:** Since a command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions of the program to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information about this point, refer to the *Using tokens in formulas* section). Furthermore, by default, the English language version is used starting with 4D v15; however, the "Use regional system settings" option on the [Is a list](is-a-list.md) of the Preferences allows you to continue using the French language in a French version of 4D.
 
@@ -31,7 +29,7 @@ Two optional parameters are available:
 
 The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example). 
 
-#### Example 1 
+## Example 1 
 
 The following code allows you to load all valid 4D commands in an array:
 
@@ -53,7 +51,7 @@ The following code allows you to load all valid 4D commands in an array:
  Until(OK=0) //end of existing commands
 ```
 
-#### Example 2 
+## Example 2 
 
 In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
 
@@ -73,7 +71,7 @@ In the English version of 4D, the drop-down list will read: Sum, Average, Min, a
 
 \*with a 4D application configured to use the French programming language (see compatibility note)
 
-#### Example 3 
+## Example 3 
 
 You want to create a method that returns **True** if the command, whose number is passed as parameter, is thread-safe, and **False** otherwise.
 
@@ -99,7 +97,17 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
   // returns True
 ```
 
-#### See also 
+## See also 
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Preemptive 4D processes*  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 538 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

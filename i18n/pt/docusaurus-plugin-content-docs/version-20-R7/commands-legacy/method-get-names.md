@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->O comando **METHOD GET NAMES** enche o array *arrayNoms* com os nomes dos métodos projeto criados na aplicação.<!-- END REF-->  
   
@@ -25,7 +25,7 @@ Se executado este comando desde um componente, devolve por defeito os nomes dos 
   
 **Nota**: os métodos localizados no lixeiro não são listados. 
 
-#### Exemplo 
+## Exemplo 
 
 Exemplos de uso:
 
@@ -39,3 +39,13 @@ Exemplos de uso:
   // Lista dos métodos projeto da base local que começam por uma cadeia específica
  METHOD GET NAMES(t_Names;"web_@";*)
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1166 |
+| Thread-seguro | &check; |
+
+

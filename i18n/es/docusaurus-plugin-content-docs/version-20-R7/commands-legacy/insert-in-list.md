@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->El comando INSERT IN LIST inserta el elemento designado por el parámetro *refElem* en la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -38,7 +35,7 @@ Pase el número de referencia del nuevo elemento en *refElem*. Aunque calificamo
 
 Si quiere que el elemento incluya subelementos, pase un número de referencia de lista válido en el parámetro *sublista*. En este caso, también debe pasar el parámetro *desplegada*. Pase **True** o **False** en este parámetro de manera que esta sublista se muestre desplegada o contraída respectivamente.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código inserta un elemento (sin sublista asociada) justo antes del elemento seleccionado actualmente en la lista *hList*:
 
@@ -47,7 +44,16 @@ El siguiente código inserta un elemento (sin sublista asociada) justo antes del
  INSERT IN LIST(hList;*;"Nuevo elemento";vlUniqueRef)
 ```
 
-#### Ver también 
+## Ver también 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 625 |
+| Hilo seguro | &cross; |
+
+

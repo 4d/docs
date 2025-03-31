@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->La commande **OBJECT DUPLICATE** permet de créer une copie de l’objet désigné par le paramètre *objet* dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
 
@@ -84,7 +81,7 @@ Lorsque la commande est appelée dans un contexte non pris en charge, l’objet 
 
 Si la commande est exécutée correctement, la variable *OK* prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Création d’un nouveau bouton nommé "BoutonAnnul" au-dessus de l’objet existant "BoutonOK" et association à la variable *vAnnul* :
 
@@ -92,7 +89,7 @@ Création d’un nouveau bouton nommé "BoutonAnnul" au-dessus de l’objet exis
  OBJECT DUPLICATE(*;"BoutonOK";"BoutonAnnul";vAnnul)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio existant "bRadio5". Ce bouton sera associé à la variable <>r6, intégré au groupe du bouton "bRadio5" et placé 20 pixels au-dessous :
 
@@ -100,8 +97,18 @@ Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio exista
  OBJECT DUPLICATE(*;"bRadio5";"bRadio6";<>r6;"bRadio5";0;20)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
 *Objets de formulaire (Accès)*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1111 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

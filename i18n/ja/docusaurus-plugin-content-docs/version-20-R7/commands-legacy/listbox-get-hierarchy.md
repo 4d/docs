@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->LISTBOX GET HIERARCHY コマンドを使用して *object*と*\**で指定したリストボックスのプロパティが階層であるかどうかを知ることができます。<!-- END REF-->
 
@@ -34,6 +31,15 @@ displayed_sidebar: docs
 
 **Note:** 階層リストボックスが階層モードでないとき、コマンドは*hierarchy*配列の最初の要素に、リストボックスの最初の列の配列へのポインタを返します。
 
-#### 参照 
+## 参照 
 
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1099 |
+| スレッドセーフである | &cross; |
+
+

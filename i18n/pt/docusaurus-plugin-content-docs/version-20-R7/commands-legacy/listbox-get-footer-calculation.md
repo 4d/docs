@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->O novo comando **LISTBOX Get footer calculation** devolve o tipo de cálculo associado à área de rodapé de página do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  
   
@@ -30,6 +27,15 @@ O parâmetro *objeto* pode designar:
 * a variável e o nome de uma coluna de list box. Neste caso, el comando devolve o cálculo associado a esta área de rodapé de página desta coluna.
 Pode comparar o valor devolvido com as constantes do tema *Listbox Footer Calculation* (ver o comando [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)).
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1150 |
+| Thread-seguro | &cross; |
+
+

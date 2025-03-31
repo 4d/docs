@@ -5,13 +5,13 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* ; itemRef | * ; *enterable* ; *styles* {; *icon* {; *color*}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* ; *itemRef* ; *enterable* ; *styles* {; *icon* {; *color*}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *list* ; * ; *enterable* ; *styles* {; *icon* {; *color*}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
 | enterable | Boolean | &#8594;  | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8594;  | Font style for the item |
 | icon | Text, Integer | &#8594;  | Picture name or number ("" or 0 for no icon) |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->The **SET LIST ITEM PROPERTIES** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
 
@@ -62,11 +59,11 @@ In the *icon* parameter, you can pass a picture to be used as the icon for the i
 
 The *color* parameter (optional) lets you modify the color of the item text. The color must be specified in the form of an RGB color, i.e. a 4-byte longint in the 0x00RRGGBB format. For more information about this format, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. Pass -1 in the *color* parameter to reset the original color of the item.
 
-#### Example 1 
+## Example 1 
 
 See the example for the [APPEND TO LIST](append-to-list.md) command.
 
-#### Example 2 
+## Example 2 
 
 The following example changes the text of the current item of *list* to bold and bright red:
 
@@ -74,9 +71,18 @@ The following example changes the text of the current item of *list* to bold and
  SET LIST ITEM PROPERTIES(list;*;True;Bold;0;0x00FF0000)
 ```
 
-#### See also 
+## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 *Hierarchical Lists*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 386 |
+| Thread safe | &cross; |
+
+

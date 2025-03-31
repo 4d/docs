@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->O comando MINIMIZE WINDOW define o tamanho da janela, cujo número foi passado em *janela*, do tamanho que tinha antes de ser maximizada.<!-- END REF--> Se for omitido janela, o comando aplica a cada janela da aplicação (Windows) ou a janela do primeiro plano do processo atual (em Mac OS).  
 
 Este comando tem o mesmo efeito que um clique na caixa de redução da aplicação 4D:
 
-##### On Windows 
+### On Windows 
 
 A janela retorna a seu tamanho inicial, ou seja, seu tamanho antes de ser maximizada. Se for omitido o parâmetro janela, todas as janelas da aplicação são redimensionadas a seu tamanho inicial.  
 
@@ -30,7 +27,7 @@ A janela retorna a seu tamanho inicial, ou seja, seu tamanho antes de ser maximi
 
 Caixa de redução em Windows
 
-##### On Mac OS 
+### On Mac OS 
 
 O tamanho da janela é reduzido a seu tamanho inicial (seu tamanho antes de ser maximizada). Se o parâmetro janela for omitido, a janela do primeiro plano do processo atual retorna a seu tamanho inicial.  
 
@@ -49,7 +46,16 @@ Windows
 ![](../assets/en/commands/pict39372.en.png)  
 Mac OS
 
-#### Ver também 
+## Ver também 
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 454 |
+| Thread-seguro | &cross; |
+
+

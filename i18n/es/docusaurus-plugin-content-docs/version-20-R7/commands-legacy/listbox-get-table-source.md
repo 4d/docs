@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->El comando LISTBOX GET TABLE SOURCE permite conocer la fuente actual de datos mostrados en el list box designado por los parámetros *\** y *objeto*.<!-- END REF-->
 
@@ -32,6 +29,15 @@ Si las líneas del list box están vinculadas con la selección actual de la tab
 
 Si el list box está asociado con arrays, *numTabla* devuelve -1 y *tempo*, si se pasa, devuelve una cadena vacía.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1014 |
+| Hilo seguro | &cross; |
+
+

@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.CONVERT FROM TEXT.Summary-->CONVERT FROM TEXTコマンドは、現在の4Dの文字セットで記述されているテキストを、他の文字セットで記述されているテキストへ変換するために使用できます。<!-- END REF-->
-
-*4Dtext* 引数には変換するテキストを渡します。このテキストは、4Dが使用する文字セットで記述されています。4Dのバージョン11では、デフォルトでUnicode 文字セットが使用されています。
+<!--REF #_command_.CONVERT FROM TEXT.Summary-->CONVERT FROM TEXTコマンドは、現在の4Dの文字セットで記述されているテキストを、他の文字セットで記述されているテキストへ変換するために使用できます。<!-- END REF-->引数には変換するテキストを渡します。このテキストは、4Dが使用する文字セットで記述されています。4Dのバージョン11では、デフォルトでUnicode 文字セットが使用されています。
 
 *charSet* には変換に使用する文字セットを渡します。セットの標準名 (例えば、"ISO-8859-1" や "UTF-8" ) 、またはMIBEnum識別子を渡すことができます。
 
@@ -185,10 +183,20 @@ CONVERT FROM TEXTと[Convert to text](convert-to-text.md "Convert to text")コ�
 
 **注:** IANAに定義されていない特別な文字セット (1258=x-mac-japanese) を使用することができます。これはWindows上ではコードページ10001に、Mac上ではkTextEncodingMacJapaneseにマッ プされています。 
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されます。
 
-#### 参照 
+## 参照 
 
 [Convert to text](convert-to-text.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1011 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | OK |
+
+

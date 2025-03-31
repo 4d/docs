@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Shift down.Summary-->Shift down retorna TRUE se a tecla Shift estiver pressionada.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 O método abaixo de objeto para o botão *bUnBotao* realiza diferentes ações dependendo da função das teclas de modificação pressionadas quando clicar no botão: 
 
@@ -43,7 +43,7 @@ O método abaixo de objeto para o botão *bUnBotao* realiza diferentes ações d
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -51,3 +51,12 @@ O método abaixo de objeto para o botão *bUnBotao* realiza diferentes ações d
 [Macintosh option down](macintosh-option-down.md)  
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 543 |
+| Thread-seguro | &check; |
+
+

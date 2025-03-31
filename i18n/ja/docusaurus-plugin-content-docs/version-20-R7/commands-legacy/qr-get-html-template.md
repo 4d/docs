@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get HTML template.Summary-->QR Get HTML template コマンドは、クイックレポート*area*に現在使用されているHTMLテンプレートを返します。<!-- END REF-->戻り値はテキスト値であり、HTMLテンプレートの全内容が納められます。
 
@@ -25,6 +22,16 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 751 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

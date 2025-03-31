@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get pointer.Summary-->La commande **OBJECT Get pointer** retourne un pointeur vers la variable d’un objet de formulaire.<!-- END REF--> 
 
@@ -36,7 +33,7 @@ Cette commande permet de désigner différents types d'objets en fonction du par
 Le paramètre optionnel *nomSousFormulaire* vous permet de récupérer un pointeur vers un objet *nomObjet* n’appartenant pas au contexte courant, c’est-à-dire au formulaire parent. Pour pouvoir utiliser ce paramètre, vous devez avoir passé le sélecteur Object named.   
  Lorsque le paramètre *nomSousFormulaire* est passé, la commande **OBJECT Get pointer** recherche dans un premier temps l’objet sous-formulaire nommé *nomSousFormulaire* dans le formulaire courant, puis recherche à l’intérieur de ce sous-formulaire un objet nommé *nomObjet*. Si cet objet est trouvé, elle retourne un pointeur vers la variable de cet objet.
 
-#### Exemple 
+## Exemple 
 
 Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même formulaire parent. Les objets sous-formulaires sont nommés "SF1" et "SF2". Le formulaire "SF" contient un objet nommé *ValeurCourante*. Dans l’événement "Sur chargement" de la méthode formulaire du formulaire parent, nous souhaitons initialiser l’objet *ValeurCourante* de SF1 à "Janvier" et celui de SF2 "Février" : 
 
@@ -48,7 +45,7 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
  $Ptr->:="Février"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Focus object](focus-object.md)  
 [OBJECT Get name](object-get-name.md)  
@@ -56,3 +53,12 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
 [Self](self.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1124 |
+| Thread safe | &cross; |
+
+

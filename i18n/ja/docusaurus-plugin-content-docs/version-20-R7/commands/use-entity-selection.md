@@ -8,15 +8,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| 引数              | 型                                  |   | 説明           |
-| --------------- | ---------------------------------- | - | ------------ |
-| entitySelection | 4D.EntitySelection | → | エンティティセレクション |
+| 引数              | 型                                  |                             | 説明           |
+| --------------- | ---------------------------------- | --------------------------- | ------------ |
+| entitySelection | 4D.EntitySelection | &#8594; | エンティティセレクション |
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
-The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
+`USE ENTITY SELECTION` コマンドは、<!--REF #_command_.USE ENTITY SELECTION.Summary-->*entitySelection* 引数のデータクラスに合致するテーブルのカレントセレクションを、渡したエンティティセレクションの内容で更新します<!-- END REF-->。
 
 [リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
@@ -28,11 +28,11 @@ The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summa
 
 :::note
 
-`USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+`USE ENTITY SELECTION` の呼び出し後、更新された(空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
 
 :::
 
-#### 例題
+## 例題
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,6 +42,17 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されます
 ```
 
-#### 参照
+## 参照
 
 [Create entity selection](create-entity-selection.md)
+
+## プロパティ
+
+|                 |                             |
+| --------------- | --------------------------- |
+| コマンド番号          | 1513                        |
+| スレッドセーフ         | &check; |
+| カレントレコードを変更する   |                             |
+| カレントセレクションを変更する |                             |
+
+

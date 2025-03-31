@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->The **SET PICTURE TO LIBRARY** command creates a new picture or replaces a picture in the Picture Library.<!-- END REF-->
 
@@ -38,7 +35,7 @@ If there is no Picture Library graphic with the reference number passed in *picR
 
 **Note:** If you pass an empty picture in *picture* or a negative or null value in *picRef*, the command does nothing.
 
-#### Example 1 
+## Example 1 
 
 No matter what the current contents of the Picture Library, the following example adds a new picture to the Picture Library by first looking for a unique picture reference number:
 
@@ -50,7 +47,7 @@ No matter what the current contents of the Picture Library, the following exampl
  SET PICTURE TO LIBRARY(vgPicture;$vlPicRef;"New Picture")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example imports into the Picture Library the pictures (stored in a document on disk) created by the third example for the command [PICTURE LIBRARY LIST](picture-library-list.md):
 
@@ -86,12 +83,23 @@ The following example imports into the Picture Library the pictures (stored in a
     End
 ```
 
-#### Error management 
+## Error management 
 
 If there is not enough memory to add the picture to the Picture Library, an error -108 is generated. Note that I/O errors may also be returned (i.e., the structure file is locked). You can catch these errors using an error-handling method.
 
-#### See also 
+## See also 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 566 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+| Forbidden on the server ||
+
+

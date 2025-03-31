@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->La commande **ARRAY TO LIST** crée ou remplace la liste hiérarchique ou l'énumération *liste* en utilisant les éléments du tableau *tableau*.<!-- END REF-->
 
@@ -34,7 +31,7 @@ Le paramètre optionnel *réfEléments*, s'il est passé, doit être un tableau 
 
 Vous pouvez utiliser **ARRAY TO LIST** pour construire une liste basée sur les éléments d'un tableau. Cependant, pour vous affranchir de ces contraintes et exploiter pleinement les listes de valeurs, il est conseillé d'utiliser les commandes du thème *Listes hiérarchiques*.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant copie le tableau *tabRégions* dans l'énumération "Régions" :
 
@@ -42,7 +39,7 @@ L'exemple suivant copie le tableau *tabRégions* dans l'énumération "Régions"
  ARRAY TO LIST(tabRégions;"Régions")
 ```
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez placer les valeurs distinctes d’un champ dans une liste, par exemple pour créer un pop up menu hiérarchique. Vous pouvez écrire :
 
@@ -53,13 +50,23 @@ Vous souhaitez placer les valeurs distinctes d’un champ dans une liste, par ex
  ARRAY TO LIST($tabPays;listePays)
 ```
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 La commande **ARRAY TO LIST** génère l'erreur *\-9957* lorsqu'elle est appliquée à une énumération en cours de modification en mode Développement. Vous pouvez intercepter cette erreur à l'aide d'une méthode projet de gestion des erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 287 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

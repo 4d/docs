@@ -16,14 +16,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Parámetros    | Tipo    |     | Descripción                   |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Result        | Object  |  ←  | Information about the process |
+| Parámetros    | Tipo    |                             | Descripción                   |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Resultado     | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando `Process info` <!-- REF #_command_.Process info.Summary -->devuelve un objeto que da información detallada sobre el proceso cuyo número se pasa en *processNumber*<!-- END REF -->. Si pasa un número de proceso incorrecto, el comando devuelve un objeto null.
 
@@ -34,14 +34,14 @@ El objeto devuelto contiene las siguientes propiedades:
 | cpuTime          | Real                                    | Tiempo en ejecución (segundos)                                         |
 | cpuUsage         | Real                                    | Porcentaje de tiempo dedicado a este proceso (entre 0 y 1)             |
 | creationDateTime | Text (Date ISO 8601) | Fecha y hora de creación del proceso                                                      |
-| ID               | Longint                                 | ID único del proceso                                                                      |
+| ID               | Integer                                 | ID único del proceso                                                                      |
 | name             | Text                                    | Nombre del proceso                                                                        |
-| number           | Longint                                 | Process number                                                                            |
+| number           | Integer                                 | Process number                                                                            |
 | apropiativo      | Boolean                                 | True si se ejecuta de forma apropiativa, false en caso contrario                          |
 | sessionID        | Text                                    | Session UUID                                                                              |
-| state            | Longint                                 | Estado actual. Valores posibles: ver abajo                |
+| state            | Integer                                 | Estado actual. Valores posibles: ver abajo                |
 | systemID         | Text                                    | ID del proceso de usuario, proceso 4D o proceso de reserva                                |
-| type             | Longint                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
+| type             | Integer                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
 | visible          | Boolean                                 | True si es visible, false en caso contrario                                               |
 
 - Valores posibles para "state":
@@ -143,7 +143,7 @@ He aquí un ejemplo de objeto de salida:
 
 ```
 
-#### Ejemplo
+## Ejemplo
 
 Quiere saber si el proceso es apropiativo:
 
@@ -155,7 +155,7 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-#### Ver también
+## Ver también
 
 [Count tasks](../commands-legacy/count-tasks.md)\
 [Process activity](process-activity.md)\

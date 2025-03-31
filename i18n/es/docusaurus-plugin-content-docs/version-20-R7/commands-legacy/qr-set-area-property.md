@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->El comando **QR SET AREA PROPERTY** muestra u oculta el elemento de interfaz cuya referencia se pasa en *propiedad*.<!-- END REF-->
 
@@ -33,6 +30,16 @@ Puede utilizar la siguiente constante del tema *QR Propiedades de área* en *pro
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *propiedad* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR Get area property](qr-get-area-property.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 796 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

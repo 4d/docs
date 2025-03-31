@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** specifies the number of break levels in a report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
@@ -29,7 +26,7 @@ Each break level that is generated will print the corresponding Break areas and 
 
 The second, optional, argument, *pageBreak*, is used to cause page breaks during printing.
 
-#### Example 
+## Example 
 
 The following example prints a report with two break levels. The selection is sorted on four levels, but the **BREAK LEVEL** command specifies to break on only two levels. One field is accumulated with the [ACCUMULATE](accumulate.md) command:
 
@@ -41,9 +38,18 @@ The following example prints a report with two break levels. The selection is so
  PRINT SELECTION([Emp]) // Print the report
 ```
 
-#### See also 
+## See also 
 
 [ACCUMULATE](accumulate.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 302 |
+| Thread safe | &cross; |
+
+

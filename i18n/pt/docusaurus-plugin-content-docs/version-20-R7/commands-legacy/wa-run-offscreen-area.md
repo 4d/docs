@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->O comando **WA Run offscreen area** cria uma área web na memória que pode ser usada para carregar automaticamente e analisar as páginas web
 
 **Nota:** Esse comando usa o motor de renderização web embebido.<!-- END REF--> .
 
-No objeto *parâmetros*, pasesqualquer dos atributos opcionais abaixo para a área web. Estas propiedades estarão disponíveis através do comando [This ](this.md) dentro do método onEvent e fazem referência à instância: 
+No objeto *parâmetros*, pasesqualquer dos atributos opcionais abaixo para a área web. Estas propiedades estarão disponíveis através do comando [This ](../commands/this.md) dentro do método onEvent e fazem referência à instância: 
 
 | **Propriedade <br/>** | **Tipo <br/>** | **Descrição <br/>**                                                                                                                                                                                                                                                                                                                           |
 | ----------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,7 +60,7 @@ Os comandos abaixo podem ser usados no método callback:
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser criar e manejar uma área web offscreen usando uma função da classe OffscreenArea:
 
@@ -89,12 +86,22 @@ Na **classe OffscreenArea**:
  End case
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável de sistema OK é estabelecida como 0 se o timeout foi alcançaddo ou [CANCEL](cancel.md) for chamado em *onEvent*, senão é estabelecida como 1.
 
-#### Ver também 
+## Ver também 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Gestão programada de áreas web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1727 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

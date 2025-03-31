@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->The SET DEFAULT CENTURY command specifies the default century and the pivot year used by 4D when you enter a date with only two digits for the year.<!-- END REF-->
 
@@ -61,3 +61,13 @@ In all cases:
 * 01/25/2007 means January 25, 2007
 
 This command only affects data entry. It has no effect on date storage, computation, and so on.
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 392 |
+| Thread safe | &check; |
+
+

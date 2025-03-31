@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** コマンドを使用すれば、アプリケーションモードにおいて、クエリエディターのような標準の4 Dダイアログボックスを表示する際に、*aTable* に渡されるそのテーブルのフィールドのマスクや名前の変更、並べ替えが行えます (スタートアップモードが**アプリケーション**である場合、または**実行**メニューから**アプリケーションをテスト**を選択した場合) 。<!-- END REF-->
 
@@ -53,14 +50,23 @@ displayed_sidebar: docs
 * プラグインは常にコマンドによって指定された仮想ストラクチャへアクセスします。
 * [SET TABLE TITLES](set-table-titles.md) コマンドが引数なしに呼び出された場合、(カスタムのテーブル名およびフィールド名を含め)"バーチャル"なストラクチャーはアプリケーション環境からは完全に削除されます。
 
-#### 例題 
+## 例題 
 
 [SET TABLE TITLES](set-table-titles.md "SET TABLE TITLES") コマンドの例題を参照してください。
 
-#### 参照 
+## 参照 
 
 [Field name](field-name.md)  
 [GET FIELD TITLES](get-field-titles.md)  
 [Last field number](last-field-number.md)  
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 602 |
+| スレッドセーフである | &cross; |
+
+

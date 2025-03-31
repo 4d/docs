@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu bar reference.Summary-->O comando **Get menu bar reference** devolve a identificação única da barra de menus atual ou da barra de menus de um processo específico.<!-- END REF-->
 
@@ -35,10 +32,19 @@ Se a barra de menus foi criada pelo comando [Create menu](create-menu.md), esta 
 
 O parâmetro *processo* pode ser utilizado para designar o processo do que quer obter a identificação da barra de menus atual. Se omite este parâmetro, o comando devolve a identificação da barra de menus do processo atual..i
 
-#### Exemplo 
+## Exemplo 
 
 Consulte o exemplo do comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITEMS").
 
-#### Ver também 
+## Ver também 
 
 [SET MENU BAR](set-menu-bar.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 979 |
+| Thread-seguro | &cross; |
+
+

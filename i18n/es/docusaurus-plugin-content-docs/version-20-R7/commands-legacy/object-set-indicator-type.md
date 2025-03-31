@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->El comando **OBJECT SET INDICATOR TYPE** modifica el tipo de indicador de progresión del o de los termómetro(s) designado(s) por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  
   
@@ -34,6 +31,15 @@ En el parámetro *indicador*, pase el tipo de indicador a mostrar. Puede utiliza
 | Barber shop               | Entero largo | 2     | Barra que muestra una animación continua          |
 | Progress bar              | Entero largo | 1     | Barra de progreso estándar                        |
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1246 |
+| Hilo seguro | &cross; |
+
+

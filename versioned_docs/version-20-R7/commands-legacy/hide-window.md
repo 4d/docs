@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->The **HIDE WINDOW** command hides the window whose number was passed in *window* or, if this parameter is omitted, the current process frontmost window.<!-- END REF--> For example, this command lets you display only the active window in a process that consists of several processes. 
 
@@ -29,7 +26,7 @@ To display a window that was previously hidden by the **HIDE WINDOW** command:
 
 To hide all the windows of a process, use the [HIDE PROCESS](hide-process.md) command.
 
-#### Example 
+## Example 
 
 This example corresponds to a method of a button located in an input form. This button opens a dialog box in a new window that belongs to the same process. In this example, the user wants to hide the other windows of the process (an entry form and a tool palette) while displaying the dialog box. Once the dialog box is validated, other process windows are displayed again.
 
@@ -45,6 +42,15 @@ This example corresponds to a method of a button located in an input form. This 
  SHOW WINDOW(Palette) // Display the other windows
 ```
 
-#### See also 
+## See also 
 
 [SHOW WINDOW](show-window.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 436 |
+| Thread safe | &cross; |
+
+

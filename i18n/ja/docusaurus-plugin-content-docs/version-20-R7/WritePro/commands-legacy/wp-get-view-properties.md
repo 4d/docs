@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get view properties.Summary-->**WP Get view properties** コマンドは、*wpArea* 引数で指定した4D Write Pro エリアのカレントのビュープロパティを返します。<!-- END REF-->
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 | wk visible vertical ruler    | visibleVerticalRuler   | 垂直ルーラーを表示します(ページビューモードでのみ表示されるエフェクトです)。取りうる値: True/False                                                                                                                                                                                                         |
 | wk zoom                      | zoom                   | 4D Write Pro エリアのコンテンツを表示するズーム倍率。取りうる値: 1より大きい数値                                                                                                                                                                                                                 |
 
-#### 例題 
+## 例題 
 
 4D Write Pro エリア内にて、ページモードのときのみルーラーを表示したい場合を考えます:
 
@@ -66,6 +66,6 @@ displayed_sidebar: docs
  WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
-#### 参照 
+## 参照 
 
 [WP SET VIEW PROPERTIES](wp-set-view-properties.md)  

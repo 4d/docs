@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Random.Summary-->Random devuelve un valor entero aleatorio entre 0 y 32 767 (inclusive).<!-- END REF-->
 
@@ -25,10 +25,20 @@ Para definir un rango de enteros, utilice esta fórmula:
 
 El valor *vStart* es el primer número del intervalo, y el valor *vEnd* es el último.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo asigna un valor aleatorio entre 10 y 30 a la variable *vlResult*:
 
 ```4d
  vlResult:=(Random%21)+10
 ```
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 100 |
+| Hilo seguro | &check; |
+
+

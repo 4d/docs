@@ -16,25 +16,23 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MAIL New attachment.Params-->
 
-| Parámetros  | Tipo                              |                                       | Descripción                                                                                        |
-| ----------- | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Parámetros  | Tipo                              |                                       | Descripción                                                                                        |
-| ***         | ***                               | :---: | ***                                                                                                |
-| file        | 4D.File           | →                                     | Archivo adjunto                                                                                    |
-| zIPFile     | 4D.ZipFile        | →                                     | Archivo zip adjunto                                                                                |
-| blob        | 4D.Blob           | →                                     | BLOB que contiene el adjunto                                                                       |
-| path        | Text                              | →                                     | Ruta del archivo adjunto                                                                           |
-| name        | Text                              | →                                     | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
-| cid         | Text                              | →                                     | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
-| type        | Text                              | →                                     | Valor del encabezado content-type                                                                  |
-| disposition | Text                              | →                                     | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Result      | 4D.MailAttachment | ←                                     | Objeto adjunto                                                                                     |
+| Parámetros  | Tipo                              |                             | Descripción                                                                                        |
+| ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
+| file        | 4D.File           | &#8594; | Archivo adjunto                                                                                    |
+| zIPFile     | 4D.ZipFile        | &#8594; | Archivo zip adjunto                                                                                |
+| blob        | 4D.Blob           | &#8594; | BLOB que contiene el adjunto                                                                       |
+| path        | Text                              | &#8594; | Ruta del archivo adjunto                                                                           |
+| name        | Text                              | &#8594; | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
+| cid         | Text                              | &#8594; | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
+| type        | Text                              | &#8594; | Valor del encabezado content-type                                                                  |
+| disposition | Text                              | &#8594; | Valor del encabezado content-disposition: "inline" o "attachment". |
+| Resultado   | 4D.MailAttachment | &#8592; | Objeto adjunto                                                                                     |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede agregar a un [objeto de Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir el adjunto, puede utilizar:
 
@@ -48,7 +46,7 @@ El parámetro opcional *name* permite pasar el nombre y la extensión que utiliz
 - pasó una ruta de archivo, se utiliza el nombre y la extensión del archivo,
 - pasó un BLOB, se genera automáticamente un nombre aleatorio sin extensión.
 
-El parámetro opcional *cid* permite pasar un ID interno para el archivo adjunto. Este ID es el valor del encabezado `Content-Id`, se utilizará sólo en mensajes HTML. El cid asocia el archivo adjunto con una referencia definida en el cuerpo del mensaje mediante una etiqueta HTML como `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. Puede pasar una cadena vacía en *cid* si no quiere utilizar este parámetro.
+El parámetro opcional *cid* permite pasar un ID interno para el archivo adjunto. Este ID es el valor del encabezado `Content-Id`, se utilizará sólo en mensajes HTML. El cid asocia el archivo adjunto con una referencia definida en el cuerpo del mensaje mediante una etiqueta HTML como `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo.
 
 Puede utilizar el parámetro opcional *type* para definir explícitamente el `content-type` del archivo adjunto. Por ejemplo, puede pasar una cadena que defina un tipo MIME ("video/mpeg"). Este valor de content-type se definirá para el archivo adjunto, independientemente de su extensión. Para más información sobre los tipos MIME, por favor consulte la [página tipo MIME en Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
@@ -85,7 +83,7 @@ Por defecto, si se omite el parámetro *disposition*:
 - si se utiliza el parámetro *cid*, el encabezado `Content-disposition` se define en "inline",
 - si el parámetro *cid* no se pasa o está vacío, el encabezado `Content-disposition` se establece en "attachment".
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Desea enviar un correo electrónico con un archivo seleccionado por el usuario como adjunto y una imagen integrada en el cuerpo HTML:
 
@@ -123,7 +121,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Desea enviar un correo electrónico con un área 4D Write Pro como archivo adjunto:
 
@@ -148,3 +146,12 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 
 $transporter.send($email)
 ```
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1644                        |
+| Hilo seguro       | &check; |
+
+

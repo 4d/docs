@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->La commande **REGENERATE MISSING TABLE** reconstruit la table manquante dont vous avez passé le nom dans le paramètre *nomTable*.<!-- END REF--> Lorsqu’une table manquante est reconstruite, elle devient visible dans l’éditeur de Structure et ses données sont de nouveau accessibles.
 
@@ -24,7 +21,7 @@ Les tables manquantes sont des tables dont les données sont présentes dans le 
 
 Si la table désignée par le paramètre *nomTable* n’est pas une table manquante de la base, la commande ne fait rien. 
 
-#### Exemple 
+## Exemple 
 
 Cette méthode regénère toutes les tables manquantes éventuellement présentes dans la base :
 
@@ -59,6 +56,15 @@ Cette méthode regénère toutes les tables manquantes éventuellement présente
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1126 |
+| Thread safe | &cross; |
+
+

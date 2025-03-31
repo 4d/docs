@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->O comando **FORM GET ENTRY ORDER** devolve em *nomObjetos* os nomes ordenados dos objetos que definem a ordem de entrada do formulario.<!-- END REF--> 
 
@@ -33,7 +30,7 @@ A ordem de entrada real sempre inclui objetos da página 0 e dos formulários he
 
 **Nota:** a ordem de entrada dentro de um subformulario não é devolvida quando se aplica este comando ao formulário pai.
 
-#### Exemplo 
+## Exemplo 
 
 Pode excluir certos objetos da ordem de entrada:
 
@@ -51,6 +48,15 @@ Pode excluir certos objetos da ordem de entrada:
  FORM SET ENTRY ORDER($arrTabOrderObject) //aplica a nova ordem de entrada
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1469 |
+| Thread-seguro | &cross; |
+
+

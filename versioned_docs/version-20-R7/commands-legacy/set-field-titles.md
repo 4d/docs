@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** lets you mask, rename, and reorder the fields of the table passed in *aTable* when they appear in standard 4D dialog boxes, such as the Query editor, within the Application environment (i.e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu).<!-- END REF--> 
 
@@ -50,14 +47,23 @@ Use the **SET FIELD TITLES** command for:
 * Plug-ins always access the "virtual" structure as specified by this command.
 * If the [SET TABLE TITLES](set-table-titles.md) command is called without any parameters, the "virtual" structure (including table and field custom names) is completely removed from the Application environment.
 
-#### Example 
+## Example 
 
 See example for the [SET TABLE TITLES](set-table-titles.md) command.
 
-#### See also 
+## See also 
 
 [Field name](field-name.md)  
 [GET FIELD TITLES](get-field-titles.md)  
 [Last field number](last-field-number.md)  
 [Parse formula](parse-formula.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 602 |
+| Thread safe | &cross; |
+
+

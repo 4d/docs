@@ -64,7 +64,7 @@ La fenêtre suivante s'affiche :
 
 #### Démarrage automatique de l'admin du serveur web
 
-Cochez cette option pour lancer le serveur web `WebAdmin` automatiquement au démarrage de 4D ou 4D Server (voir [ci-dessus](#launching-at-startup)). Cette option n'est pas cochée par défaut.
+Cochez cette option pour lancer le serveur web `WebAdmin` automatiquement au démarrage de 4D ou 4D Server (voir [ci-dessus](#launch-at-startup)). Cette option n'est pas cochée par défaut.
 
 #### Connexions HTTP sur localhost acceptées
 

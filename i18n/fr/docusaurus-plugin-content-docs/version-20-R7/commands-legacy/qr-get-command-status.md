@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get command status.Summary-->La commande **QR Get command status** retourne 0 si la commande désignée par le paramètre *numCommande* est inactivée et 1 si elle est activée.<!-- END REF-->
 
@@ -89,7 +86,17 @@ Passez dans paramètre *numCommande* une des constantes du thème *QR Commandes*
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numCommande* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 792 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

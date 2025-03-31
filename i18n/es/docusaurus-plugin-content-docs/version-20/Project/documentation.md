@@ -113,7 +113,7 @@ Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;
 
 :::note
 
-En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](../code-editor/write-class-method.md#using-help-tips).
+De lo contrario, el editor de código muestra [el comentario de bloque en la parte superior del código del método](../code-editor/write-class-method.md#help-tips).
 
 :::
 
@@ -161,6 +161,8 @@ _italic_
 ```4d
     var $txt : Texto
     $txt:="¡Hola mundo!"  
+```  
+```  
 ```
 ````
 - La etiqueta de la tabla es soportada:
@@ -168,8 +170,8 @@ _italic_
 ```md
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 
@@ -214,7 +216,7 @@ GetLogo (size) -> logo
 
 | Parameter | Type   | in/out | Description |
 | --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
+| size      | Integer | in | Logo style selector (1 to 5)  |
 | logo      | Picture | out | Selected logo |
 
 

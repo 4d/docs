@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET TIMER.Summary-->El comando SET TIMER permite activar el evento de formulario On Timer y fijar, para el proceso y formulario actual, el número de tics (1 tic = 1/60 de segundo) entre cada evento de formulario On Timer.<!-- END REF--> 
 
@@ -30,7 +27,7 @@ Si pasa -1 en el parámetro *tickCount*, el comando activará el evento de formu
 
 Para desactivar por programación el disparador del evento de formulario On Timer, llame nuevamente a SET TIMER y pase 0 en *ticCont*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el ordenador haga bip cada tres segundos. Para hacer esto, escriba el siguiente método de formulario: 
 
@@ -44,7 +41,16 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 645 |
+| Hilo seguro | &cross; |
+
+

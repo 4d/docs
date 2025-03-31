@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** reemplaza el formato de salida para los objetos especificados por *objeto* por el formato que pasa en *formatSalida*.<!-- END REF--> El nuevo formato se utiliza únicamente para la visualización actual, no se guarda con el formulario.
 
@@ -28,14 +25,14 @@ Si especifica el parámetro opcional *\**, indica un nombre de objeto (una caden
 
 Naturalmente, debe utilizar un formato de salida compatible con el tipo de datos presente en el objeto o con el objeto mismo.
 
-##### Booleanos 
+### Booleanos 
 
 Para dar formato a campos booleanos:
 
 * (todas las versiones) puede pasar un valor simple en *formatSalida*. En este caso, el campo se mostrará como una casilla de selección y su etiqueta será el valor especificado.
 * (sólo bases de datos binarias) puede pasar dos valores, separados por un punto y coma (*;*), en *formatSalida*. En este caso, el campo se mostrará como dos botones radio.
 
-##### Fecha y hora 
+### Fecha y hora 
 
 Para dar formato a los campos o variables de tipo Fecha u Hora, puede utilizar:
 
@@ -73,7 +70,7 @@ Horas:
 | System time long             | 11    | 1:02:03 AM HNEC (Mac únicamente)                                                                                                                                                                                                    |  
 | System time long abbreviated | 10    | 1•02•03 AM (Mac únicamente)                                                                                                                                                                                                         |  
 | System time short            | 9     |                                                                                                                                                                                                                                     |
-* o un [formato personalizado basado en un modelo](https://developer.4d.com/docs/Project/date-time-formats.md) (valor string). Por ejemplo:  
+* o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor string). Por ejemplo:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -92,7 +89,7 @@ Véase también el ejemplo 2.
  OBJECT SET FORMAT(*;"timeinput";":m")  
 ```
 
-##### Imágenes 
+### Imágenes 
 
 Para dar formato a campos o variables de tipo Imagen, pase Char(n) en *formatSalida*, donde *n* es una de las siguientes constantes predefinidas de 4D: 
 
@@ -107,7 +104,7 @@ Para dar formato a campos o variables de tipo Imagen, pase Char(n) en *formatSal
 | Replicated                  | Entero largo | 7     |
 
   
-##### Alfas y numéricos 
+### Alfas y numéricos 
 
 Para dar formato a campos o variables de tipo alfa o numérico, pase directamente la etiqueta del formato en el parámetro *formatSalida*. 
 
@@ -115,7 +112,7 @@ Para mayor información sobre formatos de salida, consulte las secciones *Format
 
 **Nota:** en *formatSalida*, para utilizar los formatos de salida personalizados que usted haya podido crear en la caja de diálogo Preferencias, coloque un prefijo al nombre del formato con una barra vertical (|).
 
-##### Botones imagen 
+### Botones imagen 
 
 Para dar formato a botones imagen, pase en el parámetro *formatSalida* una cadena de caracteres respetando la siguiente sintaxis:  
 *cols;lineas;imagen;modo{;ticks}*
@@ -144,7 +141,7 @@ Utilizado para volver transparente el fondo de la imagen.
 Este modo le permite definir que la última miniatura debe ser mostrada cuando el botón esté inactivo. Cuando este modo es seleccionado, 4D muestra la última miniatura cuando el botón está desactivado. Cuando este modo se utiliza con los modos 0, 1 y 2, la última miniatura no se tiene en cuanta en la secuencia de los otros modos. Aparecerá únicamente cuando el botón esté desactivado.  
 • *ticks* \= activación del modo “Cambiar cada x ticks” y define intervalo de tiempo entre la visualización de cada imagen. Cuando se pasa este parámetro opcional, le permite hacer ciclos a través del contenido del botón imagen a la velocidad especificada. Por ejemplo, si usted introduce "2;3;?16807;0;10", el botón imagen mostrará una imagen diferente cada 10 tics. Cuando este modo está activo, sólo el modo Transparente puede utilizarse (64).
 
-##### Menús imagen desplegable 
+### Menús imagen desplegable 
 
 Para dar formato a los menús imagen desplegable, pase en el parámetro *formatSalida* una cadena de caracteres respetando la siguiente sintaxis:  
 *cols;lineas;imagen;hMargen;vMargen;modo*  
@@ -160,7 +157,7 @@ Para dar formato a los menús imagen desplegable, pase en el parámetro *formatS
 \- *modo* \= 0: el menú imagen desplegable no es transparente,  
 \- *modo* \= 64: el menú imagen desplegable es transparente.
 
-##### Termómetros y reglas 
+### Termómetros y reglas 
 
 Para dar formato a objetos de tipo termómetro o regla, pase en el parámetro *formatSalida*, una cadena de carácter respetando la siguiente sintaxis:  
 *min;max;unidad;paso;modo{;format{;visualización}}*  
@@ -181,7 +178,7 @@ Para dar formato a objetos de tipo termómetro o regla, pase en el parámetro *f
    * *visualización* \= 0 (o se omite): mostrar una regla estándar/termómetro en animación continua "barber shop".  
    * *visualización* \= 1 : activa el modo "Stepper" para una regla / activa el modo "Progresión asincrónica" para un termómetro. Para mayor información sobre estas opciones consulte el manual de *Diseño*.
 
-##### Dials 
+### Dials 
 
 Para dar formato a objetos de tipo dial, en el parámetro *formatSalida*, pase una cadena de caracteres respetando la siguiente sintaxis:  
 *min;max;unid;interv{;modo}*  
@@ -192,7 +189,7 @@ Para dar formato a objetos de tipo dial, en el parámetro *formatSalida*, pase u
 * *interv* \= intervalo mínimo del cursor de movimiento en el indicador.
 * *modo* \= modo de funcionamiento del dial (opcional). Este parámetro sólo acepta el valor 32: On Data Change se ejecuta mientras el usuario está ajustando el indicador. Si este valor no se utiliza, On Data Change ocurre sólo después de que el usuario haya terminado de ajustar el indicador.
 
-##### Rejillas de botones 
+### Rejillas de botones 
 
 Para dar formato a rejillas de botones, pase en el parámetro *formatSalida* una cadena de caracteres respetando la siguiente sintaxis:  
 *cols;lines*  
@@ -202,7 +199,7 @@ Para dar formato a rejillas de botones, pase en el parámetro *formatSalida* una
 
 **Nota:** para mayor información sobre formatos de salida de los objetos de formulario, consulte el Manual de Diseño.
 
-##### Botones 3D 
+### Botones 3D 
 
 Para dar formato a botones 3D, pase en el parámetro *formatSalida* una cadena de caracteres respetando la siguiente sintaxis:  
 *titulo;imagen;fondo;tituloPos;tituloVisible;iconVisible;estilo;horMargen;vertMargen;*  
@@ -258,7 +255,7 @@ Algunas opciones no se tienen en cuenta para todos los estilos de botones 3D. Ad
  OBJECT SET FORMAT(myVar;"NiceButton;?256;:562;1;;1;4;5;;5;0;;2")
 ```
 
-##### Encabezados de list box 
+### Encabezados de list box 
 
 Para formatear el icono en un encabezado de list box, pase una cadena de caracteres en el parámetro *formatSalida*, que respeta la siguiente sintaxis:  
 *imagen;iconPos*
@@ -273,7 +270,7 @@ Para formatear el icono en un encabezado de list box, pase una cadena de caracte
 
 Esta funcionalidad es útil, por ejemplo, cuando se quiere trabajar con un icono personalizado.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 La siguiente línea de código da formato al campo *\[Empleados\]Fecha Contratado* al quinto formato de fecha (Internal date long). 
 
@@ -281,28 +278,28 @@ La siguiente línea de código da formato al campo *\[Empleados\]Fecha Contratad
  OBJECT SET FORMAT([Empleados]Fecha Contratado;Char(Internal date long))
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
-Este ejemplo formatea una variable fecha y una variable hora utilizando [formatos personalizados](https://developer.4d.com/docs/Project/date-time-formats.md): 
+Este ejemplo formatea una variable fecha y una variable hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo cambia el formato de un campo *\[Empresa\]Codigo postal* de acuerdo con la longitud del valor en el campo: 
 
 ```4d
  If(Length([Empresa]Codigo postal)=9)
-    OBJECT SET FORMAT([Empresa]Codigo postal;"#####–####")
+    OBJECT SET FORMAT([Empresa]Codigo postal;"###–##")
  Else
-    OBJECT SET FORMAT([Empresa]Codigo postal;"#####")
+    OBJECT SET FORMAT([Empresa]Codigo postal;"###")
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo da formato al valor de un campo numérico dependiendo de si es positivo, negativo, o nulo:
 
@@ -310,7 +307,7 @@ El siguiente ejemplo da formato al valor de un campo numérico dependiendo de si
  OBJECT SET FORMAT([Stats]Results;"### ##0.00;(### ##0.00);")
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 El siguiente ejemplo define el formato de un campo Booleano para mostrar Casado y Soltero, en lugar de los valores por defecto Sí y No: 
 
@@ -318,7 +315,7 @@ El siguiente ejemplo define el formato de un campo Booleano para mostrar Casado 
  OBJECT SET FORMAT([Empleado]Estado Civil;"Casado;Soltero")
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Siempre que haya almacenado un archivo de imagen llamado "envelope\_open.png" en la carpeta Resources de la base, puede escribir:
 
@@ -330,7 +327,7 @@ Siempre que haya almacenado un archivo de imagen llamado "envelope\_open.png" en
 
 ![](../assets/en/commands/pict2878245.en.png)
 
-#### Ejemplo 7 
+## Ejemplo 7 
 
 El siguiente ejemplo define el formato de un campo booleano para mostrar una casilla de selección llamada “Clasificado”: 
 
@@ -338,7 +335,7 @@ El siguiente ejemplo define el formato de un campo booleano para mostrar una cas
  OBJECT SET FORMAT([Carpeta]Clasificación;"Clasificado")
 ```
 
-#### Ejemplo 8 
+## Ejemplo 8 
 
 Usted tiene una tabla de miniaturas que contiene 1 línea y 4 columnas, destinada a mostrar un botón imagen (“activa por defecto”, “al hacer clic en el botón”, “al pasar el cursor” e “inactivo”). Usted quiere asociar las opciones Cambiar al pasar el cursor encima, Volver al soltar el clic y Última imagen si desactivado: 
 
@@ -346,7 +343,7 @@ Usted tiene una tabla de miniaturas que contiene 1 línea y 4 columnas, destinad
  OBJECT SET FORMAT(*;"BotonImagen";"4;1;?15000;176")
 ```
 
-#### Ejemplo 9 
+## Ejemplo 9 
 
 Pase un termómetro a modo "Barber shop" 
 
@@ -355,9 +352,18 @@ Pase un termómetro a modo "Barber shop"
  $Mitermo :=1 //Iniciar la animación
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  
 [OBJECT SET FILTER](object-set-filter.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 236 |
+| Hilo seguro | &cross; |
+
+

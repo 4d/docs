@@ -5,13 +5,13 @@ slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* ; beforeItemRef | * ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* ; *beforeItemRef* ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<br/>**INSERT IN LIST** ( * ; *list* ; * ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| beforeItemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
+| beforeItemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
 | itemText | Text | &#8594;  | Text for the new list item |
 | itemRef | Integer | &#8594;  | Unique reference number for the new list item |
 | sublist | Integer | &#8594;  | Optional sublist to attach to the new list item |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->
 
@@ -40,7 +37,7 @@ You pass the item reference number of the new item in *itemRef*. Although we qua
 
 If you want for the item to include subitems, pass a valid list reference number in the *sublist* parameter. In this case, you must also pass the *expanded* parameter. Pass either **True** or **False** in this parameter so that this sublist is displayed either expanded or collapsed respectively. 
 
-#### Example 
+## Example 
 
 The following code inserts an item (with no attached sublist) just before the currently selected item in the *hList* list:
 
@@ -49,7 +46,16 @@ The following code inserts an item (with no attached sublist) just before the cu
  INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
-#### See also 
+## See also 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 625 |
+| Thread safe | &cross; |
+
+

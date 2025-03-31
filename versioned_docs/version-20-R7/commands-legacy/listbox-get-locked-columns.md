@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->The **LISTBOX Get locked columns** command returns the number of locked columns in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -30,6 +27,15 @@ If a column is inserted or deleted by programming within the locked area, the nu
 
 However, the command does not take into account the visible/invisible status of columns.
 
-#### See also 
+## See also 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1152 |
+| Thread safe | &cross; |
+
+

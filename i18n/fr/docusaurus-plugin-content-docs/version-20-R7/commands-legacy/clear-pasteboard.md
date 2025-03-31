@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->**CLEAR PASTEBOARD** efface entièrement le conteneur de données.<!-- END REF--> Si le conteneur contient plusieurs instances des mêmes données, toutes les instances sont effacées. Après un appel à **CLEAR PASTEBOARD**, le conteneur de données est vide.
 
@@ -25,7 +22,7 @@ Si vous appelez **CLEAR PASTEBOARD** une fois et puis appelez [APPEND DATA TO PA
 
 En revanche, les commandes [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) et [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) effacent automatiquement le conteneur avant d'y placer des données.
 
-#### Exemple 1 
+## Exemple 1 
 
 Le code suivant efface le conteneur puis y ajoute des données : 
 
@@ -35,10 +32,19 @@ Le code suivant efface le conteneur puis y ajoute des données :
  APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Ajouter du texte RTF
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 402 |
+| Thread safe | &cross; |
+
+

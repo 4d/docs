@@ -65,7 +65,7 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | path             | Text       | Caminho de [um atributo de alias](../ORDA/ordaClasses.md#alias-attributes-1) com base em uma relação                                                                                                                                                                                                                                                                                       |
 | readOnly         | Parâmetros | True se o atributo for apenas de leitura. Por exemplo, os atributos computados sem função [`set`](../ORDA/ordaClasses.md#function-set-attributename) são apenas de leitura.                                                                                                                                                                                                                |
 | relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                         |
-| type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": "blob", "bool", "date", "image", "number", "object" ou "string". "number" é retornado para qualquer tipo numérico, inclusive duração; "string" é retornado para os tipos de atributo uuid, alfa e texto; os atributos "blob" são [objetos blob](../Concepts/dt_blob.md#blob-type).</li><li>si `.kind` = "relatedEntity": nome da dataClass relacionada</li><li>se `.kind` = "relatedEntities": nome da dataClass relacionada + sufixo "Selection"</li><li>se `.kind` = "calculated" ou "alias": o mesmo que acima, dependendo do resultado</li>                                                                                                                                                               |
+| type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": "blob", "bool", "date", "image", "number", "object" ou "string". "number" é retornado para qualquer tipo numérico, inclusive duração; "string" é retornado para os tipos de atributo uuid, alfa e texto; os atributos "blob" são [objetos blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nome da dataClass relacionada</li><li>se `.kind` = "relatedEntities": nome da dataClass relacionada + sufixo "Selection"</li><li>se `.kind` = "calculated" ou "alias": o mesmo que acima, dependendo do resultado</li>                                                                                                                                                               |
 | unique           | Parâmetros | True se o valor do atributo tiver que ser único. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                          |
 
 :::tip
@@ -120,7 +120,6 @@ Considerando as propriedades de tabela abaixo:
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Histórico</summary>
@@ -157,9 +156,9 @@ Se aplica carregamento diferido/lazy loading.
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                  |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 > Para conhecer o número total de entidades num dataclass, recomenda-se a utilização da função [`getCount()`](#getcount) que é mais optimizada do que a expressão `ds.myClass.all().length`.
 
@@ -170,7 +169,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
  $allEmp:=ds. Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -189,11 +188,13 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 | --------- | ---- |::| ----------------------------------------------------- |
 |           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve o datastore para a dataclass especificada<!-- END REF -->.
+A função `.clearRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
 > Esta função não reinicia os valores `timeout` e `maxEntries`.
 
@@ -219,7 +220,7 @@ $ds. Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -282,9 +283,9 @@ Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no ar
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                  |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Exemplo 1
 
@@ -449,7 +450,7 @@ A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta a folha d
 
 Em *primaryKey*, passe o valor da chave primária da entidade a recuperar. Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
-Se nenhuma entidade for encontrada com  *primaryKey*, uma entidade**Null** é retornada.
+Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** é retornada.
 
 É aplicado o lazy loading/carregamento diferido, ou seja os dados relacionados são carregados do disco só quando pedidos.
 
@@ -457,13 +458,13 @@ Se nenhuma entidade for encontrada com  *primaryKey*, uma entidade**Null** é re
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                               |
-| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                        |
+| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/remoteDatastores.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
@@ -526,7 +527,7 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 #### Descrição
 
-A função `.new( )` <!-- REF #DataClassClass.getCount().Summary --> cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
+The `.getDataStore( )` function <!-- REF #DataClassClass.getCount().Summary --> devolve o datastore para a dataclass especificada<!-- END REF -->.
 
 Se esta função for utilizada dentro de uma transacção, as entidades criadas durante a transação serão levadas em consideração.
 
@@ -566,7 +567,7 @@ $number:=$ds. Persons.getCount()
 
 #### Descrição
 
-A função `.newSelection( )` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -668,7 +669,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -696,34 +697,34 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 #### Descrição
 
-A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.getRemoteCache().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
 
 Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                          |
-| ----------- | ---------- | ---------------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                              |
-| stamp       | Integer    | Carimbo da cache.                                                                  |
-| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas. |
-| |           | Collection | Contém um objecto de entrada para cada entidade na cache.                          |
+| Propriedade | Tipo       | Descrição                                                                           |
+| ----------- | ---------- | ----------------------------------------------------------------------------------- |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                               |
+| stamp       | Integer    | Carimbo da cache.                                                                   |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.  |
+| |           | Collection | Collection | Collection | Contém um objecto de entrada para cada entidade na cache. |
 
 Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                             |
-| ----------- | ---------- | ------------------------------------- |
-| data        | Object     | Objeto que contém os dados da entrada |
-| expired     | Parâmetros | True se a entrada tiver expirado      |
-| |           | Text       | Chave primária da entidade.           |
+| Propriedade | Tipo       | Descrição                                             |
+| ----------- | ---------- | ----------------------------------------------------- |
+| data        | Object     | Objeto que contém os dados da entrada                 |
+| expired     | Parâmetros | True se a entrada tiver expirado                      |
+| |           | Text       | Text       | Text       | Chave primária da entidade. |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
 | Propriedade            | Tipo         | Descrição                                                                                                                         |
 | ---------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String       | Chave primária da entidade                                                                                                        |
-| __STAMP                | Longint      | Stamp da entidade na base de dados                                                                                                |
-| __TIMESTAMP            | String       | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                           |
+| __KEY                  | Text         | Chave primária da entidade                                                                                                        |
+| __STAMP                | Integer      | Stamp da entidade na base de dados                                                                                                |
+| __TIMESTAMP            | Text         | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                           |
 | dataClassAttributeName | Diferente de | Se houver dados na cache para um atributo dataclass, estes são devolvidos numa propriedade com o mesmo tipo que na base de dados. |
 
 Os dados relativos a entidades relacionadas são armazenados na cache do objecto de dados.
@@ -830,7 +831,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
-> Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 Se quiser uma seleção de entidades ordenada, passe o seletor `dk keep ordered` no parâmetro *keepOrder*. Como padrão se omitir este parâmetro ou se passar o seletor `dk non ordered`, o método cria uma seleção de entidades não ordenada. As seleções de entidades desordenadas são mais rápidas mas não se pode confiar nas posições das entidades. Para mas informação, consulte [Seleções de entidades ordenadas e desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
@@ -921,7 +922,7 @@ onde:
  | Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                               |
  | Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                           |
 
-* **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Quando usar um valor constante, as regras abaixo devem ser respeitadas:
+* **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20. Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   * Valores constantes de tipo **booleano** : **true** ou **false** (diferencia maiuscula de minúscula).
   * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
@@ -1011,6 +1012,21 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 ```4d
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
 ```
+
+#### Not equal to null or undefined values
+
+O comparador "not equal to *value*" (`#` ou `!`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujas "informações". status chegado é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //encontra pessoas cujo valor do atributo é false
+```
+
+Se você deseja encontrar pessoas cujas "info.married" status são `false`, null, ou não definidas, você precisa escrever:
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
+```
+
 
 #### Não igual a em colecções
 
@@ -1190,7 +1206,7 @@ No parâmetro *querySettings* é possível passar um objeto que conteha opções
 | Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parameters    | Object     | **Marcadores nomeados para os valores** utilizados em *queryString* ou *fórmula*. Os valores se expressam como pares propriedade / valor, onde propriedade é o nome do marcador de posição inserido para um valor em *queryString* ou *formula* (":placeholder") e valor é o valor a comparar. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                             |
-| attributes    | Object     | **attributePath**: path of attribute on which you want to execute the query. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass<table><tr><th>Tipo</th><th>Descrição</th></tr><tr><td>String</td><td>attributePath expressado com a notação de pontos, por exemplo: "name" ou "user.address.zipCode"</td></tr><tr><td>Coleção de strings</td><td>Cada string da coleção representa um nível de attributePath, por exemplo: \["name"] ou \["user","address","zipCode"]. Usar uma coleção permite pesquisar atributos com nomes que não se ajustem à notação de pontos, por exemplo \["4Dv17.1","en/fr"]</td></tr></table>Pode combinar marcadores de posição indexados (valores passados diretamente nos parâmetros *value*) e os valores de marcadores de posição com nome na mesma pesquisa. |
+| attributes    | Object     | **attributePath**: path of attribute on which you want to execute the query. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass<table><tr><th>Tipo</th><th>Descrição</th></tr><tr><td>String</td><td>attributePath expressado com a notação de pontos, por exemplo: "name" ou "user.address.zipCode"</td></tr><tr><td>Coleção de strings</td><td>Cada string da coleção representa um nível de attributePath, por exemplo: \["name"] ou \["user","address","zipCode"]. Usar uma coleção permite pesquisar atributos com nomes que não se ajustem à notação de pontos, por exemplo, \["4Dv17.1","en/fr"]</td></tr></table>Pode combinar marcadores de posição indexados (valores passados diretamente nos parâmetros *value*) e os valores de marcadores de posição com nome na mesma pesquisa. |
 | args          | Object     | Parámetro(s) a passar para as fórmulas, se houver. O objeto **args** será recebido em $1 dentro das fórmulas e, portanto, seus valores estarão disponíveis através de *$1.property* (ver exemplo 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | allowFormulas | Parâmetros | True para permitir as chamadas de fórmulas na pesquisa (padrão). Passe falso para desautorizar a execução de fórmulas. Se for estabelecido como false y `query()` receber uma fórmula, se envia um erro (1278 - Fórmula não permitida neste método membro).                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | context       | Text       | Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade está projetada para o processamento cliente/servidor; para saber mais, consulte [**Otimização cliente/servidor**](../ORDA/remoteDatastores.md#context).                                                                                                                                                                                                                                                                                         |
@@ -1509,7 +1525,6 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 [`.query()`](EntitySelectionClass.md#query) para seleções de entidades
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Histórico</summary>
@@ -1534,7 +1549,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 #### Descrição
 
-A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 

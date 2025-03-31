@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->OBJECT GET SCROLL POSITION は*object*で指定されたフォームオブジェクトの、スクロールバーの位置に関連する情報を*vPosition*と*hPosition*引数に返します。<!-- END REF-->
 
@@ -31,6 +28,15 @@ displayed_sidebar: docs
 
 *object*がピクチャ (変数またはフィールド) をさす場合、*vPosition*には縦移動、 *hPosition*には横移動が返されます。これらの値はピクセル単位で表現され、ローカル座標システムのピクチャの基点を0とします。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1114 |
+| スレッドセーフである | &cross; |
+
+

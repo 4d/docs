@@ -5,7 +5,7 @@ title: Compilation
 
 Vous pouvez compiler vos projets, c'est-à-dire traduire toutes vos méthodes en langage machine. La compilation d'un projet permet de vérifier la cohérence du code et d'accélérer son exécution, mais aussi de masquer le code dans son intégralité. La compilation est une étape indispensable, entre le développement de projets avec 4D et leur déploiement en tant qu'applications autonomes.
 
-## Compilation
+## Compilation incrémentale
 
 La compilation est gérée depuis votre application 4D et est entièrement automatique.
 
@@ -35,7 +35,7 @@ Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe
 
 Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
-Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. Le compilateur fournit toujours un [diagnostic précis](#error-files) des erreurs afin de vous aider à les corriger.
+Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. Le compilateur fournit toujours un [diagnostic précis](#error-file) des erreurs afin de vous aider à les corriger.
 
 > La compilation nécessite une licence appropriée. Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
@@ -107,7 +107,7 @@ Seuls les warnings comportant un numéro peuvent être désactivés. Les numéro
 
 ## Paramètres du compilateur
 
-La page "Compilateur" de la boîte de dialogue de Propriétés vous permet de définir les paramètres liés à la compilation du projet. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window) en cliquant sur le bouton **Paramètres du compilateur** :
+La page "Compilateur" de la boîte de dialogue de Propriétés vous permet de définir les paramètres liés à la compilation du projet. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window-features) en cliquant sur le bouton **Paramètres du compilateur** :
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,19 +117,19 @@ Cette zone regroupe les options génériques utilisées lors du processus de com
 
 #### Générer le fichier de symboles
 
-Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Le fichier de symboles est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_symbols.xml`.
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Le fichier de symboles est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet et est nommé `ProjectName_symbols.xml`.
 
 #### Générer le fichier d'erreurs
 
-Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#error-file)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
+Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#error-file)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet et est nommé `ProjectName_errors.xml`.
 
 #### Chemin de compilation
 
 Permet de définir le nombre de passes (analyse du code) effectuées par le compilateur et donc la durée de la compilation.
 
 - **Effectuer les passes de typage** : Passer par toutes les étapes qui permettent la compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **Les variables process et interprocess sont typées** : la passe de typage des variables process et interprocess ainsi que des paramètres des méthodes n'est pas effectuée. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
+- **Toutes les variables sont typées** : la passe de typage des variables locales, process et interprocess ainsi que des paramètres des méthodes n'est pas effectuée. Utilisez cette option lorsque vous êtes certain que toutes les variables process, interprocess et locales ainsi que les paramètres des méthodes ont été clairement typés.
 
 
 #### Cible de compilation
@@ -181,7 +181,7 @@ Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, ma
 
 ### Fichier de symboles
 
-Si vous cochez l'option [**Générer le fichier de symboles**](#generate-the-symbol-file) dans les propriétés du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](Project/architecture.md#logs) du projet pendant la compilation. Il est divisé en plusieurs parties :
+Si vous cochez l'option [**Générer le fichier de symboles**](#symbol-file) dans les paramètres du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet pendant la compilation. Il est divisé en plusieurs parties :
 
 #### Liste des variables process et interprocess
 
@@ -228,7 +228,7 @@ type résultat, nombre d'appels, Thread Safe ou Thread Unsafe
 
 ### Fichier d’erreurs
 
-Vous pouvez générer ou non un fichier d’erreurs lors de la compilation grâce l'option [**Générer le fichier d'erreurs**](#generer-le-fichier-derreur) des propriétés du compilateur. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](Project/architecture.md#logs) du projet.
+Vous pouvez générer ou non un fichier d’erreurs lors de la compilation grâce l'option [**Générer le fichier d'erreurs**](#generer-le-fichier-derreur) des propriétés du compilateur. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet.
 
 Bien que les erreurs soient directement accessibles via la [fenêtre de compilation](#compilation), il peut être intéressant de disposer d’un fichier d’erreurs qu’il est alors possible de transmettre d’un poste à l’autre. Le fichier d’erreurs est généré au format XML afin de faciliter l’analyse automatique de son contenu. Il permet également la création d’interfaces personnalisées de présentation des erreurs.
 
@@ -245,7 +245,7 @@ Si votre projet ne présente aucune erreur générale, le fichier ne comporte pa
 
 Un fichier d’erreurs peut donc comporter trois types de messages :
 
-- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire.  Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. Dans la fenêtre de compilation, il vous suffit de double-cliquer sur le libellé de l’erreur pour ouvrir la méthode concernée à la ligne correspondante.
+- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire. Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. Dans la fenêtre de compilation, il vous suffit de double-cliquer sur le libellé de l’erreur pour ouvrir la méthode concernée à la ligne correspondante.
 
 - **Erreurs générales** : Il s’agit d’erreurs qui ne permettent pas le passage en passe de compilation. Le compilateur délivre une erreur générale dans deux cas :
   - Si le type d’une variable process ou interprocess n’a pas pu être déterminé.
@@ -290,13 +290,13 @@ Les deux compilateurs sont intégrés dans 4D. Le compilateur adéquat est autom
 
 Le compilateur classique génère du code compilé natif pour les processeurs Intel/AMD sur n'importe quelle machine. Il ne nécessite aucune configuration particulière.
 
-Le code compilé qui en résulte est stocké dans le dossier [DerivedData](architecture.md#deriveddata) du projet.
+Le code compilé qui en résulte est stocké dans le dossier [DerivedData](./architecture.md#deriveddata-folder) du projet.
 
 ### Compilateur Silicon
 
 Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
-Le code compilé qui en résulte est stocké dans le dossier [Libraries](architecture.md#libraries) du projet.
+Le code compilé qui en résulte est stocké dans le dossier [Libraries](./architecture.md#libraries-folder) du projet.
 
 #### Conditions requises
 

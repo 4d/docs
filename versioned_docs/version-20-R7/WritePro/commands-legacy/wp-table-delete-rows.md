@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Summary-->The **WP TABLE DELETE ROWS** command removes one or several row(s) from a 4D Write Pro table.<!-- END REF-->
 
@@ -34,7 +34,7 @@ With this syntax, the optional *numRows* parameter defines the number of rows to
 
 Removing all rows of a table will remove the entire table.
 
-#### Example 
+## Example 
 
 You want to delete two rows from the *Invoice* table. This code:
 
@@ -50,6 +50,6 @@ Will remove the two rows from the correct location:
 
 ![](../../assets/en/WritePro/commands/pict4680306.en.png)
 
-#### See also 
+## See also 
 
 [WP TABLE DELETE COLUMNS](wp-table-delete-columns.md)  

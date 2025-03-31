@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get text resource.Summary-->Get text resource コマンドは、*resID*に渡されるIDを持つテキスト ("TEXT") リソースに格納されているテキストを返します。<!-- END REF-->
 
@@ -28,7 +25,7 @@ displayed_sidebar: docs
 
 **Note:** テキストリソースは、最大32000文字を使用することができます。
 
-#### 例題 
+## 例題 
 
 以下の例は、テキストリソースID=20800の内容を表示します。このIDは、現在開かれているリソースファイルの少なくとも1つに登録されている必要があります:
 
@@ -36,12 +33,22 @@ displayed_sidebar: docs
  ALERT(Get text resource(20800))
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 リソースが見つかるとOK変数は1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 504 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

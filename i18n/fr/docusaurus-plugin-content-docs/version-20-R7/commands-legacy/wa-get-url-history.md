@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->La commande **WA GET URL HISTORY** retourne un ou deux tableaux contenant les URLs visités au cours de la session dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Elle permet de construire une interface de navigation personnalisée.
 
@@ -43,6 +40,15 @@ S’il est passé, le paramètre *tabTitres* contient la liste des noms de fenê
 
 **Note de compatibilité :* A partir de 4D v19 R5, cette commande retourne uniquement l'URL courante dans des tableaux urlsArr et titlesArr pour des zones web à l'aide du moteur de rendu du système de Windows.*
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA Create URL history menu](wa-create-url-history-menu.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1048 |
+| Thread safe | &cross; |
+
+

@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD Get path.Summary-->O comando **METHOD Get path** devolve a rota de acesso interna completa de um método.<!-- END REF-->
 
@@ -49,7 +46,7 @@ Passe os valores nos parâmetros *aTabela*, *nomObjeto* e *nomObjetoForm* em fun
 
 Se o comando for executado desde um componente, retorna como padrão as rotas dos métodos de componente. Se passar o parâmetro \*, o array contém as rotas dos métodos da database host..
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
   //Recuperar a rota de acesso do método base "On Startup":
@@ -62,8 +59,17 @@ Se o comando for executado desde um componente, retorna como padrão as rotas do
  $path:=METHOD Get path(Path table form;[Empregados];"input";"OK")
 ```
 
-#### Ver também 
+## Ver também 
 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1164 |
+| Thread-seguro | &cross; |
+
+

@@ -15,7 +15,7 @@ En la colección de pasos, hay un objeto con las siguientes propiedades que defi
 
 | Propiedad     | Tipo       | Descripción                                                                        |
 | ------------- | ---------- | ---------------------------------------------------------------------------------- |
-| description   | String     | Petición ejecutada o "AND" cuando hay varios pasos                                 |
+| description   | Text       | Petición ejecutada o "AND" cuando hay varios pasos                                 |
 | time          | Number     | Número de milisegundos necesarios para ejecutar la petición                        |
 | recordsfounds | Number     | Número de registros encontrados                                                    |
 | steps         | Collection | Una colección con un objeto que define el siguiente paso de la ruta de la petición |

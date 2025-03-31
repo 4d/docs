@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->La commande **OB GET PROPERTY NAMES** retourne dans *tabPropriétés* les noms des propriétés contenues dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF--> 
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->La commande **OB GET PROPERTY NAMES** retourne dans *tabPropriétés* les noms des propriétés contenues dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
 Passez dans le paramètre *tabPropriétés* un tableau texte. Si le tableau n’existe pas, la commande le crée et le dimensionne automatiquement. 
 
@@ -37,7 +35,7 @@ Optionnellement, vous pouvez passer dans *tabTypes* un tableau entier long. Pour
 
 **Note :** Pour les propriétés d'un tableau, la commande retourne Est une collection.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez tester qu’un objet n’est pas vide :
 
@@ -54,7 +52,7 @@ Vous souhaitez tester qu’un objet n’est pas vide :
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Utilisation d’un élément de tableau d’objets :
 
@@ -94,7 +92,16 @@ Utilisation d’un élément de tableau d’objets :
   // $tabTypes{2}=255
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1232 |
+| Thread safe | &check; |
+
+

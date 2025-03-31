@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Print form.Summary-->Print form simplesmente imprime *formulario* com os valores atuais dos campos e variáveis.<!-- END REF--> Geralmente este comando se utiliza para imprimir relatórios muito complexos que necessitem um controle total do processo de impressão. Print form não processa registros, nem quebras ou saltos de páginas. Estas operações são sua responsabilidade. Print form imprime campos e variáveis em um marco de tamanho fixo unicamente.
 
@@ -111,7 +108,7 @@ Print form gera só um evento On Printing Detail para o método formulário.
 * Tenha certeza de que não apareça nenhuma caixa de diálogo na equipe servidor (exceto para um requerimento específico).
 * No caso de um problema relacionado com a impressora (sem papel, impressora desconectada, etc.), não é gerada uma mensagem de erro.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir atua da mesma que forma que o comando [PRINT SELECTION](print-selection.md). Entretanto, o relatório usa um de dois diferentes formulários, dependendo se o registro é para um cheque ou um depósito:
 
@@ -136,11 +133,11 @@ O exemplo a seguir atua da mesma que forma que o comando [PRINT SELECTION](print
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Veja o exemplo do comando [SET PRINT MARKER](set-print-marker.md). 
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este formulário se utiliza como diálogo e depois se imprime com modificações:
 
@@ -168,9 +165,18 @@ O código que chama ao diálogo depois imprime seu corpo:
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-#### Ver também 
+## Ver também 
 
 [CANCEL](cancel.md)  
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 5 |
+| Thread-seguro | &cross; |
+
+

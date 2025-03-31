@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get resource properties.Summary-->O comando **Get resource properties** retorna os atributos do recurso cujo tipo se passa em *resTipo* e cujo número de identificação se passa em *resNum*.<!-- END REF-->  
   
@@ -29,10 +26,21 @@ Se o arquivo de recursos não existir, **Get resource properties** retorna 0 (ze
   
 O valor numérico devolvido por **Get resource properties** deve considerado como um valor binário cujos bits tem um significado especial.  
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [Get resource name](get-resource-name.md).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK toma o valor 0 se o recurso não existir, do contrário assume o valor 1\. 
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 515 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

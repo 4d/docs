@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->O comando **LISTBOX Get auto row height**  devolve o valor de altura de fila mínimo ou máximo actual definido para o objeto list box designado utilizando os parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -44,7 +41,7 @@ De forma predeterminada, o comando devolve o valor em píxels. Pode passar uma d
 | lk lines  | Inteiro longo | 1     | A altura designa um número de linhas. 4D calcula a altura de uma linha em função da fonte. |
 | lk pixels | Inteiro longo | 0     | A altura é o número de pixels (por padrão).                                                |
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser obter o número máximo de linhas para uma fila de list box:
 
@@ -56,8 +53,17 @@ vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get row height ](listbox-get-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1502 |
+| Thread-seguro | &cross; |
+
+

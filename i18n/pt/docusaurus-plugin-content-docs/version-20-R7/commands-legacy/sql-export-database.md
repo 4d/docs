@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SQL EXPORT DATABASE.Summary-->O comando SQL EXPORT DATABASE exporta ao formato SQL todos os registros de todas as tabelas do banco.<!-- END REF--> Em SQL, esta operação de exportação global é chamada "Dump".
 
@@ -50,10 +47,20 @@ No arquivo de exportação, podem haver menos valores que campos na tabela. Nest
   
 Se a exportação for realizada corretamente, a variável OK assume o valor 1\. Do contrário, assume o valor 0.
 
-##### 
+### 
 
 **Nota:** Este comando não é compatível com campos tipo Objeto
 
-#### Ver também 
+## Ver também 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1065 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

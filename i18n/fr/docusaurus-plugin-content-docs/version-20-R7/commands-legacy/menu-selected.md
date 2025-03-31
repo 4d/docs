@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** ne s'utilise que lorsqu'un formulaire est affiché.<!-- END REF--> Cette fonction détecte la commande de menu choisie dans un menu et, dans le cas d'un sous-menu hiérarchique, retourne la référence du sous-menu.
 
@@ -41,7 +38,7 @@ Vous pouvez également extraire ces valeurs à l'aide des [SET AUTOMATIC RELATIO
 
 Menu choisi retourne 0 si aucune commande de menu n'est sélectionnée.
 
-#### Exemple 
+## Exemple 
 
 La méthode formulaire suivante utilise la fonction **Menu selected** pour fournir les arguments "menu" et "ligne de menu" à [SET MENU ITEM MARK](set-menu-item-mark.md) :
 
@@ -59,6 +56,16 @@ La méthode formulaire suivante utilise la fonction **Menu selected** pour fourn
 
 **Note :** L’événement On Menu Selected n’est pas activé si aucune ligne n'est sélectionnée, *$refmenuincludingItem* est toujours renseigné et *$NumMenu* vaut 0 si le menu n’est pas un des menus de la barre.
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gestion des menus*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 152 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

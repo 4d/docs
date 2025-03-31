@@ -8,14 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Parámetros | Tipo                         |   | Descripción                                                                                 |
-| ---------- | ---------------------------- | - | ------------------------------------------------------------------------------------------- |
-| option     | Integer                      | → | Servidor web a obtener (por defecto si se omite = `Web server database`) |
-| Resultado  | 4D.WebServer | ← | Objeto servidor web                                                                         |
+| Parámetros | Tipo                         |                             | Descripción                                                                                 |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------- |
+| option     | Integer                      | &#8594; | Servidor web a obtener (por defecto si se omite = `Web server database`) |
+| Resultado  | 4D.WebServer | &#8592; | Objeto servidor web                                                                         |
 
 <!-- END REF-->
-
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 <details><summary>Historia</summary>
 
@@ -26,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descripción
+## Descripción
 
 El comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->devuelve el objeto del servidor web predeterminado, o el objeto del servidor web definido a través del parámetro *option*<!-- END REF -->.
 
@@ -40,7 +38,7 @@ Por defecto, si se omite el parámetro *option*, el comando devuelve una referen
 
 El **objeto servidor web devuelto** contiene los valores actuales de las [propiedades del servidor web](../API/WebServerClass.md).
 
-#### Ejemplo
+## Ejemplo
 
 El objeto servidor web devuelto contiene los valores actuales de las propiedades del servidor web.
 
@@ -53,7 +51,16 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
  End if
 ```
 
-#### Ver también
+## Ver también
 
 [Lista servidor WEB](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1674                        |
+| Hilo seguro       | &cross; |
+
+

@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Mod.Summary-->The **Mod** command returns the remainder of the Integer division of *number1* by *number2*.<!-- END REF-->
-
-**Notes:** 
 
 * **Mod** accepts Integer, Long Integer, and Real expressions. However, if *number1* or *number2* are real numbers, the numbers are first rounded and then **Mod** is calculated.
 * Be careful when using **Mod** with real numbers of a large size (above 2^31) since, in this case, its operation may reach the limits of the calculation capacities of standard processors.
@@ -28,7 +26,7 @@ You can also use the *%* operator to calculate the remainder.
 
 **WARNING:** The *%* operator returns valid results with Integer and Long Integer expressions. To calculate the modulo of real values, you must use the **Mod** command.
 
-#### Example 
+## Example 
 
 The following example illustrates how the Mod function works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
@@ -37,3 +35,13 @@ The following example illustrates how the Mod function works with different argu
  vlResult:=Mod(4;2) // vlResult gets 0
  vlResult:=Mod(3.5;2) // vlResult gets 0
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 98 |
+| Thread safe | &check; |
+
+

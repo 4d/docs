@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->O comando LISTBOX COLLAPSE é utilizado para contrair linhas de quebra do objeto list box designado pelos parâmetros *objeto* e *\** .<!-- END REF--> 
 
@@ -42,7 +39,7 @@ O parâmetro opcional *selector* é utilizado para especificar o alcance da orde
 
 Se a seleção ou o list box não conter uma linha de quebra ou se todas as linhas de quebra já estiverem contraídas, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo colapsa o primeiro nível de linhas de quebra da seleção no list box:
 
@@ -50,6 +47,15 @@ Este exemplo colapsa o primeiro nível de linhas de quebra da seleção no list 
  LISTBOX COLLAPSE(*;"MeuListbox";False;lk selection)
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX EXPAND](listbox-expand.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1101 |
+| Thread-seguro | &cross; |
+
+

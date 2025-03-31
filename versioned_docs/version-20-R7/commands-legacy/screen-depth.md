@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->The SCREEN DEPTH command returns in *depth* and *color* information about the monitor.<!-- END REF--> 
 
@@ -47,7 +44,7 @@ The following predefined constants are provided by 4D:
 
 The optional parameter *screen* specifies the monitor for which you want to get information. If you omit the *screen* parameter, the command returns the depth of the main screen.
 
-#### Example 
+## Example 
 
 Your application displays many color graphics. Somewhere in your database, you could write:
 
@@ -58,6 +55,16 @@ Your application displays many color graphics. Somewhere in your database, you c
  End if
 ```
 
-#### See also 
+## See also 
 
 [Count screens](count-screens.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 439 |
+| Thread safe | &cross; |
+
+

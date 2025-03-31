@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->**ST SET OPTIONS**コマンドは、*object* 引数で指定されたスタイル付テキストフィールドまたはテキスト変数に関する様々なオプションを変更することができます。<!-- END REF-->
 
@@ -48,7 +45,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1216065.en.png)
 
-#### 例題 
+## 例題 
 
 以下のコードは、エリアの表示モードを切り替えます:
 
@@ -61,6 +58,15 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [ST GET OPTIONS](st-get-options.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1289 |
+| スレッドセーフである | &cross; |
+
+

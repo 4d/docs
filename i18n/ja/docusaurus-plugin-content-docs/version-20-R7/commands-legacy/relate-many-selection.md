@@ -13,13 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.RELATE MANY SELECTION.Summary-->RELATE MANY SELECTION コマンドは、1テーブルのレコードセレクションを元にしてnテーブルのレコードセレクションを作成し、nテーブルの一番目のレコードをカレントレコードとしてロードします。<!-- END REF-->
+<!--REF #_command_.RELATE MANY SELECTION.Summary-->RELATE MANY SELECTION コマンドは、1テーブルのレコードセレクションを元にしてnテーブルのレコードセレクションを作成し、nテーブルの一番目のレコードをカレントレコードとしてロードします。<!-- END REF-->RELATE MANY SELECTIONは、1テーブルのカレントレコードを変更します。
 
-**Note:** RELATE MANY SELECTIONは、1テーブルのカレントレコードを変更します。
-
-#### 例題 
+## 例題 
 
 以下の例では、未収金が$1,000以上の顧客を対象に作成されたすべての請求書を選択しています。\[Invoices\]テーブルの\[Invoices\]Customer IDフィールドは、\[Customers\]テーブルの\[Customers\]IDフィールドにリレートしています。
 
@@ -30,8 +28,19 @@ displayed_sidebar: docs
  RELATE MANY SELECTION([Invoices]Customer ID)
 ```
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 340 |
+| スレッドセーフである | &check; |
+| カレントレコードを変更する ||
+| カレントセレクションを変更する ||
+
+

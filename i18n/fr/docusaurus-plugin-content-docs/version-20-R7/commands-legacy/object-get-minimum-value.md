@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->La commande **OBJECT GET MINIMUM VALUE** retourne dans la variable *valeurMini* la valeur minimum courante de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -26,7 +23,16 @@ La propriété "Valeur minimum" peut être définie via la Liste des propriété
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1243 |
+| Thread safe | &cross; |
+
+

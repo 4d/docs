@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get menu item style.Summary-->El comando Get menu item style devuelve el estilo de fuente de la línea de menú cuyo número o referencia se pasa en *menu* y cuyo número de elemento se pasa en *menuItem*.<!-- END REF--> Puede pasar -1 en *menuItem* para indicar el último elemento añadido a *menu.*
 
@@ -36,7 +33,7 @@ Get menu item style devuelve una combinación (uno o una suma) de las siguientes
 | Italic    | Entero largo | 2     |
 | Underline | Entero largo | 4     |
 
-#### Ejemplo 
+## Ejemplo 
 
 Para probar si un elemento de menú se muestra en negrita, escribe:
 
@@ -46,6 +43,16 @@ Para probar si un elemento de menú se muestra en negrita, escribe:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 426 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

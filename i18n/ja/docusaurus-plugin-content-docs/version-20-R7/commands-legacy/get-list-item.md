@@ -5,7 +5,7 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* ; itemPos | * ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* ; *itemPos* ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<br/>**GET LIST ITEM** ( {* ;} *list* ; * ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST ITEM.Summary-->GET LIST ITEM コマンドは、リスト参照番号またはオブジェクト名が*list*であるリスト中、*itemPos*で指定した項目に関する情報を返します。<!-- END REF-->
 
@@ -42,7 +39,7 @@ displayed_sidebar: docs
 * *subList*に、その項目に添付されたサブリストのリスト参照番号。項目にサブリストが添付されていない場合、*subList*には0が返されます。
 * 項目にサブリストが添付されているとき、*expanded*にはサブリストが展開されていればTRUEが、折りたたまれていればFALSEが返されます。
 
-#### 例題 1 
+## 例題 1 
 
 *hList* は項目にユニークな参照番号が与えられたリストです。以下のコードはプログラムで、現在選択されている項目のサブリストの展開/折りたたみを切り替えます:
 
@@ -56,11 +53,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [APPEND TO LIST](append-to-list.md "APPEND TO LIST") コマンドの例題を参照
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
@@ -68,3 +65,12 @@ displayed_sidebar: docs
 [Selected list items](selected-list-items.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 378 |
+| スレッドセーフである | &cross; |
+
+

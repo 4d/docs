@@ -7,11 +7,12 @@ Les objets de session sont retournés par la commande [`Session`](../commands/se
 
 ### Types de sessions
 
-Trois types de sessions sont pris en charge par cette classe :
+Les types de sessions suivants sont pris en charge par cette classe :
 
-- [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
+- [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
 - [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
-- [**Session des procédures stockées**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
+- [**Session des procédures stockées**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
+- [**Session autonome**](../Project/overview.md#development) : objet session local retourné dans une application mono-utilisateur (utile dans les phases de développement et de test des applications client/serveur).
 
 :::note
 
@@ -24,6 +25,7 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 |                                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
+| [<!-- INCLUDE #SessionClass.createOTP().Syntax -->](#createotp)<br/><!-- INCLUDE #SessionClass.createOTP().Summary -->                   |
 | [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
 | [<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
@@ -31,6 +33,7 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
 | [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
@@ -61,11 +64,17 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 
 :::note
 
-This function does nothing and always returns **True** with remote client and stored procedure sessions.
+Cette fonction ne fait rien et retourne toujours **True** avec les sessions client distants, procédure stockée et autonomes.
 
 :::
 
-La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session et retourne **True** si l'exécution a réussi<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
+La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session et retourne **True** si l'exécution a réussi<!-- END REF -->. Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session.
+
+:::note
+
+In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+
+:::
 
 #### Exemple
 
@@ -76,6 +85,54 @@ var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
 $isGuest:=Session.isGuest() //$isGuest est True
+```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.createOTP().Desc -->
+
+## .createOTP()
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R9   | Ajout         |
+
+</details>
+
+<!-- REF #SessionClass.createOTP().Syntax -->**.createOTP** ( { *lifespan* : Integer } ) : Text <!-- END REF -->
+
+<!-- REF #SessionClass.createOTP().Params -->
+
+| Paramètres | Type    |                             | Description                                  |
+| ---------- | ------- | :-------------------------: | -------------------------------------------- |
+| lifespan   | Integer |              ->             | Durée de vie du token de session en secondes |
+| Résultat   | Text    | <- | UUID de la session                           |
+
+<!-- END REF -->
+
+#### Description
+
+:::note
+
+Cette fonction est uniquement disponible avec les sessions utilisateur web. Elle retourne une chaîne vide dans les autres contextes.
+
+:::
+
+La fonction `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crée un nouvel OTP (One Time Passcode) pour la session et renvoie son UUID de token<!-- END REF -->. Ce token est propre à la session au cours de laquelle il a été généré.
+
+Pour plus d'informations sur les tokens OTP, veuillez consulter [cette section](../WebServer/sessions.md#session-token-otp).
+
+Par défaut, si le paramètre *lifespan* est omis, le token est créé avec la même durée de vie que le [`.idleTimeOut`](#idletimeout) de la session. Vous pouvez définir un délai personnalisé en passant une valeur en secondes dans *lifespan* (la valeur minimale est de 10 secondes, *lifespan* est réinitialisé à 10 si une valeur inférieure est passée). Si un token expiré est utilisé pour restaurer la session d'un utilisateur web, il est ignoré.
+
+Le token retourné peut ensuite être utilisé lors d'échanges avec des applications tierces ou des sites Web pour identifier la session de manière sécurisée. Par exemple, le token OTP de session peut être utilisé avec une application de paiement.
+
+#### Exemple
+
+```4d
+var $token : Text
+$token := Session.createOTP( 60 ) //le token est valable pendant 1 mn
 ```
 
 <!-- END REF -->
@@ -141,7 +198,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 La fonction `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->renvoie une collection contenant tous les noms de privilèges associés à la session<!-- END REF -->.
 
-Avec une session de client distant ou de procédure stockée, cette fonction renvoie une collection ne contenant que "WebAdmin".
+Avec les sessions client distant, procédures stockées et autonomes, cette fonction retourne une collection contenant uniquement "WebAdmin".
 
 :::info
 
@@ -237,7 +294,7 @@ $privileges := Session.getPrivileges()
 
 La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le *privilege* est associé à la session, et False sinon<!-- END REF -->.
 
-Avec des sessions de client distant et de procédure stockée, cette fonction renvoie toujours True, quel que soit le *privilege*.
+Avec les sessions client distant, procédures stockées et autonomes, cette fonction retourne toujours True, quel que soit le *privilege*.
 
 #### Exemple
 
@@ -270,11 +327,11 @@ End if
 
 #### Description
 
-La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant unique (UUID) de la session sur le serveur<!-- END REF -->. Cette chaîne unique est automatiquement attribuée par le serveur à chaque session et vous permet d'identifier ses process.
+La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant unique (UUID) de la session utilisateur<!-- END REF -->. Avec 4D Server, cette chaîne unique est automatiquement assignée par le serveur à chaque session et vous permet d'identifier ses process.
 
 :::tip
 
-You can use this property to get the [`.storage`](#storage) object of a session thanks to the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`.storage`](#storage) d'une session grâce à la commande [`Session storage`](../commands/session-storage.md) .
 
 :::
 
@@ -309,7 +366,7 @@ Si cette propriété n'est pas définie, sa valeur par défaut est 60 (1h).
 
 Lorsque cette propriété est définie, la propriété [`.expirationDate`](#expirationdate) est mise à jour en conséquence.
 
-> La valeur ne peut pas être < 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
+> La valeur ne peut pas être &#060; 60 ; si une valeur inférieure est définie, le timeout est élevé à 60.
 
 Cette propriété est en **lecture-écriture**.
 
@@ -346,28 +403,33 @@ End if
 
 :::note
 
-Cette propriété est uniquement disponible avec les sessions des procédures stockées et des client distants.
+Cette propriété est uniquement disponible avec les sessions clients distants, procédures stockées et autonomes.
 
 :::
 
-La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session du client distant ou de la procédure stockée sur le serveur<!-- END REF -->.
+La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit le client distant ou la session de procédure stockée sur le serveur, ou la session autonome<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Process activity`](../commands/process-activity.md) command for remote client and stored procedure sessions.
+:::note
+
+- L'objet `.info` est le même objet que celui retourné dans la propriété "session" par la commande [`Process activity`](../commands/process-activity.md) pour les sessions de clients distants et procédures stockées.
+- L'objet `.info` est le même objet que celui retourné par la commande [`Session info`](../commands/session-info.md) pour une session autonome.
+
+:::
 
 L'objet `.info` contient les propriétés suivantes:
 
-| Propriété        | Type          | Description                                                                                                                                                  |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type             | Text          | Type de session : "remote" ou "storedProcedure"                                                                                              |
-| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                           |
-| machineName      | Text          | Sessions distantes : nom de la machine distante. Session des procédures stockées : nom de la machine serveur |
-| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                              |
-| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                            |
-| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                             |
-| creationDateTime | Date ISO 8601 | Date et heure de création de la session                                                                                                                      |
-| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                       |
-| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                            |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                     |
+| Propriété        | Type          | Description                                                                                                                                                                                                                    |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type             | Text          | Type de session : "remote", "storedProcedure", "standalone"                                                                                                                                                    |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                                                                                             |
+| machineName      | Text          | Sessions distantes : nom de la machine distante. Session procédures stockées : nom de la machine serveur. Session autonome : nom de la machine |
+| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                |
+| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                              |
+| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                               |
+| creationDateTime | Date ISO 8601 | Date et heure de création de la session. Session autonome : date et heure de démarrage de l'application                                                                                        |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                         |
+| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                              |
+| persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                                                                                               |
 
 :::note
 
@@ -403,7 +465,7 @@ L'objet `.info` contient les propriétés suivantes:
 
 :::note
 
-Cette fonction retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
+Cette fonction retourne toujours **False** avec les sessions clients distants, procédures stockées et autonomes.
 
 :::
 
@@ -418,6 +480,67 @@ If (Session.isGuest())
  //Faire quelque chose pour l'utilisateur invité
 End if
 ```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.restore().Desc -->
+
+## .restore()
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R9   | Ajout         |
+
+</details>
+
+<!-- REF #SessionClass.restore().Syntax -->**.restore** ( *token* : Text ) : Boolean <!-- END REF -->
+
+<!-- REF #SessionClass.restore().Params -->
+
+| Paramètres | Type    |                             | Description                                                                     |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------- |
+| token      | Text    |              ->             | UUID du token de session                                                        |
+| Résultat   | Boolean | <- | True si la session courante a été remplacée avec succès par la session du token |
+
+<!-- END REF -->
+
+#### Description
+
+:::note
+
+Cette fonction est uniquement disponible avec les sessions utilisateur web. Elle renvoie False dans les autres contextes.
+
+:::
+
+La fonction `.restore()` <!-- REF #SessionClass.restore().Summary -->remplace la session courante de l'utilisateur Web par sa session originale correspondant à l'UUID *token*<!-- END REF -->. Le storage et les privilèges de la session sont restaurés.
+
+Si la session originale de l'utilisateur a été correctement restaurée, la fonction renvoie `true`.
+
+La fonction renvoie `false` si :
+
+- le token de session a déjà été utilisé,
+- le token de session a expiré,
+- le token de session n'existe pas,
+- la session d'origine elle-même a expiré.
+
+Dans ce cas, la session courante de l'utilisateur web est laissée intacte (aucune session n'est restaurée).
+
+#### Exemple
+
+Dans un singleton appelé par un HTTP request handler personnalisé :
+
+```4d
+shared singleton Class constructor()
+
+Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
+   Session.restore($request.urlQuery.state) 
+```
+
+#### Voir également
+
+[`.createOTP()`](#createotp)
 
 <!-- END REF -->
 
@@ -451,7 +574,7 @@ End if
 
 :::note
 
-Cette fonction ne fait rien et retourne toujours **False** avec les sessions des clients distants et des procédures stockées.
+Cette fonction ne fait rien et retourne toujours **False** avec les sessions client distants, procédures stockées et autonomes.
 
 :::
 
@@ -532,7 +655,7 @@ Cette propriété est elle-même en **lecture seulement** mais elle retourne un 
 
 :::tip
 
-You can get the `.storage` property of a session using the [`Session storage`](../commands-legacy/session-storage.md) command.
+Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la commande [`Session storage`](../commands/session-storage.md).
 
 :::
 
@@ -580,7 +703,8 @@ End use
 La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
 - Avec les sessions web, cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
+- Avec les sessions clients distants et procédures stockées, cette propriété retourne le même nom d'utilisateur que la commande [`Current user`](../commands-legacy/current-user.md).
+- Avec les sessions autonomes, cette propriété contient "designer" ou le nom défini avec la commande [`SET USER ALIAS`](../commands-legacy/set-user-alias.md).
 
 Cette propriété est en **lecture seule**.
 

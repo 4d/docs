@@ -13,16 +13,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Current process.Summary-->Current process devuelve el número de proceso a partir del cual se llama este comando.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver los ejemplos de [DELAY PROCESS](delay-process.md "DELAY PROCESS") y [PROCESS PROPERTIES](process-properties.md "PROCESS PROPERTIES").
 
-#### Ver también 
+## Ver también 
 
-[Process number](process-number.md)  
+[Process number](../commands/process-number.md)  
 [Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 322 |
+| Hilo seguro | &check; |
+
+

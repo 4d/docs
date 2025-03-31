@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->**OBJECT SET FONT STYLE** assigne le style de police *style* à ou aux objet(s) de formulaire désigné(s) par *objet*.<!-- END REF-->   
 Le nombre *style* est un code de style du système d'exploitation. En additionnant des codes, vous combinez les styles. 
@@ -35,7 +32,7 @@ Vous devez passer dans le paramètre *style* une des constantes prédéfinies su
 | Underline | Entier long | 4      |
 
   
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant définit le style de police du bouton *bAjoutNouveau*. Le style demandé est gras italique : 
 
@@ -43,7 +40,7 @@ L'exemple suivant définit le style de police du bouton *bAjoutNouveau*. Le styl
  OBJECT SET FONT STYLE(bAjoutNouveau;Bold+Italic)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant définit le style de police Normal pour tous les objets de formulaire dont le nom débute par "vt" : 
 
@@ -51,10 +48,19 @@ L'exemple suivant définit le style de police Normal pour tous les objets de for
  OBJECT SET FONT STYLE(*;"vt@";Plain)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Notes de programmation*  
 [OBJECT Get font style](object-get-font-style.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 166 |
+| Thread safe | &cross; |
+
+

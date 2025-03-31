@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get menu item style.Summary-->Get menu item style コマンドは、*menu*引数にメニュー番号またはメニュー参照で指定したメニュー中、*menuItem*引数にメニュー項目番号で指定したメニュー項目のフォントスタイルを返します。<!-- END REF-->*menuItem*に-1を渡して*menu*に最後に追加された項目を指定することもできます。
 
@@ -36,7 +33,7 @@ Get menu item style はテーマの定義済み定数 (ひとつまたは和) �
 | Italic    | 倍長整数 | 2 |
 | Underline | 倍長整数 | 4 |
 
-#### 例題 
+## 例題 
 
 メニューが太字で表示されるかどうかをテストするには、以下のように書きます:
 
@@ -46,6 +43,16 @@ Get menu item style はテーマの定義済み定数 (ひとつまたは和) �
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 426 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

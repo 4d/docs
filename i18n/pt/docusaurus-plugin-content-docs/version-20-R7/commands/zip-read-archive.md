@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parâmetro  | Tipo                     |     | Descrição                       |
-| ---------- | ------------------------ | :-: | ------------------------------- |
-| zipFile    | 4D. File |  →  | Arquivos Zip                    |
-| senha      | Text                     |  →  | Senha do arquivo ZIP, se houver |
-| Resultados | Parâmetros               |  ←  | Objeto arquivo                  |
+| Parâmetro  | Tipo                     |                             | Descrição                       |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------- |
+| zipFile    | 4D. File | &#8594; | Arquivos Zip                    |
+| senha      | Text                     | &#8594; | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros               | &#8592; | Objeto arquivo                  |
 
 <!-- END REF -->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
 The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
@@ -36,9 +36,9 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Objeto arquivo**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
+O objeto `4D.ZipArchive` retornado contém uma única propriedade [`root`](../API/ZipArchiveClass.md#root) cujo valor é um objeto `4D.ZipFolder`. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
-#### Exemplo
+## Exemplo
 
 Para recuperar e ver os conteúdos de um objeto ZIP file:
 
@@ -78,9 +78,18 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-#### Veja também
+## Veja também
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+## Propriedades
+
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1637                        |
+| Thread safe    | &check; |
+
+

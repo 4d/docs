@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->El comando **OBJECT Get multiline** devuelve el estado actual de la opción "Multilínea" del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -37,6 +34,15 @@ El valor devuelto corresponde a una de las siguientes constantes del tema "*Prop
   
 **Nota:** si aplica el comando **OBJECT Get multiline** a un objeto que no admite la opción "Multilínea", devuelve el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET MULTILINE](object-set-multiline.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1254 |
+| Hilo seguro | &cross; |
+
+

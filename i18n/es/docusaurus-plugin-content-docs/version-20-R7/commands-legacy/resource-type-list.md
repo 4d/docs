@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->El comando RESOURCE TYPE LIST llena el array *resTipos* con los tipos de recursos presentes en el (los) archivo(s) de recursos abierto(s).<!-- END REF--> 
 
@@ -27,7 +24,7 @@ Puede predeclarar el array *resTipos* como un array tipo Alfa o Texto antes de l
 
 Después de la llamada, puede probar el número de tipo de recursos encontrados aplicando el comando [Size of Array](size-of-array.md "Size of Array") al array *resTipos*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo llena el array *atResTipo* con los tipos de recursos presentes en los archivos de recursos abiertos:
 
@@ -35,7 +32,7 @@ El siguiente ejemplo llena el array *atResTipo* con los tipos de recursos presen
  RESOURCE TYPE LIST(atResTipo)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente archivo muestra si el archivo de estructura Mac OS utiliza el contenido de los antiguos plug-ins 4D, que deberán ser actualizados para utilizar la base en Windows: 
 
@@ -50,7 +47,7 @@ El siguiente archivo muestra si el archivo de estructura Mac OS utiliza el conte
 
 **Nota:** el archivo de estructura no es el único archivo en el cual los plug-ins de la versión anterior pueden ser almacenados. La base también puede incluir un archivo Proc.Ext.
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente método de proyecto devuelve el número de recursos presentes en un archivo de recursos:
 
@@ -80,6 +77,15 @@ Una vez este método de proyecto se implementa en una base, puede escribir:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [RESOURCE LIST](resource-list.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 499 |
+| Hilo seguro | &cross; |
+
+

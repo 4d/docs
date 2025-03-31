@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->El comando OBJECT SET VISIBLE muestra u oculta los objetos especificados por *objeto*.<!-- END REF-->
 
@@ -26,7 +23,7 @@ Si especifica el parámetro opcional *\**, indica que el parámetro *objeto* des
 
 Si pasa *visible* igual a [TRUE](true.md "TRUE"), los objetos son mostrados. Si pasa *visible* igual a [FALSE](false.md "FALSE"), los objetos se ocultan. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este es un formulario típico en el entorno Diseño:
 
@@ -57,7 +54,16 @@ o:
 
 ![](../assets/en/commands/pict27190.es.png)
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 603 |
+| Hilo seguro | &cross; |
+
+

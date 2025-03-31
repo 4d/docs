@@ -18,7 +18,7 @@ Aucune activation n’est requise pour les usages suivants :
 
 ## Première activation
 
-Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. The dialog box for choosing the activation mode appears.
+Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. La boîte de dialogue de choix du mode d'activation apparaît.
 
 ![](../assets/en/getStart/server1.png)
 

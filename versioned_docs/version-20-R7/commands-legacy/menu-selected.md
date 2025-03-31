@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Menu selected.Summary-->**Menu selected** is used only when forms are displayed.<!-- END REF--> It detects which menu command has been chosen from a menu and, in the case of a hierarchical submenu, returns the reference of the submenu.
 
@@ -41,7 +38,7 @@ You can also extract these values using the *bitwise operators* as follows:
 
 If no menu commands are selected, **Menu selected** returns 0.
 
-#### Example 
+## Example 
 
 The following form method uses **Menu selected** to supply the menu and menu item arguments to [SET MENU ITEM MARK](set-menu-item-mark.md):
 
@@ -59,6 +56,16 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 
 **Note:** The On Menu Selected form event is not activated if no item is selected, *$refMenuIncludingItem* is always given a value and *$MenuNum* equals 0 if the menu is not one of the menus of the menu bar.
 
-#### See also 
+## See also 
 
 *Managing Menus*  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 152 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

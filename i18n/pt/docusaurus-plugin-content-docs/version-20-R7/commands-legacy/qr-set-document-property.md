@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->O comando QR SET DOCUMENT PROPERTY permite mostrar a caixa de diálogo de impressão ou definir a unidade utilizada pelo documento.<!-- END REF-->  
   
@@ -35,6 +32,16 @@ displayed_sidebar: docs
 se passa um número de área incorreto, se gera o erro -9850.  
 Se passa um valor incorreto do parâmetro propriedade, se gera o erro -9852 ou -9853.
 
-#### Ver também 
+## Ver também 
 
 [QR Get document property](qr-get-document-property.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 772 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

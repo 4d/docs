@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA SET URL FILTERS.Summary-->WA SET URL FILTERS コマンドは、*\** と *object* 引数で指定したWebエリアで、1 つ以上のフィルタを設定するために使用します。<!-- END REF--> 
 
@@ -40,7 +37,7 @@ displayed_sidebar: docs
 
 **重要**: このコマンドによって実行されるURLフィルタリングは、[WA OPEN URL](wa-open-url.md) コマンドと"javascript:"で始まるURLを除き、ページの主URLを変更するリクエストであればユーザーからのリクエストであってもjavascriptコードであっても4Dコードであっても、どのようなリクエストに対しても適用されます。
 
-#### 例題 1 
+## 例題 1 
 
 .org, .net そして .fr Web サイトへのアクセスを禁止したい場合:   
 
@@ -57,7 +54,7 @@ displayed_sidebar: docs
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 日本のサイト以外へのアクセスを禁止したい場合(.jp):   
 
@@ -72,7 +69,7 @@ displayed_sidebar: docs
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 4D のWeb サイトにのみアクセスを許可する場合 (.com, .fr, .es, etc.):   
 
@@ -87,7 +84,7 @@ displayed_sidebar: docs
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 ローカルのドキュメントにのみアクセスを許可 (C://doc フォルダ内):   
 
@@ -103,7 +100,7 @@ displayed_sidebar: docs
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 特定のキーワードを含むサイトを除いて許可する場合: 
 
@@ -118,7 +115,7 @@ displayed_sidebar: docs
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 特定のIP アドレスへのアクセスを拒否する場合:   
 
@@ -136,7 +133,16 @@ displayed_sidebar: docs
   //(Note that the IP address of a domain may vary).
 ```
 
-#### 参照 
+## 参照 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1030 |
+| スレッドセーフである | &cross; |
+
+

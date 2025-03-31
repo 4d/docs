@@ -11,14 +11,11 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to display by default in the Formula editor |
 | formula | Text | &#8594;  | Variable containing the formula to display in the Formula editor or "" to display editor only |
-| &#8592; | Formula validated by the user |
+|| &#8592; | Formula validated by the user |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.EDIT FORMULA.Summary-->The **EDIT FORMULA** command displays the Formula editor in order to let the user write or modify a formula.<!-- END REF--> The editor contains the following on opening:
 
@@ -36,7 +33,7 @@ The user can modify the *formula* displayed and save it. It is also possible to 
 
 Keep in mind that when the dialog box is validated, the command does not execute the *formula*; it only validates and updates the contents of the variable. If you want to execute the *formula*, you must use the [EXECUTE FORMULA](execute-formula.md) command. 
 
-#### Example 
+## Example 
 
 Displaying the Formula editor with the \[Employees\] table and without a pre-entered formula: 
 
@@ -48,12 +45,22 @@ Displaying the Formula editor with the \[Employees\] table and without a pre-ent
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user validates the dialog box, the system variable OK is set to 1\. If the user cancels the dialog box, the system variable OK is set to 0.
 
-#### See also 
+## See also 
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 806 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( columnNumber | pictPosY )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *columnNumber* )} : Integer<br/>**Drop position** {( *pictPosY* )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Drop position.Summary-->**Drop position**コマンドは、 “複合” オブジェクトに対して行われたドロップのドロップ位置を知るために使用します。<!-- END REF-->
 
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 
 **重要**: フォームオブジェクトに**ドロップ可**プロパティが選択されている場合、ドロップされたデータを受け付けます。また、そのオブジェクトメソッドは、On Drag Over またはOn Drop あるいはその両方に対して、これらのイベントを処理するためにアクティブにする必要があります。
 
-#### 例題 
+## 例題 
 
 以下の例では、支払額のリストが人ごとかつ月ごとに分割されます。これは二つのリストボックス間でドラッグ&ドロップをすることで実行されます:
 
@@ -92,7 +89,15 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *ドラッグ＆ドロップ*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 608 |
+| スレッドセーフである | &cross; |
+
+

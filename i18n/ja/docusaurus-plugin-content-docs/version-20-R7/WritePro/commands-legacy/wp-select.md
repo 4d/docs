@@ -20,7 +20,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP SELECT.Summary-->**WP SELECT**コマンドは*wpArea* 引数で指定した4D Write Proエリアから、*targetObj* に基づいた、あるいは*startRange* と*endRange* で定義された新しいレンジに基づいた新しいセレクションを作成します。<!-- END REF-->
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 *startRange* と*endRange* 引数にはエリアで選択したい最初の文字と最後の文字の位置に対応する値を渡します。*startRange* 引数にwk start text 定数を渡す事でエリアの最初を定義する事ができ、また*endRange* 引数にwk end text 定数を渡す事でエリアの最後を定義する事ができます。4D Write Proドキュメントは表示されているテキストだけではなく範囲内に含まれるフォーマットタグもあるという点に注意して下さい。
 
-#### 例題 
+## 例題 
 
 以下のコードは:
 
@@ -62,6 +62,6 @@ displayed_sidebar: docs
  WP SELECT(*;"WParea";wk start text;12)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Text range](wp-text-range.md)  

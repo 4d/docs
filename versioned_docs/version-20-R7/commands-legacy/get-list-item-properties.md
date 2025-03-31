@@ -5,13 +5,13 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* ; itemRef | * ; *enterable* {; *styles* {; *icon* {; *color*}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* ; *itemRef* ; *enterable* {; *styles* {; *icon* {; *color*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *list* ; * ; *enterable* {; *styles* {; *icon* {; *color*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
 | enterable | Boolean | &#8592; | TRUE = Enterable, FALSE = Non-enterable |
 | styles | Integer | &#8592; | Font style for the item |
 | icon | Text, Integer | &#8592; | Picture name or number |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->The **GET LIST ITEM PROPERTIES** command returns the properties of the item designated by the *itemRef* parameterwithin the list whose list reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -49,9 +46,18 @@ After the call:
 
 For details about these properties, see the description of the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### See also 
+## See also 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 631 |
+| Thread safe | &cross; |
+
+

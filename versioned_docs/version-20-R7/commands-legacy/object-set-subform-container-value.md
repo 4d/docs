@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->The **OBJECT SET SUBFORM CONTAINER VALUE** command sets the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->
 
@@ -26,11 +23,20 @@ Pass in *value* a value of the same type as the data source bound to the subform
 
 For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
 
-#### Example 
+## Example 
 
 A detailed example is available in the [OBJECT Get subform container value](object-get-subform-container-value.md) section.
 
-#### See also 
+## See also 
 
 [Form](form.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1784 |
+| Thread safe | &cross; |
+
+

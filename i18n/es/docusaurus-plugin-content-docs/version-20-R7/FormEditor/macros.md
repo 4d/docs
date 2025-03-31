@@ -76,7 +76,7 @@ Cuando las macros están definidas en su proyecto 4D, puede llamar una macro uti
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Este menú se crea con base en `formMacros.json` [archivo(s) de definición de macros](#location-of-macros). Los elementos de la macro se clasifican en orden alfabético.
+Este menú se crea con base en [archivo(s) de definición de macros](#location-of-macro-file) `formMacros.json`. Los elementos de la macro se clasifican en orden alfabético.
 
 Este menú puede ser llamado en un área vacía o en una selección en el formulario. El objeto seleccionado se pasa a `$editor.currentSelection` o `$editor.target` en la función [`onInvoke`](#oninvoke) de la macro.
 
@@ -140,7 +140,7 @@ Las propiedades personalizadas, cuando se utilizan, se pasan a la función [cons
 
 Cada macro que quiera instanciar en su proyecto o componente debe ser declarada como una [clase 4D](Concepts/classes.md).
 
-El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#creating-macros) del archivo `formMacros.json`.
+El nombre de la clase debe coincidir con el nombre definido mediante el atributo [class](#declaring-macros) del archivo `formMacros.json`.
 
 Las macros se instancian al iniciar la aplicación. En consecuencia, si se modifica la estructura de la clase macro (añadir una función, modificar un parámetro...) o el [constructor](#class-constructor), tendrá que reiniciar la aplicación para aplicar los cambios.
 
@@ -207,7 +207,7 @@ Estas son las propiedades devueltas en el parámetro *$editor*:
 | ---------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | $editor.editor.form              | Object     | Formulario completo                                                                               |
 | $editor.editor.file              | File       | Objeto File del archivo de formularios                                                            |
-| $editor.editor.name              | String     | Nombre del formulario                                                                             |
+| $editor.editor.name              | Text       | Nombre del formulario                                                                             |
 | $editor.editor.table             | number     | Número de tabla del formulario, 0 para el formulario proyecto                                     |
 | $editor.editor.currentPageNumber | number     | El número de la página actual                                                                     |
 | $editor.editor.currentPage       | Object     | La página actual, que contiene todos los objetos de formulario y el orden de entrada de la página |
@@ -224,7 +224,7 @@ Estas son las propiedades que puede pasar en el objeto `$result` si quiere que e
 | formProperties                    | Object     | formProperties si es modificado por la macro                            |
 | editor.groups     | Object     | información de grupo, si los grupos son modificados por la macro        |
 | editor.views      | Object     | ver información, si las vistas son modificadas por la macro             |
-| editor.activeView | String     | Nombres de vistas activos                                               |
+| editor.activeView | Text       | Nombres de vistas activos                                               |
 
 Por ejemplo, si los objetos de la página actual y de los grupos han sido modificados, puede escribir:
 
@@ -242,9 +242,9 @@ Cuando se maneja el atributo `method` de los objetos de formulario, se puede def
 
 - Utilizando un objeto con la siguiente estructura:
 
-| Propiedad | Tipo   | Descripción       |
-| --------- | ------ | ----------------- |
-| source    | String | código del método |
+| Propiedad | Tipo | Descripción       |
+| --------- | ---- | ----------------- |
+| source    | Text | código del método |
 
 4D creará un archivo con el nombre del objeto en la carpeta "objectMethods" con el contenido del atributo `source`. Esta función solo está disponible para el código macro.
 

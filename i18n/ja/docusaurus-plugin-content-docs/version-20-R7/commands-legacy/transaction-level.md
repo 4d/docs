@@ -13,12 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Transaction level.Summary-->Transaction levelコマンドはプロセスの現在のトランザクションレベルを返します。<!-- END REF-->4Dランゲージ経由またはSQL経由でトランザクションが開始されたかに関わらず、このコマンドはカレントプロセスのすべてのトランザクションを考慮に入れます。
 
-#### 参照 
+## 参照 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 *トランザクションを使用する*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 961 |
+| スレッドセーフである | &check; |
+
+

@@ -3,15 +3,15 @@ id: onAfterKeystroke
 title: On After Keystroke
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                          |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **y compris** ce caractère. |
+| Code | Peut être appelé par                                                                                                                                                                                                                                                                  | Définition                                                                                                                                          |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 28   | [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) [Colonne de list box](FormObjects/listbox_overview.md#list-box-columns) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **y compris** ce caractère. |
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                          |
-| ------- | -------------------------------------------------------------------------------------- |
-| 18 R5   | - Support in non-enterable list boxes- The event is now triggered after IME validation |
+| Release | Modifications                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------------ |
+| 18 R5   | - Prise en charge dans les list box non saisissables - L'événement est désormais déclenché après la validation IME |
 </details>
 
 ## Description

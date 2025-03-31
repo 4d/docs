@@ -17,12 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB Copy.Summary-->O comando **OB Copy** devolve um objeto que contém uma cópia completa das propriedades, sub objetos e valores de *objeto*.<!-- END REF-->
-
-* Primeira sintaxe: **OB Copy(object{; resolvePtrs})**
-
   
 Se o *objeto* conter valores de tipo de ponteiro, por padrão a cópia também contém os ponteiros. No entanto, pode resolver os ponteiros ao momento da cópia passando **True** no parâmetro *resolvePont*. Neste caso, cada ponteiro presente como valor em objeto se avalia ao momento da cópia e utiliza seu valor não referenciado.
 
@@ -45,7 +42,7 @@ O parâmetro *groupWith* permite que determine uma coleção ou um objeto com o 
 * O mesmo principio se aplica às seleções de entidades armazenadas dentro das propriedades de *objeto*. Entretanto, o comando se otimiza quando se passa ck shared e uma seleção de entidades aninhada é *compaível*: a mesma referência de seleção de entidades se devolve no objeto resultante.
 * Os objetos almazém de dados, a classe de dados e entidade não podem ser copiados. Se chamar ao comando **OB Copy** com eles, se devolve um valor Null.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Você quer duplicar um objeto que contém valores simples:
 
@@ -69,7 +66,7 @@ Você quer duplicar um objeto que contém valores simples:
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Duplique um objeto que contenha ponteiros:
 
@@ -100,7 +97,7 @@ Duplique um objeto que contenha ponteiros:
   // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para copiar o objeto normal (não compartilhado) *$person* no objeto partilhado *$sharedObject*, precisamos criar uma cópia partilhada do objeto (*$sharedObject*).
 
@@ -119,7 +116,7 @@ Para copiar o objeto normal (não compartilhado) *$person* no objeto partilhado 
  End use
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 *$obj* contém um ponteiro (propriedade "name") no registro atual do campo "name".
 
@@ -142,7 +139,7 @@ Para copiar o objeto normal (não compartilhado) *$person* no objeto partilhado 
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a grupos compartilhados diferentes, uma cópia direta resultaria em um erro. Primeiro deve copiar *$sharedObj* e designar *$sharedColl como um grupo compartilhado para a cópia*. 
 
@@ -164,7 +161,16 @@ Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a
  End use
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Get](ob-get.md)  
 *Objetos compartidos e Coleções compartidas*  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1225 |
+| Thread-seguro | &check; |
+
+

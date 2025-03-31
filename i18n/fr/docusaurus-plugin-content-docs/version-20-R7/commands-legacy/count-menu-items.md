@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Count menu items.Summary-->La commande **Count menu items** retourne le nombre de lignes (commandes) de menus présentes dans le menu dont vous avez passé le numéro ou la référence dans *menu.<!-- END REF-->*  
   
@@ -26,6 +23,16 @@ Si vous omettez le paramètre *process*, **Count menu items** s'applique à la b
 
 **Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count menus](count-menus.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 405 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

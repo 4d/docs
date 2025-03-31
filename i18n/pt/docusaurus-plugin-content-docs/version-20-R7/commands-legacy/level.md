@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Level.Summary-->Level  se utiliza para determinar o nível de quebra do cabeçalho atual.<!-- END REF--> Devolve o nível de quebra durante os eventos On Header e On Printing Break.
 
 O nível 0 é o último nível a imprimir e é apropriado para a impressão de um total geral. Level  devolve 1 quando 4D imprime uma quebra no primeiro campo de ordenação, 2 quando 4D imprime uma quebra no segundo campo ordenado, e assim sucessivamente.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo é um modelo para um método de formulário. Mostra cada evento possível enquanto um relatório utiliza um formulário como formulário de saída. Level  se chama quando um cabeçalho ou uma quebra estão sendo impressas:
 
@@ -63,9 +60,18 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 101 |
+| Thread-seguro | &cross; |
+
+

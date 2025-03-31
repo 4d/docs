@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->**OPEN FONT PICKER**コマンドは、システムのフォントピッカーダイアログボックスを表示させます。<!-- END REF-->
 
@@ -25,7 +22,7 @@ displayed_sidebar: docs
 
 色が変更されると、オブジェクトに対して On After Edit フォームイベントが生成されます。
 
-#### 例題 
+## 例題 
 
 フォーム内にて、ユーザーがテキスト変数エリアのフォントまたはスタイルを変更できるように、フォントピッカーを表示するボタンを追加したい場合を考えます。以下の点に確認して下さい:
 
@@ -42,6 +39,15 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1303 |
+| スレッドセーフである | &cross; |
+
+

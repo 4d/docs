@@ -13,17 +13,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.Tickcount.Summary-->Tickcount retorna o número de tics (1 tic = 1 / 60 avos de um segundo) passados desde que se iniciou a máquina.<!-- END REF-->
+<!--REF #_command_.Tickcount.Summary-->Tickcount retorna o número de tics (1 tic = 1 / 60 avos de um segundo) passados desde que se iniciou a máquina.<!-- END REF-->Tickcount retorna um valor de tipo Inteiro longo.
 
-**Nota:** Tickcount retorna um valor de tipo Inteiro longo.
-
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [Milliseconds](milliseconds.md "Milliseconds").
 
-#### Ver também 
+## Ver também 
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 458 |
+| Thread-seguro | &check; |
+
+

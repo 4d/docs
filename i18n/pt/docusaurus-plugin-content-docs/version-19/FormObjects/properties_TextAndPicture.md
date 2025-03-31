@@ -98,7 +98,7 @@ O título do botão será deslocado para a direita e para baixo em função do n
 
 ## Número de estados
 
-Esta propriedade define o número exato de estados presentes na imagem utilizada como ícone para um [botão com ícone](button_overview.md), uma [caixa de verificação](checkbox_overview.md) ou um [botão radio](radio_overview.md) personalizado. In general, a button icon includes four states: active, clicked, mouse over and inactive.
+Esta propriedade define o número exato de estados presentes na imagem utilizada como ícone para um [botão com ícone](button_overview.md), uma [caixa de verificação](checkbox_overview.md) ou um [botão radio](radio_overview.md) personalizado. Em geral, um ícone de botão inclui quatro estados: ativo, clicado, mouse sobre e inativo.
 
 Cada estado é representado por uma imagem diferente. Na imagem de origem, os estados devem ser empilhados verticalmente:
 
@@ -171,11 +171,11 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 ## Margem vertical
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Essa propriedade funciona em conjunto com a propriedade [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -191,29 +191,29 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Com menu pop-up
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Esta propriedade permite exibir um símbolo que aparece como um triângulo no botão para indicar a presença de um menu pop-up anexado:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+A aparência e o local desse símbolo dependem do estilo do botão e da plataforma atual.
 
 ### Ligados e Separados
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Para anexar um símbolo de menu pop-up a um botão, há duas opções de exibição disponíveis:
 
 |                         Linked                          |                          Separado                          |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> A disponibilidade real de um modo "separado" depende do estilo do botão e da plataforma.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.</li>
-<li>Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Only the selection of the action in the pop-up menu causes its execution.</li>
+<li>Quando o menu pop-up é **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; essa ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.</li>
+<li>Quando o menu pop-up está **vinculado**, um simples clique no botão exibe apenas o menu pop-up. Somente a seleção da ação no menu pop-up causa sua execução.</li>
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por `eventos formulário` e dos comandos **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** e **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
 
 #### Gramática JSON
 
@@ -223,4 +223,4 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### Objectos suportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Botão da barra de ferramentas](button_overview.md#toolbar) - [Botão](button_overview.md#bevel) [chanfrado - Botão chanfrado arredondado](button_overview.md#rounded-bevel) - [Botão de gradiente do OS X](button_overview.md#os-x-gradient) - [Botão texturizado do OS X](button_overview.md#os-x-textured) - [Botão do Office XP](button_overview.md#office-xp) - [Botão de círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)

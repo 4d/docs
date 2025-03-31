@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is license available.Summary-->El comando Is license available le permite conocer la disponibilidad de un plug-in.<!-- END REF--> Es útil, por ejemplo, para mostrar u ocultar funciones que necesitan de la presencia de un plug-in.
 
@@ -42,10 +39,19 @@ En este caso, el comando devuelve [True](true.md "True") si el plug-in correspon
 Is license available devuelve [False](false.md "False") si el plug-in está funcionando en modo demostración.
 * Pase en el parámetro *licencia* el número de identificación del recurso “4BNX” del plug-in. En este caso, el comando se comporta como se indicó anteriormente.
 
-#### Ver también 
+## Ver también 
 
 [CHANGE LICENSES](change-licenses.md)  
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 714 |
+| Hilo seguro | &cross; |
+
+

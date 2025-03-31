@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->APPEND DATA TO PASTEBOARD コマンドは、*dataType*で指定されたデータタイプで*data*BLOB内にあるデータをペーストボードに追加します。<!-- END REF-->
 
@@ -37,7 +34,7 @@ displayed_sidebar: docs
 
 しかし、BLOBにテキストやピクチャが含まれている場合、APPEND DATA TO PASTEBOARD コマンドを使用してテキストやピクチャをペーストボードに追加できることに留意してください。
 
-#### 例題 
+## 例題 
 
 ペーストボードコマンドとBLOBを使用すると、洗練されたカット/コピー/ペーストの仕組みを構築でき、たった1つのデータではなく構造化されたデータを扱うことができます。以下の例では、2つのプロジェクトメソッドSET RECORD TO PASTEBOARDとGET RECORD FROM PASTEBOARDは、ペーストボードとの間でコピーするためにレコード全体を1つのデータとして扱うことができます。
 
@@ -211,12 +208,22 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ペーストボードにBLOBデータが正しく追加されると、OKシステム変数は１に設定されます。そうでなければ０が設定され、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 403 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | OK |
+
+

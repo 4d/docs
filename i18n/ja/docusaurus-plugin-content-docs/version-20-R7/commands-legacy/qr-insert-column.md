@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->QR INSERT COLUMN コマンドは指定された位置にカラムの作成または挿入を行います。<!-- END REF-->挿入された場所の右にあるカラムはすべて右側へ移動します。
 
@@ -30,7 +27,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドはクロステーブルレポートには使用できません。
 
-#### 例題 
+## 例題 
 
 次のコードはクイックレポートエリアの一番目にカラムを挿入（または作成）し、カラムタイトルに“Field1”を設定し（デフォルト動作）、Field1の値をカラムの内容として代入します。
 
@@ -38,6 +35,16 @@ displayed_sidebar: docs
  QR INSERT COLUMN(MyArea;1;->[Table1]Field1)
 ```
 
-#### 参照 
+## 参照 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 748 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

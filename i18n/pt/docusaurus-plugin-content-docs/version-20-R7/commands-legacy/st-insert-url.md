@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST INSERT URL.Summary-->O comando **ST INSERT URL** insere um link URL no campo ou a variável de texto com estilo designada pelo parâmetro *objeto* .<!-- END REF--> 
 
@@ -49,9 +46,9 @@ Os parámetros opcionais *inicioSel* e *fimSel* designam uma seleção de texto 
   
 **Nota**: se *inicioSel* é maior que *fimSel* (exceto quando *fimSel* é 0) , o comando não faz nada e a variável OK toma o valor 0.
 
-Uma vez inserido o link, é ativo: o uso de **Ctrl+clique** (Windows) ou **Comando+clique** (OS X) abre uma página do navegador por padrão no endereço especificado no parâmetro *enderecoURL*.
+Uma vez inserido o link, é ativo: o uso de **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) abre uma página do navegador por padrão no endereço especificado no parâmetro *enderecoURL*.
 
-#### Exemplo 
+## Exemplo 
 
 Você deseja inserir um link ao web site de 4D para substituir o texto selecionado no objeto:
 
@@ -61,7 +58,17 @@ Você deseja inserir um link ao web site de 4D para substituir o texto seleciona
  ST INSERT URL(*;"myText";vTitle;vURL;ST Start highlight;ST End highlight)
 ```
 
-#### Ver também 
+## Ver também 
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1280 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

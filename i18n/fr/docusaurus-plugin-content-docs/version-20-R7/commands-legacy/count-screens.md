@@ -13,17 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Count screens.Summary-->**Count screens** retourne le nombre de moniteurs qui sont connectés à votre machine.<!-- END REF-->
 
-#### Voir aussi 
+## Voir aussi 
 
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN COORDINATES](screen-coordinates.md)  
 [SCREEN DEPTH](screen-depth.md)  
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 437 |
+| Thread safe | &cross; |
+
+

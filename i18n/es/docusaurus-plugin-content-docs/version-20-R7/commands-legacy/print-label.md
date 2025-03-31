@@ -11,14 +11,11 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a imprimir, o Tabla por defecto, si se omite |
 | doc | Text | &#8594;  | Nombre del documento de etiquetas del disco |
-| * &#124; > | &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
+| * &#124; > |Operator| &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** le permite imprimir etiquetas con los datos de la selección de *tabla*.<!-- END REF-->
 
@@ -47,7 +44,7 @@ Si especifica el parámetro *documento*, las etiquetas se imprimen con los pará
 * La sintaxis que hace que el editor de etiquetas aparezca no funciona con 4D Server; en este caso, la variable sistema OK toma el valor 0.
 * En el caso de un problema relacionado de impresora (sin papel, impresora desconectada, etc.), no se genera un mensaje de error.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo imprime las etiquetas utilizando el formulario de salida de una tabla. El ejemplo utiliza dos métodos. El primero es un método de proyecto que designa el formulario de salida a utilizar y luego imprime las etiquetas: 
 
@@ -72,7 +69,7 @@ El segundo método es el método de formulario del formulario *"Imprimir Etiquet
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[Personas\], y luego imprime automáticamente las etiquetas “Mis etiquetas”:
 
@@ -83,7 +80,7 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[Personas\], y después le permite al usuario elegir las etiquetas a imprimir:
 
@@ -94,7 +91,7 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[Personas\] y luego muestra el Asistente de etiquetas de manera que el usuario pueda diseñar, guardar, cargar e imprimir todo tipo de etiquetas:
 
@@ -105,7 +102,17 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 39 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

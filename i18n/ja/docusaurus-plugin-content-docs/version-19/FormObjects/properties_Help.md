@@ -23,11 +23,11 @@ title: ヘルプ
 
 |   名称    | データタイプ | とりうる値       |
 |:-------:|:------:| ----------- |
-| tooltip |  text  | ユーザー用のヘルプ情報 |
+| tooltip |  テキスト  | ユーザー用のヘルプ情報 |
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [ラジオボタン](radio_overview.md)
+[ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md)  - [ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](./comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [ラジオボタン](radio_overview.md)
 
 #### 追加のヘルプ機能
 

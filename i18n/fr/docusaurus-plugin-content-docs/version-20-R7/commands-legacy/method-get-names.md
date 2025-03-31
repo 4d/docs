@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->La commande **METHOD GET NAMES** remplit le tableau *tabNoms* avec les noms des méthodes projet créées dans l’application.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 
 **Note :** Les méthodes placées dans la corbeille ne sont pas listées. 
 
-#### Exemple 
+## Exemple 
 
 Exemples d’utilisations types :
 
@@ -39,3 +39,13 @@ Exemples d’utilisations types :
   // Liste des méthodes projet de la base hôte débutant par une chaîne spécifique
  METHOD GET NAMES(t_Noms;"web_@";*)
 ```
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1166 |
+| Thread safe | &check; |
+
+

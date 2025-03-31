@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->The **SET LIST PROPERTIES** command sets the line height and selection properties of the hierarchical list whose list reference you pass in *list*.<!-- END REF-->
 
@@ -46,7 +43,7 @@ If you pass 0 or omit the *multiSelections* parameter, the default behavior will
 The optional *editable* parameter lets you indicate whether the list must be editable by the user when it is displayed as a choice list associated with a field or a variable during data entry. When the list is editable, a **Modify** button is added in the choice list window and the user can add, delete and sort the values through a specific editor.   
 If you pass 1 or omit the *editable* parameter, the list will be editable; if you pass 0, it will not be editable.
 
-#### Example 
+## Example 
 
 You want to disallow the expand/collapse sublist on double-click. You can write in the form method: 
 
@@ -58,8 +55,17 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
  End case
 ```
 
-#### See also 
+## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 387 |
+| Thread safe | &cross; |
+
+

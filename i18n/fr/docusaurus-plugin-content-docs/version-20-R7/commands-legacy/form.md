@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Form.Summary-->La commande **Form** retourne l'objet associé au formulaire courant, s'il existe.<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
@@ -24,15 +21,15 @@ displayed_sidebar: docs
 * le formulaire courant est un sous-formulaire,
 * un formulaire table est actuellement affiché à l'écran.
 
-##### Formulaire DIALOGUE 
+### Formulaire DIALOGUE 
 
 Si le formulaire courant est affiché suite à un appel à la commande [DIALOG](dialog.md), **Form** retourne soit un objet vide, soit l'objet *formData* passé en paramètre à cette commande, le cas échéant.
 
-##### Sous-formulaire 
+### Sous-formulaire 
 
 Si le formulaire courant est un sous-formulaire, l'objet retourné par **Form** dépend de la variable du conteneur parent :
 
-* Si la variable associée au conteneur parent a été typée en objet ([C\_OBJECT](c-object.md)), **Form** retourne la valeur de cette variable.  
+* Si la variable associée au conteneur parent a été typée en objet (*C\_OBJECT*), **Form** retourne la valeur de cette variable.  
 Dans ce cas, l'objet retourné par **Form** est identique à celui retourné par l'expression suivante :  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  
@@ -41,7 +38,7 @@ Dans ce cas, l'objet retourné par **Form** est identique à celui retourné par
 
 Pour plus d'informations, veuillez vous reporter à la section *Sous-formulaires en page*.
 
-##### Formulaire table 
+### Formulaire table 
 
 **Form** retourne l'objet associé au formulaire table affiché à l'écran. Dans le contexte d'un formulaire d'entrée affiché depuis un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
 
@@ -49,7 +46,7 @@ Pour plus d'informations, veuillez vous reporter à la section *Sous-formulaires
 | ------------- | -------- | --------------------------------------------- |
 | parentForm    | objet    | **Form** objet du formulaire de sortie parent |
 
-#### Exemple 
+## Exemple 
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
@@ -97,6 +94,15 @@ Le formulaire affiche les informations pour chaque enfant :
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DIALOG](dialog.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1466 |
+| Thread safe | &cross; |
+
+

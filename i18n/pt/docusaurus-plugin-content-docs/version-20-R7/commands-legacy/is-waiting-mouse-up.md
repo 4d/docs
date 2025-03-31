@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->**Tema:** Eventos formulário
 
@@ -30,7 +27,7 @@ O comando devolve **False** nos seguintes casos:
 
 Este comando deve ser utilizado junto com . Lhe permite sincronizar o estado interno do objeto de formulário com a aplicação global. Basicamente, permite a seu código manejar o caso onde o usuario clicou e começou a mover algo dentro de uma imagem objeto de formulário, e esta ação é interrompida por um evento externo, como um quadro de diálogo de alerta. Neste caso, o estado interno do objeto pode ser suspenso de forma indefinida devido a que se espera um evento mouse up que não ocorrerá. Para abordar este problema, deve proteger o código de movimento do mouse com um comando **Is waiting mouse up** o que assegura que seja executado em um contexto válido.
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mouse em um objeto imagem:
 
@@ -58,6 +55,15 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1422 |
+| Thread-seguro | &cross; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->OBJECT SET VISIBLE コマンドは、*object*によって指定されるオブジェクトを表示、あるいは非表示にします。<!-- END REF--> 
 
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 
 引数*visible*に[True](true.md "True")渡すとオブジェクトが表示されます。引数*visible*に[FALSE](false.md "FALSE")を渡すとオブジェクトが非表示になります。
 
-#### 例題 
+## 例題 
 
 以下の図はデザインモードにおける典型的なフォームです:
 
@@ -57,7 +54,16 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict27190.ja.png)
 
-#### 参照 
+## 参照 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 603 |
+| スレッドセーフである | &cross; |
+
+

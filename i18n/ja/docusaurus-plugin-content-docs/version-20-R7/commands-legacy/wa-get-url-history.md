@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA GET URL HISTORY.Summary-->WA GET URL HISTORY コマンドは、*\** と *object* 引数で指定したWebエリアのセッション中に訪問したURLを含む1つまたは2つの配列を返します。<!-- END REF-->このコマンドを使用して、カスタムのナビゲーションシステムを作成できます。
 
@@ -43,6 +40,15 @@ URLは時間順に並びかえられます。
 
 **互換性に関する注意:** **4D v19 R5 以降、このコマンドは Windows のシステムレンダリングエンジン を使用しているWeb エリアにおける urlsArr および titlesArr 配列のみを返します。*
 
-#### 参照 
+## 参照 
 
 [WA Create URL history menu](wa-create-url-history-menu.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1048 |
+| スレッドセーフである | &cross; |
+
+

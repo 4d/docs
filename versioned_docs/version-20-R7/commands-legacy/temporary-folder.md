@@ -13,14 +13,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Temporary folder.Summary-->The Temporary folder command returns the pathname to the current temporary folder set by your system.<!-- END REF-->
 
-#### Example 
+## Example 
 
 See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
-#### See also 
+## See also 
 
 [System folder](system-folder.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 486 |
+| Thread safe | &check; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->GET MACRO PARAMETERコマンドは、呼び出されたメソッドテキストのすべてまたは一部を引数*textParam*に返します。<!-- END REF-->
 
@@ -30,10 +27,19 @@ displayed_sidebar: docs
 
 Full method textを*selector*に渡すと、メソッドのテキストはすべて*textParam*に返されます。Highlighted method textを*selector*に渡すと、メソッドで選択されたテキストだけが*textParam*に返されます。
 
-#### 例題 
+## 例題 
 
 [SET MACRO PARAMETER](set-macro-parameter.md "SET MACRO PARAMETER")コマンドの例を参照してください。
 
-#### 参照 
+## 参照 
 
 [SET MACRO PARAMETER](set-macro-parameter.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 997 |
+| スレッドセーフである | &cross; |
+
+

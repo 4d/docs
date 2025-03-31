@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->**DOCUMENT LIST**コマンド は、*pathname*に渡すパス名にあるドキュメントの名前を要素とするテキスト配列*documents*を生成します。<!-- END REF-->
-
-**注:** 引数*pathname* は絶対パス名だけを受け入れます。 
+<!--REF #_command_.DOCUMENT LIST.Summary-->**DOCUMENT LIST**コマンド は、*pathname*に渡すパス名にあるドキュメントの名前を要素とするテキスト配列*documents*を生成します。<!-- END REF-->引数*pathname* は絶対パス名だけを受け入れます。 
 
 *options* 引数を省略した場合、デフォルトで *documents* 配列にドキュメント名のみが返されます。*options* 引数に*System Documents*テーマの以下の定数を渡すと、この動作を変更できます:
 
@@ -38,7 +36,7 @@ displayed_sidebar: docs
 
 指定した場所にドキュメントがない場合、コマンドは空の配列を返します。*pathname*に渡したパス名が無効だと、**DOCUMENT LIST**はファイルマネジャエラーを生成します。このエラーは[ON ERR CALL](on-err-call.md)でインストールされるエラー処理メソッドを使用して、検知することができます。
 
-#### 例題 1 
+## 例題 1 
 
 フォルダー中のすべてのドキュメントをリスト (デフォルトシンタックス):
 
@@ -50,7 +48,7 @@ displayed_sidebar: docs
  Text1.txt  
  Text2.txt
 
-#### 例題 2 
+## 例題 2 
 
 絶対モードでフォルダー中のすべてのドキュメントをリスト:
 
@@ -62,7 +60,7 @@ displayed_sidebar: docs
  C:\\Text1.txt  
  C:\\Text2.txt
 
-#### 例題 3 
+## 例題 3 
 
 再帰 (相対) モードですべてのドキュメントをリスト:
 
@@ -79,7 +77,7 @@ displayed_sidebar: docs
  \\Folder2\\Text5.txt  
  \\Folder2\\Folder3\\Picture1.png
 
-#### 例題 4 
+## 例題 4 
 
 再帰 (絶対) モードですべてのドキュメントをリスト:
 
@@ -95,7 +93,7 @@ displayed_sidebar: docs
  C:\\MyFolder\\Folder2\\MyText5.txt  
  C:\\MyFolder\\Folder2\\Folder3\\MyPicture1.png
 
-#### 例題 5 
+## 例題 5 
 
 再帰POSIX (相対) モードですべてのドキュメントをリスト:
 
@@ -111,7 +109,17 @@ displayed_sidebar: docs
  Folder2/MyText5.txt  
  Folder2/Folder3/MyPicture1.png
 
-#### 参照 
+## 参照 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 474 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

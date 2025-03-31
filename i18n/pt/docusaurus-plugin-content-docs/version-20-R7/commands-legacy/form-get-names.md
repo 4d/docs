@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FORM GET NAMES.Summary-->O comando **FORM GET NAMES** enche o array *arrayNoms* com os nomes dos formulários da aplicação.<!-- END REF--> 
 
@@ -38,7 +35,7 @@ Se o comando se executa desde um componente, devolve por padrão os nomes dos fo
 
 **Nota:** Os formulários localizados no lixo não são listados. 
 
-#### Exemplo 
+## Exemplo 
 
 Exemplos de usos típicos:
 
@@ -64,7 +61,16 @@ Exemplos de usos típicos:
  FORM GET NAMES(tablePtr->;arr_Names;*)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Formulários*  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1167 |
+| Thread-seguro | &cross; |
+
+

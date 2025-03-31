@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN URL.Summary-->The **WA OPEN URL** command loads the URL passed in the *url* parameter into the Web area designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -45,8 +42,17 @@ is the same as:
  WA OPEN URL(MyWArea;"http://www.4d.com/")
 ```
 
-#### See also 
+## See also 
 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1020 |
+| Thread safe | &cross; |
+
+

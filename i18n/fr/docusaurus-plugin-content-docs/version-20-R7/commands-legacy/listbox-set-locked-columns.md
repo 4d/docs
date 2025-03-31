@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->La commande **LISTBOX SET LOCKED COLUMNS** permet de verrouiller les *nbColonnes* premières colonnes gauches de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -30,7 +27,16 @@ Vous pouvez passer dans *nbColonnes* toute valeur comprise entre 1 et le nombre 
 
 Si vous passez 0 ou une valeur négative dans *nbColonnes*, le verrouillage des colonnes est supprimé. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get locked columns](listbox-get-locked-columns.md)  
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1151 |
+| Thread safe | &cross; |
+
+

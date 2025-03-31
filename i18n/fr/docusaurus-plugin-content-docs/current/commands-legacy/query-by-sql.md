@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY SQL.Summary-->La commande **QUERY BY SQL** permet de tirer directement parti du moteur SQL intégré de 4D.<!-- END REF--> Elle exécute une requête SELECT simple qui peut être écrite ainsi :
 
@@ -54,7 +51,7 @@ Pour plus d’informations sur ce point, reportez-vous à la section *Présentat
 
 **Rappel :** Les références aux variables locales ne sont pas possibles en mode compilé. Pour plus d'informations sur la programmation SQL dans 4D, reportez-vous à la section *Présentation des commandes du thème SQL*.   
 
-##### A propos des liens 
+### A propos des liens 
 
 **QUERY BY SQL** n’utilise pas les liens entre les tables définis dans l’éditeur de structure de 4D. Si vous souhaitez tirer parti des données liées, vous devez ajouter une clause JOIN dans la requête. Par exemple, considérons la structure suivante, dans laquelle un lien N vers 1 relie les champs \[Personnes\]Ville à \[Villes\]Nom :
 
@@ -76,7 +73,7 @@ Avec **QUERY BY SQL**, vous devez écrire l’instruction suivante, que le lien 
 
 **Note :** Les liens 1 vers N et N vers N sont également traités par **QUERY BY SQL** d’une manière différente de [QUERY BY FORMULA](query-by-formula.md).
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple recherche les bureaux dont les ventes sont supérieures à 100\. La requête SQL est : 
 
@@ -92,7 +89,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Bureaux];$formuleRequete)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple recherche les commandes comprises entre 3000 et 4000\. La requête SQL est :   
 
@@ -108,7 +105,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Ventes];$formuleRequete)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple montre comment trier le résultat de la requête sur un critère spécifique. La requête SQL est : 
 
@@ -124,7 +121,7 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Personnes];$formuleRequete)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Cet exemple montre une requête utilisant des tables liées dans 4D. Via le SQL vous devez utiliser un JOIN pour recréer cette relation. Considérons les deux tables suivantes : 
 
@@ -153,10 +150,22 @@ En utilisant la commande **QUERY BY SQL** :
  QUERY BY SQL([Lignes_Factures];$formuleRequete)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le format de la condition de recherche est correct, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0, le résultat de la commande est une sélection vide et une erreur est retournée. Cette erreur peut être interceptée par une méthode installée à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY BY FORMULA](query-by-formula.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 942 |
+| Thread safe | &cross; |
+| Modifie les variables | OK, error |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

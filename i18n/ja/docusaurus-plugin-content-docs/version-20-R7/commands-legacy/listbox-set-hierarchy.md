@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->LISTBOX SET HIERARCHY コマンドを使用して*object*と*\**で指定されたリストボックスを階層モードにするか非階層モードにするか設定できます。<!-- END REF-->. 
 
@@ -39,7 +36,7 @@ displayed_sidebar: docs
 * リストボックスが現在非階層モードで、過去にも階層であると設定されたことがなければ、デフォルトで最初の配列が階層として使用されます。
 * リストボックスが現在非階層モードで、以前に階層モードとして設定されたことがあれば、最後の時点の階層が再構築されます。
 
-#### 例題 
+## 例題 
 
 aCountry、aRegion、そしてaCity配列をリストボックスの階層として定義する:
 
@@ -51,6 +48,15 @@ aCountry、aRegion、そしてaCity配列をリストボックスの階層とし
  LISTBOX SET HIERARCHY(*;"mylistbox";True;$ArrHierarch)
 ```
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1098 |
+| スレッドセーフである | &cross; |
+
+

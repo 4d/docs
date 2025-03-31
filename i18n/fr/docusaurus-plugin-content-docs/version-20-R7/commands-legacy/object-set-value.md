@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Exemple 1 
+## Exemple 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** fixe la *valeur* des sources de données courantes pour les objets formulaires désignés par le paramètre *nomObjet*.<!-- END REF-->
 
@@ -27,7 +24,7 @@ Le paramètre *valeur* vous permet de passer une nouvelle valeur (de tout type) 
 
 **Note** : Si les sources de données sont une expression non assignable, **OBJECT SET VALUE** ne fait rien. Pour plus d'informations, consultez *expressions assignables vs non-assignables* .
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez lire la valeur des sources de données d'un objet formulaire, lire son nom et définir une nouvelle valeur :
 
@@ -39,6 +36,15 @@ Vous souhaitez lire la valeur des sources de données d'un objet formulaire, lir
  OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //trouver le nom de l'objet formulaire et définir la valeur à 50
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get value](object-get-value.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1742 |
+| Thread safe | &cross; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CLEAR LIST.Summary-->CLEAR LIST コマンドは、*list*に渡したリスト参照番号を持つ階層リストを廃棄します。<!-- END REF-->
 
@@ -31,7 +28,7 @@ displayed_sidebar: docs
 2. 親項目に対して[SET LIST ITEM](set-list-item.md "SET LIST ITEM")コマンドを呼び出して、サブリストを消去する前にサブリストを親項目から切り離す。
 3. CLEAR LISTコマンドを呼び出して、[GET LIST ITEM](get-list-item.md "GET LIST ITEM")コマンドで取得した参照番号を持つサブリストを消去する。
 
-#### 例題 1 
+## 例題 1 
 
 (ウィンドウを閉じてフォームがアンロードされるときなどに) 必要のないオブジェクトやデータをすべて消去するクリーンアップルーチン中で、クリアしようとするリストはすでにクリアされたものであるかもしれません。[Is a list](is-a-list.md "Is a list")を使用して、クリアする必要のあるリストだけをクリアすることができます:
 
@@ -42,16 +39,25 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Load list](load-list.md "Load list") コマンドの例題参照
 
-#### 例題 3 
+## 例題 3 
 
 [BLOB to list](blob-to-list.md "BLOB to list") コマンドの例題参照
 
-#### 参照 
+## 参照 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 377 |
+| スレッドセーフである | &cross; |
+
+

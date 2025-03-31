@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Data file.Summary-->O comando Data file retorna o nome longo do arquivo de dados ou do primeiro segmento do banco no qual você está trabalhando atualmente.<!-- END REF-->
 
@@ -28,8 +28,16 @@ Se você está trabalhando, por exemplo, com o banco na pasta Documentos:MeusCDs
 
 **Atenção:** se você chama este comando desde 4D em modo remoto, você só retorna o nome do arquivo de dados, não o nome longo.
 
-#### Ver também 
+## Ver também 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 490 |
+| Thread-seguro | &check; |
+
+

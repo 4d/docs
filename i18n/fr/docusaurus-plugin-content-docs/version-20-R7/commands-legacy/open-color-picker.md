@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->La commande **OPEN COLOR PICKER** affiche la boîte de dialogue de sélection de couleur du système.<!-- END REF--> 
 
-**Note :** Cette boîte de dialogue est modale sous Windows mais pas sous OS X.
+**Note :** Cette boîte de dialogue est modale sous Windows mais pas sous macOS.
 
 Si l’utilisateur sélectionne une couleur et valide la boîte de dialogue, la couleur choisie est appliquée à la sélection courante de texte dans l’objet ayant le focus, si la propriété "Autoriser sélecteur couleur/police" est cochée pour cet objet (cf. manuel *Mode Développement*).
 
@@ -28,6 +25,15 @@ Si vous passez 0 dans le paramètre *texteOuFond* ou omettez ce paramètre, la c
 
 Si la couleur a été modifiée, l’événement formulaire On After Edit est généré pour l’objet. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [OPEN FONT PICKER](open-font-picker.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1304 |
+| Thread safe | &cross; |
+
+

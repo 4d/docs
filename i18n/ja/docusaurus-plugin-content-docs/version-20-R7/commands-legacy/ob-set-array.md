@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->**OB SET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中の *property* と関連付ける配列 *array* を定義します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB SET ARRAY.Summary-->**OB SET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中の *property* と関連付ける配列 *array* を定義します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *property* 引数には、作成または修正したいプロパティのラベル(名前)を渡して下さい。オブジェクト内に指定されたプロパティが存在する場合、その値は指定した値で上書きされます。プロパティが存在しない場合、新たにプロパティが作成されます。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
@@ -31,7 +29,7 @@ displayed_sidebar: docs
 * *array* 引数には単純な変数もサポートされます。単純な変数を渡した場合、単一の値を持つ配列が作成され、*property* 引数のプロパティに割り当てられます。
 * 二次元配列を使用することはできません。
 
-#### 例題 1 
+## 例題 1 
 
 テキスト配列を使用する場合:
 
@@ -46,7 +44,7 @@ displayed_sidebar: docs
   // Value of $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-#### 例題 2 
+## 例題 2 
 
 配列に要素を追加する場合:
 
@@ -63,7 +61,7 @@ displayed_sidebar: docs
   // $Employees = {"Employees":["Smith","White","Brown"]}
 ```
 
-#### 例題 3 
+## 例題 3 
 
 テキスト配列の一要素を配列として使用する場合:
 
@@ -73,7 +71,7 @@ displayed_sidebar: docs
   // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-#### 例題 4 
+## 例題 4 
 
 オブジェクト配列を使用する場合:
 
@@ -102,7 +100,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1211436.en.png)
 
-#### 例題 5 
+## 例題 5 
 
 オブジェクトフィールドを使用する場合を考えます:
 
@@ -116,7 +114,7 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1899097.en.png)
 
-#### 例題 6 
+## 例題 6 
 
 ピクチャー配列を使用する場合:
 
@@ -129,8 +127,17 @@ displayed_sidebar: docs
  OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
 ```
 
-#### 参照 
+## 参照 
 
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 *コレクションと4D配列間での型の変換*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1227 |
+| スレッドセーフである | &check; |
+
+

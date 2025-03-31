@@ -19,11 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->La commande **TRANSFORM PICTURE** permet d’appliquer une transformation de type *opérateur* à l’image passée dans le paramètre *image*.<!-- END REF-->
-
-**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [C\_BOOLEAN](c-boolean.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->La commande **TRANSFORM PICTURE** permet d’appliquer une transformation de type *opérateur* à l’image passée dans le paramètre *image*.<!-- END REF-->Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
 
 L’*image* source est modifiée directement à l’issue de l’exécution de la commande. A noter cependant que certaines opérations ne sont pas destructives et peuvent être annulées via l’opération inverse ou l’opération “Réinitialisation”. Par exemple, une image réduite à 1 % retrouvera sa taille originale sans altération si elle est agrandie 100 fois par la suite. Les transformations ne modifient pas le type d’origine de l’image : par exemple, une image vectorielle restera vectorielle à l’issue de la transformation. 
 
@@ -48,7 +46,7 @@ Passez dans *opérateur* le numéro de l’opération à effectuer et dans *para
 * Fade to grey scale : l’image est passée en niveaux de gris (aucun paramètre n’est requis). Cette transformation ne peut pas être annulée.
 * Transparency : Un masque de transparence est appliqué à l'image sur la base de la couleur passée dans *param1*. Par exemple, si vous passez 0x00FFFFFF (blanc) dans *param1*, tous les pixels blancs de l'image originale seront transparents dans l'image transformée. Cette opération peut être appliquée aux images bitmap ou vectorielles. Par défaut, si le paramètre *param1* est omis, le blanc (0x00FFFFFF) sera utilisé comme couleur cible. Cette fonction est plus particulièrement destinée à gérer la transparence dans les images converties depuis le format obsolète PICT, mais peut être utilisée avec des images de tout type. Cette transformation ne peut pas être annulée.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez transformer les parties blanches d'une image en parties transparentes. Pour cela, vous pouvez utiliser le code suivant :
 
@@ -60,7 +58,7 @@ Vous obtenez le résultat suivant :
 
 ![](../assets/en/commands/pict1359750.en.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici un exemple de recadrage (l’image est affichée dans le formulaire avec le format “Image tronquée (non centrée)”) : 
 
@@ -70,6 +68,15 @@ Voici un exemple de recadrage (l’image est affichée dans le formulaire avec l
 
 ![](../assets/en/commands/pict28288.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [COMBINE PICTURES](combine-pictures.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 988 |
+| Thread safe | &check; |
+
+

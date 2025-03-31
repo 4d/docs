@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->La commande **DELETE FROM LIST** supprime l'élément désigné par le paramètre *réfElément* de la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
 
@@ -32,7 +29,7 @@ Si vous travaillez avec les numéros de référence des éléments, veillez à c
 
 Quel que soit l'élément que vous supprimez, vous pouvez passer un troisième paramètre optionnel, *\**, pour indiquer à 4D de supprimer automatiquement de la mémoire la sous-liste rattachée à l'élément, s'il en existe. Si vous ne passez pas ce paramètre, il est préférable de récupérer au préalable le numéro de référence de la sous-liste (éventuelle) rattachée à l'élément, de manière à pouvoir si besoin est supprimer cette sous-liste à l'aide de la commande [CLEAR LIST](clear-list.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une sous-liste est rattachée à l'élément, elle est supprimée (ainsi que toute sous-sous-liste) :
 
@@ -40,7 +37,16 @@ L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 624 |
+| Thread safe | &cross; |
+
+

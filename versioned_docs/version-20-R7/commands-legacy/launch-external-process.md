@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 :::
 
-#### Description 
+## Description 
 
 The **LAUNCH EXTERNAL PROCESS** command launches an external process from 4D under macOS and Windows. 
 
@@ -49,7 +49,7 @@ These variables are valid in the current process for the next call to **LAUNCH E
 
 When passed, the *pid* parameter (longint) returns the system level ID for the process created to launch the command, regardless of the *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* option status. With this information, it is easier to interact with a created external process thereafter, e.g. to stop it. If the process launch fails, the *pid* parameter is not returned.
 
-#### Examples under macOS 
+## Examples under macOS 
 
 The following examples use the macOS Terminal available in the Application/Utilities folder.
 
@@ -80,7 +80,7 @@ The following examples use the macOS Terminal available in the Application/Utili
  LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
 ```
 
-#### Examples under Windows 
+## Examples under Windows 
 
 5\. To open NotePad:
 
@@ -124,7 +124,7 @@ The following examples use the macOS Terminal available in the Application/Utili
  $docname:=Select document("";"*.*";"Choose the file to open";0)
  If(OK=1)
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+$docname+"\"")
+    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
  End if
 ```
 
@@ -138,11 +138,21 @@ The following examples use the macOS Terminal available in the Application/Utili
  LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //gets all information
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise (file not found, insufficient memory, etc.), it is set to 0.
 
-#### See also 
+## See also 
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 811 |
+| Thread safe | &check; |
+| Modifies variables | OK |
+
+

@@ -5,7 +5,7 @@ title: On Alternative Click
 
 | Code | Pode ser chamado por                                                                                                                                           | Definição                                          |
 | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Botão](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: A área da "seta" de um botão é clicada</li><li>Listas de caixas: Em uma coluna de um array de objetos, um botão de elipses (atributo "alternateButton") é clicado</li> |
+| 38   | [Botão](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: a área da "seta" de um botão é clicada</li><li>List boxes: em uma coluna de um array de objetos, um botão de elipses (atributo "alternateButton") é clicado</li> |
 
 ## Descrição
 
@@ -22,7 +22,7 @@ Alguns estilos de botões podem ser [ligados a um menu pop-up](FormObjects/prope
 
 ### List box
 
-Esse evento é gerado nas colunas das caixas de listagem do tipo matriz de objetos [](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), quando o usuário clica em um botão de reticências do widget (atributo "alternateButton").
+Esse evento é gerado nas colunas das caixas de listagem do tipo matriz de objetos [](FormObjects/listbox_overview.md#object-arrays-in-columns), quando o usuário clica em um botão de reticências do widget (atributo "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

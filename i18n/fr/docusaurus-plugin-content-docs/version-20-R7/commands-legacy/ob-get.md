@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.OB Get.Summary-->La commande **OB Get** retourne la valeur courante de la *propriété* de l’*objet*, convertie optionnellement dans le *type* défini.<!-- END REF-->
-
-*objet* doit avoir été défini via la commande [C\_OBJECT](c-object.md) ou désigner un champ objet 4D.
+<!--REF #_command_.OB Get.Summary-->La commande **OB Get** retourne la valeur courante de la *propriété* de l’*objet*, convertie optionnellement dans le *type* défini.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
 **Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP GET ATTRIBUTES* (cf. exemple 9). Toutefois, à la différence de *WP GET ATTRIBUTES*, **OB Get** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
@@ -46,7 +44,7 @@ La commande retourne la valeur de la *propriété*. Plusieurs types de données 
 * dans les valeurs réelles, le séparateur décimal est toujours le point "."
 * les heures sont retournées sous forme d’un nombre. A noter que [OB SET](ob-set.md) stocke les heures sous forme de millisecondes, conformément au standard javascript, tandis que 4D attend un nombre de secondes. Pour une interprétation correcte par **OB Get** d'une heure stockée, vous devez utiliser la constante Is time.
 
-#### Exemple 1 
+## Exemple 1 
 
 Récupération d’une valeur de type texte :
 
@@ -57,7 +55,7 @@ Récupération d’une valeur de type texte :
  $prénom:=OB Get($ref;"Prénom")  // $prénom = "Harry" (texte)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Récupération d’une valeur numérique convertie en entier long :
 
@@ -67,7 +65,7 @@ Récupération d’une valeur numérique convertie en entier long :
  $age:=OB Get($ref ;"age";Is longint) // $age est un entier long
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Récupération des valeurs d’un objet :
 
@@ -79,7 +77,7 @@ Récupération des valeurs d’un objet :
  $nomfils:=OB Get($fils ;"nom") //$nomfils="john" (texte)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Modifications de l’âge d’un employé :
 
@@ -100,7 +98,7 @@ Modifications de l’âge d’un employé :
  End for
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Lorsque vous récupérez une date, la valeur résultante dépend du paramétrage courant de la base. 
 
@@ -126,7 +124,7 @@ Lorsque vous récupérez une date, la valeur résultante dépend du paramétrage
 
 **Note :** Pour plus d'informations sur ce paramétrage, reportez-vous à la *Page Compatibilité*.
 
-#### Exemple 6 
+## Exemple 6 
 
 Utilisation d'objets imbriqués :
 
@@ -145,7 +143,7 @@ Utilisation d'objets imbriqués :
      // $childName = "Monroe" (texte)
 ```
 
-#### Exemple 7 
+## Exemple 7 
 
 Récupération dans 4D d'une heure stockée dans un objet :
 
@@ -161,7 +159,7 @@ Récupération dans 4D d'une heure stockée dans un objet :
   // $get_h = ?01:00:01?
 ```
 
-#### Exemple 8 
+## Exemple 8 
 
 Exemples de manipulation de champs objet 4D :
 
@@ -175,7 +173,7 @@ Exemples de manipulation de champs objet 4D :
  $lastName:=OB Get([Personnes]Identity_OB;"Nom")
 ```
 
-#### Exemple 9 
+## Exemple 9 
 
 Dans la méthode d'un formulaire contenant une zone 4D Write Pro, vous pouvez écrire :
 
@@ -192,7 +190,7 @@ Vous pouvez également lire les attributs personnalisés des documents :
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Exemple 10 
+## Exemple 10 
 
 Vous voulez connaître la taille d'une image stockée dans un objet :
 
@@ -208,8 +206,17 @@ Vous voulez connaître la taille d'une image stockée dans un objet :
  $vPict:=OB Get($object;"photo") //"Est une image" est inutile dans ce cas
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 *Types champs et variables*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1224 |
+| Thread safe | &check; |
+
+

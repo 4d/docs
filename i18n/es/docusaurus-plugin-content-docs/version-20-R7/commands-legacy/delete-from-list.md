@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->El comando DELETE FROM LIST borra el elemento designado por el parámetro *refElem* de la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -33,7 +30,7 @@ Si trabaja con los números de referencia de los elementos, construya una lista 
 
 Sin importar que elemento borre, debe especificar el parámetro opcional *\** para permitir a 4D borrar automáticamente la sublista asociada al elemento, si la hay. Si no especifica el parámetro *\**, es una buena idea obtener previamente el número de referencia de la sublista (si la hay) asociada al elemento, de manera que puede borrarla, si es necesario, utilizando el comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente código borra el elemento seleccionado de la lista *hList*. Si el elemento tiene una sublista asociada se borra (como también toda sub-sublista):
 
@@ -41,7 +38,16 @@ El siguiente código borra el elemento seleccionado de la lista *hList*. Si el e
  DELETE FROM LIST(hList;*;*)
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 624 |
+| Hilo seguro | &cross; |
+
+

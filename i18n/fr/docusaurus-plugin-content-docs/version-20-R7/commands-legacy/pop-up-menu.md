@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Pop up menu.Summary-->La commande **Pop up menu** fait apparaître un pop up à l'emplacement courant du curseur de la souris ou à l'emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->
@@ -63,14 +60,26 @@ La méthode projet MON RACCOURCI fait apparaître un pop up menu de navigation :
 
 ```4d
   // Méthode projet MON RACCOURCI
- MOUSE POSITION($vlMouseX;$vlMouseY;$vlBouton)
- If(Macintosh control down | ($vlBouton=2))
-    $vtItems:="A propos de cette base...<i;(-;!-autres options;(-"=""     for($vltable;1;get="" last="" table="" number)=""        if(is="" number="" valid($vltable))=""           $vtitems:="$vtItems+";"+Table" name($vltable)=""        end="" if=""     end="" for=""     $vlchoixutilisateur:="Pop" up="" menu($vtitems)=""     case="" of=""        :($vlchoixutilisateur="1)"   //="" afficher="" les="" informations="" options=""        else=""           if($vlchoixutilisateur="">0)
-  // Aller à la table dont le numéro est $vlChoixUtilisateur-4
-          End if
-    End case
- End if</i;(-;!-autres>
-```
+ MOUSE POSITION($vlMouseX;$vlMouseY;$vlBouton)
+ If(Macintosh control down | ($vlBouton=2))
+    $vtItems:="A propos de cette base...<I;(-;!-Autres options;(-"
+    For($vlTable;1;Get last table number)
+       If(Is table number valid($vlTable))
+          $vtItems:=$vtItems+";"+Table name($vlTable)
+       End if
+    End for
+    $vlChoixUtilisateur:=Pop up menu($vtItems)
+    Case of
+       :($vlChoixUtilisateur=1)
+  ` Afficher les informations
+       :($vlChoixUtilisateur=2)
+  ` Afficher les options
+       Else
+          If($vlChoixUtilisateur>0)
+  ` Aller à la table dont le numéro est $vlChoixUtilisateur-4
+          End if
+    End case
+ End if
 
 Cette méthode projet peut être appelée d'une des manières suivantes :
 
@@ -90,3 +99,12 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 542 |
+| Thread safe | &cross; |
+
+

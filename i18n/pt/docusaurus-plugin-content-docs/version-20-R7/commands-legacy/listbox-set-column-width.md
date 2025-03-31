@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->O comando LISTBOX SET COLUMN WIDTH le permite modificar por programação a largura de uma ou todas as colunas do objeto (list box, coluna ou título) designado utilizando os parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -32,6 +29,15 @@ Passe no parâmetro *largura* a novo largura (em pixels) do objeto.
 
 Os parâmetros opcionais *larguraMin e* *larguraMax* permitem definir os limites para o redimensionamento manual da coluna. Pode passar em larguraMin e larguraMax respectivamente os valores da largura mínima e máxima, expresso em pixels. Se deseja que o usuário não possa redimensionar a coluna, deve passar o mesmo valor em *largura*, *largura* *Min e* *largura* *Max*. 
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 833 |
+| Thread-seguro | &cross; |
+
+

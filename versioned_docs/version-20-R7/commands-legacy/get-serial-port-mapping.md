@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->The **GET SERIAL PORT MAPPING** command returns two arrays, *numArray* and *nameArray*, containing the serial port numbers and the serial port names of the current machine.<!-- END REF--> 
 
-This command is useful under Mac OS X, where the operating system dynamically allocates the port number when using a USB serial adapter. You can address any extended serial port using its name (static), regardless of its actual number.
+This command is useful under macOS, where the operating system dynamically allocates the port number when using a USB serial adapter. You can address any extended serial port using its name (static), regardless of its actual number.
 
 **Note:** This command does not return meaningful values with standard ports. If you want to address a standard port, you must pass its value (0 or 1) directly using the [SET CHANNEL](set-channel.md) command (former operation of 4D). 
 
-#### Example 
+## Example 
 
 This project method can be used to address the same serial port (without protocol), regardless of the number that has been assigned to it: 
 
@@ -37,7 +37,7 @@ This project method can be used to address the same serial port (without protoco
   // vPortName contains the name of the port to be used; it may come from a dialog box,
   // a value stored in a field, etc.
  If(arrPortNums{$vPortNum}=0)
-    $vFinalPortNum:=0 //special case under Mac OS X
+    $vFinalPortNum:=0 //special case under macOS
  Else
     $vFinalPortNum:=arrPortNums{$vPortNum}+100
  End if
@@ -46,6 +46,15 @@ This project method can be used to address the same serial port (without protoco
  SET CHANNEL(11) //Closing of port
 ```
 
-#### See also 
+## See also 
 
 [SET CHANNEL](set-channel.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 909 |
+| Thread safe | &check; |
+
+

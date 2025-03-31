@@ -22,7 +22,7 @@ Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la port
 | Peut être configuré via          | Nom                                                                                                     | Commentaires |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------ |
 | Boîte de dialogue des Propriétés | [Page Options (I)/Utiliser le cache 4D Web](../settings/web.md#use-the-4d-web-cache) |              |
-| Boîte de dialogue des Propriétés | [Page Options (I)/Taille du cache des pages](../settings/web.md#page-cache-size)     |              |
+| Boîte de dialogue des Propriétés | [Page Options (I)/Taille du cache des pages](../settings/web.md#pages-cache-size)    |              |
 
 Active et configure le cache des pages web.
 
@@ -70,11 +70,11 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 
 ## Paramètres CORS
 
-| Peut être configuré via          | Nom                                                                                                                                      | Commentaires                                                                                                                                |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                     | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)                                        |
-| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                      | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)                                        |
-| Boîte de dialogue des Propriétés | [Page Options (II)/Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-names-HTTP-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
+| Peut être configuré via          | Nom                                                                                                                                     | Commentaires                                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| objet webServer                  | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                    | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)                                        |
+| `WEB SET OPTION`                 | `Web CORS settings`                                                                                                                     | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)                                        |
+| Boîte de dialogue des Propriétés | [Page Options (II)/Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-nameshttp-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
 Liste des hôtes et méthodes autorisé(e)s pour le service CORS.
 
@@ -252,7 +252,7 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 Numéro de port IP (TCP) d'écoute pour HTTP. Par défaut, 4D publie une application Web sur le port HTTP normal (port TCP), qui est le port 80. Si ce port est déjà utilisé par un autre service Web, vous devez modifier le port HTTP utilisé par 4D pour ce projet.
 
-> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir [macOS HelperTool](#macos-helpertool)).
+> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir macOS HelperTool).
 
 À partir d'un navigateur Web, vous devez inclure le numéro de port HTTP par défaut dans l'adresse que vous saisissez pour vous connecter à l'application Web. L'adresse doit comporter un suffixe composé de deux points suivis du numéro de port. Par exemple, si vous utilisez le port HTTP numéro 8080, indiquez "123.4.567.89:8080".
 
@@ -319,15 +319,15 @@ Valeurs possibles: Chaîne de caractères représentant l'adresse IP. Les format
 #### À propos du support de l'IPv6
 
 - **Aucun avertissement lorsque le port TCP est occupé**<br/>
-  Lorsque le serveur est configuré pour répondre sur "Toutes" les adresses IP, si le port TCP est utilisé par une autre application, cela n'est pas indiqué au démarrage du serveur. En fait, le serveur 4D ne détecte pas d'erreur dans ce cas car le port reste libre sur l'adresse IPv6. Cependant, il n'est pas possible d'y accéder en utilisant l'adresse IPv4 de la machine, ni au moyen de l'adresse locale : 127.0.0.1.
+   Lorsque le serveur est configuré pour répondre sur "Toutes" les adresses IP, si le port TCP est utilisé par une autre application, cela n'est pas indiqué au démarrage du serveur. En fait, le serveur 4D ne détecte pas d'erreur dans ce cas car le port reste libre sur l'adresse IPv6. Cependant, il n'est pas possible d'y accéder en utilisant l'adresse IPv4 de la machine, ni au moyen de l'adresse locale : 127.0.0.1.
 
 Si votre serveur 4D ne semble pas répondre sur le port défini, vous pouvez tester l'adresse [::1] sur la machine serveur (équivalent à 127.0.0.1 pour IPv6, ajoutez [:portNum] pour tester un autre numéro de port). Si 4D répond, il est probable qu'une autre application utilise le port en IPv4.
 
 - **Adresses IPv6 avec mappage d'IPv4**<br/>
-  Pour standardiser le traitement, 4D fournit une représentation hybride standard des adresses IPv4 en IPv6. Ces adresses sont écrites avec un préfixe de 96 bits au format IPv6, suivi de 32 bits écrits dans la notation décimale à point d'IPv4. Par exemple, ::ffff:192.168.2.34 représente l'adresse IPv4 192.168.2.34.
+   Pour standardiser le traitement, 4D fournit une représentation hybride standard des adresses IPv4 en IPv6. Ces adresses sont écrites avec un préfixe de 96 bits au format IPv6, suivi de 32 bits écrits dans la notation décimale à point d'IPv4. Par exemple, ::ffff:192.168.2.34 représente l'adresse IPv4 192.168.2.34.
 
 - **Indication des numéros de port**<br/>
-  Comme la notation IPv6 utilise les deux-points (:), l'ajout de numéros de port peut entraîner une certaine confusion, par exemple :
+   Comme la notation IPv6 utilise les deux-points (:), l'ajout de numéros de port peut entraîner une certaine confusion, par exemple :
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // adresse IPv6
@@ -627,7 +627,8 @@ Dans certains cas, d'autres fonctions internes optimisées peuvent être appelé
 Deux options permettent de définir le mode de fonctionnement des connexions persistantes :
 
 - **Nombre de demandes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises sur une connexion persistante. Limiter le nombre de demandes par connexion permet d'éviter le server flooding, provoqué par un trop grand nombre de requêtes entrantes (technique utilisée par les pirates informatiques).<p>
-  La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le Serveur Web 4D.</p>
+   La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le Serveur Web 4D.</p>
 
 - **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Une fois cette période terminée, le serveur ferme la connexion.<p>
-  Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
+   Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
+

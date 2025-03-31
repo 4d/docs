@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Cache info.Summary-->La commande **Cache info** retourne un objet contenant des informations détaillées sur le contenu actuel du cache (mémoire utilisée, tables et index chargés, etc.)
+<!--REF #_command_.Cache info.Summary-->La commande **Cache info** retourne un objet contenant des informations détaillées sur le contenu actuel du cache (mémoire utilisée, tables et index chargés, etc.)<!-- END REF-->.
 
-**Note :** Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.<!-- END REF-->
+**Note :** Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.
 
 Par défaut, l'information retournée se réfère seulement à la base courante en cours d'exécution. Le paramètre objet optionnel *dbFilter* vous permet de spécifier la portée de cette commande :
 
@@ -33,7 +33,7 @@ La commande **Cache info** retourne un objet unique qui contient toutes les info
 
 Les éléments du tableau *objects* sont des objets racine (tables, index, Blobs, etc.) qui sont actuellement chargés dans le cache. Chaque élément contient les attributs spécifiques qui décrivent son statut courant. Pour plus d'informations sur l'interprétation avancée de ces données, veuillez contacter les services techniques de 4D. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez obtenir des informations sur la base de données courante : 
 
@@ -50,6 +50,15 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
  $cache:=Cache info($dbFilter)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [MEMORY STATISTICS](memory-statistics.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1402 |
+| Thread safe | &check; |
+
+

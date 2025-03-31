@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->El comando **OBJECT SET EVENTS** modifica, para el proceso actual, la configuración de los eventos formulario del formulario u objetos designados por los parámetros *objeto* y *\** .<!-- END REF-->
 
@@ -106,7 +103,7 @@ El comando **OBJECT SET EVENTS** puede dar lugar a la activación de eventos que
 
 Si un *objeto* se duplica después de una llamada al comando **OBJECT SET EVENTS**, la configuración resultante de activación/desactivación también se duplica.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Activación de tres eventos formulario para un conjunto de objetos list box y desactivación de otros eventos:
 
@@ -119,7 +116,7 @@ Activación de tres eventos formulario para un conjunto de objetos list box y de
   // activa 3 eventos y desactiva todos los demás
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desactivación de tres eventos formulario para un conjunto de objetos list box, sin modificar los otros eventos:
 
@@ -132,7 +129,7 @@ Desactivación de tres eventos formulario para un conjunto de objetos list box, 
   // desactiva solo 3 eventos
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Activación de un evento formulario para un objeto, sin modificar los otros eventos:
 
@@ -143,7 +140,7 @@ Activación de un evento formulario para un objeto, sin modificar los otros even
   // activa únicamente el evento
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Desactivación de todos los eventos del formulario:  
 
@@ -153,7 +150,7 @@ Desactivación de todos los eventos del formulario:
   // desactiva todos los eventos
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Desactivación de un solo evento del formulario sin modificar los otros:
 
@@ -164,7 +161,16 @@ Desactivación de un solo evento del formulario sin modificar los otros:
   // solo desactiva el evento
 ```
 
-#### Ver también 
+## Ver también 
 
 *Eventos formulario*  
 [OBJECT GET EVENTS](object-get-events.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1239 |
+| Hilo seguro | &cross; |
+
+

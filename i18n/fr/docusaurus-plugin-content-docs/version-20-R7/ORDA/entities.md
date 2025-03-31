@@ -14,7 +14,7 @@ Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
 Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter au datastore, vous devez appeler la fonction [`entity.save()`](../API/EntityClass.md#save).
 
-Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous à [Utilisation des attributs d'entité](#using-entity-attributes).
+Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
 
 Par exemple, nous voulons créer une nouvelle entité dans la dataclass "Employee" dans le datastore courant avec "John" et "Dupont" affectés aux attributs de prénom et de nom :
 
@@ -239,7 +239,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 
 - En lançant une requête sur les entités [dans une dataclass](API/DataClassClass.md#query) ou dans une [entity selection existante](API/EntitySelectionClass.md#query) ;
 - En utilisant la fonction [`.all()`](API/DataClassClass.md#all) pour sélectionner toutes les entités d'une dataclass ;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- En utilisant la commande [`Create entity selection`](../commands/create-entity-selection.md) ou la fonction [`.newSelection()`](API/DataClassClass.md#newselection) de la classe data pour créer une entity selection vide ;
 - En utilisant la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une entity selection existante ;
 - En utilisant l'une des différentes fonctions de la [classe Entity selection](API/EntitySelectionClass.md) qui retourne une nouvelle entity selection, comme [`.or()`](API/EntitySelectionClass.md#or) ;
 - En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
@@ -267,7 +267,7 @@ Une entity selection peut être **partageable** (lisible par plusieurs process, 
 Une entity selection **partageable** a les caractéristiques suivantes :
 
 - elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
+- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe ;
 - elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable en utilisant la fonction [`.copy()`](API/EntitySelectionClass.md#copy) avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
 > La plupart des fonctions d'entity selection (telles que [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) prennent en charge les entity selection partageables puisqu'elles ne modifient pas la sélection d'origine (elles en renvoient une nouvelle).
@@ -312,9 +312,9 @@ Une nouvelle entity selection **hérite** de la nature de l'entity selection ori
 
 - la nouvelle entity selection résulte de l'une des diverses fonctions des classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nouvelle entity selection est basée sur une relation :
-  - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque *attributeName* est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
-  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que l'entity selection),
-  - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
+ - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque *attributeName* est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
+ - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que l'entity selection),
+ - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
 
 Exemples :
 
@@ -444,7 +444,7 @@ Les filtres s'appliquent aux **entités**. Si vous souhaitez restreindre l'accè
 
 ### Comment définir un filtre de restriction
 
-Vous créez un filtre pour une dataclass en définissant une fonction `event restrict` dans la [**classe dataclass**](dsMapping.md#classe-dataclass) de la dataclass. Le filtre est alors automatiquement activé.
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. Le filtre est alors automatiquement activé.
 
 ### `Function event restrict`
 
@@ -553,9 +553,9 @@ Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" q
 - Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
 - Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
 - Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) :
-  - Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
+ - Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
 
-  - Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
+ - Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
 
 Le diagramme suivant illustre le verrouillage optimiste :
 

@@ -5,19 +5,16 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; pageNumber | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; *pageNumber* } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectNames | Text array | &#8592; | Object names sorted by entry order |
-| pageNumber &#124; * | Longint, Operator | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
+| pageNumber &#124; * | Integer, Operator | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
 
@@ -33,7 +30,7 @@ The actual entry order always includes objects from page 0 and from inherited fo
 
 **Note:** The entry order within a subform is not returned when this command is applied to the parent form. 
 
-#### Example 
+## Example 
 
 You want to exclude some objects from the current entry order:
 
@@ -51,6 +48,15 @@ You want to exclude some objects from the current entry order:
  FORM SET ENTRY ORDER($arrTabOrderObject) //apply the new entry order
 ```
 
-#### See also 
+## See also 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1469 |
+| Thread safe | &cross; |
+
+

@@ -17,16 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->El comando PHP GET FULL RESPONSE permite obtener información adicional sobre la respuesta devuelta por el intérprete PHP.<!-- END REF--> Este comando es especialmente útil en el caso de que ocurra un error durante la ejecución del script.   
   
@@ -36,7 +33,16 @@ Los arrays texto sincronizados *etiquetasErr* y *valoresErrV* se llenan cuando l
   
 Dado que los intercambios entre 4D y el intérprete PHP se efectúan a través de FastCGI, el intérprete PHP funciona como si fuera llamado por un servidor HTTP y por tanto, envía encabezados HTTP. Puede recuperar estos encabezados y sus valores en los arrays *camposEncHttp* y *valoresEncHttp*.
 
-#### Ver también 
+## Ver también 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1061 |
+| Hilo seguro | &cross; |
+
+

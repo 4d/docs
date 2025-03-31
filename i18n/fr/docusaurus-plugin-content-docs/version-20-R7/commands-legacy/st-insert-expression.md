@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ST INSERT EXPRESSION.Summary-->La commande **ST INSERT EXPRESSION** insère une référence à l’*expression* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
@@ -73,7 +70,7 @@ Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une
 
 **Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
 
@@ -81,9 +78,19 @@ Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
  ST INSERT EXPRESSION(*;"myText";"[Clients]Nom";ST Start highlight;ST End highlight)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1281 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
 :::info 互換性
 
 **4D のビルトインPHPインタープリターは削除されました**。[`4D.SystemWorkerクラス`](../API/SystemWorkerClass.md) を使用して外部PHPインタープリターをご利用ください。
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->**PHP SET OPTION** コマンドを使用して、[PHP Execute](php-execute.md) コマンド呼び出し前に、特定のオプションを設定することができます。<!-- END REF-->このコマンドのスコープはカレントプロセスです。
 
@@ -36,7 +33,16 @@ option引数には、変更するオプションを指定する"*PHP*"テーマ�
 
 デフォルトで**PHP SET OPTION** はプロセス内で後に続くすべての[PHP Execute](php-execute.md) のオプションを設定します。 次の呼び出しにのみ有効なオプションを設定するためには、アスタリスク (*\**) 引数を渡します。
 
-#### 参照 
+## 参照 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1059 |
+| スレッドセーフである | &cross; |
+
+

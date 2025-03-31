@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->USE CHARACTER SET modifica el conjunto de caracteres utilizado por 4D para todas las operaciones de transferencia de datos entre la base y un documento o puerto serial para el proceso actual.<!-- END REF--> Las operaciones de transferencia incluyen la importación y exportación de texto, DIF y SYLK. Un mapa de caracteres también funciona con los datos enviados por los comandos [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (para paquetes de tipo texto), y [RECEIVE BUFFER](receive-buffer.md). No tiene efecto en transferencias de datos realizadas con [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (para paquetes tipo BLOB) y [RECEIVE VARIABLE](receive-variable.md).
 
@@ -26,7 +26,7 @@ Cuando se pasa el parámetro \*, el conjunto de caracteres por defecto se restab
 
 En 4D, el conjunto de caracteres por defecto es UTF-8.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo (modo Unicode) utiliza el conjunto de caracteres UTF-16 para exportar un texto, luego restablece el conjunto de caracteres por defecto:
 
@@ -36,14 +36,12 @@ El siguiente ejemplo (modo Unicode) utiliza el conjunto de caracteres UTF-16 par
  USE CHARACTER SET(*;0) // Restablecer el conjunto de caracteres por defecto
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el mapa se carga correctamente, de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
-*\_o\_Mac to Win*  
-*\_o\_Win to Mac*  
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
@@ -53,3 +51,13 @@ La variable sistema OK toma el valor 1 si el mapa se carga correctamente, de lo 
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 205 |
+| Hilo seguro | &check; |
+| Modifica variables | OK |
+
+

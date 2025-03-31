@@ -22,7 +22,7 @@ title: VP SET BINDING PATH
 | rangeObj             | Object | -> | Objeto intervalo                         |                  |
 | dataContextAttribute | Text   | -> | Nome do atributo a associar a *rangeObj* | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
@@ -35,7 +35,7 @@ In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*.
 
 > Os atributos do tipo coleção não são suportados. Quando você passar o nome de uma coleção, o comando não faz nada.
 
-#### Exemplo
+## Exemplo
 
 Defina um contexto de dados e vincule o atributo `firstName` e `lastName` às células:
 
@@ -50,7 +50,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Veja também
+## Veja também
 
 [VP Get binding path](vp-get-binding-path.md)<br/>
 [VP Get data context](vp-get-data-context.md)<br/>

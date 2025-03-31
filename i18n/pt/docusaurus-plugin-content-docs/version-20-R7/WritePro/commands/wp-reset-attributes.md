@@ -9,23 +9,23 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
-| Parâmetro           | Tipo   |   | Descrição                                         |
-| ------------------- | ------ | - | ------------------------------------------------- |
-| targetObj           | Object | → | Range or element or 4D Write Pro document         |
-| sectionOrSubsection | Object | → | Section or subsection of a 4D Write Pro document  |
-| attribName          | String | → | Name of attribute(s) to remove |
+| Parâmetro           | Tipo   |                             | Descrição                                         |
+| ------------------- | ------ | --------------------------- | ------------------------------------------------- |
+| targetObj           | Object | &#8594; | Range or element or 4D Write Pro document         |
+| sectionOrSubsection | Object | &#8594; | Section or subsection of a 4D Write Pro document  |
+| attribName          | Text   | &#8594; | Name of attribute(s) to remove |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. You can pass the attribute name to be reset in *attribName* or, in the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
 
 In the *targetObj* parameter, you can pass either:
 
-- a range, or
+- um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- um documento 4D Write Pro
 
 When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
 
@@ -39,7 +39,7 @@ When an attribute value is removed using the **WP RESET ATTRIBUTES** command, th
 
 If the attribute to be reset was not defined in the element passed as a parameter, the command does nothing.
 
-#### Exemplo 1
+## Exemplo 1
 
 You want to remove several attributes from the following selection:
 
@@ -60,7 +60,7 @@ The resulting document is:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 
-#### Exemplo 2
+## Exemplo 2
 
 ```4d
 $section:=WP Get section($document; 3)
@@ -69,7 +69,7 @@ $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
 WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
 ```
 
-#### Veja também
+## Veja também
 
 *4D Write Pro Attributes*\
 [WP GET ATTRIBUTES](../commands-legacy/wp-get-attributes.md)\

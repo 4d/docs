@@ -5,13 +5,13 @@ title: Bases de datos remotas
 
 Un **datastore remoto** es una referencia, en una aplicación 4D local (4D o 4D Server), a un [datastore](dsMapping.md#datastore) almacenado en otra aplicación 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore.md) command.
+La aplicación 4D local se conecta y hace referencia al datastore remoto a través de una llamada al comando [`Open datastore`](../commands/open-datastore.md).
 
 En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../commands/open-datastore.md) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando [`Open datastore`](../commands/open-datastore.md), la conexión con los procesos solicitantes se gestiona a través de [sesiones web](../WebServer/sessions.md) en la máquina remota.
 
 La sesión web creada en el almacén de datos remoto se identifica utilizando un ID de sesión interno que se asocia al `localID` del lado de la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
@@ -49,9 +49,9 @@ Las funcionalidades ORDA relacionadas con el bloqueo de entidades y transaccione
 
 - Si un proceso bloquea una entidad de un datastores remoto, la entidad se bloquea para todos los otros procesos, incluso cuando estos procesos comparten la misma sesión (ver [Bloqueo de entidades](entities.md#entity-locking)). Si varias entidades que apuntan a un mismo registro han sido bloqueadas en un proceso, todas deben ser desbloqueadas en el proceso para eliminar el bloqueo. Si se ha puesto un bloqueo en una entidad, el bloqueo se elimina cuando ya no hay ninguna referencia a esta entidad en la memoria.
 - Las transacciones pueden iniciarse, validarse o cancelarse por separado en cada almacén de datos remoto mediante las funciones `dataStore.startTransaction()`, `dataStore.cancelTransaction()` y `dataStore.validateTransaction()`. No afectan a otros almacenes de datos.
-- Los comandos clásicos del lenguaje 4D (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) sólo se aplican al datastore principal (devuelto por `ds`).
-  Si una entidad de un datastore remoto es retenida por una transacción en un proceso, los otros procesos no pueden actualizarla, incluso si estos procesos comparten la misma sesión.
+- Classic 4D language commands ([`START TRANSACTION`](../commands-legacy/start-transaction.md), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md), [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md)) only apply to the main datastore (returned by `ds`).
+    Si una entidad de un datastore remoto es retenida por una transacción en un proceso, los otros procesos no pueden actualizarla, incluso si estos procesos comparten la misma sesión.
 - Los bloqueos en las entidades son eliminados y las transacciones son anuladas:
-  - cuando el proceso es eliminado.
-  - cuando la sesión se cierra en el servidor
-  - cuando la sesión es terminada desde la ventana de administración del servidor.
+    - cuando el proceso es eliminado.
+    - cuando la sesión se cierra en el servidor
+    - cuando la sesión es terminada desde la ventana de administración del servidor.

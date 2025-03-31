@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Folder.Params -->
 
-| Paramètres     | Type                      |     | Description                                                           |
-| -------------- | ------------------------- | :-: | --------------------------------------------------------------------- |
-| path           | Text                      |  →  | Chemin du dossier                                                     |
-| folderConstant | Integer                   |  →  | Constante de dossier 4D                                               |
-| pathType       | Integer                   |  →  | `fk posix path` (par défaut) ou `fk platform path` |
-| \*             | operator                  |  →  | \* pour retourner le dossier de la base hôte                          |
-| Résultat       | 4D.Folder |  ←  | Nouvel objet dossier                                                  |
+| Paramètres     | Type                                               |                             | Description                                                           |
+| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Chemin du dossier                                                     |
+| folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*             | operator                                           | &#8594; | \* pour retourner le dossier de la base hôte                          |
+| Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
 
-#### Description
+## Description
 
-La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type `4D.Folder`<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -55,7 +55,7 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 | fk database folder         | 4      | Filesystem associé : "/PACKAGE"                                                                                             |
 | fk desktop folder          | 115    |                                                                                                                                             |
 | fk documents folder        | 117    | Dossier Documents de l'utilisateur                                                                                                          |
-| fk home folder             | 118    | Dossier personnel actuel de l'utilisateur (généralement `/Users/<username>/`)                                            |
+| fk home folder             | 118    | Dossier personnel courant de l'utilisateur (généralement `/Users/<username>/`)                                           |
 | fk licenses folder         | 1      | Dossier contenant les fichiers de licence 4D de la machine                                                                                  |
 | fk logs folder             | 7      | Filesystem associé : "/LOGS"                                                                                                |
 | fk mobileApps folder       | 10     |                                                                                                                                             |
@@ -69,8 +69,18 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 > Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
 
-#### Voir également
+## Voir également
 
+[classe `4D.Folder`](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1567                        |
+| Thread safe        | &check; |
+
+

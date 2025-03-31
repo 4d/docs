@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->El comando **METHOD SET COMMENTS** remplaza la documentación del(os) método(s) designados por el parámetro *ruta* por los definidos en el parámetro *comentarios*.<!-- END REF-->
 
@@ -51,7 +48,7 @@ Si pasa un nombre de ruta invalido, se genera un error.
 
 Puede ejecutar este comando desde un componente, pero en este caso debe pasar el parámetro *\** porque el acceso en modo escritura al código del componente no es posible. Si omite el parámetro *\** en este contexto, se genera el error -9763.
 
-#### Ejemplo 
+## Ejemplo 
 
 Añadir una fecha de modificación a un comentario de trigger existente:
 
@@ -61,6 +58,15 @@ Añadir una fecha de modificación a un comentario de trigger existente:
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1193 |
+| Hilo seguro | &cross; |
+
+

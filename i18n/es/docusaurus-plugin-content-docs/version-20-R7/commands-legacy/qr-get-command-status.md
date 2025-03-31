@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get command status.Summary-->El comando QR Get command status devuelve 0 si el *comando* está inactivo ó 1 si está activo.<!-- END REF-->
 
@@ -35,7 +32,17 @@ En *comando*, puede pasar un valor o una de las constantes del tema .
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *comando* es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR ON COMMAND](qr-on-command.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 792 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

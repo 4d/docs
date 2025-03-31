@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->**OBJECT SET CONTEXT MENU**コマンドは、引数 *object* と *\** で指定したオブジェクトのデフォルトでのコンテキストメニューの関連付けを、カレントプロセスにおいて有効化または無効化します。<!-- END REF-->
 
@@ -28,6 +25,15 @@ displayed_sidebar: docs
 
 *contextMenu* 引数には、コンテキストメニューを有効にしたい場合には **True** を、無効にしたい場合には **False** を渡します。 
 
-#### 参照 
+## 参照 
 
 [OBJECT Get context menu](object-get-context-menu.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1251 |
+| スレッドセーフである | &cross; |
+
+

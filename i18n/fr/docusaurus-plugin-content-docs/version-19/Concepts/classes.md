@@ -24,7 +24,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.firstName+" "+This.lastName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```
 var $person : cs.Person //object of Person class  
@@ -135,7 +135,7 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet classe
+## L'objet class
 
 Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
@@ -170,7 +170,14 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
+
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](../API/FunctionClass.md#about-function-objects).
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -195,7 +202,7 @@ Function getFullname()->$fullname : Text
 
 Pour une fonction de classe, la commande `Current method name` retourne : `<ClassName>.<FunctionName>`, par exemple "MyClass.myMethod".
 
-Dans le code de l'application, les fonctions de classes sont appelées comme des méthodes membres des instances d'objets et peuvent recevoir des [paramètres](#class-function-parameters) si besoin. Les syntaxes suivantes sont prises en charge :
+Dans le code de l'application, les fonctions de classes sont appelées comme des méthodes membres des instances d'objets et peuvent recevoir des [paramètres](#parameters) si besoin. Les syntaxes suivantes sont prises en charge :
 
 - utilisation de l'opérateur `()`. Par exemple, `myObject.methodName("hello")`
 - utilisation d'une méthode membre de la classe "4D.Function" :
@@ -271,7 +278,16 @@ $area:=$rect.getArea() //5000
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
+// code
 ```
+
+:::note
+
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+
+:::
+
 
 Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
 
@@ -374,7 +390,7 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. A l'intérieur d'une [fonction de classe](#class-function), `Super` désigne le prototype de la superclasse et permet d'appeler une fonction de la hiérarchie de superclasses.
+2. A l'intérieur d'une [fonction de classe](#function), `Super` désigne le prototype de la superclasse et permet d'appeler une fonction de la hiérarchie de superclasses.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   
@@ -395,6 +411,16 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

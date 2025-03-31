@@ -21,9 +21,9 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | ------------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objeto de rango de celda              |                  |
 | dataObject | Object  | -> | Objeto que contiene los datos a pegar |                  |
-| options    | Longint | -> | Especifica lo que se pega             | <!-- END REF --> |
+| options    | Integer | -> | Especifica lo que se pega             | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pega el contenido, estilo y fórmulas almacenadas en *dataObject* al objeto *rangeObj*<!-- END REF -->.
 
@@ -46,11 +46,11 @@ Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro 
 
 Si *options* se refiere a una opción de pegado que no está presente en el objeto copiado (por ejemplo, fórmulas), el comando no hace nada.
 
-#### Ejemplo
+## Ejemplo
 
 Ver el ejemplo de [VP Copy to object](vp-copy-to-object.md)
 
-#### Ver también
+## Ver también
 
 [VP Copy to object](vp-copy-to-object.md)<br/>
 [VP MOVE CELLS](vp-move-cells.md)<br/>

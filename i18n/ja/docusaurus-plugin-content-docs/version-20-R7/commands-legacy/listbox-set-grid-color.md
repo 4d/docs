@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->**LISTBOX SET GRID COLOR** コマンドを使用し、 *object* 引数および *\** で指定されたリストボックスオブジェクト上のグリッドの色を変更することができます。<!-- END REF-->
 
@@ -33,8 +30,17 @@ displayed_sidebar: docs
 * *horizontal* に[True](true.md "True") を渡した場合、水平グリッドラインにカラーが適用されます。False を渡すと、カラーは変更されません。
 * *vertical* に[True](true.md "True") を渡した場合、垂直グリッドラインにカラーが適用されます。[False](false.md "False") を渡すと、カラーは変更されません。
 
-#### 参照 
+## 参照 
 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 842 |
+| スレッドセーフである | &cross; |
+
+

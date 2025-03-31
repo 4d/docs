@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->The **QR SET INFO ROW** command shows/hides the row whose reference was passed in *row*.<!-- END REF-->
 
@@ -41,7 +38,7 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *row* value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 The following statement hides the detail row:
 
@@ -49,8 +46,18 @@ The following statement hides the detail row:
  QR SET INFO ROW(area;qr detail;1)
 ```
 
-#### See also 
+## See also 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 763 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

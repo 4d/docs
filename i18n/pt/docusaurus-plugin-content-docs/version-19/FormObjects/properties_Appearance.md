@@ -93,7 +93,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Veja também
 
@@ -222,7 +222,7 @@ Exibe/oculta a régua horizontal quando a visualização do documento está no m
 
 ---
 
-## Mostrar HTML WYSYWIG
+## Mostrar HTML WYSIWYG
 
 Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avançados do 4D Write Pro que não são compatíveis com todos os navegadores são removidos.
 
@@ -365,7 +365,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
 #### Veja também
 
@@ -379,7 +379,7 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 - **Página**: o modo de visualização mais completo, que inclui contornos de página, orientação, margens, quebras de página, cabeçalhos e rodapés, etc.
 - **Rascunho**: modo rascunho com propriedades básicas do documento
-- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
+- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)). Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
 
 > A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 

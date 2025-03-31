@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->La commande **SQL GET DATA SOURCE LIST** retourne dans les tableaux *tabNomsSources* et *tabPilotes* les noms et les pilotes des sources de données de type *typeSource* définies dans le gestionnaire ODBC du système d’exploitation.<!-- END REF-->
 
@@ -37,7 +34,7 @@ La commande remplit et dimensionne les tableaux *tabNomsSources* et *tabPilotes*
 
 **Note :** Si vous souhaitez vous connecter à une source de données 4D externe via ODBC, vous devez au préalable installer le pilote 4D ODBC sur votre poste. Pour plus d'informations, reportez-vous au manuel d'installation de 4D ODBC Driver. 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple utilise une source de données utilisateur :
 
@@ -47,12 +44,22 @@ Cet exemple utilise une source de données utilisateur :
  GET DATA SOURCE LIST(User data source;tdsn;tdsnPilotes)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 989 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

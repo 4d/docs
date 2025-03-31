@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->La commande **OBJECT Get enabled** retourne Vrai si l'objet ou le groupe d'objets désigné par *objet* est activé dans le formulaire et Faux s’il est inactivé.<!-- END REF--> 
 
@@ -34,6 +31,15 @@ Cette commande peut être appliquée aux types d'objets suivants :
 * Pop-up menu, Liste déroulante, Combo Box, Menu/Liste déroulante
 * Thermomètre, Règle
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1079 |
+| Thread safe | &cross; |
+
+

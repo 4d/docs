@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->La commande **LISTBOX SET COLUMN FORMULA** permet de modifier la *formule* associée à la colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> Les formules ne peuvent être utilisées que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection**.
 
@@ -40,7 +37,16 @@ Au moment de l’appel de la commande, la formule est analysée puis exécutée.
 
 Le paramètre *typeDonnées* permet de désigner le type des données issues de l’exécution de la formule. Vous devez passer dans ce paramètre une des constantes du thème *Types champs et variables*. Si le résultat de la formule ne correspond pas au type de données attendu, une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get column formula](listbox-get-column-formula.md)  
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1203 |
+| Thread safe | &cross; |
+
+

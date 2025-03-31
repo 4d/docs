@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->La commande **SET MENU ITEM ICON** permet de modifier l’icône associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->
 
@@ -36,7 +33,7 @@ Passez dans le paramètre *refIcône* l'image devant être utilisée comme icôn
 
 **Note :** Il est recomandé d'utiliser des chemins vers des fichiers image, étant donné que la bibliothèque d'images est obsolète et n'est plus supportée dans les projets 4D. De plus, la syntaxe *file:<relativePathname>* est obsolète, il est donc recommandé d'utiliser le chemin *path:<filesystem>.*
 
-#### Exemple 
+## Exemple 
 
 Utilisation d'une image se trouvant dans le dossier Resources de la base :
 
@@ -44,6 +41,15 @@ Utilisation d'une image se trouvant dans le dossier Resources de la base :
  SET MENU ITEM ICON($RefMenu;2;"Path:/RESOURCES/french.lproj/spot.png")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 984 |
+| Thread safe | &cross; |
+
+

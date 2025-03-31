@@ -5,7 +5,7 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; itemRef | * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; *itemRef* ; *arrSelection* {; *arrValues*} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* ; * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->**GET LIST ITEM PARAMETER ARRAYS**コマンドは*list* 引数で指定した参照またはオブジェクト名を持つ階層リスト中で、*itemRef* で指定した項目に割り当てられたパラメーター (およびその値) を一回の呼び出しで取り出すことができます。<!-- END REF-->
 
@@ -32,7 +29,7 @@ displayed_sidebar: docs
 
 *arrValues* はテキスト配列でなければなりません。関連付けた値がテキストでない (数値やブール) の場合、文字に変換されます (True="1", False="0")。
 
-#### 例題 
+## 例題 
 
 以下のコードで構築された階層リストがあるとき: 
 
@@ -74,6 +71,15 @@ displayed_sidebar: docs
   // arrParamValues{5} = "Dallas"
 ```
 
-#### 参照 
+## 参照 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1195 |
+| スレッドセーフである | &cross; |
+
+

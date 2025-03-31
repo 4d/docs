@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->El comando **CALL SUBFORM CONTAINER** permite a una instancia de subformulario enviar el *evento* al objeto subformulario que lo contiene.<!-- END REF--> El objeto subformulario puede entonces procesar el *evento* en el contexto del formulario padre. 
 
@@ -28,7 +25,16 @@ En *evento*, puede pasar todo evento de formulario predefinido de 4D (puede util
 
 ![](../assets/en/commands/pict166755.en.png)
 
-#### Ver también 
+## Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1086 |
+| Hilo seguro | &cross; |
+
+

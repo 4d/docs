@@ -14,11 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.Day number.Summary-->Day number コマンドは、*aDate*に対応するの曜日を数値で返します。<!-- END REF-->  
-
-**Note:** Day number は日付がヌルの時、*2* を返します。 
+<!--REF #_command_.Day number.Summary-->Day number コマンドは、*aDate*に対応するの曜日を数値で返します。<!-- END REF-->Day number は日付がヌルの時、*2* を返します。 
 
 4Dは "" テーマで以下の定義済み定数を提供します:
 
@@ -34,7 +32,7 @@ displayed_sidebar: docs
 
 **Note:** Day number は1から7までの値を返します。日付から日を取り出すには、[Day of](day-of.md "Day of")コマンドを使用します。
 
-#### 例題 
+## 例題 
 
 以下の関数は、現在の曜日文字列を返します。:
 
@@ -58,6 +56,15 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Day of](day-of.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 114 |
+| スレッドセーフである | &check; |
+
+

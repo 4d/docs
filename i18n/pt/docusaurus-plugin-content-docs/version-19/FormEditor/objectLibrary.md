@@ -42,7 +42,7 @@ Usando bibliotecas, você pode criar planos de fundo de objetos de formulários 
 
 ### Criar uma biblioteca de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. É exibida uma caixa de diálogo padrão para salvar o arquivo, que permite escolher o nome e o local da biblioteca de objetos.
+Para criar uma biblioteca de objetos, selecione **Novo>Biblioteca de objetos...** no menu **Arquivo** ou na barra de ferramentas 4D. É exibida uma caixa de diálogo padrão para salvar o arquivo, que permite escolher o nome e o local da biblioteca de objetos.
 
 Após validar a caixa de diálogo, o 4D cria uma biblioteca de objetos em seu disco e exibe sua janela (vazia por padrão).
 
@@ -54,7 +54,7 @@ Após validar a caixa de diálogo, o 4D cria uma biblioteca de objetos em seu di
 
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
+Para abrir uma biblioteca de objetos personalizados, selecione o comando **Abrir>Biblioteca de objetos...** no menu **Arquivo** ou a barra de ferramentas 4D. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 
 - **.4dproject**
 - **.4dz**

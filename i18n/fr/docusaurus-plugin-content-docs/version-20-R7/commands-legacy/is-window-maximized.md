@@ -14,14 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Is window maximized.Summary-->La commande **Is window maximized** retourne **Vrai** si la fenêtre dont le numéro de référence est passé dans *window* est actuellement maximisée, et **Faux** dans le cas contraire.<!-- END REF--> 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez passer entre l'état maximisé et l'état précédent :
 
@@ -33,7 +30,16 @@ Vous souhaitez passer entre l'état maximisé et l'état précédent :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1830 |
+| Thread safe | &cross; |
+
+

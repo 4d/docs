@@ -7,7 +7,7 @@ La clase `SMTPTransporter` permite configurar conexiones SMTP y enviar correos e
 
 ### Objeto SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. Ofrecen las siguientes propiedades y funciones:
+Los objetos SMTP Transporter son instanciados con el comando [`SMTP New transporter`](../commands/smtp-new-transporter.md). Ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,13 +34,13 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 | Parámetros | Tipo                               |                             | Descripción                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
 | server     | Object                             |              ->             | Información del servidor de correo                 |
-| Result     | 4D.SMTPTransporter | <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
+| Resultado  | 4D.SMTPTransporter | <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.SMTPTransporter`<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.SMTPTransporter`<!-- END REF -->. Es idéntico al comando [`SMTP New transporter`](../commands/smtp-new-transporter.md) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -125,7 +125,7 @@ La conexión SMTP se cierra automáticamente:
 | Parámetros | Tipo   |                             | Descripción                                        |
 | ---------- | ------ | :-------------------------: | -------------------------------------------------- |
 | mail       | Object |              ->             | [Email](EmailObjectClass.md#email-object) a enviar |
-| Result     | Object | <- | Estado SMTP                                        |
+| Resultado  | Object | <- | Estado SMTP                                        |
 
 <!-- END REF -->
 
@@ -135,7 +135,7 @@ La función `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envía el
 
 > El objeto `transporter` debe haber sido creado con el comando `SMTP New transporter`.
 
-El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. Para más información, consulte la descripción del comando [`SMTP New transporter`](#smtp-new-transporter).
+El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. Para más información, consulte la descripción del comando [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 
 En *mail*, pase un [objeto `Email`](EmailObjectClass.md#email-object) válido para enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 

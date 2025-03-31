@@ -19,22 +19,22 @@ O desenho dos retângulos é controlado através de muitas propriedades (cor, es
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
  "myRectangle": {
-  "type": "rectangle", //define the type of object
-  "left": 60,    //left position on the form  
-  "top": 160,    //top position on the form 
-  "width": 100,   //width of the object
-  "height": 20,   //height of the object
-  "borderRadius": 20  //define the roundness of the corners
-                }
+  "type": "rectangle", //defina o tipo de objeto
+  "left": 60, //posição esquerda no formulário  
+  "top": 160, //posição superior no formulário 
+  "width": 100, //largura do objeto
+  "height": 20, //altura do objeto
+  "borderRadius": 20 //defina o arredondamento dos cantos
+}
 ```
 
 #### Propriedades compatíveis
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Inferior](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Raio do canto](properties_CoordinatesAndSizing.md#corner-radius) - [Tipo de linha pontilhada](properties_BackgroundAndBorder.md#dotted-line-type) - [Cor de preenchimento](properties_BackgroundAndBorder.md#background-color--fill-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Cor da linha](properties_BackgroundAndBorder.md#line-color) - [Largura da linha](properties_BackgroundAndBorder.md#line-width) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 ## Linha
 
@@ -57,12 +57,12 @@ A propriedade JSON `startPoint` define a coordenada a partir da qual a linha dev
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "topLeft", //first direction
-  "strokeDashArray": "6 2" //dashed
+  "startPoint": "topLeft", //primeira direção
+  "strokeDashArray": "6 2" //tracejado
   }
 ```
 
-Result: ![](../assets/en/FormObjects/shape_line1.png)
+Resultado: ![](../assets/en/FormObjects/shape_line1.png)
 
 ```
  "myLine": {
@@ -71,36 +71,36 @@ Result: ![](../assets/en/FormObjects/shape_line1.png)
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "bottomLeft", //2nd direction
-  "strokeDashArray": "6 2" //dashed
+  "startPoint": "bottomLeft", //2ª direção
+  "strokeDashArray": "6 2" //tracejado
   }
 ```
 
-Result: ![](../assets/en/FormObjects/shape_line2.png)
+Resultado: ![](../assets/en/FormObjects/shape_line2.png)
 
 #### Propriedades compatíveis
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Inferior](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Tipo de Linha pontilhada](properties_BackgroundAndBorder.md#dotted-line-type) - [Altura](properties_CoordinatesAndSizing.md#height) - [Tamanho Horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Cor da linha](properties_BackgroundAndBorder.md#line-color) - [Largura da linha](properties_BackgroundAndBorder.md#line-width) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Topo](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Dimensionamiento Vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 ## Oval
 
-Uma oval estática é um objeto decorativo para formas. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Uma oval estática é um objeto decorativo para formas. Os objetos ovais podem ser usados para desenhar formas circulares (quando as propriedades de [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) são iguais).
 
 ![](../assets/en/FormObjects/shape_oval.png)
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```4d
  "myOval": {
-  "type": "oval",  //define the type of object
-  "left": 60,   //left position on the form  
-  "top": 160,   //top position on the form 
-  "width": 100,  //width of the object
-  "height": 20,  //height of the object
-  "fill": "blue"  //define the background color
-                }
+  "type": "oval", //defina o tipo de objeto
+  "left": 60, //posição esquerda no formulário  
+  "top": 160, //posição superior no formulário 
+  "width": 100, //largura do objeto
+  "height": 20, //altura do objeto
+  "fill": "blue" //defina a cor de fundo
+}
 ```
 
 #### Propriedades compatíveis
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Inferior](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Tipo de linha pontilhada](properties_BackgroundAndBorder.md#dotted-line-type) - [Cor de preenchimento](properties_BackgroundAndBorder.md#background-color--fill-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Cor da linha](properties_BackgroundAndBorder.md#line-color) - [Largura da linha](properties_BackgroundAndBorder.md#line-width) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)

@@ -5,7 +5,7 @@ title: Form Events
 
 Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs. 
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. For example:
+In your code, you control the events using the [`FORM Event`](../commands/form-event.md) command, that returns the triggered event. For example:
 
 ```4d  
 //code of a button
@@ -19,7 +19,7 @@ End if
 
 ## Event object
 
-Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+Each event is returned as an object by the [`FORM Event`](../commands/form-event.md) command. By default, it contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|

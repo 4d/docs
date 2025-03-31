@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get document property.Summary-->El comando QR Get document property permite recuperar el estado mostrado para la caja de diálogo de impresión o la unidad utilizada para el documento presente en *area*.<!-- END REF-->
 
@@ -45,6 +42,15 @@ En *propiedad* puede utilizar una de las constantes del tema :
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si pasa un valor incorrecto del parámetro *propiedad*, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 773 |
+| Hilo seguro | &cross; |
+
+

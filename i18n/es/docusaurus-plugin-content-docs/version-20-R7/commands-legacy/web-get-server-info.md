@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB Get server info.Summary-->El comando **WEB Get server info** devuelve un objeto que contiene información del tiempo de ejecución detallada en la sesión actual del servidor web 4D.<!-- END REF--> La información devuelta incluye el servidor SOAP.
 
@@ -56,7 +56,7 @@ El objeto devuelto contiene las siguientes propiedades (los nombres de propiedad
 
 **4D Server**: el comando devuelve información sobre el servidor web local. Si desea monitorear el servidor web 4D Server desde un 4D remoto, debe aplicar la propiedad "Ejecutar en el servidor" al método.
 
-##### Propiedad cache 
+### Propiedad cache 
 
 Si pasa **true** en el parámetro *conCache*, el comando devuelve la propiedad objeto "cache" con el siguiente contenido:
 
@@ -71,7 +71,7 @@ Si pasa **true** en el parámetro *conCache*, el comando devuelve la propiedad o
 | nbCachedObjects            | Número            | Número de objetos en la caché                                                                                                                     |
 | cachedObjects              | Colección         | Colección de objetos en la caché. Cada objeto en caché es definido por diferentes propiedades (url, mimeType, expirationType, lastModified, etc.) |
 
-#### Ejemplo 
+## Ejemplo 
 
 Después de ejecutar el siguiente código:
 
@@ -123,8 +123,17 @@ Después de ejecutar el siguiente código:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Process activity](../commands/process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1531 |
+| Hilo seguro | &check; |
+
+

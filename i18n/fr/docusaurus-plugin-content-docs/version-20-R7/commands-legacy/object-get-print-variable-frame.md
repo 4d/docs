@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->La commande **OBJECT GET PRINT VARIABLE FRAME** vous permet de d’obtenir la configuration courante des options d’impression en taille variable de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -36,6 +33,15 @@ Si l’*objet* est un sous-formulaire et si l’impression en taille variable es
 | Print Frame fixed with multiple records | Entier long | 2      | La taille initiale de la zone du sous-formulaire est conservée mais 4D imprime le formulaire plusieurs fois pour imprimer tous les enregistrements.                                          |
 | Print Frame fixed with truncation       | Entier long | 1      | 4D n’imprime que les enregistrements qui apparaissent dans la zone du sous-formulaire. Le formulaire n’est imprimé qu’une fois et les enregistrements qui ne sont pas imprimés sont ignorés. |
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1241 |
+| Thread safe | &cross; |
+
+

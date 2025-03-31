@@ -27,7 +27,7 @@ Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomiend
 :::
 
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.HTTP Get.Summary-->El comando **HTTP Get** envía directamente una petición HTTP GET a un URL específico y procesa la respuesta del servidor HTTP.<!-- END REF-->
 
@@ -52,11 +52,11 @@ Puede pasar variables de diferentes tipos en *respuesta*:
 * Texto: cuando el resultado se espera en forma de texto (ver nota abajo)
 * BLOB: cuando el resultado se espera en forma binaria.
 * Imagen: cuando el resultado se espera en forma de imagen.
-* Objeto: cuando el resultado se espera en forma de objeto [C\_OBJECT](c-object.md).
+* Objeto: cuando el resultado se espera en forma de objeto *C\_OBJECT*.
 
 **Nota:** cuando se pasa una variable de texto en *respuesta*, 4D intentará decodificar los datos devueltos desde el servidor. 4D primero intenta recuperar el conjunto de caracteres del encabezado de *tipo de contenido*, luego del contenido utilizando un BOM y, finalmente, busca cualquier atributo *http-equiv charset* (en contenido html) o *codificación* (para xml). Si no se puede detectar ningún charset, 4D intentará decodificar la respuesta en ANSI. Si la conversión falla, el texto resultante quedará vacío. Si no está seguro de si el servidor devuelve una información charset o BOM, pero conoce la codificación, es más preciso pasar *respuesta* en BLOB y llamar al [Convert to text](convert-to-text.md).
 
-Si pasa un BLOB, contendrá el texto, la imagen o todo tipo de contenido (.wav, .zip, etc.) devuelto por el servidor. A continuación, debe gestionar la recuperación de estos contenidos (los encabezados no están incluidos en el BLOB). Si pasa un objeto de tipo [C\_OBJECT](c-object.md), si la petición devuelve un resultado con el contenido tipo texto, 4D intenta analizar el contenido JSON y devuelve el resultado analizado como un objeto, de lo contrario, se devuelve un objeto *4D.Blob*.
+Si pasa un BLOB, contendrá el texto, la imagen o todo tipo de contenido (.wav, .zip, etc.) devuelto por el servidor. A continuación, debe gestionar la recuperación de estos contenidos (los encabezados no están incluidos en el BLOB). Si pasa un objeto de tipo *C\_OBJECT*, si la petición devuelve un resultado con el contenido tipo texto, 4D intenta analizar el contenido JSON y devuelve el resultado analizado como un objeto, de lo contrario, se devuelve un objeto *4D.Blob*.
 
 En *nomEncab* y *valoresEncab* pase los arrays que contienen los nombres y los valores de los encabezados de la petición.  
 Después de la ejecución del método, estos arrays contienen los nombres y los valores de los encabezados devueltos por el servidor HTTP. Más específicamente, este principio le permite administrar sus cookies.   
@@ -66,7 +66,7 @@ El parámetro *\** permite activar el mecanismo keep-alive para la conexión al 
 El comando devuelve el código del estado HTTP estándar (200=OK...) tal como fue devuelto por el servidor. La lista de códigos de estado HTTP está en el *RFC 2616*.  
 Si la conexión al servidor no es posible por una razón relacionada con la red (DNS Failed, Server not reachable...), el comando devuelve 0 y se genera un error. Puede interceptar estos errores utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Recuperación del logo 4D en el sitio web de 4D:
 
@@ -79,7 +79,7 @@ Recuperación del logo 4D en el sitio web de 4D:
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Recuperación de un RFC:
 
@@ -92,7 +92,7 @@ Recuperación de un RFC:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Recuperación de un vídeo:
 
@@ -102,6 +102,16 @@ Recuperación de un vídeo:
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-#### Ver también 
+## Ver también 
 
 [HTTP Request](http-request.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1157 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+
+

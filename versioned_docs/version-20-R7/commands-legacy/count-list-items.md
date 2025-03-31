@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Count list items.Summary-->The Count list items command returns either the number of items currently “visible” or the total number of items in the list whose reference number or object name you pass in *list*.<!-- END REF-->
 
@@ -33,7 +30,7 @@ When this parameter is omitted, the command returns the number of items that are
 
 You apply this command to a list displayed in a form.
 
-#### Examples 
+## Examples 
 
 Here a list named *hList* shown in the Application environment:
 
@@ -58,7 +55,16 @@ Here a list named *hList* shown in the Application environment:
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
 ```
 
-#### See also 
+## See also 
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 380 |
+| Thread safe | &cross; |
+
+

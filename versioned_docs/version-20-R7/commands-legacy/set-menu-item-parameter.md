@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->The **SET MENU ITEM PARAMETER** command associates a custom character string with a menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
 This parameter is mainly used by the [Dynamic pop up menu](dynamic-pop-up-menu.md) command.
 
-#### Example 
+## Example 
 
 This code provides a menu including the names of the open windows and lets you get the number of the window chosen:
 
@@ -39,8 +36,17 @@ This code provides a menu including the names of the open windows and lets you g
  RELEASE MENU($tMenuRef)
 ```
 
-#### See also 
+## See also 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1004 |
+| Thread safe | &cross; |
+
+

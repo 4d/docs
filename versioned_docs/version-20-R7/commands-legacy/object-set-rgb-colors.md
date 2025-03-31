@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->The **OBJECT SET RGB COLORS** command changes the foreground and background colors of the objects specified by the *object* parameter and the optional *\** parameter.<!-- END REF--> When the command is applied to a list box object, an additional parameter lets you modify the alternating color of the rows.
 
@@ -42,7 +39,7 @@ You indicate RGB color values in *foregroundColor* and, optionally, *backgroundC
 | 4-byte RGB value              | Integer  | 4-byte Long Integer (format 0x00rrggbb). Hex values:<br/> rr = red component of the color gg = green component of the color bb = blue component of the color                                                                                                                                                                                                                                                                                  | 0x00000000, 0x00FF7F7F                                                                                    |
 | 4D "system" color constant    | Integer  | Colors used by 4D for drawing objects with automatic colors. Available constants (from *SET RGB COLORS* theme):<br/> Background color Background color none (can only be used with the *backgroundColor* and *altBackgrndColor* parameters) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **Note:* Automatic colors depend on the system as well as the type of object to which they are assigned.* |
 
-#### Example 1 
+## Example 1 
 
 This form contains the two non-enterable variables *vsColorValue* and *vsColor* as well as the three thermometers: *thRed*, *thGreen*, and *thBlue*.
 
@@ -90,7 +87,7 @@ When executed, the form looks like this:
 
 ![](../assets/en/commands/pict4278099.en.png)
 
-#### Example 2 
+## Example 2 
 
 Changing to transparent background with a light font color:
 
@@ -102,8 +99,16 @@ Changing to transparent background with a light font color:
 
 ![](../assets/en/commands/pict1210702.en.png)
 
-#### See also 
+## See also 
 
-*\_o\_OBJECT SET COLOR*  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB Color](select-rgb-color.md)  
+[Select RGB color](select-rgb-color.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 628 |
+| Thread safe | &cross; |
+
+

@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->La commande **LDAP SEARCH ALL** recherche sur le server LDAP cible toutes les occurrences correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
 
@@ -50,7 +47,7 @@ Par défaut, la commande retourne les attributs sous forme de tableau si plusieu
 * Lorsque vous passez **true** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en tableau. Si une seule valeur est trouvée, la commande retourne un tableau à un seul élément.
 * Lorsque vous passez **false** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en variable simple. Si plusieurs valeurs sont trouvées, la commande retourne uniquement le premier élément.
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous voulons récupérer les numéros de téléphone de tous les utilisateurs nommés "smith" dans l'annuaire d'enterprise :
 
@@ -76,7 +73,7 @@ Nous voulons récupérer les numéros de téléphone de tous les utilisateurs no
   // ...
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attributsEnTableau* :
 
@@ -114,7 +111,16 @@ Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attr
   // $memberOf est une variable contenant le premier groupe de l'entrée
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1329 |
+| Thread safe | &cross; |
+
+

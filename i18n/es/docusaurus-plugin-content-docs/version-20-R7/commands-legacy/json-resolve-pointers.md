@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->El comando **JSON Resolve pointers** resuelve todos los punteros JSON encontrados en el objeto, con respecto a la configuración de opciones (si existe).<!-- END REF-->
 
@@ -54,7 +54,7 @@ En todos los casos, el comando devuelve un objeto que contiene las siguientes pr
 | errors\[\].pointerURI   | Cadena            | valor del puntero                                                                                                  |
 | errors\[\].referredPath | Cadena            | ruta completa del documento                                                                                        |
 
-#### Definir punteros JSON 
+## Definir punteros JSON 
 
 JSON Pointer es un estándar que define una sintaxis de cadena que se puede utilizar para acceder a un campo o a un valor clave particular en todo el documento JSON. El estándar se ha descrito en [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
@@ -68,19 +68,19 @@ Un puntero JSON es, estrictamente hablando, una cadena compuesta de partes separ
 
 **Nota**: 4D no soporta el carácter "-" como referencia a elementos de array inexistentes.
 
-##### Recursividad y resolución de ruta 
+### Recursividad y resolución de ruta 
 
 Los punteros JSON se resuelven recursivamente, lo que significa que si un puntero resuelto también contiene punteros, se resuelven recursivamente y así sucesivamente, hasta que se resuelvan todos los punteros. En este contexto, todas las rutas de archivo encontradas en las URIs de puntero JSON pueden ser relativas o absolutas. Deben utilizar '/' como delimitador de ruta y se resuelven de la siguiente manera:
 
 * Una ruta relativa no debe comenzar con '/'. Se resuelve relativamente al documento JSON donde se ha encontrado la cadena de ruta de acceso,
-* Una ruta absoluta comienza con '/'. Solo las [rutas filesystem](https://developer.4d.com/docs/Concepts/paths/#filesystem-pathnames) se aceptan como rutas absolutas. Por ejemplo, "/RESOURCES/templates/myfile.json" apunta al archivo "myfile.json" que se encuentra en la carpeta de recursos de la base de datos actual.
+* Una ruta absoluta comienza con '/'. Solo las [rutas filesystem](../Concepts/paths.md#filesystem-pathnames) se aceptan como rutas absolutas. Por ejemplo, "/RESOURCES/templates/myfile.json" apunta al archivo "myfile.json" que se encuentra en la carpeta de recursos de la base de datos actual.
 
 **Notas:**
 
 * La resolución del nombre distingue entre mayúsculas y minúsculas.
 * 4D no resuelve una ruta a un archivo json ubicado en la red (que empiece por "http/https").
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar en un objeto:
 
@@ -108,7 +108,7 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere reutilizar "billingAddress" como "shippingAddress" en el siguiente objeto JSON (llamado $oMyConfig):
 
@@ -153,7 +153,7 @@ Después de ejecutar este código:
 }
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo ilustra el efecto de la opción "fusionar". Usted desea editar los derechos de un usuario basándose en un archivo predeterminado.
 
@@ -227,6 +227,15 @@ Si ejecuta:
 }
 ```
 
-#### Ver también 
+## Ver también 
 
   
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1478 |
+| Hilo seguro | &check; |
+
+

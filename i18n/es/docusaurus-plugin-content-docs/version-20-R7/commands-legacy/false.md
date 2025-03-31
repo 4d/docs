@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.False.Summary-->False devuelve el valor booleano Falso (False).<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo asigna la variable *vbOpciones* a Falso:
 
@@ -25,7 +25,16 @@ El siguiente ejemplo asigna la variable *vbOpciones* a Falso:
  vbOpciones:=False
 ```
 
-#### Ver también 
+## Ver también 
 
 [Not](not.md)  
 [True](true.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 215 |
+| Hilo seguro | &check; |
+
+

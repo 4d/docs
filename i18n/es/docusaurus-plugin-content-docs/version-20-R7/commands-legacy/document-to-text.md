@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Document to text.Summary-->El comando **Document to text** le permite recuperar el contenido de un archivo directamente en el disco en una variable texto 4D o campo texto.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Si el documento contiene un Byte Order Mark (BOM), 4D utiliza el conjunto de car
 Si el documento no contiene un BOM y si se omite el parámetro *conjCaracteres,* 4D utiliza por defecto los siguientes conjuntos de caracteres:
 
 * bajo Windows: ANSI
-* bajo OS X: MacRoman
+* bajo macOS: MacRoman
 
 En breakMode, puede pasar un entero largo que indica el proceso a efectuar en los caracteres de fin de línea presentes en el documento. Puede pasar una de las siguientes constantes, del tema "*Documentos sistema*":
 
@@ -51,7 +51,7 @@ Por defecto, cuando se omite el parámetro *modoRetorno*, los saltos de línea s
 
 **Nota**: este comando no modifica la variable OK. En caso de fallo, se genera un error que puede interceptar utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 Dado el documento texto siguiente (los campos están separados por tabulaciones):
 
@@ -73,7 +73,16 @@ Cuando ejecuta este código:
   // \r = CR
 ```
 
-#### Ver también 
+## Ver también 
 
 *Documentos sistema*  
 [TEXT TO DOCUMENT](text-to-document.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1236 |
+| Hilo seguro | &check; |
+
+

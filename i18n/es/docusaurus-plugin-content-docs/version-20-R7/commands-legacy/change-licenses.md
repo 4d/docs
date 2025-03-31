@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->El comando CHANGE LICENSES muestra la caja de diálogo de gestión de licencias 4D.<!-- END REF--> 
 
@@ -27,7 +24,7 @@ CHANGE LICENSES es una forma conveniente de activar licencia y añadir números 
 
 Para mayor información esta caja de diálogo, consulte la sección *Instalación y activación* Guía de instalación de 4D.
 
-#### Ejemplo 
+## Ejemplo 
 
 En una caja de diálogo de configuración o de preferencias personalizada, coloque un botón con el siguiente método:
 
@@ -38,7 +35,17 @@ En una caja de diálogo de configuración o de preferencias personalizada, coloq
 
 De esta forma un usuario puede activar licencias sin tener que modificar la base.
 
-#### Ver también 
+## Ver también 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 637 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

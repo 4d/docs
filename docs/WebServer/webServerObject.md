@@ -64,7 +64,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Web server functions
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions: 
+A [web server class object](API/WebServerClass.md../commands/web-server.md-object) contains the following functions: 
 
 |Functions|Parameter|Return value|Description|
 |---|---|---|---|
@@ -88,7 +88,7 @@ $status:=webServer.stop()
 
 ## Web server properties
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server. 
+A web server object contains [various properties](API/WebServerClass.md../commands/web-server.md-object) which configure the web server. 
 
 These properties are defined:
 
@@ -112,7 +112,7 @@ The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-S
 |`WEB CLOSE SESSION`|Web server that received the request|
 |`WEB GET BODY PART`|Web server that received the request|
 |`WEB Get body part count`|Web server that received the request|
-|`WEB Get Current Session ID`|Web server that received the request|
+|`WEB Get current session ID`|Web server that received the request|
 |`WEB GET HTTP BODY`|Web server that received the request|
 |`WEB GET HTTP HEADER`|Web server that received the request|
 |`WEB GET OPTION`|Host application web server|

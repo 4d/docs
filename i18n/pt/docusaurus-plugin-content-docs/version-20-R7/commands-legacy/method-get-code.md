@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, triggers, métodos projeto, métodos formulário e métodos objeto.  
   
@@ -70,11 +67,11 @@ O código exportado com seus tokens faz com que seja independente da linguagem d
 
 Se o comando for executado desde um componente, se aplica como padrão para os métodos do componente. Se passar o parâmetro *\**, acessa aos métodos do banco de dados local.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Consulte o exemplo do comando [METHOD SET CODE](method-set-code.md).
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo ilustra o efeito de parâmetro *opção*.  
   
@@ -123,7 +120,16 @@ O documento resultante conterá:
   //%attributes = {"lang":"en"} comentario adicionado e reservado por 4DCase of    : (Form event:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [METHOD SET CODE](method-set-code.md)  
 *Usar tokens em fórmulas*  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1190 |
+| Thread-seguro | &cross; |
+
+

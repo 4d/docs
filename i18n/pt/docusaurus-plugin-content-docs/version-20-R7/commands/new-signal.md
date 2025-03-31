@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Parâmetro   | Tipo                       |   | Descrição                          |
-| ----------- | -------------------------- | - | ---------------------------------- |
-| description | Text                       | → | Descrição para o sinal             |
-| Resultado   | 4D. Signal | ← | Objeto nativo encapsulando o sinal |
+| Parâmetro   | Tipo                       |                             | Descrição                          |
+| ----------- | -------------------------- | --------------------------- | ---------------------------------- |
+| description | Text                       | &#8594; | Descrição para o sinal             |
+| Resultado   | 4D. Signal | &#8592; | Objeto nativo encapsulando o sinal |
 
 <!-- END REF-->
 
@@ -23,9 +23,9 @@ displayed_sidebar: docs
 
 </details>
 
-#### Descrição
+## Descrição
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
+O comando `New signal` <!-- REF #_command_.New signal.Summary -->cria um objeto `4D.Signal` <!-- END REF -->.
 
 Um sinal é um objeto partilhado que pode ser passado como parâmetro de um worker ou processo para outro worker ou processo, de forma que:
 
@@ -38,9 +38,9 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **Valor retornado**
 
-Um novo [objeto `4D.Signal`](#signal-object).
+Um novo [objeto `4D.Signal`](../API/SignalClass.md#signal-object).
 
-#### Exemplo
+## Exemplo
 
 Este é um exemplo típico de um worker que fixa um sinal:
 
@@ -69,3 +69,12 @@ O método ***doSomething*** poderia ser como:
  End use
  $signal.trigger() // The work is finished
 ```
+
+## Propriedades
+
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1641                        |
+| Thread safe    | &check; |
+
+

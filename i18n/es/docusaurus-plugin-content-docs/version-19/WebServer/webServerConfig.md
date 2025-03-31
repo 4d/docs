@@ -200,7 +200,7 @@ Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está tambi�
 
 HSTS permite al servidor web 4D declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Una vez activado, el servidor web 4D añadirá automáticamente información relacionada con HSTS a todos los encabezadoss de las respuestas. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web 4D, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con el parámetro web **HSTS max age**.
 
-> HSTS requiere que HTTPS esté [activado](enable-https) en el servidor. [El HTTP](enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
+> HSTS requiere que HTTPS esté [activado](#enable-https) en el servidor. [El HTTP](#enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
 
 > Puede obtener el modo de conexión actual utilizando el comando `WEB Is secured connection`.
 
@@ -247,7 +247,7 @@ Pasa el tamaño expresado en bytes como valor. Por defecto, el umbral de compres
 
 Número de puerto IP (TCP) de escucha para HTTP. Por defecto, 4D publica una aplicación web en el puerto web HTTP normal (puerto TCP), que es el puerto 80. Si ese puerto ya es utilizado por otro servicio web, debe cambiar el puerto HTTP utilizado por 4D para esta base de datos.
 
-> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
+> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver macOS HelperTool).
 
 Desde un navegador web, es necesario incluir el número de puerto HTTP no predeterminado en la dirección que se introduce para conectarse a la aplicación web. La dirección debe tener un sufijo formado por dos puntos seguido del número de puerto. Por ejemplo, si está utilizando el puerto HTTP número 8080, especificará "123.4.567.89:8080".
 > **Atención**: si utiliza números de puerto TCP distintos a los predeterminados (80 para HTTP estándar y 443 para HTTPS), tenga cuidado de no utilizar números de puerto que sean predeterminados para otros servicios que pueda querer utilizar simultáneamente. Por ejemplo, si también tiene previsto utilizar el protocolo FTP en su equipo servidor web, no utilice los puertos TCP 20 y 21, que son los puertos por defecto para ese protocolo. Los números de puertos inferiores a 256 están reservados para servicios conocidos y los números de puertos de 256 a 1024 están reservados para servicios específicos originados en las plataformas UNIX. Para obtener la máxima seguridad, especifique un número de puerto más allá de estos intervalos (por ejemplo, en los 2000 o 3000).
@@ -386,7 +386,7 @@ Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
 Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web está autorizado a procesar. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Pasar el valor máximo (2 147 483 648) significa que, en la práctica, no se define ningún límite.
 
-Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. This limit is used to avoid web server saturation due to incoming requests that are too large.
+Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Cuando una petición alcanza este límite, el servidor web 4D la rechaza.
 
 Valores posibles: 500 000 a 2 147 483 648.
 
@@ -448,7 +448,7 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 Algunos robots (motores de búsqueda, arañas...) recorren los servidores web y las páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs a las que no pueden acceder.
 
-Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
+Para ello, ponga el archivo ROBOTS. TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>

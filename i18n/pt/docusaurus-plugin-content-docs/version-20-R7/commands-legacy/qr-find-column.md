@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Find column.Summary-->O comando QR Find column devolve o número da primeira coluna cujo conteúdo corresponde à *expressao* passada em parâmetro.<!-- END REF-->
 
@@ -28,7 +25,7 @@ QR Find column devolve –1 se não se encontra nada.
 
 Se passa um número de *area* inválido, se gera o erro -9850.
 
-#### Exemplo 
+## Exemplo 
 
 O código a seguir permite recuperar o número da coluna que contém o campo \[G.NQR Tests\]Trimestre e apaga essa coluna:
 
@@ -44,3 +41,14 @@ $NumColumn:=QR Find column (MiArea; "\[G.NQR Tests\]Trimestre")
     QR DELETE COLUMN(MinhaArea;$NumColumn)
  End if
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 776 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

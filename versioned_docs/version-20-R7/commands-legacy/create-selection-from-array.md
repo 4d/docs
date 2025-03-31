@@ -15,12 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName* from:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName*<!-- END REF--> from:
 
 * either an array of absolute record numbers *recordArray* from *aTable*,
-* or an array of Booleans.<!-- END REF--> In this case, the values of the array indicate the belonging (**True**) or not (**False**) of each record in *table* to *selectionName*.
+* or an array of Booleans. In this case, the values of the array indicate the belonging (**True**) or not (**False**) of each record in *table* to *selectionName*.
 
 **Warning:** A named selection is created and loaded into memory. Therefore, make sure that you have enough memory before executing this command.
 
@@ -36,11 +36,11 @@ When you use a Boolean array with this command, the Xth element of the array ind
 
 **Warning:** Keep in mind that a record number can be reused if the record is deleted and another record is created (see *About Record Numbers*). 
 
-#### Error management 
+## Error management 
 
 If a record number is invalid (record not created), the error -10503 is generated. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
-#### See also 
+## See also 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -48,3 +48,14 @@ If a record number is invalid (record not created), the error -10503 is generate
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 640 |
+| Thread safe | &check; |
+| Modifies variables | error |
+| Changes current selection ||
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get report kind.Summary-->La commande **QR Get report kind** retourne le *type* d'état présent dans la *zone*.<!-- END REF--> 
 
@@ -30,6 +27,16 @@ Vous pouvez comparer le résultat avec les constantes du thème *QR Types d'éta
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 755 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

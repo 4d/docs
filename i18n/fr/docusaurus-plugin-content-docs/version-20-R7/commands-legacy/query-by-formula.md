@@ -14,9 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** effectue une recherche d'enregistrements dans *laTable*.<!-- END REF--> **QUERY BY FORMULA** modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
+<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** effectue une recherche d'enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
 **QUERY BY FORMULA** et la commande [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) fonctionnent exactement de la même manière, à la différence près que **QUERY BY FORMULA** effectue sa recherche parmi la totalité des enregistrements de la table alors que [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) se cantonne aux enregistrements de la sélection courante.
 
@@ -48,7 +48,7 @@ S'ils existent, les liens entre les tables ne sont en principe pas utilisés. To
 
 **Note de compatibilité :** Jusqu'à 4D Server v11, cette commande était exécutée sur le poste client. Par compatibilité, ce fonctionnement est maintenu dans les bases de données converties. Toutefois, une propriété de compatibilité et un sélecteur de la commande [SET DATABASE PARAMETER](set-database-parameter.md) permettent d'adopter l'exécution sur serveur dans les bases de données converties.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant recherche les enregistrements de toutes les factures qui ont été saisies au mois de décembre, sans tenir compte de l'année. Le principe est d'appliquer la fonction [Month of](month-of.md) à chaque enregistrement. Cette recherche ne pourrait pas être effectuée d'une autre manière sans créer un champ séparé pour le mois :
 
@@ -57,7 +57,7 @@ L'exemple suivant recherche les enregistrements de toutes les factures qui ont �
   // Chercher les factures saisies en décembre
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant recherche les enregistrements de toutes les personnes dont le nom comporte plus de dix caractères :
 
@@ -66,7 +66,7 @@ L'exemple suivant recherche les enregistrements de toutes les personnes dont le 
   // Chercher les personnes dont le nom fait plus de dix caractères
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Dans cet exemple, on utilise une jointure pour rechercher toutes les lignes de factures du client "ACME" même si les tables ne sont pas liées :
 
@@ -74,9 +74,20 @@ Dans cet exemple, on utilise une jointure pour rechercher toutes les lignes de f
  QUERY BY FORMULA([ligne_factures];([ligne_factures]facture_id=[facture]id&[facture]client="ACME"))
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 48 |
+| Thread safe | &check; |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

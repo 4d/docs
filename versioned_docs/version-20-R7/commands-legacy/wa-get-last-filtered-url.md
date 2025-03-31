@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Get last filtered URL.Summary-->The **WA Get last filtered URL** command returns the last URL that was filtered in the Web area designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -30,9 +27,18 @@ The URL may have been filtered for one of the following reasons:
 
 It is advisable to call this command in the context of the On URL Filtering, On Open External Link and On Window Opening Denied form events in order to find out the URL that was filtered.
 
-#### See also 
+## See also 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1035 |
+| Thread safe | &cross; |
+
+

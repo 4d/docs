@@ -5,18 +5,18 @@ title: VP Get formula by name
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 
-**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| 引数         | 型      |                             | 説明                                            |                  |
-| ---------- | ------ | --------------------------- | --------------------------------------------- | ---------------- |
-| vpAreaName | Text   | ->                          | 4D View Pro フォームオブジェクト名                       |                  |
-| name       | Text   | ->                          | 命名レンジの名前                                      |                  |
-| scope      | Number | ->                          | ターゲットのスコープ (デフォルト=カレントシート) |                  |
-| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義                          | <!-- END REF --> |
+| 引数         | 型       |                             | 説明                                            |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                       |                  |
+| name       | Text    | ->                          | 命名レンジの名前                                      |                  |
+| scope      | Integer | ->                          | ターゲットのスコープ (デフォルト=カレントシート) |                  |
+| 戻り値        | Object  | <- | 命名フォーミュラ、または命名レンジの定義                          | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Get formula by name` コマンドは、<!-- REF #_method_.VP Get formula by name.Summary --> *name* 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します (定義されたスコープにそれらが存在しない場合には **null** が返されます)<!-- END REF -->。
 
@@ -29,7 +29,7 @@ title: VP Get formula by name
 - `vk current sheet`
 - `vk workbook`
 
-##### 返されるオブジェクト
+### 返されるオブジェクト
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
@@ -38,7 +38,7 @@ title: VP Get formula by name
 | formula | Text | 命名フォーミュラまたは命名レンジに対応したフォーミュラのテキスト。 命名レンジの場合、フォーミュラは連続した絶対セル参照として返されます。 |
 | comment | Text | 命名フォーミュラまたは命名レンジに対応したコメント                                             |
 
-#### 例題
+## 例題
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
@@ -51,7 +51,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
   //$formula=null (存在しない場合)
 ```
 
-#### 参照
+## 参照
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP Get names](vp-get-names.md)

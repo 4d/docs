@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->O comando **METHOD SET CODE** modifica o código dos métodos designados pelo parâmetro *rota* com o conteúdo passado no parâmetro *codigo*.<!-- END REF--> Este comando pode acessar ao código de todos os tipos de métodos: métodos de banco, triggers, métodos projeto, métodos formulário e métodos objeto. Se um método não existir, é criado com os conteúdos *codigo*.
 
@@ -64,7 +61,7 @@ Quando essa propriedade conter uma string vazia, o método é posto no nível da
 
 Pode executar o comando de uma componente, mas neste caso você deve passar o parâmetro *\** porque o acesso ao código do componente é somente leitura. Se omitir o parâmetro *\** neste contexto, o erro -9763 é gerado.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo exporta e importa a totalidade dos métodos projeto de uma aplicação:
 
@@ -96,6 +93,15 @@ Este exemplo exporta e importa a totalidade dos métodos projeto de uma aplicaç
  SHOW ON DISK($root_t)
 ```
 
-#### Ver também 
+## Ver também 
 
 [METHOD GET CODE](method-get-code.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1194 |
+| Thread-seguro | &cross; |
+
+

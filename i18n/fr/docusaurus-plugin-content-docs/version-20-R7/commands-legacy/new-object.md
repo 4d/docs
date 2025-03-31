@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New object.Summary-->La commande **New object** crée un objet vide ou pré-rempli et retourne sa référence.<!-- END REF-->
 
-Si vous ne passez aucun paramètre, **New object** crée un objet vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec [C\_OBJECT](c-object.md) ou un champ objet 4D.
+Si vous ne passez aucun paramètre, **New object** crée un objet vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec *C\_OBJECT* ou un champ objet 4D.
 
-**Note :** [C\_OBJECT](c-object.md) déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
+**Note :** *C\_OBJECT* déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
 
 Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plusieurs paires *propriété*/*valeur* comme paramètres :
 
@@ -45,7 +45,7 @@ Notez que :
 * les dates sont stockées sous forme de date "yyyy-mm-dd" ou de chaîne au format "YYYY-MM-DDTHH:mm:ss.SSSZ" en fonction du paramétrage courant relatif au stockage des dates dans les objets (cf. *Page Compatibilité*). Lorsque vous convertissez des dates 4D en texte, avant de les stocker dans l'objet, par défaut, le programme utilise l'heure locale de la zone. Vous pouvez modifier ce comportement en utilisant le sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 * si vous passez une heure, elle est stockée en nombre de millisecondes (réel).
 
-#### Exemple 1 
+## Exemple 1 
 
 Cette commande peut créer des objets vides ou des objets remplis :
 
@@ -61,7 +61,7 @@ Cette commande peut créer des objets vides ou des objets remplis :
   // $obj3 = {name:Smith,age:40}
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Création d'un nouvel objet avec un objet en paramètre *valeur* : 
 
@@ -80,7 +80,7 @@ Création d'un nouvel objet avec un objet en paramètre *valeur* :
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cette commande est utile pour passer des objets en paramètres :
 
@@ -89,7 +89,7 @@ Cette commande est utile pour passer des objets en paramètres :
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 
@@ -102,7 +102,16 @@ Avec cette commande, vous pouvez aisément gérer des objets en boucle :
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [New shared object](new-shared-object.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1471 |
+| Thread safe | &check; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Summary-->The **OBJECT SET FOCUS RECTANGLE INVISIBLE** command sets or dynamically modifies the visibility option for the focus rectangle of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This setting corresponds to the **Hide focus rectangle** option that is available for enterable objects in the Property List in the Design mode. 
 
@@ -28,6 +25,15 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 Pass **True** in the *invisible* parameter to hide the focus rectangle and **False** to keep it visible.
 
-#### See also 
+## See also 
 
 [OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1177 |
+| Thread safe | &cross; |
+
+

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->El comando QUERY SELECTION WITH ARRAY busca en la tabla del campo pasado como primer parámetro los registros para los cuales el valor de campoObjetivo es igual a al menos uno de los valores de los elementos en el *array*.<!-- END REF--> Los registros encontrados constituyen la nueva selección actual. 
 
@@ -25,6 +25,16 @@ QUERY SELECTION WITH ARRAY funciona de la misma forma que [QUERY WITH ARRAY](que
 
 Para mayor información, consulte la descripción del comando [QUERY WITH ARRAY](query-with-array.md "QUERY WITH ARRAY").
 
-#### Ver también 
+## Ver también 
 
 [QUERY WITH ARRAY](query-with-array.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1050 |
+| Hilo seguro | &check; |
+| Modifica la selección actual ||
+
+

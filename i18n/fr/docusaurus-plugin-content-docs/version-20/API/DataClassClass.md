@@ -65,7 +65,7 @@ Les objets attributs retournés contiennent les propriétés suivantes :
 | path             | Text    | Chemin d'un [attribut alias](../ORDA/ordaClasses.md#alias-attributes-1) basé sur une relation                                                                                                                                                                                                                                                                                                 |
 | readOnly         | Boolean | Vrai si l'attribut est en lecture seule. Par exemple, les attributs calculés sans fonction [`set`](../ORDA/ordaClasses.md#function-set-attributename) sont en lecture seule.                                                                                                                                                                                                                  |
 | relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
-| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris duration ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-type).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
+| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris duration ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li>                                                                                                                                                   |
 | unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
 
 :::tip
@@ -120,7 +120,6 @@ Considérant les propriétés de table suivantes :
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Historique</summary>
@@ -157,9 +156,9 @@ Le mode lazy loading est appliqué.
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                     |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                               |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 > Pour obtenir le nombre total d'entités dans une dataclass, il est recommandé d'utiliser la fonction [`getCount()`](#getcount) qui est plus optimisée que l'expression `ds.myClass.all().length`.
 
@@ -170,7 +169,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Historique</summary>
@@ -189,7 +188,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 | ---------- | ---- |::| ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -221,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -284,9 +285,9 @@ Si une propriété \_\_STAMP est fournie, une vérification est effectuée sur l
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                     |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                               |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Exemple 1
 
@@ -459,13 +460,13 @@ Le chargement différé (lazy loading) est appliqué, ce qui signifie que les do
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                 |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                           |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête pour les valeurs des attributs est directement envoyée au serveur (le [cache ORDA](../ORDA/remoteDatastores.md#orda-cache) n'est pas utilisé). En revanche, lorsque vous appelez la fonction `.get()` **avec** un `context` transmis via le paramètre *settings*, les valeurs des attributs sont extraites du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
 
 :::
 
@@ -522,7 +523,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 <!-- REF #DataClassClass.getCount().Params -->
 | Paramètres | Type    |    | Description                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
-| result     | Integer | <- | Nombre d'entités dans la dataclass|<!-- END REF -->
+| Résultat   | Integer | <- | Nombre d'entités dans la dataclass|<!-- END REF -->
 
 |
 
@@ -672,7 +673,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Historique</summary>
@@ -689,7 +690,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Paramètres | Type   |    | Description                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass.|<!-- END REF -->
+| Résultat   | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass.|<!-- END REF -->
 
 
 |
@@ -725,9 +726,9 @@ L'objet `data` de chaque entrée contient les propriétés suivantes :
 
 | Propriété              | Type    | Description                                                                                                                                    |
 | ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Clé primaire de l'entité                                                                                                                       |
-| __STAMP                | Longint | Stamp de l'entité dans la base de données                                                                                                      |
-| __TIMESTAMP            | String  | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z)                                                         |
+| __KEY                  | Text    | Clé primaire de l'entité                                                                                                                       |
+| __STAMP                | Integer | Stamp de l'entité dans la base de données                                                                                                      |
+| __TIMESTAMP            | Text    | Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z)                                                         |
 | dataClassAttributeName | Variant | S'il y a des données dans le cache pour un attribut de dataclass, il est retourné dans une propriété du même type que dans la base de données. |
 
 Les données concernant les entités liées sont stockées dans le cache de l'objet data.
@@ -836,7 +837,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
 
-> Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 Si vous voulez créer une entity selection triée, passez le sélecteur `dk keep ordered` dans le paramètre *keepOrder*. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur `dk non ordered` la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
 
@@ -927,7 +928,7 @@ où :
  | Inclus parmi                            | IN          | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                 |
  | Contient mot-clé                        | %           | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                  |
 
-* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   * Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   * Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
   * Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
@@ -939,7 +940,7 @@ où :
  | Conjonction | Symbole(s)              |
  | ----------- | ----------------------- |
  | AND         | &, &&, and              |
- | OU          | &#124;,&#124;&#124;, or |
+ | OR          | &#124;,&#124;&#124;, or |
 
 * **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant. >Si vous utilisez cette déclaration, l'entity selection retournée est triée (pour plus d'informations, veuillez consulter [Entity selections triées vs Entity selection non triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees)).
 
@@ -1017,6 +1018,21 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
 ```4d
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
+
+#### Différent des valeurs null ou undefined
+
+Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
+
+```4d
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
+```
+
+Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
+
+```4d
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
+```
+
 
 #### Not equal to et les collections
 
@@ -1517,7 +1533,6 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 [`.query()`](EntitySelectionClass.md#query) pour les entity selections
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Historique</summary>

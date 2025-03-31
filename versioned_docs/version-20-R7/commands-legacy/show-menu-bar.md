@@ -12,21 +12,28 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SHOW MENU BAR.Summary-->The SHOW MENU BAR command makes the menu bar visible.<!-- END REF-->
 
 If the menu bar was already visible, the command does nothing.
 
-#### Example 
+## Example 
 
 See example for the [HIDE MENU BAR](hide-menu-bar.md) command.
 
-#### See also 
+## See also 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 431 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

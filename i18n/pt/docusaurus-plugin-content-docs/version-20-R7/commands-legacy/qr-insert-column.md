@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->O comando QR INSERT COLUMN insere ou cria uma coluna em una posição específica.<!-- END REF--> As colunas situadas à direita da coluna adicionada serão deslocadas em conseqüência disso.  
 
@@ -30,7 +27,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 
 **Nota:** este comando não pode ser utilizado com um relatório tabela cruzada.
 
-#### Exemplo 
+## Exemplo 
 
 A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, insere “Campo1” como título da coluna (comportamento por padrão) e preenche o conteúdo do corpo com os valores do Campo1.
 
@@ -38,6 +35,16 @@ A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, 
  QR INSERT COLUMN(MinhaArea;1;->[Tabela 1]Campo1)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 748 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

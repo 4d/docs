@@ -15,15 +15,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get menu item parameter.Summary-->O comando Get menu item parameter devolve a cadeia de caracteres personalizada associada a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF--> Esta cadeia deve ter sido definida previamente utilizando o comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER").
 
-#### Ver também 
+## Ver também 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1003 |
+| Thread-seguro | &cross; |
+
+

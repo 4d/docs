@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->O comando QR GET TOTALS SPACING permite recuperar o valor do espaço adicionado sobre uma linha de subtotal.<!-- END REF--> Aplica unicamente em modo listado.  
 
@@ -36,6 +33,16 @@ displayed_sidebar: docs
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *subtotal* for incorreto, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 762 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

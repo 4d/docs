@@ -14,15 +14,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.FOLDER LIST.Summary-->FOLDER LIST コマンド は、*pathname*に渡すパス名にあるフォルダの名前を要素とするテキストまたは文字列配列*directories*を生成します。<!-- END REF-->
-
-**Note:** 引数*pathname* は完全なパス名だけを受け入れます。 
+<!--REF #_command_.FOLDER LIST.Summary-->FOLDER LIST コマンド は、*pathname*に渡すパス名にあるフォルダの名前を要素とするテキストまたは文字列配列*directories*を生成します。<!-- END REF-->引数*pathname* は完全なパス名だけを受け入れます。 
 
 指定した場所にフォルダがない場合、コマンドは空の配列を返します。*pathname*に渡すパス名が無効だと、FOLDER LISTはファイルマネジャエラーを生成します。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")メソッドを使用して検知することができます。
 
-#### 参照 
+## 参照 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 473 |
+| スレッドセーフである | &check; |
+| システム変数を更新する | error |
+
+

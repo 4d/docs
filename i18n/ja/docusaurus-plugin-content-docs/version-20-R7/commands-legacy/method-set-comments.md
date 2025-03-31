@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->**METHOD SET COMMENTS**コマンドは*path*引数で指定したメソッドのドキュメンテーションを*comments*引数の内容で置き換えます。<!-- END REF-->
 
@@ -53,7 +50,7 @@ displayed_sidebar: docs
 
 コマンドをコンポーネントから実行することもできますが、この場合 (コンポーネントコードには書き込みアクセスができないため) *\** 引数を渡さなければなりません。この状況で *\** 引数を省略するとエラー-9763が生成されます。
 
-#### 例題 
+## 例題 
 
 既存のトリガーのドキュメンテーションに更新日を追加する:
 
@@ -63,6 +60,15 @@ displayed_sidebar: docs
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1193 |
+| スレッドセーフである | &cross; |
+
+

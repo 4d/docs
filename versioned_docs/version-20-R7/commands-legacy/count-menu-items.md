@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Count menu items.Summary-->The **Count menu items** command returns the number of menu items present in the menu whose number or reference is passed in *menu.<!-- END REF-->*
 
@@ -26,6 +23,16 @@ If you omit the *process* parameter, **Count menu items** applies to the menu ba
 
 **Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") parameter in *menu*, the *process* parameter serves no purpose and will be ignored.
 
-#### See also 
+## See also 
 
 [Count menus](count-menus.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 405 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

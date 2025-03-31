@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->The WA SET PREFERENCE command sets different preferences for the Web area designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -33,7 +30,7 @@ Pass the preference to be modified in the *selector* parameter and the value to 
 
 For each preference, pass **True** in *value* to activate it and **False** to deactivate it.
 
-#### Example 
+## Example 
 
 To enable URL drops in the 'myarea' Web area:
 
@@ -49,6 +46,15 @@ To enable URL drops in the 'myarea' Web area:
  End if
 ```
 
-#### See also 
+## See also 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1041 |
+| Thread safe | &cross; |
+
+

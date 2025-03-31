@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->El comando **LISTBOX GET GRID COLORS** devuelve el color de las líneas horizontales y verticales que componen la rejilla del objeto list box object designado por los parámetros *objeto* y *\**.<!-- END REF-->
 
@@ -30,6 +27,15 @@ En *colorH* y *colorV*, el comando devuelve los valores de los colores RGB. El f
 * Si pasa un texto, el color se expresará como un texto CSS (formato "#rrggbb")
 * Si pasa un entero largo, el color se expresará como un entero largo de 4 bytes (formato 0x00rrggbb).
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1200 |
+| Hilo seguro | &cross; |
+
+

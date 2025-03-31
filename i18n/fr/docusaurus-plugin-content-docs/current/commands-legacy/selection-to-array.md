@@ -5,7 +5,7 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( leChamp | laTable ; *tableau* {; *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}{; *})<br/>**SELECTION TO ARRAY** {( *laTable* ; *tableau* {; *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}}{; *})}<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->
-
-**SELECTION TO ARRAY** s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
+<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
 
 * Charger les valeurs d'un ou plusieurs champs,
 * Charger les numéros des enregistrements de la table, à l'aide de la syntaxe *\[table\];tableau*
@@ -47,7 +45,7 @@ A l’image de la commande [QUERY](query.md), ce principe vous permet de scinder
 
 **Note :** Après un appel à **SELECTION TO ARRAY**, la sélection courante et l'enregistrement courant ne sont pas modifiés, mais l'enregistrement courant n'est plus chargé. Utilisez la commande [LOAD RECORD](load-record.md) après un **SELECTION TO ARRAY** si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans l'exemple suivant, la table *\[Personnes\]* dispose d'un lien automatique vers la table *\[Sociétés\]*. Les deux tableaux *tabNoms* et *tabAdresseSociétés* sont dimensionnés en fonction du nombre d'enregistrements dans la sélection de la table *\[Personnes\]* et contiennent des informations venant des deux tables :
 
@@ -55,7 +53,7 @@ Dans l'exemple suivant, la table *\[Personnes\]* dispose d'un lien automatique v
  SELECTION TO ARRAY([Personnes]Nom;tabNoms;[Sociétés]Adresse;tabAdresseSociétés)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple ci-dessous retourne les numéros d'enregistrements de la table *\[Clients\]* dans le tableau *tabNumEnr* et les valeurs du champ *\[Clients\]Noms* dans le tableau *tabNoms* :
 
@@ -71,7 +69,7 @@ Le même exemple peut être écrit :
  SELECTION TO ARRAY
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
@@ -79,3 +77,12 @@ Le même exemple peut être écrit :
 [ON ERR CALL](on-err-call.md)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 260 |
+| Thread safe | &check; |
+
+

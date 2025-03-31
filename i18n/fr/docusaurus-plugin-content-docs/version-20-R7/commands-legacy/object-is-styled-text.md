@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->La commande **OBJECT Is styled text** retourne **Vrai** si l’option "Multistyle" est cochée pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -30,7 +27,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 **Note :** La commande **OBJECT Is styled text** retourne **Vrai** lorsqu'elle est appliquée à une zone 4D Write Pro.
 
-#### Exemple 
+## Exemple 
 
 Un formulaire comporte un champ représenté par deux objets différents, l’un avec la propriété "Multistyle" cochée, l’autre sans cette propriété cochée. Vous pouvez écrire : 
 
@@ -42,6 +39,15 @@ Un formulaire comporte un champ représenté par deux objets différents, l’un
      // retourne Faux (l’option "Multistyle" n’est cochée)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Texte multistyle*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1261 |
+| Thread safe | &cross; |
+
+

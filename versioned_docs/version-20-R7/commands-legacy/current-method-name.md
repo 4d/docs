@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current method name.Summary-->The Current method name command returns the method name where it has been invoked.<!-- END REF--> This command is useful for debugging generic methods.
 
@@ -37,3 +37,13 @@ According to the calling method type, the returned string can be as follows:
 This command cannot be called from within a 4D formula.
 
 **Note:** For this command to be able to operate in compiled mode, it must not be included in code for which range checking has been disabled. See *Range checking*.
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 684 |
+| Thread safe | &check; |
+
+

@@ -18,9 +18,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.Print form.Summary-->La commande **Print form** imprime simplement *formulaire* avec les valeurs courantes des champs et des variables de *laTable*.<!-- END REF--> Cette commande est généralement utilisée pour imprimer des états particulièrement complexes nécessitant un contrôle total du processus d'impression. **Print form** ne gère pas les traitements d'enregistrements, ni les ruptures, sauts de pages, en-têtes ou pieds de pages. Vous devez vous-même prendre en charge ces opérations. **Print form** imprime uniquement des champs et des variables avec une taille fixe, la commande ne gère pas les objets de taille variable.
@@ -167,3 +164,12 @@ Le code qui appelle la boîte de dialogue ensuite imprime son corps :
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 5 |
+| Thread safe | &cross; |
+
+

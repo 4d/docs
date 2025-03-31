@@ -18,15 +18,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Paramètres     | Type                         |   | Description                                                                                          |
-| -------------- | ---------------------------- | - | ---------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | → | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
-| localID        | Text                         | → | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | cs.DataStore | ← | Objet datastore                                                                                      |
+| Paramètres     | Type                         |                             | Description                                                                                          |
+| -------------- | ---------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                       | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID        | Text                         | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | cs.DataStore | &#8592; | Objet datastore                                                                                      |
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
 
@@ -39,7 +39,7 @@ Les datastores distants suivants sont pris en charge par la commande :
 
 :::note
 
-Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../REST/authUsers.md#user-login-modes) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
+Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../REST/authUsers.md#force-login-mode) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
 
 :::
 
@@ -50,7 +50,7 @@ Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vou
 | hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                                                                                                                                    | API Endpoint de l'instance Qodly cloud                                               |
 | user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | - (ignoré)                                                        |
 | password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | - (ignoré)                                                        |
-| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. | - (ignoré)                                                        |
+| idleTimeout | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. | - (ignoré)                                                        |
 | tls         | Boolean | Vrai pour utiliser une connexion sécurisée(1). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                                                                                            | Vrai pour utiliser une connexion sécurisée. Si omis, faux par défaut |
 | type        | Text    | doit être "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | - (ignoré)                                                        |
 | api-key     | Text    | - (ignoré)                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | API key de l'instance Qodly cloud                                                    |
@@ -75,7 +75,7 @@ Les objets disponibles dans le `cs.Datastore` sont mappés conformément aux [r�
 
 Si aucun datastore correspondant n'est trouvé, `Open datastore` retourne **Null**.
 
-#### Exemple 1
+## Exemple 1
 
 Connexion à un datastore distant sans utilisateur/mot de passe :
 
@@ -87,7 +87,7 @@ Connexion à un datastore distant sans utilisateur/mot de passe :
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
@@ -100,7 +100,7 @@ Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Travailler avec plusieurs datastores distants :
 
@@ -115,7 +115,7 @@ Travailler avec plusieurs datastores distants :
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Exemple 4
+## Exemple 4
 
 Connexion à une application Qodly :
 
@@ -136,10 +136,20 @@ ALERT(String($data.length)+" items have been read")
 
 ```
 
-#### Gestion des erreurs
+## Gestion des erreurs
 
 En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut pas être joint (adresse incorrecte, web serveur non lancé, http et https non activés, etc.), l'erreur 1610 "Une requête vers l’hôte: {xxx} a échoué" est générée. Vous pouvez intercepter cette erreur avec une méthode installée par `ON ERR CALL`.
 
-#### Voir également
+## Voir également
 
 [ds](ds.md)
+
+## Propriétés
+
+|                       |                             |
+| --------------------- | --------------------------- |
+| Numéro de commande    | 1452                        |
+| Thread safe           | &check; |
+| Modifie les variables | error                       |
+
+

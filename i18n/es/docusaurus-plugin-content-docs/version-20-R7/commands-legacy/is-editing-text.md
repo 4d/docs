@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is editing text.Summary-->El comando **Is editing text** devuelve **True** si el usuario está ingresando valores en un objeto de formulario de entrada, y **False** en todos los demás casos.<!-- END REF-->
 
@@ -30,7 +27,7 @@ El comando **Is editing text** solo se puede utilizar con los siguientes objetos
 
 Con otros objetos, el comando siempre devuelve **False**. En particular, no se puede utilizar con las áreas 4D Write Pro y 4D View Pro.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea permitir que el usuario seleccione una línea que comience con la letra o el número ingresado en un listbox editable:
 
@@ -56,8 +53,17 @@ Desea permitir que el usuario seleccione una línea que comience con la letra o 
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1744 |
+| Hilo seguro | &cross; |
+
+

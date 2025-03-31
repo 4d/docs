@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->The **PRINTERS LIST** command fills in the array(s) passed as parameter(s) with the names as well as, optionally, the locations or custom names and models of the available printers for the machine.<!-- END REF--> 
 
@@ -39,11 +36,21 @@ Under Windows, the name of a printer can be modified manually at the operating s
 
 Under macOS, this check can be carried out using the name of the printer (name of the print server), which is the same for each machine that is connected.
 
-#### System variables and sets 
+## System variables and sets 
 
 The system variable OK is set to 1 if the command has been executed correctly; otherwise, it is set to 0 and the arrays are returned empty. 
 
-#### See also 
+## See also 
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 789 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -140,7 +140,7 @@ El objeto `.bodyStructure` contiene las siguientes propiedades:
 | lenguaje    | Colección de textos  | Lista de etiquetas de lenguaje, como se define en la [RFC3282](https://tools.ietf.org/html/rfc3282), en el campo del encabezado Content-Language de la parte, si está presente. |
 | location    | Text                 | URI, como se define en la [RFC2557](https://tools.ietf.org/html/rfc2557), en el campo del encabezado Content-Location de la parte, si está presente.                            |
 | subParts    | Colección de objetos | Partes del cuerpo de cada hijo (colección de objetos *EmailBodyPart*)                                                                                                           |
-| headers     | Colección de objetos | Lista de todos los campos del encabezado de la parte, en el orden en que aparecen en el mensaje (colección de objetos *EmailHeader*, ver la propiedad [headers](#headers-))     |
+| headers     | Colección de objetos | Lista de todos los campos del encabezado de la parte, en el orden en que aparecen en el mensaje (colección de objetos *EmailHeader*, ver la propiedad [headers](#headers))      |
 
 ## .bodyValues
 
@@ -377,7 +377,7 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 | Parámetros | Tipo       |    | Descripción                             |
 | ---------- | ---------- |:--:| --------------------------------------- |
 | mime       | Blob, Text | -> | Email en MIME                           |
-| Result     | Object     | <- | Objeto Email|<!-- END REF -->
+| Resultado  | Object     | <- | Objeto Email|<!-- END REF -->
 
 |
 
@@ -464,7 +464,7 @@ $status:=$transporter.send($email)
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
 | mail       | Object | -> | Objeto Email                                               |
 | options    | Object | -> | Opciones de codificación y de charset del mail             |
-| Result     | Text   | <- | Objeto email convertido en MIME|<!-- END REF -->
+| Resultado  | Text   | <- | Objeto email convertido en MIME|<!-- END REF -->
 
 |
 

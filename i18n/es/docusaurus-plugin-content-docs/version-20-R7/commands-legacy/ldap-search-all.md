@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LDAP SEARCH ALL.Summary-->El comando **LDAP SEARCH ALL** busca todas las ocurrencias que coinciden con los criterios definidos en el servidor LDAP objetivo.<!-- END REF--> Este comando debe ser ejecutado dentro de una conexión a un servidor LDAP abierta con *LDAP LOGIN*; de lo contrario se devuelve un error 1003.
 
@@ -50,7 +47,7 @@ Por defecto, el comando devuelve atributos como un array si se encuentran varios
 * Cuando pase **true** en un elemento, el elemento correspondiente del parámetro *atributos* será devuelto en un array. Si se encuentra un solo valor, el comando devuelve un array con un solo elemento.
 * Cuando pase **false** en un elemento, el elemento correspondiente del parámetro *atributos* será devuelto en una variable simple. Si se encuentran varias entradas, el comando devuelve sólo el primer elemento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Queremos obtener el número de teléfono de todos los usuarios con nombre "smith" en el directorio de la empresa:
 
@@ -76,7 +73,7 @@ Queremos obtener el número de teléfono de todos los usuarios con nombre "smith
   // ...
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
 
@@ -114,7 +111,16 @@ Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
   // en $memberOf tenemos una variable que contiene el primer grupo de la entrada
 ```
 
-#### Ver también 
+## Ver también 
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1329 |
+| Hilo seguro | &cross; |
+
+

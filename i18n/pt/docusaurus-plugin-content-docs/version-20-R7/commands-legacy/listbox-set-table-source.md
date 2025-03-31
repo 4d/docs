@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->O comando **LISTBOX SET TABLE SOURCE** permite modificar a fonte de dados mostrada no listbox desenhado pelos parâmetros *\** e *objeto*
 
@@ -37,6 +34,15 @@ Se o list box já conter as colunas, seus conteúdos são atualizados depois da 
 
 **Nota**: por razões de otimização, este comando é processado de maneira anacrônica, ou seja, a mudança de fonte do listbox é realizada apenas quando a execução do método do qual se chama o comando é completada.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1013 |
+| Thread-seguro | &cross; |
+
+

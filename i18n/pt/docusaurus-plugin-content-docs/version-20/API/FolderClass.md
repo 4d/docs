@@ -86,7 +86,7 @@ O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo 
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-No parâmetro *path* , passe uma string de rotas de pasta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+No parâmetro *path* , passe uma string de rotas de pasta. Pode utilizar uma string personalizada ou um [filesystem](../Concepts/paths.md#filesystem-pathnames) (por exemplo, "/DATA").
 
 > Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder` .
 
@@ -157,9 +157,9 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                    |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário<!-- END REF -->
 
 
 |

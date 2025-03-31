@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB Entries.Summary-->El comando **OB Entries** devuelve una colección de objetos que contienen el contenido del *objeto* como pares de propiedades llave/valor.<!-- END REF--> 
 
@@ -30,7 +27,7 @@ Cada objeto devuelto contiene las siguientes propiedades:
 
 Solo se devuelven los nombres de propiedad de primer nivel (no se devuelven los nombres de propiedad de los subobjetos). El orden de las propiedades dentro de la colección devuelta sigue el orden de definición de las propiedades.
 
-#### Ejemplo 
+## Ejemplo 
 
 El uso de un objeto como un mapa hash (sistema llave/valor) ofrece un acceso rápido y directo a los datos, al igual que cuando se utiliza un índice (por ejemplo, si necesitamos la edad de Mary, podemos escribir: $persons\["Mary"\])
 
@@ -53,7 +50,16 @@ El uso de un objeto como un mapa hash (sistema llave/valor) ofrece un acceso rá
  ALERT("Sus nombres son: "+$ages.extract("key").join("-"))
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1720 |
+| Hilo seguro | &cross; |
+
+

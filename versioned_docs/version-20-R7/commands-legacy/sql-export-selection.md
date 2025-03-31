@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->The **SQL EXPORT SELECTION** command exports in SQL format the records of the current selection of the 4D table designated by the *aTable* parameter.<!-- END REF--> 
 
@@ -32,10 +29,20 @@ If the current selection is empty, the command does nothing. Note that in this c
 
 If the export is carried out correctly, the *OK* variable is set to 1\. Otherwise, it is set to 0\. 
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 
-#### See also 
+## See also 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1064 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

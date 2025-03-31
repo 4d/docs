@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get name.Summary-->O comando OBJECT Get name retorna o nome de um objeto de formulário.<!-- END REF-->   
   
@@ -26,7 +23,7 @@ O comando permite designar dois tipos de objetos em função do parâmetro *sele
 * Object current ou *seletor* omitido: se passar este seletor ou omitir o parâmetro *seletor*, o comando retorna o nome do objeto a partir do qual foi chamado (método objeto ou submétodo chamado pelo método de objeto). Neste caso, o comando deve ser chamado no contexto de um objeto de formulário, do contrário retorna uma string vazia.
 * Object with focus: se passar este seletor, o comando retorna o nome do objeto que tem o foco no formulário.
 
-#### Exemplo 
+## Exemplo 
 
 Método objeto do botão "bValidateForm":
 
@@ -36,8 +33,17 @@ Método objeto do botão "bValidateForm":
 
 Depois da execução deste método objeto, a variável *$btnName* contém o valor "bValidateForm".
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1087 |
+| Thread-seguro | &cross; |
+
+

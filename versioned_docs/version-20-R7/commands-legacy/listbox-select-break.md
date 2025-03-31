@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->The **LISTBOX SELECT BREAK** command can be used to select break rows in the list box object designated by the *object* and *\** parameters.<!-- END REF--> The list box must be displayed in hierarchical mode. 
 
@@ -41,7 +38,7 @@ The *action* parameter, if it is passed, can set the selection action to be carr
 * you have to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
 * you cannot highlight break rows for hierarchical list boxes in this case (see *Limitation with hierarchical list boxes*).
 
-#### Example 
+## Example 
 
 Given the following arrays shown in a list box:
 
@@ -60,7 +57,16 @@ Here is the result:
 
 ![](../assets/en/commands/pict185059.en.png)
 
-#### See also 
+## See also 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1117 |
+| Thread safe | &cross; |
+
+

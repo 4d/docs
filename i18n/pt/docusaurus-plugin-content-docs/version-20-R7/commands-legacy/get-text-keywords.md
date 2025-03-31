@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->O comando **GET TEXT KEYWORDS** divide todo o *texto* em palavras individuais e cria, para cada palavra obtida, um elemento no array texto *arrPalavrasChaves* para cada palavra.<!-- END REF-->  
   
@@ -23,7 +23,7 @@ displayed_sidebar: docs
   
 **Nota**: por pedido dos usuários, foi introduzida uma exceção para o francês e o italiano: o apóstrofe (') seguido por uma vogal ou a letra "h" se considera como um separador de palavra. Por exemplo, as cadeias "L'homme" ou "l'arbre" se dividem em "L’"+"homme" y "l'"+"arbre".  
   
-O algoritmo utilizado difere se a opção **Considerar só caracteres não alfanuméricos para as palavras-chaves** está selecionada nas [propriedades da base](https://developer.4d.com/docs/pt/settings/database/#text-comparison).  
+O algoritmo utilizado difere se a opção **Considerar só caracteres não alfanuméricos para as palavras-chaves** está selecionada nas [propriedades da base](../settings/database.md#text-comparison).  
   
 No parâmetro *texto*, passe o texto original a dividir em palavras. Este texto pode ter estilo, cujo caso as etiquetas de estilo são ignoradas.   
   
@@ -33,7 +33,7 @@ Si passa el parâmetro opcional *\**, o comando só armazena cada palavra difere
   
 Este comando permite efetuar de maneira simples as pesquisas entre os registros que contém grandes quantidades de texto garantindo utilizar as mesmas palavras-chaves que 4D. Por exemplo, imagine que você tem um texto que contém "10,000 Jean-Pierre BC45". Se este texto se divide nas palavras-chaves "10,000" + "Jean-Pierre" + "BC45", o array conterá 4 elementos. Então é fácil fazer um bucle neste array para encontrar os registros que contém uma ou mais destas palavras-chave utilizando o operador % (ver exemplos).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um formularia que contém uma área de pesquisa, os usuários podem introduzir uma ou mais palavras. Quando um usuário valida este formulário, buscamos os registros cujo campo *Meucampo* contenha ao menos uma das palavras-chaves introduzidas pelo usuário.   
 
@@ -51,7 +51,7 @@ Em um formularia que contém uma área de pesquisa, os usuários podem introduzi
  USE SET("Totalfound")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 No mesmo formulário que antes, buscamos os registros onde o campo *MeuCampo* contenha todas as palavras-chaves introduzidas pelo usuário.
 
@@ -68,7 +68,7 @@ No mesmo formulário que antes, buscamos os registros onde o campo *MeuCampo* co
  QUERY([MinhaTabela]) //busca
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para contar as palavras de um texto:
 
@@ -80,6 +80,15 @@ Para contar as palavras de um texto:
  ALERT("Este texto contém "+String($n)+" palavras de "+String($m))
 ```
 
-#### Ver também 
+## Ver também 
 
 [DISTINCT VALUES](distinct-values.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1141 |
+| Thread-seguro | &check; |
+
+

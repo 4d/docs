@@ -14,15 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.Char.Summary-->**Char** コマンド は文字コードが*charCode*である文字を返します。<!-- END REF-->
-
-*charCode* にはUTF-16値(1から65535の間) を渡します。
+<!--REF #_command_.Char.Summary-->**Char** コマンド は文字コードが*charCode*である文字を返します。<!-- END REF-->にはUTF-16値(1から65535の間) を渡します。
 
 **Tip:** メソッド作成時、 **Char** は通常キーボードから入力できない文字や、メソッドエディタでは編集コマンドとして解釈される文字を指定するために使用します。
 
-#### 例題 
+## 例題 
 
 以下の例は、変数にキャリッジリターンを代入するためにChar関数を使用し、警告を表示します。 
 
@@ -30,8 +28,17 @@ displayed_sidebar: docs
  ALERT("Employees: "+String(Records in table([Employees]))+Char(Carriage return)+"Press OK to continue.")
 ```
 
-#### 参照 
+## 参照 
 
 [Character code](character-code.md)  
 *Unicodeコード*  
 *文字参照記号*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 90 |
+| スレッドセーフである | &check; |
+
+

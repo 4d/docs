@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get keyboard layout.Summary-->**OBJECT Get keyboard layout**コマンドは*object* と *\** 引数で指定したオブジェクトにカレントプロセスで割り当てられたカレントキーボードレイアウトを返します。<!-- END REF-->
 
@@ -26,6 +23,15 @@ displayed_sidebar: docs
 
 このコマンドは使用する言語の (RFC3066、ISO639、そしてISO3166に基づく) コードを示す文字列を返します。詳細は[SET DATABASE LOCALIZATION](set-database-localization.md)コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1180 |
+| スレッドセーフである | &cross; |
+
+

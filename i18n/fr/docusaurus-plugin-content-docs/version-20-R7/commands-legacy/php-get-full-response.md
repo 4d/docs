@@ -17,16 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 :::info Compatibilité
 
 **PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->La commande **PHP GET FULL RESPONSE** vous permet d’obtenir des informations supplémentaires sur la réponse retournée par l’interpréteur PHP.<!-- END REF--> Cette commande est particulièrement utile en cas d’erreur survenant au cours de l’exécution du script. 
 
@@ -36,7 +33,16 @@ Les tableaux texte synchronisés *libellésErr* et *valeursErr* sont remplis lor
 
 Comme les échanges entre 4D et l’interpréteur PHP s’effectuent via FastCGI, l’interpréteur PHP fonctionne comme s’il était appelé par un serveur HTTP et envoie donc des en-têtes HTTP. Vous pouvez récupérer ces en-têtes et leurs valeurs dans les tableaux *champsEnteteHttp* et *valeursEnteteHttp*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1061 |
+| Thread safe | &cross; |
+
+

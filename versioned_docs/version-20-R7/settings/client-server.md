@@ -24,7 +24,7 @@ If you modify this parameter, you must restart the server database in order for 
 
 #### Publication name  
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
 
 :::note
 
@@ -78,8 +78,8 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
 	- QUIC automatically connects to the port 19813 for both application server and DB4D server.
 	- When the QUIC layer option is selected:
 		-	A beta message and an alert icon are displayed near the selector.
-		-	[Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
-		-	The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+		-	[Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
+		-	The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
 	- **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note

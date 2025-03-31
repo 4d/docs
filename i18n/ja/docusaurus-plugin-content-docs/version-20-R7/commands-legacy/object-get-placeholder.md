@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->**OBJECT Get placeholder**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたプレースホルダーテキストを返します。<!-- END REF-->オブジェクトにプレースホルダーテキストが何も関連付けられていない場合は、空の文字列を返します。
 
@@ -28,7 +25,7 @@ displayed_sidebar: docs
 
 プレースホルダーにプロパティリストを通じてxliff参照が定義されていた場合、コマンドは参照値ではなく、 ":xliff:*resname*"という原文をそのまま返します。
 
-#### 例題 
+## 例題 
 
 あるフィールドのプレースホルダーのテキストを取得したい場合:
 
@@ -36,6 +33,15 @@ displayed_sidebar: docs
  $txt:=OBJECT Get placeholder([People]LastName)
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1296 |
+| スレッドセーフである | &cross; |
+
+

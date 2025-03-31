@@ -13,14 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SPELL Get current dictionary.Summary-->**SPELL Get current dictionary**コマンドは使用中の辞書のID番号を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 カレント辞書の言語を表示します: 
 
@@ -33,6 +30,15 @@ displayed_sidebar: docs
  ALERT("カレント辞書: "+$countryName) // Spanish
 ```
 
-#### 参照 
+## 参照 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1205 |
+| スレッドセーフである | &cross; |
+
+

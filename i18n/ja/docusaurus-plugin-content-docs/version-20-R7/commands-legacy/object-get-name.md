@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get name.Summary-->OBJECT Get name コマンドはフォームオブジェクトの名前を返します。<!-- END REF-->   
 
@@ -26,7 +23,7 @@ displayed_sidebar: docs
 * Object current (*selector* 省略時のデフォルト): このセレクタを渡すか*selector*引数を省略した場合、コマンドはコマンドを呼び出した (オブジェクトメソッドあるいはオブジェクトメソッドから呼ばれたサブメソッド) オブジェクトの名前を返します。この場合、コマンドはフォームオブジェクトのコンテキストから呼ばれなければなりません。そうでなければ空の文字列を返します。
 * Object with focus: このセレクタを渡した場合、コマンドはフォーム上でフォーカスを持つオブジェクトの名前を返します。
 
-#### 例題 
+## 例題 
 
 "bValidateForm" ボタンのオブジェクトメソッド:
 
@@ -36,8 +33,17 @@ displayed_sidebar: docs
 
 このオブジェクトメソッド実行後、*$btnName*変数には"bValidateForm"が格納されています。
 
-#### 参照 
+## 参照 
 
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 *オブジェクト(フォーム)*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1087 |
+| スレッドセーフである | &cross; |
+
+

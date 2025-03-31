@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Parâmetro       | Tipo                                |   | Descrição            |
-| --------------- | ----------------------------------- | - | -------------------- |
-| entitySelection | 4D. EntitySelection | → | Seleção de entidades |
+| Parâmetro       | Tipo                                |                             | Descrição            |
+| --------------- | ----------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D. EntitySelection | &#8594; | Seleção de entidades |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
 
@@ -32,7 +32,7 @@ Após uma chamada para `USE ENTITY SELECTION`, o primeiro registro da seleção 
 
 :::
 
-#### Exemplo
+## Exemplo
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,6 +42,17 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atualizada
 ```
 
-#### Veja também
+## Veja também
 
 [Create entity selection](create-entity-selection.md)
+
+## Propriedades
+
+|                           |                             |
+| ------------------------- | --------------------------- |
+| Command number            | 1513                        |
+| Thread safe               | &check; |
+| Changes current record    |                             |
+| Changes current selection |                             |
+
+

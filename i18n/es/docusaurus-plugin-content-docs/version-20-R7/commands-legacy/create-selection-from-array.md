@@ -15,12 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->El comando **CREATE SELECTION FROM ARRAY** crea la selección temporal *temp* a partir de:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->El comando **CREATE SELECTION FROM ARRAY** crea la selección temporal *temp*<!-- END REF-->  a partir de:
 
 * un array de números de registros absolutos *regArray* de *tabla*,
-* o de un array de booleanos.<!-- END REF--> En este caso, los valores del array indican la pertenencia (**True**) o no (**False**) de cada registro de *tabla* a la selección *temp*.
+* o de un array de booleanos.En este caso, los valores del array indican la pertenencia (**True**) o no (**False**) de cada registro de *tabla* a la selección *temp*.
 
 **Atención:** una selección temporal se crea y carga en la memoria. Por lo tanto, asegúrese de que tenga memoria suficiente antes de ejecutar este comando.
 
@@ -36,11 +36,11 @@ Cuando utiliza un array booleano con este comando, el elemento X del array indic
 
 **Atención** **:** recuerde que un número de registro puede ser reutilizado si el registro es eliminado y se crea otro registro (ver *Acerca de números de registros*).
 
-#### Gestión de errores 
+## Gestión de errores 
 
 Si un número de registro no es válido (registro no creado), se genera el error -10503\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
-#### Ver también 
+## Ver también 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -48,3 +48,14 @@ Si un número de registro no es válido (registro no creado), se genera el error
 [LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 640 |
+| Hilo seguro | &check; |
+| Modifica variables | error |
+| Modifica la selección actual ||
+
+

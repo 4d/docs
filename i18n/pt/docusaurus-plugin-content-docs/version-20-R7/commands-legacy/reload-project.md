@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->O comando **RELOAD PROJECT** recarrega as definições do arquivo fonte (métodos, formulários, etc.) do disco para o projeto executando no ambiente atual 4D.<!-- END REF--> Só pode ser usado com projetos 4D executados em **modo interpretado**. A execução de comando é assíncrona. 
 
@@ -34,6 +31,15 @@ Quando o comando for chamado de:
 * um 4D Developer conectado remotamente a um 4D Server, é executado apenas em 4D Server.
 * um 4D monousuário ou um 4D Server, é executado localmente.
 
-#### Ver também 
+## Ver também 
 
   
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1739 |
+| Thread-seguro | &cross; |
+
+

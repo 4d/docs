@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### 
+## 
 
 <!--REF #_command_.On Drop database method.Summary-->O On Drop database method está disponível em aplicações 4D locais ou remotas.<!-- END REF-->
 
@@ -31,7 +28,7 @@ Este método de banco é executado automaticamente no caso de se soltar objetos 
 
  Em Mac OS, deve pressionar as teclas **Opção**+**Comando** ao soltar para que se chame o método de banco. 
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo pode ser utilizado para abrir um documento 4D Write que foi soltado fora de um formulário:   
   
@@ -44,6 +41,6 @@ Este exemplo pode ser utilizado para abrir um documento 4D Write que foi soltado
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 *Arrastar e Soltar*  

@@ -20,14 +20,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+## Descripción 
 
+<!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros<!-- END REF-->: 
 
-#### Descripción 
-
-<!--REF #_command_.Open window.Summary-->**Open window** abre una nueva ventana cuyas dimensiones son definidas por los cuatro primeros parámetros: 
-
-* *izquierda* es la distancia en píxeles desde el lado izquierdo de la ventana de la aplicación y el costado interior izquierdo de la ventana.<!-- END REF-->
+* *izquierda* es la distancia en píxeles desde el lado izquierdo de la ventana de la aplicación y el costado interior izquierdo de la ventana.
 * *superior* es la distancia en píxeles entre la altura de la ventana de la aplicación y el borde superior del interior de la ventana.
 * *derecha* es la distancia en píxeles entre el lado izquierdo de la ventana de la aplicación y el costado interior derecho de la ventana.
 * *inferior* es la distancia en píxeles desde la parte superior de la ventana de la aplicación y borde interior inferior de la ventana.
@@ -50,7 +47,7 @@ Si pasa una cadena vacía ("") en *titulo,* le indica a 4D que utilice los valor
 
 * El parámetro *casillaCerrar* es opcional y designa el método para cerrar la ventana. Si se especifica este parámetro, la casilla del menú Control (Windows) o la casilla Cerrar (Macintosh) se añade a la ventana. Cuando el usuario hace doble clic en la casilla de menú Control (Windows) o clic en la Casilla cerrar (Macintosh), se llama al método pasado en *casillaCerrar*.
 
-**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento On Close Box. Para mayor información, consulte el comando [Form event code](form-event-code.md).
+**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento On Close Box. Para mayor información, consulte el comando [Form event code](../commands/form-event-code.md).
 
 Si se abre más de una ventana para un proceso, la última ventana abierta es la ventana activa (del primer plano) para ese proceso. Sólo puede modificarse la información dentro de la ventana activa. Todas las demás ventanas pueden ser visualizadas. Cuando el usuario digita, la ventana activa siempre pasará al primer plano, si aún no está ahí.
 
@@ -58,7 +55,7 @@ Los formularios se muestran al interior de una ventana abierta. El texto pasado 
 
 **Open window** devuelve una referencia de ventana de tipo [WinRef](# "Unique ID (Longint) of each open window"), utilizable por los comandos de gestión de ventanas (ver la sección "*WinRef*"). 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente método de proyecto abre una ventana centrada en la ventana en la ventana principal (Windows) o en la pantalla principal (Macintosh). Note que puede aceptar dos, tres, o cuatro parámetros:
 
@@ -93,7 +90,7 @@ Una vez escrito el método de proyecto, puede utilizarlo de esta forma:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo abre una ventana flotante que tiene un casilla de menú Control (Windows) o una casilla de cerrar (Macintosh). La ventana se abre en la esquina superior derecha de la ventana de la aplicación.  
   
@@ -109,7 +106,7 @@ El método CloseColorPalette llama al comando [CANCEL](cancel.md):
 ```
 
   
-#### Ejemplo 3 
+## Ejemplo 3 
 
 El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las propiedades del formulario mostrado en la ventana:   
   
@@ -124,9 +121,9 @@ El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las pr
   
 **Recuerde**: para que la función **Open window** utilice automáticamente las propiedades del formulario, debe llamar a [FORM SET INPUT](form-set-input.md) con el parámetro opcional *\** y las propiedades del formulario deben haber sido definidas en función de esta utilización en el entorno Diseño.
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
-Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac OS X:
+Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macOS:
 
 ```4d
  $miVentana:=Open window(10;10;400;400;Sheet window)
@@ -135,8 +132,17 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo Mac 
   //El evento On Load se genera luego se muestra la ventana; "desciende" de debajo de la barra de título
 ```
 
-#### Ver también 
+## Ver también 
 
 [CLOSE WINDOW](close-window.md)  
 *Crear ventana*  
 [Open form window](open-form-window.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 153 |
+| Hilo seguro | &cross; |
+
+

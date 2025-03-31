@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->The SET FILE TO PASTEBOARD command adds the complete pathname of the file passed in the *file* parameter.<!-- END REF--> This command can be used to set up interfaces allowing the drag and drop of 4D objects to files on the desktop for example.
 
@@ -27,6 +24,15 @@ The command accepts the star *\** as an optional parameter. By default, when thi
 
 **Note:** The pasteboard is in read-only mode during the On Drag Over form event. It is therefore not possible to use this command in that context.
 
-#### See also 
+## See also 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 975 |
+| Thread safe | &cross; |
+
+

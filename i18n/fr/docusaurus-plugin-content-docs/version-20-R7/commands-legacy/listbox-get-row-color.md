@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get row color.Summary-->**Note :** Cette commande ne fonctionne qu'avec les list box de type tableau.<!-- END REF-->
 
@@ -41,7 +38,7 @@ Dans le paramètre *typeCouleur*, vous pouvez passer la constante lk couleur de 
 
 **Attention :** Une couleur affectée à une ligne ne s'affiche pas nécessairement dans chaque cellule de la ligne (voir l'exemple). Si des valeurs de couleurs qui sont en conflit sont paramétrées à l'aide des propriétés des list box ou des colonnes de list box, un ordre de priorité est appliqué. Pour plus d'informations, veuillez consulter le manuel *Mode Développement*.
 
-#### Exemple 
+## Exemple 
 
 Considérons la list box suivante :
 
@@ -57,6 +54,15 @@ Considérons la list box suivante :
   // $vtColor3 contient "#FF0000" (rouge)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1658 |
+| Thread safe | &cross; |
+
+

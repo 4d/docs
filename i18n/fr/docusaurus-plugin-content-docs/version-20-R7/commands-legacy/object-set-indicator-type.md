@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->La commande **OBJECT SET INDICATOR TYPE** vous permet de modifier le type d’indicateur de progression du ou des thermomètre(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
@@ -34,6 +31,15 @@ Passez dans le paramètre *indicateur* le type d’indicateur à afficher. Vous 
 | Barber shop               | Entier long | 2      | Barre affichant une animation continue                 |
 | Progress bar              | Entier long | 1      | Barre de progression standard                          |
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1246 |
+| Thread safe | &cross; |
+
+

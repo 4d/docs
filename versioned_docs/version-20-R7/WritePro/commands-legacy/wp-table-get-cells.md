@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Table get cells.Summary-->The **WP Table get cells** command returns a new cell range object containing the selection of cells in the *targetObj* or *tableRef* (defined by *startCol*, *startRow*, *numCols*, and *numRows*).<!-- END REF-->
 
@@ -41,7 +41,7 @@ If *numRows* is omitted, a single row is returned. If both *numCols* and *numRow
 
 If *startCol* plus *numCols* or *startRow* plus *numRows* exceeds the number of columns/rows in *tableRef*, or if *startCol* or *startRow* is greater than the number of columns/rows in *tableRef*, the returned range contains the maximum possible columns/rows.
 
-#### Example 1 
+## Example 1 
 
 You want to modifiy the attributes of a range of cells:
 
@@ -68,7 +68,7 @@ Result:
 
 ![](../../assets/en/WritePro/commands/pict3307320.en.png)
 
-#### Example 2 
+## Example 2 
 
 To get a range of cells starting from the cell "5x7" to the end of the row:
 
@@ -88,7 +88,7 @@ To get a range of cells starting from the cell "5x7" to the end of the table:
  $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to retrieve the cells a user has selected:
 
@@ -100,7 +100,7 @@ You want to retrieve the cells a user has selected:
  $cells:=WP Table get cells($userSelection)
 ```
 
-#### See also 
+## See also 
 
 [WP Table get columns](wp-table-get-columns.md)  
 [WP Table get rows](wp-table-get-rows.md)  

@@ -17,7 +17,7 @@ The name of a class can contain up to 31 characters.
 
 A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
 
 ## Functions
 
@@ -29,7 +29,7 @@ Function names must be compliant with standard [property naming rules](#object-p
 
 The name of an object property (also called object *attribute*) can contain up to 255 characters.
 
-Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](./dt_object.md#properties)**:
 
 - A property name must begin with a letter, an underscore, or a dollar "$".
 - Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").

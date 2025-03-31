@@ -12,17 +12,24 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL LOGOUT.Summary-->La commande **SQL LOGOUT** referme la connexion avec une source ODBC ouverte dans le process courant (le cas échéant).<!-- END REF--> S’il n’y a pas de connexion ODBC ouverte, la commande ne fait rien. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la connexion a été correctement refermée, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les éventuelles erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL LOGIN](sql-login.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 872 |
+| Thread safe | &cross; |
+| Modifie les variables | OK, error |
+
+

@@ -1,11 +1,11 @@
 ---
 id: onPlugInArea
-title: Sur appel zone du plug in
+title: On Plug in Area
 ---
 
-| Code | Peut être appelé par                                                        | Définition                                                    |
-| ---- | --------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| 19   | Formulaire - [Zone de Plug-in](FormObjects/pluginArea_overview.md#overview) | Un objet externe a demandé que sa méthode objet soit exécutée |
+| Code | Peut être appelé par                                      | Définition                                                    |
+| ---- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| 19   | Form - [Plug-in Area](FormObjects/pluginArea_overview.md) | Un objet externe a demandé que sa méthode objet soit exécutée |
 
 
 ## Description

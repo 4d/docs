@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->The **ST COMPUTE EXPRESSIONS** command updates the dynamic 4D expressions found in the multi-style or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> 
 
@@ -58,7 +55,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 **Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
 
-#### Example 
+## Example 
 
 You want to update the references included in the selection of text:
 
@@ -66,7 +63,17 @@ You want to update the references included in the selection of text:
  ST COMPUTE EXPRESSIONS(*;"myText";ST Start highlight;ST End highlight)
 ```
 
-#### See also 
+## See also 
 
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1285 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->The **INVOKE ACTION** command triggers the standard action defined by the *action* parameter, optionally in the *target* context.<!-- END REF-->
 
@@ -27,7 +24,7 @@ Available 4D actions are listed in the *Standard actions* section of the *4D Des
 
 **Note:** Additional specific actions are also provided for 4D Write Pro documents. They are detailed in the *Using 4D Write Pro standard actions* section of the 4D Write Pro Reference manual.
 
-##### 
+### 
 
 In *target*, you can pass the form context where the *action* must be executed. You can use one of the following constants from the *Standard Action* theme:
 
@@ -47,7 +44,7 @@ Depending on the *target*, the **INVOKE ACTION** command execution is either syn
 
 The **INVOKE ACTION** command does not generate an error, for example, if the requested action is not available in the current context. You must validate the expected action using the [Action info](action-info.md) command. 
 
-#### Example 1 
+## Example 1 
 
 You want to execute the **Copy** standard action in the current form:
 
@@ -55,7 +52,7 @@ You want to execute the **Copy** standard action in the current form:
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to execute a **Goto page** standard action (page 3) in the main form:
 
@@ -63,6 +60,15 @@ You want to execute a **Goto page** standard action (page 3) in the main form:
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-#### See also 
+## See also 
 
 [Action info](action-info.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1439 |
+| Thread safe | &cross; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** changes the identity of the current user in the database, without needing to quit.<!-- END REF--> The user can change their identity themselves either using the database connection dialog box (when the command is called without parameters) or directly via the command. When a user changes their identity, they abandon any former access privileges in favor of those belonging to the chosen user.
 
@@ -40,7 +37,7 @@ The command execution is delayed to prevent flooding (brute force attack), in ot
 
 **Note:** When the group of the current user provides access to a "serialized" feature (e.g. a plug-in), a corresponding license is used and will remain attached to the 4D user account until the end of the session, even if **CHANGE CURRENT USER** is called and the group of the new user does not provide access to the feature.
 
-##### Offering a custom access management dialog box 
+### Offering a custom access management dialog box 
 
 The **CHANGE CURRENT USER** command can be used to set up custom dialog boxes for entering the name and password (with entry and expiration rules) that benefit from the same advantages as the access control system of 4D.   
 Here is how It works: 
@@ -55,7 +52,7 @@ Here is how It works:
 
 **3.** When the entry is validated, the required information (user name and password) are passed to the **CHANGE CURRENT USER** command in order to open the database with the user account privileges.
 
-#### Example 
+## Example 
 
 The following example simply displays the connection dialog box:
 
@@ -65,7 +62,16 @@ The following example simply displays the connection dialog box:
 
 **Note:** This code does nothing in a single-user project database. 
 
-#### See also 
+## See also 
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 289 |
+| Thread safe | &cross; |
+
+

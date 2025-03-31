@@ -9,7 +9,7 @@ Après avoir [créé un entity set]($method.md#methodentityset) à l'aide de `$m
 
 | Syntaxe                                                                                                                                                                                      | Exemple                                                                      | Description                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un entity set existant                                              |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un entity set existant                                              |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
 
 ## $entityset/\{entitySetID\}
@@ -34,14 +34,14 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
 Crée un autre entity set basé sur des entity sets préalablement créés
 
-| Paramètres       | Type   | Description                                                   |
-| ---------------- | ------ | ------------------------------------------------------------- |
-| $logicOperator   | String | L'un des opérateurs logiques à tester avec l'autre entity set |
-| $otherCollection | String | ID de l'entity set                                            |
+| Paramètres       | Type | Description                                                   |
+| ---------------- | ---- | ------------------------------------------------------------- |
+| $logicOperator   | Text | L'un des opérateurs logiques à tester avec l'autre entity set |
+| $otherCollection | Text | ID de l'entity set                                            |
 
 ### Description
 
-Après avoir créé un entity set (entity set #1) en utilisant `$method=entityset`, vous pouvez ensuite créer un autre entity set en utilisant la syntaxe `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`, la propriété `$logicOperator` (dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété `$otherCollection`. Les deux entity sets doivent être dans la même dataclass.
+&$otherCollection`, la propriété `$logicOperator`(dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété`$otherCollection`. Après avoir créé un entity set (entity set #1) en utilisant `$method=entityset`, vous pouvez ensuite créer un autre entity set en utilisant la syntaxe `$entityset/\{entitySetID\}?$logicOperator... Les deux entity sets doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre entity set contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 
@@ -50,7 +50,7 @@ Voici les opérateurs logiques :
 | Opérateur | Description                                                                                                                                                                            |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Retourne les entités communes aux deux entity sets                                                                                                                                     |
-| OU        | Retourne les entités contenues dans les deux entity sets                                                                                                                               |
+| OR        | Retourne les entités contenues dans les deux entity sets                                                                                                                               |
 | EXCEPT    | Retourne les entités de l'entity set #1 moins celles de l'entity set #2                                                                                                                |
 | INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux entity sets (ce qui signifie qu'au moins une entité est commune aux deux entity sets) |
 

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT mostra *objeto* utilizando a fonte especificada no parâmetro *fonte*.<!-- END REF--> O parâmetro *fonte* deve conter um nome de fonte válido.
 
@@ -26,7 +23,7 @@ Se especificar o parâmetro opcional *\**, indica um nome de objeto (uma cadeia)
 
 **Nota**: Se usar este comando em um objeto que use uma folha de estilo, a referência à folha de estilo é apagada automaticamente do objeto - mesmo se atribuir os mesmos atributos que da folha de estilo.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a segior define a fonte de um botão chamado *bOK*: 
 
@@ -34,7 +31,7 @@ O exemplo a segior define a fonte de um botão chamado *bOK*:
  OBJECT SET FONT(bOK;"Arial")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir define a fonte para todos os objetos de formulário cujo nome contenha "info": 
 
@@ -42,7 +39,7 @@ O exemplo a seguir define a fonte para todos os objetos de formulário cujo nome
  OBJECT SET FONT(*;"@info@";"Times")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entrada e visualização de campos de tipo “senha”. Quando passe "%password" no parâmetro *fonte*:
 
@@ -55,7 +52,7 @@ O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entr
  OBJECT SET FONT([Users]Password;"%password")
 ```
 
-#### Ver também 
+## Ver também 
 
 [Font file](font-file.md)  
 [FONT LIST](font-list.md)  
@@ -63,3 +60,12 @@ O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entr
 [OBJECT Get font](object-get-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 164 |
+| Thread-seguro | &cross; |
+
+

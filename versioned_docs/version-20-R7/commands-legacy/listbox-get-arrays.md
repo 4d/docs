@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->The **LISTBOX GET ARRAYS** command returns a set of synchronized arrays providing information on each column (visible or invisible) in the list box set in the *object* and *\** parameters.<!-- END REF-->
 
@@ -47,8 +44,17 @@ For record selection, collection or entity selection type list boxes, *arrStyles
    * For each configuration set via a variable, a pointer to the variable,  
    * For each configuration set via an expression, a Nil pointer.
 
-#### See also 
+## See also 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 832 |
+| Thread safe | &cross; |
+
+

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->O comando TRUNCATE TABLE \[#descv\]apaga rapidamente todos os registros de *tabela*.<!-- END REF--> Depois de chamar o comando, não há uma seleção atual nem um registro atual.  
   
@@ -31,10 +31,22 @@ O comando TRUNCATE TABLE deve portanto ser utilizado com cuidado, no entanto é 
   
 **Nota**: o conceito e funcionamento deste comando é similar ao do comando SQL TRUNCATE (TABELA).
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando tiver sido executado corretamente, a variável sistema OK assume o valor 1\. Do contrário, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [DELETE SELECTION](delete-selection.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1051 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+| Modificar o registro atual ||
+| Modificar a seleção atual ||
+
+

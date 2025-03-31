@@ -18,23 +18,23 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula.Params -->
 
-| 引数         | 型                           |     | 説明                                  |
-| ---------- | --------------------------- | :-: | ----------------------------------- |
-| formulaExp | 式                           |  →  | オブジェクトとして返されるフォーミュラ                 |
-| 戻り値        | 4D.Function |  ←  | フォーミュラを格納しているネイティブな Function オブジェクト |
+| 引数         | 型                           |                             | 説明                                  |
+| ---------- | --------------------------- | :-------------------------: | ----------------------------------- |
+| formulaExp | 式                           | &#8594; | オブジェクトとして返されるフォーミュラ                 |
+| 戻り値        | 4D.Function | &#8592; | フォーミュラを格納しているネイティブな Function オブジェクト |
 
 <!-- END REF -->
 
-#### 説明
+## 説明
 
-`Formula` コマンドは、<!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
 フォーミュラがオブジェクトとして存在することで、コマンドやメソッドに対して引数 (計算された属性) として渡したり、"コンポーネントとホストデータベース間で共有" として宣言せずとも様々なコンポーネントから実行したりできるようになります。 呼び出されたフォーミュラオブジェクトは、それを作成したデータベースあるいはコンポーネントのコンテキストにおいて評価されます。
 
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
-- [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-- オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
+- [`.call()`](../API/FunctionClass.md#call) あるいは [`.apply()`](../API/FunctionClass.md#apply) 関数
+- object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,15 +47,15 @@ displayed_sidebar: docs
  $o.myFormula() // 3 を返します
 ```
 
-フォーミュラには [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
+You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
-フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、`This` コマンドでアクセス可能です。
+フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、 `This` コマンドでアクセス可能です。
 
-*formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。 実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。
+*formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。  実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。
 
 `Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
 
-#### 例題 1
+## 例題 1
 
 単純なフォーミュラの例:
 
@@ -69,13 +69,11 @@ displayed_sidebar: docs
  $result:=$o.f() // 3 を返します
 ```
 
-#### 例題 2
+## 例題 2
 
 ローカル変数を使用するフォーミュラの例:
 
 ```4d
-
-
  $value:=10
  $o:=New object("f";Formula($value))
  $value:=20
@@ -83,7 +81,7 @@ displayed_sidebar: docs
  $result:=$o.f() // 10 を返します
 ```
 
-#### 例題 3
+## 例題 3
 
 引数を用いたシンプルなフォーミュラの例:
 
@@ -92,7 +90,7 @@ displayed_sidebar: docs
  $result:=$o.f(10;20) // 30 を返します
 ```
 
-#### 例題 4
+## 例題 4
 
 引数を用いたプロジェクトメソッドを使用する例:
 
@@ -101,7 +99,7 @@ displayed_sidebar: docs
  $result:=$o.f("param1";"param2") // $result:=myMethod("param1";"param2") と同等です
 ```
 
-#### 例題 5
+## 例題 5
 
 `This` を使用する例:
 
@@ -112,7 +110,7 @@ displayed_sidebar: docs
  $result:=$o.fullName() // "John Smith" を返します
 ```
 
-#### 例題 6
+## 例題 6
 
 オブジェクト記法を使用してフォーミュラを呼び出す例:
 
@@ -133,9 +131,18 @@ displayed_sidebar: docs
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
-#### 参照
+## 参照
 
-[4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
-[4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
-[4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
+[4D Blog - フォーミュラ: シンプルさの裏にある、さらなるパワー](https://blog.4d.com/ja/new-formula-more-power-behind-simplicity/)\
+[4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
+[4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+## プロパティ
+
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1597                        |
+| スレッドセーフ | &check; |
+
+

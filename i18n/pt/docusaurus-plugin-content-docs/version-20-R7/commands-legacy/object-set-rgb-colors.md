@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->O comando OBJECT SET RGB COLORS modifica as cores de fundo e primeiro plano dos objetos especificados por objeto e o parâmetro opcional \*.<!-- END REF--> Quando o comando é aplicado a um objeto list box, um parâmetro adicional lhe permite modificar a cor alternativa das filas.
 
@@ -43,7 +40,7 @@ Os valores das cores RGB são indicados nos parâmetros *corPrimeirpoPlano*, *co
 | 4-byte RGB value                    | Inteiro longo | Entero largo de 4 bytes (formato 0x00rrggbb). Valores hexadecimales:<br/> rr = componente vermelho da cor gg = componente verde da cor bb = componente azul da cor                                                                                                                                                                                                                                                                            | 0x00000000, 0x00FF7F7F                                                                           |
 | 4D "system" color constant          | Entero largo  | Cores utilizadas por 4D para desenhar objetos com cores automáticas. Constantes disponíveis (do tema *DEFINIR CORES RVA*):<br/> Background color Background color none (só pode ser utilizada com os parâmetros *corFundo* e *corFundoAlt*) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **Nota:** *as cores automáticas dependem de sistema e do tipo de objeto ao qual são atribuídos.* |
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este formulário contém duas variáveis editáveis, *vsCorValor* e *vsCor* assim como três barras termômetros: *thVermelho*, *thVerde*, e *thAzul*.
 
@@ -91,7 +88,7 @@ Em execução, o formulário se vê assim:
 
 ![](../assets/en/commands/pict4278099.en.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Muda o fundo transparente com uma cor de fonte clara:
 
@@ -103,8 +100,16 @@ Muda o fundo transparente com uma cor de fonte clara:
 
 ![](../assets/en/commands/pict1210702.en.png)
 
-#### Ver também 
+## Ver também 
 
-*\_o\_OBJECT SET COLOR*  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB Color](select-rgb-color.md)  
+[Select RGB color](select-rgb-color.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 628 |
+| Thread-seguro | &cross; |
+
+

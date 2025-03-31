@@ -14,11 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Get subrecord key.Summary-->The Get subrecord key command facilitates the migration of 4D code using converted subtables to standard code for working with tables.<!-- END REF-->
-
-**Reminder:** Beginning with version 11 of 4D, subtables are not supported. When a older database is converted, any existing subtables are transformed into standard tables that are linked with the original tables by an automatic relation. The former subtable becomes the Many table and the original table is the One table. In the One table, the former subtable field is transformed into a special field of the "Subtable Relation" type and in the Many field, a special "Subtable Relation" type field is added named “id\_added\_by\_converter”. 
+<!--REF #_command_.Get subrecord key.Summary-->The Get subrecord key command facilitates the migration of 4D code using converted subtables to standard code for working with tables.<!-- END REF-->Beginning with version 11 of 4D, subtables are not supported. When a older database is converted, any existing subtables are transformed into standard tables that are linked with the original tables by an automatic relation. The former subtable becomes the Many table and the original table is the One table. In the One table, the former subtable field is transformed into a special field of the "Subtable Relation" type and in the Many field, a special "Subtable Relation" type field is added named “id\_added\_by\_converter”. 
 
 This allows converted databases to function but we strongly recommend that you replace any subtable mechanisms in your converted databases by those used for standard tables. 
 
@@ -60,7 +58,7 @@ In the *idField* parameter, the command accepts either a field of the Subtable R
 
 This lets you write the transition code. During the final stage of upgrading the application, you can remove the calls to this command. 
 
-#### Assigning values to the id\_added\_by\_converter field 
+## Assigning values to the id\_added\_by\_converter field 
 
 Starting with 4D v14 R3, you can assign a value to the "id\_added\_by\_converter" field. Previously, this value could only be assigned by 4D itself, which forced developers to use obsolete commands such as *\_o\_CREATE SUBRECORD* to be able to add records into converted subtables.
 
@@ -80,3 +78,13 @@ For example, with the structure above you can write:
 ```
 
 This code will work with either a special relation or a standard one.
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1137 |
+| Thread safe | &check; |
+
+

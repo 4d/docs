@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu bar reference.Summary-->La commande **Get menu bar reference** renvoie l’identifiant unique de la barre de menus courante ou de la barre de menus d’un process spécifique.<!-- END REF-->
 
@@ -35,10 +32,19 @@ Si la barre de menus a été créée par la commande [Create menu](create-menu.m
 
 Le paramètre *process* permet de désigner le process duquel vous souhaitez obtenir l’identifiant de la barre de menus courante. Si vous omettez ce paramètre, la commande retourne l’identifiant de la barre de menus du process courant.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [GET MENU ITEMS](get-menu-items.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU BAR](set-menu-bar.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 979 |
+| Thread safe | &cross; |
+
+

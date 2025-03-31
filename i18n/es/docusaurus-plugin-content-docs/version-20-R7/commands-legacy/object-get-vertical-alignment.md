@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get vertical alignment.Summary-->El comando **OBJECT Get vertical alignment** devuelve un valor indicando el tipo de alineación vertical aplicada al objeto designado por los parámetros *objeto* y *\**.<!-- END REF-->  
   
@@ -40,8 +37,17 @@ La alineación vertical puede aplicarse a los siguientes tipos de objetos de for
 * columnas de list box,
 * encabezados y pies de list box.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1188 |
+| Hilo seguro | &cross; |
+
+

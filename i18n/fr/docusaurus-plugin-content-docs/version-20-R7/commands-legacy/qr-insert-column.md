@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->La commande **QR INSERT COLUMN** insère ou crée dans *zone* une colonne à un emplacement spécifique.<!-- END REF--> Les colonnes situées à droite de la colonne ajoutée seront décalées en conséquence.
 
@@ -30,7 +27,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 **Note :** Cette commande ne peut pas être utilisée avec un état en tableau croisé.
 
-#### Exemple 
+## Exemple 
 
 La ligne suivante insère (ou crée) une première colonne dans la zone MaZone et la remplit avec le contenu du champ Noms. L'intitulé par défaut de la colonne sera “Noms” : 
 
@@ -38,6 +35,16 @@ La ligne suivante insère (ou crée) une première colonne dans la zone MaZone e
  QR INSERT COLUMN(MaZone;1;->[Table 1]Noms)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 748 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

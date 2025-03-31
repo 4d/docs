@@ -14,13 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.Arctan.Summary-->Arctan devuelve el ángulo, expresado en radianes, de la tangente *número*.<!-- END REF-->
+<!--REF #_command_.Arctan.Summary-->Arctan devuelve el ángulo, expresado en radianes, de la tangente *número*.<!-- END REF-->4D ofrece las constantes predefinidas *Pi*, Degree, y Radian. *Pi* devuelve el número Pi (3.14159...), Degree devuelve el valor en radianes de un grado (0.01745...) y Radian devuelve el valor en grados de un radián (57.29577...).
 
-**Nota:** 4D ofrece las constantes predefinidas *Pi*, Degree, y Radian. *Pi* devuelve el número Pi (3.14159...), Degree devuelve el valor en radianes de un grado (0.01745...) y Radian devuelve el valor en grados de un radián (57.29577...).
-
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra el valor de Pi:
 
@@ -28,8 +26,17 @@ El siguiente ejemplo muestra el valor de Pi:
  ALERT("Pi es igual a: "+String(4*Arctan(1)))
 ```
 
-#### Ver también 
+## Ver también 
 
 [Cos](cos.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 20 |
+| Hilo seguro | &check; |
+
+

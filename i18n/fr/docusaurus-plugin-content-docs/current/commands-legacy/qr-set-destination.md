@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->La commande **QR SET DESTINATION** permet de définir le *type* de destination de sortie de l'état rapide contenu dans la *zone*.<!-- END REF-->
 
@@ -44,7 +41,7 @@ Par défaut, le délimiteur de champ est le caractère Tabulation (code 9) et le
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si la valeur de *type* de destination est incorrecte, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant définit le fichier texte "MonDoc.txt" comme type de destination de l'état puis l'exécute : 
 
@@ -53,6 +50,16 @@ L'exemple suivant définit le fichier texte "MonDoc.txt" comme type de destinati
  QR RUN(MaZone)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET DESTINATION](qr-get-destination.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 745 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

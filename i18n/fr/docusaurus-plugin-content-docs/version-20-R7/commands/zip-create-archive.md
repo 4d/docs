@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Paramètres      | Type                      |     | Description                                                               |
-| --------------- | ------------------------- | :-: | ------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  →  | Objet fichier ou dossier à compresser                                     |
-| folderToZip     | 4D.Folder |  →  | Objet fichier ou dossier à compresser                                     |
-| zipStructure    | Object                    |  →  | Objet fichier ou dossier à compresser                                     |
-| destinationFile | 4D.File   |  →  | Fichier de destination de l'archive                                       |
-| options         | Integer                   |  →  | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Résultat        | Object                    |  ←  | Objet statut                                                              |
+| Paramètres      | Type                      |                             | Description                                                               |
+| --------------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594; | Objet fichier ou dossier à compresser                                     |
+| folderToZip     | 4D.Folder | &#8594; | Objet fichier ou dossier à compresser                                     |
+| zipStructure    | Object                    | &#8594; | Objet fichier ou dossier à compresser                                     |
+| destinationFile | 4D.File   | &#8594; | Fichier de destination de l'archive                                       |
+| options         | Integer                   | &#8594; | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
+| Résultat        | Object                    | &#8592; | Objet statut                                                              |
 
 <!-- END REF -->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description
+## Description
 
 La commande `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary -->crée un objet d'archive ZIP compressée et renvoie le statut de l'opération<!-- END REF -->.
 
@@ -51,7 +51,7 @@ Vous pouvez passer un objet 4D.File, 4D.Folder, ou une structure Zip en tant que
 
 Dans le paramètre *destinationFile*, passez un objet `4D.File` décrivant l'archive ZIP à créer (nom, emplacement, etc.). Il est conseillé d'utiliser l'extension ".zip" si vous souhaitez que l'archive ZIP soit traitée automatiquement par un logiciel.
 
-Une fois que l'archive est créée, vous pouvez utiliser la commande [ZIP Read archive](#zip-read-archive) pour y accéder.
+Une fois que l'archive est créée, vous pouvez utiliser la commande [ZIP Read archive](zip-read-archive.md) pour y accéder.
 
 **Status object**
 
@@ -63,7 +63,7 @@ L'objet statut retourné contient les propriétés suivantes :
 | status     | Integer | Code d'état                                                                                                                                                                          |
 | success    | Boolean | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                                                |
 
-#### Exemple 1
+## Exemple 1
 
 Pour compresser un `4D.File` :
 
@@ -77,7 +77,7 @@ Pour compresser un `4D.File` :
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Pour compresser un `4D.Folder` sans le dossier lui-même :
 
@@ -92,7 +92,7 @@ Pour compresser un `4D.Folder` sans le dossier lui-même :
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### Exemple 3
+## Exemple 3
 
 Pour compresser une structure d'archive ZIP avec un mot de passe et une barre de progression :
 
@@ -122,7 +122,7 @@ Pour compresser une structure d'archive ZIP avec un mot de passe et une barre de
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### Exemple 4
+## Exemple 4
 
 Vous souhaitez passer une collection de dossiers et de fichiers à compresser à l'objet *zipStructure* :
 
@@ -139,7 +139,7 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### Exemple 5
+## Exemple 5
 
 Vous souhaitez utiliser un autre algorithme de compression à un niveau de compression élevé :
 
@@ -157,9 +157,18 @@ $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
 ```
 
-#### Voir également
+## Voir également
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1640                        |
+| Thread safe        | &check; |
+
+

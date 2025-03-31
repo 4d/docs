@@ -13,8 +13,8 @@ Para definir claramente os conceitos implementados com subformulários, aqui est
 
 *   **Subformulário**: um formulário destinado a ser incluído em outro formulário, ele próprio chamado de formulário pai.
 *   **Formulário pai**: um formulário que contém um ou mais subformulários.
-*   **Contêiner de sub**formulário: um objeto incluído no formulário pai, que exibe uma instância do subformulário.
-*   **Instância de sub**formulário: a representação de um subformulário em um formulário pai. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
+*   **Contêiner de subformulário**: um objeto incluído no formulário pai, que exibe uma instância do subformulário.
+*   **Instância de subformulário**: a representação de um subformulário em um formulário pai. Esse conceito é importante porque é possível exibir várias instâncias do mesmo subformulário em um formulário pai.
 *   **Formulário lista**: instância do subformulário exibido como uma lista.
 *   **Formulário de detalhes**: formulário de entrada do tipo página associado a um subformulário do tipo lista que pode ser acessado com um clique duplo na lista.
 
@@ -45,7 +45,7 @@ O subformulário de página usa o formulário de entrada indicado pela proprieda
 
 É possível vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulário. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
 
-Por padrão, o 4D cria uma variável ou expressão de [tipo objeto](properties_Object.md#expression-type) para um contêiner de subformulário, o que permite compartilhar valores no contexto do subformulário usando o comando `Form` ([veja abaixo](#using-the-subform-bound-object)). For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
 
 - Defina uma variável ou expressão vinculada de um tipo escalar e chame os comandos `OBJECT Get subform container value` e `OBJECT SET SUBFORM CONTAINER VALUE` para trocar valores quando ocorrerem eventos de formulário [On Bound Variable Change](../Events/onBoundVariableChange.md) ou [On Data Change](../Events/onDataChange.md). Esta solução é recomendada para sincronizar um único valor.
 - Defina uma variável ou expressão vinculada do tipo de **objeto** e use o comando `Form` para acessar suas propriedades no subformulário. Esta solução é recomendada para sincronizar vários valores.
@@ -83,10 +83,8 @@ Caso 1: O valor da variável da forma pai ou expressão é modificado e essa mod
 O seguinte código é executado:
 
 ```4d  
-// Método de formulário de subformulário
-If (Form event code=On Bound Variable Change) //variável ou expressão vinculada foi modificada no formulário pai
-    Form.clockValue:=OBJECT Obter valor do contêiner do subformulário //sincronizar o valor local
-End if
+// Método de formulário de subformulário If (Form event code=On Bound Variable Change) //variável ou expressão vinculada foi modificada no formulário pai
+    Form.clockValue:=OBJECT Obter valor do contêiner do subformulário //sincronizar o valor local End if
 ```
 
 Ele atualiza o valor de `Form.clockValue` no subformulário:
@@ -116,10 +114,8 @@ Dentro do subformulário, o botão altera o valor da expressão `Form.clockValue
 O seguinte código é executado:
 
 ```4d  
-// método do objeto de relógio do subformulário
-If (Form event code=On Data Change) //qualquer que seja a forma como o valor é alterado
-    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
-End if
+// método do objeto de relógio do subformulário If (Form event code=On Data Change) //qualquer que seja a forma como o valor é alterado
+    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container End if
 ```
 
 ![](../assets/en/FormObjects/update-main-form.png)
@@ -147,8 +143,7 @@ No formulário pai, o subformulário é apresentado duas vezes. Cada contêiner 
 O botão apenas cria as propriedades `mãe` e `pai` no objeto `Form` do pai:
 
 ```4d
-//Método de objeto do botão Adicionar valores
-Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
+//Método de objeto do botão Adicionar valores Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
 Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 ```
 
@@ -165,11 +160,9 @@ Se você modificar um valor tanto no formulário principal quanto no subformulá
 Em versões anteriores à 4D v19 R5, a sincronização entre formulários e subformas pai foi realizada através do **ponteiros**. Por exemplo, para atualizar um objeto subformulário, você pode chamar o seguinte código:
 
 ```4d  
-// Método do formulário de subformulário
 Se (Código do evento do formulário=On Bound Variable Change) 
     ptr:=OBJECT Get pointer(Object subform container) 
-    clockValue:=ptr-> 
-Fim se
+    clockValue:=ptr-> Fim se
 ```
 
 **Este princípio ainda é suportado para compatibilidade, mas agora está obsoleto, pois não permite expressões de ligação a subformulários.** Não deve mais ser usado em seus desenvolvimentos. Em qualquer caso, recomendamos usar o [`Comando Formulário`](#synchronizing-parent-form-and-subform-multiple-values) ou os [`Comando OBJECT GET SUBFORM CONTAINER VALUE` e `Comando OBJECT SET SUBFORM CONTAINER VALUE`](#synchronizing-parent-form-and-subform-single-value) para sincronizar os valores do formulário e subformulário.
@@ -197,7 +190,7 @@ Para obter mais informações, consulte a descrição do comando `CALL SUBFORM C
 
 #### Comando EXECUTE METHOD IN SUBFORM
 
-O comando `EXECUTE METHOD IN SUBFORM` permite que um formulário ou um de seus objetos solicite a execução de um método no contexto da instância do subformulário, o que lhe dá acesso às variáveis do subformulário, objetos, etc. Este método também pode receber parâmetros.
+O comando `EXECUTE METHOD IN SUBFORM` permite que um formulário ou um de seus objetos solicite a execução de um método no contexto da instância do subformulário, o que lhe dá acesso às variáveis do subformulário, objetos, etc. Este método também pode receber parâmetros. Este método também pode receber parâmetros.
 
 Este mecanismo é ilustrado no diagrama seguinte:
 

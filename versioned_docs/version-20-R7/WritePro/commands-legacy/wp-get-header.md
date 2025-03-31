@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get header.Summary-->The **WP Get header** command returns the header associated to the *targetObj* or to the specified *sectionIndex* of the *wpDoc* document.<!-- END REF--> If no header is found with regards to the parameter(s), the command returns **Null**.
 
@@ -33,7 +33,7 @@ If the *subSectionType* parameter is passed, the command returns the header asso
     
 If the *subSectionType* is not specified, the main section header will be returned. In this case, if a sub-section is active, the main section header object is *undefined* (the main section header is available only if there is no active wk first page or wk left page sub-section).
 
-#### Example 
+## Example 
 
 You want to copy the header of the first page of a 4D Write Pro document to the headers of all pages of another 4D Write Pro document:
 
@@ -50,7 +50,7 @@ You want to copy the header of the first page of a 4D Write Pro document to the 
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### See also 
+## See also 
 
 *Using a 4D Write Pro area*  
 [WP DELETE HEADER](wp-delete-header.md)  

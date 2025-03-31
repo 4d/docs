@@ -5,21 +5,18 @@ slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *list* ; itemRef | * ; *icon* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *list* ; *itemRef* ; *icon* )<br/>**SET LIST ITEM ICON** ( * ; *list* ; * ; *icon* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | icon | Picture | &#8594;  | Icon to be associated with item |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->The **SET LIST ITEM ICON** command modifies the icon associated with the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -33,7 +30,7 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 
 Pass a valid 4D picture expression (field, variable, pointer, etc.) in the *icon* parameter. The picture will be placed to the left of the item. 
 
-#### Example 
+## Example 
 
 We want to assign the same picture to two different items. The following code is optimized since the picture is only loaded into memory once:
 
@@ -44,8 +41,17 @@ We want to assign the same picture to two different items. The following code is
  SET LIST ITEM ICON(mylist;ref2;$picture)
 ```
 
-#### See also 
+## See also 
 
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 950 |
+| Thread safe | &cross; |
+
+

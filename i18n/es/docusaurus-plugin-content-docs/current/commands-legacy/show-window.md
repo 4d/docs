@@ -13,9 +13,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 #### Descripción 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->El comando SHOW WINDOW permite mostrar la ventana cuyo número se pasó en *ventana*.<!-- END REF--> Si se omite este parámetro, se mostrará la ventana del primer plano del proceso actual.
@@ -29,3 +26,12 @@ Consulte el ejemplo del comando [HIDE WINDOW](hide-window.md "HIDE WINDOW").
 #### Ver también 
 
 [HIDE WINDOW](hide-window.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 435 |
+| Hilo seguro | &cross; |
+
+

@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Keys.Summary-->La commande **OB Keys** retourne une collection de chaînes contenant tous les noms des propriétés énumérables de l'*objet*.<!-- END REF--> 
 
 Seuls les noms de propriétés de premier niveau sont retournés (les noms des propriétés des sous-objets ne sont pas retournés). L'ordre des noms contenus dans la collection retournée suit l'ordre de défintion des propriétés.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez une collection avec tous les noms de propriétés de premier niveau d'un objet :
 
@@ -43,7 +40,16 @@ Vous souhaitez une collection avec tous les noms de propriétés de premier nive
   //$col[2]="children"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1719 |
+| Thread safe | &cross; |
+
+

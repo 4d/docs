@@ -15,14 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+## Description 
 
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters<!-- END REF--> .
 
-#### Description 
-
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->The **LISTBOX SET FOOTER CALCULATION** command sets the automatic calculation associated with the footer of the list box designated by the *object* and *\** parameters
-
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string).<!-- END REF--> If you do not pass this parameter, this indicates that the object is a variable. In this case, you pass a variable reference instead of a string.  
+If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string).If you do not pass this parameter, this indicates that the object is a variable. In this case, you pass a variable reference instead of a string.  
 The *object* parameter can designate: 
 
 * the variable or name of a footer area. In this case, the command applies to this area.
@@ -49,6 +46,15 @@ If the data type of a column or of even one column of the list box (when object 
 
 **Note:** Footer area variables are typed automatically (when there are not typed through the code) with regards to the calculation set in the Property List (see *List box footer specific properties*). If the variable data type does not correspond to the result expected by the **LISTBOX SET FOOTER CALCULATION** command, a typing error is generated. For example, for a column displaying dates, if the footer calculation is 'Maximum', the *footer* variable will be typed as Date. At this point, if you execute the statement **LISTBOX SET FOOTER CALCULATION**(footer;lk footer count), an error is generated because the expected data type of the result (longint) differs from the actual variable data type.
 
-#### See also 
+## See also 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1140 |
+| Thread safe | &cross; |
+
+

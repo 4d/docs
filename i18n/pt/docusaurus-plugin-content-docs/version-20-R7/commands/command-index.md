@@ -315,8 +315,8 @@ title: Índice
 [`Form`](../commands-legacy/form.md)<br/>
 [`FORM Convert to dynamic`](../commands-legacy/form-convert-to-dynamic.md)<br/>
 [`FORM EDIT`](../commands-legacy/form-edit.md)<br/>
-[`FORM Event`](../commands-legacy/form-event.md)<br/>
-[`Form event code`](../commands-legacy/form-event-code.md)<br/>
+[`FORM Event`](../commands/form-event.md)<br/>
+[`Form event code`](../commands/form-event-code.md)<br/>
 [`FORM FIRST PAGE`](../commands-legacy/form-first-page.md)<br/>
 [`FORM Get color scheme`](../commands-legacy/form-get-color-scheme.md)<br/>
 [`FORM Get current page`](../commands-legacy/form-get-current-page.md)<br/>
@@ -463,7 +463,7 @@ title: Índice
 [`HTTP Get`](../commands-legacy/http-get.md)<br/>
 [`HTTP Get certificates folder`](../commands-legacy/http-get-certificates-folder.md)<br/>
 [`HTTP GET OPTION`](../commands-legacy/http-get-option.md)<br/>
-[`HTTP Parse message`](../commands-legacy/http-parse-message.md)<br/>
+[`HTTP Parse message`](http-parse-message.md)<br/>
 [`HTTP Request`](../commands-legacy/http-request.md)<br/>
 [`HTTP SET CERTIFICATES FOLDER`](../commands-legacy/http-set-certificates-folder.md)<br/>
 [`HTTP SET OPTION`](../commands-legacy/http-set-option.md)<br/>

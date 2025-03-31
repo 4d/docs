@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX GET ARRAYS.Summary-->O comando **LISTBOX GET ARRAYS** devolve um conjunto de arrays sincronizados oferecendo informação sobre cada coluna (visível ou invisível) do list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
@@ -47,8 +44,17 @@ Para seleção de registro, list boxes do tipo coleção ou seleção de entidad
 \- Por cada configuração definida através de uma variável, um ponteiro a variável,  
 \- Por cada configuração definida através de uma expressão, um ponteiro Nil.
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 832 |
+| Thread-seguro | &cross; |
+
+

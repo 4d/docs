@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES コマンドは、引数 *userID* に渡したユニークなユーザーID番号を持つユーザーに関する情報を返します。<!-- END REF-->必ず [GET USER LIST](get-user-list.md) コマンドによって返される有効なユーザーID番号を渡さなければなりません。
 
@@ -44,14 +41,24 @@ displayed_sidebar: docs
 
 **バイナリデータベースに関する注記:** グループおよびユーザーIDの値は、その作成者に依存します (デザイナー、管理者、または関連したグループオーナー)。詳細については *ユーザーとグループ ID の範囲* を参照ください。
 
-#### エラー管理 
+## エラー管理 
 
  コマンドを呼び出すための特定のアクセス権を持っていない場合や、パスワードシステムが他のプロセスによって既にアクセスされている場合は、アクセス権エラーが生成されます。ON ERR CALL コマンドを使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 611 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

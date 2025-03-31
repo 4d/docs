@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET FONT SIZE.Summary-->OBJECT SET FONT SIZE define o tamanho da fonte dos objetos de formulário especificados por *objeto* utilizando o tamanho de fonte que se passa em *tamanho*.<!-- END REF-->
 
@@ -30,7 +27,7 @@ A área para o objeto, como se definiu no formulário, deve ser suficientemente 
 
 Nota: Se usar este comando ou um objeto que esteja usando uma folha de estilo, a referência para a folha de estilo é apagada automaticamente do objeto - mesmo se atribuir os mesmos atributtos à folha de estilo.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir define o tamanho de fonte para uma variável chamada *vtInfo*: 
 
@@ -38,7 +35,7 @@ O exemplo a seguir define o tamanho de fonte para uma variável chamada *vtInfo*
  OBJECT SET FONT SIZE(vtInfo;14)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir define o tamanho de fonte para todos os objetos de formulário cujo nome começa por "hl": 
 
@@ -48,9 +45,18 @@ O exemplo a seguir define o tamanho de fonte para todos os objetos de formulári
 
   
 
-#### Ver também 
+## Ver também 
 
 *Interação de comandos genéricos com textos multi estilos*  
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 165 |
+| Thread-seguro | &cross; |
+
+

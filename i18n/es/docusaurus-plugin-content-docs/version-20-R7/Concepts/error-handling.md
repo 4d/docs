@@ -87,18 +87,18 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 
 - las variables sistema dedicadas:
 
-  - `Error` (entero largo): código de error
-  - `Error method`(texto): nombre del método que ha provocado el error
-  - `Error line` (entero largo): número de línea del método que ha provocado el error
-  - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
+ - `Error` (entero largo): código de error
+ - `Error method`(texto): nombre del método que ha provocado el error
+ - `Error line` (entero largo): número de línea del método que ha provocado el error
+ - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
 
 :::info
 
 4D mantiene automáticamente una serie de variables denominadas [**variables sistema**](variables.md#system-variables), que responden a diferentes necesidades.
 :::
 
-- el comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D. You can also use the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- el comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D. el comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
+- el comando `Call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 #### Ejemplo
 

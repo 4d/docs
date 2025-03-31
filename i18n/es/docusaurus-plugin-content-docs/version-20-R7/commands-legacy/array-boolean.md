@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.ARRAY BOOLEAN.Summary-->El comando ARRAY BOOLEAN crea y/o redimensiona un array de elementos *Booleanos* en memoria.<!-- END REF-->
-
-* El parámetro *arrayName* es el nombre del array.
+<!--REF #_command_.ARRAY BOOLEAN.Summary-->El comando ARRAY BOOLEAN crea y/o redimensiona un array de elementos *Booleanos* en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
 * El parámetro *tamaño2* es opcional; si se especifica *tamaño2*, el comando crea un array bidimensional.
 
@@ -32,7 +30,7 @@ Cuando aplica ARRAY BOOLEAN a un array existente:
 
 **Tip:** en algunos contextos, una alternativa a utilizar arrays booleanos es utilizar un array entero donde cada elemento signifique “verdadero” si es diferente de cero y signifique “falso” si es igual a cero.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array de proceso de 100 elementos de tipo [Booleano](# "Can be either TRUE or FALSE"):
 
@@ -40,7 +38,7 @@ Este ejemplo crea un array de proceso de 100 elementos de tipo [Booleano](# "Can
  ARRAY BOOLEAN(abValores;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas de 50 elementos de tipo [Booleano](# "Can be either TRUE or FALSE"):
 
@@ -48,7 +46,7 @@ Este ejemplo crea un array local de 100 filas de 50 elementos de tipo [Booleano]
  ARRAY BOOLEAN($abValores;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array interproceso de 50 elementos de tipo [Booleano](# "Can be either TRUE or FALSE") y a cada elemento asigna el valor Verdadero par:
 
@@ -59,6 +57,15 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo [Booleano](# "Ca
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY INTEGER](array-integer.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 223 |
+| Hilo seguro | &check; |
+
+

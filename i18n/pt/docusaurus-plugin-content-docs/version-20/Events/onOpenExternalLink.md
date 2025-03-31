@@ -10,9 +10,9 @@ title: On Open External Link
 
 ## Descrição
 
-This event is generated when the loading of a URL was blocked by the Web area and the URL was opened with the current system browser, because of a filter set up via the `WA SET EXTERNAL LINKS FILTERS` command.
+Este evento é gerado quando o carregamento de uma URL foi bloqueado pela área Web e o URL foi aberto com o navegador do sistema atual, porque um filtro configurado através do comando `WA SET EXTERNAL LINKS FILTERS`.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Você pode descobrir o URL bloqueado usando o comando `WA Get last filtered URL`.
 
 
 ### Veja também

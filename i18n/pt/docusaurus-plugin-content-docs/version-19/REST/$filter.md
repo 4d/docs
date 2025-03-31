@@ -44,7 +44,7 @@ Para mais informações sobre como consultar dados em 4D, consulte a documentaç
 > Por exemplo, pode escrever o seguinte ao passar um valor com uma aspa ao utilizar a propriedade *params*:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 > 
-> If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+> Se você passar o valor diretamente, poderá escrever o seguinte: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Atributo
 

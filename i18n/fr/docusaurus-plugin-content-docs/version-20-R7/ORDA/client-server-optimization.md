@@ -12,28 +12,28 @@ title: Optimisation client/serveur
 
 Les architectures client/serveur de l'ORDA qui prennent en charge l'optimisation sont :
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
+- Les datastores serveur auxquels accèdent les applications 4D distantes via [**`ds`**](../commands/ds.md),
+- Les [datastores distants](remoteDatastores.md), ouverts via la commande [**`Open datastore`**](../commands/open-datastore.md) (requêtes clientes REST).
 
 ## Contexte d'optimisation
 
 Le contexte d'optimisation est fondé sur ce qui suit :
 
 - Lorsqu'un client requête une entity selection au serveur, 4D "apprend" automatiquement quels attributs de l'entity selection sont réellement utilisés côté client lors de l'exécution du code, et génère un "contexte d'optimisation" correspondant. Ce contexte est lié à l'entity selection et stocke les attributs utilisés. Il sera mis à jour dynamiquement si d'autres attributs sont utilisés par la suite. Les commandes et fonctions suivantes déclenchent la phase d'apprentissage :
-  - [`Create entity selection`](../commands/create-entity-selection.md)
-  - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
-  - [`dataClass.all()`](../API/DataClassClass.md#all)
-  - [`dataClass.get()`](../API/DataClassClass.md#get)
-  - [`dataClass.query()`](../API/DataClassClass.md#query)
-  - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
+ - [`Create entity selection`](../commands/create-entity-selection.md)
+ - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
+ - [`dataClass.all()`](../API/DataClassClass.md#all)
+ - [`dataClass.get()`](../API/DataClassClass.md#get)
+ - [`dataClass.query()`](../API/DataClassClass.md#query)
+ - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
 - Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une [list box de type entity selection](#entity-selection-based-list-box), la phase d'apprentissage a lieu pendant l'affichage de la première ligne. L'affichage des lignes suivantes est optimisé. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entity selection d'origine à l'entity selection retournée :
-  - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
-  - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
-  - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
-  - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderBy)
-  - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
-  - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
+ - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
+ - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
+ - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
+ - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)
+ - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
+ - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
@@ -43,7 +43,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
 
 :::note Note de compatibilité
 
-Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
+Les contextes gérés dans les connexions établies via [`Open datastore`](../commands/open-datastore.md) peuvent uniquement être utilisés entre des versions principales similaires de 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
 
 :::
 

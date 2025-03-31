@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->O comando **ST SET OPTIONS** modifica uma ou várias opções de funcionamento do campo ou da variável de texto com estilo designada pelo parâmetro *objeto* .<!-- END REF-->  
   
@@ -48,7 +45,7 @@ Visualização das expressões:
 
 ![](../assets/en/commands/pict1216065.pt.png)
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte código permite mudar o modo de visualização da área:
 
@@ -61,6 +58,15 @@ O seguinte código permite mudar o modo de visualização da área:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [ST GET OPTIONS](st-get-options.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1289 |
+| Thread-seguro | &cross; |
+
+

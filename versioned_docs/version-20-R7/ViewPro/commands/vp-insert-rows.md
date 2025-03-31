@@ -13,7 +13,7 @@ title: VP INSERT ROWS
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP INSERT ROWS` command <!-- REF #_method_.VP INSERT ROWS.Summary -->inserts rows defined by the *rangeObj*<!-- END REF -->.
 
@@ -21,7 +21,7 @@ In *rangeObj*, pass an object containing a range of the starting row (the row wh
 
 New rows are inserted directly before the first row in the *rangeObj*.
 
-#### Example
+## Example
 
 To insert 3 rows before the first row:
 
@@ -33,7 +33,7 @@ The results is:
 
 ![](../../assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
-#### See also
+## See also
 
 [VP DELETE COLUMNS](vp-delete-columns.md)<br/>
 [VP DELETE ROWS](vp-delete-rows.md)<br/>

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 <!-- END REF -->
 
 
-#### Description
+## Description
 
 The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
@@ -38,19 +38,19 @@ In the *server* parameter, pass an object containing the following properties:
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
 |[<!-- INCLUDE #transporter.host.Syntax -->](../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->|*mandatory*
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->|none|
-|.**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.|none|
+|.**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)* object.|none|
 |[<!-- INCLUDE #transporter.port.Syntax -->](../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->|993|
 |[<!-- INCLUDE #transporter.user.Syntax -->](../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->|none|
 
 >**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
-#### Result
+## Result
 
 The function returns an [**IMAP transporter object**](../API/IMAPTransporterClass.md#imap-transporter-object). All returned properties are **read-only**.
 
 >The IMAP connection is automatically closed when the transporter object is destroyed.
 
-#### Example
+## Example
 
 ```4d
 $server:=New object
@@ -68,4 +68,14 @@ If(Not($status.success))
    ALERT("An error occurred: "+$status.statusText)
 End if
 ```
+
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1723 |
+| Thread safe | &check; |
+
 

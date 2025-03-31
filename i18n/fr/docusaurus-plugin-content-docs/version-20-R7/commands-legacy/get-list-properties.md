@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST PROPERTIES.Summary-->La commande **GET LIST PROPERTIES** retourne des informations sur la liste hiérarchique dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
@@ -37,6 +34,15 @@ Ces propriétés peuvent être définies à l'aide de la commande [SET LIST PROP
 
 Pour une description complète de ces propriétés d'apparence et de comportement, reportez-vous à la commande [SET LIST PROPERTIES](set-list-properties.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 632 |
+| Thread safe | &cross; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->La **On Server Close Connection database method** est exécutée sur le poste serveur à chaque fois qu'un process 4D Client est refermé.<!-- END REF-->
 
@@ -40,6 +37,6 @@ Le tableau suivant détaille les informations fournies par les trois paramètres
 
 La **On Server Close Connection database method** est le pendant inverse de la [On Server Open Connection database method](on-server-open-connection-database-method.md). Pour plus d'informations sur ce point, ainsi que pour la description des **process 4D Client**, reportez-vous à la description de cette méthode base. 
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous au premier exemple de la [On Server Open Connection database method](on-server-open-connection-database-method.md).

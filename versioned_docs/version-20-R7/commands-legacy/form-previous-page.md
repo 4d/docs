@@ -12,14 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE changes the currently displayed form page to the previous form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](form-load.md) command, or if the first form page is already displayed, FORM PREVIOUS PAGE does nothing.
 
-#### Example 
+## Example 
 
 The following example is a one-line method called from a menu command. It displays the form page that precedes the one currently displayed:
 
@@ -27,10 +24,19 @@ The following example is a one-line method called from a menu command. It displa
  FORM PREVIOUS PAGE
 ```
 
-#### See also 
+## See also 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 249 |
+| Thread safe | &cross; |
+
+

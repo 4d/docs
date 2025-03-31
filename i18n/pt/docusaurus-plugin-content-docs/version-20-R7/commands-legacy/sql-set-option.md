@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SQL SET OPTION.Summary-->O comando SQL SET OPTION é utilizado para modificar o *valor* da opção passada em *opçao*.<!-- END REF-->  
   
@@ -41,10 +38,20 @@ displayed_sidebar: docs
    * em Windows, se utiliza ISO8859-1  
    * em Mac OS, se utiliza MAC-ROMAN.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável Sistema OK retorna 1\. Do contrário, retorna 0.
 
-#### Ver também 
+## Ver também 
 
 [SQL GET OPTION](sql-get-option.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 818 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

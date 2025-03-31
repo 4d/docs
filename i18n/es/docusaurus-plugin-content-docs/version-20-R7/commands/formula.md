@@ -18,14 +18,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula.Params -->
 
-| Parámetros | Tipo                        |     | Descripción                             |
-| ---------- | --------------------------- | :-: | --------------------------------------- |
-| formulaExp | Expression                  |  →  | Fórmula a devolver como objeto          |
-| Result     | 4D.Function |  ←  | Función nativa que encapsula la fórmula |
+| Parámetros | Tipo                        |                             | Descripción                             |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
+| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
+| Resultado  | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando `Formula` <!-- REF #_command_.Formula.Summary -->crea un objeto `4D Function` basado en la expresión *formulaExp*<!-- END REF -->. *formulaExp* puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.
 
@@ -33,8 +33,8 @@ Tener una fórmula como objeto permite pasarla como parámetro (atributo calcula
 
 La fórmula devuelta puede ser llamada con:
 
-- los métodos [`.call()`](#call) o [`.apply()`](#apply), o
-- la sintaxis de notación objeto (ver [objeto formula](#formula-object)).
+- los métodos [`.call()`](../API/FunctionClass.md#call) o [`.apply()`](../API/FunctionClass.md#apply), o
+- la sintaxis de notación objeto (ver [objeto formula](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ La fórmula devuelta puede ser llamada con:
  $o.myFormula() //devuelve 3
 ```
 
-Puede pasar [parámetros](#passing-parameters) a `Formula`, como se muestra a continuación en el [ejemplo 4](#example-4).
+Puede pasar [parámetros](../API/FunctionClass.md#passing-parameters) a `Formula`, como se muestra a continuación en el [ejemplo 4](#example-4).
 
 Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en [ejemplo 5](#ejemplo-5). Se puede acceder a las propiedades del objeto mediante el comando `This`.
 
@@ -55,7 +55,7 @@ Si *formulaExp* utiliza variables locales, sus valores se copian y almacenan en 
 
 El objeto creado por `Formula` puede guardarse, por ejemplo, en un campo de base de datos o en un documento blob.
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Una fórmula simple:
 
@@ -69,7 +69,7 @@ Una fórmula simple:
  $result:=$o.f() // devuelve 3
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Una fórmula utilizando variables locales:
 
@@ -83,7 +83,7 @@ Una fórmula utilizando variables locales:
  $result:=$o.f() // devuelve 10
 ```
 
-#### Ejemplo 3
+## Ejemplo 3
 
 Una fórmula sencilla que utiliza parámetros:
 
@@ -92,7 +92,7 @@ Una fórmula sencilla que utiliza parámetros:
  $result:=$o.f(10;20) //devuelve 30
 ```
 
-#### Ejemplo 4
+## Ejemplo 4
 
 Una fórmula utilizando un método proyecto con parámetros:
 
@@ -101,7 +101,7 @@ Una fórmula utilizando un método proyecto con parámetros:
  $result:=$o.f("param1";"param2") // equivalente a $result:=myMethod("param1";"param2")
 ```
 
-#### Ejemplo 5
+## Ejemplo 5
 
 Utilizando `This`:
 
@@ -112,7 +112,7 @@ Utilizando `This`:
  $result:=$o.fullName() //devuelve "John Smith"
 ```
 
-#### Ejemplo 6
+## Ejemplo 6
 
 Llamar a una fórmula utilizando la notación de objetos:
 
@@ -133,9 +133,18 @@ Llamar a una fórmula utilizando la notación de objetos:
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
-#### Ver también
+## Ver también
 
 [4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)\
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)\
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1597                        |
+| Hilo seguro       | &check; |
+
+

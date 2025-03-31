@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->La commande **OBJECT Get indicator type** retourne le type d’indicateur courant affecté au(x) thermomètre(s) désigné(s) par le(s) paramètre(s) *objet* et *\**.<!-- END REF-->
 
@@ -34,6 +31,15 @@ Vous pouvez comparer la valeur retournée par la commande aux constantes suivant
 | Barber shop               | Entier long | 2      | Barre affichant une animation continue                 |
 | Progress bar              | Entier long | 1      | Barre de progression standard                          |
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1247 |
+| Thread safe | &cross; |
+
+

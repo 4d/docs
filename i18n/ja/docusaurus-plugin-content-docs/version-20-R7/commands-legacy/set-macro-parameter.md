@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MACRO PARAMETER.Summary-->SET MACRO PARAMETERコマンドは、呼び出されたメソッドにテキスト*textParam*を挿入します。<!-- END REF-->
 
@@ -31,7 +28,7 @@ displayed_sidebar: docs
   
 テキストが選択されていない場合、*textParam*がメソッドへ挿入されます。
 
-#### 注 
+## 注 
 
 [GET MACRO PARAMETER](get-macro-parameter.md "GET MACRO PARAMETER")とSET MACRO PARAMETERコマンドが正確に起動するには、新しい"バージョン" の属性が、以下のようにマクロ自体に記述されていなければなりません。
 
@@ -41,7 +38,7 @@ displayed_sidebar: docs
 </macro>
 ```
 
-#### 例題 
+## 例題 
 
 このマクロは新しいテキストを作成します。このテキストは呼び出しているメソッドへ返されます。
 
@@ -57,6 +54,15 @@ displayed_sidebar: docs
   //新しいコードで選択されたテキストを置き換える
 ```
 
-#### 参照 
+## 参照 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 998 |
+| スレッドセーフである | &cross; |
+
+

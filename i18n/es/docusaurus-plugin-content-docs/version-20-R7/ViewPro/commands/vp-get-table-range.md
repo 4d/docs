@@ -23,9 +23,9 @@ title: VP Get table range
 | tableName  | Text    | ->                          | Nombre de la tabla                                                             |                  |
 | onlyData   | Integer | ->                          | `vk table full range` (por defecto) o `vk table data range` |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite)                 |                  |
-| Result     | Object  | <- | Rango que contiene la tabla                                                    | <!-- END REF --> |
+| Resultado  | Object  | <- | Rango que contiene la tabla                                                    | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devuelve el rango de *tableName*<!-- END REF -->.
 
@@ -44,7 +44,7 @@ En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 Si no se encuentra *tableName*, el comando devuelve **null**.
 
-#### Ver también
+## Ver también
 
 [VP RESIZE TABLE](vp-resize-table.md)<br/>
 [VP Find table](vp-find-table.md)

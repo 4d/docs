@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Select document.Summary-->El comando Select document muestra una caja de diálogo estándar de apertura de documentos, permitiendo al usuario definir uno o más archivos y devolver el nombre y/o ruta de acceso completa del o de los archivo(s) seleccionado(s).<!-- END REF-->
 
@@ -50,7 +50,7 @@ El parámetro *opciones* permite especificar funciones avanzadas autorizadas en 
 | Multiple files    | Entero largo | 1     | Autoriza la selección simultánea de varios archivos utilizando las combinaciones **Mayús+clic** (selección adyacente) y **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS). En este caso, el parámetro *seleccionado*, si se pasa, contiene la lista de todos los archivos seleccionados. Por defecto, si esta constante no se utiliza, el comando no permitirá la selección de archivos múltiples.                                                                                                              |
 | Package open      | Entero largo | 2     | (macOS únicamente): autoriza la apertura de paquetes como carpetas y por lo tanto la visualización/selección de sus contenidos. Por defecto, si no se utiliza esta constante, el comando no permitirá la apertura de paquetes.                                                                                                                                                                                                                                                                                    |
 | Package selection | Entero largo | 4     | (macOS únicamente): autoriza la selección de paquetes como entidades (por defecto si se omite). Utilice Package open si desea permitir que los usuarios visualicen/seleccionen contenidos del paquete.                                                                                                                                                                                                                                                                                                            |
-| Use sheet window  | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz Mac OS X con animación gráfica (para mayor información, consulte la sección *Tipos de ventanas (Compatibilidad)*). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar.                                                                                                 |
+| Use sheet window  | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz macOS con animación gráfica (para mayor información, consulte la sección *Tipos de ventanas (Compatibilidad)*). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar.                                                                                                 |
 
 Si no quiere utilizar una opción, pase 0 en el parámetro *opciones*.
 
@@ -60,7 +60,7 @@ El parámetro opcional *seleccionados* le permite obtener la ruta de acceso comp
 
 El comando devuelve el nombre (nombre + extensión bajo Windows) del archivo seleccionado. Si son seleccionados varios archivos, el comando devuelve el nombre del primer archivo de la lista de archivos seleccionados. La lista de archivos puede recuperarse en el parámetro *seleccionados*. Si ningún archivo es seleccionado, el comando devuelve una cadena vacía.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo se utiliza para especificar un archivo de datos 4D: 
 
@@ -76,7 +76,7 @@ Este ejemplo se utiliza para especificar un archivo de datos 4D:
  $Doc:=Select document("";$DocTipo;"Seleccionar el archivo de datos";$Opciones)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Creación de un documento personalizado por el usuario:
 
@@ -87,13 +87,23 @@ Creación de un documento personalizado por el usuario:
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente y se seleccionó un documento válido, la variable sistema OK toma el valor 1 y la variable sistema Document contendrá la ruta de acceso completa del archivo seleccionado.  
   
 Si no se seleccionó ningún archivo (por ejemplo, si el usuario hace clic en el botón **Cancelar** en la caja de diálogo de apertura de archivos), la variable sistema OK toma el valor 0 y la variable Document estará vacía. 
 
-#### Ver también 
+## Ver también 
 
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 905 |
+| Hilo seguro | &check; |
+| Modifica variables | OK, Document, error |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->**OBJECT SET RESIZING OPTIONS**コマンドは*object*と*\** で指定したオブジェクトのリサイズオプションをカレントプロセス内で動的に変更します。<!-- END REF-->これらのオプションを使用して、フォームウィンドウのサイズが変更されたときにオブジェクトをどのように表示するかを指定できます。
 
@@ -41,6 +38,15 @@ displayed_sidebar: docs
 | Resize vertical move | 倍長整数 | 2 | ウィンドウの高さが拡げられたら、オブジェクトも同じだけ下方向に移動する。     |
 | Resize vertical none | 倍長整数 | 0 | ウィンドウの高さが変更されても、オブジェクトの位置及びサイズを変更しない。    |
 
-#### 参照 
+## 参照 
 
 [OBJECT GET RESIZING OPTIONS](object-get-resizing-options.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1175 |
+| スレッドセーフである | &cross; |
+
+

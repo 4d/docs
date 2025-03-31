@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->La commande **FORM GET ENTRY ORDER** retourne dans *nomsObjets* les noms des objets dans l'ordre de saisie du formulaire courant.<!-- END REF--> 
 
@@ -33,7 +30,7 @@ L'ordre de saisie actuel inclut toujours les objets de la page 0 et des formulai
 
 **Note :** L'ordre de saisie dans un sous-formulaire n'est pas retourné lorsque la commande s'applique au formulaire parent. 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez exclure certains objets de l'ordre de saisie :
 
@@ -50,6 +47,15 @@ Vous voulez exclure certains objets de l'ordre de saisie :
  FORM SET ENTRY ORDER($arrTabOrderObject)  // On applique le nouvel ordre de saisie
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1469 |
+| Thread safe | &cross; |
+
+

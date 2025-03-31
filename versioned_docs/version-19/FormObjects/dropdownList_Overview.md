@@ -28,7 +28,7 @@ You can create different types of drop-down lists with different features. To de
 
 > This feature is only available in 4D projects.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. The object must contain the following properties:
 
 |Property|Type|Description|
 |---|---|---|
@@ -137,7 +137,7 @@ When the form is executed, 4D automatically manages the drop-down list during in
 
 #### Selected item value or Selected item reference
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. This option lets you optimize the size of the data saved.
+When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. This option lets you optimize the size of the data saved.
 
 ### Using a hierarchical choice list
 

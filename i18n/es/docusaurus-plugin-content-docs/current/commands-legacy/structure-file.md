@@ -64,7 +64,15 @@ El siguiente ejemplo puede utilizarse para saber si el método se llama desde un
 
 #### Ver también 
 
-*\_o\_DATA SEGMENT LIST*  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  
 [Data file](data-file.md)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 489 |
+| Hilo seguro | &check; |
+
+

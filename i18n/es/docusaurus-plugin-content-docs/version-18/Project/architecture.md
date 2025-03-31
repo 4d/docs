@@ -118,7 +118,7 @@ La carpeta Trash contiene los métodos y formularios que se han eliminado del pr
 - Formularios
 - TableForms
 
-Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
+Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources-folder).
 
 ### Carpeta DerivedData
 

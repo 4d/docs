@@ -22,10 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties コマンドは、引数 userID に渡したユニークなユーザーID番号を持つ既存のユーザーアカウントのプロパティを変更・更新するか、新規ユーザーを追加します。<!-- END REF-->また、デザイナーあるいは管理者に関連する新規ユーザを追加することもできます。
 
@@ -54,11 +51,11 @@ displayed_sidebar: docs
 
 **バイナリデータベースに関する注記:** グループおよびユーザーIDの値は、その作成者に依存します (デザイナー、管理者、または関連したグループオーナー)。詳細については *ユーザーとグループ ID の範囲* を参照ください。デザイナーに関連した新規ユーザーを追加するには、引数 userID に -1を渡します。管理者に関連した新規ユーザーを追加するには、引数 userID に -2を渡します。
 
-#### エラー管理 
+## エラー管理 
 
  コマンドを呼び出すための特定のアクセス権を持っていない場合や、パスワードシステムが他のプロセスによって既にアクセスされている場合は、アクセス権エラーが生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドを使ってインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
-#### 参照 
+## 参照 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -66,3 +63,12 @@ displayed_sidebar: docs
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 612 |
+| スレッドセーフである | &cross; |
+
+

@@ -20,7 +20,7 @@ Uma constante literal de tipo data está cercada de sinais de exclamação (!...
 
 Uma data nula é especificada por _!00-00-00!_.
 
-**Tip:** The Method Editor includes a shortcut for entering a null date. Para escrever uma data nula, introduza o caractere de exclamação (!) e aperte Enter..
+**Dica:** O editor de métodos inclui um acesso direto para introduzir uma data nula. Para escrever uma data nula, introduza o caractere de exclamação (!) e aperte Enter..
 
 **Notas:**
 

@@ -12,13 +12,13 @@ title: VP ROW AUTOFIT
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
 
 In *rangeObj*, pass a range object containing a range of the rows whose size will be automatically handled.
   
-#### Example
+## Example
 
 The following rows don't correctly display the text:
 
@@ -32,7 +32,7 @@ Result:
 
 ![](../../assets/en/ViewPro/cmd_vpRowAutoFit2.PNG)
 
-#### See also
+## See also
 
 [VP Column autofit](vp-column-autofit.md)
 

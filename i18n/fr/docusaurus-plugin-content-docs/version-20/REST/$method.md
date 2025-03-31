@@ -28,7 +28,7 @@ Supprime l'entité, la collection d'entités ou l'entity selection courante (cr�
 
 Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
+Vous pouvez également supprimer les entités d'un ensemble d'entités en appelant [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Exemple
 
@@ -60,7 +60,7 @@ Crée un entity set dans le cache de 4D Server basé sur la collection d'entité
 
 ### Description
 
-Lorsque vous créez une collection d'entités en REST, vous pouvez également créer un entity set qui sera enregistré dans le cache de 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Par défaut, il est valable deux heures; vous pouvez toutefois modifier cette durée en passant une valeur (en secondes) à $timeout.
+Lorsque vous créez une collection d'entités en REST, vous pouvez également créer un entity set qui sera enregistré dans le cache de 4D Server. L'entity set aura un numéro de référence que vous pouvez passer à `$entityset/\{entitySetID\}` pour y accéder. Par défaut, il est valable deux heures; vous pouvez toutefois modifier cette durée en passant une valeur (en secondes) à $timeout.
 
 Si vous avez utilisé `$savedfilter` et/ou `$savedorderby` (avec `$filter` et/ou `$orderby`) lors de la création de votre ensemble d'entités, vous pouvez le recréer avec le même ID de référence même s'il a été supprimé du cache de 4D Server.
 

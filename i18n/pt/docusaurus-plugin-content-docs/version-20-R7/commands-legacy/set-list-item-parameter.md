@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->O comando SET LIST ITEM PARAMETER permite modificar o parâmetro *seletor* para o elemento *refElem* da lista hierárquica cuja referência ou nome de objeto são passadas no parâmetro *lista*.<!-- END REF-->
 
@@ -39,7 +36,7 @@ Em *seletor*, pode passar
 | Associated standard action | Cadeia | 4D\_standard\_action\_name | Associa uma ação padrão com o *itemRef*. Neste caso deve passar no parâmetro *valor* o nome de uma ação padrão com um parâmetro, por exemplo "fontSize?value=10pt". Para saber mais veja a seção *Ações padrões* no manual *Design Reference*.                                   |
 * Custom selector: pode passar em *seletor* todo texto personalizado e associá-lo com um valor de tipo texto, numérico ou booleano. Este valor será armazenado com o elemento e poderá ser recuperado utilizando o comando [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Este princípio permite configurar todo tipo de interface associado com as listas hierárquicas. Por exemplo, em uma lista de nomes de clientes, pode guardar a idade de cada pessoa e mostrá-la unicamente quando o elemento correspondente seja selecionado.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser estabelecer uma lista de escolhas de um pop menu hierárquico, formando uma lista personalizada de valores de fontes usando as ação padrão
 
@@ -59,10 +56,19 @@ APPEND TO LIST($myList;ak standard action title;1)
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-#### Ver também 
+## Ver também 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 986 |
+| Thread-seguro | &cross; |
+
+

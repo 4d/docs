@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ACCEPT.Summary-->La commande **ACCEPT** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour :
 
@@ -31,10 +28,20 @@ Enfin, cette commande peut être placée dans la méthode de la case de fermetur
 
 Il n'est pas possible d'enchaîner plusieurs **ACCEPT**. En d'autres termes, l'exécution consécutive de deux commandes **ACCEPT** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule.
 
-##### Mode headless 
+### Mode headless 
 
 La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [CANCEL](cancel.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 269 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->The **SPELL ADD TO USER DICTIONARY** command adds one or more words to the current user dictionary.<!-- END REF-->
 
@@ -24,7 +21,7 @@ A user dictionary is a dictionary containing words added by the user to the curr
 
 In *words*, pass a text string or a text array containing the word(s) to be added to the user dictionary. If one of the words is already found in the dictionary, it is ignored by the command.
 
-#### Example 
+## Example 
 
 Adding proper nouns to the user dictionary:
 
@@ -36,6 +33,15 @@ Adding proper nouns to the user dictionary:
  SPELL ADD TO USER DICTIONARY($arrTwords)
 ```
 
-#### See also 
+## See also 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1214 |
+| Thread safe | &cross; |
+
+

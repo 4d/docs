@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET OPTIONS.Summary-->The **ST SET OPTIONS** command modifies one or more operating options for the styled text field or variable designated by the *object* parameter.<!-- END REF-->
 
@@ -48,7 +45,7 @@ Display of expressions:
 
 ![](../assets/en/commands/pict1216065.en.png)
 
-#### Example 
+## Example 
 
 The following code lets you switch the display mode of the area:
 
@@ -61,6 +58,15 @@ The following code lets you switch the display mode of the area:
  End if
 ```
 
-#### See also 
+## See also 
 
 [ST GET OPTIONS](st-get-options.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1289 |
+| Thread safe | &cross; |
+
+

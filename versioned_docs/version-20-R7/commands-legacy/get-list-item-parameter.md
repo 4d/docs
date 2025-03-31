@@ -5,22 +5,19 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *list* ; itemRef | * ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *list* ; *itemRef* ; *selector* ; *value* )<br/>**GET LIST ITEM PARAMETER** ( * ; *list* ; * ; *selector* ; *value* )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | selector | Text | &#8594;  | Parameter constant |
 | value | Text, Boolean, Real | &#8592; | Current value of parameter |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->The **GET LIST ITEM PARAMETER** command is used to find out the current *value* of the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
 
@@ -34,7 +31,16 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 
 In *selector*, you can pass the Additional text or Associated standard action constants (found in the “*Hierarchical Lists*” theme) or any custom value. For more information about the *selector* and *value* parameters, please refer to the description of the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
 
-#### See also 
+## See also 
 
 *Hierarchical Lists*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 985 |
+| Thread safe | &cross; |
+
+

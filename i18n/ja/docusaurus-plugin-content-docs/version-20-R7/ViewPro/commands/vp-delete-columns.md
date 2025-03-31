@@ -13,19 +13,19 @@ title: VP DELETE COLUMNS
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP DELETE COLUMNS` コマンドは、<!-- REF #_method_.VP DELETE COLUMNS.Summary -->*rangeObj* 引数で指定したカラムを削除します<!-- END REF -->。
 
-*rangeObj* 引数には、削除するカラムを指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:
+*rangeObj* 引数には、削除するカラムを指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください: 渡すレンジについては、以下の点に注意してください: 渡すレンジについては、以下の点に注意してください:
 
 - レンジにカラムと行の両方が含まれる場合、カラムのみが削除されます。
 - レンジに行しか含まれていない場合、コマンドは何もしません。
-  \> カラムは右から左に向かって削除されます。
+  &#062; カラムは右から左に向かって削除されます。
 
 > カラムは右から左に向かって削除されます。
 
-#### 例題
+## 例題
 
 ユーザーが選択したカラムを削除します (以下の画像の B、C、D のカラムを削除します):
 
@@ -37,8 +37,9 @@ title: VP DELETE COLUMNS
 VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 ```
 
-#### 参照
+## 参照
 
 [VP DELETE ROWS](vp-delete-rows.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>
 [VP INSERT ROWS](vp-insert-rows.md)
+

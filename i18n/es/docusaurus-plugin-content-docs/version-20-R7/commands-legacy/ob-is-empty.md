@@ -14,13 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.OB Is empty.Summary-->El comando **OB Is empty** devuelve **True** si *objeto* no está definido o está vacío, y **False** si *objeto* está definido (inicializado) y contiene al menos una propiedad.<!-- END REF-->  
-  
-*objeto* debe haber sido creado con el comando [C\_OBJECT](c-object.md) o designar un campo objeto 4D.
+<!--REF #_command_.OB Is empty.Summary-->El comando **OB Is empty** devuelve **True** si *objeto* no está definido o está vacío, y **False** si *objeto* está definido (inicializado) y contiene al menos una propiedad.<!-- END REF-->debe haber sido creado con el comando *C\_OBJECT* o designar un campo objeto 4D.
 
-#### Ejemplo 
+## Ejemplo 
 
 Estos son los diferentes resultados de este comando como también del comando [OB Is defined](ob-is-defined.md), dependiendo del contexto:
 
@@ -40,6 +38,15 @@ Estos son los diferentes resultados de este comando como también del comando [O
  $def:=OB Is defined($ref) // True
 ```
 
-#### Ver también 
+## Ver también 
 
 [OB Is defined](ob-is-defined.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1297 |
+| Hilo seguro | &check; |
+
+

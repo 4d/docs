@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Form.Summary-->O comando **Form** devolve o objeto associado com o formulário atual, se houver.<!-- END REF--> 4D associa automaticamente um objeto ao formulário atual nos casos abaixo:
 
@@ -24,15 +21,15 @@ displayed_sidebar: docs
 * o formulário atual for um subformulário.
 * um formulário tabela estiver exibido atualmente na tela.
 
-##### formulário DIALOG 
+### formulário DIALOG 
 
 Se o formulário atual for mostrado mediante uma chamada ao comando [DIALOG](dialog.md), **Form** devolve ou um objeto vazio, ou o objeto *formData* passado como parâmetro a este comando, se houver.
 
-##### Subformulário 
+### Subformulário 
 
 Se o formulàrio atual for um subformulário, o objeto devolvido depende da variável container pai:
 
-* Se a variável associada ao container principal tiver sido escrita como um objeto ([C\_OBJECT](c-object.md)), **Form** devolve o valor desta variável.  
+* Se a variável associada ao container principal tiver sido escrita como um objeto (*C\_OBJECT*), **Form** devolve o valor desta variável.  
 Neste caso, o objeto devolvido por **Form** é o mesmo que o devolvido pela expressão abaixo:  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  
@@ -41,7 +38,7 @@ Neste caso, o objeto devolvido por **Form** é o mesmo que o devolvido pela expr
 
 Para mais informação, consulte a seção *Subformulários em modo página*.
 
-##### Formulário tabela 
+### Formulário tabela 
 
 **Form** retorna o objeto associado com o formulário tabela exibido na tela. No contexto de um formulário input exibido a partir de um formulário output (ou seja, depois de um duplo clique em um registro), o objeto retornado contém as propriedades abaixo: 
 
@@ -49,7 +46,7 @@ Para mais informação, consulte a seção *Subformulários em modo página*.
 | --------------- | -------- | ---------------------------------------- |
 | parentForm      | object   | **Form** objeto do formulário output pai |
 
-#### Exemplo 
+## Exemplo 
 
 Em um formulário exibindo o registro de uma pessoa, um botão "Check children" abre um diálogo para verificar/modificar os nomes e idades dos filhos:
 
@@ -97,6 +94,15 @@ O formulário exibe informação para cada campo:
 
 Se os valores forem editados e o botão OK button for clicaod, o campo é atualizado (o registro pai deve ser salvo depois). 
 
-#### Ver também 
+## Ver também 
 
 [DIALOG](dialog.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1466 |
+| Thread-seguro | &cross; |
+
+

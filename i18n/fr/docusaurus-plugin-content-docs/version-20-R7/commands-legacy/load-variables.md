@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOAD VARIABLES.Summary-->La commande **LOAD VARIABLES** charge une ou plusieurs variable(s) depuis le document désigné par *document*.<!-- END REF--> Ce document doit avoir été créé à l'aide de la commande [SAVE VARIABLES](save-variables.md).
 
@@ -26,7 +26,7 @@ Dans le cadre de bases compilées, les variables utilisées doivent être du mê
 
 **ATTENTION :** Cette commande ne traite pas les variables de type Tableau. Pour cela, vous devez utiliser les commandes du thème BLOB.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant charge trois variables d'un document nommé PrefsUti :
 
@@ -34,14 +34,24 @@ L'exemple suivant charge trois variables d'un document nommé PrefsUti :
  LOAD VARIABLES("PrefsUti";VSNom;VLCode;VGIconPict)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si les variables ont été correctement chargées, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 74 |
+| Thread safe | &check; |
+| Modifie les variables | OK, Document |
+
+

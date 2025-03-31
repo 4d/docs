@@ -14,7 +14,7 @@ title: VP Get stylesheets
 |sheet|Integer|->|Target scope (default = current sheet)|
 |Result  |Collection|<-|Collection of style sheet objects|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
 
@@ -25,7 +25,7 @@ You can define where to get the style sheets in the optional *sheet* parameter u
 * `vk current sheet`
 * `vk workbook`  
 
-#### Example
+## Example
 
 The following code will return a collection of all the style objects in the current sheet:
 
@@ -55,7 +55,7 @@ In this case, the current sheet uses two style objects:
 ]
 ```
 
-#### See also
+## See also
 
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>

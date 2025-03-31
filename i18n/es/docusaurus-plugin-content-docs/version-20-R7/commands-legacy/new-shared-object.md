@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.New shared object.Summary-->El comando **New shared object** crea un nuevo objeto compartido vacío o prellenado y devuelve su referencia.<!-- END REF--> Para agregar o editar una propiedad a este objeto debe estar rodeado por la estructura *Use...End use*, de lo contrario, se devuelve un error. Sin embargo, es posible leer una propiedad fuera de una estructura *Use...End use*. 
 
 **Nota:** para más información sobre objetos compartidos, consulte la página *Objetos y colecciones compartidos*.
 
-Si no pasa ningún parámetro, **New shared object** crea un objeto vacío y devuelve su referencia. Debe asignar esta referencia a una variable 4D declarada con el comando [C\_OBJECT](c-object.md).
+Si no pasa ningún parámetro, **New shared object** crea un objeto vacío y devuelve su referencia. Debe asignar esta referencia a una variable 4D declarada con el comando *C\_OBJECT*.
 
-**Nota:** [C\_OBJECT](c-object.md) declara una variable del tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D") pero no crea un objeto.
+**Nota:** *C\_OBJECT* declara una variable del tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D") pero no crea un objeto.
 
 Opcionalmente, puede rellenar el nuevo objeto pasando uno o varios pares de *propiedad*/*valor* como parámetros:
 
@@ -41,7 +41,7 @@ Opcionalmente, puede rellenar el nuevo objeto pasando uno o varios pares de *pro
     
 (\*) Cuando se agrega un objeto o una colección compartido a un objeto compartido, comparten el mismo identificador de bloqueo. Para más información sobre este punto, consulte la sección *Identificador de bloqueo*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Usted desea crear un nuevo objeto compartido prellenado:
 
@@ -50,7 +50,7 @@ Usted desea crear un nuevo objeto compartido prellenado:
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea crear y modificar un objeto compartido. La estructura debe llamarse para este objeto:
 
@@ -62,8 +62,17 @@ Usted desea crear y modificar un objeto compartido. La estructura debe llamarse 
  End use
 ```
 
-#### Ver también 
+## Ver también 
 
 [New object](new-object.md)  
-[New shared collection](new-shared-collection.md)  
+[New shared collection](../commands/new-shared-collection.md)  
 *Objetos y colecciones compartidos*  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1526 |
+| Hilo seguro | &check; |
+
+

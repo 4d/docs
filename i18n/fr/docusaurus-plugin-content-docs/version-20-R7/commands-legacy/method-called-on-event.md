@@ -13,15 +13,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Method called on event.Summary-->La commande **Method called on event** retourne le nom de la méthode installée par la commande [ON EVENT CALL](on-event-call.md).<!-- END REF--> 
 
 Si aucune méthode d’appel sur événement n’a été installée, une chaîne vide ("") est retournée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON EVENT CALL](on-event-call.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 705 |
+| Thread safe | &cross; |
+
+

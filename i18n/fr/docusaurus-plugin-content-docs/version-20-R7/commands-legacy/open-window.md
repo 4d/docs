@@ -20,14 +20,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+## Description 
 
+<!--REF #_command_.Open window.Summary-->**Open window** ouvre une nouvelle fenêtre dont les dimensions sont définies par les quatre premiers paramètres<!-- END REF--> :
 
-#### Description 
-
-<!--REF #_command_.Open window.Summary-->**Open window** ouvre une nouvelle fenêtre dont les dimensions sont définies par les quatre premiers paramètres :
-
-* *gauche* est la distance en pixels entre le côté gauche de la fenêtre de l'application et le côté intérieur gauche de la fenêtre.<!-- END REF-->
+* *gauche* est la distance en pixels entre le côté gauche de la fenêtre de l'application et le côté intérieur gauche de la fenêtre.
 * *haut* est la distance en pixels entre le haut de la fenêtre de l'application et le bord supérieur de l'intérieur de la fenêtre.
 * *droite* est la distance en pixels entre le côté gauche de la fenêtre de l'application et le côté intérieur droit de la fenêtre.
 * *bas* est la distance en pixels entre le haut de la fenêtre de l'application et le bord inférieur de l'intérieur de la fenêtre.
@@ -49,13 +46,13 @@ Si vous passez une chaîne de caractères vide ("") dans *titre*, vous indiquez 
 
 * Le paramètre *caseFermeture*, optionnel, désigne la méthode de gestion de la fermeture de la fenêtre. Si ce paramètre est passé, la case du menu Système (sous Windows) ou une case de fermeture (sous Mac OS) est ajoutée à la fenêtre. Lorsque l'utilisateur Windows double-clique sur la case du menu Système ou que l'utilisateur Mac OS clique sur la case de fermeture, la méthode passée dans *caseFermeture* est exécutée.
 
-**Note :** Vous pouvez aussi gérer la fermeture à partir de la méthode du formulaire affiché dans la fenêtre pendant l'événement On Close Box. Pour plus d'informations sur ce point, reportez-vous à la commande [Form event code](form-event-code.md).
+**Note :** Vous pouvez aussi gérer la fermeture à partir de la méthode du formulaire affiché dans la fenêtre pendant l'événement On Close Box. Pour plus d'informations sur ce point, reportez-vous à la commande [Form event code](../commands/form-event-code.md).
 
 Si plusieurs fenêtres sont ouvertes dans le même process, la dernière fenêtre créée est la fenêtre active (de premier plan) du process. Seules les informations situées dans la fenêtre active peuvent être modifiées. Toutes les autres fenêtres peuvent être visualisées. Lorsque l'utilisateur tape une touche du clavier, la fenêtre active vient toujours se placer au premier plan, si elle n'y est pas déjà. 
 
 Les formulaires sont affichés à l'intérieur de fenêtres ouvertes à l'écran. Le texte passé à la commande [MESSAGE](message.md) est également affiché dans une fenêtre. 
 
-#### Exemple 1 
+## Exemple 1 
 
 La méthode projet suivante ouvre une fenêtre centrée dans la fenêtre principale (sous Windows) ou dans l'écran principal (sous Mac OS). Notez qu'elle accepte deux, trois ou quatre paramètres :
 
@@ -90,7 +87,7 @@ Une fois que cette méthode projet est écrite, vous pouvez l'utiliser de la man
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant crée une fenêtre flottante comportant une case de menu système (sous Windows) ou une case de fermeture (sous Mac OS). La fenêtre est créée dans le coin supérieur droit de la fenêtre de l'application.
 
@@ -105,7 +102,7 @@ La méthode *caseFermeture* appelle la commande [CANCEL](cancel.md) :
  CANCEL
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des propriétés du formulaire affiché dans la fenêtre : 
 
@@ -121,9 +118,9 @@ L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des 
 
  Pour que la fonction **Open window** utilise automatiquement les propriétés du formulaire, vous devez avoir appelé [FORM SET INPUT](form-set-input.md) avec le paramètre optionnel *\** et les propriétés du formulaire doivent avoir été définies en fonction de cette utilisation.
 
-#### Exemple 4 
+## Exemple 4 
 
-Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous Mac OS X :
+Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous macOS :
 
 ```4d
  $maFenêtre:=Open window(10;10;400;400;Sheet window)
@@ -133,8 +130,17 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
   //du dessous de la barre de titre
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLOSE WINDOW](close-window.md)  
 *Creer fenetre*  
 [Open form window](open-form-window.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 153 |
+| Thread safe | &cross; |
+
+

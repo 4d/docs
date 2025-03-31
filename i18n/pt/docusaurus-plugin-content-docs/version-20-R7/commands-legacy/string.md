@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.String.Summary-->O comando String devolve em forma de cadeia alfanumérica a expressão de tipo numérica, Data, Hora, cadeia ou Booleana que se passa em *expressão*.<!-- END REF-->  
   
@@ -167,10 +167,19 @@ Se a expressão é avaliada como indefinida, o comando devolve uma string vazia.
 Expressões Null  
 Se a expressão for avaliada como Null, o comando devolve a string "null". Isto é útil quando se esperar que o resultado de uma expressão (por exemplo, um atributo objeto) seja uma string, mesmo se puder ser null.
 
-#### Ver também 
+## Ver também 
 
 [Bool](bool.md)  
 [Date](date.md)  
 [Num](num.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 10 |
+| Thread-seguro | &check; |
+
+

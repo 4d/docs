@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get text property.Summary-->La commande **QR Get text property** retourne la valeur courante de la *propriété* de texte dans la cellule de *zone* désignée par *numColonne* et *numLigne*.<!-- END REF-->
 
@@ -65,6 +62,16 @@ Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 Si le paramètre *numLigne* est incorrect, l’erreur -9853 est générée.  
 Si le paramètre *propriété* est incorrect, l’erreur -9854 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 760 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

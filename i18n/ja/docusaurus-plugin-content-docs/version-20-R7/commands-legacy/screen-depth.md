@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SCREEN DEPTH.Summary-->Screen depthコマンドは、モニターについての情報を引数*depth*と*color*に返します。<!-- END REF-->
 
@@ -48,7 +45,7 @@ displayed_sidebar: docs
   
 オプションの引数*screen*は、得たい情報のモニターを指定します。引数*screen*を省略すると、コマンドは主画面 (メインスクリーン) の深度を返します。
 
-#### 例題 
+## 例題 
 
 アプリケーションが多くのカラーグラフィックスを表示するとします。その場合には、データベースのどこかに以下のように記述することができます。
 
@@ -59,6 +56,15 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Count screens](count-screens.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 439 |
+| スレッドセーフである | &cross; |
+
+

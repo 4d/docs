@@ -15,19 +15,19 @@ title: VP SET PRINT INFO
 | printInfo  | Object  | -> | Objeto que contém atributos de impressão                    |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
 
 Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
+You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. Para ver a lista completa dos atributos disponíveis, consulte [Atributos de impressão](../configuring.md#print-attributes).
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
 - `vk current sheet`
 
-#### Exemplo
+## Exemplo
 
 O código seguinte imprime uma área 4D View Pro num documento PDF:
 
@@ -70,7 +70,7 @@ O PDF:
 
 ![](../../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### Veja também
+## Veja também
 
 [Atributos de impressão 4D View Pro](../configuring.md#print-attributes)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>

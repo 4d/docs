@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get picture file name.Summary-->**Get picture file name**コマンドは引数に渡されたピクチャーのカレントデフォルト名を返します。<!-- END REF-->
 
@@ -22,6 +22,15 @@ displayed_sidebar: docs
 
 ピクチャーにデフォルト名が設定されていない場合、コマンドは空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1171 |
+| スレッドセーフである | &check; |
+
+

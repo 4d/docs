@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get sections.Summary-->The **WP Get sections** command returns a collection of all sections defined in the *targetObj* parameter.<!-- END REF-->
 
@@ -34,7 +34,7 @@ For text boxes and anchored pictures, **WP Get sections** returns:
 
 For more information about sections, please refer to the *Handling headers, footers, and sections* paragraph.
 
-#### Example 
+## Example 
 
 You want to change an attribute for the last section of the 4D Write Pro area:
 
@@ -44,6 +44,6 @@ You want to change an attribute for the last section of the 4D Write Pro area:
  WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
 ```
 
-#### See also 
+## See also 
 
 [WP Get section](wp-get-section.md)  

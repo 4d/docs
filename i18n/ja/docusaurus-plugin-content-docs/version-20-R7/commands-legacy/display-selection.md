@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION は、出力フォームを使用して、*aTable*の カレントセレクションを表示します。<!-- END REF-->レコードはデザインモードの一覧に類似のスクロール可能な一覧として表示されます。ユーザがレコー ドをダブルクリックすると、デフォルトでそのレコードはカレント入力フォーム上に表示されます。リストは最前面にあるウインドウに表示されます。 
 
@@ -53,7 +50,7 @@ DISPLAY SELECTION の実行を終了するため、出力フォームのフッ�
 
 DISPLAY SELECTION の実行中と後、ユーザが選択したレコードは UserSet という名前のセットに格納されます。 UserSet は、セレクションの表示中にボタンがクリックされて呼び出されるオブジェクトメソッドや、メニュー項目が選択された際に実行されるメソッド内で使用できます。またコマンド終了後に、DISPLAY SELECTION を呼び出したプロジェクトメソッド内でも利用できます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、最初に、\[People\]テーブルの全レコードをカレントセレクションにします。次にDISPLAY SELECTIONを使用してレコードを表示し、ユーザがプリントするレコードを選択します。最後に、選択されたレコードを[USE SET](use-set.md "USE SET")でカレントセレクションにし、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドでそのレコードを印刷します:
 
@@ -64,11 +61,11 @@ DISPLAY SELECTION の実行中と後、ユーザが選択したレコードは U
  PRINT SELECTION([People]) // ユーザが選択したレコードを印刷
 ```
 
-#### 例題 2 
+## 例題 2 
 
 [Form event](form-event.md "Form event")の6番目の例題を参照してください。この例題ではDISPLAY SELECTIONコマンドの実行中に発生するイベントをすべて監視するためのあらゆるチェックが示されています。
 
-#### 例題 3 
+## 例題 3 
 
 アプリケーションモードでDISPLAY SELECTIONや[MODIFY SELECTION](modify-selection.md)を使用して、デザインモードでの**レコード**メニューの機能を再現するには、以下の手順にしたがってください: 
 
@@ -92,8 +89,18 @@ c. 以下のプロジェクトメソッドをメニューに関連付けます:
 
 アプリケーションモードでセレクションの表示や修正を実行するたび、標準のメニューオプションを提供するために、[PRINT SELECTION](print-selection.md "PRINT SELECTION")や[QR REPORT](qr-report.md "QR REPORT")等、他のコマンドも使用できます。[Current form table](current-form-table.md "Current form table") コマンドを使用すればこれらのメソッドは汎用コードとなり、このメニューバーをあらゆるテーブルのあらゆる出力フォームに関連付けることができます。
 
-#### 参照 
+## 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 *セット*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 59 |
+| スレッドセーフである | &cross; |
+| サーバー上での使用は不可 ||
+
+

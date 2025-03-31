@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST Get content type.Summary-->O comando **ST Get content type** devolve o tipo de conteúdo encontrado no campo ou a variável de texto multi estilo designada pelo parâmetro *objeto* .<!-- END REF--> 
 
@@ -61,7 +58,7 @@ O comando devolve um valor que designa o tipo de conteúdo identificado. Pode co
 | ST URL type         | Inteiro longo | 1     | A seleção contém só uma referência de URL                      |
 | ST User type        | Inteiro longo | 5     | A seleção contém apenas uma referência personalizada           |
 
-#### Exemplo 
+## Exemplo 
 
 Você deseja mostrar os comandos de um menu contextual baseado no tipo de conteúdo selecionado na área.
 
@@ -102,3 +99,14 @@ Você deseja mostrar os comandos de um menu contextual baseado no tipo de conte�
        ...
     End if
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1286 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | OK |
+
+

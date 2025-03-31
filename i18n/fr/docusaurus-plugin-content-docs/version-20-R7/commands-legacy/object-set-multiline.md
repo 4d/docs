@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET MULTILINE.Summary-->La commande **OBJECT SET MULTILINE** vous permet de modifier la propriété "Multilignes" de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -35,7 +32,7 @@ Passez dans le paramètre *multiLigne* la nouvelle valeur de l’option que vous
 | Multiline Yes  | Entier long | 1      | Dans les zones mono-lignes, le texte est affiché jusqu’au premier retour chariot ou au dernier mot affichable en entier. 4D insère des retours à la ligne, il est possible de faire défiler le contenu de la zone en appuyant sur la touche flèche basse.<br/>Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques |
 
   
-#### Exemple 
+## Exemple 
 
 Vous souhaitez interdire le multiligne dans une zone de saisie :
 
@@ -43,6 +40,15 @@ Vous souhaitez interdire le multiligne dans une zone de saisie :
  OBJECT SET MULTILINE(*;"vSaisie";Multiline No)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get multiline](object-get-multiline.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1253 |
+| Thread safe | &cross; |
+
+

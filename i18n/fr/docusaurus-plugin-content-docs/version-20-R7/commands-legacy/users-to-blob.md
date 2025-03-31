@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**Note de compatibilité :** Cette commande fonctionne uniquement dans les bases binaires.<!-- END REF--> Elle retourne toujours un BLOB vide dans les projets.
 
@@ -30,6 +27,16 @@ Cette commande équivaut à l’enregistrement des groupes et utilisateurs depui
 
 Ce principe permet de conserver une sauvegarde des utilisateurs parmi les données de la base, et ainsi de mettre en place un mécanisme de sauvegarde et de chargement automatiques des utilisateurs en cas de mise à jour de la structure de la base (en effet, les informations relatives aux comptes utilisateurs sont stockées par 4D dans le fichier de structure de la base).
 
-#### Voir aussi 
+## Voir aussi 
 
 [BLOB TO USERS](blob-to-users.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 849 |
+| Thread safe | &cross; |
+| Modifie les variables | OK, error |
+
+

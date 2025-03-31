@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET TABLE TITLES.Summary-->The **GET TABLE TITLES** command fills the *tableTitles* and *tableNums* arrays with the names and numbers of database tables defined in the Structure window or using the [SET TABLE TITLES](set-table-titles.md) command.<!-- END REF--> The contents of these two arrays are synchronized.
 
@@ -27,7 +24,16 @@ Otherwise, **GET TABLE TITLES** returns the names of all database tables as defi
 
 In both cases, the command does not return invisible tables. 
 
-#### See also 
+## See also 
 
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 803 |
+| Thread safe | &cross; |
+
+

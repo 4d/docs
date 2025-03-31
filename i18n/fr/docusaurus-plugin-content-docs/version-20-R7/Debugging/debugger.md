@@ -52,33 +52,33 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
+> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
 #### Exécuter pas à pas
 
 Exécute la ligne de méthode en cours, indiquée par le compteur de programme (la flèche jaune). Le débogueur passe à la ligne suivante.
 
-Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
+Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
-Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton **Reprendre exécution**.
+Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
 #### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
-La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtre Fenêtre de [chaîne d'appel](#call-chain-pane) de la fenêtre du débogueur.
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
-Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
+When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Exécuter et sortir
+#### Step Out
 
-Si vous tracez des sous-routines et des fonctions, cliquer sur ce bouton vous permet d'exécuter l’intégralité de la méthode qui est en train d'être tracée, et de revenir à la méthode appelante. La fenêtre du débogueur retourne à la méthode précédente dans la chaîne d’appel. Si la méthode courante est la dernière méthode de la chaîne d’appel, la fenêtre du débogueur se referme.
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
 
-Dans le débogage distant, lors de l'exécution de la dernière ligne de la méthode, si la méthode est exécutée sur le serveur, la méthode parente est appelée. Si la méthode parente est exécutée du côté distant, le bouton agit de la même manière que le bouton Reprendre exécution.
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
 
-#### Pas à pas nouveau process
+#### Step Into Process
 
-Lors de l’exécution d’une ligne qui crée un nouveau process (par exemple qui appelle la commande New process), ce bouton ouvre une nouvelle fenêtre du débogueur qui vous permet de tracer la méthode de gestion du process que vous venez de créer. Lors de l’exécution d’une ligne qui ne crée pas de nouveau process, ce bouton se comporte comme le bouton Exécuter pas à pas.
+On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
 
 #### Stopper exécution
 
@@ -89,9 +89,9 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 
 #### Stopper et éditer
 
-La méthode qui s'exécute lorsque vous cliquez sur ce bouton s'ouvre dans l'éditeur de code.
+The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
-> **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Editer méthode
 
@@ -99,7 +99,7 @@ La méthode qui s'exécute au moment où vous cliquez sur le bouton Éditer s'ou
 
 Si vous utilisez ce bouton pour modifier une méthode, les modifications ne seront effectives que la prochaine fois qu'elle sera exécutée.
 
-> **Astuce :** Utilisez ce bouton lorsque vous savez quels changements sont requis dans votre code et quand ils n'interfèrent pas avec le reste du code à exécuter ou à tracer.
+> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
 #### Enregistrer paramètres
 
@@ -146,27 +146,27 @@ $c:=a+b
 
 1. Une fenêtre de débogage s'ouvre avec le compteur de programme défini à la ligne avec `a:=1`. À ce stade, le thème **Objets courants** affiche :
 
-   | $a | Undefined |
-   | -- | --------- |
+ | $a | Undefined |
+ | -- | --------- |
 
-   La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. À ce stade, le thème **Objets courants** affiche :
 
-   | $a | 1         |
-   | -- | --------- |
-   | $b | Undefined |
+ | $a | 1         |
+ | -- | --------- |
+ | $b | Undefined |
 
-   La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. Le compteur de programme est maintenant placé sur la ligne avec $c:=a+b. Le thème **Objets courants** affiche :
 
-   | $c | Undefined |
-   | -- | --------- |
-   | $a | 1         |
-   | $b | 2         |
+ | $c | Undefined |
+ | -- | --------- |
+ | $a | 1         |
+ | $b | 2         |
 
-   La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+ La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 #### Variables
 
@@ -268,9 +268,9 @@ Dans l'image ci-dessus :
 - `thirdMethod` n'a reçu aucun paramètre
 - `$0` est actuellement indéfini, car la méthode n'a pas attribué de valeur à `$0` (parce qu'elle n'a pas encore exécuté cette assignation ou parce que la méthode est une sous-routine et non une fonction)
 - `secondMethod` a reçu trois paramètres de `firstMethod` :
-  - $1 est un pointeur vers la table `[Employee]`
-  - $2 est un pointeur vers le champ `ID` dans la table `[Employee]`
-  - $3 est un paramètre alphanumérique dont la valeur est "Z"
+ - $1 est un pointeur vers la table `[Employee]`
+ - $2 est un pointeur vers le champ `ID` dans la table `[Employee]`
+ - $3 est un paramètre alphanumérique dont la valeur est "Z"
 
 Vous pouvez double-cliquer sur le nom de n'importe quelle méthode pour afficher son contenu dans le [Fenêtre d'évaluation des méthodes](#fenetre-devaluation-des-methodes).
 
@@ -366,9 +366,9 @@ Vous pouvez copier n'importe quelle expression sélectionnée depuis la fenêtre
 
 1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
-   - Glissez et déposez le texte sélectionné dans la zone d'expression
-   - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
+ - Glissez et déposez le texte sélectionné dans la zone d'expression
+ - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+ - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
 
 ### Compteur de programme
 
@@ -405,11 +405,11 @@ Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieur
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Aller à définition** : permet d’accéder à la définition de l’objet sélectionné. Cette commande est disponible avec les objets suivants :
-  - *Méthode projet :* affiche le contenu de la méthode dans une nouvelle fenêtre de l'éditeur de code
-  - *Champ* : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
-  - *table* : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
-  - *formulaire* : affiche le formulaire dans l’éditeur de formulaires
-  - *variable* (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
+ - *Méthode projet :* affiche le contenu de la méthode dans une nouvelle fenêtre de l'éditeur de code
+ - *Champ* : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
+ - *table* : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
+ - *formulaire* : affiche le formulaire dans l’éditeur de formulaires
+ - *variable* (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
 - **Chercher les références** (cette fonction est également accessible depuis l’Editeur de code) : rechercher tous le projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
 - **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
 - **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.

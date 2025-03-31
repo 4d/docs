@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->El comando **OBJECT SET CONTEXT MENU** activa o desactiva, para el proceso actual, la asociación de un menú contextual por defecto al objeto o a los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  
   
@@ -28,6 +25,15 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
   
 Pase **True** en el parámetro *menuContext* para activar el menú contextual, y **False** para desactivarlo.
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get context menu](object-get-context-menu.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1251 |
+| Hilo seguro | &cross; |
+
+

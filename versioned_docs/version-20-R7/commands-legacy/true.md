@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.True.Summary-->True returns the Boolean value True.<!-- END REF-->
 
-#### Example 
+## Example 
 
 The following example sets the variable *vbOptions* to True:
 
@@ -25,7 +25,16 @@ The following example sets the variable *vbOptions* to True:
  vbOptions:=True
 ```
 
-#### See also 
+## See also 
 
 [False](false.md)  
 [Not](not.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 214 |
+| Thread safe | &check; |
+
+

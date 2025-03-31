@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET TEXT.Summary-->La commande **WP SET TEXT** insère le texte passé dans le paramètre *nouveauTexte* en texte brut dans le paramètre *objCible* à la position spécifiée par le paramètre *positionTexte*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Dans le paramètre *positionTexte*, l'emplacement du texte inséré peut être p
 Si vous ne passez pas un paramètre miseAJourPlage, le contenu inséré sera inclus par défaut dans la plage résultante.
 * Si objCible n'est pas une plage, miseAJourPlage est ignoré.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez ajouter du texte à ce document :
 
@@ -85,6 +85,6 @@ Remplace le texte existant :
   // écrit " Hello world!"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get text](wp-get-text.md)  

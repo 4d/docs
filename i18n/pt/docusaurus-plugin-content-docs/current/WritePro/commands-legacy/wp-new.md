@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](wp-insert-document.md), por exemplo.
+<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md), por exemplo.
 
 Por padrão, se omitir o parâmetro *fonte*, o comando devolve um objeto 4D Write Pro vazio.
 
 Também pode utilizar o parâmetro *fonte*, em cujo caso o novo objeto 4D Write Pro será preenchido com o conteúdo da *fonte*. Pode passar:
 
-* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
+* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](../commands/wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
 * ou um parâmetro *blob*: Neste caso, deve passar ou:  
    * um formato de documento 4D Write Pro (.4wp) armazenado em um BLOB. Para saber mais sobre o formato 4D Write Pro, veja *formato de documento .4wp*.  
    * uma área de legado 4D Write carregada em um BLOB (Blobs contendo documentos .4w7 ou .4wt são suportados). Para uma lista detalhada de propriedades de 4D Write suportadas em documentos 4D Write Pro, veja a seção *Importar documentos 4D Write*  
-   * Se deseja importar um documento 4D Write (.4w7 ou .4wt) armazenado no disco, também pode considerar o uso do comando [WP Import document](wp-import-document.md).
+   * Se deseja importar um documento 4D Write (.4w7 ou .4wt) armazenado no disco, também pode considerar o uso do comando [WP Import document](../commands/wp-import-document.md).
 * un parámetro [objeto](# "Estruturas de dados como objetos 4D nativos") que puede ser:  
    * uma range.  
    **WP New** retorna um novo documento criado a partir da range especificada. Note que, se a range não for igual a range completa do documento, só a primeira seção é exportada e bookmarks não são exportadas  
@@ -45,7 +45,7 @@ Como padrão, expressões HTML inseridas em documentos 4D WRite legados não sã
 
 Nota de compatibilidade: Folhas de estilo de caracteres em documentos 4D Write "legado" usam um mecanismo proprietário, que não é mais compatível com o 4D Write Pro. Para obter os melhores resultados de textos importados, atributos de folha de estilo são convertidos para atributos de estilo "hard coded". Folhas de estilo caractere "legado" não são importadas e não são mais referenciadas no documento.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Deseja criar um objeto 4D Write Pro vazio:
 
@@ -53,7 +53,7 @@ Deseja criar um objeto 4D Write Pro vazio:
  myWPObject:=WP New
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser criar um novo objeto 4D Write Pro além de um documento 4D Write Pro armazenado em disco :
 
@@ -64,7 +64,7 @@ Se quiser criar um novo objeto 4D Write Pro além de um documento 4D Write Pro a
  myWPArea:=WP Nouveau($BlobDoc)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Deseja criar um objeto 4D Write Pro que contém uma referência de expressão 4D simples:
 
@@ -75,7 +75,7 @@ Deseja criar um objeto 4D Write Pro que contém uma referência de expressão 4D
  myWPA:=WP New(myText)
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Você deseja inicializar sua área 4D Write Pro com um modelo criado previamente:
 
@@ -89,7 +89,7 @@ Você deseja inicializar sua área 4D Write Pro com um modelo criado previamente
  myNewWPA:=WP New(wpTemplate)
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Se quiser importar um documento armazenado em um campo BLOB do registro atual do anterior plug-in 4D Write em uma área nova 4D Write Pro e manter as expressões HTML:
 
@@ -98,7 +98,7 @@ Se quiser importar um documento armazenado em um campo BLOB do registro atual do
  wpArea=WP New([Templates]Reference_;wk import html expressions as text)
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Se definir um documento modelo com partes pré-formatadas diferentemente, cada uma das quais sendo armazenadas como uma bookmark. Quando produzir um documento final do modelo, pode extrair qualquer bookmark como um novo documento e inserir a bookmark no documento final. 
 
@@ -115,7 +115,7 @@ Se definir um documento modelo com partes pré-formatadas diferentemente, cada u
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
-[WP Import document](wp-import-document.md)  
-[WP INSERT DOCUMENT](wp-insert-document.md)  
+[WP Import document](../commands/wp-import-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

@@ -14,14 +14,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->La commande **WA OPEN WEB INSPECTOR** ouvre un inspecteur web pour la zone web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gestion programmée des zones Web*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1736 |
+| Thread safe | &cross; |
+
+

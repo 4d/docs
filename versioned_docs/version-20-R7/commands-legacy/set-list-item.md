@@ -5,13 +5,13 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; itemRef | * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; *itemRef* ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<br/>**SET LIST ITEM** ( * ; *list* ; * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
 | newItemText | Text | &#8594;  | New item text |
 | newItemRef | Integer | &#8594;  | New item reference number |
 | sublist | Integer | &#8594;  | New sublist attached to item, or 0 for no sublist (detaching current one, if any), or -1 for no change |
@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->The **SET LIST ITEM** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
 
@@ -44,7 +41,7 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
 
 **Note:** Even if they are optional, both the *sublist* and *expanded* parameters must be passed jointly.
 
-#### Example 1 
+## Example 1 
 
 *hList* is a list whose items have unique reference numbers. The following object method for a button adds a child item to the current selected list item.
 
@@ -65,18 +62,27 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [GET LIST ITEM](get-list-item.md) command.
 
-#### Example 3 
+## Example 3 
 
 See example for the [APPEND TO LIST](append-to-list.md) command.
 
-#### See also 
+## See also 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 385 |
+| Thread safe | &cross; |
+
+

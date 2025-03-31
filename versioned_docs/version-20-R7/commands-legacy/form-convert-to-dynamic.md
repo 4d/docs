@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->The **FORM Convert to dynamic** command converts the *formName* (classic form) to a dynamic form and returns it in an object.<!-- END REF-->
 
@@ -36,7 +33,7 @@ In order to be able to run the form directly by passing the resulting object to 
 
 **Note:** References to the form method and form object methods are exported with internal IDs, which will be valid only in the current database while *formName* methods are not modified. If you want to use the exported form in another context, you need to assign project method names to the form or form object "method" property (see example).
 
-#### Example 
+## Example 
 
 You want to convert a classic form, modify it, and display it. 
 
@@ -60,7 +57,16 @@ If you execute the code:
   
 ![](../assets/en/commands/pict3977362.en.png)
 
-#### See also 
+## See also 
 
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1570 |
+| Thread safe | &cross; |
+
+

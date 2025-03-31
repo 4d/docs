@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESTORE.Summary-->El comando RESTORE permite restituir el o los archivos incluidos en un archivo 4D.<!-- END REF--> Este comando es útil con interfaces personalizadas para la gestión de backups. 
 
@@ -32,7 +29,17 @@ El comando RESTORE modifica el valor de las variables *OK* y *Document*: si la r
 
 **Nota:** en una aplicación 4D compilada y fusionada con 4D Volume Desktop, el comando RESTORE produce la visualización de una caja de diálogo estándar de apertura de archivos que lista por defecto los archivos de extensión “4BK”.
 
-#### Ver también 
+## Ver también 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 918 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK, Document, error |
+
+

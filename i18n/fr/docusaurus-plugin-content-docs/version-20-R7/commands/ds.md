@@ -8,28 +8,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Paramètres | Type      |   | Description                            |
-| ---------- | --------- | - | -------------------------------------- |
-| localID    | Text      | → | Identifiant local du datastore distant |
-| Résultat   | DataStore | ← | Nouvelle référence de datastore        |
+| Paramètres | Type                         |                             | Description                            |
+| ---------- | ---------------------------- | --------------------------- | -------------------------------------- |
+| localID    | Text                         | &#8594; | Identifiant local du datastore distant |
+| Résultat   | cs.DataStore | &#8592; | Nouvelle référence de datastore        |
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 La commande `ds` <!-- REF #_command_.ds.Summary -->retourne une référence vers le datastore correspondant à la base de données 4D courante ou à la base de données désignée par *localID*<!-- END REF -->.
 
-Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`.
+Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Ser Le datastore est ouvert automatiquement et est disponible directement via `ds`. Le datastore est ouvert automatiquement et est disponible directement via `ds`.
 
-Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. The datastore must have been previously opened with the [`Open datastore`](open-datastore.md) command by the current database (host or component). L'identifiant local est défini lors de l'utilisation de cette commande.
+Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. L'identifiant local est défini lors de l'utilisation de cette commande.
 
 > La portée de l'identifiant local est la base de données dans laquelle le datastore a été ouvert.
 
 Si aucun datastore nommé *localID* n'est trouvé, la commande renvoie **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](../ORDA/dsMapping.md#general-rules).
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales](../ORDA/dsMapping.md#general-rules) de correspondance d'ORDA.
 
-#### Exemple 1
+## Exemple 1
 
 Utilisation du datastore principal de la base 4D :
 
@@ -38,7 +38,7 @@ var $result : cs.EmployeeSelection
 $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### Exemple 2
+## Exemple 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -64,6 +64,15 @@ $result:=ds.Employee.query("firstName = :1";"S@")
  $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
-#### Voir également
+## Voir également
 
 [Open datastore](open-datastore.md)
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1482                        |
+| Thread safe        | &check; |
+
+

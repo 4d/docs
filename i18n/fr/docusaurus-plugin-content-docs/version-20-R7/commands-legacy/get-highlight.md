@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET HIGHLIGHT.Summary-->La commande **GET HIGHLIGHT** vous permet de déterminer précisément le texte actuellement sélectionné dans *objet*.<!-- END REF-->
 
@@ -36,20 +33,22 @@ Si les valeurs *débutSél* et *finSél* retournées sont identiques, l'utilisat
 
 Si l'objet désigné par le paramètre *objet* n'est pas trouvé dans le formulaire, la commande retourne -1 dans *débutSél* et -2 dans *finSél*. 
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant récupère le texte sélectionné dans le champ *\[Produits\]Notes* : 
 
 ```4d
- GET HIGHLIGHT([Produits]Notes;vPremier;vDernier)
- If(vPremier<vdernier)     alert("le="" texte="" sélectionné="" est="" :="" "+substring([produits]notes;vpremier;vdernier-vpremier))=""  end="" if<="" pre=""></vdernier)>
+GET HIGHLIGHT([Products]Comments;vFirst;vLast)
+If(vFirst < vlast)
+    ALERT("The selected text is:"+Substring([Products]Comments;vFirst;vLast-vFirst))
+End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-#### Exemple 3 
+## Exemple 3 
 
 Modification du style du texte sélectionné :
 
@@ -58,8 +57,17 @@ Modification du style du texte sélectionné :
  ST SET ATTRIBUTES(*;"monTexte";$debutsel,$finsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 209 |
+| Thread safe | &cross; |
+
+

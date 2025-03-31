@@ -21,10 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite cambiar los parámetros de los gráficos mostrados en un formulario.<!-- END REF--> El gráfico debe haber sido definido con el comando [GRAPH](graph.md). GRAPH SETTINGS no tiene efecto en un gráfico de tipo sectores. Este comando debe llamarse obligatoriamente en el mismo proceso que el formulario.
 
@@ -38,10 +35,19 @@ Los parámetros *xgrid* y *ygrid* muestran u ocultan las líneas de rejilla. Una
 
 El(los) parámetro(s) *titulo* especifican los títulos de las leyendas.
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo del comando [GRAPH](graph.md "GRAPH").
 
-#### Ver también 
+## Ver también 
 
 [GRAPH](graph.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 298 |
+| Hilo seguro | &cross; |
+
+

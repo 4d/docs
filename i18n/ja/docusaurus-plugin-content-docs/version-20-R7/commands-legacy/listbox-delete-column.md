@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->LISTBOX DELETE COLUMN コマンドは、引数*object*および *\** で指定されたリストボックスから1つ以上の列 (表示または非表示) を取り除きます。<!-- END REF-->
 
@@ -32,7 +29,16 @@ displayed_sidebar: docs
 
 *colPosition* 引数がリストボックスの列数よりも大きい場合、コマンドは何も行いません。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 830 |
+| スレッドセーフである | &cross; |
+
+

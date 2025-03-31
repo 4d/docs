@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->O comando APPEND TO LIST  adiciona um novo elemento à lista hierárquica cujo número de referência se passa em *lista*.<!-- END REF-->
 
@@ -37,7 +34,7 @@ A referência da lista que passa em *sublista* deve fazer referência a uma list
 * Para inserir um novo elemento em uma lista, utilize [INSERT IN LIST](insert-in-list.md). Para mudar o texto de um elemento existente ou modificar sua lista filha ao igual que seu estado expandido, utilize [SET LIST ITEM](set-list-item.md).
 * Para mudar a aparência do novo elemento adicionado utilize [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-#### Exemplo 
+## Exemplo 
 
 Esta é uma vista parcial da estrutura de um banco:
 
@@ -150,9 +147,18 @@ Quando o formulário é executado, a lista será vista desta forma:
 
 **Nota:** este exemplo é útil para propósitos de interface de usuário se trabalhar com um número limitado de registros. Lembre que as listas são conservadas em memória, não construa interfaces de usuário com listas hierárquicas que contenham milhões de elementos. 
 
-#### Ver também 
+## Ver também 
 
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 376 |
+| Thread-seguro | &cross; |
+
+

@@ -14,14 +14,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Frontmost window.Summary-->The Frontmost window command returns the window reference number of the frontmost window.<!-- END REF-->
 
-#### See also 
+## See also 
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 447 |
+| Thread safe | &cross; |
+
+

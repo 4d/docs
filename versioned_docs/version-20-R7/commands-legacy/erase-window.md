@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->The **ERASE WINDOW** command clears the contents of the window whose reference number is passed in *window*.<!-- END REF--> 
 
@@ -26,7 +23,16 @@ Usually, you will use **ERASE WINDOW** in combination with [MESSAGE](message.md)
 
 Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CLOSE WINDOW](close-window.md), which removes the window from the screen.
 
-#### See also 
+## See also 
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 160 |
+| Thread safe | &cross; |
+
+

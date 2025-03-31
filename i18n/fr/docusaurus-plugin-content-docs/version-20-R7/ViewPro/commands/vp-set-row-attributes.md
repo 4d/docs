@@ -14,7 +14,7 @@ title: VP SET ROW ATTRIBUTES
 | rangeObj    | Object | -> | Plage de lignes                          |                  |
 | propertyObj | Object | -> | Objet contenant des propriétés de lignes | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->.
 
@@ -30,7 +30,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 | resizable | boolean | Vrai si la ligne peut être redimensionnée, sinon faux                             |
 | header    | text    | Texte de l'en-tête de la ligne                                                    |
 
-#### Exemple
+## Exemple
 
 Pour modifier la taille de la deuxième ligne et définir l'en-tête, saisissez le code suivant :
 
@@ -45,7 +45,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ![](../../assets/en/ViewPro/cmd_vpSetRowAttributes.PNG)
 
-#### Voir également
+## Voir également
 
 [VP Get row attributes](vp-get-row-attributes.md)<br/>
 [VP get column attributes](vp-get-column-attributes.md)<br/>

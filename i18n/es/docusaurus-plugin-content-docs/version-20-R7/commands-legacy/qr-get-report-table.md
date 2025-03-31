@@ -14,15 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR Get report table.Summary-->El comando QR Get report table devuelve el número de la tabla actual del informe designado por el parámetro *area*.<!-- END REF-->
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
-#### Ver también 
+## Ver también 
 
 [QR SET REPORT TABLE](qr-set-report-table.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 758 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

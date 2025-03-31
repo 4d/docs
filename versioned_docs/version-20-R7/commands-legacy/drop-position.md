@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( columnNumber | pictPosY )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *columnNumber* )} : Integer<br/>**Drop position** {( *pictPosY* )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Drop position.Summary-->The Drop position command can be used to find out the location, in a “complex” destination object, where an object has been (dragged and) dropped.<!-- END REF-->
 
@@ -33,7 +30,7 @@ If you call Drop position when handling an event that is not a drag-and-drop eve
 
 **Important:** A form object accepts dropped data if its **Droppable** property has been selected. Also, its object method must be activated for On Drag Over and/or On Drop, in order to process these events.
 
-#### Example 
+## Example 
 
 In the following example, a list of amounts paid must be broken down per month and per person. This is carried out by drag and drop between two list boxes:
 
@@ -92,7 +89,15 @@ The left (destination) list box object method contains the following code:
  End case
 ```
 
-#### See also 
+## See also 
 
-*\_o\_DRAG AND DROP PROPERTIES*  
 *Drag and Drop*  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 608 |
+| Thread safe | &cross; |
+
+

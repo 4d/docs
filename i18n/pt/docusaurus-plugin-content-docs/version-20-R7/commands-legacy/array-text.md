@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.ARRAY TEXT.Summary-->O comando ARRAY TEXT cria e/ou redimensiona um array de elementos do tipo [Texto](# "A character string that may contain from 0 to 2 GB of text") na memória.<!-- END REF-->
-
-* O parâmetro *nomeArray* é o nome do array.
+<!--REF #_command_.ARRAY TEXT.Summary-->O comando ARRAY TEXT cria e/ou redimensiona um array de elementos do tipo [Texto](# "A character string that may contain from 0 to 2 GB of text") na memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
 * O parâmetro *tamanho2* é opcional; se *tamanho2* for especificado, o comando cria um array de duas dimensões. Neste caso, *tamanho* especifica o número de linhas e *tamanho2* especifica o número de colunas em cada array. Cada linha em um array de duas dimensões pode ser tratada tanto como um elemento como um array. Isso significa que enquanto se trabalha com a primeira dimensão do array, você pode usar outros comandos de array para inserir e deletar arrays inteiros e arrays de duas dimensões.
 
@@ -28,7 +26,7 @@ Enquanto se aplica ARRAY TEXT para um array já existente:
 * se você aumentar o tamanho de um array, os elementos existentes não sofrem mudanças, e os novos elementos se iniciam em "" (cadeia vazia).
 * se você reduzir o tamanho de um array, os últimos elementos deletados do array se perdem.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array de processo de 100 elementos de tipo [Texto](# "A character string that may contain from 0 to 2 GB of text"):
 
@@ -36,7 +34,7 @@ Este exemplo cria um array de processo de 100 elementos de tipo [Texto](# "A cha
  ARRAY TEXT(atValores;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 100 linhas de 50 elementos do tipo [Texto](# "A character string that may contain from 0 to 2 GB of text"):
 
@@ -44,7 +42,7 @@ Este exemplo cria um array local de 100 linhas de 50 elementos do tipo [Texto](#
  ARRAY TEXT($atValores;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui a cada elemento o valor “Elemento #” seguido pelo seu número de elemento:
 
@@ -55,6 +53,12 @@ Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui
  End for
 ```
 
-#### Ver também 
 
-*\_o\_ARRAY STRING*  
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 222 |
+| Thread-seguro | &check; |
+
+

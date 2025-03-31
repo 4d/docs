@@ -15,14 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->**SET DRAG ICON**コマンドは、指定したアイコンを、ドラッグ＆ドロップ中のカーソルと関連付けます。<!-- END REF-->
 
-このコマンドはOn Begin Drag Over のフォームイベント中（ドラッグ中）しか呼び出すことができません([Form event code](form-event-code.md) コマンドを参照のこと)
+このコマンドはOn Begin Drag Over のフォームイベント中（ドラッグ中）しか呼び出すことができません([Form event code](../commands/form-event-code.md) コマンドを参照のこと)
 
 *icon* 引数にはドラッグ中に表示させたいピクチャを渡します。サイズは最大で 256x256 ピクセルです。 縦か横のどちらかの大きさが256ピクセルを超えていた場合、画像は自動的にリサイズされます。
 
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 
 引数省略時にはカーソルがアイコンの中央に位置するようになります。
 
-#### 例題 
+## 例題 
 
 フォーム内で、ユーザーが行をドラッグ＆ドロップするとラベルを生成することができるようにします。この場合リストボックスのオブジェクトメソッドは以下の様になります:
 
@@ -57,6 +54,15 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-#### 参照 
+## 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1272 |
+| スレッドセーフである | &cross; |
+
+

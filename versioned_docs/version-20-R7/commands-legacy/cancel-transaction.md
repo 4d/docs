@@ -12,16 +12,25 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** cancels the transaction that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> **CANCEL TRANSACTION** cancels the operations executed on the data and stored during the transaction.
+<!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** cancels the transaction that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF-->cancels the operations executed on the data and stored during the transaction.
 
 **Note:** **CANCEL TRANSACTION** does not have an effect on any changes made in the current records that were not saved - they remain displayed after the command is executed.
 
-#### See also 
+## See also 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 [Transaction level](transaction-level.md)  
 *Using Transactions*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 241 |
+| Thread safe | &check; |
+
+

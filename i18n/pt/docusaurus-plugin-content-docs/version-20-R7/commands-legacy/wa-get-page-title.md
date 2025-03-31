@@ -15,15 +15,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA Get page title.Summary-->O comando WA Get page title retorna o título da página atual ou que vai a ser mostrada na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> O título corresponde a a etiqueta HTML "Title".  
 
 Este comando retorna uma string vazia se não houver título disponível para o URL atual.
 
-#### Ver também 
+## Ver também 
 
 [WA Get page content](wa-get-page-content.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1036 |
+| Thread-seguro | &cross; |
+
+

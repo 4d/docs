@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->La commande **INSERT MENU ITEM** insère de nouvelles lignes dans le menu dont vous avez passé le numéro ou la référence dans *menu* et les place après la ligne de menu dont le numéro est passé dans *aprèsLigne*.<!-- END REF-->
 
@@ -41,7 +38,7 @@ Le paramètre facultatif *sousMenu* vous permet de désigner un menu comme ligne
 
 **Important :** Les nouvelles lignes n'ont pas de méthodes ou d'actions associées. Vous devez leur associer une action ou une méthode via les commandes [SET MENU ITEM PROPERTY](set-menu-item-property.md) ou [SET MENU ITEM METHOD](set-menu-item-method.md) ou encore les gérer à partir d'une méthode formulaire qui utilise la fonction [Menu selected](menu-selected.md).
 
-#### Exemple 
+## Exemple 
 
 L’exemple suivant crée un menu constitué de deux commandes auxquelles il affecte une méthode :
 
@@ -53,7 +50,17 @@ L’exemple suivant crée un menu constitué de deux commandes auxquelles il aff
  SET MENU ITEM METHOD(refMenu;2;"GestParDial")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 412 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

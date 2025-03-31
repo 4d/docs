@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Current form name.Summary-->O comando **Current form name** retorna o nome do formulário atual definido para o processo.<!-- END REF--> O formulário atual pode ser um formulário de projeto ou formulário de tabela. 
 
@@ -29,7 +26,7 @@ O comando retorna:
 * o atributo "nome" se o formulário atual for criado por um objeto ou
 * uma string vazia se não houver formulário atual definido para o processo
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Em um formulário de entrada, ponha o código abaixo em um botão:
 
@@ -45,7 +42,7 @@ Em um formulário de entrada, ponha o código abaixo em um botão:
   //...
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser obter o formulário atual se este for um formulário projeto:
 
@@ -57,6 +54,15 @@ Se quiser obter o formulário atual se este for um formulário projeto:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM LOAD](form-load.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1298 |
+| Thread-seguro | &cross; |
+
+

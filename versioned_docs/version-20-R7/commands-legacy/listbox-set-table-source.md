@@ -5,21 +5,18 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *object* ; tableNum | selName {; *highlightName*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *object* ; *tableNum* {; *highlightName*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *object* ; *selName* {; *highlightName*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum &#124; selName | Longint, String | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
+| tableNum &#124; selName | Integer, Text | &#8594;  | Number of table whose current selection is to be used or Named selection to be used |
 | highlightName | Text | &#8594;  | Name of highlight set |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->The **LISTBOX SET TABLE SOURCE** command can be used to modify the source of the data displayed in the listbox that is designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -37,6 +34,15 @@ If the listbox already contains columns, their contents will be updated after th
 
 **Note:** For optimization purposes, this command is processed in an asynchronous manner; in other words, the source of the listbox is changed only after the complete execution of the method in which the command is called. 
 
-#### See also 
+## See also 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1013 |
+| Thread safe | &cross; |
+
+

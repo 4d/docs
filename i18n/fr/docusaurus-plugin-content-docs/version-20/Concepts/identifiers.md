@@ -17,7 +17,7 @@ Le nom d’une classe peut contenir jusqu’à 31 caractères.
 
 Un nom de classe doit être conforme aux [règles standard de nommage des propriétés](#propriétés-des-objets) au regard de la notation à points.
 
-> Donner le même nom à une classe et à une [table de la base](#tables) est déconseillé afin d'éviter tout conflit.
+> Donner le même nom à une classe et à une [table de la base](#tables-and-fields) est déconseillé afin d'éviter tout conflit.
 
 ## Fonctions
 
@@ -29,7 +29,7 @@ Les noms de fonctions doivent être conformes aux [règles standard de nommage d
 
 Le nom d'une propriété d'objet (aussi appelé *attribut*) peut contenir jusqu'à 255 caractères.
 
-Les propriétés d'objets peuvent référencer des valeurs scalaires, des éléments ORDA, des fonctions de classe, d'autres objets, etc. Quelle que soit leur nature, les noms des propriétés d'objets doivent suivre certaines règles **si vous souhaitez utiliser la [notation à point](dt_object.md#propriétés-des-objets)** :
+Les propriétés d'objets peuvent référencer des valeurs scalaires, des éléments ORDA, des fonctions de classe, d'autres objets, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](./dt_object.md#properties)**:
 
 - Un nom de propriété doit commencer par une lettre, un trait de soulignement ("_") ou un dollar ("$").
 - Ensuite, le nom peut inclure des lettres, des chiffres, des traits de soulignement ("_") ou des dollars ("$").
@@ -44,7 +44,7 @@ monObjet.monAttribut:="10"
 
 :::tip
 
-Faire commencer un nom de propriété d'objet avec un caractère de soulignement ("_") exclura la propriété des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+Faire commencer un nom de propriété d'objet avec un caractère de soulignement ("_") exclura la propriété des fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `$o._myPrivateProperty`, il ne sera pas proposé dans l'éditeur de code lorsque vous tapez `"$o. "`.
 
 :::
 

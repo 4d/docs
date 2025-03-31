@@ -129,9 +129,9 @@ Function add($x : Variant; $y : Integer): Integer
 Les paramètres, y compris la valeur retournée, doivent être déclarés une seule fois. En particulier, vous ne pouvez pas déclarer le même paramètre en tant qu'entrée et sortie, même avec le même type. Par exemple :
 
 ```qs
-    //invalid declaration
+    //déclaration invalide
 Function myTransform ($x : Integer) -> $x : Integer 
-    //error: $x is declared twice
+    //erreur: $x est déclaré deux fois
 ```
 
 :::
@@ -350,7 +350,7 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-    + si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
+    + if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
     + si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 
@@ -473,7 +473,7 @@ APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans 
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 ```
 
-> Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-objects-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
+> Lorsque des paramètres facultatifs sont nécessaires dans vos méthodes, vous pouvez également envisager d'utiliser des [propriétés d'objet en tant que paramètres nommés](#using-object-properties-as-named-parameters), ce qui constitue un moyen souple de gérer un nombre variable de paramètres.
 
 
 
@@ -483,7 +483,7 @@ Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètr
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+DO_SOMETHING([People]Name) //La valeur de [People]Name est "williams"
 ALERT([People]Name)
 
     //Voici du code extrait de la méthode  DO_SOMETHING
@@ -491,15 +491,15 @@ ALERT([People]Name)
  ALERT($1)
 ```
 
-La boîte de dialogue d'alerte affichée par `FAIRE QUELQUE CHOSE` contiendra "WILLIAM" et celle affichée par `MA METHODE` contiendra "william". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[Personnes]Nom` passé en paramètre par la méthode `MA METHODE`.
+La boîte de dialogue d'alerte affichée par `DO_SOMETHING` contiendra "WILLIAMS" et celle affichée par `MA METHODE` contiendra "williams". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[[People]Name` passé en paramètre par la méthode `MY_METHOD`.
 
-Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la valeur du champ, deux solutions s'offrent à vous :
+Si vous voulez réellement que la méthode `DO_SOMETHING` modifie la valeur du champ, deux solutions s'offrent à vous :
 
 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
 ```4d
   //Voici du code extrait de la méthode  MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+ DO_SOMETHING(->[People]Name) //La valeur de [People]Name est "williams"
  ALERT([People]Last Name)
 
   //Voici du code extrait de la méthode  DO_SOMETHING
@@ -507,13 +507,13 @@ Si vous voulez réellement que la méthode `FAIRE QUELQUE CHOSE` modifie la vale
  ALERT($1->)
 ```
 
-Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ainsi, à l'intérieur de la méthode `FAIRE QUELQUE CHOSE`, $1 ne contient plus la valeur du champ mais un pointeur vers le champ. L'objet **référencé** par $1 ($1-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAM".
+Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ainsi, à l'intérieur de la méthode `DO_SOMETHING`, $1 ne contient plus la valeur du champ mais un pointeur vers le champ. L'objet **référencé** par $1 ($1-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAMS".
 
-2. Plutôt que la méthode `FAIRE QUELQUE CHOSE` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
+2. Plutôt que la méthode `DO_SOMETHING` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
 
 ```4d
     //Voici du code extrait de la méthode MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ [People]Name:=DO_SOMETHING([People]Name)
  ALERT([People]Name)
 
     //Voici du code extrait de la méthode DO SOMETHING
@@ -521,7 +521,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returning-values).
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returned-value).
 
 
 ### Cas particuliers : objets et collections

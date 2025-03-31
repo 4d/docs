@@ -42,3 +42,12 @@ La méthode projet suivante crée le tableau *taChamps* avec les noms des champs
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 255 |
+| Thread safe | &check; |
+
+

@@ -13,17 +13,20 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
 
-**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| 引数         | 型                                                                                 |    | 説明                      |                  |
-| ---------- | --------------------------------------------------------------------------------- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text                                                                              | -> | 4D View Pro フォームオブジェクト名 |                  |
-| tableName  | Text                                                                              | -> | Table name              |                  |
-| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | 設定する表テーマのプロパティ          | <!-- END REF --> |
+| 引数         | 型                                                                                 |    | 説明                                             |
+| ---------- | --------------------------------------------------------------------------------- | -- | ---------------------------------------------- |
+| vpAreaName | Text                                                                              | -> | 4D View Pro フォームオブジェクト名                        |
+| tableName  | Text                                                                              | -> | Table name                                     |
+| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | 設定する表テーマのプロパティ                                 |
+| sheet      | Integer                                                                           | -> | シートのインデックス (省略した場合はカレントシート) |
 
-#### 説明
+<!-- END REF -->
+
+## 説明
 
 `VP SET TABLE THEME` コマンドは、<!-- REF #_method_.VP SET TABLE THEME.Summary -->*tableName* の表の現在のテーマを変更します<!-- END REF -->。
 
@@ -31,7 +34,9 @@ title: VP SET TABLE THEME
 
 *options* には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](../classes.md#tabletheme) のオブジェクトを渡します。
 
-#### 例題 1
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+
+## 例題 1
 
 あらかじめ定義されたテーマを表に設定します:
 
@@ -42,7 +47,7 @@ $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
 
-#### 例題 2
+## 例題 2
 
 交互の列表示を設定します:
 
@@ -80,7 +85,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 ```
 
-#### 参照
+## 参照
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table theme](vp-get-table-theme.md)

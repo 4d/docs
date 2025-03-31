@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT DIF.Summary-->The EXPORT DIF command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh DIF document on the disk.
 
@@ -33,7 +30,7 @@ By default, the command uses the UTF-8 character set. Since DIF format documents
 
 When using EXPORT DIF, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13). You can modify these values by assigning new values to the two *System Variables* FldDelimit and RecDelimit. The user can change these default values in the export dialog box of the Design mode. Since Text fields can contain carriage returns, be careful if you use the carriage return as the field delimiter for fields to be exported.
 
-#### Example 
+## Example 
 
 The following example exports data to a DIF document. The method first sets the output form so that the data will be exported through the correct form, then performs the export:
 
@@ -42,13 +39,23 @@ The following example exports data to a DIF document. The method first sets the 
  EXPORT DIF([People];"NewPeople.dif"")  // Export to the "NewPeople.dif" document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 84 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

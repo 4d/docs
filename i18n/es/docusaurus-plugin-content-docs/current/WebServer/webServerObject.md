@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //el valor de $nbSrv es 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](commands/web-server.md) command:
+Para instanciar un objeto servidor web, llame al comando [`WEB Server`](commands/web-server.md):
 
 ```4d
 //crear una variable objeto de la clase 4D.WebServer
@@ -63,7 +63,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Funciones del servidor web
 
-Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
+Un [objeto de clase Web srver](API/WebServerClass.md../commands/web-server.md-object) contiene las siguientes funciones:
 
 | Funciones                                | Parámetros                          | Valor devuelto                     | Descripción             |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------- | ----------------------- |
@@ -86,7 +86,7 @@ $status:=webServer.stop()
 
 ## Propiedades del servidor web
 
-Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
+Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md../commands/web-server.md-object) que configuran el servidor web.
 
 Estas propiedades son definidas:
 
@@ -97,7 +97,7 @@ Estas propiedades son definidas:
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
 - Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
-> _isRunning_, _name_, _openSSLVersion_, y _perfectForwardSecrecy_ son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
+> *isRunning*, *name*, *openSSLVersion*, y *perfectForwardSecrecy* son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
 
 ## Alcance de los comandos 4D Web
 
@@ -109,7 +109,7 @@ El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Ser
 | `WEB CLOSE SESSION`             | Servidor web que ha recibido la petición |
 | `WEB GET BODY PART`             | Servidor web que ha recibido la petición |
 | `WEB Get body part count`       | Servidor web que ha recibido la petición |
-| `WEB Get Current Session ID`    | Servidor web que ha recibido la petición |
+| `WEB Get current session ID`    | Servidor web que ha recibido la petición |
 | `WEB GET HTTP BODY`             | Servidor web que ha recibido la petición |
 | `WEB GET HTTP HEADER`           | Servidor web que ha recibido la petición |
 | `WEB GET OPTION`                | Aplicación local del servidor web        |

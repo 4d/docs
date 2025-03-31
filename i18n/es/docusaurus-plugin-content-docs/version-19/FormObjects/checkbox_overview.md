@@ -346,9 +346,9 @@ El estilo del botón Personalizado acepta una imagen de fondo personalizada y pe
 
 - [Ruta de acceso fondo](properties_TextAndPicture.md#background-pathname)
 - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) y [margen vertical](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Suele asociarse a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede utilizarse junto con una [imagen de fondo](properties_TextAndPicture.md#background-pathname) de [4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Ejemplo JSON
 
@@ -376,8 +376,8 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 [Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Clase](properties_Object.md#css-class) - [Editable](properties_Entry.md#enterable) - [Tipo de expresión](properties_Object.md#expression-type) - [Focalizable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Nombre](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Guardar valor](properties_Object.md#save-value) - [Ahorro](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Existen propiedades específicas adicionales, dependiendo del [estilo de botón](#check-box-button-styles):
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
+- [Nombre de la ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin) (personalizado)
 - [Tres estados](properties_Display.md#three-states) (Plano, Clásico)
 - [Número de estados](properties_TextAndPicture.md#number-of-states) - [Nombre de ruta de la imagen](properties_TextAndPicture.md#picture-pathname) - [Título/Posición de la imagen](properties_TextAndPicture.md#titlepicture-position) (Botón de la barra de herramientas, Bisel, Bisel redondeado, OS X Degradado, OS X Texturizado, Office XP, Personalizado)

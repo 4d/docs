@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SCREENSHOT.Summary-->El comando **FORM SCREENSHOT** devuelve un formulario en forma de imagen.<!-- END REF--> Este comando admite dos sintaxis diferentes: en función de la sintaxis utilizada, puede obtener la imagen de un formulario ejecutado, o la imagen del formulario en el editor de formularios.
 
@@ -36,6 +33,15 @@ Por defecto, el comando devuelve una captura de pantalla de la página 1 del for
 * Las áreas web no se dibujan en la captura de pantalla devuelta.
 * Los dos primeros parámetros de este comando son opcionales, no puede pasar directamente como un argumento una función que devuelva un puntero como [Current form table](current-form-table.md)\-> o [Table](table.md)\->. Aunque esta sintaxis funcionaría en modo interpretado, sería rechazada durante la compilación, así que es necesario en este caso utilizar una variable puntero intermediaria. Para obtener más información, consulte "*Uso directo de los comandos que devuelven punteros*".
 
-#### Ver también 
+## Ver también 
 
 [FORM LOAD](form-load.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 940 |
+| Hilo seguro | &cross; |
+
+

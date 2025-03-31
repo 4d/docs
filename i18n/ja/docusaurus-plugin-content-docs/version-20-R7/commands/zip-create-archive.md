@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| 引数              | 型                         |     | 説明                                                                                                                |
-| --------------- | ------------------------- | :-: | ----------------------------------------------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| folderToZip     | 4D.Folder |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| zipStructure    | Object                    |  →  | 圧縮する File または Folder オブジェクト                                                                                       |
-| destinationFile | 4D.File   |  →  | アーカイブの保存先ファイル                                                                                                     |
-| options         | Integer                   |  →  | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | Object                    |  ←  | ステータスオブジェクト                                                                                                       |
+| 引数              | 型                         |                             | 説明                                                                                                                |
+| --------------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| folderToZip     | 4D.Folder | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| zipStructure    | Object                    | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
+| destinationFile | 4D.File   | &#8594; | アーカイブの保存先ファイル                                                                                                     |
+| options         | Integer                   | &#8594; | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
+| 戻り値             | Object                    | &#8592; | ステータスオブジェクト                                                                                                       |
 
 <!-- END REF -->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `ZIP Create archive` コマンドは、<!-- REF #_command_.ZIP Create archive.Summary -->圧縮された ZIPArchive オブジェクトを作成し、その処理のステータスを返します<!-- END REF -->。
 
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 - *fileToZip*: 圧縮する `4D.File` オブジェクトを引数として渡します。
 
-- *folderToZip*: 圧縮する `4D.Folder` を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。
+- *folderToZip*: 圧縮する `4D.Folder` を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。 この場合、任意の *options* 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 `ZIP Create archive` はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、*options* 引数に `ZIP Without enclosing folder` 定数を渡します。
 
-- *zipStructure*: ZIPArchive オブジェクトを表すオブジェクトを引数として渡します。 以下のプロパティを利用して、このオブジェクトを定義することが可能です:
+- *zipStructure*: ZIPArchive オブジェクトを表すオブジェクトを引数として渡します。 以下のプロパティを利用して、このオブジェクトを定義することが可能です: 以下のプロパティを利用して、このオブジェクトを定義することが可能です: 以下のプロパティを利用して、このオブジェクトを定義することが可能です: 以下のプロパティを利用して、このオブジェクトを定義することが可能です: 以下のプロパティを利用して、このオブジェクトを定義することが可能です: 以下のプロパティを利用して、このオブジェクトを定義することが可能です:
 
 | プロパティ       | 型                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,9 +49,9 @@ displayed_sidebar: docs
 | files       | Collection                  | <li>`4D.File` または` 4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>タイプ</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table> |
 | callback    | 4D.Function | $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ                                                                                                                                                                                                                                                                                                                                                                            |
 
-*destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
+*destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
 
-アーカイブが作成されると、[ZIP Read archive](#zip-read-archive) を使用してアクセスすることができます。
+アーカイブが作成されると、[ZIP Read archive](zip-read-archive.md) を使用してアクセスすることができます。
 
 **ステータスオブジェクト**
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 | status     | Integer | ステータスコード                                                                                                                   |
 | success    | Boolean | アーカイブが正常に作成された場合には true、それ以外は false                                                                                        |
 
-#### 例題 1
+## 例題 1
 
 `4D.File` を圧縮します:
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### 例題 2
+## 例題 2
 
 フォルダー自体は圧縮せずに `4D.Folder` の中身だけを圧縮します:
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-#### 例題 3
+## 例題 3
 
 ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 
@@ -122,7 +122,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### 例題 4
+## 例題 4
 
 *zipStructure* オブジェクトに、圧縮したいフォルダーとファイルを格納したコレクションを渡します:
 
@@ -139,7 +139,7 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
  $err:=ZIP Create archive($zip;$destination)
 ```
 
-#### 例題 5
+## 例題 5
 
 高い圧縮レベルの代替圧縮アルゴリズムを使用します:
 
@@ -157,9 +157,18 @@ $destination:=Folder(fk desktop folder).file("images.zip")
 $err:=ZIP Create archive($zip; $destination)
 ```
 
-#### 参照
+## 参照
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
+
+## プロパティ
+
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1640                        |
+| スレッドセーフ | &check; |
+
+

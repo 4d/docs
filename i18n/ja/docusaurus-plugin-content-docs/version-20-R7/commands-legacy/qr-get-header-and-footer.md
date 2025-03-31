@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->QR GET HEADER AND FOOTER コマンドを使用し、ヘッダまたはフッタの内容とサイズを取得できます。<!-- END REF-->
 
@@ -47,7 +44,7 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*selector*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 例題 
+## 例題 
 
 次のコードは、ヘッダタイトルの値とヘッダサイズを取得し、それを警告として表示します:
 
@@ -66,6 +63,16 @@ displayed_sidebar: docs
  ALERT("The height of the header is "+String($height))
 ```
 
-#### 参照 
+## 参照 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 775 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Current form table.Summary-->The Current form table command returns the pointer to the table of the form being displayed or printed in the current process.<!-- END REF-->
 
@@ -32,7 +29,7 @@ If the currently displayed form is the Detail form for a subform area, you are i
 * The pointer to the table shown in the subform area, if the subform displays a table.
 * A non-significant pointer, if the subform area displays a subtable.
 
-#### Example 
+## Example 
 
 Throughout your application, you use the following convention when displaying a record:  
 If the variable *vsCurrentRecord* is present in a form, it displays “New Record” if you are working with a new record. If you are working with the 56th record of a selection composed of 5200 records, it displays “56 of 5200”.
@@ -60,9 +57,18 @@ To do so, use the object method to create the variable *vsCurrentRecord*, then c
  End case
 ```
 
-#### See also 
+## See also 
 
 [DIALOG](dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 627 |
+| Thread safe | &cross; |
+
+

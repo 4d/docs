@@ -29,8 +29,8 @@ La primera vez que se conecte a un proyecto 4D Server a través de un 4D remoto,
 Para conectarse remotamente a un proyecto 4D Server:
 
 1. Haga una de las siguientes cosas:
-   - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
-   - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+  - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
+  - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
 
 Aparece el diálogo de conexión de 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
 
@@ -87,7 +87,7 @@ Sin embargo, debe prestar atención a las siguientes diferencias de comportamien
 
 ## Sesiones de usuarios remotos
 
-On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
+En el servidor, el comando [`Session`](../commands/session.md) devuelve un objeto `session` que describe la sesión de usuario actual. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 ### Utilización
 
@@ -101,7 +101,7 @@ El objeto `session` del usuario remoto está disponible en:
 
 - Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
-- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword,
+- ORDA [funciones del modelo de datos](../ORDA/ordaClasses.md) (excepto las declaradas con la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions),
 - Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
 :::info
@@ -113,3 +113,4 @@ Todos los procedimientos almacenados en el servidor comparten la misma sesión d
 ### Ver también (entrada de blog)
 
 [Objeto sesión remota 4D con conexión cliente/servidor y procedimiento almacenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+

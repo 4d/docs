@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Exp.Summary-->**Exp** retourne l'exponentielle (e=2,71828...) de *nombre*.<!-- END REF--> **Exp** est la fonction inverse de [Log](log.md). 
+<!--REF #_command_.Exp.Summary-->**Exp** retourne l'exponentielle (e=2,71828...) de *nombre*.<!-- END REF-->est la fonction inverse de [Log](log.md). 
 
 **Note :** La fonction exponentielle, qui au nombre réel x fait correspondre le nombre réel y, est notée y = ex. 4D fournit la constante prédéfinie e number (2,71828...).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant assigne l'exponentielle de 1 à *vrE* (le logarithme de *vrE* est 1) :
 
@@ -28,6 +28,15 @@ L'exemple suivant assigne l'exponentielle de 1 à *vrE* (le logarithme de *vrE* 
  vrE:=Exp(1) // vrE vaut e (e = 2,71828...)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Log](log.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 21 |
+| Thread safe | &check; |
+
+

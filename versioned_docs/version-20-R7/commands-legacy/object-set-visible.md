@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET VISIBLE.Summary-->The **OBJECT SET VISIBLE** command shows or hides the objects specified by *object*.<!-- END REF-->
 
@@ -26,7 +23,7 @@ If you specify the optional *\** parameter, you indicate an object name (a strin
 
 If you pass *visible* equal to **TRUE**, the objects are shown. If you pass *visible* equal to **FALSE**, the objects are hidden.
 
-#### Example 
+## Example 
 
 Here is a typical form in the Design environment:
 
@@ -57,7 +54,16 @@ or:
 
 ![](../assets/en/commands/pict27190.en.png)
 
-#### See also 
+## See also 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 603 |
+| Thread safe | &cross; |
+
+

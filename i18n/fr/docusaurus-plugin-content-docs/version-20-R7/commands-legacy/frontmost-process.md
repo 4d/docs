@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Frontmost process.Summary-->**Frontmost process** retourne le numéro du process dont la ou les fenêtre(s) est (sont) au premier plan.<!-- END REF--> 
 
@@ -28,11 +25,20 @@ Lorsqu'une ou plusieurs fenêtres flottantes sont ouvertes, deux niveaux différ
 
 Si la fonction **Frontmost process** est utilisée dans la méthode formulaire ou dans une méthode objet d'une fenêtre flottante, la fonction retourne le numéro du process de la fenêtre flottante au premier plan parmi les fenêtres flottantes. Si vous passez le paramètre optionnel astérisque, la fonction retourne le numéro du process dont la fenêtre est au premier plan, **exception faite du niveau des fenêtres flottantes**.
 
-#### Exemple 
+## Exemple 
 
 Référez-vous à l'exemple de [BRING TO FRONT](bring-to-front.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 327 |
+| Thread safe | &cross; |
+
+

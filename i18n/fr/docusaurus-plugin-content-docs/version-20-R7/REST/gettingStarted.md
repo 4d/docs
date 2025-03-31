@@ -19,9 +19,9 @@ Pour simplifier l'exemple, nous allons utiliser 4D et un navigateur qui s'exécu
 1. Lancez votre application 4D ou 4D Server et créez un nouveau projet. Vous pouvez, par exemple, le nommer "Emp4D".
 
 2. Dans l'éditeur de structure, créez une table [Employees] et ajoutez-y les champs suivants :
-   - Lastname (Alpha)
-   - Firstname (Alpha)
-   - Salary (Longint)
+    - Lastname (Alpha)
+    - Firstname (Alpha)
+    - Salary (Longint)
 
 ![](../assets/en/REST/getstarted1.png)
 

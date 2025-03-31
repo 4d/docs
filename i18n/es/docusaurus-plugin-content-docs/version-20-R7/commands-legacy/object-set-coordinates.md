@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->El comando **OBJECT SET COORDINATES** modifica la ubicación y, opcionalmente, el tamaño del objeto o de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
   
@@ -42,7 +39,7 @@ Este comando sólo funciona en los siguientes contextos:
 * Encabezados y pies de página de formularios de salida mostrados por el comando [MODIFY SELECTION](modify-selection.md) o [DISPLAY SELECTION](display-selection.md),
 * Los formularios en impresión.
 
-#### Ejemplo 
+## Ejemplo 
 
 La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20) (30,40):
 
@@ -52,8 +49,17 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-#### Ver también 
+## Ver también 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1248 |
+| Hilo seguro | &cross; |
+
+

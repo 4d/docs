@@ -16,7 +16,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
 | [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
@@ -33,8 +33,6 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<br/><!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
-
-<!-- REF DataStoreClass.dataclassName.Desc -->
 
 ## *.dataclassName*
 
@@ -64,8 +62,6 @@ Cada dataclass en un datastore está disponible como propiedad del objeto [DataS
  $sel:=ds.Employee.all()
 ```
 
-<!-- END REF -->
-
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
 ## .cancelTransaction()
@@ -94,15 +90,13 @@ La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
-Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransactions).
+Puede anidar varias transacciones (subtransacciones). Si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función [`.validateTransaction()`](#validatetransaction).
 
 #### Ejemplo
 
 Ver el ejemplo de la función [`.startTransaction() `](#starttransaction).
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 
 ## .clearAllRemoteContexts()
 
@@ -154,7 +148,7 @@ En estos casos, puedes utilizar `.clearAllRemoteContexts()` para borrar sus cont
 
 | Parámetros | Tipo   |                             | Descripción                                                              |
 | ---------- | ------ | :-------------------------: | ------------------------------------------------------------------------ |
-| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
+| Resultado  | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
 
 <!-- END REF -->
 
@@ -209,8 +203,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 ```
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.flushAndLock().Desc -->
 
 ## .flushAndLock()
 
@@ -288,8 +280,6 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
-
 ## .getAllRemoteContexts()
 
 <details><summary>Historia</summary>
@@ -306,7 +296,7 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 | Parámetros | Tipo       |                             | Descripción                                    |
 | ---------- | ---------- | --------------------------- | ---------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos contextos de optimización |
+| Resultado  | Collection | <- | Colección de objetos contextos de optimización |
 
 <!-- END REF -->
 
@@ -318,7 +308,7 @@ La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Para obtener más información sobre cómo se pueden crear contextos, consulte [Optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
-Cada objeto de la colección devuelta tiene las propiedades listadas en la sección [`.getRemoteContextInfo()`](#propiedades-del-objeto-devuelto).
+Cada objeto de la colección devuelta tiene las propiedades enumeradas en la sección [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Ejemplo
 
@@ -365,8 +355,6 @@ $info:=$ds.getAllRemoteContexts()
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
-
 ## .getGlobalStamp()
 
 <details><summary>Historia</summary>
@@ -383,7 +371,7 @@ $info:=$ds.getAllRemoteContexts()
 
 | Parámetros | Tipo |                             | Descripción                                      |
 | ---------- | ---- | --------------------------- | ------------------------------------------------ |
-| Result     | Real | <- | Valor actual del marcador de modificación global |
+| Resultado  | Real | <- | Valor actual del marcador de modificación global |
 
 <!-- END REF -->
 
@@ -435,7 +423,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 | Parámetros | Tipo   |                             | Descripción                      |
 | ---------- | ------ | :-------------------------: | -------------------------------- |
-| Result     | Object | <- | Propiedades del almacén de datos |
+| Resultado  | Object | <- | Propiedades del almacén de datos |
 
 <!-- END REF -->
 
@@ -449,7 +437,7 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devuelve 
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | type       | string  | <li>"4D": datastore principal, disponible a través de ds </li><li>"4D Server": datastore remoto, abrir con Open datastore</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | networked  | boolean | <li>True: el datastore se alcanza a través de una conexión de red.</li><li>False: el datastore no se alcanza a través de una conexión de red (base de datos local)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| localID    | text    | ID del almacén de datos en la máquina. Corresponde a la cadena localId dada con el comando `Open datastore`. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| localID    | text    | ID del almacén de datos en la máquina. ID del almacén de datos en la máquina. Cadena vacía ("") para el almacén de datos principal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>nombre de host</td><td>texto</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>booleano</td><td>True si se utiliza una conexión segura con el datastore remoto</td></tr><tr><td>idleTimeout</td><td>número</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>usuario</td><td>texto</td><td>Usuario autenticado en el almacén de datos remoto</td></tr></table> |
 
 - Si la función `.getInfo()` se ejecuta en un 4D Server o en un 4D monopuesto, `networked` es False.
@@ -487,8 +475,6 @@ En un almacén de datos remoto:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
-
 ## .getRemoteContextInfo()
 
 <details><summary>Historia</summary>
@@ -506,7 +492,7 @@ En un almacén de datos remoto:
 | Parámetros  | Tipo   |                             | Descripción              |
 | ----------- | ------ | --------------------------- | ------------------------ |
 | contextName | Text   | ->                          | Nombre del contexto      |
-| Result      | Object | <- | Descripción del contexto |
+| Resultado   | Object | <- | Descripción del contexto |
 
 <!-- END REF -->
 
@@ -522,12 +508,12 @@ Para obtener más información sobre cómo se pueden crear contextos de optimiza
 
 El objeto devuelto tiene las siguientes propiedades:
 
-| Propiedad                                 | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ----------------------------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                                      | Text | Nombre del contexto                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| main                                      | Text | Atributo(s) asociado(s) al contexto (los nombres de atributos están separados por comas)                                                                                                                                                                                                                                                                                                                                        |
-| dataclass                                 | Text | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| currentItem (opcional) | Text | Los atributos del [modo página](../ORDA/remoteDatastores.md#list-box-basado-en-una-selección-de entidades) si el contexto está vinculado a un list box. Se devuelve como `Null` o elemento de texto vacío si el nombre del contexto no se utiliza para un list box, o si no hay contexto para el elemento actual (currentItem) |
+| Propiedad                                 | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                                      | Text | Nombre del contexto                                                                                                                                                                                                                                                                                                                                           |
+| main                                      | Text | Atributo(s) asociado(s) al contexto (los nombres de atributos están separados por comas)                                                                                                                                                                                                             |
+| dataclass                                 | Text | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                   |
+| currentItem (opcional) | Text | Los atributos del [modo página](../ORDA/client-server-optimization.md#entity-selection-based-list-box) si el contexto está vinculado a un list box. Se devuelve como `Null` o elemento de texto vacío si el nombre del contexto no se utiliza para un list box, o si no hay contexto para el elemento actual (currentItem) |
 
 Como los contextos se comportan como filtros de atributos, si *main* se devuelve vacío, significa que no se aplica ningún filtro, y que el servidor devuelve todos los atributos de la dataclass.
 
@@ -557,7 +543,7 @@ Ver el ejemplo de la sección [`.setRemoteContextInfo()`](#example-1-3).
 
 | Parámetros | Tipo       |                             | Descripción                                                    |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una solicitud |
+| Resultado  | Collection | <- | Colección de objetos, donde cada objeto describe una solicitud |
 
 <!-- END REF -->
 
@@ -597,7 +583,7 @@ Vea el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 | Parámetros | Tipo    |                             | Descripción                                                                                                        |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------ |
-| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
+| Resultado  | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
 
 <!-- END REF -->
 
@@ -612,8 +598,6 @@ Por defecto, se concede acceso al Data Explorer para las sesiones `webAdmin`, pe
 [`.setAdminProtection()`](#setadminprotection)
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.locked().Desc -->
 
 ## .locked()
 
@@ -631,7 +615,7 @@ Por defecto, se concede acceso al Data Explorer para las sesiones `webAdmin`, pe
 
 | Parámetros | Tipo    |                             | Descripción       |
 | ---------- | ------- | --------------------------- | ----------------- |
-| Result     | Boolean | <- | True si bloqueado |
+| Resultado  | Boolean | <- | True si bloqueado |
 
 <!-- END REF -->
 
@@ -677,9 +661,9 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas las selecciones de entidades como alterables por defecto en los datastores de la aplicación actual<!-- END REF --> (incluyendo [datastores remotos](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
 
-Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](./EntitySelectionClass.md#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 > **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes.
 > Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
@@ -706,7 +690,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 | ------------- | ------ | --------------------------- | -------------------------------------------------------- |
 | curPassPhrase | Text   | ->                          | Frase de cifrado actual                                  |
 | curDataKey    | Object | ->                          | Llave de encriptación de datos actual                    |
-| Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación |
+| Resultado     | Object | <- | Resultado de la coincidencia de la llave de encriptación |
 
 <!-- END REF -->
 
@@ -806,8 +790,6 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
-
 ## .setGlobalStamp()
 
 <details><summary>Historia</summary>
@@ -863,8 +845,6 @@ ds.setGlobalStamp($newValue)
 
 [.getGlobalStamp()](#getglobalstamp)
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
-
 ## .setRemoteContextInfo()
 
 <details><summary>Historia</summary>
@@ -915,7 +895,7 @@ Si *attributes* es un texto vacío, o si *attributesColl* es una colección vac�
 Puede pasar un *contextType* para especificar si el contexto es un contexto estándar o el contexto del elemento actual de la selección de entidades mostrada en un list box:
 
 - Si el valor es "main" (por defecto), *contextName* designa un contexto estándar.
-- Si su valor es "currentItem", los atributos pasados se ponen en el contexto del elemento actual.  Ver [list box basada en una selección de entidades](../ORDA/remoteDatastores.md#list-box-basada-en-una-selección-de-entidades).
+- Si su valor es "currentItem", los atributos pasados se ponen en el contexto del elemento actual.  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 En *pageLength*, especifique el número de entidades de dataclass a solicitar al servidor.
 
@@ -1010,11 +990,11 @@ End case
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| Parámetros | Tipo                    |    | Descripción                                                                        |
-| ---------- | ----------------------- | -- | ---------------------------------------------------------------------------------- |
-| file       | 4D.File | -> | Objeto File                                                                        |
-| options    | Integer                 | -> | Opción de registro de respuesta (servidor únicamente)           |
-| reqNum     | Integer                 | -> | Número de peticiones a mantener en memoria (cliente únicamente) |
+| Parámetros | Tipo                    |    | Descripción                                                              |
+| ---------- | ----------------------- | -- | ------------------------------------------------------------------------ |
+| file       | 4D.File | -> | Objeto File                                                              |
+| options    | Integer                 | -> | Opción de registro de respuesta (servidor únicamente) |
+| reqNum     | Integer                 | -> | Number of requests to keep in memory (client only)    |
 
 <!-- END REF -->
 
@@ -1033,7 +1013,8 @@ Para una descripción del formato del registro de peticiones ORDA, por favor con
 Para crear un registro de peticiones ORDA del lado del cliente, llame a esta función en una máquina remota. El registro puede enviarse a un archivo o a la memoria, según el tipo de parámetro:
 
 - Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
-  Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
+ En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+ Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
@@ -1043,7 +1024,7 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 #### Del lado del servidor
 
-Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Los datos del registro se escriben en un archivo en formato `.jsonl`. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
 - Si ha pasado el parámetro *file*, los datos de registro se escriben en este archivo, en la ubicación solicitada. - Si omite el parámetro *file* o si es null, los datos del registro se escriben en un archivo llamado *ordaRequests.jsonl* y se almacenan en la carpeta "/LOGS".
 - El parámetro *options* puede utilizarse para especificar si la respuesta del servidor debe registrarse y si debe incluir el cuerpo. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:
@@ -1208,8 +1189,6 @@ Esta función no hace nada si el registro de peticiones ORDA no se inició en la
 Ver ejemplos para [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.unlock().Desc -->
 
 ## .unlock()
 

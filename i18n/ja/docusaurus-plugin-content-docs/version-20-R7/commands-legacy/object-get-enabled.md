@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->OBJECT Get enabled コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループがフォーム中で有効ならTrueを、無効ならFalseを返します。<!-- END REF-->
 
@@ -34,6 +31,15 @@ displayed_sidebar: docs
 * ポップアップメニュー、ドロップダウンリスト、コンボボックス、メニュー/ドロップダウンリスト
 * サーモメータ、ルーラ
 
-#### 参照 
+## 参照 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1079 |
+| スレッドセーフである | &cross; |
+
+

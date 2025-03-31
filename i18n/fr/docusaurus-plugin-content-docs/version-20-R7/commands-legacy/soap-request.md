@@ -22,3 +22,12 @@ Cette commande peut être utilisée pour des raisons de sécurité dans la *Mét
 #### Voir aussi 
 
 [SOAP DECLARATION](soap-declaration.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 783 |
+| Thread safe | &check; |
+
+

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->La commande **WEB SERVICE Get info** retourne des informations relatives à l'erreur éventuellement générée lors de l’exécution de la dernière requête SOAP adressée à un Web Service.<!-- END REF--> Cette commande doit généralement être appelée dans le cadre d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
@@ -28,3 +28,13 @@ Le paramètre *typeInfo* vous permet d’indiquer le type d’information que vo
 | Web Service HTTP status code | Entier long | 2      | Code de statut HTTP (à utiliser en cas d’erreur principale 9912).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 Une chaîne vide est retournée lorsqu’aucune information n’est disponible, en particulier si la dernière requête SOAP n'a pas généré d'erreur.
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 780 |
+| Thread safe | &check; |
+
+

@@ -5,7 +5,7 @@ slug: /commands/print-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( {*aTable*}{;}{* | >} )<!-- END REF-->
+<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *aTable* {; *} )<br/>**PRINT RECORD** ( *aTable* {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** prints the current record of *aTable*, without modifying the current selection.<!-- END REF--> The current output form is used for printing. If there is no current record for *aTable*, **PRINT RECORD** does nothing.
 
@@ -37,7 +34,7 @@ By default, **PRINT RECORD** displays the Print job dialog box before printing. 
 
 **Warning:** Do not use the [PAGE BREAK](page-break.md) command with **PRINT RECORD**. [PAGE BREAK](page-break.md) is exclusively reserved for use in combination with the [Print form](print-form.md) command.
 
-#### Example 1 
+## Example 1 
 
 The following example prints the current record of the \[Invoices\] table. The code is contained in the object method of a **Print** button on the input form. When the user clicks the button, the record is printed using an output form designed for this purpose. 
 
@@ -47,7 +44,7 @@ The following example prints the current record of the \[Invoices\] table. The c
  FORM SET OUTPUT([Invoices];"Standard Output") // Restore the previous output form
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example prints the same current record in two different forms. The code is contained in the object method of a **Print** button on the input form. You want to set customized print parameters and then use them in the two forms. 
 
@@ -62,6 +59,15 @@ The following example prints the same current record in two different forms. The
  End if
 ```
 
-#### See also 
+## See also 
 
 [Print form](print-form.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 71 |
+| Thread safe | &cross; |
+
+

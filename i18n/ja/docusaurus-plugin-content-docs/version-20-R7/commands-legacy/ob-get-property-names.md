@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->**OB GET PROPERTY NAMES**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に含まれているプロパティの名前を、 *arrProperties* という名前のテキスト配列に入れて返します。<!-- END REF-->
-
-*object* で指定するオブジェクトは、 [C\_OBJECT](c-object.md) コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->**OB GET PROPERTY NAMES**コマンドは、 *object* 引数で指定したランゲージオブジェクトの中に含まれているプロパティの名前を、 *arrProperties* という名前のテキスト配列に入れて返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。
 
 *arrProperties* 引数にはテキスト配列を渡します。配列が存在しない場合、コマンドが自動的に作成してリサイズします。
 
@@ -37,7 +35,7 @@ displayed_sidebar: docs
 
 **注:** 値が配列型の場合、コマンドは Is collection を返します。
 
-#### 例題 1 
+## 例題 1 
 
 オブジェクトが空でないかどうかをテストしたい場合を考えます:
 
@@ -54,7 +52,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクト配列の要素を使用する場合を考えます:
 
@@ -94,7 +92,16 @@ displayed_sidebar: docs
   // $arrTypes{2}=255
 ```
 
-#### 参照 
+## 参照 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1232 |
+| スレッドセーフである | &check; |
+
+

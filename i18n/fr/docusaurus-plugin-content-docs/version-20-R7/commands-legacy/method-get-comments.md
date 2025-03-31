@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->La commande **METHOD GET COMMENTS** retourne dans le paramètre *commentaires* la documentation de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF-->
 
@@ -53,6 +50,15 @@ Il n’est pas possible de mixer les deux syntaxes.
 
 Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1189 |
+| Thread safe | &cross; |
+
+

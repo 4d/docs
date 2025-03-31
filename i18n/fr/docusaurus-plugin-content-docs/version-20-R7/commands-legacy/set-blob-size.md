@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Si vous souhaitez que les nouveaux octets réservés (s'il y en a) pour le BLOB soient initialisés avec une valeur particulière, passez cette valeur (comprise entre 0 et 255) dans le paramètre optionnel *remplisseur*.
 
-##### Note 
+### Note 
 
 **Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
@@ -50,3 +50,12 @@ L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 
 #### Voir aussi 
 
 [BLOB size](blob-size.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 606 |
+| Thread safe | &check; |
+
+

@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.Command name.Summary-->O comando **Command name** retorna o nome do comando cujno número foi passado em *comando*.<!-- END REF-->
-
-**Nota:** O número de cada comando é indicado no Explorer assim como na área Propriedades desta documentação.
+<!--REF #_command_.Command name.Summary-->O comando **Command name** retorna o nome do comando cujno número foi passado em *comando*.<!-- END REF-->O número de cada comando é indicado no Explorer assim como na área Propriedades desta documentação.
 
 **Nota de Compatibilidade:** Já que o nome de comando pode variar entre versões de 4D (comandos renomeados) ou de acordo com a linguagem do aplicativo, pode ser útil designar um comando através de seu número, especialmente em porções de código não-tokenizadas. A utilidade do comando com respeito a esta necessidade diminui ao longo do tempo com a evolução de 4D, já que agora 4D oferece uma sintaxe token. Esta sintaxe token pode ser usada para evitar possíveis problemas por variações em nomes de comando, assim como outros elementos tais como tabelas, mas permitindo digitar os nomes em uma maneira legível (para saber mais, veja *Usar tokens em fórmulas* ). Além disso, de forma pré-determinada, a versão na língua inglesa a partir de 4D v15; entretanto, a opção "Use regional system settings" em [Is a list](is-a-list.md) das Preferências permite que continue a usar a linguagem francesa na versão francesa de 4D.  
   
@@ -30,7 +28,7 @@ Dois valores opcionais estão disponíveis:
 
 O comando **Command name** estabelece a variável *OK* para 1 se *comand*o corresponde a um número de comando existente, e a 0 de outra maneira. Note, entretanto, que alguns comandos existentes foram desativados, em cujo caso **Command name** retorna uma string vazia (ver último exemplo). 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte código lhe permite carregar todos os comandos 4D válidos em um array:
 
@@ -52,7 +50,7 @@ O seguinte código lhe permite carregar todos os comandos 4D válidos em um arra
  Until(OK=0) //fim dos comandos existentes
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Em um formulário, você deseja mostrar uma lista suspensa que contenha os comandos padrão de geração de informes. No método de objeto desta lista suspensa, você escreve:
 
@@ -72,7 +70,7 @@ Na versão inglesa de 4D, a lista suspensa conterá: Sum, Average, Min, e Max. N
 
 \*com um aplicativo 4D application configurado para a linguagem francesa (ver nota de compatibilidade).
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser criar um método que devolva **True** se o comando, cujo número foi passado como parâmetro, for thread seguro e em caso contrário **False**.   
 
@@ -98,7 +96,17 @@ Depois, para o comando "SAVE RECORD" (53) por exemplo, pode escrever:
   // devolveTrue
 ```
 
-#### Ver também 
+## Ver também 
 
 [EXECUTE FORMULA](execute-formula.md)  
 *Processos 4D Preemptivos*  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 538 |
+| Thread-seguro | &check; |
+| Modificar variáveis | OK |
+
+

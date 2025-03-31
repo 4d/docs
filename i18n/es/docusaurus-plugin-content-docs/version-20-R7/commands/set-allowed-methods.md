@@ -9,15 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Parámetros   | Tipo       |   | Descripción           |
-| ------------ | ---------- | - | --------------------- |
-| methodsArray | Text array | → | Array of method names |
+| Parámetros   | Tipo           |                             | Descripción           |
+| ------------ | -------------- | --------------------------- | --------------------- |
+| methodsArray | Array de texto | &#8594; | Array of method names |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-#### Descripción
+## Descripción
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
 
@@ -26,7 +24,7 @@ displayed_sidebar: docs
 - The formula editor - allowed methods appear at the end of the list of default commands and can be used in formulas (see section *Description of formula editor*).
 - The label editor - the allowed methods are listed in the **Apply** menu if they are also shared with the component (see section *Description of label editor*).
 - Formulas inserted in styled text areas or 4D Write Pro documents through the [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) command - disallowed methods are automatically rejected.
-- 4D View Pro documents - by default, if the [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) command has never been called during the session, 4D View Pro formulas only accept methods defined by **SET ALLOWED METHODS**. However, using [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) is recommended. See [Declaring allowed method](../ViewPro/formulas.md#declaring-allowed-methods).
+- 4D View Pro documents - by default, if the [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) command has never been called during the session, 4D View Pro formulas only accept methods defined by **SET ALLOWED METHODS**. However, using [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) is recommended. Ver [Declarando el método permitido](../ViewPro/formulas.md#declaring-allowed-methods).
 
 By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
 
@@ -44,7 +42,7 @@ This command only filters the **input** of methods, not their **execution**. It 
 
 :::
 
-#### Ejemplo
+## Ejemplo
 
 This example authorizes all methods starting with “formula” and the “Total\_general” method to be entered by the user in protected contexts:
 
@@ -55,7 +53,16 @@ This example authorizes all methods starting with “formula” and the “Total
  SET ALLOWED METHODS(methodsArray)
 ```
 
-#### Ver también
+## Ver también
 
 [EDIT FORMULA](../commands-legacy/edit-formula.md)\
 [GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 805                         |
+| Hilo seguro       | &cross; |
+
+

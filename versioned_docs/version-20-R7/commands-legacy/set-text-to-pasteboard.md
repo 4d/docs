@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** clears the pasteboard and then puts a copy of the text you passed in *text* into the pasteboard.<!-- END REF--> 
 
@@ -28,15 +25,25 @@ After you have put some text into the pasteboard, you can retrieve it using the 
 
 **Note:** The pasteboard is read only during the On Drag Over form event. It is not possible to use this command in this context.
 
-#### Example 
+## Example 
 
 See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
-#### System variables and sets 
+## System variables and sets 
 
 If a copy of the text is correctly placed in the pasteboard, the OK variable is set to 1\. If there is not enough memory to place a copy of the text in the pasteboard, the OK variable is set to 0, but no error is generated.
 
-#### See also 
+## See also 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 523 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

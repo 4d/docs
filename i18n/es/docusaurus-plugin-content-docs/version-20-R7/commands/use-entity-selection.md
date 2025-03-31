@@ -8,15 +8,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Parámetros      | Tipo                               |   | Descripción          |
-| --------------- | ---------------------------------- | - | -------------------- |
-| entitySelection | 4D.EntitySelection | → | Una entity selection |
+| Parámetros      | Tipo                               |                             | Descripción          |
+| --------------- | ---------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D.EntitySelection | &#8594; | Una entity selection |
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
-The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
+El comando `USE ENTITY SELECTION` <!--REF #_command_.USE ENTITY SELECTION.Summary-->actualiza la selección actual de la tabla que coincide con el nivel de datos del parámetro *entitySelection*, de acuerdo al contenido de la selección de entidad<!-- END REF-->.
 
 Este comando no puede utilizarse con un [almacén de datos remoto](../ORDA/remoteDatastores.md).
 
@@ -32,7 +32,7 @@ Tras una llamada a `USE ENTITY SELECTION`, el primer registro de la selección a
 
 :::
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -42,6 +42,17 @@ REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla Employee
 ```
 
-#### Ver también
+## Ver también
 
 [Create entity selection](create-entity-selection.md)
+
+## Propiedades
+
+|                           |                             |
+| ------------------------- | --------------------------- |
+| Número de comando         | 1513                        |
+| Hilo seguro               | &check; |
+| Changes current record    |                             |
+| Changes current selection |                             |
+
+

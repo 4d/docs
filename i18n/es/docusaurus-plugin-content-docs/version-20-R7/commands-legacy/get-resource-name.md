@@ -16,13 +16,20 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get resource name.Summary-->El comando Get resource name devuelve el nombre del recurso cuyo tipo se pasa en *resTipo* y cuyo número de referencia (ID) en *resNum*.<!-- END REF--> 
 
  Si pasa un número de referencia de archivo de recursos en el parámetro *resArchivo*, el recurso se busca en ese archivo únicamente. Si no pasa *resArchivo*, el archivo se busca en los archivos de recursos abiertos.
 
 Si el recurso no existe, Get resource name devuelve una cadena vacía.
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 513 |
+| Hilo seguro | &cross; |
+
+

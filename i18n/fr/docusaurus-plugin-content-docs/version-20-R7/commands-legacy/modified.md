@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** retourne **Vrai** si une valeur a été assignée par programmation au champ *leChamp* ou s'il a été modifié lors de la saisie de données.<!-- END REF--> La commande **Modified** ne fonctionne que lorsqu'elle est appelée dans le cadre d'une méthode formulaire (ou d'une sous-méthode appelée par la méthode formulaire).
 
@@ -33,9 +30,9 @@ Dans tous les cas, pour savoir si la valeur d'un champ a été effectivement mod
 
 **Note :** Bien que la fonction **Modified** puisse être appliquée à tout type de champ, si vous l'utilisez conjointement avec la fonction [Old](old.md), vous devez dans ce cas tenir compte des restrictions liées à cette fonction. Reportez-vous à la description de la commande [Old](old.md).
 
-Pendant la saisie de données, il est généralement plus pratique d'effectuer des opérations dans des méthodes objet à l'aide de la commande [Form event code](form-event-code.md) que d'utiliser la fonction **Modified** dans des méthodes formulaires. Comme une méthode objet reçoit l'événement On Data Change à chaque fois qu'un champ est modifié, utiliser une telle méthode équivaut à appeler **Modified** dans une méthode formulaire.
+Pendant la saisie de données, il est généralement plus pratique d'effectuer des opérations dans des méthodes objet à l'aide de la commande [Form event code](../commands/form-event-code.md) que d'utiliser la fonction **Modified** dans des méthodes formulaires. Comme une méthode objet reçoit l'événement On Data Change à chaque fois qu'un champ est modifié, utiliser une telle méthode équivaut à appeler **Modified** dans une méthode formulaire.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant teste si le champ *\[Commandes\]Quantité* ou le champ *\[Commandes\]Prix* a été modifié. Si c'est le cas, le champ *\[Commandes\]Total* est recalculé :
 
@@ -47,7 +44,7 @@ L'exemple suivant teste si le champ *\[Commandes\]Quantité* ou le champ *\[Comm
 
 Notez que le même résultat aurait pu être obtenu en utilisant la seconde ligne de cette méthode en tant que méthode objet des champs *\[Commandes\]Quantité* et *\[Commandes\]Prix* dans le cadre de l'événement formulaire On Data Change. 
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appelez plusieurs sous-routines qui sont susceptibles de modifier le champ *\[uneTable\]Champ important* mais sans provoquer de sauvegarde de l'enregistrement. A la fin de la méthode principale, vous pouvez utiliser la commande **Modified** pour déterminer si vous devez stocker l'enregistrement :
 
@@ -64,7 +61,16 @@ Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appel
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 32 |
+| Thread safe | &cross; |
+
+

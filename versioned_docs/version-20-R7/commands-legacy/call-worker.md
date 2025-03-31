@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CALL WORKER.Summary-->The **CALL WORKER** command creates or calls the worker process whose name or ID you passed in *process*, and requests the execution of the code designated by *formula* in its context with the optional *param* parameter(s).<!-- END REF-->
 
@@ -36,7 +36,7 @@ In *formula*, you designate the 4D code to execute in the context of the worker 
 * a **string** containing the name of a project method. You can pass an empty string; in this case, the worker executes the method that was originally used to start its process, if any (i.e., the startup method of the worker).  
 **Note:** It is not possible to pass an empty string in *formula* when the command calls the main process (process number 1) since it was not started using a project method. As a result, **CALL WORKER* (1;"")* does nothing.
 
-You can also pass parameters to the *formula* using one or more optional *param* parameters. You can use [sequential parameters](https://developer.4d.com/docs/Concepts/parameters#sequential-parameters) or, if the formula expression is a function or a project method, [named parameters](https://developer.4d.com/docs/Concepts/parameters#named-parameters). Upon starting execution in the context of the process, the process formula receives the parameter values either in the named parameters, or in *$1*, *$2*, and so on. Remember that arrays cannot be passed as parameters. Furthermore, in the context of the **CALL WORKER** command, the following additional considerations need to be taken into account:
+You can also pass parameters to the *formula* using one or more optional *param* parameters. You can use sequential parameters ($1, $2...) (https://developer.4d.com/docs/Concepts/parameters#sequential-parameters) or, if the formula expression is a function or a project method, [named parameters](https://developer.4d.com/docs/Concepts/parameters#named-parameters). Upon starting execution in the context of the process, the process formula receives the parameter values either in the named parameters, or in *$1*, *$2*, and so on. Remember that arrays cannot be passed as parameters. Furthermore, in the context of the **CALL WORKER** command, the following additional considerations need to be taken into account:
 
 * Pointers to tables or fields are allowed.
 * Pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the moment they are being accessed by the process method.
@@ -44,7 +44,7 @@ You can also pass parameters to the *formula* using one or more optional *param*
 
 A worker process remains alive until the application is closed or the [KILL WORKER](kill-worker.md) command is explicitly called for it. To free up memory, do not forget to call this command once a worker process is no longer needed.
 
-#### Example 
+## Example 
 
 In a form, a button starts a computation: for example, statistics for the selected year. The button creates or calls a worker process that computes the data while the user can continue to work in the form.
 
@@ -70,9 +70,18 @@ The code of *workerMethod* is:
  CALL FORM($window;Formula(displayStats);$vStatResults)
 ```
 
-#### See also 
+## See also 
 
 *About workers*  
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1389 |
+| Thread safe | &check; |
+
+

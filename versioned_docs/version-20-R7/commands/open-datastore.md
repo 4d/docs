@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
 
@@ -39,7 +39,7 @@ The following remote datastores are supported by the command:
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
 
 :::
 
@@ -79,7 +79,7 @@ Objects available in the `cs.Datastore` are mapped with respect to the [ORDA gen
 If no matching datastore is found, `Open datastore` returns **Null**.
 
 
-#### Example 1  
+## Example 1  
 
 Connection to a remote datastore without user / password:
 
@@ -91,7 +91,7 @@ Connection to a remote datastore without user / password:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Example 2
+## Example 2
 
 Connection to a remote datastore with user / password / timeout / tls:
 
@@ -104,7 +104,7 @@ Connection to a remote datastore with user / password / timeout / tls:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Example 3  
+## Example 3  
 
 Working with several remote datastores:
 
@@ -119,7 +119,7 @@ Working with several remote datastores:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
-#### Example 4
+## Example 4
 
 Connection to a Qodly application:
 
@@ -142,11 +142,21 @@ ALERT(String($data.length)+" items have been read")
 
 
 
-#### Error management  
+## Error management  
 
 In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
 
 
-#### See also 
+## See also 
 
 [ds](ds.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1452 |
+| Thread safe | &check; |
+| Modifies variables | error |
+
+

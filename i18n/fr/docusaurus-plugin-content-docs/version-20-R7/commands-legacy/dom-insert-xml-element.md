@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Insert XML element.Summary-->La commande **DOM Insert XML element** permet d’insérer un nouvel élément XML parmi les enfants de l’élément XML dont la référence est passée dans le paramètre *refElémentCible*.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Le paramètre *indexEnfant* permet de désigner l’enfant de l’élément pare
 
 La commande retourne la référence de l’élément XML obtenu.
 
-#### Exemple 
+## Exemple 
 
 Dans la structure suivante, nous souhaitons inverser le premier et le deuxième livre :
 
@@ -71,6 +71,15 @@ Pour cela, il suffit d’exécuter le code suivant :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Append XML element](dom-append-xml-element.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1083 |
+| Thread safe | &check; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->The OBJECT GET SCROLL POSITION returns, in the *vPosition* and *hPosition* parameters, information related to the position of the scroll bars of the form object designated by the *\** and *object* parameters.<!-- END REF-->
 
@@ -31,6 +28,15 @@ If *object* designates a list type object (subform, list form, hierarchical list
 
 If *object* designates a picture (variable or field), *vPosition* returns the vertical movement and *hPosition* the horizontal movement of the picture. These values are expressed in pixels with respect to the origin of the picture in the local coordinate system. 
 
-#### See also 
+## See also 
 
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1114 |
+| Thread safe | &cross; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->The DISABLE MENU ITEM command disables the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF-->You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.
 
@@ -30,6 +27,16 @@ If the *menuItem* parameter designates a hierarchical submenu, all the items of 
 
 **Tip:** To enable/disable all items of a menu at once, pass 0 (zero) in *menuItem*.
 
-#### See also 
+## See also 
 
 [ENABLE MENU ITEM](enable-menu-item.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 150 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

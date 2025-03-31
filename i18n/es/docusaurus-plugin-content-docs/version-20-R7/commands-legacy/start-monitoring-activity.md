@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->El comando **START MONITORING ACTIVITY** registra las operaciones que excedan una *duracion* especificada en la memoria.<!-- END REF--> Se puede invocar y ejecutar en un 4D remoto, 4D Server y en aplicaciones 4D autonomas (si *fuente* no proviene de una actividad de red). Las actividades registradas se puede recuperar utilizando el comando [Monitored activity](monitored-activity.md). Llame a [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) cuando desee detener la actividad de seguimiento.
 
@@ -29,9 +29,9 @@ El parámetro opcional *fuente* define el tipo de actividad a monitorear. Valore
 | Activity network    | 2     | Operaciones de peticiones de red                      |
 | Activity operations | 4     | Operaciones de datos 4D                               |
 
-**Nota**: si los historiales de depuración se han detenido en el servidor 4D [GRAPH SETTINGS](graph-settings.md), **START MONITORING ACTIVITY** con Activity network reiniciará los historiales.
+**Nota**: si los historiales de depuración se han detenido en el servidor 4D [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** con Activity network reiniciará los historiales.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea iniciar/detener la supervisión y revisión de los datos 4D y las actividades de depuración que duran más de un milisegundo:
 
@@ -88,7 +88,16 @@ Desea iniciar/detener la supervisión y revisión de los datos 4D y las activida
  }  
 \]
 
-#### Ver también 
+## Ver también 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1712 |
+| Hilo seguro | &check; |
+
+

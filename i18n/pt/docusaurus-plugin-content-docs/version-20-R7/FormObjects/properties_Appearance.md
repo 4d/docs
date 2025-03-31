@@ -91,7 +91,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -213,7 +213,7 @@ Exibe/oculta a régua horizontal quando a visualização do documento estiver no
 
 ---
 
-## Mostrar HTML WYSYWIG
+## Mostrar HTML WYSIWYG
 
 Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avançados do 4D Write Pro que não são compatíveis com todos os navegadores são removidos.
 
@@ -301,7 +301,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controle de guias](tabControl.md)
 
 ---
 
@@ -349,7 +349,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista jerárquica](list_overview.md#overview) - [Sub formulario](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 

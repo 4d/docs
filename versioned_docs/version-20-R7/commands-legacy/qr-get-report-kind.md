@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get report kind.Summary-->The **QR Get report kind** command retrieves the report type for the area whose reference was passed in *area*.<!-- END REF-->
 
@@ -33,6 +30,16 @@ You can also compare the function result with the constants of the *QR Report Ty
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 755 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

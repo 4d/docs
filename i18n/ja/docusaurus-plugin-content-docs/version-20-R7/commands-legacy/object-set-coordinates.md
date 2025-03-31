@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->**OBJECT SET COORDINATES**コマンドは、引数 *object* と *\** で指定したオブジェクトの位置とそれに伴うサイズを、カレントのプロセスにおいて変更します。<!-- END REF-->
 
@@ -42,7 +39,7 @@ displayed_sidebar: docs
 * [MODIFY SELECTION](modify-selection.md) か [DISPLAY SELECTION](display-selection.md) フォームを使用して表示された出力フォームのヘッダーとフッター
 * 印刷中のフォーム
 
-#### 例題 
+## 例題 
 
 以下の宣言は、 "button\_1" のオブジェクトを、 (10,20) (30,40) の座標に表示します:
 
@@ -52,8 +49,17 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-#### 参照 
+## 参照 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1248 |
+| スレッドセーフである | &cross; |
+
+

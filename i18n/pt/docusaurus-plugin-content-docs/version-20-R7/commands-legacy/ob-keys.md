@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB Keys.Summary-->O comando **OB Keys** retorna uma coleção de strings contendo todos os nomes de propriedade enumeráveis do *objeto*.<!-- END REF--> 
 
 Apenas os nomes de propriedade de primeiro-nível são retornados (nomes de propriedade de sub-objetos não são retornados). A ordem dos nomes dentro da coleção retornada seguem a ordem de definição das propriedades
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser uma coleção com todos os nomes de propriedade de primeiro-nível de um objeto:
 
@@ -45,7 +42,16 @@ Se quiser uma coleção com todos os nomes de propriedade de primeiro-nível de 
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1719 |
+| Thread-seguro | &cross; |
+
+

@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA GET LAST URL ERROR.Summary-->WA GET LAST URL ERROR コマンドを使用して、*\** と *object* 引数で指定したWebエリアで発生した最後のエラーに関する情報のいくつかの項目を取得できます。<!-- END REF-->
 
@@ -34,6 +31,15 @@ displayed_sidebar: docs
 
 発生したエラーの原因を知るためには、On URL Loading Errorフォームイベントのフレームワークでこのコマンドを呼び出すことをお勧めします。
 
-#### 参照 
+## 参照 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1034 |
+| スレッドセーフである | &cross; |
+
+

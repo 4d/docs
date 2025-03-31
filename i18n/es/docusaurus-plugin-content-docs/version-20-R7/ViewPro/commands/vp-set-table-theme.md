@@ -13,17 +13,20 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
 
-**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| Parámetros | Tipo                                                                              |    | Descripción                                  |                  |
-| ---------- | --------------------------------------------------------------------------------- | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text                                                                              | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| tableName  | Text                                                                              | -> | Nombre de la tabla                           |                  |
-| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Propiedades del tema de la tabla a modificar | <!-- END REF --> |
+| Parámetros | Tipo                                                                              |    | Descripción                                                    |
+| ---------- | --------------------------------------------------------------------------------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text                                                                              | -> | Nombre de objeto formulario área 4D View Pro                   |
+| tableName  | Text                                                                              | -> | Nombre de la tabla                                             |
+| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Propiedades del tema de la tabla a modificar                   |
+| sheet      | Integer                                                                           | -> | Índice de la hoja (hoja actual si se omite) |
 
-#### Descripción
+<!-- END REF -->
+
+## Descripción
 
 El comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifica el tema actual de *tableName*<!-- END REF -->.
 
@@ -31,7 +34,9 @@ En *vpAreaName*, pase el nombre del área 4D View Pro y en *tableName*, el nombr
 
 En el parámetro *options*, pase un objeto de la [clase`cs.ViewPro.TableTheme`](../classes.md#tabletheme) que contenga las propiedades del tema a modificar.
 
-#### Ejemplo 1
+En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+
+## Ejemplo 1
 
 Desea definir un tema predefinido en una tabla:
 
@@ -42,7 +47,7 @@ $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Quiere tener esta representación de columna alternativa:
 
@@ -80,7 +85,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 ```
 
-#### Ver también
+## Ver también
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table theme](vp-get-table-theme.md)

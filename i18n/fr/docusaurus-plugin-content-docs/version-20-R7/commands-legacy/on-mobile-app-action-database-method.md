@@ -14,15 +14,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
+## Description 
 
+<!--REF #_command_.On Mobile App Action database method.Summary-->**Documentation déplacée**<!-- END REF-->
 
-#### Description 
+La documentation de cette méthode base a été mise à jour et déplacée vers [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
 
-<!--REF #_command_.On Mobile App Action database method.Summary-->**Documentation déplacée**
-
-La documentation de cette méthode base a été mise à jour et déplacée vers [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
-
-#### Voir aussi 
+## Voir aussi 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  

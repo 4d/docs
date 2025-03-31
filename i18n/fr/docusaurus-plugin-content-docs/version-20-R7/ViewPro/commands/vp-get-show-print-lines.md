@@ -15,7 +15,7 @@ title: VP Get show print lines
 | sheet      | Integer | <- | Numéro d'indice de la feuille                              |                  |
 | Résultat   | Boolean | <- | True si les lignes d'impression sont visibles, sinon False | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get show print lines`<!-- REF #_method_.VP Get show print lines.Summary -->retourne `True` si les lignes d'aperçu avant impression sont visibles et `False` si elles sont masquées.<!-- END REF -->
 
@@ -25,7 +25,7 @@ Dans *sheet*, passez le numéro de la page cible. Si *sheet* est omis, la comman
 
 > La numérotation démarre à 0.
 
-#### Exemple
+## Exemple
 
 Le code suivant permet de vérifier si les lignes d'aperçu sont visibles ou masquées dans le document :
 
@@ -34,6 +34,6 @@ Le code suivant permet de vérifier si les lignes d'aperçu sont visibles ou mas
  $result:=VP Get show print lines("ViewProArea";1)
 ```
 
-#### Voir également
+## Voir également
 
 [VP SET SHOW PRINT LINES](vp-set-show-print-lines.md)

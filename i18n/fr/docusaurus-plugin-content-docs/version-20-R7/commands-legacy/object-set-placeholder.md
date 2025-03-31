@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->La commande **OBJECT SET PLACEHOLDER** vous permet d’associer un texte d’exemple à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -34,7 +31,7 @@ Passez dans *texteExemple* le texte d’aide ou l’indication devant apparaîtr
 
 Cette commande peut être utilisée uniquement avec les objets de formulaire de type variable, champ et combo box. Un texte d’exemple peut être associé à des valeurs de type texte et alpha. Il peut également être associé à des données de type date ou heure si l’objet de formulaire comporte la propriété "Vide si null".
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
 
@@ -44,6 +41,15 @@ Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
 
 ![](../assets/en/commands/pict1208449.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1295 |
+| Thread safe | &cross; |
+
+

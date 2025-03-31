@@ -55,16 +55,16 @@ Un objeto HTTPRequest es un objeto no compartible.
 
 Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
-|                                                                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.dataType.Summary -->|
+|                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#datatype)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.dataType.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.encoding.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.errors.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.headers.Syntax -->](#headers)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.headers.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.method.Syntax -->](#method)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.method.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.protocol.Syntax -->](#protocol)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.protocol.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.response.Syntax -->](#response)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.response.Summary -->|
-| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#returnResponseBody)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary -->|
+| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#datatype)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.terminate().Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.terminated.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.timeout.Syntax -->](#timeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.timeout.Summary -->|
@@ -92,7 +92,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | url        | Text           | -> | URL a la que enviar la solicitud                    |
 | options    | Object         | -> | Propiedades de configuración de la petición         |
-| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest|<!-- END REF -->
+| Resultado  | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest|<!-- END REF -->
 
 |
 
@@ -372,7 +372,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 | Parámetros | Tipo           |    | Descripción                                         |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tiempo máximo en segundos para esperar la respuesta |
-| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest|<!-- END REF -->
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest|<!-- END REF -->
 
 |
 
@@ -387,6 +387,6 @@ Si se pasa un parámetro *time*, la función esperará como máximo el número d
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other `CALL WORKER` calls. Se puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de `.wait()`, se ejecutan funciones de retrollamada, ya sean de otros `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md) u otras llamadas `CALL WORKER`. Se puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 <!-- END REF -->

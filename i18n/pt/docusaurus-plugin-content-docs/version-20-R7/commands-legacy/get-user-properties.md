@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES retorna a informação sobre o usuário cujo número de referência se passa no parâmetro *refUsuario*.<!-- END REF--> Deve passar um número de referência de usuário retornado pelo comando [GET USER LIST](get-user-list.md).
 
@@ -46,14 +43,24 @@ Se passa o parâmetro opcional *adesao*, recupera os números de referência ún
   
 Nota para bancos de dados binários. Valors das IDs de referência de grupo e de usuários dependem de seus criadores (Designer, Administrador, ou proprietário de grupo afiliado) Para saber mais veja o parágrafo *User and group ID ranges*.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se não tiver privilégios de acesso para chamar ao comando GET USER PROPERTIES ou se outro processo abriu no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com un método de gestão de erros instalado por [ON ERR CALL](on-err-call.md).
 
-#### Ver também 
+## Ver também 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 611 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

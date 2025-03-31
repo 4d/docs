@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA ZOOM IN.Summary-->The WA ZOOM IN command increases the size of the contents displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
 
@@ -25,6 +22,15 @@ Under macOS, the scope of this command is the 4D session: the configuration carr
 
 Under Windows, the scope of this command is global: the configuration is retained after the 4D application is closed.
 
-#### See also 
+## See also 
 
 [WA ZOOM OUT](wa-zoom-out.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1039 |
+| Thread safe | &cross; |
+
+

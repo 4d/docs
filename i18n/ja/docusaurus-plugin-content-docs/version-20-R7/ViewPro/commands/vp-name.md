@@ -16,7 +16,7 @@ title: VP Name
 | sheet      | Integer | ->                          | レンジの場所 (省略時はカレントシート) |                  |
 | 戻り値        | Object  | <- | rangeName のレンジオブジェクト                    | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Name` コマンドは、<!-- REF #_method_.VP Name.Summary -->命名レンジを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -29,7 +29,7 @@ title: VP Name
 - `vk current sheet`
 - `vk workbook`
 
-#### 例題
+## 例題
 
 "Total" という名前のレンジに値を渡します:
 
@@ -40,7 +40,7 @@ $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### 参照
+## 参照
 
 [VP ADD RANGE NAME](vp-add-range-name.md)<br/>
 [VP ALL](vp-all.md)<br/>

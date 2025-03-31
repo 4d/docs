@@ -17,16 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
 :::info Compatibility
 
 **PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP Execute.Summary-->The **PHP Execute** command can be used to execute a PHP script or function.<!-- END REF-->
 
@@ -57,7 +54,7 @@ In addition, the script itself may generate PHP errors. In this case, you must u
 
 **Note:** PHP can be used to configure error management. For more information, please refer, for example, to the following page: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
 
-##### Conversion of data returned 
+### Conversion of data returned 
 
 The following table specifies how 4D interprets and converts data that is returned according to the type of the *phpResult* parameter.
 
@@ -77,11 +74,11 @@ The following table specifies how 4D interprets and converts data that is return
 
 **Note:** If you need to recover large volumes of data using PHP, it is usually more efficient to pass by the *stdOut* buffer (**echo** command or similar) rather than by the function return. For more information, refer to the description of the [PHP GET FULL RESPONSE](php-get-full-response.md) command. 
 
-##### Using environment variables 
+### Using environment variables 
 
 You can use the [SET ENVIRONMENT VARIABLE](set-environment-variable.md) command to specify the environment variables used by the script. Warning: after calling [LAUNCH EXTERNAL PROCESS](launch-external-process.md) or **PHP Execute**, the set of environment variables is erased.
 
-##### Special functions 
+### Special functions 
 
 4D provides the following special functions:
 
@@ -90,7 +87,7 @@ You can use the [SET ENVIRONMENT VARIABLE](set-environment-variable.md) command 
 
 Note that the interpreter is relaunched automatically when the first request is sent by PHP Execute. 
 
-#### Example 1 
+## Example 1 
 
 Calling the "myPhpFile.php" script without any function. Here are the contents of the script:
 
@@ -109,7 +106,7 @@ The following 4D code:
 
 ... will display the current PHP version.
 
-#### Example 2 
+## Example 2 
 
 Calling the *myPhpFunction* function in the "myNewScript.php" script with parameters. Here are the contents of the script:
 
@@ -130,7 +127,7 @@ Calling with function:
  ALERT($result) // Displays "Hello 4D world!"
 ```
 
-#### Example 3 
+## Example 3 
 
 Quitting the PHP interpreter:
 
@@ -138,7 +135,7 @@ Quitting the PHP interpreter:
  $ifOk:=PHP Execute("";"quit_4d_php")
 ```
 
-#### Example 4 
+## Example 4 
 
 Error management:
 
@@ -178,7 +175,7 @@ The PHP\_errHandler method is as follows:
  End for
 ```
 
-#### Example 5 
+## Example 5 
 
 Dynamic creation by 4D of a script before its execution:
 
@@ -205,7 +202,7 @@ The script is then executed:
  $err:=PHP Execute("C:\\Scripts\\MyScript.php";"function2Rename_v2";*)
 ```
 
-#### Example 6 
+## Example 6 
 
 Direct retrieval of a Date and Time type value. Here are the contents of the script:
 
@@ -225,7 +222,7 @@ Receiving the date on the 4D side:
   //$phpResult_time is ?01 :02 :03 ?
 ```
 
-#### Example 7 
+## Example 7 
 
 Distribution of data in arrays:
 
@@ -241,7 +238,7 @@ Distribution of data in arrays:
   // $arLong contains the numbers, 11, 22, 33, etc.
 ```
 
-#### Example 8 
+## Example 8 
 
 Initialization of an array:
 
@@ -252,7 +249,7 @@ Initialization of an array:
   // Fills the $arText array with 50 "undefined" elements
 ```
 
-#### Example 9 
+## Example 9 
 
 Passing of parameters via an array:
 
@@ -263,7 +260,7 @@ Passing of parameters via an array:
   // Fills the array with the initial values
 ```
 
-#### Example 10 
+## Example 10 
 
 Here is an example of the basic use of the trim function, to remove extra spaces and/or invisible characters from the beginning and end of a string:
 
@@ -276,8 +273,17 @@ Here is an example of the basic use of the trim function, to remove extra spaces
 
 For more information concerning the trim function, please refer to the PHP documentation.
 
-#### See also 
+## See also 
 
 *Executing PHP scripts in 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1058 |
+| Thread safe | &cross; |
+
+

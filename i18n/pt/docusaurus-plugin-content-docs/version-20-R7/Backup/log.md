@@ -44,13 +44,13 @@ Você pode descobrir se o seu aplicativo utiliza um arquivo de log a qualquer mo
 Para criar um arquivo de histórico:
 
 1. Na página **Cópia de segurança/Configuração** das Propriedades do banco de dados, marque a opção **Utilizar o arquivo de histórico**.
-   O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado *data.journal*.
+  O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado *data.journal*.
 
 2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo.
-   Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
+  Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
 
 3. Clique em **Salvar**.
-   O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
+  O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
 4. Valide a caixa de diálogo das Propriedades.
 
@@ -67,7 +67,7 @@ Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Pre
 
 ## Configurações do arquivo de registro
 
-As [configurações do arquivo de log](settings.md#log-file-management) são baseadas em duas informações: um valor booleano e um caminho.
+As [configurações do arquivo de log](settings.md#log-management) são baseadas em duas informações: um valor booleano e um caminho.
 
 1. **Valor booleano**: indicando se o recurso "Usar arquivo de registro" está ativado ou desativado no aplicativo. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. No entanto, quando as [configurações do usuário](../Desktop/user-settings.md) são ativadas, a configuração do arquivo *catalog.4DCatalog* é substituída, e o valor booleano pode então ser definido no arquivo *Backup.4DSettings* [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) ou no arquivo *Backup.4DSettings* [na pasta do projeto](../Project/architecture.md#settings-user) (consulte também a documentação da chave de backup xml `JournalFileEnabled` em [doc.4d.com](https://doc.4d.com)).
 

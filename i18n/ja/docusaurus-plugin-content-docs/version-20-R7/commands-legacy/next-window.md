@@ -14,13 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Next window.Summary-->Next window コマンドは、*window* に渡したウィンドウの後ろにあるウィンドウの参照番号を、ウィンドウの重なり順に基づき、返します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [Frontmost window](frontmost-window.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 448 |
+| スレッドセーフである | &cross; |
+
+

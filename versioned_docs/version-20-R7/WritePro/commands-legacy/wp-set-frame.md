@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP SET FRAME.Summary-->The **WP SET FRAME** command sets the cursor into the frame designated by *frameSelector* and optionally, *textBoxID*, in the 4D Write Pro *wpArea* area.<!-- END REF-->
 
@@ -50,7 +50,7 @@ You can pass in *frameSelector* one of the following constants from the *4D Writ
 
 If *frameSelector* \= wk text box, you must pass the *textBoxID* parameter with the **id** of the text box in which to set the focus. In this case, if *textBoxID* is omitted or if there is no text box with the specified id or if there is no page corresponding to the anchor conditions of the text box, the command does nothing. The *textBoxID* parameter is ignored if *frameSelector* \# wk text box.
 
-#### Example 
+## Example 
 
 You want to set the cursor to the left footer of the current section:
 
@@ -58,6 +58,6 @@ You want to set the cursor to the left footer of the current section:
  WP SET FRAME(*;"WPArea";wk current section left footer)
 ```
 
-#### See also 
+## See also 
 
 [WP Get frame](wp-get-frame.md)  

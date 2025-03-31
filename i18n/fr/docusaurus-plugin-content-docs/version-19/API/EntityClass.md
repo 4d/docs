@@ -92,8 +92,10 @@ $myEntity.save() //sauvegarder l'entity
 
 #### Description
 
-La fonction `clone()` <!-- REF #EntityClass.clone().Summary -->crée en mémoire une nouvelle entité référençant le même enregistrement que l'entité d'origine<!-- END REF -->. Cette fonction vous permet de mettre à jour des entités séparément.
-> A noter que toute modification apportée aux entités n'est stockée dans l'enregistrement référencé qu'au moment où la fonction [`.save( )`](#save) est exécutée.
+La fonction `clone()` <!-- REF #EntityClass.clone().Summary -->crée en mémoire une nouvelle entité référençant le même enregistrement que l'entité d'origine<!-- END REF -->.
+
+Cette fonction vous permet de mettre à jour des entités séparément. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.
+> A noter que toute modification apportée aux entités n'est stockée dans l'enregistrement référencé qu'au moment où la fonction [`.save()`](#save) est exécutée.
 
 Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées dans la base de données. Elle ne peut pas être appelée sur une entité nouvellement créée (pour laquelle [`.isNew()`](#isnew) retourne **True**).
 
@@ -145,7 +147,7 @@ Les différences sont retournées sous forme de collection d'objets dont les pro
 
 | Nom de propriété | Type                      | Description                                  |
 | ---------------- | ------------------------- | -------------------------------------------- |
-| attributeName    | String                    | Nom de l'attribut                            |
+| attributeName    | Text                      | Nom de l'attribut                            |
 | value            | Dépend du type d'attribut | Valeur de l'attribut dans l'entité d'origine |
 | otherValue       | Dépend du type d'attribut | Valeur de l'attribut dans *entityToCompare*  |
 
@@ -165,9 +167,9 @@ Si l'une des entités comparées vaut **Null**, une erreur est retournée.
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+ $diff1:=$clone.diff(employee) // Toutes les différences sont retournées
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
+  // Seules les différences sur firstName et lastName sont retournées
 ```
 
 $diff1:
@@ -233,7 +235,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (toutes les différences sont retournées) :
+vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournées)
 
 ```4d
 [
@@ -348,26 +350,26 @@ Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le para
 
 L'objet retourné par `.drop( )` contient les propriétés suivantes :
 
-| Propriété     |                     | Type                  | Description                                                                                                    |
-| ------------- | ------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean               | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                       |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur :***                                                                  |
-| status(*)     |                     | number                | Code d'erreur, voir ci-dessous                                                                                 |
-| statusText(*) |                     | text                  | Description de l'erreur, voir ci-dessous                                                                       |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                       |
-| LockKindText  |                     | text                  | "Locked by record"                                                                                             |
-| lockInfo      |                     | object                | Information sur l'origine du verrouillage                                                                      |
-|               | task_id             | number                | Id du process                                                                                                  |
-|               | user_name           | text                  | Nom d'utilisateur de la session sur la machine                                                                 |
-|               | user4d_alias        | text                  | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
-|               | host_name           | text                  | Nom de la machine                                                                                              |
-|               | task_name           | text                  | Nom du process                                                                                                 |
-|               | client_version      | text                  |                                                                                                                |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur critique (clé primaire dupliquée, disque plein..) :***                |
-| errors        |                     | collection of objects |                                                                                                                |
-|               | message             | text                  | Message d'erreur                                                                                               |
-|               | component signature | text                  | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
-|               | errCode             | number                | Code d'erreur                                                                                                  |
+| Propriété     |                     | Type                | Description                                                                                                    |
+| ------------- | ------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| success       |                     | boolean             | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                       |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur :***                                                                  |
+| status(*)     |                     | number              | Code d'erreur, voir ci-dessous                                                                                 |
+| statusText(*) |                     | text                | Description de l'erreur, voir ci-dessous                                                                       |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                       |
+| LockKindText  |                     | text                | "Locked by record"                                                                                             |
+| lockInfo      |                     | object              | Information sur l'origine du verrouillage                                                                      |
+|               | task_id             | number              | Id du process                                                                                                  |
+|               | user_name           | text                | Nom d'utilisateur de la session sur la machine                                                                 |
+|               | user4d_alias        | text                | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
+|               | host_name           | text                | Nom de la machine                                                                                              |
+|               | task_name           | text                | Nom du process                                                                                                 |
+|               | client_version      | text                |                                                                                                                |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur critique (clé primaire dupliquée, disque plein..) :***                |
+| errors        |                     | collection d'objets |                                                                                                                |
+|               | message             | text                | Message d'erreur                                                                                               |
+|               | component signature | text                | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
+|               | errCode             | number              | Code d'erreur                                                                                                  |
 
 (\*) Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *Résultat* en cas d'erreur :
 
@@ -443,7 +445,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 La fonction `.first()` <!-- REF #EntityClass.first().Summary -->retourne une référence vers l'entité en première position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 #### Exemple
 
@@ -829,7 +831,7 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 La fonction `.last()` <!-- REF #EntityClass.last().Summary -->retourne une référence vers l'entité en dernière position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 #### Exemple
 
@@ -883,29 +885,29 @@ Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramèt
 
 L'objet retourné par `.lock( )` contient les propriétés suivantes :
 
-| Propriété        |                     | Type                  | Description                                                                                                                             |
-| ---------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | vrai si l'action de verrouillage a été effectuée avec succès (ou si l'entité est déjà verrouillée dans le process courant), sinon faux. |
-|                  |                     |                       | ***Disponible uniquement si l'option `dk reload if stamp changed` est utilisée :***                                                     |
-| **wasReloaded**  |                     | boolean               | vrai si l'entité a été correctement rechargée, sinon faux.                                                                              |
-|                  |                     |                       | ***Disponible uniquement en cas d'erreur :***                                                                                           |
-| status(\*)     |                     | number                | Code d'erreur, voir ci-dessous                                                                                                          |
-| statusText(\*) |                     | text                  | Description de l'erreur, voir ci-dessous                                                                                                |
-|                  |                     |                       | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                                                |
-| lockKindText     |                     | text                  | "Locked by record"                                                                                                                      |
-| lockInfo         |                     | object                | Information sur l'origine du verrouillage                                                                                               |
-|                  | task_id             | number                | ID du process                                                                                                                           |
-|                  | user_name           | text                  | Nom d'utilisateur de la session sur la machine                                                                                          |
-|                  | user4d_alias        | text                  | Nom ou alias de l'utilisateur 4D                                                                                                        |
-|                  | user4d_id           | number                | Identifiant utilisateur dans le répertoire de la base 4D                                                                                |
-|                  | host_name           | text                  | Nom de la machine                                                                                                                       |
-|                  | task_name           | text                  | Nom du process                                                                                                                          |
-|                  | client_version      | text                  |                                                                                                                                         |
-|                  |                     |                       | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :                                        |
-| errors           |                     | collection of objects |                                                                                                                                         |
-|                  | message             | text                  | Message d'erreur                                                                                                                        |
-|                  | component signature | text                  | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                                                       |
-|                  | errCode             | number                | Code d'erreur                                                                                                                           |
+| Propriété        |                     | Type                | Description                                                                                                                             |
+| ---------------- | ------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean             | vrai si l'action de verrouillage a été effectuée avec succès (ou si l'entité est déjà verrouillée dans le process courant), sinon faux. |
+|                  |                     |                     | ***Disponible uniquement si l'option `dk reload if stamp changed` est utilisée :***                                                     |
+| **wasReloaded**  |                     | boolean             | vrai si l'entité a été correctement rechargée, sinon faux.                                                                              |
+|                  |                     |                     | ***Disponible uniquement en cas d'erreur :***                                                                                           |
+| status(\*)     |                     | number              | Code d'erreur, voir ci-dessous                                                                                                          |
+| statusText(\*) |                     | text                | Description de l'erreur, voir ci-dessous                                                                                                |
+|                  |                     |                     | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                                                |
+| lockKindText     |                     | text                | "Locked by record"                                                                                                                      |
+| lockInfo         |                     | object              | Information sur l'origine du verrouillage                                                                                               |
+|                  | task_id             | number              | ID du process                                                                                                                           |
+|                  | user_name           | text                | Nom d'utilisateur de la session sur la machine                                                                                          |
+|                  | user4d_alias        | text                | Nom ou alias de l'utilisateur 4D                                                                                                        |
+|                  | user4d_id           | number              | Identifiant utilisateur dans le répertoire de la base 4D                                                                                |
+|                  | host_name           | text                | Nom de la machine                                                                                                                       |
+|                  | task_name           | text                | Nom du process                                                                                                                          |
+|                  | client_version      | text                |                                                                                                                                         |
+|                  |                     |                     | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :                                        |
+| errors           |                     | collection d'objets |                                                                                                                                         |
+|                  | message             | text                | Message d'erreur                                                                                                                        |
+|                  | component signature | text                | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                                                       |
+|                  | errCode             | number              | Code d'erreur                                                                                                                           |
 
 (\*) Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *Résultat* en cas d'erreur :
 
@@ -977,7 +979,7 @@ Exemple avec option `dk reload if stamp changed` :
 
 La fonction `.next()` <!-- REF #EntityClass.next().Summary -->retourne une référence vers l'entité suivante dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous êtes sur la dernière entité de la sélection), la fonction retourne Null. Si l'entité suivante a été supprimée, la fonction renvoie l'entité valide suivante (et finalement Null).
 
@@ -1019,9 +1021,9 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
-S'il n'y a pas d'entité précédente valide dans l'entity selection (i.e. vous êtes sur la première entité de la sélection), la fonction retourne Null. Si l'entité précédente a été supprimée, la fonction retourne l'entité précédente valide (et finalement Null).
+Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
 #### Exemple
 
@@ -1137,28 +1139,28 @@ Sinon, vous pouvez passer l'option `dk auto merge` dans le paramètre *mode* afi
 
 L'objet retourné par `.save()` contient les propriétés suivantes :
 
-| Propriété    |                    | Type                  | Description                                                                                                    |
-| ------------ | ------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| success      |                    | boolean               | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                 |
-|              |                    |                       | ***Disponible uniquement si l'option `dk auto merge` a été utilisée*** :                                       |
-| autoMerged   |                    | boolean               | Vrai si un "auto merge" a été effectué, sinon faux.                                                            |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur*** :                                                                  |
-| status       |                    | number                | Code d'erreur, [voir ci-dessous](#status-and-statustext)                                                       |
-| statusText   |                    | text                  | Description de l'erreur, [voir ci-dessous](#status-and-statustext)                                             |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur en verrouillage pessimiste*** :                                       |
-| lockKindText |                    | text                  | "Locked by record"                                                                                             |
-| lockInfo     |                    | object                | Information sur l'origine du verrouillage                                                                      |
-|              | task_id            | number                | Id du process                                                                                                  |
-|              | user_name          | text                  | Nom d'utilisateur de la session sur la machine                                                                 |
-|              | user4d_alias       | text                  | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
-|              | host_name          | text                  | Nom de la machine                                                                                              |
-|              | task_name          | text                  | Nom du process                                                                                                 |
-|              | client_version     | text                  |                                                                                                                |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :               |
-| errors       |                    | collection of objects |                                                                                                                |
-|              | message            | text                  | Message d'erreur                                                                                               |
-|              | componentSignature | text                  | Signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
-|              | errCode            | number                | Code d'erreur                                                                                                  |
+| Propriété    |                    | Type                | Description                                                                                                    |
+| ------------ | ------------------ | ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean             | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                 |
+|              |                    |                     | ***Disponible uniquement si l'option `dk auto merge` a été utilisée*** :                                       |
+| autoMerged   |                    | boolean             | Vrai si un "auto merge" a été effectué, sinon faux.                                                            |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur*** :                                                                  |
+| status       |                    | number              | Code d'erreur, [voir ci-dessous](#status-and-statustext)                                                       |
+| statusText   |                    | text                | Description de l'erreur, [voir ci-dessous](#status-and-statustext)                                             |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur en verrouillage pessimiste*** :                                       |
+| lockKindText |                    | text                | "Locked by record"                                                                                             |
+| lockInfo     |                    | object              | Information sur l'origine du verrouillage                                                                      |
+|              | task_id            | number              | Id du process                                                                                                  |
+|              | user_name          | text                | Nom d'utilisateur de la session sur la machine                                                                 |
+|              | user4d_alias       | text                | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
+|              | host_name          | text                | Nom de la machine                                                                                              |
+|              | task_name          | text                | Nom du process                                                                                                 |
+|              | client_version     | text                |                                                                                                                |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :               |
+| errors       |                    | collection d'objets |                                                                                                                |
+|              | message            | text                | Message d'erreur                                                                                               |
+|              | componentSignature | text                | Signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
+|              | errCode            | number              | Code d'erreur                                                                                                  |
 
 ##### status et statusText
 
@@ -1166,7 +1168,7 @@ Les valeurs suivantes peuvent être retournées dans les propriétés `status` e
 
 | Constante                                 | Valeur | Commentaire                                                                                                                                                                                                                                                                                |
 | ----------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk status automerge failed`              | 6      | (Uniquement si l'option `dk auto merge` est utilisée) Echec du mécanisme de merge automatique lors de la sauvegarde de l'entité. **statusText associé **: "Auto merge failed".                                                                                                             |
+| `dk status automerge failed`              | 6      | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                                                                                                                                                                                                   |
 | `dk status entity does not exist anymore` | 5      | L'entité n'existe plus dans les données. Cette erreur peut se produire dans les cas suivants :<br/><li>l'entité a été supprimée (le stamp est modifié et l'espace mémoire est libéré)</li><li>l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). Avec `.drop( )`, cette erreur peut être retournée lorsque l'option `dk force drop if stamp changed` est utilisée. Avec `.lock( )`, cette erreur peut être retournée lorsque l'option dk reload if stamp changed est utilisée.</li><br/>**statusText associé** : "Entity does not exist anymore"                                                           |
 | `dk status locked`                        | 3      | L'entité est verrouillée par un verrou pessimiste.<br/>**statusText associé** : "Already locked"                                                                                                                                                                                     |
 | `dk status serious error`                 | 4      | Une erreur critique peut être une erreur de bas niveau de la base de données (ex. clé dupliquée), une erreur matérielle, etc.<br/>**statusText associé** : "Other error"                                                                                                             |
@@ -1515,7 +1517,7 @@ Retourne :
 <!-- END REF -->
 
 <!-- REF EntityClass.touched().Desc -->
-## .touched( )
+## .touched()
 
 <details><summary>Historique</summary>
 
@@ -1560,7 +1562,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 <!-- END REF -->
 
 <!-- REF EntityClass.touchedAttributes().Desc -->
-## .touchedAttributes( )
+## .touchedAttributes()
 
 <details><summary>Historique</summary>
 

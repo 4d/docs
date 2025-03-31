@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->The **GET WINDOW RECT** command returns the coordinates of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, the variable parameters are left unchanged.
 
@@ -30,11 +27,20 @@ The coordinates are expressed relative to the top left corner of the contents ar
 
 **Note:** Under Windows, if you pass -1 in *window*, **GET WINDOW RECT** returns the coordinates of the application window (MDI window). These coordinates correspond to the contents area of the window (excluding menu bars and borders). In this case in SDI mode, **GET WINDOW RECT** returns (0;0;0;0) as coordinates. 
 
-#### Example 
+## Example 
 
 See example for the [WINDOW LIST](window-list.md) command.
 
-#### See also 
+## See also 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 443 |
+| Thread safe | &cross; |
+
+

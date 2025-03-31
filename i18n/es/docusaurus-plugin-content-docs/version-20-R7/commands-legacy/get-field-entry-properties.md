@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( ptrCamp|numTabla {; *numCamp*}; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrCamp* ; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabla* ; *numCamp* ; *lista* ; *obligatorio* ; *noEditable* ; *noModificable* )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->El comando GET FIELD ENTRY PROPERTIES devuelve las propiedades de entrada de datos para el campo especificado por *numTabla* y *numCamp* o por *ptrCamp*.<!-- END REF--> 
 
@@ -42,8 +39,17 @@ Si ninguna lista está asociada al campo o si el tipo del campo no permite la as
 * El parámetro *noEditable* devuelve True si el campo dispone del atributo “No editable”, de lo contrario False. Un campo no editable únicamente puede leerse, no acepta entrada de datos. El atributo “No modificable” puede asociarse a campos de todos los tipos, excepto BLOB.
 * El parámetro *noModificable* devuelve True si el campo es “No modificable”, de lo contrario False. Un campo no modificable acepta sólo una entrada y no puede ser modificado. El atributo “No modificable” puede ser definido para todos los tipos de campos, excepto BLOB.
 
-#### Ver también 
+## Ver también 
 
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 685 |
+| Hilo seguro | &cross; |
+
+

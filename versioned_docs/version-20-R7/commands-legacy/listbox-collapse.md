@@ -18,10 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->The LISTBOX COLLAPSE command is used to collapse the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -42,7 +39,7 @@ The optional *selector* parameter is used to specify the scope of the command. Y
 
 If the selection or list box does not contain a break row or if all the break rows are already collapsed, the command does nothing. 
 
-#### Example 
+## Example 
 
 This example collapses the first level of the break rows of the selection in the list box:
 
@@ -50,6 +47,15 @@ This example collapses the first level of the break rows of the selection in the
  LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX EXPAND](listbox-expand.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1101 |
+| Thread safe | &cross; |
+
+

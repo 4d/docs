@@ -15,7 +15,7 @@ title: VP SET FORMULA
 | formula       | Text   | -> | Fórmula ou método 4D |                  |
 | formatPattern | Text   | -> | Formato do campo     | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
@@ -24,19 +24,19 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
 > If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *formula*.
+O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para a *fórmula*.
 
 You remove the formula in *rangeObj* by replacing it with an empty string ("").
 
-#### Exemplo 1
+## Exemplo 1
 
 ```4d
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Para remover a fórmula:
 
@@ -44,13 +44,13 @@ Para remover a fórmula:
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
 ```
 
-#### Exemplo 3
+## Exemplo 3
 
 ```4d
 VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 ```
 
-#### Veja também
+## Veja também
 
 [Cell format](../configuring.md#cell-format)<br/>
 [VP Get Formula](vp-get-formula.md)<br/>

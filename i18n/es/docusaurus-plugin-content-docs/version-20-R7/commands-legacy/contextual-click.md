@@ -13,19 +13,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+## Descripción 
 
+<!--REF #_command_.Contextual click.Summary-->El comando Contextual click devuelve Verdadero si un se ha efectuado un clic contextua<!-- END REF-->l:
 
-#### Descripción 
-
-<!--REF #_command_.Contextual click.Summary-->El comando Contextual click devuelve Verdadero si un se ha efectuado un clic contextual:
-
-* Bajo Windows y Mac OS, los clics contextuales se efectúan con el botón derecho del ratón.<!-- END REF-->
+* Bajo Windows y Mac OS, los clics contextuales se efectúan con el botón derecho del ratón.
 * Bajo Mac OS, los clics contextuales también pueden generarse utilizando la combinación **Control+clic**.
 
 Este comando debe utilizarse sólo en el contexto del evento de formulario On clicked. Por lo tanto es necesario verificar en modo Diseño que el evento haya sido seleccionado correctamente en las propiedades del formulario y/o del objeto específico. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método, combinado con un área desplegable, le permite cambiar el valor de un elemento array utilizando un menú contextual: 
 
@@ -39,7 +36,16 @@ Este método, combinado con un área desplegable, le permite cambiar el valor de
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 713 |
+| Hilo seguro | &cross; |
+
+

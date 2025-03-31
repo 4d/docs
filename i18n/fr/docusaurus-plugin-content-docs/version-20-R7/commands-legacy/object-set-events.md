@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->La commande **OBJECT SET EVENTS** vous permet de modifier, pour le process courant, la configuration des événements formulaire du formulaire, de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -104,7 +101,7 @@ La commande **OBJECT SET EVENTS** peut entraîner l’activation d’événement
 
 Si un *objet* est dupliqué après l’appel de la commande **OBJECT SET EVENTS**, la configuration résultante d’activation/désactivation de chaque événement est également dupliquée. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Activation de trois événements formulaire pour un ensemble d’objets list box, et désactivation des autres événements :
 
@@ -117,7 +114,7 @@ Activation de trois événements formulaire pour un ensemble d’objets list box
       // active 3 événements et désactive tous les autres
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Désactivation de trois événements formulaire pour un ensemble d’objets list box, sans modifier les autres événements :
 
@@ -130,7 +127,7 @@ Désactivation de trois événements formulaire pour un ensemble d’objets list
      // désactive uniquement les 3 événements
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Activation d’un événement formulaire pour un objet, sans modifier les autres événements :
 
@@ -141,7 +138,7 @@ Activation d’un événement formulaire pour un objet, sans modifier les autres
      // active uniquement l’événement
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Désactivation de tous les événements du formulaire :  
 
@@ -151,7 +148,7 @@ Désactivation de tous les événements du formulaire :
      // désactive tous les événements
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Désactivation d’un seul événement du formulaire sans modifier les autres :
 
@@ -162,7 +159,16 @@ Désactivation d’un seul événement du formulaire sans modifier les autres :
      // désactive uniquement l’événement
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Evénements formulaire*  
 [OBJECT GET EVENTS](object-get-events.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1239 |
+| Thread safe | &cross; |
+
+

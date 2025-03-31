@@ -200,7 +200,7 @@ Lorsque [HTTPS est activé](#enable-https), n'oubliez pas que si [HTTP est égal
 
 HSTS permet au serveur web 4D de déclarer que les navigateurs ne doivent interagir avec lui que par des connexions HTTPS sécurisées. Une fois activé, le serveur Web 4D ajoutera automatiquement des informations relatives au HSTS à tous les en-têtes des réponses. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur web 4D, puis toutes les futures demandes HTTP seront automatiquement transformées en demandes HTTPS. La durée de stockage de ces informations par le navigateur est spécifiée avec le paramètre Web **HSTS max age**.
 
-> Activer le HSTS requiert que HTTPS soit [activé](enable-https) sur le serveur. [Le HTTP](enable-http) doit également être activé pour permettre les connexions initiales du client.
+> Activer le HSTS requiert que HTTPS soit [activé](#enable-https) sur le serveur. [Le HTTP](#enable-http) doit également être activé pour permettre les connexions initiales du client.
 
 > Vous pouvez vérifier le mode de connexion utilisé en utilisant la commande `WEB Is secured connection`.
 
@@ -247,7 +247,7 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 Numéro de port IP (TCP) d'écoute pour HTTP. Par défaut, 4D publie une application Web sur le port HTTP normal (port TCP), qui est le port 80. Si ce port est déjà utilisé par un autre service Web, vous devez modifier le port HTTP utilisé par 4D pour ce projet.
 
-> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir [macOS HelperTool](#macos-helpertool)).
+> Sous macOS, la modification du port HTTP permet de lancer le serveur web 4D sans être l'utilisateur root de la machine (voir macOS HelperTool).
 
 À partir d'un navigateur Web, vous devez inclure le numéro de port HTTP par défaut dans l'adresse que vous saisissez pour vous connecter à l'application Web. L'adresse doit comporter un suffixe composé de deux points suivis du numéro de port. Par exemple, si vous utilisez le port HTTP numéro 8080, indiquez "123.4.567.89:8080".
 > **Avertissement** : Si vous utilisez des numéros de port TCP autres que ceux par défaut (80 pour HTTP standard et 443 pour HTTPS), veillez à ne pas utiliser des numéros de port utilisés par défaut pour d'autres services que vous pourriez vouloir utiliser simultanément. Par exemple, si vous prévoyez également d'utiliser le protocole FTP sur votre machine de serveur Web, n'utilisez pas les ports TCP 20 et 21, qui sont les ports par défaut pour ce protocole. Les numéros de ports inférieurs à 256 sont réservés à des services connus, et les numéros de ports de 256 à 1024 sont réservés à des services spécifiques issus des plateformes UNIX. Pour une sécurité maximale, spécifiez un numéro de port au-delà de ces intervalles (par exemple, dans les 2000 ou 3000).
@@ -319,8 +319,8 @@ Valeurs possibles: Chaîne de caractères représentant l'adresse IP. Les format
 - **Indication des numéros de port**<br/>. Comme la notation IPv6 utilise les deux-points (:), l'ajout de numéros de port peut entraîner une certaine confusion, par exemple :
 
 ```code4d
- 2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
- 2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+ 2001:0DB8::85a3:0:ac1f:8001 // adresse IPv6
+ 2001:0DB8::85a3:0:ac1f:8001:8081 // adresse IPv6 avec port 8081
 ```
 
 Pour éviter cette confusion, nous recommandons d'utiliser la notation [ ] lorsque vous combinez une adresse IPv6 avec un numéro de port. Par exemple:
@@ -335,7 +335,7 @@ Pour éviter cette confusion, nous recommandons d'utiliser la notation [ ] lorsq
 | -------------------------------- | -------------------------------------------------- | ------------ |
 | objet webServer                  | [`keepSession`](API/WebServerClass.md#keepsession) |              |
 | `WEB SET OPTION`                 | `Web keep session`                                 |              |
-| Boîte de dialogue des Propriétés | Options (I) page/Automatic Session Management      |              |
+| Boîte de dialogue des Propriétés | Page Options (I)/Gestion automatique des sessions  |              |
 
 Statut de la gestion de session pour le serveur Web 4D. Le fonctionnement des sessions est décrit dans la section [Gestion des sessions](sessions.md).
 
@@ -582,7 +582,7 @@ Permet d'optimiser le fonctionnement du 4D Web Server en mode distant en réutil
 Lorsque l'option **Réutiliser les contextes temporaires** est cochée, en mode distant, 4D maintient les process web spécifiques et les réutilise pour les demandes suivantes. Supprimer l'étape de création du process améliore les performances du serveur web.
 
 En contrepartie, vous devez veiller à initialiser systématiquement les variables utilisées dans les méthodes 4D afin d'éviter l'obtention des résultats incorrects. De même, il est nécessaire d'effacer toutes les sélections ou enregistrements courant(e)s défini(e)s lors de la requête précédente.
-> - Cette option est cochée (et verrouillée) automatiquement lorsque l'option **Gestion automatique des sessions** est cochée. En fait, le mécanisme de gestion des sessions est basé sur le principe du recyclage des process Web : chaque session utilise le même process qui est maintenu pendant la durée de vie de la session. Cependant, notez que les process de session ne peuvent pas être "partagés" entre différentes sessions : une fois la session terminée, le processus est automatiquement arrêté (et non réutilisé). Il est donc inutile de réinitialiser les sélections ou les variables dans ce cas.
+> - Cette option est cochée (et verrouillée) automatiquement lorsque l'option **Gestion automatique des sessions** est cochée. En fait, le mécanisme de gestion des sessions est basé sur le principe du recyclage des process Web : chaque session utilise le même process qui est maintenu pendant la durée de vie de la session. Cependant, notez que les process de session ne peuvent pas être "partagés" entre différentes sessions : une fois la session terminée, le process est automatiquement arrêté (et non réutilisé). Il est donc inutile de réinitialiser les sélections ou les variables dans ce cas.
 > 
 > - Cette option n'a d'effet qu'avec un serveur web 4D en mode distant. Avec un 4D en mode local, tous les process Web (autres que les process de session) sont arrêtés après leur utilisation.
 

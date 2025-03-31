@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->La commande **LDAP LOGIN** ouvre une connexion en lecture seule sur le serveur LDAP désigné par le paramètre *url* avec les identifiants *login* et *motDePasse* fournis.<!-- END REF--> Si elle est acceptée par le serveur, cette connexion sera utilisée pour toutes les recherches LDAP effectuées par la suite dans le process courant, jusqu'à ce que la commande [LDAP LOGOUT](ldap-logout.md) soit exécutée (ou que le process soit terminé). 
 
@@ -55,7 +52,7 @@ Si les paramètres de connexion sont valides, une connexion au serveur LDAP est 
 
 N'oubliez pas d'appeler la commande [LDAP LOGOUT](ldap-logout.md) lorsque la connexion au serveur LDAP n'est plus nécessaire. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous voulez vous connecter à un serveur LDAP et effectuer une recherche :
 
@@ -68,7 +65,7 @@ Vous voulez vous connecter à un serveur LDAP et effectuer une recherche :
  LDAP LOGOUT //ne pas oublier de se déconnecter
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple tente de se connecter à une application :
 
@@ -94,7 +91,16 @@ Cet exemple tente de se connecter à une application :
  ON ERR CALL("")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *LDAP*  
 [LDAP LOGOUT](ldap-logout.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1326 |
+| Thread safe | &cross; |
+
+

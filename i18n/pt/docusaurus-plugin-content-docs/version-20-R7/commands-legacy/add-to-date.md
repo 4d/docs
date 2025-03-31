@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Add to date.Summary-->O comando Add to date adiciona *anos*, *meses,* e *dias* a data passada em *data*, depois retorna a data resultante.<!-- END REF-->
 
 Mesmo que você possa utilizar os [Self](self.md) para adicionar dias a uma data, Add to date lhe permite rapidamente adicionar meses e anos sem ter que lidar com o número de dias ao mês ou anos bissextos (como seria feito quando utiliza o operador + em datas).
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
   // Esta linha calcula a data dentro de um ano, ou mesmo dia
@@ -35,3 +35,13 @@ Mesmo que você possa utilizar os [Self](self.md) para adicionar dias a uma data
   // Esta linha faz o mesmo que $vdAmanhã:=Current date+1
  $vdAmanhã:=Add to date(Current date;0;0;1)
 ```
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 393 |
+| Thread-seguro | &check; |
+
+

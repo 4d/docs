@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->La commande **FORM GET OBJECTS** retourne sous forme de tableau(x) la liste de tous les objets présents dans le formulaire courant.<!-- END REF--> Cette liste peut être restreinte à la page courante du formulaire et peut exclure les objets des formulaires hérités. La commande peut être utilisée avec les formulaires entrée et sortie. 
 
@@ -43,7 +40,7 @@ Le paramètre optionnel *optionPage* vous permet de désigner la ou les partie(s
 
 **Note de compatibilité :** Passer le paramètre *\** équivaut à passer Form current page+Form inherited. Cependant, la syntaxe utilisant le paramètre *\** est obsolète et ne doit plus être utilisée.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez obtenir les objets de toutes les pages, y compris ceux des formulaires hérités (le cas échéant):
 
@@ -60,7 +57,7 @@ Ou :
  FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form all pages+Form inherited)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir les objets de la page courante du formulaire chargé, incluant la page 0 de ce formulaire ainsi que les objets des formulaires hérités (le cas échéant) :
 
@@ -70,7 +67,7 @@ Vous souhaitez obtenir les objets de la page courante du formulaire chargé, inc
  FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form current page+Form inherited)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez obtenir les objets des formulaires hérités. S'il n'y a pas de formulaire hérité, les tableaux seront retournés vides. 
 
@@ -79,7 +76,7 @@ Vous souhaitez obtenir les objets des formulaires hérités. S'il n'y a pas de f
  FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form inherited)
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Vous souhaitez obtenir les objets de la page 4, ainsi que ceux de la page 0, mais pas ceux des formulaires hérités (le cas échéant) :
 
@@ -89,7 +86,7 @@ Vous souhaitez obtenir les objets de la page 4, ainsi que ceux de la page 0, mai
  FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form current page)
 ```
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous souhaitez obtenir les objets de toutes les pages, mais sans ceux des formulaires hérités :
 
@@ -98,7 +95,7 @@ Vous souhaitez obtenir les objets de toutes les pages, mais sans ceux des formul
  FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form all pages)
 ```
 
-#### Exemple 6 
+## Exemple 6 
 
 Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des list box qu’il contient.
 
@@ -117,8 +114,17 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
  FORM UNLOAD
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 898 |
+| Thread safe | &cross; |
+
+

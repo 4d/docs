@@ -23,7 +23,7 @@ In the following example, a break point (the red bullet) has been set, in the de
 
 ![break-point](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
+In the above example, clicking the [**No Trace**](./debugger.md#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
 
 To remove a break point, click the corresponding bullet.
 

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Refresh license.Summary-->The **Refresh license** command updates the current 4D Server license.<!-- END REF--> It connects you to the 4D customer database and automatically activates any new or updated licenses (*e.g.*, additional purchased clients) related to the current license.
 
@@ -33,7 +30,7 @@ The object returned by **Refresh license** contains the following properties:
 
 **Note**: This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **Refresh license** does nothing.
 
-#### Example 
+## Example 
 
 You want to update your license and receive a message when it's completed:
 
@@ -47,3 +44,13 @@ You want to update your license and receive a message when it's completed:
     ALERT($res.statusText)
  End if
 ```
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1336 |
+| Thread safe | &cross; |
+
+

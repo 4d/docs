@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Ejemplo 1 
+## Ejemplo 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** define el *valor* de la fuente de datos actual para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->
 
@@ -27,7 +24,7 @@ El parámetro *valor* le permite pasar un nuevo valor (cualquier tipo) para la f
 
 **Nota**: si la fuente de datos es una expresión no asignable, **OBJECT SET VALUE** no hace nada. Para más información, consulte *Expresiones asignables frente a no asignables*.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea obtener el valor de la fuente de datos para un objeto de formulario, obtener su nombre y definir un nuevo valor:
 
@@ -39,6 +36,15 @@ Desea obtener el valor de la fuente de datos para un objeto de formulario, obten
  OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //encuentra el nombre del objeto del formulario y define el valor en 50
 ```
 
-#### Ver también 
+## Ver también 
 
 [OBJECT Get value](object-get-value.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1742 |
+| Hilo seguro | &cross; |
+
+

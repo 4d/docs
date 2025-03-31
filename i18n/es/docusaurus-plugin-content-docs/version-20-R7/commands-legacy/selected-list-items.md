@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Selected list items.Summary-->El comando Selected list items devuelve la posición o referencia del elemento seleccionado en la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
 
@@ -44,7 +41,7 @@ Si la lista tiene sublistas, aplique el comando a la lista principal (la que est
 
 En todos los casos, si ningún elemento está seleccionado, la función devuelve 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 Esta es una lista llamada *hList,* mostrada en el entorno Aplicación:
 
@@ -83,7 +80,16 @@ Esta es una lista llamada *hList,* mostrada en el entorno Aplicación:
   // $arrRefs{1} gets 101, $arrRefs{2} vale 203 (por ejemplo)
 ```
 
-#### Ver también 
+## Ver también 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 379 |
+| Hilo seguro | &cross; |
+
+

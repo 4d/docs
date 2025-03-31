@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->The SQL SET PARAMETER command allows the use of a 4D variable, array or field value in SQL requests.<!-- END REF-->
 
@@ -36,7 +33,7 @@ The value of the 4D object replaces the *?* character in the SQL request (standa
 
 **Warning:** This command is used for handling *parameters* passed to the SQL request. It is not possible to use the SQL param out type to associate a 4D object with the *result* of an SQL request. SQL request results are retrieved, for example, using the *boundObj* parameter of the [SQL EXECUTE](sql-execute.md) command (see the *Overview of SQL Commands*). The **SQL SET PARAMETER** command is mainly intended for setting parameters passed to the request (SQL param in); the SQL param out and SQL param in out types are reserved for use in the context of SQL stored procedures that could return parameters. 
 
-#### Example 1 
+## Example 1 
 
 This example is used to execute an SQL request which calls the associated 4D variables directly:
 
@@ -55,7 +52,7 @@ This example is used to execute an SQL request which calls the associated 4D var
  SQL LOGOUT
 ```
 
-#### Example 2 
+## Example 2 
 
 Same example as the previous one, but using the SQL SET PARAMETER command:
 
@@ -76,6 +73,17 @@ Same example as the previous one, but using the SQL SET PARAMETER command:
  SQL LOGOUT
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 823 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

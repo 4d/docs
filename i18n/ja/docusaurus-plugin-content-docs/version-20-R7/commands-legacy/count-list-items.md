@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Count list items.Summary-->**Count list items** コマンドは、*list*に渡した参照番号またはオブジェクト名のリスト上で現在表示中または項目総数を返します。<!-- END REF-->
 
@@ -32,7 +29,7 @@ displayed_sidebar: docs
 
 このコマンドは、フォームに表示されているリストで使用します。
 
-#### 例題 
+## 例題 
 
 以下はアプリケーションモードで表示された、*hList*という名前の階層リストです:
 
@@ -58,7 +55,16 @@ displayed_sidebar: docs
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItemsは8のままです。
 ```
 
-#### 参照 
+## 参照 
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 380 |
+| スレッドセーフである | &cross; |
+
+

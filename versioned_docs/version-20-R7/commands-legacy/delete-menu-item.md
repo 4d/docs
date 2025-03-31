@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->The **DELETE MENU ITEM** command deletes the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
 
@@ -32,7 +29,17 @@ If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu ba
 
 **Note:** For consistency in the user interface, do not keep a menu with no items.
 
-#### See also 
+## See also 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 413 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

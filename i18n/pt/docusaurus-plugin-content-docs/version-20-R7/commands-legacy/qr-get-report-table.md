@@ -14,15 +14,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Get report table.Summary-->O comando QR Get report table devolve o número da tabela atual do relatório designado pelo parâmetro *area*.<!-- END REF-->
 
 Se passa um número de *area* inválido, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 [QR SET REPORT TABLE](qr-set-report-table.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 758 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

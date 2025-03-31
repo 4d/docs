@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->La commande **SQL SET PARAMETER** permet d’utiliser la valeur d’une variable, d’un tableau ou d’un champ 4D dans les requêtes SQL.<!-- END REF-->
 
@@ -36,7 +33,7 @@ La valeur de l’objet 4D est substituée au caractère *?* dans la requête SQL
 
 **Attention :** Cette commande permet de manipuler les *paramètres* passés à la requête SQL. Il n'est pas possible d'utiliser le type SQL param out pour associer un objet 4D au *résultat* d'une requête SQL. Le résultat d'une requête SQL est récupéré par exemple via le paramètre *objetLié* de la commande [SQL EXECUTE](sql-execute.md) (cf. section *Présentation des commandes du thème SQL*). La commande **SQL SET PARAMETER** est généralement utilisée pour définir des paramètres passés à la requête (SQL param in) ; les types SQL param out et SQL param in out sont réservés à une utilisation dans le contexte de procédures stockées SQL pouvant retourner des paramètres. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple permet d’exécuter une requête SQL faisant directement appel à des variables 4D associées :
 
@@ -55,7 +52,7 @@ Cet exemple permet d’exécuter une requête SQL faisant directement appel à d
  SQL LOGOUT
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Même exemple que le précédent, mais en utilisant la commande **SQL SET PARAMETER** :
 
@@ -76,6 +73,17 @@ Même exemple que le précédent, mais en utilisant la commande **SQL SET PARAME
  SQL LOGOUT
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 823 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

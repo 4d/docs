@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR Get area property.Summary-->O comando **QR Get area property** devolve 0 se não mostra o elemento de interface (barra de ferramentas ou barra de menus) passado em *propriedade*; do contrário, devolve 1\.<!-- END REF--> 
 
@@ -33,6 +30,16 @@ Pode utilizar as constantes do tema *QR Propriedades de área* em *propriedade*:
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *propriedade* for incorreto, se gera o erro -9852.
 
-#### Ver também 
+## Ver também 
 
 [QR SET AREA PROPERTY](qr-set-area-property.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 795 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

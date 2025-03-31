@@ -15,14 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
+## Descripción 
 
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas*<!-- END REF--> con: 
 
-#### Descripción 
-
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->El comando STRING LIST TO ARRAY llena el array *cadenas* con: 
-
-* las cadenas almacenadas en el recurso de tipo lista de cadenas ("STR#") cuyo número se pasa en *resNum*.<!-- END REF-->
+* las cadenas almacenadas en el recurso de tipo lista de cadenas ("STR#") cuyo número se pasa en *resNum*.
 * o con una cadena almacenada en un archivo XLIFF abierto cuyo atributo "id" del elemento "group" se pasa en *resNum* (ver a continuación "Compatibilidad con la arquitectura XLIFF").
 
 Si el recurso no se encuentra, el array *cadenas* no cambia y la variable OK toma el valor 0 (cero).
@@ -33,16 +30,26 @@ Si el recurso no se encuentra, el array *cadenas* no cambia y la variable OK tom
 
 **Tip:** cuando utilice los recursos listas de cadenas, limítese a recursos de 32K, y a un máximo de unas centenas de cadenas por recurso.
 
-#### Compatibilidad con la arquitectura XLIFF 
+## Compatibilidad con la arquitectura XLIFF 
 
 El comando STRING LIST TO ARRAY es compatible con la arquitectura XLIFF de 4D a partir de la versión 11: el comando busca primero por los valores correspondientes a *resNum* y *strNum* en todos los archivos XLIFF abiertos (si el parámetro *resArchivo* se omite) y llena el array *cadenas* con los valores correspondientes. En este caso, *resNum* específica el atributo **id** del elemento **group** y el array *cadenas* contiene todas las cadenas del elemento. Si no se encuentra el valor, el comando continua la búsqueda en los archivos de recursos abiertos. Para mayor información sobre la arquitectura XLIFF en 4D, consulte el Manual de Diseño.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contrario toma el valor 0 (cero).
 
-#### Ver también 
+## Ver también 
 
 [Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 511 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

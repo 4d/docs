@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Example 1 
+## Example 1 
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** sets the *value* of the current data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
 
@@ -27,7 +24,7 @@ The *value* parameter allows you pass a new value (any type) for the form object
 
 **Note**: If the data source is a non-assignable expression, **OBJECT SET VALUE** does nothing. For more information, see *assignable vs non-assignable expressions*.
 
-#### Example 2 
+## Example 2 
 
 You want to get the data source value for a form object, get its name, and set a new value:
 
@@ -39,6 +36,15 @@ You want to get the data source value for a form object, get its name, and set a
  OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //find the form object name and set the value to 50
 ```
 
-#### See also 
+## See also 
 
 [OBJECT Get value](object-get-value.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1742 |
+| Thread safe | &cross; |
+
+

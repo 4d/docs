@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->The **WA Run offscreen area** command creates a web area in memory which can be used to automatically load and parse web pages.<!-- END REF--> 
 
@@ -64,7 +61,7 @@ The following commands can be used in the callback method:
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-#### Example 
+## Example 
 
 You want to create and handle an offscreen web area using a function of your OffscreenArea class:
 
@@ -90,12 +87,22 @@ In the **OffscreenArea class**:
  End case
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK system variable is set to 0 if the timeout has been reached or the [CANCEL](cancel.md) was called in *onEvent*, otherwise it is set to 1.
 
-#### See also 
+## See also 
 
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event.md)  
 *Programmed management of Web Areas*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1727 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

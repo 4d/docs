@@ -14,14 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is window maximized.Summary-->O comando **Is window maximized** devolve **True** se a janela cujo número de referência for passado em *janela* estiver maximizada,no momento e **False** no caso contrário.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar entre o estado maximizado e o anterior:
 
@@ -33,7 +30,16 @@ Se quiser mudar entre o estado maximizado e o anterior:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1830 |
+| Thread-seguro | &cross; |
+
+

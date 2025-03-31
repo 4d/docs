@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Entries.Summary-->The **OB Entries** command returns a collection of objects containing the contents of the *object* as key / value property pairs.<!-- END REF--> 
 
@@ -30,7 +27,7 @@ Each returned object contains the following properties:
 
 Only first-level property names are returned (property names of sub-objects are not returned). The order of properties within the returned collection follows the definition order of the properties.
 
-#### Example 
+## Example 
 
 Using an object as an hash map (key / value system) provides a quick and direct access to data, just like when using an index (*e.g.*, if we need Mary's age, we can write: $persons\["Mary"\])
 
@@ -53,7 +50,16 @@ Using an object as an hash map (key / value system) provides a quick and direct 
  ALERT("Their names are: "+$ages.extract("key").join("-"))
 ```
 
-#### See also 
+## See also 
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1720 |
+| Thread safe | &cross; |
+
+

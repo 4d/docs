@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->La commande **LISTBOX GET OBJECTS** retourne un tableau contenant les noms de chaque objet composant la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
@@ -37,7 +34,7 @@ Passez dans *tabNomsObj* un tableau texte qui sera automatiquement rempli par la
 
 Le tableau retourne les noms des objets de toutes les colonnes (y compris les pieds de colonnes), quel que soit leur statut visible/invisible. 
 
-Cette commande est utile dans le contexte de l’analyse d’un formulaire via les commandes [FORM LOAD](form-load.md), [FORM GET OBJECTS](form-get-objects.md) et [OBJECT Get type](object-get-type.md). Elle permet, si nécessaire, d’obtenir les noms des sous-objets des list box.
+Cette commande est utile dans le contexte de l’analyse d’un formulaire via les commandes [FORM LOAD](../commands/form-load.md), [FORM GET OBJECTS](form-get-objects.md) et [OBJECT Get type](object-get-type.md). Elle permet, si nécessaire, d’obtenir les noms des sous-objets des list box.
 
 #### Exemple 
 
@@ -60,5 +57,14 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 
 #### Voir aussi 
 
-[FORM LOAD](form-load.md)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1302 |
+| Thread safe | &cross; |
+
+

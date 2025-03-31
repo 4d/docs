@@ -5,7 +5,7 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* ; itemRef | * ; *icon* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* ; *itemRef* ; *icon* )<br/>**GET LIST ITEM ICON** ( * ; *list* ; * ; *icon* <!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET LIST ITEM ICON.Summary-->GET LIST ITEM ICON コマンドは、*list*に参照番号またはオブジェクト名を渡したリスト内の、*itemRef*項目参照の項目に割り当てられたアイコンを*icon*に返します。<!-- END REF-->  
   
@@ -35,7 +32,16 @@ iconにはピクチャ変数を渡します。コマンド実行後、(スタテ
 
 **Note:** 項目に割り当てられたアイコンがスタティックな参照 (リソース参照またはピクチャライブラリのピクチャ) で定義されている場合、その番号は[GET LIST ITEM PROPERTIES](get-list-item-properties.md "GET LIST ITEM PROPERTIES") コマンドで取得できます。
 
-#### 参照 
+## 参照 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 951 |
+| スレッドセーフである | &cross; |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->El comando **QR SET DOCUMENT PROPERTY**  permite mostrar la caja de diálogo de impresión o definir la unidad utilizada por el documento.<!-- END REF-->
 
@@ -45,6 +42,16 @@ En *propiedad*, puede pasar unas de las constantes del tema *QR Propiedades de d
 Si pasa un número de *area* incorrecto, se genera el error -9850.  
 Si pasa un valor incorrecto en *propiedad* o *valor*, se genera el error correspondiente (-9852 o -9853).
 
-#### Ver también 
+## Ver también 
 
 [QR Get document property](qr-get-document-property.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 772 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

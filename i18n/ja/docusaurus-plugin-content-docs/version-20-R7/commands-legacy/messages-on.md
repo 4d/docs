@@ -12,10 +12,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.MESSAGES ON.Summary-->[MESSAGES OFF](messages-off.md "MESSAGES OFF") コマンドの説明を参照してください。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [MESSAGES OFF](messages-off.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 181 |
+| スレッドセーフである | &check; |
+
+

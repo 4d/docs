@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Menu selected.Summary-->Menu selected se utiliza sólo cuando se muestran formularios.<!-- END REF--> Esta función detecta el comando de menú elegido en un menú y en el caso de un submenú jerárquico, devuelve la referencia del submenú. 
 
@@ -41,7 +38,7 @@ Igualmente puede extraer estos valores utilizando los Operadores bitwise como en
 
 Si ningún comando de menú está seleccionado, Menu selected devuelve 0.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente método de formulario utiliza Menu selected para proporcionar los argumentos menú y línea de menú a [SET MENU ITEM MARK](set-menu-item-mark.md "SET MENU ITEM MARK"): 
 
@@ -59,6 +56,16 @@ El siguiente método de formulario utiliza Menu selected para proporcionar los a
 
 **Nota:** el evento de formulario On Menu Selected no es activado si ninguna línea está seleccionada, *$MenuRefIncludingItem* siempre es dado y *$MenuNum* vale 0 si el menú no es uno de los menús de la barra.
 
-#### Ver también 
+## Ver también 
 
 *Gestión de menús*  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 152 |
+| Hilo seguro | &cross; |
+| Prohibido en el servidor ||
+
+

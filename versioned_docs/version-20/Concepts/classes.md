@@ -181,6 +181,12 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
+:::note
+
+There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
+
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class.
 
 In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
@@ -301,6 +307,13 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
+
+
 A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.  
 
 When you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
@@ -325,7 +338,7 @@ Class Constructor ($name : Text ; $age : Integer)
 // You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"HelloWorld";"age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 
@@ -541,7 +554,7 @@ Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
 
-2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. Inside a [class member function](#function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //calls "doSomething" function  

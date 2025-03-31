@@ -15,9 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** recherche des enregistrements dans *laTable*.<!-- END REF--> **QUERY SELECTION** modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
+<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** recherche des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
 
 **QUERY SELECTION** a un fonctionnement et des effets proches de ceux de [QUERY](query.md). La différence entre ces deux commandes est la portée de la recherche :
 
@@ -28,7 +28,7 @@ Pour plus d'informations, reportez-vous à la description de la commande [QUERY]
 
 La commande **QUERY SELECTION** est utile lorsqu'une recherche ne peut pas être exprimée via une séquence d'appels à [QUERY](query.md) reliés à l'aide du paramètre *\**. Typiquement, c'est le cas lorsque vous souhaitez effectuer une recherche dans une sélection courante qui ne résulte pas d'une précédente recherche, mais de l'exécution d'une commande telle que [USE SET](use-set.md). 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez effectuer une recherche parmi les enregistrements préalablement surlignés par l'utilisateur dans un formulaire liste. Vous pouvez écrire :
 
@@ -40,6 +40,18 @@ Vous souhaitez effectuer une recherche parmi les enregistrements préalablement 
 
 Vous trouvez donc toutes les sociétés basées à Paris, dont l'activité est boursière, parmi la sélection initiale de l'utilisateur.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY](query.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 341 |
+| Thread safe | &check; |
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+
+

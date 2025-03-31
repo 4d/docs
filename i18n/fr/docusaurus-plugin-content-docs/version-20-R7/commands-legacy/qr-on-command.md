@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->La commande **QR ON COMMAND** exécute la méthode projet 4D dont le nom est passé dans le paramètre *nomMéthode* lorsqu'une commande de l'éditeur d'états rapides est appelée via la sélection d'un menu ou le clic sur un bouton.<!-- END REF-->
 
@@ -40,8 +37,18 @@ Si vous souhaitez que la commande initiale choisie par l'utilisateur soit exécu
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 *QR Commandes*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 790 |
+| Thread safe | &cross; |
+| Modifie les variables | error |
+
+

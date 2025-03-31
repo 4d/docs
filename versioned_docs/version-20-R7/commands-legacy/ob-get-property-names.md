@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->
-
-*object* can be an object varialble or a 4D object field.
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
 
 Pass a text array in the *arrProperties* parameter. If the array does not exist, the command creates and sizes it automatically. 
 
@@ -37,7 +35,7 @@ Optionally, you can also pass a longint array in *arrTypes*. For each element of
 
 **Note:** For array attributes, the command returns Is collection. 
 
-#### Example 1 
+## Example 1 
 
 You want to test that an object is not empty:
 
@@ -54,7 +52,7 @@ You want to test that an object is not empty:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 Using an object array element:
 
@@ -94,7 +92,16 @@ Using an object array element:
   // $arrTypes{2}=255
 ```
 
-#### See also 
+## See also 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1232 |
+| Thread safe | &check; |
+
+

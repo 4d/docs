@@ -13,16 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->**GET PICTURE FROM PASTEBOARD** retourne l'image présente dans le conteneur de données dans le champ ou la variable *image*.<!-- END REF--> 
 
 **Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-#### Exemple 
+## Exemple 
 
 Ci-dessous, la méthode objet d'un bouton affecte l'image au format jpeg ou gif présente dans le conteneur de données, s'il y en a une, au champ \[Employés\]Photo :
 
@@ -34,12 +31,22 @@ Ci-dessous, la méthode objet d'un bouton affecte l'image au format jpeg ou gif 
  End if
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'image est correctement extraite, OK prend la valeur 1\. Sinon, OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 522 |
+| Thread safe | &cross; |
+| Modifie les variables | OK |
+
+

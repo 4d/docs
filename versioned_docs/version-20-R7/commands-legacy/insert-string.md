@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.Insert string.Summary-->**Insert string** inserts a string into *source* and returns the resulting string.<!-- END REF--> **Insert string** inserts the string *what* before the character at position *where*.
+<!--REF #_command_.Insert string.Summary-->**Insert string** inserts a string into *source* and returns the resulting string.<!-- END REF-->inserts the string *what* before the character at position *where*.
 
 If *what* is an empty string (""), **Insert string** returns *source* unchanged.
 
@@ -26,7 +26,7 @@ If *where* is greater than the length of *source*, then *what* is appended to *s
 
 **Insert string** is different from [Change string](change-string.md) in that it inserts characters instead of overwriting them.
 
-#### Example 
+## Example 
 
 The following example illustrates the use of **Insert string**. The results are assigned to the variable *vtResult*.
 
@@ -36,8 +36,17 @@ The following example illustrates the use of **Insert string**. The results are 
  vtResult:=Insert string("Indention";"ta";6) // vtResult gets "Indentation"
 ```
 
-#### See also 
+## See also 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 231 |
+| Thread safe | &check; |
+
+

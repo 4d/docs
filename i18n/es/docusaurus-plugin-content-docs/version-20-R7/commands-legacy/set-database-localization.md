@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->El comando SET DATABASE LOCALIZATION utilizado para modificar el lenguaje actual de la base para la sesión actual.<!-- END REF-->  
   
@@ -35,7 +32,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
   
 **4D Server**: con 4D Server, los idiomas disponibles son los pertenecientes a la máquina remota que llamó al comando. Por lo tanto, debe asegurarse de que las carpetas **Resources** estén sincronizadas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Queremos definir el lenguaje de la interfaz como francés:
 
@@ -43,7 +40,7 @@ Queremos definir el lenguaje de la interfaz como francés:
  SET DATABASE LOCALIZATION("fr")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 La interfaz de su aplicación utiliza la cadena estática ":xliff:shopping". Los archivos XLIFF contienen particularmente la siguiente información:
 
@@ -69,6 +66,16 @@ La interfaz de su aplicación utiliza la cadena estática ":xliff:shopping". Los
   //La cadena ":xliff:shopping" muestra "Magasiner"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get database localization](get-database-localization.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1104 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->**QR SET DESTINATION** コマンドは、*area* に渡された参照番号のエリア用のレポート出力タイプを設定します。<!-- END REF-->
 
@@ -40,7 +37,7 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な出力先*type*を渡した場合、エラー番号-9852が生成されます。
 
-#### 例題 
+## 例題 
 
 以下のコードは出力先をテキストファイルMydoc.txtに設定し、クイックレポートを実行します: 
 
@@ -49,6 +46,16 @@ displayed_sidebar: docs
  QR RUN(MyArea)
 ```
 
-#### 参照 
+## 参照 
 
 [QR GET DESTINATION](qr-get-destination.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 745 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

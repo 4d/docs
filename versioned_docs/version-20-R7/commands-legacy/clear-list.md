@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR LIST.Summary-->The **CLEAR LIST** command deletes the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->
 
@@ -31,7 +28,7 @@ To clear a sublist attached to an item (on any level) of another list currently 
 2. Call [SET LIST ITEM](set-list-item.md) on the parent item to detach the sublist from the list item before clearing it.
 3. Call **CLEAR LIST** to clear the sublist whose reference number you obtained with [GET LIST ITEM](get-list-item.md).
 
-#### Example 1 
+## Example 1 
 
 Within a clean-up routine that clears all objects and data that you no longer need (i.e., when a window is closed and a form unloaded), you may end up clearing a hierarchical list that may have already been cleared, depending on the user actions within the form. Use [Is a list](is-a-list.md) to clear the list only if necessary:
 
@@ -42,16 +39,25 @@ Within a clean-up routine that clears all objects and data that you no longer ne
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [Load list](load-list.md) command.
 
-#### Example 3 
+## Example 3 
 
 See example for the [BLOB to list](blob-to-list.md) command.
 
-#### See also 
+## See also 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 377 |
+| Thread safe | &cross; |
+
+

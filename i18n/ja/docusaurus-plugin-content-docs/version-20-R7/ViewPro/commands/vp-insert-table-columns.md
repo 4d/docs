@@ -22,11 +22,11 @@ title: VP INSERT TABLE COLUMNS
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |                  |
 | tableName   | Text    | -> | Table name                                           |                  |
 | column      | Integer | -> | 列の挿入場所を指定する表組み内のインデックス                               |                  |
-| count       | Text    | -> | 挿入する列の数 (>0)                      |                  |
+| count       | Integer | -> | 挿入する列の数 (>0)                      |                  |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |                  |
 | sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート)       | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP INSERT TABLE COLUMNS` コマンドは、<!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスに、1つまたは *count* で指定した数の空の列を挿入します<!-- END REF -->。
 
@@ -43,11 +43,11 @@ title: VP INSERT TABLE COLUMNS
 
 *tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
 
-#### 例題
+## 例題
 
 [VP INSERT TABLE ROWS](vp-insert-table-rows.md) および [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md) の例題を参照ください。
 
-#### 参照
+## 参照
 
 [VP INSERT TABLE ROWS](vp-insert-table-rows.md)<br/>
 [VP REMOVE TABLE COLUMNS](vp-remove-table-columns.md)<br/>

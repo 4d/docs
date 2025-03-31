@@ -14,11 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SORT ARRAY.Summary-->**SORT ARRAY**コマンドは、1つまたは複数の配列を昇順や降順にソートします。<!-- END REF-->
-
-**注意:** 
 
 * Pointer 配列や Picture 配列のソートは行えません。二次元配列の要素(例えば *a2DArray{$vlThisElem}*)をソートすることはできますが、二次元配列そのもの(*a2DArray*)をソートすることはできません。
 * Object 型の配列をソートすることはできます。Null 要素はグループ化され、配列の要素は内部的な順番によってソートされます。
@@ -27,7 +25,7 @@ displayed_sidebar: docs
 
 複数の配列を指定した場合、すべての配列が最初の配列の順番でソートされます。各配列ごとに個々にソートするわけではありません。その代り、同期した配列をソートしたい場合には [MULTI SORT ARRAY](multi-sort-array.md) コマンドを使用することができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は2つの配列を作成し、companyでソートします:
 
@@ -45,7 +43,7 @@ displayed_sidebar: docs
  SELECTION TO ARRAY([People]Name;asNames;[People]Company;asCompanies)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例では、*\[People\]*テーブルから名前をフローティングウィンドウに表示します。ウィンドウ上のボタンをクリックすると、名前のリストをAからZへ、またはZからAへソートします。同じ名前の人が複数存在するため、インデックス付きで重複不可である*\[People\]ID number*フィールドを使用できます。名前のリストをクリックすると、クリックした名前を持つレコードを取得します。同期がとられ、表示されない*alIDs*配列を利用することにより、必ずクリックした名前に対応するレコードにアクセスできます:
 
@@ -76,9 +74,18 @@ displayed_sidebar: docs
  SORT ARRAY(asNames;alIDs;<)
 ```
 
-#### 参照 
+## 参照 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 229 |
+| スレッドセーフである | &check; |
+
+

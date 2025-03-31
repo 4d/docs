@@ -19,8 +19,8 @@ The following ORDA and singleton functions can be called in REST:
 | Fonction de classe                                                 | Syntaxe                                                                                                             |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                             |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                      |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                                                          |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                                                                    |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                         |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                            |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                           |
@@ -29,7 +29,7 @@ The following ORDA and singleton functions can be called in REST:
 
 :::note
 
-`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
+`/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). La fonction est d'abord recherchée dans la classe Entity selection. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
 :::
 
@@ -69,7 +69,7 @@ All functions allowed to be called directly from HTTP REST requests (`POST` or `
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+Voir la section [Fonctions exposées vs non exposées](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ### `onHttpGet`
 
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-La totalité du code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser un process préemptif*](../WebServer/preemptiveWeb.md#activer-le-mode-préemptif-pour-le-serveur-web) est ignorée par le serveur REST).
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 :::info
 
@@ -98,7 +98,7 @@ Les règles suivantes s'appliquent :
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Les paramètres doivent être inclus dans une collection (format JSON).
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
 - L'entity selection et l'entité peuvent être passées en tant que paramètres. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -130,15 +130,15 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | Propriétés                                            | Type                                                                 | Description                                                                 |
 | ----------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Attributs de l'entité                                 | mixte                                                                | Optionnelle - Valeurs à modifier                                            |
-| __DATACLASS | String                                                               | Obligatoire - Indique la Dataclass de l'entité                              |
+| __DATACLASS | Text                                                                 | Obligatoire - Indique la Dataclass de l'entité                              |
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
+- Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### Paramètre d'entité associé
 
@@ -155,7 +155,7 @@ L'entity selection doit avoir été définie au préalable à l'aide de [$method
 | Propriétés                                           | Type    | Description                                                                             |
 | ---------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
 | Attributs de l'entité                                | mixte   | Optionnelle - Valeurs à modifier                                                        |
-| __DATASET  | String  | Obligatoire - entitySetID (UUID) de la sélection d'entité            |
+| __DATASET  | Text    | Obligatoire - entitySetID (UUID) de l'entity selection               |
 | __ENTITIES | Boolean | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une sélection d'entité |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
@@ -628,7 +628,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Returning a document
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
@@ -682,7 +682,7 @@ You can call the function using this request:
 
 ### Using an entity selection to get a list
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutGoingMessageClass.md).
+You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()

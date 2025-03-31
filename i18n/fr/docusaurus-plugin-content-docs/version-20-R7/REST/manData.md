@@ -45,7 +45,7 @@ Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity 
 
 Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
+Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 
 A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
 
@@ -71,7 +71,7 @@ avec des données contenues dans le corps de la requête : `["Paris"]`
 
 > Les appels aux méthodes projet 4D exposées en tant que service REST sont toujours pris en charge mais sont obsolètes.
 
-## Selecting Attributes to get
+## Sélectionner les attributs à obtenir
 
 Vous pouvez toujours définir les attributs à retourner dans la réponse REST après une requête initiale en passant leur chemin d'accès dans la requête (par exemple, `Company(1)/name,revenues/`)
 
@@ -226,6 +226,6 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
+You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Vous pouvez utiliser la syntaxe<a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> lorsque vous souhaitez récupérer une seule entité. Par exemple, vous pouvez écrire :
 
 `GET  /rest/Company:companyCode("Acme001")`

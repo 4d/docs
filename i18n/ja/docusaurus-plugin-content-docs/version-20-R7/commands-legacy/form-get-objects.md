@@ -5,7 +5,7 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; formPageOption | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *formPageOption*} )<br/>**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->FORM GET OBJECTS コマンドは、カレントフォーム に存在する全オブジェクトのリストを配列形式で返します。<!-- END REF-->このリストは、カレントフォームページのオブジェクトに限定することができ、また継承されたフォームのオブジェクトを除外することができます。このコマンドは、入力フォームおよび出力フォームの双方で使用することができます。
 
@@ -47,7 +44,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意:** *\** 引数を渡すことは、Form current page+Form inherited を渡す事と同等です。 *\** 引数を渡すシンタックスは現在は使用されておらず、今後使用されるべきではありません。
 
-#### 例題 1 
+## 例題 1 
 
 継承されたフォームのオブジェクトも含めて(もしあれば)、全てのページの情報を取得したい場合:
 
@@ -64,7 +61,7 @@ displayed_sidebar: docs
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 カレントページに関する情報だけを取得し、ロードされたフォームのページ0と継承されたフォームオブジェクトも(もしあれば)含めたい場合:
 
@@ -74,7 +71,7 @@ displayed_sidebar: docs
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 継承されたフォーム内の全てのオブジェクトの情報が(もしあれば)取得したい場合(ただい、もし継承されたフォームがない場合には空の配列が返されます):
 
@@ -83,7 +80,7 @@ displayed_sidebar: docs
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 0ページ目のオブジェクトも含め、4ページ目のオブジェクトの情報を取得し、継承されたフォームオブジェクトに関しては(もしあれば)除外したい場合:
 
@@ -93,7 +90,7 @@ displayed_sidebar: docs
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 全てのページのオブジェクトの情報を取得し、継承されたフォームオブジェクトに関しては(もしあれば)除外したい場合:
 
@@ -102,7 +99,7 @@ displayed_sidebar: docs
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
 ```
 
-#### 例題 6 
+## 例題 6 
 
 フォームをロードし、そこに内包される全てのリストボックスオブジェクトの一覧を取得する場合:
 
@@ -121,8 +118,17 @@ displayed_sidebar: docs
  FORM UNLOAD
 ```
 
-#### 参照 
+## 参照 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 *Form Objects (Access)*  
 *オブジェクト(フォーム)*  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 898 |
+| スレッドセーフである | &cross; |
+
+

@@ -3,7 +3,7 @@ id: tabControl
 title: Controles Abas
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
+Uma guia cria um objeto que permite que o usuário escolha entre várias telas virtuais exibidas nos limites da guia. O usuário acessa cada tela clicando na guia correspondente.
 
 O seguinte formulário de várias páginas utiliza um objeto de controlo de pestanas:
 
@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
@@ -34,16 +34,16 @@ Under macOS, in addition to the standard position (top), the tab controls can al
   "top": 160,  
   "width": 100, 
   "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
- }
+  "labelsPlacement": "bottom" //define a direção
+}
 ```
 
 ## Adicionando etiquetas a um controle de tabulação
 
 Há várias maneiras de fornecer as etiquetas para um controle de tabulação:
 
-* You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Os ícones associados aos itens da lista no editor de listas serão apresentados no controle de pestanas.
-* Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+* Você pode atribuir uma [lista de valores](properties_DataSource.md#choice-list-static-list) ao controle de abas através de uma coleção (lista estática) ou um ponteiro JSON ("$ref") para uma lista de json. Os ícones associados aos itens da lista no editor de listas serão apresentados no controle de pestanas.
+* Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. Por exemplo, você poderia colocar o código no método objeto do controle de guia e executá-lo quando o evento `On Load` ocorrer.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -51,13 +51,13 @@ Há várias maneiras de fornecer as etiquetas para um controle de tabulação:
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando `Load list` para carregar os valores no array.
 
 ## Gerenciamento programada das abas
 
 ### Comando FORM GOTO PAGE
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+Você pode usar o comando [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) no método do controle da aba:
 
 ```4d
 FORM GOTO PAGE(arrPages)
@@ -80,9 +80,9 @@ Eis um exemplo de método objeto:
 
 ### Acção Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Quando você atribuir a [ação padrão](properties_Action.md#standard-action) `gotoPage` para um objeto do tipo Tab, 4D irá exibir automaticamente a página do formulário que corresponde ao número da guia selecionada.
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+Por exemplo, se o usuário selecionar a terceira aba, 4D exibirá a terceira página do formulário atual (se existir).
 
 ## Propriedades compatíveis
 

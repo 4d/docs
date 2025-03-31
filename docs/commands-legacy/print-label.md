@@ -5,26 +5,23 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( {*aTable* }{;}{ *document* {; * | >}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *aTable* {; *document* {; * }} )<br/>**PRINT LABEL** ( *aTable* {; *document* {; >}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to print, or Default table, if omitted |
 | document | Text | &#8594;  | Name of disk label document |
-| * &#124; > | &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| * &#124; > |Operator| &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** enables you to print labels with the data from the selection of *aTable*.<!-- END REF-->
 
-If do not specify the *document* parameter, **PRINT LABEL** prints the current selection of *aTable* as labels, using the current output form. You cannot use this command to print subforms. For details about creating forms for labels, refer to the *4D Design Reference* manual.
+If do not specify the *document* parameter, **PRINT LABEL** prints the current selection of *aTable* as labels, using the current output form. You cannot use this command to print subforms. 
 
-If you specify the *document* parameter, **PRINT LABEL** enables you to access the Label Wizard (shown below) or to print an existing Label document stored on disk. See the following discussion.
+If you specify the *document* parameter, **PRINT LABEL** enables you to access the [Label Wizard](../Desktop/labels.md) (shown below) or to print an existing Label document stored on disk. See the following discussion.
 
 ![](../assets/en/commands/pict2980390.en.png)
 
@@ -35,7 +32,7 @@ By default, **PRINT LABEL** displays the Print job dialog box before printing. I
 
 Note that this parameter has no effect if the Label Wizard is involved.
 
-If the Label Wizard is not involved, the OK variable is set to 1 if all labels are printed; otherwise, it is set to 0 (zero) (i.e., if user clicked **Cancel** in the printing dialog box).
+If the [Label Wizard](../Desktop/labels.md) is not involved, the OK variable is set to 1 if all labels are printed; otherwise, it is set to 0 (zero) (i.e., if user clicked **Cancel** in the printing dialog box).
 
 If you specify the *document* parameter, the labels are printed with the label setup defined in *document*. If *document* is an empty string (""), **PRINT LABEL** will present an Open File dialog box so the user can specify the file to use for the label setup. If *document* is the name of a document that does not exist (for example, pass *char(1)* in *document)*, the Label Wizard is displayed and the user can define the label setup.
 
@@ -47,7 +44,7 @@ If you specify the *document* parameter, the labels are printed with the label s
 * The syntax which makes the label editor appear does not work with 4D Server; in this case, the system variable OK is set to 0.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 1 
+## Example 1 
 
 The following example prints labels using the output form of a table. The example uses two methods. The first is a project method that sets the correct output form and then prints labels: 
 
@@ -72,7 +69,7 @@ The second method is the form method for the form *"Label Out"*. The form contai
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example lets the user query the \[People\] table, and then automatically prints the labels “My Labels”:
 
@@ -83,7 +80,7 @@ The following example lets the user query the \[People\] table, and then automat
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example lets the user query the \[People\] table, and then lets the user choose the labels to be printed:
 
@@ -94,7 +91,7 @@ The following example lets the user query the \[People\] table, and then lets th
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example lets the user query the \[People\] table, and then displays the Label Wizard so the user can design, save, load and print any labels:
 
@@ -105,7 +102,17 @@ The following example lets the user query the \[People\] table, and then display
  End if
 ```
 
-#### See also 
+## See also 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 39 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

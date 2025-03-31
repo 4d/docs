@@ -5,21 +5,18 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* ; itemRef | * ; *font* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* ; *itemRef* ; *font* )<br/>**SET LIST ITEM FONT** ( * ; *list* ; * ; *font* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| itemRef &#124; * | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
 | font | Text, Integer | &#8594;  | Font name or number |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->The **SET LIST ITEM FONT** command modifies the character font of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
 
@@ -31,7 +28,7 @@ Lastly, you can pass \* in *itemRef*: in this case, the command will apply to th
 
 In the *font* parameter, pass the name or number of the font to be used. To reapply the default font of the hierarchical list, pass an empty string in *font*.
 
-#### Example 
+## Example 
 
 Apply the Times font to the current item of the list:
 
@@ -39,9 +36,18 @@ Apply the Times font to the current item of the list:
  SET LIST ITEM FONT(*;"Mylist";*;"Times")
 ```
 
-#### See also 
+## See also 
 
 [Get list item font](get-list-item-font.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 953 |
+| Thread safe | &cross; |
+
+

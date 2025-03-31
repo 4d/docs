@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.QR SET TOTALS SPACING.Summary-->El comando QR SET TOTALS SPACING define un espacio debajo de la línea de subtotal.<!-- END REF--> Aplica únicamente al modo listado. 
 
@@ -37,6 +34,16 @@ displayed_sidebar: docs
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *subtotal*, es incorrecto, se genera el error -9852.
 
-#### Ver también 
+## Ver también 
 
 [QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 761 |
+| Hilo seguro | &cross; |
+| Modifica variables | error |
+
+

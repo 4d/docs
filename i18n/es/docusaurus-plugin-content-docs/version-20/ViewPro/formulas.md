@@ -35,7 +35,7 @@ Todas las fórmulas tienen operandos y operadores:
 *   Los **operandos** incluyen varias categorías:
     *   Los [valores](#values-and-operators) (soportan 5 tipos de datos)
     *   Las [referencias a otras celdas](#cell-references) (relativas, absolutas, mixtas o por nombre)
-    *   [funciones estándar de hoja de cálculo](#using-functions)
+    *   [funciones estándar de hoja de cálculo](#built-in-functions)
     *   Las [funciones 4D](#4d-functions) basados en fórmulas 4D y que dan acceso a variables, campos, métodos, comandos o expresiones 4D.
 
 ## Valores y operadores
@@ -361,7 +361,7 @@ Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D 
 Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 
 *   **Autorizado**: fue declarado explícitamente utilizando el método [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-*   **Ejecutable**: pertenece al proyecto local o a un componente cargado con la opción "Compartido por los componentes y el proyecto local" activada (ver [Compartir los métodos proyecto](../Concepts/components.md#sharing-of-project-methods)).
+*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
 *   **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
 > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir con la gramática de identificación JavaScript (ver [Estándar ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver *Acceso a los datos*) se ignora en todos los casos.
 

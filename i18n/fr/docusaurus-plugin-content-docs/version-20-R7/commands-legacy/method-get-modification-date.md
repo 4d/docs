@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->La commande **METHOD GET MODIFICATION DATE** retourne dans les paramètres *dateMod* et *heureMod* les dates et heures de dernière modification de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF--> 
 
@@ -43,7 +40,7 @@ Il n’est pas possible de mixer les deux syntaxes.
 
 Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez connaître les dates et heures de modification de plusieurs méthodes :
 
@@ -57,7 +54,7 @@ Vous souhaitez connaître les dates et heures de modification de plusieurs méth
  METHOD GET MODIFICATION DATE(tabChemins;tabDates;tabHeures)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez obtenir les dates de modification des méthodes d'un module, préfixées "Web\_". Il n’est pas possible d’utiliser "@" dans le chemin, vous pouvez cependant écrire :
 
@@ -70,3 +67,13 @@ Vous souhaitez obtenir les dates de modification des méthodes d'un module, pré
 ```
 
   
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1170 |
+| Thread safe | &cross; |
+
+

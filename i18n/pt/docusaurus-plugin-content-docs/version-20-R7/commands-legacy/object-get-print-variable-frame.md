@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->O comando **OBJECT GET PRINT VARIABLE FRAME** obtém a configuração atual das opções de impressão em tamanho variável do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -35,6 +32,15 @@ Se o *objeto* é um sub formulário e se a impressão em tamanho variável está
 | Print Frame fixed with multiple records | Inteiro longo | 2     | O tamanho inicial do marco permanece do mesmo tamanho, 4D imprime o formulário várias vezes para incluir todos os registros.                           |
 | Print Frame fixed with truncation       | Inteiro longo | 1     | 4D imprime só os registros que aparecem na área do subformulário. O formulário se imprime só uma vez e os registros que não se imprimem são ignorados. |
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1241 |
+| Thread-seguro | &cross; |
+
+

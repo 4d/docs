@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->QR GET TOTALS SPACING コマンドを使用し、小計行の下部の行間を取得することができます。<!-- END REF-->このコマンドはリストモードにのみ適用されます。 
 
@@ -36,6 +33,16 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*subtotal*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 762 |
+| スレッドセーフである | &cross; |
+| システム変数を更新する | error |
+
+

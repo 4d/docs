@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD limpia el portapapeles y coloca una copia de la imagen que usted pasó en *imagen* en el portapapeles.<!-- END REF--> 
 
@@ -26,7 +23,7 @@ La imagen se pasa a su formato nativo (jpeg, tif, png, etc)
 
 Después de colocar la imagen en el portapapeles, puede recuperarla utilizando el comando GET PICTURE FROM PASTEBOARD o llamando GET PASTEBOARD DATA("com.4d.picture.gif";...).
 
-#### Ejemplo 
+## Ejemplo 
 
 En una ventana flotante, usted visualiza un formulario que contiene el array *asEmpleadoNombre*, el cual lista los nombres de los empleados de una tabla \[Empleados\]. Cada vez que hace clic en un nombre, usted quiere copiar la imagen de un empleado en el portapapeles. En el método de objeto del Array, usted escribe:
 
@@ -41,13 +38,23 @@ En una ventana flotante, usted visualiza un formulario que contiene el array *as
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si una copia de la imagen se coloca correctamente en el portapapeles, la variable OK toma el valor 1.
 
 Si no hay suficiente memoria para colocar una copia de la imagen en el portapapeles, la variable OK toma el valor 0, pero no se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 521 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

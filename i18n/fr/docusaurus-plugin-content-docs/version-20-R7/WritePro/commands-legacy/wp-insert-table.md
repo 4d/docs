@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Insert table.Summary-->La commande **WP Insert table** insère un nouveau tableau dans la plage *objCible* en fonction du *mode* d'insertion spécifié et retourne le nouvel objet correspondant.<!-- END REF--> Optionnellement, vous pouvez passer le paramètre *miseAJourPlage* ainsi qu'un nombre prédéfini de colonnes et de lignes dans *nbCols* et *nbLignes*.
 
@@ -52,7 +52,7 @@ Vous pouvez passer dans *nbCols* et *nbLignes* le nombre de colonnes et de ligne
 
 La commande retourne le nouveau tableau en tant qu'objet, que vous pouvez passer ensuite à une autre commande tableau 4D Write Pro. Le tableau est créé avec police, bordure, et attributs couleur par défaut, que vous pouvez personnaliser en utilisant la commande [WP SET ATTRIBUTES](wp-set-attributes.md).
 
-#### Exemple 
+## Exemple 
 
 Dans un document vide, vous souhaitez ajouter un nouveau tableau avec 3 colonnes et 2 lignes :
 
@@ -66,7 +66,7 @@ Résultat :
 
 ![](../../assets/en/WritePro/commands/pict3306926.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Table append row](wp-table-append-row.md)  
 [WP Table get rows](wp-table-get-rows.md)  

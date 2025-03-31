@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->La commande **GET MENU ITEM ICON** retourne dans la variable *refIcône* la référence de l’icône éventuellement associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette référence est le chemin d'accès ou le numéro de l’image.
 
@@ -33,6 +30,15 @@ Si vous n’attribuez pas de type spécifique à la variable *refIcône*, par d�
 
 Si aucune icône n’est associée à la ligne, la commande retourne une valeur vide.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 983 |
+| Thread safe | &cross; |
+
+

@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->El comando ERASE WINDOW borra el contenido de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> 
 
@@ -26,7 +23,16 @@ Generalmente, utilizará ERASE WINDOW en combinación con [MESSAGE](message.md "
 
 No confunda ERASE WINDOW, que borra el contenido de una ventana, con [CLOSE WINDOW](close-window.md "CLOSE WINDOW"), que suprime la ventana de la pantalla.
 
-#### Ver también 
+## Ver también 
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 160 |
+| Hilo seguro | &cross; |
+
+

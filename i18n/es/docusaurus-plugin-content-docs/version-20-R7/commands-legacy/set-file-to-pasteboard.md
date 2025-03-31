@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->El comando SET FILE TO PASTEBOARD añade al portapapeles la ruta de acceso completa del archivo pasada en el parámetro *archivo*.<!-- END REF--> Este comando permite crear interfaces permitiendo arrastrar y soltar objetos 4D a los archivos en el escritorio por ejemplo.  
   
@@ -27,6 +24,15 @@ El comando admite el asterisco *\** como parámetro opcional. Por defecto, cuand
 
 **Nota:** el portapapeles está en modo sólo lectura durante el evento de formulario On Drag Over. Por lo tanto no es posible utilizar este comando en ese contexto.
 
-#### Ver también 
+## Ver también 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 975 |
+| Hilo seguro | &cross; |
+
+

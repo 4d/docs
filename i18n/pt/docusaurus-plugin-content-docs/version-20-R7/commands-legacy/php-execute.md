@@ -17,9 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
 :::info Compatibilidade
 
 **PHP está obsoleto em 4D**. Recomenda-se usar a classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
@@ -27,7 +24,7 @@ displayed_sidebar: docs
 :::
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PHP Execute.Summary-->O comando PHP Execute permite executar um script ou uma função PHP.<!-- END REF-->
 
@@ -53,12 +50,12 @@ Os parâmetros *param1...N* são enviados em PHP no formato JSON em UTF-8\. Eles
 
 **Nota:** por razões técnicas, o tamanho dos parâmetros passados através do protocolo FastCGI não deve passar os 64 KB. Deve considerar esta limitação se utiliza parâmetros de tipo Texto.
 
-O comando devolve True se a execução for realizada corretamente do lado de 4D, em outras palavras, se o lançamento do ambiente de execução, a abertura do script e o estabelecimento da comunicação com o intérprete PHP foram exitosos. Do contrário, se gera um erro, que pode interceptar com o comando [ON ERR CALL](on-err-call.md "ON ERR CALL") e analizar com [Last errors](get-last-error-stack.md "Last errors").   
+O comando devolve True se a execução for realizada corretamente do lado de 4D, em outras palavras, se o lançamento do ambiente de execução, a abertura do script e o estabelecimento da comunicação com o intérprete PHP foram exitosos. Do contrário, se gera um erro, que pode interceptar com o comando [ON ERR CALL](on-err-call.md "ON ERR CALL") e analizar com [Last errors](last-errors.md).   
 Além disso, o script mesmo pode gerar erros PHP. Neste caso, deve utilizar o comando [PHP GET FULL RESPONSE](php-get-full-response.md "PHP GET FULL RESPONSE") para analizar a fonte do erro (ver exemplo 4). 
 
 **Nota:** PHP permite configurar a gestão de erros. Para maior informação, consulte por exemplo a página: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.
 
-##### Conversão dos dados devolvidos 
+### Conversão dos dados devolvidos 
 
 A tabela a seguir especifica como 4D interpreta e converte os dados devolvidos em função do tipo do parâmetro *resultPHP*.
 
@@ -78,11 +75,11 @@ A tabela a seguir especifica como 4D interpreta e converte os dados devolvidos e
 
 **Nota:** se precisar recuperar grandes volumes de dados utilizando PHP, é mais eficiente passar pelo canal do buffer *stdOut* (comando **echo** ou similar) que pelo retorno de função. Para maior informação, consulte a descrição do comando [PHP GET FULL RESPONSE](php-get-full-response.md). 
 
-##### Usar variáveis de ambiente 
+### Usar variáveis de ambiente 
 
 Pode utilizar o comando [SET ENVIRONMENT VARIABLE](set-environment-variable.md "SET ENVIRONMENT VARIABLE") para definir as variáveis de ambiente utilizadas pelo script. Atenção: depois de chamar [LAUNCH EXTERNAL PROCESS](launch-external-process.md "LAUNCH EXTERNAL PROCESS") ou PHP Execute, o conjunto das variáveis de ambiente se apaga.
 
-##### Funções especiais 
+### Funções especiais 
 
 4D oferece as seguintes funções especiais:
 
@@ -91,7 +88,7 @@ Pode utilizar o comando [SET ENVIRONMENT VARIABLE](set-environment-variable.md "
 
 Note que o intérprete é relançado automaticamente quando a primeira petição é enviada por PHP Execute. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Chamada do script "myPhpFile.php" sem função. Este é o conteúdo do script:
 
@@ -110,7 +107,7 @@ O código 4D a seguir:
 
 ... mostrará a versão atual do PHP.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Chamada da função *myPhpFunction* no script "myNewScript.php" com parâmetros. Este é o conteúdo do script:
 
@@ -131,7 +128,7 @@ Chamada com função:
  ALERT($result) // Mostra "Olá mundo 4D!"
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Sair do intérprete PHP:
 
@@ -139,7 +136,7 @@ Sair do intérprete PHP:
  $ifOk:=PHP Execute("";"quit_4d_php")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Gestão de erros:
 
@@ -179,7 +176,7 @@ O método PHP\_errHandler é o seguinte:
  End for
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Criação dinâmica por 4D de um script antes de sua execução:
 
@@ -206,7 +203,7 @@ Se executa o script:
  $err:=PHP Execute("C:\Scripts\MyScript.php";"function2Rename_v2";*)
 ```
 
-#### Exemplo 6 
+## Exemplo 6 
 
 Recuperação direta de um valor de tipo data e hora. Este é o conteúdo do script:
 
@@ -226,7 +223,7 @@ Recepção da data do lado 4D:
   //$phpResult_time is ?01 :02 :03 ?
 ```
 
-#### Exemplo 7 
+## Exemplo 7 
 
 Distribuição de dados em arrays:
 
@@ -242,7 +239,7 @@ Distribuição de dados em arrays:
   // $arLong contém os números, 11, 22, 33, etc.
 ```
 
-#### Exemplo 8 
+## Exemplo 8 
 
 Inicialização de um array:
 
@@ -253,7 +250,7 @@ Inicialização de um array:
   // Preencher o array $arText com 50 elementos "indefinido"
 ```
 
-#### Exemplo 9 
+## Exemplo 9 
 
 Passo de parâmetros através de um array:
 
@@ -264,7 +261,7 @@ Passo de parâmetros através de um array:
   // Preencha o array com os valores iniciais
 ```
 
-#### Exemplo 10 
+## Exemplo 10 
 
 Este é um exemplo da utilização básica da função trim, para eliminar espaços adicionais e/ou caracteres invisíveis de princípio a fim de uma cadeia:
 
@@ -277,8 +274,17 @@ Este é um exemplo da utilização básica da função trim, para eliminar espa�
 
 Para obter mais informação sobre a função trim, por favor, consulte a documentação de PHP.
 
-#### Ver também 
+## Ver também 
 
 *Executar scripts PHP em 4D*  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1058 |
+| Thread-seguro | &cross; |
+
+

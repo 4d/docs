@@ -3,9 +3,9 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
-The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
+A classe `HTTPRequest` permite que você lide com [`objetos HTTPRequest`](#httprequest-object) que pode ser usado para configurar e enviar solicitações a um servidor HTTP, além de processar as respostas do servidor HTTP.
 
-A classe `HTTPRequest` está disponível no class store `4D`. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+A classe `HTTPRequest` está disponível no class store `4D`. Você cria e envia solicitações HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) que retorna uma [`HTTPRequest object`](#httprequest-object).
 
 <details><summary>História</summary>
 
@@ -48,22 +48,22 @@ Um objecto HTTPRequest é um objecto não partilhável.
 
 Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
-|                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPRequestClass.agent.Syntax -->](#agent)<br/><!-- INCLUDE #HTTPRequestClass.agent.Summary -->                                        |
-| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #HTTPRequestClass.dataType.Summary -->                               |
-| [<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #HTTPRequestClass.encoding.Summary -->                               |
-| [<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #HTTPRequestClass.errors.Summary -->                                     |
-| [<!-- INCLUDE #HTTPRequestClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #HTTPRequestClass.headers.Summary -->                                  |
-| [<!-- INCLUDE #HTTPRequestClass.method.Syntax -->](#method)<br/><!-- INCLUDE #HTTPRequestClass.method.Summary -->                                     |
-| [<!-- INCLUDE #HTTPRequestClass.protocol.Syntax -->](#protocol)<br/><!-- INCLUDE #HTTPRequestClass.protocol.Summary -->                               |
-| [<!-- INCLUDE #HTTPRequestClass.response.Syntax -->](#response)<br/><!-- INCLUDE #HTTPRequestClass.response.Summary -->                               |
-| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#returnResponseBody)<br/><!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary --> |
-| [<!-- INCLUDE #HTTPRequestClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #HTTPRequestClass.terminate().Summary -->                        |
-| [<!-- INCLUDE #HTTPRequestClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #HTTPRequestClass.terminated.Summary -->                         |
-| [<!-- INCLUDE #HTTPRequestClass.timeout.Syntax -->](#timeout)<br/><!-- INCLUDE #HTTPRequestClass.timeout.Summary -->                                  |
-| [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)<br/><!-- INCLUDE #HTTPRequestClass.url.Summary -->                                              |
-| [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #HTTPRequestClass.wait().Summary -->                                       |
+|                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #HTTPRequestClass.agent.Syntax -->](#agent)<br/><!-- INCLUDE #HTTPRequestClass.agent.Summary -->                              |
+| [<!-- INCLUDE #HTTPRequestClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #HTTPRequestClass.dataType.Summary -->                     |
+| [<!-- INCLUDE #HTTPRequestClass.encoding.Syntax -->](#encoding)<br/><!-- INCLUDE #HTTPRequestClass.encoding.Summary -->                     |
+| [<!-- INCLUDE #HTTPRequestClass.errors.Syntax -->](#errors)<br/><!-- INCLUDE #HTTPRequestClass.errors.Summary -->                           |
+| [<!-- INCLUDE #HTTPRequestClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #HTTPRequestClass.headers.Summary -->                        |
+| [<!-- INCLUDE #HTTPRequestClass.method.Syntax -->](#method)<br/><!-- INCLUDE #HTTPRequestClass.method.Summary -->                           |
+| [<!-- INCLUDE #HTTPRequestClass.protocol.Syntax -->](#protocol)<br/><!-- INCLUDE #HTTPRequestClass.protocol.Summary -->                     |
+| [<!-- INCLUDE #HTTPRequestClass.response.Syntax -->](#response)<br/><!-- INCLUDE #HTTPRequestClass.response.Summary -->                     |
+| [<!-- INCLUDE #HTTPRequestClass.returnResponseBody.Syntax -->](#datatype)<br/><!-- INCLUDE #HTTPRequestClass.returnResponseBody.Summary --> |
+| [<!-- INCLUDE #HTTPRequestClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #HTTPRequestClass.terminate().Summary -->              |
+| [<!-- INCLUDE #HTTPRequestClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #HTTPRequestClass.terminated.Summary -->               |
+| [<!-- INCLUDE #HTTPRequestClass.timeout.Syntax -->](#timeout)<br/><!-- INCLUDE #HTTPRequestClass.timeout.Summary -->                        |
+| [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)<br/><!-- INCLUDE #HTTPRequestClass.url.Summary -->                                    |
+| [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #HTTPRequestClass.wait().Summary -->                             |
 
 <!-- REF #4D.HTTPRequest.new().Desc -->
 
@@ -92,7 +92,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 #### Descrição
 
-The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria e envia uma solicitação HTTP para o servidor HTTP definido na *url* com as *opções* definidas e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
@@ -142,7 +142,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | protocol               | Text                                              | "auto" ou "HTTP1". "auto" significa HTTP1 na implementação actual                                                                                                                                                                                                                                                                                   | "auto"              |
 | proxyAuthentication    | [objeto de autenticação](#authentication-object)  | Autenticação por procuração de tratamento de objectos                                                                                                                                                                                                                                                                                                               | indefinido          |
 | serverAuthentication   | [objeto de autenticação](#authentication-object)  | Autenticação do servidor de tratamento de objectos                                                                                                                                                                                                                                                                                                                  | indefinido          |
-| returnResponseBody     | Parâmetros                                        | If false, the response body is not returned in the [`response` object](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                                                                                                 | True                |
+| returnResponseBody     | Parâmetros                                        | Se false, o corpo de resposta não é retornado no objeto [`response`](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                                                                                                   | True                |
 | timeout                | Real                                              | Tempo de espera em segundos. Indefinido = sem timeout                                                                                                                                                                                                                                                                                               | Indefinido          |
 | validateTLSCertificate | Parâmetros                                        | Se false, 4D não valida o certificado TLS e não retorna um erro se ele for inválido (i.e. expirado, auto-assinado...). Importante: Na implementação actual, a Autoridade de Certificação em si não é verificada. | True                |
 
@@ -169,13 +169,13 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NÃO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
 
 :::
 
 #### objecto evento
 
-An `event` object is returned when a [callback function](#callback-functions) is called. Contém as seguintes propriedades:
+Um objeto `event` é retornado quando uma [função de retorno de chamada](#callback-functions) é chamada. Contém as seguintes propriedades:
 
 | Propriedade           | Tipo | Descrição                                                                                                                  |
 | --------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -194,87 +194,6 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 <!-- END REF -->
 
-<!-- REF #HTTP Parse message.Desc -->
-
-## HTTP Parse message
-
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 20 R4   | Adicionado |
-
-</details>
-
-<!-- REF #HTTP Parse message.Syntax -->**HTTP Parse message**( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF -->
-
-<!-- REF #HTTP Parse message.Params -->
-
-| Parâmetro  | Tipo       |                             | Descrição                                                       |
-| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
-| data       | Text, Blob |              ->             | Dados a serem analisados                                        |
-| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
-
-<!-- END REF -->
-
-#### Descrição
-
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
-
-:::info
-
-HTTP em si, é um protocolo de comunicação sem estado. Neste quadro, os clientes iniciam uma comunicação enviando mensagens "request" aos servidores, especificando detalhes como método, alvo, cabeçalhos, conteúdo, etc. Os servidores, respondem com mensagens de "resposta" que incluem os mesmos detalhes. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
-
-:::
-
-#### Exemplo
-
-No exemplo a seguir, analisamos os dados de um arquivo de texto que contém solicitações HTTP.
-
-Aqui está o conteúdo do arquivo:
-
-```
-POST /batch/gmail/v1/ HTTP/1.1
-Accept-Encoding: gzip, deflate
-Authorization: Bearer xxxxxx
-Connection: Close
-Content-Length: 442
-Content-Type: multipart/mixed; boundary=batch_19438756D576A14ABA87C112F56B9396; charset=UTF-8
-Date: Wed, 29 Nov 2023 13:51:35 GMT
-Host: gmail.googleapis.com
-User-Agent: 4D/20.4.0
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item1>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58689824c92?format=raw HTTP/1.1
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item2>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?format=raw HTTP/1.1
-
---batch_19438756D576A14ABA87C112F56B9396--
-```
-
-Para analisar o arquivo:
-
-```4d
-var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
-var $parsedMessage : Object:=HTTP Parse message($message)
-//$parsedMessage= {
-//headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}],
-//requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
-//}
-```
-
-<!-- END REF -->
-
 <!-- REF #HTTPRequestClass.agent.Desc -->
 
 ## .agent
@@ -283,7 +202,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 #### Descrição
 
-The `.agent` property contains <!-- REF #HTTPRequestClass.agent.Summary -->the `agent`object passed in [`options`](#options-parameter) or the global agent object if it was omitted<!-- END REF -->.
+A propriedade `.agent` contém <!-- REF #HTTPRequestClass.agent.Summary --> o objeto `agent`passado em [`options`](#options-parameter) ou o objeto agente global se ele foi omitido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -295,7 +214,7 @@ The `.agent` property contains <!-- REF #HTTPRequestClass.agent.Summary -->the `
 
 #### Descrição
 
-The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
+A propriedade `.dataType` contém <!-- REF #HTTPRequestClass.dataType.Summary -->o `dataType` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew), "auto" se foi omitido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -307,7 +226,7 @@ The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary --
 
 #### Descrição
 
-The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
+A propriedade `.encoding` contém <!-- REF #HTTPRequestClass.encoding.Summary -->o `encoding` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew), "UTF-8" se ele foi omisso<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -319,7 +238,7 @@ The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary --
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #HTTPRequestClass.errors.Summary -->the collection of all the errors if at least one error has been triggered<!-- END REF -->.
+A propriedade `.errors` contém <!-- REF #HTTPRequestClass.errors.Summary --> a coleção de todos os erros se pelo menos um erro tiver sido acionado<!-- END REF -->.
 
 Aqui está o conteúdo da propriedade `.errors`:
 
@@ -340,7 +259,7 @@ Aqui está o conteúdo da propriedade `.errors`:
 
 #### Descrição
 
-The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->the `headers` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém um objecto vazio.
+A propriedade `.headers` contém <!-- REF #HTTPRequestClass.headers.Summary -->o `headers` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém um objecto vazio.
 
 <!-- END REF -->
 
@@ -352,7 +271,7 @@ The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->t
 
 #### Descrição
 
-The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém "GET".
+A propriedade `.method` contém <!-- REF #HTTPRequestClass.method.Summary -->o `método` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém "GET".
 
 <!-- END REF -->
 
@@ -364,7 +283,7 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 
 #### Descrição
 
-The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido ou se "auto" foi utilizado, contém a versão do protocolo utilizado.
+A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary -->o `protocolo` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido ou se "auto" foi utilizado, contém a versão do protocolo utilizado.
 
 <!-- END REF -->
 
@@ -384,13 +303,13 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 #### Descrição
 
-The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
+A propriedade `.response` contém <!-- REF #HTTPRequestClass.response.Summary --> a resposta à solicitação se ela tiver recebido pelo menos o código de estado, indefinido caso contrário<!-- END REF -->.
 
 Um objeto `response` é um objeto não compartilhável. Contém as seguintes propriedades:
 
 | Propriedade                 | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Diferente de | Corpo da resposta. The type of the message is defined according to the [`dataType`](#datatype) property. Indefinido se o corpo ainda não tiver sido recebido                                                                                                                                                                          |
+| .body       | Diferente de | Corpo da resposta. O tipo da mensagem é definido conforme a propriedade [`dataType`](#datatype). Indefinido se o corpo ainda não tiver sido recebido                                                                                                                                                                                  |
 | .headers    | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = value (value can be a collection if the same key appears multiple times). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                                         |
 | .status     | Number       | Código de estado da resposta                                                                                                                                                                                                                                                                                                                                          |
 | .statusText | Text         | Mensagem que explica o código de estado                                                                                                                                                                                                                                                                                                                               |
@@ -406,7 +325,7 @@ Um objeto `response` é um objeto não compartilhável. Contém as seguintes pro
 
 #### Descrição
 
-The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary --> o `returnResponseBody` passado em o objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém True.
 
 <!-- END REF -->
 
@@ -428,7 +347,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta a solicitação HTTP <!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 
@@ -440,7 +359,7 @@ The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->ab
 
 #### Descrição
 
-The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summary -->True if the request is terminated (after the call to `onTerminate`), false otherwise<!-- END REF -->.
+A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summary -->True se a solicitação for encerrada (após a chamada para `onTerminate`), false caso contrário<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -452,7 +371,7 @@ The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descrição
 
-The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém Indefinido.
+A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->o `timeout` passado no objeto [`options`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém Indefinido.
 
 <!-- END REF -->
 
@@ -464,7 +383,7 @@ The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->t
 
 #### Descrição
 
-The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL of the HTTP request<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da solicitação HTTP <!-- END REF -->.
 
 <!-- END REF -->
 
@@ -472,14 +391,14 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |                             | Descrição                                           |
-| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
-| time       | Real                           |              ->             | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
+| Parâmetro  | Tipo                           |                             | Descrição                    |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
+| timeout    | Real                           |              ->             | Maximum wait time in seconds |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object           |
 
 <!-- END REF -->
 
@@ -487,12 +406,16 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 > Esta função é thread segura.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
+A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary --> espera por uma resposta do servidor ou até o `timeout` especificado ser alcançado<!-- END REF -->.
 
-If a *time* parameter is passed, the function will wait at most the defined number of seconds.
+If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
 
 Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
-During a `.wait()` execution, callback functions are executed, whether from other `HTTPRequest` or [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+:::note
+
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
+
+:::
 
 <!-- END REF -->

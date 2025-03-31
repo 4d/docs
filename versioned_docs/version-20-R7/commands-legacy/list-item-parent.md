@@ -5,21 +5,18 @@ slug: /commands/list-item-parent
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *list* ; itemRef | * ) : Integer<!-- END REF-->
+<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *list* ; *itemRef* ) : Integer<br/>**List item parent** ( * ; *list* ; * ) : Integer<!-- END REF-->
 <!--REF #_command_.List item parent.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number  (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
+| itemRef &#124; * | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
 | Function result | Integer | &#8592; | Item reference number of parent item or 0 if none |
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.List item parent.Summary-->The **List item parent** command returns the item reference number of a parent item.<!-- END REF-->
 
@@ -37,7 +34,7 @@ If there is no item with the item reference number you passed, or if you have pa
 
 If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
 
-#### Example 
+## Example 
 
 Given the list named *hList* shown here in the Application environment:
 
@@ -67,9 +64,18 @@ The item reference numbers are set as follows:
 * If the item “a - 1” is selected, the variable *$vlParentItemRef* gets 100, the item reference number of the item “a”.
 * If the item “a” or “b” is selected, the variable *$vlParentItemRef* gets 0, because these items have no parent item.
 
-#### See also 
+## See also 
 
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 633 |
+| Thread safe | &cross; |
+
+

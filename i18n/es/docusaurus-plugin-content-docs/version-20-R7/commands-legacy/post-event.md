@@ -19,10 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.POST EVENT.Summary-->El comando POST EVENT simula un evento de teclado o de ratón.<!-- END REF--> Tiene el mismo efecto que cuando el usuario actúa a través del teclado o del ratón. 
 
@@ -47,7 +44,16 @@ En el parámetro *modificadores*, pase una constante o una combinación de const
 
 Si pasa el parámetro *proceso*, el evento se envía al proceso cuyo número se pasa en *proceso*. Si pasa *0* (cero) o si omite este parámetro, el evento se envía a nivel de la aplicación y el planificador de 4D lo enviará al proceso apropiado.
 
-#### Ver también 
+## Ver también 
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 467 |
+| Hilo seguro | &cross; |
+
+

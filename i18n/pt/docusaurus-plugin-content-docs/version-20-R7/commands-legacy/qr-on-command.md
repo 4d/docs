@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->O comando QR ON COMMAND executa o método de projeto 4D passado no parâmetro *nomMetodo* quando um comando do editor de relatórios rápidos for chamado pelo usuário, selecionando um comando de menu ou clicando em um botão.<!-- END REF-->
 
@@ -39,8 +36,18 @@ Se deseja que o comando inicial seja executado, deve incluir a seguinte instruç
   
 Se passa um número de *area* inválido, se gera o erro -9850.
 
-#### Ver também 
+## Ver também 
 
 *QR Comandos*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 790 |
+| Thread-seguro | &cross; |
+| Modificar variáveis | error |
+
+

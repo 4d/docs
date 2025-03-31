@@ -149,7 +149,7 @@ La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDown
 
 **.backColor** : Text<!-- END REF -->
 
-La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[couleur de fond](configuring.md/#background--foreground) de la table<!-- END REF -->.
+La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[couleur de fond](configuring.md#background--foreground) de la table<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[co
 
 **.forecolor** : Text<!-- END REF -->
 
-La propriété `.forecolor` est la <!-- REF #TableStyle.forecolor.Summary -->[couleur de premier plan](configuring.md/#background--foreground) de la table<!-- END REF -->.
+La propriété `.forecolor` est la <!-- REF #TableStyle.forecolor.Summary -->[couleur de premier plan](configuring.md#background--foreground) de la table<!-- END REF -->.
 
 ### .police
 
@@ -165,7 +165,7 @@ La propriété `.forecolor` est la <!-- REF #TableStyle.forecolor.Summary -->[co
 
 **.font** : Text<!-- END REF -->
 
-La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la police (voir [**Polices et texte**](configuring.md/#fonts-and-text)) de la table<!-- END REF -->.
+La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la police (voir [**Polices et texte**](configuring.md#fonts-and-text)) de la table<!-- END REF -->.
 
 ### .textDecoration
 
@@ -173,7 +173,7 @@ La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la pol
 
 **.textDecoration** : Integer<!-- END REF -->
 
-La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summary -->décoration du texte de la table (voir [**Polices et texte**](configuring.md/#fonts-and-text))<!-- END REF -->.
+La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summary -->décoration du texte de la table (voir [**Polices et texte**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 ### .borderLeft
 
@@ -403,3 +403,7 @@ La propriété `.secondRowStripStyle` est le <!-- REF #TableThemeOptions.secondR
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 La propriété `.wholeTableStyle` est le <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->style par défaut de la zone de données<!-- END REF -->.
+
+
+
+

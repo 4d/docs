@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.ST Get expression.Summary-->The **ST Get expression** command returns the first expression found in the current selection of the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
 
@@ -52,7 +49,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 If there is no expression found in the selection, the command returns an empty string. 
 
-#### Example 1 
+## Example 1 
 
 When there is a double-click event, you check that there is in fact an expression, and if so, you display a dialog where you have retrieved its values so that the user can modify them:
 
@@ -72,7 +69,7 @@ When there is a double-click event, you check that there is in fact an expressio
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to execute a 4D method when a user link is clicked:
 
@@ -91,6 +88,16 @@ You want to execute a 4D method when a user link is clicked:
  End case
 ```
 
-#### See also 
+## See also 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1287 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

@@ -16,14 +16,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
+## Description 
 
+The **Get indexed string** command returns: 
 
-#### Description 
-
-<!--REF #_command_.Get indexed string.Summary-->The **Get indexed string** command returns: 
-
-* Either one of the strings stored in the string list (“STR#”) resource whose ID is passed in *resID*.<!-- END REF-->
+* Either <!--REF #_command_.Get indexed string.Summary-->one of the strings stored in the string list (“STR#”) resource whose ID is passed in *resID*.<!-- END REF-->
 * Or a string stored in an open XLIFF file whose 'id' attribute of the 'group' element is passed in *resID* (see "Compatibility with XLIFF architecture" below).
 
 You pass the number of the string in *strID*. The strings of a string list resource are numbered from 1 to N. To get all the strings (and their numbers) of a string list resource, use the [STRING LIST TO ARRAY](string-list-to-array.md) command.
@@ -34,16 +31,26 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 **Note:** A string of a string list resource can contain up to 255 characters.
 
-##### Compatibility with XLIFF architecture 
+### Compatibility with XLIFF architecture 
 
 The **Get indexed string** command is compatible with the XLIFF architecture of 4D beginning with version 11: the command first looks for values corresponding to *resID* and *strID* in all the open XLIFF files (when the *resFile* parameter is omitted). In this case, *resID* specifies the **id** attribute of the **group** element and *strID* specifies the **id** attribute of the **trans-unit** element. If the value is not found, the command continues searching in the open resources files. For more information about XLIFF architecture in 4D, refer to the Design Reference manual.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
-#### See also 
+## See also 
 
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 510 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

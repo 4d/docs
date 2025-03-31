@@ -19,7 +19,7 @@ El generador de aplicaciones le permite:
 Generar un paquete de proyecto puede realizarse utilizando:
 
 * el comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
-* or the Build Application window.
+* o la ventana Crear aplicación.
 
 Para mostrar la caja de diálogo Generar la aplicación, seleccione **Diseño** > **Generar la aplicación...** en la barra de menús.
 
@@ -110,7 +110,7 @@ En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarg
 
 El principio consiste en fusionar un archivo de estructura compilado con 4D Volume Desktop. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito.
 
-You can define a default data file or allow users to create and use their own data file (see the [Data file management](#management-of-data-files) section).
+Puede definir un archivo de datos por defecto o permitir que los usuarios creen y utilicen su propio archivo de datos (consulte la sección [Gestión de archivos de datos](#management-of-data-files)).
 
 Es posible automatizar la actualización de las aplicaciones monopuesto fusionadas mediante una secuencia de comandos de lenguaje (ver [Actualización automática de aplicaciones servidor o monopuesto](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
 
@@ -146,15 +146,15 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
 * *Windows*
   * MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
   * Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
-  * Una carpeta Database  - Incluye una carpeta Resources y un archivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management](#management-of-data-files).
-  * (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en la base. For more information about this, refer to the [Plugins and components page](#plugins--components-page) section.
+  * Una carpeta Database  - Incluye una carpeta Resources y un archivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Nota**: esta carpeta también contiene la carpeta *Datos por defecto*, si se ha definido (ver [Gestión de archivos de datos](#management-of-data-files).
+  * (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en la base. Para más información al respecto, consulte la sección [de la página Plugins y componentes](#plugins--components-page).
   * Carpeta Licenses - Un archivo XML de números de licencia integrados en la aplicación. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses-and-certificate).
   * Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
  Todos estos elementos deben estar en la misma carpeta para que el ejecutable funcione.
 
 * *macOS*
-  * Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins--components-page) section. Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses-and-certificate). **Nota**: en macOS, el comando [Archivo aplicación](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) del lenguaje 4D devuelve la ruta del archivo NombreApplication (situado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:
+  * Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses-and-certificate). **Nota**: en macOS, el comando [Archivo aplicación](https://doc.4d.com/4Dv17R6/4D/17-R6/Application-file.301-4311297.en.html) del lenguaje 4D devuelve la ruta del archivo NombreApplication (situado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:
 
 #### Personalizar la carpeta 4D Volume Desktop
 
@@ -278,7 +278,7 @@ Hay muchas causas posibles para este error. Cuando reciba este mensaje, es acons
 ### Archivos generados
 
 Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. Esta carpeta contiene dos subcarpetas, `\&#060;ApplicationName&#062;Client` y `\&#060;ApplicationName&#062;Server`.
-> Estas carpetas no se generan si ocurre un error. In this case, open the [log file](#log-file) in order to find out the cause of the error.
+> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#log-file) para averiguar la causa del error.
 
 La carpeta `&#060;ApplicationName&#062;Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `\&#060;ApplicationName&#062;Server` contiene la parte del servidor de la aplicación.
 

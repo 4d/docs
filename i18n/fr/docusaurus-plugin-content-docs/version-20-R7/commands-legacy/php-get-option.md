@@ -14,16 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 :::info Compatibilité
 
 **PHP est obsolète dans 4D**. Il est désormais recommandé d'utiliser la classe [`4D.SystemWorker`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->La commande **PHP GET OPTION** permet de connaître la valeur courante d’une option relative à l’éxécution de scripts PHP.<!-- END REF--> 
 
@@ -36,7 +33,16 @@ Passez dans le paramètre *option* une constante du thème *PHP* désignant l’
 
 **Note :** Seul le compte utilisateur est retourné lorsque vous utilisez l'option PHP privileges avec la commande **PHP GET OPTION** (le mot de passe n'est pas retourné).
 
-#### Voir aussi 
+## Voir aussi 
 
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1060 |
+| Thread safe | &cross; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->The **LISTBOX SET HEADERS HEIGHT** command modifies by programming the height of the header row in the list box designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -38,6 +35,15 @@ Headers must respect the minimum height set by the system. This height is 24 pix
 
 **Note:** For more information about calculation row heights, refer to the *Design Reference* manual.
 
-#### See also 
+## See also 
 
 [LISTBOX Get headers height](listbox-get-headers-height.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1143 |
+| Thread safe | &cross; |
+
+

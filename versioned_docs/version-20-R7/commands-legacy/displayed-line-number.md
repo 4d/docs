@@ -13,10 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.Displayed line number.Summary-->The **Displayed line number** command only works with the On Display Detail form event.<!-- END REF--> It returns the number of the row being processed while a list of records or list box rows is displayed on screen. If **Displayed line number** is called other than when displaying a list or a list box, it returns 0.
 
@@ -24,7 +21,7 @@ In the case of a list of records, when the displayed row is not empty (when it i
 
 Like [Selected record number](selected-record-number.md), **Displayed line number** starts at 1\. This command is useful if you want to process each row of a list form or list box displayed on screen, including empty rows. 
 
-#### Example 
+## Example 
 
 This example lets you apply an alternating color to a list form displayed on screen, even for rows without records:
 
@@ -43,7 +40,16 @@ This example lets you apply an alternating color to a list form displayed on scr
 
 ![](../assets/en/commands/pict32598.en.png)
 
-#### See also 
+## See also 
 
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 897 |
+| Thread safe | &cross; |
+
+

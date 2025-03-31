@@ -15,15 +15,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->O comando OBJECT Get enterable devolve True se o objeto ou grupo de objetos designado por *objeto* tem o atributo **editável**; do contrário, devolve False.<!-- END REF--> 
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome de objeto (string) Se não passa este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passa uma referência de campo o variável (campo ou variável objeto unicamente) ao invés de uma string.
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1067 |
+| Thread-seguro | &cross; |
+
+

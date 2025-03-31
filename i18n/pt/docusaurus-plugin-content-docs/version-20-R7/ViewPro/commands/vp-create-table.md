@@ -26,7 +26,7 @@ title: VP CREATE TABLE
 | source    | Text                                                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |                  |
 | options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opções adicionais                                               | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. É possível criar uma tabela em um intervalo de células para facilitar o gerenciamento e a análise de um grupo de dados relacionados. Em geral, uma tabela contém dados relacionados em linhas e colunas e aproveita um [contexto de dados] (vp-set-data-context).
 
@@ -66,11 +66,11 @@ Aqui, os títulos das colunas seriam `LastName` e `FirstName`.
 
   - A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha. O número de valores na primeira subcoleção determina quantas colunas são criadas.
   - Os índices das subcoleções são utilizados como títulos das colunas.
-  - Cada subcoleção define os valores das células para a linha. Os valores podem ser `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` ou `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](vp-set-value.md).
+  - Cada subcoleção define os valores das células para a linha. Os valores podem ser `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` ou `Picture`. Um valor `Time` deve ser um objeto que contenha um atributo de tempo, conforme descrito em [VP SET VALUE](vp-set-value.md).
 
 > Isto só funciona quando se geram colunas automaticamente. Não é possível usar uma coleção de dados escalares com a opção *tableColumns*.
 
-#### Exemplo
+## Exemplo
 
 Para criar uma tabela utilizando um contexto de dados:
 
@@ -81,25 +81,29 @@ var $data : Object
 $data:=New object()
 $data.people:=New collection()
 $data.people.push(New object("firstName"; "John"; "lastName"; "Smith"; "email"; "johnsmith@gmail.com"))
-$data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"; "marypoppins@gmail.com")) VP SET DATA CONTEXT("ViewProArea"; $data)
+$data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"; "marypoppins@gmail.com"))
+
+
+VP SET DATA CONTEXT("ViewProArea"; $data)
 
 // Define the columns for the table
-var $options : cs. ViewPro. TableOptions
+var $options : cs.ViewPro.TableOptions
 
-$options:=cs. ViewPro. TableOptions.new()
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(cs. ViewPro. TableColumns.new("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(cs. ViewPro. TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(cs. ViewPro. TableColumns.new("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
+// Create a table from the "people" collection
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
 Aqui está o resultado:
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-#### Veja também
+## Veja também
 
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
@@ -111,3 +115,4 @@ Aqui está o resultado:
 [VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
 [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md)<br/>
 [VP SET TABLE THEME](vp-set-table-theme.md)
+

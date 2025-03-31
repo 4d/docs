@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->El comando GET HIGHLIGHTED RECORDS  guarda en el conjunto designado por el parámetro *nomConjunto* los registros seleccionados (es decir, los registros seleccionados por el usuario en el formulario listado) de la *tabla* pasada como parámetro.<!-- END REF--> Si el parámetro *tabla* se omite, se utiliza la tabla del formulario o del subformulario actual. 
 
@@ -29,7 +26,7 @@ El conjunto designado por *nomConjunto* puede ser local/cliente, proceso o inter
 
 **Nota:** en formularios incluidos, el comando GET HIGHLIGHTED RECORDS devuelve un conjunto vacío si el subformulario no tiene la propiedad de selección **Multilíneas**. En este caso, para conocer la línea seleccionada, debe utilizar el comando [Selected record number](selected-record-number.md "Selected record number"). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método indica cuántos registros están seleccionados en el subformulario que muestra los registros de la tabla \[CDs\]:
 
@@ -39,10 +36,20 @@ Este método indica cuántos registros están seleccionados en el subformulario 
  CLEAR SET("$highlight")
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0\. 
 
-#### Ver también 
+## Ver también 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 902 |
+| Hilo seguro | &cross; |
+| Modifica variables | OK |
+
+

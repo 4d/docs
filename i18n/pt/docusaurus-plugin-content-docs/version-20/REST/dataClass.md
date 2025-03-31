@@ -9,7 +9,7 @@ Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para tra
 
 | Sintaxe                                                                                | Exemplo                                  | Descrição                                                                                   |
 | -------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                      | `/Employee`                              | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass            |
+| [**\{dataClass\}**](#dataclass)                                                      | `/Employee`                              | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass            |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                 | `/Employee:firstName(John)`              | Retorna os dados para uma entidade na qual os valores de atributo são definidas             |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executa uma função de classe de uma dataclass                                               |
@@ -32,7 +32,7 @@ Aqui está uma descrição dos dados retornados:
 
 | Propriedade   | Tipo       | Descrição                                                                                                                                                                                              |
 | ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| __entityModel | String     | Nome da dataclass.                                                                                                                                                                                     |
+| __entityModel | Text       | Nome da dataclass.                                                                                                                                                                                     |
 | __COUNT       | Number     | Número de entidades na classe de dados.                                                                                                                                                                |
 | __SENT        | Number     | Número de entidades enviadas pela petição REST. Esse número pode ser o número total de entidades se for menor que o valor definido por `$top/$limit`.                                                  |
 | __FIRST       | Number     | Número de entidade em que a seleção vai começar. Ou o valor padrão 0 ou o valor definido por `$skip`.                                                                                                  |
@@ -42,7 +42,7 @@ Cada entidade contém as propriedades abaixo:
 
 | Propriedade | Tipo   | Descrição                                                                                                     |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Valor da chave primária definida para a classe de dados.                                                      |
+| __KEY       | Text   | Valor da chave primária definida para a classe de dados.                                                      |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
 | __STAMP     | Number | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
@@ -144,9 +144,9 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 ### Descrição
 
-Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. A chave é o valor do atributo definido como a chave primária para seu dataclas. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
-For more information about the data returned, refer to [\{dataClass\}](#dataclass).
+Para saber mais sobre os dados retornados, veja [\{dataClass\}](#dataclass).
 
 Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 

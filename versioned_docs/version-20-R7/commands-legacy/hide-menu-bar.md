@@ -12,16 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.HIDE MENU BAR.Summary-->The HIDE MENU BAR command makes the menu bar invisible.<!-- END REF-->
 
 If the menu bar was already hidden, the command does nothing.
 
-#### Example 
+## Example 
 
 The following method displays a record in full-screen display (Macintosh) until you click the mouse button:
 
@@ -41,8 +38,18 @@ The following method displays a record in full-screen display (Macintosh) until 
 
 **Note:** On Windows, the window will be limited to the bounds of the application window.
 
-#### See also 
+## See also 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 432 |
+| Thread safe | &cross; |
+| Forbidden on the server ||
+
+

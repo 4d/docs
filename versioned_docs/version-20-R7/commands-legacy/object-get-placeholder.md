@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->The **OBJECT Get placeholder** command returns the placeholder text associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> If there is no placeholder text associated with the object, the command returns an empty string.
 
@@ -28,7 +25,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 If the placeholder is an xliff reference defined using the Property List, the command returns the original reference in the form ":xliff:*resname*", and not its calculated value.
 
-#### Example 
+## Example 
 
 You want to get the field placeholder text:
 
@@ -36,6 +33,15 @@ You want to get the field placeholder text:
  $txt:=OBJECT Get placeholder([People]LastName)
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1296 |
+| Thread safe | &cross; |
+
+

@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get plugin access.Summary-->El comando Get plugin access devuelve el nombre del grupo de usuarios autorizados a utilizar el plug-in cuyo número se pasa en el parámetro *plugIn*.<!-- END REF--> Si ningún grupo está asociado al plug-in, el comando devuelve una cadena vacía (""). 
 
@@ -32,7 +29,16 @@ Pase en el parámetro *plugIn* el número del plug-in del que quiere conocer el 
 | 4D View license        | Entero largo | 808465207 |
 | 4D Write license       | Entero largo | 808464697 |
 
-#### Ver también 
+## Ver también 
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 846 |
+| Hilo seguro | &cross; |
+
+

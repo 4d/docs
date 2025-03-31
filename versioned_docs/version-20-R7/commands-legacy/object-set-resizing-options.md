@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->The **OBJECT SET RESIZING OPTIONS** command sets or dynamically modifies the resizing options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> These options specify how the object is displayed when the form window is resized.
 
@@ -41,6 +38,15 @@ In the *vertical* parameter, you pass a value indicating the vertical resizing o
 | Resize vertical move | Integer | 2     | If the window grows by 100 pixels in height, the object is moved 100 pixels towards the bottom. |
 | Resize vertical none | Integer | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
 
-#### See also 
+## See also 
 
 [OBJECT GET RESIZING OPTIONS](object-get-resizing-options.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1175 |
+| Thread safe | &cross; |
+
+

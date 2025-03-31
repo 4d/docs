@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->**METHOD GET NAMES**コマンドはアプリケーション中のプロジェクトメソッドの名前を*arrNames*配列に返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 **注:** ゴミ箱内のメソッドは含まれません。 
 
-#### 例題 
+## 例題 
 
 典型的な利用例:
 
@@ -39,3 +39,13 @@ displayed_sidebar: docs
   // ホストデータベース内で、特定の文字から始まるメソッドのみをリストする
  METHOD GET NAMES(t_Names;"web_@";*)
 ```
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1166 |
+| スレッドセーフである | &check; |
+
+

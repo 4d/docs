@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->The **SET MENU ITEM METHOD** command modifies the 4D project method associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
@@ -31,10 +28,19 @@ In *method*, pass the name of the 4D method as a character string (expression).
 
 **Note:** If the menu item corresponds to the title of a hierarchical sub-menu, the method will not be called when the menu item is selected.
 
-#### Example 
+## Example 
 
 Refer to the example of the [SET MENU BAR](set-menu-bar.md) command. 
 
-#### See also 
+## See also 
 
 [Get menu item method](get-menu-item-method.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 982 |
+| Thread safe | &cross; |
+
+

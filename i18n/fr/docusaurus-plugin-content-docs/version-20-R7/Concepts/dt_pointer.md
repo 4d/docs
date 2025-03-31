@@ -7,7 +7,7 @@ Les variables ou expressions de type Pointeur sont des références à d'autres 
 
 Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
-Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : "Allons faire un tour avec ta voiture" au lieu de "Allons faire un tour avec la voiture qui a la plaque d’immatriculation 123ABD". Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression "ta voiture". For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : "Allons faire un tour avec ta voiture" au lieu de "Allons faire un tour avec la voiture qui a la plaque d’immatriculation 123ABD". Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression "ta voiture". L'expression "la voiture qui a la plaque d'immatriculation 123ABD" est le nom d'un objet, et l'expression "ta voiture" revient à utiliser un pointeur pour référencer l'objet.
 
 La capacité de se référer à quelque chose sans connaître son identité exacte est très utile. Si votre ami s’achetait une nouvelle voiture, l’expression "ta voiture" serait toujours exacte — ce serait toujours une voiture et vous pourriez toujours aller quelque part avec. Les pointeurs fonctionnent de la même manière. Par exemple, un pointeur peut pointer à un moment donné vers un champ numérique appelé Age, et plus tard vers une variable numérique appelée Ancien âge. Dans les deux cas, le pointeur référence des données numériques pouvant être utilisée dans des calculs.
 
@@ -33,11 +33,11 @@ $MyVar:="Hello"
 $MyVar est désormais une variable contenant la chaîne "Hello". Nous pouvons alors créer un pointeur vers $MyVar :
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
-Le symbole -> signifie "pointer vers". The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
+The -&#062; symbol means “get a pointer to.” Ce symbole est formé du caractère "tiret" (-) suivi du caractère "supérieur à". Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
 
 $MyPointer est désormais une variable qui contient un pointeur vers $MyVar. $MyPointer ne contient pas "Hello", la valeur de $MyVar, mais vous pouvez utiliser $MyPointer pour obtenir cette valeur. L’expression suivante retourne la valeur de $MyVar :
 
@@ -92,6 +92,26 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
 |           |                     |          | vPtrA # vPtrB | False  |
 
+:::warning Null Pointers
+
+Tenter d'assigner ou de lire un pointeur null (alias "nil") produira une erreur à l'exécution. Par exemple :
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+Pour éviter de telles erreurs, vous pouvez écrire :
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principales utilisations
 
 ### Utiliser des pointeurs vers des tables
@@ -138,22 +158,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.
 
-Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans Méthode1 :
+Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. For example, if you write in *Method1*:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-Dans Method2, le débogueur affichera $1 de la façon suivante :
+*Method2*:
 
-| $1 | ->$MaVar (Méthode1) |
-| -- | -------------------------------------- |
+```4d
+#DECLARE($param : Pointer)
+...
+```
 
-La valeur de $1 sera :
+The debugger will display $param as follows:
 
-| $MyVar (Method1) | "Hello world" |
-| ----------------------------------- | ------------- |
+| $param | ->$MaVar (Méthode1) |
+| ------ | -------------------------------------- |
+
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
 
 ### Utiliser des pointeurs vers des éléments de tableau
 
@@ -196,11 +223,12 @@ Si vous devez vous référer au quatrième élément du tableau à l’aide du p
 Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `takeTwo`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
 
 ```4d
-  //méthode projet takeTwo
-  //$1 - Pointeur vers un champ ou une variable de type chaîne. Changez en majuscules.
-  //$2 - Pointeur vers un champ ou une variable de type chaîne. Changez en minuscules.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //takeTwo project method
+  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
+  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 L'instruction suivante emploie la méthode `takeTwo` pour passer un champ en caractères majuscules et une variable en caractères minuscules :
@@ -230,15 +258,15 @@ Cet exemple affiche une boîte de dialogue d’alerte contenant “Goodbye”.
 Voici la description de chaque ligne de l’exemple :
 
 - $MyVar:="Hello"
-  \--> Cette ligne place la chaîne "Hello" dans la variable $MyVar.
+ \--> Cette ligne place la chaîne "Hello" dans la variable $MyVar.
 - $PointerOne:=->$MyVar
-  \--> $PointerOne contient maintenant un pointeur vers $MyVar.
+ \--> $PointerOne contient maintenant un pointeur vers $MyVar.
 - $PointerTwo:=->$PointerOne
-  \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
+ \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
+ \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
 - ALERTE (($PointerTwo->)->)
-  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
+ \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
@@ -253,3 +281,5 @@ $NewVar:=($PointerTwo->)->
 ```
 
 **Important :** Vous devez utiliser des parenthèses lors des déréférencements multiples.
+
+

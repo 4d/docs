@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->La commande **LISTBOX SET TABLE SOURCE** vous permet de modifier la source des données affichées dans la list box désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
@@ -36,6 +33,15 @@ Si la list box contenait déjà des colonnes, leur contenu est mis à jour à l�
 
 **Note :** Pour des raisons d'optimisation, cette commande est traitée de manière asynchrone, c'est-à-dire que le changement de source de la listbox n'est effectif qu'à l'issue de l'exécution complète de la méthode dans laquelle la commande est appelée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1013 |
+| Thread safe | &cross; |
+
+

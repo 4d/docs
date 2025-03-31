@@ -15,16 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
-
-
 :::info Compatibilidad
 
 **PHP es obsoleto en 4D**. Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
 
 :::
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->El comando **PHP SET OPTION** se utiliza para definir opciones específicas antes de llamar el comando [PHP Execute](php-execute.md).<!-- END REF--> El alcance de este comando es el proceso actual.
 
@@ -36,7 +33,16 @@ Pase en el parámetro *opcion* una constante del tema "*PHP*" para designar la o
 
 Por defecto, **PHP SET OPTION** define la opción para todas las llamadas posteriores a [PHP Execute](php-execute.md) del proceso. Si lo quiere definir para la próxima llamada únicamente pase el parámetro estrella (*\**).
 
-#### Ver también 
+## Ver también 
 
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1059 |
+| Hilo seguro | &cross; |
+
+

@@ -9,7 +9,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 | Sintaxe                                                                                                                                                                                      | Exemplo                                                                      | Descrição                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera um conjunto de entidades existente                                                    |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera um conjunto de entidades existente                                                    |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
 
 ## $entityset/\{entitySetID\}
@@ -34,14 +34,14 @@ Após criar um conjunto de entidades, o ID do conjunto de entidades é devolvido
 
 Criar outro conjunto de entidades com base em conjuntos de entidades criados anteriormente
 
-| Parâmetro        | Tipo   | Descrição                                                            |
-| ---------------- | ------ | -------------------------------------------------------------------- |
-| $logicOperator   | String | Um dos operadores lógicos a testar com o outro conjunto de entidades |
-| $otherCollection | String | ID do conjunto de entidades                                          |
+| Parâmetro        | Tipo | Descrição                                                            |
+| ---------------- | ---- | -------------------------------------------------------------------- |
+| $logicOperator   | Text | Um dos operadores lógicos a testar com o outro conjunto de entidades |
+| $otherCollection | Text | ID do conjunto de entidades                                          |
 
 ### Descrição
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Os dois conjuntos de entidades devem estar na mesma classe de dados.
+&$otherCollection`syntax, the`$logicOperator`property (whose values are shown below), and another entity set (entity set #2) defined by the`$otherCollection`property. After creating an entity set (entity set #1) by using`$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... Os dois conjuntos de entidades devem estar na mesma classe de dados.
 
 A continuación, puede crear otro conjunto de entidades que contenga los resultados de esta llamada utilizando el `$method=entityset` al final de la petición REST.
 
@@ -84,7 +84,7 @@ Se quisermos saber se os dois conjuntos de entidades se intersectam, podemos esc
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-Se houver uma intersecção, esta consulta devolve true. .
+Se houver uma intersecção, esta consulta devolve true. . .
 
 No exemplo seguinte, criamos um conjunto de entidades que combina todas as entidades de ambos os conjuntos de entidades:
 

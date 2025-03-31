@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | localID | Text | &#8594;  | Local ID of the remote datastore to return |
-| Result | DataStore | &#8592; | Reference to the datastore |
+| Result | cs.DataStore | &#8592; | Reference to the datastore |
 
 <!-- END REF-->
 
 
-#### Description
+## Description
 
 The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
 
@@ -29,7 +29,7 @@ If no *localID* datastore is found, the command returns **Null**.
 
 Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](../ORDA/dsMapping.md#general-rules).
 
-#### Example 1
+## Example 1
 
 Using the main datastore on the 4D database:
 
@@ -38,7 +38,7 @@ var $result : cs.EmployeeSelection
 $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### Example 2
+## Example 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -65,6 +65,15 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
 
-#### See also 
+## See also 
 
 [Open datastore](open-datastore.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1482 |
+| Thread safe | &check; |
+
+

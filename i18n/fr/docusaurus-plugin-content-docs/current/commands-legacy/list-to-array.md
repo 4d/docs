@@ -15,9 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
 #### Description 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->La commande **LIST TO ARRAY** crée ou remplace le tableau *tableau* avec les éléments du premier niveau de la liste ou de l'énumération *liste*.<!-- END REF-->
@@ -87,3 +84,12 @@ Si vous exécutez l’instruction :
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
+
+#### Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 288 |
+| Thread safe | &cross; |
+
+

@@ -5,7 +5,7 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; pageNumber | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; *pageNumber* } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
-
-
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->**FORM GET ENTRY ORDER** コマンドは フォーム上のオブジェクトの名前を、その入力順に並べて *objectNames* に返します。<!-- END REF-->
 
@@ -33,7 +30,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドが親フォームに対して呼ばれた場合、サブフォーム内の入力順は返されません。
 
-#### 例題 
+## 例題 
 
 現在の入力順からいくつかのオブジェクトを除外します:
 
@@ -51,6 +48,15 @@ displayed_sidebar: docs
  FORM SET ENTRY ORDER($arrTabOrderObject) // 新しい入力順を適用します
 ```
 
-#### 参照 
+## 参照 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1469 |
+| スレッドセーフである | &cross; |
+
+

@@ -327,11 +327,11 @@ En macOS y Windows, una casilla de selección con el estilo de botón "Divulgaci
 
 - *Windows*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
 - *macOS*
 
-  ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+ ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
 :::info
 
@@ -357,11 +357,11 @@ El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del 
 
 El estilo del botón Personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
+- [Ruta de acceso al fondo de pantalla](properties_TextAndPicture.md#background-pathname)
 - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) y [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede ser usada en conjunto con una [imagen de fondo](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Ejemplo JSON:
 
@@ -392,7 +392,7 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 > (1) No soportado por los estilos [Regular](#regular) y [Flat](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpanded).
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Propiedades específicas adicionales están disponibles en función del [estilo de botón](#check-box-button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- Personalizado: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalmargin) - [Desplazamiento del ícono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalmargin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)

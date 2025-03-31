@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get enabled.Summary-->O comando OBJECT Get enabled devolve True se o objeto ou grupo de objetos designado por objeto está ativo no formulário e False se não está ativo.<!-- END REF-->   
   
@@ -34,6 +31,15 @@ Este comando pode ser aplicado aos seguintes tipos de objetos:
 * Pop-up menu, Lista suspensa, Combo box, Menu/Lista suspensa
 * Termômetro, Régua
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1079 |
+| Thread-seguro | &cross; |
+
+

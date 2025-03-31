@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*aTable*}{;}{* | >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* {; *} )<br/>**PRINT SELECTION** ( *aTable* {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,10 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** prints the current selection of *aTable*.<!-- END REF--> The records are printed with the current output form of the table in the current process. **PRINT SELECTION** performs the same action as the **Print** menu command in the Design environment. If the selection is empty, **PRINT SELECTION** does nothing.
 
@@ -33,7 +30,7 @@ During printing, the output form method and/or the form’s object methods are e
 * An On Printing Break event is generated just before a break area is printed.
 * An On Printing Footer event is generated just before a footer is printed.
 
-You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](before-selection.md) during an On Header event. You can also check for the last footer, by testing [End selection](end-selection.md) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](form-event-code.md) and [Level](level.md).
+You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](before-selection.md) during an On Header event. You can also check for the last footer, by testing [End selection](end-selection.md) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](../commands/form-event-code.md) and [Level](level.md).
 
 To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](sum.md) and [Average](average.md) to assign values to variables. For more information, see the descriptions of [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md).
 
@@ -46,7 +43,7 @@ After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing
 * Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-#### Example 
+## Example 
 
 The following example selects all the records in the \[People\] table. It then uses the [DISPLAY SELECTION](display-selection.md) command to display the records and allows the user to highlight the records to print. Finally, it uses the selected records with the [USE SET](use-set.md) command, and prints them with **PRINT SELECTION**:
 
@@ -57,10 +54,19 @@ The following example selects all the records in the \[People\] table. It then u
  PRINT SELECTION([People]) // Print the records that the user picked
 ```
 
-#### See also 
+## See also 
 
-*\_o\_PAGE SETUP*  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 60 |
+| Thread safe | &cross; |
+| Modifies variables | OK |
+
+

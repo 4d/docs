@@ -15,10 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET TOTALS SPACING.Summary-->The QR SET TOTALS SPACING command sets a space below a subtotal row.<!-- END REF--> It applies only to the list mode.
 
@@ -37,6 +34,16 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *subtotal*, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 761 |
+| Thread safe | &cross; |
+| Modifies variables | error |
+
+

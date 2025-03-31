@@ -1,9 +1,9 @@
 ---
 id: debugLogFiles
-title: Description des fichiers d'historique
+title: Description des fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les fichiers d'historique sont généralement démarrés ou arrêtés via des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés à l'aide des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) et sont stockés dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -63,7 +63,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                       |
 | systemid                                   | ID système                                                                                                                                                                                                                                         |
 | component                                  | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                             |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                           |
+| process\_info_                           | index Correspond au champ "index" dans le journal 4DRequestsLog_ProcessInfo.txt et permet de relier une requête à un process.                                                                                                                      |
 | request                                    | ID de requête en mode distant chaîne de message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                      |
 | bytes_in                                   | Nombre d'octets reçus                                                                                                                                                                                                                              |
 | bytes_out                                  | Nombre d'octets envoyés                                                                                                                                                                                                                            |
@@ -244,9 +244,9 @@ Les fichiers peuvent être générés en deux versions :
  Pour démarrer ce journal :
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+ SET DATABASE PARAMETER(SMTP Log;1) //démarrer le journal SMTP 
+ SET DATABASE PARAMETER(POP3 Log;1) //démarrer le journal POP3 
+ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
  ```
 
  4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) de la fenêtre d'administration de 4D Server.

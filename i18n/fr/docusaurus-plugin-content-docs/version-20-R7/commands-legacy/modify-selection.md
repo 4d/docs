@@ -17,10 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](display-selection.md) pour une description détaillée.  
 Les seules différences entre ces deux commandes sont les suivantes :
@@ -29,8 +26,18 @@ Les seules différences entre ces deux commandes sont les suivantes :
 
 2\. [DISPLAY SELECTION](display-selection.md) charge les enregistrements en mode Lecture seulement dans le process courant, ce qui signifie qu'ils ne sont pas verrouillés en écriture pour les autres process. **MODIFY SELECTION** place tous les enregistrements de la sélection en mode Lecture-écriture, ce qui signifie qu'ils sont automatiquement verrouillés en écriture pour les autres process. **MODIFY SELECTION** libère les enregistrements lorsque son exécution est terminée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code.md)  
 *Présentation des ensembles*  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 204 |
+| Thread safe | &cross; |
+| Interdite sur le serveur ||
+
+

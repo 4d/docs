@@ -76,7 +76,7 @@ Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une 
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Les macros sont classées par ordre alphabétique.
+Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macro-file) `formMacros.json`. Les macros sont classées par ordre alphabétique.
 
 Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Les objets sélectionnés sont passés à `$editor.currentSelection` ou `$editor.target` dans la [fonction `onInvoke`](#oninvoke) de la macro.
 
@@ -140,7 +140,7 @@ Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à
 
 Chaque macro que vous souhaitez instancier dans votre projet ou composant doit être déclarée en tant que [classe 4D](Concepts/classes.md).
 
-Le nom de la classe doit correspondre au nom défini à l'aide de l'attribut [class](#creating-macros) du fichier `formMacros.json`.
+Le nom de la classe doit correspondre au nom défini à l'aide de l'attribut [class](#declaring-macros) du fichier `formMacros.json`.
 
 Les macros sont instanciées au lancement de l'application. Par conséquent, si vous modifiez la structure de la classe macro (ajout d'une fonction, modification d'un paramètre...) ou le [constructeur](#class-constructor), vous devrez redémarrer l'application pour appliquer les modifications.
 
@@ -207,7 +207,7 @@ Voici les propriétés retournées dans le paramètre *$editor* :
 | ---------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
 | $editor.editor.form              | Object     | L'ensemble du formulaire                                                               |
 | $editor.editor.file              | File       | Objet fichier du formulaire                                                            |
-| $editor.editor.name              | String     | Nom du formulaire                                                                      |
+| $editor.editor.name              | Text       | Nom du formulaire                                                                      |
 | $editor.editor.table             | number     | Numéro de table du formulaire, 0 pour un formulaire projet                             |
 | $editor.editor.currentPageNumber | number     | Numéro de la page courante                                                             |
 | $editor.editor.currentPage       | Object     | Page courante, contenant tous les objets du formulaire et l'ordre de saisie de la page |
@@ -224,7 +224,7 @@ Voici les propriétés que vous pouvez passer dans l'objet `$result` si vous vou
 | formProperties                    | Object     | Propriétés du formulaire si modifiées par la macro                      |
 | editor.groups     | Object     | informations du groupe, si les groupes sont modifiés par la macro       |
 | editor.views      | Object     | informations sur les vues, si les vues sont modifiées par la macro      |
-| editor.activeView | String     | Nom de la vue active                                                    |
+| editor.activeView | Text       | Nom de la vue active                                                    |
 
 Par exemple, si des objets de la page courante et des groupes ont été modifiés, vous pouvez écrire ce qui suit :
 
@@ -242,9 +242,9 @@ Lors de la manipulation de l'attribut `method` des objets de formulaire, vous po
 
 - En utilisant un objet avec la structure suivante :
 
-| Propriété | Type   | Description        |
-| --------- | ------ | ------------------ |
-| source    | String | code de la méthode |
+| Propriété | Type | Description        |
+| --------- | ---- | ------------------ |
+| source    | Text | code de la méthode |
 
 4D créera un fichier en utilisant le nom de l'objet dans le dossier "objectMethods" avec le contenu de l'attribut `source`. Cette fonctionnalité n'est disponible que pour le code macro.
 

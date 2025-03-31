@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->O comando PRINT OPTION VALUES \[#descv\]devolve em *nomesArray*,uma lista de nomes de valores disponíveis para a *opçao* de impressão definida.<!-- END REF-->Opcionalmente, pode recuperar a informação para cada valor em *info1Array* e *info2Array*. 
 
@@ -52,7 +49,16 @@ Toda a informação devolvida por estes comandos é fornecida pelo sistema opera
 
 **Nota:** o comando PRINT OPTION VALUES só funciona com impressoras PostScript.
 
-#### Ver também 
+## Ver também 
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 785 |
+| Thread-seguro | &cross; |
+
+

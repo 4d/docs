@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Application info.Summary-->**Application info** コマンドはアクティブなアプリケーションのアクティビティと、ネットワーク設定に関する詳細な情報を格納したオブジェクト型を返します。<!-- END REF-->
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | pid                         | 数値     | (OS によって提供される)4D アプリケーションのインスタンスプロセスのID -- 例えば外部スクリプトから実行中の4D インスタンスを識別することができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | 16600                                           |
 | portID                      | 数値     | 4D Server: アクティブに聞いていているポート、4D remote: リモート接続のポート。スタンドアロン環境では返されません。最小値: 1。詳細な情報については、*ポート番号*を参照してください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 19814                                           |
 | remoteDebuggerSessionID     | テキスト   | サーバーデバッガーが起動しているリモートアプリケーションのセッションID。このID は[Process activity](../commands/process-activity.md) によっても返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | "A838A40BJN3NJKH..."                            |
-| SDIMode                     | ブール    | アプリケーションがWindows 上でSDI モードで実行中の場合にはTrue(macOS上では意味を持ちません)。取り得る値: true、false。より詳細な情報については、*developer.4d.com* の[SDI モード](https://developer.4d.com/docs/ja/Menus/sdi/) を参照してください                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | true                                            |
+| SDIMode                     | ブール    | アプリケーションがWindows 上でSDI モードで実行中の場合にはTrue(macOS上では意味を持ちません)。取り得る値: true、false。より詳細な情報については、*developer.4d.com* の[SDI モード](../Menus/sdi.md) を参照してください                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | true                                            |
 | TLSEnabled                  | ブール    | TLS がクライアント/サーバー通信において有効化されている場合にはTrue を返します。スタンドアロン環境では返されません。取り得る: True、False。詳細な情報については、*TLSプロトコルとクライアント/サーバ接続*を参照してください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | true                                            |
 | uptime                      | 数値     | ローカルの4D データベースが開かれてからの経過時間(秒単位)。リモート接続に対しては、接続が開かれてからの経過時間を返します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 143                                             |
 | useLegacyNetworkLayer       | ブール    | アプリケーションサーバーにおいて旧式ネットワークレイヤーが使用されている場合にはTrue。スタンドアロン環境では返されません。取り得る値: True、False。詳細な情報については、*旧式ネットワークレイヤーの有効化または無効化*を参照してください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | false                                           |
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 (\*) Windows 上では、例えば[On Startupデータベースメソッド](on-startup-database-method.md) 内で**Application info** コマンドを呼び出すなどして、カウンターを事前に初期化しておく必要があります。
 
-#### 例題
+## 例題
 
 以下のコードを実行すると、実行中のアプリケーションについての情報を格納したオブジェクトが返されます:
 
@@ -125,9 +125,18 @@ displayed_sidebar: docs
 }
 ```
 
-#### 参照 
+## 参照 
 
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [System info](system-info.md)  
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1599 |
+| スレッドセーフである | &check; |
+
+

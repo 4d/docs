@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.ARRAY BOOLEAN.Summary-->O comando ARRAY BOOLEAN cria e/ou redimensiona um array de elementos  na memória.<!-- END REF-->
-
-* O parâmetro n*omeArray* é o nome do array.
+<!--REF #_command_.ARRAY BOOLEAN.Summary-->O comando ARRAY BOOLEAN cria e/ou redimensiona um array de elementos  na memória.<!-- END REF-->é o nome do array.
 * O parâmetro *tamanho* é o número de elementos em um array.
 * O parâmetro *tamanho2* é opcional; se *tamanho2* for especificado, o comando cria um array de duas dimensões.
 
@@ -32,7 +30,7 @@ Enquanto se aplica ARRAY BOOLEAN para um array já existente:
 
 **Dica:** em alguns contextos, um alternativa à utilização de arrays Booleanos é usar um array Inteiro onde cada elemento signifique "verdadeiro" se for diferente de zero e signifique "falso" se for igual a zero.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo cria um array de processo de 100 elementos de tipo [Booleano](# "Can be either TRUE or FALSE"):
 
@@ -40,7 +38,7 @@ Este exemplo cria um array de processo de 100 elementos de tipo [Booleano](# "Ca
  ARRAY BOOLEAN(abValores;100)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo cria um array local de 100 linhas de 50 elementos do tipo [Booleano](# "Can be either TRUE or FALSE"):
 
@@ -48,7 +46,7 @@ Este exemplo cria um array local de 100 linhas de 50 elementos do tipo [Booleano
  ARRAY BOOLEAN($abValores;100;50)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo cria um array interprocesso de 50 elementos do tipo Booleano e determina que cada elemento signifique "Verdadeiro":
 
@@ -59,6 +57,15 @@ Este exemplo cria um array interprocesso de 50 elementos do tipo Booleano e dete
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [ARRAY INTEGER](array-integer.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 223 |
+| Thread-seguro | &check; |
+
+

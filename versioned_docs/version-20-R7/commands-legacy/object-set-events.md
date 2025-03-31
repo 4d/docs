@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->The **OBJECT SET EVENTS** command modifies, for the current process, the configuration of the form events of the form or object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -106,7 +103,7 @@ The **OBJECT SET EVENTS** command can lead to the enabling of events that are no
 
 If an *object* is duplicated after a call to the **OBJECT SET EVENTS** command, the resulting enabled/disabled configuration is also duplicated.
 
-#### Example 1 
+## Example 1 
 
 Enabling three form events for a set of list box objects and disabling other events:
 
@@ -119,7 +116,7 @@ Enabling three form events for a set of list box objects and disabling other eve
   // enables 3 events and disables all others
 ```
 
-#### Example 2 
+## Example 2 
 
 Disabling three form events for a set of list box objects, without modifying the other events:
 
@@ -132,7 +129,7 @@ Disabling three form events for a set of list box objects, without modifying the
   // disables only these 3 events
 ```
 
-#### Example 3 
+## Example 3 
 
 Enabling a form event for an object, without modifying the other events:
 
@@ -143,7 +140,7 @@ Enabling a form event for an object, without modifying the other events:
   // only enables this event
 ```
 
-#### Example 4 
+## Example 4 
 
 Disabling all events of the form:  
 
@@ -153,7 +150,7 @@ Disabling all events of the form:
   // disables all events
 ```
 
-#### Example 5 
+## Example 5 
 
 Disables a single event of the form without modifying the others:
 
@@ -164,7 +161,16 @@ Disables a single event of the form without modifying the others:
   // only disables this event
 ```
 
-#### See also 
+## See also 
 
 *Form Events*  
 [OBJECT GET EVENTS](object-get-events.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1239 |
+| Thread safe | &cross; |
+
+

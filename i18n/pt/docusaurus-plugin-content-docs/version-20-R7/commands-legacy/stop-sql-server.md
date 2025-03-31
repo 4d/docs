@@ -12,10 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
-
-
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.STOP SQL SERVER.Summary-->O comando STOP SQL SERVER pára o servidor SQL integrado da aplicação 4D na qual foi executado.<!-- END REF-->  
   
@@ -23,6 +20,15 @@ Se o servidor SQL foi lançado, todas as conexões SQL são interrompidas e o se
   
 **Nota**: este comando não afeta o funcionamento do motor SQL interno de 4D. O motor SQL sempre está disponível para pesquisas internas.
 
-#### Ver também 
+## Ver também 
 
 [START SQL SERVER](start-sql-server.md)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 963 |
+| Thread-seguro | &cross; |
+
+

@@ -16,10 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
-
-
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
 
@@ -45,7 +42,7 @@ The command returns one of the following values:
 * a pointer to the array of the requested property, defined by the user.
 * a pointer to the array of the requested property, defined dynamically when calling the [LISTBOX SET ROW COLOR](listbox-set-row-color.md) or [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md) command.
 
-#### Example 
+## Example 
 
 Typical examples of use:
 
@@ -59,7 +56,16 @@ Typical examples of use:
   // associated with the columns of the "Col4" list box
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1278 |
+| Thread safe | &cross; |
+
+
