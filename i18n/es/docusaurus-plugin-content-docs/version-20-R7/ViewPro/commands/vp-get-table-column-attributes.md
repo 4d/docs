@@ -23,7 +23,7 @@ title: VP Get column attributes
 | tableName  | Text    | ->                          | Nombre de la tabla                                             |                  |
 | column     | Integer | ->                          | Índice de la columna en la tabla                               |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Atributos de la *columna*                                      | <!-- END REF --> |
+| Resultado  | Object  | <- | Atributos de la *columna*                                      | <!-- END REF --> |
 
 #### Descripción
 

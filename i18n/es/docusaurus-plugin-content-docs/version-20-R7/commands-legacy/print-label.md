@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla a imprimir, o Tabla por defecto, si se omite |
 | doc | Text | &#8594;  | Nombre del documento de etiquetas del disco |
-| * &#124; > | &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
+| * &#124; > |Operator| &#8594;  | * para suprimir las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
 
 <!-- END REF-->
 

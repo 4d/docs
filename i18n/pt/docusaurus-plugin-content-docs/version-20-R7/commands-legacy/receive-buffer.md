@@ -21,7 +21,7 @@ displayed_sidebar: docs
 A porta serial de buffer do Windows é limitada a 10 Kbytes. Isso significa que o buffer pode realizar um overflow. Quando ela estiver cheia e novos caracteres forem recebidos, os novos caracteres substituem os antigos caracteres. Os caracteres antigos estão perdidos e, portanto, é essencial que o buffer seja lido rapidamente quando novos caracteres são recebidos.
 
 **Em Mac OS**  
-A porta serial buffer no Mac OS X é capacidade ilimitada (dependendo da memória disponível). Se o buffer estiver cheio e novos caracteres são recebidos, os novos caracteres substituem os antigos caracteres. Os caracteres antigos estão perdidos e, portanto, é essencial que o buffer seja lido rapidamente quando novos caracteres são recebidos. 
+A porta serial buffer no macOS é capacidade ilimitada (dependendo da memória disponível). Se o buffer estiver cheio e novos caracteres são recebidos, os novos caracteres substituem os antigos caracteres. Os caracteres antigos estão perdidos e, portanto, é essencial que o buffer seja lido rapidamente quando novos caracteres são recebidos. 
 
   
 RECEIVE BUFFER é diferente de [RECEIVE PACKET](receive-packet.md), ele leva o que está no buffer e, em seguida, retorna imediatamente. [RECEIVE PACKET](receive-packet.md) aguarda até encontrar um caractere específico ou até que um determinado número de caracteres estejam no buffer

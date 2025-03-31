@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Add to date.Summary-->**Add to date** コマンドは、*date*に*years*、*months*、*days* を加算し、その結果の日付を返します。<!-- END REF--> 
 
-通常、任意の日付に日を追加する場合、[日付演算子](https://developer.4d.com/docs/ja/Concepts/date/#%E6%97%A5%E4%BB%98%E6%BC%94%E7%AE%97%E5%AD%90)を使用しますが、**Add to date** は（+ 日付 演算子を使用する場合のように）1ケ月の日数やうるう年の取り扱い方法を気にすることなく月や年を素早く加算することができます。
+通常、任意の日付に日を追加する場合、[日付演算子](../Concepts/date.md#日付演算子)を使用しますが、**Add to date** は（+ 日付 演算子を使用する場合のように）1ケ月の日数やうるう年の取り扱い方法を気にすることなく月や年を素早く加算することができます。
 
 #### 例題 
 

@@ -33,7 +33,7 @@ $MyVar:="Hello"
 $MyVar é agora uma variável que contém a string "Olá". Agora podemos criar um ponteiro para $MyVar:
 
 ```4d
-C_POINTER($MyPointer)  
+var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
@@ -92,6 +92,26 @@ Con:
 | Desigualdade | Pointer # Pointer   | Parâmetros | vPtrA # vPtrC | True  |
 |              |                     |            | vPtrA # vPtrB | False |
 
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Principais usos
 
 ### Ponteiros para tabelas
@@ -138,22 +158,29 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Quando se utilizam apontadores para processar ou variáveis locais, é necessário ter a certeza de que a variável apontada já está definida quando o apontador é utilizado. Tenha em mente que as variáveis locais são eliminadas quando o método que as criou tiver concluído a sua execução e as variáveis de processo são eliminadas no final do processo que as criou. Quando um ponteiro chama uma variável que já não existe, isto causa um erro de sintaxe no modo interpretado (variável não definida) mas pode gerar um erro mais grave no modo compilado.
 
-Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. Por exemplo, se escrever no Método1:
+Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo em muitos casos. Os ponteiros para variáveis locais só podem ser utilizados dentro do mesmo processo. No depurador, quando se mostra um ponteiro para uma variável local que tenha sido declarada noutro método, o nome do método original é indicado entre parênteses, após o ponteiro. For example, if you write in *Method1*:
 
 ```4d
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
 
-No Método2, o depurador exibirá $1 como se segue:
+*Method2*:
 
-| $1 | ->$MyVar (Method1) |
-| -- | ------------------------------------- |
+```4d
+#DECLARE($param : Pointer)
+...
+```
 
-O valor de $1 será:
+The debugger will display $param as follows:
 
-| $MyVar (Method1) | "Hello world" |
-| ----------------------------------- | ------------- |
+| $param | ->$MyVar (Method1) |
+| ------ | ------------------------------------- |
+
+You can expand $param and its value will be:
+
+| $MyVar | "Hello world" |
+| ------ | ------------- |
 
 ### Ponteiros para os elementos do array
 
@@ -196,11 +223,12 @@ Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça d
 Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
 
 ```4d
-  //método projeto takeTwo
-  //$1 - Ponteiro para um campo ou variável do tipo string. Altere para maiúsculas.
-  //$2 - Ponteiro para um campo ou variável do tipo string. Altere para minúsculas.
- $1->:=Uppercase($1->)
- $2->:=Lowercase($2->)
+  //takeTwo project method
+  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
+  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+ $changeUp->:=Uppercase($changeUp->)
+ $changeLow->:=Lowercase($changeLow->)
 ```
 
 La siguiente línea utiliza el método `takeTwo` para cambiar un campo a mayúsculas y para cambiar una variable a minúsculas:
@@ -230,26 +258,28 @@ Exibe uma caixa de alerta com a palavra "Adeus".
 Aqui está uma explicação de cada linha do exemplo:
 
 - $MyVar:="Hello"
-  \--> This line puts the string "Hello" into the variable $MyVar.
+ \--> This line puts the string "Hello" into the variable $MyVar.
 - $PointerOne:=-$MyVar
-  \-- $PointerOne agora contém um ponteiro para $MyVar.
+ \-- $PointerOne agora contém um ponteiro para $MyVar.
 - $PointerTwo:=-$PointerOne
-  \-- $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que por sua vez aponta para $MyVar.
+ \-- $PointerTwo (uma nova variável) contém um ponteiro para $PointerOne, que por sua vez aponta para $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
+ \--> $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
 - ALERT (($PointerTwo->)->)
-  \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
+ \--> A mesma coisa: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por conseguinte ($PointerTwo-&#062;)-&#062; faz referência ao conteúdo de $MyVar.
 
-A seguinte linha coloca "Olá" em $MyVar:
+A seguinte linha coloca "Hello" em $MyVar:
 
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
-A seguinte linha recebe "Olá" de $MyVar e coloca-o em $NewVar:
+A seguinte linha recebe "Hello" de $MyVar e coloca-o em $NewVar:
 
 ```
 $NewVar:=($PointerTwo->)->
 ```
 
 **Importante:** la desreferenciación múltiple requiere paréntesis.
+
+

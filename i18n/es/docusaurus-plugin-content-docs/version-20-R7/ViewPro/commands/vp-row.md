@@ -15,7 +15,7 @@ title: VP Row
 | row        | Integer | ->                          | Índice de la línea                                             |                  |
 | rowCount   | Integer | ->                          | Número de líneas                                               |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Range object of row(s)                      | <!-- END REF --> |
+| Resultado  | Object  | <- | Range object of row(s)                      | <!-- END REF --> |
 
 #### Descripción
 
@@ -51,3 +51,4 @@ $row:=VP Row("ViewProArea";9) // línea 10
 [VP Column](vp-column.md)<br/>
 [VP Combine ranges](vp-combine-ranges.md)<br/>
 [VP Name](vp-name.md)
+

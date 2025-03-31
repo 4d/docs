@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](../commands/wp-insert-document.md), por exemplo.
+<!--REF #_command_.WP New.Summary-->O comando **WP New** cria e devolve um objeto 4D Write Pro.<!-- END REF-->\[#/descv\]. O objeto retornado é um documento completo que pode ser passado ao comando [WP INSERT DOCUMENT](../commands/wp-insert-document-body.md), por exemplo.
 
 Por padrão, se omitir o parâmetro *fonte*, o comando devolve um objeto 4D Write Pro vazio.
 
 Também pode utilizar o parâmetro *fonte*, em cujo caso o novo objeto 4D Write Pro será preenchido com o conteúdo da *fonte*. Pode passar:
 
-* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
+* um parâmetro *cadeia*: Neste caso, passe uma fonte HTML 4D, ou seja, um texto exportado por [WP EXPORT VARIABLE](../commands/wp-export-variable.md) com a opção wk web page html 4D. Este texto pode conter referências (etiquetas e expressões 4D) e imagens aninhadas).
 * ou um parâmetro *blob*: Neste caso, deve passar ou:  
    * um formato de documento 4D Write Pro (.4wp) armazenado em um BLOB. Para saber mais sobre o formato 4D Write Pro, veja *formato de documento .4wp*.  
    * uma área de legado 4D Write carregada em um BLOB (Blobs contendo documentos .4w7 ou .4wt são suportados). Para uma lista detalhada de propriedades de 4D Write suportadas em documentos 4D Write Pro, veja a seção *Importar documentos 4D Write*  
@@ -118,4 +118,4 @@ Se definir um documento modelo com partes pré-formatadas diferentemente, cada u
 #### Ver também 
 
 [WP Import document](../commands/wp-import-document.md)  
-[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

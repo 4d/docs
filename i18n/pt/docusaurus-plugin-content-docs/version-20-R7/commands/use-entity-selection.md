@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Parâmetro       | Tipo                                |   | Descrição            |
-| --------------- | ----------------------------------- | - | -------------------- |
-| entitySelection | 4D. EntitySelection | → | Seleção de entidades |
+| Parâmetro       | Tipo                                |                             | Descrição            |
+| --------------- | ----------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D. EntitySelection | &#8594; | Seleção de entidades |
 
 <!-- END REF-->
 
@@ -54,3 +54,5 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 | Thread safe               | &amp;check; |
 | Changes current record    |                                 |
 | Changes current selection |                                 |
+
+

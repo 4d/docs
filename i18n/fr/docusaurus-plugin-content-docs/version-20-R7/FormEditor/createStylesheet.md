@@ -143,12 +143,12 @@ Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) 
 
 #### Syntaxes prises en charge
 
-| Syntaxe                                                                                   | Description                                                                                                               |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                           | les objets ayant un `attribute`                                                                                           |
-| [attribute="valeur"]                  | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
-| [attribute~="valeur"] | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
-| [attribute\|="valeur"]                | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
+| Syntaxe                                                                                            | Description                                                                                                               |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                    | les objets ayant un `attribute`                                                                                           |
+| [attribute="valeur"]                           | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
+| [attribute~="valeur"]          | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| [attribute&#124;="valeur"] | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
 #### Exemples
 
@@ -272,13 +272,13 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-  - Nom la couleur CSS : `fill: red;`
-  - Valeur hexadécimale : `fill: #FF0000;`
-  - fonction `rgb()` : `fill:rgb(255,0,0)`
+ - Nom la couleur CSS : `fill: red;`
+ - Valeur hexadécimale : `fill: #FF0000;`
+ - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
-  - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
-  - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
+ - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
+ - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordre de priorité
 

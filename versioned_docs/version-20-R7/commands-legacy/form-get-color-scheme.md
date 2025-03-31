@@ -41,7 +41,7 @@ You want to load a picture depending on the form current scheme:
 
 #### See also 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
 #### Properties

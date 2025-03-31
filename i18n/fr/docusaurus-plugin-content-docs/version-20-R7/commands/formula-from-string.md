@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| Paramètres    | Type                        |     | Description                                                                                       |
-| ------------- | --------------------------- | :-: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                        |  →  | Formule texte à retourner comme objet                                                             |
-| context       | Number                      |  →  | `sk execute in current database` (par défaut) ou `sk execute in host database` |
-| Résultat      | 4D.Function |  ←  | Objet natif encapsulant la formule                                                                |
+| Paramètres    | Type                        |                             | Description                                                                                       |
+| ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                        | &#8594; | Formule texte à retourner comme objet                                                             |
+| context       | Number                      | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
+| Résultat      | 4D.Function | &#8592; | Objet natif encapsulant la formule                                                                |
 
 <!-- END REF -->
 
@@ -72,3 +72,5 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1601                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

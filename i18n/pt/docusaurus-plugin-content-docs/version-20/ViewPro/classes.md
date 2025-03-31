@@ -148,7 +148,7 @@ A propriedade `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownL
 <!-- REF #TableStyle.backColor.Syntax -->
 **.backColor**: Text<!-- END REF -->
 
-A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor de fundo](configuring.md/#background--foreground) da tabela<!-- END REF -->.
+A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor de fundo](configuring.md#background--foreground) da tabela<!-- END REF -->.
 
 
 ### .forecolor
@@ -156,7 +156,7 @@ A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[cor d
 <!-- REF #TableStyle.forecolor.Syntax -->
 **.forecolor**: Text<!-- END REF -->
 
-A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor de primeiro plano](configuring.md/#background--foreground) da tabela<!-- END REF -->.
+A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor do primeiro plano](configuring.md#background--foreground) da tabela<!-- END REF -->.
 
 
 
@@ -165,7 +165,7 @@ A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor d
 <!-- REF #TableStyle.font.Syntax -->
 **.font**: Text<!-- END REF -->
 
-A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome do letra (ver [**Categorias de letra e texto**](configuring.md/#fonts-and-text)) da tabela<!-- END REF -->.
+A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome da fonte (consulte [**Fontes e texto**](configuring.md#fonts-and-text)) da tabela<!-- END REF -->.
 
 
 
@@ -174,7 +174,7 @@ A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome do letra (v
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->decoração do texto da tabela (ver [**Letras e textos**](configuring.md/#fonts-and-text))<!-- END REF -->.
+A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->decoração de texto da tabela (consulte [**Fontes e texto**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft
@@ -305,7 +305,7 @@ A propriedade `.firstRowStripSize` é o <!-- REF #TableThemeOptions.firstRowStri
 ### .firstRowStripStyle
 
 <!-- REF #TableThemeOptions.firstRowStripStyle.Syntax -->
-**.firstRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.firstRowStripStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.firstRowStripStyle` é o <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->primeiro estilo de linha alternada<!-- END REF -->.
 
@@ -326,14 +326,14 @@ A propriedade `.headerRowStyle` é o <!-- REF #TableThemeOptions.headerRowStyle.
 ### .highlightFirstColumnStyle
 
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
-**.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.highlightFirstColumnStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" tem de ser true.
 
 ### .highlightLastColumnStyle
 
 <!-- REF #TableThemeOptions.highlightLastColumnStyle.Syntax -->
-**.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
+**.highlightLastColumnStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
 A propriedade `.highlightLastColumnStyle` é a <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->estilo de la última columna<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 

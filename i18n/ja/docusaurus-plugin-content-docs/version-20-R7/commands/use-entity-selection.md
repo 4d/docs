@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| 引数              | 型                                  |   | 説明           |
-| --------------- | ---------------------------------- | - | ------------ |
-| entitySelection | 4D.EntitySelection | → | エンティティセレクション |
+| 引数              | 型                                  |                             | 説明           |
+| --------------- | ---------------------------------- | --------------------------- | ------------ |
+| entitySelection | 4D.EntitySelection | &#8594; | エンティティセレクション |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 :::note
 
-`USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+`USE ENTITY SELECTION` の呼び出し後、更新された(空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
 
 :::
 
@@ -48,9 +48,11 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 
 #### プロパティ
 
-|                           |                                                                 |
-| ------------------------- | --------------------------------------------------------------- |
-| コマンド番号                    | 1513                                                            |
-| スレッドセーフ                   | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
-| Changes current record    |                                                                 |
-| Changes current selection |                                                                 |
+|                 |                                 |
+| --------------- | ------------------------------- |
+| コマンド番号          | 1513                            |
+| スレッドセーフ         | &amp;check; |
+| カレントレコードを変更する   |                                 |
+| カレントセレクションを変更する |                                 |
+
+

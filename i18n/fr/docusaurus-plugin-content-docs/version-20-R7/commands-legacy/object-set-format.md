@@ -68,7 +68,7 @@ Heures :
 | System time long             | 11     | 1:02:03 AM HNEC (Mac uniquement)                                                                                                                                                                                                               |  
 | System time long abbreviated | 10     | 1•02•03 AM (Mac uniquement)                                                                                                                                                                                                                    |  
 | System time short            | 9      | 01:02:03                                                                                                                                                                                                                                       |
-* ou un [format personnalisé basé sur un modèle](https://developer.4d.com/docs/Project/date-time-formats.md) (valeur de chaîne). Par exemple :  
+* ou un [format personnalisé basé sur un modèle](../Project/date-time-formats.md) (valeur de chaîne). Par exemple :  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -280,7 +280,7 @@ La ligne de code suivante formate le champ *\[Employés\]Date embauche* au cinqu
 
 #### Exemple 2 
 
-Cet exemple formate une variable de date et une variable d'heure en utilisant des [formats personnalisés](https://developer.4d.com/docs/Project/date-time-formats.md) :
+Cet exemple formate une variable de date et une variable d'heure en utilisant des [formats personnalisés](../Project/date-time-formats.md) :
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12

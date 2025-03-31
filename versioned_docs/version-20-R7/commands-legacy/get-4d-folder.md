@@ -107,7 +107,7 @@ With the 4D Client application, this constant is strictly equivalent to the prev
 
 ##### Database Folder Unix Syntax 
 
-Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under OS X.
+Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under macOS.
 
 ##### Current Resources folder 
 

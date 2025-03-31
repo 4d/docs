@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| Parâmetro | Tipo   |   | Descrição                                                  |
-| --------- | ------ | - | ---------------------------------------------------------- |
-| id        | Text   | → | Unique identifier (UUID) of the session |
-| Resultado | Object | ← | Storage object of the session                              |
+| Parâmetro | Tipo   |                             | Descrição                                                  |
+| --------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id        | Text   | &#8594; | Unique identifier (UUID) of the session |
+| Resultado | Object | &#8592; | Storage object of the session                              |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ In *id*, pass the UUID of the session for which you want to get the storage. It 
 
 **Nota:** você pode obter os identificadores de sessão usando o comando [Process activity](process-activity.md).
 
-O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session.
+O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session. It is a shared object used to store information available to all processes of the session.
 
 #### Exemplo
 
@@ -61,11 +61,13 @@ This method modifies the value of a "settings" property stored in the storage ob
 #### Veja também
 
 [Process activity](process-activity.md)\
-[Session](../API/SessionClass.md#session)
+[Session](session.md)
 
 #### Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1839                            |
-| Thread safe    | &amp;cross; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1839                        |
+| Thread safe    | &cross; |
+
+

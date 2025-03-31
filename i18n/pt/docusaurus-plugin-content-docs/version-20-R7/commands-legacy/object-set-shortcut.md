@@ -65,7 +65,7 @@ No parâmetro *modificadores*, passe uma ou mais teclas de modificação à asso
 | Constante        | Tipo          | Valor | Comentário                                              |
 | ---------------- | ------------- | ----- | ------------------------------------------------------- |
 | Command key mask | Inteiro longo | 256   | Windows = tecla Ctrl, Mac OS = tecla Comando            |
-| Control key mask | Inteiro longo | 4096  | Tecla Ctrl em OS X, ou clique direito em Windows e OS X |
+| Control key mask | Inteiro longo | 4096  | Tecla Ctrl em macOS, ou clique direito em Windows e macOS |
 | Option key mask  | Inteiro longo | 2048  | Windows = tecla Alt, Mac OS = tecla Opção               |
 | Shift key mask   | Inteiro longo | 512   | Windows e Mac Os                                        |
 

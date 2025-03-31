@@ -463,7 +463,7 @@ title: インデックス
 [`HTTP Get`](../commands-legacy/http-get.md)<br/>
 [`HTTP Get certificates folder`](../commands-legacy/http-get-certificates-folder.md)<br/>
 [`HTTP GET OPTION`](../commands-legacy/http-get-option.md)<br/>
-[`HTTP Parse message`](../commands-legacy/http-parse-message.md)<br/>
+[`HTTP Parse message`](http-parse-message.md)<br/>
 [`HTTP Request`](../commands-legacy/http-request.md)<br/>
 [`HTTP SET CERTIFICATES FOLDER`](../commands-legacy/http-set-certificates-folder.md)<br/>
 [`HTTP SET OPTION`](../commands-legacy/http-set-option.md)<br/>

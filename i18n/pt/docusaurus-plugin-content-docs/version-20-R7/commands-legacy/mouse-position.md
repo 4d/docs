@@ -25,7 +25,7 @@ As coordenadas horizontal e vertical são retornadas em *mouseX* e *mouseY*. Se 
 O parâmetro *botaoMouse* retorna o estado dos botões, como foi descrito anteriormente.  
 
   
-**Nota**: os valores 2 e 3 podem ser retornados em Mac OS X a partir da versão 10.2.5 apenas.
+**Nota**: os valores 2 e 3 podem ser retornados em macOS a partir da versão 10.2.5 apenas.
 
 #### Exemplo 
 

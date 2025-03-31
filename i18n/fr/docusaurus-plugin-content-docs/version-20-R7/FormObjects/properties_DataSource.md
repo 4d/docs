@@ -34,7 +34,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 ## Enumération
 
-Associe une liste de choix à un objet. Il peut s'agir d'un nom de liste de choix (une référence de liste) ou d'une collection de valeurs par défaut.
+Associe une énumération à un objet. Il peut s'agir d'un nom d'énumération (une référence de liste) ou d'une collection de valeurs par défaut.
 
 Vous pouvez également associer des listes de choix à des objets à l'aide des commandes [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv20/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv20/help/command/en/page1266.htm
 
@@ -43,11 +43,12 @@ Vous pouvez également associer des listes de choix à des objets à l'aide des 
 | Nom        | Type de données   | Valeurs possibles                                                                   |
 | ---------- | ----------------- | ----------------------------------------------------------------------------------- |
 | choiceList | liste, collection | Une liste de valeurs possibles                                                      |
-| liste      | liste, collection | Une liste de valeurs possibles (listes hiérarchiques uniquement) |
+| list       | liste, collection | Une liste de valeurs possibles (listes hiérarchiques uniquement) |
 
 #### Objets pris en charge
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) -
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -83,7 +84,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -169,7 +170,7 @@ L'utilisation de l'option de **Référence élément sélectionné** nécessite 
 
 Liste des valeurs qui seront utilisées comme valeurs par défaut pour la colonne de la list box (type tableau uniquement). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. En utilisant le langage, vous pouvez gérer l'objet en vous référant à ce tableau.
 
-> Ne pas confondre cette propriété avec la propriété["default value](properties_RangeOfValues.md#default-list-of-values)" qui permet de définir la valeur d'un champ dans les nouveaux enregistrements.
+> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
 
 Vous devez saisir une liste de valeurs. Dans l'éditeur de formulaires, une boîte de dialogue spécifique vous permet de saisir des valeurs séparées par des retours à la ligne :
 
@@ -198,23 +199,26 @@ Une expression 4D à associer à une colonne. Vous pouvez saisir :
 - Une **variable simple** (dans ce cas, elle doit être déclarée explicitement pour la compilation). Vous pouvez utiliser n'importe quel type de variable, à l'exception des BLOB et des tableaux. La valeur de la variable sera généralement calculée dans l'événement `On Display Detail`.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes)
-  only), for example: `[Employees]LastName`. Les types de champs suivants peuvent être utilisés :
-  - String
-  - Numérique
-  - Date
-  - Time
-  - Picture
-  - Boolean\
-    You can use fields from the Master Table or from other tables.
+ only), for example: `[Employees]LastName`. Les types de champs suivants peuvent être utilisés :
+ - String
+ - Numérique
+ - Date
+ - Time
+ - Picture
+ - Boolean\
+  You can use fields from the Master Table or from other tables.
 
-- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. La valeur sera évaluée dans les événements `On Display Detail` et `On Data Change`. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
-  Les types d'expression suivants sont pris en charge :
-  - String
-  - Numérique
-  - Date
-  - Picture
-  - Boolean
+- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. L'expression doit retourner une valeur. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
+ Les types d'expression suivants sont pris en charge :
+ - String
+ - Numérique
+ - Date
+ - Picture
+ - Boolean
 
+For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
+For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
 For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath>` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
 Si vous utilisez une collection de valeurs scalaires, 4D créera un objet pour chaque élément de la collection avec une seule propriété (nommée "value"), remplie avec la valeur de l'élément. Dans ce cas, vous utiliserez `This.value` comme expression.
@@ -251,7 +255,7 @@ Toutes les tables de la base de données peuvent être utilisées, que le formul
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -305,17 +309,17 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
-## Selection Name
+## Sélection temporaire
 
 `Listbox de type sélection nommée`
 
-Spécifie la sélection nommée à utiliser. Vous devez entrer le nom d'une sélection nommée valide. Il peut s'agir d'une sélection nommée process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection nommée doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
+Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 
-> Les sélections nommées sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections nommées** du *manuel de référence du langage 4D*.
+> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections nommées** du *manuel de référence du langage 4D*.
 
 #### Grammaire JSON
 
@@ -325,4 +329,4 @@ Spécifie la sélection nommée à utiliser. Vous devez entrer le nom d'une sél
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

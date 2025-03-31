@@ -46,7 +46,7 @@ Os parámetros opcionais *inicioSel* e *fimSel* designam uma seleção de texto 
   
 **Nota**: se *inicioSel* é maior que *fimSel* (exceto quando *fimSel* é 0) , o comando não faz nada e a variável OK toma o valor 0.
 
-Uma vez inserido o link, é ativo: o uso de **Ctrl+clique** (Windows) ou **Comando+clique** (OS X) abre uma página do navegador por padrão no endereço especificado no parâmetro *enderecoURL*.
+Uma vez inserido o link, é ativo: o uso de **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) abre uma página do navegador por padrão no endereço especificado no parâmetro *enderecoURL*.
 
 #### Exemplo 
 

@@ -226,6 +226,6 @@ Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
 ## Recuperar apenas uma entidade
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Por exemplo, pode escrever:
+Pode usar a sintaxe [`\{dataClass\}:\{attribute\}(valor)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. Pode usar a sintaxe <a href="%7BdataClass%7D.html#dataclassattributevalue"><code>\{dataClass\}:\{attribute\}(value)</code></a> quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
 
 `GET  /rest/Company:companyCode("Acme001")`

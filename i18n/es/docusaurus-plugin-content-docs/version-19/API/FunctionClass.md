@@ -15,7 +15,7 @@ Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado des
 
 ### Objetos Formula
 
-Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) permiten crear objetos [`4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión 4D o código expresado como texto.
+Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) le permiten crear objetos `4D.Function` para ejecutar cualquier expresión 4D o código expresado como texto.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 
@@ -132,7 +132,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 | Parámetros | Tipo        |    | Descripción                                                        |
 | ---------- | ----------- |:--:| ------------------------------------------------------------------ |
 | formulaExp | Expression  | -> | Fórmula a devolver como objeto                                     |
-| Result     | 4D.Function | <- | Función nativa que encapsula la fórmula|<!-- END REF -->
+| Resultado  | 4D.Function | <- | Función nativa que encapsula la fórmula|<!-- END REF -->
 
 
 |
@@ -147,7 +147,7 @@ Tener una fórmula como objeto permite pasarla como parámetro (atributo calcula
 La fórmula devuelta puede ser llamada con:
 
 *   los métodos [`.call()`](#call) o [`.apply()`](#apply), o
-*   object notation syntax (see [formula object](#formula-object)).
+*   sintaxis de notación de objeto (ver objeto [formula](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
@@ -271,7 +271,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 | Parámetros    | Tipo        |    | Descripción                                                       |
 | ------------- | ----------- |:--:| ----------------------------------------------------------------- |
 | formulaString | Text        | -> | Fórmula texto a devolver como objeto                              |
-| Result        | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
+| Resultado     | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
 
 
 |
@@ -331,7 +331,7 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objeto a devolver por el comando This en la fórmula                           |
 | formulaParams | Collection | -> | Colección de valores que se pasan como $1...$n cuando se ejecuta la `fórmula` |
-| Result        | any        | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
+| Resultado     | any        | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
 
 
 |
@@ -405,7 +405,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | -- | ------------------------------------------------------------------ |
 | thisObj    | Object | -> | Objeto a devolver por el comando This en la fórmula                |
 | params     | any    | -> | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Result     | any    | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
+| Resultado  | any    | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
 
 
 |

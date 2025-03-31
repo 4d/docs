@@ -21,7 +21,7 @@ No parâmetro *rotaArquivo*, passe o nome ou a rota de acesso completa da base a
 
 * .4db (arquivo de estrutura interpretado),
 * .4dc (arquivo de estrutura compilado),
-* .4dbase (pacote OS X),
+* .4dbase (pacote macOS),
 * 4dproject (arquivo do banco de dados projeto)
 * .4dz (arquivo de lançamento dos bancos de dados projeto)
 * .4dlink (arquivo de acesso direto).

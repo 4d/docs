@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
-| Paramètres | Type       |   | Description                                  |
-| ---------- | ---------- | - | -------------------------------------------- |
-| Résultat   | Collection | ← | Collection des objets Web Server disponibles |
+| Paramètres | Type       |                             | Description                                  |
+| ---------- | ---------- | --------------------------- | -------------------------------------------- |
+| Résultat   | Collection | &#8592; | Collection des objets Web Server disponibles |
 
 <!-- END REF-->
 
@@ -61,3 +61,5 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1716                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

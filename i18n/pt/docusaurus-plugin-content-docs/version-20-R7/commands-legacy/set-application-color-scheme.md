@@ -35,7 +35,7 @@ No parâmetro *esquemaCor*, passe um esquema de cores a aplicar:
 #### Ver também 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 
 #### Propriedades
 

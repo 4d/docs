@@ -20,7 +20,7 @@ Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
 Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Além de recuperar uma única entidade em um dataclass usando [\{dataClass\}({key})](dataClass.md#dataclasskey), você também pode escrever uma [função de classe](ClassFunctions.md#function-calls) que retorne uma seleção de entidade (ou uma coleção).
 
 Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
@@ -37,7 +37,7 @@ Um conjunto de entidades (ou então *seleções de entidades*) é uma coleção 
 
 Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua petição REST. Como uma medida de segurança, também pode usar [`$savedfilter`]($savedfilter.md) ou [`$savedorderby`]($savedorderby.md) quando chamar [`$filter`]($filter.md) ou [`$orderby`]($orderby.md) assim se o conjunto de entidade alguma ver for removido ou der time out no servidor, pode ser facilmente recuperado com a mesma ID que antes.
 
-To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
+Para acessar o conjunto de entidades, você deve usar `$entityset/\{entitySetID\}`, por exemplo:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
@@ -50,7 +50,7 @@ Se modificar qualquer dos atributos de entidade no conjunto de entidades, o valo
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
+Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), pode combinar dois conjuntos de entidade que foram previamente criados. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
 Uma nova seleção de entidades é retornada, entretanto também pode criar um novo conjunto de entidades chamando [`$method=entityset`]($method.md#methodentityset) no fim da petição REST.
 
@@ -242,7 +242,7 @@ Se quiser salvar um BLOB armazenado na dataclass, pode escrever:
 
 ## Recuperar apenas uma entidade
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Por exemplo, pode escrever:
+É particularmente útil quando quiser fazer uma pesquisa relacionada que não seja criada com a mesma chave primária que a dataclass. Pode usar a sintaxe [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) quando quiser recuperar apenas uma entidade. Por exemplo, pode escrever:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

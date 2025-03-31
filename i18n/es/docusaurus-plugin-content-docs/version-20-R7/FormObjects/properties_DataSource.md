@@ -47,7 +47,8 @@ También se pueden asociar listas de selección a objetos utilizando los comando
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) -
+[Combo box](comboBox_overview.md) - [Lista Jerárquica](list_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -83,7 +84,7 @@ Especifica una variable o expresión a la que se asignará el elemento/entidad d
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -169,7 +170,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
-> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
+> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-value)" que permite definir un valor de campo en los nuevos registros.
 
 Debe introducir una lista de valores. En el editor de formularios, un diálogo específico permite introducir valores separados por retornos de carro:
 
@@ -198,21 +199,21 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
 - Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - Un **campo** que utiliza la sintaxis estándar [Tabla]Campo (solo [list box tipo selección](listbox_overview.md#selection-list-boxes)), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
-  - String
-  - Numeric
-  - Fecha
-  - Hora
-  - Picture
-  - Boolean\
-    Puede utilizar campos de la tabla maestra o de otras tablas.
+ - String
+ - Numeric
+ - Fecha
+ - Hora
+ - Picture
+ - Boolean\
+  Puede utilizar campos de la tabla maestra o de otras tablas.
 
 - Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. La expresión debe devolver un valor. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
-  Se soportan los siguientes tipos de expresiones:
-  - String
-  - Numeric
-  - Fecha
-  - Picture
-  - Boolean
+ Se soportan los siguientes tipos de expresiones:
+ - String
+ - Numeric
+ - Fecha
+ - Picture
+ - Boolean
 
 Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
 Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
@@ -252,7 +253,7 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
@@ -300,23 +301,23 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                          |
-| ------------------- | -------------- | ----------------------------------------- |
-| selectedItemsSource | string         | Colección asignable o expresión de objeto |
+| Nombre              | Tipos de datos | Valores posibles                           |
+| ------------------- | -------------- | ------------------------------------------ |
+| selectedItemsSource | string         | Assignable collection or object expression |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)
 
 ---
 
-## Nombre de selección
+## Selección temporal
 
 `List boxes de tipo selección nombrada`
 
-Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
+Especifica la selección temporal a utilizar. Debe introducir el nombre de una selección temporal válida. Puede ser una selección temporal proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
-> Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
+> Las selecciones temporales son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
 
 #### Gramática JSON
 
@@ -326,4 +327,4 @@ Especifica la selección con nombre que se utilizará. Debe introducir el nombre
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md#overview)
+[List Box](listbox_overview.md)

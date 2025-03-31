@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to print, or Default table, if omitted |
 | document | Text | &#8594;  | Name of disk label document |
-| * &#124; > | &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| * &#124; > |Operator| &#8594;  | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 
@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** enables you to print labels with the data from the selection of *aTable*.<!-- END REF-->
 
-If do not specify the *document* parameter, **PRINT LABEL** prints the current selection of *aTable* as labels, using the current output form. You cannot use this command to print subforms. For details about creating forms for labels, refer to the *4D Design Reference* manual.
+If do not specify the *document* parameter, **PRINT LABEL** prints the current selection of *aTable* as labels, using the current output form. You cannot use this command to print subforms. 
 
-If you specify the *document* parameter, **PRINT LABEL** enables you to access the Label Wizard (shown below) or to print an existing Label document stored on disk. See the following discussion.
+If you specify the *document* parameter, **PRINT LABEL** enables you to access the [Label Wizard](../Desktop/labels.md) (shown below) or to print an existing Label document stored on disk. See the following discussion.
 
 ![](../assets/en/commands/pict2980390.en.png)
 
@@ -32,7 +32,7 @@ By default, **PRINT LABEL** displays the Print job dialog box before printing. I
 
 Note that this parameter has no effect if the Label Wizard is involved.
 
-If the Label Wizard is not involved, the OK variable is set to 1 if all labels are printed; otherwise, it is set to 0 (zero) (i.e., if user clicked **Cancel** in the printing dialog box).
+If the [Label Wizard](../Desktop/labels.md) is not involved, the OK variable is set to 1 if all labels are printed; otherwise, it is set to 0 (zero) (i.e., if user clicked **Cancel** in the printing dialog box).
 
 If you specify the *document* parameter, the labels are printed with the label setup defined in *document*. If *document* is an empty string (""), **PRINT LABEL** will present an Open File dialog box so the user can specify the file to use for the label setup. If *document* is the name of a document that does not exist (for example, pass *char(1)* in *document)*, the Label Wizard is displayed and the user can define the label setup.
 

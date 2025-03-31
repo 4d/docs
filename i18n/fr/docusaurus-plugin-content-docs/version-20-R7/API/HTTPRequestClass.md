@@ -200,87 +200,6 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 <!-- END REF -->
 
-<!-- REF #HTTP Parse message.Desc -->
-
-## HTTP Parse message
-
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 20 R4   | Ajout         |
-
-</details>
-
-<!-- REF #HTTP Parse message.Syntax -->**HTTP Parse message**( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF -->
-
-<!-- REF #HTTP Parse message.Params -->
-
-| Paramètres | Type       |                             | Description                                                         |
-| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------- |
-| data       | Text, Blob |              ->             | Données à analyser                                                  |
-| Résultat   | Object     | <- | Objet dont chaque propriété est une partie des données multiparties |
-
-<!-- END REF -->
-
-#### Description
-
-La commande `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analyse un texte ou un blob multipart/form-data (message HTTP "response") et extrait le contenu vers un objet. Chaque propriété de l'objet renvoyé correspond à une partie des données multipart<!-- END REF -->.
-
-:::info
-
-HTTP lui-même est un protocole de communication sans état. Dans ce cadre, les clients initient la communication en envoyant des messages "request" aux serveurs, en spécifiant des détails tels que la méthode, la cible, les en-têtes, le contenu, etc. Les serveurs, à leur tour, répondent par des messages "response" qui contiennent les mêmes détails. `HTTP Parse message` analyse le message "request" ou "response" et retourne un objet structuré.
-
-:::
-
-#### Exemple
-
-Dans l'exemple suivant, nous analysons les données d'un fichier texte contenant des requêtes HTTP.
-
-Voici le contenu du fichier :
-
-```
-POST /batch/gmail/v1/ HTTP/1.1
-Accept-Encoding: gzip, deflate
-Authorization: Bearer xxxxxx
-Connection: Close
-Content-Length: 442
-Content-Type: multipart/mixed; boundary=batch_19438756D576A14ABA87C112F56B9396; charset=UTF-8
-Date: Wed, 29 Nov 2023 13:51:35 GMT
-Host: gmail.googleapis.com
-User-Agent: 4D/20.4.0
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item1>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58689824c92?format=raw HTTP/1.1
-
-
---batch_19438756D576A14ABA87C112F56B9396
-Content-Type: application/http
-Content-ID: <item2>
-
-GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?format=raw HTTP/1.1
-
---batch_19438756D576A14ABA87C112F56B9396--
-```
-
-Pour analyser le fichier :
-
-```4d
-var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
-var $parsedMessage : Object:=HTTP Parse message($message)
-//$parsedMessage= {
-//headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}],
-//requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
-//}
-```
-
-<!-- END REF -->
-
 <!-- REF #HTTPRequestClass.agent.Desc -->
 
 ## .agent
@@ -478,13 +397,13 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
 | Paramètres | Type                           |                             | Description                                         |
 | ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
-| time       | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
+| timeout    | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
 | Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
 
 <!-- END REF -->
@@ -495,10 +414,14 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
-Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini.
+Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Decimals are accepted.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
 
-Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker.md) . Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+:::note
+
+Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker.md) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+
+:::
 
 <!-- END REF -->

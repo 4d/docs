@@ -57,10 +57,10 @@ You can use one of the following constants, depending on the modifier key to be 
 | ----------------------------------- | -------------------------------------- |  
 | Shift                               | Shift key bit / Shift key mask         |  
 | Caps Lock                           | Caps lock key bit / Caps lock key mask |  
-| Alt (also called Option under OS X) | Option key bit / Option key mask       |  
+| Alt (also called Option under macOS) | Option key bit / Option key mask       |  
 | Ctrl under Windows                  | Command key bit / Command key mask     |  
-| Ctrl under OS X                     | Control key bit / Control key mask     |  
-| Command under OS X                  | Command key bit / Command key mask     |  
+| Ctrl under macOS                     | Control key bit / Control key mask     |  
+| Command under macOS                  | Command key bit / Command key mask     |  
 | Right click                         | Control key bit / Control key mask     |
 * The system variables MouseX and MouseY contain the horizontal and vertical positions of the mouse click, expressed in the local coordinate system of the window where the click occurred. The upper left corner of the window is position 0,0\. These are meaningful only when there is a mouse click.
 * The MouseProc system variable contains the process reference number of the process in which the event occurred (mouse click).

@@ -53,7 +53,7 @@ A escolha entre associar uma ação padrão ou um método de projecto a um coman
 
 É possível atribuir um método de projecto e/ou uma acção padrão a um comando de menu seleccionado no editor de Menu:
 
-- **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método de projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...] . 4D displays a project method creation dialog that is used to access the Method editor.
+- **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...]. 4D exibe um diálogo de criação de método projeto usado para acessar o editor do Método.
 - **Acção Padrão Associada**: Escolha ou escreva a acção que deseja atribuir na caixa combinada "Acção Padrão Associada". Pode introduzir qualquer acção apoiada e (opcionalmente) parâmetro que deseje na área. Para uma lista completa de acções padrão, consulte por favor a secção **Acções padrão** na *Design Reference*. **Nota para macOS:** Sob macOS, os comandos de menu personalizados associados à acção *Quit* são automaticamente colocados no menu de aplicação, em conformidade com as normas de interface da plataforma.
 
 Usando a linguagem 4D, pode associar um método de projecto usando o comando `SET MENU ITEM METHOD` , e uma acção padrão usando o comando `SET MENU ITEM PROPERTY` .

@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onOpen` é executado uma vez
 2. São executados zero ou vários `onMessage`
 3. Zero ou um `onError` é executado (pára o processamento)
-4. `onTerminate` é sempre executado uma vez
+4. `onTerminate` is always executed
 
 #### Exemplo
 
@@ -139,7 +139,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### Descrição
 
-The `.dataType` property contains <!-- REF #WebSocketClass.dataType.Summary -->the type of the response body content<!-- END REF -->. Pode ser "text", "blob" ou "object".
+A propriedade `.dataType` contém <!-- REF #WebSocketClass.dataType.Summary --> o tipo do conteúdo do corpo de resposta<!-- END REF -->. Pode ser "text", "blob" ou "object".
 
 Esta propriedade é só de leitura.
 
@@ -167,7 +167,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.id` property contains <!-- REF #WebSocketClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+A propriedade `.id` contém <!-- REF #WebSocketClass.id.Summary --> o identificador único da conexão<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 
@@ -251,7 +251,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 
 #### Descrição
 
-The `.url` property contains <!-- REF #WebSocketClass.url.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. É o URL que você passou para a função [`new()`](#4dwebsocketnew).
+A propriedade `.url` contém <!-- REF #WebSocketClass.url.Summary --> a URL à qual o WebSocket se conectou<!-- END REF -->. É o URL que você passou para a função [`new()`](#4dwebsocketnew).
 
 Esta propriedade é só de leitura.
 

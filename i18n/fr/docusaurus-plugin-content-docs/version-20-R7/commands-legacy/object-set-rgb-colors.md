@@ -103,7 +103,7 @@ Passage du fond en transparent avec couleur de police claire :
 #### Voir aussi 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB Color](select-rgb-color.md)  
+[Select RGB color](select-rgb-color.md)  
 
 #### Propriétés
 

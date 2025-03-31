@@ -9,7 +9,7 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
   - Componentes
   - Datos
     - Logs
-    - Settings
+    - Propiedades
   - Documentation
   - Plugins
   - Project
@@ -17,7 +17,7 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
     - Sources
     - Trash
   - Resources
-  - Settings
+  - Propiedades
   - userPreferences.username
   - WebFolder
 
@@ -118,7 +118,7 @@ La carpeta Trash contiene los métodos y formularios que se han eliminado del pr
 - Formularios
 - TableForms
 
-Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
+Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources-folder).
 
 ### Carpeta DerivedData
 

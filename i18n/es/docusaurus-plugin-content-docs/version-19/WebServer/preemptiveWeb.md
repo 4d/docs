@@ -31,7 +31,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - Servidor de servicios web: gestiona las peticiones SOAP
 - REST heredado: peticiones directas a métodos 4D (`/rest/{table}/{methodName}`)
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
-  - cuando la opción [**sesiones escalables**](sessions.md#enabling-sessions) está seleccionada, el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
+  - cuando se selecciona la opción [**Sesiones escalables**](sessions.md#enabling-sessions), el modo apropiativo se utiliza automáticamente para procesos web.
   - de lo contrario, la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes) se tiene en cuenta.
   - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. Sólo tiene que seleccionar la propiedad " Puede ejecutarse en procesos apropiativos " para los métodos del servidor SOAP publicados (ver [Publicación de un servicio web con 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) o los métodos del cliente proxy (ver [Suscripción a un servicio web en 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) y asegurarse de que el compilador confirme que son hilo seguro.
 

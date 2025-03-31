@@ -14,7 +14,7 @@ title: Function
 
 ### フォーミュラオブジェクト
 
-[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、[`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、`4D.Function` オブジェクトを作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 
@@ -50,7 +50,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 引数の受け渡し
 
-フォーミュラには、[順番引数シンタックス](Concepts/parameters.md#順番引数) $1, $2...$n を使用して引数を渡すことができます。 たとえば:
+You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. たとえば:
 
 ```4d
  var $f : Object
@@ -138,7 +138,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
 *   [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
+*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-object) 参照)
 
 ```4d
  var $f : 4D.Function

@@ -41,3 +41,4 @@ Pour rétablir les valeurs par défaut des paramètres et supprimer le style gra
 ![](../assets/en/Preferences/overviewSettings.png)
 
 Ce bouton réinitialise tous les paramètres de la page courante. Il devient actif lorsqu'au moins un paramètre a été modifié sur la page courante.
+

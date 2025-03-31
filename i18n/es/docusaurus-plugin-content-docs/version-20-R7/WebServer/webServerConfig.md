@@ -252,7 +252,7 @@ Pasa el tamaño expresado en bytes como valor. Por defecto, el umbral de compres
 
 Número de puerto IP (TCP) de escucha para HTTP. Por defecto, 4D publica una aplicación web en el puerto web HTTP normal (puerto TCP), que es el puerto 80. Si ese puerto ya es utilizado por otro servicio web, debe cambiar el puerto HTTP utilizado por 4D para esta base de datos.
 
-> En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
+> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
 
 Desde un navegador web, es necesario incluir el número de puerto HTTP no predeterminado en la dirección que se introduce para conectarse a la aplicación web. La dirección debe tener un sufijo formado por dos puntos seguido del número de puerto. Por ejemplo, si está utilizando el puerto HTTP número 8080, especificará "123.4.567.89:8080".
 
@@ -468,10 +468,9 @@ A cambio, debe asegurarse en este caso de inicializar sistemáticamente las vari
 
 ## Robots.txt
 
-Ciertos robots (motores de búsqueda, arañas...) desplazarse a través de servidores web y páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs
-a las que no pueden acceder.
+Ciertos robots (motores de búsqueda, arañas...) desplazarse a través de servidores web y páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs a las que no pueden acceder.
 
-Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
+Para ello, ponga el archivo ROBOTS. TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>
@@ -625,7 +624,8 @@ En algunos casos, se pueden invocar otras funciones internas optimizadas. Las co
 Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión le permite evitar la inundación del servidor debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p>
-  El valor por defecto (100) puede aumentarse o disminuirse en función de los recursos de la máquina que aloja el Servidor Web 4D.</p>
+   El valor por defecto (100) puede aumentarse o disminuirse en función de los recursos de la máquina que aloja el Servidor Web 4D.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez transcurrido este periodo, el servidor cierra la conexión.<p>
-  Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>
+   Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>
+

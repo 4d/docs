@@ -41,7 +41,7 @@ Vous souhaitez charger une image en fonction du schéma courant du formulaire :
 
 #### Voir aussi 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
 #### Propriétés

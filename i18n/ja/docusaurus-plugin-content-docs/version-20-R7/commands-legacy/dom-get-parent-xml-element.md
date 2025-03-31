@@ -33,7 +33,7 @@ documentノードにこのコマンドを適用すると、コマンドはヌル
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
-[DOM Get Root XML element](dom-get-root-xml-element.md)  
+[DOM Get root XML element](dom-get-root-xml-element.md)  
 
 #### プロパティ
 

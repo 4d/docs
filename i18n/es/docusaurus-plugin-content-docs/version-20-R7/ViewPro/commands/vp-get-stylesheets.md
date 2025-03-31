@@ -13,7 +13,7 @@ title: VP Get stylesheets
 | ---------- | ---------- | --------------------------- | --------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                    |                  |
 | sheet      | Integer    | ->                          | Alcance objetivo (por defecto = hoja actual) |                  |
-| Result     | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
+| Resultado  | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
 
 #### Descripción
 
@@ -59,3 +59,5 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>
 [VP Get stylesheet](vp-get-stylesheet.md)<br/>
 [VP REMOVE STYLESHEET](vp-remove-stylesheet.md)
+
+

@@ -12,7 +12,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando crea un nuevo proyecto, 4D crea automáticamente una barra de menú por defecto (Barra de Menú #1) para que pueda acceder al entorno Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el proyecto. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
@@ -31,12 +31,12 @@ Puede modificar esta barra de menú como desee o crear otras adicionales.
 ### Utilizando el editor de menús
 
 1. Seleccione el elemento que desea crear y haga clic en el botón Añadir ![](../assets/en/Menus/PlussNew.png) debajo del área de la barra de menús.
-   O
-   Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista.
-   Si ha creado una barra de menús, aparece una nueva barra en la lista que contiene los menús por defecto (Archivo y Edición).
+  O
+  Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista.
+  Si ha creado una barra de menús, aparece una nueva barra en la lista que contiene los menús por defecto (Archivo y Edición).
 2. (opcional) Haga doble clic en el nombre de la barra de menú/menú para pasar al modo de edición e introducir un nombre personalizado.
-   OR Enter the custom name in the "Title" area.
-   Los nombres de las barras de menú deben ser únicos. Pueden contener hasta 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
+  OR Enter the custom name in the "Title" area.
+  Los nombres de las barras de menú deben ser únicos. Pueden contener hasta 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
 
 ### Utilizando el lenguaje 4D
 
@@ -55,13 +55,12 @@ Para cada uno de los menús, debe añadir los comandos que aparecen cuando el me
 Para añadir un elemento de menú:
 
 1. En la lista de menús fuente, seleccione el menú al que desea añadir un comando.
-   Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
+  Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
 2. Elija **Añadir un elemento al menú "NombreDelMenú"** en el menú de opciones del editor o desde el menú contextual (clic derecho en la lista central).
-   O
-   Haga clic en el botón añadir ![](../assets/en/Menus/PlussNew.png) ubicado debajo de la lista central.
-   4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
+  Añadir líneas
+  4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
 3. Haga doble clic en el nombre del comando para pasar al modo edición e introducir un nombre personalizado.
-   OR Enter the custom name in the "Title" area. Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).
+  OR Enter the custom name in the "Title" area. Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).
 
 ### Utilizando el lenguaje 4D
 

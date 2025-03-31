@@ -9,25 +9,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
-| Parámetros | Tipo   |   | Descripción   |
-| ---------- | ------ | - | ------------- |
-| Resultado  | Object | ← | Objeto evento |
+| Parámetros | Tipo   |                             | Descripción   |
+| ---------- | ------ | --------------------------- | ------------- |
+| Resultado  | Object | &#8592; | Objeto evento |
 
 <!-- END REF-->
 
 #### Descripción
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred. Usually, you will use **FORM Event** from within a form or object method.
 
 **Objeto devuelto**
 
 Each returned object includes the following main properties:
 
-| **Property** | **Type** | **Description**                                                                                                                                                                               |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
-| code         | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propiedad** | **Type** | **Description**                                                                                                                                                                               |
+| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
+| code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
+| description   | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -76,7 +76,7 @@ You want to handle the On Display Details on a list box object with a method set
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+El método *setColor*:
 
 ```4d
  var $event;$0;$meta : Object
@@ -103,7 +103,9 @@ The resulting list box when rows are selected:
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1606                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1606                            |
+| Hilo seguro       | &amp;check; |
+
+

@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 #### 説明 
 
-<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document.md) コマンドなどに渡すことができます。
+<!--REF #_command_.WP New.Summary-->**WP New** コマンドは4D Write Pro オブジェクトを作成して返します。<!-- END REF-->返されたオブジェクトは完全なドキュメントであり、例えば[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md) コマンドなどに渡すことができます。
 
 *source* 引数を省略した場合、コマンドはデフォルトで空の4D Write Proオブジェクトを返します。
 
 *source* 引数を使用した場合、新しい4D Write Pro オブジェクトは*source* 引数の中身をコンテンツとして返されます。渡せる内容は以下の通りです:
 
-* *文字列* の引数: この場合、4D HTMLソースを渡します。つまり、 wk web page html 4D オプションを使用した[WP EXPORT VARIABLE](wp-export-variable.md) で書き出されたテキストです。このテキストは参照(4Dタグと式)と埋め込まれた画像を含むことができます。
+* *文字列* の引数: この場合、4D HTMLソースを渡します。つまり、 wk web page html 4D オプションを使用した[WP EXPORT VARIABLE](../commands/wp-export-variable.md) で書き出されたテキストです。このテキストは参照(4Dタグと式)と埋め込まれた画像を含むことができます。
 * *blob* 引数: この場合、いかのどちらかを渡す事ができます:  
    * BLOBに保存された4D Write Pro(.4wp)フォーマットドキュメント。  
    4D Write Proドキュメントフォーマットの詳細については、*.4wp ドキュメントフォーマット* を参照して下さい。  
@@ -119,4 +119,4 @@ displayed_sidebar: docs
 #### 参照 
 
 [WP Import document](../commands/wp-import-document.md)  
-[WP INSERT DOCUMENT](../commands/wp-insert-document.md)  
+[WP INSERT DOCUMENT](../commands/wp-insert-document-body.md)  

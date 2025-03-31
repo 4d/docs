@@ -102,7 +102,7 @@ displayed_sidebar: docs
 #### 参照 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB Color](select-rgb-color.md)  
+[Select RGB color](select-rgb-color.md)  
 
 #### プロパティ
 

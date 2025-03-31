@@ -13,7 +13,7 @@ title: VP All
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Objeto rango de todas las celdas                               | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto rango de todas las celdas                               | <!-- END REF --> |
 
 #### Descripción
 

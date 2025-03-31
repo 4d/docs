@@ -8,15 +8,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parámetros | Tipo   |   | Descripción              |
-| ---------- | ------ | - | ------------------------ |
-| Resultado  | Object | ← | Elemento u objeto actual |
+| Parámetros | Tipo   |                             | Descripción              |
+| ---------- | ------ | --------------------------- | ------------------------ |
+| Resultado  | Object | &#8592; | Elemento u objeto actual |
 
 <!-- END REF-->
 
 #### Descripción
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+El comando `This` <!--REF #_command_.This.Summary-->devuelve una referencia al objeto procesado actualmente.<!-- END REF-->
 
 En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
@@ -181,7 +181,9 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1470                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1470                            |
+| Hilo seguro       | &amp;check; |
+
+

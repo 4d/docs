@@ -17,7 +17,7 @@ El nombre de una clase puede contener hasta 31 caracteres.
 
 Un nombre de clase debe cumplir con el estándar [reglas de nomenclatura de propiedades](#object-properties) para la notación de puntos.
 
-> No se recomienda dar el mismo nombre a una clase y a una [tabla de la base](#tables), para evitar conflictos.
+> No se recomienda dar el mismo nombre a una clase y a una [tabla de la base](#tables-and-fields), para evitar conflictos.
 
 ## Funciones
 

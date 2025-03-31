@@ -100,7 +100,7 @@ Webサーバーオブジェクトには、Webサーバーを構成する [さま
 - Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
 - Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
 
-> _isRunning_、_name_、_openSSLVersion_、_perfectForwardSecrecy_ は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
+> *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
 
 ## 4D Webコマンドのスコープ
 
@@ -112,7 +112,7 @@ Webサーバーオブジェクトには、Webサーバーを構成する [さま
 | `WEB CLOSE SESSION`             | リクエストを受け取った Webサーバー |
 | `WEB GET BODY PART`             | リクエストを受け取った Webサーバー |
 | `WEB Get body part count`       | リクエストを受け取った Webサーバー |
-| `WEB Get Current Session ID`    | リクエストを受け取った Webサーバー |
+| `WEB Get current session ID`    | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP BODY`             | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP HEADER`           | リクエストを受け取った Webサーバー |
 | `WEB GET OPTION`                | ホストアプリケーション Webサーバー |

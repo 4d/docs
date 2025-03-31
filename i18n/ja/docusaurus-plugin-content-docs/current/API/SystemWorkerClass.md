@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )  を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
+システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )   を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
 
 `SystemWorker` クラスは、`4D` クラスストアにて提供されています。
 
@@ -328,9 +328,7 @@ $output:=$worker.response
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### 説明
 
@@ -346,7 +344,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。
+`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。 とりうる値: "text" または "blob"。
 
 このプロパティは **読み取り専用** です。
 
@@ -360,7 +358,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
+`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
 
 このプロパティは **読み取り専用** です。
 
@@ -381,8 +379,8 @@ $output:=$worker.response
 | プロパティ                                                                                      | 型      | 説明                  |
 | ------------------------------------------------------------------------------------------ | ------ | ------------------- |
 | [].errorCode           | number | 4Dエラーコード            |
-| [].message             | text   | 4Dエラーの詳細            |
-| [ ].componentSignature | text   | エラーを返した内部コンポーネントの署名 |
+| [].message             | テキスト   | 4Dエラーの詳細            |
+| [ ].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名 |
 
 エラーが発生しなかった場合、`.errors` は undefined です。
 
@@ -396,7 +394,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
+`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
 
 このプロパティは **読み取り専用** です。
 
@@ -441,17 +439,17 @@ $output:=$worker.response
 | 引数          | 型    |     | 説明                                                  |
 | ----------- | ---- | :-: | --------------------------------------------------- |
 | message     | Text |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
-| messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト数                                    |
+| messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト                                     |
 
 <!-- END REF -->
 
 #### 説明
 
-`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。
+`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。
 
 `.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
 
-[options オブジェクト](#options-object) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
+[options オブジェクト](#options-オブジェクト) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
 
 <!-- END REF -->
 
@@ -550,24 +548,26 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| 引数      | 型                               |                             | 説明                            |
-| ------- | ------------------------------- | :-------------------------: | ----------------------------- |
-| timeout | Real                            |              ->             | 待機時間 (秒単位) |
-| 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト           |
+| 引数      | 型                               |                             | 説明                           |
+| ------- | ------------------------------- | :-------------------------: | ---------------------------- |
+| timeout | Real                            |              ->             | 最大待機時間(秒) |
+| 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト          |
 
 <!-- END REF -->
 
 #### 説明
 
-`.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または *timeout* で指定した時間が経過するまで待機します<!-- END REF -->。
+`.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または *timeout* で指定した時間に到達するまで待機します<!-- END REF -->。
 
-*timeout* には、秒単位の値を渡します。 `SystemWorker` スクリプトは、*timeout* に指定された時間だけ、外部プロセスを待ちます。 *timeout* を省略した場合、スクリプトの実行は無期限に待機します。
+`.wait()` 関数は、*timeout* 引数で指定された時間に到達するか(定義されていれば)、エラーが発生した場合を除き、`onTerminate` フォーミュラの処理が終わるまで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。 タイムアウトに達した場合、`SystemWorker` はキルされません。
 
-実際には、`.wait()` はタイムアウトに達した場合を除き、`onTerminate` フォーミュラのプロセス終了まで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。
+*timeout* 引数にタイムアウト値を渡していた場合、.wait() は*timeout* 引数で定義されていた時間分だけ外部プロセスを待ちます。
 
-`.wait()` の実行中、コールバック関数、とくに他のイベントや他の `SystemWorker` インスタンスからのコールバックは実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+:::note
 
-この関数は、SystemWorker オブジェクトを返します。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+
+:::
 
 > `SystemWorker` を 4D のワーカープロセスから作成した場合、この関数は必要ありません。
 

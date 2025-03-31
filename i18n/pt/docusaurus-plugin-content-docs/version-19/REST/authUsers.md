@@ -20,7 +20,7 @@ Se o método base `On REST Authentication` não tiver sido definido, é aberta u
 
 ## Modo preventivo
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+No servidor 4D, as solicitações REST são tratadas automaticamente através de processos preventivos, **mesmo no modo interpretado**. Você precisa ter certeza de que seu código é [compatível com uma execução preventiva](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 With 4D single-user, interpreted code is always run in cooperative mode.
 
@@ -37,11 +37,8 @@ A página de início de sessão em HTML:
 <html><body bgcolor="#ffffff">
 
 <div id="demo">
- <FORM name="myForm">
-Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
-Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
-<button type="button" onclick="onClick()">
-Login
+ <FORM name="myForm"> Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/> Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+<button type="button" onclick="onClick()"> Login
 </button>
 <div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
 </FORM>
@@ -83,20 +80,18 @@ Quando a página de início de sessão é enviada para o servidor, o método bas
  //On REST Authentication
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
-var $sales : cs.SalesPersonsEntity
+var $sales : cs. SalesPersonsEntity
 
 $Accepted:=False
 
- //A '/rest' URL has been called with headers username-4D and password-4D
-If ($userId#"")
-    $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
+ //A '/rest' URL foi chamado com nome de usuário-4D e senha-4D If ($userId#"")
+    $sales:=ds. SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
         If (Verify password hash($password; $sales.password))
             fillSession($sales)
             $Accepted:=True
         End if 
-    End if 
-End if 
+    End if End if 
 ```
 
 > Assim que tiver sido chamado e devolvido `True`, o método base `On REST Authentication` deixa de ser chamado na sessão.

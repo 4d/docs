@@ -4,7 +4,7 @@ title: Imprimir
 ---
 
 
-## Settings
+## Propiedades
 
 Permite definir los parámetros de impresión específicos para el formulario. Esta funcionalidad es útil para ver los límites de páginas de impresión en el editor de formularios.
 

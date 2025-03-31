@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous OS X) contenant l’application mise à jour |
+| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
 | erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
 
 <!-- END REF-->
@@ -22,7 +22,7 @@ Cette commande est destinée à être utilisée dans un processus de mise à jou
 
 **Note :** La commande fonctionne uniquement avec 4D Server ou une application monoposte fusionnée avec 4D Volume Desktop. 
 
-Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossier de la nouvelle version de l’application fusionnée (dossier contenant l’application *monApp4D.exe* sous Windows et package *monApp4D.app* sous OS X), créée par le générateur d’applications de 4D. 
+Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossier de la nouvelle version de l’application fusionnée (dossier contenant l’application *monApp4D.exe* sous Windows et package *monApp4D.app* sous macOS), créée par le générateur d’applications de 4D. 
 
 **Note :** Il est fortement conseillé d’utiliser pour les fichiers des nouvelles versions des applications le même nom que ceux des applications elles-mêmes, car le processus de mise à jour remplace le dossier de l’application. Si vous utilisez des noms différents, les raccourcis et chemins mémorisés ne fonctionneront plus. 
 
@@ -47,7 +47,7 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
      // Syntaxe Windows
  SET UPDATE FOLDER("C:\\MesMisesAJour"+Folder separator+"MonAppli"+Folder separator;True)
  
-     // Syntaxe OS X
+     // Syntaxe macOS
  SET UPDATE FOLDER("MacHD:MesMisesAJour"+Folder separator+"MonAppli.app"+Folder separator;True)
 ```
 

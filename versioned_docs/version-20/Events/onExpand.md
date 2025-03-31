@@ -5,7 +5,7 @@ title: On Expand
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|44|[Hierarchical List](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md)|An element of the hierarchical list or hierarchical list box has been expanded using a click or a keystroke|
+|44|[Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md)|An element of the hierarchical list or hierarchical list box has been expanded using a click or a keystroke|
 
 
 ## Description

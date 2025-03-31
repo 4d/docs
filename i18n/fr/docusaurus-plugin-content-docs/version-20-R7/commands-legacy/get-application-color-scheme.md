@@ -1,12 +1,12 @@
 ---
 id: get-application-color-scheme
-title: Get application color scheme
+title: Get Application color scheme
 slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get application color scheme.Syntax-->**Get application color scheme** {( * )} : Text<!-- END REF-->
-<!--REF #_command_.Get application color scheme.Params-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Retourne le schéma couleur de la base hôte |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Get application color scheme.Summary-->La commande **Get application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->La commande **Get Application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 
 
 **Note :** Sous Windows, cette command retourne toujours "light".
 
@@ -36,7 +36,7 @@ Pour plus de détails sur les noms des schémas de couleur, veuillez vous report
  var $colorScheme : Text
  
   // Récupère le schemaCouleur de la base hôte
- $colorScheme:=Get application color scheme(*)
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 #### Voir aussi 

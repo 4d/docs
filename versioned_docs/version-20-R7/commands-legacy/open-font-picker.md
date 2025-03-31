@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->The **OPEN FONT PICKER** command displays the system font picker dialog box.<!-- END REF-->
 
-**Note:** This is a modal dialog box under Windows but not under OS X.
+**Note:** This is a modal dialog box under Windows but not under macOS.
 
 When the user selects a font and/or a style and validates the dialog box, the changes are applied to the current text selection in the object with the focus, if the "Allow Font/Color Picker" property is checked for this object (see the *Design Reference* manual). Otherwise, the command does nothing.
 

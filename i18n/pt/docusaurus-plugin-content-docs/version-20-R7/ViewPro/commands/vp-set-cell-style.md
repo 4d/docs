@@ -29,7 +29,7 @@ Para remover um estilo e reverter para as configurações de estilo padrão (se 
 - giving the *styleObj* parameter a NULL value will remove any style settings from the *rangeObj*,
 - giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
 
-For more information about style objects and style sheets, see the [Style Objects](../configuring.md#style-objects) paragraph.
+Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Objetos de estilo](../configuring.md#style-objects).
 
 #### Exemplo
 

@@ -257,7 +257,7 @@ Class constructor($macro : Object)
 | プロパティ | 型 | 説明 |
 | ----- | - | -- |
 |       |   |    |
- source|Text|method code|
+ source|テキスト|メソッドコード|
 
 後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 

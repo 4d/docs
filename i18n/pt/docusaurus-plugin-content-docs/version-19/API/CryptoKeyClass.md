@@ -42,13 +42,13 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                          |
-| ---------- | ------------ | -- | -------------------------------------------------- |
-| settings   | Object       | -> | Parâmetros para gerar ou carregar um par de chaves |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
+| Parâmetro  | Tipo         |    | Descrição                                         |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Settings to generate or load a key pair           |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 <!-- END REF -->
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -62,11 +62,11 @@ A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um 
 
 #### *CryptoKey*
 
-O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um objeto compartido, portanto, pode ser utilizado por vários processos 4D simultaneamente.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
 
 #### Exemplo 1
 
-Uma mensagem é assinada por uma chave privada e a assinatura é verificada pela chave pública correspondente. O código a seguir assina e verifica uma assinatura de mensagem simples.
+A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
 
 - Lado bob:
 
@@ -167,7 +167,7 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 
 A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâmetro *mensagem* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-"RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 #### *options*
 
@@ -213,7 +213,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 
 A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o parâmetro *mensagem* utilizando a chave **public**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-"RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 ##### *options*
 
@@ -315,7 +315,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 | ---------- | ------ | -- | ------------------------------------------------------------------------------- |
 | message    | Text   | -> | String mensagem a assinar                                                       |
 | options    | Object | -> | Opções de assinatura                                                            |
-| Resultados | Text   | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "encoding" |
+| Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
 A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.

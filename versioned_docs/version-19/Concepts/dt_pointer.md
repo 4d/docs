@@ -84,6 +84,27 @@ With:
 |Inequality	|Pointer # Pointer	|Boolean	|vPtrA # vPtrC	|True|
 ||||			vPtrA # vPtrB	|False|
 
+
+:::warning Null Pointers
+
+Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. For example:
+
+```4d
+var $p : Pointer // non initialized pointer (Nil value)
+$v:=$p-> // error
+$p->:=$v // error
+```
+
+To prevent such errors, you can write:
+
+```4d
+If ($p#Null)
+  $p->:=$v
+End if
+```
+
+:::
+
 ## Main usages
 ### Pointers to tables
 Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:

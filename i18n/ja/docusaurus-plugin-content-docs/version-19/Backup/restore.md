@@ -44,7 +44,7 @@ Maintenance and Security Center (MSC) の [復元](MSC/restore.md)ページか�
 
 ## 手動でログを統合する
 
-MSC の復元ページでログファイルの自動統合を選択していない場合 ([複数のログファイルを連続して統合する](MSC/restore.md#successive-intergration-of-several-data-log-files) 参照)、データファイルに保存されていない処理がログファイル中に見つかると、4D はアプリケーションを開く際に警告ダイアログボックスを表示します。
+MSC の復元ページでログファイルの自動統合を選択していない場合 ([複数のログファイルを連続して統合する](../MSC/restore.md#successive-integration-of-several-data-log-files) 参照)、データファイルに保存されていない処理がログファイル中に見つかると、4D はアプリケーションを開く際に警告ダイアログボックスを表示します。
 
 ![](../assets/en/Backup/backup08.png)
 

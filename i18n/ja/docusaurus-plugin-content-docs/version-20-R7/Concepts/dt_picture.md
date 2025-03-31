@@ -1,6 +1,6 @@
 ---
 id: picture
-title: ピクチャー
+title: Picture
 ---
 
 ピクチャーのフィールド・変数・式に格納されるデータは、任意の Windows または Macintosh の画像です。 これらの画像には、ペーストボード上に置いたり、4Dコマンドやプラグインコマンド (`READ PICTURE FILE` など) を使用してディスクから読み出すことのできる画像を含みます。
@@ -16,7 +16,11 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 
 4D は多様な [ピクチャーフォーマット](FormEditor/pictures.md#native-formats-supported) をネイティブにサポートします: .jpeg, .png, .svg 等。
 
-4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:
+多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:  これは以下の形式で返されます:  これは以下の形式で返されます:  これは以下の形式で返されます:
 
 - 拡張子 (例: “.gif”)
 - MIME タイプ (例: “image/jpeg”)
@@ -24,22 +28,25 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
 多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
-4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:
 
 ## ピクチャー演算子
 
-| 演算       | シンタックス                            | 戻り値     | 動作                                                                                                                                    |
-| -------- | --------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 水平連結     | Pict1 + Pict2                     | Picture | Pict1 の右側に Pict2 を追加します                                                                                                               |
-| 垂直連結     | Pict1 / Pict2                     | Picture | Pict1 の下側に Pict2 を追加します                                                                                                               |
-| 排他的論理和   | Pict1 & Pict2 | Picture | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。               |
-| 包括的論理和   | Pict1 \| Pict2                    | Picture | Pict1 と Pict2 を重ね、そのマスクした結果を返します (両ピクチャーとも同じサイズである必要があります) `$equal:=Equal pictures(Pict1;Pict2;Pict3)` と同じ結果になります。 |
-| 水平移動     | Picture + Number                  | Picture | 指定ピクセル分、ピクチャーを横に移動します。                                                                                                                |
-| 垂直移動     | Picture / Number                  | Picture | 指定ピクセル分、ピクチャーを縦に移動します。                                                                                                                |
-| リサイズ     | Picture \* Number                 | Picture | 割合によってピクチャーをサイズ変更します。                                                                                                                 |
-| 水平スケール   | Picture \*+ Number                | Picture | 割合によってピクチャー幅をサイズ変更します。                                                                                                                |
-| 垂直スケール   | Picture \*\| Number               | Picture | 割合によってピクチャー高さをサイズ変更します。                                                                                                               |
-| キーワードを含む | Picture % String                  | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください                                                        |
+| 演算       | シンタックス                                      | 戻り値     | 動作                                                                                                                                                                                                                                                                                                                                  |
+| -------- | ------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 水平連結     | Pict1 + Pict2                               | Picture | Pict1 の右側に Pict2 を追加します                                                                                                                                                                                                                                                                                                             |
+| 垂直連結     | Pict1 / Pict2                               | Picture | Pict1 の下側に Pict2 を追加します                                                                                                                                                                                                                                                                                                             |
+| 排他的論理和   | Pict1 & Pict2           | Picture | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) Pict1 の前面に Pict2 を重ねます (Pict2 が前面) <code>COMBINE PICTURES(pict3;pict1;Superimposition;pict2)</code> と同じ結果になります。 Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。 |
+| 包括的論理和   | Pict1 &#124; Pict2      | Picture | \| 演算子を使用するためには、Pict1 と Pict2 が完全に同一のサイズでなければなりません。 ピクチャーのフィールド・変数・式に格納されるデータは、任意の Windows または Macintosh の画像です。 これらの画像には、ペーストボード上に置いたり、4Dコマンドやプラグインコマンド (`READ PICTURE FILE` など) を使用してディスクから読み出すことのできる画像を含みます。                                                                                                   |
+| 水平移動     | Picture + Number                            | Picture | 指定ピクセル分、ピクチャーを横に移動します。                                                                                                                                                                                                                                                                                                              |
+| 垂直移動     | Picture / Number                            | Picture | 指定ピクセル分、ピクチャーを縦に移動します。                                                                                                                                                                                                                                                                                                              |
+| リサイズ     | Picture \* Number                           | Picture | 割合によってピクチャーをサイズ変更します。                                                                                                                                                                                                                                                                                                               |
+| 水平スケール   | Picture \*+ Number                          | Picture | 割合によってピクチャー幅をサイズ変更します。                                                                                                                                                                                                                                                                                                              |
+| 垂直スケール   | Picture \*&#124; Number | Picture | 割合によってピクチャー高さをサイズ変更します。                                                                                                                                                                                                                                                                                                             |
+| キーワードを含む | Picture % String                            | Boolean | 文字列が、ピクチャー式に格納されたピクチャーに関連付けられている場合に true を返します。 `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください `GET PICTURE KEYWORDS` を参照ください                                                                                           |
 
 **注 :**
 

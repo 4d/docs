@@ -49,7 +49,7 @@ displayed_sidebar: docs
   // Windows シンタックス
  SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
  
-  // OS X シンタックス
+  // macOS シンタックス
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 

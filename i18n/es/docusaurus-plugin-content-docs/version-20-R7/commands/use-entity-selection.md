@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-| Parámetros      | Tipo                               |   | Descripción          |
-| --------------- | ---------------------------------- | - | -------------------- |
-| entitySelection | 4D.EntitySelection | → | Una entity selection |
+| Parámetros      | Tipo                               |                             | Descripción          |
+| --------------- | ---------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D.EntitySelection | &#8594; | Una entity selection |
 
 <!-- END REF-->
 
@@ -48,9 +48,11 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 
 #### Propiedades
 
-|                           |                                                                 |
-| ------------------------- | --------------------------------------------------------------- |
-| Command number            | 1513                                                            |
-| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
-| Changes current record    |                                                                 |
-| Changes current selection |                                                                 |
+|                           |                                 |
+| ------------------------- | ------------------------------- |
+| Número de comando         | 1513                            |
+| Hilo seguro               | &amp;check; |
+| Changes current record    |                                 |
+| Changes current selection |                                 |
+
+

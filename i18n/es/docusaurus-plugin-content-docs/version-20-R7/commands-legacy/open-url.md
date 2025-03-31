@@ -32,7 +32,7 @@ En Windows, el mecanismo para el reconocimiento del nombre de la aplicación es 
 
 **Nota**: encontrará la lista de aplicaciones instaladas en el *registry* en la siguiente llave: HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths  
 
-Bajo OS X, el mecanismo utiliza el Finder que indexa automáticamente todas las aplicaciones instaladas. Puede reconocer toda aplicación .app por su nombre de package (con o sin el sufijo .app). Por ejemplo, puede pasar:  
+Bajo macOS, el mecanismo utiliza el Finder que indexa automáticamente todas las aplicaciones instaladas. Puede reconocer toda aplicación .app por su nombre de package (con o sin el sufijo .app). Por ejemplo, puede pasar:  
   
  "safari"  
  "FireFox"  

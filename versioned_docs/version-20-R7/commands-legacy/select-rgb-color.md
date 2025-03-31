@@ -1,12 +1,12 @@
 ---
 id: select-rgb-color
-title: Select RGB Color
+title: Select RGB color
 slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB Color.Syntax-->**Select RGB Color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
-<!--REF #_command_.Select RGB Color.Params-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | defaultColor | Integer | &#8594;  | Preselected RGB color |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Select RGB Color.Summary-->The Select RGB Color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->The Select RGB color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
 
 The system color selection window appears as follows:   
 

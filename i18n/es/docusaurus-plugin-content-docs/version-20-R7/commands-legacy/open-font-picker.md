@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN FONT PICKER.Summary-->El comando **OPEN FONT PICKER** muestra la caja de diálogo de selección de fuente del sistema.<!-- END REF-->  
   
-**Nota**: esta caja de diálogo es modal en Windows pero no en OS X.  
+**Nota**: esta caja de diálogo es modal en Windows pero no en macOS.  
   
 Si el usuario selecciona una fuente y/o un estilo y valida la caja de diálogo, los cambios se aplican a la selección actual de texto en el objeto con el foco, si la propiedad "Aceptar selector color/fuente" está seleccionada para este objeto (ver el manual de *Diseño*). De lo contrario, el comando no hace nada.  
   

@@ -3,7 +3,7 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. Os objetos `Datastore` são retornados pelos seguintes comandos:
+Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface fornecido pelo ORDA para fazer referência e acessar um banco de dados. Os objetos `Datastore` são retornados pelos seguintes comandos:
 
 - [ds](../commands/ds.md): um atalho para o datastore principal
 - [Open datastore](../commands/open-datastore.md): para abrir qualquer datastore remoto
@@ -673,7 +673,7 @@ A função também retornará `True` se o datastore tiver sido bloqueado por out
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas as seleções de entidades como alteráveis por padrão nos datastores do aplicativo atual<!-- END REF --> (incluindo [datastores remotos](ORDA/remoteDatastores.md)). Ele deve ser usado uma vez, por exemplo, no método de banco de dados `On Startup`.
 
-Quando essa função não é chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai" ou [como elas são criadas] (ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Essa função não modifica as seleções de entidades criadas por [`.copy()`](#copy) ou `OB Copy` quando a opção explícita `ck shared` é utilizada.
 
@@ -1025,7 +1025,7 @@ Para uma descrição do formato de log do pedido ORDA, por favor, consulte a se�
 Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. O registro pode ser enviado para um arquivo ou para a memória, dependendo do parâmetro:
 
 - Se você tiver passado um objeto *file* criado com o comando `File`, os dados de registro serão gravados nesse arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
-  Se chamar a.startRequestLog() com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
+ Se chamar a.startRequestLog() com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
 
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
 

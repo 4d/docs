@@ -111,7 +111,7 @@ Com a aplicação 4D Client, essa constante é rigorosamente equivalente à cons
 
 ##### Pasta base sintaxe Unix (Database Folder Unix Syntax) 
 
-Pasta contendo o arquivo de estrutura de banco de dados. Esta constante designa a mesma pasta que o anterior, mas o caminho retornado é expressado utilizando a sintaxe UNIX (POSIX), de tipo /Users/ ... Esta sintaxe é usada principalmente quando você usa o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sob OS X.
+Pasta contendo o arquivo de estrutura de banco de dados. Esta constante designa a mesma pasta que o anterior, mas o caminho retornado é expressado utilizando a sintaxe UNIX (POSIX), de tipo /Users/ ... Esta sintaxe é usada principalmente quando você usa o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sob macOS.
 
 ##### Pasta Current Resources 
 

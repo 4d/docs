@@ -13,7 +13,7 @@ title: VP Get default style
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre del área 4D View Pro en el formulario                   |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Parámetros de estilo por defecto                               | <!-- END REF --> |
+| Resultado  | Object  | <- | Parámetros de estilo por defecto                               | <!-- END REF --> |
 
 #### Descripción
 

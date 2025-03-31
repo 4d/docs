@@ -42,7 +42,7 @@ The Administrator cannot:
 - edit the Designer user
 - by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
 
 - Designer icon: ![](../assets/en/Users/iconDesigner.png)
 - Administrator icon: ![](../assets/en/Users/iconAdmin.png)
@@ -92,7 +92,7 @@ You can use up to 15 alphanumeric characters for a password. The password editor
 5. Set the group(s) to which the user belongs using the "Member of Groups" table.
 You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
 
 ### Deleting a user
 
@@ -212,7 +212,7 @@ Users, groups, as well as their access rights are stored in a specific project f
 This file can be stored at the following locations, depending on your needs:
 
 - If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location). 
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.  
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.  
 
 > To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

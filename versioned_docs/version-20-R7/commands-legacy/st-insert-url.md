@@ -47,7 +47,7 @@ The optional *startSel* and *endSel* parameters designate a selection of text in
 
 **Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
 
-Once the link is inserted, it is active: using **Ctrl+click** (Windows) or **Command+click** (OS X) on its label opens a page of the default browser at the address specified in the *urlAddress* parameter.
+Once the link is inserted, it is active: using **Ctrl+click** (Windows) or **Command+click** (macOS) on its label opens a page of the default browser at the address specified in the *urlAddress* parameter.
 
 #### Example 
 

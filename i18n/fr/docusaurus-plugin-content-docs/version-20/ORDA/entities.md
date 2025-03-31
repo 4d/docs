@@ -194,10 +194,10 @@ Une "entity selection" peut être **partageable** (lisible par plusieurs process
 Une entity selection **partageable** a les caractéristiques suivantes :
 
 - elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group;
+- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe ;
 - elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable à l'aide de la fonction [`.copy()`](API/EntitySelectionClass.md#copy), avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
-> the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+> La plupart des fonctions d'entity selection (telles que [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) prennent en charge les entity selection partageables car elles n'ont pas besoin de modifier l'entity selection d'origine (elles en retournent une nouvelle).
 
 Une entity selection **modifiable** a les caractéristiques suivantes :
 
@@ -218,22 +218,22 @@ Une nouvelle entity selection est **partageable** dans les cas suivants :
 
 Voici un exemple :
 ```4d
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) //$myComp n'appartient pas à une entity selection
+$employees:=$myComp.employees //$employees est partageable
 ```
 
 Une nouvelle entity selection est **modifiable** dans les cas suivants :
 
-- la nouvelle "entity selection" crée un espace vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
-- la nouvelle "entity selection" est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
+- la nouvelle entity selection est créée vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
+- la nouvelle entity selection est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
 
 Voici un exemple :
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify est modifiable
 ```
 
 
-A new entity selection **inherits** from the original entity selection nature in the following cases:
+Une nouvelle entity selection **hérite** de la nature de l'entity selection originale dans les cas suivants :
 
 - la nouvelle entity selection résulte de l'une des diverses fonctions de classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nouvelle entity selection est basée sur une relation :
@@ -253,22 +253,22 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::note Entity selections returned from the server
+:::note Entity selections renvoyées par le serveur
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Voici un exemple :
+Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si \[`copy()`\](../API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter \[`copy()`\](../API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
 
 ```4d
-    //a function is always executed on the server
+    //une fonction est toujours exécutée sur le serveur
 exposed Function getSome() : cs.MembersSelection
-    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+    return This.query("ID >= :1" ; 15).orderBy("ID ASC")
 
-    //in a method, executes on the remote side
+    //dans une méthode, exécutée du côté distant
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result :=ds.Members.getSome() // $result est partageable
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result est maintenant modifiable
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -292,7 +292,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
 
-The `sendMails` method:
+La méthode `sendMails` :
 
 ```4d 
 

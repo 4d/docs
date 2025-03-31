@@ -11,7 +11,7 @@ Les formulaires fournissent l'interface par laquelle les informations sont saisi
 Les formulaires peuvent également contenir d'autres formulaires grâce aux fonctionnalités suivantes :
 
 - [les objets sous-formulaires](FormObjects/subform_overview.md)
-- [les formulaires hérités](properties_FormProperties.md#inherited-forms)
+- [les formulaires hérités](./properties_FormProperties.md#inherited-form-name)
 
 ## Création de formulaires
 
@@ -88,7 +88,7 @@ Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de
 
 - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
 - Organisez chaque sujet sur sa propre page.
-- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order).
+- Réduire ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
 - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
@@ -112,7 +112,7 @@ A l’exécution du formulaire, les objets sont chargés et combinés dans l’o
 3. Page zéro du formulaire ouvert
 4. Page courante du formulaire ouvert.
 
-Cet ordre détermine [l'ordre de saisie](../FormEditor/formEditor.html#data-entry-order) par défaut des objets dans le formulaire.
+Cet ordre détermine [l'ordre de saisie](formEditor.md#data-entry-order) par défaut des objets dans le formulaire.
 
 > Seules les pages 0 et 1 du formulaire hérité peuvent apparaître dans les autres formulaires.
 

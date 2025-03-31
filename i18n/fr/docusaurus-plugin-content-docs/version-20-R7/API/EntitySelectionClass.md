@@ -2019,10 +2019,10 @@ La fonction `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourn
 
 L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
 
-- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
+- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée < 0, *startFrom* est mis à 0.
 - Si *startFrom >= length*, la fonction retourne une entity selection vide.
 - Si *end* < 0, le paramètre est recalculé comme *end:=end+length*.
-- Si *end < startFrom* (valeurs passées ou recalculées), la fonction ne fait rien.
+- Si *end < startFrom* (valeurs passées ou calculées), la méthode ne fait rien.
 
 Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
 

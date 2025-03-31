@@ -73,7 +73,7 @@ displayed_sidebar: docs
 ２番目の引数 (*$2*) はWebブラウザから送信されたHTTPリクエストのヘッダとボディです。この情報は**On Web Connectionデータベースメソッド**に"そのまま"渡されることに留意してください。その内容は接続を試みたWebブラウザの仕様により異なります。  
 Mac OS上のSafariでは、以下のようなヘッダを受け取るでしょう (一部省略):  
 ```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: ja-jpAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent: Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: ja-jpAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
     

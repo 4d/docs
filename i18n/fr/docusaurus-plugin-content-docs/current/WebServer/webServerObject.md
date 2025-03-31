@@ -97,11 +97,11 @@ Ces propriétés sont définies :
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
 - Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
 
-> _isRunning_, _name_, _openSSLVersion_ et _perfectForwardSecrecy_ sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
+> *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 
 ## Portée des commandes 4D Web
 
-Le langage 4D contient [plusieurs commandes](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
+Portée Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
 
 | Command                         | Portée                            |
 | ------------------------------- | --------------------------------- |
@@ -109,7 +109,7 @@ Le langage 4D contient [plusieurs commandes](https://doc.4d.com/4Dv18/4D/18/Web-
 | `WEB CLOSE SESSION`             | Serveur Web ayant reçu la requête |
 | `WEB GET BODY PART`             | Serveur Web ayant reçu la requête |
 | `WEB Get body part count`       | Serveur Web ayant reçu la requête |
-| `WEB Get Current Session ID`    | Serveur Web ayant reçu la requête |
+| `WEB Get current session ID`    | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP BODY`             | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP HEADER`           | Serveur Web ayant reçu la requête |
 | `WEB GET OPTION`                | Application hôte du serveur web   |

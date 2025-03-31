@@ -36,7 +36,7 @@ Le paramètre *dateExp* reçoit la date d’expiration et le paramètre *heureEx
 #### Voir aussi 
 
 *Gestion des sessions Web*  
-[WEB Get Current Session ID](web-get-current-session-id.md)  
+[WEB Get current session ID](web-get-current-session-id.md)  
 [WEB SET OPTION](web-set-option.md)  
 
 #### Propriétés

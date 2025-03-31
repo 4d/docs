@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-| Parámetros  | Tipo                      |   | Descripción                          |
-| ----------- | ------------------------- | - | ------------------------------------ |
-| description | Text                      | → | Descripción para la señal            |
-| Resultado   | 4D.Signal | ← | Objeto nativo que encapsula la señal |
+| Parámetros  | Tipo                      |                             | Descripción                          |
+| ----------- | ------------------------- | --------------------------- | ------------------------------------ |
+| description | Text                      | &#8594; | Descripción para la señal            |
+| Resultado   | 4D.Signal | &#8592; | Objeto nativo que encapsula la señal |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Dado que el objeto signal es un objeto compartido, también puede utilizarse par
 
 **Valor devuelto**
 
-Un nuevo objeto [`4D.Signal`](#signal-object).
+A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
 
 #### Ejemplo
 
@@ -72,7 +72,9 @@ El método ***doSomething*** puede ser como:
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1641                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1641                        |
+| Hilo seguro       | &check; |
+
+

@@ -116,7 +116,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 | ------------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
 | thisObj       | Object     |              ->             | Objeto a devolver por el comando This en la fórmula                                                                        |
 | formulaParams | Collection |              ->             | Colección de valores que se pasan como $1...$n cuando se ejecuta `formula` |
-| Result        | any        | <- | Valor obtenido de la ejecución de la fórmula                                                                               |
+| Resultado     | any        | <- | Valor obtenido de la ejecución de la fórmula                                                                               |
 
 <!-- END REF -->
 
@@ -176,7 +176,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | thisObj    | Object | ->                          | Objeto a devolver por el comando This en la fórmula                                                                                                      |
 | params     | any    | ->                          | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Result     | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
+| Resultado  | any    | <- | Valor obtenido de la ejecución de la fórmula                                                                                                             |
 
 <!-- END REF -->
 

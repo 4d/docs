@@ -11,6 +11,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen una ruta contextual a las carpetas principales de la aplicación.
 
+## Rutas de los filesystem
 
 4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Una ruta del sistema de archivos se evalúa con respecto al contexto y se devuelve como una ruta absoluta.
 

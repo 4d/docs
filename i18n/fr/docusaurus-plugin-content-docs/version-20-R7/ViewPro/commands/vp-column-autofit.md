@@ -38,3 +38,4 @@ La sélection des colonnes et l'exécution du code suivant :
 #### Voir également
 
 [VP ROW AUTOFIT](vp-row-autofit.md)
+

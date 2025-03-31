@@ -33,7 +33,7 @@ Si le document contient une BOM (Byte Order Mark), 4D utilise le jeu de caractè
 Si le document ne contient pas de BOM et si le paramètre *jeuCaractères* est omis, 4D utilise par défaut les jeux de caractères suivants :
 
 * sous Windows : ANSI
-* sous OS X : MacRoman
+* sous macOS : MacRoman
 
 Vous pouvez passer dans *modeRetour* un entier long indiquant le traitement à effectuer sur les caractères de fin de ligne présents dans le document. Vous pouvez utiliser une des constantes suivantes, placées dans le thème "*Documents système*" :
 

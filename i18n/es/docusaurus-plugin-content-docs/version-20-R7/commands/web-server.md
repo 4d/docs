@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-| Parámetros | Tipo                         |   | Descripción                                                                                 |
-| ---------- | ---------------------------- | - | ------------------------------------------------------------------------------------------- |
-| option     | Integer                      | → | Servidor web a obtener (por defecto si se omite = `Web server database`) |
-| Resultado  | 4D.WebServer | ← | Objeto servidor web                                                                         |
+| Parámetros | Tipo                         |                             | Descripción                                                                                 |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------- |
+| option     | Integer                      | &#8594; | Servidor web a obtener (por defecto si se omite = `Web server database`) |
+| Resultado  | 4D.WebServer | &#8592; | Objeto servidor web                                                                         |
 
 <!-- END REF-->
 
@@ -58,7 +58,9 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1674                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                                                                     |
+| ----------------- | ------------------------------------------------------------------- |
+| Número de comando | 1674                                                                |
+| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+
+

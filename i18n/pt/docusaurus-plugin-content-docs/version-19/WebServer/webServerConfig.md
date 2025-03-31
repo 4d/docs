@@ -200,7 +200,7 @@ Quando [HTTPS estiver ativado](#enable-https), lembre-se de que se [HTTP também
 
 O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que esta informação é armazenada pelo navegador é especificado com a configuração da Web **HSTS idade máxima**.
 
-> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [O HTTP](enable-http) também deve ser ativado para permitir conexões iniciais do cliente.
+> A ativação do HSTS exige que o HTTPS esteja [ativado](#enable-https) no servidor. [O HTTP](#enable-http) também deve ser ativado para permitir conexões iniciais do cliente.
 
 > Você pode obter o modo de conexão atual usando o comando `WEB Is secured connection` .
 
@@ -247,7 +247,7 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
-> No macOS, a modificação da porta HTTP permite iniciar o servidor web 4D sem ser o usuário raiz da máquina (consulte [macOS HelperTool](#macos-helpertool)).
+> In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see macOS HelperTool).
 
 Em um navegador da Web, é necessário incluir o número da porta HTTP não padrão no endereço inserido para se conectar ao aplicativo da Web. O endereço deve ter um sufixo constituído por dois pontos seguidos pelo número do porto. Por exemplo, se você estiver usando a porta HTTP número 8080, você irá especificar "123.4.567.89:8080".
 > **Aviso**: Se você usar números de porta TCP diferentes dos números padrão (80 para HTTP padrão e 443 para HTTPS), tome cuidado para não usar números de porta que sejam padrão para outros serviços que você possa querer usar simultaneamente. Por exemplo, se você também planeja usar o protocolo FTP em seu servidor web, não use a porta TCP 20 e 21, que são as portas padrão para esse protocolo. Os números de portas abaixo de 256 são reservados para serviços conhecidos e números de portas de 256 a 1024 são reservados para serviços específicos originários das plataformas UNIX. Para segurança máxima, especifique o número de portas para além destes intervalos (por exemplo, nos anos 2000 ou 3000).

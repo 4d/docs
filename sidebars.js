@@ -227,7 +227,7 @@ module.exports =
 						"commands-legacy/get-4d-folder",
 						"commands-legacy/get-database-localization",
 						"commands-legacy/get-database-parameter",
-						"commands-legacy/get-last-update-log-path",
+						"commands-legacy/last-update-log-path",
 						"commands-legacy/is-compiled-mode",
 						"commands-legacy/is-data-file-locked",
 						"commands-legacy/notify-resources-folder-modification",
@@ -315,10 +315,10 @@ module.exports =
 						"commands-legacy/integrate-mirror-log-file",
 						"commands-legacy/log-file",
 						"commands-legacy/log-file-to-json",
-						"commands-legacy/new-log-file",
+						"commands/new-log-file",
 						"commands-legacy/restore",
 						"commands-legacy/restore-info",
-						"commands-legacy/select-log-file"
+						"commands/select-log-file"
 						]
 					},
 					{
@@ -743,7 +743,7 @@ module.exports =
 						"commands-legacy/http-get",
 						"commands-legacy/http-get-certificates-folder",
 						"commands-legacy/http-get-option",
-						"commands-legacy/http-parse-message",
+						"commands/http-parse-message",
 						"commands-legacy/http-request",
 						"commands-legacy/http-set-certificates-folder",
 						"commands-legacy/http-set-option"
@@ -2432,11 +2432,13 @@ module.exports =
 				"API/IncomingMessageClass",
 				"API/MailAttachmentClass",
 				"API/OutgoingMessageClass",
-       			"API/POP3TransporterClass",
+				"API/POP3TransporterClass",
 				"API/SessionClass",
 				"API/SignalClass",
 				"API/SMTPTransporterClass",
 				"API/SystemWorkerClass",
+				"API/TCPConnectionClass",
+				"API/TCPEventClass",
 				"API/WebFormClass",
 				"API/WebFormItemClass",
 				"API/WebServerClass",
@@ -2875,6 +2877,7 @@ module.exports =
 								items: [
 									"WritePro/writeprointerface",
 									"WritePro/managing-formulas",
+									"WritePro/commands-legacy/4d-write-pro-attributes",
 									{
 										type: "category",
 										label: "Commands",
@@ -2895,7 +2898,7 @@ module.exports =
 											"WritePro/commands/wp-delete-subsection",
 											"WritePro/commands-legacy/wp-delete-text-box",
 											"WritePro/commands/wp-export-document",
-											"WritePro/commands-legacy/wp-export-variable",
+											"WritePro/commands/wp-export-variable",
 											"WritePro/commands-legacy/wp-find-all",
 											"WritePro/commands-legacy/wp-find-next",
 											"WritePro/commands-legacy/wp-find-previous",
@@ -2978,17 +2981,17 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Progress.100-7455831.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-SVG-Component.100-7456702.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R7/4D/20-R7/4D-Widgets.100-7457351.en.html',
+						  href: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
@@ -3388,6 +3391,11 @@ module.exports =
 							type: "doc",
 							label: "Build Application",
 							id: "Desktop/building"
+						},
+						{
+							type: "doc",
+							label: "Labels",
+							id: "Desktop/labels"
 						}
 					]
 				},

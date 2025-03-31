@@ -31,8 +31,8 @@ Les règles suivantes s'appliquent :
 - Headers must remain in the same row and the resulting table range must overlap the original table range.
 - If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
 - If the table expands on cells containing data:
-  - if rows are added, data is deleted,
-  - if columns are added, data are kept and are displayed in new columns.
+    - if rows are added, data is deleted,
+    - if columns are added, data are kept and are displayed in new columns.
 
 If *tableName* does not exist, nothing happens.
 

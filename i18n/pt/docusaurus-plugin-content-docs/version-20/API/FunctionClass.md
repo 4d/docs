@@ -14,7 +14,7 @@ Um objeto`4D. Function` contém um pedaço de código que pode ser executado de 
 
 ### Objetos de formulários
 
-Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
+Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem que você crie objetos `4D.Function` para executar qualquer expressão 4D ou código expresso como texto.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
@@ -50,7 +50,7 @@ Também pode executar uma função usando as funções [`apply()`](#apply) e [`c
 
 #### Utilização de parâmetros
 
-Pode passar parâmetros para suas fórmulas usando o parâmetro sequencial [ syntax](Concepts/parameters.md#sequential-parameters) baseado em $1, $2...$n. For example, you can write: Por exemplo, pode escrever: Por exemplo, pode escrever:
+You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Por exemplo, pode escrever:
 
 ```4d
  var $f : Object

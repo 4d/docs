@@ -19,9 +19,9 @@ RESTサーバーは 4D および 4D Server に含まれており、[設定完了
 1. 4D または 4D Server アプリケーションを起動し、新規プロジェクトを作成します。 名前は仮に "Emp4D" とします。
 
 2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
-   - Lastname (文字列)
-   - Firstname (文字列)
-   - Salary (倍長整数)
+    - Lastname (文字列)
+    - Firstname (文字列)
+    - Salary (倍長整数)
 
 ![](../assets/en/REST/getstarted1.png)
 

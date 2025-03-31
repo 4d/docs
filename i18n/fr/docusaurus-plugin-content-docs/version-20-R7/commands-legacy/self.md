@@ -37,7 +37,7 @@ Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md)
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This](this.md)  
+[This](../commands/this.md)  
 
 #### Propriétés
 

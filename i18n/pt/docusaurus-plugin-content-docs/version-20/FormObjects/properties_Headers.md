@@ -5,7 +5,7 @@ title: Cabeçalhos
 
 ## Exibir cabeçalhos
 
-This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). Existe um cabeçalho por coluna; cada cabeçalho é configurado separadamente.
+Esta propriedade é usada para exibir ou ocultar [os cabeçalhos de coluna listbox](listbox_overview.md#list-box-headers). Existe um cabeçalho por coluna; cada cabeçalho é configurado separadamente.
 
 #### Gramática JSON
 
@@ -19,26 +19,26 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 ---
 
-## Height
+## Alto
 
-This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
+Esta propriedade é usada para definir a altura da linha para um cabeçalho de list box em **píxeis** ou **linhas de texto** (quando exibido). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-* *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
+* *Píxel* - o valor da altura é aplicado diretamente à linha em questão, independentemente do tamanho da fonte contida nas colunas. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
-* *Line* - the height is calculated while taking into account the font size of the row concerned.
+* *Linha* - a altura é calculada considerando o tamanho da fonte da linha em questão.
   * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   * Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
-  * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
-> > > This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
+  * No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
+> > Esta propriedade também pode ser definida dinamicamente usando o comando [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html).
 
-Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
+Conversão de unidades: quando você muda de uma unidade para a outra, 4D converte-os automaticamente e exibe o resultado na Lista de propriedades. Por exemplo, se a fonte usada for "Lucida grande 24", uma altura de "1 linha" será convertida em "30 píxeis" e uma altura de "60 píxeis" será convertida em "2 linhas".
 
-Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. Este facto é ilustrado nas sequências seguintes:
+Observe que a conversão para frente e para trás pode levar a um resultado diferente do valor inicial devido aos cálculos automáticos feitos por 4D. Este facto é ilustrado nas sequências seguintes:
 
 - (tipo de letra Arial 18)*: 52 píxeis -> 2 linhas -> 40 píxeis
 - *(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
-#### JSON Exemplo
+#### Exemplo JSON
 
 ```
  "List Box": {

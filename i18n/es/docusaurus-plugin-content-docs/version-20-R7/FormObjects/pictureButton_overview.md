@@ -8,6 +8,7 @@ Un botón imagen es similar a un [botón estándar](button_overview.md). Sin emb
 Los botones imagen pueden utilizarse de dos maneras:
 
 - Como botones de comando en un formulario. En este caso, el botón de imagen suele incluir cuatro estados diferentes: activado, desactivado, presionado y al pasar por encima.\
+  En este caso, el botón de imagen suele incluir cuatro estados diferentes: activado, desactivado, presionado y al pasar por encima.\
   Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada miniatura corresponde a los estados Por defecto, Presionado, Pasar el ratón y Desactivado.
 
   | Propiedad                  | Nombre JSON            | Valor |
@@ -19,6 +20,7 @@ Los botones imagen pueden utilizarse de dos maneras:
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
 - Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [menús emergentes de imágenes](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que el botón de imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).\
+  Aquí un ejemplo de un botón imagen.\
   Aquí un ejemplo de un botón imagen.\
   Aquí un ejemplo de un botón imagen.\
   Aquí un ejemplo de un botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
@@ -33,7 +35,7 @@ Puede implementar un botón imagen de la siguiente manera:
 
 1. En primer lugar, prepare un único gráfico en el que las series de imágenes estén dispuestas en líneas, en columnas o en las dos.
 
-   ![](../assets/en/FormObjects/pictureButton_grid.png)
+  ![](../assets/en/FormObjects/pictureButton_grid.png)
 
 Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).
 
@@ -55,11 +57,11 @@ Hay otros modos disponibles:
 - [Retroceder al soltar](properties_Animation.md#switch-back-when-released)
 - [Alternar al pasar el ratón por encima](properties_Animation.md#switch-when-roll-over)
 - [Alternar continuamente al hacer clic](properties_Animation.md#switch-continuously-on-clicks)
-- [Usar el último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Usar último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
+- [Cambiar cada x ticks](./properties_Animation.md#switch-every-x-ticks)
 
 > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 
-[Negrita](properties_Text.md#bold) - [Estilo línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Clase](properties_Object.md#css-class) - [Columnas](properties_Crop.md#columns) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Alto](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Dimensionamiento Horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Volver al primer fotograma](properties_Animation.md#loop-back-to-first-frame) - [Nombre del objeto](properties_Object.md#object-name) - [Ruta](properties_Picture.md#pathname) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Líneas](properties_Crop.md#rows) - [Atajo](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Volver a cambiar cuando se suelte](properties_Animation.md#switch-back-when-released) - [Conmutar continuamente con clics](properties_Animation.md#switch-continuously-on-clicks) - [Cambiar cada x ticks](properties_Animation.md#switch-every-x-tics) - [Título](properties_Object.md#title) - [Cambiar al volcar](properties_Animation.md#switch-when-roll-over) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
+[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Switch back when released](properties_Animation.md#switch-back-when-released) - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks) - [Switch every x ticks](properties_Animation.md#switch-every-x-ticks) - [Title](properties_Object.md#title) - [Switch when roll over](properties_Animation.md#switch-when-roll-over) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)

@@ -23,7 +23,7 @@ Webユーザーに特定のアクセス権を与えるには、ユーザーを�
 
 ### カスタムの認証 (デフォルト)
 
-このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4Dは、[認証を必要とする](#データベースメソッドの呼び出し) HTTPリクエストのみを評価します。
+このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
 
 この認証モードは最も柔軟性が高く、以下のことが可能です:
 
@@ -51,8 +51,8 @@ ds.webUser.save()
 入力された値は次のように評価されます:
 
 - **4Dパスワードを含む** オプションがチェックされている場合、ユーザーの認証情報はまず、[内部の 4Dユーザーテーブル](Users/overview.md) に対して評価されます。
-  - ブラウザーから送信されたユーザー名が 4D のユーザーテーブルに存在し、パスワードが正しい場合、接続は受け入れられます。 パスワードが正しくなければ接続は拒否されます。
-  - ユーザー名が 4D のユーザーテーブルに存在しない場合、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
+ - ブラウザーから送信されたユーザー名が 4D のユーザーテーブルに存在し、パスワードが正しい場合、接続は受け入れられます。 パスワードが正しくなければ接続は拒否されます。
+ - ユーザー名が 4D のユーザーテーブルに存在しない場合、[`On Web Authentication`](#on-web-authentication) データベースメソッドが呼び出されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
 - **4Dパスワードを含む** オプションがチェックされていない場合、ユーザーの認証情報は、その他の接続情報 (IPアドレス、ポート、URL など) とともに [`On Web Authentication`](#on-web-authentication) データベースメソッドに受け渡されます。 `On Web Authentication` データベースメソッドが存在しない場合、接続は拒否されます。
 
 > 4Dクライアントの Webサーバーでは、すべての 4Dクライアントマシンが同じユーザーテーブルを共有することに留意が必要です。 ユーザー名/パスワードの検証は 4D Serverアプリケーションでおこなわれます。
@@ -114,7 +114,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 :::note
 
-`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#authentication-mode)の設定により異なります。
+`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
 
 :::
 

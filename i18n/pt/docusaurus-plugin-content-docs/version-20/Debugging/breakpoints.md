@@ -23,7 +23,7 @@ No exemplo a seguir, um ponto de interrupção (o marcador vermelho) foi definid
 
 ![break-point](../assets/en/Debugging/break.png)
 
-No exemplo acima, clicar no botão [**No Trace**](./debugger.md/#no-trace) retoma a execução normal até a linha marcada com o ponto de interrupção. Essa linha não é executada - o usuário é levado de volta ao modo de rastreio. Definir um ponto de interrupção para além do contador do programa e clicar no botão **No Trace** permite saltar partes do método que está sendo rastreado.
+No exemplo acima, clicar no botão [**No Trace**](./debugger.md#no-trace) retoma a execução normal até a linha marcada com o ponto de interrupção. Essa linha não é executada - o usuário é levado de volta ao modo de rastreio. Definir um ponto de interrupção para além do contador do programa e clicar no botão **No Trace** permite saltar partes do método que está sendo rastreado.
 
 Para remover um ponto de interrupção, clique no marcador correspondente.
 

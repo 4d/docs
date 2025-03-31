@@ -32,9 +32,9 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
-  Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
+ Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. Es posible controlar el acceso al menú contextual mediante el comando [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html).
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
 
 #### Gramática JSON
 
@@ -70,7 +70,7 @@ Cuando esta propiedad está desactivada, se desactiva todo menú emergente asoci
 
 ## Filtro de entrada
 
-Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. Por ejemplo, si un número de componente siempre tiene dos letras seguidas de tres dígitos, puede utilizar un filtro de entrada para restringir al usuario a respetar ese patrón. Incluso puede controlar las letras y números en particular.
+Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Por ejemplo, si un número de componente siempre tiene dos letras seguidas de tres dígitos, puede utilizar un filtro de entrada para restringir al usuario a respetar ese patrón. Incluso puede controlar las letras y números en particular.
 
 Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto en la visualización de los datos después de que el usuario deseleccione el objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). El filtro restringe la entrada de datos y el formato asegura la correcta visualización del valor tras la entrada de datos.
 
@@ -114,8 +114,8 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                         |
-| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                             |
+| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | entryFilter | string         | <li>Código de filtro de entrada</li> o <li>Nombre de filtro de entrada (los nombres de filtro empiezan por &#124; )</li> |
 
 #### Objetos soportados
@@ -176,13 +176,13 @@ Esta propiedad está disponible para [objetos de entrada](input_overview.md) que
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - En las entradas multilínea, 4D realiza retornos de línea automáticos:\
-  ![](../assets/en/FormObjects/multilineAuto.png)
+ ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### No
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 - Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:\
-  ![](../assets/en/FormObjects/multilineNo.png)
+ ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Sí
 
@@ -221,7 +221,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) y [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html).
+> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
 
 #### Gramática JSON
 
@@ -263,9 +263,9 @@ Puede configurar esta opción haciendo clic en [...] en la propiedad Accesos dir
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
 
-Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la página [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) en la caja de diálogo Preferencias.
+To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
 
 #### Gramática JSON
 
@@ -273,7 +273,6 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 | --------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                  |
 | shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                    |
-| shortcutCommand | boolean        | true, false                                                                                                                                                                                                                                                    |
 | shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                |
 | shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                    |
 |                 |                |                                                                                                                                                                                                                                                                |
@@ -289,7 +288,7 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 
 Permite el paso directo al modo de edición en list boxes.
 
-Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no. Tenga en cuenta que esta opción permite editar celdas incluso cuando el list box [modo selección](properties_ListBox.md#selection-mode) está en "Ninguno".
+Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no. Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no.
 
 Cuando esta opción no está activa, los usuarios deben seleccionar primero la línea de celdas y luego, hacer clic en una celda para editar su contenido.
 

@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Parâmetro      | Tipo                          |   | Descrição                                                                                       |
-| -------------- | ----------------------------- | - | ----------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                        | → | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
-| localID        | Text                          | → | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultado      | cs. DataStore | ← | Objeto do armazém de dados                                                                      |
+| Parâmetro      | Tipo                          |                             | Descrição                                                                                       |
+| -------------- | ----------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                        | &#8594; | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
+| localID        | Text                          | &#8594; | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Resultado      | cs. DataStore | &#8592; | Objeto do armazém de dados                                                                      |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
   //$myds e $myds2 são equivalentes
 ```
 
-Objects available in the `cs.Datastore` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Objetos disponíveis no `cs.Datastore` são mapeados em relação às [regras gerais ORDA](ORDA/dsMapping.md#general-rules).
 
 Se não for encontrado um datastore correspondente, `Open datastore` retornará **Null**.
 
@@ -151,3 +151,5 @@ Em caso de erro, o comando retorna **Null**. Se não for possível acessar o arm
 | Command number     | 1452                            |
 | Thread safe        | &amp;check; |
 | Modifies variables | error                           |
+
+

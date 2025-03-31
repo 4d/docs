@@ -75,7 +75,7 @@ Ofrecen las siguientes propiedades y funciones:
 | Parámetros | Tipo         |    | Descripción                                                              |
 | ---------- | ------------ | -- | ------------------------------------------------------------------------ |
 | option     | Integer      | -> | Servidor web a obtener (por defecto si se omite = `Web server database`) |
-| Result     | 4D.WebServer | <- | Objeto servidor web                                                      |
+| Resultado  | 4D.WebServer | <- | Objeto servidor web                                                      |
 
 <!-- END REF -->
 
@@ -120,7 +120,7 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 | Parámetros | Tipo       |    | Descripción                                           |
 | ---------- | ---------- | -- | ----------------------------------------------------- |
-| Result     | Collection | <- | Colección de los objetos del servidor web disponibles |
+| Resultado  | Collection | <- | Colección de los objetos del servidor web disponibles |
 
 <!-- END REF -->
 
@@ -693,7 +693,7 @@ El <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 | Parámetros | Tipo   |    | Descripción                                     |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | settings   | Object | -> | Parámetros del servidor web a definir al inicio |
-| Result     | Object | <- | Estado del inicio del servidor web              |
+| Resultado  | Object | <- | Estado del inicio del servidor web              |
 
 <!-- END REF -->
 

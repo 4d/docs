@@ -20,7 +20,7 @@ If a toolbar window has been created by the [Open form window](open-form-window.
 
 #### Example 
 
-On OS X, you have defined a custom toolbar and a standard window that has the Has full screen mode Mac option. When a standard window is maximized by a user while the toolbar window is displayed, you do not want the toolbar to overlap the maximized window.
+On macOS, you have defined a custom toolbar and a standard window that has the Has full screen mode Mac option. When a standard window is maximized by a user while the toolbar window is displayed, you do not want the toolbar to overlap the maximized window.
 
 To prevent this, in the On Resize form event of the standard window, you need to detect when the window has entered full screen mode and then call **HIDE TOOL BAR**:
 

@@ -33,14 +33,14 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 *attributes* 引数には、設定するプロパティを含むオブジェクトを渡します:
 
-| プロパティ               | 型    | 説明                                                                                                                                               |
-| ------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataField           | テキスト | データコンテキストにおける、表の列のプロパティ名。                                                                                                                        |
-| name                | テキスト | 表の列の名前。 表組み内でユニークでなくてはなりません。 すでに他の列で使われている場合、名前は適用されず、自動的にデフォルトの名前が使われます。                                                                        |
-| formula             | テキスト | 列の各セルにフォーミュラを設定します。 SpreadJS のドキュメント [Structured Reference Formulas](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) 参照 |
-| footerText          | テキスト | 列のフッター値                                                                                                                                          |
-| footerFormula       | テキスト | 列のフッターのフォーミュラ。                                                                                                                                   |
-| filterButtonVisible | ブール  | 表組みの列のフィルターボタンを表示するかどうかを設定します (表組み作成時のデフォルトは `true`)。                                                                         |
+| プロパティ               | 型       | 説明                                                                                                                                               |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataField           | テキスト    | データコンテキストにおける、表の列のプロパティ名。                                                                                                                        |
+| name                | テキスト    | 表の列の名前。 表組み内でユニークでなくてはなりません。 すでに他の列で使われている場合、名前は適用されず、自動的にデフォルトの名前が使われます。                                                                        |
+| formula             | テキスト    | 列の各セルにフォーミュラを設定します。 SpreadJS のドキュメント [Structured Reference Formulas](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) 参照 |
+| footerText          | テキスト    | 列のフッター値                                                                                                                                          |
+| footerFormula       | テキスト    | 列のフッターのフォーミュラ。                                                                                                                                   |
+| filterButtonVisible | boolean | 表組みの列のフィルターボタンを表示するかどうかを設定します (表組み作成時のデフォルトは `true`)。                                                                         |
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
@@ -104,3 +104,12 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 [VP Find table](vp-find-table.md)<br/>
 [VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
 [VP RESIZE TABLE](vp-resize-table.md)
+
+
+
+
+
+
+
+
+

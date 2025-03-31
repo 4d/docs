@@ -44,15 +44,15 @@ No parâmetro *modificadores*, passe uma constante ou uma combinação de consta
 | ---------------------- | ------------- | ----- | -------------------------------------------------------------------- |
 | Activate window bit    | Inteiro longo | 0     |                                                                      |
 | Activate window mask   | Inteiro longo | 1     |                                                                      |
-| Caps lock key bit      | Inteiro longo | 10    | Windows e OS X                                                       |
-| Caps lock key mask     | Inteiro longo | 1024  | Windows e OS X                                                       |
-| Command key bit        | Inteiro longo | 8     | Tecla Ctrl em Windows, tecla Comando em OS X)                        |
+| Caps lock key bit      | Inteiro longo | 10    | Windows e macOS                                                       |
+| Caps lock key mask     | Inteiro longo | 1024  | Windows e macOS                                                       |
+| Command key bit        | Inteiro longo | 8     | Tecla Ctrl em Windows, tecla Comando em macOS)                        |
 | Command key mask       | Inteiro longo | 256   | Windows = tecla Ctrl, Mac OS = tecla Comando                         |
-| Control key bit        | Inteiro longo | 12    | Tecla Ctrl em OS X, ou clique direito em Windows e OS X<br/> |
-| Control key mask       | Inteiro longo | 4096  | Tecla Ctrl em OS X, ou clique direito em Windows e OS X              |
+| Control key bit        | Inteiro longo | 12    | Tecla Ctrl em macOS, ou clique direito em Windows e macOS<br/> |
+| Control key mask       | Inteiro longo | 4096  | Tecla Ctrl em macOS, ou clique direito em Windows e macOS              |
 | Mouse button bit       | Inteiro longo | 7     |                                                                      |
 | Mouse button mask      | Inteiro longo | 128   |                                                                      |
-| Option key bit         | Inteiro longo | 11    | Tecla Alt (também chamada Opção em OS X)                             |
+| Option key bit         | Inteiro longo | 11    | Tecla Alt (também chamada Opção em macOS)                             |
 | Option key mask        | Inteiro longo | 2048  | Windows = tecla Alt, Mac OS = tecla Opção                            |
 | Right control key bit  | Inteiro longo | 15    |                                                                      |
 | Right control key mask | Inteiro longo | 32768 |                                                                      |
@@ -60,7 +60,7 @@ No parâmetro *modificadores*, passe uma constante ou uma combinação de consta
 | Right option key mask  | Inteiro longo | 16384 |                                                                      |
 | Right shift key bit    | Inteiro longo | 13    |                                                                      |
 | Right shift key mask   | Inteiro longo | 8192  |                                                                      |
-| Shift key bit          | Inteiro longo | 9     | Windows e OS X                                                       |
+| Shift key bit          | Inteiro longo | 9     | Windows e macOS                                                       |
 | Shift key mask         | Inteiro longo | 512   | Windows e Mac Os                                                     |
 
 Por exemplo, para simular a tecla Shift, passe Shift key bit.  

@@ -12,7 +12,7 @@ title: VP Font to object
 | Parámetros | Tipo   |                             | Descripción                     |
 | ---------- | ------ | --------------------------- | ------------------------------- |
 | font       | Text   | ->                          | Cadena abreviada para la fuente |
-| Result     | Object | <- | Objeto fuente                   |
+| Resultado  | Object | <- | Objeto fuente                   |
 
 <!-- END REF -->
 

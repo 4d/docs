@@ -24,8 +24,8 @@ O modo de login legado baseado no método de banco de dados `On REST Authenticat
 
 A sequência de login do usuário é a seguinte:
 
-1. At the first REST call (for a Qodly page call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
-   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
+1. At the first REST call (for a Qodly page call for example), a "guest" web user session is created. Não tem privilégios, nenhum direito de executar solicitações diferentes da [solicitações REST descritivas](#descriptive-rest-requests), sem consumo de licença.\
+    Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` deve ser uma [função de datastore class](../ORDA/ordaClasses.md#datastore-class) exposta.
 
@@ -37,7 +37,7 @@ A sequência de login do usuário é a seguinte:
 
 In the user login phase, license usage is disconnected from web user sessions. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. A execução dessa função aciona o consumo da licença 4D.
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. Para atribuir privilégios a uma sessão web, você precisa executar a função [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) para a sessão. A execução dessa função aciona o consumo da licença 4D.
 
 ### Solicitações REST descritivas
 

@@ -17,7 +17,7 @@ Pour des raisons de sécurité, par défaut, 4D ne répond pas aux requêtes RES
 
 Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'affiche lorsque vous cochez cette option, pour attirer votre attention sur le fait que lorsque les services REST sont activés, l'accès par défaut aux objets de base de données est gratuit tant que les accès REST n'ont pas été configurés.
 
-> You must restart the 4D application for your changes to take effect.
+> Vous devez redémarrer l'application 4D pour que vos modifications soient prises en compte.
 
 ## Controlling REST access
 
@@ -57,22 +57,22 @@ Pour supprimer l'exposition REST d'une table :
 1. Affichez l'Inspecteur de table dans l'Editeur de structure et sélectionnez la table à modifier.
 
 2. Uncheck the **Expose as REST resource** option:
-   ![alt-text](../assets/en/REST/table.png)
-   Do this for each table whose exposure needs to be modified.
+    ![alt-text](../assets/en/REST/table.png)
+    Do this for each table whose exposure needs to be modified.
 
 ### Exposer des champs
 
-Par défaut, touts les champs d'une base 4D sont exposés dans REST.
+Par défaut, tous les champs d'une base 4D sont exposés dans REST.
 
-Vous pouvez choisir d'exposer certains champs de vos tables à REST. Par exemple, si vous ne souhaitez pas exposer le champ [Employees]Salary.
+Vous pouvez choisir d'exposer certains champs de vos tables en REST. Par exemple, vous pouvez ne pas souhaiter exposer le champ [Employees]Salary.
 
 Pour supprimer l'exposition REST d'un champ :
 
 1. Affichez l'Inspecteur de champ dans l'Editeur de structure et sélectionnez le champ à modifier.
 
 2. Décochez la case **Exposer en tant que ressource REST** pour le champ.
-   ![alt-text](../assets/en/REST/field.png)
-   Repeat this for each field whose exposure needs to be modified.
+    ![alt-text](../assets/en/REST/field.png)
+    Repeat this for each field whose exposure needs to be modified.
 
 > Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
 

@@ -12,7 +12,7 @@ title: VP Get value
 | Parámetros | Tipo   |                             | Descripción                           |                  |
 | ---------- | ------ | --------------------------- | ------------------------------------- | ---------------- |
 | rangeObj   | Object | ->                          | Objeto rango                          |                  |
-| Result     | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
 
 #### Descripción
 

@@ -19,8 +19,8 @@ The following ORDA and singleton functions can be called in REST:
 | Função de classe                                                   | Sintaxe                                                                                                             |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                             |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                      |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                                                          |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                                                                    |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                         |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                                                            |
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                                                           |
@@ -49,7 +49,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+A função `getCity()` deve ter sido declarada com a palavra-chave `onHttpGet` (veja [Configuração da função](#function-configuration) abaixo).
 
 :::
 
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 :::info
 
@@ -138,7 +138,7 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+Veja um exemplo de [conteúdo baixando usando uma entidade](#using-an-entity-to-download-contents) com uma solicitação GET.
 
 #### Parâmetro de entidade relacionada
 
@@ -158,8 +158,8 @@ A seleção da entidade deve ter sido definida previamente usando [$method=entit
 | __DATASET  | Text       | Obrigatório - entitySetID (UUID) da seleção de entidades                 |
 | __ENTITIES | Parâmetros | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma seleção de entidade |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter) with a POST request.
-See example for [getting a list built upon an entity selection](#using-an-entity-selection-to-get-a-list) with a GET request.
+Ver exemplo para [receber uma seleção de entidade](#receiving-an-entity-selection-as-parameter) com uma solicitação POST.
+Ver exemplo para [obter uma lista construída após uma seleção de entidades](#using-an-entity-selection-to-get-a-list) com uma solicitação GET.
 
 ## POST request examples
 
@@ -213,7 +213,7 @@ Corpo do pedido: ["Aguada"]
 
 #### Resultados
 
-Le résultat est une entité:
+O resultado é uma entidade:
 
 ```
 {

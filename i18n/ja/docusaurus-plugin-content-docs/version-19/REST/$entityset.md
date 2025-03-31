@@ -9,12 +9,13 @@ title: '$entityset'
 
 | シンタックス                                                                                                         | 例題                                                                                 | 説明                                |
 | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | 既存のエンティティセットを取得します                |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                      | `/People/$entityset/0ANUMBER`                                                      | 既存のエンティティセットを取得します                |
 | [**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
 
 ## $entityset/\{entitySetID\}
 
 既存のエンティティセットを取得します(*例*: `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+
 
 ### 説明
 
@@ -22,7 +23,7 @@ title: '$entityset'
 
 エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
 ### 例題
 

@@ -117,8 +117,8 @@ Ao inserir um valor, você declara que as classes e funções do componente esta
 
 ```4d
 //no projeto host
-var $rect: cs.eGeometry.Rectangle
-$rect:=cs.eGeometry.Rectangle.new(10;20)
+var $rect: cs.eGeometry. Rectangle
+$rect:=cs.eGeometry. Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
@@ -132,7 +132,7 @@ O namespace de um componente [compilado](#protection-of-components-compilation) 
 
 Obviamente, é recomendável usar um nome distinto para evitar qualquer conflito. Se uma classe de usuário com o mesmo nome de um componente já existir no projeto, a classe de usuário será levada em consideração e as classes de componentes serão ignoradas.
 
-As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs.Mycomponent.Employee" no projeto host.
+As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs. Mycomponent. Employee" no projeto host.
 
 ### Classes ocultas
 
@@ -353,7 +353,7 @@ Um componente pode executar o código 4D automaticamente ao abrir ou fechar o ba
 
 A execução do código de inicialização ou de fechamento é feita por meio do método de banco de dados `On Host Database Event`.
 
-> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve marcar a [opção**Executar o método "On Host Database Event" dos componentes**](../settings/security.md#options) na página Segurança das Configurações.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo.
 
 
 ## Proteção dos componentes: compilação

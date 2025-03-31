@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Paramètres | Type                                                  |   | Description                                            |
-| ---------- | ----------------------------------------------------- | - | ------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection | → | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                            | ← | New shared collection                                  |
+| Paramètres | Type                                                  |                             | Description                                            |
+| ---------- | ----------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                            | &#8592; | New shared collection                                  |
 
 <!-- END REF-->
 
@@ -75,3 +75,5 @@ Contrairement aux collections standard (non partagées), les collections partag�
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1527                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

@@ -44,13 +44,13 @@ Você pode descobrir se o seu aplicativo utiliza um arquivo de log a qualquer mo
 Para criar um arquivo de histórico:
 
 1. Na página **Cópia de segurança/Configuração** das Propriedades do banco de dados, marque a opção **Utilizar o arquivo de histórico**.
-   O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado *data.journal*.
+  O programa exibe um caixa de diálogo abrir/novo arquivo. Por padrão, o arquivo de log é chamado *data.journal*.
 
 2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo.
-   Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
+  Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
 
 3. Clique em **Salvar**.
-   O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
+  O disco e o nome do arquivo de histórico aberto agora estão exibidos na área Usar histórico da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
 4. Valide a caixa de diálogo das Propriedades.
 

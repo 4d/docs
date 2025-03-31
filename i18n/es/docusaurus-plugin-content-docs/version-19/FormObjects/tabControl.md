@@ -48,7 +48,7 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 ### Utilizar un objeto
 
-Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](Concepts/dt_collection) como [fuente de datos](properties_Object.md#variable-or-expression) del control de pestañas. El objeto debe contener las siguientes propiedades:
+Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](Concepts/dt_collection.md) como [fuente de datos](properties_Object.md#variable-or-expression) del control de pestañas. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo       | Descripción                                                                                                                                                  |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

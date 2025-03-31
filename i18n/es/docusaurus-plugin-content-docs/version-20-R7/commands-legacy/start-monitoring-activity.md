@@ -29,7 +29,7 @@ El parámetro opcional *fuente* define el tipo de actividad a monitorear. Valore
 | Activity network    | 2     | Operaciones de peticiones de red                      |
 | Activity operations | 4     | Operaciones de datos 4D                               |
 
-**Nota**: si los historiales de depuración se han detenido en el servidor 4D [GRAPH SETTINGS](graph-settings.md), **START MONITORING ACTIVITY** con Activity network reiniciará los historiales.
+**Nota**: si los historiales de depuración se han detenido en el servidor 4D [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** con Activity network reiniciará los historiales.
 
 #### Ejemplo 
 

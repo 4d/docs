@@ -18,7 +18,7 @@ title: VP Name
 
 #### Descrição
 
-The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
+O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->retorna um novo objeto de intervalo referenciando uma faixa de nome<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

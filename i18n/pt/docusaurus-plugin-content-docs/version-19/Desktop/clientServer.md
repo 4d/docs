@@ -18,7 +18,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 Uma aplicação cliente/servidor mesclada é personalizada e seu início é simplificado:
 
-- Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. O arquivo do projeto não precisa ser selecionado.
+- Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 - Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor.
 
 Estes princípios são detalhados na página [Build Application](building.md#what-is-a-clientserver-application).
@@ -74,7 +74,7 @@ Cada vez que o 4D executa uma ação **Salvar tudo** no ambiente de design (expl
 
 No entanto, você precisa prestar atenção às seguintes diferenças de comportamento em comparação com a [arquitetura de projeto padrão](Project/architecture.md):
 
-- a pasta userPreferences.\{username\} usada pelo 4D não é a mesma pasta usada pelo 4D Server na pasta do projeto. Em vez disso, é uma pasta dedicada, denominada "userPreferences", armazenada na pasta do sistema do projeto (ou seja, o mesmo local em que se abre um projeto .4dz).
+- the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder. Em vez disso, é uma pasta dedicada, denominada "userPreferences", armazenada na pasta do sistema do projeto (ou seja, o mesmo local em que se abre um projeto .4dz).
 - a pasta usada pelo 4D para dados derivados não é a pasta chamada "DerivedData" na pasta do projeto. Em vez disso, é uma pasta dedicada chamada "DerivedDataRemote" localizada na pasta do sistema do projeto.
 - O arquivo catalog.4DCatalog não é editado pela 4D, mas sim pelo 4D Server. As informações do catálogo são sincronizadas através de pedidos cliente/servidor
 - o arquivo directory.json não é editado por 4D, mas pelo servidor 4D. As informações do diretório são sincronizadas através de pedidos cliente/servidor

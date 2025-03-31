@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Paramètres | Type    |   | Description                   |
-| ---------- | ------- | - | ----------------------------- |
-| Résultat   | Integer | ← | Numéro d'événement formulaire |
+| Paramètres | Type    |                             | Description                   |
+| ---------- | ------- | --------------------------- | ----------------------------- |
+| Résultat   | Integer | &#8592; | Numéro d'événement formulaire |
 
 <!-- END REF-->
 
@@ -138,7 +138,7 @@ L'exemple suivant montre une méthode formulaire générique qui gère les évé
 
 #### Exemple 5
 
-Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commandes-legacy/get-edited-text.md), [Keystroke](../commandes-legacy/keystroke.md) et [FILTER KEYSTROKE](../commandes-legacy/filter-keystroke.md).
+Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) et [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md).
 
 #### Exemple 6
 
@@ -355,3 +355,5 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 | ------------------ | ------------------------------- |
 | Numéro de commande | 388                             |
 | Thread safe        | &amp;cross; |
+
+

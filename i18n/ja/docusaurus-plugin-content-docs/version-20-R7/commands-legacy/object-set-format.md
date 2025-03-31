@@ -201,8 +201,8 @@ displayed_sidebar: docs
    * *style* \= 9: 角の丸いべベル  
    * *style* \= 10: 折り畳む/展開  
    * *style* \= 11: ヘルプ  
-   * *style* \= 12: OS X テクスチャー  
-   * *style* \= 13: OS X グラデーション
+   * *style* \= 12: macOS テクスチャー  
+   * *style* \= 13: macOS グラデーション
 * *horMargin* \= 水平マージン。ボタン内部の左右マージン (アイコンやテキストが描画されないエリア) をピクセル単位で指定します。
 * *vertMargin* \= 垂直マージン。ボタン内部の上下マージン (アイコンやテキストが描画されないエリア) をピクセル単位で指定します。
 * *iconOffset* \= 右および下方向へのアイコンのシフト。ピクセル単位で指定されるこの値は、ボタンがクリックされた際のボタンアイコンの右下方向へのシフトを指定します (同じ値が両方向に使用されます)。
@@ -249,7 +249,7 @@ displayed_sidebar: docs
 
 #### 例題 2 
 
-This example formats a date variable and a time variable using [customized formats](https://developer.4d.com/docs/Project/date-time-formats.md): 
+This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12

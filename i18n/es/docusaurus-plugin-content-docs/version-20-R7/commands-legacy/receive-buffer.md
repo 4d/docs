@@ -21,7 +21,7 @@ displayed_sidebar: docs
 El buffer de puerto serial en Windows está limitado en tamaño a 10 Kbytes. Esto significa que el buffer puede saturarse. Cuando está lleno y se reciben nuevos caracteres, los nuevos caracteres se reemplazan los antiguos caracteres. Los antiguos caracteres se pierden; por lo tanto, es esencial que el buffer se lea rápidamente cuando se reciben nuevos caracteres.
 
 **En Mac OS**  
-El buffer del puerto serial en Mac OS X tiene una capacidad en principio ilimitada (depende de la memoria disponible). Si el buffer está lleno y se reciben nuevos caracteres, los nuevos caracteres reemplazan los antiguos caracteres. Los antiguos caracteres se pierden; por lo tanto, es esencial que el buffer se lea rápidamente cuando se reciben nuevos caracteres. 
+El buffer del puerto serial en macOS tiene una capacidad en principio ilimitada (depende de la memoria disponible). Si el buffer está lleno y se reciben nuevos caracteres, los nuevos caracteres reemplazan los antiguos caracteres. Los antiguos caracteres se pierden; por lo tanto, es esencial que el buffer se lea rápidamente cuando se reciben nuevos caracteres. 
 
 El comando RECEIVE BUFFER es diferente de [RECEIVE PACKET](receive-packet.md) en la medida en que recupera todo lo que encuentra en el buffer y lo devuelve inmediatamente. [RECEIVE PACKET](receive-packet.md) espera hasta encontrar un carácter específico o un cierto número de caracteres en el buffer. 
 

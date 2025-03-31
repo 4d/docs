@@ -13,7 +13,7 @@ title: VP Get selection
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre del área 4D View Pro en el formulario                   |                  |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
+| Resultado  | Object  | <- | Objeto rango de celdas                                         | <!-- END REF --> |
 
 #### Descripción
 

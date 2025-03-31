@@ -45,24 +45,24 @@ Dans le paramètre *modifiers*, vous devez passer une constante ou une combinais
 | ---------------------- | ----------- | ------ | --------------------------------------------------------- |
 | Activate window bit    | Entier long | 0      |                                                           |
 | Activate window mask   | Entier long | 1      |                                                           |
-| Caps lock key bit      | Entier long | 10     | Windows et OS X                                           |
-| Caps lock key mask     | Entier long | 1024   | Windows et OS X                                           |
-| Command key bit        | Entier long | 8      | Touche Ctrl sous Windows, touche Commande sous OS X       |
-| Command key mask       | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous OS X       |
-| Control key bit        | Entier long | 12     | Touche Ctrl sous OS X, ou clic droit sous Windows et OS X |
-| Control key mask       | Entier long | 4096   | Touche Ctrl sous OS X, ou clic droit sous Windows et OS X |
+| Caps lock key bit      | Entier long | 10     | Windows et macOS                                           |
+| Caps lock key mask     | Entier long | 1024   | Windows et macOS                                           |
+| Command key bit        | Entier long | 8      | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Command key mask       | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key bit        | Entier long | 12     | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Control key mask       | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
 | Mouse button bit       | Entier long | 7      |                                                           |
 | Mouse button mask      | Entier long | 128    |                                                           |
-| Option key bit         | Entier long | 11     | Touche Alt (aussi appelée Option sous OS X)               |
-| Option key mask        | Entier long | 2048   | Touche Alt (aussi appelée Option sous OS X)               |
+| Option key bit         | Entier long | 11     | Touche Alt (aussi appelée Option sous macOS)               |
+| Option key mask        | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
 | Right control key bit  | Entier long | 15     |                                                           |
 | Right control key mask | Entier long | 32768  |                                                           |
 | Right option key bit   | Entier long | 14     |                                                           |
 | Right option key mask  | Entier long | 16384  |                                                           |
 | Right shift key bit    | Entier long | 13     |                                                           |
 | Right shift key mask   | Entier long | 8192   |                                                           |
-| Shift key bit          | Entier long | 9      | Windows et OS X                                           |
-| Shift key mask         | Entier long | 512    | Windows et OS X                                           |
+| Shift key bit          | Entier long | 9      | Windows et macOS                                           |
+| Shift key mask         | Entier long | 512    | Windows et macOS                                           |
 
 Par exemple, pour simuler la touche Majuscule, passez la valeur Shift key bit.
 

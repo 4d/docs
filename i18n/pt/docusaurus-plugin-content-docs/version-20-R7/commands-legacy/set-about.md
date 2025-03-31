@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.SET ABOUT.Summary-->O comando SET ABOUT muda o comando de menu Sobre 4D do menu **Ajuda** (Windows) ou do menu **Aplicação** (Mac OS X) em *textoItem*.<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Summary-->O comando SET ABOUT muda o comando de menu Sobre 4D do menu **Ajuda** (Windows) ou do menu **Aplicação** (macOS) em *textoItem*.<!-- END REF-->
 
 Depois de chamar este comando, quando o usuário selecionar este comando de menu no modo Desenho ou Aplicação, *metodo* é chamado. Geralmente, este método mostra uma caixa de diálogo que dá informação sobre a versão de seu banco.  
   

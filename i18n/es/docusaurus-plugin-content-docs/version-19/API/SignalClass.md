@@ -104,7 +104,7 @@ Método ***OpenForm***:
 | Parámetros  | Tipo      |    | Descripción                                                     |
 | ----------- | --------- |:--:| --------------------------------------------------------------- |
 | description | Text      | -> | Descripción para la señal                                       |
-| Result      | 4D.Signal | <- | Objeto nativo que encapsula la señal|<!-- END REF -->
+| Resultado   | 4D.Signal | <- | Objeto nativo que encapsula la señal|<!-- END REF -->
 
 |
 
@@ -248,7 +248,7 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 | Parámetros | Tipo    |    | Descripción                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
 | timeout    | Real    | -> | Tiempo máximo de espera de la señal en segundos               |
-| Result     | Boolean | <- | Estado de la propiedad `.signaled`|<!-- END REF -->
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`|<!-- END REF -->
 
 |
 

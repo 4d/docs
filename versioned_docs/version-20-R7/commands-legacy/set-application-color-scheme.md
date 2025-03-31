@@ -35,7 +35,7 @@ In the *colorScheme* parameter, pass a color scheme to apply:
 #### See also 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 
 #### Properties
 

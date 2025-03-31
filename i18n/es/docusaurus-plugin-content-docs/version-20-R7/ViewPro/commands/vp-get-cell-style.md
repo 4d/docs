@@ -12,7 +12,7 @@ title: VP Get cell style
 | Parámetros | Tipo   |                             | Descripción  |                  |
 | ---------- | ------ | --------------------------- | ------------ | ---------------- |
 | rangeObj   | Object | ->                          | Objeto rango |                  |
-| Result     | Object | <- | Objeto style | <!-- END REF --> |
+| Resultado  | Object | <- | Objeto style | <!-- END REF --> |
 
 #### Descripción
 

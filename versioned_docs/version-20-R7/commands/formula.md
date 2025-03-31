@@ -33,8 +33,8 @@ Having a formula as an object allows it to be passed as a parameter (calculated 
 
 The returned formula can be called with:
 
-*	[`.call()`](#call) or [`.apply()`](#apply) methods, or
-*	object notation syntax (see [formula object](#formula-object)).
+*	[`.call()`](../API/FunctionClass.md#call) or [`.apply()`](../API/FunctionClass.md#apply) methods, or
+*	object notation syntax (see [formula object](../commands/formula.md-object)).
 
 ```4d
  var $f : 4D.Function
@@ -47,7 +47,7 @@ The returned formula can be called with:
  $o.myFormula() //returns 3
 ```
 
-You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+You can pass [parameters](../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
 You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
 

@@ -33,7 +33,7 @@ Si el documento contiene un Byte Order Mark (BOM), 4D utiliza el conjunto de car
 Si el documento no contiene un BOM y si se omite el parámetro *conjCaracteres,* 4D utiliza por defecto los siguientes conjuntos de caracteres:
 
 * bajo Windows: ANSI
-* bajo OS X: MacRoman
+* bajo macOS: MacRoman
 
 En breakMode, puede pasar un entero largo que indica el proceso a efectuar en los caracteres de fin de línea presentes en el documento. Puede pasar una de las siguientes constantes, del tema "*Documentos sistema*":
 

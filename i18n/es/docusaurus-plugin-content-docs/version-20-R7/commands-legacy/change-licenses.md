@@ -37,7 +37,7 @@ De esta forma un usuario puede activar licencias sin tener que modificar la base
 
 #### Ver también 
 
-[License info](license-info.md)  
+[License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
 #### Propiedades

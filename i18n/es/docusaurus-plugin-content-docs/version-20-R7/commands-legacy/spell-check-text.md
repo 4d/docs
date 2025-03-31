@@ -25,7 +25,7 @@ Este comando devuelve la posición del primer carácter de esta palabra desconoc
 
 Si la verificación inicia sin error y se encuentra una palabra desconocida, la variable sistema OK toma el valor 0\. Si un error de inicialización ocurre durante la verificación o si no se encuentran palabras desconocidas, OK toma el valor 1.
 
-**Note OS X:** bajo OS X, cuando el corrector nativo se activa, este comando no soporta la corrección gramatical. 
+**Note macOS:** bajo macOS, cuando el corrector nativo se activa, este comando no soporta la corrección gramatical. 
 
 #### Ejemplo 
 

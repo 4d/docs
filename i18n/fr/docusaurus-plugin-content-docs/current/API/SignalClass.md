@@ -178,10 +178,10 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Paramètres | Type    |                             | Description                                   |
-| ---------- | ------- | --------------------------- | --------------------------------------------- |
-| timeout    | Real    | ->                          | Délai d'attente maximum du signal en secondes |
-| Résultat   | Boolean | <- | Etat de la propriété `.signaled`              |
+| Paramètres | Type    |                             | Description                                         |
+| ---------- | ------- | --------------------------- | --------------------------------------------------- |
+| timeout    | Real    | ->                          | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | Boolean | <- | Etat de la propriété `.signaled`                    |
 
 <!-- END REF -->
 
@@ -189,13 +189,20 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 La fonction `.wait()` <!-- REF #SignalClass.wait().Summary -->place le process courant en attente jusqu'à ce que la propriété `.signaled` de l'objet signal devienne **true** ou que le *timeout* optionnel expire<!-- END REF -->.
 
-Pour prévenir tout code bloquant, vous pouvez passez un temps d'attente maximum en secondes dans le paramètre *timeout* (les décimales sont acceptées).
+Pour prévenir tout code bloquant, vous pouvez passez un temps d'attente maximum en secondes dans le paramètre *timeout* (les décimales sont acceptées). Decimals are accepted.
 
-> **Attention** : L'appel de `.wait( )` sans *timeout* dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
+If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-|
+La fonction retourne la valeur de la propriété `.signaled`.
 
-La fonction retourne la valeur de la propriété `.signaled`. Evaluer cette valeur permet de savoir si la fonction a retourné à cause de l'appel de `.trigger( )` (`.signaled` est **true**) ou si le *timeout* a expiré (`.signaled` est **false**).
+- Evaluer cette valeur permet de savoir si la fonction a retourné à cause de l'appel de `.trigger( )` (`.signaled` est **true**) ou si le *timeout* a expiré (`.signaled` est **false**).
+- **false** if the timeout expired before the signal was triggered.
+
+:::note Attention
+
+**Attention** : L'appel de `.wait( )` sans *timeout* dans le process principal de 4D n'est pas recommandé car il pourrait geler l'ensemble de l'application 4D.
+
+:::
 
 > L'état d'un process qui attend un signal est `En attente d'un marqueur interne`.
 

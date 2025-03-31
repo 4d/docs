@@ -64,4 +64,4 @@ Obtemos o seguinte erro na segunda entidade e, por conseguinte, a primeira entid
 }
 ```
 
-> Embora o salário da primeira entidade tenha um valor de 45000, este valor não foi guardado no servidor e o _timestamp (__STAMP)_ também não foi modificado. Se recarregarmos a entidade, veremos o valor anterior.
+> Embora o salário da primeira entidade tenha um valor de 45000, este valor não foi guardado no servidor e o *timestamp (__STAMP)* também não foi modificado. Se recarregarmos a entidade, veremos o valor anterior.

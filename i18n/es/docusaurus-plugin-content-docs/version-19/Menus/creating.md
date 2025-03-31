@@ -12,7 +12,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando crea un nuevo proyecto, 4D crea automáticamente una barra de menú por defecto (Barra de Menú #1) para que pueda acceder al entorno Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el proyecto. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
@@ -21,7 +21,7 @@ La barra de menús por defecto incluye tres menús:
 - **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
 - **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
-> > Menu items appear *in italics* because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
+> > > > > > > > Menu items appear *in italics* because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
 
 Puede modificar esta barra de menú como desee o crear otras adicionales.
 
@@ -87,9 +87,9 @@ En tiempo de ejecución, si un menú adjunto se modifica por programación, toda
 
 Un menú puede estar unido a una barra de menús o a otro menú.
 
-- To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](../assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-  ![](../assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. El menú que se adjunta se convierte así en un submenú. El título del elemento se mantiene (el nombre original del submenú se ignora), pero este título puede modificarse.
+- Para adjuntar un menú a una barra de menús: haga clic con el botón derecho del ratón en la barra de menús y seleccione **Adjuntar un menú a la barra de menús "nombre de la barra" >**, luego elija el menú que desea adjuntar a la barra de menús: ![](../assets/en/Menus/attach.png) También puede seleccionar una barra de menú y luego hacer clic en el botón de opciones que se encuentra debajo de la lista.
+- Para adjuntar un menú a otro menú: seleccione el menú en el área de la izquierda, luego haga clic con el botón derecho del ratón en el elemento del menú y seleccione **Agregar un submenú al elemento "nombre del elemento">**, luego elija el menú que desea utilizar como submenú:  
+  ![](../assets/en/Menus/attach2.png) También puede seleccionar un elemento del menú y luego hacer clic en el botón de opciones que se encuentra debajo de la lista. El menú que se adjunta se convierte así en un submenú. El título del elemento se mantiene (el nombre original del submenú se ignora), pero este título puede modificarse.
 
 #### Quitar los menús
 

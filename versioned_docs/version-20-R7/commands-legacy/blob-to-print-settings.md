@@ -24,7 +24,7 @@ The *params* parameter allows you to define how to handle the basic "number of c
 * If you pass 0 or omit this parameter, the values stored in the BLOB are restored,
 * If you pass 1, the values are reset to default: the number of copies is set to 1 and the page range is set to "all pages".
 
-The parameters are applied to the [current 4D printing settings](https://developer.4d.com/docs/settings/compatibility/) as long as no command such as *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) or [PRINT SELECTION](print-selection.md) without the > parameter modifies them. The parameters set are used more particularly by the [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) and [QR REPORT](qr-report.md) commands, as well as by the menu commands of 4D, including those of the Design environment.
+The parameters are applied to the [current 4D printing settings](../settings/compatibility.md) as long as no command such as *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) or [PRINT SELECTION](print-selection.md) without the > parameter modifies them. The parameters set are used more particularly by the [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](print-form.md) and [QR REPORT](qr-report.md) commands, as well as by the menu commands of 4D, including those of the Design environment.
 
 The [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), and [PRINT RECORD](print-record.md) commands must be called with the *\>* parameter (if applicable) in order for the settings defined by **BLOB to print settings** to be kept.
 
@@ -38,7 +38,7 @@ The command returns one of the following status codes:
 
 (\*) Settings depend on the currently selected printer at the moment the BLOB was saved. Applying these settings to a another printer is supported if both printers are of the same model. If the printers are different, only common parameters will be restored.
 
-##### Windows / OS X 
+##### Windows / macOS 
 
 The *printSettings* BLOB can be saved and read on both platforms. However, even if some print settings are common, some others are platform-specific and depend on the drivers and system versions. If the same *printSettings* BLOB is shared between both platforms, you may lose parts of the information.   
 When used in a heterogeneous environment, in order to restore the maximum settings available for each platform (and not only the common part), it is recommended that you work with two *printSettings* BLOBs, one for each platform.

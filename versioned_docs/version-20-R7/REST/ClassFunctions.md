@@ -24,8 +24,8 @@ The following ORDA and singleton functions can be called in REST:
 |Class function|Syntax|
 |---|----|
 |[datastore class](ORDA/ordaClasses.md#datastore-class)|`/rest/$catalog/DataStoreClassFunction`|
-|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/\{dataClass\}/DataClassClassFunction`|
-|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/\{dataClass\}/EntitySelectionClassFunction`|
+|[dataclass class](ORDA/ordaClasses.md#dataclass-class)|`/rest/{dataClass}/DataClassClassFunction`|
+|[entitySelection class](ORDA/ordaClasses.md#entityselection-class)|`/rest/{dataClass}/EntitySelectionClassFunction`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$filter`|
 ||`/rest/{dataClass}/EntitySelectionClassFunction/$orderby`|
@@ -92,7 +92,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Thread-safe
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
 
 
 
@@ -154,8 +154,8 @@ You can also pass values for any attributes of the entity. These values will aut
 - If `__KEY` is not provided, a new entity is created on the server with the given attributes.
 - If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request. 
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request. 
 
 #### Related entity parameter
 

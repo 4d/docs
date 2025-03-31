@@ -41,7 +41,7 @@ Pour plus d'informations sur la création d'un entity set, reportez-vous à `$me
 
 ### sessionInfo
 
-Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection _sessionInfo_ :
+Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection *sessionInfo* :
 
 | Propriété  | Type   | Description                                                                                          |
 | ---------- | ------ | ---------------------------------------------------------------------------------------------------- |

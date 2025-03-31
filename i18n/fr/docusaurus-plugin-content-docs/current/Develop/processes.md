@@ -117,7 +117,7 @@ Bien qu'ils aient été conçus principalement pour la communication interproces
 
 Un worker est utilisé pour demander à un process d'exécuter des méthodes projet. Un worker est composé de :
 
-- un nom unique (_attention : le nom est sensible à la casse_), également utilisé pour nommer le process qui lui est associé
+- un nom unique (*attention : le nom est sensible à la casse*), également utilisé pour nommer le process qui lui est associé
 - un process associé, qui peut exister ou non à un moment donné
 - une boîte aux lettres
 - une méthode de démarrage (facultatif)
@@ -138,7 +138,7 @@ Les process Worker peuvent être créés sur 4D Server par le biais de procédur
 
 Un process worker est fermé par un appel à la commande [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html), qui vide la boîte aux lettres du worker et demande au process associé d'arrêter de traiter les messages et de terminer son exécution dès que la tâche en cours est terminée.
 
-La méthode de démarrage d'un worker est la méthode utilisée pour créer le worker (à la première utilisation). Si `CALL WORKER` est appelé avec un paramètre _méthode_ vide, la méthode de démarrage est automatiquement réutilisée comme méthode à exécuter.
+La méthode de démarrage d'un worker est la méthode utilisée pour créer le worker (à la première utilisation). Si `CALL WORKER` est appelé avec un paramètre *méthode* vide, la méthode de démarrage est automatiquement réutilisée comme méthode à exécuter.
 
 Le process principal créé par 4D lors de l'ouverture d'une base de données pour les modes utilisateur et application est un process worker et peut être appelé en utilisant `CALL WORKER`. Notez que le nom du process principal peut varier en fonction de la langue de localisation de 4D, mais il a toujours le numéro de process 1 ; par conséquent, il est plus pratique de le désigner par son numéro de process plutôt que par son nom lors de l'appel à `CALL WORKER`.
 

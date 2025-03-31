@@ -34,3 +34,4 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 #### Ver también
 
 [VP SET VALUE](vp-set-value.md)
+

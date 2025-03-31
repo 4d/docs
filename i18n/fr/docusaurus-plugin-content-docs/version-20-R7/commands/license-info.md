@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-| Paramètres | Type   |   | Description                          |
-| ---------- | ------ | - | ------------------------------------ |
-| Résultat   | Object | ← | Information about the active licence |
+| Paramètres | Type   |                             | Description                          |
+| ---------- | ------ | --------------------------- | ------------------------------------ |
+| Résultat   | Object | &#8592; | Information about the active licence |
 
 <!-- END REF-->
 
@@ -141,3 +141,5 @@ You want to get information on your current 4D Server license:
 | ------------------ | --------------------------------------------------------------- |
 | Numéro de commande | 1489                                                            |
 | Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+
+

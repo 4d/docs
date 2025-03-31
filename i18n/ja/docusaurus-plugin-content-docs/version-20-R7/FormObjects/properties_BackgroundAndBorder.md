@@ -79,23 +79,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[階層リスト](list_overview.md) -
-[入力](input_overview.md) -
-[リストボックス](listbox_overview.md) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[ルーラー](ruler.md) -
-[スピナー](spinner.md) -
-[ステッパー](stepper.md) -
-[サブフォーム](subform_overview.md) -
-[テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -127,13 +111,13 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称                 | データタイプ | とりうる値       |
-| ------------------ | ------ | ----------- |
-| hideExtraBlankRows | ブール    | true, false |
+| 名称                 | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| hideExtraBlankRows | boolean | true, false |
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 ---
 
@@ -222,7 +206,7 @@ title: 背景色と境界線
 
 ## 透過
 
-リストボックスの背景を透明にします。 When set, any [alternate background color](#alternate-background-color) or [background color](#background-color--fill-color) defined for the column is ignored.
+リストボックスの背景を透明にします。 このプロパティが有効になっていると、列に対して設定されている [交互に使用する背景色](#交互に使用する背景色) および [背景色](#背景色-塗りカラー) の設定は無視されます。
 
 #### JSON 文法
 
@@ -232,8 +216,8 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md#概要)
+[リストボックス](listbox_overview.md)
 
 #### 参照
 
-[Background Color / Fill Color](#background-color--fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)

@@ -9,7 +9,7 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 | Syntaxe                                                                                                                                  | Exemple                               | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [**\{dataClass\}**](#dataClass)                                                                                                        | `/Employee`                           | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass |
+| [**\{dataClass\}**](#dataclass)                                                                                                        | `/Employee`                           | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass |
 | [**\{dataClass\}[{key}]**](#dataclasskey)                                          | `/Employee[22]`                       | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass               |
 | [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                                | `/Employee:firstName(John)`           | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                   |
 | [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)                                                         | `/City/getCity`                       | Exécute une fonction de classe d'une dataclass                                                       |
@@ -139,7 +139,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 ### Description
 
-En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
+En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut défini comme clé primaire pour votre dataclass. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
 For more information about the data returned, refer to [\{dataClass\}](#dataclass).
 
@@ -203,3 +203,4 @@ Si vous souhaitez utiliser un attribut relationnel à l'aide de [$attributes]($a
 La requête suivante retourne toutes les données publiques de l'employé nommé "Jones".
 
 `GET  /rest/Employee:lastname(Jones)`
+

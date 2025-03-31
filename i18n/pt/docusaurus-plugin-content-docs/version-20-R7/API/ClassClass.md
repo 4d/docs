@@ -33,7 +33,7 @@ Quando uma classe de usuário é [defined] (Concepts/classes.md#class-definition
 
 #### Descrição
 
-The `.isSessionSingleton` property <!-- REF #ClassClass.isSessionSingleton.Summary -->returns `true` if the user class has been defined as a [session singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+A propriedade `.isSessionSingleton` <!-- REF #ClassClass.isSessionSingleton.Summary -->retorna `true` se a classe do usuário tiver sido definida como uma [classe singleton de session](../Concepts/classes.md#singleton-classes)<!-- END REF -->, e `false` caso contrário.
 
 Essa propriedade é **somente leitura**.
 

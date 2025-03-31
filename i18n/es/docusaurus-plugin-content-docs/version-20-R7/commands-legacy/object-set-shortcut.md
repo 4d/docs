@@ -64,10 +64,10 @@ En el parámetro *modificadores*, pase una o más teclas de modificación a asoc
   
 | Constante        | Tipo         | Valor | Comentario                                             |
 | ---------------- | ------------ | ----- | ------------------------------------------------------ |
-| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en OS X           |
-| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo OS X, o clic derecho en Windows y OS X |
-| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en OS X)             |
-| Shift key mask   | Entero largo | 512   | Windows y OS X                                         |
+| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en macOS           |
+| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo macOS, o clic derecho en Windows y macOS |
+| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en macOS)             |
+| Shift key mask   | Entero largo | 512   | Windows y macOS                                         |
 
   
 **Nota**: si omite el parámetro *modificadores*, el objeto se activa tan pronto como se presiona la tecla definida. Por ejemplo, si se asocia la tecla "H" a un botón, este botón se activa cada vez que presione la tecla H. Este funcionamiento ser reserva para interfaces específicas.

@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Parámetros | Tipo                         |   | Descripción                                     |
-| ---------- | ---------------------------- | - | ----------------------------------------------- |
-| localID    | Text                         | → | ID local del almacén de datos remoto a devolver |
-| Result     | cs.DataStore | ← | Referencia al almacén de datos                  |
+| Parámetros | Tipo                         |                             | Descripción                                     |
+| ---------- | ---------------------------- | --------------------------- | ----------------------------------------------- |
+| localID    | Text                         | &#8594; | ID local del almacén de datos remoto a devolver |
+| Resultado  | cs.DataStore | &#8592; | Referencia al almacén de datos                  |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ También puede obtener una referencia en un datastore remoto abierto pasando su 
 
 Si no se encuentra ningún datastore *localID*, el comando devuelve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](../ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `cs.Datastore` son creados apartir de la base de datos objetivo en función de las [reglas generales ORDA](../ORDA/dsMapping.md#general-rules).
 
 #### Ejemplo 1
 
@@ -70,7 +70,9 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1482                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                   |                                 |
+| ----------------- | ------------------------------- |
+| Número de comando | 1482                            |
+| Hilo seguro       | &amp;check; |
+
+

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.SET ABOUT.Summary-->El comando **SET ABOUT** cambia el comando de menú **Acerca de 4D** del menú **Ayuda** (Windows) o del menú **Aplicación** (Mac OS X) por *textoElem*.<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Summary-->El comando **SET ABOUT** cambia el comando de menú **Acerca de 4D** del menú **Ayuda** (Windows) o del menú **Aplicación** (macOS) por *textoElem*.<!-- END REF-->
 
 Después de llamar este comando, cuando el usuario selecciona esta línea de menú en el entorno Diseño o Aplicación, se llama *metodo*. Generalmente, este método muestra una caja de diálogo que da información sobre la versión de su aplicación.
 

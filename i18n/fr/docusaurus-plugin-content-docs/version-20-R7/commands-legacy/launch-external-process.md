@@ -124,7 +124,7 @@ Tous les exemples suivants utilisent le Terminal de macOS, accessible dans le do
  $nomdoc:=Select document("";"*.*";"Choisissez le fichier à ouvrir";0)
  If(OK=1)
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+$nomdoc+"\"")
+    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
  End if
 ```
 

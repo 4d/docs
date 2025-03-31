@@ -46,24 +46,24 @@ In the parameter *modifiers*, you pass one or a combination of the constants of 
 | ---------------------- | ------- | ----- | ---------------------------------------------------------- |
 | Activate window bit    | Integer | 0     |                                                            |
 | Activate window mask   | Integer | 1     |                                                            |
-| Caps lock key bit      | Integer | 10    | Windows and OS X                                           |
-| Caps lock key mask     | Integer | 1024  | Windows and OS X                                           |
-| Command key bit        | Integer | 8     | Ctrl key under Windows, Command key under OS X             |
-| Command key mask       | Integer | 256   | Ctrl key under Windows, Command key under OS X             |
-| Control key bit        | Integer | 12    | Ctrl key under OS X, or right click under Windows and OS X |
-| Control key mask       | Integer | 4096  | Ctrl key under OS X, or right click under Windows and OS X |
+| Caps lock key bit      | Integer | 10    | Windows and macOS                                           |
+| Caps lock key mask     | Integer | 1024  | Windows and macOS                                           |
+| Command key bit        | Integer | 8     | Ctrl key under Windows, Command key under macOS             |
+| Command key mask       | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
+| Control key bit        | Integer | 12    | Ctrl key under macOS, or right click under Windows and macOS |
+| Control key mask       | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
 | Mouse button bit       | Integer | 7     |                                                            |
 | Mouse button mask      | Integer | 128   |                                                            |
-| Option key bit         | Integer | 11    | Alt key (also called Option under OS X)                    |
-| Option key mask        | Integer | 2048  | Alt key (also called Option under OS X)                    |
+| Option key bit         | Integer | 11    | Alt key (also called Option under macOS)                    |
+| Option key mask        | Integer | 2048  | Alt key (also called Option under macOS)                    |
 | Right control key bit  | Integer | 15    |                                                            |
 | Right control key mask | Integer | 32768 |                                                            |
 | Right option key bit   | Integer | 14    |                                                            |
 | Right option key mask  | Integer | 16384 |                                                            |
 | Right shift key bit    | Integer | 13    |                                                            |
 | Right shift key mask   | Integer | 8192  |                                                            |
-| Shift key bit          | Integer | 9     | Windows and OS X                                           |
-| Shift key mask         | Integer | 512   | Windows and OS X                                           |
+| Shift key bit          | Integer | 9     | Windows and macOS                                           |
+| Shift key mask         | Integer | 512   | Windows and macOS                                           |
 
 For example, to simulate the Shift key, pass Shift key bit.
 

@@ -111,7 +111,7 @@ La <!-- REF #WebServerClass.cipherSuite.Summary -->liste de chiffrement utilisé
 
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.CORSEnabled.Summary -->statut du service CORS (*Cross-origin resource sharing*) pour le serveur Web<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est activé (True), les appels XHR (par exemple les requêtes REST) à partir de pages Web hors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste des domaines CORS, voir \`COR Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
+Le <!-- REF #WebServerClass.CORSEnabled.Summary -->statut du service CORS (*Cross-origin resource sharing*) pour le serveur Web<!-- END REF -->. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'il est désactivé (False, par défaut), toutes les requêtes entre sites (cross site) envoyées avec CORS sont ignorées. Lorsqu'il est activé (True) et qu'un domaine ou une méthode non autorisé(e) envoie une requête entre sites, elle est rejetée avec une réponse d'erreur "403 - forbidden".
 
 Par défaut : False (désactivé)
 
@@ -127,17 +127,17 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et de méthodes autorisées pour le service CORS<!-- END REF --> (voir la propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
-- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.\*
-  - 192.168.\*:8081
-  - <http://192.168.5.17:8081>
-  - <http://\*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - \*.myDomain.com
-  - myProject.myDomain.com
-  - \*
+- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs syntaxes sont supportées :
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - <http://192.168.5.17:8081>
+ - <http://\\\\\\\\\\*.myDomain.com>
+ - <http://myProject.myDomain.com>
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 - **methods** (texte, facultatif) : méthode(s) HTTP acceptée(s) pour l'hôte CORS correspondant. Séparez chaque méthode par un ";" (ex : "post;get"). Si *methods* est vide, null ou non défini, toutes les méthodes sont activées.
 
@@ -175,7 +175,7 @@ Le <!-- REF #WebServerClass.defaultHomepage.Summary -->nom de la page home par d
 
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur Web, puis toutes les futures requêtes HTTP seront automatiquement transformées en requêtes HTTPS. La durée de stockage de ces informations par le navigateur est indiquée avec la propriété `HSTSMaxAge`. HSTS nécessite l'activation de HTTPS sur le serveur. HTTP doit également être activé pour permettre des connexions client initiales.
+Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur Web, puis toutes les futures requêtes HTTP seront automatiquement transformées en requêtes HTTPS. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. HSTS nécessite l'activation de HTTPS sur le serveur. HTTP doit également être activé pour permettre des connexions client initiales.
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ L'<!-- REF #WebServerClass.HTTPTrace.Summary -->activation de `HTTP TRACE`<!-- E
 
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HTTPEnabled.Summary -->statut du protocole HTTP<!-- END REF -->.
+Le <!-- REF #WebServerClass.HTTPSEnabled.Summary -->statut du protocole HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -268,7 +268,7 @@ Le <!-- REF #WebServerClass.HTTPEnabled.Summary -->statut du protocole HTTP<!-- 
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HTTPPort.Summary -->numéro de port IP d'écoute pour HTTPS<!-- END REF -->.
+Le <!-- REF #WebServerClass.HTTPSPort.Summary -->numéro de port IP d'écoute pour HTTPS<!-- END REF -->.
 
 Par défaut = 443
 
@@ -296,7 +296,7 @@ Par défaut = 480 minutes
 
 > Cette propriété n'est pas retournée en [mode sessions évolutives](#scalablesession).
 
-La <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
+La <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs (durée définie dans le cookie)<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
 
 Par défaut = 480 minutes
 
@@ -419,7 +419,7 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 *Propriété en lecture seulement.*
 
-La <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité du PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.name.Summary -->nom de l'application web server<!-- END REF -->.
 
 <!-- END REF -->
 

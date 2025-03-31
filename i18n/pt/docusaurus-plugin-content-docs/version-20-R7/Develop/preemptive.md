@@ -60,17 +60,17 @@ São fornecidas as seguintes opções:
 
 - **Pode ser executado em um processo preemptivo**: ao selecionar esta opção, declara que o método pode ser executado em um processo preemptivo e, portanto, deve ser executado em modo preemptivo quando for possível. A propriedade "preemptive" do método é definida como "capable".
 
-  Quando essa opção estiver marcada, o compilador 4D verificará se o método é realmente capaz e retornará erros se esse não for o caso -- por exemplo, se ele chama direta ou indiretamente comandos ou métodos que não podem ser executados em modo preemptivo (toda a cadeia de chamadas é analisada, mas os erros são reportados apenas ao primeiro subnível). Pode então editar o método para que se torne thread-safe, ou selecionar outra opção.
+ Quando essa opção estiver marcada, o compilador 4D verificará se o método é realmente capaz e retornará erros se esse não for o caso -- por exemplo, se ele chama direta ou indiretamente comandos ou métodos que não podem ser executados em modo preemptivo (toda a cadeia de chamadas é analisada, mas os erros são reportados apenas ao primeiro subnível). Pode então editar o método para que se torne thread-safe, ou selecionar outra opção.
 
-  Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um [contexto específico] (#when-is-a-process-started-preemptively).
+ Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um [contexto específico] (#when-is-a-process-started-preemptively).
 
 - **Não pode ser executado em um processo preemptivo**: selecionando esta opção, se declara que o método não deve ser executado em modo preemptivo, e, portanto, sempre se deve executar em modo cooperativo, da mesma forma que nas versões anteriores de 4D. A propriedade "preemptive" do método é definida como "incapable".
 
-  Quando esta opção estiver marcada, o compilador 4D não verificará a habilidade do método de executar preemptivamente; ele é automaticamente marcado como "thread-unsafe" internamente (mesmo que seja teoricamente capaz). Quando chamado em tempo de execução, este método irá "contaminar" quaisquer outros métodos na mesma thread, forçando assim esta thread a ser executada em modo cooperativo, mesmo que os outros métodos sejam thread-safe.
+ Quando esta opção estiver marcada, o compilador 4D não verificará a habilidade do método de executar preemptivamente; ele é automaticamente marcado como "thread-unsafe" internamente (mesmo que seja teoricamente capaz). Quando chamado em tempo de execução, este método irá "contaminar" quaisquer outros métodos na mesma thread, forçando assim esta thread a ser executada em modo cooperativo, mesmo que os outros métodos sejam thread-safe.
 
 - **Indiferente** (pré-determinado): ao selecionar esta opção, declara que não deseja manejar a propriedade preventiva para o método. A propriedade "preemptiva" do método é definida como "indiferente".
 
-  Quando esta opção está marcada, o compilador 4D avaliará a capacidade preemptiva do método e o marcará internamente como "thread-safe" ou "thread-unsafe". Não é devolvido qualquer erro relacionado com a execução preemptiva. Se o método for avaliado como thread-safe, em tempo de execução não impedirá a execução preemptiva de threads quando chamado num contexto preemptivo. Por outro lado, se o método for avaliado como "thread-unsafe", em tempo de execução impedirá qualquer execução de thread preemptiva quando for chamado.
+ Quando esta opção está marcada, o compilador 4D avaliará a capacidade preemptiva do método e o marcará internamente como "thread-safe" ou "thread-unsafe". Não é devolvido qualquer erro relacionado com a execução preemptiva. Se o método for avaliado como thread-safe, em tempo de execução não impedirá a execução preemptiva de threads quando chamado num contexto preemptivo. Por outro lado, se o método for avaliado como "thread-unsafe", em tempo de execução impedirá qualquer execução de thread preemptiva quando for chamado.
 
 Note que com essa opção, independentemente da avaliação interna de segurança de thread, o método será sempre executado em modo cooperativo quando chamado diretamente por 4D como o primeiro método pai (por exemplo, através do comando `New process`). Se for marcado internamente como "thread-safe", só é tido em conta quando chamado a partir de outros métodos dentro de uma cadeia de chamadas.
 
@@ -143,7 +143,7 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 
 - O comando [`PROCESS PROPERTIES`] (https://doc.4d.com/4dv20/help/command/en/page336.html) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
 - O Explorador de execução e a [janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
-  mostram ícones específicos para os processos preemptivos.
+ mostram ícones específicos para os processos preemptivos.
 
 ## Escrevendo um método thread seguro
 
@@ -165,8 +165,8 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 
 - No caso de um método "Compartilhado por componentes e bancos de dados host", a propriedade "Pode ser executado em processos preemptivos" deve ser selecionada.
 - Todas as instruções SQL são thread- seguro. O código SQL inserido nos blocos `Begin SQL`/`End SQL` deve estar em conformidade com as seguintes condições:
-  - Deve ser aplicado ao 4D Server ou ao banco de dados local do 4D (ODBC ou bancos de dados remotos via `SQL LOGIN` não são thread seguros. No entanto, os bancos de dados locais usados com `USE DATABASE` são thread seguro).
-  * Qualquer trigger chamado por instruções SQL deve ser thread seguro (consulte [Triggers](#triggers) abaixo).
+ - Deve ser aplicado ao 4D Server ou ao banco de dados local do 4D (ODBC ou bancos de dados remotos via `SQL LOGIN` não são thread seguros. No entanto, os bancos de dados locais usados com `USE DATABASE` são thread seguro).
+ * Qualquer trigger chamado por instruções SQL deve ser thread seguro (consulte [Triggers](#triggers) abaixo).
 
 :::
 
@@ -180,7 +180,7 @@ Os métodos com a propriedade "Pode ser executado em processos preemptivos" ser�
 
 :::
 
-O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
+O [arquivo de símbolos](../Project/compiler.md#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
 
 ### Interface do usuário
 

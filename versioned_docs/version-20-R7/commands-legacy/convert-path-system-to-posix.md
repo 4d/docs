@@ -27,7 +27,7 @@ The optional *\** parameter can be used to specify the encoding of the POSIX pat
 
 #### Example 1 
 
-Examples under OS X
+Examples under macOS
 
 ```4d
  $path:=Convert path system to POSIX("machd:file 2.txt")

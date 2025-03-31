@@ -2749,7 +2749,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collection à un seul :
+Cet exemple permet de réduire plusieurs éléments de collections en une seule :
 
 ```4d
  var $c;$r : Collection
@@ -2846,7 +2846,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collection à un seul :
+Cet exemple permet de réduire plusieurs éléments de collections en une seule :
 
 ```4d
  var $c;$r : Collection

@@ -274,7 +274,6 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |---|---|---|
 |shortcutAccel |boolean|true, false (Ctrl Windows/Command macOS)|
 |shortcutAlt |boolean|true, false|
-|shortcutCommand |boolean |true, false|
 |shortcutControl |boolean |true, false (macOS Control)|
 |shortcutShift |boolean |true, false|  
 ||||

@@ -2010,7 +2010,7 @@ A função `.query()` <!-- REF #collection.query().Summary -->devolve todos os e
 O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
 ```
 
 Para obter informação detalhada sobre como construir uma consulta utilizando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função [`dataClass.query()`](DataClassClass.md#query).
@@ -2193,7 +2193,7 @@ A função `.remove()` <!-- REF #collection.remove().Summary -->insere elementos
 > Essa função modifica a coleção original.
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
-> **Aviso**: lembre que elementos coleção são numerados a partir de 0. Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*).
+> **Aviso**: Lembre que elementos coleção são numerados a partir de 0. Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*).
 
 * Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
 * Se o valor calculado < 0, *index* será estabelecido como 0.

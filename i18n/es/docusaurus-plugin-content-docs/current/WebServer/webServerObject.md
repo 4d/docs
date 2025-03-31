@@ -97,7 +97,7 @@ Estas propiedades son definidas:
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
 - Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
-> _isRunning_, _name_, _openSSLVersion_, y _perfectForwardSecrecy_ son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
+> *isRunning*, *name*, *openSSLVersion*, y *perfectForwardSecrecy* son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
 
 ## Alcance de los comandos 4D Web
 
@@ -109,7 +109,7 @@ El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Ser
 | `WEB CLOSE SESSION`             | Servidor web que ha recibido la petición |
 | `WEB GET BODY PART`             | Servidor web que ha recibido la petición |
 | `WEB Get body part count`       | Servidor web que ha recibido la petición |
-| `WEB Get Current Session ID`    | Servidor web que ha recibido la petición |
+| `WEB Get current session ID`    | Servidor web que ha recibido la petición |
 | `WEB GET HTTP BODY`             | Servidor web que ha recibido la petición |
 | `WEB GET HTTP HEADER`           | Servidor web que ha recibido la petición |
 | `WEB GET OPTION`                | Aplicación local del servidor web        |

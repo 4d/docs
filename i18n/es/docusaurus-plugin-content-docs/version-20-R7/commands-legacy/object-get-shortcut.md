@@ -28,10 +28,10 @@ El parámetro *modificadores* devuelve un valor que indica la(s) tecla(s) modifi
 
 | Constante        | Tipo         | Valor | Comentario                                             |
 | ---------------- | ------------ | ----- | ------------------------------------------------------ |
-| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en OS X           |
-| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo OS X, o clic derecho en Windows y OS X |
-| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en OS X)             |
-| Shift key mask   | Entero largo | 512   | Windows y OS X                                         |
+| Command key mask | Entero largo | 256   | Tecla Ctrl en Windows, Tecla Comando en macOS           |
+| Control key mask | Entero largo | 4096  | Tecla Ctrl bajo macOS, o clic derecho en Windows y macOS |
+| Option key mask  | Entero largo | 2048  | Tecla Alt (también llamada Opción en macOS)             |
+| Shift key mask   | Entero largo | 512   | Windows y macOS                                         |
   
   
 Si ninguna tecla de modificación se ha definido para el atajo, modificadores devuelve 0.  

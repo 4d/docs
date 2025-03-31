@@ -14,11 +14,11 @@ Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usu
 * **Não fazer nada**: só aparece a janela da aplicação, vazia.
 * **Diálogo Abrir Projeto Local**: 4D apresenta uma caixa de diálogo padrão para abrir um documento, permitindo-lhe selecionar um projeto local.
 * **Abrir o último projeto utilizado**: 4D abre diretamente o último projeto utilizado; não aparece nenhuma caixa de diálogo de abertura.
-> To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+> Para forçar a apresentação da caixa de diálogo de abertura quando esta opção é selecionada, mantenha premida a tecla **Alt** (Windows) ou **Opção** (macOS) enquanto inicia o projeto.
 
 * **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
 * **Abra a caixa de diálogo Welcome Wizard** (configuração de fábrica): O 4D exibe a caixa de diálogo Welcome Wizard (Assistente de boas-vindas).
-> **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
+> > > > > **4D Server**: O aplicativo 4D Server ignora essa opção. Nesse ambiente, o modo **Do nothing** é sempre usado.
 
 ### Criação de formulários automática
 
@@ -47,9 +47,9 @@ Na caixa de diálogo Preferências do 4D, a opção **Janela guia** permite cont
 
 Estão disponíveis três opções:
 
-* **De acordo com as Preferências do sistema** (padrão): As janelas 4D se comportarão como definido nas Preferências do sistema do macOS (Em tela cheia, Sempre ou Manualmente).
-* **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
-* **Sempre**: Abrir um novo documento no editor de formulários 4D ou nos editores de métodos sempre resultará na criação de uma nova guia.
+* **Conforme as Preferências do sistema** (padrão): as janelas 4D se comportarão como definido nas Preferências do sistema do macOS (Em tela cheia, Sempre ou Manualmente).
+* **Nunca**: abrir um novo documento no editor de formulários ou no editor de métodos sempre resultará na criação de uma nova janela (as guias nunca são criadas).
+* **Sempre**: abrir um novo documento no editor de formulários 4D ou nos editores de métodos sempre resultará na criação de uma nova guia.
 
 ### Sair do modo Desenho ao passar para o modo Aplicação
 
@@ -85,30 +85,30 @@ Esse parâmetro configura o idioma padrão usado para o processamento e a compar
 Um banco de dados 4D pode, portanto, operar em uma linguagem diferente da do sistema. Quando um banco de dados é aberto, o motor 4D detecta a linguagem usada pelo arquivo de dados e fornece a linguagem (modo interpretador ou compilado). As comparações de texto, independentemente de serem realizadas pelo mecanismo de banco de dados ou pelo idioma, são feitas no mesmo idioma.
 
 Ao criar um novo arquivo de dados, o 4D usa o idioma previamente definido nesse menu. Ao abrir um arquivo de dados que não está no mesmo idioma que a estrutura, o idioma do arquivo de dados é usado e o código do idioma é copiado para a estrutura.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
+> Pode modificar este parâmetro para a base de dados aberta utilizando os parâmetros da base de dados (ver [Comparação de texto](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 ## Localização da documentação
 
 Esta área configura o acesso à documentação HTML 4D mostrada no navegador atual:
 
-* When the user double-clicks on a command on the **Commands Page** of the Explorer;
-* When the user clicks on a command name in the Method editor and hits the **F1** key.
+* Quando o usuário clica duas vezes em um comando da **página Comandos** do Explorador;
+* Quando o usuário clica em um nome de comando no editor de métodos e atinge a chave **F1**.
 
-You can choose to access the 4D online documentation site directly or to access a static version that is stored locally.
+Você pode escolher acessar o site de documentação online 4D diretamente ou acessar uma versão estática armazenada localmente.
 
 ### Pasta local
 
 Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
-Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar um local diferente, clique no botão [...] ao lado da área de entrada e escolha uma pasta raiz da documentação (pasta correspondente ao idioma: fr, en, de ou em ja). A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar um local diferente, clique no botão [...] ao lado da área de entrada e escolha uma pasta raiz da documentação (pasta correspondente ao idioma: fr, en, de ou em ja).
 
 ### Sítio Web
 
-URL access to the on-line documentation for the version on 4D Doc Center. 4D cria chamadas para as páginas da documentação com base nessa URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+Acesso URL da documentação “on-line” para a versão no 4D Doc Center. 4D cria chamadas para as páginas da documentação com base nessa URL. Você pode modificá-la, por exemplo, se você quiser exibir a documentação em um idioma diferente do idioma da aplicação. O botão de teste à direita da área abre o navegador padrão para ir para a URL especificada.
 
 ### Procurar primeiro na pasta local
 
-This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
+Esta opção (marcada por padrão) define onde 4D irá procurar a página de documentação chamada usando o Gerenciador ou a tecla F1.
 
-* Quando essa opção está marcada, 4D procura primeiro a página na pasta local. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
-* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
+* Quando essa opção está marcada, 4D procura primeiro a página na pasta local. Se for encontrado, 4D mostra a página no navegador atual. Se não, 4D irá automaticamente procurar por ele na documentação on-line do site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+* Quando não estiver checado, 4D procura a página desejada diretamente na documentação on-line do site e a exibe no navegador atual. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.

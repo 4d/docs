@@ -108,7 +108,7 @@ Con la aplicación 4D Client, esta constante es estrictamente equivalente a la c
 
 ##### Carpeta base sintaxis Unix (Database Folder Unix Syntax) 
 
-Carpeta que contiene el archivo de estructura de la base. Esta constante designa la misma carpeta que la anterior pero la ruta de acceso que devuelve se expresa utilizando sintaxis Unix (Posix), de tipo/Usuarios/... Esta sintaxis se usa principalmente cuando utiliza el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) bajo OS X.
+Carpeta que contiene el archivo de estructura de la base. Esta constante designa la misma carpeta que la anterior pero la ruta de acceso que devuelve se expresa utilizando sintaxis Unix (Posix), de tipo/Usuarios/... Esta sintaxis se usa principalmente cuando utiliza el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) bajo macOS.
 
 ##### Carpeta Resources actual 
 

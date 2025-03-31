@@ -11,7 +11,7 @@ Forms provide the interface through which information is entered, modified, and 
 Forms can also contain other forms through the following features:
 
 - [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [inherited forms](./properties_FormProperties.md#inherited-form-name)
 
 ## Creating forms
 
@@ -19,7 +19,7 @@ You can add or modify 4D forms using the following elements:
 
 - **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
 - **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
-- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Example:
+- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture#sources). Example:
 
 ```
 {
@@ -88,7 +88,7 @@ You can create multiple pages for an input form. If you have more fields or vari
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize each topic on its own page.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
+- Reduce or eliminate scrolling during data entry by setting the [entry order](formEditor.md#data-entry-order).
 - Provide space around the form elements for an attractive screen design.
 
 Multiple pages are a convenience used for input forms only. They are not for printed output. When a multi-page form is printed, only the first page is printed.
@@ -112,7 +112,7 @@ When a form is executed, the objects are loaded and combined in the following or
 3. Page zero of the open form
 4. Current page of the open form.
 
-This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
+This order determines the default [entry order](formEditor.md#data-entry-order) of objects in the form.
 
 > Only pages 0 and 1 of an inherited form can appear in other forms.
 

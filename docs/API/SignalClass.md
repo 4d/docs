@@ -191,22 +191,28 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 <!-- REF #SignalClass.wait().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|timeout|Real|->|Maximum waiting time for the signal in seconds|
+|timeout|Real|->|Maximum wait time in seconds|
 |Result|Boolean|<-|State of the `.signaled` property|
 <!-- END REF -->
 
 
 #### Description
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->waits until the `.signaled` property of the Signal object becomes **true** or the specified `timeout` is reached<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
-
->**Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
+To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Decimals are accepted.
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
+The function returns the value of the .signaled property:
+* **true** if the signal was triggered (`.trigger()` was called).
+* **false** if the timeout expired before the signal was triggered.
+
+:::note Warning
+
+Calling `.wait()` without a *timeout* in the main process is not recommended, as it could freeze the entire 4D application.
+
+:::
 
 >The state of a process that waits for a signal is `Waiting for internal flag`.
 

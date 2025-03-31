@@ -320,8 +320,7 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -545,7 +544,7 @@ Esta propiedad es **de sólo lectura**.
 | Parámetros | Tipo            |    | Descripción                                    |
 | ---------- | --------------- |:--:| ---------------------------------------------- |
 | timeout    | Real            | -> | Tiempo de espera (en segundos)                 |
-| Result     | 4D.SystemWorker | <- | Objeto SystemWorker|<!-- END REF -->
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker|<!-- END REF -->
 
 |
 

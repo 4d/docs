@@ -118,7 +118,7 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
  $docname:=Select document("";"*.*";"Choose the file to open";0)
  If(OK=1)
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+$docname+"\"")
+    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
  End if
 ```
 

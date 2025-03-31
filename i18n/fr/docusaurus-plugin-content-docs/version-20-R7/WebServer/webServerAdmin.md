@@ -14,8 +14,8 @@ Un projet 4D peut démarrer et surveiller un serveur Web pour l'application prin
 Il y a plusieurs manières de démarrer le serveur Web principal :
 
 - via un bouton/une commande de menu :
-  - 4D: **Exécution\>Démarrer le serveur Web**<br/>![](../assets/en/WebServer/start1.png)
-  - 4D Server : Bouton **Démarrer le serveur HTTP** dans la page Serveur HTTP<br/>![](../assets/en/WebServer/start2.png)
+    - 4D: **Exécution\>Démarrer le serveur Web**<br/>![](../assets/en/WebServer/start1.png)
+    - 4D Server : Bouton **Démarrer le serveur HTTP** dans la page Serveur HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 - automatiquement à l'ouverture de l'application 4D. Pour ce faire, affichez la page **Web\/Configuration** des Propriétés et cochez la case **Lancer le serveur Web au démarrage** :<br/>![](../assets/en/WebServer/config.png)
 
@@ -45,7 +45,7 @@ Lorsque vous sélectionnez cette commande, la page d'accueil du site Web publié
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. Cette commande prend en compte le numéro du [port de publication TCP](#http-port) spécifié dans les paramètres.
+Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
 
 ## Vider le cache
 
@@ -58,7 +58,7 @@ Pour ce faire, vous pouvez :
 
 Le cache est alors immédiatement effacé.
 
-> Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#cacheclear).
+> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
 
 ## Explorateur d'exécution
 
@@ -228,7 +228,7 @@ D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
-  - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
+    - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 

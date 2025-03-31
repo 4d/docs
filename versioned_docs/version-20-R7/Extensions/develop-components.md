@@ -12,13 +12,13 @@ You can develop 4D components for your own needs and keep them private. You can 
 
 - **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component.
 - **Host Project**: Application project in which a component is installed and used.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.  
+- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.  
 
 ## Basics
 
 Creating and installing 4D components is carried out directly from 4D:
 
-- To use a component, you simply need to [install it in your application](../Project/components.md#basics).
+- To use a component, you simply need to [install it in your application](../Project/components.md).
 - A project can be both a matrix and a host, in other words, a matrix project can itself use one or more components. However, a component cannot use "sub-components" itself.
 - A component can call on most of the 4D elements: classes, functions, project methods, project forms, menu bars, choice lists, and so on. It cannot call database methods and triggers.
 - You cannot use the datastore, standard tables, or data files in 4D components. However, a component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.

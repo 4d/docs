@@ -41,7 +41,7 @@ Under Windows, if an error occurs during execution of the command, the *OK* vari
 **Notes:**
 
 * Only certain picture formats (more specifically, JPEG and TIFF) support metadata. Conversely, formats such as GIF or BMP do not accept metadata. When you convert a picture with metadata to a format that does not support it, then information is lost.
-* Under OS X version 10.7 (Lion), a bug in the native framework used for encoding and decoding picture metadata may cause inaccuracies in GPS coordinates. In this case, updating to OS X 10.8 (Mountain Lion) or 10.9 (Maverick) is strongly recommended.
+* Under macOS version 10.7 (Lion), a bug in the native framework used for encoding and decoding picture metadata may cause inaccuracies in GPS coordinates. In this case, updating to macOS 10.8 (Mountain Lion) or 10.9 (Maverick) is strongly recommended.
 
 #### Example 1 
 

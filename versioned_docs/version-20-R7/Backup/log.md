@@ -69,7 +69,7 @@ You must create another log file if you create a new data file. You must set or 
 
 ## Log file settings 
 
-The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
+The [log file settings](settings.md#log-management) are based on two pieces of information: a boolean value and a path.
 
 1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
 

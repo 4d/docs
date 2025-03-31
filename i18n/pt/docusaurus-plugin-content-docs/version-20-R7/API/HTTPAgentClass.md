@@ -148,3 +148,5 @@ A propriedade `.requestsCount` contém <!-- REF #HTTPAgentClass.requestsCount.Su
 A propriedade `.freeSocketsCount` contém <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->o número de sockets livres de `maxSockets` associados ao HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
+
+

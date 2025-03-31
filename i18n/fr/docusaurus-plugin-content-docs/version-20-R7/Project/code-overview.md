@@ -70,7 +70,7 @@ Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../
 
 :::caution
 
-Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
 Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez désigner un propriétaire de la méthode pour que seuls certains utilisateurs puissent changer son nom.
 
@@ -106,7 +106,7 @@ Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter 
 
 ### Mode d’exécution
 
-Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. It is described in the [Preemptive processes section](../Develop/processes.md#preemptive-processes).
+Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. It is described in the [Preemptive processes section](../Develop/preemptive.md).
 
 ### Disponibilité
 
@@ -160,7 +160,7 @@ Pour modifier globalement les attributs des méthodes :
 1. Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît. La boîte de dialogue **Attributs des méthodes** apparaît.
 
 2. Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement.
-   La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
+  La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
 
 Utilisez le caractère générique @ pour vous aider à définir des groupes de méthodes :
 
@@ -179,3 +179,4 @@ Utilisez le caractère générique @ pour vous aider à définir des groupes de 
 **Note :** Si l'attribut "Publié dans WSDL" est défini à Vrai, il ne sera appliqué qu'aux méthodes projet qui contiennent déjà l'attribut "Web Service".
 
 4. Cliquez sur **Appliquer**. La modification est appliquée instantanément à toutes les méthodes projet désignées par la chaîne de caractères saisie.
+

@@ -9,6 +9,8 @@ jobs:
     uses: ./.github/workflows/workflow-syntax-check.yml
   workflow-build:
     uses: ./.github/workflows/workflow-build.yml
+  workflow-static:
+    uses: ./.github/workflows/workflow-build-static.yml
 
   gh-release:
     needs: [workflow-build]
@@ -17,8 +19,36 @@ jobs:
     steps:
     - name: Download artifact
       uses: actions/download-artifact@v4
+      with:
+        name: build
     - name: Publish
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/
+        publish_dir: ./
+
+  publish-release:
+    needs: [workflow-static]
+    name: 'Publish Release'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        pattern: static-doc-*
+        path: ./release
+    - name: Zip
+      run: |
+        cd release
+        for dir in *; do
+          zip -r "$dir.zip" "$dir"
+        done
+    - name: Upload Release Asset
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: "latest"
+        files: |
+          release/*.zip
+        token: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: true
+

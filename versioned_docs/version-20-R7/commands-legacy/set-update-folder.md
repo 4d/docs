@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | Pathname of folder (package under OS X) containing updated application |
+| folderPath | Text | &#8594;  | Pathname of folder (package under macOS) containing updated application |
 | silentErrors | Boolean | &#8594;  | False (default) = report errors visibly, <br/>True = do not report them |
 
 <!-- END REF-->
@@ -22,7 +22,7 @@ This command is intended to be used in an automatic update process for a merged 
 
 **Note:** This command only works with 4D Server or a single-user application merged with 4D Volume Desktop. 
 
-In the *folderPath* parameter, pass the complete pathname for the folder of the new version of the merged application (folder containing the *my4DApp.exe* application under Windows or the *my4DApp* *.app* package under OS X), created by the 4D application builder. 
+In the *folderPath* parameter, pass the complete pathname for the folder of the new version of the merged application (folder containing the *my4DApp.exe* application under Windows or the *my4DApp* *.app* package under macOS), created by the 4D application builder. 
 
 **Note:** We recommend that you use the same names for the files in the new version of the application as the ones in the original, since the application folder is replaced during the update. If you use different names for these files, any stored shortcuts and/or paths will no longer work. 
 
@@ -49,7 +49,7 @@ You created a "MyUpdates" folder on your disk, where you placed a new version of
   // Windows syntax
  SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
  
-  // OS X syntax
+  // macOS syntax
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 

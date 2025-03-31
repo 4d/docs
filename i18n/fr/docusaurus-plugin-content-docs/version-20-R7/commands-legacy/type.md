@@ -60,7 +60,7 @@ Vous pouvez appliquer la fonction **Type** aux champs, variables interprocess, v
 **Notes :** 
 
 * Vous ne pouvez pas appliquer la fonction **Type** aux expressions scalaires telles que les propriétés d'objets (*emp.name*) ou les éléments de collections (*maColl\[5\]*). Pour cela, vous devez utiliser la commande [Value type](value-type.md).
-* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $1...) déclaré comme [C\_VARIANT](c-variant.md), cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
+* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $1...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
 
 #### Exemple 1 
 

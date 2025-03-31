@@ -198,7 +198,7 @@ Exemplo em macOS:
 
   ![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> Em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
+> em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
 
 
 #### Exemplo JSON:
@@ -390,7 +390,7 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
 - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) e [margem vertical](properties_TextAndPicture.md#vertical-margin)
 
-Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo de](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
+Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states), que pode ser usada em conjunto com uma [imagem de fundo ](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
 #### Exemplo JSON:
 

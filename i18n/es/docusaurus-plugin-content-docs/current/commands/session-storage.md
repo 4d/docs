@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| Parámetros | Tipo   |   | Descripción                                                |
-| ---------- | ------ | - | ---------------------------------------------------------- |
-| id         | Text   | → | Unique identifier (UUID) of the session |
-| Resultado  | Object | ← | Storage object of the session                              |
+| Parámetros | Tipo   |                             | Descripción                                                |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id         | Text   | &#8594; | Unique identifier (UUID) of the session |
+| Resultado  | Object | &#8592; | Storage object of the session                              |
 
 <!-- END REF-->
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
+In *id*, pass the UUID of the session for which you want to get the storage. Se asigna automáticamente por 4D (4D Server o, para sesiones independientes, 4D mono-usuario) y se almacena en [**.id**](../API/SessionClass.md#id) propiedad del [objeto de sesión](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
 
 **Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+El objeto devuelto es la propiedad [**.storage**](../API/SessionClass.md#storage) de la sesión. It is a shared object used to store information available to all processes of the session.
 
 #### Ejemplo
 
@@ -61,11 +61,13 @@ This method modifies the value of a "settings" property stored in the storage ob
 #### Ver también
 
 [Process activity](process-activity.md)\
-[Session](../API/SessionClass.md#session)
+[Session](session.md)
 
 #### Propiedades
 
-|                |                                                                 |
-| -------------- | --------------------------------------------------------------- |
-| Command number | 1839                                                            |
-| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1839                        |
+| Hilo seguro       | &cross; |
+
+

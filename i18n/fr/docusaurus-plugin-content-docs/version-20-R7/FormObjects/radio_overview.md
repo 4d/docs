@@ -16,7 +16,7 @@ Un bouton radio est sélectionné :
 
 ## Configuration des boutons radio
 
-Les boutons radio sont utilisés sous forme d’ensembles coordonnés : un seul bouton peut être sélectionné à la fois parmi l’ensemble. Afin de fonctionner de manière coordonnée, un ensemble de boutons radio doit partager la même propriété de [groupe radio](properties_Object.md#radio-group).
+Les boutons radio sont utilisés sous forme d’ensembles coordonnés : un seul bouton peut être sélectionné à la fois parmi l’ensemble. Sélectionner un bouton radio d’un groupe met ce bouton à 1 et les autres boutons du groupe à 0.
 
 Les boutons radio sont contrôlés par des méthodes. Comme pour tous les boutons, la variable associée au bouton radio est initialisée à 0 (zéro) lorsque le formulaire est ouvert pour la première fois. Une méthode associée à un bouton radio est exécutée lorsqu’il est sélectionné. L’exemple suivant représente des boutons radio utilisés dans une base de données d’enregistrements audio et se rapporte à la vitesse d’enregistrement :
 
@@ -79,7 +79,7 @@ Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel),
 - *Sous Windows* - ce bouton est identique au style [Bevel](#bevel).
 
 - *Sous macOS* - les coins du bouton sont arrondis.
-  ![](../assets/en/FormObjects/roundedBevel.png)
+ ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 

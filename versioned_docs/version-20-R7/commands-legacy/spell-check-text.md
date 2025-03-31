@@ -25,7 +25,7 @@ This command returns the position of the first character of this unknown word in
 
 If the check starts without error and an unknown word is found, the OK system variable is set to 0\. If an initialization error occurs during the check, or if no unknown words are found, OK is set to 1.
 
-**Note OS X:** Under OS X, when the native spell checker is enabled, this command does not support grammar correction. 
+**Note macOS:** Under macOS, when the native spell checker is enabled, this command does not support grammar correction. 
 
 #### Example 
 

@@ -68,7 +68,7 @@ Usted quiere obtener la ruta del último archivo de backup:
 
 #### Ver también 
 
-[File](file.md)  
+[File](../commands/file.md)    
 
 #### Propiedades
 

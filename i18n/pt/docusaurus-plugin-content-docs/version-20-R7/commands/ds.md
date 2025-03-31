@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Parâmetro  | Tipo                          |   | Descrição                                       |
-| ---------- | ----------------------------- | - | ----------------------------------------------- |
-| localID    | Text                          | → | ID local del armazém de dados remoto a devolver |
-| Resultados | cs. DataStore | ← | Referencia ao armazém de dados                  |
+| Parâmetro  | Tipo                          |                             | Descrição                                       |
+| ---------- | ----------------------------- | --------------------------- | ----------------------------------------------- |
+| localID    | Text                          | &#8594; | ID local del armazém de dados remoto a devolver |
+| Resultados | cs. DataStore | &#8592; | Referencia ao armazém de dados                  |
 
 <!-- END REF-->
 
@@ -74,3 +74,5 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 | -------------- | ------------------------------- |
 | Command number | 1482                            |
 | Thread safe    | &amp;check; |
+
+

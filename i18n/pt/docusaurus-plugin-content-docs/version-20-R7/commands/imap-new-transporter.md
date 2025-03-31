@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
-| Parâmetro  | Tipo                               |     | Descrição                                                                         |
-| ---------- | ---------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| server     | Object                             |  →  | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter |  ←  | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
+| Parâmetro  | Tipo                               |                             | Descrição                                                                         |
+| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informação de servidor de correio                                                 |
+| Resultados | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
 
 <!-- END REF -->
 
@@ -38,7 +38,7 @@ No parâmetro server, passe um objeto contendo as propriedades abaixo:
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                |
 | [<!-- INCLUDE #transporter.host.Syntax -->](../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *mandatory*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                     | nenhum                                                            |
-| **senha** : Texto<br/>Senha do usuário para autenticação no servidor. Não retornado no objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                                                                                                | nenhum                                                            |
+| **senha** : Texto<br/>Senha do usuário para autenticação no servidor. Not returned in *[IMAP transporter](\(../API/IMAPTransporterClass.md#imap-transporter-object\))* object.                                                                                                                                                                                                                                                                                                                                                               | nenhum                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | 993                                                               |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | nenhum                                                            |
 
@@ -71,7 +71,9 @@ End if
 
 #### Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1723                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1723                        |
+| Thread safe    | &check; |
+
+

@@ -459,7 +459,7 @@ Filters apply to **entities**. If you want restrict access to a **dataclass** it
 
 ### How to define a restrict filter
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. The filter is then automatically enabled.
 
 
 ### `Function event restrict`

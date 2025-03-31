@@ -68,7 +68,7 @@ Vous voulez obtenir le chemin d'accès du fichier de sauvegarde le plus récent 
 
 #### Voir aussi 
 
-[File](file.md)  
+[File](../commands/file.md)    
 
 #### Propriétés
 

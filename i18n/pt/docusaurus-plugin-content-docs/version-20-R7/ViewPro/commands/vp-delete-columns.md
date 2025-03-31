@@ -22,7 +22,7 @@ Em rangeObj, passe um objeto que contenha um intervalo de colunas a remover. Se 
 - tanto colunas como linhas, apenas as colunas são removidas.
 - apenas linhas, o comando não faz nada.
 
-> \> > Columns are deleted from right to left.
+> &#062; &#062; Columns are deleted from right to left.
 
 #### Exemplo
 
@@ -41,3 +41,4 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 [VP DELETE ROWS](vp-delete-rows.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>
 [VP INSERT ROWS](vp-insert-rows.md)
+

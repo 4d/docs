@@ -49,38 +49,38 @@ Ce code permet de créer un pop up menu dynamique hiérarchique, construit sur l
 
 ```4d
  var $refMainContextMenu;$refMenuEdit : Text
- $refMainContextMenu:=Créer menu
- APPEND MENU ITEM($refMainContextMenu;"-")
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak select all)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak clear)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak copy)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak cut)
- APPEND MENU ITEM($refMainContextMenu;ak standard action title)
- SET MENU ITEM PROPERTY($refMainContextMenu;-1;Action standard associée;ak paste)
- APPEND MENU ITEM($refMainContextMenu;"-")
-   //Sous-menu Edition
- $refMenuEdit:=Créer menu
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font bold)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("B"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font italic)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("I"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font linethrough)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("L"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font underline)
- SET MENU ITEM SHORTCUT($refMenuEdit;-1;Code de caractère("U"))
- APPEND MENU ITEM($refMenuEdit;ak standard action title)
- SET MENU ITEM PROPERTY($refMenuEdit;-1;Action standard associée;ak font show dialog)
- APPEND MENU ITEM($refMainContextMenu;"Edition";$refMenuEdit)
- 
- paramRef:=Dynamic pop up menu($refMainContextMenu)
+$refMainContextMenu:=Create menu
+APPEND MENU ITEM($refMainContextMenu; "-")
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak select all)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak clear)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak copy)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak cut)
+APPEND MENU ITEM($refMainContextMenu; ak standard action title)
+SET MENU ITEM PROPERTY($refMainContextMenu; -1; Associated standard action; ak paste)
+APPEND MENU ITEM($refMainContextMenu; "-")
+//Sous-menu Edition
+$refMenuEdit:=Create menu
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font bold)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("B"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font italic)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("I"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font linethrough)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("L"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font underline)
+SET MENU ITEM SHORTCUT($refMenuEdit; -1; Character code("U"))
+APPEND MENU ITEM($refMenuEdit; ak standard action title)
+SET MENU ITEM PROPERTY($refMenuEdit; -1; Associated standard action; ak font show dialog)
+APPEND MENU ITEM($refMainContextMenu; "Edition"; $refMenuEdit)
+
+paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
 #### Voir aussi 

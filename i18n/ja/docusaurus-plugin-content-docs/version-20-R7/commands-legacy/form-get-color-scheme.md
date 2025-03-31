@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 #### 参照 
 
-[Get application color scheme](get-application-color-scheme.md)  
+[Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
 #### プロパティ

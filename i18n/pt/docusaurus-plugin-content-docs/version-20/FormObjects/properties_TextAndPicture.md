@@ -204,11 +204,11 @@ Por padrão, quando um botão contém um título e uma imagem, os elementos são
 
 ## Margem vertical
 
-Esta propriedade permite definir o tamanho (em pixels) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> Essa propriedade funciona em conjunto com a propriedade [Horizontal Margin (Margem horizontal](#horizontal-margin) ).
+> Essa propriedade funciona em conjunto com a propriedade [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -252,7 +252,7 @@ Consulte a [descrição do evento`On Alternative Click`](../Events/onAlternative
 
 ### Gerir o menu pop-up
 
-É importante observar que a propriedade "With Pop-up Menu" gerencia apenas o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por meio de `eventos de formulário` e da função [`Menu pop-up dinâmico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) e [`Menu pop-up`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) e menu pop-up.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. A exibição do menu pop-up e seus valores devem ser tratados inteiramente pelo desenvolvedor, principalmente por meio de `eventos de formulário` e da função [`Menu pop-up dinâmico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) e [`Menu pop-up`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) e menu pop-up.
 
 #### Gramática JSON
 

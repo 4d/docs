@@ -320,8 +320,7 @@ $output:=$worker.response
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->
-**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
 
 #### 説明
 
@@ -372,8 +371,8 @@ $output:=$worker.response
 | プロパティ                  | 型      | 説明                  |
 | ---------------------- | ------ | ------------------- |
 | [].errorCode           | number | 4Dエラーコード            |
-| [].message             | text   | 4Dエラーの詳細            |
-| [ ].componentSignature | text   | エラーを返した内部コンポーネントの署名 |
+| [].message             | テキスト   | 4Dエラーの詳細            |
+| [ ].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名 |
 
 エラーが発生しなかった場合、`.errors` は undefined です。
 

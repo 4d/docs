@@ -16,10 +16,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Parámetros    | Tipo    |     | Descripción                   |
-| ------------- | ------- | :-: | ----------------------------- |
-| processNumber | Integer |  →  | Process number                |
-| Result        | Object  |  ←  | Information about the process |
+| Parámetros    | Tipo    |                             | Descripción                   |
+| ------------- | ------- | :-------------------------: | ----------------------------- |
+| processNumber | Integer | &#8594; | Process number                |
+| Resultado     | Object  | &#8592; | Information about the process |
 
 <!-- END REF -->
 

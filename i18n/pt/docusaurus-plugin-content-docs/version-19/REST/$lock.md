@@ -28,7 +28,7 @@ A propriedade [`lockKindText`](../API/EntityClass.md#lock) é "Locked by session
 
 ### Descrição
 
-Os bloqueios accionados pela API REST são colocados ao nível da  [sessão](authUsers.md#opening-sessions).
+The locks triggered by the REST API are put at the [session](./authUsers.md#opening-sessions) level.
 
 Uma entidade bloqueada é vista como *bloqueada* (ou seja, as acções de bloquear/desbloquear/atualizar/eliminar não são possíveis) por:
 

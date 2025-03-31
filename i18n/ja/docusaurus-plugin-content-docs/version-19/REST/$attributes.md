@@ -3,7 +3,7 @@ id: attributes
 title: '$attributes'
 ---
 
-データクラスから取得するリレート属性を選択するのに使います (*例:* `Company(1)?$attributes=employees.lastname`、 `Employee?$attributes=employer.name`)。
+データクラスから取得する属性を選択するのに使います (*例:* `Company(1)?$attributes=name,city`、 `Company(1)?$attributes=employees.lastname` あるいは `Employee?$attributes=employer.name`)。
 
 
 ## 説明
@@ -24,6 +24,10 @@ title: '$attributes'
 - **リレートエンティティズ** 属性を対象に `$attributes` が指定された場合:
     - `$attributes=relatedEntities.*`: リレートエンティティズの属性がすべて返されます。
     - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: リレートエンティティズの指定された属性だけが返されます。
+
+
+- **ストレージ** 属性を対象に `$attributes` が指定された場合:
+    - `$attributes=attribute1, attribute2, ...`: エンティティのそれらの属性のみが返されます。
 
 
 

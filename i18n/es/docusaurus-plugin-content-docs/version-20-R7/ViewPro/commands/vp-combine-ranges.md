@@ -13,7 +13,7 @@ title: VP Combine ranges
 | ------------- | ------ | --------------------------- | -------------------------------------- | ---------------- |
 | rangeObj      | Object | ->                          | Objeto rango                           |                  |
 | otherRangeObj | Object | ->                          | Objeto rango                           |                  |
-| Result        | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
+| Resultado     | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
 
 #### Descripción
 
@@ -45,3 +45,4 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
 [VP Name](vp-name.md)<br/>
 [VP Row](vp-row.md)<br/>
 [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)
+

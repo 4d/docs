@@ -18,8 +18,8 @@ A continuación, aparecerá una [ventana de administración del servidor](monito
 
 ## Especificidades da administração via uma máquina 4D remota
 
-A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
+Uma máquina cliente exibindo a janela de administração do servidor possui acesso a todas as informações disponíveis e pode agir após os processos e o início/parada dos servidores. Quando a janela de administração do servidor é exibida em uma máquina remota, existem, no entanto, certas restrições e características específicas relativas à sua operação:
 
 - En la página [Proceso](processes.md), no es posible depurar un proceso de usuario (ya que la ventana de depuración aparece en la máquina del servidor).
-- En la página de mantenimiento , es posible ejecutar acciones que provocan la desconexión de todos los clientes y el reinicio del servidor (operaciones de compactación y reinicio). In this case, the client machine requesting the operation is automatically reconnected on restarting.
-- En la [página Mantenimiento](maintenance.md), los botones **Ver informe** pasan a llamarse **Descargar informe** tras la ejecución de una operación de mantenimiento. These files are downloaded into the local database folder on the client machine before being displayed.
+- En la página de mantenimiento [](maintenance.md), es posible ejecutar acciones que provocan la desconexión de todos los clientes y el reinicio del servidor (operaciones de compactación y reinicio). Neste caso, a máquina cliente solicitando a operação é automaticamente reconectada ao reiniciar.
+- En la [página Mantenimiento](maintenance.md), los botones **Ver informe** pasan a llamarse **Descargar informe** tras la ejecución de una operación de mantenimiento. Esses arquivos são baixados para a pasta do banco de dados local na máquina cliente antes de serem exibidos.

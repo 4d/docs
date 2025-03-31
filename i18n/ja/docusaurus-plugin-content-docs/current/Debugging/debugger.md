@@ -3,13 +3,13 @@ id: debugger
 title: デバッガー
 ---
 
-The 4D debugger is useful when you need to spot errors or monitor the execution of methods. デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
+4D デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+**VS Code**でコーディングすることに慣れている場合、 [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) 拡張機能をインストールした後、VS Code を使用して4D Server 上の4D コードをデバッグすることもできます。
 
 :::
 
@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 デバッガーを開くには、次のような方法があります:
 
 - [シンタックスエラーウィンドウ](basics.md#シンタックスエラーウィンドウ) で **トレース** ボタンをクリックする。
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- [`TRACE`](../commands-legacy/trace.md) コマンドを使用する
 - メソッド実行ウィンドウで **デバッグ** ボタンをクリックする、またはコードエディターで **実行してデバッグ** ボタンを選択する。
 - メソッド実行中に **Alt+Shift+右クリック** (Windows) または **Ctrl+Option+Cmd+クリック** (Macintosh) をおこない、表示されるポップアップウィンドウ内でトレースするプロセスを選択する:
 
@@ -29,8 +29,8 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-- _drop_ is the method being traced
-- The debugger window appeared because of a break point.
+- *drop* は現在トレースしているメソッドです。
+- デバッガウィンドウは、ブレークポイントがあったために表示されました。
 
 新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
 
@@ -54,7 +54,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 :::note
 
-Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+デフォルトのショートカットは、環境設定ダイアログボックスの[ショートカットページ](../Preferences/shortcuts.md) で変更できます。
 
 :::
 
@@ -111,22 +111,22 @@ The method that is executing when you click the **Abort and Edit** button opens 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-## Auto-saving
+## 設定保存
 
-The current state of the debugger window is automatically saved in the project. 構成には次の内容が含まれます:
+デバッガウィンドウの現在の状態がプロジェクトに自動的に保存されます。 構成には次の内容が含まれます: 構成には次の内容が含まれます: 構成には次の内容が含まれます:
 
-- the size and position of the window,
-- the position of the division lines,
-- the [display mode](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pin-an-expression) to keep it displayed in all contexts.
+- ウィンドウのサイズと位置
+- 分割線の位置
+- [表示モード](#表示モード)
+- カスタムのウォッチエリアに現在表示されている式 デフォルトでは、カレントメソッドと関数に対しては式は保存されています。 You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+**デフォルトウィンドウ設定** ボタンを使用するとカレントウィンドウのデフォルトの位置とサイズを復元します(これには分割線とウィンドウ自体を含みます)。
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
 ## ウォッチエリア
 
-**ウォッチエリア** は実行コントロールツールバーの下、デバッグウィンドウの左上隅に表示されます。 次に例を示します:
+**ウォッチエリア** は実行コントロールツールバーの下、デバッグウィンドウの左上隅に表示されます。 次に例を示します: 次に例を示します: 次に例を示します: 次に例を示します: 次に例を示します:
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
@@ -140,9 +140,9 @@ The **Default window configuration** button restores the default position and si
 
 ### 式リスト
 
-#### Line Expressions
+#### ライン式
 
-This theme lets you keep track of the values of expressions:
+このテーマには、次のように式の値が表示されます:
 
 - 実行されるコードの行 (プログラムカウンターにより、[ソースコードエリア](#ソースコードエリア) 内で黄色の矢印でマークされている行) で使用されている。
 - コードの前の行で使用されている。
@@ -156,29 +156,29 @@ $b:=$a+1
 $c:=$a+$b
 ```
 
-1. ソースコードエリアのプログラムカウンターが `$a:=1` の行にセットされた状態で、デバッグウィンドウが開きます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
+1. ソースコードエリアのプログラムカウンターが `$a:=1` の行にセットされた状態で、デバッグウィンドウが開きます。 **次行に進む** ボタンをクリックします。 プログラムカウンターは $c:=$a+$b の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
 
-   | $a | 未定義 |
-   | -- | --- |
+ | $a | 未定義 |
+ | -- | --- |
 
-   まだ初期化されていない変数 `$a` が表示されているのは、実行の対象となっている行で使用されているためです。
+ まだ初期化されていない変数 `$a` が表示されているのは、実行の対象となっている行で使用されているためです。
 
-2. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$b:=$a+1` の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
+2. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$b:=$a+1` の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています :
 
-   | $a | 1   |
-   | -- | --- |
-   | $b | 未定義 |
+ | $a | 1   |
+ | -- | --- |
+ | $b | 未定義 |
 
-   変数 `$a` の値は 1 になりました。 まだ初期化されていない変数 `$b` が表示されているのは、実行の対象となっている行で使用されているためです。
+ 変数 `$a` の値は 1 になりました。 変数 `$a` の値は 1 になりました。 まだ初期化されていない変数 `$b` が表示されているのは、実行の対象となっている行で使用されているためです。 変数 `$b` の値が 2 になりました。 変数 `$b` の値が 2 になりました。 まだ初期化されていない変数 `$c` が表示されているのは、実行の対象となっている行で使用されているためです。
 
 3. **次行に進む** ボタンをクリックします。 プログラムカウンターは $c:=$a+$b の行に設定されます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
 
-   | $c | 未定義 |
-   | -- | --- |
-   | $a | 1   |
-   | $b | 2   |
+ | $c | 未定義 |
+ | -- | --- |
+ | $a | 1   |
+ | $b | 2   |
 
-   変数 `$b` の値が 2 になりました。 まだ初期化されていない変数 `$c` が表示されているのは、実行の対象となっている行で使用されているためです。
+ 変数 `$b` の値が 2 になりました。 変数 `$b` の値が 2 になりました。 まだ初期化されていない変数 `$c` が表示されているのは、実行の対象となっている行で使用されているためです。
 
 #### 変数
 
@@ -261,10 +261,10 @@ $c:=$a+$b
 - **すべて閉じる**: ウォッチエリアの階層リストの全レベルを縮小します。
 - **すべて拡げる**: ウォッチエリアの階層リストの全レベルを展開します。
 - **型を表示**: 各項目のデータ型を (適切な場合に) 表示します。
-- **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。 テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
-- **アイコンを表示**: 各項目のタイプを示すアイコンを表示します。 表示速度を速くするために、このオプションをオフにすることもできます。
+- **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。  テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
+- **アイコンを表示**: 各項目のタイプを示すアイコンを表示します。  表示速度を速くするために、このオプションをオフにすることもできます。
 - **テーブル/フィールドをソート**: テーブルおよびフィールドをそれぞれアルファベット順に並べ替えます。
-- **数値を16進で表示**: 通常、数値は 10進法で表示されます。 このオプションを使用すると、数値が 16進法表記で表示されます。 注: 数値を 16進法で入力するには、0x (ゼロの後にx) とタイプし、その後に 16進数を続けます。
+- **数値を16進で表示**: 通常、数値は 10進法で表示されます。 このオプションを使用すると、数値が 16進法表記で表示されます。 このオプションを使用すると、数値が 16進法表記で表示されます。 注: 数値を 16進法で入力するには、0x (ゼロの後にx) とタイプし、その後に 16進数を続けます。
 - **アクティビティモニターを有効にする**: 動作のモニタリング (アプリケーション内部の詳細チェック) を有効にし、追加テーマ (**スケジューラー**、**ネットワーク**) に情報を表示します。
 
 ## 呼び出し連鎖エリア
@@ -280,9 +280,9 @@ $c:=$a+$b
 - `thirdMethod` は引数を受け取っていません。
 - `$0` は現在未定義です。これは、メソッドが `$0` に値を割り当てていないためです (メソッドがこの割り当てをまだ実行していないか、メソッドが関数ではなくサブルーチンなことが原因です)。
 - `secondMethod` は `firstMethod` から 3つの引数を受け取っています:
-  - $1 は `[Employee]` テーブルへのポインター
-  - $2 は `[Employee]` テーブルの `ID` フィールドへのポインター
-  - $3 は値が "Z" の英数字の引数です。
+ - $1 は `[Employee]` テーブルへのポインター
+ - $2 は `[Employee]` テーブルの `ID` フィールドへのポインター
+ - $3 は値が "Z" の英数字の引数です。
 
 呼び出し連鎖エリアのメソッド名をダブルクリックすると、そのソースコードが[ソースコードエリア](#ソースコードエリア) に表示されます。
 
@@ -294,93 +294,93 @@ $c:=$a+$b
 
 メソッドの引数リストが展開されていれば、引数や戻り値を [カスタムウォッチエリア](#カスタムウォッチエリア) にドラッグ＆ドロップすることができます。
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+呼び出しチェーンは [Call chain](https://doc.4d.com/4dv19/help/command/ja/page1662.html) コマンドを使って取得することもできます。
 
 ## カスタムウォッチエリア
 
 カスタムウォッチエリアは、式を評価するために使用します。 [ウォッチエリア](#ウォッチエリア) と似ていますが、ここでは任意の式を表示することができます。 どのようなタイプの式でも評価できます:
 
 - 変数
-- object and object property
+- オブジェクトとオブジェクトのプロパティ
 - フィールド
-- ポインター
+- pointer
 - 演算
 - 4Dコマンド
-- メソッド
+- method
 - ほか値を返すものなら何でも
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 BLOB のコンテンツを表示するためには、例えば [BLOB to text](../commands-legacy/blob-to-text.md) などのBLOB コマンドを使用することができます。
 
-### Display mode
+### 表示モード
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+カスタムウォッチペインの[コンテキストメニュー](#contextual-menu) から**表示** オプションを使用することで、全てのデバッガウィンドウで使用される表示モードを選択することができます。
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
 次のオプションから選択することができます:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **ローカル変数**: ローカル変数が実行中のソースコード内で初期化されるとすぐにその変数を自動的に表示し評価します。
+- **ライン式**: 式リストの中の[ライン式](#line-expressions) の項目と同じコンテンツを自動的に表示して評価します。
+- **式**: 手動で入力したカスタムの式のみを表示します。 カスタムの式には特定の青いアイコン ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png) が表示されます。
 
 :::note
 
-Whatever the display mode, you can add custom expressions at any moment.
+表示モードに関わらず、カスタムの式はいつでも追加可能です。
 
 :::
 
 ### 新しい式の挿入
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pin-an-expression).
+評価したい任意の式を入力することができます。 カスタムの式は [式を固定化](#pin-an-expression) した場合を除き、カレントのデバッガのウィンドウにしか表示されません。
 
 リストに式を追加する方法は複数あります:
 
 - ウォッチエリアまたは呼び出し連鎖エリアから項目や式をドラッグ＆ドロップします。
 - [ソースコードエリア](#ソースコードエリア) で式を選択し、**ctrl+D**  (Windows) または **cmd+D** (macOS) を押します。
 - カスタムウォッチエリアの空スペースのどこかをダブルクリックします (プレースホルダー名を持つ編集可能な式が追加されます)。
-- Select a [display option](#display-mode) that automatically inserts expressions.
-- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. 値を返すフォーミュラであれば、なんでも追加できます。
+- [表示オプション](#表示モード) を選択することで式が自動的に挿入されます。
+- カスタムウォッチペインの[コンテキストメニュー](#コンテキストメニュー) 内の**新しい式...** を選ぶことで**フォーミュラエディタ** を使用して式を追加することができます。 値を返すフォーミュラであれば、なんでも追加できます。 値を返すフォーミュラであれば、なんでも追加できます。 値を返すフォーミュラであれば、なんでも追加できます。
 
 式を編集するには、その式をクリックして選択し、再びクリックすると (または**Enter**キーを押す) 編集モードになります。
 
-To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
+カスタムの式を削除するには、その式をクリックして選択し、**Backspace** または **Delete**キーを押すか、あるいは **x** アイコンをクリックします。
 
 :::warning
 
-Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+システム変数 (たとえば OK変数) の値を変更するような 4D式を評価する場合、その後のメソッド実行に影響しうる点に注意してください。
 
 :::
 
-### Pinning an expression
+### 式をピン留めする
 
-You can click on the pushpin icon to pin an expression:
+押しピンのアイコンをクリックすることで、式をピン留めすることができます:
 
 ![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
-The expression will then be displayed in all debugger windows.
+ピン留めされた式はその後全てのデバッガウィンドウに表示されるようになります。
 
 ### コンテキストメニュー
 
-The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
+カスタムウォッチペインのメニューはコンテキストクリック、または![メニュー](../assets/en/Debugging/custom-watch-pane-menu.png) アイコンをクリックすることで利用可能です。
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
-  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+- **表示**: 全てのデバッガウィンドウで使用する[表示モード](#表示モード) を選択します。
+- **新しい式...**: 新しい式を挿入し、4D のフォーミュラエディターを表示します。
+ ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+ フォーミュラエディターについての詳細な情報については、 [4D Design Reference マニュアル](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html) をご覧ください。
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **コマンドを挿入...**: 4D コマンドを新しい式として挿入するメニューを表示します。
 * **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
-* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
+* **標準式**: ウォッチエリアの式リストをカスタムの式としてコピーします。
 
 > このオプションは [リモートデバッグモード](debugging-remote.md)では利用できません。
 
 - **すべて閉じる/すべて拡げる**: 階層リストの全レベルを縮小/展開します。
 - **型を表示**: リストの各項目のデータ型を (適切な場合に) 表示します。
-- **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。 テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
+- **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。  テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
 - **アイコンを表示**: 各項目のタイプを示すアイコンを表示します。
 - **テーブル/フィールドをソート**: テーブルおよびフィールドをそれぞれアルファベット順に並べ替えます。
 - **数値を16進で表示**: 数値がを16進法表記で表示します。 数値を 16進法で入力するには、0x (ゼロの後にx) とタイプし、その後に 16進数を続けます。
@@ -391,9 +391,9 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 このエリアでは、[**ブレークポイント**](breakpoints.md) の追加や削除も可能です。
 
-### Prototype
+### プロトタイプ
 
-The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+呼び出しチェーンに表示される、現在実行中のメソッドまたは関数のプロトタイプがペインの上部に表示されます:
 
 ![prototype](../assets/en/Debugging/prototype.png)
 
@@ -416,9 +416,9 @@ The prototype of the currently executed method or function in the Call chain is 
 
 1. ソースコードエリア内で評価する式を選択します。
 2. 次のいずれかの方法をおこないます:
-   - 選択したテキストをカスタムウォッチエリアの式欄へドラッグ＆ドロップする。
-   - **Ctrl+D** (Windows) または **Cmd+D** (macOS) を押す。
-   - 選択したテキストを右クリックして、コンテキストメニューから **式ペインにコピー** コマンドを選択する。
+ - 選択したテキストをカスタムウォッチエリアの式欄へドラッグ＆ドロップする。
+ - **Ctrl+D** (Windows) または **Cmd+D** (macOS) を押す。
+ - 選択したテキストを右クリックして、コンテキストメニューから **式ペインにコピー** コマンドを選択する。
 
 ### プログラムカウンター
 
@@ -445,7 +445,9 @@ The prototype of the currently executed method or function in the Call chain is 
 ```
 
 行 `If (This condition)` にプログラムカウンターが設定されているとします。
+行 `If (This condition)` にプログラムカウンターが設定されているとします。
 **次行に進む** ボタンをクリックすると、プログラムカウンターが行 `DO SOMETHING ELSE` に直接移動します。
+しかし、今回トレースしたかったのは `DO_SOMETHING` 行のコードでした。このような場合、プログラムカウンターをその行に移動して実行することができます。
 しかし、今回トレースしたかったのは `DO_SOMETHING` 行のコードでした。このような場合、プログラムカウンターをその行に移動して実行することができます。
 
 ### コンテキストメニュー
@@ -454,16 +456,16 @@ The prototype of the currently executed method or function in the Call chain is 
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. このコマンドは以下の要素に使用できます:
-  - _Project methods_, _user classes_: Selects the method in the Explorer and switches to the documentation tab
-  - _4D commands, functions, class names:_ Displays the online documentation.
-- **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
+- **ドキュメンテーションを表示**: ターゲット要素のドキュメンテーションを開きます。 このコマンドは以下の要素に使用できます: このコマンドは以下の要素に使用できます: このコマンドは以下の要素に使用できます: このコマンドは以下の要素に使用できます: このコマンドは以下の要素に使用できます:
+ - *プロジェクトメソッド*, *ユーザークラス*: エクスプローラー内でのメソッドを選択し、ドキュメンテーションタブに切り替えします。
+ - *4D コマンド、関数、クラス名:* オンラインのドキュメントを表示します。
+- **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
 - **コピー**: 選択された式が標準のペーストボードへとコピーされます。
 - **式ペインにコピー**: 選択された式をカスタムウォッチエリアにコピーします。
 - **カーソルまで実行**: プログラムカウンターと選択行の間のコードを実行します。
-- **次のステートメントを設定**: 現在の行および途中の行を実行せずに、プログラムカウンターを選択行まで移動します。 選択行は、ユーザーが実行ボタンのいずれかをクリックした際に実行されます。
-- **ブレークポイントをトグル** (コードエディターでも利用可能): 選択行のブレークポイントの有無を切り替えます。 これによりメソッドエディターのブレークポイントの有無も切り替わります。
-- **ブレークポイントを編集...** (コードエディターでも利用可能): ブレークポイントプロパティダイアログボックスを表示します。 ここでおこなわれた変更はメソッドエディターにも反映されます。
+- **次のステートメントを設定**: 現在の行および途中の行を実行せずに、プログラムカウンターを選択行まで移動します。 選択行は、ユーザーが実行ボタンのいずれかをクリックした際に実行されます。 選択行は、ユーザーが実行ボタンのいずれかをクリックした際に実行されます。
+- **ブレークポイントをトグル** (コードエディターでも利用可能): 選択行のブレークポイントの有無を切り替えます。  これによりメソッドエディターのブレークポイントの有無も切り替わります。
+- **ブレークポイントを編集...** (コードエディターでも利用可能): ブレークポイントプロパティダイアログボックスを表示します。  ここでおこなわれた変更はメソッドエディターにも反映されます。
 
 ### 次/前を検索
 
@@ -497,7 +499,7 @@ The prototype of the currently executed method or function in the Call chain is 
 
 #### すべてのエリア
 
-- **Ctrl** + **+/-** (Windows) または **Command** + **+/-** (macOS) を押すと、可読性を向上させるためにフォントサイズが拡大/縮小します。 変更されたフォントサイズはコードエディターにも適用され、環境設定に保存されます。
+- **Ctrl** + **+/-** (Windows) または **Command** + **+/-** (macOS) を押すと、可読性を向上させるためにフォントサイズが拡大/縮小します。  変更されたフォントサイズはコードエディターにも適用され、環境設定に保存されます。
 - **Ctrl + \*** (Windows) または **Command + \*** (macOS) を押すと、ウォッチエリアが強制的に更新されます。
 - 全エリアでいずれの項目も選択されていない場合に **Enter**キーを押すと、1行ずつ進みます。
 - 項目の値が選択されている場合には、矢印キーでリスト内を移動します。
