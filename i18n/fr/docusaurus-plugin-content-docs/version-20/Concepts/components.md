@@ -12,13 +12,13 @@ Plusieurs composants sont [préinstallés dans l'environnement de développement
 
 ## Installation des composants
 
-To install a component, you simply need to copy the component package folder into the [`Components` folder of the project](Project/architecture.md). Vous pouvez utiliser des alias ou des raccourcis.
+Pour installer un composant, il suffit de copier les fichiers du composant dans le dossier [`Components` du projet](Project/architecture.md). Vous pouvez utiliser des alias ou des raccourcis.
 
 Un projet hôte fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés. Un projet hôte fonctionnant en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
 :::note
 
-Interpreted component package folder name must be suffixed ".4dbase".
+Le nom d'un dossier de composant interprété doit être suffixé ".4dbase".
 
 :::
 
