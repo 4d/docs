@@ -53,6 +53,7 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
   APPEND MENU ITEM(myMenu; ak standard action title)
   SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
 ```
+
 #### Ver también 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
