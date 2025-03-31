@@ -42,9 +42,21 @@ Considere que no caso da propriedade Associated Standard Action, pode passar no 
   
  Nota de compatibilidade: em versões anteriores, as constantes de tema *Valores para ação padrão associada* se utilizaram no parâmetro valor (Inteiro longo). A partir de 4D v16 R3, são obsoletas, mas ainda são suportadas por compatibilidade.  
   
-Note: ISe o item menu corresponder ao título do submenu hierárquico, a ação padrão não será chamada quando o item menu for selecionado
+Note: se o item menu corresponder ao título do submenu hierárquico, a ação padrão não será chamada quando o item menu for selecionado
 
 Proprierdade personalizada - Nesta propriedade pode passar qualquer texto personalizado e associar um valor do texto, núemro ou tipo Booleano. Este valor será armazenado com o item e pode ser recuperado usando o comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). Pode usar qualquer string personalziada na propriedade parâmetro, simplesmente tenha certeza de não usar um título usado por 4D (por convenção, propriedades estabelecidas por 4D começam com “4D\_”).
+
+#### Exemplo
+
+```4d
+  // Ação padrão
+  // Associar um item
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak copy)
+  // Associar um sub menu
+  APPEND MENU ITEM(myMenu; ak standard action title)
+  SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
+```
 
 #### Ver também 
 
