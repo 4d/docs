@@ -1,21 +1,53 @@
 ---
 id: licenses
-title: Gestão de Licenças 4D
+title: Licenças
 ---
 
-Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Normalmente, a activação é automática se [entrar usando a sua conta 4D](GettingStarted/Installation.md) no Welcome Wizard.
+## 4D Licenses Overview
+
+To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
+
+- **Development licenses**, required for working with 4D and 4D Server IDE.
+- **Deployment licenses**, required for deploying your custom applications built with 4D.
+
+### Development licenses
+
+Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+
+### Deployment licenses
+
+Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| Deployment license       | Descrição                                                          | Where to enter it                                                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | Embedded custom license, contact 4D Sales for information          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog                                                                    |
+| *4D Unlimited Desktop*   | **Discontinued** - Embedded custom license                         | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Desktop*             | Per-user license, allowing them to use stand-alone 4D applications | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+| *4D Server OEM*          | Embedded custom license, contact 4D Sales for information          | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                            | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Server*              | Per-user license, allowing them to use 4D Server and clients       | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+
+### Expiration
+
+Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
+
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+
+## Activating licenses
+
+Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
 
 Contudo, em casos específicos, poderá ter de activar as suas licenças manualmente, por exemplo, se:
 
 - sua configuração não permitir a ativação automática
-- tiver comprado licenças adicionais
+- you have purchased additional development licenses.
 
 Não precisa ativar nada para os usos abaixo:
 
 - 4D usado em modo remoto (conexão ao servidor 4D)
 - 4D usado em modo local com um projeto aplicação interpretado sem acesso ao ambiente Design.
 
-## Primeira ativação
+### Primeira ativação
 
 Com 4D, selecione o comando **Gestião de licenças...** do menu **Ajuda**. Com 4D Server basta lançar a aplicação 4D Server. The dialog box for choosing the activation mode appears.
 
@@ -69,9 +101,14 @@ Sua aplicação 4D agora está ativada.
 
 Esse modo pode ser usado para ativação temporária especial de 4D (por no máximo 5 dias) sem conexão a um site 4D Web. Essa ativação só pode ser usada uma vez.
 
-## Adicionar licenças
+## Refresh
 
-Pode adicionar novas licenças, por exemplo par aumentar as capacidades de sua aplicação, a qualquer momento.
+Licenses are usually automatically updated at startup of your 4D application.
+
+Pode utilizar o botão **Refresh** nos seguintes contextos:
+
+- Quando tiver adquirido uma expansão adicional e quiser ativá-la,
+- When you need to update an expired number (Partners or evolutions).
 
 Escolha o comando **License Manager...** a partir do menu **Help** da aplicação Servidor 4D ou 4D, depois clicar no botão **Refresh** :
 
@@ -81,11 +118,6 @@ Este botão conecta você à nossa base de dados de clientes e ativa automaticam
 
 - Se adquiriu expansões adicionais para um Servidor 4D, não necessita de introduzir qualquer número de licença -- basta clicar em **Atualizar**.
 - Na primeira ativação de um Servidor 4D, basta introduzir o número do servidor e todas as expansões compradas são automaticamente atribuídas.
-
-Pode utilizar o botão **Refresh** nos seguintes contextos:
-
-- Quando tiver adquirido uma expansão adicional e quiser ativá-la,
-- Quando for necessário atualizar um número temporário expirado (Parceiros ou evoluções).
 
 ## 4D Online Store
 
