@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 #### Descrição 
 
-<!--REF #_command_.RELATE ONE SELECTION.Summary-->O comando RELATE ONE SELECTION cria uma nova seleção de registros em *tabela1* a partir da seleção de registros da *tabelaN* relacionada e carrega o primeiro registro da nova seleção como o registro atual.<!-- END REF--> 
+<!--REF #_command_.RELATE ONE SELECTION.Summary-->O comando **RELATE ONE SELECTION** cria uma nova seleção de registros em *tabela1* a partir da seleção de registros da *tabelaN* relacionada e carrega o primeiro registro da nova seleção como o registro atual.<!-- END REF--> 
 
-Este comando só pode ser utilizado se há uma relação de Muitos a Um. RELATE ONE SELECTION pode funcionar através de vários níveis de relações. Pode haver várias tabelas relacionadas entre a tabela Muitos e a tabela 1\. As relações podem ser manuais ou automáticas.
+Este comando só pode ser utilizado se há uma relação de *tabelaN* a *tabela1*. **RELATE ONE SELECTION** pode funcionar através de vários níveis de relações. Pode haver várias tabelas relacionadas entre a *tabelaN* e a *tabela1*. 
 
-**RELATE ONE SELECTION** utiliza a "via mais curta" para passar da taba de início à tabela de destino. Se as vias existentes são de tamanho equivalente, e você precisar controlar o caminho utilizado, pode usar o comando [SET FIELD RELATION](set-field-relation.md). 
+As relações podem ser manuais ou automáticas. Quando existem relações automáticas, elas são sempre usadas primeiro por **RELATE ONE SELECTION**. Quando vários caminhos são possíveis da tabela inicial para a tabela de destino, o **RELATE ONE SELECTION** usa o caminho mais curto, usando as relações automáticas (se houver). Se houver caminhos existentes do mesmo tamanho e você quiser controlar o caminho usado, ou se quiser “forçar” o uso de relações manuais, será necessário usar o comando [`SET FIELD RELATION`](set-field-relation.md).
 
 #### Exemplo 
 
